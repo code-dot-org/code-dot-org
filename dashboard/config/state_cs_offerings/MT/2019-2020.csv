@@ -1,0 +1,149 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Information Systems Management,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming III,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10156,Information Systems Management,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Information Systems Management,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming III,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10156,Information Systems Management,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaverhead Co High School,MT-0006-0023,300309000041,10152,Computer Science: Joy and Beauty of Computing,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology HL,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bigfork High School,MT-0331-0443,300384000058,10152,VHS-CREATIVE PROGRAMMING WITH SCRATCH,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Adv Computer Coding & Design CSP IV,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester-Joplin-Inverness HS,MT-1237-0687,300010100179,10152,Montana Digital Academy,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Choteau High School,MT-0884-1148,300633000184,10157,MDA AP Computer Science A,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Circle High School,MT-0548-0733,300681000187,10152,Coding,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbus High School,MT-0849-1112,300720000205,10157,A Digital Academy AP,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Florence-Carlton HS,MT-0743-0977,301110000301,10152,MDA-Computer Science,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Florence-Carlton HS,MT-0743-0977,301110000301,10152,MDA-Computer Science,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gardiner High School,MT-1191-0824,301185000322,10152,Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrison High School,MT-0543-0727,301353000404,10157,AP Computer Science,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrison High School,MT-0543-0727,301353000404,10157,AP Computer Science,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huntley Project High Schl,MT-0983-1298,301470000452,10152,Computer Science (MTDA),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huntley Project High Schl,MT-0983-1298,301470000452,10152,Computer Science (MTDA),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology HL,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shields Valley High Schl,MT-1228-1666,300093301026,10154,Coding for Web Design,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Three Forks High School,MT-0361-0483,302619000741,10157,AP Computer Science,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming III,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker High School,MT-0244-0335,300273000035,10152,Computer Programming III,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 4,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Adv Computer Coding & Design CSP III,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Adv Computer Coding & Design CSP IV,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter County High School,MT-0097-0133,300561000162,10152,Computer Science Discoveries,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter County High School,MT-0097-0133,300561000162,10152,Computer Science Discoveries,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glasgow High School,MT-0926-1204,301242000343,10152,Coding II,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glasgow High School,MT-0926-1204,301242000343,10152,Coding II,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Falls High School,MT-0099-0134,301305000380,10152,COMPUTER SCIENCE INDEPENDENT STUDY,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln Co High School,MT-0528-0711,301677000521,10157,MTDA,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology SL,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology HL,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 3,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 4,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 2,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Adv Computer Coding & Design CSP III,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbus High School,MT-0849-1112,300720000205,10157,Digital Academy A,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High School,MT-0457-0611,301512000461,10152,Computer Programming,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High School,MT-0457-0611,301512000461,10152,Computer Programming,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Opheim High School,MT-0935-1215,301974000603,10153,VISUAL BAS,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Opheim High School,MT-0935-1215,301974000603,10155,Java,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Opheim High School,MT-0935-1215,301974000603,10153,VISUAL BAS,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Opheim High School,MT-0935-1215,301974000603,10155,Java,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology SL,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology HL,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roundup H S,MT-0606-0811,302307000675,10152,"Computer Programming, Advanced",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roundup H S,MT-0606-0811,302307000675,10152,"Computer Programming, Advanced",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 3,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10152,COMPUTER SCIENCE INDEPENDENT STUDY,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manhattan H S,MT-0348-0465,301764000548,10157,AP Computer Science,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manhattan H S,MT-0348-0465,301764000548,10157,AP Computer Science,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Yellowstone HS,MT-0374-0496,302763000769,10152,S1 Comp Coding and Programming,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Yellowstone HS,MT-0374-0496,302763000769,10152,S2 Comp Coding and Programming,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Yellowstone HS,MT-0374-0496,302763000769,10152,S2 Comp Coding and Programming,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Yellowstone HS,MT-0374-0496,302763000769,10152,S1 Comp Coding and Programming,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anaconda Sr High School,MT-0237-0326,300203000015,10152,COMPUTER SCIENCE,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology SL,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 2,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Adv Computer Coding & Design CSP III,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lambert High School,MT-0769-1006,301602000493,10152,Computer Programing,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manhattan H S,MT-0348-0465,301764000548,10157,AP Computer Science,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manhattan H S,MT-0348-0465,301764000548,10157,AP Computer Science,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High School,MT-1239-1837,300065401099,10159,IB Design Technology SL,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 2,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roundup H S,MT-0606-0811,302307000675,10152,Computer Programming I,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roundup H S,MT-0606-0811,302307000675,10152,Computer Programming I,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Superior High School,MT-0579-0768,302547000729,10019,AP Computer Science,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Superior High School,MT-0579-0768,302547000729,10019,AP Computer Science,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 3,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colstrip High School,MT-0797-1040,300708000194,10157,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10152,COMPUTER SCIENCE INDEPENDENT STUDY,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huntley Project High Schl,MT-0983-1298,301470000452,10152,Computer Coding,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huntley Project High Schl,MT-0983-1298,301470000452,10152,Computer Coding,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Turner High School,MT-0045-0070,302667000751,10152,Computer Programming,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bigfork High School,MT-0331-0443,300384000058,10152,CODING 1,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 2,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design II,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10156,COMPUTER CODING AND DESIGN WITH PYTHON,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S2,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall High School,MT-0454-0608,302784000778,10155,Multi-Media with Game Design,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 1,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grass Range High School,MT-0269-0368,301299000352,10152,Coding,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10157,INTRO TO COMPUTER SCIENCE PRINCIPLES,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,ADVANCED PROGRAMMING 1,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,ADVANCED PROGRAMMING 1,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S1,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 1,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S1,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S2,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plevna High School,MT-0256-0352,302100000628,10157,Computer Science - Grade 9,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plevna High School,MT-0256-0352,302100000628,10157,Computer Science - Grade 9,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Troy High School,MT-0520-0697,302658000749,10153,Computer Applications,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Victor High School,MT-0738-0972,302727000763,10019,Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Victor High School,MT-0738-0972,302727000763,10019,Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bigfork High School,MT-0331-0443,300384000058,10152,CODING 2,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 1,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson High School,MT-0207-0284,300834000240,10054,Business & Personal Law,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson High School,MT-0207-0284,300834000240,10054,Business & Personal Law,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,ADVANCED PROGRAMMING 2,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,ADVANCED PROGRAMMING 2,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colstrip High School,MT-0797-1040,300708000194,10157,Computer Sci Principles Mobile,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10156,COMPUTER CODING AND DESIGN WITH PYTHON,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C M Russell High School,MT-0099-1464,301305000379,10157,INTRO TO COMPUTER SCIENCE PRINCIPLES,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,INTRO TO PROGRAMMING,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,INTRO TO PROGRAMMING,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Polson High School,MT-0478-0633,302109000633,10152,JBC/Coding,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Lodge High School,MT-0057-0084,302211000655,10152,Computer Sc.,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall High School,MT-0454-0608,302784000778,10152,Introduction to Programming,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belgrade High School,MT-0369-0491,300333000046,10152,Computer Coding and Design,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bigfork High School,MT-0331-0443,300384000058,10152,CODING 1,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design II,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S1,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S2,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sentinel High School,MT-0584-1433,301854000564,10155,Computer Science A,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Billings West High School,MT-0966-1251,300390000091,10152,COMPUTER PROGRAM 1,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design II,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S2,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glasgow High School,MT-0926-1204,301242000343,10152,Coding I,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glasgow High School,MT-0926-1204,301242000343,10152,Coding I,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Falls High School,MT-0099-0134,301305000380,10157,INTRO TO COMPUTER SCIENCE PRINCIPLES,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design I,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Helena High School,MT-0488-0661,301383000430,10155,Computer Sci S1,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belgrade High School,MT-0369-0491,300333000046,10152,Computer Coding and Design,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belgrade High School,MT-0369-0491,300333000046,10157,AP Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design I,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Capital High School,MT-0488-1547,301383000429,10152,Computer Science,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bozeman High School,MT-0351-0473,300459000113,10152,Computer Coding & Design I,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Falls High School,MT-0099-0134,301305000380,10156,COMPUTER CODING AND DESIGN WITH PYTHON,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glacier High School,MT-0311-1835,301542000358,10152,CODING 101,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,INTRO TO PROGRAMMING,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High School,MT-0735-1084,301326000389,10152,INTRO TO PROGRAMMING,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corvallis High School,MT-0731-0964,300741000215,10152,COMPUTER PROG,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corvallis High School,MT-0731-0964,300741000215,10152,COMPUTER PROG,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glacier High School,MT-0311-1835,301542000358,10152,CODING 101,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sentinel High School,MT-0584-1433,301854000564,10156,Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
