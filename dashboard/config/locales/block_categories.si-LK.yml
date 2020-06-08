@@ -3,12 +3,30 @@ si:
   data:
     block_categories:
       Actions: ක්‍රියාවන්
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: පාට
+      Comment: Comment
+      Comments: Comments
       Conditionals: කන්ඩිෂනලස්
+      Dancers: Dancers
+      Default: Default
       Events: වැඩසටහන්
       Functions: ශ්‍රිතයන්
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: තර්කය
       Loops: ලූපයන්
       Math: ගණිත
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: පෙළ
       Variables: විචල්‍යන්
+      'Variables ': 'Variables '
+      World: World
