@@ -178,8 +178,6 @@ export const processedLevel = level => {
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
-    bonus: level.bonus,
-    sublevels: level.sublevels,
-    bubbleChoiceLetter: level.letter
+    bonus: level.bonus
   };
 };
