@@ -9,13 +9,20 @@ sr-SP:
       BinaryImages: Binarne slike
       BinaryImages_2018: Binarne slike
       BuildingAFoundation: Изградња темеља
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Компјутерско Размишљање
       Conditionals: Кондиционали
       Conditionals_2018: Кондиционали
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DiceRace: 'Real Life Algorithms: Dice Race'
       DigitalCitizenship: Дигитално држављанство
       DigitalFootprint: Твој дигитални траг
       DigitalFootprint_2018: Твој дигитални траг
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun: For Loop Fun
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Functional Suncatchers
       GettingLoopy: Запетљанције
       GettingLoopy_2018: Запетљанције
@@ -24,6 +31,8 @@ sr-SP:
       GraphPaperProgramming: Графиконско - Папирно Програмирање
       GraphPaperProgramming_2018: Графиконско - Папирно Програмирање
       Internet: Интернет
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
       MoveIt: Помери га, помери
       MoveItMoveIt_2018: Помери га, помери
       PaperPlanes: 'Стварни алгоритми: Папирни авиони'
@@ -32,13 +41,26 @@ sr-SP:
       PlantASeed_2018: 'Прави алгоритми: Засади семе'
       RelayProgramming: Relay programming
       RelayProgramming_2018: Relay programming
+      SongwritingParameters: Songwriting
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters: Songwriting With Parameters
+      TangramAlgorithms: Tangram Algorithms
       UnplugHappyMaps: Веселе мапе
       UnplugHappyMaps_2018: Веселе мапе
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Активност ван мреже
       courseB_unplugged_MRF_2018: Моји роботски пријатељи
       courseB_unplugged_loopyMRF: Активност ван мреже
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Активност ван мреже
       courseC_Unplugged_ScreenOutTheMean_2018: Активност ван мреже
       courseD_unplugged_digitalCitizenship: Активност ван мреже
       courseD_unplugged_digitalCitizenship_2018: Активност ван мреже
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Активност ван мреже
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
