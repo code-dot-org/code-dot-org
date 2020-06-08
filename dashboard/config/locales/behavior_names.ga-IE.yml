@@ -5,6 +5,7 @@ ga-IE:
       CourseE_Project_SpriteLab:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -17,6 +18,7 @@ ga-IE:
       CourseE_Project_SpriteLab_2019:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -29,10 +31,12 @@ ga-IE:
       CourseE_hoops:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
         moving south: dul ó dheas
+        being hungry: being hungry
         moving north: dul ó thuaidh
         jittering: crith
         moving west: dul siar
@@ -41,6 +45,7 @@ ga-IE:
       CourseF_Project_SpriteLab:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -52,6 +57,7 @@ ga-IE:
         patrolling: patrólú
       CourseF_Project_SpriteLab_2019:
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -73,8 +79,10 @@ ga-IE:
         moving south: dul ó dheas
         moving west: dul siar
         spinning right: casadh ar deiseal
+        spinning left: spinning left
         swimming left and right: snámh anonn is anall
       Dance Party 2_2019:
+        spinning left: spinning left
         shrinking: crapadh
         patrolling: patrólú
         wandering: fánaíocht
@@ -87,6 +95,7 @@ ga-IE:
         spinning right: casadh ar deiseal
         swimming left and right: snámh anonn is anall
       Dance Party 3_2019:
+        spinning left: spinning left
         shrinking: crapadh
         patrolling: patrólú
         wandering: fánaíocht
@@ -99,6 +108,7 @@ ga-IE:
         spinning right: casadh ar deiseal
         swimming left and right: snámh anonn is anall
       Dance Party 4_2019:
+        spinning left: spinning left
         shrinking: crapadh
         patrolling: patrólú
         wandering: fánaíocht
@@ -111,6 +121,7 @@ ga-IE:
         spinning right: casadh ar deiseal
         swimming left and right: snámh anonn is anall
       Dance Party 5_2019:
+        spinning left: spinning left
         shrinking: crapadh
         patrolling: patrólú
         wandering: fánaíocht
@@ -292,8 +303,10 @@ ga-IE:
         spinning right: casadh ar deiseal
       Virtual Pet 1_2019:
         wandering: fánaíocht
+        mystery: mystery
         spinning right: casadh ar deiseal
         moving east: dul soir
+        spinning left: spinning left
         shrinking: crapadh
         moving south: dul ó dheas
         swimming left and right: snámh anonn is anall
@@ -313,10 +326,12 @@ ga-IE:
         moving south: dul ó dheas
         moving west: dul siar
         spinning right: casadh ar deiseal
+        spinning left: spinning left
         swimming left and right: snámh anonn is anall
       Virtual Pet 2_2019:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -330,9 +345,11 @@ ga-IE:
         wandering: fánaíocht
         wandering2: fánaíocht2
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         moving east2: dul soir2
         shrinking: crapadh
+        spinning left2: spinning left2
         growing: fás
         spinning right2: casadh ar deiseal2
         moving south: dul ó dheas
@@ -363,6 +380,7 @@ ga-IE:
       Virtual Pet 4_2019:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -406,7 +424,10 @@ ga-IE:
         moving west: dul siar
         spinning right: casadh ar deiseal
       behaviors 1:
+        mystery behavior: mystery behavior
         wandering: fánaíocht
+        running east: running east
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -418,7 +439,10 @@ ga-IE:
         patrolling: patrólú
         moving east: dul soir
       behaviors 2:
+        flying: flying
         wandering: fánaíocht
+        running east: running east
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -430,7 +454,10 @@ ga-IE:
         patrolling: patrólú
         moving east: dul soir
       behaviors 3:
+        zooming east: zooming east
+        driving east: driving east
         wandering: fánaíocht
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -443,7 +470,10 @@ ga-IE:
         moving east: dul soir
       behaviors 3a:
         spinning right: casadh ar deiseal
+        zooming east: zooming east
+        driving east: driving east
         wandering: fánaíocht
+        spinning left: spinning left
         shrinking: crapadh
         growing: fás
         moving south: dul ó dheas
@@ -454,7 +484,10 @@ ga-IE:
         patrolling: patrólú
         moving east: dul soir
       behaviors 4:
+        move south and west: move south and west
         wandering: fánaíocht
+        running east: running east
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -466,10 +499,13 @@ ga-IE:
         patrolling: patrólú
         moving east: dul soir
       behaviors 6:
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
         moving east: dul soir
+        rolling: rolling
+        running east: running east
         wandering: fánaíocht
         moving south: dul ó dheas
         swimming left and right: snámh anonn is anall
@@ -479,9 +515,12 @@ ga-IE:
         patrolling: patrólú
       behaviors 7:
         moving north: dul ó thuaidh
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
+        rolling: rolling
+        running east: running east
         wandering: fánaíocht
         moving south: dul ó dheas
         swimming left and right: snámh anonn is anall
@@ -492,8 +531,11 @@ ga-IE:
       behaviors free play:
         spinning and growing: casadh agus fás
       courseE_Dogger_2:
+        drive left: drive left
+        drive right: drive right
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -506,6 +548,7 @@ ga-IE:
       courseE_aboutme_1:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -518,6 +561,7 @@ ga-IE:
       courseE_aboutme_2:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -530,6 +574,7 @@ ga-IE:
       courseE_aboutme_3:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -542,6 +587,7 @@ ga-IE:
       courseE_aboutme_4:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -554,6 +600,7 @@ ga-IE:
       courseE_aboutme_5:
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
@@ -564,12 +611,16 @@ ga-IE:
         moving west: dul siar
         patrolling: patrólú
       courseF_project_1:
+        flying south and loop: flying south and loop
+        drive south and loop: drive south and loop
         wandering: fánaíocht
         moving east: dul soir
+        spinning left: spinning left
         spinning right: casadh ar deiseal
         shrinking: crapadh
         growing: fás
         moving south: dul ó dheas
+        being hungry: being hungry
         moving north: dul ó thuaidh
         jittering: crith
         moving west: dul siar

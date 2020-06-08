@@ -22,6 +22,42 @@ ga-IE:
           cliceáil 'Rith' arís.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Tá tú sa Mód Deartha anois.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 Boolean Predict:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2018:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2019:
+        '': This program will print out a result here
+      CSD U3 Sprites anitab 1:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2018:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2019:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites intro sprites:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Use this block to create a sprite
+      CSD U3 Sprites text:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2018:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2019:
+        '': Use this block to put text on the screen
+      CSD U3 UP_ARROW:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018_2019:
+        '': Add an if statement and place your movement code inside it
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Athraigh an uimhir anseo
       CSD U3 Variables Predict Where XY:
@@ -46,14 +82,71 @@ ga-IE:
         CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_2019:
         CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction velocityX:
         CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX_2018:
         CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityX_2019:
         CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_2018:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY_2019:
@@ -64,6 +157,24 @@ ga-IE:
         CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions isTouching intro_2019:
         CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types:
         CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 collisions types_2018:
@@ -97,6 +208,60 @@ ga-IE:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018_2019:
+        '': Add your block inside this if statement
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019:
+        callout: This block creates a variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Seo é an cnaipe "Rith".
@@ -149,6 +314,8 @@ ga-IE:
         CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
+      CSDU4 - Design Mode - 3:
+        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Cé mhéad uair a chaithfidh tú an zombaí a aistriú chun
           ciorcal iomlán a dhéanamh
@@ -247,6 +414,9 @@ ga-IE:
         dance_callout_11_b: Bloc nua!
       Dance_Party_11_5:
         dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
       Function intro Ryan:
         Function_intro_Ryan_1: Insíonn an t-ordú beag seo don ríomhaire an píosa MÓR
           cóid sa spás oibre leis an ainm céanna a rith.
@@ -354,6 +524,9 @@ ga-IE:
       OPD-K5-projects-4:
         courseE_playLab_scaffold3_1: Treoraigh an t-aisteoir don bhratach seo chun
           dul ar aghaidh go dtí an chéad leibhéal eile.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach
           nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna
@@ -406,6 +579,10 @@ ga-IE:
         '': Cliceáil anseo!
       behaviors 1:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
+      behaviors 3a:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Replace the costume block below with this.
       behaviors 4:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
       behaviors 5:
@@ -489,6 +666,8 @@ ga-IE:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
           den chineál seo is féidir leat a úsáid sa dúshlán seo.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
           Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
@@ -623,6 +802,11 @@ ga-IE:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
           aisteoirí a aistriú timpeall an spáis oibre.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: This block is very important for this project. Be sure to
+          use it!
+      courseC_artist_loops1b_2019:
+        sticker2: Add this to the middle of your program.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir
           a chur i lár an scáileáin.
@@ -715,6 +899,12 @@ ga-IE:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
           mhéad bloc den chineál seo atá fágtha agat.
+      courseC_maze_programming5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo
           níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
@@ -797,6 +987,8 @@ ga-IE:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
           mhéad bloc den chineál seo atá fágtha agat.
+      courseD_maze_intro5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.
@@ -839,6 +1031,18 @@ ga-IE:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
           mhéad bloc den chineál seo atá fágtha agat.
+      courseD_maze_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
           líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
@@ -863,6 +1067,8 @@ ga-IE:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
           mhéad bloc den chineál seo atá fágtha agat.
+      courseD_scrat_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
           líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
