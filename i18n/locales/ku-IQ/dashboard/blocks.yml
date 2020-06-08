@@ -3,8 +3,10 @@ ku:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -15,6 +17,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           MOVE1:
             MOVES.Roll: خل بوونەوە
@@ -27,6 +30,8 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
           MOVE2:
             MOVES.Roll: خل بوونەوە
             MOVES.ClapHigh: چەپڵەی بەهێز
@@ -38,11 +43,14 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
       Dancelab_atTimestamp:
         text: پاشان{TIMESTAMP}{UNIT}
         options:
           UNIT:
             '"measures"': پێوانەکان
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: بگۆڕە{COLOR}{METHOD} بە ئەندازەی {AMOUNT}
         options:
@@ -54,6 +62,7 @@ ku:
         text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -64,6 +73,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': هەموو ئەسپە یەکشاخەکان
           MOVE:
             '"next"': "(دواتر)"
@@ -79,6 +89,8 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
           DIR:
             '1': "→"
             "-1": "←"
@@ -99,6 +111,8 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
           DIR:
             '1': "→"
             "-1": "←"
@@ -106,13 +120,17 @@ ku:
         text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
       Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} by {VAL}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -123,9 +141,12 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -133,6 +154,7 @@ ku:
         text: "{GROUP} بەردەوام {MOVE} {DIR} جارێک"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -143,6 +165,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           MOVE:
             '"rand"': "(هەڕەمەکی)"
@@ -168,6 +191,8 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
           DIR:
             '1': "→"
             "-1": "←"
@@ -198,14 +223,21 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
+      Dancelab_everyMeasuresRange:
+        text: 'repeat every {N} measures after {START} '
       Dancelab_everySeconds:
         text: 'هەموو {N} {UNIT} '
         options:
           UNIT:
             '"measures"': پێوانەکان
+            '"seconds"': seconds
       Dancelab_everySecondsRange:
         text: 'سەرجەم {N} {UNIT} لە {START} تا {STOP} '
         options:
@@ -229,7 +261,9 @@ ku:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -239,6 +273,7 @@ ku:
         options:
           UNIT:
             '"measures"': پێوانەکان
+            '"seconds"': seconds
       Dancelab_ifDanceIs:
         text: |-
           ئەگەر {SPRITE} ئەنجام بدات {DANCE}
@@ -255,6 +290,8 @@ ku:
             MOVES.Roll: خل بوونەوە
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
       Dancelab_ifTime:
         text: |-
           ئەگەر {UNIT} بریتی بێت لە {OP} {N}
@@ -262,6 +299,7 @@ ku:
         options:
           UNIT:
             '"measures"': پێوانەکان
+            '"seconds"': seconds
           OP:
             '">"': ">"
             '"<"': "\\<"
@@ -272,6 +310,8 @@ ku:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
@@ -279,8 +319,10 @@ ku:
             "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_jumpToEach:
+        text: jump {GROUP} to {LOCATION}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -291,10 +333,13 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
@@ -305,6 +350,7 @@ ku:
         text: "{GROUP} ڕێکبخە وەک {FORMAT}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -315,14 +361,20 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           FORMAT:
             '"border"': چوارچێوە
             '"inner"': چوارگۆشەی ناوەوە
+            '"diamond"': diamond
             '"circle"': بازنە
             '"grid"': هێڵدار
+            '"top"': top row
             '"row"': ڕیز
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': ستوون
+            '"right"': right column
             '"x"': بەیەکداچوو
             '"plus"': کۆ
             '"random"': هەڕەمەکی
@@ -330,14 +382,23 @@ ku:
         text: "{COSTUME} ێکی نوێ دروستبکە لە {LOCATION}"
         options:
           COSTUME:
+            '"ALIEN"': alien
             '"BEAR"': وورچ
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
             '"FROG"': بۆق
             '"MOOSE"': هەموو ڕەنەکان
             '"PINEAPPLE"': ئەناناس
+            '"ROBOT"': robot
             '"SHARK"': ماسی قرش
+            '"SLOTH"': sloth
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
@@ -358,10 +419,13 @@ ku:
             '"PINEAPPLE"': ئەناناس
             '"ROBOT"': ڕۆبۆت
             '"SHARK"': ماسی قرش
+            '"SLOTH"': sloth
             '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
@@ -402,14 +466,20 @@ ku:
             '"PINEAPPLE"': ئەناناس
             '"ROBOT"': ڕۆبۆت
             '"SHARK"': ماسی قرش
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           LAYOUT:
             '"border"': چوارچێوە
             '"inner"': چوارگۆشەی ناوەوە
+            '"diamond"': diamond
             '"circle"': بازنە
             '"grid"': هێڵدار
+            '"top"': top row
             '"row"': ڕیز
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': ستوون
+            '"right"': right column
             '"x"': بەیەکداچوو
             '"plus"': کۆ
             '"random"': هەڕەمەکی
@@ -433,6 +503,7 @@ ku:
           {EFFECT} {PALETTE}
         options:
           EFFECT:
+            '"none"': None
             '"circles"': بازنە
             '"color_cycle"': ڕەنگ
             '"diamonds"': ئەڵماس
@@ -466,24 +537,32 @@ ku:
           {PALETTE} {EFFECT}
         options:
           EFFECT:
+            '"none"': None
             '"rand"': "(هەڕەمەکی)"
             '"circles"': بازنە
+            '"quads"': Angles
             '"color_cycle"': ڕەنگ
             '"diamonds"': ئەڵماس
             '"disco_ball"': تۆپی دیسکۆ
             '"fireworks"': یاری ئاگرین
+            '"flowers"': Flowers
+            '"growing_stars"': Growing Stars
             '"swirl"': هایپنۆ
             '"kaleidoscope"': كالیدۆسکۆپ
             '"lasers"': تەختەی سەمای لێزەری
             '"splatter"': پڕژێنەری بۆیە
             '"rainbow"': پەلكەزێرینە
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
             '"snowflakes"': بەفر
             '"text"': ناوی گۆرانیەکان
+            '"squiggles"': Squiggles
             '"galaxy"': بۆشایی ئاسمان
             '"sparkles"': بریسکە
             '"spiral"': لوولپێچی
             '"disco"': چوارگۆشە
             '"stars"': ئەستێرە
+            '"music_wave"': Waves
           PALETTE:
             '"rave"': ڕەش و سپی
             '"cool"': تۆنی شین
@@ -507,6 +586,7 @@ ku:
         text: خێرایی سەمای {GROUP} دابنێ بە {SPEED}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -517,6 +597,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           SPEED:
             '1': normal
@@ -528,6 +609,7 @@ ku:
         text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
         options:
           EFFECT:
+            '"none"': None
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
             '"hearts_red"': دڵ
@@ -545,11 +627,15 @@ ku:
         text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
         options:
           EFFECT:
+            '"none"': None
             '"rand"': "(هەڕەمەکی)"
             '"bubbles"': بڵق
+            '"hearts_colorful"': Colorful Hearts
             '"confetti"': بڕشتی کاغەز
+            '"emojis"': Emojis
             '"hearts_red"': دڵ
             '"music_notes"': نۆتەی مۆسیقا
+            '"paint_drip"': Paint Drip
             '"pineapples"': ئەناناس
             '"pizzas"': پیتزا
             '"smiling_poop"': پیسایی
@@ -558,12 +644,15 @@ ku:
             '"smile_face"': خەندە
             '"spotlight"': سپۆتلایت
             '"color_lights"': ڕووناکی ستەیج
+            '"exploding_stars"': Starburst
             '"raining_tacos"': لەفەی تاکۆ
       Dancelab_setProp:
         text: 'دابنی {SPRITE} {PROPERTY} بە بڕی {VAL} '
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -571,6 +660,7 @@ ku:
         text: دابنێ {GROUP} {PROPERTY} بە بڕی {VAL}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -581,9 +671,12 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -592,14 +685,18 @@ ku:
         text: بە هەڕەمەکی {SPRITE} {PROPERTY} ڕێکبخە
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
             '"tint"': سێبەری ڕەنگ
       Dancelab_setPropRandomEach:
+        text: randomize {GROUP} {PROPERTY}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -610,9 +707,12 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -623,6 +723,7 @@ ku:
         text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -633,11 +734,13 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintEachInline:
         text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -648,6 +751,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintInline:
         text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
@@ -661,6 +765,7 @@ ku:
         text: بینراویی {THIS} بکە بە {VISIBILITY}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -671,6 +776,7 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           VISIBILITY:
             'true': بینراو
@@ -679,7 +785,9 @@ ku:
         text: "{SPRITE} دەستپێدەکات {PROPERTY} دوای {RANGE}"
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -689,8 +797,10 @@ ku:
             '"mid"': ناوەند
             '"treble"': سیانی
       Dancelab_startMappingEach:
+        text: "{GROUP} begin {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -701,9 +811,12 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -716,7 +829,9 @@ ku:
         text: "{SPRITE} دەوەستێت {PROPERTY} دوای {RANGE}"
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -727,8 +842,10 @@ ku:
             '"mid"': ناوەند
             '"treble"': سیانی
       Dancelab_stopMappingEach:
+        text: "{GROUP} stop {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
@@ -739,9 +856,12 @@ ku:
             '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': هەموو قرشەکان
+            '"SLOTH"': sloths
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
             '"rotation"': سوڕانەوە
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
@@ -752,14 +872,40 @@ ku:
             '"mid"': ناوەند
             '"treble"': سیانی
       Dancelab_translateStrings:
+        text: translate {STRING}
         options:
           STRING:
+            '"music_wave"': Waves
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"quads"': Angles
+            '"flowers"': Flowers
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Growing Stars
+            '"emojis"': Emojis
             '"hearts_colorful"': دڵ
+            '"paint_drio"': Paint Drip
+            '"exploding_stars"': Starburst
+            '"row_top"': top row
+            '"row_bottom"': bottom row
+            '"column_left"': left column
+            '"column_right"': right column
+            '"diamond"': diamond
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Highway
+            '"stream"': Stream
+            '"tile"': Tile
+            '"shadow"': Shadow
             '"s"': s
             '"t"': t
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -775,6 +921,10 @@ ku:
         text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
+            '"up"': up
+            '"left"': left
+            '"down"': down
+            '"right"': right
             '"space"': بۆشایی ئاسمان
             '"enter"': ئینتەر
             '"a"': a
@@ -800,6 +950,8 @@ ku:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -822,18 +974,34 @@ ku:
         text: دامەزراندن
       Dancelab_whenSetup2:
         text: دامەزراندن
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} بەر {SPRITE2} دەکەوێ"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_clickedOn:
         text: کاتێک {SPRITE} کرتە دەکرێت
       gamelab_clickedSpritePointer:
@@ -852,7 +1020,10 @@ ku:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
             '"tint"': سێبەری ڕەنگ
       gamelab_getThisSprite:
@@ -860,16 +1031,27 @@ ku:
         options:
           CHOICE:
             '"this"': ئەمە
+            '"other"': other
       gamelab_hideTitleScreen:
         text: شاشەی ناونیشان بشارەوە
       gamelab_isTouchingEdges:
         text: "{SPRITE} بەر لێوارەکان دەکەوێت"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} داگیراوە"
         options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
           KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
             '"a"': a
             '"b"': b
             '"c"': c
@@ -893,6 +1075,8 @@ ku:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
         text: 'شوێنی x: {X} y: {Y}'
@@ -906,8 +1090,14 @@ ku:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} ڕوودەکاتە {DIRECTION}"
+        options:
+          DIRECTION:
+            '"right"': right
+            '"left"': left
       gamelab_mouseLocation:
         text: شوێنی ماوس
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: "{SPRITE} بجوڵێنە بەبڕی{DISTANCE} وێنەخاڵ بۆ پێشەوە"
       gamelab_moveInDirection:
@@ -920,6 +1110,10 @@ ku:
             '"West"': ڕۆژئاوا
       gamelab_moveToward:
         text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: دەنگ هەڵکەر {SOUND}
       gamelab_pointInDirection:
@@ -954,26 +1148,50 @@ ku:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ئەشكەوت
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': مەیدان
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': گەلەستێرە
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': هێڵدار
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': پەلكەزێرینە
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': خەیاڵی-زانستی
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ئەستێرە
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: هیچ
       gamelab_setProp:
         text: دابنی {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} بکە بە {N}%"
         options:
           PROPERTY:
+            '"scale"': size
             '"width"': پانی
+            '"height"': height
       gamelab_setTint:
         text: ڕەنگی {THIS} بگۆڕە بۆ {COLOR}
       gamelab_setupSim:
@@ -989,14 +1207,33 @@ ku:
         text: شاشەی ناونیشان پشانبدە {BREAK} ناونیشان {TITLE} دەق {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} کرتە کراوە"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
+        options:
+          DIRECTION:
+            '"right"': right
+            '"left"': left
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: کاتێک هێمای خوارەوە دادەگیرێت
       gamelab_whenKey:
         text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1015,6 +1252,11 @@ ku:
         text: کاتێک {KEY} داگیراوە
         options:
           KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1033,38 +1275,80 @@ ku:
         text: پۆتانی yی {SPRITE}
       Mikelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'add training data: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": object
+            "{x: 200, y: 100}": fish
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fish
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
+      Mikelab_getNext:
+        text: get next object
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       Mikelab_groupChangeAnim:
         text: "{SELECT} {COSTUME} بگۆڕە بۆ {COSTUME2}"
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupChangePropBy:
         text: "{PROPERTY} ی {SELECT} {COSTUME} بگۆڕە بە بڕی {VAL}"
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       Mikelab_groupCreateNewSprite:
         text: "{COSTUME} ێکی نوێ دروستبکە لە {LOCATION}"
@@ -1072,15 +1356,19 @@ ku:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: لاببە {SELECT} {COSTUME}
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupDisplace:
         text: هەموو {COSTUME} ڕێگەدەگرن {COSTUME2} بجوڵێ
@@ -1093,35 +1381,46 @@ ku:
             '"average"': تێکڕا
             '"this"': ئەمە
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       Mikelab_groupRemoveAllBehaviors:
         text: کردەوەکانی {SELECT} {COSTUME} بوەستێنە
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} وادەکات {BEHAVIOR} بوەستێت"
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupRemoveTint:
         text: ڕەنگی {SELECT} {COSTUME} لاببە
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupSetProp:
         text: "{PROPERTY} ی {SELECT} {COSTUME} دابنێ بەبڕی {VAL}"
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
       Mikelab_groupSetTint:
         text: ڕەنگی {SELECT} {COSTUME} بگۆڕە بۆ {COLOR}
         options:
           SELECT:
+            '"all"': all
             '"this"': ئەمە
       Mikelab_groupWhenClickedOn:
         text: کاتێک {COSTUME} کرتە دەکرێت
@@ -1135,6 +1434,12 @@ ku:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} ئێستاکە {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: remove {TRASH}
+        options:
+          TRASH:
+            object: object
+            fish: fish
       Mikelab_ifDanceIs:
         text: |-
           ئەگەر {SPRITE} ئەنجام بدات {DANCE}
@@ -1151,53 +1456,183 @@ ku:
             MOVES.Roll: خل بوونەوە
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+      Mikelab_ifLabel:
+        text: |-
+          if {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: not my-label
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'شوێنی x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: رەنگێکی هەڕەمەکی
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
+      Mikelab_repeatUntilComplete:
+        text: repeat forever
+      Mikelab_sendBad:
+        text: move object left
+      Mikelab_sendGood:
+        text: move object right
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
+            '"scale"': size
             '"rotation"': سوڕانەوە
+            '"x"': x position
+            '"y"': y position
             '"direction"': ئاڕاستەی جووڵە
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
+      Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
+        options:
+          CORNER:
+            '"right"': right
+            '"left"': left
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: "{COSTUME} ێکی سپڕایتی نوێ لە {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
             "{x: 200, y: 200}": ناوەڕاست
             "{x: 100, y: 100}": سەرەوە لای چەپ
             "{x: 300, y: 100}": سەرەوە لای ڕاست
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: کاتێک {SPRITE} کرتە دەکرێت
       Mikelab_whenKeyPressed:
         text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
             '"w"': ڕۆژئاوا
+            '"a"': A
             '"s"': باشور
+            '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
             '"w"': ڕۆژئاوا
+            '"a"': A
             '"s"': باشور
+            '"d"': D
       Mikelab_whenMouseClicked:
         text: کاتێ ماوس کرتە دەکرێ
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
+      Mikelab_whenYesNoClicked:
+        text: when {KEY} clicked
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
+      Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
+        options:
+          KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
@@ -1229,7 +1664,10 @@ ku:
         text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
       aalab_addBehaviorUntilBoolean:
         text: سپڕایتی {SPRITE} دەست بە {BEHAVIOR} دەکات تا {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: new sprite named{SPRITE_NAME} with costume{ANIMATION_NAME} at location{LOCATION}
       aalab_goToScene:
+        text: go to scene {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1246,15 +1684,25 @@ ku:
       aalab_prompt:
         text: پرسیار بکە {MESSAGE}
       aalab_scene:
+        text: scene {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: setup story
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': هەڕەمەکی
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: دووانی بکێشە {BIN}
       binary_drawBinScreen:
@@ -1287,10 +1735,21 @@ ku:
         text: قەبارەی تۆڕە هێڵدارەکە دیاریبکە {SIZE}
       binary_move:
         text: "{DIR} بجوڵێنە"
+        options:
+          DIR:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
       binary_whenKey:
         text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1314,6 +1773,7 @@ ku:
             "'redCoralBlock'": مەرجانی سوور
             "'sand'": لم/وردە بەرد
             "'wool_blue'": ئاوی قووڵ
+            "'planksOak'": oak planks
             "'seaLantern'": چرای دەریایی
       craft_ifStandingOnLimit:
         text: |-
@@ -1326,6 +1786,8 @@ ku:
             "'seaLantern'": چرای دەریایی
       craft_log:
         text: نامەی لۆگ {MESSAGE}
+      craft_moveForward:
+        text: move forward
       craft_placeBlock:
         text: جێگیربکە {blockType}
         options:
@@ -1357,6 +1819,8 @@ ku:
             '"polishedGranite"': گرانێتی لووس
       craft_placePrismarine:
         text: پریسمارین دابنێ
+      craft_placeTorch:
+        text: place torch
       craft_repeatUntilConduit:
         text: |-
           دووبارە بکەوە تا جۆگەکە تەواو دەبێت

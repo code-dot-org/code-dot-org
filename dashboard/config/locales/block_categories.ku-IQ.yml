@@ -3,11 +3,30 @@ ku:
   data:
     block_categories:
       Actions: کردەوەکان
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: ڕەنگ
+      Comment: Comment
+      Comments: Comments
       Conditionals: مەرجیەکان
+      Dancers: Dancers
+      Default: Default
+      Events: Events
       Functions: فرمانەکان
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: لۆژيك
       Loops: گرێکان
       Math: بیرکاری
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: دەق
       Variables: گۆڕاوەکان
+      'Variables ': 'Variables '
+      World: World
