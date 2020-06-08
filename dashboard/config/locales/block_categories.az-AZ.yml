@@ -3,15 +3,30 @@ az:
   data:
     block_categories:
       Actions: Əmrlər
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Rəng
       Comment: Şərh
+      Comments: Comments
       Conditionals: Şərti ifadələr
+      Dancers: Dancers
+      Default: Default
       Events: Hadisələr
       Functions: funksiyalar
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Məntiq
       Loops: dövrlər
       Math: Riyaziyyat
       Numbers: Ədədlər
+      Properties: Properties
+      Sprites: Sprites
       Text: mətn
       Variables: dəyişənlər
+      'Variables ': 'Variables '
       World: Dünya

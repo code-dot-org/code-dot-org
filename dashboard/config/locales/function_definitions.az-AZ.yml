@@ -17,27 +17,53 @@ az-AZ:
           name: çevrə çək
         draw a car:
           name: bir avtomobil çək
+      2-3 Artist 7:
+        draw_rect:
+          name: draw_rect
+          parameters:
+            width: width
+            height: hündürlük
       2-3 Artist Debugging 10:
         draw square:
           name: bir kvadrat çək
+          parameters:
+            width: width
+            height: hündürlük
+        jump to controller top left:
+          name: jump to controller top left
+        jump to middle:
+          name: jump to middle
         draw a circle:
           name: çevrə çək
         draw a button:
           name: bir düymə çək
+        draw cord:
+          name: draw cord
+        draw R pad:
+          name: draw R pad
       2-3 Artist Debugging 5:
         draw left leg:
           name: sol ayaq çək
         draw right leg:
           name: sağ ayaq çək
+        draw body and arms:
+          name: draw body and arms
+          parameters:
+            armlength: armlength
+            bodylength: bodylength
         draw a head:
           name: bir baş çək
       2-3 Artist Debugging 6:
         draw right leg:
           name: sağ ayaq çək
+        draw sitting stick figure:
+          name: draw sitting stick figure
         draw head:
           name: baş çək
         draw arms:
           name: qolları çək
+        jump to neck:
+          name: jump to neck
         draw left leg:
           name: sol ayaq çək
       2-3 Artist Debugging 7:
@@ -47,6 +73,9 @@ az-AZ:
           name: D çək
         draw E:
           name: E çək
+      2-3 Artist Functions 1:
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 10:
         big gear:
           name: böyük dişli çarx
@@ -64,9 +93,13 @@ az-AZ:
       2-3 Artist Functions 2:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 3:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 4:
         draw a square:
           name: kvadrat çək
@@ -82,6 +115,21 @@ az-AZ:
       2-3 Bee Functions 2:
         get 5:
           name: 5 ədəd götür
+      2-3 Bee Functions 4:
+        move and get nectar:
+          name: move and get nectar
+      2-3 Bee Functions 5:
+        move and get 4:
+          name: move and get 4
+      2-3 Bee Functions 6:
+        move and get 4:
+          name: move and get 4
+      2-3 Bee Functions 8:
+        get 7 nectar make 7 honey:
+          name: get 7 nectar make 7 honey
+      2-3 Bee Functions 9:
+        get 7 make 7:
+          name: get 7 make 7
       2-3 Bee Functions Assessment 1:
         get 7:
           name: 7 ədəd götür
@@ -106,42 +154,122 @@ az-AZ:
           name: dairə çək
         draw goal:
           name: hədəf çək
+      4-5 Bee Conditionals 7:
+        check purple flower:
+          name: check purple flower
+      4-5 Bee Conditionals 8:
+        check flower make honey:
+          name: check flower make honey
+      4-5 Bee Conditionals Assessment 1:
+        get nectar or make honey:
+          name: get nectar or make honey
+      4-5 Bee Debugging 7:
+        make 3 honey:
+          name: make 3 honey
+      4-5 Bee Debugging 8:
+        get 5 nectar:
+          name: get 5 nectar
+      4-5 Bee Debugging 9:
+        make all honey:
+          name: make all honey
+      Alien Defender:
+        game has been won:
+          name: game has been won
       Choose Your Own Adventure:
+        witch ending:
+          name: witch ending
         story:
           name: hekayə
+        starting path:
+          name: starting path
       Course 4 Artist Binary 1:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 2:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 3:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 4:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 5:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 6:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary 7:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary Free Play 2:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary Free Play 2a:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary Free Play 2b:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       Course 4 Artist Binary pre1:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
+      Course 4 Artist Functions Inspiration:
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square 20px wide
+      Course 4 Artist Functions challenge:
+        draw a line of squares:
+          name: draw a line of squares
+          description: draw a 6 squares next to one another 6 squares long
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square 20px wide
       Course 4 Bee Params 1:
         get 3 nectar:
           name: 3 nektar al
@@ -151,41 +279,102 @@ az-AZ:
       Course 4 Bee Params 3:
         get 3 nectar:
           name: 3 nektar al
+          parameters:
+            direction: direction
       Course 4 Bee Params 4:
         get 3 nectar:
           name: 3 nektar al
+          parameters:
+            direction: direction
+      Course 4 Bee Params 5:
+        get 5 nectar:
+          name: get 5 nectar
+          parameters:
+            direction: direction
+      Course 4 Bee Params 6:
+        get 5 nectar:
+          name: get 5 nectar
+          parameters:
+            direction: direction
+            nectar units: nectar units
       Course 4 Bee Params 7:
         get many nectar:
           name: çoxlu nektar al
+          description: Collect a given number of nectar in either direction
+          parameters:
+            direction: direction
+            nectars: nectars
       Course 4 Bee Params 8:
         get nectar make honey:
           name: nektar al bal hazırla
+          description: Move in a direction to either collect nectar or make honey.
+          parameters:
+            direction: direction
+            nectars: nectars
+            honey: bal
       Course 4 Play Lab Params 1:
         jump:
           name: atıl
+          description: Makes the main character jump up 100 pixels
+      Course 4 Play Lab Params 10:
+        level_up:
+          name: level_up
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: xallar
       Course 4 Play Lab Params 2:
         jump:
           name: atıl
+          description: Makes the main character jump up 'height' pixels
       Course 4 Play Lab Params 3:
         jump:
           name: atıl
+          description: Makes the given actor jump the given height
+          parameters:
+            height: hündürlük
+            actor: personaj
       Course 4 Play Lab Params 4:
         patrol:
           name: patrul
+          description: Move a sprite up an down
         do something:
           name: bir şey etmək
       Course 4 Play Lab Params 5:
         patrol:
           name: patrul
+          description: Move a sprite up an down
+          parameters:
+            actor: personaj
       Course 4 Play Lab Params 6:
         patrol:
           name: patrul
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: personaj
       Course 4 Play Lab Params 7:
         patrol:
           name: patrul
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: personaj
+            speed: sürət
       Course 4 Play Lab Params 8:
         patrol:
           name: patrul
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: personaj
+            speed: sürət
+      Course 4 Play Lab Params 9:
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: xallar
       Course 4 Play Lab Vars 1:
         set score:
           name: skoru təyin et
@@ -195,19 +384,80 @@ az-AZ:
       Course 4 SCF 1:
         draw a hexagon:
           name: altıbucaqlı çək
+        draw a line of hexagons:
+          name: draw a line of hexagons
+        shift down/forward:
+          name: shift down/forward
+        shift down/backward:
+          name: shift down/backward
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
       Course 4 SCF 1a:
         get nectar:
           name: nektarı al
+          parameters:
+            dir: dir
+            counter: sayğac
+      Course 4 SCF 1b:
+        make honey up and over:
+          name: make honey up and over
+      Course 4 SCF 2:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
+        draw octagons:
+          name: draw octagons
+          parameters:
+            numOctagons: numOctagons
+        draw an octagon:
+          name: draw an octagon
+        shift down:
+          name: shift down
       Course 4 SCF 3:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: bir şey etmək
+        draw an octagon:
+          name: draw an octagon
+          parameters:
+            length: uzunluq
       'Course E: Play Lab Project':
         do something:
           name: bir şey etmək
       Find the Wizard:
+        check guess:
+          name: check guess
         do something:
           name: bir şey etmək
+      FoodFight:
+        level_up:
+          name: level_up
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: xallar
+      Function intro Ryan:
+        build bridge:
+          name: build bridge
+      Function intro Ryan_2019:
+        build bridge:
+          name: build bridge
       Geometric Sun:
+        draw a door:
+          name: draw a door
+        draw grass:
+          name: draw grass
+        draw windows:
+          name: draw windows
+        rectangle:
+          name: rectangle
+          description: lol
         sun:
           name: günəş
         diamond:
@@ -220,7 +470,17 @@ az-AZ:
           name: üçbucaq
         square:
           name: kvadrat
+          description: lol
       Geometric Sun_2018:
+        draw a door:
+          name: draw a door
+        draw grass:
+          name: draw grass
+        draw windows:
+          name: draw windows
+        rectangle:
+          name: rectangle
+          description: lol
         sun:
           name: günəş
         diamond:
@@ -233,18 +493,136 @@ az-AZ:
           name: üçbucaq
         square:
           name: kvadrat
+          description: lol
+      Guess The Number:
+        check guess:
+          name: check guess
+          parameters:
+            theGuess: theGuess
+      InspirationalArtwork:
+        n-sided shape:
+          name: n-sided shape
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+          parameters:
+            sides: sides
+            length: uzunluq
+        draw a loop:
+          name: draw a loop
+          parameters:
+            length: uzunluq
+            sides: sides
+        draw spiral circle:
+          name: draw spiral circle
+          parameters:
+            size: ölçü
+      InspirationalArtwork_2018:
+        draw a loop:
+          name: draw a loop
+          parameters:
+            length: uzunluq
+            sides: sides
+        n-sided shape:
+          name: n-sided shape
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+        draw spiral circle:
+          name: draw spiral circle
+          parameters:
+            size: ölçü
+      K-1 Artist2 3:
+        draw roof:
+          name: draw roof
+      K-1 Artist2 4:
+        draw rectangle:
+          name: draw rectangle
+      K-1 Artist2 5:
+        draw rectangle:
+          name: draw rectangle
+      MC_HOC_2017_07_Cole:
+        clear path:
+          name: clear path
+      MC_HOC_2017_07_Cole_2019:
+        clear path:
+          name: clear path
+      MC_HOC_2017_10_RETRY:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_Ali:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_FP20x20:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
+      NEW Course 4 Artist Functions 11:
+        draw a line of  squares:
+          name: draw a line of  squares
+          description: draw a 6 squares next to one another 6 squares long
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square with sides 20 pixels long
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 12:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 13:
+        draw a square 20:
+          name: draw a square 20
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 14:
+        empty function:
+          name: empty function
+        draw a line of squares:
+          name: draw a line of squares
+          description: 'draw a line of squares '
+        draw a square 40:
+          name: draw a square 40
+          description: Draw a square with sides length 40
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: kvadrat çək
       NEW Course 4 Artist Functions 4:
         draw a square:
           name: kvadrat çək
+          description: draws a square that is 100 pixels in size
       NEW Course 4 Artist Functions 7:
         draw a square:
           name: kvadrat çək
       NEW Course 4 Artist Functions 8:
         draw a triangle:
           name: üçbucaq çək
+          description: 'draws a triangle that is 100 pixels in size
+
+'
       NEW Course 4 Artist Functions 9:
         draw a square:
           name: kvadrat çək
@@ -260,22 +638,82 @@ az-AZ:
           name: bir şey etmək
         draw a hexagon:
           name: altıbucaqlı çək
+          description: draw a hexagon that is 100 pixels in size with a length parameter
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+            length: uzunluq
         do something:
           name: bir şey etmək
+          parameters:
+            sides: sides
+            length: uzunluq
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: uzunluq
+            sides: sides
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: uzunluq
+            sides: sides
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: uzunluq
+            sides: sides
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: uzunluq
+            sides: sides
       NEW Course 4 Artist Params 15:
         draw a star:
           name: bir ulduz çək
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            sides: sides
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+            sides: sides
       NEW Course 4 Artist Params 2:
         do something:
           name: bir şey etmək
@@ -285,50 +723,140 @@ az-AZ:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: üçbucaq çək
+          description: draw a triangle that is 50 pixels in size
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          name: draw a triangle with length
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          name: draw a pentagon
+          description: draw a pentagon that is 100 pixels
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a hexagon:
           name: altıbucaqlı çək
+          description: draw a hexagon that is 100 pixels in size
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          description: draw a square that is 100 pixels' length in size
+          parameters:
+            length: uzunluq
+        draw a sqaure:
+          name: draw a sqaure
+          description: draw a square that is 100 pixels in size
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: üçbucaq çək
+          description: 'draw a triangle with length parameter
+
+'
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          name: draw a triangle with length
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 9:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
         do something:
           name: bir şey etmək
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: uzunluq
+            sides: sides
       NEW Course 4 Play Lab Params 11:
         jump:
           name: atıl
+          description: jump function block with height and actor parameter
+          parameters:
+            height: hündürlük
+            actor: personaj
         patrol:
           name: patrul
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: personaj
+            speed: sürət
       New Artist Project:
         draw a star:
           name: bir ulduz çək
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            sides: sides
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+      New Minecraft Hero Project:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
       New Play Lab Project:
         jump:
           name: atıl
+          description: jump function block with height and actor parameter
+          parameters:
+            height: hündürlük
+            actor: personaj
         patrol:
           name: patrul
+          description: a patrol function that has a actor and speed parameter
+          parameters:
+            actor: personaj
+            speed: sürət
       Robot Doodle:
+        25 pixel square:
+          name: 25 pixel square
         draw head:
           name: baş çək
         draw eye:
           name: göz çək
       Robot Doodle_2018:
+        25 pixel square:
+          name: 25 pixel square
         draw head:
           name: baş çək
         draw eye:
@@ -339,30 +867,140 @@ az-AZ:
       Standalone_Artist_8:
         draw a shape:
           name: bir forma çək
+      Standalone_Artist_9:
+        my function:
+          name: my function
+      course1_artist_loops_challenge1:
+        '"simple" solution':
+          name: '"simple" solution'
+      course1_artist_loops_challenge2:
+        potential solution:
+          name: potential solution
       course3_artist_functions_challenge1:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       course3_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       course3_bee_functions_challenge1:
         do something:
           name: bir şey etmək
+        get 3 nectar or honey:
+          name: get 3 nectar or honey
       course3_bee_functions_challenge2:
         do something:
           name: bir şey etmək
+        move and collect:
+          name: move and collect
+      course3_bee_functions_challenge3:
+        check nectar or honey:
+          name: check nectar or honey
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+      course3_bee_functions_challenge4:
+        check nectar or honey:
+          name: check nectar or honey
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+        move and check:
+          name: move and check
+      course3_playLab_challenge1:
+        win game:
+          name: win game
+        lose game:
+          name: lose game
+        keep playing:
+          name: keep playing
       course4_artist_binary_challenge1:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       course4_artist_binary_challenge2:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      course4_artist_concept_challenge2:
+        draw pinwheel:
+          name: draw pinwheel
       course4_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       course4_artist_fwp_challenge1:
+        draw background:
+          name: draw background
+          parameters:
+            color: color
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: bir şey etmək
+      course4_bee_for_challenge1:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      course4_bee_fwp_challenge1:
+        pick row:
+          name: pick row
+          parameters:
+            length: uzunluq
+      course4_bee_fwp_challenge2:
+        pick row:
+          name: pick row
+          parameters:
+            length: uzunluq
+      courseA_artist_loops_challenge1:
+        '"simple" solution':
+          name: '"simple" solution'
+      courseB_artist_loops_challenge2:
+        potential solution:
+          name: potential solution
+      courseB_artist_loops_challenge2_2018:
+        potential solution:
+          name: potential solution
+      courseB_artist_loops_challenge2_2019:
+        potential solution:
+          name: potential solution
+      courseC_artist_prog3:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
+      courseC_artist_prog3_2018:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
+      courseC_artist_prog3_2019:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
       courseC_artist_prog4:
         booster:
           name: təkanverici
@@ -376,128 +1014,297 @@ az-AZ:
         do something:
           name: bir şey etmək
       courseD_artist_binary1:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_artist_binary1_2018:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_artist_binary1_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_artist_binary2:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary2_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary2_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary3:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary3_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary3_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary4:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary4_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary4_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary5:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary5_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary5_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary6:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary6_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary6_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary7:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary7_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary7_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8_predict1:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8_predict1_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary8_predict1_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binaryFP_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binaryFP_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary_challenge1_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary_challenge1_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary_challenge2_2018:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_artist_binary_challenge2_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_autorun_binary2_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_autorun_binary3_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_autorun_binary4_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_autorun_binary5_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_autorun_binary6_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_autorun_binary7_2019:
+        draw bit:
+          name: draw bit
         draw:
           name: çək
+          parameters:
+            binary: binary
       courseD_autorun_binary8_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       courseD_autorun_binary8_predict1_2019:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseE_Dogger_2:
+        stop_everything:
+          name: stop_everything
+        lose:
+          name: lose
       courseE_artist_concept1:
         do something:
           name: bir şey etmək
@@ -509,36 +1316,76 @@ az-AZ:
       courseE_artist_concept4:
         draw a square:
           name: kvadrat çək
+        draw a line of squares:
+          name: draw a line of squares
+        draw a plane of squares:
+          name: draw a plane of squares
       courseE_artist_concept4_2018:
         draw a square:
           name: kvadrat çək
+        draw a line of squares:
+          name: draw a line of squares
+        draw a plane of squares:
+          name: draw a plane of squares
       courseE_artist_concept_challenge1:
         do something:
           name: bir şey etmək
       courseE_artist_concept_challenge1_2018:
         do something:
           name: bir şey etmək
+      courseE_artist_concept_challenge2:
+        draw pinwheel:
+          name: draw pinwheel
+      courseE_artist_concept_challenge2_2018:
+        draw pinwheel:
+          name: draw pinwheel
+      courseE_artist_functions1:
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions10:
         do something:
           name: bir şey etmək
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
       courseE_artist_functions10_2018:
         do something:
           name: bir şey etmək
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
       courseE_artist_functions10_2019:
         do something:
           name: bir şey etmək
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+      courseE_artist_functions1_copy:
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_2018:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_2019:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_copy:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions3_2018:
         draw a star:
           name: bir ulduz çək
@@ -564,24 +1411,41 @@ az-AZ:
         draw a star:
           name: bir ulduz çək
       courseE_artist_functions7:
+        draw a window:
+          name: draw a window
         draw a house:
           name: ev çək
       courseE_artist_functions7_2018:
+        draw a window:
+          name: draw a window
         draw a house:
           name: ev çək
+      courseE_artist_functions7_2019:
+        draw a window:
+          name: draw a window
       courseE_artist_functions8:
         do something:
           name: bir şey etmək
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
       courseE_artist_functions8_2018:
         do something:
           name: bir şey etmək
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
       courseE_artist_functions8_2019:
         do something:
           name: bir şey etmək
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
       courseE_artist_functions8a_2018:
@@ -595,109 +1459,371 @@ az-AZ:
         do something:
           name: bir şey etmək
       courseE_artist_functions8b_2018:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
       courseE_artist_functions8c_2018:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions9:
         do something:
           name: bir şey etmək
         draw triangle:
           name: üçbucaq çək
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functions9_2018:
         do something:
           name: bir şey etmək
         draw triangle:
           name: üçbucaq çək
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functions9_2019:
         do something:
           name: bir şey etmək
         draw triangle:
           name: üçbucaq çək
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functionsProj_2018:
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: bir kvadrat çək
       courseE_artist_functions_challenge1:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_challenge1_2018:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_challenge1_2019:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_challenge2_2018:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_challenge2_2019:
+        my design:
+          name: my design
         do something:
           name: bir şey etmək
       courseE_artist_functions_predict1:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_2018:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_2019:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_copy:
         draw a square:
           name: kvadrat çək
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict2:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: bir şey etmək
       courseE_artist_functions_predict2_2018:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: bir şey etmək
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: bir şey etmək
+      courseE_bee_concept4:
+        honey nectar:
+          name: honey nectar
       courseE_bee_functions1:
         do something:
           name: bir şey etmək
+      courseE_bee_functions10:
+        move and make honey:
+          name: move and make honey
+      courseE_bee_functions11_predict1:
+        move and make honey:
+          name: move and make honey
       courseE_bee_functions2:
         get 2 nectar:
           name: 2 nektar al
       courseE_bee_functions3:
         get 5:
           name: 5 ədəd götür
+      courseE_bee_functions4:
+        move and get nectar:
+          name: move and get nectar
+      courseE_bee_functions5:
+        move and get 4:
+          name: move and get 4
+      courseE_bee_functions6:
+        get 7 nectar make 7 honey:
+          name: get 7 nectar make 7 honey
+      courseE_bee_functions7:
+        get 7 make 7:
+          name: get 7 make 7
+      courseE_bee_functions8:
+        collect all nectar:
+          name: collect all nectar
+      courseE_bee_functions9:
+        get all nectar:
+          name: get all nectar
       courseE_bee_functions_challenge1:
         do something:
           name: bir şey etmək
+        get 3 nectar or honey:
+          name: get 3 nectar or honey
       courseE_bee_functions_challenge2:
         do something:
           name: bir şey etmək
+        move and collect:
+          name: move and collect
       courseE_farmer_concept1:
         do something:
           name: bir şey etmək
       courseE_farmer_concept2:
         do something:
           name: bir şey etmək
+        get pumpkin:
+          name: get pumpkin
+      courseE_farmer_concept2_2018:
+        get pumpkin:
+          name: get pumpkin
       courseE_farmer_concept3:
         do something:
           name: bir şey etmək
+      courseE_farmer_functions10a1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
+      courseE_farmer_functions10a1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
+      courseE_farmer_functions10b:
+        navigate:
+          name: navigate
+      courseE_farmer_functions11_predict:
+        check and pick:
+          name: check and pick
+        find pumpkin:
+          name: find pumpkin
+        wander path:
+          name: wander path
+      courseE_farmer_functions11_predict_2018:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions11_predict_2019:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions13_2018:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions13_2019:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions1a_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions1a_2019:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2ba:
+        corn and pumpkin:
+          name: corn and pumpkin
+      courseE_farmer_functions2ba_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c:
+        corn and pumpkin:
+          name: corn and pumpkin
+      courseE_farmer_functions3c1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions4b:
+        corn and pumpkin:
+          name: corn and pumpkin
+      courseE_farmer_functions5c:
+        corn and pumpkin:
+          name: corn and pumpkin
+      courseE_farmer_functions6c:
+        corn and pumpkin:
+          name: corn and pumpkin
+      courseE_farmer_functions7a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions7a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8b:
+        navigate:
+          name: navigate
+      courseE_farmer_functions9a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions9a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions9b:
+        navigate:
+          name: navigate
+      courseE_playLab_challenge1:
+        win game:
+          name: win game
+        lose game:
+          name: lose game
+        keep playing:
+          name: keep playing
       courseE_playLab_scaffold1:
         do something:
           name: bir şey etmək
@@ -713,38 +1839,199 @@ az-AZ:
       courseF_artist_fwp1:
         draw a square:
           name: kvadrat çək
+        checker:
+          name: checker
+          parameters:
+            size: ölçü
+            color: color
         do something:
           name: bir şey etmək
+        Make gingham:
+          name: Make gingham
+          parameters:
+            size: ölçü
+        black outline:
+          name: black outline
+          parameters:
+            length: uzunluq
       courseF_artist_fwp2:
         draw a square:
           name: kvadrat çək
+          description: 'draw a square with length parameter
+
+'
+          parameters:
+            length: uzunluq
+        checker:
+          name: checker
+          parameters:
+            size: ölçü
+            color: color
         do something:
           name: bir şey etmək
+        Make gingham:
+          name: Make gingham
+          parameters:
+            size: ölçü
+        black outline:
+          name: black outline
+          parameters:
+            length: uzunluq
       courseF_artist_fwp2_predict1:
         draw a square:
           name: kvadrat çək
+          description: draw a square with a length parameter
+          parameters:
+            length: uzunluq
       courseF_artist_fwp3:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        draw a square2:
+          name: draw a square2
+          parameters:
+            size: ölçü
+        filled square:
+          name: filled square
+          parameters:
+            size: ölçü
+            color: color
+        black outline:
+          name: black outline
+          parameters:
+            length: uzunluq
+      courseF_artist_fwp4:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: uzunluq
+            sides: sides
+      courseF_artist_fwp5:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: uzunluq
+            sides: sides
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: uzunluq
+            sides: sides
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: uzunluq
+            sides: sides
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: uzunluq
+            sides: sides
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: bir ulduz çək
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            sides: sides
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: uzunluq
+            sides: sides
+            min: min
       courseF_artist_fwp_challenge1:
+        draw background:
+          name: draw background
+          parameters:
+            color: color
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: bir şey etmək
       courseF_artist_fwp_challenge2:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: bir şey etmək
+        draw an octagon:
+          name: draw an octagon
+          parameters:
+            length: uzunluq
+      courseF_bee_conditionals2:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_for_challenge1:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      courseF_bee_functions2:
+        get only nectar:
+          name: get only nectar
+      courseF_bee_functions3:
+        only make honey:
+          name: only make honey
+      courseF_bee_functions3a:
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions4:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions5a:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
       courseF_bee_functions6:
         get nectar make honey:
           name: nektar al bal hazırla
@@ -759,6 +2046,102 @@ az-AZ:
       courseF_bee_functionsPre7:
         get nectar make honey:
           name: nektar al bal hazırla
+      courseF_bee_functions_challenge1:
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions_challenge2:
+        rowOfNectar:
+          name: rowOfNectar
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_fwp2:
+        rowOfNectar:
+          name: rowOfNectar
+      courseF_bee_fwp3:
+        rowOfNectar:
+          name: rowOfNectar
+      courseF_bee_fwp4:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            length: uzunluq
+      courseF_bee_fwp5:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            width: width
+      courseF_bee_fwp6:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            width: width
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          name: rowOfNectarOrHoney
+          parameters:
+            width: width
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          name: rowOfNectarOrHoney
+          parameters:
+            width: width
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          name: rowOfNectarOrHoney
+          parameters:
+            width: width
+      courseF_bee_fwp_challenge1:
+        pick row:
+          name: pick row
+          parameters:
+            length: uzunluq
+      courseF_bee_fwp_challenge2:
+        pick row:
+          name: pick row
+          parameters:
+            length: uzunluq
+      courseF_bee_variables_1_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_1_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_6_2018:
+        collect stairs:
+          name: collect stairs
+      courseF_bee_variables_6_2019:
+        collect stairs:
+          name: collect stairs
       courseF_bee_variables_7_2018:
         collect:
           name: topla
@@ -766,23 +2149,47 @@ az-AZ:
         collect:
           name: topla
       courseF_bee_variables_8_2018:
+        move and increment:
+          name: move and increment
         collect:
           name: topla
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: move and increment
         collect:
           name: topla
       grade5_artist_binary11:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       grade5_artist_binary4:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       grade5_artist_binary5:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       grade5_artist_binary8:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
       grade5_artist_binary9:
         draw:
           name: çək
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
