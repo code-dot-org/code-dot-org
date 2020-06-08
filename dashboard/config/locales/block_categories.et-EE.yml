@@ -3,12 +3,30 @@ et:
   data:
     block_categories:
       Actions: Tegevused
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Värv
+      Comment: Comment
+      Comments: Comments
       Conditionals: Tingimuslaused
+      Dancers: Dancers
+      Default: Default
       Events: Sündmused
       Functions: Funktsioonid
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Loogika
       Loops: Tsüklid
       Math: Matemaatika
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Tekst
       Variables: Muutujad
+      'Variables ': 'Variables '
+      World: World

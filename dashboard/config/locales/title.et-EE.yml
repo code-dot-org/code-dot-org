@@ -9,16 +9,20 @@ et-EE:
       BinaryImages: Binaarsed pildid
       BinaryImages_2018: Binaarsed pildid
       BuildingAFoundation: Vundamendi ehitus
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Arvutuslik mõtlemine
       Conditionals: Tingimuslaused
       Conditionals_2018: Tingimuslaused
       Crowdsourcing: Ühistegevused
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Päris elu algoritmid: täringuralli'
       DigitalCitizenship: Digitaalne kodakondsus
       DigitalFootprint: Sinu digitaalne jalajälg
       DigitalFootprint_2018: Sinu digitaalne jalajälg
       EnvelopeVariables: Ümbriku muutujad
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: For Loop Fun
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funktsionaalsed päikesepüüdjad
       GettingLoopy: Muutub tsükliliseks
       GettingLoopy_2018: Muutub tsükliliseks
@@ -27,6 +31,7 @@ et-EE:
       GraphPaperProgramming: Millimeetripaberi programmeerimine
       GraphPaperProgramming_2018: Millimeetripaberi programmeerimine
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
       MoveIt: Liiguta, liiguta
       MoveItMoveIt_2018: Liiguta, liiguta
@@ -37,16 +42,24 @@ et-EE:
       RelayProgramming: Relee programmeerimine
       RelayProgramming_2018: Relee programmeerimine
       SongwritingParameters: Laulude kirjutamine
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Laulukirjutamine parameetritega
       TangramAlgorithms: Tangrami algoritmid
       UnplugHappyMaps: Happy Maps
       UnplugHappyMaps_2018: Happy Maps
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Lahutatud tegevus
       courseB_unplugged_MRF_2018: Minu robotsõbrad
       courseB_unplugged_loopyMRF: Lahutatud tegevus
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Lahutatud tegevus
       courseC_Unplugged_ScreenOutTheMean_2018: Lahutatud tegevus
       courseD_unplugged_digitalCitizenship: Lahutatud tegevus
       courseD_unplugged_digitalCitizenship_2018: Lahutatud tegevus
+      courseE_unplugged_CnC_2018: Digital Sharing
       courseE_unplugged_privateInformation: 'Terve mõistus: Era- ja isiklik teave '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Lahutatud tegevus
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
