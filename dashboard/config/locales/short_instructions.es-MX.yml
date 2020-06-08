@@ -24,6 +24,9 @@ es-MX:
       2-3 Artist 7: "Termine dibujando el último conjunto de ventanas en la escuela
         para que todos en clase puedan ver afuera. \n\nLos lados de cada panel de
         ventana cuadrado tienen 25 píxeles de longitud. "
+      2-3 Artist 8: Complete the rooms for each of the animals by splitting the rectangle
+        into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels
+        tall. There are many different ways to solve this puzzle, so have some fun!
       2-3 Artist 9 NEW: Termina esta cometa
       2-3 Artist Assessment 1: evaluación Termina de dibujar el último diente, 25
         píxeles de ancho por 25 píxeles de alto.
@@ -32,9 +35,25 @@ es-MX:
       2-3 Artist Debugging 10: "El panel de dirección en mi dispositivo de juego es
         demasiado estrecho. \n\n¿Puedes aumentar el ancho en 10 pixeles? \n\nIntenta
         ejecutar el código primero para ver cuál es el error."
+      2-3 Artist Debugging 11: |-
+        My snowflake is falling apart!
+
+        Can you figure out what's going wrong?
       2-3 Artist Debugging 2: 'El código para los tres bigotes que ves es incorrecto.
         Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para
         dibujar los bigotes.'
+      2-3 Artist Debugging 3: "My boat has a hole! \n\nWhat do you need to fix to
+        make the ends meet?"
+      2-3 Artist Debugging 5: "The code that we have for the leg and foot is wrong.
+        \n\nCan you fix it?"
+      2-3 Artist Debugging 6: |-
+        Looks like I'm sitting on a chair that’s missing a leg!
+
+        Edit the code to draw the last leg.
+      2-3 Artist Debugging 7: |-
+        Looks like the C in code is drawn backwards!
+
+        Can you make it look like a C again?
       2-3 Artist Debugging 8: Mi molinillo de viento no está terminado. ¿Cuántas veces
         necesito repetir para terminarlo?
       2-3 Artist Debugging 9: 'El código de este tallo es incorrecto. Sugerencia:
@@ -105,6 +124,11 @@ es-MX:
         veces para dibujar este patrón.\\\r\n\\\r\nDivide el número de grados \nde
         un círculo(360) entre el número de figuras que debes dibujar (12) para saber
         cuantos grados debes girar antes de repetir cada triangulo."
+      2-3 Artist Nested Loops 4: |-
+        Loop this diamond 12 times to draw a flower!
+
+        Note: We'll use the same angle to loop 12 diamonds as we did for 12 triangles.\
+        How much do you need to turn after each shape?
       2-3 Artist Nested Loops 5: Llenar en las ventanas del edificio con un bucle
         anidado. Las ventanas son 20 píxeles largos y 20 píxeles aparte.
       2-3 Artist Nested Loops 6: "Este dinosaurio tiene 8 picos a lo largo de su cola.\n\nCada
@@ -116,6 +140,8 @@ es-MX:
         que lo componen.
       2-3 Artist Nested Loops 8: Ahora vamos a agregar un poco de pasto a nuestra
         imagen. Cada manojo de pasto esta separado 50 pixeles.
+      2-3 Artist Nested Loops 9: "We'll finish this picture by adding our flower.
+        \n\nLoop the diamond 12 times to draw the flower."
       2-3 Artist Nested Loops Free Play: juego libre, dibujar algo fascinante con
         bucles anidados.
       2-3 Bee Conditionals 11: "¡Me pregunto qué hay allí afuera!\n\nAyúdame a volar
@@ -156,12 +182,24 @@ es-MX:
         Corrige los errores para recoger todo el néctar y hacer toda la miel.
       2-3 Bee Debugging 2: "¿Puedes encontrar el problemaí?\\\r\n\\\r\nArregla el/los
         error(es) para recolectar todo el nectar."
+      2-3 Bee Debugging 3: |-
+        Ooh, this one stings!
+
+        Fix the error(s) to collect all of the nectar.
       2-3 Bee Debugging 4: Estos bloques realmente me molestan. Corregir el (los)
         error(es) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging 5: "¡Esa flor se ve sabrosa! \n\ncorrige el (los) error (es)
         para recoger todo el néctar.\\\nahora puede utilizar ambos ejecutar y paso."
+      2-3 Bee Debugging 6: |-
+        What a sweet challenge!
+
+        Fix the error(s) to collect all of the nectar.
       2-3 Bee Debugging 7: Estos bloques realmente me molestan. Corregir el (los)
         error(es) para recoger todo el néctar y hacer todo de la miel.
+      2-3 Bee Debugging 8: |-
+        So many beautiful flowers!
+
+        Fix the error(s) to collect all of the nectar.
       2-3 Bee Debugging 9: Estos bloques realmente me molestan. Corregir el (los)
         error(es) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging Assessment 1: |-
@@ -260,6 +298,7 @@ es-MX:
         Usa bucles para llevarme hasta el girasol con el menor número de bucles posible.
       2-3 Maze Loops 20: "¿Puedes resolver este rompecabezas utilizando el menor número
         de bloque posibles?"
+      2-3 Maze Loops 21: Get me to the sunflower using the fewest blocks possible!
       2-3 Maze Loops Assessment 1: 'Evaluación: ¡Llévame al girasol usando solo 5
         bloques! '
       4-5 Artist 1: Ayúdame a terminar de dibujar mi caja (cada línea tiene 300 pixeles
@@ -293,6 +332,10 @@ es-MX:
         equilátero. Cada lado es de 300 píxeles.'
       4-5 Artist Free Draw 1: "¡Dibujo libre! Dibujar lo que estés inspirado para
         crear."
+      4-5 Artist Patterns 1: |-
+        Draw this square using a loop.
+
+        Each side is 20 pixels long.
       4-5 Artist Patterns 10: "Este código dibuja dos filas de hexágonos. Repite todo
         4 veces para dibujar el panal. \n\nDeberás retroceder 120 pixeles en tu bucle
         más externo para asegurarte de que el artista no dibuje fuera de la pantalla."
@@ -335,6 +378,9 @@ es-MX:
       4-5 Bee Conditionals 1: La abeja no puede decir si se trata de una flor o un
         panal de miel. Reúnen néctar de las flores, pero primero tienes que comprobar
         si es una flor o un panal de miel.
+      4-5 Bee Conditionals 2: "More clouds! \n\nCheck underneath every cloud to see
+        if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds
+        hide the same thing!"
       4-5 Bee Conditionals 3: Ahora la abeja sólo quiere hacer miel. Asegúrese de
         que sólo haga miel en el panal.
       4-5 Bee Conditionals 4: El objeto desconocido es una flor o un panal de miel.
@@ -419,6 +465,8 @@ es-MX:
         girar. '
       4-5 Maze Conditionals 4: Ok, esto es como con el rompecabezas pasado, pero recuerda
         como utilizaste el bloque "if" y el bloque "repeat" juntos.
+      4-5 Maze Conditionals 5: "\"Me want sunflower!\"  \n\nUse an `if` statement
+        to get the zombie to the sunflower with the fewest number of blocks."
       4-5 Maze Conditionals 6: ¡Yo quiero girasol! Utiliza in bloque "if" para llevarme
         allá, con el menor número de bloques.
       4-5 Maze Conditionals 7: Ok, hagámoslo de nuevo para practicar - esto no es
@@ -444,6 +492,8 @@ es-MX:
         viento.
       4-5 Nested Loops 6: "¿Puedes repetir el código del triángulo para dibujar un
         hexágono?"
+      4-5 Nested Loops 7: "Loop this design 10 times. \n\nHow much do you have to
+        turn each time you loop?"
       4-5 Nested Loops 8: "Repite esta forma 6 veces. \n\n¿Cuánto tienes que girar
         cada vez que aplicas el bucle? "
       4-5 Nested Loops 9: "¡Dibuja los dientes en la boca de cocodrilo!"
@@ -455,6 +505,9 @@ es-MX:
       4-5 While Loops 3: 'Muéveme a la pila y remueve todo, después muéveme hacia
         el agujero y llénalo completamente. Sugerencia: Utiliza tan pocos bloques
         como sea posible.'
+      4-5 While Loops 4: "Wow, look at that! \n\nI don't know how many shovelfuls
+        of dirt this hole needs.\\\nCan you write a program that keeps using the `fill`
+        block until the ground is even?  "
       4-5 While Loops 5: Wow, ahora hay dos agujeros muy profundos. ¿Puedes escribir
         un programa que llene los dos hasta que el suelo esté parejo?
       4-5 While Loops 6: "¡Wow, ahora hay un montón de tierra! ¿Puedes escribir un
@@ -740,6 +793,9 @@ es-MX:
       Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
         imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
         ¡Necesitas remover algo!"
+      Course 4 Artist For Loops Challenge: "**Challenge:** Can you figure out how
+        to use all of the things you've learned to create this image of polygons,
+        all with 40 pixel sides?"
       Course 4 Artist For Loops inspire: 'Inspiración de juego libre: ¡Ahora has aprendido
         todo lo que necesitas saber para hacer un patrón como éste! Si te inspira
         esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por
@@ -791,6 +847,9 @@ es-MX:
         forma siga siendo el mismo, sin importa cuántos lados tenga? Consejo: Tendrás
         que usar tus bloques de matemáticas (360 dividido por "caras" en dos lugares
         esta vez) '
+      Course 4 Bee 1: "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa
+        el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue
+        el néctar un vez SÓLO si hay un flor."
       Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
         para ver si es una flor o un panal...de lo contrario, ¡haz miel!
       Course 4 Bee 3: El objeto desconocido es una flor o un panal de miel. Ahora
@@ -937,6 +996,8 @@ es-MX:
         la derecha?
       Course 4 SCF 1a: "¿Puedes averiguar cómo recolectar todo este néctar con la
         menor cantidad de bloques posibles?"
+      Course 4 SCF 1b: Can you figure out how to collect all of this honey with the
+        fewest blocks possible?
       Course 4 SCF 2: 'Utiliza lo que aprendiste en la lección anterior para dibujar
         una imagen como ésta. Nota: El código se vuelve más simple si incorporas parámetros. '
       Course 4 SCF 3: 'Utiliza lo que aprendiste en la lección anterior para dibujar
@@ -1128,6 +1189,11 @@ es-MX:
         azul el fondo.
       Fish Tank 4-validated_2019: Usa el bloque `configurar color de fondo` para hacer
         azul el fondo.
+      Fish Tank 5-validated: Our fish is getting a little lonely. Add another sprite
+        to the fish tank.
+      Fish Tank 5-validated_2019: The fish is adventurous and wants to meet new creatures
+        in the sea. Add another sprite to the fish tank. This sprite can have any
+        costume other than the one you use for your fish!
       Fish Tank 6-validated: Añade un comportamiento al nuevo amigo del pescado.
       Fish Tank 6-validated_2019: Añade un comportamiento al nuevo amigo del pescado.
       Fish Tank 7-validated: "¡Usa algunos bloques nuevos de la caja de herramientas
@@ -1593,6 +1659,9 @@ es-MX:
         del tanque.
       OPD-K5-spritelab-4: Usa el bloque `configurar color de fondo` para hacer azul
         el fondo.
+      OPD-K5-spritelab-6: The fish is adventurous and wants to meet new creatures
+        in the sea. Add another sprite to the fish tank. This sprite can have any
+        costume other than the one you use for your fish!
       OPD-K5-spritelab-7: Añade un comportamiento al nuevo amigo del pescado.
       OPD-K5-variables-2: 'Ahora dibuja tres de esos triángulos, uno al lado del otro.   '
       OPD-K5-variables-5: Mueve la longitud de 50 a una variable, para que podamos
@@ -1887,6 +1956,8 @@ es-MX:
         y los campos!
       course2_maze_loops_challenge1: "¡Ahora Scrat quiere usar bucles para intentar
         encontrar su bellota! "
+      course2_maze_programming_challenge1: _"The pig is hiding! Can you help me find
+        a way around?"_
       course2_maze_programming_challenge2: A veces hay más de una forma de resolver
         el mismo problema. ¡En ocasiones es más rápido ir hacia atrás que hacia adelante!
       course3_artist_functions_challenge1: Una vez que defines una función, puedes
@@ -1900,6 +1971,7 @@ es-MX:
         miel?
       course3_bee_functions_challenge1: De ti depende este desafío. ¡Puede ser más
         difícil de lo que parece!
+      course3_bee_functions_challenge2: You are on your own for this challenge!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar
         y la miel mientras haya un camino por delante. ¡Úsala para completar el desafío!
       course3_bee_functions_challenge4: "¡Aprovecha todo lo que has aprendido para
@@ -1913,6 +1985,7 @@ es-MX:
       course3_farmer_until_challenge2: Usa bloques Si/Si no para seguir el camino
         con curvas. Usa el comando `remover 1` en un bucle para limpiar las pilas
         en cada esquina.
+      course3_maze_debugging_challenge1: _"Am I just going around in circles?"_
       course3_maze_debugging_challenge2: _"Si giro muy seguido, me podría marear!
         Ayúdame a alcanzar la bellota con solo cuatro comandos `girar`."_
       course3_maze_until_challenge1: No hay pistas, solo un desafío. Llevar al zombi
@@ -2267,18 +2340,30 @@ es-MX:
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events3_2018: Conecta el bloque `mover a la izquierda` al bloque
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: Agrega bloques para moverte a la derecha si se hace
         clic en el botón `derecha`.
       courseA_playLab_events4_2018: Agrega otro bloque de evento para que Jorge se
         mueva a la derecha si haces clic en el botón `derecha`.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
       courseA_playLab_events5_2018: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: "¡Hazlo aún más interesante! Cambia el fondo y reproduce
         un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events6_2018: "¡Hazlo aún más interesante! Cambia el fondo y
         reproduce un sonido aleatorio cuando se hace clic en Jorge."
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: Agrega todo lo que quieras a este juego. ¿Puedes hacer
         que el dinosaurio desaparezca cuando Jorge se encuentra con él?
       courseA_playLab_events7_2018: _Juego libre:_ Agrega lo que quieras a este juego.
@@ -4883,6 +4968,8 @@ es-MX:
         luego de todo lo demás dentro de tu loop?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas giros a la derecha de 72
         grados luego de todo lo demás dentro de tu loop?"
+      ramp_artist_loops4_2019: Create this star pattern by looping a sequence of "move
+        forward" and "turn right by 144 degrees" blocks.
       ramp_artist_loops5: Usa bucles para dibujar esta escalera.
       ramp_artist_loops5_2018: Usa bucles para dibujar esta escalera.
       ramp_artist_loops5_2019: Usa bucles para dibujar esta escalera.

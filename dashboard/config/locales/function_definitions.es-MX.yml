@@ -20,9 +20,15 @@ es-MX:
       2-3 Artist 7:
         draw_rect:
           name: dibuja_rectangulo
+          parameters:
+            width: ancho
+            height: altura
       2-3 Artist Debugging 10:
         draw square:
           name: dibujar cuadrado
+          parameters:
+            width: ancho
+            height: altura
         jump to controller top left:
           name: saltar al controlador superior izquierdo
         jump to middle:
@@ -33,6 +39,8 @@ es-MX:
           name: dibuja un botón
         draw cord:
           name: dibujar una cuerda
+        draw R pad:
+          name: draw R pad
       2-3 Artist Debugging 5:
         draw left leg:
           name: dibujar pierna izquierda
@@ -40,6 +48,9 @@ es-MX:
           name: dibujar pierna derecha
         draw body and arms:
           name: dibujar cuerpo y brazos
+          parameters:
+            armlength: armlength
+            bodylength: bodylength
         draw a head:
           name: dibuja una cabeza
       2-3 Artist Debugging 6:
@@ -174,51 +185,71 @@ es-MX:
       Course 4 Artist Binary 1:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 2:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 3:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 4:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 5:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 6:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary 7:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary Free Play 2:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary Free Play 2a:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary Free Play 2b:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       Course 4 Artist Binary pre1:
@@ -226,14 +257,19 @@ es-MX:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       Course 4 Artist Functions Inspiration:
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: Draw a square 20px wide
       Course 4 Artist Functions challenge:
         draw a line of squares:
           name: dibujar una hilera de cuadrados
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: Draw a square 20px wide
       Course 4 Bee Params 1:
         get 3 nectar:
           name: obtener 3 néctares
@@ -243,55 +279,102 @@ es-MX:
       Course 4 Bee Params 3:
         get 3 nectar:
           name: obtener 3 néctares
+          parameters:
+            direction: direction
       Course 4 Bee Params 4:
         get 3 nectar:
           name: obtener 3 néctares
+          parameters:
+            direction: direction
       Course 4 Bee Params 5:
         get 5 nectar:
           name: obtener 5 néctares
+          parameters:
+            direction: direction
       Course 4 Bee Params 6:
         get 5 nectar:
           name: obtener 5 néctares
+          parameters:
+            direction: direction
+            nectar units: nectar units
       Course 4 Bee Params 7:
         get many nectar:
           name: obtener mucho néctar
+          description: Collect a given number of nectar in either direction
+          parameters:
+            direction: direction
+            nectars: nectars
       Course 4 Bee Params 8:
         get nectar make honey:
           name: obtener néctar hacer miel
+          description: Move in a direction to either collect nectar or make honey.
+          parameters:
+            direction: direction
+            nectars: nectars
+            honey: miel
       Course 4 Play Lab Params 1:
         jump:
           name: salta
+          description: Makes the main character jump up 100 pixels
       Course 4 Play Lab Params 10:
         level_up:
           name: subir_nivel
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: anotar_puntos
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: puntos
       Course 4 Play Lab Params 2:
         jump:
           name: salta
+          description: Makes the main character jump up 'height' pixels
       Course 4 Play Lab Params 3:
         jump:
           name: salta
+          description: Makes the given actor jump the given height
+          parameters:
+            height: altura
+            actor: actor
       Course 4 Play Lab Params 4:
         patrol:
           name: patrullar
+          description: Move a sprite up an down
         do something:
           name: hacer algo
       Course 4 Play Lab Params 5:
         patrol:
           name: patrullar
+          description: Move a sprite up an down
+          parameters:
+            actor: actor
       Course 4 Play Lab Params 6:
         patrol:
           name: patrullar
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: actor
       Course 4 Play Lab Params 7:
         patrol:
           name: patrullar
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: actor
+            speed: velocidad
       Course 4 Play Lab Params 8:
         patrol:
           name: patrullar
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: actor
+            speed: velocidad
       Course 4 Play Lab Params 9:
         score_points:
           name: anotar_puntos
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: puntos
       Course 4 Play Lab Vars 1:
         set score:
           name: Establece la puntuación
@@ -309,17 +392,24 @@ es-MX:
           name: bajar/retroceder
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
       Course 4 SCF 1a:
         get nectar:
           name: obtener néctar
+          parameters:
+            dir: dir
+            counter: contador
       Course 4 SCF 1b:
         make honey up and over:
           name: hacer miel encima
       Course 4 SCF 2:
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         draw octagons:
           name: dibujar octágonos
+          parameters:
+            numOctagons: numOctagons
         draw an octagon:
           name: dibujar un octágono
         shift down:
@@ -327,10 +417,13 @@ es-MX:
       Course 4 SCF 3:
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         do something:
           name: hacer algo
         draw an octagon:
           name: dibujar un octágono
+          parameters:
+            length: longitud
       'Course E: Play Lab Project':
         do something:
           name: hacer algo
@@ -342,8 +435,13 @@ es-MX:
       FoodFight:
         level_up:
           name: subir_nivel
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: anotar_puntos
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: puntos
       Function intro Ryan:
         build bridge:
           name: construir puente
@@ -359,6 +457,7 @@ es-MX:
           name: dibujar ventanas
         rectangle:
           name: rectángulo
+          description: lol
         sun:
           name: sol
         diamond:
@@ -371,6 +470,7 @@ es-MX:
           name: triángulo
         square:
           name: cuadrado
+          description: lol
       Geometric Sun_2018:
         draw a door:
           name: dibujar una puerta
@@ -380,6 +480,7 @@ es-MX:
           name: dibujar ventanas
         rectangle:
           name: rectángulo
+          description: lol
         sun:
           name: sol
         diamond:
@@ -392,23 +493,43 @@ es-MX:
           name: triángulo
         square:
           name: cuadrado
+          description: lol
       Guess The Number:
         check guess:
           name: verificar hipótesis
+          parameters:
+            theGuess: theGuess
       InspirationalArtwork:
         n-sided shape:
           name: forma de n lados
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+          parameters:
+            sides: sides
+            length: longitud
         draw a loop:
           name: dibujar un bucle
+          parameters:
+            length: longitud
+            sides: sides
         draw spiral circle:
           name: dibujar un círculo en espiral
+          parameters:
+            size: tamaño
       InspirationalArtwork_2018:
         draw a loop:
           name: dibujar un bucle
+          parameters:
+            length: longitud
+            sides: sides
         n-sided shape:
           name: forma de n lados
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
         draw spiral circle:
           name: dibujar un círculo en espiral
+          parameters:
+            size: tamaño
       K-1 Artist2 3:
         draw roof:
           name: dibujar techo
@@ -457,13 +578,16 @@ es-MX:
       NEW Course 4 Artist Functions 11:
         draw a line of  squares:
           name: dibujar una hilera de  cuadrados
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: Draw a square with sides 20 pixels long
         draw a line of squares:
           name: dibujar una hilera de cuadrados
       NEW Course 4 Artist Functions 12:
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         draw a line of squares:
           name: dibujar una hilera de cuadrados
       NEW Course 4 Artist Functions 13:
@@ -476,22 +600,29 @@ es-MX:
           name: función vacía
         draw a line of squares:
           name: dibujar una hilera de cuadrados
+          description: 'draw a line of squares '
         draw a square 40:
           name: dibujar un cuadrado 40
+          description: Draw a square with sides length 40
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: Dibuje un cuadrado
       NEW Course 4 Artist Functions 4:
         draw a square:
           name: Dibuje un cuadrado
+          description: draws a square that is 100 pixels in size
       NEW Course 4 Artist Functions 7:
         draw a square:
           name: Dibuje un cuadrado
       NEW Course 4 Artist Functions 8:
         draw a triangle:
           name: dibujar un triángulo
+          description: 'draws a triangle that is 100 pixels in size
+
+'
       NEW Course 4 Artist Functions 9:
         draw a square:
           name: Dibuje un cuadrado
@@ -507,41 +638,83 @@ es-MX:
           name: hacer algo
         draw a hexagon:
           name: dibujar un hexágono
+          description: draw a hexagon that is 100 pixels in size with a length parameter
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            sides: sides
+            length: longitud
         do something:
           name: hacer algo
+          parameters:
+            sides: sides
+            length: longitud
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: dibujar un polígono
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: dibujar un polígono
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: dibujar un borde en espiral
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Artist Params 15:
         draw a star:
           name: dibujar una estrella
           description: 'Dibuja una estrella especificando sus puntos y la longitud
             de sus lados '
+          parameters:
+            points: puntos
+            length: longitud
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: dibujar un molinete
+          parameters:
+            sides: sides
+            length: longitud
+            repeat: repetir
         draw a triangle:
           name: dibujar un triángulo
+          parameters:
+            length: longitud
         draw a shape:
           name: dibujar una forma
+          parameters:
+            sides: sides
+            length: longitud
         draw a house:
           name: dibujar una casa
+          parameters:
+            length: longitud
         draw a square:
           name: Dibuje un cuadrado
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Artist Params 2:
         do something:
           name: hacer algo
@@ -551,59 +724,113 @@ es-MX:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: dibujar un triángulo
+          description: draw a triangle that is 50 pixels in size
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: dibujar un triángulo con longitud
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: dibujar un pentágono
+          description: draw a pentagon that is 100 pixels
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: dibujar un triángulo
+          parameters:
+            length: longitud
         draw a hexagon:
           name: dibujar un hexágono
+          description: draw a hexagon that is 100 pixels in size
+          parameters:
+            length: longitud
         draw a square:
           name: Dibuje un cuadrado
+          description: draw a square that is 100 pixels' length in size
+          parameters:
+            length: longitud
         draw a sqaure:
           name: dibujar un cuadrado
+          description: draw a square that is 100 pixels in size
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: dibujar un triángulo
+          description: 'draw a triangle with length parameter
+
+'
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: dibujar un triángulo con longitud
+          parameters:
+            length: longitud
       NEW Course 4 Artist Params 9:
         draw a square:
           name: Dibuje un cuadrado
+          parameters:
+            length: longitud
         do something:
           name: hacer algo
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            length: longitud
+            sides: sides
       NEW Course 4 Play Lab Params 11:
         jump:
           name: salta
           description: 'funcion de salto parametros de altura y actor '
+          parameters:
+            height: altura
+            actor: actor
         patrol:
           name: patrullar
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: actor
+            speed: velocidad
       New Artist Project:
         draw a star:
           name: dibujar una estrella
           description: 'Dibuja una estrella especificando sus puntos y la longitud
             de sus lados '
+          parameters:
+            points: puntos
+            length: longitud
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: dibujar un molinete
+          parameters:
+            sides: sides
+            length: longitud
+            repeat: repetir
         draw a triangle:
           name: dibujar un triángulo
+          parameters:
+            length: longitud
         draw a shape:
           name: dibujar una forma
+          parameters:
+            sides: sides
+            length: longitud
         draw a house:
           name: dibujar una casa
+          parameters:
+            length: longitud
         draw a square:
           name: Dibuje un cuadrado
+          parameters:
+            length: longitud
       New Minecraft Hero Project:
         function 1:
           name: función 1
@@ -613,8 +840,15 @@ es-MX:
         jump:
           name: salta
           description: 'funcion de salto parametros de altura y actor '
+          parameters:
+            height: altura
+            actor: actor
         patrol:
           name: patrullar
+          description: a patrol function that has a actor and speed parameter
+          parameters:
+            actor: actor
+            speed: velocidad
       Robot Doodle:
         25 pixel square:
           name: cuadrado de 25 pixeles
@@ -690,11 +924,15 @@ es-MX:
       course4_artist_binary_challenge1:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       course4_artist_binary_challenge2:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       course4_artist_concept_challenge2:
@@ -708,10 +946,15 @@ es-MX:
       course4_artist_fwp_challenge1:
         draw background:
           name: dibujar fondo
+          parameters:
+            color: color
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            sides: sides
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         do something:
           name: hacer algo
       course4_bee_for_challenge1:
@@ -720,9 +963,13 @@ es-MX:
       course4_bee_fwp_challenge1:
         pick row:
           name: escoger fila
+          parameters:
+            length: longitud
       course4_bee_fwp_challenge2:
         pick row:
           name: escoger fila
+          parameters:
+            length: longitud
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: solución "simple"
@@ -738,16 +985,22 @@ es-MX:
       courseC_artist_prog3:
         draw flame:
           name: dibujar llama
+          parameters:
+            x: x
         draw fire:
           name: dibujar fuego
       courseC_artist_prog3_2018:
         draw flame:
           name: dibujar llama
+          parameters:
+            x: x
         draw fire:
           name: dibujar fuego
       courseC_artist_prog3_2019:
         draw flame:
           name: dibujar llama
+          parameters:
+            x: x
         draw fire:
           name: dibujar fuego
       courseC_artist_prog4:
@@ -767,169 +1020,237 @@ es-MX:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_artist_binary1_2018:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_artist_binary1_2019:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_artist_binary2:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary2_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary2_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary3:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary3_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary3_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary4:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary4_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary4_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary5:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary5_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary5_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary6:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary6_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary6_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary7:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary7_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary7_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8_predict1:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8_predict1_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary8_predict1_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binaryFP_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binaryFP_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary_challenge1_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary_challenge1_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary_challenge2_2018:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_artist_binary_challenge2_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_autorun_binary2_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_autorun_binary3_2019:
@@ -937,34 +1258,48 @@ es-MX:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_autorun_binary4_2019:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_autorun_binary5_2019:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_autorun_binary6_2019:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_autorun_binary7_2019:
         draw bit:
           name: dibujar un poco
         draw:
           name: dibujar
+          parameters:
+            binary: binary
       courseD_autorun_binary8_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseD_autorun_binary8_predict1_2019:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       courseE_Dogger_2:
@@ -1508,86 +1843,165 @@ es-MX:
           name: Dibuje un cuadrado
         checker:
           name: verificador
+          parameters:
+            size: tamaño
+            color: color
         do something:
           name: hacer algo
         Make gingham:
           name: Hacer tela a cuadros
+          parameters:
+            size: tamaño
         black outline:
           name: contorno negro
+          parameters:
+            length: longitud
       courseF_artist_fwp2:
         draw a square:
           name: Dibuje un cuadrado
+          description: 'draw a square with length parameter
+
+'
+          parameters:
+            length: longitud
         checker:
           name: verificador
+          parameters:
+            size: tamaño
+            color: color
         do something:
           name: hacer algo
         Make gingham:
           name: Hacer tela a cuadros
+          parameters:
+            size: tamaño
         black outline:
           name: contorno negro
+          parameters:
+            length: longitud
       courseF_artist_fwp2_predict1:
         draw a square:
           name: Dibuje un cuadrado
+          description: draw a square with a length parameter
+          parameters:
+            length: longitud
       courseF_artist_fwp3:
         draw a square:
           name: Dibuje un cuadrado
+          parameters:
+            length: longitud
         draw a square2:
           name: dibujar un cuadrado2
+          parameters:
+            size: tamaño
         filled square:
           name: cuadrado lleno
+          parameters:
+            size: tamaño
+            color: color
         black outline:
           name: contorno negro
+          parameters:
+            length: longitud
       courseF_artist_fwp4:
         draw a polygon:
           name: dibujar un polígono
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: longitud
+            sides: sides
       courseF_artist_fwp5:
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            length: longitud
+            sides: sides
       courseF_artist_fwp6:
         draw a spiral edge:
           name: dibujar un borde en espiral
+          parameters:
+            length: longitud
+            sides: sides
       courseF_artist_fwp7:
         draw a spiral edge:
           name: dibujar un borde en espiral
+          parameters:
+            length: longitud
+            sides: sides
+            min: mín.
       courseF_artist_fwp8:
         draw a spiral edge:
           name: dibujar un borde en espiral
+          parameters:
+            length: longitud
+            sides: sides
+            min: mín.
       courseF_artist_fwp9:
         draw a star:
           name: dibujar una estrella
           description: 'Dibuja una estrella especificando sus puntos y la longitud
             de sus lados '
+          parameters:
+            points: puntos
+            length: longitud
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: dibujar un molinete
+          parameters:
+            sides: sides
+            length: longitud
+            repeat: repetir
         draw a triangle:
           name: dibujar un triángulo
+          parameters:
+            length: longitud
         draw a shape:
           name: dibujar una forma
+          parameters:
+            sides: sides
+            length: longitud
         draw a house:
           name: dibujar una casa
+          parameters:
+            length: longitud
         draw a square:
           name: Dibuje un cuadrado
+          parameters:
+            length: longitud
         draw a spiral edge:
           name: dibujar un borde en espiral
+          parameters:
+            length: longitud
+            sides: sides
+            min: mín.
       courseF_artist_fwp_challenge1:
         draw background:
           name: dibujar fondo
+          parameters:
+            color: color
         draw a polygon:
           name: dibujar un polígono
+          parameters:
+            sides: sides
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         do something:
           name: hacer algo
       courseF_artist_fwp_challenge2:
         draw a square 20:
           name: dibujar un cuadrado 20
+          description: draw a square of size 20 pixels
         do something:
           name: hacer algo
         draw an octagon:
           name: dibujar un octágono
+          parameters:
+            length: longitud
       courseF_bee_conditionals2:
         move and check:
           name: mover y verificar
@@ -1658,27 +2072,43 @@ es-MX:
       courseF_bee_fwp4:
         rowOfNectar:
           name: filaDeNéctar
+          parameters:
+            length: longitud
       courseF_bee_fwp5:
         rowOfNectar:
           name: filaDeNéctar
+          parameters:
+            width: ancho
       courseF_bee_fwp6:
         rowOfNectar:
           name: filaDeNéctar
+          parameters:
+            width: ancho
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: filaDeNéctarOMiel
+          parameters:
+            width: ancho
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: filaDeNéctarOMiel
+          parameters:
+            width: ancho
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: filaDeNéctarOMiel
+          parameters:
+            width: ancho
       courseF_bee_fwp_challenge1:
         pick row:
           name: escoger fila
+          parameters:
+            length: longitud
       courseF_bee_fwp_challenge2:
         pick row:
           name: escoger fila
+          parameters:
+            length: longitud
       courseF_bee_variables_1_2018:
         collect row:
           name: recoger fila
@@ -1734,25 +2164,35 @@ es-MX:
       grade5_artist_binary11:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       grade5_artist_binary4:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       grade5_artist_binary5:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       grade5_artist_binary8:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco
       grade5_artist_binary9:
         draw:
           name: dibujar
+          parameters:
+            binary: binary
         draw bit:
           name: dibujar un poco

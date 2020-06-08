@@ -6,56 +6,67 @@ es-MX:
         desc: Esta clase introducirá el concepto de “Ciencias de la computación” y explicará qué hace un “informático”. Los estudiantes tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante recibirá un recordatorio sobre qué aprendió durante la clase. Tal vez crea que no es conveniente enseñar a los niños más pequeños el complejo vocabulario asociado a estas clases, pero si se presenta de manera lúdica y divertida, ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
           - unplug1-es-ES
+        video: Unplug1
       Unplug2:
         title: Pensamiento computacional
         desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del pensamiento computacional. Después de una breve introducción, los alumnos deben dividirse en grupos y darán instrucciones a otros alumnos para que dibujen un monstruo específico (del catálogo de monstruos preseleccionados). La tarea debe ser dividida, para que luego los equipos encuentren patrones en todos los monstruos del catálogo y encuentren detalles similares entre los monstruos. Deben usar esa información para crear un algoritmo (instrucciones) para que otro equipo dibuje un monstruo específico. A continuación, los equipos deben intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el algoritmo que les toque. ¿El dibujo es lo que el equipo original quiso conseguir?
         pdfs:
           - unplug2-es-ES
+        video: Unplug2
       Unplug3:
         title: Programación con Papel Cuadriculado
         desc: Al programar algunos dibujos, los estudiantes empezarán a comprender de qué se trata la programación. Para comenzar la clase, los estudiantes intercambiarán instrucciones para colorear cuadrados en una hoja cuadriculada, con el fin de reproducir una imagen en la hoja. La clase puede terminar exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
           - unplug3-es-ES
+        video: Unplug3
       Unplug4:
         title: Algoritmos
         desc: Esta clase cubre el tema algoritmos. El primer ejercicio muestra con figuras de tangram y papel cuadriculado la importancia de que cada instrucción sea lo más clara e inequívoca posible. Para finalizar, la clase puede explorar en cuántas formas se puede doblar un papel en un rectángulo y notar cómo algunos métodos requieren menos pliegues que otros.
         pdfs:
           - unplug4-es-ES
+        video: Unplug4
       Unplug5:
         title: Funciones
         desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas y una medalla especial. Seguirán una serie de tareas repetitivas, y luego se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se duplican varias veces. Una vez que esas habilidades se definieron, se solicitarán desde un programa principal y el bello proceso de creación será plasmado en una sola pieza de papel. El programa final se escribirá por toda la clase, independientemente del tipo de cuerdas, piedritas o medallas. Para permitirlo realmente, los estudiantes deberán “abstraer” los detalles específicos entre los materiales y crear términos vagos para los suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción a las variables.
         pdfs:
           - unplug5-es-ES
+        video: Unplug5
       Unplug6:
         title: Condicionales
         desc: En la clase se realizará un juego. Después de introducir la idea de condicionales, sentencias “si” y bucles, la clase puede practicar en conjunto el uso de un programa ya escrito; solo necesitarán un mazo de tarjetas y suerte.
         pdfs:
           - unplug6-es-ES
+        video: Unplug6
       Unplug7:
         title: Composición de canciones
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes. Vamos a elegir una actividad que utiliza conocimientos previos para dar una buena clase sobre definición y llamada de funciones. Una vez que los estudiantes se familiaricen con el proceso de definición/llamado, podemos agregar complicaciones como pasaje de parámetros en los llamados a funciones.
         pdfs:
           - unplug7-es-ES
+        video: Unplug7
       Unplug8:
         title: Abstracción
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego de palabras, para que la clase aprenda sobre la efectividad que posee la abstracción.
         pdfs:
           - unplug8-es-ES
+        video: Unplug8
       Unplug9:
         title: Programación de relevos
         desc: Esta lección retoma una idea de una actividad anterior (4. Programación en papel cuadriculado) y usa esas habilidades para hacer hincapié en la importancia de completar los programas que funcionan con una determinada secuencia y de buscar "errores" en los programas regularmente.
         pdfs:
           - unplug9-es-ES
+        video: Unplug9
       Unplug10:
         title: Internet
         desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden sobre direcciones web, IP y DNS.
         pdfs:
           - unplug10-es-ES
+        video: Unplug10
       Unplug11:
         title: Cierre
         desc: El cierre final de la serie de 20 horas ayudará a la clase a revivir sus momentos favoritos. Además, se informan los próximos pasos a seguir, si están interesados en continuar con el viaje a través de las Ciencias de la computación.
         pdfs:
           - unplug11-es-ES
+        video: Unplug11
       UnplugHappyMaps:
         title: Mapas felices
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
@@ -174,6 +185,7 @@ es-MX:
         title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
+        title: ''
         desc: 'traducción pendiente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos de la vida real: plantar una semilla'
@@ -253,6 +265,42 @@ es-MX:
       courseB_unplugged_MRF_2018:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: '¡Aprende a programar y escribir código con tus amigos!'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
       PlantASeed_2018:
         title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
@@ -297,6 +345,7 @@ es-MX:
         desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos se pueden representar y guardar de más de una forma.
       MoveItMoveIt_2018:
         title: Muévelo, muévelo
+        desc: ''
       courseB_unplugged_CnC_2018:
         title: Crear y jugar limpio es lo mejor
         desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene como objetivo ayudar a los alumnos a entender cómo funciona el intercambio y la inspiración en el proceso creativo. Esto conlleva la promoción de la expresión creativa y la necesidad de ser justos con el trabajo creativo.
@@ -370,6 +419,7 @@ es-MX:
         title: 'Algoritmos de la vida real : Aviones de papel'
         desc: Esta lección muestra la manera en que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel esencial.
       test-uid-passthrough:
+        title: ''
         desc: "# Sesión sobre escenarios de reclutamiento\\r\n\\r\n## Deslizar a la derecha\\r\nPara esta sesión, usaremos una herramienta llamada \"Deslizar a la derecha para Ciencias de la Computación\", que ha sido desarrollada por nuestros socios del MIT. En \"Deslizar a la derecha\", revisarás algunos perfiles de estudiantes y tendrás en cuenta argumentos específicos que puedes usar para convencerlos de que se inscriban en tu curso de Principios de Ciencias de la Computación. \\r\n\\r\n### Cómo funciona\\r\nAl jugar a \"Deslizar a la derecha\", verás una serie de argumentos que puedes decir a cada estudiante. Desliza hacia la derecha en los argumentos que crees que pueden ser eficaces a la hora de convencer a los estudiantes para que se inscriban en el curso, o hacia la izquierda si piensas que no lo serán. Durante la sesión, compartiremos en grupo tus opiniones sobre los tipos de argumentos más eficaces para lograr la inscripción en el curso, y tendrás la oportunidad de ver las elecciones de argumentos de otras personas de tu taller. \\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">submitButton next-stage</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> ¡Haz clic aquí para jugar a Deslizar a la derecha para Ciencias de la Computación!</a>\\r\n\\r\n"
       PlantASeed_2019:
         title: 'Algoritmos de la vida real: plantar una semilla'
@@ -385,6 +435,7 @@ es-MX:
         desc: '¡En esta lección aprenderás sobre bucles!'
       MoveItMoveIt_2019:
         title: Muévelo, muévelo
+        desc: ''
       DigitalFootprint_2019:
         title: Tu huella dactilar
         desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.

@@ -13,6 +13,7 @@ es-MX:
           ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
         - unplug1-es-ES
+        video: Unplug1
       Unplug2:
         title: Pensamiento computacional
         desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del
@@ -28,6 +29,7 @@ es-MX:
           quiso conseguir?
         pdfs:
         - unplug2-es-ES
+        video: Unplug2
       Unplug3:
         title: Programación con Papel Cuadriculado
         desc: Al programar algunos dibujos, los estudiantes empezarán a comprender
@@ -37,6 +39,7 @@ es-MX:
           exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
         - unplug3-es-ES
+        video: Unplug3
       Unplug4:
         title: Algoritmos
         desc: Esta clase cubre el tema algoritmos. El primer ejercicio muestra con
@@ -46,6 +49,7 @@ es-MX:
           algunos métodos requieren menos pliegues que otros.
         pdfs:
         - unplug4-es-ES
+        video: Unplug4
       Unplug5:
         title: Funciones
         desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas
@@ -60,6 +64,7 @@ es-MX:
           El uso de huecos genéricos es una maravillosa introducción a las variables.
         pdfs:
         - unplug5-es-ES
+        video: Unplug5
       Unplug6:
         title: Condicionales
         desc: En la clase se realizará un juego. Después de introducir la idea de
@@ -68,6 +73,7 @@ es-MX:
           suerte.
         pdfs:
         - unplug6-es-ES
+        video: Unplug6
       Unplug7:
         title: Composición de canciones
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes.
@@ -77,12 +83,14 @@ es-MX:
           agregar complicaciones como pasaje de parámetros en los llamados a funciones.
         pdfs:
         - unplug7-es-ES
+        video: Unplug7
       Unplug8:
         title: Abstracción
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego de palabras,
           para que la clase aprenda sobre la efectividad que posee la abstracción.
         pdfs:
         - unplug8-es-ES
+        video: Unplug8
       Unplug9:
         title: Programación de relevos
         desc: Esta lección retoma una idea de una actividad anterior (4. Programación
@@ -91,12 +99,14 @@ es-MX:
           secuencia y de buscar "errores" en los programas regularmente.
         pdfs:
         - unplug9-es-ES
+        video: Unplug9
       Unplug10:
         title: Internet
         desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden
           sobre direcciones web, IP y DNS.
         pdfs:
         - unplug10-es-ES
+        video: Unplug10
       Unplug11:
         title: Cierre
         desc: El cierre final de la serie de 20 horas ayudará a la clase a revivir
@@ -105,6 +115,7 @@ es-MX:
           de la computación.
         pdfs:
         - unplug11-es-ES
+        video: Unplug11
       UnplugHappyMaps:
         title: Mapas felices
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
