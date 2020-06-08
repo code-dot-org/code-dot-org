@@ -498,20 +498,15 @@ module LevelsHelper
       all_voices = JSON.parse(response.body)
       language_dictionary = {}
       all_voices.each do |voice|
-        if language_dictionary[voice["Locale"]].nil?
-          language_dictionary[voice["Locale"]] = {}
-          language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
-        elsif language_dictionary[voice["Locale"]][voice["Gender"].downcase].nil?
-          language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
+        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        unless native_locale_name.empty?
+          language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+          language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
         end
       end
-      all_languages = Languages.get_locale.map {|language| language[:locale_s]}
-      language_dictionary.keys.each do |language|
-        if language_dictionary[language].size < 2 || !(all_languages.include? language)
-          language_dictionary.delete(language)
-        end
-      end
-      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
+
+      language_dictionary.delete_if {|_, voices| voices.length < 2}
+
       speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
     end
 

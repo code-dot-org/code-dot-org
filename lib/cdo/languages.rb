@@ -33,7 +33,7 @@ class Languages
   end
 
   cached def self.get_native_name_by_locale(locale)
-    table.select(:native_name_s, :locale_s).where("locale_s = '#{locale}'").first[:native_name_s]
+    table.select(:native_name_s, :locale_s).where("locale_s = '#{locale}'").to_a
   end
 
   cached def self.get_csf_languages
