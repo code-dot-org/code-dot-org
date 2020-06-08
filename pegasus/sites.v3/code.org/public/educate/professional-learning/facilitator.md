@@ -19,7 +19,7 @@ Code.org counts on engaging, committed, and knowledgeable facilitators to develo
 
 **If you are interested in joining the program, please sign up below to receive a reminder when applications open.**
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=\_"blank"><button>Tell me when applications open!</button></a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target="_blank"><button>Tell me when applications open!</button></a>
 
 [/col-50]
 
