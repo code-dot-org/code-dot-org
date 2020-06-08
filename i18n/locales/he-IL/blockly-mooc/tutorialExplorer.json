@@ -1,7 +1,7 @@
 {
   "startButton": "התחל",
   "filterOrgNames": "נוצר על-ידי",
-  "filterOrgNamesAll": "",
+  "filterOrgNamesAll": "All",
   "filterSortBy": "מיין לפי",
   "filterSortByDisplayWeight": "מומלץ",
   "filterSortByPopularityRank": "הפופולרי ביותר",
@@ -48,7 +48,7 @@
   "roboticsButtonText": "רובוטיקה ומעגלים",
   "roboticsText": "יש ברשותך רובוטים? השתמש בפעילויות אלה כדי לעשות שעת קוד מוחשית עבור תלמידים בכל הגילאים!",
   "tutorialSetNoTutorials": "החיפוש שלך חזר ללא תוצאות.\nאנא נסה לשנות חלק מהמסננים כדי לראות פעילויות נוספות.",
-  "tutorialDetailsMoreResources": "",
+  "tutorialDetailsMoreResources": "More resources",
   "tutorialDetailsTeacherNotes": "הערות המורה",
   "tutorialDetailsShortLink": "קישור מקוצר",
   "tutorialDetailInternationalLanguages": "שפות",

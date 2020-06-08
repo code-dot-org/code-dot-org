@@ -46,6 +46,7 @@
   "jump": "πήδα",
   "jumpBackward": "κάνε άλμα προς τα πίσω κατά",
   "jumpForward": "κάνε άλμα προς τα εμπρός κατά",
+  "jumpToOverDown": "jump to %1 over %2 down",
   "jumpToPosition": "μετάβαση στη θέση %1",
   "jumpByDirection": "μετάβαση %1 κατά %2 pixels",
   "jumpTooltip": "Μετακινεί τον καλλιτέχνη χωρίς να αφήνει ίχνη.",

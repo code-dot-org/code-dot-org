@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Du trykket inn tasten, men din danser reagerte ikke.",
   "danceFeedbackNeedTwoDancers": "Du må lage to dansere.",
   "danceFeedbackOnlyOneDancerMoved": "Kun en av dine dansere beveget seg.",
-  "danceFeedbackNeedLead": "Du må også lage en danseleder med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> block.",
+  "danceFeedbackNeedLead": "Du må også lage en danseleder med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> block.",
   "danceFeedbackNeedBackup": "Du må lage en gruppe med bakgrunnsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
   "danceFeedbackSetSize": "Du trenger å endre størrelse av minst en danser når musikken er i gang.",
   "measure": "Takter:"

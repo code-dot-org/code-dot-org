@@ -11,12 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ 'every 2 measures' block",
   "danceFeedbackNeedMakeANewDancer": "ប្រើ 'make a new' block ដើម្បីបង្កើតអ្នករាំម្នាក់ទៀត",
   "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ",
-  "danceFeedbackDidntPress": "",
-  "danceFeedbackPressedKey": "",
-  "danceFeedbackNeedTwoDancers": "",
-  "danceFeedbackOnlyOneDancerMoved": "",
-  "danceFeedbackNeedLead": "",
-  "danceFeedbackNeedBackup": "",
-  "danceFeedbackSetSize": "",
-  "measure": ""
+  "danceFeedbackDidntPress": "Make sure to press the arrow keys while your dance is running.",
+  "danceFeedbackPressedKey": "You pressed a key, but your dancer didn't respond.",
+  "danceFeedbackNeedTwoDancers": "You need to make two dancers.",
+  "danceFeedbackOnlyOneDancerMoved": "Only one of your dancers moved.",
+  "danceFeedbackNeedLead": "You also need to create one lead dancer with the <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> block.",
+  "danceFeedbackNeedBackup": "You need to create a group of backup dancers with the <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
+  "danceFeedbackSetSize": "You need to change the size of at least one dancer after the music starts.",
+  "measure": "Measure:"
 }

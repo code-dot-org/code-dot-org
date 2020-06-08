@@ -46,7 +46,7 @@
   "jump": "spring",
   "jumpBackward": "spring achteruit met",
   "jumpForward": "spring vooruit met",
-  "jumpToOverDown": "",
+  "jumpToOverDown": "jump to %1 over %2 down",
   "jumpToPosition": "zet op de %1 positie",
   "jumpByDirection": "spring %1 met %2 pixels",
   "jumpTooltip": "Verplaatst de artiest zonder sporen na te laten.",

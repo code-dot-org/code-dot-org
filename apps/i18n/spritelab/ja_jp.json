@@ -6,5 +6,21 @@
   "spritelabFeedbackMoveFishLeftRight": "魚のスプライトは左か右へ動かなければなりません。ビヘイビアーを変えてみよう。",
   "spritelabFeedbackChangeBackgroundColor": "バックグラウンドを白以外の色に変えてください。",
   "spritelabFeedbackCreateTwoSprites": "かっきり二つのスプライトを作ってください。",
-  "spritelabFeedbackTwoSpritesWithCostumes": "スプライトたちは別のコスチュームを着なければなりません。"
+  "spritelabFeedbackTwoSpritesWithCostumes": "スプライトたちは別のコスチュームを着なければなりません。",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "You need to create two sprites with different costumes that each have a behavior.",
+  "spritelabFeedbackClickSprite": "Make sure to click on your sprite after pressing `Run`.",
+  "spritelabFeedbackUseSpinningBehavior": "Your sprite needs to start spinning. Try changing its behavior.",
+  "spritelabFeedbackPinkAlienBehavior": "Your pink alien sprite did not start a behavior.",
+  "spritelabFeedbackCreateThreeAliens": "You need to create a blue alien, a pink alien, and a yellow alien.",
+  "spritelabFeedbackAliensNotInLine": "Your three alien sprites need to be arranged in a horizontal line (within 50 pixels).",
+  "spritelabFeedbackYellowAlienBehavior": "The yellow alien did not start its behavior.",
+  "spritelabFeedbackNoAlienColor": "At least one of your aliens did not change color.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Your alien sprites need to stop all their behaviors.",
+  "spritelabFeedbackBlueAlienBehavior": "Your blue alien needs to start a new behavior.",
+  "spritelabFeedbackUseCostume": "You need to use at least one costume.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "You need to create three sprites with different costumes.",
+  "spritelabFeedbackMoveUpNotDown": "Your sprite needs to move up (north) instead of down (south).",
+  "spritelabFeedbackRobotFasterThanRover": "The robot reached the right side of the screen before the rover.",
+  "spritelabFeedbackDifferentStarRotation": "Sprites with both star costumes need to rotate the same amount.",
+  "spritelabFeedbackAstronautMoveToCorner": "The astronaut sprite needs to move to one of the four corners."
 }

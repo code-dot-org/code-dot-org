@@ -83,7 +83,7 @@
   "pathRight": "ถ้ามีเส้นทางไปทางขวา",
   "pick": "เก็บ",
   "pilePresent": "มีกองดินอยู่",
-  "plant": "",
+  "plant": "plant",
   "plantInNonSoilError": "ฉันสามารถปลูกบางอย่างในดินที่ชื้นได้",
   "plantTooltip": "เพาะต้นกล้า",
   "pumpkin": "ฟักทอง",

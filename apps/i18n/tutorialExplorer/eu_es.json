@@ -1,6 +1,7 @@
 {
   "startButton": "Hasiera",
   "filterOrgNames": "Създаден от",
+  "filterOrgNamesAll": "All",
   "filterSortBy": "Honen arabera ordenatu",
   "filterSortByDisplayWeight": "Gomendatua",
   "filterSortByPopularityRank": "Ospetsuena",
@@ -47,6 +48,7 @@
   "roboticsButtonText": "Robotika jarduerak ikusi",
   "roboticsText": "Baduzu robotik? Erabili jarduera hauek eta hautemangarriaren Kode Ordu Bat egin adin guztietako ikasleentzat!",
   "tutorialSetNoTutorials": "Zur bilaketak ez du emaitzarik eman. Mesedez saia zaitez iragazki batzuk mugitzen jarduera gehiago ikusi ahal izateko.",
+  "tutorialDetailsMoreResources": "More resources",
   "tutorialDetailsTeacherNotes": "Irakaslearen oharrak",
   "tutorialDetailsShortLink": "Lotura motza",
   "tutorialDetailInternationalLanguages": "Hizkuntzak",
