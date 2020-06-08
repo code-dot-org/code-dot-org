@@ -17,9 +17,10 @@ describe('AnimationPickerBody', function() {
     onPickLibraryAnimation: emptyFunction,
     onUploadClick: emptyFunction,
     playAnimations: false,
-    libraryManifest: spriteCostumeLibrary,
+    getLibraryManifest: () => spriteCostumeLibrary,
     categories: CostumeCategories,
-    hideUploadOption: false
+    hideUploadOption: false,
+    hideAnimationNames: false
   };
 
   describe('upload warning', function() {

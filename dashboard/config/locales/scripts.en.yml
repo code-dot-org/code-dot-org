@@ -25017,7 +25017,13 @@ en:
           description_short: Practice and complete the Create Performance Task (PT).
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           lesson_groups: {}
-          lessons: {}
+          lessons:
+            Create PT - Review the Task:
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
         csp9-2020:
           stages:
             new stage:
@@ -25807,6 +25813,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -25835,6 +25843,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -25933,6 +25943,8 @@ en:
               name: Variables with Yara Shahidi & Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break Younger Staging
           description_audience: ''
           description_short: ''
@@ -25957,6 +25969,8 @@ en:
               name: Variables with Yara Shahidi & Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         code-break-younger:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -25987,6 +26001,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
@@ -26015,6 +26031,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         no-lg:
           stages:
             new stage:
