@@ -15,13 +15,27 @@ sv:
         parprogrammeringen och försök igen.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: is invalid. Note that each link can only be used once to reset
+                your password, and only the most recently sent link will work.
       messages:
         blank: krävs
+        blank_plural: are required
+        invalid: is invalid
+        invalid_plural: are invalid
     attributes:
       user:
         name: Visat namn
+        name_example: Display Name (e.g. Cool Coder or Jane S.)
         email: E-post
         parent_email: Förälder/vårdnadshavares e-postadress
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
+        personal_email_markdown: Personal email address [(click here if you don't
+          have an email address)](%{url})
         username: 'användarnamn
 
 '
@@ -33,6 +47,15 @@ sv:
         gender: Kön
         edit_header: Redigera kontouppgifter
         finish_sign_up_header: Fortsätt färdigställa ditt konto
+        finish_sign_up_subheader: Fill out the following information to finish creating
+          a Code.org account for <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Fill out the following information to finish
+          creating a Code.org account for **%{email}**.
+        finish_sign_up_subheader_provider: Fill out the following information to finish
+          creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Fill out the following information
+          to finish creating a Code.org account with **%{provider}** for **%{email}**.
+        reset_password_token: The reset password link you have followed
         error:
           future: kan inte vara i framtiden
   beta: beta
@@ -45,13 +68,19 @@ sv:
   previous_page: Föregående sida
   next_page: Nästa sida
   next_resource: Nästa resurs
+  done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: Okej
   or: eller
   heading_x_of_y: "%{heading} (sida %{x} av %{y})"
   join_section:
     code:
+      title: Join a section on Code.org
       placeholder: Avsnitt kod (ABCDEF)
+      instructions: 'Please enter the 6 letter code your teacher shared with you (example:
+        "ABCDEF") to join their section.'
+      instructions_short: Enter your 6 letter section code
+      submit: Join
   add_hint_form:
     placeholder: Skriv in ditt tips här
     submit: Lägg till tips
@@ -90,10 +119,29 @@ sv:
     facebook: Facebook
     windowslive: Microsoft Account
     microsoft_v2_auth: Microsoft Account
+    clever: Clever
+    powerschool: Powerschool
     forgot_password: Glömt ditt lösenord?
+    migration_success: Success! You have updated to our new account experience.
+    demigration_success: The new account experience is now disabled on your account.
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
+    not_linked: Sorry, your Code.org account is not linked to %{provider}. You'll
+      have to sign in by typing your password below.
+    use_clever: Sorry, your Code.org account is not linked to %{provider}. Please
+      sign in through your Clever Portal instead.
+    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}
+      account. Please try again.
+    already_in_use: Your %{provider} account is already connected to another Code.org
+      account.
+    already_linked: Your %{provider} account is already linked to your Code.org account.
+    existing_account:
+      account_exists: Good news! You already have a Code.org account that uses %{email}
+      sign_in: Please sign in and we'll link your %{provider} profile.
+      sign_up: Not your email? Want to create a new account with a different email?
+        We will also link your %{provider} profile if you choose to create a new account.
   signup_form:
+    email_signup: Sign up with your email address
     student_count: "%{count} elever har redan kommit med."
     teacher_count: "%{count} lärare har redan kommit med."
     overview: Registrera ett konto för att spåra dina framsteg eller hantera ditt
@@ -108,6 +156,18 @@ sv:
     hoc_already_signed_up_content: |-
       Du ska ansvara för att undervisa i Hour of Code! Du och dina elever behöver inte logga in i Code Studio för att kunna delta.
       För att komma igång, <a href="https://code.org/learn">välj en kurs</a> att använda i ditt klassrum och dela länken med eleverna.<br/><br/>Om du uppskattade the Hour of Code och vill fortsätta, kan du skapa ett konto på Code Studio med ett eget lösenord. Det ger dig möjlighet att lägga in dina elever i våra längre, och mer omfattande kurser. <a href="https://code.org/educate">longer courses</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
+    hoc_already_signed_up_content_post_hoc_markdown: Thank you for hosting an Hour
+      of Code. To sign in to Code Studio, you’ll need to set up a password for your
+      account. This will let you save your progress and manage your classroom. You’ll
+      be able to assign courses to students and track their progress. [You can also
+      continue to browse the various stages and puzzles](%{studio_url}) without creating
+      an account.
     teacher_educator_guide: Se pedagogguiden
     title: Skapa konto på Code.org
     school_name: Skolans namn (valfritt)
@@ -126,9 +186,15 @@ sv:
     valid_password: Giltigt lösenord!
     invalid_password: Lösenordet måste vara minst 6 tecken långt
     mismatch_password: De två lösenord du skrev matchar inte varandra
+    student_consent: I confirm that I have my parent or legal guardian's permission
+      to use the Code.org services.
     agree_us_website: Jag samtycker till att använda en webbplats baserad i USA.
     my_data_to_us: När jag använder denna webbplats kan information om detta skickas
       till och lagras eller bearbetas i USA.
+    student_terms_markdown: Email addresses are not stored in a form that allows us
+      to contact students. Students will never receive emails from Code.org except
+      for password recovery. See our [privacy policy](http://code.org/privacy) for
+      more information.
     additional_information: Vi behöver  ytterligare information att fortsätta registrera
       dig.
     user_type_button: Uppdatera kontotyp
@@ -137,27 +203,39 @@ sv:
     user_type_student: Student
     field_is_required: krävs
     accept_terms: Du måste godkänna för att skapa ett konto
+    error: An error occurred.
     email_preference_question: Får vi skicka e-post till dig med nyheter om våra kurser,
       lokala erbjudanden eller andra nyheter i ämnet datavetenskap?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nej
+    email_preference_required: You must specify an email preference.
     parent_account_checkbox: Jag är en förälder / målsman som anmäler mitt barn
     parent_account_email_progress_permission: Har vi tillstånd att skicka dig e-post
       då och då för att uppdatera dig om ditt barns framsteg och projekt samt om deras
       kurs och datavetenskap? [(Se vår integritetspolicy)] (%{privacy_policy_url})
     parent_account_email_label: Förälder/vårdnadshavare
   school_info:
+    title: School Information (optional)
     school_country: Skolans land
     select_school_type: Skoltyp
+    charter: Charter
     private: Privat
     public: Offentlig
+    homeschool: Homeschool
+    after_school: After School
     other: Annat
     state: Stat
     district: Distrikt
+    other_district_not_listed: Other district not listed above
     district_name: Distriktsnamn
     school: Skola
+    other_school_not_listed: Other school not listed above
     school_name: Skolnamn
+    school_zip: School Zip Code
     school_address: Skolans adress
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Har du redan ett konto? Logga in
     login: E-post
@@ -177,6 +255,8 @@ sv:
     login: Logga in
     invalid_login: Ogiltig inloggning, försök igen
     pair_programming: Jag har en partner vid min dator
+    student_privacy_markdown: Learn more about why you're not seeing your full name
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: Glömt ditt lösenord?
@@ -184,6 +264,10 @@ sv:
         för lösenordsåterställning.
       email: E-postadress
       submit: Skicka in
+    reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
+      invalid_email: It looks like you may have signed up with an invalid email address.
+        Please email support@code.org to receive a password recovery link.
     change_form:
       title: Ändra ditt lösenord
       new_password: Nytt lösenord
@@ -199,17 +283,27 @@ sv:
       Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+    parent_email_added_subject: Welcome to Code.org!
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: 'Din sektion:'
       other: 'Dina sektioner:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
     confirm:
       remove: Är du säker du vill lämna den här gruppen?
+    default_name: Untitled Section
     remove: "(ta bort sektion)"
     type:
       picture: Bild-lösenord
       word: Hemligt ord
       email: E-post
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Inbjuda skickades
     added_teacher: "%{name} är tillagd som din lärare"
@@ -223,6 +317,9 @@ sv:
       section_not_found: Kunde inte hitta ett avsnitt med koden "%{section_code}".
       blank_code: Ange en sektion kod
       cant_join_own_section: Tyvärr, du kan inte ansluta till ditt eget avsnitt.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org anmälan: %{student_name} är inte längre associerat som
@@ -244,17 +341,37 @@ sv:
     updated: "%{model} har uppdaterats."
     destroyed: "%{model} har tagits bort."
     access_denied: Du har inte tillgång till denna %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now sign into your account with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Jag är klar med min Kodtimme
       sign_in_to_save: Logga in för att spara framsteg
+      my_dashboard: My Dashboard
       course_catalog: Kurskatalog
       project_gallery: Projekt
       sections: Avsnitt
       help_support: Hjälp och support
       report_bug: Rapportera ett problem
+      report_abuse: Report abuse
+      teacher_community: Teacher community
       professional_learning: Kollaborativt lärande
       documentation: Dokumentation
+      tutorials: Tutorials
+      app_lab_documentation: App Lab Documentation
+      app_lab_tutorials: App Lab Tutorials
+      game_lab_documentation: Game Lab Documentation
+      game_lab_tutorials: Game Lab Tutorials
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
       educate_overview: Pedagog översikt
       educate_elementary: Grundskolan
       educate_middle: Högstadiet
@@ -280,6 +397,7 @@ sv:
       help_us: Hjälp oss
       teach: Undervisa
       about: Om
+      legal: Privacy & Legal
       legal_privacy: Sekretesspolicy
       legal_tos: Villkor
     user:
@@ -287,6 +405,7 @@ sv:
       district_dashboard: Distriktets kontrollpanel
       label: Hej %{username}
       stats: Mina framsteg
+      my_projects: My projects
       settings: Mitt konto
       logout: Logga ut
       signin: Logga in
@@ -300,20 +419,35 @@ sv:
       algebra_game: Algebra
       applab: App Lab
       artist: Konstnären
+      artist_k1: Artist (Pre-reader)
+      basketball: Basketball
       bounce: Studsa
       calc: Calc
       dance: Dansparty
       eval: Eval
       flappy: Flappy
       frozen: Frost
+      gamelab: Game Lab
+      gamelab_jr: Game Lab (beta)
       gumball: Gumball
       iceage: Ice Age
       infinity: Oändligt
+      makerlab: Maker Toolkit
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hero
       playlab: Spel-labb
+      playlab_k1: Play Lab (Pre-reader)
+      scratch: Scratch
       sports: Sport
+      spritelab: Sprite Lab
       starwars: Star Wars
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
       weblab: Web Lab
+      view_all: View all projects...
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
@@ -357,20 +491,60 @@ sv:
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
     email_confirm_wrong_email: "(Fel e-postadress?)"
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(lämna tomt om du inte vill ändra det)"
     current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
       ändringar)"
     delete: Ta bort ditt konto
     delete_text: Ett klick på knappen nedan kommer att ta bort ditt konto.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
       konton bort.'
     delete_confirm: Är du säker du vill ta bort ditt konto?
     deleted_user: borttagen användare
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
+    create_personal_login: Create a personal password login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
     create_personal_login_under_13_username: Användarnamn (använd inte ditt riktiga
       namn!)
     create_personal_login_under_13_parent_email: Förälder/vårdnadshavares emailadress
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_link_account: You can also instead choose to connect to
+      a personal account under the “Manage Linked Accounts” section.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. I confirm that I have my parent or legal guardian's permission
+      to use the Code.org services even without a teacher.
+    create_personal_login_terms_markdown: By creating a personal login, I agree to
+      be bound by the Code.org [terms of service](%{terms_of_service_url}). I confirm
+      that I have my parent or legal guardian's permission to use the Code.org services
+      even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored
+      in a form that allows us to contact students. Students will never receive emails
+      from Code.org except for password recovery. See our [privacy policy](%{privacy_policy_url})
+      for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
     parent_email_label: Förälder/vårdnadshavares emailadress (valfritt)
+    parent_email_hint: "(this can be used for password recovery)"
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
     update: Uppdatera konto
+    account_successfully_updated: Account successfully updated.
+    auth_option_saved: You have successfully linked your %{provider} account with
+      email %{email}.
+    auth_option_saved_no_email: You have successfully linked your %{provider} account.
     update_email: Uppdatera
     for_parents_and_guardians: För föräldrar och vårdnadshavare
     link_a_parent_email: Koppla en e-post adress till förälder / vårdnadshavare till
@@ -381,6 +555,7 @@ sv:
     none: Ingen
     only_one_parent_email_supported_warning: Obs! Vi kan för närvarande endast stödja
       en e-postadress till förälder / vårdnadshavare per konto.
+    encrypted: encrypted
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -424,10 +599,16 @@ sv:
     try_beta_courses: Nytt! Prova våra beta-kurser för elever från förskoleklass till
       åk 5
     use_as_teacher: Använda denna webbplats som lärare
+    heading_elementary_markdown: |-
+      ## 20 hour courses for
+
+      # Computer Science Fundamentals (all ages)
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
     choose_next_course: Prova en Code Studio kurs genom att välja en nedan
     print_certificate: Skriv ut intyg
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   move_students:
     new_section_dne: Ledsen, men avsnittet %{new_section_code} existerar inte. Ange
       koden för ett annat avsnitt.
@@ -441,6 +622,8 @@ sv:
       grupp.
     already_enrolled_in_new_section: Du kan inte flytta dessa studenter eftersom deras
       lärare redan har placerat dem i en annat grupp.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
@@ -449,6 +632,7 @@ sv:
     male: Man
     female: Kvinna
     non_binary: Icke-binär
+    not_listed: Preferred term not listed
     none: Föredrar att inte svara
   user_type:
     student: Student
@@ -502,6 +686,7 @@ sv:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips
     teacher: Se lösningen
+    teacher_no_solution: Stop seeing solution
     auth_error: Du har inte behörighet till att se lösningen.
     submit: Uppdatera Artist plats
     direction: Start- riktning (i grader)
@@ -511,6 +696,7 @@ sv:
     notes_coming_soon: Text till denna video kommer snart.
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
+    show_notes: Show Notes
     show_video: Visa video
     label: Video
   compatibility:
@@ -520,6 +706,21 @@ sv:
         som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar
         fullt ut.
       link: Lär dig mer
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      oceans_unsupported_browser: This browser is not supported for this tutorial.
+        Please try visiting this page using Edge, Chrome, Firefox, or another modern
+        browser.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
@@ -591,9 +792,18 @@ sv:
       title: Galleri
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     gamelab:
+      title: Game Lab
+      body: Game Lab is a programming environment where you can make simple animations
+        and games with objects and characters that interact with each other.
       audience: Ålder 13+
       cta: Läs mer
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Ålder 13+
       cta: Läs mer
     frozen:
@@ -618,8 +828,11 @@ sv:
         Minecraft via koden.
     sports:
       title: Sport
+      body: Make a basketball game or mix and match across sports.
     text-compression:
       title: Text komprimering
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Lektioner där du inte behöver tillgång till en dator
       audience: Ålder 4+
@@ -631,15 +844,25 @@ sv:
         lektioner i klassrummet.
     unplugged_conditionals:
       title: Villkor
+      body: Learn about algorithms and conditional statements in this “unplugged”
+        activity using a deck of cards.
     widgets:
+      title: Widgets
+      body: Students can explore concepts from our Computer Science Principles course
+        hands-on using these digital tools. Use the widgets on their own, or create
+        a single-concept lesson for your class.
+      audience: Ages 14+
       cta: Läs mer
   landing:
+    prerelease_tutorial: This tutorial is in **beta**.  It is subject to revision
+      as feedback is received and improvements are made.
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: "//support.code.org"
     help_resources: Hjälp och resurser
     help_support: Hjälp och support
     documentation: Dokumentation
+    tutorials: Tutorials
   free_response:
     placeholder: Skriv in ditt svar här
   multi:
@@ -647,11 +870,15 @@ sv:
     wrong_body: Svaret du angett är inte korrekt.  Försök igen!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Tack
     wrong_body: Tack för ditt lämnade svar.
     correct_title: Tack
     correct_body: Tack för ditt lämnade svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Tack
     wrong_body: Tack för lämnade svar.
@@ -660,6 +887,9 @@ sv:
     hide_survey_last_answer: Undersökningen är anonym.  Besök lärarnas statussida
       för det sammanfattade resultatet.  Observera att resultaten endast är synliga
       om minst fem elever har lämnat in enkäten.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Tack
     wrong_body: Tack för lämnade svar.
@@ -694,6 +924,8 @@ sv:
     open_response_body: Tack för ditt svar!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
@@ -708,6 +940,12 @@ sv:
   age_interstitial:
     age: Din ålder
     header: Kontoinformation uppdatering
+    warning: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.
+    disclaimer: As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out_markdown: If you do not wish to provide your age you may [sign out](%{url}).
   terms_interstitial:
     title: Uppdaterade användarvillkor och Sekretesspolicy
     intro_desc: 'Vi har uppdaterat våra användarvillkor och sekretesspolicy, som visas
@@ -752,15 +990,22 @@ sv:
       villkoren.
     review_terms: Granska uppdaterade villkor
   school_info_interstitial:
+    title: We want to bring Computer Science to every student - help us track our
+      progress!
+    message: Please enter your school information below.
+    message_with_suggestion: Please verify that the following information is correct,
+      or update as necessary.
     save: Spara
   race_interstitial:
     title: 'Tillval: Hjälp oss att följa våra framsteg med att förbättra mångfalden
       inom datavetenskapen'
+    message: Please tell us your race (check all that apply)
     races:
       white: Vit
       black: Svart eller afroamerikansk
       hispanic: Spansk eller latino
       asian: Asiat
+      hawaiian: Native Hawaiian or other Pacific Islander
       american_indian: Amerikansk indian / Inhemsk från Alaska
       other: Annat
       opt_out: Föredrar att inte svara
@@ -801,6 +1046,8 @@ sv:
       skola.
     embed: Inbäddad
     advanced_share: Visa avancerade alternativ
+    no_projects: You currently have no projects. Click on one of the buttons above
+      to start a project.
     name: Namn
     updated: Uppdaterad
     project_type: Projekttyp
@@ -808,10 +1055,16 @@ sv:
       nedan för att göra ett nytt Spel Lab eller Artist projekt! <br/>Du kan komma
       tillbaka och arbeta med ditt projekt när som helst.
     need_help: Behöver du hjälp att komma igång?
+    thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
+      to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
+      to refresh everywhere.
     saved: Sparade
     not_saved: Inte sparad
     view_all: Titta på mina projekt
     edit_project: Redigera projektet
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>
         Användarvillkor</a> och kan inte delas med andra.
@@ -844,20 +1097,47 @@ sv:
   peer_review:
     accepted:
       name: Godkänd
+      description_markdown: "**Yes**, this submission **meets** the requirements"
     rejected:
       name: Ej godkänd
+      description_markdown: "**No**, this submission **does not meet** the requirements"
     escalated:
       name: Upptrappad
       description: Jag skulle vilja att en instruktör granskar denna inlämning
     instructor_feedback: Återkoppling till instruktör
     peer_feedback: Din feedback
     outdated: Denna feedback skapades för en tidigare skickad version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
     peer_review: Din recension
   external_links:
     disclaimer: Varning
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
+    title: Hour of Code downloads
     capsule_title: Har du Internet?
+    capsule_desc: Use the online, web-based [%{app_name}](%{url}).
     instructions_headline: Inget Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      [here](%{url}).'
     minecraft_name: Minecraft-kodtimmen
     starwars_blocks_name: 'Star Wars: Bygga en Galax Med Kod (Block)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
@@ -869,6 +1149,7 @@ sv:
     download_in_Bosnian: 'Ladda ner på bosniska:'
     download_in_Bulgarian: 'Ladda ner på bulgariska:'
     download_in_Catalan: 'Ladda ner på katalanska:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
     download_in_Chinese: 'Ladda ner på kinesiska:'
     download_in_Croatian: 'Ladda ner på kroatiska:'
     download_in_Czech: 'Ladda ner på tjeckiska:'
@@ -905,6 +1186,19 @@ sv:
     download_in_Vietnamese: 'Ladda ner på vietnamesiska:'
     windows: Windows (64-bitars)
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Innehållet i detta steg syns inte eftersom det för närvarande är låst.
     Din lärare kan låsa upp steget när det är dags att arbeta på det eller för att
     granska dina svar.
@@ -912,52 +1206,221 @@ sv:
     din lärare vilka lektion som du bör vara på.
   hidden_script: Din lärare förväntade sig inte att du skulle vara här. Fråga gärna
     din lärare vilken lektion som du bör vara på.
+  no_course_access_student: You don't have access to this course. Please ask your
+    teacher which course you should be on.
+  no_course_access_teacher: You don't have access to this course. If you believe you
+    should have access to this course, please write to support@code.org so that we
+    can fix the situation.
+  no_script_access_student: You don't have access to this unit. Please ask your teacher
+    which unit you should be on.
+  no_script_access_teacher: You don't have access to this unit. If you believe you
+    should have access to this unit, please write to support@code.org so that we can
+    fix the situation.
   return_unit_overview: Gå till avsnittets översikt
   return_course_overview: Gå till avsnittets översikt
+  view_all_units: View all units
   view_teacher_guide: Visa lärarhandledning
   pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
       first_name: Förnamn
+      first_name_preferred: Preferred First Name
+      last_name: Last Name
       email: E-post
+      email_alternate: Alternate Email
+      gender: Gender Identity
       school_name: Skolnamn
+      school_city: School City
       school_country: Skolans land
+      ages: Which age(s) do you teach this year?
+      subjects: Which subject(s) do you teach this year?
+      resources: Which of the following CS education resources do you use?
+      robotics: Which of the following robotics resources do you use?
+      workshop_organizer: Workshop Organizer
+      workshop_facilitator: Workshop Facilitator
+      workshop_course: Workshop Course
+      email_opt_in: Can we email you about Code.org’s international program, updates
+        to our courses, or other computer science news?
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner(s) in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
     form_entries:
       gender:
         male: Man
         female: Kvinna
         non_binary: Icke-binär
+        not_listed: Preferred term not listed
         none: Föredrar att inte svara
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 years old"
+        ages_7_8: 7-8 years old
+        ages_9_10: 9-10 years old
+        ages_11_12: 11-12 years old
+        ages_13_14: 13-14 years old
+        ages_15_16: 15-16 years old
+        ages_17_18: 17-18 years old
+        ages_19_over: 19+ years old
       subjects:
         cs: Datavetenskap
+        ict: ICT
         math: Matte
         science: Naturvetenskap
+        history: History / Social Studies
         la: Språk
         efl: Engelska som utländsk språk
         music: Musik
         art: Konst
         other: 'Övrigt:'
       resources:
+        bootstrap: Bootstrap
         codecademy: CodeCademy
+        csfirst: Google CS First
         khan: Khan Academy
         kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
         other: 'Övrigt:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
         raspberry: Raspberry Pi
+        wonder: Wonder Workshop
         other: 'Övrigt:'
+      workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: CS Discoveries
+        csp: CS Principles
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej
+    international_opt_in:
+      title: Workshop Attendance
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that they can help to support your journey as a computer science
+        teacher.
+      thanks_markdown: Thank you for submitting! We look forward to supporting you
+        as you get to know Code.org’s curriculum and tools. Please keep sharing your
+        questions and feedback with us by writing to us at [support@code.org](%{support_email_url})
+        or by posting on the [teacher forum](%{teacher_forum_url})!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body_markdown: Thanks for your interest in Code.org’s Professional Learning
+        Program! You’re currently signed into a student account. Please either create
+        a teacher account or [go to your user settings](%{user_settings}) to upgrade
+        your account from student to teacher.
+      more_markdown: If you’d like more information about the program before you start
+        your application, please check out the [Professional Learning Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Your account doesn’t have an email address. Please [visit your
+        account settings](%{user_registration}) to add your email address before completing
+        this form.
+  courses_category: Full Courses
   cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
     accept: Jag håller med
   gdpr_dialog:
     heading: Samtycker du till att använda en webbplats baserad i USA?
     message: När du använder denna webbplats kan information om detta skickas till
       och lagras eller bearbetas i USA.
+    link_intro: For details see our
     privacy_policy: sekretesspolicy
     logout: Logga ut
     true: Ja
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   copy: Kopiera
+  maker:
+    google_oauth:
+      login_with_google: Login to the Maker App with Google
+      enter_code: Please enter the code provided when you logged in via Google on
+        your default browser.
+      copy_code: Please copy and paste this code into the Maker App to login to Code.org.
+      error_token_expired: Token has expired. Please log in again for a new token.
+      error_wrong_provider: Wrong provider. Please make sure you are logging in with
+        Google.
+      error_invalid_user: Invalid user id. Please try logging in again.
+      error_no_code: Please enter your login code.
   parent_email_banner:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här
       kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"

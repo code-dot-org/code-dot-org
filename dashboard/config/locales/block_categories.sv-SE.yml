@@ -18,12 +18,14 @@ sv:
       Game/Score: Spel/Poäng
       Games/Score: Spel/Poäng
       Groups: Grupper
+      Input: Input
       Locations: Platser
       Logic: Logik
       Loops: loopar
       Math: Matte
       Numbers: Siffror
       Properties: Egenskaper
+      Sprites: Sprites
       Text: text
       Variables: variabler
       'Variables ': 'Variabler '

@@ -14,24 +14,251 @@ sv-SE:
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Kom ihåg att kolla så att ALLA moln har en BLOMMA.
           Du behöver inte kolla efter bivaxkakor alls.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: You're now in Design Mode.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 Boolean Predict:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2018:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2019:
+        '': This program will print out a result here
+      CSD U3 Sprites anitab 1:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2018:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2019:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites intro sprites:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Use this block to create a sprite
+      CSD U3 Sprites text:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2018:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2019:
+        '': Use this block to put text on the screen
+      CSD U3 UP_ARROW:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018_2019:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 Variables Predict Where X:
+        CSD_U3_variables: Change the number here
+      CSD U3 Variables Predict Where XY:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2018:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2019:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where X_2018:
+        CSD_U3_variables: Change the number here
+      CSD U3 Variables Predict Where X_2019:
+        CSD_U3_variables: Change the number here
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 debug_2018:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 debug_2019:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 ellipse:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 ellipse_2018:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 ellipse_2019:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill_2018:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018_2019:
+        '': Add your block inside this if statement
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019:
+        callout: This block creates a variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Här är koden
         CSD_U3_rect_c2: Här är "Kör"-knappen.
@@ -41,10 +268,51 @@ sv-SE:
         CSD_U3_rect_c1: Här är koden
       CSD U3 sequence:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 sequence_2018:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 sequence_2019:
         CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 colorLeds intensity:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2019:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 light show:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2019:
+        CSDUDL03P09: What does this line do?
+      CSD U6 tugowar variables 1:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2018:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2019:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2018:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2019:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2018:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2019:
+        CSD_U6_checkWin: Check if the player has won
+      CSDU4 - Design Mode - 3:
+        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för
           göra en hel cirkel
@@ -52,6 +320,10 @@ sv-SE:
         repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
       Course 4 Artist For Loops 4:
         place_counter_variable: Dra din räknare-variabel in i detta block
+      Course 4 Artist Functions challenge:
+        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
+          and put them behind categories to keep things tidy.  Click here to find
+          all of the blocks that you need.
       Course 4 Artist Vars 1:
         repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
       Course 4 Artist Vars 12:
@@ -61,11 +333,23 @@ sv-SE:
       Course 4 Artist Vars 6:
         degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje
           vinkel i grader.
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
+          coding area wider.
+      Course 4 Bee 1:
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
+          make honey
+      Course 4 Bee 3:
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
+          and makes honey if it's not a flower
       Course 4 Bee Params 2:
         edit_get_nectar: Använd den här knappen om du vill redigera funktionen och
           ändra den riktning i vilken biet kommer att vända sig för att få nektar.
       Course 4 Maze 4:
         repeat: Sätt block inuti loopen för att upprepa kommandon
+      Course 4 Play Lab Params 2:
+        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
+          it uses the height parameter.
       Course 4 Play Lab Params 3:
         edit_function: Klicka här om du vill redigera din funktion.
       Course 4 Play Lab Params 6:
@@ -73,6 +357,18 @@ sv-SE:
           funktion
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Använd piltangenterna för att flytta figuren
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a
+          different name for each character?  That's so each `for` loop can control
+          its own counter.
+        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change
+          the "increment" of the `for` loops.
+      Course 4 SCV 6:
+        Course_4_SCV_6: This block allows you to customize your color to almost anything
+          you want to see!  Play around with the numbers to see what happens!
       CourseD_Dance_Party_01:
         dance_callout_01: Lägg till detta block till ditt program!
       CourseD_Dance_Party_02:
@@ -115,6 +411,9 @@ sv-SE:
         dance_callout_11_b: Nytt Block!
       Dance_Party_11_5:
         dance_party_11_5_groups: Kolla här för "alla ankor" block
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
       Function intro Ryan:
         Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra
           den STORA gruppen kod med samma namn i arbetsytan.
@@ -137,6 +436,14 @@ sv-SE:
         Infinity_move_right_runbutton: Lägg till flytta- blocket här
       Infinity_repeat:
         Infinity_repeat_callout: Placera flytta - block  här inne
+      InspirationalArtwork:
+        InspirationalArtwork_1: Try using the new `comment` block under this label
+          to leave yourself notes inside your program!
+      InspirationalArtwork_2018:
+        InspirationalArtwork_1: Try using the `comment` block under this label to
+          leave yourself notes inside your program!
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
       MC HOC 2016 New Walk:
         MC_HOC_2016_New_Walk_callout2: Hit "Kör" för att börja flytta.
       MC_HOC_2017_03_Cole:
@@ -161,6 +468,9 @@ sv-SE:
         MC_HOC_2017_08_RY_1: Agenten kan sväva över lava, men spelaren kan inte det!
       MC_HOC_2017_Ali_2019:
         MC_HOC_2017_08_RY_1: Agenten kan sväva över lava, men spelaren kan inte det!
+      NEW Course 4 Artist Functions 3:
+        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
+          that it creates a square.
       NEW Course 4 Artist Functions 7:
         edit_function: Klicka här om du vill redigera din funktion.
       NEW Course 4 Artist Functions 8:
@@ -175,11 +485,39 @@ sv-SE:
           till och sedan dra den till din funktionsdefinition
       NEW Course 4 Artist Vars 6:
         place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Enter the largest number of nectar you want the bee to collect
+          here
       NEW Course 4 Bee For Loops 5:
         actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken
           är här nu.
+      New Artist Project:
+        New Artist Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
       New Frozen Project:
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
       Overworld Chop Trees:
         craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
           igång
@@ -194,12 +532,22 @@ sv-SE:
           avsluta det?
       Overworld Move to Sheep:
         craft_run_button_callout: Tryck på "Kör" för att prova programmet
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Tryck på "Kör" för att prova programmet
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block
       Overworld Place Wall:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
       Overworld Place Wall_2019:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Robot Doodle:
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
+          label to leave yourself notes inside your program!
+      Robot Doodle_2018:
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
+          label to leave yourself notes inside your program!
       Underground Avoiding Lava:
         craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
           till ett kommando för att gå framåt?
@@ -210,11 +558,356 @@ sv-SE:
         craft_what_is_iron: Bryt järnet!
       Underground Iron_2019:
         craft_what_is_iron: Bryt järnet!
+      Virtual Pet 2_2019:
+        '': Click here!
+      behaviors 1:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Replace the costume block below with this.
+      behaviors 4:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 5:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play:
+        behaviors_edit: Add code to this behavior.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
+          corn, but what about the other vegetables?
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_loops1_2019:
+        courseA_collector_loops1_1: Use this block to collect the treasure.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: Use the step button to go step-by-step through
+          the program. This will help you find the bug!
+      courseA_maze_seq4:
+        made_of_stone: These blocks are made of stone.  You can move them, but you
+          can't delete them!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseB_artist_loops3:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_artist_loops3_2018:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_artist_loops5:
+        courseB_artist_loops5_1: This number means that there are no more of this
+          block left in the toolbox.
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseB_collector_loops1_2018:
+        courseB_collector_loops1_1: Use this block to collect the treasure.
+      courseB_collector_loops1_2019:
+        courseB_collector_loops1_1: Use this block to collect the treasure.
+      courseB_maze_seq1:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through
+          the program. This will help you find the bug!
+      courseB_maze_seq3:
+        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
+          away.
+      courseB_playlab_events6:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2019:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: This block is very important for this project. Be sure to
+          use it!
+      courseC_artist_loops1b_2019:
+        sticker2: Add this to the middle of your program.
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
+          to the center of the screen.
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
+          to the center of the screen.
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
+          to the center of the screen.
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them in another lesson.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them in another lesson.
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
+          that there are four pumpkins available to pick.
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
+          that there are four pumpkins available to pick.
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
+          that there are four pumpkins available to pick.
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: Grey blocks cannot be deleted!
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_1: These gray blocks are locked and cannot be deleted!
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseC_maze_programming3:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming4:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseC_maze_programming5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming7:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
+          away.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
+          away.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
+          away.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
+      courseD_artist_nestedLoops1a:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
+          right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2018:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
+          right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
+          right. If you want to, this `random color` block makes it easy!
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Du kan ändra detta antal.
+        courseD_artist_ramp11_2: Click here to type in the number of times to repeat
+          your code.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Kom ihåg att kolla så att ALLA moln har en BLOMMA.
           Du behöver inte kolla efter bivaxkakor alls.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: Kom ihåg att kolla så att ALLA moln har en BLOMMA.
           Du behöver inte kolla efter bivaxkakor alls.
@@ -224,10 +917,330 @@ sv-SE:
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Kom ihåg att kolla så att ALLA moln har en BLOMMA.
           Du behöver inte kolla efter bivaxkakor alls.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2018:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseD_maze_intro5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks cannot be thrown away.
+      courseD_maze_ramp4:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseD_maze_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp6:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
+          as you tell it to, then continue to run the rest of the program.
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseD_scrat_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_scrat_ramp6:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
+          as you tell it to, then continue to run the rest of the program.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
+          as you tell it to, then continue to run the rest of the program.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_aboutme_2:
+        '': Click here!
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: Du kan ändra detta antal.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Du kan ändra detta antal.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      courseF_artist_for1:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_for1_2018:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_for1_2019:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables6:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6_2018:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6_2019:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a_2018:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of
+          the blocks you need are beneath these labels!
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_1: Use this block when the length of the path changes
+          (as in the sides of the rectangle!)
+      courseF_bee_for4:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for4_2018:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for4_2019:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for9:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_functions2:
+        courseF_bee_functions2_1: This block calls a function.  Click this "edit"
+          button to see what is inside!
+      courseF_bee_functions6:
+        courseF_bee_functions6_1: Don't forget to look in here for more blocks that
+          might help make this easier!
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
+      courseF_bee_fwp1:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
+      courseF_bee_fwp3:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
+          corn, but what about the other vegetables?
+      courseF_bee_variables_1_2018:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_variables_1_2019:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: The toolbox has been organized into categories
+          to make it easier to find the blocks you need.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
+      coursea_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
+      coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och
           ändra storleken.
@@ -261,3 +1274,12 @@ sv-SE:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
       frozen square snowflake:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!

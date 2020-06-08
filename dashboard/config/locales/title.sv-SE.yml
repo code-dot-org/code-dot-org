@@ -9,16 +9,20 @@ sv-SE:
       BinaryImages: Binära bilder
       BinaryImages_2018: Binära bilder
       BuildingAFoundation: Bygga en grund
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Uträkningstänkande
       Conditionals: Villkor
       Conditionals_2018: Villkor
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Instruktioner i verkliga livet: Tärnings- spelet'
       DigitalCitizenship: Digitalt medborgarskap
       DigitalFootprint: Ditt digitala fotavtryck
       DigitalFootprint_2018: Ditt digitala fotavtryck
       EnvelopeVariables: Envelope variabler
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: "'För' loop skoj"
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funktionella Solfångare
       GettingLoopy: Att bli snurrig
       GettingLoopy_2018: Att bli snurrig
@@ -27,6 +31,7 @@ sv-SE:
       GraphPaperProgramming: Kalkyleringsprogrammering
       GraphPaperProgramming_2018: Kalkyleringsprogrammering
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Galna Glibs
       MoveIt: Flytta den, flytta den
       MoveItMoveIt_2018: Flytta det, flytta den
@@ -37,15 +42,25 @@ sv-SE:
       RelayProgramming: Stafettprogrammering
       RelayProgramming_2018: Stafettprogrammering
       SongwritingParameters: Låtskrivande
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Låtskrivande med parametrar
       TangramAlgorithms: Tangram algoritmer(uppsättning av instruktioner)
       UnplugHappyMaps: Glada kartor
       UnplugHappyMaps_2018: Glada kartor
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Ouppkopplad aktivitet
       courseB_unplugged_MRF_2018: Mina Robotic- vänner
       courseB_unplugged_loopyMRF: Ouppkopplad aktivitet
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Ouppkopplad aktivitet
       courseC_Unplugged_ScreenOutTheMean_2018: Ouppkopplad aktivitet
       courseD_unplugged_digitalCitizenship: Ouppkopplad aktivitet
       courseD_unplugged_digitalCitizenship_2018: Ouppkopplad aktivitet
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Ouppkopplad aktivitet
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
