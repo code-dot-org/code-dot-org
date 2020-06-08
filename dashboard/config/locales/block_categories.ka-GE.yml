@@ -10,6 +10,7 @@ ka:
       Comment: კომენტარი
       Comments: კომენტარები
       Conditionals: პირობითი ბრძანებები
+      Dancers: Dancers
       Default: ნაგულისხმევი
       Events: მოვლენები
       Functions: ფუნქციები
@@ -23,6 +24,7 @@ ka:
       Loops: ციკლები
       Math: მათემატიკა
       Numbers: რიცხვები
+      Properties: Properties
       Sprites: სპრაიტები
       Text: ტექსტი
       Variables: ცვლადები

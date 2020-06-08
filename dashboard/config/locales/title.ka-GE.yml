@@ -9,16 +9,20 @@ ka-GE:
       BinaryImages: ორობითი სურათები
       BinaryImages_2018: ორობითი სურათები
       BuildingAFoundation: ფუნდამენტის აშენება
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: გამოთვლითი აზროვნება
       Conditionals: პირობითი ბრძანებები
       Conditionals_2018: პირობითი ბრძანებები
       Crowdsourcing: ქრაუდსორსინგი
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'ცხოვრებისეული ალგორითმები: კამათლების შეჯიბრი'
       DigitalCitizenship: ციფრული მოქალაქეობა
       DigitalFootprint: თქვენი ციფრული ნაკვალევი
       DigitalFootprint_2018: თქვენი ციფრული ნაკვალევი
       EnvelopeVariables: ცვლადები კონვერტებში
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: ხალისი "მიზნისთვის" ციკლით
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: ფუნქციური ვიტრაჟები
       GettingLoopy: ჩაციკლვა
       GettingLoopy_2018: ჩაციკლვა
@@ -27,6 +31,7 @@ ka-GE:
       GraphPaperProgramming: გრაფიკული პროგრამირება ქაღალდზე
       GraphPaperProgramming_2018: გრაფიკული პროგრამირება ქაღალდზე
       Internet: ინტერნეტი
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
       MoveIt: ვისწავლოთ გადაადგილება
       MoveItMoveIt_2018: ვისწავლოთ გადაადგილება
@@ -37,13 +42,18 @@ ka-GE:
       RelayProgramming: პროგრამირება ცვლაში
       RelayProgramming_2018: პროგრამირება ცვლაში
       SongwritingParameters: სიმღერის დაწერა
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: სიმღერის დაწერა პარამეტრების გამოყენებით
       TangramAlgorithms: ტანგრამული ალგორითმები
       UnplugHappyMaps: ბედნიერი რუკები
       UnplugHappyMaps_2018: ბედნიერი რუკები
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: აქტივობა უკომპიუტეროდ
       courseB_unplugged_MRF_2018: ჩემი რობოტი-მეგობრები
       courseB_unplugged_loopyMRF: აქტივობა უკომპიუტეროდ
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: აქტივობა უკომპიუტეროდ
       courseC_Unplugged_ScreenOutTheMean_2018: აქტივობა უკომპიუტეროდ
       courseD_unplugged_digitalCitizenship: აქტივობა უკომპიუტეროდ
@@ -51,4 +61,6 @@ ka-GE:
       courseE_unplugged_CnC_2018: ციფრული გაზიარება
       courseE_unplugged_privateInformation: 'სტანდარტული უნარების კურსი: კონფიდენციალური
         და პირადი ინფორმაცია '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: აქტივობა უკომპიუტეროდ
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
