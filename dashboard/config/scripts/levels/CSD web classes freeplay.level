@@ -11,14 +11,18 @@
     "parent_level_id": 18346,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/csd-1718/text_properties/index.html",
-      "/docs/csd-1718/html_tags/index.html",
-      "/docs/csd-1718/headers/index.html",
-      "/docs/csd-1718/lists/index.html",
-      "/docs/csd-1718/images-in-html/index.html",
-      "/docs/csd-1718/cc_search/index.html"
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/csd-1718/style_sheets/index.html",
+    "map_reference": "/docs/concepts/css/classes/",
     "submittable": "false",
     "encrypted": "false",
     "display_name": "Free Play",
@@ -32,7 +36,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-09 18:11:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:00:07 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:01:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-30 11:39:36 +0000\",\"changed\":[\"long_instructions\",\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-09 18:11:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:00:07 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:01:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-30 11:39:36 +0000\",\"changed\":[\"long_instructions\",\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:15:09 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
