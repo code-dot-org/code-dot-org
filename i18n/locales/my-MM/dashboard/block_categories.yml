@@ -2,8 +2,30 @@ my:
   data:
     block_categories:
       Actions: လုပ်​ဆောင်ချက်များ
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
+      Color: Color
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
+      Dancers: Dancers
+      Default: Default
+      Events: Events
+      Functions: Functions
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Logic
       Loops: Loops
       Math: သင်္ချာ
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: စာ
       Variables: Variables
+      'Variables ': 'Variables '
+      World: World
