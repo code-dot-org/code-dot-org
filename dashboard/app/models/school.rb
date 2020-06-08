@@ -70,14 +70,17 @@ class School < ActiveRecord::Base
     stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
   end
 
-  # determines if school meets Amazon Fugure Engineer criteria
-  # eligible if a) title I school, >40% URM, or >40% eligible for free and reduced meals
+  # Determines if school meets Amazon Fugure Engineer criteria.
+  # Eligible if the school is any of the following:
+  # a) title I school,
+  # b) >40% URM students,
+  # or c) >40% of students eligible for free and reduced meals.
   def afe_high_needs?
     stats = most_recent_school_stats
     return false if stats.nil?
 
-    # To align with maker_high_needs? definition above, returning false
-    # if we don't have all data for a given school
+    # To align with maker_high_needs? definition above,
+    # returning false if we don't have all data for a given school.
     stats.title_i_eligible? || (stats.urm_percent || 0) >= 0.4 || (stats.frl_eligible_percent || 0) >= 0.4
   end
 
