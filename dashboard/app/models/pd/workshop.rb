@@ -327,7 +327,13 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def friendly_subject
-    subject ? "#{subject} Workshop" : nil
+    if subject && (subject.downcase.include?("workshop") || subject == SUBJECT_TEACHER_CON)
+      subject
+    elsif subject
+      "#{subject} Workshop"
+    else
+      nil
+    end
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
