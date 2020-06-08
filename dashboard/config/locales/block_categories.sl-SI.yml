@@ -18,12 +18,14 @@ sl:
       Game/Score: Igra/rezultat
       Games/Score: Igra/rezultat
       Groups: Skupine
+      Input: Input
       Locations: Lokacije
       Logic: Logika
       Loops: Zanke
       Math: Matematika
       Numbers: Številke
       Properties: Lastnosti
+      Sprites: Sprites
       Text: Besedilo
       Variables: Spremenljivke
       'Variables ': 'Spremenljivke '
