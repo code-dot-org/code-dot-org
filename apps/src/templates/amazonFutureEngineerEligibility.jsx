@@ -10,6 +10,8 @@ const styles = {
   }
 };
 
+//static sessionStorageKey = 'AmazonFutureEngineerEligibility';
+
 export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
@@ -21,15 +23,38 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     };
   }
 
+  /*
+  saveToSessionStorage = newState => {
+    if (this.constructor.sessionStorageKey) {
+      const mergedData = {
+        ...{
+          currentPage: this.state.currentPage,
+          data: this.state.data
+        },
+        ...newState
+      };
+      sessionStorage.setItem(
+        this.constructor.sessionStorageKey,
+        JSON.stringify(mergedData)
+      );
+    }
+  };
+  */
+
   handleChange = change => {
     this.setState(change);
   };
 
-  submit = () => {
+  handleClickCheckEligibility = () => {
     // TO DO: actually check whether a school is eligible
     // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
-    this.setState({
-      schoolEligible: true
+
+    $.ajax({
+      url: '/dashboardapi/v1/schools/' + this.state.schoolId,
+      type: 'get',
+      dataType: 'json'
+    }).done(data => {
+      console.log(data);
     });
   };
 
@@ -66,7 +91,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 showRequiredIndicator={true}
                 value={this.state.schoolId}
               />
-              <Button id="submit" onClick={this.submit}>
+              <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
               </Button>
             </FormGroup>
@@ -79,7 +104,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             onContinue={this.handleChange}
           />
         )}
-        {this.state.schoolEligible !== null && this.state.consent === true && (
+        {this.state.schoolEligible === true && this.state.consent === true && (
           <AmazonFutureEngineerAccountConfirmation />
         )}
       </div>
