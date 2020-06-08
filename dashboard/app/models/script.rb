@@ -1806,4 +1806,12 @@ class Script < ActiveRecord::Base
   def self.get_version_year_options
     Course.get_version_year_options
   end
+
+  def number_of_lessons
+    num_lessons = 0
+    lesson_groups.each do |lesson_group|
+      num_lessons += lesson_group.lessons.count
+    end
+    num_lessons
+  end
 end

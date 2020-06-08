@@ -689,7 +689,7 @@ module LevelsHelper
         end
       stage = @script_level.name
       position = @script_level.position
-      if @script_level.script.lessons.many?
+      if @script_level.script.number_of_lessons > 1
         "#{script}: #{stage} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"

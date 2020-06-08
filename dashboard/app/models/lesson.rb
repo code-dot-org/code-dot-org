@@ -84,7 +84,7 @@ class Lesson < ActiveRecord::Base
     # In the case of lockable lessons, we don't want to include the Lesson 1
     return localized_name if lockable
 
-    if script.lessons.to_a.many?
+    if script.number_of_lessons > 1
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one lesson, use the script name
       script.localized_title
@@ -92,7 +92,7 @@ class Lesson < ActiveRecord::Base
   end
 
   def localized_name
-    if script.lessons.many?
+    if script.number_of_lessons > 1
       I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
@@ -130,8 +130,8 @@ class Lesson < ActiveRecord::Base
       lesson_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: script.lessons.to_a.size, # TODO: remove once corresponding js change is deployed and no longer cached
-        num_script_lessons: script.lessons.to_a.size,
+        script_stages: script.number_of_lessons, # TODO: remove once corresponding js change is deployed and no longer cached
+        num_script_lessons: script.number_of_lessons,
         id: id,
         position: absolute_position,
         relative_position: relative_position,
