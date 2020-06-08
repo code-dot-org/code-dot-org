@@ -30,6 +30,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
           MOVE2:
             MOVES.Roll: Хвиля
@@ -42,6 +43,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
       Dancelab_atTimestamp:
         text: після {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ uk:
             MOVES.Kick: Зірка
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
           DIR:
             '1': "→"
@@ -218,10 +223,13 @@ uk:
             MOVES.Kick: Зірка
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
@@ -282,6 +290,7 @@ uk:
             MOVES.Roll: Хвиля
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
       Dancelab_ifTime:
         text: |-
@@ -969,10 +978,19 @@ uk:
         text: налаштування
       Dancelab_whenSetup2:
         text: налаштування
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: Спрайт {SPRITE} Починається {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -1017,10 +1035,13 @@ uk:
         options:
           CHOICE:
             '"this"': це
+            '"other"': other
       gamelab_hideTitleScreen:
         text: приховати заголовок екрана
       gamelab_isTouchingEdges:
         text: "{SPRITE} торкається країв"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
       gamelab_keyPressed:
@@ -1079,6 +1100,8 @@ uk:
             '"left"': ліворуч
       gamelab_mouseLocation:
         text: розташування миші
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: Переміщення {SPRITE} {DISTANCE} пікселі вперед
       gamelab_moveInDirection:
@@ -1091,6 +1114,10 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: Переміщення {SPRITE} Пікселів {DISTANCE} До {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: ПлейЗвук {SOUND}
       gamelab_pointInDirection:
@@ -1125,13 +1152,31 @@ uk:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': печера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': суду
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустеля
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галактики
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сітка
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': науково-фантастичного
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': зірки
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
@@ -1168,12 +1213,18 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: Свою чергу {SPRITE} {DIRECTION} {N} Градусів
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: при натисканні стрілки вниз
       gamelab_whenKey:
@@ -1237,7 +1288,10 @@ uk:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не риба
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": мітка
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не мітка
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1245,7 +1299,10 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -1257,9 +1314,19 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: отримати наступний об'єкт
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1298,6 +1365,7 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: Видалити {SELECT} {COSTUME}
         options:
@@ -1390,6 +1458,7 @@ uk:
             MOVES.Roll: Хвиля
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Zombie
             MOVES.Rest: Немає
       Mikelab_ifLabel:
         text: |-
@@ -1415,14 +1484,20 @@ uk:
           DANCE:
             MOVES.ClapHigh: риби
             MOVES.Clown: не мітка
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: випадковий колір
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: повторювати завжди
       Mikelab_sendBad:
@@ -1430,10 +1505,30 @@ uk:
       Mikelab_sendGood:
         text: пересунути об' єкт праворуч
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1441,11 +1536,20 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': праворуч
             '"left"': ліворуч
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: Новий {COSTUME} спрайт на {LOCATION}
         options:
@@ -1459,6 +1563,7 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: коли клацнули {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1469,42 +1574,63 @@ uk:
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+            '"space"': spacebar
             '"w"': Зх
             '"a"': А
             '"s"': Пд
             '"d"': Г
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': стрілка вгору
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+            '"space"': spacebar
             '"w"': Зх
             '"a"': А
             '"s"': Пд
             '"d"': Г
       Mikelab_whenMouseClicked:
         text: при натисканні миші
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: коли натиснув {KEY}
         options:
           KEY:
             '"yes"': так
             '"no"': ні
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': стрілка вгору
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
       RyanLab_moveForward:
         text: рухатись вперед
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: повернути ліворуч
       RyanLab_turnRight:
@@ -1569,9 +1695,16 @@ uk:
       aalab_setupStory:
         text: історія налаштування
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': випадковий
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: залучити двійковий {BIN}
       binary_drawBinScreen:

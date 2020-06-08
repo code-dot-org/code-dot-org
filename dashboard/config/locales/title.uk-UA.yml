@@ -9,6 +9,7 @@ uk-UA:
       BinaryImages: Двійкові зображення
       BinaryImages_2018: Двійкові зображення
       BuildingAFoundation: Закладання основ
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Обчислювальне мислення
       Conditionals: Умови
       Conditionals_2018: Умови
@@ -19,7 +20,9 @@ uk-UA:
       DigitalFootprint: Твій цифровий слід
       DigitalFootprint_2018: Твій цифровий слід
       EnvelopeVariables: Конвертні змінні
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Ігри з циклами
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Функції для блискіток
       GettingLoopy: Економія на повторах
       GettingLoopy_2018: Економія на повторах
@@ -28,6 +31,7 @@ uk-UA:
       GraphPaperProgramming: Програмування по клітинках
       GraphPaperProgramming_2018: Програмування по клітинках
       Internet: Інтернет
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Пропуски
       MoveIt: Рухайся, рухайся
       MoveItMoveIt_2018: Рухайся, рухайся
@@ -38,17 +42,25 @@ uk-UA:
       RelayProgramming: Естафетне програмування
       RelayProgramming_2018: Естафетне програмування
       SongwritingParameters: Написання пісень
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Пісні з параметрами
       TangramAlgorithms: Алгоритми танграму
       UnplugHappyMaps: Щасливі карти
       UnplugHappyMaps_2018: Щасливі карти
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Безмашинна вправа
       courseB_unplugged_MRF_2018: Мої друзі-роботи
       courseB_unplugged_loopyMRF: Безмашинна вправа
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Безмашинна вправа
       courseC_Unplugged_ScreenOutTheMean_2018: Безмашинна вправа
       courseD_unplugged_digitalCitizenship: Безмашинна вправа
       courseD_unplugged_digitalCitizenship_2018: Безмашинна вправа
+      courseE_unplugged_CnC_2018: Digital Sharing
       courseE_unplugged_privateInformation: 'Здоровий глузд в освіта: Приватна та
         Особиста інформація '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Безмашинна вправа
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

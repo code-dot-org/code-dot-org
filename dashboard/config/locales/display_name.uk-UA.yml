@@ -2,6 +2,7 @@
 uk-UA:
   data:
     display_name:
+      AB_Debug_Artist1: 'Artist Debugging #1 (AB)'
       Alien Defender: Чужорідний захисник
       App Lab Intro 8 - Video Design Mode: 'Відео: режим проектування'
       App Lab Intro 8 - Video Getting Started: 'Відео: Початок роботи'
@@ -12,6 +13,7 @@ uk-UA:
       AppLab Intro 7 - Change Text 2: Змінити текст
       AppLab Intro 7 - Full Text: Дві кнопки
       AppLab Intro 7 - onEvent intro: Зробити кнопки Працюючою
+      AppLab Intro 7 - onEvent twoButtons: More onEvent Practice
       AppLab Intro 7 - playSound: Використання playSound
       AppLab Intro 7 - thisOrThatAddButton: Це або те
       AppLab Intro 7 - thisOrThatAddScreen: Це або те
@@ -28,9 +30,28 @@ uk-UA:
       CSD Booleans Map: Булеві та оператори порівняння
       CSD Booleans Map_2018: Булеві та оператори порівняння
       CSD Booleans Map_2019: Булеві та оператори порівняння
+      CSD Buzzer Map: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2018: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2019: 'Circuit Playground: Buzzer'
       CSD Counter Pattern Map: Лічильник шаблону
       CSD Counter Pattern Map_2018: Лічильник шаблону
       CSD Counter Pattern Map_2019: Лічильник шаблону
+      CSD If Else Map: If-Else Statements
+      CSD If Else Map_2018: If-Else Statements
+      CSD If Else Map_2019: If-Else Statements
+      CSD If Statements Map: If Statements
+      CSD If Statements Map_2018: If Statements
+      CSD If Statements Map_2019: If Statements
+      CSD LEDs Map: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2019: 'Circuit Playground: Introduction'
+      CSD Polling Events Map: Polling Events
+      CSD Polling Events Map_2018: Polling Events
+      CSD Polling Events Map_2019: Polling Events
+      CSD Problem Solving Process Video: 'Video: Problem Solving Process'
+      CSD Set Scale Map: Changing Sensor Scale
+      CSD Set Scale Map_2018: Changing Sensor Scale
+      CSD Set Scale Map_2019: Changing Sensor Scale
       CSD U1L02 TFMD_2018: Огляд уроку
       CSD U1L02 TFMD_2019: Огляд уроку
       CSD U1L03 TFMD_2018: Огляд уроку
@@ -45,9 +66,15 @@ uk-UA:
       CSD U1L07 TFMD_2019: Огляд уроку
       CSD U1L09 TFMD_2018: Огляд уроку
       CSD U1L09 TFMD_2019: Огляд уроку
+      CSD U2 CC Search Map: Creative Commons Search
+      CSD U2 CC Search Map_2018: Creative Commons Search
+      CSD U2 CC Search Map_2019: Creative Commons Search
       CSD U2 CSS Classes Map: Класи CSS
       CSD U2 CSS Classes Map_2018: Класи CSS
       CSD U2 CSS Classes Map_2019: Класи CSS
+      CSD U2 CSS explore CSS: 'Exploration: Adding Style'
+      CSD U2 CSS explore CSS_2018: 'Exploration: Adding Style'
+      CSD U2 CSS explore CSS_2019: 'Exploration: Adding Style'
       CSD U2 HTML Tags Map: HTML Теги
       CSD U2 HTML Tags Map_2018: HTML Теги
       CSD U2 HTML Tags Map_2019: HTML Теги
@@ -72,6 +99,9 @@ uk-UA:
       CSD U2 Pair Programming Video: Парне програмування
       CSD U2 Pair Programming Video_2018: Парне програмування
       CSD U2 Pair Programming Video_2019: Парне програмування
+      CSD U2 RGB intro: RGB Widget
+      CSD U2 RGB intro_2018: RGB Widget
+      CSD U2 RGB intro_2019: RGB Widget
       CSD U2 Style Sheet Map: CSS та таблиці стилів
       CSD U2 Style Sheet Map_2018: CSS та таблиці стилів
       CSD U2 Style Sheet Map_2019: CSS та таблиці стилів
@@ -87,9 +117,13 @@ uk-UA:
       CSD U2 formatting map: Форматування HTML
       CSD U2 formatting map_2018: Форматування HTML
       CSD U2 formatting map_2019: Форматування HTML
+      CSD U2 images map: Images in HTML
+      CSD U2 images map_2018: Images in HTML
+      CSD U2 images map_2019: Images in HTML
       CSD U2 lists map: Списки в HTML
       CSD U2 lists map_2018: Списки в HTML
       CSD U2 lists map_2019: Списки в HTML
+      CSD U2 publish video: Publishing Your Website
       CSD U2L01 TFMD_2018: Огляд уроку
       CSD U2L01 TFMD_2019: Огляд уроку
       CSD U2L02 TFMD_2018: Огляд уроку
@@ -118,6 +152,14 @@ uk-UA:
       CSD U2L13 TFMD_2019: Огляд уроку
       CSD U2L14 TFMD_2018: Огляд уроку
       CSD U2L14 TFMD_2019: Огляд уроку
+      CSD U3 - Booleans Video: 'Video: Booleans'
+      CSD U3 - Booleans Video_2018: 'Video: Booleans'
+      CSD U3 - Booleans Video_2019: 'Video: Booleans'
+      CSD U3 - Conditionals Video: 'Video: Conditionals'
+      CSD U3 - Conditionals Video_2018: 'Video: Conditionals'
+      CSD U3 - Conditionals Video_2019: 'Video: If/Else Statements'
+      CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
+      CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
       CSD U3 Animation Edit Map: Редагування зображень
       CSD U3 Animation Edit Map_2018: Редагування зображень
       CSD U3 Animation Edit Map_2019: Редагування зображень
@@ -127,12 +169,28 @@ uk-UA:
       CSD U3 AnimationsMulti Play Defender: Приклад гри
       CSD U3 AnimationsMulti Play Defender_2018: Приклад гри
       CSD U3 AnimationsMulti Play Defender_2019: Приклад гри
+      CSD U3 Complex Movement counter prediction gamelab: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2018: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2019: Velocity and the Counter
+        Pattern
       CSD U3 Compound Nested Challenge: 'Виклик: Перевірка кількох умов'
       CSD U3 Compound Nested Challenge_2018: 'Виклик: Перевірка кількох умов'
       CSD U3 Compound Nested Challenge_2019: 'Виклик: Перевірка кількох умов'
       CSD U3 Draw Loop Plugged update your scene: 'Виклик: розширюйте свою сцену'
       CSD U3 Draw Loop Plugged update your scene_2018: 'Виклик: розширюйте свою сцену'
       CSD U3 Draw Loop Plugged update your scene_2019: 'Виклик: розширюйте свою сцену'
+      CSD U3 Drawing Squares to Corners: Using the Grid
+      CSD U3 Drawing Squares to Corners_2018: Using the Grid
+      CSD U3 Drawing Squares to Corners_2019: Using the Grid
+      CSD U3 Entertainment Sample 3: Sprite Scenes
+      CSD U3 Entertainment Sample 3_2018: Sprite Scenes
+      CSD U3 Entertainment Sample 3_2019: Sprite Scenes
+      CSD U3 Entertainment Sample 4: Sprite Scenes
+      CSD U3 Entertainment Sample 4_2018: Sprite Scenes
+      CSD U3 Entertainment Sample 4_2019: Sprite Scenes
+      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
       CSD U3 Interactive Card Exemplar_2018: Інтерактивна картка
       CSD U3 Interactive Card Exemplar_2019: Інтерактивна картка
       CSD U3 Keyboard Input Challenge: 'Виклик: Додати більше входів'
@@ -183,12 +241,27 @@ uk-UA:
       CSD U3 Plotting Shapes Shape Lab: Малювання фігур
       CSD U3 Plotting Shapes Shape Lab_2018: Малювання фігур
       CSD U3 Plotting Shapes Shape Lab_2019: Малювання фігур
+      CSD U3 Random Number Map Level: Random Numbers
+      CSD U3 Random Number Map Level_2018: Random Numbers
+      CSD U3 Random Number Map Level_2019: Random Numbers
+      CSD U3 Scene Example: Sprite Scenes
+      CSD U3 Scene Example_2018: Sprite Scenes
+      CSD U3 Scene Example_2018_2019: Sprite Scenes
+      CSD U3 Sprite Properties Map: Sprite Properties
+      CSD U3 Sprite Properties Map_2018: Sprite Properties
+      CSD U3 Sprite Properties Map_2019: Sprite Properties
       CSD U3 Sprites Map: Створення Sprites
       CSD U3 Sprites Map_2018: Створення Sprites
       CSD U3 Sprites Map_2019: Створення Sprites
       CSD U3 Sprites scene challenge: 'Виклик: розширюйте свою сцену'
       CSD U3 Sprites scene challenge_2018: 'Виклик: розширюйте свою сцену'
       CSD U3 Sprites scene challenge_2019: 'Виклик: розширюйте свою сцену'
+      CSD U3 The Draw Loop Map: The Draw Loop
+      CSD U3 The Draw Loop Map_2018: The Draw Loop
+      CSD U3 The Draw Loop Map_2019: The Draw Loop
+      CSD U3 Variables Challenge: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2018: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2019: 'Challenge: Updating Variables'
       CSD U3 Variables Draw Challenge: 'Виклик: намалюйте зображення'
       CSD U3 Variables Draw Challenge_2018: 'Виклик: намалюйте зображення'
       CSD U3 Variables Draw Challenge_2019: 'Виклик: намалюйте зображення'
@@ -198,21 +271,68 @@ uk-UA:
       CSD U3 Watchers Map: Налагодження з спостерігачами
       CSD U3 Watchers Map_2018: Налагодження з спостерігачами
       CSD U3 Watchers Map_2019: Налагодження з спостерігачами
+      CSD U3 acceleration map: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2018: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2019: Velocity and the Counter Pattern Review
       CSD U3 challenge face: 'Виклик: обличчя'
       CSD U3 challenge face_2018: 'Виклик: обличчя'
       CSD U3 challenge face_2019: 'Виклик: обличчя'
+      CSD U3 challenge new shape: 'Challenge: Shape of Shapes'
+      CSD U3 challenge new shape_2018: 'Challenge: Shape of Shapes'
+      CSD U3 challenge new shape_2019: 'Challenge: Shape of Shapes'
+      CSD U3 collisions build isTouching: Collision Detection
+      CSD U3 collisions build isTouching_2018: Collision Detection
+      CSD U3 collisions build isTouching_2019: Collision Detection
       CSD U3 collisions car intro: Приклад гри
       CSD U3 collisions car intro_2018: Приклад гри
       CSD U3 collisions car intro_2019: Приклад гри
+      CSD U3 collisions predict set velocity code: Sprite Interactions
+      CSD U3 collisions predict set velocity code_2018: Sprite Interactions
+      CSD U3 collisions predict set velocity code_2019: Sprite Interactions
+      CSD U3 finishing touches: Project - Finishing Touches
+      CSD U3 finishing touches_2018: Project - Finishing Touches
+      CSD U3 finishing touches_2019: Project - Finishing Touches
+      CSD U3 function video: 'Video: Functions'
+      CSD U3 functions review: Functions Review
+      CSD U3 functions review_2018: Functions Review
+      CSD U3 functions review_2019: Functions Review
+      CSD U3 if else predict: Predict
+      CSD U3 interactions map: Sprite Interactions Review
+      CSD U3 interactions map_2018: Sprite Interactions Review
+      CSD U3 interactions map_2019: Sprite Interactions Review
+      CSD U3 istouching map: Collision Detection Review
+      CSD U3 istouching map_2018: Collision Detection Review
+      CSD U3 istouching map_2019: Collision Detection Review
+      CSD U3 naming map: Naming Variables
+      CSD U3 naming map_2018: Naming Variables
+      CSD U3 naming map_2019: Naming Variables
       CSD U3 picture: 'Виклик: намалюйте зображення'
       CSD U3 picture_2018: 'Виклик: намалюйте зображення'
       CSD U3 picture_2019: 'Виклик: намалюйте зображення'
       CSD U3 platform challenge: Поліпшити вашу гру
       CSD U3 platform challenge_2018: Поліпшити вашу гру
       CSD U3 platform challenge_2019: Поліпшити вашу гру
+      CSD U3 platform sample1: Sample Platform Jumper Game
+      CSD U3 platform sample1_2018: Sample Platform Jumper Game
+      CSD U3 platform sample1_2019: Sample Platform Jumper Game
+      CSD U3 platform sample2: Plane Jumper
+      CSD U3 platform sample2_2018: Plane Jumper
+      CSD U3 platform sample2_2019: Plane Jumper
+      CSD U3 platform sample3: Bunny Jumper
+      CSD U3 platform sample3_2018: Bunny Jumper
+      CSD U3 platform sample3_2019: Bunny Jumper
+      CSD U3 plotting shapes map: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2018: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2019: Plotting Shapes in Game Lab
       CSD U3 rect: Введення в Ігрову Лаб
       CSD U3 rect_2018: Введення в Ігрову Лаб
       CSD U3 rect_2019: Введення в Ігрову Лаб
+      CSD U3 shape size map: Shapes and Parameters
+      CSD U3 shape size map_2018: Shapes and Parameters
+      CSD U3 shape size map_2019: Shapes and Parameters
+      CSD U3 velocity map: Sprite Velocity
+      CSD U3 velocity map_2018: Sprite Velocity
+      CSD U3 velocity map_2019: Sprite Velocity
       CSD U3L01 TFMD_2018: Огляд уроку
       CSD U3L01 TFMD_2019: Огляд уроку
       CSD U3L02 TFMD_2018: Огляд уроку
@@ -257,15 +377,27 @@ uk-UA:
       CSD U3L21 TFMD_2019: Огляд уроку
       CSD U3L22 TFMD_2018: Огляд уроку
       CSD U3L22 TFMD_2019: Огляд уроку
+      CSD U4 - Design Mode Project: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2018: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2019: 'App Project: Screen Design'
       CSD U4 Change Screen Map: Зміна екранів
       CSD U4 Change Screen Map_2018: Зміна екранів
       CSD U4 Change Screen Map_2019: Зміна екранів
+      CSD U4 Design Elements Map: Design Mode Elements
+      CSD U4 Design Elements Map_2018: Design Mode Elements
+      CSD U4 Design Elements Map_2019: Design Mode Elements
       CSD U4 Design Mode Map: Тур по дизайну режиму
       CSD U4 Design Mode Map_2018: Тур по дизайну режиму
       CSD U4 Design Mode Map_2019: Тур по дизайну режиму
       CSD U4 Importing Screens Map: Імпортування екранів
       CSD U4 Importing Screens Map_2018: Імпортування екранів
       CSD U4 Importing Screens Map_2019: Імпортування екранів
+      CSD U4 Mult Screen Map: Multi-Screen Apps
+      CSD U4 Mult Screen Map_2018: Multi-Screen Apps
+      CSD U4 Mult Screen Map_2019: Multi-Screen Apps
+      CSD U4 User Input Map: Responding to User Input
+      CSD U4 User Input Map_2018: Responding to User Input
+      CSD U4 User Input Map_2019: Responding to User Input
       CSD U4L01 autoSFLP_2018: Огляд уроку
       CSD U4L01 autoSFLP_2019: Огляд уроку
       CSD U4L02 autoSFLP_2018: Огляд уроку
@@ -298,6 +430,16 @@ uk-UA:
       CSD U4L15 autoSFLP_2019: Огляд уроку
       CSD U4L16 autoSFLP_2018: Огляд уроку
       CSD U4L16 autoSFLP_2019: Огляд уроку
+      CSD U5 Amazon Data Video: Collecting Information About Users
+      CSD U5 Amazon Data Video_2018: Collecting Information About Users
+      CSD U5 Amazon Data Video_2019: How Amazon Uses Data
+      CSD U5 Netflix Data Video_2019: How Netflix Uses Data
+      CSD U5 Waze Data Video: Collecting Information About Users
+      CSD U5 Waze Data Video_2018: Collecting Information About Users
+      CSD U5 Waze Data Video_2019: How Waze Uses Data
+      CSD U5 binary video: Binary and Data
+      CSD U5 binary video_2018: Binary and Data
+      CSD U5 binary video_2019: Binary and Data
       CSD U5 black white images pixelation: Чорно-білий пікселейний віджет
       CSD U5 black white images pixelation 2: Чорно-білий пікселейний віджет
       CSD U5 black white images pixelation 2_2018: Чорно-білий пікселейний віджет
@@ -343,12 +485,33 @@ uk-UA:
       CSD U5L14 autoSFLP_2019: Огляд уроку
       CSD U5L15 autoSFLP_2018: Огляд уроку
       CSD U5L15 autoSFLP_2019: Огляд уроку
+      CSD U6 Event Types: Event Types
+      CSD U6 Event Types_2018: Event Types
+      CSD U6 Event Types_2019: Event Types
       CSD U6 analog challenge: 'Виклик: створення сенсорів'
       CSD U6 analog challenge_2018: 'Виклик: створення сенсорів'
       CSD U6 analog challenge_2019: 'Виклик: створення сенсорів'
+      CSD U6 arrays intro: Introduction to Arrays
+      CSD U6 arrays intro_2018: Introduction to Arrays
+      CSD U6 arrays intro_2019: Arrays
+      CSD U6 arrays video: 'Video: Introduction to Arrays'
+      CSD U6 challenge motorcycle_2018: 'Challenge: Motorcycle'
+      CSD U6 challenge motorcycle_2019: 'Challenge: Motorcycle'
+      CSD U6 circuit LED map: Circuits and LEDs
+      CSD U6 circuit LED map_2018: Circuits and LEDs
+      CSD U6 circuit LED map_2019: Circuits and LEDs
+      CSD U6 circuit button map: Button Circuits
+      CSD U6 circuit button map_2018: Button Circuits
+      CSD U6 circuit button map_2019: Button Circuits
       CSD U6 circuit logic video: Схеми та логіка
       CSD U6 circuit logic video_2018: Схеми та логіка
       CSD U6 circuit logic video_2019: Схеми та логіка
+      CSD U6 emoji race demo: Sample Program
+      CSD U6 emoji race demo_2018: Sample Program
+      CSD U6 emoji race demo_2019: Sample Program
+      CSD U6 emotion machine example: Emotion Machine Example
+      CSD U6 emotion machine example_2018: Emotion Machine Example
+      CSD U6 emotion machine example_2019: Emotion Machine Example
       CSD U6 for loop led bonus 1_2018: 'Виклик: Додати інші кнопки'
       CSD U6 for loop led bonus 2_2018: 'Виклик: кольорові візерунки'
       CSD U6 for loop led bonus 3_2018: 'Виклик: музика'
@@ -358,9 +521,27 @@ uk-UA:
       CSD U6 functions paramters video: Функції з параметрами
       CSD U6 functions paramters video_2018: Функції з параметрами
       CSD U6 functions paramters video_2019: Функції з параметрами
+      CSD U6 getProperty Map: getProperty
+      CSD U6 getProperty Map_2018: getProperty
+      CSD U6 getProperty Map_2019: getProperty
       CSD U6 hardware software video: Обладнання та програмне забезпечення
       CSD U6 hardware software video_2018: Обладнання та програмне забезпечення
       CSD U6 hardware software video_2019: Обладнання та програмне забезпечення
+      CSD U6 light pattern challenge_2018: Improved Light Show
+      CSD U6 light pattern challenge_2019: Improved Light Show
+      CSD U6 params starchaser challenge 1_2018: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 1_2019: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 2_2018: Starchaser - Reset Player
+      CSD U6 params starchaser challenge 2_2019: Starchaser - Reset Player
+      CSD U6 sensor experiment embedded: Sensor Experiment
+      CSD U6 sensor experiment embedded_2018: Sensor Experiment
+      CSD U6 sensor experiment embedded_2019: Sensor Experiment
+      CSD U6 setProperty Map: Designing Screens with Code
+      CSD U6 setProperty Map_2018: Designing Screens with Code
+      CSD U6 setProperty Map_2019: Designing Screens with Code
+      CSD U6 tugowar demo: Demo - Bug Grab
+      CSD U6 tugowar demo_2018: Demo - Bug Grab
+      CSD U6 tugowar demo_2019: Demo - Bug Grab
       CSD U6 tugowar final: Зробіть це своїм власним
       CSD U6 tugowar final_2018: Зробіть це своїм власним
       CSD U6 tugowar final_2019: Зробіть це своїм власним
@@ -412,23 +593,84 @@ uk-UA:
       CSD U6L16 TFMD: Огляд уроку
       CSD U6L16 TFMD_2018: Огляд уроку
       CSD U6L16 TFMD_2019: Огляд уроку
+      CSD What Makes a Computer a Computer Video: 'Video: What Makes a Computer, a
+        Computer?'
+      CSD What Makes a Computer a Computer Video_2018: 'Video: What Makes a Computer,
+        a Computer?'
+      CSD What Makes a Computer a Computer Video_2019: 'Video: What Makes a Computer,
+        a Computer?'
+      CSD colorLed Map: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2019: 'Circuit Playground: Color LEDs'
+      CSD onBoardEvent Map: Responding to Board Events
+      CSD onBoardEvent Map_2018: Responding to Board Events
+      CSD onBoardEvent Map_2019: Responding to Board Events
       CSD-Arrays: Змінення та створення масивів
       CSD-Arrays_2018: Змінення та створення масивів
       CSD-Arrays_2019: Змінення та створення масивів
+      'CSD: Animating Sprite Movement': 'Video: Sprite Movement'
+      'CSD: Animating Sprite Movement_2018': 'Video: Sprite Movement'
+      'CSD: Animating Sprite Movement_2019': 'Video: Sprite Movement'
+      'CSD: Animation Tab': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2018': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2019': 'Video: The Animation Tab'
+      'CSD: Drawing in Game Lab 1': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 1_2018': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 1_2019': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 2': 'Video: Drawing in Game Lab - Part 2'
+      'CSD: Drawing in Game Lab 2_2018': 'Video: Drawing in Game Lab - Part 2'
+      'CSD: Drawing in Game Lab 2_2019': 'Video: Drawing in Game Lab - Part 2'
       'CSD: For Loop_2018': Цикли For
+      'CSD: For Loop_2019': 'Video: For Loops'
+      'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
+      'CSD: Introduction to the Draw Loop_2018': 'Video: Introduction to the Draw
+        Loop'
+      'CSD: Introduction to the Draw Loop_2019': 'Video: Introduction to the Draw
+        Loop'
+      'CSD: Sprite Velocity': 'Video: Velocity'
+      'CSD: Sprite Velocity_2018': 'Video: Velocity'
+      'CSD: Sprite Velocity_2019': 'Video: Velocity'
+      'CSD: Sprites in Game Lab': 'Video: Introduction to Sprites'
+      'CSD: Sprites in Game Lab_2018': 'Video: Introduction to Sprites'
+      'CSD: Sprites in Game Lab_2019': 'Video: Introduction to Sprites'
       CSDU4 Design Mode Video: Введення в Режим дизайну
       CSDU4 Design Mode Video_2018: Введення в Режим дизайну
       CSDU4 Design Mode Video_2019: Введення в Режим дизайну
+      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
+      CSDU4 Project Events: 'App Project: Linking Screens'
+      CSDU4 Project Events_2018: 'App Project: Linking Screens'
+      CSDU4 Project Events_2019: 'App Project: Linking Screens'
+      CSDU4 Project Import: 'App Project: Screen Import'
+      CSDU4 Project Import_2018: 'App Project: Screen Import'
+      CSDU4 Project Import_2019: 'App Project: Screen Import'
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge_2018: Sound Board
+      CSDU6 - board event challenge_2019: Sound Board
+      CSDU6 buzzer 2d arrays_2018: 2D Arrays
+      CSDU6 buzzer 2d arrays_2019: 2D Arrays
+      CSDU6 buzzer.stop_2018: Stopping the Music
+      CSDU6 buzzer.stop_2019: Stopping the Music
+      CSS U2 Body Map: The Body Element
+      CSS U2 Body Map_2018: The Body Element
+      CSS U2 Body Map_2019: The Body Element
       'Course E: Artist Project': Курс E Виконавець проекту
       'Course E: Artist Project_2018': Курс E Виконавець проекту
       'Course E: Artist Project_2019': Курс E Виконавець проекту
+      'Course F: Artist Project - Revise_2018': Revise Artist Project
       'Course F: Artist Project_2018': Курс F Виконавчий проект
       'Course F: Artist Project_2019': Курс F Виконавчий проект
       CourseEF_video_IntroSpriteLab: Це Спрайт Лаб
       CourseEF_video_IntroSpriteLab_2019: Це Спрайт Лаб
       CourseEF_video_MakeSprite: Як зробити спрайт
       CourseEF_video_MakeSprite_2019: Як зробити спрайт
+      CourseE_Project_SpriteLab: Course E Sprite Lab Project
+      CourseE_Project_SpriteLab_2019: Course E Sprite Lab Project
+      CourseE_hoops: 'Bunny '
       CourseF_Project_Revise_SpriteLab: Переглянути проект Sprite Lab
+      CourseF_Project_SpriteLab: Course F Sprite Lab Project
+      CourseF_Project_SpriteLab_2019: Course F Sprite Lab Project
       Dance_Party_extras_alternate_2019: Назад і вперед
       Dance_Party_extras_battle: Танцювальні команди
       Dance_Party_extras_battle_2019: Танцювальні команди
@@ -443,7 +685,19 @@ uk-UA:
       Dance_Party_extras_speed_2019: Пришвидшення та сповільнення
       Dance_Party_extras_visible: Куди вони поділися?
       Dance_Party_extras_visible_2019: Куди вони поділися?
+      Final Personal Website: Final Personal Website
+      Final Personal Website_2018: Final Personal Website
+      Final Personal Website_2019: Final Personal Website
+      Geometric Sun_2018: Geometric Sun
       InspirationalArtwork_2018: Натхнення!
+      Intro to Web Lab - Part 1: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 1_2018: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 1_2019: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 2: 'Video: Intro to Web Lab - Part 2'
+      Intro to Web Lab - Part 2_2018: 'Video: Intro to Web Lab - Part 2'
+      Intro to Web Lab - Part 2_2019: 'Video: Intro to Web Lab - Part 2'
+      Introduction to Variables - Part 1_2018: Introduction to Variables
+      Introduction to Variables - Part 1_2019: Introduction to Variables
       MC_HOC_2017_01_RETRY: Садиба
       MC_HOC_2017_01_RETRY_2019: Садиба
       MC_HOC_2017_02_Cole: Ферма
@@ -466,15 +720,43 @@ uk-UA:
       MC_HOC_2017_Ali_2019: Фортеця Острів
       MC_HOC_2017_FP20x20: Безкоштовна гра
       MC_HOC_2017_FP20x20_2019: Безкоштовна гра
+      Making Music_2018: Making Music
+      Making Music_2019: Making Music
+      New Dance Lab Project: New Dance Party Project
       New Minecraft Hero Project: Безкоштовна гра
+      OPD-K5 WhatIsCS: What is computer science?
+      OPD-K5 WhatIsCS_copy: What is computer science?
       OPD-K5-spritelab-5-video: Як зробити спрайт
       Oceans_Video_Machine_Learning: 'Відео: Машинне навчання'
       Oceans_Video_Societal_Implications: 'Відео: Соціальні наслідки'
       Oceans_Video_Training_Data: 'Відео: Тренування баз даних'
+      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
+      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
+      Robot Doodle_2018: Robot Doodle
+      The Accelerometer_2018: The Accelerometer
+      The Accelerometer_2019: The Accelerometer
+      Using Accelerometer Events_2018: Using Accelerometer Events
+      Using Accelerometer Events_2019: Using Accelerometer Events
+      'Video: Intro to CSS Part 2_2018': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS Part 2_2019': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS_2018': 'Video: Intro to CSS'
+      'Video: Intro to CSS_2019': 'Video: Intro to CSS'
       courseA_video_Stevie: Стів і Великий проект
       courseA_video_Stevie_2018: Стів і Великий проект
       courseB_video_Unspotted: Баги
       courseB_video_Unspotted_2018: Баги
+      courseE_Dogger_2: Dogger Example
+      courseF_artist_for1: For Loops Freeplay (Beginning)
+      courseF_artist_for1_2018: For Loops Freeplay (Beginning)
+      courseF_artist_for1_2019: For Loops Freeplay (Beginning)
+      courseF_project_1: Sprite Lab Example Project
       courseF_video_csMatters: Кінець курсових проектів
+      courseF_video_csMatters_2018: 'Video: CS Matters'
+      csd U3 conditional statements video: 'Video: "If/Else" Statements'
+      csd U3 conditional statements video_2019: 'Video: Conditional Statements'
+      csd u5 recommender sample: Sample App
+      csd u5 recommender sample_2019: Sample App
       csd-pre-survey-2017-levelgroup_2018: Огляд уроку
       csd-pre-survey-levelgroup_2019: Огляд уроку
+      scrat_loops_C-F_video: Loops in Ice Age Video
+      scrat_loops_C-F_video_2019: Loops in Ice Age Video
