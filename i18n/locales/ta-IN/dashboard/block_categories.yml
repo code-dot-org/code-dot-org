@@ -2,15 +2,30 @@ ta:
   data:
     block_categories:
       Actions: செயல்கள்
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: நிறம்
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
       Dancers: நடனக்கலைஞர்கள்
+      Default: Default
       Events: நிகழ்வுகள்
       Functions: செயல்பாடுகள்
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
       Groups: குழுக்கள்
+      Input: Input
+      Locations: Locations
       Logic: தர்க்கம்
       Loops: சுழற்சிகள்
       Math: கணிதம்
       Numbers: எண்கள்
+      Properties: Properties
+      Sprites: Sprites
       Text: உரை
       Variables: மாறிலிகள்
+      'Variables ': 'Variables '
       World: உலகம்
