@@ -22,6 +22,42 @@ fil-PH:
           'Run' ulit.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Ikaw ay nasa Design Mode na ngayon.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 Boolean Predict:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2018:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2019:
+        '': This program will print out a result here
+      CSD U3 Sprites anitab 1:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2018:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2019:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites intro sprites:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Use this block to create a sprite
+      CSD U3 Sprites text:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2018:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2019:
+        '': Use this block to put text on the screen
+      CSD U3 UP_ARROW:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018_2019:
+        '': Add an if statement and place your movement code inside it
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Baguhin ang numero dito
       CSD U3 Variables Predict Where XY:
@@ -34,6 +70,117 @@ fil-PH:
         CSD_U3_variables: Baguhin ang numero dito
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Baguhin ang numero dito
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
@@ -61,6 +208,60 @@ fil-PH:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018_2019:
+        '': Add your block inside this if statement
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019:
+        callout: This block creates a variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Narito ang "Run" na button.
@@ -83,6 +284,12 @@ fil-PH:
         CSDU6L10_rainbow: Idagdag ang iyong code dito
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: Idagdag ang iyong code dito
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 light show_2018:
@@ -107,6 +314,8 @@ fil-PH:
         CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
+      CSDU4 - Design Mode - 3:
+        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Maglagay ng bilang kung ilang beses ba dapat gumalaw ang
           zombie para makagawa ng buong bilog
@@ -210,6 +419,9 @@ fil-PH:
         dance_callout_11_b: Bagong block!
       Dance_Party_11_5:
         dance_party_11_5_groups: Tingnan dito para sa mga block na "lahat pato"
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
       Function intro Ryan:
         Function_intro_Ryan_1: Ang maliit na mga instruksyon na ito ay nagsasabi sa
           kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga
@@ -246,6 +458,33 @@ fil-PH:
         InspirationalArtwork_1: Subukang gamitin ang bagong `comment` na bloke sa
           ilalim ng label na ito para hayaan ang iyong sarili na magtala sa loob ng
           iyong mga programa!
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+      MC_HOC_2017_03_Cole:
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace
+          and add code that you want to run over and over.
+      MC_HOC_2017_03_Cole_2019:
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace
+          and add code that you want to run over and over.
+      MC_HOC_2017_04_Cole:
+        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
+      MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
+      MC_HOC_2017_06_Cole:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit
+          them!
+      MC_HOC_2017_06_Cole_2019:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit
+          them!
+      MC_HOC_2017_Ali:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
+      MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
+      NEW Course 4 Artist Functions 3:
+        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
+          that it creates a square.
       NEW Course 4 Artist Functions 7:
         edit_function: Mag-click dito para ma-edit ang iyong function.
       NEW Course 4 Artist Functions 8:
@@ -262,16 +501,41 @@ fil-PH:
       NEW Course 4 Artist Vars 6:
         place_length_variable: I-drag ang haba na variable dito para mapalitan ang
           mga marka ng tanong
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Enter the largest number of nectar you want the bee to collect
+          here
       NEW Course 4 Bee For Loops 5:
         actions_category: Ang tool box ay nagkaroon ng bagong itsura. Ang "Aksyon"
           na mga bloke ay nandito na ngayon.
+      New Artist Project:
+        New Artist Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
       New Frozen Project:
         snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
           mga snowflakes!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Use this block to leave yourself or your teacher notes
+          about how your code works.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon
           ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math`
           na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
       Overworld Chop Trees:
         craft_callout_preplaced: Naglagay tayo ng ilang mga bloke dito para makapagsimula
           ka
@@ -286,8 +550,12 @@ fil-PH:
           iyong bahay. Matatapos mo ba ito?
       Overworld Move to Sheep:
         craft_run_button_callout: Pindutin ang "Takbo" upang masubukan ang iyong program
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Pindutin ang "Takbo" upang masubukan ang iyong program
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block
       Overworld Place Wall:
         craft_inside_repeat: Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga
           bloke dito
@@ -312,15 +580,78 @@ fil-PH:
         craft_what_is_iron: Minahin ang bakal na ito!
       Underground Iron_2019:
         craft_what_is_iron: Minahin ang bakal na ito!
+      Virtual Pet 2_2019:
+        '': Click here!
+      behaviors 1:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Replace the costume block below with this.
+      behaviors 4:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 5:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play:
+        behaviors_edit: Add code to this behavior.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
           ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Gamitin ang utos na ito para mapagalaw
           ang bubuyog patalikod.
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo
           na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
+          corn, but what about the other vegetables?
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
@@ -329,6 +660,17 @@ fil-PH:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
           ang mga ito sa mamayang yugto.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
@@ -364,6 +706,24 @@ fil-PH:
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Gamitin hakbang na pindutan para makapunta sa
           bawat hakbang sa programa. Ito ay makakatulong sa iyo na maghanap ng bug!
+      courseA_maze_seq4:
+        made_of_stone: These blocks are made of stone.  You can move them, but you
+          can't delete them!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Click here to change the direction of the event
+          arrow.
       courseA_playLab_events6:
         courseA_playLab_events6_1: Ito ay nagbibigay-daan sa iyo na makapili ng "random"
           na tunog, kung saan nangangahulugan na hindi mo alam kung ano ang makukuha
@@ -430,6 +790,18 @@ fil-PH:
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin
           ang mga direksyon.
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo
           na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
@@ -439,6 +811,11 @@ fil-PH:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo
           na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: This block is very important for this project. Be sure to
+          use it!
+      courseC_artist_loops1b_2019:
+        sticker2: Add this to the middle of your program.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng
           ito para mapapunta ang artista sa gitna ng screen.
@@ -452,6 +829,12 @@ fil-PH:
         courseC_collector_prog1_1: Nakakakita ka ba ng ilang bagong mga bloke sa loob
           ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
           ang mga ito sa mamayang yugto.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them in another lesson.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them in another lesson.
       courseC_collector_prog7:
         courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa
           toolbox kung kailangan mo ang mga ito!
@@ -479,6 +862,8 @@ fil-PH:
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring
           burahin!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
@@ -521,6 +906,12 @@ fil-PH:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseC_maze_programming5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Ito ang iyong unang hamon na palaisipan! Ang
           mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
@@ -598,9 +989,17 @@ fil-PH:
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Gamitin ang blokeng ito para magkolekta ng isang
           piraso ng kayamanan.  '
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseD_maze_intro5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
@@ -643,6 +1042,18 @@ fil-PH:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseD_maze_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng
           ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin
@@ -667,6 +1078,8 @@ fil-PH:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseD_scrat_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng
           ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin
@@ -678,6 +1091,14 @@ fil-PH:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito
           ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
+      courseE_aboutme_2:
+        '': Click here!
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat
           ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
@@ -703,6 +1124,36 @@ fil-PH:
       courseE_artist_functions8a_2019:
         courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function
           ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
@@ -711,15 +1162,147 @@ fil-PH:
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
           ang iyong code.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo
           na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
+          next level.
+      courseF_artist_for1:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_for1_2018:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_for1_2019:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables6:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6_2018:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6_2019:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a_2018:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of
+          the blocks you need are beneath these labels!
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_1: Use this block when the length of the path changes
+          (as in the sides of the rectangle!)
+      courseF_bee_for4:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for4_2018:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for4_2019:
+        courseF_bee_for4_1: You will find the `for` loop in here!
+      courseF_bee_for9:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_functions2:
+        courseF_bee_functions2_1: This block calls a function.  Click this "edit"
+          button to see what is inside!
+      courseF_bee_functions6:
+        courseF_bee_functions6_1: Don't forget to look in here for more blocks that
+          might help make this easier!
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
+      courseF_bee_fwp1:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
+      courseF_bee_fwp3:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
+          corn, but what about the other vegetables?
+      courseF_bee_variables_1_2018:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_variables_1_2019:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: The toolbox has been organized into categories
+          to make it easier to find the blocks you need.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
       coursea_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
       coursea_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Gamitin ang "create a circle"
           na bloke at baguhin ang laki.
