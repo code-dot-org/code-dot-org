@@ -63,6 +63,7 @@ ar:
   previous_page: الصفحة السابقة
   next_page: الصفحة التالية
   next_resource: المصدر التالي
+  done_with_module: Done with this Learning Module
   cancel: "إلغاء"
   okay: "حسناً"
   or: "أو"
@@ -311,10 +312,17 @@ ar:
       sections: "الأقسام"
       help_support: "مساعدة ودعم"
       report_bug: "أبلغ عن وجود خلل"
+      report_abuse: "Report abuse"
       teacher_community: "مجتمع المدرسين"
       professional_learning: "Professional learning"
       documentation: "الوثائق"
       tutorials: "الدروس"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
+      sprite_lab_documentation: "Sprite Lab Documentation"
+      sprite_lab_tutorials: "Sprite Lab Tutorials"
       educate_overview: "لمحة عن المعلم"
       educate_elementary: "المدرسة الابتدائية"
       educate_middle: "المرحلة المتوسطة"
@@ -340,6 +348,7 @@ ar:
       help_us: "ساعدنا"
       teach: "التعليم"
       about: "حول"
+      legal: "Privacy & Legal"
       legal_privacy: "سياسة الخصوصية"
       legal_tos: "شروط الخدمة"
     user:
@@ -347,6 +356,7 @@ ar:
       district_dashboard: 'جزء لوحة المعلومات'
       label: 'مرحباً %{username}'
       stats: 'ستوديو كود'
+      my_projects: 'My projects'
       settings: 'حسابي'
       logout: 'تسجيل الخروج'
       signin: 'تسجيل الدخول'
@@ -363,6 +373,7 @@ ar:
       artist_k1: 'الفنان (القارئ الأوّلي)'
       basketball: 'كرة السلة'
       bounce: 'الارتداد'
+      calc: 'Calc'
       dance: 'حفلة الرقص'
       eval: 'تقييم'
       flappy: 'فلابي'
@@ -374,13 +385,20 @@ ar:
       infinity: 'ما لانهاية'
       makerlab: 'صانع الأدوات'
       minecraft_adventurer: 'مغامر في Minecraft'
+      minecraft_aquatic: 'Minecraft Aquatic'
       minecraft_codebuilder: 'Minecraft: كود الاتصال'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'بطل Minecraft'
       playlab: 'مختبر اللعب'
       playlab_k1: 'Play Lab (القارئ الأوّلي)'
       scratch: 'Scratch'
+      sports: 'Sports'
+      spritelab: 'Sprite Lab'
       starwars: 'حرب النجوم "Star Wars"'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
+      weblab: 'Web Lab'
+      view_all: 'View all projects...'
     popup:
       progress_for_user: "تقدم %{name}"
       progress: 'إنجازاتك'
@@ -500,6 +518,7 @@ ar:
     no_primary_course: "جرب الدورة تدريبية في \"كود استوديو\""
     choose_next_course: "جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل"
     print_certificate: "طباعة الشهادة"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود قسم مختلف."
     section_code_cant_be_current_section: "القسم الحالي لا يمكن أن يكون مثل القسم الجديد."
@@ -636,6 +655,7 @@ ar:
       audience: "للأعمار 13 +"
       cta: "تعلم كيف"
     hoc-encryption:
+      title: "Simple Encryption"
       body: "سيتعلم الطلاب أساليب لإنشاء الرسائل المشفَّرة واختراقها."
     weblab:
       title: "مختبر الويب (التجريبي)"
@@ -648,6 +668,7 @@ ar:
       title: "حرب النجوم \"Star Wars\""
     infinity:
       title: "لعبة مختبر اللعب اللانهائية"
+      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
       body: "استكشف عالم Minecraft عن طريق الكود."
@@ -660,8 +681,10 @@ ar:
       title: "Minecraft"
       body: "عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة! رحلة عبر Minecraft مع البرمجة."
     sports:
+      title: "Sports"
       body: "اصنع لعبة كرة السلة، أو قم بالخلط والمطابقة عبر الرياضات."
     text-compression:
+      title: "Text Compression"
       body: "في هذا الدرس، سيستعمل الطلاب أداة ضغط النص لضغطه بتغيير النماذج بالرموز."
     unplugged:
       title: "درس غير موصول"
@@ -692,11 +715,15 @@ ar:
     wrong_body: "أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!"
     correct_title: "صحيح"
     correct_body: "هذا هو الجواب الصحيح."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "شكراً"
     wrong_body: "شكرا لك على تقديم إجابة."
     correct_title: "شكراً"
     correct_body: "شكرا لك على تقديم إجابة."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "شكراً"
     wrong_body: "شكرا لك على تقديم الإجابات."
@@ -734,6 +761,8 @@ ar:
     open_response_body: "شكرا لردكم!"
     correct_title: "صحيح"
     correct_body: "هذا هو الجواب الصحيح."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "موافق"
     startover_title: "هل أنت متأكد من أنك تريد البدء من جديد؟"
@@ -860,6 +889,15 @@ ar:
     instructor_feedback: 'ملاحظات المدرب'
     peer_feedback: 'ردود القرين'
     outdated: 'هذه الملاحظات مقدمة لنسخة سابقة'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: إخلاء مسؤولية
     leaving_domain: أنت الآن تغادر من هذا النطاق إلى موقع إلكتروني لا تديره مؤسسة Code.org.
@@ -918,6 +956,15 @@ ar:
     download_in_Vietnamese: 'تحميل بالفييتنامنية:'
     windows: 'ويندوز (64-بايت)'
     mac: 'نظام تشغيل ماك'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'لا يمكن الاطلاع على محتوى هذه الصفحة لأنه مقفل حاليا. يمكن للمدرس فتح قفل هذا التمرين عندما يحين وقت العمل عليه أو لمراجعة إجاباتك.'
   hidden_stage: "لم يتوقع مدرسك أن تكون هنا. المرجو سؤاله عن أي درس ستتواجد فيه."
   hidden_script: "لم يتوقع مدرسك أن تكون هنا. المرجو سؤاله عن أي وحدة ستتواجد فيها."
@@ -930,6 +977,34 @@ ar:
   view_all_units: 'شاهد كل الوحدات'
   view_teacher_guide: 'عرض دليل المعلم'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
       first_name: 'الاسم الأول'
       first_name_preferred: 'الاسم الأول المفضل'
@@ -989,6 +1064,7 @@ ar:
         csfirst: 'أوليات غوغل علوم الكمبيوتر'
         khan: 'أكاديمية خان'
         kodable: 'كودابل'
+        lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "أخرى:"
@@ -1035,6 +1111,10 @@ ar:
     privacy_policy: 'سياسة الخصوصية'
     logout: 'تسجيل الخروج'
     yes: 'نعم'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
   copy: 'نسخ'
   maker:
     google_oauth:

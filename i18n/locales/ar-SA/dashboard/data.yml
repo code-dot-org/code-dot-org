@@ -39,6 +39,7 @@ ar:
         Custom: الرسام
         CustomStudio: مختبر اللعب
         Gamelab: أداة Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: برونزية
@@ -352,11 +353,14 @@ ar:
         C4_unplugged_forloops: للحلقات
         C4_unplugged_parameters: تأليف الأغاني مع المعلمات
         C4_unplugged_binary: ثنائي
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: الزوايا في الرسام
         CSF_collector_k1_blocks: 'أساسيات علوم الكمبيوتر: المجمِّع'
         CSF_collector_repeat_loops: المجمِّع يكرر الحلقات البرمجية
         CSF_collector_text_blocks: 'أساسيات علوم الكمبيوتر: المجمِّع'
         CSF_create_functions: إنشاء دوال
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: مسائل علوم الكمبيوتر
         CSF_maze_intro_k1_blocks: مقدمة إلى Code Studio
         CSF_maze_intro_text_blocks: مقدمة إلى Code Studio
@@ -387,15 +391,50 @@ ar:
         csd_external_netflix_data: كيف يضع نتفليكس اقتراحاته بشأن البرامج التليفزيونية والأفلام؟
         csd_external_waze_data: لماذا أصبح كثير من المستخدمين مهووسون بتطبيق Waze؟
         csd_gamelab_animation_tab: تبويب الرسوم المتحركة
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: السرعة
         csd_weblab_intro_1: مدخل لمختبر الويب -الجزء 2
         csd_weblab_intro_2: مدخل لمختبر الويب -الجزء 2
         csd_weblab_css_1: مدخل ل CSS - جزء 1
         csd_weblab_css_2: مدخل ل CSS - جزء 2
         csd_weblab_intro_3: مدخل لمختبر الويب - جزء 3
+        csp_applab_objects: Introduction to Objects
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_processing_lists: Processing Lists with Loops
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: تقديم للدوال
         csp_applab_functions_parameters: الدوال والمعاملات
         csp_applab_loops: الحلقات
+        csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: بعض المعلومات عن البكسل
         csp_cs_is_changing_everything: علوم الكمبيوتر تغير كل شيء
         csp_pixelation_color_1: برنامج بكسل الألوان - الجزء 1
@@ -480,10 +519,13 @@ ar:
         applab_intro_sounds: أصوات وصور - مختبر التطبيقات
         applab_intro_designmode: وضع التصميم - مختبر التطبيقات
         applab_intro_share: تقاسم تطبيقك - مختبر التطبيقات
+        csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: الحصادة
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: الحصادة
+        CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: الحلقات في العصر الجليدي
         CSF_scrat_loops_CF: الحلقات في العصر الجليدي
         CSF_if_allskins: الكتلة البرمجية if
@@ -503,7 +545,11 @@ ar:
         mc_2018_conditionals: 'Minecraft: سفر مائي شرطي'
         mc_2018_closing: 'Minecraft: سفر مائي تهانينا'
         hoc_dance_warmup: حفلة الرقص - تسخينات
+        hoc_dance_events: Dance Party - Events
+        hoc_dance_properties: Dance Party - Properties
         hoc_dance_congrats: حفلة الرقص - البداية!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
         teaching_csf_how_it_works: 'تدريس أساسيات علوم الكمبيوتر: كيف تنجز الدورات'
         elem_pd_2: المدرسة الابتدائية لعلوم الكمبيوتر - PD فيديو 2/2
         what_is_cs: ما علوم الكمبيوتر؟
@@ -522,10 +568,12 @@ ar:
         csd_gamelab_functions: "تعريف الدوال وتسميتها\n"
         csd_applab_parameters: الدوال والمعاملات
         csd_applab_loops: الحلقات البرمجية في مشروع App Lab
+        csd_problem_solving_process: The Problem Solving Process
         CSF_Going_Places_Safely: الحي الذي أقطنه عبر الإنترنت
         CSF_SpriteLab_Intro_v2: التعريف بمشروع Sprite Lab (مختبر سبرايت)
         CSF_Spritelab_MakeSprite_v2: كيف تصنع "سبرايت"
         CSF_SpriteLab_SpritesInAction_v2: العفاريت تتحرك
+        csd_debugging: Debugging
         csd_applab_designmode_short: وضع التصميم في مشروع App Lab
         csp-pd-welcome: مرحبًا بك في العائلة!
         CSF-Teaching-Problem-Solving: تدريس حل المشكلات ضمن أساسيات علوم الكمبيوتر
@@ -545,9 +593,21 @@ ar:
         csd_what_computers_do: ما الذي تفعله أجهزة الكمبيوتر؟
         csf_my_online_neighborhood_2020: الحي الذي أقطنه عبر الإنترنت
         csf_follow_the_digital_trail: اتبع المسلك الرقمي
+        csf_private_and_personal_information: Private and Personal Information
+        csd_what_computers_are: What is a Computer?
         codebreak_e01: 'برنامج Code Break 1.0: الخوارزميات مع هيل هاربر'
         codebreak_e02: 'برنامج Code Break 2.0: النماذج الأولية مع مارك كوبان وليندسي سكوت'
         codebreak_e03: 'برنامج Code Break 3.0: التشفير مع أشتون كوتشر ومايا جيل إبنر'
+        codebreak_e04: Code Break 4.0 Digital Information with Mike Krieger and Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

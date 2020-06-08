@@ -5,12 +5,314 @@ ar-SA:
       2-3 Artist Debugging 1:
         2-3_Artist_Debugging_1_a: لا يمتلك الفنان رز "خطوة"، لكن يمكنك سحب الشريط
           المنزلق إلى اليسار لمشاهدة تشغيل البرنامج ببطء.
+      2-3 Bee Conditionals 5:
+        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
+          know until you run the code!
       4-5 Artist Patterns Free Play:
         4-5_Artist_Patterns_Free_Play_1: كافة مربعاتك البرمجية منظمة في فئات. أنقر
           على هذه الكلمات لترى أين ذهب كل شيء!
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: تذكّر، افحص لتتأكد ما إذا كان لكل غيمة زهرة. لست
           ملزمًا لفحص خلايا النحل بتاتًا.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: You're now in Design Mode.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 Boolean Predict:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2018:
+        '': This program will print out a result here
+      CSD U3 Boolean Predict_2019:
+        '': This program will print out a result here
+      CSD U3 Sprites anitab 1:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2018:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2019:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites intro sprites:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Use this block to create a sprite
+      CSD U3 Sprites text:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2018:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2019:
+        '': Use this block to put text on the screen
+      CSD U3 UP_ARROW:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018_2019:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 Variables Predict Where X:
+        CSD_U3_variables: Change the number here
+      CSD U3 Variables Predict Where XY:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2018:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2019:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where X_2018:
+        CSD_U3_variables: Change the number here
+      CSD U3 Variables Predict Where X_2019:
+        CSD_U3_variables: Change the number here
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 debug:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 debug_2018:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 debug_2019:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse_2018:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse_2019:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill_2018:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill_2019:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018_2019:
+        '': Add your block inside this if statement
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019:
+        callout: This block creates a variable.
+      CSD U3 rect:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Here is the "Run" button.
+      CSD U3 rect_2018:
+        CSD_U3_rect_c1: Here is the code
+      CSD U3 rect_2019:
+        CSD_U3_rect_c1: Here is the code
+      CSD U3 sequence:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 sequence_2018:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 sequence_2019:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 colorLeds intensity:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2019:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 light show:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2019:
+        CSDUDL03P09: What does this line do?
+      CSD U6 tugowar variables 1:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2018:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2019:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2018:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2019:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2018:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2019:
+        CSD_U6_checkWin: Check if the player has won
+      CSDU4 - Design Mode - 3:
+        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة
           كاملة
@@ -18,6 +320,10 @@ ar-SA:
         repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
       Course 4 Artist For Loops 4:
         place_counter_variable: سحب متغير العداد داخل مربع البرمجة هذا
+      Course 4 Artist Functions challenge:
+        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
+          and put them behind categories to keep things tidy.  Click here to find
+          all of the blocks that you need.
       Course 4 Artist Vars 1:
         repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
       Course 4 Artist Vars 12:
@@ -26,17 +332,41 @@ ar-SA:
         set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
       Course 4 Artist Vars 6:
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
+          coding area wider.
+      Course 4 Bee 1:
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
+          make honey
+      Course 4 Bee 3:
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
+          and makes honey if it's not a flower
       Course 4 Bee Params 2:
         edit_get_nectar: استخدم هذا الزر لتحرير المهمة وتغيير اتجاه النحلة سوف تتحول
           إلى الحصول على الرحيق.
       Course 4 Maze 4:
         repeat: ضع مربعات برمجة داخل الحلقة لتكرار الأوامر
+      Course 4 Play Lab Params 2:
+        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
+          it uses the height parameter.
       Course 4 Play Lab Params 3:
         edit_function: انقر هنا لتحرير وظيفتك.
       Course 4 Play Lab Params 6:
         edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
       Course 4 Play Lab Vars 1:
         arrows_move_actor: استخدم الأسهم لتحريك الفنان
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a
+          different name for each character?  That's so each `for` loop can control
+          its own counter.
+        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change
+          the "increment" of the `for` loops.
+      Course 4 SCV 6:
+        Course_4_SCV_6: This block allows you to customize your color to almost anything
+          you want to see!  Play around with the numbers to see what happens!
       CourseD_Dance_Party_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
       CourseD_Dance_Party_02:
@@ -107,6 +437,9 @@ ar-SA:
       InspirationalArtwork:
         InspirationalArtwork_1: جرب استخدام المربع البرمجي "تعليق" الجديد أسفل هذه
           التسيمة لكي تترك تعليق بنفسك داخل البرنامج الخاص بك!
+      InspirationalArtwork_2018:
+        InspirationalArtwork_1: Try using the `comment` block under this label to
+          leave yourself notes inside your program!
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: عند الانتهاء من كتابة البرنامج، اضغط زر "تشغيل"
           لتتمكّن من تجريب برنامجك!
@@ -134,6 +467,9 @@ ar-SA:
       MC_HOC_2017_Ali_2019:
         MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
           لا يمكنهم فعل ذلك!  '
+      NEW Course 4 Artist Functions 3:
+        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
+          that it creates a square.
       NEW Course 4 Artist Functions 7:
         edit_function: انقر هنا لتحرير وظيفتك.
       NEW Course 4 Artist Functions 8:
@@ -147,6 +483,9 @@ ar-SA:
           ثم اسحبه إلى تعريف الدالة الخاصة بك
       NEW Course 4 Artist Vars 6:
         place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Enter the largest number of nectar you want the bee to collect
+          here
       NEW Course 4 Bee For Loops 5:
         actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
       New Artist Project:
@@ -220,6 +559,18 @@ ar-SA:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Virtual Pet 2_2019:
         '': انقر هنا!
+      behaviors 1:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Replace the costume block below with this.
+      behaviors 4:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 5:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play:
+        behaviors_edit: Add code to this behavior.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: استخدم هذه الحلقة لجمع كل الرحيق (أو
           العسل) من زهرة واحدة (أو من خلية نحل).
@@ -299,6 +650,8 @@ ar-SA:
           سوف ترى كيف تستخدمها لاحقًا في المرحلة.
 
 '
+      courseA_collector_loops1_2019:
+        courseA_collector_loops1_1: Use this block to collect the treasure.
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: 'هذا الرقم يخبرك كم من هذه المربعات البرمجية يمكنك
           استخدامها في هذا اللغز.
@@ -314,6 +667,8 @@ ar-SA:
           استخدامها في هذا اللغز.
 
 '
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: 'هل ترى كتل جديدة في مربع الأدوات؟ لا تشغل بالك،
           سوف ترى كيف تستخدمها لاحقًا في المرحلة.
@@ -434,6 +789,10 @@ ar-SA:
           سوف ترى كيف تستخدمها لاحقًا في المرحلة.
 
 '
+      courseB_collector_loops1_2018:
+        courseB_collector_loops1_1: Use this block to collect the treasure.
+      courseB_collector_loops1_2019:
+        courseB_collector_loops1_1: Use this block to collect the treasure.
       courseB_maze_seq1:
         courseB_maze_seq1: 'انقر على المصباح عندما تحتاج إلى تلميح!
 
@@ -646,6 +1005,12 @@ ar-SA:
           للخلف.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: استخدم هذا المربع البرمجي لجمع قطعة واحدة من الكنز.
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
@@ -945,6 +1310,12 @@ ar-SA:
         courseF_playlab_variables5c_1: ستجد المربع البرمجي للمتغير الخاص بك هنا.
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: ابحث عن المربع البرمجي "اسأل" هنا!
+      coursea_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
+      coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
       express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
           الخاصة بك.
