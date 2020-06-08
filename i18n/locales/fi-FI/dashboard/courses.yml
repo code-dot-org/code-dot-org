@@ -4,14 +4,47 @@ fi:
     course:
       name:
         csp-2017:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('17-'18)
+          version_title: "'17-'18"
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
           description_teacher: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
           description_short: Opi tietotekniikan peruskäsitteet.
+        csd-2017:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
+          version_title: "'17-'18"
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer description for students
+          description_teacher: This is a course for allthethings and has a longer description for teachers
+        csd-2018:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('18-'19)
+          version_title: "'18-'19"
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
           description_short: Opi tietotekniikan peruskäsitteet.
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
           description_teacher: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
         csp-2019:
+          title: Computer Science Principles ('19-'20)
+          version_title: "'19-'20"
           description_short: Opi tietotekniikan peruskäsitteet.
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
           description_teacher: Syksyllä 2016 College Board käynnisti uusimman AP® kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan, miten tietotekniikka ja teknologia voivat vaikuttaa maailmaan. AP-hanke suunnitteli AP tietotekniikan periaatteet tavoitteena luoda tietotekniikkan alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla mahdollisuuksilla.
+        csd-2019:
+          title: Computer Science Discoveries ('19-'20)
+          version_title: "'19-'20"
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.

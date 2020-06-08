@@ -9,16 +9,20 @@ fi-FI:
       BinaryImages: Binäärikuvat
       BinaryImages_2018: Binäärikuvat
       BuildingAFoundation: Rakennetaan perustus
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Laskennallinen ajattelu
       Conditionals: Ehtolausekkeet
       Conditionals_2018: Ehtolausekkeet
       Crowdsourcing: Joukkoistaminen
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Tosielämän algoritmit: Noppakisa'
       DigitalCitizenship: Digitaalinen kansalaisuus
       DigitalFootprint: Digitaalinen jalanjälkesi
       DigitalFootprint_2018: Digitaalinen jalanjälkesi
       EnvelopeVariables: Kirjekuorimuuttujat
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Silmukkahupia
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funktionaaliset auringonkerääjät
       GettingLoopy: Mennään silmukoille
       GettingLoopy_2018: Mennään silmukoille
@@ -27,6 +31,7 @@ fi-FI:
       GraphPaperProgramming: Ruutupaperiohjelmointi
       GraphPaperProgramming_2018: Ruutupaperiohjelmointi
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
       MoveIt: Liikuta, liikuta
       MoveItMoveIt_2018: Liikuta, liikuta
@@ -37,15 +42,25 @@ fi-FI:
       RelayProgramming: Releohjelmointi
       RelayProgramming_2018: Releohjelmointi
       SongwritingParameters: Säveltäminen
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Parametroitu laulunkirjoitus
       TangramAlgorithms: Tangram-algoritmit
       UnplugHappyMaps: Iloiset kartat
       UnplugHappyMaps_2018: Iloiset kartat
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Tietokoneeton tekeminen
       courseB_unplugged_MRF_2018: Robottiystäväni
       courseB_unplugged_loopyMRF: Tietokoneeton tekeminen
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Tietokoneeton tekeminen
       courseC_Unplugged_ScreenOutTheMean_2018: Tietokoneeton tekeminen
       courseD_unplugged_digitalCitizenship: Tietokoneeton tekeminen
       courseD_unplugged_digitalCitizenship_2018: Tietokoneeton tekeminen
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Tietokoneeton tekeminen
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

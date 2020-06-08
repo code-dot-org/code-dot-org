@@ -17,12 +17,14 @@ fi:
       Game/Score: Peli/pistemäärä
       Games/Score: Pelit/pistemäärä
       Groups: Ryhmät
+      Input: Input
       Locations: Sijainnit
       Logic: Logiikka
       Loops: Silmukat
       Math: Matematiikka
       Numbers: Numerot
       Properties: Ominaisuudet
+      Sprites: Sprites
       Text: teksti
       Variables: Muuttujat
       'Variables ': 'Muuttujat '

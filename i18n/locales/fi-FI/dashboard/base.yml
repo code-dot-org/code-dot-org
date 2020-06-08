@@ -63,6 +63,7 @@ fi:
   previous_page: Edellinen sivu
   next_page: Seuraava sivu
   next_resource: Seuraava resurssi
+  done_with_module: Done with this Learning Module
   cancel: "Peru"
   okay: "Selvä"
   or: "tai"
@@ -134,6 +135,7 @@ fi:
     overview: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi. <a href="/">Voit selata lukuisia tasoja ja tehtäviä</a> ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
     overview_markdown: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi. [Voit selata lukuisia tasoja ja tehtäviä](/) ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
     hoc_already_signed_up_heading: 'Aloita ilman sisäänkirjautumista'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Kiitos, että järjestät Koodaustunnin. Kirjautuaksesi Koodistudioon, sinun täytyy asettaa tilillesi salasana. Se antaa sinun tallentaa edistymisesi ja hallita luokkaasi. Voit antaa kursseja oppilaillesi ja seurata heidän edistymistään. <a href="%{studio_url}">Voit myös jatkaa eri tasojen ja tehtävien selailua</a> luomatta tiliä.'
     hoc_already_signed_up_content_post_hoc_markdown: 'Kiitos, että järjestät Koodaustunnin. Kirjautuaksesi Koodistudioon, sinun täytyy asettaa tilillesi salasana. Se antaa sinun tallentaa edistymisesi ja hallita luokkaasi. Voit antaa kursseja oppilaillesi ja seurata heidän edistymistään. [Voit myös jatkaa eri tasojen ja tehtävien selailua](%{studio_url}) luomatta tiliä.'
     teacher_educator_guide: 'Katso opettajan opas'
@@ -167,6 +169,7 @@ fi:
     accept_terms: "Sinun on hyväksyttävä luodaksesi tili."
     error: "Tapahtui virhe."
     email_preference_question: "Saammeko lähettää ilmoituksia kursseistamme, paikallisista tapahtumista tai muista tietotekniikan uutisista sähköpostiisi? (noin kerran kuussa)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Kyllä"
     email_preference_no: "Ei"
     email_preference_required: "Sinun on määriteltävä haluatko sähköpostia."
@@ -257,6 +260,7 @@ fi:
       picture: 'Kuvallinen Salasana'
       word: 'Salasana'
       email: 'Sähköposti'
+      google_classroom: 'Google Classroom'
       clever: 'Fiksu'
   follower:
     invite_sent: 'Kutsu lähetetty'
@@ -307,9 +311,15 @@ fi:
       sections: "Ryhmät"
       help_support: "Ohjeet ja tuki"
       report_bug: "Ilmoita ongelmasta"
+      report_abuse: "Report abuse"
       teacher_community: "Opettajayhteisö"
+      professional_learning: "Professional Learning"
       documentation: "Dokumentaatio"
       tutorials: "Oppaat"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
       sprite_lab_documentation: "Sprite-labra dokumentaatio"
       sprite_lab_tutorials: "Sprite-labra oppitunnit"
       educate_overview: "Kouluttajan yleiskatsaus"
@@ -337,6 +347,7 @@ fi:
       help_us: "Auta meitä"
       teach: "Opeta"
       about: "Tietoja"
+      legal: "Privacy & Legal"
       legal_privacy: "Tietosuojakäytäntö"
       legal_tos: "Käyttöehdot"
     user:
@@ -344,6 +355,7 @@ fi:
       district_dashboard: 'Koulupiirin hallintapaneeli'
       label: 'Hei %{username}'
       stats: 'Code Studio'
+      my_projects: 'My projects'
       settings: 'Tilin asetukset'
       logout: 'Kirjaudu ulos'
       signin: 'Kirjaudu sisään'
@@ -357,9 +369,12 @@ fi:
       algebra_game: 'Algebra'
       applab: 'Sovelluslabra'
       artist: 'Taiteilija'
+      artist_k1: 'Artist (Pre-reader)'
       basketball: 'Koripallo'
       bounce: 'Bounce'
+      calc: 'Calc'
       dance: 'Tanssibileet'
+      eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Pelilabra'
@@ -367,11 +382,20 @@ fi:
       gumball: 'Gumball'
       iceage: 'Jääkausi'
       infinity: 'Ääretön'
+      makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft seikkailija'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft sankari'
       playlab: 'Pelilabra'
+      playlab_k1: 'Play Lab (Pre-reader)'
+      scratch: 'Scratch'
+      sports: 'Sports'
+      spritelab: 'Sprite Lab'
       starwars: 'Tähtien sota'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
       weblab: 'Nettilabra'
       view_all: 'Kaikki projektit...'
     popup:
@@ -445,12 +469,15 @@ fi:
     enter_parent_email: "Anna huoltajasi sähköpostiosoite (salasanan palauttamiseksi)"
     update: "Päivitä tili"
     account_successfully_updated: "Käyttäjätili päivitettiin onnistuneesti."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Päivitä"
     for_parents_and_guardians: "Vanhemmille ja Huoltajille"
     link_a_parent_email: "Liitä vanhemman/huoltajan sähköpostiosoite tähän tiliin saadaksesi päivityksiä lapsesi edistymisestä ja projekteista. Voit käyttää tätä sähköpostiosoitetta myös salasanan palautukseen."
     parent_guardian_email_label: "Huoltajan sähköpostiosoite"
     none: "Ei mitään"
     only_one_parent_email_supported_warning: "Huomaa: Voimme tällä hetkellä tukea vain yhden vanhemman/huoltajan sähköpostiosoitetta oppilasta kohti."
+    encrypted: "encrypted"
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'
@@ -490,6 +517,7 @@ fi:
     no_primary_course: "Kokeile kurssia Koodistudiossa"
     choose_next_course: "Kokeile jotakin allaolevista Koodistudion kursseista"
     print_certificate: "Tulosta todistus"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "Anteeksi, mutta ryhmää %{new_section_code} ei ole olemassa. Anna eri ryhmäkoodi."
     section_code_cant_be_current_section: "Ryhmä ei voi olla sama kuin nykyinen ryhmä."
@@ -507,6 +535,7 @@ fi:
     male: 'Mies'
     female: 'Nainen'
     non_binary: 'Ei-binäärinen'
+    not_listed: 'Preferred term not listed'
     none: 'En halua vastata'
   user_type:
     student: 'Oppilas'
@@ -515,6 +544,9 @@ fi:
     thank_you: 'Kiitämme <a href="https://code.org/about/donors">lahjoittajia</a>, <a href="https://code.org/about/partners">yhteistyökumppaneita</a>, <a href="https://code.org/about/team">laajennettua tiimiämme</a>, videoiden esiintyjiä, ja <a href="https://code.org/about/advisors">koulutusneuvonantajia</a> heidän tuestaan Koodistudion luomisessa.'
     help_from_html: 'Erityisesti haluamme antaa tunnustuksen insinööreille Googlelta, Microsoftilta, Facebookilta ja Twitterilta, jotka auttoivat näiden oppimateriaalien tekemisessä.'
     help_from_html_old: 'Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitteriltä auttoivat näiden materiaalien tekemisessä.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Toimii Amazon Web Services -palvelun päällä'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ja Hour of Code&reg; ovat Code.org tavaramerkkejä.'
     copyright: 'Copyright'
@@ -548,12 +580,16 @@ fi:
     download: 'Lataa video'
     show_notes: 'Näytä muistiinpanot'
     show_video: 'Näytä video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Selaintasi ei tueta. Päivitä selaimesi [johonkin tuetuista selaimistamme](%{supported_browsers_url}). Voit yrittää katsella tätä sivua, mutta todennäköisesti sen toiminnallisuudet ovat rikki."
       link: "Lue lisää"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       oceans_unsupported_browser: "Tätä oppituntia ei tueta tällä selaimella. Kokeile tätä sivua Edge, Chrome, Firefox, tai muulla nykyaikaisella selaimella."
       weblab_unsupported_browser: "Valitettavasti meillä on tällä hetkellä vaikeuksia tämän nettilabran laatamisessa tällä selaimella. Voisit onnistua paremmin jollain toisella selaimella kunnes tämä on saatu toimimaan. Pahoittelemme."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Tämä kestää kauemmin kuin tavallisesti...'
   try_reloading: 'Yritä ladata sivu uudelleen'
   next_stage: 'Valmis! Siirry seuraavalle tasolle'
@@ -614,8 +650,12 @@ fi:
       body: "Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa"
     gamelab:
       title: "Pelilabra"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "13+ -vuotiaille"
       cta: "Lisätietoja"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Nettilabra (beta)"
       body: "Nettilabra on koodausympäristö, jossa tehdään yksikertaisia nettisivuja käyttäen HTML ja CSS kieliä. Suunnittele omat sivusi ja jaa kavereille."
@@ -639,17 +679,27 @@ fi:
     hero:
       title: "Minecraft"
       body: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Oppitunnit ilman tietokonetta"
       audience: "Yli 4-vuotiaille"
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "Jos sinulla ei ole tietokonetta, kokeile näitä oppitunteja ilman nettiä luokassasi."
     unplugged_conditionals:
       title: "Ehtolausekkeet"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
       title: "Pienoisohjelmat"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Yli 14-vuotiaille"
       cta: "Lisätietoja"
   landing:
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Raportoi ongelma"
     support: "Katso ohjeet"
     support_url: "//support.code.org"
@@ -664,22 +714,29 @@ fi:
     wrong_body: "Antamasi vastaus ei ole oikein. Yritä uudelleen!"
     correct_title: "Oikein"
     correct_body: "Tämä on oikea vastaus."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "Kiitos"
     wrong_body: "Kiitos vastauksestasi."
     correct_title: "Kiitos"
     correct_body: "Kiitos vastauksestasi."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "Kiitos"
     wrong_body: "Kiitos vastauksistasi."
     correct_title: "Kiitos"
     correct_body: "Kiitos vastauksistasi."
+    hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Kiitos"
     wrong_body: "Kiitos vastauksistasi."
     correct_title: "Kiitos"
     correct_body: "Kiitos vastauksistasi."
     unsubmit-title: "Peru arviointi"
+    unsubmit-body: "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?"
     submit-incomplete-title: "Lähetä arviointi"
     submit-incomplete-body: "Kysymyksiä jäi kesken.  Et voi muokata tehtävääsi toimitettuasi sen.  Oletko varma?"
     submit-complete-title: "Lähetä arviointi"
@@ -703,6 +760,8 @@ fi:
     open_response_body: "Kiitos vastauksestasi!"
     correct_title: "Oikein"
     correct_body: "Tämä on oikea vastaus."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "OK"
     startover_title: "Oletko varma, että haluat aloittaa alusta?"
@@ -716,8 +775,14 @@ fi:
   age_interstitial:
     age: Ikäsi
     header: Käyttäjätilin tietojen päivitys
+    warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
+    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Päivitetyt käyttöehdot ja Tietosuojakäytäntö"
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will *no longer store email addresses for student accounts on Code Studio.* This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Käyttöehdot"
     privacy: "Tietosuojakäytäntö"
     privacy_notice: "Tietosuoja"
@@ -726,13 +791,17 @@ fi:
     accept_tos: Kirjautumalla Code.org:iin, hyväksyt [käyttöehtomme](%{tos_url}) ja [tietosuojakäytäntömme](%{privacy_url}).
     accept: "Hyväksy"
     print: "Tulosta"
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
     review_terms: "Katso päivitetyt ehdot"
   school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Anna koulun tiedot alla."
     message_with_suggestion: "Tarkista seuraavat tiedot tai päivitä tarvittaessa."
     save: "Tallenna"
   race_interstitial:
     title: "Valinnainen: Auta meitä seuraamaan edistymistämme tietotekniikan monipuolistamisessa"
+    message: "Please tell us your race (check all that apply)"
     races:
       white: "Valkoihoinen"
       black: "Musta tai afroamerikkalainen"
@@ -769,6 +838,8 @@ fi:
     unpublish: "Peru julkaiseminen"
     share_title: Jaa projektisi
     share_copy_link: "Kopioi linkki:"
+    share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Upota"
     advanced_share: "Näytä lisäasetukset"
     no_projects: "Sinulla ei ole projekteja. Valitse jokin yllä olevista napeista aloittaaksesi."
@@ -777,12 +848,15 @@ fi:
     project_type: "Projektityyppi"
     help_text: "Klikkaa <strong>Tee Sovellus</strong> tai <strong>Piirrä Jotain</strong> alla tehdäksesi uuden Pelilabra tai Taiteilija projektin! <br/>Voit tulla myöhemmin takaisin ja jatkaa projektiesi työstämistä milloin tahansa."
     need_help: "Tarvitsetko apua alkutoimissa?"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     saved: "Tallennettu"
     not_saved: "Ei tallenneta"
     view_all: 'Katso omia projektejasi'
     edit_project: 'Muokkaa projektia'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Tämän projektin on raportoitu rikkovan Code.org:in <a href='http://code.org/tos'> Käyttöehtoja</a>, minkä vuoksi sitä ei voi jakaa muiden kanssa."
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "Jos uskot tämän olevan virhe, ota <a href='https://code.org/contact'> yhteyttä.</a>"
       go_to_code_studio: 'Siirry Code Studio:on'
       report_abuse_form:
@@ -804,59 +878,227 @@ fi:
   peer_review:
     accepted:
       name: 'Hyväksytty'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
     rejected:
       name: 'Hylätty'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
     escalated:
+      name: 'Escalated'
       description: 'Haluaisin ohjaajan tarkistavan tämän raportin'
     instructor_feedback: 'Ohjaajan palaute'
     peer_feedback: 'Kanssaoppijan palaute'
     outdated: 'Palaute on lisätty aiemmin lähetettyyn versioon'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: Vastuuvapauslauseke
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available.
   hoc_download:
     title: 'Koodaustunnin lataukset'
     capsule_title: 'Onko sinulla nettiyhteys?'
+    capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
     instructions_headline: 'Ei nettiyhteyttä?'
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
     minecraft_name: 'Minecraft Koodaustunti'
     starwars_blocks_name: 'Tähtien sota: Rakenna galaksi koodaten (lohkot)'
     starwars_javascript_name: 'Tähtien sota: Rakenna galaksi koodaten (JavaScript)'
     download_message: 'Lataa %{app_name} käytettäväksi offline-tilassa (136MB)'
+    download_in_Albanian: 'Download in Albanian:'
     download_in_Arabic: 'Lataa Arabiaksi:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
     download_in_English: 'Lataa englanniksi:'
     download_in_Finnish: 'Lataa suomeksi:'
     download_in_French: 'Lataa ranskaksi:'
     download_in_German: 'Lataa saksaksi:'
     download_in_Greek: 'Lataa kreikaksi:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bittinen)'
     mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Opettajasi ei uskonut sinun olevan täällä. Kysy opettajaltasi missä sinun kuuluisi olla."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Siirry sarjan yleisesittelyyn'
   return_course_overview: 'Siirry sarjan yleisesittelyyn'
   view_all_units: 'Näytä kaikki sarjat'
   view_teacher_guide: 'Katso opettajan opas'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
+      first_name: 'First Name'
+      first_name_preferred: 'Preferred First Name'
+      last_name: 'Last Name'
       email: 'Sähköposti'
+      email_alternate: 'Alternate Email'
+      gender: 'Gender Identity'
       school_name: 'Koulun nimi'
+      school_city: 'School City'
       school_country: 'Koulun maa'
+      ages: 'Which age(s) do you teach this year?'
+      subjects: 'Which subject(s) do you teach this year?'
+      resources: 'Which of the following CS education resources do you use?'
+      robotics: 'Which of the following robotics resources do you use?'
+      workshop_organizer: 'Workshop Organizer'
+      workshop_facilitator: 'Workshop Facilitator'
+      workshop_course: 'Workshop Course'
+      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Mies'
         female: 'Nainen'
         non_binary: 'Ei-binäärinen'
+        not_listed: 'Preferred term not listed'
         none: 'En halua vastata'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
+      ages:
+        ages_under_6: '< 6 years old'
+        ages_7_8: '7-8 years old'
+        ages_9_10: '9-10 years old'
+        ages_11_12: '11-12 years old'
+        ages_13_14: '13-14 years old'
+        ages_15_16: '15-16 years old'
+        ages_17_18: '17-18 years old'
+        ages_19_over: '19+ years old'
       subjects:
         cs: 'Tietotekniikka'
+        ict: 'ICT'
         math: 'Matematiikka'
         science: 'Tiede'
+        history: 'History / Social Studies'
         la: 'Kielet'
+        efl: 'English as a Foreign Language'
+        music: 'Music'
+        art: 'Art'
+        other: "Other:"
       resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
+        lightbot: 'Lightbot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Other:"
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Other:"
+      workshop_course:
+        csf_af: 'CS Fundamentals (Courses A-F)'
+        csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
+        csp: 'CS Principles'
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'
+    international_opt_in:
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body_markdown: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or [go to your user settings](%{user_settings}) to upgrade your account from student to teacher.'
+      more_markdown: 'If you’d like more information about the program before you start your application, please check out the [Professional Learning Program overview](%{pl_overview}).'
+    no_teacher_email:
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
+  courses_category: 'Full Courses'
   cookie_banner:
     message: 'Jatkamalla sivustollemme tai napsauttamalla "Hyväksyn," hyväksyt evästeiden tallentamisen laitteellesi.'
     more_information: "Katso Code.org -sivuston tietosuojakäytäntö."
@@ -864,8 +1106,24 @@ fi:
   gdpr_dialog:
     heading: 'Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?'
     message: 'Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä Yhdysvalloissa.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
     yes: 'Kyllä'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
   copy: 'Kopioi'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
   parent_email_banner:
     text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"
     link_your_email: "Liitä sähköpostiosoitteesi"
