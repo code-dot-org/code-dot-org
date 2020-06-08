@@ -311,7 +311,6 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
-    azure_speech_service = azure_speech_service_options
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
