@@ -9,16 +9,20 @@ sq-AL:
       BinaryImages: Imazhet Binare
       BinaryImages_2018: Imazhet Binare
       BuildingAFoundation: Krijimi i një fondacioni
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Te menduarit kompjuterik
       Conditionals: Kushtet
       Conditionals_2018: Kushtet
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algoritmet e jetës reale: Dice Race'
       DigitalCitizenship: Shtetësi Dixhitale
       DigitalFootprint: Gjurmët e Tua Dixhitale
       DigitalFootprint_2018: Gjurmët e Tua Dixhitale
       EnvelopeVariables: Variablat Zarf
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Qef me Ciklet For
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Suncatchers-at Funksionalë
       GettingLoopy: Duke u Çmëndur
       GettingLoopy_2018: Duke u Çmëndur
@@ -27,6 +31,7 @@ sq-AL:
       GraphPaperProgramming: Programimi Grafik me Letër
       GraphPaperProgramming_2018: Programimi Grafik me Letër
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Glibsi i Çmendur
       MoveIt: Lëvize, Lëvize
       MoveItMoveIt_2018: Lëvize atë, lëvize atë
@@ -37,15 +42,25 @@ sq-AL:
       RelayProgramming: Programimi i Besuar
       RelayProgramming_2018: Programimi i Besuar
       SongwritingParameters: Të shkruarit e Këngëve
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Të shkruarit këngë me Parametra
       TangramAlgorithms: Algoritmat Tangram
       UnplugHappyMaps: Hartat e Gëzuara
       UnplugHappyMaps_2018: Hartat e Gëzuara
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Aktiviteti Unplugged
       courseB_unplugged_MRF_2018: Miqtë e mi Robotikë
       courseB_unplugged_loopyMRF: Aktiviteti Unplugged
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Aktiviteti Unplugged
       courseC_Unplugged_ScreenOutTheMean_2018: Aktiviteti Unplugged
       courseD_unplugged_digitalCitizenship: Aktiviteti Unplugged
       courseD_unplugged_digitalCitizenship_2018: Aktiviteti Unplugged
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Aktiviteti Unplugged
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

@@ -2,12 +2,30 @@ sq:
   data:
     block_categories:
       Actions: Veprime
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Ngjyra
+      Comment: Comment
+      Comments: Comments
       Conditionals: Kushtet
+      Dancers: Dancers
+      Default: Default
       Events: Ngjarje
       Functions: funksione
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Logjikë
       Loops: cikle 
       Math: Matematikë
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Tekst
       Variables: variabla
+      'Variables ': 'Variables '
+      World: World
