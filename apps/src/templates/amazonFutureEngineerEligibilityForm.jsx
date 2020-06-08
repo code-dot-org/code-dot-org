@@ -73,9 +73,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               defaultValue={this.props.email}
             />
             <SchoolAutocompleteDropdownWithLabel
-              setField={this.handleDropdownChange}
-              showRequiredIndicator={true}
               value={this.props.schoolId}
+              disabled={true}
             />
             <FieldGroup
               id="firstName"
