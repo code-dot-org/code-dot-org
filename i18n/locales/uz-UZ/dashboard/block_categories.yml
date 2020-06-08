@@ -10,16 +10,21 @@ uz:
       Comments: Izohlar
       Conditionals: Shart buyruqlari
       Dancers: Raqqoslar
+      Default: Default
+      Events: Events
       Functions: Funksiyalar
       'Functions ': 'Vazifalar '
       Game/Score: O'yin/Hisob
       Games/Score: O'yin/Hisob
       Groups: Guruhlar
+      Input: Input
       Locations: Manzil
       Logic: Mantiq
       Loops: Sikllar
       Math: Matematik
       Numbers: Raqamlar
+      Properties: Properties
+      Sprites: Sprites
       Text: Matn
       Variables: O‘zgaruvchilar
       'Variables ': 'O''zgaruvchilar '
