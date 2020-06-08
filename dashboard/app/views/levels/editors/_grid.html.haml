@@ -3,8 +3,10 @@
 
 = hidden_field_tag :size, 8
 = f.hidden_field :maze_data
-.field#grid
-  = f.label 'level'
+%h1.control-legend{data: {toggle: "collapse", target: "#grid"}}
+  Grid
+
+#grid.in.collapse
   - if @level.is_a? Karel
     #gridEditor
     :javascript
