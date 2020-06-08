@@ -2,14 +2,30 @@ ca:
   data:
     block_categories:
       Actions: Accions
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Color
+      Comment: Comment
+      Comments: Comments
       Conditionals: Condicionals
       Dancers: Dansaires
+      Default: Default
       Events: Esdeveniments
       Functions: Funcions
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
       Groups: Grups
+      Input: Input
+      Locations: Locations
       Logic: Lògic
       Loops: Bucles
       Math: Matemàtiques
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: text
       Variables: Variables
+      'Variables ': 'Variables '
+      World: World
