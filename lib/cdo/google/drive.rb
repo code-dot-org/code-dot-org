@@ -116,20 +116,11 @@ module Google
       worksheet ||= document.add_worksheet(sheet_name, 500)
       worksheet.delete_rows(1, worksheet.num_rows)
       current_index = 1
-      start = Time.now.to_i
-      last_batch_time = start
       data.each_slice(BATCH_UPDATE_SIZE) do |data_batch|
-        puts "writing to worksheet starting at index #{current_index}, data batch size is #{data_batch.count}"
         worksheet.update_cells(current_index, 1, data_batch)
         current_index += BATCH_UPDATE_SIZE
         worksheet.save
-        current_time = Time.now.to_i
-        puts "time for batch: #{current_time - last_batch_time}"
-        last_batch_time = current_time
       end
-      end_time = Time.now.to_i
-      elapsed_time = end_time - start
-      puts "total time: #{elapsed_time} seconds"
     end
 
     # Returns an ACL object for a spreadsheet document
