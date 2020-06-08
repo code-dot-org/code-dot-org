@@ -85,6 +85,8 @@ hu:
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
         csp-2019:
+          title: Computer Science Principles ('19-'20)
+          version_title: "'19-'20"
           description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
           description_student: 2016 őszén mutatkozott be a College Board legújabb
             AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
@@ -105,6 +107,8 @@ hu:
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
         csd-2019:
+          title: Computer Science Discoveries ('19-'20)
+          version_title: "'19-'20"
           description_short: Bevezető számítógép-tudományi tanfolyam, amely lehetővé
             teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
           description_student: A Számítógép-tudományi Felfedezések (SZT Felfedezések)

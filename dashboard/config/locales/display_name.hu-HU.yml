@@ -2,6 +2,7 @@
 hu-HU:
   data:
     display_name:
+      AB_Debug_Artist1: 'Artist Debugging #1 (AB)'
       Alien Defender: Földönkívüli támadás
       App Lab Intro 8 - Video Design Mode: 'Videó: Tervező mód'
       App Lab Intro 8 - Video Getting Started: 'Videó: Kezdő lépések'
@@ -12,6 +13,8 @@ hu-HU:
       AppLab Intro 7 - Change Text 2: Szöveg módosítása
       AppLab Intro 7 - Full Text: Két gomb
       AppLab Intro 7 - onEvent intro: Használd a gombokat
+      AppLab Intro 7 - onEvent twoButtons: More onEvent Practice
+      AppLab Intro 7 - playSound: Using playSound
       AppLab Intro 7 - thisOrThatAddButton: Ez vagy az
       AppLab Intro 7 - thisOrThatAddScreen: Ez vagy az
       AppLab Intro 7 - thisOrThatPersonalize: Ez vagy az
@@ -24,6 +27,15 @@ hu-HU:
       CSD Board Sensors Map: Analóg szenzorok
       CSD Board Sensors Map_2018: Analóg szenzorok
       CSD Board Sensors Map_2019: Analóg szenzorok
+      CSD Booleans Map: Booleans and Comparison Operators
+      CSD Booleans Map_2018: Booleans and Comparison Operators
+      CSD Booleans Map_2019: Booleans and Comparison Operators
+      CSD Buzzer Map: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2018: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2019: 'Circuit Playground: Buzzer'
+      CSD Counter Pattern Map: The Counter Pattern
+      CSD Counter Pattern Map_2018: The Counter Pattern
+      CSD Counter Pattern Map_2019: The Counter Pattern
       CSD If Else Map: Ha-egyébként nyilatkozatok
       CSD If Else Map_2018: Ha-egyébként nyilatkozatok
       CSD If Else Map_2019: Ha-egyébként nyilatkozatok
@@ -33,7 +45,13 @@ hu-HU:
       CSD LEDs Map: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2018: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2019: 'Áramkör játszótér: LED-EK'
+      CSD Polling Events Map: Polling Events
+      CSD Polling Events Map_2018: Polling Events
+      CSD Polling Events Map_2019: Polling Events
       CSD Problem Solving Process Video: 'Videó: probléma-megoldási folyamat'
+      CSD Set Scale Map: Changing Sensor Scale
+      CSD Set Scale Map_2018: Changing Sensor Scale
+      CSD Set Scale Map_2019: Changing Sensor Scale
       CSD U1L02 TFMD_2018: Lecke áttekintése
       CSD U1L02 TFMD_2019: Lecke áttekintése
       CSD U1L03 TFMD_2018: Lecke áttekintése
@@ -75,6 +93,9 @@ hu-HU:
       CSD U2 Inspector Warm Up: Fedezd fel a HTML-t
       CSD U2 Inspector Warm Up_2018: Fedezd fel a HTML-t
       CSD U2 Inspector Warm Up_2019: Fedezd fel a HTML-t
+      CSD U2 Layout Properties Map: Layout Properties
+      CSD U2 Layout Properties Map_2018: Layout Properties
+      CSD U2 Layout Properties Map_2019: Layout Properties
       CSD U2 Pair Programming Video: Páros programozás
       CSD U2 Pair Programming Video_2018: Páros programozás
       CSD U2 Pair Programming Video_2019: Páros programozás
@@ -96,6 +117,9 @@ hu-HU:
       CSD U2 formatting map: HTML formázás
       CSD U2 formatting map_2018: HTML formázás
       CSD U2 formatting map_2019: HTML formázás
+      CSD U2 images map: Images in HTML
+      CSD U2 images map_2018: Images in HTML
+      CSD U2 images map_2019: Images in HTML
       CSD U2 lists map: HTML listák
       CSD U2 lists map_2018: HTML listák
       CSD U2 lists map_2019: HTML listák
@@ -128,21 +152,50 @@ hu-HU:
       CSD U2L13 TFMD_2019: Lecke áttekintése
       CSD U2L14 TFMD_2018: Lecke áttekintése
       CSD U2L14 TFMD_2019: Lecke áttekintése
+      CSD U3 - Booleans Video: 'Video: Booleans'
+      CSD U3 - Booleans Video_2018: 'Video: Booleans'
+      CSD U3 - Booleans Video_2019: 'Video: Booleans'
       CSD U3 - Conditionals Video: 'Video: feltételes utasítások'
       CSD U3 - Conditionals Video_2018: 'Video: feltételes utasítások'
       CSD U3 - Conditionals Video_2019: 'Video: feltételes utasítások'
+      CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
+      CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
       CSD U3 Animation Edit Map: Képek szerkesztése
       CSD U3 Animation Edit Map_2018: Képek szerkesztése
       CSD U3 Animation Edit Map_2019: Képek szerkesztése
+      CSD U3 Animation Tab Map: The Animation Tab
+      CSD U3 Animation Tab Map_2018: The Animation Tab
+      CSD U3 Animation Tab Map_2019: The Animation Tab
       CSD U3 AnimationsMulti Play Defender: Minta játék
       CSD U3 AnimationsMulti Play Defender_2018: Minta játék
       CSD U3 AnimationsMulti Play Defender_2019: Minta játék
+      CSD U3 Complex Movement counter prediction gamelab: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2018: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2019: Velocity and the Counter
+        Pattern
+      CSD U3 Compound Nested Challenge: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2018: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2019: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Draw Loop Plugged update your scene: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2019: 'Challenge: Extend Your Scene'
+      CSD U3 Drawing Squares to Corners: Using the Grid
+      CSD U3 Drawing Squares to Corners_2018: Using the Grid
+      CSD U3 Drawing Squares to Corners_2019: Using the Grid
       CSD U3 Entertainment Sample 3: Sprite helyzetek
       CSD U3 Entertainment Sample 3_2018: Sprite helyzetek
       CSD U3 Entertainment Sample 3_2019: Sprite helyzetek
       CSD U3 Entertainment Sample 4: Sprite helyzetek
       CSD U3 Entertainment Sample 4_2018: Sprite helyzetek
       CSD U3 Entertainment Sample 4_2019: Sprite helyzetek
+      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
+      CSD U3 Interactive Card Exemplar_2018: Interactive Card
+      CSD U3 Interactive Card Exemplar_2019: Interactive Card
+      CSD U3 Keyboard Input Challenge: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018_2019: 'Challenge: Add More Inputs'
       CSD U3 L11 Freeplay: Ingyenes Játék
       CSD U3 L11 Freeplay_2018: Ingyenes Játék
       CSD U3 L11 Freeplay_2019: Ingyenes Játék
@@ -200,33 +253,83 @@ hu-HU:
       CSD U3 Sprites Map: Sprite-ok létrehozása
       CSD U3 Sprites Map_2018: Sprite-ok létrehozása
       CSD U3 Sprites Map_2019: Sprite-ok létrehozása
+      CSD U3 Sprites scene challenge: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2019: 'Challenge: Extend Your Scene'
+      CSD U3 The Draw Loop Map: The Draw Loop
+      CSD U3 The Draw Loop Map_2018: The Draw Loop
+      CSD U3 The Draw Loop Map_2019: The Draw Loop
+      CSD U3 Variables Challenge: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2018: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2019: 'Challenge: Updating Variables'
+      CSD U3 Variables Draw Challenge: 'Challenge: Draw an Image'
+      CSD U3 Variables Draw Challenge_2018: 'Challenge: Draw an Image'
+      CSD U3 Variables Draw Challenge_2019: 'Challenge: Draw an Image'
       CSD U3 Variables Map: változók
       CSD U3 Variables Map_2018: változók
       CSD U3 Variables Map_2019: változók
+      CSD U3 Watchers Map: Debugging with Watchers
+      CSD U3 Watchers Map_2018: Debugging with Watchers
+      CSD U3 Watchers Map_2019: Debugging with Watchers
+      CSD U3 acceleration map: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2018: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2019: Velocity and the Counter Pattern Review
       CSD U3 challenge face: 'Kihívás: Arc'
       CSD U3 challenge face_2018: 'Kihívás: Arc'
       CSD U3 challenge face_2019: 'Kihívás: Arc'
+      CSD U3 challenge new shape: 'Challenge: Shape of Shapes'
+      CSD U3 challenge new shape_2018: 'Challenge: Shape of Shapes'
+      CSD U3 challenge new shape_2019: 'Challenge: Shape of Shapes'
+      CSD U3 collisions build isTouching: Collision Detection
+      CSD U3 collisions build isTouching_2018: Collision Detection
+      CSD U3 collisions build isTouching_2019: Collision Detection
       CSD U3 collisions car intro: Minta játék
       CSD U3 collisions car intro_2018: Minta játék
       CSD U3 collisions car intro_2019: Minta játék
       CSD U3 collisions predict set velocity code: Sprite interakciók
       CSD U3 collisions predict set velocity code_2018: Sprite interakciók
       CSD U3 collisions predict set velocity code_2019: Sprite interakciók
+      CSD U3 finishing touches: Project - Finishing Touches
+      CSD U3 finishing touches_2018: Project - Finishing Touches
+      CSD U3 finishing touches_2019: Project - Finishing Touches
+      CSD U3 function video: 'Video: Functions'
       CSD U3 functions review: Függvények áttekintése
       CSD U3 functions review_2018: Függvények áttekintése
       CSD U3 functions review_2019: Függvények áttekintése
+      CSD U3 if else predict: Predict
       CSD U3 interactions map: Sprite interakciók áttekintése
       CSD U3 interactions map_2018: Sprite interakciók áttekintése
       CSD U3 interactions map_2019: Sprite interakciók áttekintése
+      CSD U3 istouching map: Collision Detection Review
+      CSD U3 istouching map_2018: Collision Detection Review
+      CSD U3 istouching map_2019: Collision Detection Review
+      CSD U3 naming map: Naming Variables
+      CSD U3 naming map_2018: Naming Variables
+      CSD U3 naming map_2019: Naming Variables
+      CSD U3 picture: 'Challenge: Draw an Image'
+      CSD U3 picture_2018: 'Challenge: Draw an Image'
+      CSD U3 picture_2019: 'Challenge: Draw an Image'
       CSD U3 platform challenge: Javíts a játékodon
       CSD U3 platform challenge_2018: Javíts a játékodon
       CSD U3 platform challenge_2019: Javíts a játékodon
+      CSD U3 platform sample1: Sample Platform Jumper Game
+      CSD U3 platform sample1_2018: Sample Platform Jumper Game
+      CSD U3 platform sample1_2019: Sample Platform Jumper Game
+      CSD U3 platform sample2: Plane Jumper
+      CSD U3 platform sample2_2018: Plane Jumper
+      CSD U3 platform sample2_2019: Plane Jumper
       CSD U3 platform sample3: Ugró nyuszi
       CSD U3 platform sample3_2018: Ugró nyuszi
       CSD U3 platform sample3_2019: Ugró nyuszi
+      CSD U3 plotting shapes map: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2018: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2019: Plotting Shapes in Game Lab
       CSD U3 rect: Bevezetés a játéklaborba
       CSD U3 rect_2018: Bevezetés a játéklaborba
       CSD U3 rect_2019: Bevezetés a játéklaborba
+      CSD U3 shape size map: Shapes and Parameters
+      CSD U3 shape size map_2018: Shapes and Parameters
+      CSD U3 shape size map_2019: Shapes and Parameters
       CSD U3 velocity map: Sprite sebesség
       CSD U3 velocity map_2018: Sprite sebesség
       CSD U3 velocity map_2019: Sprite sebesség
@@ -274,6 +377,27 @@ hu-HU:
       CSD U3L21 TFMD_2019: Lecke áttekintése
       CSD U3L22 TFMD_2018: Lecke áttekintése
       CSD U3L22 TFMD_2019: Lecke áttekintése
+      CSD U4 - Design Mode Project: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2018: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2019: 'App Project: Screen Design'
+      CSD U4 Change Screen Map: Changing Screens
+      CSD U4 Change Screen Map_2018: Changing Screens
+      CSD U4 Change Screen Map_2019: Changing Screens
+      CSD U4 Design Elements Map: Design Mode Elements
+      CSD U4 Design Elements Map_2018: Design Mode Elements
+      CSD U4 Design Elements Map_2019: Design Mode Elements
+      CSD U4 Design Mode Map: Tour of Design Mode
+      CSD U4 Design Mode Map_2018: Tour of Design Mode
+      CSD U4 Design Mode Map_2019: Tour of Design Mode
+      CSD U4 Importing Screens Map: Importing Screens
+      CSD U4 Importing Screens Map_2018: Importing Screens
+      CSD U4 Importing Screens Map_2019: Importing Screens
+      CSD U4 Mult Screen Map: Multi-Screen Apps
+      CSD U4 Mult Screen Map_2018: Multi-Screen Apps
+      CSD U4 Mult Screen Map_2019: Multi-Screen Apps
+      CSD U4 User Input Map: Responding to User Input
+      CSD U4 User Input Map_2018: Responding to User Input
+      CSD U4 User Input Map_2019: Responding to User Input
       CSD U4L01 autoSFLP_2018: Lecke áttekintése
       CSD U4L01 autoSFLP_2019: Lecke áttekintése
       CSD U4L02 autoSFLP_2018: Lecke áttekintése
@@ -306,9 +430,31 @@ hu-HU:
       CSD U4L15 autoSFLP_2019: Lecke áttekintése
       CSD U4L16 autoSFLP_2018: Lecke áttekintése
       CSD U4L16 autoSFLP_2019: Lecke áttekintése
+      CSD U5 Amazon Data Video: Collecting Information About Users
+      CSD U5 Amazon Data Video_2018: Collecting Information About Users
       CSD U5 Amazon Data Video_2019: Hogyan használja az Amazon az adatokat
       CSD U5 Netflix Data Video_2019: Hogyan használja a Netflix az adatokat
+      CSD U5 Waze Data Video: Collecting Information About Users
+      CSD U5 Waze Data Video_2018: Collecting Information About Users
       CSD U5 Waze Data Video_2019: Hogyan használja a Waze az adatokat
+      CSD U5 binary video: Binary and Data
+      CSD U5 binary video_2018: Binary and Data
+      CSD U5 binary video_2019: Binary and Data
+      CSD U5 black white images pixelation: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2019: Black and White Pixelation Widget
       CSD U5L01 autoSFLP_2018: Lecke áttekintése
       CSD U5L01 autoSFLP_2019: Lecke áttekintése
       CSD U5L02 autoSFLP_2018: Lecke áttekintése
@@ -339,15 +485,35 @@ hu-HU:
       CSD U5L14 autoSFLP_2019: Lecke áttekintése
       CSD U5L15 autoSFLP_2018: Lecke áttekintése
       CSD U5L15 autoSFLP_2019: Lecke áttekintése
+      CSD U6 Event Types: Event Types
+      CSD U6 Event Types_2018: Event Types
+      CSD U6 Event Types_2019: Event Types
+      CSD U6 analog challenge: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2018: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2019: 'Challenge: Making Sense of Sensors'
+      CSD U6 arrays intro: Introduction to Arrays
+      CSD U6 arrays intro_2018: Introduction to Arrays
+      CSD U6 arrays intro_2019: Arrays
       CSD U6 arrays video: 'Videó: bevezető a Tömbök-höz'
       CSD U6 challenge motorcycle_2018: 'Kihívás: Motorbicikli'
       CSD U6 challenge motorcycle_2019: 'Kihívás: Motorbicikli'
       CSD U6 circuit LED map: Áramkörök és LED-ek
       CSD U6 circuit LED map_2018: Áramkörök és LED-ek
       CSD U6 circuit LED map_2019: Áramkörök és LED-ek
+      CSD U6 circuit button map: Button Circuits
+      CSD U6 circuit button map_2018: Button Circuits
+      CSD U6 circuit button map_2019: Button Circuits
+      CSD U6 circuit logic video: Circuits and Logic
+      CSD U6 circuit logic video_2018: Circuits and Logic
+      CSD U6 circuit logic video_2019: Circuits and Logic
       CSD U6 emoji race demo: Példa program
       CSD U6 emoji race demo_2018: Példa program
       CSD U6 emoji race demo_2019: Példa program
+      CSD U6 emotion machine example: Emotion Machine Example
+      CSD U6 emotion machine example_2018: Emotion Machine Example
+      CSD U6 emotion machine example_2019: Emotion Machine Example
+      CSD U6 for loop led bonus 1_2018: 'Challenge: Add More Buttons'
+      CSD U6 for loop led bonus 2_2018: 'Challenge: Color Patterns'
       CSD U6 for loop led bonus 3_2018: 'Kihívás: Zene'
       CSD U6 for loop map: Számláló ciklusok
       CSD U6 for loop map_2018: Számláló ciklusok
@@ -355,6 +521,30 @@ hu-HU:
       CSD U6 functions paramters video: Paraméteres függvények
       CSD U6 functions paramters video_2018: Paraméteres függvények
       CSD U6 functions paramters video_2019: Paraméteres függvények
+      CSD U6 getProperty Map: getProperty
+      CSD U6 getProperty Map_2018: getProperty
+      CSD U6 getProperty Map_2019: getProperty
+      CSD U6 hardware software video: Hardware and Software
+      CSD U6 hardware software video_2018: Hardware and Software
+      CSD U6 hardware software video_2019: Hardware and Software
+      CSD U6 light pattern challenge_2018: Improved Light Show
+      CSD U6 light pattern challenge_2019: Improved Light Show
+      CSD U6 params starchaser challenge 1_2018: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 1_2019: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 2_2018: Starchaser - Reset Player
+      CSD U6 params starchaser challenge 2_2019: Starchaser - Reset Player
+      CSD U6 sensor experiment embedded: Sensor Experiment
+      CSD U6 sensor experiment embedded_2018: Sensor Experiment
+      CSD U6 sensor experiment embedded_2019: Sensor Experiment
+      CSD U6 setProperty Map: Designing Screens with Code
+      CSD U6 setProperty Map_2018: Designing Screens with Code
+      CSD U6 setProperty Map_2019: Designing Screens with Code
+      CSD U6 tugowar demo: Demo - Bug Grab
+      CSD U6 tugowar demo_2018: Demo - Bug Grab
+      CSD U6 tugowar demo_2019: Demo - Bug Grab
+      CSD U6 tugowar final: Make it Your Own
+      CSD U6 tugowar final_2018: Make it Your Own
+      CSD U6 tugowar final_2019: Make it Your Own
       CSD U6L01 TFMD: Lecke áttekintése
       CSD U6L01 TFMD_2018: Lecke áttekintése
       CSD U6L01 TFMD_2019: Lecke áttekintése
@@ -403,13 +593,40 @@ hu-HU:
       CSD U6L16 TFMD: Lecke áttekintése
       CSD U6L16 TFMD_2018: Lecke áttekintése
       CSD U6L16 TFMD_2019: Lecke áttekintése
+      CSD What Makes a Computer a Computer Video: 'Video: What Makes a Computer, a
+        Computer?'
+      CSD What Makes a Computer a Computer Video_2018: 'Video: What Makes a Computer,
+        a Computer?'
       CSD What Makes a Computer a Computer Video_2019: 'Videó: Mi teszi a számítógépet
         számítógéppé?'
+      CSD colorLed Map: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2019: 'Circuit Playground: Color LEDs'
+      CSD onBoardEvent Map: Responding to Board Events
+      CSD onBoardEvent Map_2018: Responding to Board Events
+      CSD onBoardEvent Map_2019: Responding to Board Events
+      CSD-Arrays: Modifying and Creating Arrays
+      CSD-Arrays_2018: Modifying Arrays
+      CSD-Arrays_2019: Modifying Arrays
       'CSD: Animating Sprite Movement': 'Videó: mozgó sprite'
       'CSD: Animating Sprite Movement_2018': 'Videó: mozgó sprite'
       'CSD: Animating Sprite Movement_2019': 'Videó: mozgó sprite'
+      'CSD: Animation Tab': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2018': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2019': 'Video: The Animation Tab'
+      'CSD: Drawing in Game Lab 1': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 1_2018': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 1_2019': 'Video: Drawing in Game Lab - Part 1'
+      'CSD: Drawing in Game Lab 2': 'Video: Drawing in Game Lab - Part 2'
+      'CSD: Drawing in Game Lab 2_2018': 'Video: Drawing in Game Lab - Part 2'
+      'CSD: Drawing in Game Lab 2_2019': 'Video: Drawing in Game Lab - Part 2'
       'CSD: For Loop_2018': Számláló ciklusok
       'CSD: For Loop_2019': 'Videó: Ciklusok'
+      'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
+      'CSD: Introduction to the Draw Loop_2018': 'Video: Introduction to the Draw
+        Loop'
+      'CSD: Introduction to the Draw Loop_2019': 'Video: Introduction to the Draw
+        Loop'
       'CSD: Sprite Velocity': 'Videó: sebesség'
       'CSD: Sprite Velocity_2018': 'Videó: sebesség'
       'CSD: Sprite Velocity_2019': 'Videó: sebesség'
@@ -419,6 +636,25 @@ hu-HU:
       CSDU4 Design Mode Video: Bevezető a Tervező módhoz
       CSDU4 Design Mode Video_2018: Bevezető a Tervező módhoz
       CSDU4 Design Mode Video_2019: Bevezető a Tervező módhoz
+      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
+      CSDU4 Project Events: 'App Project: Linking Screens'
+      CSDU4 Project Events_2018: 'App Project: Linking Screens'
+      CSDU4 Project Events_2019: 'App Project: Linking Screens'
+      CSDU4 Project Import: 'App Project: Screen Import'
+      CSDU4 Project Import_2018: 'App Project: Screen Import'
+      CSDU4 Project Import_2019: 'App Project: Screen Import'
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge_2018: Sound Board
+      CSDU6 - board event challenge_2019: Sound Board
+      CSDU6 buzzer 2d arrays_2018: 2D Arrays
+      CSDU6 buzzer 2d arrays_2019: 2D Arrays
+      CSDU6 buzzer.stop_2018: Stopping the Music
+      CSDU6 buzzer.stop_2019: Stopping the Music
+      CSS U2 Body Map: The Body Element
+      CSS U2 Body Map_2018: The Body Element
+      CSS U2 Body Map_2019: The Body Element
       'Course E: Artist Project': Tanfolyam E Művész projekt
       'Course E: Artist Project_2018': Tanfolyam E Művész projekt
       'Course E: Artist Project_2019': Tanfolyam E Művész projekt
@@ -431,6 +667,8 @@ hu-HU:
       CourseEF_video_MakeSprite_2019: Hogyan készítsünk sprite-ot
       CourseE_Project_SpriteLab: Tanfolyam E Sprite labor projekt
       CourseE_Project_SpriteLab_2019: Tanfolyam E Sprite labor projekt
+      CourseE_hoops: 'Bunny '
+      CourseF_Project_Revise_SpriteLab: Revise Sprite Lab Project
       CourseF_Project_SpriteLab: Tanfolyam F Sprite labor projekt
       CourseF_Project_SpriteLab_2019: Tanfolyam F Sprite labor projekt
       Dance_Party_extras_alternate_2019: Előre és hátra
@@ -447,7 +685,21 @@ hu-HU:
       Dance_Party_extras_speed_2019: Gyorsítás, lassítás
       Dance_Party_extras_visible: Hová tűntek?
       Dance_Party_extras_visible_2019: Hová tűntek?
+      Final Personal Website: Final Personal Website
+      Final Personal Website_2018: Final Personal Website
+      Final Personal Website_2019: Final Personal Website
+      Geometric Sun_2018: Geometric Sun
       InspirationalArtwork_2018: Inspiráció!
+      Intro to Web Lab - Part 1: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 1_2018: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 1_2019: 'Video: Intro to Web Lab - Part 1'
+      Intro to Web Lab - Part 2: 'Video: Intro to Web Lab - Part 2'
+      Intro to Web Lab - Part 2_2018: 'Video: Intro to Web Lab - Part 2'
+      Intro to Web Lab - Part 2_2019: 'Video: Intro to Web Lab - Part 2'
+      Introduction to Variables - Part 1_2018: Introduction to Variables
+      Introduction to Variables - Part 1_2019: Introduction to Variables
+      MC_HOC_2017_01_RETRY: Homestead
+      MC_HOC_2017_01_RETRY_2019: Homestead
       MC_HOC_2017_02_Cole: Farm
       MC_HOC_2017_02_Cole_2019: Farm
       MC_HOC_2017_03_Cole: Erdő
@@ -458,6 +710,8 @@ hu-HU:
       MC_HOC_2017_04_Cole_2019: Mocsár
       MC_HOC_2017_05_Cole: Folyó
       MC_HOC_2017_05_Cole_2019: Folyó
+      MC_HOC_2017_06_Cole: High Tide
+      MC_HOC_2017_06_Cole_2019: High Tide
       MC_HOC_2017_07_Cole: Havas hágó
       MC_HOC_2017_07_Cole_2019: Havas hágó
       MC_HOC_2017_10_RETRY: Barlang
@@ -466,20 +720,42 @@ hu-HU:
       MC_HOC_2017_Ali_2019: Alvilági erőd
       MC_HOC_2017_FP20x20: Szabad játék
       MC_HOC_2017_FP20x20_2019: Szabad játék
+      Making Music_2018: Making Music
+      Making Music_2019: Making Music
+      New Dance Lab Project: New Dance Party Project
       New Minecraft Hero Project: Szabad játék
+      OPD-K5 WhatIsCS: What is computer science?
+      OPD-K5 WhatIsCS_copy: What is computer science?
       OPD-K5-spritelab-5-video: Hogyan készítsünk sprite-ot
       Oceans_Video_Machine_Learning: 'Videó: Gépi tanulás'
       Oceans_Video_Societal_Implications: 'Videó: Társadalmi vonatkozások'
       Oceans_Video_Training_Data: 'Videó: Tréningadatok'
+      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
+      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
+      Robot Doodle_2018: Robot Doodle
+      The Accelerometer_2018: The Accelerometer
+      The Accelerometer_2019: The Accelerometer
+      Using Accelerometer Events_2018: Using Accelerometer Events
+      Using Accelerometer Events_2019: Using Accelerometer Events
       'Video: Intro to CSS Part 2_2018': 'Videó: bevezetés a CSS-be, 2. rész'
       'Video: Intro to CSS Part 2_2019': 'Videó: bevezetés a CSS-be, 2. rész'
       'Video: Intro to CSS_2018': 'Videó: bevezetés a CSS-be'
       'Video: Intro to CSS_2019': 'Videó: bevezetés a CSS-be'
+      courseA_video_Stevie: Stevie and the Big Project
+      courseA_video_Stevie_2018: Stevie and the Big Project
+      courseB_video_Unspotted: Unspotted Bugs
+      courseB_video_Unspotted_2018: Unspotted Bugs
+      courseE_Dogger_2: Dogger Example
       courseF_artist_for1: Számláló ciklusok szabad játék (kezdő)
       courseF_artist_for1_2018: Számláló ciklusok szabad játék (kezdő)
       courseF_artist_for1_2019: Számláló ciklusok szabad játék (kezdő)
       courseF_project_1: Sprite labor példa projekt
       courseF_video_csMatters: Tanfolyam végi projektek
+      courseF_video_csMatters_2018: 'Video: CS Matters'
+      csd U3 conditional statements video: 'Video: "If/Else" Statements'
+      csd U3 conditional statements video_2019: 'Video: Conditional Statements'
+      csd u5 recommender sample: Sample App
+      csd u5 recommender sample_2019: Sample App
       csd-pre-survey-2017-levelgroup_2018: Lecke áttekintése
       csd-pre-survey-levelgroup_2019: Lecke áttekintése
       scrat_loops_C-F_video: Ciklusok a Jégkorszakban Videó
