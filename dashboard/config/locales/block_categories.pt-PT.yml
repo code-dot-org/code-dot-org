@@ -18,12 +18,14 @@ pt:
       Game/Score: Jogo/Pontuação
       Games/Score: Jogos/Pontuação
       Groups: Grupos
+      Input: Input
       Locations: Localizações
       Logic: Lógica
       Loops: Ciclos
       Math: Matemática
       Numbers: Números
       Properties: Propriedades
+      Sprites: Sprites
       Text: Texto
       Variables: Variáveis
       'Variables ': 'Variáveis '

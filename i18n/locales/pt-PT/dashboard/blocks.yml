@@ -30,6 +30,7 @@ pt:
             MOVES.Clown: Gangnam
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
           MOVE2:
             MOVES.Roll: Rolo de Corpo
@@ -42,6 +43,7 @@ pt:
             MOVES.Clown: Gangnam
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
       Dancelab_atTimestamp:
         text: após {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ pt:
             MOVES.Clown: Gangnam
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ pt:
             MOVES.Clown: Gangnam
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ pt:
             MOVES.Kick: Estrela
             MOVES.XArmsUp: Alongar
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
           DIR:
             '1': "→"
@@ -218,10 +223,13 @@ pt:
             MOVES.Kick: Estrela
             MOVES.XArmsUp: Alongar
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'repetir cada {N} medidas após {START} '
       Dancelab_everySeconds:
@@ -282,6 +290,7 @@ pt:
             MOVES.Roll: Rolo de Corpo
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
       Dancelab_ifTime:
         text: |-
@@ -969,10 +978,19 @@ pt:
         text: configuração
       Dancelab_whenSetup2:
         text: configuração
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: Sprite {SPRITE} Começa {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: Mudar {SPRITE} {PROPERTY} Por {VAL}
         options:
@@ -1017,10 +1035,13 @@ pt:
         options:
           CHOICE:
             '"this"': Isto
+            '"other"': other
       gamelab_hideTitleScreen:
         text: ocultar tela de título
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando bordas"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} saltar para {LOCATION}"
       gamelab_keyPressed:
@@ -1093,6 +1114,10 @@ pt:
             '"West"': Ocidente
       gamelab_moveToward:
         text: Mover {SPRITE} Pixels {DISTANCE} Para {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1127,13 +1152,31 @@ pt:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': caverna
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': tribunal
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficção científica
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Estrelas
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo de água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nenhum
@@ -1170,6 +1213,10 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: Transformar {SPRITE} {DIRECTION} {N} Graus
         options:
@@ -1241,7 +1288,10 @@ pt:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": não peixe
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": meu rótulo
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": não o meu rótulo
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1249,7 +1299,10 @@ pt:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": Topo
@@ -1261,9 +1314,19 @@ pt:
             "{x: 300, y: 100}": canto superior direito
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": canto inferior direito
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: obter o próximo objeto
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1302,6 +1365,7 @@ pt:
             "{x: 300, y: 100}": canto superior direito
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": canto inferior direito
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: remover {SELECT} {COSTUME}
         options:
@@ -1394,6 +1458,7 @@ pt:
             MOVES.Roll: Rolo de Corpo
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nenhum
       Mikelab_ifLabel:
         text: |-
@@ -1419,14 +1484,20 @@ pt:
           DANCE:
             MOVES.ClapHigh: peixe
             MOVES.Clown: não o meu rótulo
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'localização x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: cor aleatória
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: Sprite {SPRITE} Pára {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: repetir para sempre
       Mikelab_sendBad:
@@ -1434,10 +1505,30 @@ pt:
       Mikelab_sendGood:
         text: mover objeto para a direita
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1445,11 +1536,20 @@ pt:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': para a direita
             '"left"': para a esquerda
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: Novo {COSTUME} sprite at sprite at sprite at spr {LOCATION}
         options:
@@ -1463,6 +1563,7 @@ pt:
             "{x: 300, y: 100}": canto superior direito
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": canto inferior direito
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: quando {SPRITE} clicado
       Mikelab_whenKeyPressed:
@@ -1473,42 +1574,63 @@ pt:
             '"down"': seta para baixo
             '"left"': seta para a esquerda
             '"right"': seta para a direita
+            '"space"': spacebar
             '"w"': O
             '"a"': A
             '"s"': S
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': seta para cima
             '"down"': seta para baixo
             '"left"': seta para a esquerda
             '"right"': seta para a direita
+            '"space"': spacebar
             '"w"': O
             '"a"': A
             '"s"': S
             '"d"': D
       Mikelab_whenMouseClicked:
         text: quando o mouse clicou
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: quando {KEY} clicado
         options:
           KEY:
             '"yes"': sim
             '"no"': não
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': seta para cima
             '"down"': seta para baixo
             '"left"': seta para a esquerda
             '"right"': seta para a direita
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x coordenada de {SPRITE}
       Mikelab_yLocationOf:
         text: y coordenada de {SPRITE}
       RyanLab_moveForward:
         text: segue em frente
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: virar à esquerda
       RyanLab_turnRight:
@@ -1573,9 +1695,16 @@ pt:
       aalab_setupStory:
         text: história de configuração
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': aleatório
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: desenhar binário {BIN}
       binary_drawBinScreen:
