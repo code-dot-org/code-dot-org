@@ -14,6 +14,12 @@ hi:
         प्रोग्रामिंग रोकें और पुन: प्रयास करें ।'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: is invalid. Note that each link can only be used once to reset
+                your password, and only the most recently sent link will work.
       messages:
         blank: की आवश्यकता है
         blank_plural: की आवश्यकता है
@@ -46,6 +52,7 @@ hi:
           समाप्त करने के लिए निम्न जानकारी भरें <strong>%{provider}</strong>के लिये<strong>%{email}</strong>"
         finish_sign_up_subheader_provider_markdown: "&lt; div वर्ग के लिए एक Code.org
           खाता बनाना समाप्त करने के लिए निम्न जानकारी भरें **%{provider}**के लिये**%{email}**"
+        reset_password_token: The reset password link you have followed
         error:
           future: भविष्य में नहीं किया जा सकता
   beta: बीटा
@@ -58,14 +65,19 @@ hi:
   previous_page: पिछला पृष्ठ
   next_page: अगले पृष्ठ
   next_resource: अगले संसाधन
+  done_with_module: Done with this Learning Module
   cancel: रद्द करें
   okay: ठीक है
   or: 'अथवा '
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
   join_section:
     code:
+      title: Join a section on Code.org
       placeholder: अनुभाग कोड (ABCDEF)
+      instructions: 'Please enter the 6 letter code your teacher shared with you (example:
+        "ABCDEF") to join their section.'
       instructions_short: अपने 6 पत्र अनुभाग कोड दर्ज करें
+      submit: Join
   add_hint_form:
     placeholder: कृपया अपने सुझाव यहाँ दर्ज करें
     submit: जोड़ने के संकेत
@@ -95,6 +107,9 @@ hi:
     continue_with: "%{provider} के साथ साइन इन करें"
     sign_in_with: "%{provider} के साथ साइन इन करें"
     signed_in: साइंगड इन!
+    signed_out_markdown: "### You have signed out of [Code.org](%{url})."
+    sign_out_of_markdown: "#### You used %{provider} to sign in. [Click here](%{url})
+      to sign out of %{provider}."
     already_signedup: पहले से पंजीकृत?
     notyet_signedup: अभी तक शामिल नहीं हुए?
     google_oauth2: गूगल खाता
@@ -119,6 +134,11 @@ hi:
       है ।
     already_linked: आपका %{provider} खाता पहले से ही अंय Code.org खाते से कनेक्टेड
       है ।
+    existing_account:
+      account_exists: Good news! You already have a Code.org account that uses %{email}
+      sign_in: Please sign in and we'll link your %{provider} profile.
+      sign_up: Not your email? Want to create a new account with a different email?
+        We will also link your %{provider} profile if you choose to create a new account.
   signup_form:
     email_signup: अपने ईमेल पते के साथ साइन अप करें
     student_count: "%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं"
@@ -175,6 +195,10 @@ hi:
       सहमत हूं ।
     my_data_to_us: इस साइट के मेरे उपयोग से डेटा के लिए भेजा जा सकता है और संग्रहीत
       या संयुक्त राज्य अमेरिका में संसाधित ।
+    student_terms_markdown: Email addresses are not stored in a form that allows us
+      to contact students. Students will never receive emails from Code.org except
+      for password recovery. See our [privacy policy](http://code.org/privacy) for
+      more information.
     additional_information: हम कुछ अतिरिक्त जानकारी की आवश्यकता आप साइन अप करने के
       लिए जारी रखने के लिए ।
     user_type_button: खाता प्रकार अद्यतन करें
@@ -237,6 +261,8 @@ hi:
     login: दाखिल करना
     invalid_login: अवैध लॉगिन, कृपया दुबारा कोशिश करें
     pair_programming: मेरे कंप्यूटर पर मेरा एक पार्टनर है
+    student_privacy_markdown: Learn more about why you're not seeing your full name
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: अपना पासवर्ड भूल गए?
@@ -342,6 +368,7 @@ hi:
       sections: अनुभाग
       help_support: सहायता और समर्थन
       report_bug: समस्या की रिपोर्ट करें
+      report_abuse: Report abuse
       teacher_community: अध्यापक समुदाय
       professional_learning: पेशेवर प्रशिक्षण
       documentation: दस्तावेजीकरण
@@ -350,6 +377,8 @@ hi:
       app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
       game_lab_documentation: गेम लैब दस्तावेज
       game_lab_tutorials: गेम लैब ट्यूटोरियल्स
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
       educate_overview: शिक्षक रूपरेखा
       educate_elementary: प्राथमिक स्कूल
       educate_middle: मिडल स्कूल
@@ -375,6 +404,7 @@ hi:
       help_us: हमारी मदद करें
       teach: पढ़ाएं
       about: के बारे में
+      legal: Privacy & Legal
       legal_privacy: गोपनीयता नीति
       legal_tos: सेवा की शर्तें
     user:
@@ -522,6 +552,9 @@ hi:
       रिकवरी के लिए)
     update: खाता अद्यतन करें
     account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
+    auth_option_saved: You have successfully linked your %{provider} account with
+      email %{email}.
+    auth_option_saved_no_email: You have successfully linked your %{provider} account.
     update_email: अद्यतन करें
     for_parents_and_guardians: माता-पिता और अभिभावकों के लिए
     link_a_parent_email: अपने बच्चे की प्रगति और प्रोजेक्ट्स के बारे में अपडेट रहने
@@ -576,10 +609,16 @@ hi:
     test_videos_help: अपने स्कूल में हमारे नए वीडियो प्लेयर का परीक्षण करें
     try_beta_courses: नया! K-5 के छात्रों के लिए हमारे बीटा पाठ्यक्रमों को आजमाएं
     use_as_teacher: इस साइट को अध्यापक के तौर पर उपयोग करें
+    heading_elementary_markdown: |-
+      ## 20 hour courses for
+
+      # Computer Science Fundamentals (all ages)
     your_gallery: गैलरी
     no_primary_course: कोड स्टूडियो पाठ्यक्रम आजमाएं
     choose_next_course: नीचे दिए गए कोड स्टूडियो पाठ्यक्रम में से एक चुनकर आजमाएं
     print_certificate: प्रमाण-पत्र प्रिंट करें
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   move_students:
     new_section_dne: हमें खेद है कि अनुभाग %{new_section_code} मौजूद नहीं है। कृपया
       अलग अनुभाग कोड दर्ज करें।
@@ -644,6 +683,7 @@ hi:
     feedback: प्रतिक्रिया प्रदान करें
     translate: हमारी सामग्री को अनुवाद करने के लिए स्वेच्छा से आए
     support: सहयोग
+    support_url: http://support.code.org
     tos_short: शर्तें
     tos: सेवा की शर्तें
     privacy: गोपनीयता नीति
@@ -683,6 +723,9 @@ hi:
       gamelab_unsupported_tablet: गेम लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
         कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
         करने में आपको समस्याएं आ सकती हैं।
+      oceans_unsupported_browser: This browser is not supported for this tutorial.
+        Please try visiting this page using Edge, Chrome, Firefox, or another modern
+        browser.
       weblab_unsupported_browser: 'अफसोस, हमें इस समय इस ब्राउजर पर वेब लैब लोड करने
         में समस्याएं आ रही हैं। आप इसके ठीक होने तक किसी और ब्राउजर का उपयोग करना
         चाह सकते हैं। असुविधा के लिए खेद है। '
@@ -824,8 +867,11 @@ hi:
       audience: आयु 14+
       cta: जानें कैसे
   landing:
+    prerelease_tutorial: This tutorial is in **beta**.  It is subject to revision
+      as feedback is received and improvements are made.
     report_bug: बग की रिपोर्ट करें
     support: मदद प्राप्त करें
+    support_url: "//support.code.org"
     help_resources: मदद और संसाधन
     help_support: सहायता और समर्थन
     documentation: दस्तावेजीकरण
@@ -837,11 +883,15 @@ hi:
     wrong_body: आपके द्वारा दर्ज किया गया जवाब सही नहीं है।  कृपया दुबारा प्रयास करें!
     correct_title: सही
     correct_body: यह सही जवाब है।
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: धन्यवाद
     wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
     correct_title: धन्यवाद
     correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: धन्यवाद
     wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
@@ -890,6 +940,8 @@ hi:
     open_response_body: आपके जवाब के लिए धन्यवाद!
     correct_title: सही
     correct_body: यह सही जवाब है।
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: ठीक है
     startover_title: Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?
@@ -904,6 +956,12 @@ hi:
   age_interstitial:
     age: आपकी आयु
     header: खाता सूचना अद्यतन
+    warning: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.
+    disclaimer: As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out_markdown: If you do not wish to provide your age you may [sign out](%{url}).
   terms_interstitial:
     title: अद्यतन की गई सेवा की शर्तें और गोपनीयता नीति
     intro_desc: 'हमने अपनी सेवा की शर्तों और गोपनीयता नीति का अद्यतन किया है, जैसा
@@ -1064,14 +1122,26 @@ hi:
   peer_review:
     accepted:
       name: स्वीकृत
+      description_markdown: "**Yes**, this submission **meets** the requirements"
     rejected:
       name: अस्वीकृत
+      description_markdown: "**No**, this submission **does not meet** the requirements"
     escalated:
       name: तीव्र किया गया
       description: मैं इस प्रस्तुत की समीक्षा के लिए एक इंस्ट्रक्टर चाहता हूं
     instructor_feedback: इंस्ट्रक्टर की प्रतिक्रिया
     peer_feedback: सहपाठी की प्रक्रिया
     outdated: यह प्रतिक्रिया पिछले प्रस्तुत किए संस्करण के लिए जोड़ी गई थी
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
+    peer_review: Peer Review
   external_links:
     disclaimer: अस्वीकरण
     leaving_domain: अब आप इस डोमेन को ऐसी साइट पर छोड़ रहे हैं, जो Code.org द्वारा
@@ -1141,6 +1211,19 @@ hi:
     download_in_Vietnamese: 'वियतनामी में डाउनलोड करें:'
     windows: Windows (64-बिट)
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: इस स्टेज की सामग्रियां दिखाई नहीं देतीं क्योंकि यह स्टेज इस समय लॉक
     है। आपका अध्यापक इस स्टेज को अनलॉक कर सकता है, जब इस पर काम करने या आपके जवाबों
     की समीक्षा करने का समय हो।
@@ -1148,6 +1231,11 @@ hi:
     से पूछें कि आपको किस पाठ पर होना चाहिए।
   hidden_script: आपके अध्यापक ने यहां आपके होने की अपेक्षा नहीं की थी। कृपया अपने
     अध्यापक से पूछें कि आपको किस इकाई पर होना चाहिए।
+  no_course_access_student: You don't have access to this course. Please ask your
+    teacher which course you should be on.
+  no_course_access_teacher: You don't have access to this course. If you believe you
+    should have access to this course, please write to support@code.org so that we
+    can fix the situation.
   no_script_access_student: इस इकाई तक आपकी पहुंच नहीं है। कृपया अपने अध्यापक से पूछें
     कि आपको किस इकाई पर होना चाहिए।
   no_script_access_teacher: इस इकाई तक आपकी पहुंच नहीं है। यदि आपको लगता है कि इस
@@ -1158,6 +1246,53 @@ hi:
   view_all_units: सभी इकाईयां देखें
   view_teacher_guide: अध्यापक गाइड देखें
   pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
       first_name: पहला नाम
       first_name_preferred: वरीय पहला नाम
@@ -1228,6 +1363,7 @@ hi:
         csfirst: Google CS First
         khan: Khan Academy
         kodable: Kodable
+        lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
         other: 'अन्य:'
@@ -1259,12 +1395,27 @@ hi:
         और 2) आप अपने देश में हमारे अंतर्राष्ट्रीय साझेदार के साथ अपने जानकारी साझा
         करने के लिए सहमत हैं, ताकि वे कंप्यूटर साइंस के अध्यापर के तौर पर आपके सफर
         को सहयोग करने में मदद कर पाएं।
+      thanks_markdown: Thank you for submitting! We look forward to supporting you
+        as you get to know Code.org’s curriculum and tools. Please keep sharing your
+        questions and feedback with us by writing to us at [support@code.org](%{support_email_url})
+        or by posting on the [teacher forum](%{teacher_forum_url})!
     logged_out:
       heading: पेशेवर शिक्षण कार्यक्रम में रुचि दिखाने के लिए आपका धन्यवाद!
       body: शुरू करने के लिए, पहले आपको अपने Code.org खाते पर लॉग इन करने की जरूरत
         है। यदि आप अपना आवेदन शुरू करने से पहले कार्यक्रम के बारे में और जानकारी प्राप्त
         करना चाहते हैं, तो कृपया <a href="%{url}">पेशेवर शिक्षण कार्यक्रम की रूपरेखा</a>
         देखें।
+    not_teacher:
+      body_markdown: Thanks for your interest in Code.org’s Professional Learning
+        Program! You’re currently signed into a student account. Please either create
+        a teacher account or [go to your user settings](%{user_settings}) to upgrade
+        your account from student to teacher.
+      more_markdown: If you’d like more information about the program before you start
+        your application, please check out the [Professional Learning Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Your account doesn’t have an email address. Please [visit your
+        account settings](%{user_registration}) to add your email address before completing
+        this form.
   courses_category: Full Courses
   cookie_banner:
     message: हमारी साइट को लगातार ब्राउज करके या "मैं सहमत हूं” पर क्लिक करके, आप
@@ -1285,6 +1436,17 @@ hi:
     वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
   page_not_found_button: मुख्य पृष्ठ पर वापस जाएं
   copy: प्रतिलिपि बनाएँ
+  maker:
+    google_oauth:
+      login_with_google: Login to the Maker App with Google
+      enter_code: Please enter the code provided when you logged in via Google on
+        your default browser.
+      copy_code: Please copy and paste this code into the Maker App to login to Code.org.
+      error_token_expired: Token has expired. Please log in again for a new token.
+      error_wrong_provider: Wrong provider. Please make sure you are logging in with
+        Google.
+      error_invalid_user: Invalid user id. Please try logging in again.
+      error_no_code: Please enter your login code.
   parent_email_banner:
     text: "**आप माता-पिता हैं या अभिभावक?** अपने बच्चे की प्रगति और प्रोजेक्ट्स के
       बारे में अपडेट रहने के लिए इस ईमेल को अपने खाते से लिंक करें।"
