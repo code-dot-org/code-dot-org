@@ -63,6 +63,7 @@ tr:
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
   next_resource: Sonraki Kaynak
+  done_with_module: Done with this Learning Module
   cancel: "İptal"
   okay: "Tamam"
   or: "veya"
@@ -126,6 +127,7 @@ tr:
     existing_account:
       account_exists: "Haberler iyi! %{email} mail adresiyle bir Code.org hesabınız zaten var."
       sign_in: "%{provider} hesabınızla oturum açtığınızda hesaplarınız bağlanacak."
+      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
   signup_form:
     email_signup: 'E-posta adresiniz ile kayıt olun'
     student_count: '%{count}öğrenci çoktan kaydoldu.'
@@ -170,6 +172,7 @@ tr:
     email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
     email_preference_yes: "Evet"
     email_preference_no: "Hayır"
+    email_preference_required: "You must specify an email preference."
     parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
     parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
     parent_account_email_label: "Ebeveyn/Veli E-postası"
@@ -213,6 +216,7 @@ tr:
     login: 'Giriş Yap'
     invalid_login: 'Geçersiz oturum açma adı, lütfen yeniden deneyin'
     pair_programming: 'Bilgisayarı başka biriyle kullanıyorum.'
+    student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Şifrenizi mi unuttunuz?'
@@ -304,10 +308,13 @@ tr:
       sections: "Bölümler"
       help_support: "Yardım ve Destek"
       report_bug: "Hata bildir"
+      report_abuse: "Report abuse"
       teacher_community: "Öğretmen topluluğu"
       professional_learning: "Profesyonel öğrenme"
       documentation: "Belgeler"
       tutorials: "Eğitmler"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
       game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
       game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
       sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
@@ -337,6 +344,7 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+      legal: "Privacy & Legal"
       legal_privacy: "Gizlilik Politikası"
       legal_tos: "Şartlar"
     user:
@@ -371,8 +379,10 @@ tr:
       gumball: 'Gumball'
       iceage: 'Buz Devri'
       infinity: 'Sonsuz'
+      makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Maceracısı'
       minecraft_aquatic: 'Minecraft Suda yaşayan'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Kahraman'
       playlab: 'Oyun Laboratuvarı'
@@ -444,15 +454,20 @@ tr:
     create_personal_login_under_13_username: "Kullanıcı adı (gerçek adınızı kullanmayınız!)"
     create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, altta kendi girişinizi yapın.'
+    create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
     create_personal_login_terms_markdown: "Kişisel hesap oluşturmakla ben, Code.org'un [hizmet şartlarına bağlı olmayı kabul ediyorum](%{terms_of_service_url}). Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
     create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız."
     create_personal_login_email_note_markdown: 'Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org''dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](%{privacy_policy_url}) bakınız.'
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
+    parent_email_label: "Parent/guardian email (optional)"
+    parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
     update: "Hesabı güncelle"
     account_successfully_updated: "Hesap başarıyla güncellendi."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Güncelle"
     for_parents_and_guardians: "Ebeveynler ve Veliler İçin"
     link_a_parent_email: "Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için bu hesaba bir ebeveyn/veli e-posta adresi bağlayın. Bu e-posta adresini şifre kurtarma için de kullanabilirsiniz."
@@ -494,10 +509,12 @@ tr:
     test_videos_help: 'Okulunuzda yeni video oynatıcımızı deneyin'
     try_beta_courses: 'Yeni! K-5 öğrencileri için beta kurslarımızı deneyin'
     use_as_teacher: 'Siteyi öğretmen profiliyle kullan'
+    heading_elementary_markdown: "## 20 hour courses for\n\n# Computer Science Fundamentals (all ages)"
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
     choose_next_course: "Aşağıdaki Code Studio derslerinden birini seçerek deneyin"
     print_certificate: "Sertifikayı Yazdır"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
@@ -506,6 +523,7 @@ tr:
     student_not_found: "Öğrenci ve öğretmen bulunamadı."
     all_students_must_be_in_current_section: "Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır."
     already_enrolled_in_new_section: "Öğrenciler zaten başka bir bölümde bulunduğundan onları başka yere taşıyamazsınız."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Code Studio'da Öğrenin"
     description: "Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar ve sanat yarat."
@@ -513,6 +531,8 @@ tr:
   gender:
     male: 'Erkek'
     female: 'Kadın'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Cevap vermemeyi tercih ederim'
   user_type:
     student: 'öğrenci'
@@ -564,6 +584,7 @@ tr:
       link: "Daha fazlasını öğren"
       applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
       weblab_unsupported_browser: "Ne yazık ki, şu anda Web Lab bu tarayıcı yükleme ile ilgili sorunlar yaşıyorsanız. Bu çözülene kadar farklı bir tarayıcı kullanmak isteyebilirsiniz. Rahatsız ettiğim için özür dilerim."
       weblab_unsupported_locale_storage: "Web Lab Özel tarama modunda kullanma sorunlarla karşılaşabilirsiniz. Lütfen projenize normal modda yeniden yükleyin. Rahatsız ettiğim için özür dilerim."
   slow_loading: 'Bu normalden uzun sürüyor...'
@@ -659,6 +680,7 @@ tr:
       title: "Spor"
       body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
     text-compression:
+      title: "Text Compression"
       body: "Bu derste, öğrenciler metin sıkıştırma aracı ile metinler yerine semboller kullanarak sıkıştır."
     unplugged:
       title: "Bağımsız dersler"
@@ -674,6 +696,7 @@ tr:
       audience: "14 yaş üzeri"
       cta: "Nasıl olduğunu öğren"
   landing:
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Hata bildir"
     support: "Yardım Al"
     support_url: "//support.code.org"
@@ -734,6 +757,8 @@ tr:
     open_response_body: "cevabınız için teşekkürler!"
     correct_title: "Doğru"
     correct_body: "İşte bu doğru cevap."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "TAMAM"
     startover_title: "Baştan başlamak istediğinize emin misiniz?"
@@ -747,6 +772,9 @@ tr:
   age_interstitial:
     age: Yaşın
     header: Hesap Bilgileri Güncelleme
+    warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
+    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
     intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
@@ -847,8 +875,10 @@ tr:
   peer_review:
     accepted:
       name: 'Kabul edildi'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
     rejected:
       name: 'Reddedildi'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
     escalated:
       name: 'Yükseltilmiş'
       description: 'Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum'
@@ -856,6 +886,13 @@ tr:
     peer_feedback: 'Geribildirim Gönder'
     outdated: 'Bu geribildirim daha önce yollanan gönderiye eklendi'
     review_in_progress: 'Gözden geçirmeye hazır'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
     peer_review: 'Eş gözden geçirme'
   external_links:
     disclaimer: Yasal uyarı
@@ -915,53 +952,175 @@ tr:
     download_in_Vietnamese: 'Vietnam dilinde yükleyin:'
     windows: 'Windows'
     mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Bu sahnenin içeriği görünmemektedir çünkü bu sahne şu anda kilitlidir. Öğretmeniniz bu sahneyi size çalışmak veya yanıtlarınızı gözden geçirmek için zamanında açacaktır.'
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi derste olman gerektiğini sor."
   hidden_script: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi ünitede olman gerektiğini sor."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Ünite genel bakışına git'
   return_course_overview: 'Ünite genel bakışına git'
   view_all_units: 'Tüm üniteleri göster'
   view_teacher_guide: 'Öğretmen kılavuzunu görüntüle'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
+      first_name: 'First Name'
+      first_name_preferred: 'Preferred First Name'
+      last_name: 'Last Name'
       email: 'e-posta'
+      email_alternate: 'Alternate Email'
+      gender: 'Gender Identity'
       school_name: 'Okulun Adı'
       school_city: 'Okulun bulunduğu şehir'
       school_country: 'Okulun bulunduğu ülke'
+      ages: 'Which age(s) do you teach this year?'
+      subjects: 'Which subject(s) do you teach this year?'
+      resources: 'Which of the following CS education resources do you use?'
+      robotics: 'Which of the following robotics resources do you use?'
+      workshop_organizer: 'Workshop Organizer'
+      workshop_facilitator: 'Workshop Facilitator'
+      workshop_course: 'Workshop Course'
+      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Erkek'
         female: 'Kadın'
+        non_binary: 'Non-binary'
+        not_listed: 'Preferred term not listed'
         none: 'Cevap vermemeyi tercih ederim'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
+      ages:
+        ages_under_6: '< 6 years old'
+        ages_7_8: '7-8 years old'
+        ages_9_10: '9-10 years old'
+        ages_11_12: '11-12 years old'
+        ages_13_14: '13-14 years old'
+        ages_15_16: '15-16 years old'
+        ages_17_18: '17-18 years old'
+        ages_19_over: '19+ years old'
       subjects:
         cs: 'Bilgisayar Bilimi'
+        ict: 'ICT'
         math: 'Matematik'
         science: 'Fen Bilimleri'
+        history: 'History / Social Studies'
         la: 'Dil Sanatları'
+        efl: 'English as a Foreign Language'
+        music: 'Music'
+        art: 'Art'
+        other: "Other:"
       resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
         khan: 'Khan Akademi'
         kodable: 'Kodlanabilir'
+        lightbot: 'Lightbot'
         scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Other:"
       robotics:
         grok: 'Grok'
         kodable: 'Kodlanabilir'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Other:"
       workshop_course:
+        csf_af: 'CS Fundamentals (Courses A-F)'
+        csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
         csp: ''' 16 - 17'' Bilgisayar bilimleri ilkeleri'
       email_opt_in:
         opt_in_yes: 'Evet'
         opt_in_no: 'Hayır'
+    international_opt_in:
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body_markdown: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or [go to your user settings](%{user_settings}) to upgrade your account from student to teacher.'
+      more_markdown: 'If you’d like more information about the program before you start your application, please check out the [Professional Learning Program overview](%{pl_overview}).'
+    no_teacher_email:
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Tüm Kurslar'
   cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
     accept: 'Kabul ediyorum'
   gdpr_dialog:
     heading: 'Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyor musunuz?'
     message: 'Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
     yes: 'Evet'
   page_not_found_title: "Sayfa Bulunamadı"
   page_not_found_header: '404: Sayfa Bulunamadı'
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
   parent_email_banner:
     text: "** Ebeveyn veya veli misiniz? ** Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için e-postanızı bu hesaba bağlayın!"
     link_your_email: "E-postanızı bağlayın"

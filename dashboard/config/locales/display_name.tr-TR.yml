@@ -2,6 +2,7 @@
 tr-TR:
   data:
     display_name:
+      AB_Debug_Artist1: 'Artist Debugging #1 (AB)'
       Alien Defender: Uzaylı Koruyucu
       App Lab Intro 8 - Video Design Mode: 'Video: Tasarım Modu'
       App Lab Intro 8 - Video Getting Started: 'Video: İşe Başlama'
@@ -32,13 +33,25 @@ tr-TR:
       CSD Buzzer Map: 'Devre Sahası: Buzzer'
       CSD Buzzer Map_2018: 'Devre Sahası: Buzzer'
       CSD Buzzer Map_2019: 'Devre Sahası: Buzzer'
+      CSD Counter Pattern Map: The Counter Pattern
+      CSD Counter Pattern Map_2018: The Counter Pattern
+      CSD Counter Pattern Map_2019: The Counter Pattern
+      CSD If Else Map: If-Else Statements
+      CSD If Else Map_2018: If-Else Statements
+      CSD If Else Map_2019: If-Else Statements
       CSD If Statements Map: Eğer (If) Durumları
       CSD If Statements Map_2018: Eğer (If) Durumları
       CSD If Statements Map_2019: Eğer (If) Durumları
+      CSD LEDs Map: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2019: 'Circuit Playground: Introduction'
       CSD Polling Events Map: Yoklama olayları
       CSD Polling Events Map_2018: Yoklama olayları
       CSD Polling Events Map_2019: Yoklama olayları
       CSD Problem Solving Process Video: 'Video: Problem Çözme Süreci'
+      CSD Set Scale Map: Changing Sensor Scale
+      CSD Set Scale Map_2018: Changing Sensor Scale
+      CSD Set Scale Map_2019: Changing Sensor Scale
       CSD U1L02 TFMD_2018: Derse Genel Bakış
       CSD U1L02 TFMD_2019: Derse Genel Bakış
       CSD U1L03 TFMD_2018: Derse Genel Bakış
@@ -80,6 +93,9 @@ tr-TR:
       CSD U2 Inspector Warm Up: HTML'i Keşfet
       CSD U2 Inspector Warm Up_2018: HTML'i Keşfet
       CSD U2 Inspector Warm Up_2019: HTML'i Keşfet
+      CSD U2 Layout Properties Map: Layout Properties
+      CSD U2 Layout Properties Map_2018: Layout Properties
+      CSD U2 Layout Properties Map_2019: Layout Properties
       CSD U2 Pair Programming Video: Eşli Programlama
       CSD U2 Pair Programming Video_2018: Eşli Programlama
       CSD U2 Pair Programming Video_2019: Eşli Programlama
@@ -107,6 +123,7 @@ tr-TR:
       CSD U2 lists map: HTML'de Listeler
       CSD U2 lists map_2018: HTML'de Listeler
       CSD U2 lists map_2019: HTML'de Listeler
+      CSD U2 publish video: Publishing Your Website
       CSD U2L01 TFMD_2018: Derse Genel Bakış
       CSD U2L01 TFMD_2019: Derse Genel Bakış
       CSD U2L02 TFMD_2018: Derse Genel Bakış
@@ -135,6 +152,14 @@ tr-TR:
       CSD U2L13 TFMD_2019: Derse Genel Bakış
       CSD U2L14 TFMD_2018: Derse Genel Bakış
       CSD U2L14 TFMD_2019: Derse Genel Bakış
+      CSD U3 - Booleans Video: 'Video: Booleans'
+      CSD U3 - Booleans Video_2018: 'Video: Booleans'
+      CSD U3 - Booleans Video_2019: 'Video: Booleans'
+      CSD U3 - Conditionals Video: 'Video: Conditionals'
+      CSD U3 - Conditionals Video_2018: 'Video: Conditionals'
+      CSD U3 - Conditionals Video_2019: 'Video: If/Else Statements'
+      CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
+      CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
       CSD U3 Animation Edit Map: Resimleri Düzenleme
       CSD U3 Animation Edit Map_2018: Resimleri Düzenleme
       CSD U3 Animation Edit Map_2019: Resimleri Düzenleme
@@ -144,6 +169,18 @@ tr-TR:
       CSD U3 AnimationsMulti Play Defender: Örnek Oyun
       CSD U3 AnimationsMulti Play Defender_2018: Örnek Oyun
       CSD U3 AnimationsMulti Play Defender_2019: Örnek Oyun
+      CSD U3 Complex Movement counter prediction gamelab: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2018: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2019: Velocity and the Counter
+        Pattern
+      CSD U3 Compound Nested Challenge: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2018: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2019: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Draw Loop Plugged update your scene: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2019: 'Challenge: Extend Your Scene'
       CSD U3 Drawing Squares to Corners: Izgarayı Kullanmak
       CSD U3 Drawing Squares to Corners_2018: Izgarayı Kullanmak
       CSD U3 Drawing Squares to Corners_2019: Izgarayı Kullanmak
@@ -153,8 +190,12 @@ tr-TR:
       CSD U3 Entertainment Sample 4: Hareketli Sahneleri
       CSD U3 Entertainment Sample 4_2018: Hareketli Sahneleri
       CSD U3 Entertainment Sample 4_2019: Hareketli Sahneleri
+      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
       CSD U3 Interactive Card Exemplar_2018: İnteraktif Kart
       CSD U3 Interactive Card Exemplar_2019: İnteraktif Kart
+      CSD U3 Keyboard Input Challenge: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018_2019: 'Challenge: Add More Inputs'
       CSD U3 L11 Freeplay: Ücretsiz Oyna
       CSD U3 L11 Freeplay_2018: Ücretsiz Oyna
       CSD U3 L11 Freeplay_2019: Ücretsiz Oyna
@@ -212,6 +253,9 @@ tr-TR:
       CSD U3 Sprites Map: Hareketliler Oluşturuluyor
       CSD U3 Sprites Map_2018: Hareketliler Oluşturuluyor
       CSD U3 Sprites Map_2019: Hareketliler Oluşturuluyor
+      CSD U3 Sprites scene challenge: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2019: 'Challenge: Extend Your Scene'
       CSD U3 The Draw Loop Map: Döngü çiz
       CSD U3 The Draw Loop Map_2018: Döngü çiz
       CSD U3 The Draw Loop Map_2019: Döngü çiz
@@ -224,6 +268,12 @@ tr-TR:
       CSD U3 Variables Map: Değişkenler
       CSD U3 Variables Map_2018: Değişkenler
       CSD U3 Variables Map_2019: Değişkenler
+      CSD U3 Watchers Map: Debugging with Watchers
+      CSD U3 Watchers Map_2018: Debugging with Watchers
+      CSD U3 Watchers Map_2019: Debugging with Watchers
+      CSD U3 acceleration map: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2018: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2019: Velocity and the Counter Pattern Review
       CSD U3 challenge face: 'Meydan Okuma: Yüz (surat)'
       CSD U3 challenge face_2018: 'Meydan Okuma: Yüz (surat)'
       CSD U3 challenge face_2019: 'Meydan Okuma: Yüz (surat)'
@@ -236,12 +286,41 @@ tr-TR:
       CSD U3 collisions car intro: Örnek Oyun
       CSD U3 collisions car intro_2018: Örnek Oyun
       CSD U3 collisions car intro_2019: Örnek Oyun
+      CSD U3 collisions predict set velocity code: Sprite Interactions
+      CSD U3 collisions predict set velocity code_2018: Sprite Interactions
+      CSD U3 collisions predict set velocity code_2019: Sprite Interactions
+      CSD U3 finishing touches: Project - Finishing Touches
+      CSD U3 finishing touches_2018: Project - Finishing Touches
+      CSD U3 finishing touches_2019: Project - Finishing Touches
+      CSD U3 function video: 'Video: Functions'
+      CSD U3 functions review: Functions Review
+      CSD U3 functions review_2018: Functions Review
+      CSD U3 functions review_2019: Functions Review
+      CSD U3 if else predict: Predict
+      CSD U3 interactions map: Sprite Interactions Review
+      CSD U3 interactions map_2018: Sprite Interactions Review
+      CSD U3 interactions map_2019: Sprite Interactions Review
+      CSD U3 istouching map: Collision Detection Review
+      CSD U3 istouching map_2018: Collision Detection Review
+      CSD U3 istouching map_2019: Collision Detection Review
       CSD U3 naming map: Değişkenleri Adlandırma
       CSD U3 naming map_2018: Değişkenleri Adlandırma
       CSD U3 naming map_2019: Değişkenleri Adlandırma
       CSD U3 picture: 'Meydan Okuma: Bir Resim Çiz'
       CSD U3 picture_2018: 'Meydan Okuma: Bir Resim Çiz'
       CSD U3 picture_2019: 'Meydan Okuma: Bir Resim Çiz'
+      CSD U3 platform challenge: Improve Your Game
+      CSD U3 platform challenge_2018: Improve Your Game
+      CSD U3 platform challenge_2019: Improve Your Game
+      CSD U3 platform sample1: Sample Platform Jumper Game
+      CSD U3 platform sample1_2018: Sample Platform Jumper Game
+      CSD U3 platform sample1_2019: Sample Platform Jumper Game
+      CSD U3 platform sample2: Plane Jumper
+      CSD U3 platform sample2_2018: Plane Jumper
+      CSD U3 platform sample2_2019: Plane Jumper
+      CSD U3 platform sample3: Bunny Jumper
+      CSD U3 platform sample3_2018: Bunny Jumper
+      CSD U3 platform sample3_2019: Bunny Jumper
       CSD U3 plotting shapes map: Oyun Laboratuvarı'nda Şekil Çizimi
       CSD U3 plotting shapes map_2018: Oyun Laboratuvarı'nda Şekil Çizimi
       CSD U3 plotting shapes map_2019: Oyun Laboratuvarı'nda Şekil Çizimi
@@ -251,6 +330,9 @@ tr-TR:
       CSD U3 shape size map: Şekiller ve Parametreler
       CSD U3 shape size map_2018: Şekiller ve Parametreler
       CSD U3 shape size map_2019: Şekiller ve Parametreler
+      CSD U3 velocity map: Sprite Velocity
+      CSD U3 velocity map_2018: Sprite Velocity
+      CSD U3 velocity map_2019: Sprite Velocity
       CSD U3L01 TFMD_2018: Derse Genel Bakış
       CSD U3L01 TFMD_2019: Derse Genel Bakış
       CSD U3L02 TFMD_2018: Derse Genel Bakış
@@ -295,9 +377,27 @@ tr-TR:
       CSD U3L21 TFMD_2019: Derse Genel Bakış
       CSD U3L22 TFMD_2018: Derse Genel Bakış
       CSD U3L22 TFMD_2019: Derse Genel Bakış
+      CSD U4 - Design Mode Project: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2018: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2019: 'App Project: Screen Design'
+      CSD U4 Change Screen Map: Changing Screens
+      CSD U4 Change Screen Map_2018: Changing Screens
+      CSD U4 Change Screen Map_2019: Changing Screens
+      CSD U4 Design Elements Map: Design Mode Elements
+      CSD U4 Design Elements Map_2018: Design Mode Elements
+      CSD U4 Design Elements Map_2019: Design Mode Elements
+      CSD U4 Design Mode Map: Tour of Design Mode
+      CSD U4 Design Mode Map_2018: Tour of Design Mode
+      CSD U4 Design Mode Map_2019: Tour of Design Mode
+      CSD U4 Importing Screens Map: Importing Screens
+      CSD U4 Importing Screens Map_2018: Importing Screens
+      CSD U4 Importing Screens Map_2019: Importing Screens
       CSD U4 Mult Screen Map: Çoklu ekranlı Uygulamalar
       CSD U4 Mult Screen Map_2018: Çoklu ekranlı Uygulamalar
       CSD U4 Mult Screen Map_2019: Çoklu ekranlı Uygulamalar
+      CSD U4 User Input Map: Responding to User Input
+      CSD U4 User Input Map_2018: Responding to User Input
+      CSD U4 User Input Map_2019: Responding to User Input
       CSD U4L01 autoSFLP_2018: Derse Genel Bakış
       CSD U4L01 autoSFLP_2019: Derse Genel Bakış
       CSD U4L02 autoSFLP_2018: Derse Genel Bakış
@@ -330,6 +430,31 @@ tr-TR:
       CSD U4L15 autoSFLP_2019: Derse Genel Bakış
       CSD U4L16 autoSFLP_2018: Derse Genel Bakış
       CSD U4L16 autoSFLP_2019: Derse Genel Bakış
+      CSD U5 Amazon Data Video: Collecting Information About Users
+      CSD U5 Amazon Data Video_2018: Collecting Information About Users
+      CSD U5 Amazon Data Video_2019: How Amazon Uses Data
+      CSD U5 Netflix Data Video_2019: How Netflix Uses Data
+      CSD U5 Waze Data Video: Collecting Information About Users
+      CSD U5 Waze Data Video_2018: Collecting Information About Users
+      CSD U5 Waze Data Video_2019: How Waze Uses Data
+      CSD U5 binary video: Binary and Data
+      CSD U5 binary video_2018: Binary and Data
+      CSD U5 binary video_2019: Binary and Data
+      CSD U5 black white images pixelation: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2019: Black and White Pixelation Widget
       CSD U5L01 autoSFLP_2018: Derse Genel Bakış
       CSD U5L01 autoSFLP_2019: Derse Genel Bakış
       CSD U5L02 autoSFLP_2018: Derse Genel Bakış
@@ -363,18 +488,63 @@ tr-TR:
       CSD U6 Event Types: Olay Türleri
       CSD U6 Event Types_2018: Olay Türleri
       CSD U6 Event Types_2019: Olay Türleri
+      CSD U6 analog challenge: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2018: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2019: 'Challenge: Making Sense of Sensors'
       CSD U6 arrays intro: Dizilere Giriş
       CSD U6 arrays intro_2018: Dizilere Giriş
       CSD U6 arrays intro_2019: Diziler
+      CSD U6 arrays video: 'Video: Introduction to Arrays'
+      CSD U6 challenge motorcycle_2018: 'Challenge: Motorcycle'
+      CSD U6 challenge motorcycle_2019: 'Challenge: Motorcycle'
+      CSD U6 circuit LED map: Circuits and LEDs
+      CSD U6 circuit LED map_2018: Circuits and LEDs
+      CSD U6 circuit LED map_2019: Circuits and LEDs
+      CSD U6 circuit button map: Button Circuits
+      CSD U6 circuit button map_2018: Button Circuits
+      CSD U6 circuit button map_2019: Button Circuits
+      CSD U6 circuit logic video: Circuits and Logic
+      CSD U6 circuit logic video_2018: Circuits and Logic
+      CSD U6 circuit logic video_2019: Circuits and Logic
+      CSD U6 emoji race demo: Sample Program
+      CSD U6 emoji race demo_2018: Sample Program
+      CSD U6 emoji race demo_2019: Sample Program
+      CSD U6 emotion machine example: Emotion Machine Example
+      CSD U6 emotion machine example_2018: Emotion Machine Example
+      CSD U6 emotion machine example_2019: Emotion Machine Example
+      CSD U6 for loop led bonus 1_2018: 'Challenge: Add More Buttons'
+      CSD U6 for loop led bonus 2_2018: 'Challenge: Color Patterns'
+      CSD U6 for loop led bonus 3_2018: 'Challenge: Music'
       CSD U6 for loop map: For Döngüleri
       CSD U6 for loop map_2018: For Döngüleri
       CSD U6 for loop map_2019: For Döngüleri
       CSD U6 functions paramters video: Fonksiyon parametreleri
       CSD U6 functions paramters video_2018: Fonksiyon parametreleri
       CSD U6 functions paramters video_2019: Fonksiyon parametreleri
+      CSD U6 getProperty Map: getProperty
+      CSD U6 getProperty Map_2018: getProperty
+      CSD U6 getProperty Map_2019: getProperty
+      CSD U6 hardware software video: Hardware and Software
+      CSD U6 hardware software video_2018: Hardware and Software
+      CSD U6 hardware software video_2019: Hardware and Software
+      CSD U6 light pattern challenge_2018: Improved Light Show
+      CSD U6 light pattern challenge_2019: Improved Light Show
+      CSD U6 params starchaser challenge 1_2018: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 1_2019: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 2_2018: Starchaser - Reset Player
+      CSD U6 params starchaser challenge 2_2019: Starchaser - Reset Player
+      CSD U6 sensor experiment embedded: Sensor Experiment
+      CSD U6 sensor experiment embedded_2018: Sensor Experiment
+      CSD U6 sensor experiment embedded_2019: Sensor Experiment
       CSD U6 setProperty Map: Kod ile Ekranlar Tasarlama
       CSD U6 setProperty Map_2018: Kod ile Ekranlar Tasarlama
       CSD U6 setProperty Map_2019: Kod ile Ekranlar Tasarlama
+      CSD U6 tugowar demo: Demo - Bug Grab
+      CSD U6 tugowar demo_2018: Demo - Bug Grab
+      CSD U6 tugowar demo_2019: Demo - Bug Grab
+      CSD U6 tugowar final: Make it Your Own
+      CSD U6 tugowar final_2018: Make it Your Own
+      CSD U6 tugowar final_2019: Make it Your Own
       CSD U6L01 TFMD: Derse Genel Bakış
       CSD U6L01 TFMD_2018: Derse Genel Bakış
       CSD U6L01 TFMD_2019: Derse Genel Bakış
@@ -429,6 +599,21 @@ tr-TR:
         yapan nedir?
       CSD What Makes a Computer a Computer Video_2019: Bir bilgisayarı, bilgisayar
         yapan nedir?
+      CSD colorLed Map: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2019: 'Circuit Playground: Color LEDs'
+      CSD onBoardEvent Map: Responding to Board Events
+      CSD onBoardEvent Map_2018: Responding to Board Events
+      CSD onBoardEvent Map_2019: Responding to Board Events
+      CSD-Arrays: Modifying and Creating Arrays
+      CSD-Arrays_2018: Modifying Arrays
+      CSD-Arrays_2019: Modifying Arrays
+      'CSD: Animating Sprite Movement': 'Video: Sprite Movement'
+      'CSD: Animating Sprite Movement_2018': 'Video: Sprite Movement'
+      'CSD: Animating Sprite Movement_2019': 'Video: Sprite Movement'
+      'CSD: Animation Tab': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2018': 'Video: The Animation Tab'
+      'CSD: Animation Tab_2019': 'Video: The Animation Tab'
       'CSD: Drawing in Game Lab 1': 'Video: Oyun Laboratuvarı''nda Çizim - Bölüm 1'
       'CSD: Drawing in Game Lab 1_2018': 'Video: Oyun Laboratuvarı''nda Çizim - Bölüm
         1'
@@ -440,14 +625,56 @@ tr-TR:
       'CSD: Drawing in Game Lab 2_2019': 'Video: Oyun Laboratuvarı''nda Çizim - Bölüm
         2'
       'CSD: For Loop_2018': For Döngüleri
+      'CSD: For Loop_2019': 'Video: For Loops'
+      'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
+      'CSD: Introduction to the Draw Loop_2018': 'Video: Introduction to the Draw
+        Loop'
+      'CSD: Introduction to the Draw Loop_2019': 'Video: Introduction to the Draw
+        Loop'
+      'CSD: Sprite Velocity': 'Video: Velocity'
+      'CSD: Sprite Velocity_2018': 'Video: Velocity'
+      'CSD: Sprite Velocity_2019': 'Video: Velocity'
       'CSD: Sprites in Game Lab': 'Video: Hareketlilere Giriş'
       'CSD: Sprites in Game Lab_2018': 'Video: Hareketlilere Giriş'
       'CSD: Sprites in Game Lab_2019': 'Video: Hareketlilere Giriş'
+      CSDU4 Design Mode Video: Intro to Design Mode
+      CSDU4 Design Mode Video_2018: Intro to Design Mode
+      CSDU4 Design Mode Video_2019: Intro to Design Mode
+      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
+      CSDU4 Project Events: 'App Project: Linking Screens'
+      CSDU4 Project Events_2018: 'App Project: Linking Screens'
+      CSDU4 Project Events_2019: 'App Project: Linking Screens'
+      CSDU4 Project Import: 'App Project: Screen Import'
+      CSDU4 Project Import_2018: 'App Project: Screen Import'
+      CSDU4 Project Import_2019: 'App Project: Screen Import'
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge_2018: Sound Board
+      CSDU6 - board event challenge_2019: Sound Board
+      CSDU6 buzzer 2d arrays_2018: 2D Arrays
+      CSDU6 buzzer 2d arrays_2019: 2D Arrays
+      CSDU6 buzzer.stop_2018: Stopping the Music
+      CSDU6 buzzer.stop_2019: Stopping the Music
       CSS U2 Body Map: Body Elementi
       CSS U2 Body Map_2018: Body Elementi
       CSS U2 Body Map_2019: Body Elementi
+      'Course E: Artist Project': Course E Artist Project
+      'Course E: Artist Project_2018': Course E Artist Project
+      'Course E: Artist Project_2019': Course E Artist Project
+      'Course F: Artist Project - Revise_2018': Revise Artist Project
+      'Course F: Artist Project_2018': Course F Artist Project
+      'Course F: Artist Project_2019': Course F Artist Project
+      CourseEF_video_IntroSpriteLab: This is Sprite Lab
+      CourseEF_video_IntroSpriteLab_2019: This is Sprite Lab
       CourseEF_video_MakeSprite: Nesne Oluşturma
       CourseEF_video_MakeSprite_2019: Nesne Oluşturma
+      CourseE_Project_SpriteLab: Course E Sprite Lab Project
+      CourseE_Project_SpriteLab_2019: Course E Sprite Lab Project
+      CourseE_hoops: 'Bunny '
+      CourseF_Project_Revise_SpriteLab: Revise Sprite Lab Project
+      CourseF_Project_SpriteLab: Course F Sprite Lab Project
+      CourseF_Project_SpriteLab_2019: Course F Sprite Lab Project
       Dance_Party_extras_alternate_2019: Geri ve ileri
       Dance_Party_extras_battle: Dans Ekipleri
       Dance_Party_extras_battle_2019: Dans Ekipleri
@@ -462,21 +689,78 @@ tr-TR:
       Dance_Party_extras_speed_2019: Hızlandır, Yavaşlat
       Dance_Party_extras_visible: Nereye Gittiler?
       Dance_Party_extras_visible_2019: Nereye Gittiler?
+      Final Personal Website: Final Personal Website
+      Final Personal Website_2018: Final Personal Website
+      Final Personal Website_2019: Final Personal Website
+      Geometric Sun_2018: Geometric Sun
+      InspirationalArtwork_2018: Inspiration!
       Intro to Web Lab - Part 1: Lab - Bölüm 1 Web Tanıtım
       Intro to Web Lab - Part 1_2018: Lab - Bölüm 1 Web Tanıtım
       Intro to Web Lab - Part 1_2019: Lab - Bölüm 1 Web Tanıtım
       Intro to Web Lab - Part 2: Lab - Bölüm 2 Web Tanıtım
       Intro to Web Lab - Part 2_2018: Lab - Bölüm 2 Web Tanıtım
       Intro to Web Lab - Part 2_2019: Lab - Bölüm 2 Web Tanıtım
+      Introduction to Variables - Part 1_2018: Introduction to Variables
+      Introduction to Variables - Part 1_2019: Introduction to Variables
+      MC_HOC_2017_01_RETRY: Homestead
+      MC_HOC_2017_01_RETRY_2019: Homestead
+      MC_HOC_2017_02_Cole: The Farm
+      MC_HOC_2017_02_Cole_2019: The Farm
+      MC_HOC_2017_03_Cole: The Woods
+      MC_HOC_2017_03_Cole_2019: The Woods
+      MC_HOC_2017_04POINT5_RYAN: The Desert
+      MC_HOC_2017_04POINT5_RYAN_2019: The Desert
+      MC_HOC_2017_04_Cole: The Swamp
+      MC_HOC_2017_04_Cole_2019: The Swamp
+      MC_HOC_2017_05_Cole: The River
+      MC_HOC_2017_05_Cole_2019: The River
+      MC_HOC_2017_06_Cole: High Tide
+      MC_HOC_2017_06_Cole_2019: High Tide
+      MC_HOC_2017_07_Cole: Snowy Pass
+      MC_HOC_2017_07_Cole_2019: Snowy Pass
+      MC_HOC_2017_10_RETRY: The Cave
+      MC_HOC_2017_10_RETRY_2019: The Cave
+      MC_HOC_2017_Ali: The Nether Fortress
+      MC_HOC_2017_Ali_2019: The Nether Fortress
+      MC_HOC_2017_FP20x20: Freeplay
+      MC_HOC_2017_FP20x20_2019: Freeplay
       Making Music_2018: Müzik yapma
       Making Music_2019: Müzik yapma
+      New Dance Lab Project: New Dance Party Project
+      New Minecraft Hero Project: Freeplay
+      OPD-K5 WhatIsCS: What is computer science?
+      OPD-K5 WhatIsCS_copy: What is computer science?
       OPD-K5-spritelab-5-video: Nesne Oluşturma
       Oceans_Video_Machine_Learning: 'Video: Makine Öğrenimi'
       Oceans_Video_Societal_Implications: 'Video: Toplumsal Çıkarımlar'
       Oceans_Video_Training_Data: 'Video: Eğitim Verileri'
+      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
+      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
+      Robot Doodle_2018: Robot Doodle
+      The Accelerometer_2018: The Accelerometer
+      The Accelerometer_2019: The Accelerometer
+      Using Accelerometer Events_2018: Using Accelerometer Events
+      Using Accelerometer Events_2019: Using Accelerometer Events
+      'Video: Intro to CSS Part 2_2018': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS Part 2_2019': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS_2018': 'Video: Intro to CSS'
+      'Video: Intro to CSS_2019': 'Video: Intro to CSS'
       courseA_video_Stevie: Stevie ve büyük proje
       courseA_video_Stevie_2018: Stevie ve büyük proje
       courseB_video_Unspotted: Bulunamamış hatalar
       courseB_video_Unspotted_2018: Bulunamamış hatalar
+      courseE_Dogger_2: Dogger Example
+      courseF_artist_for1: For Loops Freeplay (Beginning)
+      courseF_artist_for1_2018: For Loops Freeplay (Beginning)
+      courseF_artist_for1_2019: For Loops Freeplay (Beginning)
+      courseF_project_1: Sprite Lab Example Project
+      courseF_video_csMatters: End of Course Projects
+      courseF_video_csMatters_2018: 'Video: CS Matters'
+      csd U3 conditional statements video: 'Video: "If/Else" Statements'
+      csd U3 conditional statements video_2019: 'Video: Conditional Statements'
+      csd u5 recommender sample: Sample App
+      csd u5 recommender sample_2019: Sample App
       csd-pre-survey-2017-levelgroup_2018: Derse Genel Bakış
       csd-pre-survey-levelgroup_2019: Derse Genel Bakış
+      scrat_loops_C-F_video: Loops in Ice Age Video
+      scrat_loops_C-F_video_2019: Loops in Ice Age Video
