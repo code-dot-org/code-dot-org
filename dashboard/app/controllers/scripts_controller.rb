@@ -105,7 +105,6 @@ class ScriptsController < ApplicationController
       beta = false
       beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
     end
-    @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
       i18n: @script ? @script.summarize_i18n : {},
