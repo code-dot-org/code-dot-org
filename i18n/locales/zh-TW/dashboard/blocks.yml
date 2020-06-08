@@ -230,6 +230,8 @@ zh-TW:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: '每 {N} 小節重複，開始於 {START} '
       Dancelab_everySeconds:
@@ -972,6 +974,13 @@ zh-TW:
         text: 設定
       Dancelab_whenSetup2:
         text: 設定
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1105,6 +1114,8 @@ zh-TW:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:
@@ -1200,6 +1211,8 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
       gamelab_tumbling:
         text: 翻滾
       gamelab_turn:
@@ -1276,6 +1289,7 @@ zh-TW:
       Mikelab_changeAnim:
         text: 角色 {SPRITE} 造型設為 {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -1305,6 +1319,8 @@ zh-TW:
         text: 角色 移除 {SPRITE}
       Mikelab_displace:
         text: "{TARGET} 阻擋 {SPRITE} 前進"
+      Mikelab_eval:
+        text: eval {CODE}
       Mikelab_getAnim:
         text: 角色 {SPRITE} 的造型
       Mikelab_getNext:
@@ -1468,6 +1484,8 @@ zh-TW:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: 不是我的標籤
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: '座標 x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1521,10 +1539,17 @@ zh-TW:
       Mikelab_setTint:
         text: 角色 {SPRITE} 顏色設為 {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': 向右
             '"left"': " 向左"
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: 新增功能 {COSTUME} 雪碧在 {LOCATION}
         options:
@@ -1555,6 +1580,7 @@ zh-TW:
             '"s"': 南
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': 向上鍵被按下
@@ -1568,6 +1594,8 @@ zh-TW:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: 當滑鼠按鍵被點擊
+      Mikelab_whenMouseReleased:
+        text: when mouse released
       Mikelab_whenTouchesAny:
         text: 當角色 {SPRITE} 碰到其它角色時
       Mikelab_whenYesNoClicked:
@@ -1587,12 +1615,22 @@ zh-TW:
             '"left"': 當向左鍵被按下
             '"right"': 當向右鍵被按下
             '"space"': 空白
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
       RyanLab_moveForward:
         text: 移動-向前
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: 轉向-左方
       RyanLab_turnRight:

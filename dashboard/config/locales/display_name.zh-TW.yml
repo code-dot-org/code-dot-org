@@ -15,11 +15,36 @@ zh-TW:
       AppLab Intro 7 - onEvent intro: 使按鈕起作用
       AppLab Intro 7 - onEvent twoButtons: 更多 onEvent 的練習
       AppLab Intro 7 - playSound: 播放音效的用法
+      AppLab Intro 7 - thisOrThatAddButton: This Or That
+      AppLab Intro 7 - thisOrThatAddScreen: This Or That
+      AppLab Intro 7 - thisOrThatPersonalize: This Or That
+      AppLab Intro 7 - thisOrThatSetScreen: This Or That
       CDEF_video_SpritesInAction: 如何建立一個角色
       CDEF_video_SpritesInAction_2019: 如何建立一個角色
+      CSD Board Buttons Map: Buttons and Switch
+      CSD Board Buttons Map_2018: Buttons and Switch
+      CSD Board Buttons Map_2019: Buttons and Switch
       CSD Board Sensors Map: 類比感測器
       CSD Board Sensors Map_2018: 類比感測器
       CSD Board Sensors Map_2019: 類比感測器
+      CSD Booleans Map: Booleans and Comparison Operators
+      CSD Booleans Map_2018: Booleans and Comparison Operators
+      CSD Booleans Map_2019: Booleans and Comparison Operators
+      CSD Buzzer Map: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2018: 'Circuit Playground: Buzzer'
+      CSD Buzzer Map_2019: 'Circuit Playground: Buzzer'
+      CSD Counter Pattern Map: The Counter Pattern
+      CSD Counter Pattern Map_2018: The Counter Pattern
+      CSD Counter Pattern Map_2019: The Counter Pattern
+      CSD If Else Map: If-Else Statements
+      CSD If Else Map_2018: If-Else Statements
+      CSD If Else Map_2019: If-Else Statements
+      CSD If Statements Map: If Statements
+      CSD If Statements Map_2018: If Statements
+      CSD If Statements Map_2019: If Statements
+      CSD LEDs Map: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2019: 'Circuit Playground: Introduction'
       CSD Polling Events Map: 輪詢事件
       CSD Polling Events Map_2018: 輪詢事件
       CSD Polling Events Map_2019: 輪詢事件
@@ -41,15 +66,64 @@ zh-TW:
       CSD U1L07 TFMD_2019: 教學內容概覽
       CSD U1L09 TFMD_2018: 教學內容概覽
       CSD U1L09 TFMD_2019: 教學內容概覽
+      CSD U2 CC Search Map: Creative Commons Search
+      CSD U2 CC Search Map_2018: Creative Commons Search
+      CSD U2 CC Search Map_2019: Creative Commons Search
+      CSD U2 CSS Classes Map: CSS Classes
+      CSD U2 CSS Classes Map_2018: CSS Classes
+      CSD U2 CSS Classes Map_2019: CSS Classes
+      CSD U2 CSS explore CSS: 'Exploration: Adding Style'
+      CSD U2 CSS explore CSS_2018: 'Exploration: Adding Style'
+      CSD U2 CSS explore CSS_2019: 'Exploration: Adding Style'
+      CSD U2 HTML Tags Map: HTML Tags
+      CSD U2 HTML Tags Map_2018: HTML Tags
+      CSD U2 HTML Tags Map_2019: HTML Tags
+      CSD U2 Headers map: Headings in HTML
+      CSD U2 Headers map_2018: Headings in HTML
+      CSD U2 Headers map_2019: Headings in HTML
+      CSD U2 Heading Demo: Intro to Headings
+      CSD U2 Heading Demo_2018: Intro to Headings
+      CSD U2 Heading Demo_2019: Intro to Headings
+      CSD U2 Heading Sizes: Heading Sizes
+      CSD U2 Heading Sizes_2018: Heading Sizes
+      CSD U2 Heading Sizes_2019: Heading Sizes
+      CSD U2 Heading Test: Headings and Paragraphs
+      CSD U2 Heading Test_2018: Headings and Paragraphs
+      CSD U2 Heading Test_2019: Headings and Paragraphs
+      CSD U2 Inspector Warm Up: Explore HTML
+      CSD U2 Inspector Warm Up_2018: Explore HTML
+      CSD U2 Inspector Warm Up_2019: Explore HTML
+      CSD U2 Layout Properties Map: Layout Properties
+      CSD U2 Layout Properties Map_2018: Layout Properties
+      CSD U2 Layout Properties Map_2019: Layout Properties
       CSD U2 Pair Programming Video: 結對編程
       CSD U2 Pair Programming Video_2018: 結對編程
       CSD U2 Pair Programming Video_2019: 結對編程
+      CSD U2 RGB intro: RGB Widget
+      CSD U2 RGB intro_2018: RGB Widget
+      CSD U2 RGB intro_2019: RGB Widget
+      CSD U2 Style Sheet Map: CSS and Style Sheets
+      CSD U2 Style Sheet Map_2018: CSS and Style Sheets
+      CSD U2 Style Sheet Map_2019: CSS and Style Sheets
+      CSD U2 Text Properties Map: CSS Text Properties
+      CSD U2 Text Properties Map_2018: CSS Text Properties
+      CSD U2 Text Properties Map_2019: CSS Text Properties
+      CSD U2 a tag map: Hyperlinks
+      CSD U2 a tag map_2018: Hyperlinks
+      CSD U2 a tag map_2019: Hyperlinks
+      CSD U2 challenge: Challenge
+      CSD U2 challenge_2018: Challenge
+      CSD U2 challenge_2019: Challenge
       CSD U2 formatting map: 格式化 HTML
       CSD U2 formatting map_2018: 格式化 HTML
       CSD U2 formatting map_2019: 格式化 HTML
       CSD U2 images map: 在 HTML 中的圖像
       CSD U2 images map_2018: 在 HTML 中的圖像
       CSD U2 images map_2019: 在 HTML 中的圖像
+      CSD U2 lists map: Lists in HTML
+      CSD U2 lists map_2018: Lists in HTML
+      CSD U2 lists map_2019: Lists in HTML
+      CSD U2 publish video: Publishing Your Website
       CSD U2L01 TFMD_2018: 教學內容概覽
       CSD U2L01 TFMD_2019: 教學內容概覽
       CSD U2L02 TFMD_2018: 教學內容概覽
@@ -84,16 +158,44 @@ zh-TW:
       CSD U3 - Conditionals Video: 影片：條件判斷
       CSD U3 - Conditionals Video_2018: 影片：條件判斷
       CSD U3 - Conditionals Video_2019: 影片：如果/否則 陳述式
+      CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
+      CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
       CSD U3 Animation Edit Map: 圖像的編輯
       CSD U3 Animation Edit Map_2018: 圖像的編輯
       CSD U3 Animation Edit Map_2019: 圖像的編輯
       CSD U3 Animation Tab Map: 動畫頁籤
       CSD U3 Animation Tab Map_2018: 動畫頁籤
       CSD U3 Animation Tab Map_2019: 動畫頁籤
+      CSD U3 AnimationsMulti Play Defender: Sample Game
+      CSD U3 AnimationsMulti Play Defender_2018: Sample Game
+      CSD U3 AnimationsMulti Play Defender_2019: Sample Game
+      CSD U3 Complex Movement counter prediction gamelab: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2018: Velocity and the Counter
+        Pattern
+      CSD U3 Complex Movement counter prediction gamelab_2019: Velocity and the Counter
+        Pattern
+      CSD U3 Compound Nested Challenge: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2018: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Compound Nested Challenge_2019: 'Challenge: Checking for Multiple Conditions'
+      CSD U3 Draw Loop Plugged update your scene: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Draw Loop Plugged update your scene_2019: 'Challenge: Extend Your Scene'
       CSD U3 Drawing Squares to Corners: 網格的用法
       CSD U3 Drawing Squares to Corners_2018: 網格的用法
       CSD U3 Drawing Squares to Corners_2019: 網格的用法
+      CSD U3 Entertainment Sample 3: Sprite Scenes
+      CSD U3 Entertainment Sample 3_2018: Sprite Scenes
+      CSD U3 Entertainment Sample 3_2019: Sprite Scenes
+      CSD U3 Entertainment Sample 4: Sprite Scenes
+      CSD U3 Entertainment Sample 4_2018: Sprite Scenes
+      CSD U3 Entertainment Sample 4_2019: Sprite Scenes
       CSD U3 Functions Call Function_2019: 影片：呼叫和定義函式
+      CSD U3 Interactive Card Exemplar_2018: Interactive Card
+      CSD U3 Interactive Card Exemplar_2019: Interactive Card
+      CSD U3 Keyboard Input Challenge: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018: 'Challenge: Add More Inputs'
+      CSD U3 Keyboard Input Challenge_2018_2019: 'Challenge: Add More Inputs'
       CSD U3 L11 Freeplay: 自由發揮
       CSD U3 L11 Freeplay_2018: 自由發揮
       CSD U3 L11 Freeplay_2019: 自由發揮
@@ -142,15 +244,36 @@ zh-TW:
       CSD U3 Random Number Map Level: 隨機取數
       CSD U3 Random Number Map Level_2018: 隨機取數
       CSD U3 Random Number Map Level_2019: 隨機取數
+      CSD U3 Scene Example: Sprite Scenes
+      CSD U3 Scene Example_2018: Sprite Scenes
+      CSD U3 Scene Example_2018_2019: Sprite Scenes
+      CSD U3 Sprite Properties Map: Sprite Properties
+      CSD U3 Sprite Properties Map_2018: Sprite Properties
+      CSD U3 Sprite Properties Map_2019: Sprite Properties
+      CSD U3 Sprites Map: Creating Sprites
+      CSD U3 Sprites Map_2018: Creating Sprites
+      CSD U3 Sprites Map_2019: Creating Sprites
+      CSD U3 Sprites scene challenge: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2018: 'Challenge: Extend Your Scene'
+      CSD U3 Sprites scene challenge_2019: 'Challenge: Extend Your Scene'
       CSD U3 The Draw Loop Map: draw（繪圖）迴圈
       CSD U3 The Draw Loop Map_2018: draw（繪圖）迴圈
       CSD U3 The Draw Loop Map_2019: draw（繪圖）迴圈
+      CSD U3 Variables Challenge: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2018: 'Challenge: Updating Variables'
+      CSD U3 Variables Challenge_2019: 'Challenge: Updating Variables'
       CSD U3 Variables Draw Challenge: 挑戰：繪製圖像
       CSD U3 Variables Draw Challenge_2018: 挑戰：繪製圖像
       CSD U3 Variables Draw Challenge_2019: 挑戰：繪製圖像
       CSD U3 Variables Map: 變數
       CSD U3 Variables Map_2018: 變數
       CSD U3 Variables Map_2019: 變數
+      CSD U3 Watchers Map: Debugging with Watchers
+      CSD U3 Watchers Map_2018: Debugging with Watchers
+      CSD U3 Watchers Map_2019: Debugging with Watchers
+      CSD U3 acceleration map: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2018: Velocity and the Counter Pattern Review
+      CSD U3 acceleration map_2019: Velocity and the Counter Pattern Review
       CSD U3 challenge face: 挑戰：人臉
       CSD U3 challenge face_2018: 挑戰：人臉
       CSD U3 challenge face_2019: 挑戰：人臉
@@ -160,22 +283,53 @@ zh-TW:
       CSD U3 collisions build isTouching: 碰撞檢測
       CSD U3 collisions build isTouching_2018: 碰撞檢測
       CSD U3 collisions build isTouching_2019: 碰撞檢測
+      CSD U3 collisions car intro: Sample Game
+      CSD U3 collisions car intro_2018: Sample Game
+      CSD U3 collisions car intro_2019: Sample Game
       CSD U3 collisions predict set velocity code: 角色的互動
       CSD U3 collisions predict set velocity code_2018: 角色的互動
       CSD U3 collisions predict set velocity code_2019: 角色的互動
+      CSD U3 finishing touches: Project - Finishing Touches
+      CSD U3 finishing touches_2018: Project - Finishing Touches
+      CSD U3 finishing touches_2019: Project - Finishing Touches
       CSD U3 function video: 影片：函式
+      CSD U3 functions review: Functions Review
+      CSD U3 functions review_2018: Functions Review
+      CSD U3 functions review_2019: Functions Review
+      CSD U3 if else predict: Predict
+      CSD U3 interactions map: Sprite Interactions Review
+      CSD U3 interactions map_2018: Sprite Interactions Review
+      CSD U3 interactions map_2019: Sprite Interactions Review
       CSD U3 istouching map: 碰撞檢測
       CSD U3 istouching map_2018: 碰撞檢測
       CSD U3 istouching map_2019: 碰撞檢測
+      CSD U3 naming map: Naming Variables
+      CSD U3 naming map_2018: Naming Variables
+      CSD U3 naming map_2019: Naming Variables
       CSD U3 picture: 挑戰：繪製圖像
       CSD U3 picture_2018: 挑戰：繪製圖像
       CSD U3 picture_2019: 挑戰：繪製圖像
+      CSD U3 platform challenge: Improve Your Game
+      CSD U3 platform challenge_2018: Improve Your Game
+      CSD U3 platform challenge_2019: Improve Your Game
+      CSD U3 platform sample1: Sample Platform Jumper Game
+      CSD U3 platform sample1_2018: Sample Platform Jumper Game
+      CSD U3 platform sample1_2019: Sample Platform Jumper Game
+      CSD U3 platform sample2: Plane Jumper
+      CSD U3 platform sample2_2018: Plane Jumper
+      CSD U3 platform sample2_2019: Plane Jumper
+      CSD U3 platform sample3: Bunny Jumper
+      CSD U3 platform sample3_2018: Bunny Jumper
+      CSD U3 platform sample3_2019: Bunny Jumper
       CSD U3 plotting shapes map: 在 Game Lab 裡繪製圖形
       CSD U3 plotting shapes map_2018: 在 Game Lab 裡繪製圖形
       CSD U3 plotting shapes map_2019: 在 Game Lab 裡繪製圖形
       CSD U3 rect: Game Lab 的介紹
       CSD U3 rect_2018: Game Lab 的介紹
       CSD U3 rect_2019: Game Lab 的介紹
+      CSD U3 shape size map: Shapes and Parameters
+      CSD U3 shape size map_2018: Shapes and Parameters
+      CSD U3 shape size map_2019: Shapes and Parameters
       CSD U3 velocity map: 角色速度
       CSD U3 velocity map_2018: 角色速度
       CSD U3 velocity map_2019: 角色速度
@@ -223,9 +377,27 @@ zh-TW:
       CSD U3L21 TFMD_2019: 教學內容概覽
       CSD U3L22 TFMD_2018: 教學內容概覽
       CSD U3L22 TFMD_2019: 教學內容概覽
+      CSD U4 - Design Mode Project: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2018: 'App Project: Screen Design'
+      CSD U4 - Design Mode Project_2019: 'App Project: Screen Design'
+      CSD U4 Change Screen Map: Changing Screens
+      CSD U4 Change Screen Map_2018: Changing Screens
+      CSD U4 Change Screen Map_2019: Changing Screens
+      CSD U4 Design Elements Map: Design Mode Elements
+      CSD U4 Design Elements Map_2018: Design Mode Elements
+      CSD U4 Design Elements Map_2019: Design Mode Elements
+      CSD U4 Design Mode Map: Tour of Design Mode
+      CSD U4 Design Mode Map_2018: Tour of Design Mode
+      CSD U4 Design Mode Map_2019: Tour of Design Mode
+      CSD U4 Importing Screens Map: Importing Screens
+      CSD U4 Importing Screens Map_2018: Importing Screens
+      CSD U4 Importing Screens Map_2019: Importing Screens
       CSD U4 Mult Screen Map: 多螢幕應用程式
       CSD U4 Mult Screen Map_2018: 多螢幕應用程式
       CSD U4 Mult Screen Map_2019: 多螢幕應用程式
+      CSD U4 User Input Map: Responding to User Input
+      CSD U4 User Input Map_2018: Responding to User Input
+      CSD U4 User Input Map_2019: Responding to User Input
       CSD U4L01 autoSFLP_2018: 教學內容概覽
       CSD U4L01 autoSFLP_2019: 教學內容概覽
       CSD U4L02 autoSFLP_2018: 教學內容概覽
@@ -260,11 +432,29 @@ zh-TW:
       CSD U4L16 autoSFLP_2019: 教學內容概覽
       CSD U5 Amazon Data Video: 收集有關用戶的資料
       CSD U5 Amazon Data Video_2018: 收集有關用戶的資料
+      CSD U5 Amazon Data Video_2019: How Amazon Uses Data
+      CSD U5 Netflix Data Video_2019: How Netflix Uses Data
       CSD U5 Waze Data Video: 收集有關用戶的資料
       CSD U5 Waze Data Video_2018: 收集有關用戶的資料
+      CSD U5 Waze Data Video_2019: How Waze Uses Data
       CSD U5 binary video: 二進位和資料
       CSD U5 binary video_2018: 二進位和資料
       CSD U5 binary video_2019: 二進位和資料
+      CSD U5 black white images pixelation: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 2_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 3_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 4_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation 5_2019: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2018: Black and White Pixelation Widget
+      CSD U5 black white images pixelation_2019: Black and White Pixelation Widget
       CSD U5L01 autoSFLP_2018: 教學內容概覽
       CSD U5L01 autoSFLP_2019: 教學內容概覽
       CSD U5L02 autoSFLP_2018: 教學內容概覽
@@ -298,28 +488,63 @@ zh-TW:
       CSD U6 Event Types: 事件類型
       CSD U6 Event Types_2018: 事件類型
       CSD U6 Event Types_2019: 事件類型
+      CSD U6 analog challenge: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2018: 'Challenge: Making Sense of Sensors'
+      CSD U6 analog challenge_2019: 'Challenge: Making Sense of Sensors'
       CSD U6 arrays intro: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2018: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2019: 陣列
       CSD U6 arrays video: 影片：陣列的介紹
+      CSD U6 challenge motorcycle_2018: 'Challenge: Motorcycle'
+      CSD U6 challenge motorcycle_2019: 'Challenge: Motorcycle'
+      CSD U6 circuit LED map: Circuits and LEDs
+      CSD U6 circuit LED map_2018: Circuits and LEDs
+      CSD U6 circuit LED map_2019: Circuits and LEDs
       CSD U6 circuit button map: 按鈕電路
       CSD U6 circuit button map_2018: 按鈕電路
       CSD U6 circuit button map_2019: 按鈕電路
+      CSD U6 circuit logic video: Circuits and Logic
+      CSD U6 circuit logic video_2018: Circuits and Logic
+      CSD U6 circuit logic video_2019: Circuits and Logic
       CSD U6 emoji race demo: 範例程式
       CSD U6 emoji race demo_2018: 範例程式
       CSD U6 emoji race demo_2019: 範例程式
+      CSD U6 emotion machine example: Emotion Machine Example
+      CSD U6 emotion machine example_2018: Emotion Machine Example
+      CSD U6 emotion machine example_2019: Emotion Machine Example
+      CSD U6 for loop led bonus 1_2018: 'Challenge: Add More Buttons'
+      CSD U6 for loop led bonus 2_2018: 'Challenge: Color Patterns'
+      CSD U6 for loop led bonus 3_2018: 'Challenge: Music'
       CSD U6 for loop map: 計次迴圈（For Loops）
       CSD U6 for loop map_2018: 計次迴圈（For Loops）
       CSD U6 for loop map_2019: 計次迴圈（For Loops）
       CSD U6 functions paramters video: 函式帶參數
       CSD U6 functions paramters video_2018: 函式帶參數
       CSD U6 functions paramters video_2019: 函式帶參數
+      CSD U6 getProperty Map: getProperty
+      CSD U6 getProperty Map_2018: getProperty
+      CSD U6 getProperty Map_2019: getProperty
+      CSD U6 hardware software video: Hardware and Software
+      CSD U6 hardware software video_2018: Hardware and Software
+      CSD U6 hardware software video_2019: Hardware and Software
+      CSD U6 light pattern challenge_2018: Improved Light Show
+      CSD U6 light pattern challenge_2019: Improved Light Show
+      CSD U6 params starchaser challenge 1_2018: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 1_2019: Starchaser - Add Lives
+      CSD U6 params starchaser challenge 2_2018: Starchaser - Reset Player
+      CSD U6 params starchaser challenge 2_2019: Starchaser - Reset Player
+      CSD U6 sensor experiment embedded: Sensor Experiment
+      CSD U6 sensor experiment embedded_2018: Sensor Experiment
+      CSD U6 sensor experiment embedded_2019: Sensor Experiment
       CSD U6 setProperty Map: 以程式碼設計螢幕畫面
       CSD U6 setProperty Map_2018: 以程式碼設計螢幕畫面
       CSD U6 setProperty Map_2019: 以程式碼設計螢幕畫面
       CSD U6 tugowar demo: 演示 - 錯誤抓取
       CSD U6 tugowar demo_2018: 演示 - 錯誤抓取
       CSD U6 tugowar demo_2019: 演示 - 錯誤抓取
+      CSD U6 tugowar final: Make it Your Own
+      CSD U6 tugowar final_2018: Make it Your Own
+      CSD U6 tugowar final_2019: Make it Your Own
       CSD U6L01 TFMD: 教學內容概覽
       CSD U6L01 TFMD_2018: 教學內容概覽
       CSD U6L01 TFMD_2019: 教學內容概覽
@@ -371,6 +596,15 @@ zh-TW:
       CSD What Makes a Computer a Computer Video: 影片：是什麼讓電腦成為電腦？
       CSD What Makes a Computer a Computer Video_2018: 影片：是什麼讓電腦成為電腦？
       CSD What Makes a Computer a Computer Video_2019: 影片：是什麼讓電腦成為電腦？
+      CSD colorLed Map: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
+      CSD colorLed Map_2019: 'Circuit Playground: Color LEDs'
+      CSD onBoardEvent Map: Responding to Board Events
+      CSD onBoardEvent Map_2018: Responding to Board Events
+      CSD onBoardEvent Map_2019: Responding to Board Events
+      CSD-Arrays: Modifying and Creating Arrays
+      CSD-Arrays_2018: Modifying Arrays
+      CSD-Arrays_2019: Modifying Arrays
       'CSD: Animating Sprite Movement': 影片：角色動作
       'CSD: Animating Sprite Movement_2018': 影片：角色動作
       'CSD: Animating Sprite Movement_2019': 影片：角色動作
@@ -394,13 +628,62 @@ zh-TW:
       'CSD: Sprites in Game Lab': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2018': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2019': 影片：角色的介紹
+      CSDU4 Design Mode Video: Intro to Design Mode
+      CSDU4 Design Mode Video_2018: Intro to Design Mode
+      CSDU4 Design Mode Video_2019: Intro to Design Mode
+      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
+      CSDU4 Project Events: 'App Project: Linking Screens'
+      CSDU4 Project Events_2018: 'App Project: Linking Screens'
+      CSDU4 Project Events_2019: 'App Project: Linking Screens'
+      CSDU4 Project Import: 'App Project: Screen Import'
+      CSDU4 Project Import_2018: 'App Project: Screen Import'
+      CSDU4 Project Import_2019: 'App Project: Screen Import'
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge_2018: Sound Board
+      CSDU6 - board event challenge_2019: Sound Board
+      CSDU6 buzzer 2d arrays_2018: 2D Arrays
+      CSDU6 buzzer 2d arrays_2019: 2D Arrays
+      CSDU6 buzzer.stop_2018: Stopping the Music
+      CSDU6 buzzer.stop_2019: Stopping the Music
+      CSS U2 Body Map: The Body Element
+      CSS U2 Body Map_2018: The Body Element
+      CSS U2 Body Map_2019: The Body Element
       'Course E: Artist Project': 課程 E 小藝術家專案
       'Course E: Artist Project_2018': 課程 E 小藝術家專案
       'Course E: Artist Project_2019': 課程 E 小藝術家專案
+      'Course F: Artist Project - Revise_2018': '修訂小藝術家專案
+
+'
+      'Course F: Artist Project_2018': '課程 F 小藝術家專案
+
+'
+      'Course F: Artist Project_2019': '課程 F 小藝術家專案
+
+'
       CourseEF_video_IntroSpriteLab: 這是 Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: 這是 Sprite Lab
       CourseEF_video_MakeSprite: 如何建立一個角色
       CourseEF_video_MakeSprite_2019: 如何建立一個角色
+      CourseE_Project_SpriteLab: '課程 E 精靈實驗室專案
+
+'
+      CourseE_Project_SpriteLab_2019: '課程 E 精靈實驗室專案
+
+'
+      CourseE_hoops: '兔子
+
+'
+      CourseF_Project_Revise_SpriteLab: '修訂精靈實驗室專案
+
+'
+      CourseF_Project_SpriteLab: '課程 F 精靈實驗室專案
+
+'
+      CourseF_Project_SpriteLab_2019: '課程 F 精靈實驗室專案
+
+'
       Dance_Party_extras_alternate_2019: 不斷重複
       Dance_Party_extras_battle: 舞蹈團隊
       Dance_Party_extras_battle_2019: 舞蹈團隊
@@ -415,18 +698,84 @@ zh-TW:
       Dance_Party_extras_speed_2019: 加速、減速
       Dance_Party_extras_visible: 他們要去哪？
       Dance_Party_extras_visible_2019: 他們要去哪？
+      Final Personal Website: Final Personal Website
+      Final Personal Website_2018: Final Personal Website
+      Final Personal Website_2019: Final Personal Website
+      Geometric Sun_2018: '幾何太陽
+
+'
+      InspirationalArtwork_2018: '自由發揮！
+
+'
       Intro to Web Lab - Part 1: 影片：Web Lab 介紹 - 第 1 部分
       Intro to Web Lab - Part 1_2018: 影片：Web Lab 介紹 - 第 1 部分
       Intro to Web Lab - Part 1_2019: 影片：Web Lab 介紹 - 第 1 部分
       Intro to Web Lab - Part 2: 影片：Web Lab 介紹 - 第 2 部分
       Intro to Web Lab - Part 2_2018: 影片：Web Lab 介紹 - 第 2 部分
       Intro to Web Lab - Part 2_2019: 影片：Web Lab 介紹 - 第 2 部分
+      Introduction to Variables - Part 1_2018: Introduction to Variables
+      Introduction to Variables - Part 1_2019: Introduction to Variables
+      MC_HOC_2017_01_RETRY: '田地
+
+'
+      MC_HOC_2017_01_RETRY_2019: '田地
+
+'
+      MC_HOC_2017_02_Cole: '農場
+
+'
+      MC_HOC_2017_02_Cole_2019: '農場
+
+'
+      MC_HOC_2017_03_Cole: '樹林
+
+'
+      MC_HOC_2017_03_Cole_2019: '樹林
+
+'
       MC_HOC_2017_04POINT5_RYAN: 沙漠
       MC_HOC_2017_04POINT5_RYAN_2019: 沙漠
+      MC_HOC_2017_04_Cole: '沼澤地
+
+'
+      MC_HOC_2017_04_Cole_2019: '沼澤地
+
+'
+      MC_HOC_2017_05_Cole: '河流
+
+'
+      MC_HOC_2017_05_Cole_2019: '河流
+
+'
+      MC_HOC_2017_06_Cole: '漲潮
+
+'
+      MC_HOC_2017_06_Cole_2019: '漲潮
+
+'
+      MC_HOC_2017_07_Cole: '雪山口
+
+'
+      MC_HOC_2017_07_Cole_2019: '雪山口
+
+'
+      MC_HOC_2017_10_RETRY: '洞穴
+
+'
+      MC_HOC_2017_10_RETRY_2019: '洞穴
+
+'
+      MC_HOC_2017_Ali: '下界要塞
+
+'
+      MC_HOC_2017_Ali_2019: '下界要塞
+
+'
       MC_HOC_2017_FP20x20: 自由發揮
       MC_HOC_2017_FP20x20_2019: 自由發揮
       Making Music_2018: 製作音樂
       Making Music_2019: 製作音樂
+      New Dance Lab Project: New Dance Party Project
       New Minecraft Hero Project: 自由發揮
       OPD-K5 WhatIsCS: 計算機科學是什麼？
       OPD-K5 WhatIsCS_copy: 計算機科學是什麼？
@@ -434,6 +783,15 @@ zh-TW:
       Oceans_Video_Machine_Learning: 影片：機器學習
       Oceans_Video_Societal_Implications: 影片：社會影響
       Oceans_Video_Training_Data: 影片：訓練的數據
+      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
+      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
+      Robot Doodle_2018: '機器人塗鴉
+
+'
+      The Accelerometer_2018: The Accelerometer
+      The Accelerometer_2019: The Accelerometer
+      Using Accelerometer Events_2018: Using Accelerometer Events
+      Using Accelerometer Events_2019: Using Accelerometer Events
       'Video: Intro to CSS Part 2_2018': 影片：CSS 介紹 - 第 2 部分
       'Video: Intro to CSS Part 2_2019': 影片：CSS 介紹 - 第 2 部分
       'Video: Intro to CSS_2018': 影片：CSS 介紹
@@ -442,13 +800,21 @@ zh-TW:
       courseA_video_Stevie_2018: Stevie 和 Big Project
       courseB_video_Unspotted: 沒被發現的蟲蟲
       courseB_video_Unspotted_2018: 沒被發現的蟲蟲
+      courseE_Dogger_2: '小狗示例
+
+'
       courseF_artist_for1: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2018: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2019: 計次迴圈自由發揮（初級）
+      courseF_project_1: '精靈實驗室示例專案
+
+'
       courseF_video_csMatters: 課程項目結束
       courseF_video_csMatters_2018: 影片：計算機科學很重要
       csd U3 conditional statements video: 影片：如果/否則 陳述式
       csd U3 conditional statements video_2019: 影片：條件陳述式
+      csd u5 recommender sample: Sample App
+      csd u5 recommender sample_2019: Sample App
       csd-pre-survey-2017-levelgroup_2018: 教學內容概覽
       csd-pre-survey-levelgroup_2019: 教學內容概覽
       scrat_loops_C-F_video: 冰河歷險紀中的迴圈影片
