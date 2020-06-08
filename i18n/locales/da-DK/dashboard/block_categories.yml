@@ -17,12 +17,14 @@ da:
       Game/Score: Spil/score
       Games/Score: Spil/score
       Groups: Grupper
+      Input: Input
       Locations: Placering
       Logic: Logik
       Loops: Løkker
       Math: Matematik
       Numbers: Tal
       Properties: Egenskaber
+      Sprites: Sprites
       Text: Tekst
       Variables: Variabler
       'Variables ': 'Variabler '

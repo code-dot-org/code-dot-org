@@ -30,6 +30,7 @@ da:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
           MOVE2:
             MOVES.Roll: Kropsrulning
@@ -42,6 +43,7 @@ da:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
       Dancelab_atTimestamp:
         text: efter {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ da:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ da:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -117,6 +121,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -140,6 +145,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -185,6 +191,7 @@ da:
             MOVES.Kick: Stjerne
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -216,10 +223,13 @@ da:
             MOVES.Kick: Stjerne
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'gentag hver {N} takt efter {START} '
       Dancelab_everySeconds:
@@ -252,6 +262,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -279,6 +290,7 @@ da:
             MOVES.Roll: Kropsrulning
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
       Dancelab_ifTime:
         text: |-
@@ -641,6 +653,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -664,6 +677,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -674,6 +688,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -698,6 +713,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -772,6 +788,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -800,6 +817,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -814,6 +832,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -843,6 +862,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -956,10 +976,19 @@ da:
         text: opret
       Dancelab_whenSetup2:
         text: opret
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1002,10 +1031,16 @@ da:
             '"tint"': toning
       gamelab_getThisSprite:
         text: "{CHOICE} figur"
+        options:
+          CHOICE:
+            '"this"': this
+            '"other"': other
       gamelab_hideTitleScreen:
         text: skjul titelskærm
       gamelab_isTouchingEdges:
         text: "{SPRITE} berører kanten"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} hopper til {LOCATION}"
       gamelab_keyPressed:
@@ -1064,6 +1099,8 @@ da:
             '"left"': venstre
       gamelab_mouseLocation:
         text: musens placering
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: flyt {SPRITE} {DISTANCE} pixels fremad
       gamelab_moveInDirection:
@@ -1076,6 +1113,10 @@ da:
             '"West"': Vest
       gamelab_moveToward:
         text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: afspil lyd {SOUND}
       gamelab_pointInDirection:
@@ -1110,13 +1151,44 @@ da:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotte
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': ret
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ørken
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galakse
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': gitter
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbue
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stjerner
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervands
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: ingen
@@ -1130,20 +1202,43 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       gamelab_setSizes:
+        text: set {SPRITE} {PROPERTY} to {N}%
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': width
             '"height"': højde
+      gamelab_setTint:
+        text: change color of {THIS} to {COLOR}
+      gamelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
+          collecting
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} clicked"
         options:
           CONDITION:
             '"when"': når
             '"while"': mens
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
+        text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
           DIRECTION:
             '"right"': højre
             '"left"': venstre
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
+      gamelab_whenDownArrow:
+        text: when down arrow pressed
       gamelab_whenKey:
         text: når {KEY} klikkes
         options:
@@ -1157,7 +1252,18 @@ da:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: when left arrow pressed
+      gamelab_whenRightArrow:
+        text: when right arrow pressed
+      gamelab_whenTouching:
+        text: when {SPRITE1} touches {SPRITE2}
+      gamelab_whenUpArrow:
+        text: when up arrow pressed
+      gamelab_whileDownArrow:
+        text: while down arrow pressed
       gamelab_whileKey:
+        text: while {KEY} pressed
         options:
           KEY:
             '"up"': op
@@ -1169,9 +1275,35 @@ da:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: while left arrow pressed
+      gamelab_whileRightArrow:
+        text: while right arrow pressed
+      gamelab_whileTouching:
+        text: while {SPRITE1} is touching {SPRITE2}
+      gamelab_whileUpArrow:
+        text: while up arrow pressed
+      gamelab_xLocationOf:
+        text: x coordinate of {SPRITE}
+      gamelab_yLocationOf:
+        text: y coordinate of {SPRITE}
       Mikelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'add training data: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": object
+            "{x: 200, y: 100}": fish
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fish
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1179,7 +1311,10 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": top
@@ -1191,7 +1326,19 @@ da:
             "{x: 300, y: 100}": øverst højre
             "{x: 100, y: 300}": nederst venstre
             "{x: 300, y: 300}": nederst højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
+      Mikelab_getNext:
+        text: get next object
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1204,10 +1351,13 @@ da:
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
       Mikelab_groupChangePropBy:
+        text: change {PROPERTY} of {SELECT} {COSTUME} by {VAL}
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
           PROPERTY:
             '"scale"': størrelse
             '"rotation"': rotation
@@ -1227,12 +1377,23 @@ da:
             "{x: 300, y: 100}": øverst højre
             "{x: 100, y: 300}": nederst venstre
             "{x: 300, y: 300}": nederst højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
+        text: remove {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
+      Mikelab_groupDisplace:
+        text: all {COSTUME} block {COSTUME2} from moving
+      Mikelab_groupEdgesDisplace:
+        text: edges block {COSTUME} from moving
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
+          SELECT:
+            '"average"': average
+            '"this"': this
           PROPERTY:
             '"scale"': størrelse
             '"rotation"': rotation
@@ -1240,21 +1401,29 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupRemoveAllBehaviors:
+        text: stop {SELECT} {COSTUME} behaviors
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
       Mikelab_groupRemoveTint:
+        text: remove color from {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
       Mikelab_groupSetProp:
+        text: set {PROPERTY} of {SELECT} {COSTUME} to {VAL}
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
           PROPERTY:
             '"scale"': størrelse
             '"rotation"': rotation
@@ -1262,9 +1431,29 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupSetTint:
+        text: change color of {SELECT} {COSTUME} to {COLOR}
         options:
           SELECT:
             '"all"': alle
+            '"this"': this
+      Mikelab_groupWhenClickedOn:
+        text: when {COSTUME} clicked
+      Mikelab_groupWhenXTouchesY:
+        text: when{COSTUME} touches {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: while clicking on {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          while{COSTUME} is touching {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} is currently {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: remove {TRASH}
+        options:
+          TRASH:
+            object: object
+            fish: fish
       Mikelab_ifDanceIs:
         text: |-
           hvis {SPRITE} gør {DANCE}
@@ -1281,15 +1470,46 @@ da:
             MOVES.Roll: Kropsrulning
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
+            MOVES.Thriller: Zombie
             MOVES.Rest: Ingen
+      Mikelab_ifLabel:
+        text: |-
+          if {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: not my-label
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'placering x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: tilfældig farve
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: figur {SPRITE} stopper {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: Gentag for evigt
       Mikelab_sendBad:
@@ -1297,10 +1517,43 @@ da:
       Mikelab_sendGood:
         text: flyt objektet til højre
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1308,11 +1561,21 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value
+          {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': højre
             '"left"': venstre
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: nyt {COSTUME} figur på {LOCATION}
         options:
@@ -1326,6 +1589,7 @@ da:
             "{x: 300, y: 100}": øverst højre
             "{x: 100, y: 300}": nederst venstre
             "{x: 300, y: 300}": nederst højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: når {SPRITE} klikkes
       Mikelab_whenKeyPressed:
@@ -1336,38 +1600,63 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+            '"space"': spacebar
             '"w"': V
             '"a"': A
             '"s"': S
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': pil op
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+            '"space"': spacebar
             '"w"': V
             '"a"': A
             '"s"': S
             '"d"': D
       Mikelab_whenMouseClicked:
         text: når der klikkes på mousen
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: når {KEY} klikkes
         options:
           KEY:
             '"yes"': ja
             '"no"': nej
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': pil op
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
+      Mikelab_xLocationOf:
+        text: x coordinate of {SPRITE}
+      Mikelab_yLocationOf:
+        text: y coordinate of {SPRITE}
       RyanLab_moveForward:
         text: flyt fremad
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: drej til venstre
       RyanLab_turnRight:
@@ -1433,9 +1722,16 @@ da:
       aalab_setupStory:
         text: opret spil
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': tilfældig
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:
