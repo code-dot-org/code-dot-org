@@ -893,7 +893,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:lessons])
 
-    last_level_in_first_stage = script.lessons.first.script_levels.last
+    last_level_in_first_stage = script.lesson_group.first.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
         script_level_id: last_level_in_first_stage.id

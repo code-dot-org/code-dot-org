@@ -639,7 +639,7 @@ class ScriptsControllerTest < ActionController::TestCase
     script.reload
 
     assert_response :redirect
-    assert_equal level, script.lessons.first.script_levels.first.level
+    assert_equal level, script.lesson_group.first.lessons.first.script_levels.first.level
   end
 
   no_access_msg = "You don&#39;t have access to this unit."

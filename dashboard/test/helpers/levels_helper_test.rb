@@ -513,7 +513,7 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:lessons]
     )
 
-    bonus_script_level = script.lessons.first.script_levels[1]
+    bonus_script_level = script.lesson_groups.first.lessons.first.script_levels[1]
     uri = URI(build_script_level_path(bonus_script_level, {}))
     assert_equal '/s/test_bonus_level_links/stage/1/extras', uri.path
 
@@ -543,7 +543,7 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:lessons]
     )
 
-    stage = script.lessons[0]
+    stage = script.lesson_groups.first.lessons[0]
 
     sl = stage.script_levels[2]
     uri = URI(build_script_level_path(sl, {}))
