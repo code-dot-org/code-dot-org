@@ -9,14 +9,20 @@ lt-LT:
       BinaryImages: Dvejetainiai vaizdai
       BinaryImages_2018: Dvejetainiai vaizdai
       BuildingAFoundation: Laiptuota piramidė
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Skaičiuojamasis mąstymas
       Conditionals: Sąlyginiai sakiniai
       Conditionals_2018: Sąlyginiai sakiniai
       Crowdsourcing: Komandinis programavimas
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
       DigitalCitizenship: Virtuali pilietybė
       DigitalFootprint: Virtualūs pirštų antspaudai
       DigitalFootprint_2018: Virtualūs pirštų antspaudai
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun: For Loop Fun
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Sekų suvokimas
       GettingLoopy: Kartojimo supratimas
       GettingLoopy_2018: Kartojimo supratimas
@@ -25,6 +31,8 @@ lt-LT:
       GraphPaperProgramming: Programavimas ant languoto popieriaus
       GraphPaperProgramming_2018: Programavimas ant languoto popieriaus
       Internet: Internetas
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
       MoveIt: Judėk, judėk
       MoveItMoveIt_2018: Judėk, judėk
       PaperPlanes: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
@@ -34,14 +42,25 @@ lt-LT:
       RelayProgramming: Programavimas komandoje
       RelayProgramming_2018: Programavimas komandoje
       SongwritingParameters: Dainų rašymas
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Dainų rašymas su parametrais
+      TangramAlgorithms: Tangram Algorithms
       UnplugHappyMaps: Laimingieji žemėlapiai
       UnplugHappyMaps_2018: Laimingieji žemėlapiai
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Veikla be kompiuterių
       courseB_unplugged_MRF_2018: Mano draugai robotai
       courseB_unplugged_loopyMRF: Veikla be kompiuterių
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Veikla be kompiuterių
       courseC_Unplugged_ScreenOutTheMean_2018: Veikla be kompiuterių
       courseD_unplugged_digitalCitizenship: Veikla be kompiuterių
       courseD_unplugged_digitalCitizenship_2018: Veikla be kompiuterių
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Veikla be kompiuterių
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

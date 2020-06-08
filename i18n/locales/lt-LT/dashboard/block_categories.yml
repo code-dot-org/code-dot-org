@@ -2,12 +2,30 @@ lt:
   data:
     block_categories:
       Actions: Komandos
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Spalva
+      Comment: Comment
+      Comments: Comments
       Conditionals: Sąlyginiai sakiniai
+      Dancers: Dancers
+      Default: Default
       Events: Įvykiai
       Functions: Komandų kūrimas
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Logika
       Loops: Kartojimas
       Math: Matematika
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Tekstas
       Variables: Kintamieji
+      'Variables ': 'Variables '
+      World: World
