@@ -593,7 +593,6 @@ describe('entry tests', () => {
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
     'levels/editors/_blockly':
@@ -603,6 +602,12 @@ describe('entry tests', () => {
     'levels/editors/_droplet':
       './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_callouts':
+      './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+    'levels/editors/fields/_preload_assets':
+      './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+    'levels/editors/fields/_special_level_types':
+      './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
