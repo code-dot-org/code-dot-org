@@ -3,8 +3,10 @@ bs:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -15,6 +17,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           MOVE1:
             MOVES.Roll: Igra kukovima
@@ -27,6 +30,7 @@ bs:
             MOVES.Clown: Gangnam
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
           MOVE2:
             MOVES.Roll: Igra kukovima
@@ -39,6 +43,7 @@ bs:
             MOVES.Clown: Gangnam
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
       Dancelab_atTimestamp:
         text: nakon {TIMESTAMP} {UNIT}
@@ -57,6 +62,7 @@ bs:
         text: "{GROUP} radi {MOVE} {DIR} zauvijek"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -67,6 +73,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': svi jednorozi
           MOVE:
             '"next"': "(Sljedeća)"
@@ -82,6 +89,7 @@ bs:
             MOVES.Clown: Gangnam
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
           DIR:
             '1': "→"
@@ -103,6 +111,7 @@ bs:
             MOVES.Clown: Gangnam
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
           DIR:
             '1': "→"
@@ -118,8 +127,10 @@ bs:
             '"x"': vodoravna pozicija
             '"y"': uspravna pozicija
       Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} by {VAL}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -130,6 +141,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
@@ -142,6 +154,7 @@ bs:
         text: "{GROUP} uradi {MOVE} {DIR} jednom"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -152,6 +165,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           MOVE:
             '"rand"': "(Slučajna)"
@@ -177,6 +191,7 @@ bs:
             MOVES.Kick: Zvijezda
             MOVES.XArmsUp: Razvuci
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
           DIR:
             '1': "→"
@@ -208,10 +223,15 @@ bs:
             MOVES.Kick: Zvijezda
             MOVES.XArmsUp: Razvuci
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
+      Dancelab_everyMeasuresRange:
+        text: 'repeat every {N} measures after {START} '
       Dancelab_everySeconds:
         text: 'svako {N} {UNIT} '
         options:
@@ -270,6 +290,7 @@ bs:
             MOVES.Roll: Igra kukovima
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
       Dancelab_ifTime:
         text: |-
@@ -279,6 +300,10 @@ bs:
           UNIT:
             '"measures"': taktovi
             '"seconds"': sekunde
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
         options:
@@ -294,8 +319,10 @@ bs:
             "{x: 300, y: 300}": donja desna
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_jumpToEach:
+        text: jump {GROUP} to {LOCATION}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -306,6 +333,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           LOCATION:
             "{x: 200, y: 100}": vrh
@@ -322,6 +350,7 @@ bs:
         text: postavka {GROUP} kao {FORMAT}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -332,6 +361,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           FORMAT:
             '"border"': ivica
@@ -339,14 +369,20 @@ bs:
             '"diamond"': dijamant
             '"circle"': krug
             '"grid"': mreža
+            '"top"': top row
             '"row"': red
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': kolona
+            '"right"': right column
             '"x"': unakrsno
             '"plus"': plus
             '"random"': slučajno odabran
       Dancelab_makeAnonymousDanceSprite:
+        text: make a new {COSTUME} at {LOCATION}
         options:
           COSTUME:
+            '"ALIEN"': alien
             '"BEAR"': Medvjed
             '"CAT"': mačka
             '"DOG"': pas
@@ -354,7 +390,10 @@ bs:
             '"FROG"': Žaba
             '"MOOSE"': svi losovi
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
             '"SHARK"': Ajkula
+            '"SLOTH"': sloth
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": vrh
             "{x: 200, y: 300}": dno
@@ -382,6 +421,7 @@ bs:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Ajkula
+            '"SLOTH"': sloth
             '"UNICORN"': Jednorog
           LOCATION:
             "{x: 200, y: 100}": vrh
@@ -430,6 +470,7 @@ bs:
             '"PINEAPPLE"': Ananasi
             '"ROBOT"': Roboti
             '"SHARK"': Ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           LAYOUT:
             '"border"': ivica
@@ -437,8 +478,12 @@ bs:
             '"diamond"': dijamant
             '"circle"': krug
             '"grid"': mreža
+            '"top"': top row
             '"row"': red
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': kolona
+            '"right"': right column
             '"x"': unakrsno
             '"plus"': plus
             '"random"': slučajno odabran
@@ -473,6 +518,7 @@ bs:
             '"rainbow"': Duge
             '"snowflakes"': Snijeg
             '"text"': Imena pjesama
+            '"galaxy"': Space
             '"sparkles"': Svtlucanje
             '"spiral"': Spirala
             '"disco"': Kvadrati
@@ -496,21 +542,29 @@ bs:
             '"none"': Nijedno
             '"rand"': "(Slučajna)"
             '"circles"': Krugovi
+            '"quads"': Angles
             '"color_cycle"': Boje
             '"diamonds"': Dijamanti
             '"disco_ball"': Disko lopta
             '"fireworks"': Vatromet
+            '"flowers"': Flowers
+            '"growing_stars"': Growing Stars
             '"swirl"': Nilski konj
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Plesni podij laser
             '"splatter"': Prosute boje
             '"rainbow"': Duge
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
             '"snowflakes"': Snijeg
             '"text"': Imena pjesama
+            '"squiggles"': Squiggles
+            '"galaxy"': Space
             '"sparkles"': Svtlucanje
             '"spiral"': Spirala
             '"disco"': Kvadrati
             '"stars"': Zvijezde
+            '"music_wave"': Waves
           PALETTE:
             '"rave"': Crno-bijelo
             '"cool"': Cool
@@ -534,6 +588,7 @@ bs:
         text: podesi {GROUP} brzinu plesa {SPEED}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -544,6 +599,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           SPEED:
             '1': normal
@@ -576,9 +632,12 @@ bs:
             '"none"': Nijedno
             '"rand"': "(Slučajna)"
             '"bubbles"': Balončići
+            '"hearts_colorful"': Colorful Hearts
             '"confetti"': Konfeti
+            '"emojis"': Emojis
             '"hearts_red"': Srca
             '"music_notes"': Muzičke note
+            '"paint_drip"': Paint Drip
             '"pineapples"': Ananasi
             '"pizzas"': Pizze
             '"smiling_poop"': Krma
@@ -587,6 +646,7 @@ bs:
             '"smile_face"': Osmjesi
             '"spotlight"': Reflektor
             '"color_lights"': Rasvjeta bine
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Takosi
       Dancelab_setProp:
         text: 'podesi {SPRITE} {PROPERTY} na{VAL} '
@@ -602,6 +662,7 @@ bs:
         text: podesi {GROUP} {PROPERTY} na {VAL}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -612,6 +673,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
@@ -633,8 +695,10 @@ bs:
             '"y"': uspravna pozicija
             '"tint"': nijanse
       Dancelab_setPropRandomEach:
+        text: randomize {GROUP} {PROPERTY}
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -645,6 +709,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
@@ -660,6 +725,7 @@ bs:
         text: podesi {THIS} nijanse na {VAL}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -670,11 +736,13 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
       Dancelab_setTintEachInline:
         text: podesi {THIS} nijanse na {VAL}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -685,6 +753,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
       Dancelab_setTintInline:
         text: podesi {SPRITE} nijanse na {VAL}
@@ -698,6 +767,7 @@ bs:
         text: podesi {THIS} vidljivost na {VISIBILITY}
         options:
           THIS:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -708,6 +778,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           VISIBILITY:
             'true': vidljivo
@@ -728,8 +799,10 @@ bs:
             '"mid"': mid
             '"treble"': trebl
       Dancelab_startMappingEach:
+        text: "{GROUP} begin {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -740,6 +813,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
@@ -770,8 +844,10 @@ bs:
             '"mid"': mid
             '"treble"': trebl
       Dancelab_stopMappingEach:
+        text: "{GROUP} stop {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: all
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
@@ -782,6 +858,7 @@ bs:
             '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
             '"SHARK"': sve ajkule
+            '"SLOTH"': sloths
             '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
@@ -797,10 +874,33 @@ bs:
             '"mid"': mid
             '"treble"': trebl
       Dancelab_translateStrings:
+        text: translate {STRING}
         options:
           STRING:
+            '"music_wave"': Waves
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"quads"': Angles
+            '"flowers"': Flowers
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Growing Stars
+            '"emojis"': Emojis
             '"hearts_colorful"': Srca
+            '"paint_drio"': Paint Drip
+            '"exploding_stars"': Starburst
+            '"row_top"': top row
+            '"row_bottom"': bottom row
+            '"column_left"': left column
+            '"column_right"': right column
             '"diamond"': dijamant
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Highway
+            '"stream"': Stream
+            '"tile"': Tile
+            '"shadow"': Shadow
             '"s"': s
             '"t"': t
             '"u"': u
@@ -809,6 +909,16 @@ bs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
         options:
@@ -820,7 +930,12 @@ bs:
             '"space"': svemir
             '"enter"': enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -830,6 +945,7 @@ bs:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -839,6 +955,16 @@ bs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: kada {RANGE} vrhunac
         options:
@@ -850,29 +976,74 @@ bs:
         text: postavka
       Dancelab_whenSetup2:
         text: postavka
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
           CONDITION:
             '"when"': kada
             '"while"': dok
+      gamelab_clickedOn:
+        text: when {SPRITE} clicked
+      gamelab_clickedSpritePointer:
+        text: clicked {SPRITE}
+      gamelab_comment:
+        text: 'comment: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
+      gamelab_destroy:
+        text: remove {THIS}
+      gamelab_draggable:
+        text: being draggable
+      gamelab_edgesDisplace:
+        text: edges block {SPRITE} from moving
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
             '"tint"': nijanse
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': this
+            '"other"': other
+      gamelab_hideTitleScreen:
+        text: hide title screen
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} is touching edges"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} pressed"
         options:
           CONDITION:
             '"when"': kada
@@ -884,7 +1055,12 @@ bs:
             '"right"': desno
             '"space"': svemir
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -894,6 +1070,7 @@ bs:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -903,49 +1080,151 @@ bs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_locationAt:
+        text: 'location x: {X} y: {Y}'
+      gamelab_locationMouse:
+        text: mouse location
+      gamelab_locationOf:
+        text: location of {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_mirrorSprite:
+        text: "{SPRITE} face {DIRECTION}"
         options:
           DIRECTION:
             '"right"': desno
             '"left"': lijevo
+      gamelab_mouseLocation:
+        text: mouse location
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
+      gamelab_moveForward:
+        text: move {SPRITE} {DISTANCE} pixels forward
+      gamelab_moveInDirection:
+        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
+      gamelab_moveToward:
+        text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
+      gamelab_playSound:
+        text: playSound {SOUND}
+      gamelab_pointInDirection:
+        text: point {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
+      gamelab_printText:
+        text: print {TEXT}
       gamelab_randColor:
         text: nasumična boja
       gamelab_randomColor:
         text: nasumična boja
+      gamelab_randomLocation:
+        text: random location
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} stops everything"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} stops {BEHAVIOR}
+      gamelab_removeTint:
+        text: remove color from {THIS}
+      gamelab_setAnimation:
+        text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
         text: podesi boju pozadine {COLOR}
       gamelab_setBackgroundImage:
+        text: set background to {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': pećina
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': court
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': pustinja
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxy
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mreža
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duga
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stars
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodom
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+            undefined: none
       gamelab_setProp:
+        text: set {SPRITE} {PROPERTY} to {VAL}
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
       gamelab_setSizes:
+        text: set {SPRITE} {PROPERTY} to {N}%
         options:
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
+      gamelab_setTint:
+        text: change color of {THIS} to {COLOR}
+      gamelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
+          collecting
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} clicked"
         options:
           CONDITION:
             '"when"': kada
             '"while"': dok
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
+        text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
           DIRECTION:
             '"right"': desno
             '"left"': lijevo
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
+      gamelab_whenDownArrow:
+        text: when down arrow pressed
       gamelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
         options:
@@ -959,7 +1238,18 @@ bs:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: when left arrow pressed
+      gamelab_whenRightArrow:
+        text: when right arrow pressed
+      gamelab_whenTouching:
+        text: when {SPRITE1} touches {SPRITE2}
+      gamelab_whenUpArrow:
+        text: when up arrow pressed
+      gamelab_whileDownArrow:
+        text: while down arrow pressed
       gamelab_whileKey:
+        text: while {KEY} pressed
         options:
           KEY:
             '"up"': gore
@@ -971,13 +1261,46 @@ bs:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: while left arrow pressed
+      gamelab_whileRightArrow:
+        text: while right arrow pressed
+      gamelab_whileTouching:
+        text: while {SPRITE1} is touching {SPRITE2}
+      gamelab_whileUpArrow:
+        text: while up arrow pressed
+      gamelab_xLocationOf:
+        text: x coordinate of {SPRITE}
+      gamelab_yLocationOf:
+        text: y coordinate of {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} begins {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'add training data: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": object
+            "{x: 200, y: 100}": fish
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fish
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": vrh
@@ -989,19 +1312,46 @@ bs:
             "{x: 300, y: 100}": donja desna
             "{x: 100, y: 300}": donja lijeva
             "{x: 300, y: 300}": donja desna
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
+      Mikelab_getNext:
+        text: get next object
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
-      Mikelab_groupChangePropBy:
+      Mikelab_groupChangeAnim:
+        text: change {SELECT} {COSTUME} into {COSTUME2}
         options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupChangePropBy:
+        text: change {PROPERTY} of {SELECT} {COSTUME} by {VAL}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
       Mikelab_groupCreateNewSprite:
+        text: make a new {COSTUME} at {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": vrh
@@ -1013,18 +1363,83 @@ bs:
             "{x: 300, y: 100}": donja desna
             "{x: 100, y: 300}": donja lijeva
             "{x: 300, y: 300}": donja desna
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_groupDestroy:
+        text: remove {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupDisplace:
+        text: all {COSTUME} block {COSTUME2} from moving
+      Mikelab_groupEdgesDisplace:
+        text: edges block {COSTUME} from moving
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
+          SELECT:
+            '"average"': average
+            '"this"': this
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
+      Mikelab_groupRemoveAllBehaviors:
+        text: stop {SELECT} {COSTUME} behaviors
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveTint:
+        text: remove color from {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
       Mikelab_groupSetProp:
+        text: set {PROPERTY} of {SELECT} {COSTUME} to {VAL}
         options:
+          SELECT:
+            '"all"': all
+            '"this"': this
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
+      Mikelab_groupSetTint:
+        text: change color of {SELECT} {COSTUME} to {COLOR}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupWhenClickedOn:
+        text: when {COSTUME} clicked
+      Mikelab_groupWhenXTouchesY:
+        text: when{COSTUME} touches {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: while clicking on {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          while{COSTUME} is touching {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} is currently {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: remove {TRASH}
+        options:
+          TRASH:
+            object: object
+            fish: fish
       Mikelab_ifDanceIs:
         text: |-
           ako {SPRITE} čini {DANCE}
@@ -1041,27 +1456,100 @@ bs:
             MOVES.Roll: Igra kukovima
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
+            MOVES.Thriller: Zombie
             MOVES.Rest: Nijedno
+      Mikelab_ifLabel:
+        text: |-
+          if {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1} else {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as {DANCE}
+          do {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: not my-label
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
+      Mikelab_locationAt:
+        text: 'location x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: nasumična boja
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
+      Mikelab_removeBehaviorSimple:
+        text: sprite {SPRITE} stops {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: ponavljaj zauvijek
+      Mikelab_sendBad:
+        text: move object left
+      Mikelab_sendGood:
+        text: move object right
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': veličina
             '"rotation"': rotacija
+            '"x"': x position
+            '"y"': y position
             '"direction"': smijer kretanja
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': desno
             '"left"': lijevo
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
+        text: new {COSTUME} sprite at {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": vrh
@@ -1073,6 +1561,9 @@ bs:
             "{x: 300, y: 100}": donja desna
             "{x: 100, y: 300}": donja lijeva
             "{x: 300, y: 300}": donja desna
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_whenClickedOn:
+        text: when {SPRITE} clicked
       Mikelab_whenKeyPressed:
         text: kada je pritisnuta {KEY} tipka
         options:
@@ -1081,49 +1572,169 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+            '"space"': spacebar
             '"w"': Zapad
+            '"a"': A
             '"s"': Jug
+            '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': strelica gore
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+            '"space"': spacebar
             '"w"': Zapad
+            '"a"': A
             '"s"': Jug
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: when mouse clicked
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
+      Mikelab_whenYesNoClicked:
+        text: when {KEY} clicked
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': strelica gore
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
+      Mikelab_xLocationOf:
+        text: x coordinate of {SPRITE}
+      Mikelab_yLocationOf:
+        text: y coordinate of {SPRITE}
       RyanLab_moveForward:
         text: idi naprijed
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: okreni lijevo
       RyanLab_turnRight:
         text: okreni desno
+      SpriteLab2Beta_spriteSay:
+        text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
+      Vector_createSpriteWith:
+        text: |-
+          create sprite
+          do{STATEMENT}
+      Vector_log:
+        text: log message {MESSAGE}
       Vector_positionCenter:
         text: centralna
+      Vector_push:
+        text: set velocity {VECTOR}
+      Vector_randomLocation:
+        text: random location
+      Vector_setColor:
+        text: set color to {COLOR}
+      Vector_setSize:
+        text: set width {WIDTH} height {HEIGHT}
+      Vector_teleportTo:
+        text: set position {POSITION}
+      Vector_vectorNorth:
+        text: north
+      Vector_where:
+        text: each sprite where {PROPERTY} is {VALUE} do{STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": color
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} begins {BEHAVIOR} for {SECONDS} seconds
+      aalab_addBehaviorUntilBoolean:
+        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: new sprite named{SPRITE_NAME} with costume{ANIMATION_NAME} at location{LOCATION}
       aalab_goToScene:
+        text: go to scene {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
+      aalab_prompt:
+        text: ask question {MESSAGE}
       aalab_scene:
+        text: scene {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: setup story
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': slučajno odabran
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
+      binary_drawBin:
+        text: draw binary {BIN}
+      binary_drawBinScreen:
+        text: |-
+          draw screen
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: draw decimal {DEC}
+      binary_drawPixelHere:
+        text: set pixel {VAL}
+        options:
+          VAL:
+            '0': 'off'
+            '1': 'on'
+            '"toggle"': toggle
+      binary_drawString:
+        text: draw string {STR}
+      binary_goTo:
+        text: jump to {LOC}
+      binary_goToHome:
+        text: jump to top left
+      binary_gridSize:
+        text: set grid size {SIZE}
       binary_move:
+        text: move {DIR}
         options:
           DIR:
             '"up"': gore
@@ -1144,19 +1755,93 @@ bs:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          if path {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": ispred
+            "'right'": to the right
+            "'left'": to the left
       craft_ifStandingOn:
+        text: |-
+          if standing on {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": blue coral
+            "'redCoralBlock'": red coral
             "'sand'": pijesak
+            "'wool_blue'": deep water
             "'planksOak'": daska hrasta
+            "'seaLantern'": sea lantern
       craft_ifStandingOnLimit:
+        text: |-
+          if standing on {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": pijesak
+            "'darkPrismarine'": dark prismarine
+            "'seaLantern'": sea lantern
+      craft_log:
+        text: log message {MESSAGE}
       craft_moveForward:
         text: idi naprijed
+      craft_placeBlock:
+        text: place {blockType}
+        options:
+          blockType:
+            '"strippedOak"': stripped oak
+            '"strippedDarkOak"': stripped dark oak
+            '"stoneBricks"': stone bricks
+            '"mossyStoneBricks"': mossy stone bricks
+            '"crackedStoneBricks"': cracked stone bricks
+            '"decorativeStoneBricks"': decorative stone bricks
+            '"blueCoralBlock"': blue coral block
+            '"pinkCoralBlock"': pink coral block
+            '"magentaCoralBlock"': magenta coral block
+            '"redCoralBlock"': red coral block
+            '"yellowCoralBlock"': yellow coral block
+            '"blueDeadCoralBlock"': blue dead coral block
+            '"pinkDeadCoralBlock"': pink dead coral block
+            '"magentaDeadCoralBlock"': magenta dead coral block
+            '"readDeadCoralBlock"': red dead coral block
+            '"yellowDeadCoralBlock"': yellow dead coral block
+            '"prismarine"': prismarine
+            '"darkPrismarine"': dark prismarine
+            '"seaLantern"': sea lantern
+            '"packedIce"': packed ice
+            '"blueIce"': blue ice
+            '"blackConcrete"': black concrete
+            '"seaGrass"': sea grass
+            '"kelp"': kelp
+            '"polishedGranite"': polished granite
+      craft_placePrismarine:
+        text: place prismarine
       craft_placeTorch:
         text: postavite baklju
+      craft_repeatUntilConduit:
+        text: |-
+          repeat until conduit completed
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repeat until goal
+          {STATEMENT}
+      craft_spawnEntity:
+        text: spawn {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': cod
+            '"dolphin"': dolphin
+            '"salmon"': salmon
+            '"seaTurtle"': sea turtle
+            '"squid"': squid
+            '"tropicalFish"': tropical fish
+      craft_turn:
+        text: turn {DIR}
+        options:
+          DIR:
+            right: right ↻
+            left: left ↺

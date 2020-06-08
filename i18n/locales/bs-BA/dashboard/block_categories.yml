@@ -2,12 +2,30 @@ bs:
   data:
     block_categories:
       Actions: Akcije
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Boja
+      Comment: Comment
+      Comments: Comments
       Conditionals: Uvjeti
+      Dancers: Dancers
+      Default: Default
       Events: Događaji
       Functions: Funkcije
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Logika
       Loops: Petlje
       Math: Matematika
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Tekst
       Variables: Varijable
+      'Variables ': 'Variables '
+      World: World
