@@ -166,8 +166,10 @@ function initProjects() {
 
             var charactersToTrim = 0;
             if (options.version === "2") {
+              // length & width
               charactersToTrim = 2;
             } else if (options.version === "3") {
+              // length & width & bitsPerPixel
               charactersToTrim = 3;
             }
 
@@ -668,11 +670,11 @@ function getPositiveValue(element) {
 function getSliderBytes() {
   var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
   var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
-  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
+  var bitsPerPixelByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
   var sliderBits = widthByte + heightByte;
   if (options.version === "3") {
-    sliderBits += bppByte;
+    sliderBits += bitsPerPixelByte;
   }
 
   return sliderBits;
