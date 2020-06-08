@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Unplugged Lesson: Envelope Variables
 
-> An **event** is a placeholder for a piece of information that can change.
+> A **variable** is a placeholder for a piece of information that can change.
 
 ***
 
