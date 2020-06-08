@@ -24,7 +24,7 @@ module AWS
     HTTP_CACHE = HttpCache.config(rack_env)
 
     # CloudFront distribution config (`pegasus` and `dashboard`):
-    # - `aliases`: allowlist of domains this distribution will use (`*`-wildcards are allowed, e.g. `*.example.com`).
+    # - `aliases`: whitelist of domains this distribution will use (`*`-wildcards are allowed, e.g. `*.example.com`).
     #   CloudFront does not allow the same domain to be used by multiple distributions.
     # - `origin`: default origin server endpoint. This should point to the load balancer domain.
     # - `log`: `log.bucket` and `log.prefix` specify where to store CloudFront access logs (or disable if `log` is not provided).
@@ -234,7 +234,7 @@ module AWS
         (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
-          Forward: 'allowlist',
+          Forward: 'whitelist',
           WhitelistedNames: behavior_config[:cookies]
         } :
         {
