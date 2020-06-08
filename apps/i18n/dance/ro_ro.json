@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Ai apăsat o tastă, dar dansatorul tău nu a răspuns.",
   "danceFeedbackNeedTwoDancers": "Trebuie să creezi doi dansatori.",
   "danceFeedbackOnlyOneDancerMoved": "Doar unul dintre dansatorii tăi s-a mișcat.",
-  "danceFeedbackNeedLead": "Trebuie să creezi și un dansator principal cu blocul <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Trebuie să creezi și un dansator principal cu blocul <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Trebuie să creezi un grup de dansatori de rezervă cu blocul <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"cerc\"</title></block></xml>.",
   "danceFeedbackSetSize": "Trebuie să schimbi dimensiunea a cel puțin un dansator după ce pornește muzica.",
   "measure": "Măsură:"

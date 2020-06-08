@@ -1,13 +1,7 @@
-/* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
-import {
-  SpeechConfig,
-  SpeechSynthesizer,
-  SpeechSynthesisOutputFormat
-} from 'microsoft-cognitiveservices-speech-sdk';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both

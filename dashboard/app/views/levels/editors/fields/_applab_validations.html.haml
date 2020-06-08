@@ -1,0 +1,19 @@
+.field
+  = f.label 'Log Conditions'
+  Create a JSON array resembling the example if you want to add requirements that certain functions were executed. These will be checked when the Finish button is pressed.
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        [
+          { "entries": ["function1", "function2"], "matchType": "exact", "minTimes": 1, "message": "You need to call both functions." },
+          { "entries": ["[forTest]", "moveTo", "randomNumber", "randomNumber"], "matchType": "inexact", "minTimes": 20, "message": "You need to call moveTo in a for loop." }
+        ]
+  = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
+  :javascript
+    levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
+
+.field
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
+  %p
+    Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
