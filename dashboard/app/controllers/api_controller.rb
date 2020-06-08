@@ -160,9 +160,11 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
-          stage_state = stage.lockable_state(section.students)
-          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        stages: script.lesson_groups.each do |lesson_group|
+          lesson_group.lessons.each_with_object({}) do |lesson, lesson_hash|
+            lesson_state = lesson.lockable_state(section.students)
+            lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
+          end
         end
       }
     end
