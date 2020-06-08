@@ -3,12 +3,30 @@ ky:
   data:
     block_categories:
       Actions: Иш-аракеттер
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Түс
+      Comment: Comment
+      Comments: Comments
       Conditionals: Шартуулар
+      Dancers: Dancers
+      Default: Default
       Events: Окуялар
       Functions: Функциялар
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Логика
       Loops: Циклдер
       Math: Математика
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Тексттер
       Variables: Өзгөрмөлөр
+      'Variables ': 'Variables '
+      World: World
