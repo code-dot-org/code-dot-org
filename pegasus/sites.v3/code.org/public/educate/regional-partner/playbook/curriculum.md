@@ -39,7 +39,7 @@ Use the links below to find our program curriculum guides, course information, a
 
 ### [CS Fundamentals](https://code.org/educate/curriculum/elementary-school) (K-5)
 
-- <a href="https://docs.google.com/presentation/d/1bsw3vZuFuC5EzDxGN6szQ_IJ0nhVnqlH34enhTqZ2L0/edit#slide=id.g449748f052_0_25", target=\_"blank">CS Fundamentals One-Pager</a><br/>
+- <a href="https://docs.google.com/presentation/d/1bsw3vZuFuC5EzDxGN6szQ_IJ0nhVnqlH34enhTqZ2L0/edit#slide=id.g449748f052_0_25", target="_blank">CS Fundamentals One-Pager</a><br/>
 - [CS Fundamentals Curriculum Guide - 2019-20](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview)
 - <a href="https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit", target="_blank">Transitioning from Courses 1-4 to A-F Guide</a><br/>
 - <a href="https://code.org/professional-development-workshops", target="_blank">Find a K-5 Professional Development Workshop</a>
