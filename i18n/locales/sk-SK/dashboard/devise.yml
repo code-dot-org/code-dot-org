@@ -40,6 +40,7 @@ sk:
       update_needs_confirmation: "Úspešne ste aktualizovali konto. Prosím, skontrolujte svoj e-mail a kliknite na potvrdzujúci link, aby sme overili Vašu novú e-mailovú adresu."
       updated: "Úspešne ste aktualizovali Vaše konto."
     sessions:
+      signed_in: ""
       signed_out: "Úspešne odhlásení."
     unlocks:
       send_instructions: "O niekoľko minúť obdržíte e-mail s pokynmi, ako odomknúť účet."

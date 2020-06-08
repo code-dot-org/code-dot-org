@@ -10,6 +10,9 @@ sk:
           tendenciu preskočiť osvojenie si slovnej zásoby slov z tejto aj ďalších
           lekcií, ale skúste ich deťom odprezentovať v zábavnej či hravej forme, čo
           je oveľa produktívnejšie ako čakať na vyšší vek detí.
+        pdfs:
+        - unplug1
+        video: Unplug1
       Unplug2:
         title: Algoritmické myslenie
         desc: Stačia papiere a fixky na to, aby sa študenti naučili štyri kroky algoritmického
@@ -21,6 +24,9 @@ sk:
           algoritmu (inštrukcií) pre iný tím, ktorý má nakresliť konkrétnu príšerku.
           Tímy si navzájom vymenia návody a pokúsia sa nakresliť príšerku podľa uvedeného
           návodu. Je kresba podobná tomu, čo si pôvodný tím vybral?
+        pdfs:
+        - unplug2
+        video: Unplug2
       Unplug3:
         title: Programovanie na štvorčekový papier
         desc: '"Naprogramovaním" jeden druhého na kreslenie obrázkov študenti začnú
@@ -29,12 +35,18 @@ sk:
           papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok
           času, hodina sa môže skončiť programovaním na kreslenie obrázkov, ktoré
           študenti vytvorili sami.'
+        pdfs:
+        - unplug3
+        video: Unplug3
       Unplug4:
         title: Algoritmy
         desc: Táto lekcia pokrýva algoritmy. Pomocou tangramov a štvorčekového papiera
           vám prvá úloha ukáže, aké dôležité je definovať každú inštrukciu jasne a
           jednoznačne. Následne trieda preskúma, koľkými možnými spôsobmi môžeme zložiť
           papier do obdĺžnika a porovná počet zložení potrebný v jednotlivých postupoch.
+        pdfs:
+        - unplug4
+        video: Unplug4
       Unplug5:
         title: Funkcie
         desc: Na tejto hodine si študenti vytvoria závesnú dekoráciu z retiazok, korálok
@@ -47,36 +59,57 @@ sk:
           a pojmy z programu patria k im špecifickým materiálom a musia si tak vytvoriť
           skupinu pojmov pre jednotlivé pomôcky. Toto použitie generovaných symbolov
           je krásny úvod do problematiky premenných.
+        pdfs:
+        - unplug5
+        video: Unplug5
       Unplug6:
         title: Podmienky
         desc: Toto je triedna hra. Po predstavení konceptu podmienok, výrazov "ak
           - inak" a cyklov, si trieda jednotlivé termíny precvičí využitím predpripraveného
           programu, balíčka kariet a stávkou v lotérii.
+        pdfs:
+        - unplug6
+        video: Unplug6
       Unplug7:
         title: Napísanie piesne
         desc: Čítanie textu je pre väčšinu študentov viacmenej intuitívne. Vezmeme
           túto činnosť, ktorú všetci ovládajú a spravíme z nej riadne školenie na
           definovanie a volanie funkcií. Keď sa študenti oboznámia s procesom definovania/volania
           funkcií, pridáme do volaných funkcií zadávanie parametrov.
+        pdfs:
+        - unplug7
+        video: Unplug7
       Unplug8:
         title: Abstrakcia
         desc: Táto aktivita kombinuje každodennú rutinu vašich študentov a Mad-Lib
           herný štýl myslenia, aby pomohla vašej triede dozvedieť sa o účinnosti abstrakcie.
+        pdfs:
+        - unplug8
+        video: Unplug8
       Unplug9:
         title: Štafetové programovanie
         desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. Programovanie na štvorčekový
           papier) a využije získané zručnosti na to, aby sme zdôraznili dôležitosť
           dokončovania programov, ktoré pracujú za sebou a nutnosť častej kontroly
           programov kvôli chybám.
+        pdfs:
+        - unplug9
+        video: Unplug9
       Unplug10:
         title: Internet
         desc: V tejto lekcii budú študenti predstierať, že putujú internetom, a počas
           toho sa budú učiť o internetových adresách, protokoloch a DNS.
+        pdfs:
+        - unplug10
+        video: Unplug10
       Unplug11:
         title: Zhrnutie
         desc: Konečné zhrnutie prvej 20-hodinovej série pomôže študentom pripomenúť
           si ich obľúbené momenty a zároveň im poskytne návod, ako ďalej pokračovať
           v informatike, ak ich tieto cvičenia zaujali.
+        pdfs:
+        - unplug11
+        video: Unplug11
       UnplugHappyMaps:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
@@ -237,7 +270,7 @@ sk:
           ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme
           podmieňovacie príkazy...
       CollisionDetection:
-        title: Kolízna detekcia a Pytagorova veta
+        title: Zisťovanie kolízií a Pytagorova veta
         desc: Určenie toho, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou
           väčšiny hier. V tejto lekcii sa pozrieme na to, ako sa Pytagorová veta a
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma

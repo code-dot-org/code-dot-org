@@ -31,6 +31,30 @@ sk-SK:
         '': Tento program vypíše výsledok sem
       CSD U3 Boolean Predict_2019:
         '': Tento program vypíše výsledok sem
+      CSD U3 Sprites anitab 1:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2018:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites anitab 1_2019:
+        '': Click this to open the Animation Tab
+      CSD U3 Sprites intro sprites:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Use this block to create a sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Use this block to create a sprite
+      CSD U3 Sprites text:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2018:
+        '': Use this block to put text on the screen
+      CSD U3 Sprites text_2019:
+        '': Use this block to put text on the screen
+      CSD U3 UP_ARROW:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018:
+        '': Add an if statement and place your movement code inside it
+      CSD U3 UP_ARROW_2018_2019:
+        '': Add an if statement and place your movement code inside it
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where XY:
@@ -43,6 +67,117 @@ sk-SK:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Zmeňte číslo tu
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
@@ -70,6 +205,60 @@ sk-SK:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018:
+        '': Add your block inside this if statement
+      CSD U3 keydown conditional_2018_2019:
+        '': Add your block inside this if statement
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019:
+        callout: This block creates a variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Tu je tlačidlo "Spustiť".
@@ -92,6 +281,12 @@ sk-SK:
         CSDU6L10_rainbow: Pridajte váš kód sem
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: Pridajte váš kód sem
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_2018:
@@ -116,6 +311,8 @@ sk-SK:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
+      CSDU4 - Design Mode - 3:
+        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil
           celý kruh
@@ -369,6 +566,7 @@ sk-SK:
       behaviors 3a:
         behavior_callout: Prečo tento postup nefunguje pri prostrednej hviezde?
         star2_callout: Odstráň blok s kostýmom a použi namiesto neho blok "táto postava".
+        this_sprite_callout: Replace the costume block below with this.
       behaviors 4:
         behaviors_edit: Klikni sem  a uvidíš, ako toto správanie funguje.
       behaviors 5:
@@ -448,6 +646,8 @@ sk-SK:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
           použiť v tejto hre.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
@@ -662,6 +862,12 @@ sk-SK:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
+      courseC_maze_programming5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseC_maze_programming5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú
           náročné a možno ich vyriešite až na niekoľkatý pokus.
@@ -734,6 +940,8 @@ sk-SK:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
+      courseD_maze_intro5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť",
           ktoré spustí tvoj program.
@@ -773,6 +981,18 @@ sk-SK:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
+      courseD_maze_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2018:
+        '': These blocks don't have numbers on them. You can use as many as you want!
+      courseD_maze_ramp5a_2019:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
           koľko mu povieš. Až potom sa spustí zvyšok programu.
@@ -796,6 +1016,8 @@ sk-SK:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
+      courseD_scrat_ramp5:
+        '': These blocks don't have numbers on them. You can use as many as you want!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
           koľko mu povieš. Až potom sa spustí zvyšok programu.

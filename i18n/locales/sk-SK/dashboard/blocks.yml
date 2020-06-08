@@ -32,6 +32,7 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
           MOVE2:
             MOVES.Roll: Body Roll
@@ -44,6 +45,7 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
       Dancelab_atTimestamp:
         text: po {TIMESTAMP} {UNIT}
@@ -89,6 +91,7 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -110,6 +113,7 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -189,6 +193,7 @@ sk:
             MOVES.Kick: Star
             MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -220,10 +225,13 @@ sk:
             MOVES.Kick: Star
             MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'opakuj každé {N} merania po {START} '
       Dancelab_everySeconds:
@@ -284,6 +292,7 @@ sk:
             MOVES.Roll: Body Roll
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
       Dancelab_ifTime:
         text: |-
@@ -965,10 +974,19 @@ sk:
         text: nastavenie
       Dancelab_whenSetup2:
         text: nastavenie
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: postava {SPRITE} začni {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: zmeň {PROPERTY} {SPRITE} o {VAL}
         options:
@@ -1017,10 +1035,13 @@ sk:
         options:
           CHOICE:
             '"this"': toto
+            '"other"': other
       gamelab_hideTitleScreen:
         text: schovať úvodnú obrazovku
       gamelab_isTouchingEdges:
         text: "{SPRITE} sa dotýka okrajov"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skoč {LOCATION}"
       gamelab_keyPressed:
@@ -1093,6 +1114,8 @@ sk:
             '"West"': Západ
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
       gamelab_patrollingUpDown:
         text: hliadkovať hore-dole
       gamelab_playSound:
@@ -1129,13 +1152,31 @@ sk:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskyňa
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': ihrisko
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': púšť
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mriežka
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': dúha
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': hviezdy
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žiadne
@@ -1167,6 +1208,10 @@ sk:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: otočiť {SPRITE} {DIRECTION} {N} stupňov
         options:
@@ -1238,7 +1283,10 @@ sk:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": nie je to ryba
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": môj-štítok
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nie je môj-štítok
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1246,7 +1294,10 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -1258,9 +1309,19 @@ sk:
             "{x: 300, y: 100}": vpravo hore
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: získať ďalší predmet
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1299,6 +1360,7 @@ sk:
             "{x: 300, y: 100}": vpravo hore
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: odstráň {SELECT} {COSTUME}
         options:
@@ -1391,6 +1453,7 @@ sk:
             MOVES.Roll: Body Roll
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: Žiadne
       Mikelab_ifLabel:
         text: ak {DANCE} robí {DO1} inak {DO2}
@@ -1414,14 +1477,20 @@ sk:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie je môj-štítok
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'poloha x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: náhodná farba
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: postava {SPRITE} zastav {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: opakuj donekonečna
       Mikelab_sendBad:
@@ -1429,10 +1498,30 @@ sk:
       Mikelab_sendGood:
         text: posunúť predmet vpravo
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1440,11 +1529,20 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': vpravo
             '"left"': vľavo
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: nová {COSTUME} postava na {LOCATION}
         options:
@@ -1458,6 +1556,7 @@ sk:
             "{x: 300, y: 100}": vpravo hore
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: po kliknutí na {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1468,42 +1567,63 @@ sk:
             '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
+            '"space"': spacebar
             '"w"': Z
             '"a"': A
             '"s"': J
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': šípka hore
             '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
+            '"space"': spacebar
             '"w"': Z
             '"a"': A
             '"s"': J
             '"d"': D
       Mikelab_whenMouseClicked:
         text: po kliknutí myšou
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: po kliknutí {KEY}
         options:
           KEY:
             '"yes"': áno
             '"no"': nie
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': šípka hore
             '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x súradnica {SPRITE}
       Mikelab_yLocationOf:
         text: y súradnica {SPRITE}
       RyanLab_moveForward:
         text: posuň sa dopredu
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: otoč sa vľavo
       RyanLab_turnRight:
@@ -1568,9 +1688,16 @@ sk:
       aalab_setupStory:
         text: nastav príbeh
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': náhodný
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:

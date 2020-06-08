@@ -303,6 +303,7 @@ sk-SK:
         spinning right: rýchlo sa otočiť vpravo
       Virtual Pet 1_2019:
         wandering: túlať sa
+        mystery: mystery
         spinning right: rýchlo sa otočiť vpravo
         moving east: posúvať sa na východ
         spinning left: rýchlo sa otočiť vľavo
@@ -352,7 +353,10 @@ sk-SK:
         growing: rásť
         spinning right2: rýchlo sa otočiť vľavo2
         moving south: posúvať sa na juh
+        shrinking2: shrinking2
         swimming left and right: plávať vľavo a vpravo
+        growing2: growing2
+        moving south2: moving south2
         swimming left and right2: plávať vľavo a vpravo2
         moving north: posúvať sa na sever
         jittering: chvieť sa
@@ -420,7 +424,9 @@ sk-SK:
         moving west: posúvať sa na západ
         spinning right: rýchlo sa otočiť vpravo
       behaviors 1:
+        mystery behavior: mystery behavior
         wandering: túlať sa
+        running east: running east
         spinning left: rýchlo sa otočiť vľavo
         spinning right: rýchlo sa otočiť vpravo
         shrinking: zmenšovať sa
@@ -433,7 +439,9 @@ sk-SK:
         patrolling: hliadkovať
         moving east: posúvať sa na východ
       behaviors 2:
+        flying: flying
         wandering: túlať sa
+        running east: running east
         spinning left: rýchlo sa otočiť vľavo
         spinning right: rýchlo sa otočiť vpravo
         shrinking: zmenšovať sa
@@ -446,6 +454,8 @@ sk-SK:
         patrolling: hliadkovať
         moving east: posúvať sa na východ
       behaviors 3:
+        zooming east: zooming east
+        driving east: driving east
         wandering: túlať sa
         spinning left: rýchlo sa otočiť vľavo
         spinning right: rýchlo sa otočiť vpravo
@@ -460,6 +470,8 @@ sk-SK:
         moving east: posúvať sa na východ
       behaviors 3a:
         spinning right: rýchlo sa otočiť vpravo
+        zooming east: zooming east
+        driving east: driving east
         wandering: túlať sa
         spinning left: rýchlo sa otočiť vľavo
         shrinking: zmenšovať sa
@@ -472,7 +484,9 @@ sk-SK:
         patrolling: hliadkovať
         moving east: posúvať sa na východ
       behaviors 4:
+        move south and west: move south and west
         wandering: túlať sa
+        running east: running east
         spinning left: rýchlo sa otočiť vľavo
         spinning right: rýchlo sa otočiť vpravo
         shrinking: zmenšovať sa
@@ -490,6 +504,8 @@ sk-SK:
         shrinking: zmenšovať sa
         growing: rásť
         moving east: posúvať sa na východ
+        rolling: rolling
+        running east: running east
         wandering: túlať sa
         moving south: posúvať sa na juh
         swimming left and right: plávať vľavo a vpravo
@@ -503,6 +519,8 @@ sk-SK:
         spinning right: rýchlo sa otočiť vpravo
         shrinking: zmenšovať sa
         growing: rásť
+        rolling: rolling
+        running east: running east
         wandering: túlať sa
         moving south: posúvať sa na juh
         swimming left and right: plávať vľavo a vpravo
@@ -510,6 +528,8 @@ sk-SK:
         moving west: posúvať sa na západ
         patrolling: hliadkovať
         moving east: posúvať sa na východ
+      behaviors free play:
+        spinning and growing: spinning and growing
       courseE_Dogger_2:
         drive left: jazdi vľavo
         drive right: jazdi vpravo
