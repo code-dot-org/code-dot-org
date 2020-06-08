@@ -3,6 +3,30 @@ zu:
   data:
     block_categories:
       Actions: Izenzo
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
+      Color: Color
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
+      Dancers: Dancers
+      Default: Default
+      Events: Events
+      Functions: Functions
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Ngokulandelana
+      Loops: Loops
       Math: Izibalo
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Umbhalo
+      Variables: Variables
+      'Variables ': 'Variables '
+      World: World

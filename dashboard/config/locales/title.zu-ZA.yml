@@ -1,1 +1,66 @@
---- {}
+---
+zu-ZA:
+  data:
+    title:
+      BigEvent: The Big Event
+      BigEvent_2018: The Big Event
+      BinaryBracelets: Binary Bracelets
+      BinaryBracelets_2018: Binary Bracelets
+      BinaryImages: Binary Images
+      BinaryImages_2018: Binary Images
+      BuildingAFoundation: Building a Foundation
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      ComputationalThinking: Computational Thinking
+      Conditionals: Conditionals
+      Conditionals_2018: Conditionals
+      Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DiceRace: 'Real Life Algorithms: Dice Race'
+      DigitalCitizenship: Digital Citizenship
+      DigitalFootprint: Your Digital Footprint
+      DigitalFootprint_2018: Your Digital Footprint
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun: For Loop Fun
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers: Functional Suncatchers
+      GettingLoopy: Getting Loopy
+      GettingLoopy_2018: Getting Loopy
+      GoingPlacesSafely: Going Places Safely
+      GoingPlacesSafely_2018: Going Places Safely
+      GraphPaperProgramming: Graph Paper Programming
+      GraphPaperProgramming_2018: Graph Paper Programming
+      Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
+      MoveIt: Move it, Move it
+      MoveItMoveIt_2018: Move It, Move It
+      PaperPlanes: 'Real-life Algorithms: Paper Planes'
+      PaperPlanes_2018: 'Real-life Algorithms: Paper Planes'
+      PlantASeed: 'Real-life Algorithms: Plant a Seed'
+      PlantASeed_2018: 'Real-life Algorithms: Plant a Seed'
+      RelayProgramming: Relay Programming
+      RelayProgramming_2018: Relay Programming
+      SongwritingParameters: Songwriting
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters: Songwriting With Parameters
+      TangramAlgorithms: Tangram Algorithms
+      UnplugHappyMaps: Happy Maps
+      UnplugHappyMaps_2018: Happy Maps
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
+      courseB_unplugged_MRF: Unplugged Activity
+      courseB_unplugged_MRF_2018: My Robotic Friends
+      courseB_unplugged_loopyMRF: Unplugged Activity
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+      courseC_Unplugged_ScreenOutTheMean: Unplugged Activity
+      courseC_Unplugged_ScreenOutTheMean_2018: Unplugged Activity
+      courseD_unplugged_digitalCitizenship: Unplugged Activity
+      courseD_unplugged_digitalCitizenship_2018: Unplugged Activity
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+      courseF_unplugged_powerOfWords: Unplugged Activity
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
