@@ -5,6 +5,10 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 
+# For Azure Speech Service
+azure_speech_service_key: !Secret
+azure_speech_service_region: !Secret
+
 # Disable Secrets for CI, unit-test runs,
 # and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
 <% if ci_test || !chef_managed -%>
@@ -44,7 +48,3 @@ disable_s3_image_uploads: true
 
 # provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
-
-# For Azure Speech Service
-azure_speech_service_key: !Secret
-azure_speech_service_region: !Secret
