@@ -9,16 +9,20 @@ eu-ES:
       BinaryImages: Irudi bitarrak
       BinaryImages_2018: Irudi bitarrak
       BuildingAFoundation: Oinarri bat Eraikitzen
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Pentsamendu konputazionala
       Conditionals: Baldintzak
       Conditionals_2018: Baldintzak
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Benetako algoritmoak: dado lasterketa'
       DigitalCitizenship: Hiritartasun digitala
       DigitalFootprint: Zure aztarna digitala
       DigitalFootprint_2018: Zure aztarna digitala
       EnvelopeVariables: Gutun-azaleko aldagarriak
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Begizta jostarirako
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funtzioak aztertzen
       GettingLoopy: Iteratzen
       GettingLoopy_2018: Iteratzen
@@ -27,6 +31,7 @@ eu-ES:
       GraphPaperProgramming: Paper grafiko programazioa
       GraphPaperProgramming_2018: Paper grafiko programazioa
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Glibs txoroa
       MoveIt: Mugitu, mugitu
       MoveItMoveIt_2018: Mugi ezazu, mugi ezazu!
@@ -37,15 +42,25 @@ eu-ES:
       RelayProgramming: Txandaka programatzen
       RelayProgramming_2018: Txandaka programatzen
       SongwritingParameters: Musika idazten
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Abestiak sortzen parametroekin
       TangramAlgorithms: Tangram algoritmoak
       UnplugHappyMaps: Mapa Zoriontsuak
       UnplugHappyMaps_2018: Mapa Zoriontsuak
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Lineaz kanpoko ekintza
       courseB_unplugged_MRF_2018: Nire lagun robotikoak
       courseB_unplugged_loopyMRF: Lineaz kanpoko ekintza
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Lineaz kanpoko ekintza
       courseC_Unplugged_ScreenOutTheMean_2018: Lineaz kanpoko ekintza
       courseD_unplugged_digitalCitizenship: Lineaz kanpoko ekintza
       courseD_unplugged_digitalCitizenship_2018: Lineaz kanpoko ekintza
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Lineaz kanpoko ekintza
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

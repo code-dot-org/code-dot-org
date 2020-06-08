@@ -18,11 +18,14 @@ eu:
       Game/Score: Jokoa/Puntuak
       Games/Score: Jokoak/Puntuak
       Groups: Taldeak
+      Input: Input
       Locations: Kokalekuak
       Logic: Logika
       Loops: Itzuliak
       Math: Matematika
       Numbers: Zenbakiak
+      Properties: Properties
+      Sprites: Sprites
       Text: Testua
       Variables: Aldagaiak
       'Variables ': 'Aldagaiak '
