@@ -353,6 +353,7 @@ pl:
         C4_unplugged_forloops: Pętle dla (for)
         C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Kąty w Artyście
         CSF_collector_k1_blocks: 'Podstawy Informatyki: Kolektor'
         CSF_collector_repeat_loops: Kolektor pętli powtórz
@@ -390,15 +391,50 @@ pl:
         csd_external_netflix_data: Jak NetFlix tworzy TV Show i Movie Suggestions?
         csd_external_waze_data: Dlaczego tylu użytkowników ma obsesję na punkcie Waze?
         csd_gamelab_animation_tab: Karta Animacji
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Prędkość
         csd_weblab_intro_1: Wprowadzenie do Web Lab - Część 1
         csd_weblab_intro_2: Wprowadzenie do Web Lab - Część 2
         csd_weblab_css_1: Wprowadzenie do CSS - Część 1
         csd_weblab_css_2: Wprowadzenie do CSS - Część 2
         csd_weblab_intro_3: Wprowadzenie do Web Lab - Część 3
+        csp_applab_objects: Introduction to Objects
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_processing_lists: Processing Lists with Loops
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Wprowadzenie do Funkcji
         csp_applab_functions_parameters: Funkcje z parametrami
         csp_applab_loops: Pętle
+        csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Trochę o pikselach
         csp_cs_is_changing_everything: Informatyka zmienia wszystko
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
@@ -408,6 +444,9 @@ pl:
         csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
         csp_textcompression: Gadżet do kompresji tekstu
         csp_textcompression_new: Gadżet do kompresji tekstu
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Informatyka w algebrze - wprowadzenie
         alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
         alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
@@ -486,6 +525,7 @@ pl:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Pętle z BB-8
         CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Pętle w Epoce Lodowcowej
         CSF_scrat_loops_CF: Pętle w Epoce Lodowcowej
         CSF_if_allskins: Blok If
@@ -508,24 +548,66 @@ pl:
         hoc_dance_events: Potańcówka - Zdarzenia
         hoc_dance_properties: Potańcówka - Właściwości
         hoc_dance_congrats: Potańcówka - Rozpoczynamy!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
+        teaching_csf_how_it_works: 'Teaching CS Fundamentals: How the Course Works'
+        elem_pd_2: Elementary School Computer Science - PD video 2/2
+        what_is_cs: What is computer science?
+        repeat_block: Using the Repeat Block
+        lesson_planning: Lesson Planning
+        opd_closing: 'Teaching CS Fundamentals: Closing & Next Steps'
+        why_unplugged_lessons: Getting "unplugged"
+        writing_first_program: Writing your first computer program
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lesson in Action - Songwriting with Functions
+        what_is_an_event: What is an event?
+        teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
         csd_pair_programming: Programowanie w parach
+        csd_gamelab_functions: Calling and Defining Functions
         csd_applab_parameters: Funkcje z parametrami
+        csd_applab_loops: Loops in App Lab
         csd_problem_solving_process: Proces Rozwiązywania Problemów
+        CSF_Going_Places_Safely: My Online Neighborhood
+        CSF_SpriteLab_Intro_v2: Introducing Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: How to Make a Sprite
         CSF_SpriteLab_SpritesInAction_v2: Duszki w akcji
         csd_debugging: Debugowanie
+        csd_applab_designmode_short: App Lab Design Mode
+        csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
+        oceans_machine_learning: Machine Learning
+        oceans_training_data: Training Data
+        oceans_societal_implications: Societal Implications
         hoc_dance_congrats_2019: Potańcówka 2019 — Dobrej zabawy!
         hoc_dance_warmup_2019: Potańcówka 2019 — Rozgrzewka
         hoc_dance_events_2019: Potańcówka 2019 — Wydarzenia
         hoc_dance_measures_2019: Potańcówka 2019 — Takty
         hoc_dance_properties_2019: Potańcówka 2019 — Właściwości
+        csd_what_computers_do: What Do Computers Do?
+        csf_my_online_neighborhood_2020: My Online Neighborhood
+        csf_follow_the_digital_trail: Follow the Digital Trail
+        csf_private_and_personal_information: Private and Personal Information
         csd_what_computers_are: Czym jest komputer?
         codebreak_e01: 'Code Break 1.0: Algorytmy z Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypy z Markiem Cubanem i Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Encryption with Ashton Kutcher and Mia Gil Epner'
         codebreak_e04: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
         codebreak_e05: 'Odcinek 5.0 - Symulacje & dane z Billem Gatesem'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
         codebreak_e08: 'Odcinek 8.0 - Zmienne z Yarą Shahidi i Fuzzy Khosrowshahi '
         codebreak_e09: 'Code Break 9.0: Wydarzenia z Macklemore i Scottem Forstallem'
         codebreak_e10: 'Code Break 10.0: AI z Kat Graham i Kate Park'
+        codebreak_e11: 'Odcinek 11.0 - Abstrakcja z Susan Wojcicki & China Anne McClain'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

@@ -9,16 +9,20 @@ pl-PL:
       BinaryImages: Binarne obrazy (Binary Images)
       BinaryImages_2018: Binarne obrazy (Binary Images)
       BuildingAFoundation: Kładąc podwaliny (Building a Foundation)
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Myślenie komputacyjne
       Conditionals: Zdania z warunkami
       Conditionals_2018: Zdania z warunkami
       Crowdsourcing: Praca w grupie (Crowdsourcing)
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algorytmy z życia wzięte: Gra w kości'
       DigitalCitizenship: Cyfrowe obywatelstwo
       DigitalFootprint: Twój cyfrowy ślad
       DigitalFootprint_2018: Twój cyfrowy ślad
       EnvelopeVariables: Zmienne w kopertach
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Zabawa z pętlą "dla"
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: 'Łapacze Słońca (Suncatchers): Funkcje'
       GettingLoopy: Poznając pętle
       GettingLoopy_2018: Poznając pętle
@@ -27,6 +31,7 @@ pl-PL:
       GraphPaperProgramming: Programowanie na papierze milimetrowym
       GraphPaperProgramming_2018: Programowanie na papierze milimetrowym
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
       MoveIt: Przenieś go, Przenieś go
       MoveItMoveIt_2018: Przenieść go, przenieść go
@@ -37,12 +42,14 @@ pl-PL:
       RelayProgramming: Sztafeta programowania
       RelayProgramming_2018: Sztafeta programowania
       SongwritingParameters: Pisanie piosenek
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Pisanie Piosenek z parametrami
       TangramAlgorithms: Algorytmy na tangramach
       UnplugHappyMaps: Szczęśliwe Mapy (Happy Maps)
       UnplugHappyMaps_2018: Szczęśliwe Mapy (Happy Maps)
       courseA_unplugged_loops: Pętle bez komputera
       courseA_unplugged_loops_2018: Pętle bez komputera
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Aktywność unplugged (bez komputera)
       courseB_unplugged_MRF_2018: Moi przyjaciele wśród robotów
       courseB_unplugged_loopyMRF: Aktywność unplugged (bez komputera)
@@ -51,7 +58,9 @@ pl-PL:
       courseC_Unplugged_ScreenOutTheMean_2018: Aktywność unplugged (bez komputera)
       courseD_unplugged_digitalCitizenship: Aktywność unplugged (bez komputera)
       courseD_unplugged_digitalCitizenship_2018: Aktywność unplugged (bez komputera)
+      courseE_unplugged_CnC_2018: Digital Sharing
       courseE_unplugged_privateInformation: 'Edukacja Zdrowego Rozsądku: Prywatne
         i Osobiste Informacje '
       courseE_unplugged_privateInformation_2018: 'brak tłumaczenia: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Aktywność unplugged (bez komputera)
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
