@@ -63,6 +63,7 @@ zh-CN:
   previous_page: 上一页
   next_page: 下一页
   next_resource: 下一个资源
+  done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "好吧"
   or: "或"
@@ -310,6 +311,7 @@ zh-CN:
       sections: "小组"
       help_support: "帮助与支持"
       report_bug: "报告错误"
+      report_abuse: "Report abuse"
       teacher_community: "教师社区"
       professional_learning: "专业学习"
       documentation: "使用文档"
@@ -345,6 +347,7 @@ zh-CN:
       help_us: "帮助我们"
       teach: "教学"
       about: "关于"
+      legal: "Privacy & Legal"
       legal_privacy: "隐私政策"
       legal_tos: "使用条款"
     user:
@@ -711,11 +714,15 @@ zh-CN:
     wrong_body: "你已输入的答案不正确。请再试一次 ！"
     correct_title: "正确。"
     correct_body: "这是正确的答案。"
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交这份答案。"
     correct_title: "谢谢你"
     correct_body: "感谢您提交这份答案。"
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交答案。"
@@ -753,6 +760,8 @@ zh-CN:
     open_response_body: "感谢您的回复！"
     correct_title: "正确。"
     correct_body: "这是正确的答案。"
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "确定"
     startover_title: "你确定要重新开始吗？"
@@ -879,6 +888,14 @@ zh-CN:
     instructor_feedback: '教师反馈'
     peer_feedback: '同伴反馈'
     outdated: '这个反馈是添加给以前提交的版本'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
     peer_review: '互相检查'
   external_links:
     disclaimer: 免责声明
@@ -938,6 +955,15 @@ zh-CN:
     download_in_Vietnamese: '下载越南语版本︰'
     windows: 'Windows（64位）'
     mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: '这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。'
   hidden_stage: "你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。"
   hidden_script: "你的老师不期待你来这里。请询问你的老师应该上哪个单元。"
@@ -950,6 +976,34 @@ zh-CN:
   view_all_units: '查看所有单元'
   view_teacher_guide: '查看教师指南'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
       first_name: '名'
       first_name_preferred: '首选名字'
@@ -1009,6 +1063,7 @@ zh-CN:
         csfirst: 'Google CS First'
         khan: '可汗学院'
         kodable: 'Kodable'
+        lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "其他："
@@ -1063,6 +1118,11 @@ zh-CN:
   maker:
     google_oauth:
       login_with_google: '登录到Google的制作者应用'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: '请输入您的登录代码。'
   parent_email_banner:
     text: "**你是一名父母还是监护人？**将你的电子邮箱链接到此帐户，以便随时了解你孩子的进度和项目！"

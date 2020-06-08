@@ -4,76 +4,367 @@ zh-CN:
     behavior_names:
       CourseE_Project_SpriteLab:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       CourseE_Project_SpriteLab_2019:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       CourseE_hoops:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        being hungry: being hungry
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        swimming left and right: swimming left and right
       CourseF_Project_SpriteLab:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       CourseF_Project_SpriteLab_2019:
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
         wandering: 徘徊
       Dance Party 2:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        spinning left: spinning left
+        swimming left and right: swimming left and right
       Dance Party 2_2019:
+        spinning left: spinning left
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        swimming left and right: swimming left and right
       Dance Party 3_2019:
+        spinning left: spinning left
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        swimming left and right: swimming left and right
       Dance Party 4_2019:
+        spinning left: spinning left
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        swimming left and right: swimming left and right
       Dance Party 5_2019:
+        spinning left: spinning left
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        swimming left and right: swimming left and right
       Dance Party 6:
+        jittering: jittering
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Dance Party 6_2019:
+        jittering: jittering
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Dance Party 7_2019:
+        jittering: jittering
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Dance Party Freeplay:
+        jittering: jittering
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Fish Tank 2-validated_2019:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Fish Tank 3-validated_2019:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Fish Tank 4-validated_2019:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Fish Tank 5-validated_2019:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Fish Tank 6-validated_2019:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       OPD-K5-spritelab-2:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       OPD-K5-spritelab-3:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       OPD-K5-spritelab-4:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       OPD-K5-spritelab-6:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       OPD-K5-spritelab-7:
+        swimming left and right: swimming left and right
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Virtual Pet 1_2019:
         wandering: 徘徊
         mystery: '神秘
 
 '
+        spinning right: spinning right
+        moving east: moving east
+        spinning left: spinning left
+        shrinking: shrinking
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        growing: growing
+        patrolling: patrolling
       Virtual Pet 2:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
+        spinning left: spinning left
+        swimming left and right: swimming left and right
       Virtual Pet 2_2019:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       Virtual Pet 3_2019:
         wandering: 徘徊
         wandering2: 徘徊2
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
         moving east2: '向右移动2
 
 '
+        shrinking: shrinking
         spinning left2: '向左旋转2
 
 '
+        growing: growing
         spinning right2: '向右旋转2
 
 '
+        moving south: moving south
         shrinking2: '缩小2
 
 '
+        swimming left and right: swimming left and right
         growing2: '放大2
 
 '
@@ -83,9 +374,13 @@ zh-CN:
         swimming left and right2: '左右游动2
 
 '
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
         moving north2: '向上移动2
 
 '
+        patrolling: patrolling
         jittering2: '抖动2
 
 '
@@ -96,15 +391,62 @@ zh-CN:
 
 '
       Virtual Pet 4:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Virtual Pet 4_2019:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       Virtual Pet 5:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Virtual Pet 6:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       Virtual Pet Freeplay:
+        shrinking: shrinking
+        patrolling: patrolling
         wandering: 徘徊
+        growing: growing
+        jittering: jittering
+        moving east: moving east
+        moving north: moving north
+        moving south: moving south
+        moving west: moving west
+        spinning right: spinning right
       behaviors 1:
         mystery behavior: '神秘行为
 
@@ -113,6 +455,17 @@ zh-CN:
         running east: '向右运行
 
 '
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors 2:
         flying: '快速移动
 
@@ -121,6 +474,17 @@ zh-CN:
         running east: '向右运行
 
 '
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors 3:
         zooming east: '向右缩放
 
@@ -129,7 +493,19 @@ zh-CN:
 
 '
         wandering: 徘徊
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors 3a:
+        spinning right: spinning right
         zooming east: '向右缩放
 
 '
@@ -137,6 +513,16 @@ zh-CN:
 
 '
         wandering: 徘徊
+        spinning left: spinning left
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors 4:
         move south and west: '左右移动
 
@@ -145,31 +531,148 @@ zh-CN:
         running east: '向右运行
 
 '
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors 6:
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving east: moving east
+        rolling: rolling
         running east: '向右运行
 
 '
         wandering: 徘徊
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       behaviors 7:
+        moving north: moving north
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        rolling: rolling
         running east: '向右运行
 
 '
         wandering: 徘徊
+        moving south: moving south
+        swimming left and right: swimming left and right
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        moving east: moving east
       behaviors free play:
         spinning and growing: '旋转和放大
 
 '
       courseE_Dogger_2:
+        drive left: drive left
+        drive right: drive right
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseE_aboutme_1:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseE_aboutme_2:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseE_aboutme_3:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseE_aboutme_4:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseE_aboutme_5:
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        swimming left and right: swimming left and right
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
       courseF_project_1:
+        flying south and loop: flying south and loop
+        drive south and loop: drive south and loop
         wandering: 徘徊
+        moving east: moving east
+        spinning left: spinning left
+        spinning right: spinning right
+        shrinking: shrinking
+        growing: growing
+        moving south: moving south
+        being hungry: being hungry
+        moving north: moving north
+        jittering: jittering
+        moving west: moving west
+        patrolling: patrolling
+        swimming left and right: swimming left and right

@@ -971,6 +971,10 @@ zh-CN:
       New Infinity Project: 创建并分享你想的任何东西！
       New Minecraft Hero Project: "**自由游戏时间：** 是时候自行探索了！"
       New Sports Project: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，创造！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
       OPD-K5-events-3: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
       OPD-K5-events-4: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
@@ -1367,12 +1371,24 @@ zh-CN:
       courseA_playLab_events2_2019: 乔治狗想说 “大家好”。可以帮帮它吗？
       courseA_playLab_events3: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2018: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: 添加模块，在点击`右`按钮时向右移动。
       courseA_playLab_events4_2018: 添加另一个时间模块，在按下`右`按钮时，让乔治向右移动。
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       courseA_playLab_events6_2018: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: 添加任何你想要的到此游戏中。你能否让恐龙在乔治碰上它时消失？
       courseA_playLab_events7_2018: _自由发挥_：把觉得好玩的东西添加到游戏里。
       courseA_playLab_events7_2019: _自由发挥_：把觉得好玩的东西添加到游戏里。
