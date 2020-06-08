@@ -34,7 +34,7 @@ Use the links below to find our program curriculum guides, course information, a
 ### [CS Discoveries](https://code.org/educate/csd) (6-10)
 
 - [CS Discoveries Teacher Resources](http://curriculum.code.org/csd)
-  - <a href="https://code.org/files/CSDiscoveries_1-pager.pdf", target=\_"blank">CS Discoveries One-Pager</a>
+  - <a href="https://code.org/files/CSDiscoveries_1-pager.pdf", target="_blank">CS Discoveries One-Pager</a>
   - [CS Discoveries Curriculum Guide - 2019-20](https://docs.google.com/document/d/19Hne2rEZrvWA8OcsLpt9ShpkPzKKlxYnj-_cIfLwHwI/preview)
 
 ### [CS Fundamentals](https://code.org/educate/curriculum/elementary-school) (K-5)
