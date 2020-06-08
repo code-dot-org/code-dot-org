@@ -226,20 +226,21 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level when next level is unplugged skips the entire unplugged stage' do
     script = create(:script, name: 's1')
-    first_stage = create(:lesson, script: script, absolute_position: 1)
+    lesson_group = create :lesson_group
+    first_stage = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_first = create(:script_level, script: script, lesson: first_stage, position: 1, chapter: 1)
 
-    unplugged_stage = create(:lesson, script: script, absolute_position: 2)
+    unplugged_stage = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
     create(:script_level, levels: [create(:unplugged)], script: script, lesson: unplugged_stage, position: 1, chapter: 2)
     create(:script_level, levels: [create(:match)], script: script, lesson: unplugged_stage, position: 2, chapter: 3)
     create(:script_level, levels: [create(:match)], script: script, lesson: unplugged_stage, position: 3, chapter: 4)
 
-    plugged_stage = create(:lesson, script: script, absolute_position: 3)
+    plugged_stage = create(:lesson, script: script, absolute_position: 3, lesson_group: lesson_group)
     script_level_after = create(:script_level, script: script, lesson: plugged_stage, position: 1, chapter: 5)
 
     # make sure everything is in the order we want it to be
     script.reload
-    assert_equal [first_stage, unplugged_stage, plugged_stage], script.lessons
+    assert_equal [first_stage, unplugged_stage, plugged_stage], lesson_group.lessons
     assert_equal script_level_first, script.script_levels.first
     assert_equal script_level_after, script.script_levels.last
 
@@ -284,20 +285,21 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_progression_level when next level is spelling_bee skips the entire spelling_bee stage in non-english' do
     script = create(:script, name: 's1')
-    first_stage = create(:lesson, script: script, absolute_position: 1)
+    lesson_group = create :lesson_group
+    first_stage = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_first = create(:script_level, script: script, lesson: first_stage, position: 1, chapter: 1)
 
-    spelling_bee_stage = create(:lesson, script: script, absolute_position: 2)
+    spelling_bee_stage = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
     spelling_bee_first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: spelling_bee_stage, position: 1, chapter: 2)
     create(:script_level, levels: [create(:match)], script: script, lesson: spelling_bee_stage, position: 2, chapter: 3)
     create(:script_level, levels: [create(:match)], script: script, lesson: spelling_bee_stage, position: 3, chapter: 4)
 
-    non_spelling_bee_stage = create(:lesson, script: script, absolute_position: 3)
+    non_spelling_bee_stage = create(:lesson, script: script, absolute_position: 3, lesson_group: lesson_group)
     non_spelling_bee_first = create(:script_level, script: script, lesson: non_spelling_bee_stage, position: 1, chapter: 5)
 
     # make sure everything is in the order we want it to be
     script.reload
-    assert_equal [first_stage, spelling_bee_stage, non_spelling_bee_stage], script.lessons
+    assert_equal [first_stage, spelling_bee_stage, non_spelling_bee_stage], lesson_group.lessons
     assert_equal script_level_first, script.script_levels.first
     assert_equal non_spelling_bee_first, script.script_levels.last
 
