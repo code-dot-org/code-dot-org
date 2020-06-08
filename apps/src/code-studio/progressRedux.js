@@ -520,13 +520,13 @@ const isCurrentLevel = (currentLevelId, level) => {
  * state.levelProgress
  */
 const levelWithStatus = (
-  {levelProgress, levelPairing = {}, currentLevelId, isSublevel = false},
+  {levelProgress, levelPairing = {}, currentLevelId},
   level
 ) => {
-  if (level.kind !== LevelKind.unplugged && !isSublevel) {
+  if (level.kind !== LevelKind.unplugged) {
     if (!level.title || typeof level.title !== 'number') {
       throw new Error(
-        'Expect all non-unplugged, non-bubble choice sublevel, levels to have a numerical title'
+        'Expect all non-unplugged levels to have a numerical title'
       );
     }
   }
@@ -549,22 +549,9 @@ export const levelsByLesson = ({
   currentLevelId
 }) =>
   stages.map(stage =>
-    stage.levels.map(level => {
-      let statusLevel = levelWithStatus(
-        {levelProgress, levelPairing, currentLevelId},
-        level
-      );
-
-      if (statusLevel.sublevels) {
-        statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithStatus(
-            {levelProgress, levelPairing, currentLevelId, isSublevel: true},
-            sublevel
-          )
-        );
-      }
-      return statusLevel;
-    })
+    stage.levels.map(level =>
+      levelWithStatus({levelProgress, levelPairing, currentLevelId}, level)
+    )
   );
 
 /**
@@ -621,11 +608,9 @@ export function statusForLevel(level, levelProgress) {
   // for each uid). When locked, they will end up not having a per-uid
   // test result, but will have a LOCKED_RESULT for the LevelGroup (which
   // is tracked by ids)
-  // BubbleChoice sublevels will have a level_id
   // Worth noting that in the majority of cases, ids will be a single
   // id here
-  const id =
-    level.uid || level.level_id || bestResultLevelId(level.ids, levelProgress);
+  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
   let status = activityCssClass(levelProgress[id]);
   if (
     level.uid &&

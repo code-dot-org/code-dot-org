@@ -303,10 +303,6 @@ class ScriptLevel < ActiveRecord::Base
       summary[:name] = level.display_name || level.name
     end
 
-    if bubble_choice?
-      summary[:sublevels] = level.summarize_sublevels(script_level: self)
-    end
-
     if Rails.application.config.levelbuilder_mode
       summary[:key] = level.key
       summary[:skin] = level.try(:skin)
