@@ -30,6 +30,7 @@ ko:
             MOVES.Clown: 강남
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
           MOVE2:
             MOVES.Roll: 구르기
@@ -42,6 +43,7 @@ ko:
             MOVES.Clown: 강남
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} 이후"
@@ -87,6 +89,7 @@ ko:
             MOVES.Clown: 강남
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ ko:
             MOVES.Clown: 강남
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ ko:
             MOVES.Kick: 별
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -218,10 +223,13 @@ ko:
             MOVES.Kick: 별
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: "{START} 후{N} 마디마다반복 "
       Dancelab_everySeconds:
@@ -282,6 +290,7 @@ ko:
             MOVES.Roll: 구르기
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
       Dancelab_ifTime:
         text: "{UNIT} 이(가) {OP} {N} {DO1} {DO2} 하는 경우"
@@ -965,10 +974,19 @@ ko:
         text: 설정
       Dancelab_whenSetup2:
         text: 설정
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -1013,10 +1031,13 @@ ko:
         options:
           CHOICE:
             '"this"': 이
+            '"other"': other
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
       gamelab_isTouchingEdges:
         text: "{SPRITE} 은 접하는 가장자리입니다."
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
       gamelab_keyPressed:
@@ -1075,6 +1096,8 @@ ko:
             '"left"': 왼쪽으로
       gamelab_mouseLocation:
         text: 마우스 위치
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 앞으로
       gamelab_moveInDirection:
@@ -1087,6 +1110,10 @@ ko:
             '"West"': 서쪽
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1121,13 +1148,31 @@ ko:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 동굴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': 법원
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 사막
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 은하
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 그리드
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 공상 과학
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 별
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
             undefined: 없음
@@ -1164,12 +1209,18 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: 설정 {SPRITE} {DIRECTION} {N} 도
         options:
           DIRECTION:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: 아래쪽 화살표를 눌렀을 때
       gamelab_whenKey:
@@ -1233,7 +1284,10 @@ ko:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 물고기가 아닙니다.
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 내 라벨
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 내 라벨이 아님
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': 크기
@@ -1241,7 +1295,10 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
@@ -1253,9 +1310,19 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: 다음 객체 가져오기
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -1294,6 +1361,7 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: 제거 {SELECT} {COSTUME}
         options:
@@ -1386,6 +1454,7 @@ ko:
             MOVES.Roll: 구르기
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
+            MOVES.Thriller: Zombie
             MOVES.Rest: 없음
       Mikelab_ifLabel:
         text: |-
@@ -1411,14 +1480,20 @@ ko:
           DANCE:
             MOVES.ClapHigh: 물고기
             MOVES.Clown: 내 라벨이 아님
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: 랜덤 색
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: 스프라이트 {SPRITE} 중지 {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: 무한반복
       Mikelab_sendBad:
@@ -1426,10 +1501,30 @@ ko:
       Mikelab_sendGood:
         text: 객체 오른쪽으로 이동
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': 크기
@@ -1437,11 +1532,20 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: 새로운 {COSTUME} 스프라이트 에서 {LOCATION}
         options:
@@ -1455,6 +1559,7 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: 때 {SPRITE} 클릭
       Mikelab_whenKeyPressed:
@@ -1465,42 +1570,63 @@ ko:
             '"down"': 아래쪽 방향키를 누르면
             '"left"': 왼쪽 방향키를 누르면
             '"right"': 오른쪽 방향키를 누르면
+            '"space"': spacebar
             '"w"': 왼쪽
             '"a"': A
             '"s"': 아래쪽
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': 위쪽 방향키를 누르면
             '"down"': 아래쪽 방향키를 누르면
             '"left"': 왼쪽 방향키를 누르면
             '"right"': 오른쪽 방향키를 누르면
+            '"space"': spacebar
             '"w"': 왼쪽
             '"a"': A
             '"s"': 아래쪽
             '"d"': D
       Mikelab_whenMouseClicked:
         text: 마우스를 클릭했을 때
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: 때 {KEY} 클릭
         options:
           KEY:
             '"yes"': 네
             '"no"': 아니
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': 위쪽 방향키를 누르면
             '"down"': 아래쪽 방향키를 누르면
             '"left"': 왼쪽 방향키를 누르면
             '"right"': 오른쪽 방향키를 누르면
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
       RyanLab_moveForward:
         text: 앞으로 이동
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: 왼쪽으로 회전
       RyanLab_turnRight:
@@ -1565,9 +1691,16 @@ ko:
       aalab_setupStory:
         text: 설정 스토리
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': random(랜덤)
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

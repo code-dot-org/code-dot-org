@@ -11,6 +11,12 @@ ko:
         페어 프로그래밍을 중지하고 다시 시작해야합니다.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: is invalid. Note that each link can only be used once to reset
+                your password, and only the most recently sent link will work.
       messages:
         blank: 이(가) 필요합니다.
         blank_plural: 이(가) 필요합니다.
@@ -37,6 +43,11 @@ ko:
           밑에 있는 빈 곳에 정보들을 입력 하세요."
         finish_sign_up_subheader_markdown: "**%{email}**을 위해 Code.org 계정을 만들려면 밑에
           있는 빈 곳에 정보들을 입력 하세요."
+        finish_sign_up_subheader_provider: Fill out the following information to finish
+          creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Fill out the following information
+          to finish creating a Code.org account with **%{provider}** for **%{email}**.
+        reset_password_token: The reset password link you have followed
         error:
           future: 오늘 이전 날짜만 가능합니다.
   beta: 베타
@@ -49,14 +60,19 @@ ko:
   previous_page: 이전 페이지
   next_page: 다음 페이지
   next_resource: 다음 자료
+  done_with_module: Done with this Learning Module
   cancel: 취소
   okay: 알겠어
   or: 이거나
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   join_section:
     code:
+      title: Join a section on Code.org
       placeholder: 섹션 코드(ABCDEF)
+      instructions: 'Please enter the 6 letter code your teacher shared with you (example:
+        "ABCDEF") to join their section.'
       instructions_short: 6자리의 섹션 코드를 입력하세요.
+      submit: Join
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
     submit: 도움말 추가하기
@@ -82,8 +98,12 @@ ko:
   prize: 상품
   more_info: 자세히
   auth:
+    continue_with: Continue with %{provider}
     sign_in_with: "%{provider} 로그인"
     signed_in: 로그인 됨
+    signed_out_markdown: "### You have signed out of [Code.org](%{url})."
+    sign_out_of_markdown: "#### You used %{provider} to sign in. [Click here](%{url})
+      to sign out of %{provider}."
     already_signedup: 이미 가입했나요?
     notyet_signedup: 가입하시겠습니까?
     google_oauth2: 구글 계정
@@ -94,6 +114,8 @@ ko:
     clever: 영리 계정
     powerschool: 학교 계정
     forgot_password: 비밀번호를 잊으셨나요?
+    migration_success: Success! You have updated to our new account experience.
+    demigration_success: The new account experience is now disabled on your account.
     need_confirmation: 확인 메일을 받지 못 했나요?
     need_unlock: 잠김 해제 메일을 받지 못 했나요?
     not_linked: 죄송합니다. 여러분의 Code.org 계정이 %{provider}로 연결되어있지 않습니다. 아래에 비밀번호를 입력해서
@@ -101,7 +123,16 @@ ko:
     use_clever: 죄송합니다 Code.org 계정이 당신의 %{provider}에 연결되지 않았습니다 영리 포탈을 통해 로그인 하여 주십시오.
     unable_to_connect_provider: "%{provider}에 당신의 Code.org 계정을 연동할 수 없습니다. 다시 시도하여
       주십시오."
+    already_in_use: Your %{provider} account is already connected to another Code.org
+      account.
+    already_linked: Your %{provider} account is already linked to your Code.org account.
+    existing_account:
+      account_exists: Good news! You already have a Code.org account that uses %{email}
+      sign_in: Please sign in and we'll link your %{provider} profile.
+      sign_up: Not your email? Want to create a new account with a different email?
+        We will also link your %{provider} profile if you choose to create a new account.
   signup_form:
+    email_signup: Sign up with your email address
     student_count: "%{count} 학생 들은 이미 가입했습니다."
     teacher_count: "%{count} 선생님들은 이미 가입했습니다."
     overview: 진행상황을 확인하거나 강의을 관리하기 위해 회원으로 가입하세요. 회원가입을 하지 않아도 <a href="/">다양한 스테이지와
@@ -129,6 +160,7 @@ ko:
     age: 나이
     user_type: 학생 또는 선생님이신가요?
     submit: 가입 신청하기
+    go_to_account: Go to my account
     teacher: 선생님이신가요?
     valid_username: 사용 가능!
     invalid_username: 아이디는 최소 5문자 이상이어야 합니다.
@@ -136,8 +168,14 @@ ko:
     valid_password: 사용 가능한 비밀번호!
     invalid_password: 비밀번호는 최소 6 문자 이상이어야 합니다
     mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
+    student_consent: I confirm that I have my parent or legal guardian's permission
+      to use the Code.org services.
     agree_us_website: 본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다.
     my_data_to_us: 본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
+    student_terms_markdown: Email addresses are not stored in a form that allows us
+      to contact students. Students will never receive emails from Code.org except
+      for password recovery. See our [privacy policy](http://code.org/privacy) for
+      more information.
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
     user_type_button: 계정 유형 변경
     user_type_label: 계정 유형
@@ -196,6 +234,8 @@ ko:
     login: 로그인
     invalid_login: 잘못된 로그인입니다. 다시 시도하세요.
     pair_programming: 나는 컴퓨터 안에 파트너가 있습니다.
+    student_privacy_markdown: Learn more about why you're not seeing your full name
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: 비밀번호를 잊으셨나요?
@@ -226,6 +266,7 @@ ko:
     parent_email_added_subject: Code.org에 오신것을 환영합니다!
   teacher_mailer:
     new_teacher_subject: Code.org에 오신것을 환영합니다!
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: '여러분의 섹션:'
@@ -233,11 +274,13 @@ ko:
     code_with_teacher: "%{teacher_name} 선생님의 %{section_code}"
     confirm:
       remove: 정말로 현재 섹션에서 나가실건가요?
+    default_name: Untitled Section
     remove: "(섹션 삭제)"
     type:
       picture: 사진 암호
       word: 비밀단어
       email: 이메일
+      google_classroom: Google Classroom
       clever: 영리 계정
   follower:
     invite_sent: 초대 메일을 발송하였습니다
@@ -292,10 +335,17 @@ ko:
       sections: 섹션
       help_support: 도움말 및 지원
       report_bug: 버그 보고
+      report_abuse: Report abuse
       teacher_community: 교사 커뮤니티
       professional_learning: 전문 학습
       documentation: 문서
       tutorials: 튜토리얼
+      app_lab_documentation: App Lab Documentation
+      app_lab_tutorials: App Lab Tutorials
+      game_lab_documentation: Game Lab Documentation
+      game_lab_tutorials: Game Lab Tutorials
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
       educate_overview: 교사 개요
       educate_elementary: 초등학교
       educate_middle: 중학교
@@ -321,6 +371,7 @@ ko:
       help_us: 도움주기
       teach: 가르치기
       about: 소개
+      legal: Privacy & Legal
       legal_privacy: 개인정보보호 정책
       legal_tos: 이용 약관
     user:
@@ -328,6 +379,7 @@ ko:
       district_dashboard: 대시보드 구역
       label: 안녕하세요? %{username} 님
       stats: 코드 스튜디오
+      my_projects: My projects
       settings: 내 계정
       logout: 로그아웃
       signin: 로그인
@@ -341,6 +393,8 @@ ko:
       algebra_game: 대수학
       applab: 앱 연구실
       artist: 화가
+      artist_k1: Artist (Pre-reader)
+      basketball: Basketball
       bounce: 바운스
       calc: 계산
       dance: 댄스 파티
@@ -352,9 +406,16 @@ ko:
       gumball: 검볼의 어메이징 월드
       iceage: 아이스 에이지
       infinity: 무한
+      makerlab: Maker Toolkit
       minecraft_adventurer: Minecraft 모험가
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 마인크래프트
+      minecraft_hero: Minecraft Hero
       playlab: Play Lab
+      playlab_k1: Play Lab (Pre-reader)
+      scratch: Scratch
+      sports: Sports
       spritelab: 스프라이트 연구소
       starwars: 스타워즈
       starwarsblocks: 스타워즈 (블록)
@@ -394,6 +455,7 @@ ko:
       example: 예시 해법
       example_with_number: 예시 해법 %{solution_number}
       submitted_on: '제출:'
+      last_updated: 'Last updated:'
       unsubmit: 제출 취소
       worked_with: "~와 협력합니다."
       update_lock_settings: 잠금설정 업데이트
@@ -408,6 +470,9 @@ ko:
     current_password_hint: "(수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)"
     delete: 당신의 계정을 삭제합니다.
     delete_text: 아래 버튼을 클릭하면 당신의 계정이 삭제될 것입니다.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: '반드시 참고: 당신의 계정을 삭제하는 것은 당신의 학생들의 계정을 삭제하진 않을 것입니다.'
     delete_confirm: 정말로 당신의 계정을 삭제하시겠습니까?
     deleted_user: 삭제된 사용자
@@ -420,11 +485,32 @@ ko:
     create_personal_login_under_13_parent_email: 부모/보호자 이메일
     create_personal_login_info: 만약 학년도의 끝 후에도 Code.org 계정을 계속 사용하고 싶으시다면 아래에서 개인계정을
       만들 수 있습니다.
+    create_personal_login_link_account: You can also instead choose to connect to
+      a personal account under the “Manage Linked Accounts” section.
     create_personal_login_terms: Code.org 의 <a herf='%{terms_of_service_url}',target='_blank'>서비스
       약관</a>을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는
       것임을 확인합니다.
     create_personal_login_terms_markdown: Code.org 의 [서비스 약관](<>)을 준수할 것에 동의합니다. 13세
       미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored
+      in a form that allows us to contact students. Students will never receive emails
+      from Code.org except for password recovery. See our [privacy policy](%{privacy_policy_url})
+      for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    parent_email_label: Parent/guardian email (optional)
+    parent_email_hint: "(this can be used for password recovery)"
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
+    update: Update Account
+    account_successfully_updated: Account successfully updated.
+    auth_option_saved: You have successfully linked your %{provider} account with
+      email %{email}.
+    auth_option_saved_no_email: You have successfully linked your %{provider} account.
     update_email: 업데이트
     for_parents_and_guardians: 부모 및 보호자용
     link_a_parent_email: 부모/보호자 이메일 주소를 이 계정에 연결하여 귀 자녀의 진도와 프로젝트에 대한 업데이트를 보내 드립니다.
@@ -433,6 +519,7 @@ ko:
     none: 없음
     only_one_parent_email_supported_warning: '주: 현재는 학생 한 명당 하나의 부모/보호자 이메일 주소만 지원할
       수 있습니다.'
+    encrypted: encrypted
   user_level:
     completed: 완료
     tried: 시도함
@@ -470,10 +557,16 @@ ko:
     test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
     use_as_teacher: 선생님으로 사이트 사용하기
+    heading_elementary_markdown: |-
+      ## 20 hour courses for
+
+      # Computer Science Fundamentals (all ages)
     your_gallery: 갤러리
     no_primary_course: Code Studio 과정들을 해보세요.
     choose_next_course: 아래의 Code Studio 과정을 해보세요.
     print_certificate: 인증서 인쇄
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   move_students:
     new_section_dne: 죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요.
     section_code_cant_be_current_section: 현재 섹션과 새로운 섹션은 동일할 수 없습니다.
@@ -482,6 +575,8 @@ ko:
     student_not_found: 한 명 이상의 학생을 찾을 수 없습니다.
     all_students_must_be_in_current_section: 모든 학생들은 당신의 섹션에 등록되어야 합니다.
     already_enrolled_in_new_section: 이 학생들은 다른 섹션에 등록하였기 때문에 이동이 불가능합니다.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Code Studio 배우기
     description: 누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다.
@@ -489,6 +584,8 @@ ko:
   gender:
     male: 남
     female: 여
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: 응답 안 함
   user_type:
     student: student
@@ -540,6 +637,7 @@ ko:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
     teacher: 해법 보기
+    teacher_no_solution: Stop seeing solution
     auth_error: 해법 보기 권한이 없습니다.
     submit: 아티스트 위치 업데이트
     direction: 시작 안내(학년 기준)
@@ -549,11 +647,23 @@ ko:
     notes_coming_soon: 참고 동영상 준비중
     autoplay_option: 비디오 자동 실행
     download: 동영상 다운로드
+    show_notes: Show Notes
+    show_video: Show Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: 브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'>
         지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다.
       link: 더 알아보기
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      oceans_unsupported_browser: This browser is not supported for this tutorial.
+        Please try visiting this page using Edge, Chrome, Firefox, or another modern
+        browser.
       weblab_unsupported_browser: 불행히도 여러분이 현재 사용하는 브라우저에서 웹 연구실을 불러오는데 문제가 발생하였습니다.
         이 문제가 해결될 때까지 다른 브라우저를 사용해보세요. 불편을 드려서 죄송합니다.
       weblab_unsupported_locale_storage: 브라우저를 개인정보 보호 모드에서는 사용하면 웹 연구실 사용에 문제가 발생할
@@ -621,11 +731,17 @@ ko:
       body: 다른 사람이 만든 앱과 이미지 갤러리 보기
     gamelab:
       title: 게임 연구소
+      body: Game Lab is a programming environment where you can make simple animations
+        and games with objects and characters that interact with each other.
       audience: 13세 이상
       cta: 방법 알아보기
     hoc-encryption:
       title: 간단한 암호화
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13세 이상
       cta: 방법 알아보기
     frozen:
@@ -646,6 +762,13 @@ ko:
     hero:
       title: 마인크래프트
       body: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: 언플러그드 레슨
       audience: 6세 이상
@@ -656,8 +779,15 @@ ko:
       title: 조건
       body: 여기에 있는 카드덱을 활용한 "언플러그" 활동으로 알고리즘과 조건문에 대해서 배워보세요.
     widgets:
+      title: Widgets
+      body: Students can explore concepts from our Computer Science Principles course
+        hands-on using these digital tools. Use the widgets on their own, or create
+        a single-concept lesson for your class.
+      audience: Ages 14+
       cta: 방법 알아보기
   landing:
+    prerelease_tutorial: This tutorial is in **beta**.  It is subject to revision
+      as feedback is received and improvements are made.
     report_bug: 버그(오류) 신고하기
     support: 도움 받기
     support_url: "//support.code.org"
@@ -688,6 +818,9 @@ ko:
     correct_body: 답변 주셔서 감사 합니다.
     hide_survey_last_answer: 이 설문조사는 익명으로 처리됩니다. 결과를 확인하시려면 교사 대시보드를 방문하세요. 다섯 명 이상의
       학생이 설문에 응해야만 결과를 볼 수 있음을 알아두시기 바랍니다.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: 고마워
     wrong_body: 답변 주셔서 감사 합니다.
@@ -719,6 +852,8 @@ ko:
     open_response_body: 답변해 주셔서 감사합니다!
     correct_title: 정답
     correct_body: 정답입니다.
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?
@@ -732,6 +867,12 @@ ko:
   age_interstitial:
     age: 나이
     header: 계정 정보 업데이트
+    warning: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.
+    disclaimer: As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out_markdown: If you do not wish to provide your age you may [sign out](%{url}).
   terms_interstitial:
     title: 업데이트 된 서비스약관 및 개인정보 보호정책
     intro_desc: '아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다.
@@ -811,6 +952,8 @@ ko:
     share_u13_warning: 공유하기 전에 선생님께 여쭤보세요. 여러분 학교에 있는 다른 사용자에게만 공유할 수 있습니다.
     embed: 삽입
     advanced_share: 고급 옵션 표시
+    no_projects: You currently have no projects. Click on one of the buttons above
+      to start a project.
     name: 이름
     updated: 업데이트됨
     project_type: 프로젝트 형식
@@ -823,6 +966,9 @@ ko:
     not_saved: 저장 안됨
     view_all: 내 프로젝트 보기
     edit_project: 프로젝트 편집
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: 이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이 프로젝트는
         다른 사람과 공유할 수 없습니다.
@@ -851,14 +997,25 @@ ko:
   peer_review:
     accepted:
       name: 승인됨
+      description_markdown: "**Yes**, this submission **meets** the requirements"
     rejected:
       name: 거절됨
+      description_markdown: "**No**, this submission **does not meet** the requirements"
     escalated:
       name: 상부에 보고됨
       description: 제출 내용을 검토해 주세요.
     instructor_feedback: 강사 피드백
     peer_feedback: 동료 피드백
     outdated: 이 피드백은 이전에 제출된 버전에 추가되었습니다.
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
     peer_review: 동료 평가
   external_links:
     disclaimer: 경고
@@ -923,46 +1080,238 @@ ko:
     download_in_Vietnamese: '베트남어로 다운로드:'
     windows: 윈도우 (64비트)
     mac: 맥 OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: 현재 스테이지가 잠겨있기 때문에 해당 컨텐츠가 보이지 않습니다. 담당교사는 해당 스테이지에 대한 작업이 필요하거나 당신의
     답을 검토하기 위해서 잠금을 해제할 수 있습니다.
   hidden_stage: 이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  no_course_access_student: You don't have access to this course. Please ask your
+    teacher which course you should be on.
+  no_course_access_teacher: You don't have access to this course. If you believe you
+    should have access to this course, please write to support@code.org so that we
+    can fix the situation.
+  no_script_access_student: You don't have access to this unit. Please ask your teacher
+    which unit you should be on.
+  no_script_access_teacher: You don't have access to this unit. If you believe you
+    should have access to this unit, please write to support@code.org so that we can
+    fix the situation.
   return_unit_overview: 단위별 개요로 이동
   return_course_overview: 단위별 개요로 이동
+  view_all_units: View all units
   view_teacher_guide: 선생님 가이드 보기
   pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
+      first_name: First Name
+      first_name_preferred: Preferred First Name
+      last_name: Last Name
       email: 이메일
+      email_alternate: Alternate Email
+      gender: Gender Identity
       school_name: 학교 이름
+      school_city: School City
       school_country: 학교 국가정보
+      ages: Which age(s) do you teach this year?
+      subjects: Which subject(s) do you teach this year?
+      resources: Which of the following CS education resources do you use?
+      robotics: Which of the following robotics resources do you use?
+      workshop_organizer: Workshop Organizer
+      workshop_facilitator: Workshop Facilitator
+      workshop_course: Workshop Course
+      email_opt_in: Can we email you about Code.org’s international program, updates
+        to our courses, or other computer science news?
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner(s) in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
     form_entries:
       gender:
         male: 남
         female: 여
+        non_binary: Non-binary
+        not_listed: Preferred term not listed
         none: 응답 안 함
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 years old"
+        ages_7_8: 7-8 years old
+        ages_9_10: 9-10 years old
+        ages_11_12: 11-12 years old
+        ages_13_14: 13-14 years old
+        ages_15_16: 15-16 years old
+        ages_17_18: 17-18 years old
+        ages_19_over: 19+ years old
       subjects:
         cs: 컴퓨터과학(Computer Science, 정보과학)
+        ict: ICT
         math: 계산
         science: 과학
+        history: History / Social Studies
         la: 언어 교과
+        efl: English as a Foreign Language
+        music: Music
+        art: Art
+        other: 'Other:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
         khan: 칸 아카데미(Khan Academy)
         kodable: Kodable
         lightbot: 라이트봇
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Other:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Other:'
       workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: CS Discoveries
         csp: "'16 - '17 CS 원리"
       email_opt_in:
         opt_in_yes: 예
         opt_in_no: 아니요
+    international_opt_in:
+      title: Workshop Attendance
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that they can help to support your journey as a computer science
+        teacher.
+      thanks_markdown: Thank you for submitting! We look forward to supporting you
+        as you get to know Code.org’s curriculum and tools. Please keep sharing your
+        questions and feedback with us by writing to us at [support@code.org](%{support_email_url})
+        or by posting on the [teacher forum](%{teacher_forum_url})!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body_markdown: Thanks for your interest in Code.org’s Professional Learning
+        Program! You’re currently signed into a student account. Please either create
+        a teacher account or [go to your user settings](%{user_settings}) to upgrade
+        your account from student to teacher.
+      more_markdown: If you’d like more information about the program before you start
+        your application, please check out the [Professional Learning Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Your account doesn’t have an email address. Please [visit your
+        account settings](%{user_registration}) to add your email address before completing
+        this form.
+  courses_category: Full Courses
   cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
     accept: 동의합니다
   gdpr_dialog:
     heading: 미국에 기반을 두고 있는 웹사이트 사용에 동의하십니까?
     message: 귀하의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
     true: 예
   page_not_found_title: 페이지를 찾을 수 없습니다.
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   copy: 복사
+  maker:
+    google_oauth:
+      login_with_google: Login to the Maker App with Google
+      enter_code: Please enter the code provided when you logged in via Google on
+        your default browser.
+      copy_code: Please copy and paste this code into the Maker App to login to Code.org.
+      error_token_expired: Token has expired. Please log in again for a new token.
+      error_wrong_provider: Wrong provider. Please make sure you are logging in with
+        Google.
+      error_invalid_user: Invalid user id. Please try logging in again.
+      error_no_code: Please enter your login code.
   parent_email_banner:
     text: "**귀하는 부모입니까 아니면 보호자입니까?** 귀하의 이메일을 이 계정에 연결하여 귀 자녀의 진도와 프로젝트에 대한 업데이트를
       받으십시오!"
