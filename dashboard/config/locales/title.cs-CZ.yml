@@ -9,16 +9,20 @@ cs-CZ:
       BinaryImages: Binární obrázky
       BinaryImages_2018: Binární obrázky
       BuildingAFoundation: Budování základů
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Aritmetické Myšlení
       Conditionals: Podmínky
       Conditionals_2018: Podmínky
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algoritmy z reálného života: kostkový závod'
       DigitalCitizenship: Digitální občanství
       DigitalFootprint: Tvá digitální stopa
       DigitalFootprint_2018: Tvá digitální stopa
       EnvelopeVariables: Obálkové proměnné
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: For cyklus zábavy
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funkční náhrdelníky
       GettingLoopy: Bláznění s cykly
       GettingLoopy_2018: Bláznění s cykly
@@ -27,6 +31,7 @@ cs-CZ:
       GraphPaperProgramming: Programování na čtverečkovaném papíru
       GraphPaperProgramming_2018: Programování na čtverečkovaném papíru
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Šílená Glibs hra
       MoveIt: Přesuň to, Přesuň to
       MoveItMoveIt_2018: Pohyb, pohyb
@@ -37,15 +42,25 @@ cs-CZ:
       RelayProgramming: Štafetové programování
       RelayProgramming_2018: Štafetové programování
       SongwritingParameters: Skládání písniček
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Psaní písniček s parametry
       TangramAlgorithms: Tangram algoritmy
       UnplugHappyMaps: Šťastné mapy
       UnplugHappyMaps_2018: Šťastné mapy
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Aktivita bez počítače
       courseB_unplugged_MRF_2018: Moji robotičtí přátelé
       courseB_unplugged_loopyMRF: Aktivita bez počítače
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Aktivita bez počítače
       courseC_Unplugged_ScreenOutTheMean_2018: Aktivita bez počítače
       courseD_unplugged_digitalCitizenship: Aktivita bez počítače
       courseD_unplugged_digitalCitizenship_2018: Aktivita bez počítače
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Aktivita bez počítače
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

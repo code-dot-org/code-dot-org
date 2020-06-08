@@ -39,6 +39,7 @@ cs:
         Custom: Umělec
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronz
@@ -352,6 +353,7 @@ cs:
         C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Úhly s Malířem
         CSF_collector_k1_blocks: 'Základy informatiky: Sběračka'
         CSF_collector_repeat_loops: Opakovací cykly se sběratelkou
@@ -359,6 +361,7 @@ cs:
         CSF_create_functions: Vytváření funkcí
         CSF_debugging_k1_blocks: Ladění
         CSF_debugging_text_blocks: Ladění
+        CSF_EF_cs_matters: Computer Science Matters
         CSF_maze_intro_k1_blocks: Úvod do Code studia
         CSF_maze_intro_text_blocks: Úvod do Code studia
         CSF_my_robotic_friends: Moji robotičtí přátelé
@@ -379,17 +382,88 @@ cs:
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
         csd_concept_how_computers_work: Úvod do fungování počítačů
         csd_concept_computer: 'Jak fungují počítače: Co dělá počítač, počítačem?'
+        csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'Jak fungují počítače: Obvody a logika'
         csd_concept_memory_cpu_input_output: 'Jak fungují počítače: Paměť, procesor, vstup a výstup'
         csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
         csd_concept_search: Jak funguje vyhledávání
+        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Proč je tolik uživatelů posedlých bludištěm?
+        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
+        csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
         csd_weblab_css_1: Úvod do CSS - část 1
         csd_weblab_css_2: Úvod do CSS - část 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csp_applab_objects: Introduction to Objects
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_processing_lists: Processing Lists with Loops
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Cykly
+        csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_concept_rgb: A Little Bit About Pixels
         csp_cs_is_changing_everything: Informatika mění vše
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
         starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
@@ -413,6 +487,11 @@ cs:
         mc_2016_events: Hodina kódu s Minecraftem - Události
         mc_2016_spawn: Hodina kódu s Minecraftem - Tvoření
         mc_2016_congrats: Hodina kódu s Minecraftem - Gratulujeme
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
         mc_2017_agent_intro: Hodina kódu s Minecraftem - Agent
         mc_2017_repeat: Hodina kódu s Minecraftem - Cykly
         mc_2017_functions: Hodina kódu s Minecraftem - Funkce
@@ -421,28 +500,91 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
+        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
+        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
+        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
+        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
+        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
+        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
+        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
+        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
+        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
+        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
+        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
+        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
+        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
+        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
+        applab_intro_welcome: App Lab - Getting Started
+        applab_intro_events: App Lab - Make It Interactive
+        applab_intro_sounds: App Lab - Images and Sounds
+        applab_intro_designmode: App Lab - Design Mode
+        applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: Zahradnice
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cykly s BB-8
         CSF_harvester_skinOverview_K-1: Zahradnice
+        CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Cykly v Době ledové
         CSF_scrat_loops_CF: Cykly v Době ledové
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Cykly
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Voyage Aquatic Introduction'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Conditionals'
+        mc_2018_closing: 'Minecraft: Voyage Aquatic Congratulations'
         hoc_dance_warmup: Dance Party - Na rozehřátí
         hoc_dance_events: Taneční večírek  - Události
         hoc_dance_properties: Taneční večírek  - vlastnosti
         hoc_dance_congrats: Dance Party - Jedeme dál!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
+        teaching_csf_how_it_works: 'Teaching CS Fundamentals: How the Course Works'
+        elem_pd_2: Elementary School Computer Science - PD video 2/2
         what_is_cs: Co je informatika?
+        repeat_block: Using the Repeat Block
         lesson_planning: Plánování hodiny
+        opd_closing: 'Teaching CS Fundamentals: Closing & Next Steps'
+        why_unplugged_lessons: Getting "unplugged"
         writing_first_program: Psaní svého prvního počítačového programu
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lesson in Action - Songwriting with Functions
+        what_is_an_event: What is an event?
+        teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
         csd_pair_programming: Párové programování
+        csd_gamelab_functions: Calling and Defining Functions
         csd_applab_parameters: Funkce s Parametry
+        csd_applab_loops: Loops in App Lab
+        csd_problem_solving_process: The Problem Solving Process
         CSF_Going_Places_Safely: Mé online sousedství
+        CSF_SpriteLab_Intro_v2: Introducing Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: How to Make a Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites in Action
         csd_debugging: Ladění
+        csd_applab_designmode_short: App Lab Design Mode
         csp-pd-welcome: Vítej v rodině!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
         oceans_machine_learning: Strojové učení
+        oceans_training_data: Training Data
+        oceans_societal_implications: Societal Implications
         hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!
         hoc_dance_warmup_2019: Dance Party 2019 - Na rozehřátí
         hoc_dance_events_2019: Dance Party 2019 - Události
@@ -450,6 +592,22 @@ cs:
         hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
         csd_what_computers_do: Co dělají počítače?
         csf_my_online_neighborhood_2020: Mé online sousedství
+        csf_follow_the_digital_trail: Follow the Digital Trail
+        csf_private_and_personal_information: Private and Personal Information
+        csd_what_computers_are: What is a Computer?
+        codebreak_e01: 'Code Break 1.0: Algorithms with Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototypes with Mark Cuban and Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Encryption with Ashton Kutcher and Mia Gil Epner'
+        codebreak_e04: Code Break 4.0 Digital Information with Mike Krieger and Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
