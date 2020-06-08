@@ -50,15 +50,18 @@ class ScriptsController < ApplicationController
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user && current_user.levelbuilder?
       notice_text = ""
-      @script.lessons.each do |stage|
-        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
+      @script.lesson_groups.each do |lesson_group|
+        lesson_group.lessons.each do |stage|
+          next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
 
-        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
-        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
-        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
-        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
+          formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+          num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
+          lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+          notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
+        end
       end
       flash[:notice] = notice_text.html_safe
+
     end
   end
 
