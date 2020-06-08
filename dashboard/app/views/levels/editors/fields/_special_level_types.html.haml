@@ -19,6 +19,11 @@
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
       %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
 
+  - if @level.is_a?(Applab)
+    .field
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode"}
+      %p Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode.
+
   - if (@level.is_a?(Blockly) || @level.is_a?(Weblab))
     .field
       = f.label :project_template_level_name, 'Project Template Level Name'

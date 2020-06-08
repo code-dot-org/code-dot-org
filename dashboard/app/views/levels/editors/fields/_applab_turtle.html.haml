@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#turtle"}}
+  Turtle
+#turtle.in.collapse
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
+  .field
+    = f.label :slider_speed, 'Slider speed'
+    %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
+    = f.number_field :slider_speed, :step => 0.1
