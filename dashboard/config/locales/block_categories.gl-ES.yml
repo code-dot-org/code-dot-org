@@ -18,11 +18,14 @@ gl:
       Game/Score: Xogo/Puntuación
       Games/Score: Xogos/Puntuación
       Groups: Grupos
+      Input: Input
       Locations: Localizacións
       Logic: Lóxica
       Loops: Bucles
       Math: Matemáticas
       Numbers: Números
+      Properties: Properties
+      Sprites: Sprites
       Text: Texto
       Variables: Variables
       'Variables ': 'Variables '

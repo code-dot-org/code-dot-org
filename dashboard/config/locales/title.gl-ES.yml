@@ -9,16 +9,20 @@ gl-ES:
       BinaryImages: Imaxes binárias
       BinaryImages_2018: Imaxes binárias
       BuildingAFoundation: Construíndo unha base
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Pensamento computacional
       Conditionals: Condicionais
       Conditionals_2018: Condicionais
       Crowdsourcing: Colaboración Aberta
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algoritmos da vía real: xogo de dados'
       DigitalCitizenship: Cidadanía dixital
       DigitalFootprint: A túa pegada dixital
       DigitalFootprint_2018: A túa pegada dixital
       EnvelopeVariables: Variábeis de sobre
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Diversión con bucles "para" (for)
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Tragaluces Funcionais
       GettingLoopy: Bucleándose
       GettingLoopy_2018: Bucleándose
@@ -27,6 +31,7 @@ gl-ES:
       GraphPaperProgramming: Programación en Papel Cadriculado
       GraphPaperProgramming_2018: Programación en Papel Cadriculado
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: As Glibs tolas
       MoveIt: Móveo, móveo
       MoveItMoveIt_2018: Creando camiños
@@ -37,15 +42,25 @@ gl-ES:
       RelayProgramming: Programación por relevos
       RelayProgramming_2018: Programación por relevos
       SongwritingParameters: Composición
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Escribindo unha canción con parámetros
       TangramAlgorithms: Algoritmos Tangram
       UnplugHappyMaps: Mapas Felices
       UnplugHappyMaps_2018: Mapas Felices
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Actividade off-line
       courseB_unplugged_MRF_2018: Os meus amigos robóticos
       courseB_unplugged_loopyMRF: Actividade off-line
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Actividade off-line
       courseC_Unplugged_ScreenOutTheMean_2018: Actividade off-line
       courseD_unplugged_digitalCitizenship: Actividade off-line
       courseD_unplugged_digitalCitizenship_2018: Actividade off-line
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Actividade off-line
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
