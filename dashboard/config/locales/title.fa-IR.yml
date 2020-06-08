@@ -9,16 +9,20 @@ fa-IR:
       BinaryImages: تصاویر دوتایی
       BinaryImages_2018: تصاویر دوتایی
       BuildingAFoundation: ساختن بنیان
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: تفکر محاسباتی
       Conditionals: شرطی ها
       Conditionals_2018: شرطی ها
       Crowdsourcing: کمک گیری جمعی
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
       DigitalCitizenship: شهروندی دیجیتالی
       DigitalFootprint: ردپای دیجیتالی شما
       DigitalFootprint_2018: ردپای دیجیتالی شما
       EnvelopeVariables: متغیرهای پاکت
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: برای تفریح حلقه ای
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: نورگیرهای کاربردی
       GettingLoopy: سر گیجه گرفتن
       GettingLoopy_2018: سر گیجه گرفتن
@@ -27,6 +31,7 @@ fa-IR:
       GraphPaperProgramming: برنامه نویسی روی کاغذ رسم شطرنجی
       GraphPaperProgramming_2018: برنامه نویسی روی کاغذ رسم شطرنجی
       Internet: اینترنت
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: بازی فکری جای خالی را پرکن
       MoveIt: تکانش بده، تکانش بده
       MoveItMoveIt_2018: حرکت کن، حرکت کن
@@ -37,15 +42,25 @@ fa-IR:
       RelayProgramming: برنامه نویسی دست به دست
       RelayProgramming_2018: برنامه نویسی دست به دست
       SongwritingParameters: ترانه سرایی
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: ترانه نویسی با پارامترها
       TangramAlgorithms: الگوریتم های پازل چینی
       UnplugHappyMaps: نقشه های شاد
       UnplugHappyMaps_2018: نقشه های شاد
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: فعالیت کلاسی
       courseB_unplugged_MRF_2018: دوستان رباتی من
       courseB_unplugged_loopyMRF: فعالیت کلاسی
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: فعالیت کلاسی
       courseC_Unplugged_ScreenOutTheMean_2018: فعالیت کلاسی
       courseD_unplugged_digitalCitizenship: فعالیت کلاسی
       courseD_unplugged_digitalCitizenship_2018: فعالیت کلاسی
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: فعالیت کلاسی
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
