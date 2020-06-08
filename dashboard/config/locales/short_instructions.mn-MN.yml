@@ -531,6 +531,145 @@ mn-MN:
       Alien Defender: 'Төслийн санаа: Тоглоомын лаборатори дээр хамгаалагчийн тоглоом
         хийгээрэй!'
       CDEF_debugging_flappy2: Энэ тоглоом яагаад ажиллахгүй байна вэ?
+      CSD U3 Boolean Modify: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2018: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2019: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Predict: What do you think this code will do when it is run?
+        Predict what each console.log() command will print, then run the program to
+        check your predictions.
+      CSD U3 Boolean Predict_2018: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Boolean Predict_2019: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Keypress Boolean: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Boolean_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Boolean_2018_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Watchers_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 L5 Freeplay: Change the value of petalSize multiple times. How does it
+        change your drawing?
+      CSD U3 L5 Freeplay_2018: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 L5 Freeplay_2019: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 Mouse Input Bee 2: Do this
+      CSD U3 Mouse Input Bee 2_2018: Do this
+      CSD U3 Mouse Input Bee 2_2019: Do this
+      CSD U3 Sprites intro sprites: Do This
+      CSD U3 Sprites intro sprites_2018: Do This
+      CSD U3 Sprites intro sprites_2019: Do This
+      CSD U3 Variables change circle size: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2: Change the value of petalSize multiple times.
+        How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018: Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2019: Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U5 black white images pixelation: Complete the X shape by typing 0s and
+        1s
+      CSD U5 black white images pixelation 2: Draw a smiley face (click here to see
+        image)
+      CSD U5 black white images pixelation 2_2018: Draw a smiley face (click here
+        to see image)
+      CSD U5 black white images pixelation 2_2019: Draw a smiley face (click here
+        to see image)
+      CSD U5 black white images pixelation 3: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_2018: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_2019: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 4: Add eyebrows to the smiley face (click
+        here to see the image)
+      CSD U5 black white images pixelation 4_2018: Add eyebrows to the smiley face
+        (click here to see the image)
+      CSD U5 black white images pixelation 4_2019: Add eyebrows to the smiley face
+        (click here to see the image)
+      CSD U5 black white images pixelation 5: Draw anything you like
+      CSD U5 black white images pixelation 5_2018: Draw anything you like
+      CSD U5 black white images pixelation 5_2019: Draw anything you like
+      CSD U5 black white images pixelation_2018: Complete the X shape by typing 0s
+        and 1s
+      CSD U5 black white images pixelation_2019: Complete the X shape by typing 0s
+        and 1s
+      CSD U6 params modify clouds: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify planes: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2018: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2019: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
       CSDU4 - Design Mode - 16: Дизайны горимын үйл явдлууд таб дээр "Оруулах, харуулах"
         холбоосыг ашиглан үйл явдлын зохицуулагчийг товч дээр нэмээрэй. (Бүрэн зааврыг
         харахын тулд товшоорой).
@@ -540,6 +679,24 @@ mn-MN:
         зааврыг харахын тулд товшоорой)
       CSDU4 - Design Mode - 4: Тайлбартай, утгатай ID сонгох замаар товчлуурыг сайжруулаарай.
         (Бүрэн зааврыг харахын тулд товшоорой)
+      CSDU6 arrays select rainbow: Write the contents of the array to the screen in
+        numerical order. (Click to see full instructions)
+      CSDU6 arrays select rainbow_2018: Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays select rainbow_2019: Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2018: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2019: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2018: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2019: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       Choose Your Own Adventure: Та тоглоомын лабораторид хүссэн зүйлээ хийж чадна!
         Тоглоомын лабораторид өөрийн адал явдлын түүхийг сонгох жишээ энд байна.
       Course 4 Artist 1: 'Хайрцаг зурахад надад туслаарай. (Шугам бүр 200 пиксел урттай
@@ -897,20 +1054,38 @@ mn-MN:
       CourseE_HOC 2018 Level_9b: Эрдэнэст хүрэх зам заагч болгож шүрийг ашиглаарай.
       Crack Random Substitution: Зааварчилгаа
       Crack a Caesar Cipher: Зааварчилгаа
+      Dance Party 1-validated: 'What do you think will happen when you click on the
+        alien?  '
+      Dance Party 2: Change the behavior inside the `___ begins ___` block to make
+        the alien start spinning around.
       Dance Party 2_2019: Харийн амьтныг эргэлдэж эхлэхээр өөр зан чанар руу 'шидтэнг
         эхлүүлэх' блок доторх зан чанарын блокийг солиорой!
+      Dance Party 3: 'Create a new sprite called `alien2`, then make it do a different
+        dance move when it''s clicked.  '
       Dance Party 3_2019: 'Ягаан харийн амьтан шиг харагдах шинэ шидтэнг үүсгэж, дараа
         нь түүн дээр дарах бүрийд ямарваа хөдөлгөөн хийхээр болгоорой.  '
+      Dance Party 4: 'Create a third sprite called `alien3` and get all of your aliens
+        to stand in a line. '
       Dance Party 4_2019: Шар харийн амьтан шиг харагдах шинэ шидтэнг үүсгээрэй. Дарах
         бүрийд бүжиглэдэг болгоорой. Хэвтээ шугамын дагуу зогсоохоор бүх харийн амьтнаа
         тохируулаарай.
+      Dance Party 5: Add code to change the color of each alien when it gets clicked.
       Dance Party 5_2019: Товч дарах үйл ажиллагааны блок ашиглан товч дарах нэг үйл
         ажиллагааг үүсгэх. Энэхүү үйл ажиллагаанд зориулан дараахыг үүсгээрэй. Ингэснээр
         товч дарах бүрт, таны харийн амьтад өнгөө солих болно!
+      Dance Party 6: Use the `stops everything` block to make each alien stop moving
+        when it is clicked.
       Dance Party 6_2019: Хонх шиг харагдах шидтэнг нэмээд, дараа нь дарах бүрийд
         харийн амьтан бүр бүжиглэхээ больдог үйл ажиллагааг нэмээрэй.
+      Dance Party 7: Add a new bell sprite called `myBell` that makes all the aliens
+        start doing the same dance move when it's clicked.
       Dance Party 7_2019: Ягаан харийн амьтан хүрэх үед хөх харийн амьтан шинэ бүжиг
         эхлүүлэхээр болгоорой. 'Хүрэх үед' гэсэн үйл ажиллагааг ашиглаарай.
+      Dance Party Freeplay: Now create your own alien disco!
+      Dance Party Freeplay_2019: Now create your own alien disco!
+      Dance Party Predict: 'What do you think will happen when you click on the alien?  '
+      Dance Party Predict_2019: 'What do you think will happen when you click on the
+        alien?  '
       Dance_2019_01: '<xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
         a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
         name="LOCATION">{x: 200, y: 200}</title></block></xml> блокийг ажлын талбар
@@ -981,16 +1156,33 @@ mn-MN:
         үзэхийн тулд "Дэлгэрэнгүй" -г дарах)
       Find the Wizard: Хүссэн зүйлээ бүтээгээрэй. Энэ бол тоо таах тоглоомын жишээ
         юм!
+      Fish Tank 2-validated: Change Dusty (the tumbleweed) to a fish.
       Fish Tank 2-validated_2019: Хамхуулыг ямарваа төрлийн загас болгож хувиргаарай!
+      Fish Tank 3-validated: Change the fish's behavior so that it swims around the
+        tank.
       Fish Tank 3-validated_2019: Загасын баруун, зүүн тийш сэлдэг болгож зан чанарыг
         нь өөрчлөөрэй.
+      Fish Tank 4-validated: Use the `set background color` block to make the background
+        blue.
       Fish Tank 4-validated_2019: Суурийг аливаа өнгөтэй болгохын тулд 'суурийн өнгийг
         тохируулах'-г ашиглана уу.
+      Fish Tank 5-validated: Our fish is getting a little lonely. Add another sprite
+        to the fish tank.
       Fish Tank 5-validated_2019: Загас адал явдалд дуртай тэнгисийн бусад амьтадтай
         уулзахыг хүсэж байна. Загасны саванд өөр шидтэнг нэмээрэй. Энэ шидтэн таны
         загасандаа өмсүүлснээө өөр ямар ч хувцастай байж болно!
+      Fish Tank 6-validated: Add a behavior to the fish's new friend.
+      Fish Tank 6-validated_2019: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated: Use some new blocks from the toolbox to make your fish
+        tank special!
+      Fish Tank 7-validated_2019: Use some new blocks from the toolbox to make your
+        fish tank special!
       FoodFight: Энэ бол таны тоглоомын лабораторид хийж болох тоглоомын жишээ юм.
       Frequency Analysis: Test
+      Function intro Ryan: Use the `build bridge` function twice to make a path to
+        the Redstone Torch.
+      Function intro Ryan_2019: Use the `build bridge` function twice to make a path
+        to the Redstone Torch.
       Geometric Sun: 'Төслийн санаа: Дүрс гэх мэт геометрийн санааг ашиглан дүрсийг
         бүтээх. Энэ нь тууштай байдал, төлөвлөлтийг шаарддаг!'
       Geometric Sun_2018: 'Төслийн санаа: Дүрс гэх мэт геометрийн санааг ашиглан дүрсийг
@@ -1185,6 +1377,37 @@ mn-MN:
         авахын тулд '1 оноо нэмэх'-г ашиглаарай. Ялахын тулд таван оноо аваарай!
       MC HOC 2016 Village Test: Өө үгүй ээ! Зомбинууд таныг урхинд оруулсан байна!
         Төмөр Големийг кодлоод зомбиг хөөж, довтлоорой!
+      MC_HOC_2017_01_RETRY: 'Write code to get the Agent to the pressure plate, then
+        press "Run" and use the arrow keys to move the player out of the house to
+        collect the chest. '
+      MC_HOC_2017_01_RETRY_2019: 'Write code to get the Agent to the pressure plate,
+        then press "Run" and use the arrow keys to move the player out of the house
+        to collect the chest. '
+      MC_HOC_2017_02_Cole: 'Move the Agent to the pressure plate so that {currentPlayerName}
+        can get to the map. '
+      MC_HOC_2017_02_Cole_2019: 'Move the Agent to the pressure plate so that {currentPlayerName}
+        can get to the map. '
+      MC_HOC_2017_03_Cole: 'Code the Agent to open the gate. '
+      MC_HOC_2017_03_Cole_2019: 'Code the Agent to open the gate. '
+      MC_HOC_2017_04POINT5_RYAN: Get the Agent to the pressure plate.
+      MC_HOC_2017_04POINT5_RYAN_2019: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_Cole: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_Cole_2019: Get the Agent to the pressure plate.
+      MC_HOC_2017_05_Cole: Get the player to the shovel.
+      MC_HOC_2017_05_Cole_2019: Get the player to the shovel.
+      MC_HOC_2017_06_Cole: Fix this code to get the Agent to build a bridge across
+        this river.
+      MC_HOC_2017_06_Cole_2019: Fix this code to get the Agent to build a bridge across
+        this river.
+      MC_HOC_2017_07_Cole: Destroy the ice and get {currentPlayerName} to the Minecart.
+      MC_HOC_2017_07_Cole_2019: Destroy the ice and get {currentPlayerName} to the
+        Minecart.
+      MC_HOC_2017_10_RETRY: Use the functions to finish this minecart track.
+      MC_HOC_2017_10_RETRY_2019: Use the functions to finish this minecart track.
+      MC_HOC_2017_Ali: Use the functions to find a way across the lava.
+      MC_HOC_2017_Ali_2019: Use the functions to find a way across the lava.
+      MC_HOC_2017_FP20x20: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_FP20x20_2019: "**Freeplay:**  Time to explore on your own!"
       NEW Course 4 Artist Functions 1: Давтах гогцоог ашиглан уртаараа 100 пиксельтэй
         квадрат зурж чадах уу?
       NEW Course 4 Artist Functions 11: Нэг эгнээнд байрлах зургаан квадратыг зурдаг
@@ -1338,13 +1561,26 @@ mn-MN:
         тоогоор дамжуулсны дараа эдгээр тоонуудыг текст тэмдэгт дээр харуулан газрын
         зураг дээр байршуулж болно. Текст дээр суурилсан протоколын тусламжтайгаар
         та бүх төрлийн мэдээллийг хялбархан төлөөлж, харилцах боломжтой болно. '
+      New Artist Project: Draw something awesome! Your code is saved as a project
+        that you can return to at any time.
+      New Basketball Project: Create your own Basketball game. You can change all
+        the rules. When you're done, click Share to let friends try your game on their
+        phones.
+      New Bounce Project: Create your own Bounce game. You can change all the visuals
+        and the rules. When you're done, click Share to let friends try your game
+        on their phones.
       New Gumball Project: Дуртай зүйлээ үүсгэж, хуваалцаарай!
       New Ice Age Project: Дуртай зүйлээ үүсгэж, хуваалцаарай!
       New Infinity Project: Дуртай зүйлээ үүсгэж, хуваалцаарай!
+      New Minecraft Hero Project: "**Freeplay:**  Time to explore on your own!"
       New Sports Project: 'Өөрийн тоглоомоо бүтээгээрэй! Та эндэхийг хариуцаж байна:
         та бүх дүрмийг өөрчилж, спортыг хольж тааруулж болох ба бүтээлч байцгаая!
         Та дууссан үедээ, найзуудаа утсан дээрээ тоглоом туршуулахын тулд Дуусгах
         дээр дараарай.'
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: \`Товших үед' үйл явдал руу 'хэвийн хэмжээтэй эргүүлэх'-ийг
         хавсаргаж, дараа нь "Ажиллуулах" товчийг дараарай. Хийсдэгийг зорилт руу шилжүүлэхийн
         тулд тоглох талбай дээр дарах буюу товшоорой.
@@ -1382,6 +1618,7 @@ mn-MN:
       OPD-K5-spritelab-6: Загас адал явдалд дуртай тэнгисийн бусад амьтадтай уулзахыг
         хүсэж байна. Загасны саванд өөр шидтэнг нэмээрэй. Энэ шидтэн таны загасандаа
         өмсүүлснээө өөр ямар ч хувцастай байж болно!
+      OPD-K5-spritelab-7: Add a behavior to the fish's new friend.
       OPD-K5-variables-2: 'Одоо эдгээр гурвалжны гурвыг бие биенийх нь хажууд зураарай.   '
       OPD-K5-variables-5: 50 уртыг хувьсагч болгон шилжүүлээрэй, ингэснээр бид үүнийг
         дараагийн хэдэн тааварт ашиглах боломжтой болно.
@@ -1489,6 +1726,12 @@ mn-MN:
         найман өнцөгтийн загвараар зурж чадах уу?
       Standalone_Artist_9: Одоо урагшилж дуртай зургаа хийцгээе! Та хүссэн зүйлээ
         хийж чадах хоосон функцтэй хүртэл болно!
+      U4 Model Design 1: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2018: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2019: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
       Underground Avoiding Lava: Лаав эдгээр блокуудын доор нуугдаж байгаа бөгөөд
         үүнийг урагшлахаас өмнө далдлах хэрэгтэй. "Хэрэв" команд энд ашиглагдах болно.
         Эдгээр блокуудыг олборлохын тулд зөв газарт "урагшлах" командыг нэмээрэй.
@@ -1512,8 +1755,23 @@ mn-MN:
         болно, гэхдээ харанхуй болж болно. Дор хаяж 2 бамбар байрлуулаад, уурхайд
         дор хаяж 2 нүүрс олборлоорой.
       Vigenere: Test
+      Virtual Pet 1: What do you think will happen if you press "Run" and then click
+        on her?
+      Virtual Pet 1 Predict: 'What do you think will happen when you click on the
+        alien?  '
+      Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle,
+        her color changes to brown.
+      Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that
+        when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it
+        over to clean the giraffe!
+      Virtual Pet 5: Add actions to each event so that when the giraffe collides with
+        each sprite, it shrinks by 5.
+      Virtual Pet 6: Add an apple that returns the giraffe back to regular size when
+        they touch.
       Virtual Pet 8_2019: "**Үнэгүй тоглох:** Тэжээмэл амьтандаа өөр юу хийлгэж чадах
         вэ? Дуртай зүйлээ оролдоод үзээрэй!"
+      Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       'Widget: Text Compression': Текст доторх дүрс (давтсан үг, эсвэл хэллэг)-ийг
         хайж олоорой. Баруун талын толь бичигт оруулсан дүрсээ оруулаарай. Бичлэгийг
         толь бичигт оруулахдаа оруулгын тэмдэг нь дүрсийн оронд текстийн хэв маягт
@@ -1595,6 +1853,8 @@ mn-MN:
         цохих хүртэл ойлгоорой.'
       bounce_7_sports: '"Хэзээ" блок бүр рүү блокуудыг хавсаргаарай. Бөмбөг тугийг
         цохих хүртэл ойлгоорой.'
+      comment_intro_maze_2018: Use the new `comment` block to leave yourself quick
+        reminders.
       course1_artist_loops_challenge1: |-
         Нэг мөрт олон шугам зурахын тулд давталт ашиглаж болно.
 
@@ -1685,6 +1945,10 @@ mn-MN:
       course3_playLab_challenge1: |-
         Та хангалттай оноо авах эсвэл оноогоо дуусгах үед ямар нэг зүйл тохиолдох ёстой. Тоглоомыг хэвийн ажиллуулж байхын тулд `тоглоомд хожих' ба`тоглоомд хожигдох' функцуудыг нэмж оруулаарай.
         Санаа олж авахын тулд түлхүүр дээр дараарай!
+      course4_artist_binary_challenge1: You can only use each binary value (0 or 1)
+        once each in this puzzle. Try using nested loops to complete this drawing.
+      course4_artist_binary_challenge2: Are you persistent enough to restore this
+        logo back to normal?
       course4_artist_concept_challenge2: Доорх кодыг ашиглан таван ширхэг хавчаарын
         загвар зохион бүтээгээрэй.
       course4_artist_functions_challenge2: Энэ кодыг хэрхэн ажиллаж байгааг харахын
@@ -1853,12 +2117,94 @@ mn-MN:
         чулуунаас 1-г аваарай.
       courseA_collector_preLoops6: Энэхүү тааврыг шийдэхийн тулд хоёр эрдэсийг аваарай.
       courseA_collector_preLoops7: Энэ үеийгг давахын тулд бүх гурван овоолгыг аваарай.
+      courseA_harvester_loops1: Help the harvester pick all the corn!
+      courseA_harvester_loops10: Help the harvester pick all five ears of corn!
+      courseA_harvester_loops10_2019: Help the harvester pick all five ears of corn!
+      courseA_harvester_loops11: 'Try one more on your own! '
+      courseA_harvester_loops11_2019: 'Try one more on your own! '
+      courseA_harvester_loops1_2019: Help the harvester pick all the corn!
+      courseA_harvester_loops2: Make sure to pick all the corn!
+      courseA_harvester_loops2_2019: Make sure to pick all the corn!
+      courseA_harvester_loops3: Can you pick all the corn using only **one** move
+        block?
+      courseA_harvester_loops3_2019: Can you pick all the corn using only **one**
+        move block?
+      courseA_harvester_loops4: Can you help the harvester find the bug in her code?
+      courseA_harvester_loops4_2019: Can you help the harvester find the bug in her
+        code?
+      courseA_harvester_loops5: Try it yourself! Can you pick the corn at the end
+        too?
+      courseA_harvester_loops5_2019: Try it yourself! Can you pick the corn at the
+        end too?
+      courseA_harvester_loops5a: Look at all this corn! Can you pick it all by yourself?
+      courseA_harvester_loops5a_2019: Look at all this corn! Can you pick it all by
+        yourself?
+      courseA_harvester_loops5b: Can you change your code to make the harvester pick
+        all the corn?
+      courseA_harvester_loops5b_2019: Can you change your code to make the harvester
+        pick all the corn?
+      courseA_harvester_loops6: You will need **one** `Move West` block and **one**
+        `Move North` block.
       courseA_harvester_loops6_2019: Танд **нэг** 'Өмнө зүг рүү шилжих' хэрэгтэй ба
         **нэг** 'Өрнөд рүү шилжих' блок хэрэгтэй.
+      courseA_harvester_loops7: 'Try it on your own! '
+      courseA_harvester_loops7_2019: 'Try it on your own! '
+      courseA_harvester_loops9: Can you figure out how to pick all the corn?
+      courseA_harvester_loops9_2019: Can you figure out how to pick all the corn?
+      courseA_harvester_seq1: Play with these blocks to help the harvester pick the
+        piece of corn.
+      courseA_harvester_seq10: Make sure to pick all the corn!
+      courseA_harvester_seq10_2019: Make sure to pick all the corn!
+      courseA_harvester_seq11: Try it by yourself! Pick all the corn.
+      courseA_harvester_seq11_2019: Try it by yourself! Pick all the corn.
+      courseA_harvester_seq12: Pick all the corn.
+      courseA_harvester_seq12_2019: Pick all the corn.
+      courseA_harvester_seq13: Play with these blocks to help the harvester pick corn.
+      courseA_harvester_seq13_2019: Play with these blocks to help the harvester pick
+        corn.
+      courseA_harvester_seq1_2019: Play with these blocks to help the harvester pick
+        the piece of corn.
+      courseA_harvester_seq2: Use three `move west` blocks and one `pick corn` block
+        to solve this puzzle.
+      courseA_harvester_seq2_2019: Use three `move west` blocks and one `pick corn`
+        block to solve this puzzle.
+      courseA_harvester_seq3: Use three `Move North` blocks and one `Pick Corn` block.
+      courseA_harvester_seq3_2019: Use three `Move North` blocks and one `Pick Corn`
+        block.
+      courseA_harvester_seq4: Add one block to help the harvester pick the corn.
+      courseA_harvester_seq4_2019: Add one block to help the harvester pick the corn.
+      courseA_harvester_seq5: Find the bug and fix it!
+      courseA_harvester_seq5_2019: Find the bug and fix it!
+      courseA_harvester_seq6: Try it yourself!
+      courseA_harvester_seq6_2019: Try it yourself!
+      courseA_harvester_seq7: Try it yourself!
+      courseA_harvester_seq7_2019: Try it yourself!
+      courseA_harvester_seq8: Now the harvester needs to pick corn two times!
+      courseA_harvester_seq8_2019: Now the harvester needs to pick corn two times!
+      courseA_harvester_seq9: Add two blocks to finish this puzzle!
+      courseA_harvester_seq9_2019: Add two blocks to finish this puzzle!
+      courseA_maze_ramp2_2018: Snap all blocks together to finish your code, then
+        click "Run".
+      courseA_maze_ramp2_2019: Snap all blocks together to finish your code, then
+        click "Run".
+      courseA_maze_ramp3a_2018: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "▶ Run".
+      courseA_maze_ramp3a_2019: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "Run".
+      courseA_maze_ramp3b_2019: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "Run".
+      courseA_maze_ramp4a_2018: Can you figure out which block you need to add to
+        the bottom of the other blocks to finish this code?
+      courseA_maze_ramp4a_2019: Can you figure out which block you need to add to
+        the bottom of the other blocks to finish this code?
       courseA_maze_ramp5a_2018: Шувууг гахай руу авчраарай!
       courseA_maze_ramp5a_2019: Шувууг гахай руу авчраарай!
       courseA_maze_seq1: Шувууг өөдгүй гахай руу авчраарай!
       courseA_maze_seq10: 'Сорилт: TNT-ийг тойроод шувууг гахай руу аваачаарай! '
+      courseA_maze_seq10_2018: 'Challenge: Avoid the TNT to get the bird to the pig! '
+      courseA_maze_seq10_2019: 'Challenge: Avoid the TNT to get the bird to the pig! '
       courseA_maze_seq10_copy: 'Сорилт: TNT-ийг тойроод шувууг гахай руу аваачаарай! '
       courseA_maze_seq11: Нэгийг шилжүүл, дараа нь шувууг гахайнд аваачихын тулд нөгөөг
         хөдөлгөөрэй.
@@ -1878,7 +2224,13 @@ mn-MN:
       courseA_maze_seq3: Шувууг гахай руу аваачихын тулд кодыг засаарай!
       courseA_maze_seq4: Шувууг гахай дээр аваачихын тулд нэг блокийг ХАСААРАЙ!
       courseA_maze_seq5: Үүнийг өөрөө эхнээс нь туршиж үзээрэй.
+      courseA_maze_seq5_2018: Give this one a try.
+      courseA_maze_seq5_2019: Give this one a try.
       courseA_maze_seq5_copy: Үүнийг өөрөө эхнээс нь туршиж үзээрэй.
+      courseA_maze_seq5a_2018: What can you add to the end of this code to get the
+        bird to the pig?
+      courseA_maze_seq5a_2019: What can you add to the end of this code to get the
+        bird to the pig?
       courseA_maze_seq6: Нэгийг шилжүүл, дараа нь шувууг гахайнд аваачихын тулд нөгөөг
         хөдөлгөөрэй!
       courseA_maze_seq6_2018: Нэгийг шилжүүл, дараа нь шувууг гахайнд аваачихын тулд
@@ -1924,18 +2276,34 @@ mn-MN:
         "зүүн тийш байхад" үйл явдлын блоктой холбоорой.
       courseA_playLab_events3_2018: Ажлын талбар дээр байгаа "зүүн тийш шилжих" блокийг
         "зүүн тийш байхад" үйл явдлын блоктой холбоорой.
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: "`Баруун` товчлуур дээр дарахад баруун тийш шилжүүлэх
         блокуудыг нэмээрэй."
+      courseA_playLab_events4_2018: Add another event block to get Jorge to move right
+        when the `right` button is clicked.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: '"Дээш" ба "доош" товчийг дарсан байхад Хорхег дээш
         доош хөдөлгөх үйл явдал нэмээрэй.'
       courseA_playLab_events5_2018: '"Дээш" ба "доош" товчийг дарсан байхад Хорхег
         дээш доош хөдөлгөх үйл явдал нэмээрэй.'
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: Хорхег дарах үед арын дэвсгэрийг өөрчилж, санамсаргүй
         дуу тоглуулснаар үүнийг илүү сонирхолтой болгоорой.
       courseA_playLab_events6_2018: Хорхег дарах үед арын дэвсгэрийг өөрчилж, санамсаргүй
         дуу тоглуулснаар үүнийг илүү сонирхолтой болгоорой.
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: Энэ тоглоомонд хүссэн бүх зүйлээ нэмээрэй. Хорхе түүн
         рүү гүйх үед та үлэг гүрвэлийг алга болгож чадах уу?
+      courseA_playLab_events7_2018: _Freeplay:_ Add anything you want to this game.
+      courseA_playLab_events7_2019: _Freeplay:_ Add anything you want to this game.
       courseA_playlab_events_challenge1: Бусад нөхдөдөө харуулахын тулд код бичиж
         чадах уу? Түлхүүрүүд нь энэ төслийг алхам алхамаар хийхэд танд тусална.
       courseA_playlab_events_challenge1_2018: Бусад нөхдөдөө харуулахын тулд код бичиж
@@ -1953,6 +2321,28 @@ mn-MN:
         хэрэгтэй
       courseA_video_events_2019: Илүү сайн тоглоомын лаборатори/үйл явдлын нэгдэл
         хэрэгтэй
+      courseB_Scrat_ramp1_2018: For this puzzle, snap the blocks together and press
+        "▶ Run"!
+      courseB_Scrat_ramp1_2019: For this puzzle, snap the blocks together and press
+        "▶ Run"!
+      courseB_Scrat_ramp2_2018: Snap all blocks together to finish your code, then
+        click "▶ Run".
+      courseB_Scrat_ramp2_2019: Snap all blocks together to finish your code, then
+        click "▶ Run".
+      courseB_Scrat_ramp3a_2018: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2019: Add a `North` block to the bottom of the other blocks
+        to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3b_2018: Drag the extra block back to the toolbox to throw
+        it away.
+      courseB_Scrat_ramp3b_2019: Drag the extra block back to the toolbox to throw
+        it away.
+      courseB_Scrat_ramp4a_2018: Can you figure out which block you need to add to
+        the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp4a_2019: Can you figure out which block you need to add to
+        the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp5a_2018: Try this one all by yourself!
+      courseB_Scrat_ramp5a_2019: Try this one all by yourself!
       courseB_artist_loops1: Энэ бол "Зураач" нэртэй шинэ төрлийн таавар юм. Үеүдээр
         дамжин тоглож, хөгжилтэй зүйл зураарай.
       courseB_artist_loops10: Зураач гэртээ харих үедээ харсан зүйлийн зураг зурахдаа
@@ -2033,6 +2423,10 @@ mn-MN:
       courseB_collector_loops11: Эврика! Чадахын хэрээр их эрдэнэс цуглуулаарай!
       courseB_collector_loops11_2018: Эврика! Чадахын хэрээр их эрдэнэс цуглуулаарай!
       courseB_collector_loops11_2019: Эврика! Чадахын хэрээр их эрдэнэс цуглуулаарай!
+      courseB_collector_loops1_2018: Get at least one piece of treasure without mistakes
+        to pass!
+      courseB_collector_loops1_2019: Get at least one piece of treasure without mistakes
+        to pass!
       courseB_collector_loops2: Энэ үеийгг давахын тулд бүх дөрвөн овоолгыг аваарай.
       courseB_collector_loops2_2018: Энэ үеийгг давахын тулд бүх дөрвөн овоолгыг аваарай.
       courseB_collector_loops2_2019: Энэ үеийгг давахын тулд бүх дөрвөн овоолгыг аваарай.
@@ -2088,24 +2482,77 @@ mn-MN:
         **5** эрдэнэс олж авахад Лаурельд туслаарай.
       courseB_collector_loops_challenge2a_2019: Энэ тааврыг дуусгахын тулд дор хаяж
         **5** эрдэнэс олж авахад Лаурельд туслаарай.
+      courseB_iceage_loops1: Help Scrat across the ice to get to the acorn!
+      courseB_iceage_loops10: Help Scrat get all the way over to the acorn!
+      courseB_iceage_loops10_2019: Help Scrat get all the way over to the acorn!
+      courseB_iceage_loops11: Help Scrat get to the acorn!
+      courseB_iceage_loops11_2019: Help Scrat get to the acorn!
+      courseB_iceage_loops12: Get to the acorn any way you can!
+      courseB_iceage_loops12_2019: Get to the acorn any way you can!
+      courseB_iceage_loops1_2019: Help Scrat across the ice to get to the acorn!
+      courseB_iceage_loops2: Use two different move blocks to get to the acorn!
+      courseB_iceage_loops2_2019: Use two different move blocks to get to the acorn!
+      courseB_iceage_loops3: Can you get to the acorn with just one `W` block?
+      courseB_iceage_loops3_2019: Can you get to the acorn with just one `W` block?
+      courseB_iceage_loops4: Add one more block to get Scrat all the way to the acorn!
+      courseB_iceage_loops4_2019: Add one more block to get Scrat all the way to the
+        acorn!
+      courseB_iceage_loops6: Can you add a loop to get to the acorn?
+      courseB_iceage_loops6_2019: Can you add a loop to get to the acorn?
+      courseB_iceage_loops7: 'Scrat really wants that acorn! '
+      courseB_iceage_loops7_2019: 'Scrat really wants that acorn! '
+      courseB_iceage_loops8: 'Can you fix this code? '
+      courseB_iceage_loops8_2019: 'Can you fix this code? '
+      courseB_iceage_loops9: The acorn is so far away! Can you use loops to help Scrat
+        get there?
+      courseB_iceage_loops9_2019: The acorn is so far away! Can you use loops to help
+        Scrat get there?
       courseB_maze_seq1: |-
         Тэдгээр нь шувуудаар юу хийлгэдэг болохыг харахын тулд эдгээр блокуудтай тоглож үзээрэй!
 
         Түвшинг дуусгахын тулд шувууг гахай руу аваачаарай.
       courseB_maze_seq10: Шувууг гахай руу аваачихын тулд алдааг засаарай.
+      courseB_maze_seq10_2018: Fix the bugs to get Scrat to the acorn.
+      courseB_maze_seq10_2019: Fix the bugs to get Scrat to the acorn.
       courseB_maze_seq11: Энэ бол бүгд таны шийдэх хэрэг! Гахайнд шувууг аваачаарай.
+      courseB_maze_seq11_2018: It's all you!  Get Scrat to the acorn.
+      courseB_maze_seq11_2019: It's all you!  Get Scrat to the acorn.
       courseB_maze_seq12: Одоо гахайнд чадах ямар нэг аргаараа хүрээрэй!
+      courseB_maze_seq12_2018: Now get that acorn any way you can!
+      courseB_maze_seq12_2019: Now get that acorn any way you can!
+      courseB_maze_seq1_2018: "Play with these blocks to see what they make Scrat
+        do! \n\nGet Scrat to the acorn to complete the level."
+      courseB_maze_seq1_2019: "Play with these blocks to see what they make Scrat
+        do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2: _"Алдаа гарлаа! Намайг гахай руу аваачихын тулд кодыг засаарай."_
       courseB_maze_seq3: '"Намайг гахайнд хүргэхийн тулд кодоо засаарай!"'
       courseB_maze_seq4: Шувууг гахай дээр аваачихын тулд хоёр блокийг нэмээрэй.
+      courseB_maze_seq4_2018: Use **2** movement blocks to get the Scrat to the acorn.
+      courseB_maze_seq4_2019: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5: Одоо энэ тааврыг эхнээс нь туршиж үзээрэй!
+      courseB_maze_seq5_2018: This puzzle is a little tricky!
+      courseB_maze_seq5_2019: This puzzle is a little tricky!
       courseB_maze_seq6: Нэгийг шилжүүл, дараа нь шувууг гахайнд аваачихын тулд нөгөөг
         хөдөлгөөрэй!
+      courseB_maze_seq6_2018: Move one way, then another to get Scrat to the acorn!
+      courseB_maze_seq6_2019: Move one way, then another to get Scrat to the acorn!
       courseB_maze_seq7: Юу дутуу байгааг олж, дараа нь шувууг гахайнд хүргэхийн тулд
         блок нэмээрэй!
+      courseB_maze_seq7_2018: Figure out what is missing and then add blocks to get
+        Scrat to the acorn!
+      courseB_maze_seq7_2019: Figure out what is missing and then add blocks to get
+        Scrat to the acorn!
       courseB_maze_seq8: Таны ээлж! Гахайнд шувууг аваачихын тулд та юу хийх хэрэгтэй
         вэ?
+      courseB_maze_seq8_2018: Your turn!  What do you need to do to get Scrat to the
+        acorn?
+      courseB_maze_seq8_2019: Your turn!  What do you need to do to get Scrat to the
+        acorn?
       courseB_maze_seq9: 'Сорилт: TNT-ийг тойроод шувууг гахай руу аваачаарай.'
+      courseB_maze_seq9_2018: 'Challenge: Move around the broken ice to get Scrat
+        to the acorn.'
+      courseB_maze_seq9_2019: 'Challenge: Move around the broken ice to get Scrat
+        to the acorn.'
       courseB_maze_seq_challenge1: Блокууд дуусахаас өмнө та замаа олж чадах уу?
       courseB_maze_seq_challenge1_2018: Блокууд дуусахаас өмнө та замаа олж чадах
         уу?
@@ -2134,8 +2581,14 @@ mn-MN:
         руу шилжих үйл явдлыг ашиглаарай.
       courseB_playlab_events4: Баатрын цаг боллоо! Зүүн сумыг дарах үед баатар луу
         руу чиглэх үйл явдлыг нэмээрэй.
+      courseB_playlab_events4_2018: Get the dragon to finish this level!
+      courseB_playlab_events4_2019: Get the dragon to finish this level!
       courseB_playlab_events5: Одоо үйл явдлыг нэмж оруулаарай, ингэснээр баруун сумыг
         дарах үед баатар луунаас зугтдаг.
+      courseB_playlab_events5_2018: Add an event so that the knight runs away from
+        the dragon when you press the right arrow.
+      courseB_playlab_events5_2019: Add an event so that the knight runs away from
+        the dragon when you press the right arrow.
       courseB_playlab_events6: |-
         Баатартаа бүх тугуудыг авахад туслаарай!
 
@@ -2151,8 +2604,18 @@ mn-MN:
       courseB_playlab_events7: Тугуудыг авах замдаа луу руу гүйж байхдаа баатарыг
         алга болгож, энэ тоглоомыг хөгжилтэй болгоорой! Тэднийг илүү бодит болгохын
         тулд мөргөлдөх үед дуу тоглуулаарай.
+      courseB_playlab_events7_2018: "1.  Set the knight to vanish when he runs into
+        the dragon.    \n2.  Play a sound when they collide to make it feel more real.
+        \ "
+      courseB_playlab_events7_2019: "1.  Set the knight to vanish when he runs into
+        the dragon.    \n2.  Play a sound when they collide to make it feel more real.
+        \ "
       courseB_playlab_eventsFP: Төсөөллөө ашиглаарай. Энэ тоглоомыг илүү хөгжилтэй
         болгохын тулд та юу хийж чадах вэ?
+      courseB_playlab_eventsFP_2018: "**Free play:** Use your imagination. What can
+        you do to make this game more fun?"
+      courseB_playlab_eventsFP_2019: "**Free play:** Use your imagination. What can
+        you do to make this game more fun?"
       courseB_playlab_events_challenge1: "▼ дарахад амьтдыг доошоо хөдөлгөөрэй. "
       courseB_playlab_events_challenge1_2018: "▼ дарахад амьтдыг доошоо хөдөлгөөрэй. "
       courseB_playlab_events_challenge1_2019: "▼ дарахад амьтдыг доошоо хөдөлгөөрэй. "
@@ -2304,6 +2767,8 @@ mn-MN:
         Үлэг гүрвэлтэй тааралдах, оноо авах үед Ваддлес автоматаар эхлэл рүү буцаж очуулахад шинэ блок ашиглаарай.
         Тоглоом тоглож, хангалттай оноо авах хүртлээ Ваддлесийг сумаар хөдөлгөөрэй.
       courseC_artist_loop1: Пицца нэмж оруулцгаая!
+      courseC_artist_loop1_2018: Let's add some pizazz with a `set pattern` block.
+      courseC_artist_loop1_2019: Let's add some pizazz with a `set pattern` block.
       courseC_artist_loops1a: 'Жүжигчнийг жүжгийн талбайн гол руу аваачиж, саваа ашиглан
         шувуу зураарай. '
       courseC_artist_loops1a_2018: 'Жүжигчнийг жүжгийн талбайн гол руу аваачиж, саваа
@@ -2776,8 +3241,24 @@ mn-MN:
         түүгээрэй!
       courseC_starWars_loops9_2019: Сурч мэдсэн зүйлээ ашиглан бүх металл хаягдлыг
         түүгээрэй!
+      courseD_artist_1_2018: 'Draw a hexagon with **50** pixel long sides.  '
+      courseD_artist_1_2018_2019: 'Draw a hexagon with **50** pixel long sides.  '
+      courseD_artist_2_2018: Now, turn right by **60** degrees, then draw a straight
+        line **150** pixels long and jump back to the center of the play area.
+      courseD_artist_2_2018_2019: Now, turn right by **60** degrees, then draw a straight
+        line **150** pixels long and jump back to the center of the play area.
+      courseD_artist_3_2018: 'Nest all of the code inside of another `repeat` loop
+        and run it a total of **6** times. '
+      courseD_artist_3_2018_2019: 'Nest all of the code inside of another `repeat`
+        loop and run it a total of **6** times. '
+      courseD_artist_4_2018: Add a tiny shape to the end of your line!
+      courseD_artist_4_2018_2019: Add a tiny shape to the end of your line!
       courseD_artist_5_2018: Цасан ширхэгтэй хамт тоглоорой!
       courseD_artist_5_2018_2019: Цасан ширхэгтэй хамт тоглоорой!
+      courseD_artist_6_2018: Try changing your long 150 pixel line into 6 short lines
+        of **25** pixels, with little turns at the end.
+      courseD_artist_6_2018_2019: Try changing your long 150 pixel line into 6 short
+        lines of **25** pixels, with little turns at the end.
       courseD_artist_binary1: Доорх блокуудыг ашиглан зураач "01010101"-г хоёртод
         эхний эгнээнд байрлуулаарай.
       courseD_artist_binary1_2018: Доорх блокуудыг ашиглан зураач "01010101"-г хоёртод
@@ -2843,6 +3324,14 @@ mn-MN:
         Зурах өндөр ялгаралттай цаас энд байна - 16 пиксель ба 16 пиксель!
 
         Бид биттэй бүтээлчээр хандаж эхлэх үед юу болохыг харна уу!
+      courseD_artist_binary_challenge1_2018: You can only use each binary value (0
+        or 1) once each in this puzzle. Try using nested loops to complete this drawing.
+      courseD_artist_binary_challenge1_2019: You can only use each binary value (0
+        or 1) once each in this puzzle. Try using nested loops to complete this drawing.
+      courseD_artist_binary_challenge2_2018: Are you persistent enough to restore
+        this logo back to normal?
+      courseD_artist_binary_challenge2_2019: Are you persistent enough to restore
+        this logo back to normal?
       courseD_artist_nestedLoops1: |-
         Энэ үе шатыг эхлүүлэхийн тулд гурвалжин зураарай.\
         (Тал бүр нь 100 пикселийн урттай ба та гадна өнцөг бүрт 120 хэм эргэх хэрэгтэй.)
@@ -3117,6 +3606,44 @@ mn-MN:
       courseD_bee_nestedLoops9_predict2: Зөгийн балыг бүгдийг нь хийгээрэй.
       courseD_bee_nestedLoops9_predict2_2018: Зөгийн балыг бүгдийг нь хийгээрэй.
       courseD_bee_nestedLoops9_predict2_2019: Зөгийн балыг бүгдийг нь хийгээрэй.
+      courseD_bounce_events10s_2018: 'Attach the `score point` block to the `when
+        ball in goal` event and the `score opponent point` block to the `when ball
+        misses hand` event to make a game. '
+      courseD_bounce_events10s_2019: 'Attach the `score point` block to the `when
+        ball in goal` event and the `score opponent point` block to the `when ball
+        misses hand` event to make a game. '
+      courseD_bounce_events11s_2018: 'Attach the `throw new ball` block in all of
+        the places where the game needs a new ball. '
+      courseD_bounce_events11s_2019: 'Attach the `throw new ball` block in all of
+        the places where the game needs a new ball. '
+      courseD_bounce_events12s_2018: Make this game your own. You can change all the
+        visuals and the rules. When you're done, click "Finish" to let friends try
+        your game on their phones.
+      courseD_bounce_events12s_2019: Make this game your own. You can change all the
+        visuals and the rules. When you're done, click "Finish" to let friends try
+        your game on their phones.
+      courseD_bounce_events1s_2018: Attach a block to the "when left arrow" block
+        and press "Run" to move the player to the net.
+      courseD_bounce_events1s_2019: Attach a block to the "when left arrow" block
+        and press "Run" to move the player to the net.
+      courseD_bounce_events2s_2018: Now, attach a block to the `when right event`
+        so that the hand can get to both baskets.
+      courseD_bounce_events2s_2019: Now, attach a block to the `when right event`
+        so that the hand can get to both baskets.
+      courseD_bounce_events5s_2018: Attach a block to the `when ball hits hand` event
+        to ensure the ball reaches the basket.
+      courseD_bounce_events5s_2019: Attach a block to the `when ball hits hand` event
+        to ensure the ball reaches the basket.
+      courseD_bounce_events6s_2018: Attach code to make the ball bounce when it hits
+        the wall so you can solve this puzzle.
+      courseD_bounce_events6s_2019: Attach code to make the ball bounce when it hits
+        the wall so you can solve this puzzle.
+      courseD_bounce_events7s_2018: Attach sound blocks to make the net swish when
+        you hit the basket and have the whistle blow when the ball misses your hand.
+        Bounce the ball until it hits the finish target.
+      courseD_bounce_events7s_2019: Attach sound blocks to make the net swish when
+        you hit the basket and have the whistle blow when the ball misses your hand.
+        Bounce the ball until it hits the finish target.
       courseD_collector_debugging1: Бүх эрдэнэсийг цуглуулахын тулд алдаа (нууд)-г
         засаарай.
       courseD_collector_debugging1a_2018: Бүх эрдэнэсийг цуглуулахын тулд алдаа (нууд)-г
@@ -3151,6 +3678,10 @@ mn-MN:
         олж мэдээрэй.
       courseD_collector_debugging6: 'Сорилт: Алдаа засах чадвараа ашиглан алдаагаа
         засаж, бүх эрдэнэсээ цуглуулаарай.'
+      courseD_collector_debugging6a_2018: 'Challenge: Use the code in the work area
+        to get at least **6** pieces of treasure!'
+      courseD_collector_debugging6a_2019: 'Challenge: Use the code in the work area
+        to get at least **6** pieces of treasure!'
       courseD_collector_debugging_challenge2: Та сараалжсан гогцооны мэргэжилтэн үү?
         Бүх эрдэнэсийг цуглуулахын тулд одоог хүртэл сурсан зүйлсээ ашиглаарай!
       courseD_collector_nested_loops_challenge2: Цуглуулагч нь зөвхөн хэрэгслийн хайрцган
@@ -3311,6 +3842,33 @@ mn-MN:
       courseD_harvester_nested_loops_challenge1_2019: '"Ферм дээр надад тусламж хэрэгтэй
         байна. Хэрэгслийн хайрцаг доторх блокийг зөвхөн ашиглан энэ эрдэнэ шишийг
         хураахад туслаарай."'
+      courseD_iceage_loops1: Help Scrat across the ice to get to the acorn!
+      courseD_iceage_loops10: Help Scrat get all the way over to the acorn!
+      courseD_iceage_loops10_2019: Help Scrat get all the way over to the acorn!
+      courseD_iceage_loops11: Help Scrat get to the acorn!
+      courseD_iceage_loops11_2019: Help Scrat get to the acorn!
+      courseD_iceage_loops12: Get to the acorn any way you can!
+      courseD_iceage_loops12_2019: Get to the acorn any way you can!
+      courseD_iceage_loops1_2019: Help Scrat across the ice to get to the acorn!
+      courseD_iceage_loops2: Use a `turn left` block to get to the acorn!
+      courseD_iceage_loops2_2019: Use a `turn left` block to get to the acorn!
+      courseD_iceage_loops3: Can you get to the acorn with just one `move forward`
+        block?
+      courseD_iceage_loops3_2019: Can you get to the acorn with just one `move forward`
+        block?
+      courseD_iceage_loops4: Add one more block to get Scrat all the way to the acorn!
+      courseD_iceage_loops4_2019: Add one more block to get Scrat all the way to the
+        acorn!
+      courseD_iceage_loops6: Can you add a loop to get to the acorn?
+      courseD_iceage_loops6_2019: Can you add a loop to get to the acorn?
+      courseD_iceage_loops7: 'Scrat really wants that acorn! '
+      courseD_iceage_loops7_2019: 'Scrat really wants that acorn! '
+      courseD_iceage_loops8: 'Can you fix this code? '
+      courseD_iceage_loops8_2019: 'Can you fix this code? '
+      courseD_iceage_loops9: The acorn is so far away! Can you use loops to help Scrat
+        get there?
+      courseD_iceage_loops9_2019: The acorn is so far away! Can you use loops to help
+        Scrat get there?
       courseD_maze_intro4_2019: Улааныг гахайд хүрэхэд туслаарай.
       courseD_maze_intro5a_2019: Тэнхлэг дээрх зайг анхааралтай тоолоорой!
       courseD_maze_intro5c_2019: TNT-г ажиглаарай! Гахайнд хүрэхэд нь Улаанд туслаарай.
@@ -3467,6 +4025,7 @@ mn-MN:
       courseD_scrat_ramp4: Скратыг аюулгүй байлгахын тулд хагарсан мөсөөс зайлсхийгээрэй!
       courseD_scrat_ramp5: Хагарсан мөсөөс зайлсхийгээрэй.
       courseD_scrat_ramp6: Скратыг гогцоо ашиглан боргоцойнд хүрэхэд нь туслаарай!
+      courseD_scrat_ramp7: Help Scrat get to the acorn!
       courseD_scrat_ramp8: Скратыг боргоцойнд хүргэхийн тулд сурсан зүйлээ ашиглаарай!
       courseE_aboutme_6: 'Үргэлжлүүлж хийгээрэй! Зарлалаа сайжруулахын тулд түүнд
         илүү их шинж чанар нэмэхээр оролдоорой. '
@@ -3495,9 +4054,15 @@ mn-MN:
         Нүдний шилний хоорондох гүүр нь 75 пикселийн урттай.
       courseE_artist_functions2: 'Энэ удаа нүдний шил үүсгэхийн тулд \`квадрат зурах
         ''функцийг ашиглаарай. '
+      courseE_artist_functions2_2018: 'Use the `draw a square` function to create
+        the glasses. '
+      courseE_artist_functions2_2019: 'Use the `draw a square` function to create
+        the glasses. '
       courseE_artist_functions2_copy: 'Энэ удаа нүдний шил үүсгэхийн тулд \`квадрат
         зурах ''функцийг ашиглаарай. '
       courseE_artist_functions3: Та энэ зургийг давтах блок нэмснээр хийж болно.
+      courseE_artist_functions3_2018: Build a function that will create this star.
+      courseE_artist_functions3_2019: Build a function that will create this star.
       courseE_artist_functions3_copy: Та энэ зургийг давтах блок нэмснээр хийж болно.
       courseE_artist_functions4: Одоо та од зурж болох тул дөрвөн од зурж үзээрэй!
       courseE_artist_functions4_copy: Одоо та од зурж болох тул дөрвөн од зурж үзээрэй!
@@ -3519,7 +4084,29 @@ mn-MN:
         үүсгэж үүнийг таван удаа дуудаарай. Хаалгыг анхааралтай ажиглаарай!
       courseE_artist_functions8: 'Сорилт: Энэ зургийг 50 пиксель квадратаар хийх хэрэгтэй
         гэж бодож байгаа бол аль болох олон функцийг бүтээгээрэй.'
+      courseE_artist_functions8_2018: Use everything you've learned so far to recreate
+        this design.
+      courseE_artist_functions8_2019: Use everything you've learned so far to recreate
+        this design.
+      courseE_artist_functions8a_2018: Create a function for a single square.
+      courseE_artist_functions8a_2019: Create a function for a single square.
+      courseE_artist_functions8b_2018: Call the `draw a square` function from inside
+        your `draw a line of squares` function to make this even easier!
+      courseE_artist_functions8b_2019: Call the `draw a square` function from inside
+        your `draw a line of squares` function to make this even easier!
+      courseE_artist_functions8c_2018: Add one more function that creates this stack
+        of staggered squares.
+      courseE_artist_functions8c_2019: Add one more function that creates this stack
+        of staggered squares.
       courseE_artist_functions9: Зөвхөн оруулсан блокийг ашиглан энэ зургийг бүтээгээрэй.
+      courseE_artist_functions9_2018: "**Challenge:** Create this image using only
+        the blocks provided."
+      courseE_artist_functions9_2019: "**Challenge:** Create this image using only
+        the blocks provided."
+      courseE_artist_functionsProj_2018: "**Inspiration:** Use what you've learned
+        to make whatever you want!"
+      courseE_artist_functionsProj_2019: "**Inspiration:** Use what you've learned
+        to make whatever you want!"
       courseE_artist_functions_challenge1: Функцийг тодорхойлсны дараа та үүнийг дахин
         дуудаж болно - хүссэн үедээ, хаана ч хамаагүй! Энэ кодыг хэрхэн ажилладгийг
         харахыг хичээгээд дараа нь өөрийн гайхамшигтай загвараа хийхийн тулд үүнийг
@@ -3584,12 +4171,22 @@ mn-MN:
       courseE_farmer_concept3: Эдгээр зам бүрийн төгсгөлд нүхийг бөглөөрэй.
       courseE_farmer_concept3_2018: Эдгээр зам бүрийн төгсгөлд нүхийг бөглөөрэй.
       courseE_farmer_functions1: Ургац хураагчийг хулуунд хүрч түүхэд нь туслаарай.
+      courseE_farmer_functions10a1_2018: Use everything that you've learned so far
+        to solve this puzzle!
+      courseE_farmer_functions10a1_2019: Use everything that you've learned so far
+        to solve this puzzle!
       courseE_farmer_functions10b: Энэ тааврыг шийдэхийн тулд шинэ функцээ хоёр удаа
         ашиглаарай.
+      courseE_farmer_functions13_2018: Solve this puzzle in 23 blocks or less.
+      courseE_farmer_functions13_2019: Solve this puzzle in 23 blocks or less.
       courseE_farmer_functions1_2018: Ургац хураагчийг хулуунд хүрч түүхэд нь туслаарай.
       courseE_farmer_functions1_2019: Ургац хураагчийг хулуунд хүрч түүхэд нь туслаарай.
       courseE_farmer_functions1a: Одоо ургац хураагчид эрдэнэ шиш, байцаа, **ба**
         хулуу зэргийг түүхэд туслаарай.
+      courseE_farmer_functions1a_2018: Help the harvester pick all of the corn, then
+        the pumpkin.
+      courseE_farmer_functions1a_2019: Help the harvester pick all of the corn, then
+        the pumpkin.
       courseE_farmer_functions2b: Фермерт эрдэнэ шиш, хулуу зэргийг хураахад нь туслаарай.
       courseE_farmer_functions2b_2018: Фермерт эрдэнэ шиш, хулуу зэргийг хураахад
         нь туслаарай.
@@ -3597,18 +4194,34 @@ mn-MN:
         нь туслаарай.
       courseE_farmer_functions2ba: "`Эрдэнэ шиш ба хулуу` функцийг ашиглан эрдэнэ
         шиш, хулуу түүхэд нь фермерт туслаарай."
+      courseE_farmer_functions2ba_2018: Use the functions below to help the farmer
+        pick the corn and pumpkins.
       courseE_farmer_functions2ba_2019: "`Эрдэнэ шиш ба хулуу` функцийг ашиглан эрдэнэ
         шиш, хулуу түүхэд нь фермерт туслаарай."
       courseE_farmer_functions3c: Одоо функцийг өөрөө бөглөөд кодоос блокуудыг гаргаж
         аваад тэдгээрийг **функцийн тодорхойлолт** руу оруулаарай.
+      courseE_farmer_functions3c1_2018: This function calls other functions!
+      courseE_farmer_functions3c1_2019: This function calls other functions!
+      courseE_farmer_functions3c_2018: Try on a longer path.
+      courseE_farmer_functions3c_2019: Try on a longer path.
       courseE_farmer_functions4b: Энэ тааврыг шийдэхийн тулд шинэ функцээ ашиглаарай.
       courseE_farmer_functions5c: Таны функц энд хэрэгтэй болно.
       courseE_farmer_functions6c: Нахиа нь эрдэнэ шиш, байцааны аль эсэхийг шалгахын
         тулд та энэ программ дээр юу нэмэх хэрэгтэй вэ?
+      courseE_farmer_functions7a1_2018: Create a function that sends the harvester
+        down a square path to pick a single head of lettuce from the middle of each
+        row.
+      courseE_farmer_functions7a1_2019: Create a function that sends the harvester
+        down a square path to pick a single head of lettuce from the middle of each
+        row.
       courseE_farmer_functions7b: Ургац хураагчид энэ төвөгтэй замаар хулуу руу явахад
         тусалж эрдэнэ шиш дээр зүүн тийш эргэж, байцаан дээр баруун тийш эргээрэй.
+      courseE_farmer_functions8a1_2018: Is your function still helpful?
+      courseE_farmer_functions8a1_2019: Is your function still helpful?
       courseE_farmer_functions8b: "**Сорилт:** Сүүлийн таавраас авсан аргыг ашиглан
         бүх хулууг цуглуулаарай. "
+      courseE_farmer_functions9a1_2018: Is your function still helpful?
+      courseE_farmer_functions9a1_2019: Is your function still helpful?
       courseE_farmer_functions9b: Энэ тааврыг шийдэхэд шаардлагатай дүрсийг тодорхойлж
         чадах уу?
       courseE_farmer_ramp11a: Овоолго байгаа үед шороог зайлуулаарай.
@@ -3617,6 +4230,30 @@ mn-MN:
       courseE_farmer_ramp11b: Овоолго байгаа үед шороог зайлуулаарай.
       courseE_farmer_ramp11b_2018: Овоолго байгаа үед шороог зайлуулаарай.
       courseE_farmer_ramp11b_2019: Овоолго байгаа үед шороог зайлуулаарай.
+      courseE_farmer_ramp12_forswap: Now use nested loops to solve this puzzle.
+      courseE_farmer_ramp12_forswap_2018: Now use nested loops to solve this puzzle.
+      courseE_farmer_ramp12_forswap_2019: Now use nested loops to solve this puzzle.
+      courseE_farmer_ramp12b: While there is lettuce, pick lettuce!
+      courseE_farmer_ramp12b_2018: While there is lettuce, pick lettuce!
+      courseE_farmer_ramp12b_2019: While there is lettuce, pick lettuce!
+      courseE_farmer_ramp12c: Move forward until you reach the lettuce, then pick
+        it all using a `while` loop.
+      courseE_farmer_ramp12c_2018: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
+      courseE_farmer_ramp12c_2019: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
+      courseE_farmer_ramp12d: Move forward until you reach the lettuce, then pick
+        it all using a `while` loop.
+      courseE_farmer_ramp12d_2018: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
+      courseE_farmer_ramp12d_2019: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
+      courseE_farmer_ramp12e: Move forward until you reach the lettuce, then pick
+        it all using a `while` loop.
+      courseE_farmer_ramp12e_2018: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
+      courseE_farmer_ramp12e_2019: Move forward until you reach the lettuce, then
+        pick it all using a `while` loop.
       courseE_farmer_ramp12f: Байцаанд хүрэх хүртлээ урагшлаад дараа нь зүүн талд
         зам байгаа **бол** зүүн тийш эргээрэй. Үгүй бол баруун тийш эргээрэй.
       courseE_farmer_ramp12f_2018: Байцаанд хүрэх хүртлээ урагшлаад дараа нь зүүн
@@ -3945,6 +4582,32 @@ mn-MN:
         ашиглан эрдэнэшишийг бүгдийг нь цуглуулаарай."
       courseF_bee_fwp_challenge2: "`Урт' параметр бүхий функц дэх`гогцоонд зориулав\\`-г
         ашиглан эгнээ бүр дэх хүнсний ногоог бүгдийг нь цуглуулаарай. "
+      courseF_bee_variables_1_2018: Finish this code so that the bee can collect all
+        of the honey and nectar.
+      courseF_bee_variables_1_2019: Finish this code so that the bee can collect all
+        of the honey and nectar.
+      courseF_bee_variables_2_2018: Edit your solution in one place so that the bee
+        can collect all of the honey and nectar.
+      courseF_bee_variables_2_2019: Edit your solution in one place so that the bee
+        can collect all of the honey and nectar.
+      courseF_bee_variables_3_2018: Subtract one from the variable each time through
+        the loop if you want to use the same function to solve this level.
+      courseF_bee_variables_3_2019: Subtract one from the variable each time through
+        the loop if you want to use the same function to solve this level.
+      courseF_bee_variables_4_2018: Edit the code to work for this puzzle.
+      courseF_bee_variables_4_2019: Edit the code to work for this puzzle.
+      courseF_bee_variables_5_2018: Create your own code to solve this puzzle
+      courseF_bee_variables_5_2019: Create your own code to solve this puzzle
+      courseF_bee_variables_6_2018: "**Challenge** Now give this puzzle a try!"
+      courseF_bee_variables_6_2019: "**Challenge** Now give this puzzle a try!"
+      courseF_bee_variables_7_2018: This puzzle is a little different.  What do you
+        need to do to solve it?
+      courseF_bee_variables_7_2019: This puzzle is a little different.  What do you
+        need to do to solve it?
+      courseF_bee_variables_8_2018: How many nectar will the bee collect from this
+        flower?
+      courseF_bee_variables_8_2019: How many nectar will the bee collect from this
+        flower?
       courseF_playlab_variables1a: Хувьсагчийг дараа нь ашиглахыг хүсч буй текстээ
         хадгалахад ашиглаж болно. Хөлбөмбөгийн тоглогч Кики "Гоол!" гэж хашгируулаарай.
         Текстийг \`хашгирах" хувьсагч руу шилжүүлэх замаар үүнийг хийнэ.
@@ -3972,6 +4635,10 @@ mn-MN:
         оноо аваарай!
       courseF_video_createFunctions: Бидэнд функц үүсгэх видео байхгүй байна. Энэ
         бол байрлуулагч юм.
+      coursea_maze_ramp1_2018: For this puzzle, snap the blocks together and click
+        "▶ Run"!
+      coursea_maze_ramp1_2019: For this puzzle, snap the blocks together and click
+        "▶ Run"!
       express_maze_debugging9_2019: Багажны хайрцаг доторх блокуудыг ашиглан, программаа
         босгоорой. Скратыг боргоцойнд хүргээрэй.
       flappy_1: '"Товших үед" блокт нэг блокийг хавсаргаад, "Ажиллуулах" товчийг дараарай.

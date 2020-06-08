@@ -53,6 +53,7 @@ mn-MN:
       courseB_unplugged_MRF: Тоггүй үйл ажиллагаа
       courseB_unplugged_MRF_2018: Миний робот найзууд
       courseB_unplugged_loopyMRF: Тоггүй үйл ажиллагаа
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Тоггүй үйл ажиллагаа
       courseC_Unplugged_ScreenOutTheMean_2018: Тоггүй үйл ажиллагаа
       courseD_unplugged_digitalCitizenship: Тоггүй үйл ажиллагаа
@@ -60,5 +61,6 @@ mn-MN:
       courseE_unplugged_CnC_2018: Дижитал хуваалцах
       courseE_unplugged_privateInformation: 'Нийтлэг мэдлэгийн боловсрол: Хувийн болон
         өөрийн мэдээлэл '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Тоггүй үйл ажиллагаа
       courseF_unplugged_powerOfWords_2018: 'орчуулга дутуу байна: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

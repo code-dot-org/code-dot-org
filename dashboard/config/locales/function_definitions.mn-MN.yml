@@ -20,9 +20,15 @@ mn-MN:
       2-3 Artist 7:
         draw_rect:
           name: зурах_шулуун
+          parameters:
+            width: өргөн
+            height: өндөр
       2-3 Artist Debugging 10:
         draw square:
           name: квадрат -г зураарай
+          parameters:
+            width: өргөн
+            height: өндөр
         jump to controller top left:
           name: удирдлагын зүүн дээд рүү үсрэх
         jump to middle:
@@ -42,6 +48,9 @@ mn-MN:
           name: баруун хөлийг зурах
         draw body and arms:
           name: их бие, гарыг зурах
+          parameters:
+            armlength: armlength
+            bodylength: bodylength
         draw a head:
           name: толгой зурах
       2-3 Artist Debugging 6:
@@ -176,51 +185,71 @@ mn-MN:
       Course 4 Artist Binary 1:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 2:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 3:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 4:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 5:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 6:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary 7:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary Free Play 2:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary Free Play 2a:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary Free Play 2b:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       Course 4 Artist Binary pre1:
@@ -228,14 +257,19 @@ mn-MN:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       Course 4 Artist Functions Inspiration:
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: Draw a square 20px wide
       Course 4 Artist Functions challenge:
         draw a line of squares:
           name: квадратуудын шугамын зураарай
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: Draw a square 20px wide
       Course 4 Bee Params 1:
         get 3 nectar:
           name: 3 шүүс цуглуулах
@@ -245,55 +279,102 @@ mn-MN:
       Course 4 Bee Params 3:
         get 3 nectar:
           name: 3 шүүс цуглуулах
+          parameters:
+            direction: direction
       Course 4 Bee Params 4:
         get 3 nectar:
           name: 3 шүүс цуглуулах
+          parameters:
+            direction: direction
       Course 4 Bee Params 5:
         get 5 nectar:
           name: 5 шүүс цуглуулах
+          parameters:
+            direction: direction
       Course 4 Bee Params 6:
         get 5 nectar:
           name: 5 шүүс цуглуулах
+          parameters:
+            direction: direction
+            nectar units: nectar units
       Course 4 Bee Params 7:
         get many nectar:
           name: олон шүүс цуглуулах
+          description: Collect a given number of nectar in either direction
+          parameters:
+            direction: direction
+            nectars: nectars
       Course 4 Bee Params 8:
         get nectar make honey:
           name: шүүс цуглуулах зөгийн бал хийх
+          description: Move in a direction to either collect nectar or make honey.
+          parameters:
+            direction: direction
+            nectars: nectars
+            honey: зөгийн бал
       Course 4 Play Lab Params 1:
         jump:
           name: үсрэх
+          description: Makes the main character jump up 100 pixels
       Course 4 Play Lab Params 10:
         level_up:
           name: түвшин_ахих
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: оноо_авах
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: цэгүүд
       Course 4 Play Lab Params 2:
         jump:
           name: үсрэх
+          description: Makes the main character jump up 'height' pixels
       Course 4 Play Lab Params 3:
         jump:
           name: үсрэх
+          description: Makes the given actor jump the given height
+          parameters:
+            height: өндөр
+            actor: жүжигчин
       Course 4 Play Lab Params 4:
         patrol:
           name: эргүүл
+          description: Move a sprite up an down
         do something:
           name: ямар нэг юм хийх
       Course 4 Play Lab Params 5:
         patrol:
           name: эргүүл
+          description: Move a sprite up an down
+          parameters:
+            actor: жүжигчин
       Course 4 Play Lab Params 6:
         patrol:
           name: эргүүл
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: жүжигчин
       Course 4 Play Lab Params 7:
         patrol:
           name: эргүүл
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Course 4 Play Lab Params 8:
         patrol:
           name: эргүүл
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Course 4 Play Lab Params 9:
         score_points:
           name: оноо_авах
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: цэгүүд
       Course 4 Play Lab Vars 1:
         set score:
           name: оноо тохируулах
@@ -311,17 +392,24 @@ mn-MN:
           name: доош/арагш шилжих
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
       Course 4 SCF 1a:
         get nectar:
           name: шүүс цуглуулах
+          parameters:
+            dir: dir
+            counter: тоологч
       Course 4 SCF 1b:
         make honey up and over:
           name: зөгийн бал хийж, давтаарай
       Course 4 SCF 2:
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         draw octagons:
           name: найман өнцөгт зурах
+          parameters:
+            numOctagons: numOctagons
         draw an octagon:
           name: найман өнцөгт зурах
         shift down:
@@ -329,10 +417,13 @@ mn-MN:
       Course 4 SCF 3:
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         do something:
           name: ямар нэг юм хийх
         draw an octagon:
           name: найман өнцөгт зурах
+          parameters:
+            length: урт
       'Course E: Play Lab Project':
         do something:
           name: ямар нэг юм хийх
@@ -344,8 +435,19 @@ mn-MN:
       FoodFight:
         level_up:
           name: түвшин_ахих
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: оноо_авах
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: цэгүүд
+      Function intro Ryan:
+        build bridge:
+          name: build bridge
+      Function intro Ryan_2019:
+        build bridge:
+          name: build bridge
       Geometric Sun:
         draw a door:
           name: хаалга зурах
@@ -355,6 +457,7 @@ mn-MN:
           name: цонх зурах
         rectangle:
           name: тэгш өнцөгт
+          description: lol
         sun:
           name: нар
         diamond:
@@ -367,6 +470,7 @@ mn-MN:
           name: гурвалжин
         square:
           name: квадрат
+          description: lol
       Geometric Sun_2018:
         draw a door:
           name: хаалга зурах
@@ -376,6 +480,7 @@ mn-MN:
           name: цонх зурах
         rectangle:
           name: тэгш өнцөгт
+          description: lol
         sun:
           name: нар
         diamond:
@@ -388,23 +493,43 @@ mn-MN:
           name: гурвалжин
         square:
           name: квадрат
+          description: lol
       Guess The Number:
         check guess:
           name: таамаглалаа шалгаарай
+          parameters:
+            theGuess: theGuess
       InspirationalArtwork:
         n-sided shape:
           name: n-талт дүрс
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+          parameters:
+            sides: sides
+            length: урт
         draw a loop:
           name: гогцоо зурах
+          parameters:
+            length: урт
+            sides: sides
         draw spiral circle:
           name: спираль тойрог зурах
+          parameters:
+            size: хэмжээ
       InspirationalArtwork_2018:
         draw a loop:
           name: гогцоо зурах
+          parameters:
+            length: урт
+            sides: sides
         n-sided shape:
           name: n-талт дүрс
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
         draw spiral circle:
           name: спираль тойрог зурах
+          parameters:
+            size: хэмжээ
       K-1 Artist2 3:
         draw roof:
           name: дээвэр зураарай
@@ -414,16 +539,55 @@ mn-MN:
       K-1 Artist2 5:
         draw rectangle:
           name: тэгш өнцөгт зураарай
+      MC_HOC_2017_07_Cole:
+        clear path:
+          name: clear path
+      MC_HOC_2017_07_Cole_2019:
+        clear path:
+          name: clear path
+      MC_HOC_2017_10_RETRY:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_Ali:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_FP20x20:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
       NEW Course 4 Artist Functions 11:
         draw a line of  squares:
           name: квадратуудын шугамын зураарай
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: Draw a square with sides 20 pixels long
         draw a line of squares:
           name: квадратуудын шугамын зураарай
       NEW Course 4 Artist Functions 12:
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         draw a line of squares:
           name: квадратуудын шугамын зураарай
       NEW Course 4 Artist Functions 13:
@@ -436,22 +600,29 @@ mn-MN:
           name: хоосон функц
         draw a line of squares:
           name: квадратуудын шугамын зураарай
+          description: 'draw a line of squares '
         draw a square 40:
           name: квадрат 40-г зураарай
+          description: Draw a square with sides length 40
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: квадрат зурах
       NEW Course 4 Artist Functions 4:
         draw a square:
           name: квадрат зурах
+          description: draws a square that is 100 pixels in size
       NEW Course 4 Artist Functions 7:
         draw a square:
           name: квадрат зурах
       NEW Course 4 Artist Functions 8:
         draw a triangle:
           name: гурвалжин зурах
+          description: 'draws a triangle that is 100 pixels in size
+
+'
       NEW Course 4 Artist Functions 9:
         draw a square:
           name: квадрат зурах
@@ -467,38 +638,82 @@ mn-MN:
           name: ямар нэг юм хийх
         draw a hexagon:
           name: зургаан өнцөгт зурах
+          description: draw a hexagon that is 100 pixels in size with a length parameter
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            sides: sides
+            length: урт
         do something:
           name: ямар нэг юм хийх
+          parameters:
+            sides: sides
+            length: урт
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: олон өнцөгт зурах
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: олон өнцөгт зурах
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Artist Params 15:
         draw a star:
           name: од зурах
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            sides: sides
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            sides: sides
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Artist Params 2:
         do something:
           name: ямар нэг юм хийх
@@ -508,60 +723,130 @@ mn-MN:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: гурвалжин зурах
+          description: draw a triangle that is 50 pixels in size
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: урттай гурвалжин зураарай
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: таван өнцөгт зурах
+          description: draw a pentagon that is 100 pixels
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a hexagon:
           name: зургаан өнцөгт зурах
+          description: draw a hexagon that is 100 pixels in size
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          description: draw a square that is 100 pixels' length in size
+          parameters:
+            length: урт
         draw a sqaure:
           name: квадрат зурах
+          description: draw a square that is 100 pixels in size
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: гурвалжин зурах
+          description: 'draw a triangle with length parameter
+
+'
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: урттай гурвалжин зураарай
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 9:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         do something:
           name: ямар нэг юм хийх
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
+            sides: sides
       NEW Course 4 Play Lab Params 11:
         jump:
           name: үсрэх
+          description: jump function block with height and actor parameter
+          parameters:
+            height: өндөр
+            actor: жүжигчин
         patrol:
           name: эргүүл
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       New Artist Project:
         draw a star:
           name: од зурах
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            sides: sides
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            sides: sides
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
+      New Minecraft Hero Project:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
       New Play Lab Project:
         jump:
           name: үсрэх
+          description: jump function block with height and actor parameter
+          parameters:
+            height: өндөр
+            actor: жүжигчин
         patrol:
           name: эргүүл
+          description: a patrol function that has a actor and speed parameter
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Robot Doodle:
         25 pixel square:
           name: 25 пикселийн квадрат
@@ -637,11 +922,15 @@ mn-MN:
       course4_artist_binary_challenge1:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       course4_artist_binary_challenge2:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       course4_artist_concept_challenge2:
@@ -655,10 +944,15 @@ mn-MN:
       course4_artist_fwp_challenge1:
         draw background:
           name: суурь өнгийг зурах
+          parameters:
+            color: өнгө
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            sides: sides
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         do something:
           name: ямар нэг юм хийх
       course4_bee_for_challenge1:
@@ -667,9 +961,13 @@ mn-MN:
       course4_bee_fwp_challenge1:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       course4_bee_fwp_challenge2:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"энгийн" шийдэл'
@@ -685,16 +983,22 @@ mn-MN:
       courseC_artist_prog3:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog3_2018:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog3_2019:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog4:
@@ -714,169 +1018,237 @@ mn-MN:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_artist_binary1_2018:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_artist_binary1_2019:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_artist_binary2:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary2_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary2_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary3:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary3_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary3_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary4:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary4_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary4_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary5:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary5_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary5_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary6:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary6_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary6_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary7:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary7_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary7_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8_predict1:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8_predict1_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary8_predict1_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binaryFP_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binaryFP_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary_challenge1_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary_challenge1_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary_challenge2_2018:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_artist_binary_challenge2_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_autorun_binary2_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_autorun_binary3_2019:
@@ -884,36 +1256,55 @@ mn-MN:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_autorun_binary4_2019:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_autorun_binary5_2019:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_autorun_binary6_2019:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_autorun_binary7_2019:
         draw bit:
           name: бит зурах
         draw:
           name: зурах
+          parameters:
+            binary: binary
       courseD_autorun_binary8_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       courseD_autorun_binary8_predict1_2019:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
+      courseE_Dogger_2:
+        stop_everything:
+          name: stop_everything
+        lose:
+          name: lose
       courseE_artist_concept1:
         do something:
           name: ямар нэг юм хийх
@@ -1042,6 +1433,8 @@ mn-MN:
       courseE_artist_functions8_2018:
         do something:
           name: ямар нэг юм хийх
+        staggered squares:
+          name: staggered squares
         draw a line of squares:
           name: квадратуудын шугамын зураарай
         draw square:
@@ -1049,6 +1442,8 @@ mn-MN:
       courseE_artist_functions8_2019:
         do something:
           name: ямар нэг юм хийх
+        staggered squares:
+          name: staggered squares
         draw a line of squares:
           name: квадратуудын шугамын зураарай
         draw square:
@@ -1084,6 +1479,8 @@ mn-MN:
           name: квадрат -г зураарай
         do something:
           name: ямар нэг юм хийх
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions8c_2019:
         draw a line of squares:
           name: квадратуудын шугамын зураарай
@@ -1091,6 +1488,8 @@ mn-MN:
           name: квадрат -г зураарай
         do something:
           name: ямар нэг юм хийх
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions9:
         do something:
           name: ямар нэг юм хийх
@@ -1117,6 +1516,8 @@ mn-MN:
           name: зургаан өнцөгт зурах
         draw line of hexagons:
           name: зургаан өнцөгтийн шугамыг зурах
+        staggered squares:
+          name: staggered squares
         draw a line of squares:
           name: квадратуудын шугамын зураарай
         draw square:
@@ -1126,6 +1527,8 @@ mn-MN:
           name: зургаан өнцөгт зурах
         draw line of hexagons:
           name: зургаан өнцөгтийн шугамыг зурах
+        staggered squares:
+          name: staggered squares
         draw a line of squares:
           name: квадратуудын шугамын зураарай
         draw square:
@@ -1261,6 +1664,24 @@ mn-MN:
       courseE_farmer_concept3:
         do something:
           name: ямар нэг юм хийх
+      courseE_farmer_functions10a1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
+      courseE_farmer_functions10a1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
       courseE_farmer_functions10b:
         navigate:
           name: залуурдах
@@ -1271,12 +1692,98 @@ mn-MN:
           name: хулууг ол
         wander path:
           name: замаар яв
+      courseE_farmer_functions11_predict_2018:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions11_predict_2019:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions13_2018:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions13_2019:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions1a_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions1a_2019:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: check square for corn
       courseE_farmer_functions2ba:
         corn and pumpkin:
           name: эрдэнэ шиш, хулуу
+      courseE_farmer_functions2ba_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
       courseE_farmer_functions3c:
         corn and pumpkin:
           name: эрдэнэ шиш, хулуу
+      courseE_farmer_functions3c1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
       courseE_farmer_functions4b:
         corn and pumpkin:
           name: эрдэнэ шиш, хулуу
@@ -1286,9 +1793,27 @@ mn-MN:
       courseE_farmer_functions6c:
         corn and pumpkin:
           name: эрдэнэ шиш, хулуу
+      courseE_farmer_functions7a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions7a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2019:
+        garden square:
+          name: garden square
       courseE_farmer_functions8b:
         navigate:
           name: залуурдах
+      courseE_farmer_functions9a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions9a1_2019:
+        garden square:
+          name: garden square
       courseE_farmer_functions9b:
         navigate:
           name: залуурдах
@@ -1316,83 +1841,164 @@ mn-MN:
           name: квадрат зурах
         checker:
           name: шалгагч
+          parameters:
+            size: хэмжээ
+            color: өнгө
         do something:
           name: ямар нэг юм хийх
         Make gingham:
           name: Даавуу хийгээрэй
+          parameters:
+            size: хэмжээ
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp2:
         draw a square:
           name: квадрат зурах
+          description: 'draw a square with length parameter
+
+'
+          parameters:
+            length: урт
         checker:
           name: шалгагч
+          parameters:
+            size: хэмжээ
+            color: өнгө
         do something:
           name: ямар нэг юм хийх
         Make gingham:
           name: Даавуу хийгээрэй
+          parameters:
+            size: хэмжээ
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp2_predict1:
         draw a square:
           name: квадрат зурах
+          description: draw a square with a length parameter
+          parameters:
+            length: урт
       courseF_artist_fwp3:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         draw a square2:
           name: квадрат2-г зураарай
+          parameters:
+            size: хэмжээ
         filled square:
           name: бөглөсөн квадрат
+          parameters:
+            size: хэмжээ
+            color: өнгө
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp4:
         draw a polygon:
           name: олон өнцөгт зурах
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: урт
+            sides: sides
       courseF_artist_fwp5:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
+            sides: sides
       courseF_artist_fwp6:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            sides: sides
       courseF_artist_fwp7:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            sides: sides
+            min: хамгийн бага
       courseF_artist_fwp8:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            sides: sides
+            min: хамгийн бага
       courseF_artist_fwp9:
         draw a star:
           name: од зурах
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            sides: sides
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            sides: sides
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            sides: sides
+            min: хамгийн бага
       courseF_artist_fwp_challenge1:
         draw background:
           name: суурь өнгийг зурах
+          parameters:
+            color: өнгө
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            sides: sides
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         do something:
           name: ямар нэг юм хийх
       courseF_artist_fwp_challenge2:
         draw a square 20:
           name: квадрат 20-г зураарай
+          description: draw a square of size 20 pixels
         do something:
           name: ямар нэг юм хийх
         draw an octagon:
           name: найман өнцөгт зурах
+          parameters:
+            length: урт
       courseF_bee_conditionals2:
         move and check:
           name: хөдөлж, шалгаарай
@@ -1463,27 +2069,79 @@ mn-MN:
       courseF_bee_fwp4:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            length: урт
       courseF_bee_fwp5:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            width: өргөн
       courseF_bee_fwp6:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            width: өргөн
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp_challenge1:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       courseF_bee_fwp_challenge2:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
+      courseF_bee_variables_1_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_1_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_6_2018:
+        collect stairs:
+          name: collect stairs
+      courseF_bee_variables_6_2019:
+        collect stairs:
+          name: collect stairs
       courseF_bee_variables_7_2018:
         collect:
           name: цуглуулах
@@ -1491,33 +2149,47 @@ mn-MN:
         collect:
           name: цуглуулах
       courseF_bee_variables_8_2018:
+        move and increment:
+          name: move and increment
         collect:
           name: цуглуулах
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: move and increment
         collect:
           name: цуглуулах
       grade5_artist_binary11:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       grade5_artist_binary4:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       grade5_artist_binary5:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       grade5_artist_binary8:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
       grade5_artist_binary9:
         draw:
           name: зурах
+          parameters:
+            binary: binary
         draw bit:
           name: бит зурах
