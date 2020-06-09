@@ -10,6 +10,7 @@ class OnlyOneTest < Minitest::Test
     r, w = IO.pipe
     pid = fork do
       w.puts only_one? # true
+      GC.start
       Process.wait(fork {w.puts only_one?}) # false
     end
     Process.wait pid
