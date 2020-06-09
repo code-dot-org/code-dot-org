@@ -262,7 +262,6 @@ function generateAnimationName(baseName, animationList) {
  * @returns {function()}
  */
 export function setInitialAnimationList(serializedAnimationList) {
-  debugger;
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
     serializedAnimationList = {orderedKeys: [], propsByKey: {}};
@@ -284,33 +283,17 @@ export function setInitialAnimationList(serializedAnimationList) {
   // TODO (from 2020): Tear out this migration when we don't think we need it anymore.
   serializedAnimationList.orderedKeys.forEach(loadedKey => {
     let animation = serializedAnimationList.propsByKey[loadedKey];
-    if (animation.sourceUrl.includes('/v3/')) {
+    if (animation.sourceUrl && animation.sourceUrl.includes('/v3/')) {
       // We want to replace this sprite with the /v1/ sprite
-      console.log("attempting migration")
       let details = `name=${animation.name};key=${loadedKey}`;
       if (defaultSprites.propsByKey[loadedKey]) {
         // The key is the same in the main.json and in default sprites. Do a simple replacement.
-        console.log(`key migration of ${animation.name} successful`)
-        serializedAnimationList.propsByKey[loadedKey] = defaultSprites.propsByKey[loadedKey];
+        serializedAnimationList.propsByKey[loadedKey] =
+          defaultSprites.propsByKey[loadedKey];
         trackEvent('Research', 'ReplacedSpriteByKey', details);
       } else {
-        // The key is different between the main.json and default sprites. Try to find a default sprite with the same name.
-        let replacementSpriteKey = defaultSprites.orderedKeys.find(orderedKey => {
-          return defaultSprites.propsByKey[orderedKey].name === animation.name;
-        });
-        if (replacementSpriteKey) {
-          // We found a default sprite with a matching name. Delete the old one and replace it with the new.
-          delete serializedAnimationList.propsByKey[loadedKey];
-          serializedAnimationList.propsByKey[replacementSpriteKey] = defaultSprites.propsByKey[replacementSpriteKey];
-          serializedAnimationList.orderedKeys = serializedAnimationList.orderedKeys.filter(key => key !== loadedKey);
-          serializedAnimationList.orderedKeys.push(replacementSpriteKey);
-          console.log(`name migration of ${animation.name} successful`)
-          trackEvent('Research', 'ReplacedSpriteByName', details);
-        } else {
-          // We were unable to find a replacement for the /v3/ sprite
-          console.log(details)
-          trackEvent('Research', 'CouldNotReplaceSprite', details);
-        }
+        // We were unable to find a replacement for the /v3/ sprite
+        trackEvent('Research', 'CouldNotReplaceSprite', details);
       }
     }
   });
