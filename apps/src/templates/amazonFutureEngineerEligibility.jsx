@@ -3,6 +3,7 @@ import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   intro: {
@@ -10,7 +11,7 @@ const styles = {
   }
 };
 
-//static sessionStorageKey = 'AmazonFutureEngineerEligibility';
+const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
 export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
@@ -18,55 +19,65 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     this.state = {
       schoolEligible: null,
-      consent: false,
-      email: ''
+      formData: {
+        consent: false
+      }
     };
   }
 
-  /*
-  saveToSessionStorage = newState => {
-    if (this.constructor.sessionStorageKey) {
-      const mergedData = {
-        ...{
-          currentPage: this.state.currentPage,
-          data: this.state.data
-        },
-        ...newState
-      };
-      sessionStorage.setItem(
-        this.constructor.sessionStorageKey,
-        JSON.stringify(mergedData)
-      );
-    }
-  };
-  */
-
   handleChange = change => {
-    this.setState(change);
+    this.setState(
+      {formData: {...this.state.formData, ...change}},
+      this.saveToSessionStorage
+    );
+  };
+
+  saveToSessionStorage = () => {
+    sessionStorage.setItem(
+      sessionStorageKey,
+      JSON.stringify(this.state.formData)
+    );
   };
 
   handleClickCheckEligibility = () => {
     // TO DO: actually check whether a school is eligible
     // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
 
+    this.saveToSessionStorage({
+      schoolId: this.state.formData.schoolId,
+      email: this.state.formData.email
+    });
+
+    if (this.state.formData.schoolId === '-1') {
+      this.handleEligibility(false);
+    }
+
     $.ajax({
-      url: '/dashboardapi/v1/schools/' + this.state.schoolId,
+      url: '/dashboardapi/v1/schools/' + this.state.formData.schoolId,
       type: 'get',
       dataType: 'json'
-    }).done(data => {
-      console.log(data);
+    }).done(schoolData => {
+      this.handleEligibility(schoolData.afe_high_needs);
     });
   };
 
+  handleEligibility(isEligible) {
+    isEligible
+      ? this.setState({schoolEligible: isEligible})
+      : (window.location = pegasus('/privacy'));
+  }
+
   handleSchoolDropdownChange = (field, event) => {
-    this.setState({
+    const newData = {
       schoolId: event ? event.value : '',
       schoolName: event ? event.label : ''
-    });
+    };
+
+    this.handleChange(newData);
   };
 
   render() {
-    // TO DO: figure out how FormGroup id/className were used in regional partner mini contact
+    // TO DO: Disable button until email and school are filled in
     return (
       <div>
         {this.state.schoolEligible === null && (
@@ -89,7 +100,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
               <SchoolAutocompleteDropdownWithLabel
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
-                value={this.state.schoolId}
+                value={this.state.formData.schoolId}
               />
               <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
@@ -97,16 +108,18 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             </FormGroup>
           </div>
         )}
-        {this.state.schoolEligible === true && this.state.consent === false && (
-          <AmazonFutureEngineerEligibilityForm
-            email={this.state.email}
-            schoolId={this.state.schoolId}
-            onContinue={this.handleChange}
-          />
-        )}
-        {this.state.schoolEligible === true && this.state.consent === true && (
-          <AmazonFutureEngineerAccountConfirmation />
-        )}
+        {this.state.schoolEligible === true &&
+          this.state.formData.consent === false && (
+            <AmazonFutureEngineerEligibilityForm
+              email={this.state.formData.email}
+              schoolId={this.state.formData.schoolId}
+              onContinue={this.handleChange}
+            />
+          )}
+        {this.state.schoolEligible === true &&
+          this.state.formData.consent === true && (
+            <AmazonFutureEngineerAccountConfirmation />
+          )}
       </div>
     );
   }
@@ -116,10 +129,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 class AmazonFutureEngineerAccountConfirmation extends React.Component {
   render() {
     // TO DO: Add links to account sign up page.
-    // TO DO: Need to put submission data
-    //  (currently kept in state of AmazonFutureEngineerEligibility component)
-    //  somewhere (session cookie?) that will persist while they sign up or sign in,
-    // at which point we'll send an API request to Amazon's Pardot API endpoint.
+    // Figure out how to check when user as completed sign up or sign in (promise?).
     return (
       <div>
         <h2>Almost done!</h2>
