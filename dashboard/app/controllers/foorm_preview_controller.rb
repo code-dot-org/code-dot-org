@@ -1,6 +1,20 @@
 class FoormPreviewController < ApplicationController
-  # GET '/foorm/preview/:name'
+  # GET '/foorm/preview'
   def index
+    return render_404 if Rails.env.production?
+
+    @forms = Foorm::Form.all.map do |form|
+      {
+        name: form.name,
+        url: '/foorm/preview/' + form.name
+      }
+    end
+
+    render 'foorm/preview/index'
+  end
+
+  # GET '/foorm/preview/:name'
+  def name
     return render_404 if Rails.env.production?
 
     name = params[:name]
@@ -50,6 +64,6 @@ class FoormPreviewController < ApplicationController
 
     view_options(full_width: true, responsive_content: true)
 
-    render 'foorm/preview/index'
+    render 'foorm/preview/name'
   end
 end

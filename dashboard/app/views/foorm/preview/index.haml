@@ -1,5 +1,5 @@
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/foorm/preview/index.js'), data: @script_data}
+%h1 Foorm Previews
 
-#application-container
-  -# populated by React
+- @forms.sort_by{|form| form[:name]}.map do |form|
+  %div
+    = link_to form[:name], form[:url]
