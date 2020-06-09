@@ -11,7 +11,7 @@ import {
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 describe('EditSectionForm', () => {
-  it('renders LoginTypeField with word and picture options for word sections - students', () => {
+  it('renders LoginTypeField with word and picture options for word sections with students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -48,7 +48,7 @@ describe('EditSectionForm', () => {
       SectionLoginType.picture
     );
   });
-  it('renders LoginTypeField with word and picture options for word sections - NO students', () => {
+  it('renders LoginTypeField with word and picture options for word sections without students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -85,7 +85,7 @@ describe('EditSectionForm', () => {
       SectionLoginType.picture
     );
   });
-  it('renders LoginTypeField with word and picture options for picture sections - students', () => {
+  it('renders LoginTypeField with word and picture options for picture sections with students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -122,7 +122,7 @@ describe('EditSectionForm', () => {
       SectionLoginType.picture
     );
   });
-  it('renders LoginTypeField with word and picture options for picture sections - NO students', () => {
+  it('renders LoginTypeField with word and picture options for picture sections without students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -159,7 +159,7 @@ describe('EditSectionForm', () => {
       SectionLoginType.picture
     );
   });
-  it('does not render LoginTypeField for personal email sections - students', () => {
+  it('does not render LoginTypeField for personal email sections with students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -184,7 +184,7 @@ describe('EditSectionForm', () => {
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
   });
-  it('does not render LoginTypeField for personal email sections - NO students', () => {
+  it('does not render LoginTypeField for personal email sections without students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -209,7 +209,7 @@ describe('EditSectionForm', () => {
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
   });
-  it('does not render LoginTypeField for Google Classroom sections - students', () => {
+  it('does not render LoginTypeField for Google Classroom sections with students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -231,7 +231,7 @@ describe('EditSectionForm', () => {
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
   });
-  it('does not render LoginTypeField for Google Classroom sections - NO students', () => {
+  it('does not render LoginTypeField for Google Classroom sections without students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -256,7 +256,7 @@ describe('EditSectionForm', () => {
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
   });
-  it('does not render LoginTypeField for Clever sections - students', () => {
+  it('does not render LoginTypeField for Clever sections with students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
@@ -278,7 +278,7 @@ describe('EditSectionForm', () => {
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
   });
-  it('does not render LoginTypeField for Clever sections - NO students', () => {
+  it('does not render LoginTypeField for Clever sections without students', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
