@@ -33,6 +33,18 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
+  def self.extract_courses_taught
+    source_sql = <<~SQL
+      SELECT email, courses.name, MAX(se.updated_at) AS updated_at
+      FROM users u
+      JOIN sections se on se.user_id = u.id
+      JOIN courses on courses.id = se.course_id
+      GROUP BY email, courses.name
+    SQL
+    query = get_extraction_query(source_sql, 'email', ['name'], true, 'dashboard.courses')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
