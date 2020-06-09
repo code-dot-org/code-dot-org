@@ -33,13 +33,15 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     showRequiredIndicator: PropTypes.bool,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    includeSchoolNotFoundCheckbox: PropTypes.bool
   };
 
   schoolDropdown = undefined;
 
   static defaultProps = {
-    showRequiredIndicator: true
+    showRequiredIndicator: true,
+    includeSchoolNotFoundCheckbox: true
   };
 
   sendToParent = selectValue => {
@@ -64,7 +66,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   };
 
   render() {
-    const {showRequiredIndicator, singleLineLayout} = this.props;
+    const {
+      showRequiredIndicator,
+      singleLineLayout,
+      includeSchoolNotFoundCheckbox
+    } = this.props;
     const questionStyle = {
       ...styles.question,
       ...(singleLineLayout && singleLineLayoutStyles)
@@ -100,17 +106,19 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             schoolFilter={this.props.schoolFilter}
             disabled={this.props.disabled}
           />
-          <label style={checkboxStyle}>
-            <input
-              id="schoolNotFoundCheckbox"
-              type="checkbox"
-              onChange={this.handleSchoolNotFoundCheckbox.bind(this)}
-              checked={schoolNotFound}
-            />
-            <span style={styles.checkboxOption}>
-              {i18n.schoolNotFoundCheckboxLabel()}
-            </span>
-          </label>
+          {includeSchoolNotFoundCheckbox && (
+            <label style={checkboxStyle}>
+              <input
+                id="schoolNotFoundCheckbox"
+                type="checkbox"
+                onChange={this.handleSchoolNotFoundCheckbox.bind(this)}
+                checked={schoolNotFound}
+              />
+              <span style={styles.checkboxOption}>
+                {i18n.schoolNotFoundCheckboxLabel()}
+              </span>
+            </label>
+          )}
         </div>
         {singleLineLayout && showError && errorDiv}
       </div>

@@ -7,6 +7,11 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../code-studio/pd/form_components/SingleCheckbox';
 
+const styles = {
+  wrong_school: {
+    textAlign: 'right'
+  }
+};
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -75,7 +80,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             <SchoolAutocompleteDropdownWithLabel
               value={this.props.schoolId}
               disabled={true}
+              includeSchoolNotFoundCheckbox={false}
             />
+            <div style={styles.wrong_school}>
+              Wrong school? Go back
+              <br />
+            </div>
             <FieldGroup
               id="firstName"
               label="First name"
