@@ -7,22 +7,20 @@
 #   such as HoneyBadger and Slack.
 #
 class LogCollector
-  attr_reader :exceptions, :logs, :task_name
+  attr_reader :exceptions, :logs, :metrics, :task_name
 
   def initialize(task_name = nil)
     @task_name = task_name
-
-    # List of rescued exceptions
-    @exceptions = []
-
-    # List of message logs
+    @exceptions = []  # rescued exceptions
     @logs = []
+    @metrics = {}
   end
 
   # Execute a block and time it.
   # Save exception if caught, do not re-raise. Caller's flow will continue as normal.
   #
   # @param action_name [string] a friendly name of the block being executed
+  # @param print_to_stdout [boolean]
   def time(action_name = nil, print_to_stdout = true)
     return unless block_given?
     start_time = Time.now
@@ -46,7 +44,7 @@ class LogCollector
   # Re-raise exception if caught, do not save. This will disrupt the caller's flow.
   #
   # @param action_name [string] friendly name for the given block
-  #
+  # @param print_to_stdout [boolean]
   # @raise [StandardError] error encountered when executing the given block
   def time!(action_name = nil, print_to_stdout = true)
     return unless block_given?
@@ -84,6 +82,12 @@ class LogCollector
     error("Exception caught: #{e.inspect}. Stack trace:\n#{e.backtrace.join("\n")}")
   end
 
+  # @param metrics [Hash]
+  # @return [Hash]
+  def record_metrics(metrics)
+    @metrics.merge! metrics
+  end
+
   def ok?
     exceptions.blank?
   end
@@ -93,8 +97,25 @@ class LogCollector
   end
 
   def to_s
-    str = "#{task_name} task recorded #{exceptions.size} exceptions(s) and #{logs.size} log message(s).\n"
-    str + logs.join("\n")
+    exception_count = exceptions.length
+    log_count = logs.length
+    metric_count = metrics.length
+
+    summary = "Task '#{task_name}' recorded "\
+      "#{exception_count} #{'exception'.pluralize(exception_count)}, "\
+      "#{log_count} #{'log message'.pluralize(log_count)}, "\
+      "and #{metric_count} #{'metric'.pluralize(metric_count)}."
+
+    # Return a summary and a detailed list of exceptions, logs and metrics.
+    [
+      summary,
+      "#{exception_count} #{'exception'.pluralize(exception_count)}:",
+      exceptions.map(&:message),
+      "#{log_count} #{'log message'.pluralize(log_count)}:",
+      logs,
+      "#{metric_count} #{'metric'.pluralize(metric_count)}:",
+      metrics
+    ].flatten.join("\n")
   end
   alias_method :inspect, :to_s
 
