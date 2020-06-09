@@ -906,8 +906,8 @@ P5Lab.prototype.onReportComplete = function(response) {
  */
 P5Lab.prototype.runButtonClick = function() {
   if (!this.isSpritelab) {
-    $('.droplet-main-canvas').css('background-color', 'rgba(0, 0, 0, 0.1)');
-    $('.ace_scroller').css('background-color', 'rgba(0, 0, 0, 0.1)');
+    $('.droplet-main-canvas').css('background-color', '#E5E5E5');
+    $('.ace_scroller').css('background-color', '#E5E5E5');
   }
   this.studioApp_.toggleRunReset('reset');
   // document.getElementById('spinner').style.visibility = 'visible';
