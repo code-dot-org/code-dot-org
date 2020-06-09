@@ -9,12 +9,14 @@
 class LogCollector
   attr_reader :exceptions, :logs, :metrics, :task_name
 
-  def initialize(task_name = nil, print_to_stdout = true)
+  # @param task_name [String] friendly name of the task to collect logs for
+  # @param print_log_immediately [Boolean] print a log as soon as it is added to the log collector
+  def initialize(task_name = nil, print_log_immediately = true)
     @task_name = task_name
     @exceptions = []  # rescued exceptions
     @logs = []
     @metrics = {}
-    @print_to_stdout = print_to_stdout
+    @print_log_immediately = print_log_immediately
   end
 
   # Execute a block and time it.
@@ -24,14 +26,14 @@ class LogCollector
   def time(action_name = nil)
     return unless block_given?
     start_time = Time.now
-
     yield
-
-    info("#{action_name || 'Unnamed'} action completed without error in"\
+    info(
+      "#{action_name || 'Unnamed'} action completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError => e
-    error("#{action_name || 'Unnamed'} action exited with error in"\
+    error(
+      "#{action_name || 'Unnamed'} action exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
     record_exception(e)
@@ -46,17 +48,16 @@ class LogCollector
   def time!(action_name = nil)
     return unless block_given?
     start_time = Time.now
-
     yield
-
-    info("#{action_name || 'Unnamed'} action completed without error in"\
+    info(
+      "#{action_name || 'Unnamed'} action completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError
-    error("#{action_name || 'Unnamed'} action exited with error in"\
+    error(
+      "#{action_name || 'Unnamed'} action exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
     )
-
     # To be handled by caller
     raise
   end
@@ -64,12 +65,12 @@ class LogCollector
 
   def info(message)
     logs << "[#{Time.now}] INFO: #{message}"
-    CDO.log.info logs.last if @print_to_stdout
+    CDO.log.info logs.last if @print_log_immediately
   end
 
   def error(message)
     logs << "[#{Time.now}] ERROR: #{message}"
-    CDO.log.info logs.last if @print_to_stdout
+    CDO.log.error logs.last if @print_log_immediately
   end
 
   def record_exception(e)
@@ -91,7 +92,6 @@ class LogCollector
     exception_count = exceptions.length
     log_count = logs.length
     metric_count = metrics.length
-
     summary = "Task '#{task_name}' recorded "\
       "#{exception_count} #{'exception'.pluralize(exception_count)}, "\
       "#{log_count} #{'log message'.pluralize(log_count)}, "\
