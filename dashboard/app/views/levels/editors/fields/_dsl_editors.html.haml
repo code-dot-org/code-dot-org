@@ -30,10 +30,6 @@
   .script_text
     = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-  - if @level.supports_markdown?
-    - content_for(:head) do
-      %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
-
     .markdown
       %p Edit Markdown:
 
