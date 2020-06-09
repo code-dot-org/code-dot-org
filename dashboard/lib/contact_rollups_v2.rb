@@ -124,18 +124,25 @@ class ContactRollupsV2
     )
   end
 
-  def collect_table_metrics
-    @log_collector.record_metrics({'RawRows' => ContactRollupsRaw.count})
-    @log_collector.record_metrics({'ProcessedRows' => ContactRollupsProcessed.count})
-    @log_collector.record_metrics({'FinalRows' => ContactRollupsProcessed.count})
-    @log_collector.record_metrics({'PardotMemoryRows' => ContactRollupsPardotMemory.count})
+  def get_table_metrics
+    {
+      RawRows: ContactRollupsRaw.count,
+      ProcessedRows: ContactRollupsProcessed.count,
+      FinalRows: ContactRollupsProcessed.count,
+      PardotMemoryRows: ContactRollupsPardotMemory.count
+    }
   end
 
-  def report_results
-    collect_table_metrics
-    upload_metrics @log_collector.metrics if @is_dry_run
+  def print_logs
     CDO.log.info @log_collector
+  end
+
+  # Send logs and metrics to external systems such as AWS CloudWatch and Slack.
+  def report_results
+    @log_collector.record_metrics(get_table_metrics)
+    upload_metrics(@log_collector.metrics)
     # TODO: Report to slack channel
+    print_logs
   end
 
   # Upload pipeline metrics to AWS CloudWatch.
