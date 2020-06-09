@@ -595,15 +595,17 @@ describe('entry tests', () => {
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_blockly':
-      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_droplet':
-      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_blockly':
+      './src/sites/studio/pages/levels/editors/fields/_blockly.js',
     'levels/editors/fields/_callouts':
       './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+    'levels/editors/fields/_droplet':
+      './src/sites/studio/pages/levels/editors/fields/_droplet.js',
+    'levels/editors/fields/_grid':
+      './src/sites/studio/pages/levels/editors/fields/_grid.js',
     'levels/editors/fields/_preload_assets':
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
@@ -612,7 +614,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
