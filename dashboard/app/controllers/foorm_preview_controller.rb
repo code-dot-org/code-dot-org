@@ -3,12 +3,18 @@ class FoormPreviewController < ApplicationController
   def index
     return render_404 if Rails.env.production?
 
-    @forms = Foorm::Form.all.map do |form|
+    forms = Foorm::Form.all.map do |form|
       {
         name: form.name,
         url: '/foorm/preview/' + form.name
       }
     end
+
+    @script_data = {
+      props: {
+        forms: forms
+      }.to_json
+    }
 
     render 'foorm/preview/index'
   end
