@@ -132,11 +132,16 @@ class HeaderMiddle extends React.Component {
           finishLink: width / 4
         };
       } else {
+        const progressActualWidth = Math.min(
+          progressDesiredWidth,
+          (2 * width) / 4
+        );
+
         return {
           projectInfo: this.state.projectInfoWidth,
-          scriptName: width / 4,
-          progress: Math.min(progressDesiredWidth, (2 * width) / 4),
-          finishLink: width / 4
+          scriptName: (width - progressActualWidth) / 2,
+          progress: progressActualWidth,
+          finishLink: (width - progressActualWidth) / 2
         };
       }
     } else if (thirdItem === 'popup') {
@@ -180,7 +185,8 @@ class HeaderMiddle extends React.Component {
           <div
             id="project_info_container"
             style={{
-              float: 'left'
+              float: 'left',
+              display: widths.projectInfo === 0 ? 'none' : undefined
             }}
           >
             <ProjectInfo
@@ -196,6 +202,9 @@ class HeaderMiddle extends React.Component {
               id="script_name_container"
               style={{
                 float: 'left',
+                textAlign: 'right',
+                paddingRight: 10,
+                boxSizing: 'border-box',
                 width: widths.scriptName,
                 display: widths.scriptName === 0 ? 'none' : undefined
               }}
@@ -218,27 +227,22 @@ class HeaderMiddle extends React.Component {
           )}
 
           {lessonData && (
-            <div>
-              <div
-                id="finish_link_container"
-                style={{float: 'left', width: widths.finishLink}}
-              >
-                <div
-                  className="header_finished_link"
-                  style={styles.finishedLink}
-                >
-                  <a href={lessonData.finishLink}>{lessonData.finishText}</a>
-                </div>
+            <div
+              id="finish_link_container"
+              style={{float: 'left', width: widths.finishLink}}
+            >
+              <div className="header_finished_link" style={styles.finishedLink}>
+                <a href={lessonData.finishLink}>{lessonData.finishText}</a>
               </div>
+            </div>
+          )}
 
-              {lessonData.num_script_lessons > 1 && (
-                <div
-                  id="header_popup_container"
-                  style={{float: 'left', width: widths.popup}}
-                >
-                  <ProtectedStatefulDiv ref="header_popup_components" />
-                </div>
-              )}
+          {lessonData && lessonData.num_script_lessons > 1 && (
+            <div
+              id="header_popup_container"
+              style={{float: 'left', width: widths.popup}}
+            >
+              <ProtectedStatefulDiv ref="header_popup_components" />
             </div>
           )}
         </div>
