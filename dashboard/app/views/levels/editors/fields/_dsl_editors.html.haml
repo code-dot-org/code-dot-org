@@ -1,0 +1,49 @@
+:scss
+  $cyan: #0094ca;
+  $light_cyan: #59b9dc;
+  $lighter_cyan: #a6daed;
+  $lightest_cyan: #d9eff7;
+
+  .script_text textarea { width: 100%; height: 100px}
+  .markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .field.teacher-only-markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  #level_teacher_markdown_textarea_preview {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    padding: 10px;
+  }
+
+%h1.control-legend{data: {toggle: "collapse", target: "#dsl_editor"}}
+  DSL Editor
+
+#dsl_editor.in.collapse
+  .script_text
+    = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
+
+    .markdown
+      %p Edit Markdown:
+
+      %textarea#level_markdown_textarea
+      #level_markdown_textarea_preview
+
+// Don't not use the _teacher_only_markdown.haml partial for DSL levels because they need
+// extra functionality (initializeEmbeddedMarkdownEditor) to save the markdown content into the level file
+- unless @level.is_a?(EvaluationMulti)
+  %h1.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
+    Teacher Only Markdown
+
+  #teacher_only_markdown.in.collapse
+    .field.teacher-only-markdown
+
+      %textarea#level_teacher_markdown_textarea
+      #level_teacher_markdown_textarea_preview

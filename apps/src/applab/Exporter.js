@@ -35,14 +35,14 @@ import {
   fetchWebpackRuntime
 } from '../util/exporter';
 
-// This whitelist determines which appOptions properties
+// This allowlist determines which appOptions properties
 // will get exported with the applab app, appearing in the
-// final applab.js file. It's a recursive whitelist, so
+// final applab.js file. It's a recursive allowlist, so
 // each key/value pair is the name of a property and either
 // a boolean indicating whether or not that property should
-// be included or another whitelist for subproperties at that
+// be included or another allowlist for subproperties at that
 // location.
-const APP_OPTIONS_WHITELIST = {
+const APP_OPTIONS_ALLOWLIST = {
   levelGameName: true,
   skinId: true,
   baseUrl: true,
@@ -144,18 +144,18 @@ const APP_OPTIONS_WHITELIST = {
 
 // this configuration forces certain values to show up
 // in the appOptions config. These values will be assigned
-// regardless of whether or not they are in the whitelist
+// regardless of whether or not they are in the allowlist
 const APP_OPTIONS_OVERRIDES = {
   readonlyWorkspace: true
 };
 
 export function getAppOptionsFile(expoMode, channelId) {
-  function getAppOptionsAtPath(whitelist, sourceOptions) {
-    if (!whitelist || !sourceOptions) {
+  function getAppOptionsAtPath(allowlist, sourceOptions) {
+    if (!allowlist || !sourceOptions) {
       return null;
     }
     return _.reduce(
-      whitelist,
+      allowlist,
       (memo, value, key) => {
         if (value === true) {
           memo[key] = sourceOptions[key];
@@ -170,11 +170,11 @@ export function getAppOptionsFile(expoMode, channelId) {
       {}
     );
   }
-  const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
+  const options = getAppOptionsAtPath(APP_OPTIONS_ALLOWLIST, getAppOptions());
   _.merge(options, APP_OPTIONS_OVERRIDES);
   options.nativeExport = expoMode;
   if (!expoMode) {
-    // call non-whitelisted hasDataAPIs() function and persist as a bool in
+    // call non-allowlisted hasDataAPIs() function and persist as a bool in
     // the exported options:
     const {shareWarningInfo = {}} = getAppOptions();
     const {hasDataAPIs} = shareWarningInfo;
