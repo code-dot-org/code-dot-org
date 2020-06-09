@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AmazonFutureEngineerEligibility from '@cdo/apps/templates/amazonFutureEngineerEligibility';
+import AmazonFutureEngineerEligibility from '@cdo/apps/templates/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility';
 
 $(document).ready(init);
 
@@ -11,7 +11,8 @@ function showAmazonFutureEngineerEligibility() {
   );
 
   ReactDOM.render(
-    // Need to update API endpoint and source page ID (not sure if even needed)
+    // TO DO: confirm that there's no case where this might be used
+    // where amazonFutureEngineerEligibilityElement could be null or not an array.
     <AmazonFutureEngineerEligibility />,
     amazonFutureEngineerEligibilityElement[0]
   );
