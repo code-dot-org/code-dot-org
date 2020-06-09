@@ -6,7 +6,7 @@
 # which changes frequently such as news or sports scores.
 #
 # To reduce the likelihood of abuse, we only proxy content with an allowed
-# whitelist of JSON response types. We will need to monitor usage to detect
+# list of JSON response types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'

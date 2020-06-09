@@ -1004,7 +1004,7 @@ applabCommands.getAttribute = function(opts) {
   return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
-// Whitelist of HTML Element attributes which can be modified, to
+// Allowlist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
 var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
