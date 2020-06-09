@@ -245,7 +245,7 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # A whitelist of all family names for scripts.
+  # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
     # CSF
     COURSEA = 'coursea'.freeze,
