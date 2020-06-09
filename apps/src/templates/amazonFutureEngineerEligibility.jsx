@@ -3,7 +3,7 @@ import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   intro: {
@@ -140,7 +140,10 @@ class AmazonFutureEngineerAccountConfirmation extends React.Component {
           already have one.
         </div>
         <div>Already have a Code.org account? Sign in.</div>
-        <Button id="sign_up" onClick={() => {}}>
+        <Button
+          id="sign_up"
+          href={studio(`/users/sign_in?user_return_to=${window.location}`)}
+        >
           Sign up
         </Button>
       </div>
