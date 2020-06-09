@@ -1,12 +1,11 @@
 import {
-  blobToDataURI,
-  dataURIFromURI,
+  dataURIToBlob,
   dataURIToFramedBlob,
-  imageFromURI,
   toCanvas,
+  toImage,
   toImageData
 } from '@cdo/apps/imageUtils';
-import {assert, expect} from 'chai';
+import {assert} from 'chai';
 import expectedPng from './expected.png';
 import assertVisualMatch from '../../util/assertVisualMatch';
 
@@ -16,12 +15,38 @@ const TEST_DATA_URI =
 describe('image utils', () => {
   it('overlays an image inside the Artist frame', done => {
     dataURIToFramedBlob(TEST_DATA_URI, actual => {
-      dataURIFromURI(expectedPng).then(expected => {
-        blobToDataURI(actual, actual => {
-          expect(expected).to.equal(actual);
-          done();
-        });
-      });
+      assertVisualMatch(expectedPng, actual)
+        .then(done)
+        .catch(done);
+    });
+  });
+
+  describe('toImage', () => {
+    it('returns an Image unchanged', async () => {
+      const image = await toImage(expectedPng);
+      assert.instanceOf(image, HTMLImageElement);
+      const result = await toImage(image);
+      assert(image === result);
+    });
+
+    it('converts an image URI to an Image', async () => {
+      assert.typeOf(expectedPng, 'string');
+      const result = await toImage(expectedPng);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(expectedPng, result);
+    });
+
+    it('converts a data URI to an Image', async () => {
+      const result = await toImage(TEST_DATA_URI);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(TEST_DATA_URI, result);
+    });
+
+    it('converts a blob to an Image', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toImage(blob);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(TEST_DATA_URI, result);
     });
   });
 
@@ -33,7 +58,7 @@ describe('image utils', () => {
     });
 
     it('converts an image element to a canvas', async () => {
-      const image = await imageFromURI(expectedPng);
+      const image = await toImage(expectedPng);
       const result = await toCanvas(image);
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(image, result);
@@ -48,6 +73,13 @@ describe('image utils', () => {
 
     it('converts a data URI to a canvas', async () => {
       const result = await toCanvas(TEST_DATA_URI);
+      assert.instanceOf(result, HTMLCanvasElement);
+      assertVisualMatch(TEST_DATA_URI, result);
+    });
+
+    it('converts a blob to a canvas', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toCanvas(blob);
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(TEST_DATA_URI, result);
     });
@@ -87,7 +119,7 @@ describe('image utils', () => {
     });
 
     it('converts an image element to an ImageData object', async () => {
-      const image = await imageFromURI(expectedPng);
+      const image = await toImage(expectedPng);
       const result = await toImageData(image);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
@@ -102,6 +134,13 @@ describe('image utils', () => {
 
     it('converts a data URI string to an ImageData object', async () => {
       const result = await toImageData(TEST_DATA_URI);
+      assert.instanceOf(result, ImageData);
+      assert.equal(180000, result.data.length);
+    });
+
+    it('converts a blob to an ImageData object', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toImageData(blob);
       assert.instanceOf(result, ImageData);
       assert.equal(180000, result.data.length);
     });
