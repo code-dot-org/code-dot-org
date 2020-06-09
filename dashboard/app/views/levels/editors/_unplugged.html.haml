@@ -8,3 +8,7 @@
   .field
     = f.label :description
     = f.text_area :description, rows: 6, class: 'input-block-level'
+
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
