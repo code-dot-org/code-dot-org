@@ -30,7 +30,7 @@ class ContactRollupsV2
 
   def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
-    @log_collector = LogCollector.new('Contact Rollups')
+    @log_collector = LogCollector.new('ContactRollupsV2')
   end
 
   # Build contact rollups and sync the results to Pardot.
@@ -55,8 +55,6 @@ class ContactRollupsV2
     @log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
       ContactRollupsRaw.extract_email_preferences
     end
-    log_collector.info("ContactRollupsRaw row count after extraction = #{ContactRollupsRaw.count}")
-
     @log_collector.time!('Extracts parent emails from dashboard.users') do
       ContactRollupsRaw.extract_parent_emails
     end
@@ -64,7 +62,6 @@ class ContactRollupsV2
     @log_collector.time!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table
     end
-    log_collector.info("ContactRollupsProcessed row count after processing = #{ContactRollupsProcessed.count}")
 
     @log_collector.time!("Overwrites contact_rollups_final table") do
       truncate_or_delete_table ContactRollupsFinal
@@ -80,7 +77,14 @@ class ContactRollupsV2
     end
 
     @log_collector.time!('Creates new Pardot prospects') do
-      ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
+      results = ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        {
+          'ProspectsCreated' => results[:accepted_prospects],
+          'ProspectsRejected' => results[:rejected_prospects],
+          'CreateAPICalls' => results[:request_count]
+        }
+      )
     end
 
     unless @is_dry_run
@@ -94,14 +98,42 @@ class ContactRollupsV2
 
   def sync_updated_contacts_with_pardot
     @log_collector.time_and_continue('Updates existing Pardot prospects') do
-      ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
+      results = ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        {
+          'ProspectsUpdated' => results[:updated_prospects],
+          'ProspectUpdatesRejected' => results[:rejected_prospects],
+          'UpdateAPICalls' => results[:request_count]
+        }
+      )
     end
-    log_collector.info("ContactRollupsFinal row count after overwriting = #{ContactRollupsFinal.count}")
+  end
+
+  def collect_table_metrics
+    @log_collector.record_metrics({'RawRows' => ContactRollupsRaw.count})
+    @log_collector.record_metrics({'ProcessedRows' => ContactRollupsProcessed.count})
+    @log_collector.record_metrics({'FinalRows' => ContactRollupsProcessed.count})
+    @log_collector.record_metrics({'PardotMemoryRows' => ContactRollupsPardotMemory.count})
   end
 
   def report_results
-    # TODO: Add reporting to log file, slack channel and AWS CloudWatch.
-    puts @log_collector
+    collect_table_metrics
+    upload_metrics @log_collector.metrics if @is_dry_run
+    CDO.log.info @log_collector
+    # TODO: Report to slack channel
+  end
+
+  # Upload pipeline metrics to AWS CloudWatch.
+  # https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2
+  def upload_metrics(metrics)
+    aws_metrics = metrics.map do |key, value|
+      {
+        metric_name: key,
+        value: value,
+        dimensions: [{name: "Environment", value: CDO.rack_env}]
+      }
+    end
+    Cdo::Metrics.push('ContactRollupsV2', aws_metrics) unless @is_dry_run
   end
 
   private
