@@ -734,6 +734,7 @@ P5Lab.prototype.startTickTimer = function() {
 P5Lab.prototype.resetHandler = function(ignore) {
   if (!this.isSpritelab) {
     $('.droplet-main-canvas').css('background-color', '#FFF');
+    $('.droplet-transition-container').css('background-color', '#FFF');
     $('.ace_scroller').css('background-color', '#FFF');
   }
   this.reset();
@@ -907,6 +908,7 @@ P5Lab.prototype.onReportComplete = function(response) {
 P5Lab.prototype.runButtonClick = function() {
   if (!this.isSpritelab) {
     $('.droplet-main-canvas').css('background-color', '#E5E5E5');
+    $('.droplet-transition-container').css('background-color', '#E5E5E5');
     $('.ace_scroller').css('background-color', '#E5E5E5');
   }
   this.studioApp_.toggleRunReset('reset');
