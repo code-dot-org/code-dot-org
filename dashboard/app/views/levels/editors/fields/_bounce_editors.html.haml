@@ -1,0 +1,16 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#bounce"}}
+  Bounce Settings
+
+#bounce.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
+  .field
+    = f.label :theme, 'Theme'
+    %p
+      NOTE that not all themes are compatible with all skins. Specifically, the
+      bounce and basketball skins can only have retro or basketball themes, while
+      the sports skin can have any theme except retro.
+    = f.select :theme, options_for_select(Bounce.themes, @level.theme)
+  .field
+    = f.label :ball_direction, 'Ball Direction (in radians)'
+    = f.number_field :ball_direction, step: :any
