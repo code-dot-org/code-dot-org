@@ -60,6 +60,10 @@ class ContactRollupsV2
       ContactRollupsRaw.extract_parent_emails
     end
 
+    @log_collector.time!('Extracts courses taught from dashboard.sections') do
+      ContactRollupsRaw.extract_courses_taught
+    end
+
     @log_collector.time!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table
     end
