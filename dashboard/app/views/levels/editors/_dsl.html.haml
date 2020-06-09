@@ -1,1 +1,5 @@
+- if @level.supports_markdown?
+  - content_for(:head) do
+    %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
+
 = render partial: 'levels/editors/fields/dsl_editors', locals: {f: f}
