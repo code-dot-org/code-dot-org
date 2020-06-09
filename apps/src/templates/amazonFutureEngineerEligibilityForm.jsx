@@ -36,21 +36,27 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   submit = () => {
-    const stateChange = _.pick(this.state, [
+    const defaultFormData = _.pick(this.state, [
       'firstName',
       'lastName',
       'inspirationKit',
       'csta',
       'awsEducate',
-      'consent',
-      'street1',
-      'street2',
-      'city',
-      'state',
-      'zip'
+      'consent'
     ]);
 
-    this.props.onContinue(stateChange);
+    let shippingAddress = {};
+    if (this.state.inspirationKit) {
+      shippingAddress = _.pick(this.state, [
+        'street1',
+        'street2',
+        'city',
+        'state',
+        'zip'
+      ]);
+    }
+
+    this.props.onContinue({...defaultFormData, ...shippingAddress});
   };
 
   render() {
