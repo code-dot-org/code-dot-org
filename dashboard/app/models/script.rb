@@ -121,9 +121,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # TODO: remove hideable_stages once change to add hideable_lessons is deployed
   serialized_attrs %w(
-    hideable_stages
     hideable_lessons
     peer_reviews_to_complete
     professional_learning_course
@@ -1413,7 +1411,6 @@ class Script < ActiveRecord::Base
       is_stable: is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
-      hideable_stages: hideable_lessons?, # TODO: remove after corresponding js code is changed and not cached anymore
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
@@ -1424,7 +1421,6 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      stage_extras_available: lesson_extras_available, # TODO: remove after corresponding js code is changed and not cached anymore
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
@@ -1450,10 +1446,7 @@ class Script < ActiveRecord::Base
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    if include_lessons
-      summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)}
-      summary[:stages] = summary[:lessons] # TODO: remove after corresponding js code change is deployed and not cached anymore
-    end
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1590,13 +1583,11 @@ class Script < ActiveRecord::Base
     # try to put it in the appropriate place.
     nonboolean_keys = [
       :hideable_lessons,
-      :hideable_stages, # TODO: remove after corresponding dependencies are updated to use hideable_lessons
       :professional_learning_course,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :stage_extras_available, # TODO: remove after corresponding dependencies are updated to use lesson_extras_available
       :lesson_extras_available,
       :curriculum_path,
       :script_announcements,
@@ -1681,8 +1672,7 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
-    # TODO: remove stage_extras_available after correesponding js change is deployed and not cached
-    info[:stage_extras_available] = info[:lesson_extras_available] = lesson_extras_available
+    info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
     end
