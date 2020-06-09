@@ -47,6 +47,7 @@ class ContactRollupsV2
   # Then, process them and save the results into ContactRollupsProcessed.
   # The results are copied over to ContactRollupsFinal to be used for further analysis.
   def collect_and_process_contacts
+    start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
       truncate_or_delete_table ContactRollupsProcessed
@@ -67,9 +68,14 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsFinal
       ContactRollupsFinal.insert_from_processed_table
     end
+  ensure
+    @log_collector.record_metrics(
+      {CollectAndProcessContactsDuration: Time.now - start_time}
+    )
   end
 
   def sync_new_contacts_with_pardot
+    start_time = Time.now
     unless @is_dry_run
       @log_collector.time!('Downloads new email-Pardot ID mappings') do
         ContactRollupsPardotMemory.download_pardot_ids
@@ -80,9 +86,9 @@ class ContactRollupsV2
       results = ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
       @log_collector.record_metrics(
         {
-          'ProspectsCreated' => results[:accepted_prospects],
-          'ProspectsRejected' => results[:rejected_prospects],
-          'CreateAPICalls' => results[:request_count]
+          ProspectsCreated: results[:accepted_prospects],
+          ProspectsRejected: results[:rejected_prospects],
+          CreateAPICalls: results[:request_count]
         }
       )
     end
@@ -94,19 +100,28 @@ class ContactRollupsV2
     end
   rescue StandardError => e
     @log_collector.record_exception e
+  ensure
+    @log_collector.record_metrics(
+      {SyncNewContactsDuration: Time.now - start_time}
+    )
   end
 
   def sync_updated_contacts_with_pardot
+    start_time = Time.now
     @log_collector.time_and_continue('Updates existing Pardot prospects') do
       results = ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
       @log_collector.record_metrics(
         {
-          'ProspectsUpdated' => results[:updated_prospects],
-          'ProspectUpdatesRejected' => results[:rejected_prospects],
-          'UpdateAPICalls' => results[:request_count]
+          ProspectsUpdated: results[:updated_prospects],
+          ProspectUpdatesRejected: results[:rejected_prospects],
+          UpdateAPICalls: results[:request_count]
         }
       )
     end
+  ensure
+    @log_collector.record_metrics(
+      {SyncUpdatedContactsDuration: Time.now - start_time}
+    )
   end
 
   def collect_table_metrics
