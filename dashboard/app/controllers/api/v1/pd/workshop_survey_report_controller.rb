@@ -3,38 +3,12 @@ require 'honeybadger/ruby'
 
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
-    include WorkshopScoreSummarizer
     include ::Pd::WorkshopSurveyReportCsvConverter
     include Pd::WorkshopSurveyResultsHelper
     include Pd::SurveyPipeline::Helper
     include Pd::WorkshopSurveyConstants
 
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
-
-    # GET /api/v1/pd/workshops/:id/workshop_survey_report
-    def workshop_survey_report
-      all_my_workshops = params[:organizer_view] ? Pd::Workshop.organized_by(current_user) : Pd::Workshop.facilitated_by(current_user)
-      all_my_completed_workshops = all_my_workshops.where(course: @workshop.course).in_state(Pd::Workshop::STATE_ENDED).exclude_summer
-
-      survey_report = generate_summary_report(
-        workshop: @workshop,
-        workshops: all_my_completed_workshops,
-        course: @workshop.course,
-        facilitator_name: facilitator_name_filter
-      )
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-        format.csv do
-          # Kind of lame but we need to do this - Ruby orders hashes based on insertion order. We want to rename the first
-          # key, but that's not really supported in a way to preserve insertion order. So we have to make a new hash
-          ordered_survey_report = survey_report.transform_keys.with_index {|k, i| i == 0 ? @workshop.friendly_name : k}
-          send_as_csv_attachment(convert_to_csv(ordered_survey_report), 'workshop_survey_report.csv', titleize: false)
-        end
-      end
-    end
 
     # GET /api/v1/pd/workshops/:id/teachercon_survey_report
     def teachercon_survey_report

@@ -131,7 +131,7 @@ Given(/^I am a facilitator with completed courses$/) do
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it and answer surveys
+    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
   }
 end
 
@@ -140,7 +140,7 @@ Given(/^I am an organizer with completed courses$/) do
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it and answer surveys
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
   }
 end
 
@@ -515,37 +515,6 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   if post_create_actions.include?('and end it')
     workshop.update!(started_at: DateTime.new(2016, 3, 15))
     workshop.update!(ended_at: DateTime.new(2016, 3, 15))
-
-    if post_create_actions.include?('and answer surveys')
-      responses = {'consent_b' => '1'}
-
-      [
-        Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
-        Api::V1::Pd::WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
-      ].flatten.each do |question|
-        responses[question] = PdWorkshopSurvey::OPTIONS[question].last
-      end
-
-      Api::V1::Pd::WorkshopScoreSummarizer::OVERALL_SUCCESS_QUESTIONS.each do |question|
-        responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
-      end
-
-      responses['workshop_id_i'] = workshop.id
-
-      workshop.enrollments.each do |enrollment|
-        PEGASUS_DB[:forms].insert(
-          secret: SecureRandom.hex,
-          source_id: enrollment.id,
-          kind: 'PdWorkshopSurvey',
-          email: enrollment.email,
-          data: responses.to_json,
-          created_at: Time.now,
-          created_ip: '',
-          updated_at: Time.now,
-          updated_ip: ''
-        )
-      end
-    end
   elsif post_create_actions.include?('and start it')
     workshop.update!(started_at: DateTime.new(2016, 3, 15))
   else
