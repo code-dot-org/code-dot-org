@@ -66,6 +66,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)
     expect_renders_text(mock_image, 'CS Discoveries')
+    expect_renders_text(mock_image, '5-day Summer Workshop')
     @workshop.facilitators.each {|f| expect_renders_text(mock_image, f.name)}
     workshop_hours = Integer(@workshop.effective_num_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
@@ -87,6 +88,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)
     expect_renders_text(mock_image, 'CS Discoveries')
+    expect_renders_text(mock_image, 'Code.org TeacherCon')
     expect_renders_text(mock_image, Pd::CertificateRenderer::HARDCODED_CSD_FACILITATOR)
     workshop_hours = Integer(workshop.effective_num_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
@@ -108,6 +110,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)
     expect_renders_text(mock_image, 'CS Principles')
+    expect_renders_text(mock_image, 'Code.org TeacherCon')
     expect_renders_text(mock_image, Pd::CertificateRenderer::HARDCODED_CSP_FACILITATOR)
     workshop_hours = Integer(workshop.effective_num_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)

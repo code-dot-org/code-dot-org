@@ -1,0 +1,18 @@
+name 'Episode 12 Share'
+editor_experiment ''
+title 'Episode 1 Placeholder'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations!
+
+## You've completed the Weekly Challenges for Episode 12. 
+
+Share your projects using the hashtag #CodeBreak. Code.org will re-share the coolest posts. 
+
+### This is our last episode!
+
+Thanks for joining us. Keep learning, and don't forget to take a Code Break!
+
+
+MARKDOWN
