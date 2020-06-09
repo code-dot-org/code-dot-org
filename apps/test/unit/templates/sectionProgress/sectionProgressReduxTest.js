@@ -327,7 +327,8 @@ describe('sectionProgressRedux', () => {
                       is_concept_level: false,
                       title: 'hello world',
                       bonus: false,
-                      display_as_unplugged: false
+                      display_as_unplugged: false,
+                      sublevels: []
                     }
                   ]
                 }
@@ -349,7 +350,8 @@ describe('sectionProgressRedux', () => {
                 name: 'name',
                 progression: 'progression',
                 url: 'url',
-                bonus: false
+                bonus: false,
+                sublevels: []
               }
             ]
           }

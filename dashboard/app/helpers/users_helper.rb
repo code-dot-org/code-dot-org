@@ -168,6 +168,36 @@ module UsersHelper
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
         sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
+        if level.is_a?(BubbleChoice) # we have a parent level
+          # get progress for sublevels to save in levels hash
+          level.sublevels.each do |sublevel|
+            ul = user_levels_by_level.try(:[], sublevel.id)
+            completion_status = activity_css_class(ul)
+            # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+            submitted = !!ul.try(:submitted) &&
+              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
+            readonly_answers = !!ul.try(:readonly_answers)
+            locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
+            if completion_status == LEVEL_STATUS.not_tried
+              # for now, we don't allow authorized teachers to be "locked"
+              if locked && !user.authorized_teacher?
+                levels[level_id] = {
+                  status: LEVEL_STATUS.locked
+                }
+              end
+              next
+            end
+            levels[sublevel.id] = {
+              status: completion_status,
+              result: ul.try(:best_result) || 0,
+              submitted: submitted ? true : nil,
+              readonly_answers: readonly_answers ? true : nil,
+              paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
+              locked: locked ? true : nil,
+              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
+            }.compact
+          end
+        end
         contained_level_id = level.contained_levels.try(:first).try(:id)
 
         ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
