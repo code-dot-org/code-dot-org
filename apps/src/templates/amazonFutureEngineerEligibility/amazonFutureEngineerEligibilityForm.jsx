@@ -4,8 +4,8 @@ import {Button} from 'react-bootstrap';
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
-import SingleCheckbox from '../code-studio/pd/form_components/SingleCheckbox';
+import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
