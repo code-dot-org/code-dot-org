@@ -9,9 +9,11 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   }
 
   connectBoard() {
-    return this.connect().then(() => {
-      this.setAnalogSamplingInterval(50);
-    });
+    return Promise.resolve()
+      .then(() => this.connect())
+      .then(() => {
+        return this.setAnalogSamplingInterval(50);
+      });
   }
 
   setPinMode(pin, mode) {
