@@ -74,7 +74,8 @@ class ProgressBubbleSet extends React.Component {
     hideToolTips: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    showSublevels: PropTypes.bool
   };
 
   bubbleDisabled = level => {
@@ -133,14 +134,15 @@ class ProgressBubbleSet extends React.Component {
   };
 
   render() {
-    const {levels, style} = this.props;
+    const {levels, style, showSublevels} = this.props;
     return (
       <div style={{...styles.main, ...style}}>
         {levels.map((level, index) => {
           return (
             <span key={index}>
               {this.renderBubble(level, index, false)}
-              {level.sublevels &&
+              {showSublevels &&
+                level.sublevels &&
                 level.sublevels.map((sublevel, index) => {
                   return (
                     <span key={index}>
