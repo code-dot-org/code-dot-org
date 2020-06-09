@@ -1,0 +1,118 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Acadiana High School,LA-028-028002,220087000660,61102,COMPUTER SCIENCE I,18,1,2,2,0,0,12,0,3
+Acadiana High School,LA-028-028002,220087000660,61103,COMPUTER SCIENCE II,1,~,~,~,~,~,~,~,~
+Baton Rouge Magnet High School,LA-017-017008,220054000347,61102,COMPUTER SCIENCE I,45,15,7,1,0,0,11,2,0
+Baton Rouge Magnet High School,LA-017-017008,220054000347,61103,COMPUTER SCIENCE II,11,2,1,0,0,0,2,0,0
+Baton Rouge Magnet High School,LA-017-017008,220054000347,61175,AP COMPUTER SCIENCE A,13,3,4,0,0,0,0,0,0
+Baton Rouge Magnet High School,LA-017-017008,220054000347,61177,AP Computer Science Principles,5,~,~,~,~,~,~,~,~
+Belaire High School,LA-017-017010,220054000349,61102,COMPUTER SCIENCE I,23,13,19,2,0,0,17,0,0
+Benjamin Franklin High School,LA-WBB-WBB001,220029900888,61175,AP COMPUTER SCIENCE A,14,4,4,1,1,0,3,0,0
+Benjamin Franklin High School,LA-WBB-WBB001,220029900888,61177,AP Computer Science Principles,16,3,5,1,0,0,10,0,0
+Booker T. Washington High School,LA-009-009069,220030000208,61175,AP COMPUTER SCIENCE A,20,12,17,2,0,0,15,2,0
+Bossier PS for Technology & Innovative Learning,LA-008-008009,220027000120,61133,CREATIVE CODING THROUGH GAMES AND APPS,26,5,10,2,0,0,0,1,0
+Bossier PS for Technology & Innovative Learning,LA-008-008009,220027000120,61175,AP COMPUTER SCIENCE A,2,~,~,~,~,~,~,~,~
+Bossier PS for Technology & Innovative Learning,LA-008-008009,220027000120,80500,Introduction to Programming (1 Credit),18,3,6,1,0,0,0,0,0
+Bossier PS for Technology & Innovative Learning,LA-008-008009,220027000120,80500,Introduction to Programming (1 Credit),8,~,~,~,~,~,~,~,~
+Brusly High School,LA-061-061001,220192001457,61177,AP Computer Science Principles,12,1,1,0,0,0,4,0,0
+C.E. Byrd High School,LA-009-009008,220030000147,61175,AP COMPUTER SCIENCE A,22,5,9,2,0,0,7,0,0
+C.E. Byrd High School,LA-009-009008,220030000147,61177,AP Computer Science Principles,18,3,4,1,0,0,6,1,0
+Caddo Career & Technical Center,LA-009-009009,220030001088,61102,COMPUTER SCIENCE I,26,5,11,1,0,0,0,1,1
+Caddo Parish Magnet High School,LA-009-009012,220030001551,61102,COMPUTER SCIENCE I,17,5,4,1,0,0,5,1,0
+Caddo Parish Magnet High School,LA-009-009012,220030001551,61175,AP COMPUTER SCIENCE A,16,2,1,0,0,0,1,1,0
+Carencro High School,LA-028-028010,220087000668,61133,CREATIVE CODING THROUGH GAMES AND APPS,9,~,~,~,~,~,~,~,~
+Carencro High School,LA-028-028010,220087000668,61175,AP COMPUTER SCIENCE A,9,~,~,~,~,~,~,~,~
+Carencro High School,LA-028-028010,220087000668,61177,AP Computer Science Principles,37,12,31,0,0,0,22,1,0
+Castor High School,LA-007-007003,220021000092,80521,JAVA PROGRAMMING (1 CREDIT),1,~,~,~,~,~,~,~,~
+Central High School,LA-013-013002,220042000295,61177,AP Computer Science Principles,33,1,1,0,1,0,8,0,0
+David Thibodaux STEM Magnet Academy,LA-028-028054,220087002301,61102,COMPUTER SCIENCE I,29,3,2,4,0,0,9,2,0
+Delhi Charter School,LA-336-336001,220003801539,80500,Introduction to Programming (1 Credit),7,~,~,~,~,~,~,~,~
+Denham Springs Freshman High School,LA-032-032042,220102000904,61177,AP Computer Science Principles,15,9,0,0,0,0,1,0,0
+Denham Springs High School,LA-032-032005,220102000758,61175,AP COMPUTER SCIENCE A,28,7,1,1,0,0,6,1,0
+Denham Springs High School,LA-032-032005,220102000758,61177,AP Computer Science Principles,22,10,3,1,0,0,5,3,0
+DeRidder High School,LA-006-006002,220018000081,61177,AP Computer Science Principles,5,~,~,~,~,~,~,~,~
+Destrehan High School,LA-045-045003,220144001139,61175,AP COMPUTER SCIENCE A,20,10,5,3,0,0,5,0,0
+Destrehan High School,LA-045-045003,220144001139,61177,AP Computer Science Principles,42,19,11,5,0,0,17,0,0
+Doyle High School,LA-032-032008,220102000761,61177,AP Computer Science Principles,7,~,~,~,~,~,~,~,~
+Dutchtown High School,LA-003-003016,220009001541,61102,COMPUTER SCIENCE I,51,9,10,1,0,0,10,1,0
+Dutchtown High School,LA-003-003016,220009001541,61175,AP COMPUTER SCIENCE A,14,3,2,0,0,0,2,0,0
+East Ascension High School,LA-003-003005,220009000038,61102,COMPUTER SCIENCE I,21,5,5,2,0,0,13,1,0
+East Ascension High School,LA-003-003005,220009000038,61103,COMPUTER SCIENCE II,2,~,~,~,~,~,~,~,~
+East Ascension High School,LA-003-003005,220009000038,61175,AP COMPUTER SCIENCE A,5,~,~,~,~,~,~,~,~
+East Ascension High School,LA-003-003005,220009000038,61177,AP Computer Science Principles,9,~,~,~,~,~,~,~,~
+East Beauregard High School,LA-006-006004,220018000083,61177,AP Computer Science Principles,1,~,~,~,~,~,~,~,~
+Einstein Charter High School at Sarah Towles Reed,LA-WBM-WBM001,220029502427,61177,AP Computer Science Principles,17,4,8,1,0,0,14,2,2
+Fisher Middle/High School,LA-026-026029,220084000604,61177,AP Computer Science Principles,11,2,0,2,1,0,6,1,0
+Frederick A. Douglass High School,unspecified,unspecified,61177,AP Computer Science Principles,25,15,22,0,0,0,22,3,0
+Frederick Douglass High School,unspecified,unspecified,61102,COMPUTER SCIENCE I,94,51,88,5,0,0,81,6,2
+French Settlement High School,LA-032-032009,220102000762,61177,AP Computer Science Principles,20,10,0,1,0,0,6,0,0
+Grace King High School,LA-026-026051,220084000625,61102,COMPUTER SCIENCE I,43,16,8,17,0,0,29,1,7
+Grace King High School,LA-026-026051,220084000625,61175,AP COMPUTER SCIENCE A,43,16,8,17,0,0,29,1,7
+Hammond High Magnet School,LA-053-053009,220168001304,61102,COMPUTER SCIENCE I,17,5,5,0,0,0,7,0,0
+Haynes Academy School for Advanced Studies,LA-026-026042,220084000617,61175,AP COMPUTER SCIENCE A,12,2,1,1,0,0,3,0,0
+Haynes Academy School for Advanced Studies,LA-026-026042,220084000617,61177,AP Computer Science Principles,125,73,6,19,0,0,39,0,0
+John Ehret High School,LA-026-026023,220084000598,61102,COMPUTER SCIENCE I,85,52,25,20,0,0,57,3,5
+Keithville Elementary/Middle School,LA-009-009079,220030001918,61133,CREATIVE CODING THROUGH GAMES AND APPS,20,10,15,0,0,0,13,2,0
+Kenner Discovery Health Sciences Academy,LA-026-026125,220084000653,61102,COMPUTER SCIENCE I,16,6,3,2,0,0,9,14,1
+Kenner Discovery Health Sciences Academy,LA-026-026125,220084000653,61175,AP COMPUTER SCIENCE A,22,7,0,6,0,0,17,6,1
+Kenner Discovery Health Sciences Academy,LA-026-026125,220084000653,61177,AP Computer Science Principles,14,4,4,5,0,0,12,1,1
+Lafayette High School,LA-028-028019,220087000678,61102,COMPUTER SCIENCE I,59,10,8,3,0,0,17,4,3
+Lafayette High School,LA-028-028019,220087000678,61103,COMPUTER SCIENCE II,12,1,0,2,0,0,3,0,1
+LaGrange High School,LA-010-010033,220033000244,61177,AP Computer Science Principles,8,~,~,~,~,~,~,~,~
+Lake Charles College Prep,LA-W4B-W4B001,220019802388,61102,COMPUTER SCIENCE I,1,~,~,~,~,~,~,~,~
+Lake Charles College Prep,LA-W4B-W4B001,220019802388,61102,COMPUTER SCIENCE I,15,7,12,0,0,0,8,1,0
+Lake Charles College Prep,LA-W4B-W4B001,220019802388,61133,CREATIVE CODING THROUGH GAMES AND APPS,45,18,36,3,0,1,24,1,2
+Lee High School,LA-017-017138,220054002342,61102,COMPUTER SCIENCE I,30,15,14,4,0,0,11,2,3
+Lee High School,LA-017-017138,220054002342,61175,AP COMPUTER SCIENCE A,2,~,~,~,~,~,~,~,~
+Lee High School,LA-017-017138,220054002342,61177,AP Computer Science Principles,13,1,3,2,0,0,3,0,0
+Leesville High School,LA-058-058006,220183001410,61177,AP Computer Science Principles,17,3,4,0,0,0,7,1,0
+Lincoln Preparatory School,LA-W33-W33001,220027502421,61175,AP COMPUTER SCIENCE A,9,~,~,~,~,~,~,~,~
+Live Oak High School,LA-032-032014,220102000767,61175,AP COMPUTER SCIENCE A,24,7,0,0,0,0,6,3,0
+Live Oak High School,LA-032-032014,220102000767,61177,AP Computer Science Principles,103,48,4,2,0,0,24,2,0
+Livonia High School,LA-039-039003,220126001029,61175,AP COMPUTER SCIENCE A,17,12,4,0,0,0,6,1,0
+Louis Miller Terrebonne Career and Technical HS,LA-055-055040,220174001658,90510,Basic Coding II,8,~,~,~,~,~,~,~,~
+Louisiana School for Math Science & the Arts,LA-302-302006,220001701975,61102,COMPUTER SCIENCE I,52,22,8,1,0,7,12,2,0
+LSU Laboratory School,LA-318-318001,220002201922,61175,AP COMPUTER SCIENCE A,6,~,~,~,~,~,~,~,~
+LSU Laboratory School,LA-318-318001,220002201922,61177,AP Computer Science Principles,16,1,2,0,0,0,0,1,0
+Lusher Charter School,LA-WBE-WBE001,220029700926,61177,AP Computer Science Principles,35,11,13,2,0,0,10,1,0
+Magnet Academy for Cultural Arts,LA-049-049058,220156001685,61177,AP Computer Science Principles,12,5,4,0,0,0,7,1,0
+Magnolia School of Excellence,LA-009-009106,220030002377,61175,AP COMPUTER SCIENCE A,16,4,11,0,0,0,12,2,0
+McKinley Senior High School,LA-017-017056,220054000397,61177,AP Computer Science Principles,5,~,~,~,~,~,~,~,~
+Neville High School,LA-065-065014,220108000799,61102,COMPUTER SCIENCE I,14,2,6,2,0,0,9,2,0
+Neville High School,LA-065-065014,220108000799,61103,COMPUTER SCIENCE II,3,~,~,~,~,~,~,~,~
+New Orleans Center for Creative Arts,LA-334-334001,220003601499,61177,AP Computer Science Principles,28,14,9,2,0,0,3,0,0
+New Orleans Charter Science and Mathematics HS,LA-WBI-WBI001,220028100234,61102,COMPUTER SCIENCE I,27,10,23,2,0,0,18,4,0
+North DeSoto High School,LA-016-016012,220051001579,61177,AP Computer Science Principles,20,0,2,1,0,0,7,0,0
+Northshore High School,LA-052-052039,220165001650,61133,CREATIVE CODING THROUGH GAMES AND APPS,48,2,6,0,0,0,8,2,0
+Northside High School,LA-028-028027,220087000686,61177,AP Computer Science Principles,17,4,14,1,0,0,14,0,0
+Northwest High School,LA-049-049053,220156002006,61177,AP Computer Science Principles,4,~,~,~,~,~,~,~,~
+Opelousas Senior High School,LA-049-049032,220156001204,61175,AP COMPUTER SCIENCE A,11,7,6,2,0,0,3,0,0
+Parkway High School,LA-008-008020,220027000130,61175,AP COMPUTER SCIENCE A,13,3,2,2,0,0,6,0,0
+Patrick F. Taylor Science & Technology Academy,LA-026-026105,220084001667,61102,COMPUTER SCIENCE I,71,23,15,9,1,0,23,0,0
+Patrick F. Taylor Science & Technology Academy,LA-026-026105,220084001667,61177,AP Computer Science Principles,24,6,2,4,0,0,8,0,0
+Patterson High School,LA-051-051024,220162001254,61102,COMPUTER SCIENCE I,9,~,~,~,~,~,~,~,~
+Pickering High School,LA-058-058009,220183001664,61177,AP Computer Science Principles,4,~,~,~,~,~,~,~,~
+Plaquemine Senior High School,LA-024-024010,220075000543,61177,AP Computer Science Principles,2,~,~,~,~,~,~,~,~
+Port Allen High School,LA-061-061008,220192001464,61175,AP COMPUTER SCIENCE A,1,~,~,~,~,~,~,~,~
+Port Allen High School,LA-061-061008,220192001464,61177,AP Computer Science Principles,1,~,~,~,~,~,~,~,~
+Rosepine High School,LA-058-058012,220183001415,61177,AP Computer Science Principles,13,8,1,0,0,0,5,0,0
+Rougon Elementary School,LA-039-039013,220126002001,61175,AP COMPUTER SCIENCE A,6,~,~,~,~,~,~,~,~
+South Beauregard High School,LA-006-006011,220018000089,61177,AP Computer Science Principles,10,1,0,0,0,0,2,0,0
+Southwood High School,LA-009-009059,220030000197,61102,COMPUTER SCIENCE I,15,5,9,0,0,0,10,2,0
+Springfield High School,LA-032-032023,220102000773,61102,COMPUTER SCIENCE I,10,4,1,1,0,0,6,0,0
+Springfield High School,LA-032-032023,220102000773,61177,AP Computer Science Principles,10,4,1,1,0,0,6,0,0
+St. Amant High School,LA-003-003014,220009000046,61102,COMPUTER SCIENCE I,28,2,4,2,0,0,11,2,0
+St. Amant High School,LA-003-003014,220009000046,61177,AP Computer Science Principles,16,3,1,2,1,0,6,2,0
+Tara High School,LA-017-017088,220054000434,61177,AP Computer Science Principles,33,17,28,2,0,0,25,1,0
+Thomas Jefferson High School for Advanced Studies,LA-026-026107,220084001964,61177,AP Computer Science Principles,61,15,9,6,0,0,40,0,0
+"University View Academy, Inc. (FRM LA Connections)",LA-345-345001,220015702322,80521,JAVA PROGRAMMING (1 CREDIT),8,~,~,~,~,~,~,~,~
+Upper Pointe Coupee Elementary School,LA-039-039008,220126001034,61175,AP COMPUTER SCIENCE A,3,~,~,~,~,~,~,~,~
+Ville Platte High School,LA-020-020014,220063000482,61102,COMPUTER SCIENCE I,14,10,9,0,0,0,9,0,0
+Vinton High School,LA-010-010056,220033000270,61177,AP Computer Science Principles,18,5,2,1,0,0,11,0,0
+W. D. & Mary Baker Smith Career Center,LA-028-028035,220087000374,61103,COMPUTER SCIENCE II,3,~,~,~,~,~,~,~,~
+Walker High School,LA-032-032024,220102000774,61102,COMPUTER SCIENCE I,18,4,2,0,0,0,3,1,0
+Walker High School,LA-032-032024,220102000774,61177,AP Computer Science Principles,18,4,2,0,0,0,3,1,0
+West Feliciana High School,LA-063-063003,220198001476,61175,AP COMPUTER SCIENCE A,3,~,~,~,~,~,~,~,~
+West Feliciana High School,LA-063-063003,220198001476,61177,AP Computer Science Principles,12,3,0,0,0,0,1,0,0
+West St. Mary High School,LA-051-051039,220162001253,80521,JAVA PROGRAMMING (1 CREDIT),24,13,14,0,0,0,16,0,0
+Woodlawn High School,LA-017-017102,220054000447,61177,AP Computer Science Principles,29,8,12,2,0,0,16,0,0
+Youree Dr. Middle Advanced Placement Magnet School,LA-009-009074,220030000213,61133,CREATIVE CODING THROUGH GAMES AND APPS,14,5,3,0,0,0,5,6,0
