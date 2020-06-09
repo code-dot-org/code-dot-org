@@ -43,6 +43,9 @@
       %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
       = f.number_field :step_speed
 
+    .field
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
+
   = render partial: 'levels/editors/fields/blockly_xml_editors', locals:{f: f}
 
   :ruby
@@ -58,5 +61,5 @@
         shared_blocks: @level.shared_blocks,
       }.to_json
     }
-  %script{src: webpack_asset_path('js/levels/editors/_blockly.js'),
+  %script{src: webpack_asset_path('js/levels/editors/fields/_blockly.js'),
           data: script_data}
