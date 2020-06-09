@@ -34,6 +34,8 @@ mr:
       help_support: "सहाय्य आणि मदत"
       report_bug: "समस्या रिपोर्ट करा"
       about: "या बद्दल"
+      legal_privacy: "गोपनीयता धोरण"
+      legal_tos: "सेवेच्या अटी"
     user:
       signin: 'साइन इन करा'
       signup: 'अकाउंट तयार करा'

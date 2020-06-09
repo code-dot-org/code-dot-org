@@ -55,6 +55,10 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1098,6 +1102,12 @@ var setSvgText = (Studio.setSvgText = function(opts) {
  *  machine for consumption by the student's event-handling code.
  */
 function callHandler(name, allowQueueExtension, extraArgs = []) {
+  if (['when-up', 'when-down', 'when-left', 'when-right'].includes(name)) {
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      store.dispatch(dismissSwipeOverlay('buttonKeyPress'));
+    }
+  }
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -2638,9 +2648,8 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay

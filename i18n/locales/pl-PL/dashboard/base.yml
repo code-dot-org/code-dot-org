@@ -310,6 +310,9 @@ pl:
       help_us: "Pomóż nam"
       teach: "Ucz"
       about: "O programie"
+      legal: "Prywatność i legalność"
+      legal_privacy: "Polityka prywatności"
+      legal_tos: "Regulamin"
     user:
       classroom: 'Domowa strona nauczyciela'
       district_dashboard: 'Panel dzielnicy/okręgu'

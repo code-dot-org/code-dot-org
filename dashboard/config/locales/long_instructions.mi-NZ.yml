@@ -27,7 +27,7 @@ mi-NZ:
       CourseD_Dance_Party_02: |-
         Me tuku tenei Moose kia kanikani!
 
-        Kumea i te paraka <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ki te papamahi. Tapiri ki raro i te paraka takunetanga <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. kia timata to kanikani hou a muri i nga wahanga e wha.
+        Kumea i te paraka <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ki te papamahi. Tapiri ki raro i te paraka takunetanga <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. kia timata to kanikani hou a muri i nga wahanga e wha.
 
         Ko te **Wahanga** he mea hei kaute te wa o te waiata. ki roto i tenei tūāhua e wha nga taki te roa o ia wahanga.
       CourseD_Dance_Party_03: |-
@@ -58,7 +58,7 @@ mi-NZ:
         E mohio ana mātau pewhea te tini ngā ahuatanga o ngā kaikanikani. Ka taea hōki tātou ki te māhia ngā ahuatanga i tēnei paraka, kia timata i te wa ka tangi te waiata:
         <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -126,7 +126,7 @@ mi-NZ:
       Dance_Party_02: |-
         Tukua te moose kia kanikani!
 
-        Kumea te paraka <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ki te papamahi. Tāpiri atu ki raro i te <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block.
+        Kumea te paraka <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ki te papamahi. Tāpiri atu ki raro i te <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block.
         Ka timata to kaikanikani hou a muri i ngā wāhanga tuawha
 
         ko te **Wāhanga** hei kaute i te wa o ngā waiata. E whā ngā taki te roa kei ia wāhanga.
@@ -158,7 +158,7 @@ mi-NZ:
         E mohio ana mātau pewhea te tini ngā ahuatanga o ngā kaikanikani. Ka taea hōki tātou ki te māhia ngā ahuatanga i tēnei paraka, kia timata i te wa ka tangi te waiata:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
