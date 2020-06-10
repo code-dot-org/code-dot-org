@@ -94,7 +94,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 id="email"
                 label="Email"
                 type="text"
-                required={false}
+                required={true}
                 onChange={this.handleChange}
               />
               <SchoolAutocompleteDropdownWithLabel
@@ -142,7 +142,11 @@ class AmazonFutureEngineerAccountConfirmation extends React.Component {
         <div>Already have a Code.org account? Sign in.</div>
         <Button
           id="sign_up"
-          href={studio(`/users/sign_in?user_return_to=${window.location}`)}
+          href={studio(
+            `/users/sign_in?user_return_to=${pegasus(
+              '/amazon-future-engineer-eligibility'
+            )}`
+          )}
         >
           Sign up
         </Button>
