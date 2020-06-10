@@ -54,6 +54,16 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
 import ChallengeDialog from './templates/ChallengeDialog';
 
 const FIREHOSE_STUDY = 'feedback_dialog';
+const FIREHOSE_DIALOG_TYPES = {
+  CORRECT_COUNT: 'correct_count',
+  WRONG_COUNT: 'wrong_count',
+  APPLAB_CHOICE: 'applab_choice',
+  NO_SHARE_NO_COUNT: 'no_share_no_count',
+  SHARE_NO_COUNT: 'share_no_count',
+  DEFAULT: 'default'
+};
+let firehose_group = FIREHOSE_DIALOG_TYPES['DEFAULT'];
+
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
@@ -264,7 +274,13 @@ FeedbackUtils.prototype.displayFeedback = function(
   const isPerfect = actualBlocks <= idealBlocks;
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
-  const firehose_group = isPerfect ? 'correct_count' : 'wrong_count';
+
+  // If Firehose group already set away from default, don't override.
+  if (firehose_group !== FIREHOSE_DIALOG_TYPES['APPLAB_CHOICE']) {
+    firehose_group = isPerfect
+      ? FIREHOSE_DIALOG_TYPES['CORRECT_COUNT']
+      : FIREHOSE_DIALOG_TYPES['WRONG_COUNT'];
+  }
 
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
@@ -877,6 +893,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
             message = message + reinfFeedbackMsg;
           }
+          firehose_group = FIREHOSE_DIALOG_TYPES['APPLAB_CHOICE'];
         } else {
           var nextLevelMsg =
             (options.appStrings && options.appStrings.nextLevelMsg) ||
