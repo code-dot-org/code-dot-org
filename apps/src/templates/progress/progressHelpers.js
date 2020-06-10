@@ -179,7 +179,6 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    sublevels: level.sublevels,
-    bubbleChoiceLetter: level.letter
+    sublevels: level.sublevels
   };
 };
