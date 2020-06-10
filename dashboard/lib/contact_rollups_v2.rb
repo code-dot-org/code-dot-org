@@ -9,6 +9,9 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # Execute a SQL query in a transaction in the dashboard database.
+  # Does not return query results.
+  # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
   def self.execute_query_in_transaction(query)
     # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
     # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
@@ -25,6 +28,19 @@ class ContactRollupsV2
       ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_query(query)}
     else
       DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.run(query)}
+    end
+  end
+
+  # Execute a query in the dashboard database and returns query results.
+  # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
+  def self.retrieve_query_results(query)
+    # @see comments in +execute_query_in_transaction+ method for explanation
+    # why we have to use ActiveRecord connection in a test environment.
+    if Rails.env.test?
+      ActiveRecord::Base.connection.exec_query(query)
+    else
+      # +Database#[]+ method actually returns a dataset and does not fetch records until needed.
+      DASHBOARD_DB_WRITER[query]
     end
   end
 
