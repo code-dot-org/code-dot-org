@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import FoormPreviewIndex from '@cdo/apps/code-studio/pd/foorm/FoormPreviewIndex';
+import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
+
+import 'survey-react/survey.css';
 
 document.addEventListener('DOMContentLoaded', function(event) {
   ReactDOM.render(
-    <FoormPreviewIndex {...getScriptData('props')} />,
+    <Foorm {...getScriptData('props')} />,
     document.getElementById('application-container')
   );
 });
