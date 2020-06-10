@@ -130,6 +130,14 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
 // This might be better as pure functional component?
 class AmazonFutureEngineerAccountConfirmation extends React.Component {
+  returnToURL = relativeDashboardPath => {
+    return studio(
+      `${relativeDashboardPath}?user_return_to=${pegasus(
+        '/amazon-future-engineer-eligibility'
+      )}`
+    );
+  };
+
   render() {
     // TO DO: Add links to account sign up page.
     // Figure out how to check when user as completed sign up or sign in (promise?).
@@ -142,15 +150,11 @@ class AmazonFutureEngineerAccountConfirmation extends React.Component {
           receiving benefits, sign up for a Code.org account, or sign in if you
           already have one.
         </div>
-        <div>Already have a Code.org account? Sign in.</div>
-        <Button
-          id="sign_up"
-          href={studio(
-            `/users/sign_in?user_return_to=${pegasus(
-              '/amazon-future-engineer-eligibility'
-            )}`
-          )}
-        >
+        <div>
+          Already have a Code.org account?{' '}
+          <a href={this.returnToURL('/users/sign_in')}>Sign in.</a>
+        </div>
+        <Button id="sign_up" href={this.returnToURL('/users/sign_up')}>
           Sign up
         </Button>
       </div>
