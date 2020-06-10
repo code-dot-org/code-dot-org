@@ -1011,7 +1011,9 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
-  $('.droplet-main-canvas').css('background-color', '#FFF');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css('background-color', '#FFF');
+  }
   Applab.tickCount = 0;
 };
 
@@ -1307,7 +1309,9 @@ Applab.beginVisualizationRun = function() {
   Applab.running = true;
   $('#headers').addClass('dimmed');
   $('#codeWorkspace').addClass('dimmed');
-  $('.droplet-main-canvas').css('background-color', '#E5E5E5');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css('background-color', '#E5E5E5');
+  }
   designMode.renderDesignWorkspace();
   queueOnTick();
 };
