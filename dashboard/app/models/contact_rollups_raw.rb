@@ -33,15 +33,16 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_courses_taught
+  def self.extract_from_sections
     source_sql = <<~SQL
-      SELECT email, courses.name, MAX(se.updated_at) AS updated_at
+      SELECT email, courses.name AS course_name, scripts.name as script_name, MAX(se.updated_at) AS updated_at
       FROM users u
-      JOIN sections se on se.user_id = u.id
-      JOIN courses on courses.id = se.course_id
-      GROUP BY email, courses.name
+      JOIN sections se ON se.user_id = u.id
+      LEFT JOIN scripts ON scripts.id = se.script_id
+      LEFT JOIN courses ON courses.id = se.course_id
+      GROUP BY email, courses.name, scripts.name
     SQL
-    query = get_extraction_query(source_sql, 'email', ['name'], true, 'dashboard.courses')
+    query = get_extraction_query(source_sql, 'email', ['course_name', 'script_name'], true, 'dashboard.sections')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 

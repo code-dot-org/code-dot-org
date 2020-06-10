@@ -61,7 +61,7 @@ class ContactRollupsV2
     end
 
     @log_collector.time!('Extracts courses taught from dashboard.sections') do
-      ContactRollupsRaw.extract_courses_taught
+      ContactRollupsRaw.extract_from_sections
     end
 
     @log_collector.time!('Processes all extracted data') do
