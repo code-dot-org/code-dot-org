@@ -137,19 +137,19 @@ class ContactRollupsV2
     CDO.log.info @log_collector
   end
 
-  # Send logs and metrics to external systems such asf AWS CloudWatch and Slack
+  # Send logs and metrics to external systems such as AWS CloudWatch and Slack
   # unless in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
-    upload_metrics(@log_collector.metrics) unless @is_dry_run
+    upload_metrics unless @is_dry_run
     # TODO: Report to slack channel
     print_logs
   end
 
   # Upload pipeline metrics to AWS CloudWatch.
   # https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2
-  def upload_metrics(metrics)
-    aws_metrics = metrics.map do |key, value|
+  def upload_metrics
+    aws_metrics = @log_collector.metrics.map do |key, value|
       {
         metric_name: key,
         value: value,
