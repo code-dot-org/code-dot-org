@@ -23564,7 +23564,7 @@ en:
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
         csd3-2020:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD Unit 3 - Interactive Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -26113,3 +26113,7 @@ en:
               name: Unit 5 Assessment 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+        gamelabprojects:
+          stages: &1 {}
+          lessons: *1
+          lesson_groups: {}
