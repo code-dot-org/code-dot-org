@@ -20,6 +20,7 @@ import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -52,6 +53,7 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
 import ChallengeDialog from './templates/ChallengeDialog';
 
+const FIREHOSE_STUDY = 'feedback_dialog';
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
@@ -262,6 +264,7 @@ FeedbackUtils.prototype.displayFeedback = function(
   const isPerfect = actualBlocks <= idealBlocks;
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
+  const firehose_group = isPerfect ? 'correct_count' : 'wrong_count';
 
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
@@ -323,6 +326,11 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function() {
+      firehoseClient.putRecord({
+        study: FIREHOSE_STUDY,
+        study_group: firehose_group,
+        event: 'replay_level'
+      });
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
@@ -407,6 +415,11 @@ FeedbackUtils.prototype.displayFeedback = function(
     }
 
     dom.addClickTouchEvent(continueButton, function() {
+      firehoseClient.putRecord({
+        study: FIREHOSE_STUDY,
+        study_group: firehose_group,
+        event: 'continue'
+      });
       feedbackDialog.hide();
 
       if (options.response && options.response.puzzle_ratings_enabled) {
