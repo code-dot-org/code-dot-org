@@ -3418,7 +3418,6 @@ class UserTest < ActiveSupport::TestCase
 
   test 'password_required? is true for new users with no encrypted password' do
     user = create :user, encrypted_password: nil
-    user.expects(:managing_own_credentials?).returns(true)
     assert user.encrypted_password.nil?
     assert user.password_required?
   end
@@ -3427,7 +3426,6 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.password = "mypassword"
     user.password_confirmation = "mypassword"
-    user.expects(:managing_own_credentials?).returns(true)
     assert user.password_required?
   end
 
