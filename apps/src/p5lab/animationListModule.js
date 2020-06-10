@@ -267,7 +267,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     serializedAnimationList = {orderedKeys: [], propsByKey: {}};
   }
 
-  // TODO (from 2015): Tear out this migration when we don't think we need it anymore.
+  // TODO (from 2015): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   if (Array.isArray(serializedAnimationList)) {
     trackEvent('Research', 'RanMigration', '2015-animation-migration');
     // We got old animation data that needs to be migrated.
@@ -280,7 +280,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
-  // TODO (from 2020): Tear out this migration when we don't think we need it anymore.
+  // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   serializedAnimationList.orderedKeys.forEach(loadedKey => {
     let animation = serializedAnimationList.propsByKey[loadedKey];
     if (animation.sourceUrl && animation.sourceUrl.includes('/v3/')) {
