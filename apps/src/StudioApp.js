@@ -955,7 +955,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
-  if (this.isUsingBlockly()) {
+  if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     if (showRun && this.config.app !== 'craft') {
       $('.blocklySvg').css('background-color', '#FFF');
     } else if (showRun) {
