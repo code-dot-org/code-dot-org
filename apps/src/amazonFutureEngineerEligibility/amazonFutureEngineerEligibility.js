@@ -10,11 +10,23 @@ function showAmazonFutureEngineerEligibility() {
     '.amazon-future-engineer-eligibility-container'
   );
 
-  ReactDOM.render(
-    // Need to update API endpoint and source page ID (not sure if even needed)
-    <AmazonFutureEngineerEligibility />,
-    amazonFutureEngineerEligibilityElement[0]
-  );
+  let signedIn = false;
+  $.ajax({
+    type: 'GET',
+    url: '/dashboardapi/v1/users/me/contact_details'
+  })
+    .done(results => {
+      if (results) {
+        signedIn = true;
+      }
+    })
+    .complete(() => {
+      ReactDOM.render(
+        // Need to update API endpoint and source page ID (not sure if even needed)
+        <AmazonFutureEngineerEligibility signedIn={signedIn} />,
+        amazonFutureEngineerEligibilityElement[0]
+      );
+    });
 }
 
 async function init() {

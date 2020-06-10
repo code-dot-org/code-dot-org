@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -14,10 +15,15 @@ const styles = {
 const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
 export default class AmazonFutureEngineerEligibility extends React.Component {
+  static propTypes = {
+    signedIn: PropTypes.bool.isRequired
+  };
+
   constructor(props) {
     super(props);
 
     this.state = {
+      signedIn: this.props.signedIn,
       schoolEligible: null,
       formData: {
         consent: false
