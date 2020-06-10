@@ -31,11 +31,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     };
   }
 
-  handleChange = change => {
-    this.setState(
-      {formData: {...this.state.formData, ...change}},
-      this.saveToSessionStorage
-    );
+  updateFormData = change => {
+    this.setState({formData: {...this.state.formData, ...change}});
   };
 
   saveToSessionStorage = () => {
@@ -46,13 +43,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   handleClickCheckEligibility = () => {
-    // TO DO: actually check whether a school is eligible
     // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
-
-    this.saveToSessionStorage({
-      schoolId: this.state.formData.schoolId,
-      email: this.state.formData.email
-    });
 
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
@@ -79,10 +70,18 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       schoolName: event ? event.label : ''
     };
 
-    this.handleChange(newData);
+    this.updateFormData(newData);
+  };
+
+  loadConfirmationPage = () => {
+    this.saveToSessionStorage();
+
+    return <AmazonFutureEngineerAccountConfirmation />;
   };
 
   render() {
+    let {formData} = this.state;
+
     // TO DO: Disable button until email and school are filled in
     return (
       <div>
@@ -101,12 +100,12 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 label="Email"
                 type="text"
                 required={true}
-                onChange={this.handleChange}
+                onChange={this.updateFormData}
               />
               <SchoolAutocompleteDropdownWithLabel
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
-                value={this.state.formData.schoolId}
+                value={formData.schoolId}
               />
               <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
@@ -114,18 +113,16 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             </FormGroup>
           </div>
         )}
+        {this.state.schoolEligible === true && formData.consent === false && (
+          <AmazonFutureEngineerEligibilityForm
+            email={formData.email}
+            schoolId={formData.schoolId}
+            onContinue={this.updateFormData}
+          />
+        )}
         {this.state.schoolEligible === true &&
-          this.state.formData.consent === false && (
-            <AmazonFutureEngineerEligibilityForm
-              email={this.state.formData.email}
-              schoolId={this.state.formData.schoolId}
-              onContinue={this.handleChange}
-            />
-          )}
-        {this.state.schoolEligible === true &&
-          this.state.formData.consent === true && (
-            <AmazonFutureEngineerAccountConfirmation />
-          )}
+          formData.consent === true &&
+          this.loadConfirmationPage()}
       </div>
     );
   }
