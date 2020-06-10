@@ -955,6 +955,17 @@ StudioApp.prototype.toggleRunReset = function(button) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+  if (this.isUsingBlockly()) {
+    if (showRun && this.config.app !== 'craft') {
+      $('.blocklySvg').css('background-color', '#FFF');
+    } else if (showRun) {
+      $('.blocklySvg').css('background-color', '#A1A1A1');
+    } else if (this.config.app !== 'craft') {
+      $('.blocklySvg').css('background-color', '#E5E5E5');
+    } else {
+      $('.blocklySvg').css('background-color', '#7D7D7D');
+    }
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   getStore().dispatch(setArrowButtonDisabled(showRun));
