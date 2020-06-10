@@ -25817,6 +25817,8 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: &1
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -25849,6 +25851,7 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: *1
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -26017,6 +26020,8 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: &2
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
@@ -26049,6 +26054,7 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: *2
         no-lg:
           stages:
             new stage:
@@ -26114,6 +26120,6 @@ en:
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
         gamelabprojects:
-          stages: &1 {}
-          lessons: *1
+          stages: &3 {}
+          lessons: *3
           lesson_groups: {}
