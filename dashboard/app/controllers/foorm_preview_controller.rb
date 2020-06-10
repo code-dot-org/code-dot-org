@@ -47,10 +47,10 @@ class FoormPreviewController < ApplicationController
           facilitator_position: 3
         }
       ],
-      workshop_course: "Summer Course",
-      workshop_subject: "Sample Subject",
-      regional_partner_name: "Regional Partner A",
-      is_virtual: false,
+      workshop_course: params[:workshopCourse] || "Summer Course",
+      workshop_subject: params[:workshopSubject] || "Sample Subject",
+      regional_partner_name: params[:regionalPartnerName] || "Regional Partner A",
+      is_virtual: params[:isVirtual] == 'true' || false,
       num_facilitators: 3
     }
 
