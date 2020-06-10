@@ -1,31 +1,66 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+const styles = {
+  row: {
+    clear: 'both'
+  },
+  caption: {
+    float: 'left',
+    width: 300
+  },
+  input: {
+    float: 'left'
+  },
+  linkContainer: {
+    marginBottom: 7
+  },
+  link: {
+    fontSize: 15
+  }
+};
+
 export default class FoormPreviewIndex extends React.Component {
   static propTypes = {
     forms: PropTypes.arrayOf(PropTypes.object)
   };
 
-  state = {
-    properties: {
-      workshopCourse: '',
-      workshopSubject: '',
-      regionalPartnerName: '',
-      isVirtual: false
-    }
-  };
+  properties = [
+    {id: 'workshopCourse', caption: 'Workshop course', type: 'text'},
+    {id: 'workshopSubject', caption: 'Workshop subject', type: 'text'},
+    {id: 'regionalPartnerName', caption: 'Regional partner name', type: 'text'},
+    {id: 'isVirtual', caption: 'Is virtual', type: 'checkbox'}
+  ];
 
-  // Assume that the properties are strings unless listed here as a checkbox.
-  checkboxProperties = ['isVirtual'];
+  constructor(props) {
+    super(props);
+
+    const state = {};
+    this.properties.forEach(property => {
+      state[property.id] = property.type === 'text' ? '' : false;
+    });
+    this.state = state;
+  }
+
+  onChange(id, event) {
+    const type = this.properties.find(property => property.id === id).type;
+
+    this.setState({
+      [id]: type === 'checkbox' ? event.target.checked : event.target.value
+    });
+  }
 
   getFormUrl(form) {
     const baseUrl = form.url;
     let params = [];
 
-    Object.keys(this.state.properties).forEach(name => {
-      const value = this.state.properties[name];
-      if (value !== '') {
-        params.push(name + '=' + encodeURIComponent(value));
+    this.properties.forEach(property => {
+      const value = this.state[property.id];
+      if (
+        (property.type === 'checkbox' && value) ||
+        (property.type === 'text' && value !== '')
+      ) {
+        params.push(property.id + '=' + encodeURIComponent(value));
       }
     });
 
@@ -35,41 +70,35 @@ export default class FoormPreviewIndex extends React.Component {
     return fullUrl;
   }
 
-  onChange(name, event) {
-    const isCheckbox = this.checkboxProperties.includes(name);
-
-    this.setState({
-      properties: {
-        ...this.state.properties,
-        [name]: isCheckbox ? event.target.checked : event.target.value
-      }
-    });
-  }
-
   render() {
     return (
       <div>
-        {Object.keys(this.state.properties).map(name => {
-          const isCheckbox = this.checkboxProperties.includes(name);
-          const type = isCheckbox ? 'checkbox' : null;
-
+        <h1>Form previews</h1>
+        <h2>Optional overrides</h2>
+        {this.properties.map(property => {
           return (
-            <div key={name}>
-              {name}:
+            <div style={styles.row} key={property.id}>
+              <div style={styles.caption}>{property.caption}:</div>
               <input
-                value={this.state.properties[name]}
-                type={type}
-                onChange={this.onChange.bind(this, name)}
+                style={styles.input}
+                value={this.state[property.id]}
+                type={property.type}
+                onChange={this.onChange.bind(this, property.id)}
               />
             </div>
           );
         })}
+        <br />
 
+        <h2>Preview</h2>
         {this.props.forms.map((form, index) => (
-          <div key={index}>
-            <a href={this.getFormUrl(form)}>{form.name}</a>
+          <div style={styles.linkContainer} key={index}>
+            <a style={styles.link} target="_blank" href={this.getFormUrl(form)}>
+              {form.name}
+            </a>
           </div>
         ))}
+        <br />
       </div>
     );
   }
