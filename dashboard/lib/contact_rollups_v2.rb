@@ -137,10 +137,11 @@ class ContactRollupsV2
     CDO.log.info @log_collector
   end
 
-  # Send logs and metrics to external systems such as AWS CloudWatch and Slack.
+  # Send logs and metrics to external systems such asf AWS CloudWatch and Slack
+  # unless in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
-    upload_metrics(@log_collector.metrics)
+    upload_metrics(@log_collector.metrics) unless @is_dry_run
     # TODO: Report to slack channel
     print_logs
   end
@@ -155,7 +156,7 @@ class ContactRollupsV2
         dimensions: [{name: "Environment", value: CDO.rack_env}]
       }
     end
-    Cdo::Metrics.push('ContactRollupsV2', aws_metrics) unless @is_dry_run
+    Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
   end
 
   private
