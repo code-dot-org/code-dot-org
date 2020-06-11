@@ -23,11 +23,20 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
+    let sessionEligibilityData =
+      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+
     this.state = {
-      signedIn: this.props.signedIn,
-      schoolEligible: null,
       formData: {
-        consent: false
+        signedIn: this.props.signedIn,
+        schoolEligible:
+          'schoolEligible' in sessionEligibilityData
+            ? sessionEligibilityData.schoolEligible
+            : null,
+        consentAFE:
+          'consentAFE' in sessionEligibilityData
+            ? sessionEligibilityData.consentAFE
+            : false
       }
     };
   }
@@ -60,9 +69,14 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   handleEligibility(isEligible) {
-    isEligible
-      ? this.setState({schoolEligible: isEligible})
-      : (window.location = pegasus('/privacy'));
+    this.setState({
+      formData: {...this.state.formData, ...{schoolEligible: isEligible}}
+    });
+    this.saveToSessionStorage();
+
+    if (!isEligible) {
+      window.location = pegasus('/privacy');
+    }
   }
 
   handleSchoolDropdownChange = (field, event) => {
@@ -80,13 +94,34 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     return <AmazonFutureEngineerAccountConfirmation />;
   };
 
+  loadCompletionPage = () => {
+    // Do API calls here.
+
+    // Notes on to dos for CSTA API call:
+    // may need to make NCES ID 12 digits.
+    // CSTA wants school district?
+    // school name may be too verbose currently.
+    // what if some of these are missing?
+    // lots of validation specified in spec, none currently being done.
+    // need timestamp in appropriate format.
+
+
+    return (
+      <div>Completion!</div>
+    )
+  };
+
   render() {
     let {formData} = this.state;
+
+    if (formData.schoolEligible === false) {
+      window.location = pegasus('/privacy');
+    }
 
     // TO DO: Disable button until email and school are filled in
     return (
       <div>
-        {this.state.schoolEligible === null && (
+        {formData.schoolEligible === null && (
           <div>
             <h2>Am I eligible?</h2>
             <FormGroup id="amazon-future-engineer-eligiblity-intro">
@@ -114,16 +149,21 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             </FormGroup>
           </div>
         )}
-        {this.state.schoolEligible === true && formData.consent === false && (
+        {formData.schoolEligible === true && formData.consentAFE === false && (
           <AmazonFutureEngineerEligibilityForm
             email={formData.email}
             schoolId={formData.schoolId}
             onContinue={this.updateFormData}
           />
         )}
-        {this.state.schoolEligible === true &&
-          formData.consent === true &&
+        {formData.schoolEligible === true &&
+          formData.consentAFE === true &&
+          formData.signedIn === false &&
           this.loadConfirmationPage()}
+        {formData.schoolEligible === true &&
+          formData.consentAFE === true &&
+          formData.signedIn === true &&
+          this.loadCompletionPage()}
       </div>
     );
   }
