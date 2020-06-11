@@ -72,7 +72,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import {code_running, white} from '@cdo/apps/util/color';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 
 var copyrightStrings;
 
@@ -967,7 +967,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
     } else if (this.config.app === 'craft') {
       $('.blocklySvg').css('background-color', '#7D7D7D');
     } else {
-      $('.blocklySvg').css('background-color', code_running);
+      $('.blocklySvg').css('background-color', workspace_running_background);
     }
   }
 
