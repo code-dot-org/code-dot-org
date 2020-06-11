@@ -72,6 +72,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import {code_running, white} from '@cdo/apps/util/color';
 
 var copyrightStrings;
 
@@ -956,14 +957,17 @@ StudioApp.prototype.toggleRunReset = function(button) {
     reset.disabled = showRun;
   }
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
-    if (showRun && this.config.app !== 'craft') {
-      $('.blocklySvg').css('background-color', '#FFF');
-    } else if (showRun) {
+    // craft has a darker color scheme than other blockly labs. It needs to
+    // toggle between different colors on run/reset or else, on run, the workspace
+    // would get lighter than the default.
+    if (showRun && this.config.app === 'craft') {
       $('.blocklySvg').css('background-color', '#A1A1A1');
-    } else if (this.config.app !== 'craft') {
-      $('.blocklySvg').css('background-color', '#E5E5E5');
-    } else {
+    } else if (showRun) {
+      $('.blocklySvg').css('background-color', white);
+    } else if (this.config.app === 'craft') {
       $('.blocklySvg').css('background-color', '#7D7D7D');
+    } else {
+      $('.blocklySvg').css('background-color', code_running);
     }
   }
 
