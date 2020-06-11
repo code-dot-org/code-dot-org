@@ -119,32 +119,52 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.create_new_pardot_prospects(is_dry_run: false)
-    record_count = 0
+    request_count = 0
+    accepted_prospects = 0
+    rejected_prospects = 0
 
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
     pardot_writer = PardotV2.new is_dry_run: is_dry_run
     ContactRollupsV2.retrieve_query_results(query_new_contacts).each do |record|
-      record_count += 1
       record.deep_symbolize_keys!
       data = JSON.parse(record[:data]).deep_symbolize_keys
+
       submissions, errors = pardot_writer.batch_create_prospects record[:email], data
-      save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
+      next if submissions.blank?
+
+      request_count += 1
+      accepted_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
     end
 
     # There could be prospects left in the batch because batch size is not yet big enough
     # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
+    if submissions.present?
+      request_count += 1
+      accepted_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
+    end
 
-    CDO.log.info "#{record_count} total new prospects to be added" if is_dry_run
+    CDO.log.info "[Dry run] #{accepted_prospects} total new prospects to be added to Pardot." if is_dry_run
+
+    {
+      request_count: request_count,
+      accepted_prospects: accepted_prospects,
+      rejected_prospects: rejected_prospects
+    }
   end
 
   def self.update_pardot_prospects(is_dry_run: false)
-    record_count = 0
+    request_count = 0
+    updated_prospects = 0
+    rejected_prospects = 0
+
     pardot_writer = PardotV2.new is_dry_run: is_dry_run
     ContactRollupsV2.retrieve_query_results(query_updated_contacts).each do |record|
-      record_count += 1
       record.deep_symbolize_keys!
       # If pardot_id has changed since the last data sync, we should assume that
       # Pardot prospect data is currently empty and re-sync all contact data.
@@ -160,13 +180,29 @@ class ContactRollupsPardotMemory < ApplicationRecord
         old_prospect_data,
         new_contact_data
       )
-      save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
+      next if submissions.blank?
+
+      request_count += 1
+      updated_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
     end
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
+    if submissions.present?
+      request_count += 1
+      updated_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
+    end
 
-    CDO.log.info "#{record_count} total prospects to be updated" if is_dry_run
+    CDO.log.info "[Dry run] #{updated_prospects} total prospects to be updated in Pardot." if is_dry_run
+
+    {
+      request_count: request_count,
+      updated_prospects: updated_prospects,
+      rejected_prospects: rejected_prospects
+    }
   end
 
   def self.query_new_contacts

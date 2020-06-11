@@ -1,0 +1,55 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#artist"}}
+  Artist Settings
+
+#artist.in.collapse
+  .field
+    = f.label :slider_speed, 'Slider speed (artist only)'
+    %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
+    = f.number_field :slider_speed, :step => 0.1
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :impressive, description: "Impressive"}
+    %p Impressive levels can be shared and are automatically saved to the private gallery
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :discard_background, description: "Discard Background"}
+    %p If a level has a background image, don't display that image as feedback or include it in the image saved to the private gallery
+  .field
+    = f.label :start_direction, 'Start Direction (in degrees)'
+    = f.number_field :start_direction, :in => 0...360, :value => @level.start_direction
+  .field
+    = f.label :x
+    = f.number_field :x, :value => @level.x
+  .field
+    = f.label :y
+    = f.number_field :y, :value => @level.y
+  .field
+    = f.label :permitted_errors, 'Permitted errors (default 0)'
+    = f.number_field :permitted_errors, :value => @level.permitted_errors
+  .field
+    = f.label :auto_run, 'Automatically rerun on block changes'
+    :ruby
+      selector = f.select :auto_run, options_for_select([
+        ['No', nil],
+        ['Yes', SharedConstants::ARTIST_AUTORUN_OPTIONS.full_auto_run],
+      ], selected: @level.auto_run)
+    = selector
+  .field
+    = link_to 'Edit Predraw Blocks', edit_blocks_level_path(@level, :predraw_blocks) unless @level.new_record?
+    = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
+    :javascript
+      levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
+  .field
+    = f.label :images, 'Image field in JSON array format, e.g.:'
+    %div
+      %pre{:style => '-webkit-user-select: text'}
+        = preserve do
+          :escaped
+            [
+              {"filename": "https://images.code.org/cat.png", "position": [16, 170]},
+              {"filename": "https://images.code.org/lion.png", "position": [15, 250]},
+              {"filename": "https://images.code.org/elephant.png", "position": [127, 220]},
+              {"filename": "https://images.code.org/cow.png", "position": [255, 250]}
+            ]
+      %p Paste or drag images into this field to upload them, similar to adding images to Long Instructions.
+    = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
+    :javascript
+      levelbuilder.initializeCodeMirror('level_images', 'javascript', {attachments: true});
