@@ -140,3 +140,11 @@ level 'Episode 11 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E11 Challenges', progression: 'Challenges'
 level 'Episode 11 Share', progression: 'Share Your Work!'
 
+lesson 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia'
+level 'CodeBreak Episode 12 Placeholder', progression: 'Code Break: Episode 12'
+level 'Episode 12 Instructions', progression: 'Practice'
+level 'CodeBreak E12 Practice Mike2', progression: 'Practice'
+level 'Episode 12 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E12 Challenges', progression: 'Challenges'
+level 'Episode 12 Share', progression: 'Share Your Work!'
+

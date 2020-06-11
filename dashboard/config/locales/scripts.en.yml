@@ -23564,7 +23564,7 @@ en:
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
         csd3-2020:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD Unit 3 - Interactive Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -25815,6 +25815,10 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: &1
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -25845,6 +25849,9 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: *1
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -25891,6 +25898,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
           title: Code Break Staging
           description_audience: ''
           description_short: ''
@@ -25919,6 +25928,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
         code-break-younger-staging:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -25945,6 +25956,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
           title: Code Break Younger Staging
           description_audience: ''
           description_short: ''
@@ -25971,6 +25984,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
         code-break-younger:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -26003,6 +26018,10 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: &2
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
@@ -26033,6 +26052,9 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia: *2
         no-lg:
           stages:
             new stage:
@@ -26097,3 +26119,7 @@ en:
               name: Unit 5 Assessment 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+        gamelabprojects:
+          stages: &3 {}
+          lessons: *3
+          lesson_groups: {}
