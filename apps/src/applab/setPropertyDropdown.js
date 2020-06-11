@@ -450,7 +450,7 @@ for (var elementType in PROPERTIES) {
 
     // The PhotoSelect element is currently the only element that uses
     // textColor to modify the color of the icon so we need to make sure that
-    // if we're accessing the icon-color of a photo select element, we are
+    // if we're accessing the icon-color of PhotoSelect, we are
     // mapping it to the textColor property.
     if (
       elementType === ElementType.PHOTO_SELECT &&
