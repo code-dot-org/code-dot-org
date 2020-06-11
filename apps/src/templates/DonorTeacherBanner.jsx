@@ -112,7 +112,7 @@ export default class DonorTeacherBanner extends Component {
       });
 
       // redirect to form
-      window.location.href = pegasus('/amazon-future-engineer#sign-up-today');
+      window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
     }
 
     this.setState({submitted: true});
