@@ -6,10 +6,14 @@ import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../code-studio/pd/form_components/SingleCheckbox';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   wrong_school: {
     textAlign: 'right'
+  },
+  sectionBreak: {
+    borderColor: color.teal
   }
 };
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
@@ -35,8 +39,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
-  submit = () => {
-    const defaultFormData = _.pick(this.state, [
+  onContinue = () => {
+    const requiredFormData = _.pick(this.state, [
       'firstName',
       'lastName',
       'inspirationKit',
@@ -56,7 +60,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       ]);
     }
 
-    this.props.onContinue({...defaultFormData, ...shippingAddress});
+    this.props.onContinue({...requiredFormData, ...shippingAddress});
   };
 
   render() {
@@ -66,100 +70,98 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     return (
       <div>
         <div>
-          <div>
-            <ValidationStep
-              stepStatus={Status.SUCCEEDED}
-              stepName="You teach at an eligible school!"
-            />
-            We invite you to enroll in the Amazon Future Engineer program by
-            completing the information below.
+          <ValidationStep
+            stepStatus={Status.SUCCEEDED}
+            stepName="You teach at an eligible school!"
+          />
+          We invite you to enroll in the Amazon Future Engineer program by
+          completing the information below.
+        </div>
+        <form>
+          <FieldGroup
+            id="email"
+            label="Email"
+            type="text"
+            required={true}
+            onChange={this.handleChange}
+            defaultValue={this.props.email}
+          />
+          <SchoolAutocompleteDropdownWithLabel
+            value={this.props.schoolId}
+            disabled={true}
+            includeSchoolNotFoundCheckbox={false}
+          />
+          <div style={styles.wrong_school}>
+            Wrong school? Go back
+            <br />
           </div>
-          <form>
-            <FieldGroup
-              id="email"
-              label="Email"
-              type="text"
-              required={true}
-              onChange={this.handleChange}
-              defaultValue={this.props.email}
-            />
-            <SchoolAutocompleteDropdownWithLabel
-              value={this.props.schoolId}
-              disabled={true}
-              includeSchoolNotFoundCheckbox={false}
-            />
-            <div style={styles.wrong_school}>
-              Wrong school? Go back
-              <br />
-            </div>
-            <FieldGroup
-              id="firstName"
-              label="First name"
-              type="text"
-              required={true}
-              onChange={this.handleChange}
-            />
-            <FieldGroup
-              id="lastName"
-              label="Last name"
-              type="text"
-              required={true}
-              onChange={this.handleChange}
-            />
-            <div>
-              How can Amazon Future Engineer help you grow computer science at
-              your school?
-            </div>
-            <hr />
-            <SingleCheckbox
-              name="inspirationKit"
-              label="Send my school an Inspiration Kit with posters and stickers to
+          <FieldGroup
+            id="firstName"
+            label="First name"
+            type="text"
+            required={true}
+            onChange={this.handleChange}
+          />
+          <FieldGroup
+            id="lastName"
+            label="Last name"
+            type="text"
+            required={true}
+            onChange={this.handleChange}
+          />
+          <div>
+            How can Amazon Future Engineer help you grow computer science at
+            your school?
+          </div>
+          <hr style={styles.sectionBreak} />
+          <SingleCheckbox
+            name="inspirationKit"
+            label="Send my school an Inspiration Kit with posters and stickers to
               help promote computer science to students and parents."
-              onChange={this.handleChange}
-              value={this.state.inspirationKit}
-            />
-            {this.state.inspirationKit && (
-              <ShippingAddressFormGroup handleChange={this.handleChange} />
-            )}
-            <SingleCheckbox
-              name="csta"
-              label="Send me a free annual Computer Science Teachers Association (CSTA)
+            onChange={this.handleChange}
+            value={this.state.inspirationKit}
+          />
+          {this.state.inspirationKit && (
+            <ShippingAddressFormGroup handleChange={this.handleChange} />
+          )}
+          <SingleCheckbox
+            name="csta"
+            label="Send me a free annual Computer Science Teachers Association (CSTA)
               Plus membership - which includes access to Amazon expert-led
               webinars and other exclusive content."
-              onChange={this.handleChange}
-              value={this.state.csta}
-            />
-            <SingleCheckbox
-              name="awsEducate"
-              label="Send me a free membership to Amazon Web Services Educate to access
+            onChange={this.handleChange}
+            value={this.state.csta}
+          />
+          <SingleCheckbox
+            name="awsEducate"
+            label="Send me a free membership to Amazon Web Services Educate to access
               free content and cloud computing credits to help my students learn
               to build in the cloud."
-              onChange={this.handleChange}
-              value={this.state.awsEducate}
-            />
-            <hr />
-            <SingleCheckbox
-              name="consent"
-              label="I give Code.org permission to share my name, email address, and
+            onChange={this.handleChange}
+            value={this.state.awsEducate}
+          />
+          <hr style={styles.sectionBreak} />
+          <SingleCheckbox
+            name="consent"
+            label="I give Code.org permission to share my name, email address, and
               school name, address, and ID with Amazon.com (required to
               participate). Use of your personal information is subject to
               Amazon’s Privacy Policy."
-              onChange={this.handleChange}
-              value={this.state.consent}
-              required={true}
-            />
-            <div>
-              By clicking Continue, you will receive an email from Amazon Future
-              Engineer to claim your benefits. You will also receive occasional
-              emails from Amazon Future Engineer about new opportunities. You
-              always have the choice to adjust your interest settings or
-              unsubscribe.
-            </div>
-            <Button id="continue" onClick={this.submit}>
-              Continue
-            </Button>
-          </form>
-        </div>
+            onChange={this.handleChange}
+            value={this.state.consent}
+            required={true}
+          />
+          <div>
+            By clicking Continue, you will receive an email from Amazon Future
+            Engineer to claim your benefits. You will also receive occasional
+            emails from Amazon Future Engineer about new opportunities. You
+            always have the choice to adjust your interest settings or
+            unsubscribe.
+          </div>
+          <Button id="continue" onClick={this.onContinue}>
+            Continue
+          </Button>
+        </form>
       </div>
     );
   }
@@ -188,7 +190,7 @@ class ShippingAddressFormGroup extends React.Component {
           id="street1"
           label="Street 1"
           type="text"
-          required={true}
+          required={this.true}
           onChange={this.handleChange}
         />
         <FieldGroup
