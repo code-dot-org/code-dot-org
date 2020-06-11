@@ -9,6 +9,16 @@ import {MicrobitStubBoard} from '../makeStubBoard';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
 
+const COMPONENTS = [
+  'buttonA',
+  'buttonB',
+  'ledScreen',
+  'tempSensor',
+  'accelerometer',
+  'compass',
+  'lightSensor'
+];
+
 describe('MicroBit Components', () => {
   let board;
 
@@ -22,14 +32,7 @@ describe('MicroBit Components', () => {
       // don't cover it with new tests.  If that happens, make sure you
       // add matching tests below!
       return createMicroBitComponents(board).then(components => {
-        expect(Object.keys(components)).to.deep.equal([
-          'buttonA',
-          'buttonB',
-          'ledScreen',
-          'tempSensor',
-          'accelerometer',
-          'compass'
-        ]);
+        expect(Object.keys(components)).to.deep.equal(COMPONENTS);
       });
     });
   });
@@ -143,6 +146,27 @@ describe('MicroBit Components', () => {
     });
   });
 
+  describe('lightSensor', () => {
+    let lightSensor;
+
+    beforeEach(() => {
+      return createMicroBitComponents(board).then(
+        components => (lightSensor = components.lightSensor)
+      );
+    });
+
+    it('bound to the board controller', () => {
+      expect(lightSensor.board.mb).to.equal(board);
+    });
+
+    it('with non-null values immediately after initialization', () => {
+      // This test depends on the fake initial thermometer reading
+      // set up in the beforeEach block at the top  of this file.
+      expect(lightSensor.value).not.to.be.null;
+      expect(lightSensor.value).to.equal(0);
+    });
+  });
+
   describe('cleanupMicroBitComponents()', () => {
     let components;
 
@@ -157,23 +181,23 @@ describe('MicroBit Components', () => {
     });
 
     it('destroys everything that createMicroBitComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(6);
+      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components if shouldDestroyComponents is false', () => {
-      expect(Object.keys(components)).to.have.length(6);
+      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
       cleanupMicroBitComponents(
         components,
         false /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(6);
+      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
     });
 
     it('does not destroy components not created by createMicroBitComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(7);
+      expect(Object.keys(components)).to.have.length(COMPONENTS.length + 1);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');

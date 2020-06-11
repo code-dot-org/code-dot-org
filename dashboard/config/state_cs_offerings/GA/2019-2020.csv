@@ -1,0 +1,604 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Woodland High School,GA-608-0198,130033001914,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Hill County Middle School,GA-609-0296,130036002149,11.0120000,Foundations of Computer Programming,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richmond Hill Middle School,GA-615-0199,130057002235,11.0120000,Foundations of Computer Programming,115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burke County Middle School,GA-617-0188,130066001990,11.0120000,Foundations of Computer Programming,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage Middle School,GA-623-0205,130093003305,11.0120000,Foundations of Computer Programming,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview Middle School,GA-623-2552,130093000348,11.0120000,Foundations of Computer Programming,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oglethorpe Charter School,GA-625-0118,130102002303,11.0120000,Foundations of Computer Programming,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Godley Station School,GA-625-0211,130102003972,11.0120000,Foundations of Computer Programming,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coastal Middle School,GA-625-0311,130102002019,11.0120000,Foundations of Computer Programming,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hubert Middle School,GA-625-2060,130102000374,11.0120000,Foundations of Computer Programming,101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burney-Harris-Lyons Middle School,GA-629-0296,130117000456,11.0120000,Foundations of Computer Programming,225,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mundys Mill Middle School,GA-631-0174,130123000463,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lovejoy Middle School,GA-631-0191,130123002105,11.0120000,Foundations of Computer Programming,100,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Clayton Middle School,GA-631-3052,130123000495,11.0120000,Foundations of Computer Programming,106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cook County Middle School,GA-637-0101,130147000628,11.0120000,Foundations of Computer Programming,92,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson County Middle School,GA-642-0106,130165001952,11.0120000,Foundations of Computer Programming,215,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albany Middle School,GA-647-0101,130183000833,11.0120000,Foundations of Computer Programming,98,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Turner Middle School,GA-648-2054,130186000856,11.0120000,Foundations of Computer Programming,236,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ebenezer Middle School,GA-651-0203,130198002550,11.0120000,Foundations of Computer Programming,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Effingham Middle School,GA-651-0297,130198001597,11.0120000,Foundations of Computer Programming,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elbert County Middle School ,GA-652-0104,130201002871,11.0120000,Foundations of Computer Programming,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwatch Middle School,GA-658-0105,130222003352,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside Middle School,GA-658-0216,130222003858,11.0120000,Foundations of Computer Programming,193,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Forsyth Middle School,GA-658-0598,130222002262,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paul D. West Middle School,GA-660-0803,130228002564,11.0120000,Foundations of Computer Programming,197,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fulton Academy of Science and Technology,GA-660-1319,130228004259,11.0120000,Foundations of Computer Programming,65,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Trickum Middle School ,GA-667-0108,130255001115,11.0120000,Foundations of Computer Programming,125,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sweetwater Middle School,GA-667-0276,130255001144,11.0120000,Foundations of Computer Programming,123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dacula Middle School,GA-667-0380,130255001907,11.0120000,Foundations of Computer Programming,128,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jones Middle School,GA-667-0405,130255003388,11.0120000,Foundations of Computer Programming,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moore Middle School,GA-667-1112,130255004026,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Gwinnett Middle School,GA-667-1510,130255003945,11.0120000,Foundations of Computer Programming,90,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Middle School,GA-667-1813,130255004184,11.0120000,Foundations of Computer Programming,97,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summerour Middle School,GA-667-4058,130255001124,11.0120000,Foundations of Computer Programming,130,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C. W. Davis Middle School,GA-669-0100,130261002326,11.0120000,Foundations of Computer Programming,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warner Robins Middle School,GA-676-5056,130288001236,11.0120000,Foundations of Computer Programming,111,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Jackson Middle School,GA-678-0197,130294001683,11.0120000,Foundations of Computer Programming,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jasper County High School,GA-679-0108,130297003423,11.0120000,Foundations of Computer Programming,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jasper County Middle School,GA-679-0201,130297002397,11.0120000,Foundations of Computer Programming,89,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln County High School,GA-690-0110,130333002408,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lumpkin County High School,GA-693-0101,130342002505,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison County Middle School,GA-695-1052,130348001332,11.0120000,Foundations of Computer Programming,123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenville Middle School,GA-699-0401,130363004238,11.0120000,Foundations of Computer Programming,127,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manchester Middle School,GA-699-5050,130363001361,11.0120000,Foundations of Computer Programming,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan County High School,GA-704-1050,130378001378,11.0120000,Foundations of Computer Programming,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackmon Road Middle School,GA-706-0196,130387001376,11.0120000,Foundations of Computer Programming,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Columbus Magnet Academy,GA-706-0301,130387002421,11.0120000,Foundations of Computer Programming,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Double Churches Middle School,GA-706-0401,130387002422,11.0120000,Foundations of Computer Programming,186,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arnold Middle School,GA-706-2050,130387001413,11.0120000,Foundations of Computer Programming,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rothschild Leadership Academy School,GA-706-2067,130387001399,11.0120000,Foundations of Computer Programming,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconee County Middle School,GA-708-0193,130396000018,11.0120000,Foundations of Computer Programming,207,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Malcom Bridge Middle School,GA-708-0198,130396002225,11.0120000,Foundations of Computer Programming,186,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conyers Middle School,GA-722-0278,130441001588,11.0120000,Foundations of Computer Programming,169,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memorial Middle School,GA-722-0294,130441000583,11.0120000,Foundations of Computer Programming,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edwards Middle School,GA-722-0378,130441001587,11.0120000,Foundations of Computer Programming,166,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rehoboth Road Middle School,GA-726-0110,130252003951,11.0120000,Foundations of Computer Programming,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Americus Sumter High School (Old Americus-Sumter HS S),GA-729-0105,130462000001,11.0120000,Foundations of Computer Programming,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taliaferro County School,GA-731-0102,130468002514,11.0120000,Foundations of Computer Programming,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saddle Ridge Elementary and Middle School,GA-746-0114,130537004121,11.0120000,Foundations of Computer Programming,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaFayette Middle School,GA-746-0180,130537001741,11.0120000,Foundations of Computer Programming,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loganville Middle School,GA-747-0291,130539001767,11.0120000,Foundations of Computer Programming,105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wheeler County Middle School,GA-753-1053,130564004241,11.0120000,Foundations of Computer Programming,147,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastbrook Middle School,GA-755-0475,130570001816,11.0120000,Foundations of Computer Programming,334,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Valley Point Middle School,GA-755-0675,130570001821,11.0120000,Foundations of Computer Programming,139,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Commerce Middle School,GA-771-0105,130144000623,11.0120000,Foundations of Computer Programming,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Middle School,GA-779-0101,130303002346,11.0120000,Foundations of Computer Programming,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia School for Innovation and the Classics,GA-7820616-0616,130023804205,11.0120000,Foundations of Computer Programming,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookhaven Innovation Academy,GA-7830613-0613,130024204249,11.0120000,Foundations of Computer Programming,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J. R. Trippe Middle School,GA-793-0173,130534001740,11.0120000,Foundations of Computer Programming,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Apalachee High School,GA-607-0101,130029002350,11.0160000,"Advanced Placement, Computer Science A ",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winder-Barrow High School,GA-607-3052,130029000173,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Howard High School,GA-611-0105,130042003726,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brooks County High School,GA-614-0110,130054000263,11.0160000,"Advanced Placement, Computer Science A ",9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Zion High School,GA-622-0212,130084003582,11.0160000,"Advanced Placement, Computer Science A ",6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Villa Rica High School,GA-622-5054,130084000324,11.0160000,"Advanced Placement, Computer Science A ",17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Savannah Arts Academy,GA-625-0499,130102002245,11.0160000,"Advanced Placement, Computer Science A ",40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jenkins High School,GA-625-5060,130102000388,11.0160000,"Advanced Placement, Computer Science A ",38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattahoochee County High School,GA-626-0206,130105003525,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creekview High School,GA-628-0106,130111003308,11.0160000,"Advanced Placement, Computer Science A ",25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Ridge High School,GA-628-0115,130111004019,11.0160000,"Advanced Placement, Computer Science A ",23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Etowah High School,GA-628-0176,130111000425,11.0160000,"Advanced Placement, Computer Science A ",19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequoyah High School,GA-628-0191,130111002100,11.0160000,"Advanced Placement, Computer Science A ",28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodstock High School,GA-628-0197,130111001428,11.0160000,"Advanced Placement, Computer Science A ",28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee High School,GA-628-5050,130111000432,11.0160000,"Advanced Placement, Computer Science A ",13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clarke Central High School,GA-629-5556,130117000449,11.0160000,"Advanced Placement, Computer Science A ",22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lovejoy High School,GA-631-0190,130123002067,11.0160000,"Advanced Placement, Computer Science A ",12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High School,GA-631-1054,130123000474,11.0160000,"Advanced Placement, Computer Science A ",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morrow High School,GA-631-4058,130123000487,11.0160000,"Advanced Placement, Computer Science A ",97,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennesaw Mountain High School,GA-633-0101,130129002365,11.0160000,"Advanced Placement, Computer Science A ",32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walton High School,GA-633-0175,130129000513,11.0160000,"Advanced Placement, Computer Science A ",101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pope High School,GA-633-0188,130129001994,11.0160000,"Advanced Placement, Computer Science A ",47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lassiter High School,GA-633-0381,130129001881,11.0160000,"Advanced Placement, Computer Science A ",26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Campbell High School,GA-633-1054,130129000537,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wheeler High School,GA-633-1069,130129000529,11.0160000,"Advanced Placement, Computer Science A ",5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffee County High School,GA-634-0195,130135000581,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colquitt County High School,GA-635-1554,130138000591,11.0160000,"Advanced Placement, Computer Science A ",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grovetown High School,GA-636-0112,130141003903,11.0160000,"Advanced Placement, Computer Science A ",22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harlem High School,GA-636-0183,130141001885,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenbrier High School,GA-636-0197,130141001501,11.0160000,"Advanced Placement, Computer Science A ",6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DeKalb School of the Arts,GA-644-0410,130174003884,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Arabia Mountain High School - Academy of Engineering, Medicine and Environm",GA-644-0610,130174003915,11.0160000,"Advanced Placement, Computer Science A ",29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chamblee Charter High School,GA-644-5052,130174000692,11.0160000,"Advanced Placement, Computer Science A ",51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapel Hill High School,GA-648-0100,130186002317,11.0160000,"Advanced Placement, Computer Science A ",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lithia Springs Comprehensive High School,GA-648-0175,130186000853,11.0160000,"Advanced Placement, Computer Science A ",18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alexander High School,GA-648-0187,130186001976,11.0160000,"Advanced Placement, Computer Science A ",20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Effingham High School,GA-651-0197,130198001594,11.0160000,"Advanced Placement, Computer Science A ",5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Effingham County High School,GA-651-0390,130198000890,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitewater High School,GA-656-0105,130213002877,11.0160000,"Advanced Placement, Computer Science A ",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McIntosh High School,GA-656-0182,130213001892,11.0160000,"Advanced Placement, Computer Science A ",32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Starrs Mill High School,GA-656-0198,130213002165,11.0160000,"Advanced Placement, Computer Science A ",23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fayette County High School,GA-656-0398,130213002168,11.0160000,"Advanced Placement, Computer Science A ",18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Model High,GA-657-0111,130219002373,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Forsyth High School,GA-658-0107,130222003354,11.0160000,"Advanced Placement, Computer Science A ",36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Forsyth High School,GA-658-0190,130222001897,11.0160000,"Advanced Placement, Computer Science A ",68,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Forsyth High School,GA-658-0195,130222000893,11.0160000,"Advanced Placement, Computer Science A ",30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lambert High School,GA-658-0214,130222003954,11.0160000,"Advanced Placement, Computer Science A ",130,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alliance Academy for Innovation,GA-658-0701,130222004320,11.0160000,"Advanced Placement, Computer Science A ",19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denmark High School,GA-658-0702,130222004314,11.0160000,"Advanced Placement, Computer Science A ",75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forsyth Central High School,GA-658-5050,130222000956,11.0160000,"Advanced Placement, Computer Science A ",46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin County High School,GA-659-3050,130225000961,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High School,GA-660-0106,130228001005,11.0160000,"Advanced Placement, Computer Science A ",54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambridge High School,GA-660-0119,130228004099,11.0160000,"Advanced Placement, Computer Science A ",47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Banneker High School,GA-660-0176,130228000967,11.0160000,"Advanced Placement, Computer Science A ",20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roswell High School,GA-660-0191,130228002119,11.0160000,"Advanced Placement, Computer Science A ",31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,GA-660-0198,130228002181,11.0160000,"Advanced Placement, Computer Science A ",19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northview High School,GA-660-0203,130228002560,11.0160000,"Advanced Placement, Computer Science A ",95,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alpharetta High School,GA-660-0205,130228003364,11.0160000,"Advanced Placement, Computer Science A ",116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattahoochee High School,GA-660-0392,130228002172,11.0160000,"Advanced Placement, Computer Science A ",72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johns Creek High School,GA-660-0910,130228003935,11.0160000,"Advanced Placement, Computer Science A ",44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwood International Charter School,GA-660-3066,130228000987,11.0160000,"Advanced Placement, Computer Science A ",16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Springs High School,GA-660-4062,130228001024,11.0160000,"Advanced Placement, Computer Science A ",22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glynn Academy,GA-663-4752,130240001065,11.0160000,"Advanced Placement, Computer Science A ",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grayson High School,GA-667-0101,130255002387,11.0160000,"Advanced Placement, Computer Science A ",30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norcross High School,GA-667-0103,130255001132,11.0160000,"Advanced Placement, Computer Science A ",16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mill Creek High School,GA-667-0105,130255003376,11.0160000,"Advanced Placement, Computer Science A ",48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High School,GA-667-0176,130255001114,11.0160000,"Advanced Placement, Computer Science A ",40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookwood High School,GA-667-0182,130255001906,11.0160000,"Advanced Placement, Computer Science A ",64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shiloh High School,GA-667-0185,130255001937,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowcreek High School,GA-667-0187,130255001980,11.0160000,"Advanced Placement, Computer Science A ",27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collins Hill High School,GA-667-0195,130255000959,11.0160000,"Advanced Placement, Computer Science A ",32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peachtree Ridge High School,GA-667-0805,130255002903,11.0160000,"Advanced Placement, Computer Science A ",28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lanier High School,GA-667-1018,130255003998,11.0160000,"Advanced Placement, Computer Science A ",41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Gwinnett School of Mathematics, Science and Technology",GA-667-1019,130255003553,11.0160000,"Advanced Placement, Computer Science A ",86,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berkmar High School,GA-667-1050,130255001905,11.0160000,"Advanced Placement, Computer Science A ",32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gwinnett Intervention Education Center (GIVE) West,GA-667-1114,130255003690,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gwinnett Online Campus,GA-667-1214,130255004057,11.0160000,"Advanced Placement, Computer Science A ",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,GA-667-1410,130255003916,11.0160000,"Advanced Placement, Computer Science A ",13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Archer High School,GA-667-1710,130255003838,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Discovery High School,GA-667-1814,130255004212,11.0160000,"Advanced Placement, Computer Science A ",66,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paul Duke STEM High School,GA-667-1818,130255004313,11.0160000,"Advanced Placement, Computer Science A ",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gwinnett High School,GA-667-2558,130255001135,11.0160000,"Advanced Placement, Computer Science A ",29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Gwinnett High School,GA-667-3750,130255001129,11.0160000,"Advanced Placement, Computer Science A ",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dacula High School,GA-667-4052,130255001127,11.0160000,"Advanced Placement, Computer Science A ",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Gwinnett High School,GA-667-4556,130255001123,11.0160000,"Advanced Placement, Computer Science A ",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Duluth High School,GA-667-5550,130255001118,11.0160000,"Advanced Placement, Computer Science A ",49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee Bluff High School,GA-669-0391,130261004327,11.0160000,"Advanced Placement, Computer Science A ",6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Hall High School,GA-669-1556,130261001161,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harris County High School,GA-672-0299,130270002270,11.0160000,"Advanced Placement, Computer Science A ",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,GA-675-0101,130282002391,11.0160000,"Advanced Placement, Computer Science A ",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle's Landing High School,GA-675-0391,130282002130,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High School,GA-675-0408,130282003418,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston County High School,GA-676-0192,130288002179,11.0160000,"Advanced Placement, Computer Science A ",29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Perry High School,GA-676-1054,130288001222,11.0160000,"Advanced Placement, Computer Science A ",21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Jackson Comprehensive High School,GA-678-0107,130294003421,11.0160000,"Advanced Placement, Computer Science A ",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jackson County Comprehensive High School,GA-678-0191,130294002134,11.0160000,"Advanced Placement, Computer Science A ",20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee County High School,GA-688-0193,130327000057,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison County High School,GA-695-5050,130348001333,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan County High School,GA-704-1050,130378001378,11.0160000,"Advanced Placement, Computer Science A ",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbus High School,GA-706-3054,130387001406,11.0160000,"Advanced Placement, Computer Science A ",33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newton High School,GA-707-0173,130393001454,11.0160000,"Advanced Placement, Computer Science A ",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastside High School,GA-707-0295,130393001023,11.0160000,"Advanced Placement, Computer Science A ",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Oconee High School,GA-708-0105,130396003437,11.0160000,"Advanced Placement, Computer Science A ",35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconee County High School,GA-708-0293,130396000148,11.0160000,"Advanced Placement, Computer Science A ",9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oglethorpe County High School,GA-709-2050,130399001468,11.0160000,"Advanced Placement, Computer Science A ",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cross Creek High School,GA-721-0100,130438002339,11.0160000,"Advanced Placement, Computer Science A ",21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westside High School,GA-721-2574,130438001542,11.0160000,"Advanced Placement, Computer Science A ",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy of Richmond County High School,GA-721-4060,130438001528,11.0160000,"Advanced Placement, Computer Science A ",9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davidson Magnet School,GA-721-4562,130438001567,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,GA-722-0176,130441001591,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High School,GA-722-0192,130441002193,11.0160000,"Advanced Placement, Computer Science A ",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockdale County High School,GA-722-3052,130441001583,11.0160000,"Advanced Placement, Computer Science A ",31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas County Central High School,GA-736-0191,130489002146,11.0160000,"Advanced Placement, Computer Science A ",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest Whitfield County High School,GA-755-0175,130570001819,11.0160000,"Advanced Placement, Computer Science A ",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corretta Scott King Womens' Leadership Academy,GA-761-1410,130012003980,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grady High School,GA-761-4560,130012000066,11.0160000,"Advanced Placement, Computer Science A ",27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bremen High School,GA-763-0201,130051002455,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Calhoun High School,GA-765-3050,130072000305,11.0160000,"Advanced Placement, Computer Science A ",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carrollton High School,GA-766-1050,130087000334,11.0160000,"Advanced Placement, Computer Science A ",23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cartersville High School,GA-767-2050,130090000341,11.0160000,"Advanced Placement, Computer Science A ",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dalton High School,GA-772-4050,130162000786,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Decatur High School,GA-773-3050,130168000802,11.0160000,"Advanced Placement, Computer Science A ",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesville High School,GA-776-3050,130231001048,11.0160000,"Advanced Placement, Computer Science A ",50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High School,GA-779-0174,130303001260,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia Cyber Academy,GA-7820120-0120,130023204148,11.0160000,"Advanced Placement, Computer Science A ",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia Connections Academy,GA-7820412-0412,130022704031,11.0160000,"Advanced Placement, Computer Science A ",17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rome High School,GA-785-0193,130444000028,11.0160000,"Advanced Placement, Computer Science A ",21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vidalia Comprehensive High School,GA-793-0273,130534001739,11.0160000,"Advanced Placement, Computer Science A ",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appling County High School,GA-601-0103,130006000010,11.0190000,Advanced Placement Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Statesboro High School,GA-616-2054,130063000285,11.0190000,Advanced Placement Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burke County High School,GA-617-0288,130066001991,11.0190000,Advanced Placement Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Metter High School ,GA-621-0101,130081000317,11.0190000,Advanced Placement Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Zion High School,GA-622-0212,130084003582,11.0190000,Advanced Placement Computer Science Principles,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bowdon High School,GA-622-3050,130084000330,11.0190000,Advanced Placement Computer Science Principles,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Villa Rica High School,GA-622-5054,130084000324,11.0190000,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Savannah Arts Academy,GA-625-0499,130102002245,11.0190000,Advanced Placement Computer Science Principles,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creekview High School,GA-628-0106,130111003308,11.0190000,Advanced Placement Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Ridge High School,GA-628-0115,130111004019,11.0190000,Advanced Placement Computer Science Principles,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Etowah High School,GA-628-0176,130111000425,11.0190000,Advanced Placement Computer Science Principles,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequoyah High School,GA-628-0191,130111002100,11.0190000,Advanced Placement Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodstock High School,GA-628-0197,130111001428,11.0190000,Advanced Placement Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee High School,GA-628-5050,130111000432,11.0190000,Advanced Placement Computer Science Principles,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elite Scholars Academy School,GA-631-0114,130123003896,11.0190000,Advanced Placement Computer Science Principles,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lovejoy High School,GA-631-0190,130123002067,11.0190000,Advanced Placement Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennesaw Mountain High School,GA-633-0101,130129002365,11.0190000,Advanced Placement Computer Science Principles,66,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walton High School,GA-633-0175,130129000513,11.0190000,Advanced Placement Computer Science Principles,228,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pope High School,GA-633-0188,130129001994,11.0190000,Advanced Placement Computer Science Principles,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrison High School,GA-633-0192,130129002153,11.0190000,Advanced Placement Computer Science Principles,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sprayberry High School,GA-633-0373,130129000545,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Campbell High School,GA-633-1054,130129000537,11.0190000,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wheeler High School,GA-633-1069,130129000529,11.0190000,Advanced Placement Computer Science Principles,186,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Cobb High School,GA-633-2056,130129000525,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Cobb High School,GA-633-3056,130129000574,11.0190000,Advanced Placement Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colquitt County High School,GA-635-1554,130138000591,11.0190000,Advanced Placement Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harlem High School,GA-636-0183,130141001885,11.0190000,Advanced Placement Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside High School,GA-636-0189,130141002025,11.0190000,Advanced Placement Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenbrier High School,GA-636-0197,130141001501,11.0190000,Advanced Placement Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evans High School,GA-636-4050,130141000603,11.0190000,Advanced Placement Computer Science Principles,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newnan High School,GA-638-5054,130150000754,11.0190000,Advanced Placement Computer Science Principles,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson County High School ,GA-642-0198,130165002253,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Arabia Mountain High School - Academy of Engineering, Medicine and Environm",GA-644-0610,130174003915,11.0190000,Advanced Placement Computer Science Principles,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Druid Hills High School,GA-644-2055,130174000665,11.0190000,Advanced Placement Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside High School,GA-644-3060,130174000721,11.0190000,Advanced Placement Computer Science Principles,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chamblee Charter High School,GA-644-5052,130174000692,11.0190000,Advanced Placement Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapel Hill High School,GA-648-0100,130186002317,11.0190000,Advanced Placement Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lithia Springs Comprehensive High School,GA-648-0175,130186000853,11.0190000,Advanced Placement Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alexander High School,GA-648-0187,130186001976,11.0190000,Advanced Placement Computer Science Principles,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Manchester High School,GA-648-0212,130186004034,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elbert County High School,GA-652-0176,130201000894,11.0190000,Advanced Placement Computer Science Principles,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitewater High School,GA-656-0105,130213002877,11.0190000,Advanced Placement Computer Science Principles,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McIntosh High School,GA-656-0182,130213001892,11.0190000,Advanced Placement Computer Science Principles,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy Creek High School,GA-656-0192,130213002167,11.0190000,Advanced Placement Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fayette County High School,GA-656-0398,130213002168,11.0190000,Advanced Placement Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pepperell High School,GA-657-0107,130219003351,11.0190000,Advanced Placement Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Model High,GA-657-0111,130219002373,11.0190000,Advanced Placement Computer Science Principles,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armuchee High School,GA-657-0401,130219002375,11.0190000,Advanced Placement Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coosa High School,GA-657-5050,130219000937,11.0190000,Advanced Placement Computer Science Principles,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Forsyth High School,GA-658-0107,130222003354,11.0190000,Advanced Placement Computer Science Principles,78,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Forsyth High School,GA-658-0190,130222001897,11.0190000,Advanced Placement Computer Science Principles,128,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Forsyth High School,GA-658-0195,130222000893,11.0190000,Advanced Placement Computer Science Principles,116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lambert High School,GA-658-0214,130222003954,11.0190000,Advanced Placement Computer Science Principles,302,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alliance Academy for Innovation,GA-658-0701,130222004320,11.0190000,Advanced Placement Computer Science Principles,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denmark High School,GA-658-0702,130222004314,11.0190000,Advanced Placement Computer Science Principles,138,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forsyth Central High School,GA-658-5050,130222000956,11.0190000,Advanced Placement Computer Science Principles,98,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High School,GA-660-0106,130228001005,11.0190000,Advanced Placement Computer Science Principles,78,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hapeville Charter Career Academy,GA-660-0118,130228004045,11.0190000,Advanced Placement Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambridge High School,GA-660-0119,130228004099,11.0190000,Advanced Placement Computer Science Principles,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Banneker High School,GA-660-0176,130228000967,11.0190000,Advanced Placement Computer Science Principles,70,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roswell High School,GA-660-0191,130228002119,11.0190000,Advanced Placement Computer Science Principles,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,GA-660-0198,130228002181,11.0190000,Advanced Placement Computer Science Principles,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northview High School,GA-660-0203,130228002560,11.0190000,Advanced Placement Computer Science Principles,117,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alpharetta High School,GA-660-0205,130228003364,11.0190000,Advanced Placement Computer Science Principles,177,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creekside High School,GA-660-0291,130228002120,11.0190000,Advanced Placement Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattahoochee High School,GA-660-0392,130228002172,11.0190000,Advanced Placement Computer Science Principles,95,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johns Creek High School,GA-660-0910,130228003935,11.0190000,Advanced Placement Computer Science Principles,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwood International Charter School,GA-660-3066,130228000987,11.0190000,Advanced Placement Computer Science Principles,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Springs High School,GA-660-4062,130228001024,11.0190000,Advanced Placement Computer Science Principles,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gilmer High School,GA-661-0196,130234001053,11.0190000,Advanced Placement Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glynn Academy,GA-663-4752,130240001065,11.0190000,Advanced Placement Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Oconee Charter High School,GA-666-0402,unspecified,11.0190000,Advanced Placement Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grayson High School,GA-667-0101,130255002387,11.0190000,Advanced Placement Computer Science Principles,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norcross High School,GA-667-0103,130255001132,11.0190000,Advanced Placement Computer Science Principles,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mill Creek High School,GA-667-0105,130255003376,11.0190000,Advanced Placement Computer Science Principles,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookwood High School,GA-667-0182,130255001906,11.0190000,Advanced Placement Computer Science Principles,118,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shiloh High School,GA-667-0185,130255001937,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowcreek High School,GA-667-0187,130255001980,11.0190000,Advanced Placement Computer Science Principles,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collins Hill High School,GA-667-0195,130255000959,11.0190000,Advanced Placement Computer Science Principles,97,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peachtree Ridge High School,GA-667-0805,130255002903,11.0190000,Advanced Placement Computer Science Principles,101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lanier High School,GA-667-1018,130255003998,11.0190000,Advanced Placement Computer Science Principles,81,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Gwinnett School of Mathematics, Science and Technology",GA-667-1019,130255003553,11.0190000,Advanced Placement Computer Science Principles,232,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berkmar High School,GA-667-1050,130255001905,11.0190000,Advanced Placement Computer Science Principles,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,GA-667-1410,130255003916,11.0190000,Advanced Placement Computer Science Principles,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Discovery High School,GA-667-1814,130255004212,11.0190000,Advanced Placement Computer Science Principles,66,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paul Duke STEM High School,GA-667-1818,130255004313,11.0190000,Advanced Placement Computer Science Principles,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McClure Health Science High School,GA-667-1819,unspecified,11.0190000,Advanced Placement Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gwinnett High School,GA-667-2558,130255001135,11.0190000,Advanced Placement Computer Science Principles,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Gwinnett High School,GA-667-3750,130255001129,11.0190000,Advanced Placement Computer Science Principles,78,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Gwinnett High School,GA-667-4556,130255001123,11.0190000,Advanced Placement Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Duluth High School,GA-667-5550,130255001118,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chestatee High School,GA-669-0102,130261002569,11.0190000,Advanced Placement Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Flowery Branch High,GA-669-0202,130261002571,11.0190000,Advanced Placement Computer Science Principles,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee Bluff High School,GA-669-0391,130261004327,11.0190000,Advanced Placement Computer Science Principles,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Hall High School,GA-669-1556,130261001161,11.0190000,Advanced Placement Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harris County High School,GA-672-0299,130270002270,11.0190000,Advanced Placement Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luella High School,GA-675-0104,130282002916,11.0190000,Advanced Placement Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High School,GA-675-0408,130282003418,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Veterans High School,GA-676-0111,130288003969,11.0190000,Advanced Placement Computer Science Principles,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston County High School,GA-676-0192,130288002179,11.0190000,Advanced Placement Computer Science Principles,68,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jackson County Comprehensive High School,GA-678-0191,130294002134,11.0190000,Advanced Placement Computer Science Principles,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jasper County High School,GA-679-0108,130297003423,11.0190000,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lowndes High School,GA-692-5050,130339001310,11.0190000,Advanced Placement Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lumpkin County High School,GA-693-0101,130342002505,11.0190000,Advanced Placement Computer Science Principles,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison County High School,GA-695-5050,130348001333,11.0190000,Advanced Placement Computer Science Principles,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomson High School,GA-697-0192,130357002183,11.0190000,Advanced Placement Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan County High School,GA-704-1050,130378001378,11.0190000,Advanced Placement Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Oconee High School,GA-708-0105,130396003437,11.0190000,Advanced Placement Computer Science Principles,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconee County High School,GA-708-0293,130396000148,11.0190000,Advanced Placement Computer Science Principles,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oglethorpe County High School,GA-709-2050,130399001468,11.0190000,Advanced Placement Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Paulding High School,GA-710-0109,130402003625,11.0190000,Advanced Placement Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pickens County High School,GA-712-0198,130411002276,11.0190000,Advanced Placement Computer Science Principles,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cross Creek High School,GA-721-0100,130438002339,11.0190000,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler High School,GA-721-1052,130438001562,11.0190000,Advanced Placement Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westside High School,GA-721-2574,130438001542,11.0190000,Advanced Placement Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson Magnet,GA-721-3556,130438001534,11.0190000,Advanced Placement Computer Science Principles,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laney High School,GA-721-5566,130438001573,11.0190000,Advanced Placement Computer Science Principles,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,GA-722-0176,130441001591,11.0190000,Advanced Placement Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High School,GA-722-0192,130441002193,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockdale County High School,GA-722-3052,130441001583,11.0190000,Advanced Placement Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeland High School,GA-746-0190,130537002093,11.0190000,Advanced Placement Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walnut Grove High School,GA-747-0111,130539003901,11.0190000,Advanced Placement Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loganville High School,GA-747-0199,130539002288,11.0190000,Advanced Placement Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe Area High School,GA-747-0205,130539001772,11.0190000,Advanced Placement Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Wilkes Comprehensive High School,GA-757-0110,130576003852,11.0190000,Advanced Placement Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mays High School,GA-761-0182,130012001865,11.0190000,Advanced Placement Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Maynard H. Jackson, Jr. High School",GA-761-0186,130012001939,11.0190000,Advanced Placement Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Atlanta High School,GA-761-0192,130012002212,11.0190000,Advanced Placement Computer Science Principles,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Atlanta Classical Academy,GA-761-0415,130012004145,11.0190000,Advanced Placement Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charles Drew Charter School JA/SA,GA-761-0515,130012004161,11.0190000,Advanced Placement Computer Science Principles,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corretta Scott King Womens' Leadership Academy,GA-761-1410,130012003980,11.0190000,Advanced Placement Computer Science Principles,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grady High School,GA-761-4560,130012000066,11.0190000,Advanced Placement Computer Science Principles,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Calhoun High School,GA-765-3050,130072000305,11.0190000,Advanced Placement Computer Science Principles,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carrollton High School,GA-766-1050,130087000334,11.0190000,Advanced Placement Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesville High School,GA-776-3050,130231001048,11.0190000,Advanced Placement Computer Science Principles,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baldwin High School,GA-605-0189,130021000158,11.4710000,Computer Science Principles,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Apalachee High School,GA-607-0101,130029002350,11.4710000,Computer Science Principles,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winder-Barrow High School,GA-607-3052,130029000173,11.4710000,Computer Science Principles,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adairsville High School,GA-608-0105,130033002352,11.4710000,Computer Science Principles,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fitzgerald High School,GA-609-0291,130036000931,11.4710000,Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Howard High School,GA-611-0105,130042003726,11.4710000,Computer Science Principles,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brantley County High School,GA-613-1050,130048000258,11.4710000,Computer Science Principles,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brooks County High School,GA-614-0110,130054000263,11.4710000,Computer Science Principles,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southeast Bulloch High School,GA-616-0203,130063003550,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camden County High School,GA-620-0295,130078000315,11.4710000,Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Metter High School ,GA-621-0101,130081000317,11.4710000,Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Temple High School,GA-622-0189,130084002097,11.4710000,Computer Science Principles,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bowdon High School,GA-622-3050,130084000330,11.4710000,Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Villa Rica High School,GA-622-5054,130084000324,11.4710000,Computer Science Principles,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,GA-623-0109,130093003688,11.4710000,Computer Science Principles,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ringgold High School,GA-623-4052,130093000353,11.4710000,Computer Science Principles,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlton County High School,GA-624-0287,130099000358,11.4710000,Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+The School of Liberal Studies at Savannah High,GA-625-0210,130102003941,11.4710000,Computer Science Principles,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jenkins High School,GA-625-5060,130102000388,11.4710000,Computer Science Principles,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Etowah High School,GA-628-0176,130111000425,11.4710000,Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequoyah High School,GA-628-0191,130111002100,11.4710000,Computer Science Principles,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodstock High School,GA-628-0197,130111001428,11.4710000,Computer Science Principles,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clarke Central High School,GA-629-5556,130117000449,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mundy's Mill High School,GA-631-0104,130123002523,11.4710000,Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High School,GA-631-1054,130123000474,11.4710000,Computer Science Principles,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennesaw Mountain High School,GA-633-0101,130129002365,11.4710000,Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pope High School,GA-633-0188,130129001994,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillgrove High School,GA-633-0707,130129003649,11.4710000,Computer Science Principles,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Campbell High School,GA-633-1054,130129000537,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McEachern High School,GA-633-1064,130129000533,11.4710000,Computer Science Principles,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Cobb High School,GA-633-2056,130129000525,11.4710000,Computer Science Principles,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Cobb High School,GA-633-3056,130129000574,11.4710000,Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffee County High School,GA-634-0195,130135000581,11.4710000,Computer Science Principles,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colquitt County High School,GA-635-1554,130138000591,11.4710000,Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harlem High School,GA-636-0183,130141001885,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crisp County High School,GA-640-0196,130156000769,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson County High School ,GA-642-0198,130165002253,11.4710000,Computer Science Principles,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Martin Luther King, Jr. High School ",GA-644-0103,130174002479,11.4710000,Computer Science Principles,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Miller Grove High School,GA-644-0105,130174003332,11.4710000,Computer Science Principles,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Grove High School,GA-644-0172,130174000639,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Redan High School,GA-644-0176,130174000636,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lithonia High School,GA-644-0202,130174002537,11.4710000,Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Mountain High School,GA-644-0276,130174000644,11.4710000,Computer Science Principles,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stephenson High School,GA-644-0497,130174001553,11.4710000,Computer Science Principles,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+"Arabia Mountain High School - Academy of Engineering, Medicine and Environm",GA-644-0610,130174003915,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia High School,GA-644-2054,130174000666,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Druid Hills High School,GA-644-2055,130174000665,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside High School,GA-644-3060,130174000721,11.4710000,Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clarkston High School,GA-644-4053,130174000708,11.4710000,Computer Science Principles,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cross Keys High School,GA-644-4054,130174000707,11.4710000,Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Towers High School,GA-644-4069,130174000686,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chamblee Charter High School,GA-644-5052,130174000692,11.4710000,Computer Science Principles,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dunwoody High School,GA-644-5055,130174000690,11.4710000,Computer Science Principles,70,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwest DeKalb High School,GA-644-5067,130174000679,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dodge County High School,GA-645-0103,130177003340,11.4710000,Computer Science Principles,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High School,GA-647-1058,130183000824,11.4710000,Computer Science Principles,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westover High School,GA-647-4062,130183000839,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapel Hill High School,GA-648-0100,130186002317,11.4710000,Computer Science Principles,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lithia Springs Comprehensive High School,GA-648-0175,130186000853,11.4710000,Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Douglas County High School,GA-648-4050,130186000864,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Effingham High School,GA-651-0197,130198001594,11.4710000,Computer Science Principles,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Effingham County High School,GA-651-0390,130198000890,11.4710000,Computer Science Principles,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Claxton High School,GA-654-2050,130207000909,11.4710000,Computer Science Principles,83,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fannin County High School,GA-655-0176,130210000912,11.4710000,Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy Creek High School,GA-656-0192,130213002167,11.4710000,Computer Science Principles,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pepperell High School,GA-657-0107,130219003351,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Model High,GA-657-0111,130219002373,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armuchee High School,GA-657-0401,130219002375,11.4710000,Computer Science Principles,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coosa High School,GA-657-5050,130219000937,11.4710000,Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Forsyth High School,GA-658-0107,130222003354,11.4710000,Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Forsyth High School,GA-658-0190,130222001897,11.4710000,Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lambert High School,GA-658-0214,130222003954,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forsyth Central High School,GA-658-5050,130222000956,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High School,GA-660-0106,130228001005,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hapeville Charter Career Academy,GA-660-0118,130228004045,11.4710000,Computer Science Principles,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roswell High School,GA-660-0191,130228002119,11.4710000,Computer Science Principles,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creekside High School,GA-660-0291,130228002120,11.4710000,Computer Science Principles,82,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattahoochee High School,GA-660-0392,130228002172,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Langston Hughes High School,GA-660-1110,130228003913,11.4710000,Computer Science Principles,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwood International Charter School,GA-660-3066,130228000987,11.4710000,Computer Science Principles,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Springs High School,GA-660-4062,130228001024,11.4710000,Computer Science Principles,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High School,GA-660-5069,130228001031,11.4710000,Computer Science Principles,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gilmer High School,GA-661-0196,130234001053,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grayson High School,GA-667-0101,130255002387,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norcross High School,GA-667-0103,130255001132,11.4710000,Computer Science Principles,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mill Creek High School,GA-667-0105,130255003376,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High School,GA-667-0176,130255001114,11.4710000,Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookwood High School,GA-667-0182,130255001906,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shiloh High School,GA-667-0185,130255001937,11.4710000,Computer Science Principles,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collins Hill High School,GA-667-0195,130255000959,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peachtree Ridge High School,GA-667-0805,130255002903,11.4710000,Computer Science Principles,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berkmar High School,GA-667-1050,130255001905,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gwinnett Intervention Education Center (GIVE) West,GA-667-1114,130255003690,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gwinnett Online Campus,GA-667-1214,130255004057,11.4710000,Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,GA-667-1410,130255003916,11.4710000,Computer Science Principles,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Archer High School,GA-667-1710,130255003838,11.4710000,Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Discovery High School,GA-667-1814,130255004212,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paul Duke STEM High School,GA-667-1818,130255004313,11.4710000,Computer Science Principles,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McClure Health Science High School,GA-667-1819,unspecified,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gwinnett High School,GA-667-2558,130255001135,11.4710000,Computer Science Principles,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Gwinnett High School,GA-667-3750,130255001129,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dacula High School,GA-667-4052,130255001127,11.4710000,Computer Science Principles,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Gwinnett High School,GA-667-4556,130255001123,11.4710000,Computer Science Principles,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Duluth High School,GA-667-5550,130255001118,11.4710000,Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chestatee High School,GA-669-0102,130261002569,11.4710000,Computer Science Principles,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Flowery Branch High,GA-669-0202,130261002571,11.4710000,Computer Science Principles,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee Bluff High School,GA-669-0391,130261004327,11.4710000,Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Hall High School,GA-669-1556,130261001161,11.4710000,Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson High School,GA-669-4752,130261001168,11.4710000,Computer Science Principles,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harris County High School,GA-672-0299,130270002270,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hart County High School,GA-673-3050,130273001193,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,GA-675-0101,130282002391,11.4710000,Computer Science Principles,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luella High School,GA-675-0104,130282002916,11.4710000,Computer Science Principles,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dutchtown High,GA-675-0105,130282003407,11.4710000,Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Locust Grove High,GA-675-0214,130282003928,11.4710000,Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stockbridge High School,GA-675-0295,130282001205,11.4710000,Computer Science Principles,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ola High School,GA-675-0307,130282003414,11.4710000,Computer Science Principles,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High School,GA-675-0315,130282004172,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle's Landing High School,GA-675-0391,130282002130,11.4710000,Computer Science Principles,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High School,GA-675-0408,130282003418,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McDonough High School,GA-675-3050,130282001208,11.4710000,Computer Science Principles,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Veterans High School,GA-676-0111,130288003969,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Perry High School,GA-676-1054,130288001222,11.4710000,Computer Science Principles,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northside High School,GA-676-2052,130288001230,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Jackson Comprehensive High School,GA-678-0107,130294003421,11.4710000,Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jackson County Comprehensive High School,GA-678-0191,130294002134,11.4710000,Computer Science Principles,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jones County High School,GA-684-0192,130315001279,11.4710000,Computer Science Principles,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Laurens High School,GA-687-0110,130189003887,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lowndes High School,GA-692-5050,130339001310,11.4710000,Computer Science Principles,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lumpkin County High School,GA-693-0101,130342002505,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northside High School,GA-706-0203,130387002583,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shaw High School,GA-706-0278,130387001387,11.4710000,Computer Science Principles,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spencer High School,GA-706-0378,130387001418,11.4710000,Computer Science Principles,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardaway High School,GA-706-2062,130387001397,11.4710000,Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newton High School,GA-707-0173,130393001454,11.4710000,Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alcovy High School,GA-707-0206,130393003436,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastside High School,GA-707-0295,130393001023,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Oconee High School,GA-708-0105,130396003437,11.4710000,Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconee County High School,GA-708-0293,130396000148,11.4710000,Computer Science Principles,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Paulding High School,GA-710-0109,130402003625,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Paulding High School,GA-710-0292,130402002188,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peach County High School,GA-711-2052,130405001483,11.4710000,Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pierce County High School,GA-713-0182,130414001915,11.4710000,Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockmart High School,GA-715-0102,130420001509,11.4710000,Computer Science Principles,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Putnam County High School,GA-717-0114,130426003882,11.4710000,Computer Science Principles,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richmond County Technical Career Magnet School,GA-721-0213,130438004069,11.4710000,Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler High School,GA-721-1052,130438001562,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson Magnet,GA-721-3556,130438001534,11.4710000,Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy of Richmond County High School,GA-721-4060,130438001528,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davidson Magnet School,GA-721-4562,130438001567,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,GA-722-0176,130441001591,11.4710000,Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High School,GA-722-0192,130441002193,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockdale County High School,GA-722-3052,130441001583,11.4710000,Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Americus Sumter High School (Old Americus-Sumter HS S),GA-729-0105,130462000001,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas County Central High School,GA-736-0191,130489002146,11.4710000,Computer Science Principles,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tift County High School,GA-737-0199,130498002282,11.4710000,Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Callaway High School,GA-741-0201,130000102444,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Troup County High School,GA-741-0387,130000101964,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaGrange High School,GA-741-1052,130000100608,11.4710000,Computer Science Principles,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union County High School,GA-744-0101,130525001720,11.4710000,Computer Science Principles,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeland High School,GA-746-0190,130537002093,11.4710000,Computer Science Principles,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walnut Grove High School,GA-747-0111,130539003901,11.4710000,Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loganville High School,GA-747-0199,130539002288,11.4710000,Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe Area High School,GA-747-0205,130539001772,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coahulla Creek High School,GA-755-0112,130570004053,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest Whitfield County High School,GA-755-0175,130570001819,11.4710000,Computer Science Principles,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phoenix High School,GA-755-0212,130570001073,11.4710000,Computer Science Principles,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southeast Whitfield County High School,GA-755-0275,130570001818,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Booker T. Washington High School,GA-761-0315,130012004174,11.4710000,Computer Science Principles,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charles Drew Charter School JA/SA,GA-761-0515,130012004161,11.4710000,Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Atlanta High School,GA-761-1412,130012004240,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grady High School,GA-761-4560,130012000066,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Calhoun High School,GA-765-3050,130072000305,11.4710000,Computer Science Principles,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carrollton High School,GA-766-1050,130087000334,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cartersville High School,GA-767-2050,130090000341,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Commerce High School,GA-771-0112,130144000622,11.4710000,Computer Science Principles,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dalton High School,GA-772-4050,130162000786,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Decatur High School,GA-773-3050,130168000802,11.4710000,Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High School,GA-779-0174,130303001260,11.4710000,Computer Science Principles,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marietta High School ,GA-781-0101,130351001342,11.4710000,Computer Science Principles,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia Cyber Academy,GA-7820120-0120,130023204148,11.4710000,Computer Science Principles,81,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia Connections Academy,GA-7820412-0412,130022704031,11.4710000,Computer Science Principles,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fulton Leadership Academy,GA-7830310-0310,130021703961,11.4710000,Computer Science Principles,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rome High School,GA-785-0193,130444000028,11.4710000,Computer Science Principles,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Social Circle High School,GA-786-0300,130454001617,11.4710000,Computer Science Principles,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Atlanta Area School for the Deaf,GA-799-1893,unspecified,11.4710000,Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia School for the Deaf,GA-799-1895,unspecified,11.4710000,Computer Science Principles,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Apalachee High School,GA-607-0101,130029002350,11.4720000,"Programming, Games, Apps and Society",26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winder-Barrow High School,GA-607-3052,130029000173,11.4720000,"Programming, Games, Apps and Society",39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adairsville High School,GA-608-0105,130033002352,11.4720000,"Programming, Games, Apps and Society",10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Howard High School,GA-611-0105,130042003726,11.4720000,"Programming, Games, Apps and Society",33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Metter High School ,GA-621-0101,130081000317,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Temple High School,GA-622-0189,130084002097,11.4720000,"Programming, Games, Apps and Society",28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bowdon High School,GA-622-3050,130084000330,11.4720000,"Programming, Games, Apps and Society",18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Villa Rica High School,GA-622-5054,130084000324,11.4720000,"Programming, Games, Apps and Society",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ringgold Middle School,GA-623-5052,130093000351,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlton County High School,GA-624-0287,130099000358,11.4720000,"Programming, Games, Apps and Society",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Savannah Arts Academy,GA-625-0499,130102002245,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mundy's Mill High School,GA-631-0104,130123002523,11.4720000,"Programming, Games, Apps and Society",27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High School,GA-631-1054,130123000474,11.4720000,"Programming, Games, Apps and Society",27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennesaw Mountain High School,GA-633-0101,130129002365,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pope High School,GA-633-0188,130129001994,11.4720000,"Programming, Games, Apps and Society",5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allatoona High School,GA-633-0209,130129003781,11.4720000,"Programming, Games, Apps and Society",12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Cobb High School,GA-633-2056,130129000525,11.4720000,"Programming, Games, Apps and Society",29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffee County High School,GA-634-0195,130135000581,11.4720000,"Programming, Games, Apps and Society",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dawson County High School ,GA-642-0198,130165002253,11.4720000,"Programming, Games, Apps and Society",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia High School,GA-644-2054,130174000666,11.4720000,"Programming, Games, Apps and Society",5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chamblee Charter High School,GA-644-5052,130174000692,11.4720000,"Programming, Games, Apps and Society",17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dunwoody High School,GA-644-5055,130174000690,11.4720000,"Programming, Games, Apps and Society",22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High School,GA-647-1058,130183000824,11.4720000,"Programming, Games, Apps and Society",26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dougherty Comprehensive High School,GA-647-2052,130183000832,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westover High School,GA-647-4062,130183000839,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Manchester High School,GA-648-0212,130186004034,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Effingham High School,GA-651-0197,130198001594,11.4720000,"Programming, Games, Apps and Society",21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Effingham County High School,GA-651-0390,130198000890,11.4720000,"Programming, Games, Apps and Society",24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy Creek High School,GA-656-0192,130213002167,11.4720000,"Programming, Games, Apps and Society",20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Forsyth High School,GA-658-0190,130222001897,11.4720000,"Programming, Games, Apps and Society",11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Forsyth High School,GA-658-0195,130222000893,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lambert High School,GA-658-0214,130222003954,11.4720000,"Programming, Games, Apps and Society",18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denmark High School,GA-658-0702,130222004314,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High School,GA-660-0106,130228001005,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,GA-660-0198,130228002181,11.4720000,"Programming, Games, Apps and Society",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alpharetta High School,GA-660-0205,130228003364,11.4720000,"Programming, Games, Apps and Society",21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Langston Hughes High School,GA-660-1110,130228003913,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High School,GA-660-5069,130228001031,11.4720000,"Programming, Games, Apps and Society",42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grayson High School,GA-667-0101,130255002387,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norcross High School,GA-667-0103,130255001132,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High School,GA-667-0176,130255001114,11.4720000,"Programming, Games, Apps and Society",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shiloh High School,GA-667-0185,130255001937,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collins Hill High School,GA-667-0195,130255000959,11.4720000,"Programming, Games, Apps and Society",31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peachtree Ridge High School,GA-667-0805,130255002903,11.4720000,"Programming, Games, Apps and Society",31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berkmar High School,GA-667-1050,130255001905,11.4720000,"Programming, Games, Apps and Society",6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,GA-667-1410,130255003916,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Archer High School,GA-667-1710,130255003838,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Discovery High School,GA-667-1814,130255004212,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gwinnett High School,GA-667-2558,130255001135,11.4720000,"Programming, Games, Apps and Society",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Gwinnett High School,GA-667-3750,130255001129,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dacula High School,GA-667-4052,130255001127,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Gwinnett High School,GA-667-4556,130255001123,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Duluth High School,GA-667-5550,130255001118,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Flowery Branch High,GA-669-0202,130261002571,11.4720000,"Programming, Games, Apps and Society",13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harris County High School,GA-672-0299,130270002270,11.4720000,"Programming, Games, Apps and Society",13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,GA-675-0101,130282002391,11.4720000,"Programming, Games, Apps and Society",22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luella High School,GA-675-0104,130282002916,11.4720000,"Programming, Games, Apps and Society",23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Locust Grove High,GA-675-0214,130282003928,11.4720000,"Programming, Games, Apps and Society",5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stockbridge High School,GA-675-0295,130282001205,11.4720000,"Programming, Games, Apps and Society",30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ola High School,GA-675-0307,130282003414,11.4720000,"Programming, Games, Apps and Society",26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle's Landing High School,GA-675-0391,130282002130,11.4720000,"Programming, Games, Apps and Society",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jasper County High School,GA-679-0108,130297003423,11.4720000,"Programming, Games, Apps and Society",4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jones County High School,GA-684-0192,130315001279,11.4720000,"Programming, Games, Apps and Society",25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spencer High School,GA-706-0378,130387001418,11.4720000,"Programming, Games, Apps and Society",26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newton High School,GA-707-0173,130393001454,11.4720000,"Programming, Games, Apps and Society",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockmart High School,GA-715-0102,130420001509,11.4720000,"Programming, Games, Apps and Society",37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedartown High School,GA-715-5050,130420001510,11.4720000,"Programming, Games, Apps and Society",25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rabun County High School ,GA-719-0177,130432001520,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson Magnet,GA-721-3556,130438001534,11.4720000,"Programming, Games, Apps and Society",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockdale County High School,GA-722-3052,130441001583,11.4720000,"Programming, Games, Apps and Society",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas County Central High School,GA-736-0191,130489002146,11.4720000,"Programming, Games, Apps and Society",14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tift County High School,GA-737-0199,130498002282,11.4720000,"Programming, Games, Apps and Society",7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union County High School,GA-744-0101,130525001720,11.4720000,"Programming, Games, Apps and Society",31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe Area High School,GA-747-0205,130539001772,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coahulla Creek High School,GA-755-0112,130570004053,11.4720000,"Programming, Games, Apps and Society",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest Whitfield County High School,GA-755-0175,130570001819,11.4720000,"Programming, Games, Apps and Society",13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southeast Whitfield County High School,GA-755-0275,130570001818,11.4720000,"Programming, Games, Apps and Society",15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Atlanta High School,GA-761-0192,130012002212,11.4720000,"Programming, Games, Apps and Society",20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corretta Scott King Womens' Leadership Academy,GA-761-1410,130012003980,11.4720000,"Programming, Games, Apps and Society",3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carrollton High School,GA-766-1050,130087000334,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Commerce High School,GA-771-0112,130144000622,11.4720000,"Programming, Games, Apps and Society",8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgia Cyber Academy,GA-7820120-0120,130023204148,11.4720000,"Programming, Games, Apps and Society",2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fulton Leadership Academy,GA-7830310-0310,130021703961,11.4720000,"Programming, Games, Apps and Society",1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rome High School,GA-785-0193,130444000028,11.4720000,"Programming, Games, Apps and Society",17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

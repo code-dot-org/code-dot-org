@@ -1,3 +1,6 @@
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js')}
+
 %h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
   Special Level Types
 
