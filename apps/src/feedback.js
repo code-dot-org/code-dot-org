@@ -57,8 +57,8 @@ const FIREHOSE_STUDY = 'feedback_dialog';
 const FIREHOSE_DIALOG_TYPES = {
   CORRECT_COUNT: 'correct_count',
   WRONG_COUNT: 'wrong_count',
-  APPLAB_CHOICE: 'applab_choice',
-  NO_SHARE_NO_COUNT: 'no_share_no_count',
+  APPLAB_NO_VALIDATE: 'applab_no_validate',
+  NO_VALIDATE: 'no_validate',
   SHARE_NO_COUNT: 'share_no_count',
   DEFAULT: 'default'
 };
@@ -276,7 +276,7 @@ FeedbackUtils.prototype.displayFeedback = function(
     options.response && options.response.puzzle_ratings_enabled;
 
   // If Firehose group already set away from default, don't override.
-  if (firehose_group !== FIREHOSE_DIALOG_TYPES['APPLAB_CHOICE']) {
+  if (firehose_group === FIREHOSE_DIALOG_TYPES['DEFAULT']) {
     firehose_group = isPerfect
       ? FIREHOSE_DIALOG_TYPES['CORRECT_COUNT']
       : FIREHOSE_DIALOG_TYPES['WRONG_COUNT'];
@@ -893,7 +893,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
             message = message + reinfFeedbackMsg;
           }
-          firehose_group = FIREHOSE_DIALOG_TYPES['APPLAB_CHOICE'];
+          if (options.level.skin === 'applab') {
+            firehose_group = FIREHOSE_DIALOG_TYPES['APPLAB_NO_VALIDATE'];
+          } else {
+            firehose_group = FIREHOSE_DIALOG_TYPES['NO_VALIDATE'];
+          }
         } else {
           var nextLevelMsg =
             (options.appStrings && options.appStrings.nextLevelMsg) ||
