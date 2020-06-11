@@ -7870,7 +7870,7 @@
     "ore ironalt": ["category_obstacles/ore_ironAlt"],
     "ore ruby": ["category_obstacles/ore_ruby"],
     "ore silver": ["category_obstacles/ore_silver"],
-    "p5.play": ["category_characters/fly_bot"],
+    "p5 play": ["category_characters/fly_bot"],
     "paint brush": [
       "category_generic_items/paint_brush",
       "category_tools/paint_brush"
