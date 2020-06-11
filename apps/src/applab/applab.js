@@ -79,7 +79,7 @@ import {
 } from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import {code_running, white} from '@cdo/apps/util/color';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 
 /**
  * Create a namespace for the application.
@@ -1311,7 +1311,10 @@ Applab.beginVisualizationRun = function() {
   $('#headers').addClass('dimmed');
   $('#codeWorkspace').addClass('dimmed');
   if (!Applab.isReadOnlyView) {
-    $('.droplet-main-canvas').css('background-color', code_running);
+    $('.droplet-main-canvas').css(
+      'background-color',
+      workspace_running_background
+    );
   }
   designMode.renderDesignWorkspace();
   queueOnTick();
