@@ -1,7 +1,7 @@
 import P5Lab from '../P5Lab';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {showLevelBuilderSaveButton} from '../../code-studio/header';
-import {code_running, white} from '@cdo/apps/util/color';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 
 var GameLab = function() {
   P5Lab.call(this);
@@ -35,9 +35,15 @@ GameLab.prototype.resetHandler = function(ignore) {
 
 GameLab.prototype.runButtonClick = function() {
   if (!this.studioApp_.config.readonlyWorkspace) {
-    $('.droplet-main-canvas').css('background-color', code_running);
-    $('.droplet-transition-container').css('background-color', code_running);
-    $('.ace_scroller').css('background-color', code_running);
+    $('.droplet-main-canvas').css(
+      'background-color',
+      workspace_running_background
+    );
+    $('.droplet-transition-container').css(
+      'background-color',
+      workspace_running_background
+    );
+    $('.ace_scroller').css('background-color', workspace_running_background);
   }
   P5Lab.prototype.runButtonClick.call(this);
 };
