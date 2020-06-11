@@ -8,7 +8,6 @@
     "short_instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. You'll need to use the sliders to set the correct dimensions before you start entering the pixel data.",
     "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Task 1: Make a 3x5 letter 'A'\r\nStart by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. You'll need to use the sliders to set the correct dimensions before you start entering the pixel data.\r\n",
     "version": "1",
-    "data": "0000 0011 0000 0010 010",
     "href": "pixelation/pixelation.html",
     "skip_dialog": true,
     "instructions_important": "false",
@@ -17,11 +16,13 @@
     "v1_hide_sliders": "false",
     "parent_level_id": 16838,
     "name_suffix": "_2019",
-    "encrypted": "false"
+    "encrypted": "false",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-09 22:03:49 +0000\",\"changed\":[\"markdown_instructions\",\"video_key\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-07-22 15:00:03 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:00:39 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:01:28 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:32 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:30:24 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 22:03:49 +0000\",\"changed\":[\"markdown_instructions\",\"video_key\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-07-22 15:00:03 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:00:39 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:01:28 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:32 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:30:24 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-06-11 18:42:04 +0000\",\"changed\":[\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
