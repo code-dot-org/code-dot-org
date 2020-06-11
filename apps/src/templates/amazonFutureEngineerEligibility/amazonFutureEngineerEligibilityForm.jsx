@@ -14,8 +14,12 @@ const styles = {
   },
   sectionBreak: {
     borderColor: color.teal
+  },
+  consentIndent: {
+    marginLeft: '25px'
   }
 };
+
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -31,7 +35,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       inspirationKit: false,
       csta: false,
       awsEducate: false,
-      consent: false
+      consentAFE: false,
+      consentCSTA: false
     };
   }
 
@@ -46,7 +51,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       'inspirationKit',
       'csta',
       'awsEducate',
-      'consent'
+      'consentAFE'
     ]);
 
     let shippingAddress = {};
@@ -60,7 +65,16 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       ]);
     }
 
-    this.props.onContinue({...requiredFormData, ...shippingAddress});
+    let consentCSTA = {};
+    if (this.state.csta) {
+      consentCSTA = {consentCSTA: this.state.consentCSTA};
+    }
+
+    this.props.onContinue({
+      ...requiredFormData,
+      ...shippingAddress,
+      ...consentCSTA
+    });
   };
 
   render() {
@@ -132,6 +146,24 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             value={this.state.csta}
           />
+          {this.state.csta && (
+            <div style={styles.consentIndent}>
+              <div>
+                Since you checked the box above, please consent to the sharing
+                and use of your personal data with the CSTA. Your information
+                will be shared as described in accordance with the{' '}
+                <a href="https://csteachers.org/privacy-policy/">
+                  CSTA Privacy Policy.
+                </a>
+              </div>
+              <SingleCheckbox
+                name="consentCSTA"
+                label="I give Code.org permission to share my name, email address, and school name, address, and NCES ID with the Computer Science Teachers Association. I provide my consent to the use of my personal data as described in the CSTA Privacy Policy (required if you want a CSTA Plus membership)."
+                onChange={this.handleChange}
+                value={this.state.consentCSTA}
+              />
+            </div>
+          )}
           <SingleCheckbox
             name="awsEducate"
             label="Send me a free membership to Amazon Web Services Educate to access
@@ -142,13 +174,13 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           />
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
-            name="consent"
+            name="consentAFE"
             label="I give Code.org permission to share my name, email address, and
               school name, address, and ID with Amazon.com (required to
               participate). Use of your personal information is subject to
               Amazon’s Privacy Policy."
             onChange={this.handleChange}
-            value={this.state.consent}
+            value={this.state.consentAFE}
             required={true}
           />
           <div>
@@ -190,7 +222,7 @@ class ShippingAddressFormGroup extends React.Component {
           id="street1"
           label="Street 1"
           type="text"
-          required={this.true}
+          required={true}
           onChange={this.handleChange}
         />
         <FieldGroup
