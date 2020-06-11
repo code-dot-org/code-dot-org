@@ -82,6 +82,7 @@ const SILENCED = [
   'cookieBanner',
   'regionalPartnerMiniContact',
   'donorTeacherBanner',
+  'amazonFutureEngineerEligibility',
 
   // other entry points
   'blockly',
