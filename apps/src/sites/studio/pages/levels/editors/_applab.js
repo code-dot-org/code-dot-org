@@ -63,6 +63,9 @@ $(document).ready(function() {
   });
 
   const data = getScriptData('applabOptions');
+  const categories = (data.dataset_library_manifest.categories || []).filter(
+    category => category.published
+  );
   const tableNames = data.dataset_library_manifest.tables.map(
     table => table.name
   );
@@ -115,13 +118,15 @@ $(document).ready(function() {
             multiple={true}
             onChange={this.handleChange}
           >
-            {tableNames.map(name => {
-              return (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              );
-            })}
+            {categories.map(category => (
+              <optgroup label={category.name} key={category.name}>
+                {category.datasets.map(name => (
+                  <option key={name} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
           </select>
         </div>
       );
