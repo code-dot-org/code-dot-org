@@ -715,6 +715,7 @@ describe('entry tests', () => {
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
     'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
   };
 
@@ -754,7 +755,10 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
+
+    amazonFutureEngineerEligibility:
+      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
   };
 
   // Create a config for each of our bundles
