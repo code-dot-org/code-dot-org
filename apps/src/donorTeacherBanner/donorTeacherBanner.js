@@ -57,6 +57,9 @@ async function init() {
   if (await hasSchoolDonor('Amazon')) {
     showDonorTeacherBanner();
     $('.show-if-eligible').show();
+    if (window.location.hash === '#sign-up-today') {
+      document.getElementById('sign-up-today').scrollIntoView(true);
+    }
   } else {
     $('.show-if-not-eligible').show();
   }
