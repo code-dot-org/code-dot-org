@@ -61,7 +61,7 @@ end
 
 options = {}
 cli_parser = OptionParser.new do |opts|
-  opts.banner = "Usage: ./rebuildAnimationLibraryManifest.rb [options]"
+  opts.banner = "Usage: ./updateAnimationAliases.rb [options]"
   opts.separator ""
   opts.separator "Options:"
 
