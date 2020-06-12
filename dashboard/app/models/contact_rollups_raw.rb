@@ -23,6 +23,7 @@ class ContactRollupsRaw < ApplicationRecord
     source_sql = <<~SQL
       SELECT parent_email, MAX(updated_at) AS updated_at
       FROM users
+      WHERE parent_email > ''
       GROUP BY parent_email
     SQL
     query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
