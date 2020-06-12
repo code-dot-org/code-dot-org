@@ -70,6 +70,17 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
+  def self.extract_census_submissions
+    submitter_query = <<~SQL
+      SELECT submitter_email_address, submitter_role, MAX(updated_at) AS updated_at
+      FROM census_submissions
+      WHERE submitter_email_address > ''
+      GROUP BY submitter_email_address, submitter_role
+    SQL
+    extraction_query = get_extraction_query(submitter_query, 'submitter_email_address', ['submitter_role'], true, 'dashboard.census_submissions')
+    ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
