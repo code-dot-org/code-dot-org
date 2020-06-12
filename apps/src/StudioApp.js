@@ -195,6 +195,9 @@ class StudioApp extends EventEmitter {
      * Levelbuilder-defined helper libraries.
      */
     this.libraries = {};
+
+    this.editDuringRunAlert = undefined;
+    this.executingCode = undefined;
   }
 }
 /**
@@ -913,6 +916,35 @@ StudioApp.prototype.addChangeHandler = function(newHandler) {
 };
 
 StudioApp.prototype.runChangeHandlers = function() {
+  if (this.isRunning() && this.editDuringRunAlert === undefined) {
+    let currentlyExecutingCode = this.executingCode;
+    let currentCode = this.getCode();
+    if (this.isUsingBlockly()) {
+      // when you pick up a block of code in Blockly, it comments out that code
+      // and reorders the rest of the code so that the selected block is at the end.
+      // So, to check if the Blockly code has actually changed, we need to uncomment
+      // everything and put the code in alphabetical order to check for character differences
+      const codeWithoutComments = this.getCode()
+        .replace('\n/*\n', '')
+        .replace('*/', '');
+      currentCode = [...codeWithoutComments]
+        .sort((a, b) => a.localeCompare(b))
+        .join('');
+      currentlyExecutingCode = [...this.executingCode]
+        .sort((a, b) => a.localeCompare(b))
+        .join('');
+    }
+    if (currentCode !== currentlyExecutingCode) {
+      this.editDuringRunAlert = this.displayWorkspaceAlert(
+        'warning',
+        <div>
+          Your code has changed. Click "Reset" and then "Run" to run your code
+          again.
+        </div>,
+        true
+      );
+    }
+  }
   if (!this.changeHandlers) {
     return;
   }
@@ -942,6 +974,15 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   getStore().dispatch(setIsRunning(!showRun));
+
+  if (showRun) {
+    if (this.editDuringRunAlert !== undefined) {
+      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.editDuringRunAlert = undefined;
+    }
+  } else {
+    this.executingCode = this.getCode();
+  }
 
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -3024,12 +3065,25 @@ function rectFromElementBoundingBox(element) {
  * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
-  var container = this.displayAlert(
-    '#codeWorkspace',
-    {type: type},
-    alertContents
-  );
+StudioApp.prototype.displayWorkspaceAlert = function(
+  type,
+  alertContents,
+  bottom = false
+) {
+  let container;
+  if (bottom) {
+    container = this.displayAlert(
+      this.editCode ? '#codeTextbox' : '#codeWorkspace',
+      {type: type, sideMargin: 0, bottomMargin: 0, bottom: true},
+      alertContents
+    );
+  } else {
+    container = this.displayAlert(
+      '#codeWorkspace',
+      {type: type},
+      alertContents
+    );
+  }
 
   var toolbarWidth;
   if (this.usingBlockly_) {
@@ -3039,10 +3093,17 @@ StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
       $('.droplet-palette-element').width() + $('.droplet-gutter').width();
   }
 
-  $(container).css({
-    left: toolbarWidth,
-    top: $('#headers').height()
-  });
+  if (bottom) {
+    $(container).css({
+      left: toolbarWidth
+    });
+  } else {
+    $(container).css({
+      left: toolbarWidth,
+      top: $('#headers').height()
+    });
+  }
+  return container;
 };
 
 /**
@@ -3099,14 +3160,25 @@ StudioApp.prototype.displayAlert = function(
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
-    container = $("<div class='react-alert ignore-transform'/>").css({
-      position: position,
-      left: 0,
-      right: 0,
-      top: 0,
-      zIndex: 1000,
-      transform: 'scale(1.0)'
-    });
+    if (props.bottom) {
+      container = $("<div class='react-alert ignore-transform'/>").css({
+        position: position,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 1000,
+        transform: 'scale(1.0)'
+      });
+    } else {
+      container = $("<div class='react-alert ignore-transform'/>").css({
+        position: position,
+        left: 0,
+        right: 0,
+        top: 0,
+        zIndex: 1000,
+        transform: 'scale(1.0)'
+      });
+    }
     parent.append(container);
   }
   var renderElement = container[0];
@@ -3119,6 +3191,7 @@ StudioApp.prototype.displayAlert = function(
       onClose={handleAlertClose}
       type={props.type}
       sideMargin={props.sideMargin}
+      bottomMargin={props.bottomMargin}
       closeDelayMillis={props.closeDelayMillis}
       childPadding={props.childPadding}
     >
