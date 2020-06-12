@@ -65,7 +65,7 @@ $(document).ready(function() {
 
   const styles = {
     optgroup: {
-      color: color.lightest_gray
+      color: color.light_gray
     },
     option: {
       color: color.black
@@ -133,7 +133,7 @@ $(document).ready(function() {
               <optgroup
                 label={category.name}
                 key={category.name}
-                style={styles.optGroup}
+                style={styles.optgroup}
               >
                 {category.datasets.map(name => (
                   <option key={name} value={name} style={styles.option}>
