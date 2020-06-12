@@ -105,10 +105,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     // lots of validation specified in spec, none currently being done.
     // need timestamp in appropriate format.
 
-
-    return (
-      <div>Completion!</div>
-    )
+    return <div>Completion!</div>;
   };
 
   render() {
