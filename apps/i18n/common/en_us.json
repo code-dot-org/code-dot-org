@@ -1154,8 +1154,6 @@
   "parentLetterClever1": "Have your students log in to their Clever account at [www.clever.com]({cleverLink}) (click \"Sign in as a student\" at the top right)",
   "parentLetterClever2": "Click on the Code.org logo on the Clever dashboard. The logo looks like this:",
   "parentLetterClosing": "Please let me know if you have any questions and thank you for your continued support of your child and of our classroom!",
-  "parentLetterCodeBreak": "Join the weekly \"Code Break\" every Wednesday",
-  "parentLetterCodeBreakDetails": "The team at Code.org hosts a live interactive classroom for students of all ages. Anybody can participate, and learn computer science in a fun format starring very special guests. [More info]({codebreakLink})",
   "parentLetterForgotPassword": "If your student does not remember their password, please email me and I will provide it",
   "parentLetterForgotPasswordEmail": "If your student does not remember their password, they can reset it from the sign in screen",
   "parentLetterForgotPicturePassword": "If your student does not remember their picture password, please email me and I will provide it",
