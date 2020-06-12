@@ -9,6 +9,13 @@ When /^I add code for a canvas and a button$/ do
   add_code_to_editor(code)
 end
 
+When /^I add code for a library function$/ do
+  code =
+    "// my library function\\n" \
+    "function myLibrary() {}"
+  add_code_to_editor(code)
+end
+
 And /^Applab HTML has a button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
   expect(/button/.match(code).nil?).to be(false)
@@ -117,6 +124,15 @@ When /^I navigate to the embedded version of my project with source hidden$/ do
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"
     And I copy the embed code into a new document
+  STEPS
+end
+
+Then /^I open the library publish dialog/ do
+  steps <<-STEPS
+    When I open the share dialog
+    And I click selector "#project-share a:contains('Show advanced options')"
+    And I click selector "#project-share li:contains('Share as library')"
+    And I click selector "button:contains('Share as library')"
   STEPS
 end
 
