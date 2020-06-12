@@ -32,8 +32,6 @@ class ProjectInfo extends React.Component {
       <Measure
         bounds
         onResize={contentRect => {
-          //this.setState({ dimensions: contentRect.bounds })
-          //console.log(contentRect.bounds);
           this.props.onComponentResize(contentRect.bounds.width);
         }}
       >

@@ -8,9 +8,7 @@ import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 
-import LessonProgress, {
-  getFullWidthForLevels
-} from '../progress/LessonProgress.jsx';
+import LessonProgress from '../progress/LessonProgress.jsx';
 
 const styles = {
   headerMiddleContent: {
@@ -39,7 +37,8 @@ class HeaderMiddle extends React.Component {
     this.state = {
       width: this.getWidth(),
       projectInfoWidth: 0,
-      addedPopupComponents: false
+      addedPopupComponents: false,
+      lessonProgressFullWidth: 0
     };
   }
 
@@ -103,9 +102,7 @@ class HeaderMiddle extends React.Component {
     const thirdItem = this.thirdItem();
     const progressDesiredWidth = this.props.projectInfoOnly
       ? 0
-      : getFullWidthForLevels(
-          this.props.lessonExtrasUrl /*&& !this.props.lessonTrophyEnabled*/
-        );
+      : this.state.lessonProgressFullWidth + 10;
 
     if (this.props.projectInfoOnly) {
       return {
@@ -170,6 +167,12 @@ class HeaderMiddle extends React.Component {
     }
   }
 
+  onLessonProgressFullWidth = lessonProgressFullWidth => {
+    if (lessonProgressFullWidth !== this.state.lessonProgressFullWidth) {
+      this.setState({lessonProgressFullWidth});
+    }
+  };
+
   render() {
     const {projectInfoOnly, scriptNameData, lessonData} = this.props;
 
@@ -186,7 +189,7 @@ class HeaderMiddle extends React.Component {
             id="project_info_container"
             style={{
               float: 'left',
-              display: widths.projectInfo === 0 ? 'none' : undefined
+              visibility: widths.projectInfo === 0 ? 'hidden' : undefined
             }}
           >
             <ProjectInfo
@@ -203,10 +206,10 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 textAlign: 'right',
-                paddingRight: 10,
+                //paddingRight: 10,
                 boxSizing: 'border-box',
                 width: widths.scriptName,
-                display: widths.scriptName === 0 ? 'none' : undefined
+                visibility: widths.scriptName === 0 ? 'hidden' : undefined
               }}
             >
               <ScriptName {...extraScriptNameData} />
@@ -219,10 +222,13 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 width: widths.progress,
-                display: widths.progress === 0 ? 'none' : undefined
+                visibility: widths.progress === 0 ? 'hidden' : undefined
               }}
             >
-              <LessonProgress width={widths.progress} />
+              <LessonProgress
+                width={widths.progress}
+                onSize={this.onLessonProgressFullWidth}
+              />
             </div>
           )}
 
