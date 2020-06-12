@@ -130,7 +130,6 @@ class Lesson < ActiveRecord::Base
       lesson_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: script.number_of_lessons, # TODO: remove once corresponding js change is deployed and no longer cached
         num_script_lessons: script.number_of_lessons,
         id: id,
         position: absolute_position,
@@ -171,11 +170,7 @@ class Lesson < ActiveRecord::Base
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      unless unplugged?
-        # TODO: remove stage_extras_level_url once corresponding js change is deployed and no longer cached
-        lesson_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
-        lesson_data[:lesson_extras_level_url] = lesson_data[:stage_extras_level_url]
-      end
+      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged?
 
       lesson_data
     end

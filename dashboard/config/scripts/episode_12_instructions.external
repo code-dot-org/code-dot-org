@@ -1,0 +1,21 @@
+name 'Episode 12 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## How Computers Work
+
+**Do This:** Watch this short series of videos which explains [How Computers Work](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-).
+
+[![](https://images.code.org/ea907c454af4c1bd72463a135da13b15-image-1591674784763.png)](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-) 
+[![](https://images.code.org/d45142c228c98c9e37357298796aaf87-image-1591674796997.png)](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-)
+
+## Code-Along
+
+**Do This:** Complete the Build a Computer game with Sofia while watching Code Break.  
+
+![](https://images.code.org/db2444668a1c46828dfcd6c7d8621e60-image-1591645152130.gif)
+MARKDOWN
