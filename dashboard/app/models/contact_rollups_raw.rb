@@ -81,6 +81,37 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
+  def self.extract_school_geos
+    teacher_query = <<~SQL
+      SELECT email, school_info_id, updated_at
+      FROM users
+      WHERE user_type = 'teacher' AND email > ''
+    SQL
+
+    school_geos_query = <<~SQL
+      SELECT email, city, state, zip, MAX(updated_at) AS updated_at
+      FROM (
+        SELECT
+          teachers.email,
+          schools.city, schools.state, schools.zip,
+          GREATEST(teachers.updated_at, school_infos.updated_at, schools.updated_at) AS updated_at
+        FROM (#{teacher_query}) AS teachers
+        JOIN school_infos ON school_infos.id = teachers.school_info_id
+        JOIN schools ON schools.id = school_infos.school_id
+      ) AS inner_query
+      GROUP BY email, city, state, zip
+    SQL
+
+    extraction_query = get_extraction_query(
+      school_geos_query,
+      'email',
+      %w(city state zip),
+      true,
+      'dashboard.schools'
+    )
+    ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
