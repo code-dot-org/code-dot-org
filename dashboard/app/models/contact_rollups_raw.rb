@@ -31,12 +31,6 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_user_geos
-    teacher_query = <<~SQL
-      SELECT id, email
-      FROM users
-      WHERE user_type = 'teacher' AND email > ''
-    SQL
-
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
     teacher_geos_query = <<~SQL
@@ -44,7 +38,7 @@ class ContactRollupsRaw < ApplicationRecord
         teachers.email,
         user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country,
         MAX(user_geos.updated_at) as updated_at
-      FROM (#{teacher_query}) AS teachers
+      FROM (#{teacher_query('id, email')}) AS teachers
       JOIN user_geos
       ON teachers.id = user_geos.user_id
       GROUP BY email, city, state, postal_code, country
@@ -97,12 +91,6 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_school_geos
-    teacher_query = <<~SQL
-      SELECT email, school_info_id, updated_at
-      FROM users
-      WHERE user_type = 'teacher' AND email > ''
-    SQL
-
     school_geos_query = <<~SQL
       SELECT email, city, state, zip, MAX(updated_at) AS updated_at
       FROM (
@@ -110,7 +98,7 @@ class ContactRollupsRaw < ApplicationRecord
           teachers.email,
           schools.city, schools.state, schools.zip,
           GREATEST(teachers.updated_at, school_infos.updated_at, schools.updated_at) AS updated_at
-        FROM (#{teacher_query}) AS teachers
+        FROM (#{teacher_query('email, school_info_id, updated_at')}) AS teachers
         JOIN school_infos ON school_infos.id = teachers.school_info_id
         JOIN schools ON schools.id = school_infos.school_id
       ) AS inner_query
@@ -149,6 +137,16 @@ class ContactRollupsRaw < ApplicationRecord
       'pegasus.form_geos'
     )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
+  def self.teacher_query(columns = '*')
+    # This query selects only teacher accounts from the users table
+    # because we don't store student email addresses at all.
+    <<-SQL
+      SELECT #{columns}
+      FROM users
+      WHERE email > ''
+    SQL
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
