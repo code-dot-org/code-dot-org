@@ -121,12 +121,6 @@ class ParentLetter extends React.Component {
               accountEditLink: studio('/users/edit')
             })}
           />
-          <h1>{i18n.parentLetterCodeBreak()}</h1>
-          <SafeMarkdown
-            markdown={i18n.parentLetterCodeBreakDetails({
-              codebreakLink: pegasus('/break')
-            })}
-          />
           <h1>{i18n.parentLetterWhy()}</h1>
           <p>{i18n.parentLetterWhyDetails()}</p>
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
