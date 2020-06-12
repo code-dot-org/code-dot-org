@@ -20,6 +20,8 @@ import {
   getCurrentId
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import defaultSprites from './spritelab/defaultSprites.json';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -265,8 +267,9 @@ export function setInitialAnimationList(serializedAnimationList) {
     serializedAnimationList = {orderedKeys: [], propsByKey: {}};
   }
 
-  // TODO: Tear out this migration when we don't think we need it anymore.
+  // TODO (from 2015): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   if (Array.isArray(serializedAnimationList)) {
+    trackEvent('Research', 'RanMigration', '2015-animation-migration');
     // We got old animation data that needs to be migrated.
     serializedAnimationList = {
       orderedKeys: serializedAnimationList.map(a => a.key),
@@ -276,6 +279,24 @@ export function setInitialAnimationList(serializedAnimationList) {
       }, {})
     };
   }
+
+  // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
+  serializedAnimationList.orderedKeys.forEach(loadedKey => {
+    let animation = serializedAnimationList.propsByKey[loadedKey];
+    if (animation.sourceUrl && animation.sourceUrl.includes('/v3/')) {
+      // We want to replace this sprite with the /v1/ sprite
+      let details = `name=${animation.name};key=${loadedKey}`;
+      if (defaultSprites.propsByKey[loadedKey]) {
+        // The key is the same in the main.json and in default sprites. Do a simple replacement.
+        serializedAnimationList.propsByKey[loadedKey] =
+          defaultSprites.propsByKey[loadedKey];
+        trackEvent('Research', 'ReplacedSpriteByKey', details);
+      } else {
+        // We were unable to find a replacement for the /v3/ sprite
+        trackEvent('Research', 'CouldNotReplaceSprite', details);
+      }
+    }
+  });
 
   // Convert frameRates to frameDelays.
   for (let key in serializedAnimationList.propsByKey) {

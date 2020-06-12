@@ -10,10 +10,6 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
-# Indexes
-#
-#  index_contact_rollups_raw_on_email_and_sources  (email,sources) UNIQUE
-#
 
 CSF_SCRIPT_ARRAY = %w(
   course1
