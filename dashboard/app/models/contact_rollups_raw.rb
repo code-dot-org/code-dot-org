@@ -37,13 +37,14 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE user_type = 'teacher' AND email > ''
     SQL
 
-    # An user can have many user_geos records
+    # An user can have many user_geos records. user_geos records starts with only NULL
+    # values until a cronjob runs, does IP-to-address lookup, and update them later.
     teacher_geos_query = <<~SQL
       SELECT
         teachers.email, user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country,
         MAX(user_geos.updated_at) as updated_at
       FROM (#{teacher_query}) AS teachers
-      LEFT JOIN user_geos
+      JOIN user_geos
       ON teachers.id = user_geos.user_id
       GROUP BY teachers.email, user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country
     SQL
