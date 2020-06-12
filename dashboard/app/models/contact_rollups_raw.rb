@@ -127,6 +127,30 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
+  def self.extract_pegasus_form_geos
+    # TODO: how to run this method in Rails end-to-end tests? It reads from pegasus tables.
+    form_geos_query = <<~SQL
+      SELECT
+        forms.email,
+        form_geos.city, form_geos.state, form_geos.postal_code, form_geos.country,
+        MAX(form_geos.updated_at) AS updated_at
+      FROM #{CDO.pegasus_db_name}.forms
+      JOIN #{CDO.pegasus_db_name}.form_geos
+      ON form_geos.form_id = forms.id
+      WHERE email > ''
+      GROUP BY email, city, state, postal_code, country
+    SQL
+
+    extraction_query = get_extraction_query(
+      form_geos_query,
+      'email',
+      %w(city state postal_code country),
+      true,
+      'pegasus.form_geos'
+    )
+    ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
