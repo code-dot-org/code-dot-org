@@ -57,6 +57,68 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
+  def self.extract_professional_learning_attendance_old_attendance_model
+    source_sql = <<~SQL
+      SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
+        FROM users AS u
+        JOIN followers AS f on u.id = f.student_user_id
+        JOIN sections AS se on f.section_id = se.id
+        WHERE se.section_type in (
+          'csins_workshop',
+          'csina_workshop',
+          'ecs_workshop',
+          'csp_workshop',
+          'csf_workshop'
+        )
+        AND u.email > ''
+      GROUP BY 1,2
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['section_type'], true, 'dashboard.followers')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_professional_learning_attendance_new_attendance_model
+    source_sql = <<~SQL
+      SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
+        FROM pd_attendances AS pda
+        JOIN pd_sessions AS pds ON pds.id = pda.pd_session_id and pds.deleted_at is null
+        JOIN pd_workshops AS pdw ON pdw.id = pds.pd_workshop_id and pdw.deleted_at is null
+        JOIN users AS u ON u.id = pda.teacher_id
+        WHERE pdw.course in (
+          'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
+          'CS Principles',
+          'Exploring Computer Science',
+          'CS Discoveries'
+        )
+        AND pda.deleted_at is null
+        AND u.email > ''
+      GROUP BY 1,2
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['course'], true, 'dashboard.pd_attendances')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_roles_from_user_permissions
+    source_sql = <<~SQL
+      SELECT u.email, up.permission, up.updated_at
+      FROM user_permissions AS up
+      JOIN users AS u on u.id = up.user_id
+      WHERE up.permission in (
+        'facilitator',
+        'workshop_organizer',
+        'district_contact'
+      )
+      AND u.email > ''
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['permission'], true, 'dashboard.user_permissions')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
