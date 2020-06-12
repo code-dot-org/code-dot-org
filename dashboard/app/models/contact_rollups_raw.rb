@@ -15,6 +15,61 @@
 #  index_contact_rollups_raw_on_email_and_sources  (email,sources) UNIQUE
 #
 
+CSF_SCRIPT_ARRAY = %w(
+  course1
+  course2
+  course3
+  course4
+  coursea-2017
+  courseb-2017
+  coursec-2017
+  coursed-2017
+  coursee-2017
+  coursef-2017
+  coursea-2018
+  courseb-2018
+  coursec-2018
+  coursed-2018
+  coursee-2018
+  coursef-2018
+  coursea-2019
+  courseb-2019
+  coursec-2019
+  coursed-2019
+  coursee-2019
+  coursef-2019
+  coursea-2020
+  courseb-2020
+  coursec-2020
+  coursed-2020
+  coursee-2020
+  coursef-2020
+  20-hour
+  express-2017
+  pre-express-2017
+  express-2018
+  pre-express-2018
+  express-2019
+  pre-express-2019
+  express-2020
+  pre-express-2020
+).freeze
+
+CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
+
+COURSES_TAUGHT_ARRAY = %w(
+  csd-2017
+  csd-2018
+  csd-2019
+  csd-2020
+  csp-2017
+  csp-2018
+  csp-2019
+  csp-2020
+)
+
+COURSES_TAUGHT_LIST = COURSES_TAUGHT_ARRAY.map {|x| "'#{x}'"}.join(',')
+
 class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
@@ -43,6 +98,36 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY email, courses.name, scripts.name
     SQL
     query = get_extraction_query(source_sql, 'email', ['course_name', 'script_name'], true, 'dashboard.sections')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_scripts_taught
+    source_sql = <<~SQL
+      SELECT email, scripts.name, MAX(se.updated_at) AS updated_at
+      FROM users u
+      JOIN sections se ON se.user_id = u.id
+      JOIN scripts ON scripts.id = se.script_id
+      WHERE scripts.name in (#{CSF_SCRIPT_LIST})
+      AND email > ''
+      GROUP BY email, scripts.name
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['name'], true, 'dashboard.sections.script_id')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_courses_taught
+    source_sql = <<~SQL
+      SELECT email, courses.name, MAX(se.updated_at) AS updated_at
+      FROM users u
+      JOIN sections se ON se.user_id = u.id
+      JOIN courses ON courses.id = se.course_id
+      WHERE courses.name in (#{COURSES_TAUGHT_LIST})
+      AND email > ''
+      GROUP BY email, courses.name
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['name'], true, 'dashboard.sections.course_id')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
