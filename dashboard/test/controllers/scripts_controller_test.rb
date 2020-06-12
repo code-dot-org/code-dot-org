@@ -719,7 +719,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.has_lesson_plan?
   end
 
-  test 'should redirect to latest stable version in script family' do
+  test 'should redirect to latest stable version in script family for student without progress or assignment' do
+    sign_in create(:student)
+
     dogs1 = create :script, name: 'dogs1', family_name: 'coursea', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
