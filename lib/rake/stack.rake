@@ -8,7 +8,7 @@ namespace :stack do
     @cfn = AWS::CloudFormation.new(
       stack: (@stack = Cdo::CloudFormation::CdoApp.new(
         filename: ENV['TEMPLATE'],
-        stack_name: ENV['STACK_NAME'],
+        stack_name: ENV['STACK_NAME'].dup,
         frontends: ENV['FRONTENDS'],
         domain: ENV['DOMAIN'],
         cdn_enabled: ENV['CDN_ENABLED'],

@@ -755,7 +755,10 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
+
+    amazonFutureEngineerEligibility:
+      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
   };
 
   // Create a config for each of our bundles

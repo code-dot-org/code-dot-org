@@ -91,15 +91,15 @@ module Cdo::CloudFormation
         # Current branch is the one we're deploying to the adhoc server,
         # so check whether it's up-to-date with the remote before we get any further.
         unless `git remote show '#{ORIGIN}' 2>&1 | grep '(up to date)' | grep '#{branch}' | wc -l`.strip.to_i > 0
-          raise 'Current adhoc branch needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
-To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+          raise "Current adhoc branch (#{branch}) needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         end
       else
         # Either not adhoc or deploying a different branch than the current local one;
         # simply check that the branch exists on GitHub before deploying.
         unless system("git ls-remote --exit-code '#{ORIGIN}' #{branch} > /dev/null")
-          raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
-  To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
+          raise "Current branch (#{branch}) needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+  To specify an alternate branch name, run `rake stack:start branch=BRANCH`."
         end
       end
     end
