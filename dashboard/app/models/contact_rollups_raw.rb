@@ -41,18 +41,19 @@ class ContactRollupsRaw < ApplicationRecord
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
     teacher_geos_query = <<~SQL
       SELECT
-        teachers.email, user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country,
+        teachers.email,
+        user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country,
         MAX(user_geos.updated_at) as updated_at
       FROM (#{teacher_query}) AS teachers
       JOIN user_geos
       ON teachers.id = user_geos.user_id
-      GROUP BY teachers.email, user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country
+      GROUP BY email, city, state, postal_code, country
     SQL
 
     extraction_query = get_extraction_query(
       teacher_geos_query,
       'email',
-      %w[city state postal_code country],
+      %w(city state postal_code country),
       true,
       'dashboard.user_geos'
     )
@@ -66,7 +67,14 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE email > ''
       GROUP BY email
     SQL
-    extraction_query = get_extraction_query(enrollment_email_query, 'email', [], true, 'dashboard.pd_enrollments')
+
+    extraction_query = get_extraction_query(
+      enrollment_email_query,
+      'email',
+      [],
+      true,
+      'dashboard.pd_enrollments'
+    )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
@@ -77,7 +85,14 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE submitter_email_address > ''
       GROUP BY submitter_email_address, submitter_role
     SQL
-    extraction_query = get_extraction_query(submitter_query, 'submitter_email_address', ['submitter_role'], true, 'dashboard.census_submissions')
+
+    extraction_query = get_extraction_query(
+      submitter_query,
+      'submitter_email_address',
+      ['submitter_role'],
+      true,
+      'dashboard.census_submissions'
+    )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
