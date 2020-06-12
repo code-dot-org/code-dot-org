@@ -11,22 +11,46 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import {getStore} from '../../redux';
 
 const styles = {
   headerContainer: {
     // With our new bubble we don't want any padding above/below
-    paddingLeft: 5,
-    paddingRight: 5,
+    //paddingLeft: 5,
+    //paddingRight: 5,
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
+    position: 'relative',
+    //marginLeft: 4,
+    //marginRight: 4,
+    overflow: 'hidden'
+  },
+  headerFullProgress: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 4,
-    marginRight: 4
+    position: 'absolute',
+    paddingLeft: 4,
+    paddingRight: 4
+  },
+  headerVignette: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none'
+  },
+  headerVignetteLeftRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  headerVignetteLeft: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+  },
+  headerVignetteRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
   },
   spacer: {
     marginRight: 'auto'
@@ -46,103 +70,63 @@ const styles = {
   }
 };
 
-// return the ideal desired width of this control.  it will be up to the parent
-// container to decide how much of that space it's able to give us.
-export function getFullWidthForLevels(lessonExtrasProgressBubble) {
-  const progress = getStore().getState().progress;
-  const levels = levelsForLessonId(progress, progress.currentStageId);
-  const numLevels = levels.length;
-  const numBubbles = numLevels + (lessonExtrasProgressBubble ? 1 : 0);
-  return (numBubbles - 1) * 18 + 40;
-}
-
-// given a set of levels, and a width, return which levels we will actually
-// render.
-function getShowLevels(levels, width, lessonExtrasProgressBubble) {
-  // which dot is current level?
-  var currentLevelIndex = 0;
-  for (const [i, l] of levels.entries()) {
-    if (l.isCurrentLevel) {
-      currentLevelIndex = i;
-      break;
-    }
-  }
-
-  var numLevels = levels.length;
-
-  if (lessonExtrasProgressBubble) {
-    numLevels++;
-  }
-
-  let numAvailableElements = Math.min(
-    Math.floor((width - 40) / 18) + 1,
-    numLevels
-  );
-
-  if (numAvailableElements < 3) {
-    numAvailableElements = 3;
-  }
-
-  let firstElement, numElements;
-
-  if (numAvailableElements >= numLevels) {
-    // If there is enough room for all dots, just show them all.
-    firstElement = 0;
-    numElements = numLevels;
-  } else {
-    // If there isn't enough room, show the current level in the middle
-    // of the dots we can show.
-    var numSurroundingElements = (numAvailableElements - 1) / 2;
-
-    firstElement = Math.ceil(currentLevelIndex - numSurroundingElements);
-    var lastElement = Math.ceil(currentLevelIndex + numSurroundingElements);
-
-    // Adjust beginning and ending so they don't go off the ends of the range.
-    if (firstElement < 0) {
-      lastElement += 0 - firstElement;
-      firstElement = 0;
-    }
-
-    if (lastElement >= numLevels) {
-      firstElement = Math.max(0, firstElement - (lastElement - numLevels));
-      lastElement -= lastElement - numLevels;
-    }
-
-    numElements = lastElement - firstElement + 1;
-  }
-
-  let showLessonExtrasProgressBubble = false;
-
-  if (lessonExtrasProgressBubble && firstElement + numElements >= numLevels) {
-    numElements -= 1;
-    showLessonExtrasProgressBubble = true;
-  }
-
-  const showLevels = levels.slice(firstElement, firstElement + numElements);
-
-  return {showLevels, showLessonExtrasProgressBubble};
-}
-
 /**
  * Lesson progress component used in level header and course overview.
  */
 class LessonProgress extends Component {
   static propTypes = {
-    // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
-    width: PropTypes.number
+    width: PropTypes.number,
+    onSize: PropTypes.func.isRequired
   };
 
+  componentDidUpdate() {
+    // Report back to our parent how wide we would like to be.
+    const fullWidth = $('.full_progress').width();
+    this.props.onSize(fullWidth);
+  }
+
+  getFullProgressOffset() {
+    // We want to set the offset so that the current level is in the middle
+    // of the available width.
+
+    if (this.refs.currentLevel && this.props.width) {
+      const fullWidth = $('.full_progress').width();
+      const actualWidth = this.props.width - 10;
+      const currentLevelOffset = $(this.refs.currentLevel).position().left;
+
+      if (fullWidth > actualWidth) {
+        let desiredOffset = actualWidth / 2 - currentLevelOffset - 34 / 2;
+
+        let vignetteStyle = styles.headerVignetteLeftRight;
+
+        // don't go too far to the left
+        if (desiredOffset + fullWidth < actualWidth) {
+          desiredOffset = actualWidth - fullWidth;
+          vignetteStyle = styles.headerVignetteLeft;
+        }
+
+        // don't go too far to the right
+        if (desiredOffset > 0) {
+          desiredOffset = 0;
+          vignetteStyle = styles.headerVignetteRight;
+        }
+
+        return {
+          headerFullProgressOffset: desiredOffset,
+          vignetteStyle: {...styles.headerVignette, ...vignetteStyle}
+        };
+      }
+    }
+
+    return {headerFullProgressOffset: 0, vignetteStyle: null};
+  }
+
   render() {
-    const {
-      lessonExtrasUrl,
-      onLessonExtras,
-      lessonTrophyEnabled,
-      width
-    } = this.props;
+    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -153,11 +137,18 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    const {showLevels, showLessonExtrasProgressBubble} = getShowLevels(
+    /*const {showLevels, showLessonExtrasProgressBubble} = getShowLevels(
       levels,
       width,
       lessonExtrasUrl && !lessonTrophyEnabled
-    );
+    );*/
+    const showLevels = levels;
+    const showLessonExtrasProgressBubble = false;
+
+    const {
+      headerFullProgressOffset,
+      vignetteStyle
+    } = this.getFullProgressOffset(); // -180;
 
     return (
       <div
@@ -167,35 +158,42 @@ class LessonProgress extends Component {
           ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
         }}
       >
-        {lessonTrophyEnabled && <div style={styles.spacer} />}
-        {showLevels.map((level, index) => (
-          <div
-            key={index}
-            style={{
-              ...(level.isUnplugged &&
-                level.isCurrentLevel &&
-                styles.pillContainer)
-            }}
-          >
-            <ProgressBubble
-              level={level}
-              disabled={false}
-              smallBubble={!level.isCurrentLevel}
-              lessonTrophyEnabled={lessonTrophyEnabled}
+        <div
+          className="full_progress"
+          style={{...styles.headerFullProgress, left: headerFullProgressOffset}}
+        >
+          {lessonTrophyEnabled && <div style={styles.spacer} />}
+          {showLevels.map((level, index) => (
+            <div
+              key={index}
+              ref={level.isCurrentLevel ? 'currentLevel' : null}
+              style={{
+                ...(level.isUnplugged &&
+                  level.isCurrentLevel &&
+                  styles.pillContainer)
+              }}
+            >
+              <ProgressBubble
+                level={level}
+                disabled={false}
+                smallBubble={!level.isCurrentLevel}
+                lessonTrophyEnabled={lessonTrophyEnabled}
+              />
+            </div>
+          ))}
+          {showLessonExtrasProgressBubble && (
+            <LessonExtrasProgressBubble
+              lessonExtrasUrl={lessonExtrasUrl}
+              perfect={onLessonExtras}
             />
-          </div>
-        ))}
-        {showLessonExtrasProgressBubble && (
-          <LessonExtrasProgressBubble
-            lessonExtrasUrl={lessonExtrasUrl}
-            perfect={onLessonExtras}
-          />
-        )}
-        {lessonTrophyEnabled && (
-          <LessonTrophyProgressBubble
-            percentPerfect={getPercentPerfect(levels)}
-          />
-        )}
+          )}
+          {lessonTrophyEnabled && (
+            <LessonTrophyProgressBubble
+              percentPerfect={getPercentPerfect(levels)}
+            />
+          )}
+        </div>
+        <div id="vignette" style={vignetteStyle} />
       </div>
     );
   }
