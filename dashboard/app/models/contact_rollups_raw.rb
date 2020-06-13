@@ -56,16 +56,21 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_pd_enrollments
     enrollment_email_query = <<~SQL
-      SELECT email, MAX(updated_at) AS updated_at
-      FROM pd_enrollments
+      SELECT
+        e.email,
+        w.course,
+        MAX(GREATEST(e.updated_at, w.updated_at)) AS updated_at
+      FROM pd_enrollments as e
+      LEFT OUTER JOIN pd_workshops as w
+      ON e.pd_workshop_id = w.id
       WHERE email > ''
-      GROUP BY email
+      GROUP BY email, course
     SQL
 
     extraction_query = get_extraction_query(
       enrollment_email_query,
       'email',
-      [],
+      ['course'],
       true,
       'dashboard.pd_enrollments'
     )
