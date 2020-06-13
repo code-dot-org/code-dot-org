@@ -59,7 +59,7 @@ class ContactRollupsRaw < ApplicationRecord
       SELECT
         e.email,
         w.course,
-        MAX(GREATEST(e.updated_at, w.updated_at)) AS updated_at
+        MAX(GREATEST(e.updated_at, IFNULL(w.updated_at, e.updated_at))) AS updated_at
       FROM pd_enrollments as e
       LEFT OUTER JOIN pd_workshops as w
       ON e.pd_workshop_id = w.id
