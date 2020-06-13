@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
+   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -119,7 +119,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
+### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
@@ -156,9 +156,36 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
     1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
-### Windows note: use an Ubuntu VM
+### Windows
 
-Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
+With the release of Windows Subsystem for Linux (WSL), you can run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
+
+It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. 
+
+In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [here](https://www.microsoft.com/en-us/software-download/windows10).
+
+1. Install WSL (unabridged instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
+    1. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+    1. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+    1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
+    1. `wsl --set-default-version 2`
+        1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
+1. Install Ubuntu. When writing these steps, the Windows Store App titled simply 'Ubuntu' (which is Ubuntu 20.04) was used successfully. However, the Ubuntu setup steps above are for 16.04, so you may feel like using that instead if you fear future complications beyond setup.
+    * [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link) OR
+    * Manually download and install Ubuntu 16.04 from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual). There are installation instructions linked to from that page.
+1. Before you launch WSL for the first time, you may need to turn on virtualization in your BIOS settings.
+1. Run `wsl` from the command line (or search for 'Ubuntu' in the Start Menu) and WSL will complete installation.
+
+From here, you can follow the [Ubuntu procedure](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting) above, followed by the [overview instructions](#overview), WITH the following things to be aware of:
+1. In step 2, you will probably run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
+1. You may have to run `sudo /etc/init.d/mysql restart` before step 9.
+1. If during git clone you encounter the error `the remote end hung up unexpectedly`, it's because the repo is BIG (over 6 GB compressed). You could always try increasing the http buffer with something like `git config --global http.postBuffer 1048576000`, but it's probably easier to just download the code-dot-org-staging zip file directly from GitHub. 
+   1. If you do this, you cannot use File Explorer to move the zip archive to your Linux directory. Instead run `mv /mnt/c/<DOWNLOAD_PATH> ~` from WSL. 
+   1. Once you've unzipped the archive, you may need to run `git init` inside of the unzipped repo, or else you may receive the error message `ln: failed to create symbolic link '.git/hooks/pre-commit': No such file or directory`
+1. Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
+1. One last note from this author: running `bundle exec rake install` took me over an hour to complete. I ran the sql query as suggested and didn't notice any change in the last couple of rows; I also tried running with `--trace` but it doesn't tell you much after you see `RAILS_ENV=development RACK_ENV=development bundle exec rake dashboard:setup_db`...so you may just have to cross your fingers and hope things finish!
+
+### Alternative: Use an Ubuntu VM
 
 * Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
