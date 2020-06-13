@@ -30,22 +30,22 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_users
+  def self.extract_users_and_geos
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
-    teacher_and_location_query = <<~SQL
+    teacher_and_geo_query = <<~SQL
       SELECT
-        teachers.email, teachers.id as user_id,
-        user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country,
-        MAX(user_geos.updated_at) as updated_at
-      FROM (#{teacher_query('id, email')}) AS teachers
-      LEFT OUTER JOIN user_geos
-      ON teachers.id = user_geos.user_id
-      GROUP BY email, user_id, city, state, postal_code, country
+        t.email, t.id as user_id,
+        ug.city, ug.state, ug.postal_code, ug.country,
+        MAX(GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at))) as updated_at
+      FROM (#{teacher_query('id, email, updated_at')}) AS t
+      LEFT OUTER JOIN user_geos AS ug
+      ON t.id = ug.user_id
+      GROUP BY email, t.id, city, state, postal_code, country
     SQL
 
     extraction_query = get_extraction_query(
-      teacher_and_location_query,
+      teacher_and_geo_query,
       'email',
       %w(user_id city state postal_code country),
       true,
