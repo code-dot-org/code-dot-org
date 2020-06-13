@@ -139,6 +139,30 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
+  def self.extract_pegasus_contacts
+    # pegasus.contacts contains emails collected from pegasus.forms and
+    # dashboard.census_submissions (using +Poste2.create_recipient+ method).
+    # Those emails are already extracted, we only care about +unsubscribed_at+ column here.
+    #
+    # @Note: pegasus.contacts has duplicate emails even though its migration says
+    # email is unique. Thus, we still have to de-duplicate emails.
+    contact_query = <<~SQL
+      SELECT email, MAX(unsubscribed_at) AS unsubscribed_at, MAX(updated_at) AS updated_at
+      FROM #{CDO.pegasus_db_name}.contacts
+      WHERE email > '' AND unsubscribed_at IS NOT NULL
+      GROUP BY email
+    SQL
+
+    extraction_query = get_extraction_query(
+      contact_query,
+      'email',
+      ['unsubscribed_at'],
+      true,
+      'pegasus.contacts'
+    )
+    ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
   def self.teacher_query(columns = '*')
     # This query selects only teacher accounts from the users table
     # because we don't store student email addresses at all.
