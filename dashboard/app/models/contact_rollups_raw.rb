@@ -97,16 +97,15 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_school_geos
     school_geos_query = <<~SQL
-      SELECT email, city, state, zip, MAX(updated_at) AS updated_at
-      FROM (
-        SELECT
-          teachers.email,
-          schools.city, schools.state, schools.zip,
-          GREATEST(teachers.updated_at, school_infos.updated_at, schools.updated_at) AS updated_at
-        FROM (#{teacher_query('email, school_info_id, updated_at')}) AS teachers
-        JOIN school_infos ON school_infos.id = teachers.school_info_id
-        JOIN schools ON schools.id = school_infos.school_id
-      ) AS inner_query
+      SELECT
+        t.email,
+        s.city, s.state, s.zip,
+        MAX(GREATEST(s.updated_at, si.updated_at, t.updated_at)) AS updated_at
+      FROM schools AS s
+      INNER JOIN school_infos AS si
+      ON s.id = si.school_id
+      INNER JOIN (#{teacher_query('email, school_info_id, updated_at')}) AS t
+      ON si.id = t.school_info_id
       GROUP BY email, city, state, zip
     SQL
 
