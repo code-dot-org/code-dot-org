@@ -123,12 +123,12 @@ class ContactRollupsRaw < ApplicationRecord
     # TODO: how to run this method in Rails end-to-end tests? It reads from pegasus tables.
     form_geos_query = <<~SQL
       SELECT
-        forms.email,
-        form_geos.city, form_geos.state, form_geos.postal_code, form_geos.country,
-        MAX(form_geos.updated_at) AS updated_at
-      FROM #{CDO.pegasus_db_name}.forms
-      JOIN #{CDO.pegasus_db_name}.form_geos
-      ON form_geos.form_id = forms.id
+        f.email,
+        fg.city, fg.state, fg.postal_code, fg.country,
+        MAX(fg.updated_at) AS updated_at
+      FROM #{CDO.pegasus_db_name}.forms AS f
+      INNER JOIN #{CDO.pegasus_db_name}.form_geos AS fg
+      ON f.id = fg.form_id
       WHERE email > ''
       GROUP BY email, city, state, postal_code, country
     SQL
