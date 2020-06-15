@@ -7,7 +7,6 @@ import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import {possibleHeaders} from '../../headerRedux';
-import Measure from 'react-measure';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
@@ -16,11 +15,35 @@ const headerComponents = {
   [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton
 };
 
+const styles = {
+  headerContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 40
+  },
+  projectInfo: {
+    position: 'absolute'
+  }
+};
+
 class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
-    onComponentResize: PropTypes.func.isRequired
+    width: PropTypes.number,
+    onSize: PropTypes.func.isRequired
   };
+
+  componentDidMount() {
+    // Report back to our parent how wide we would like to be.
+    const fullWidth = $('.project_info').width();
+    this.props.onSize(fullWidth);
+  }
+
+  componentDidUpdate() {
+    // Report back to our parent how wide we would like to be.
+    const fullWidth = $('.project_info').width();
+    this.props.onSize(fullWidth);
+  }
 
   render() {
     if (!this.props.currentHeader) {
@@ -29,20 +52,11 @@ class ProjectInfo extends React.Component {
 
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
-      <Measure
-        bounds
-        onResize={contentRect => {
-          this.props.onComponentResize(contentRect.bounds.width);
-        }}
-      >
-        {({measureRef}) => (
-          <div ref={measureRef}>
-            <div className="project_info">
-              <HeaderComponent />
-            </div>
-          </div>
-        )}
-      </Measure>
+      <div style={styles.headerContainer}>
+        <div className="project_info" style={styles.projectInfo}>
+          <HeaderComponent />
+        </div>
+      </div>
     );
   }
 }

@@ -36,9 +36,9 @@ class HeaderMiddle extends React.Component {
 
     this.state = {
       width: this.getWidth(),
-      projectInfoWidth: 0,
       addedPopupComponents: false,
-      lessonProgressFullWidth: 0
+      lessonProgressFullWidth: 0,
+      projectInfoFullWidth: 0
     };
   }
 
@@ -82,94 +82,46 @@ class HeaderMiddle extends React.Component {
     this.setState({width: this.getWidth()});
   };
 
-  // The first item is the script name, the second item is the progress container.
-  // But the third item can be the "I'm finished" link, or the popup link.
-  thirdItem() {
-    if (!this.props.lessonData) {
-      return 'none';
-    } else if (this.props.lessonData.finishLink) {
-      return 'finish';
-    } else if (this.props.lessonData.num_script_lessons > 1) {
-      return 'popup';
-    } else {
-      return 'none';
-    }
-  }
-
   // Return the desired widths for the items that are showing.
   getWidths() {
-    const width = this.state.width - this.state.projectInfoWidth;
-    const thirdItem = this.thirdItem();
-    const progressDesiredWidth = this.props.projectInfoOnly
+    const width = this.state.width;
+    /*const progressDesiredWidth = this.props.projectInfoOnly
       ? 0
       : this.state.lessonProgressFullWidth + 10;
+    const showPopup =
+      this.props.lessonData && this.props.lessonData.num_script_lessons > 1; // || progressDesiredWidth < progressActualWidth;
+    const showFinish =
+      this.props.lessonData && this.props.lessonData.finishLink;
+    */
 
     if (this.props.projectInfoOnly) {
       return {
-        projectInfo: this.state.projectInfoWidth,
+        projectInfo: this.state.projectInfoFullWidth,
         scriptName: 0,
         progress: 0,
+        popup: 0,
         finishLink: 0
       };
     }
 
-    if (thirdItem === 'finish') {
-      if (width < 160) {
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: 0,
-          progress: 0,
-          finishLink: width
-        };
-      } else if (width < 300) {
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: 0,
-          progress: Math.min(progressDesiredWidth, (3 * width) / 4),
-          finishLink: width / 4
-        };
-      } else {
-        const progressActualWidth = Math.min(
-          progressDesiredWidth,
-          (2 * width) / 4
-        );
-
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: (width - progressActualWidth) / 2,
-          progress: progressActualWidth,
-          finishLink: (width - progressActualWidth) / 2
-        };
-      }
-    } else if (thirdItem === 'popup') {
-      if (width < 160) {
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: 0,
-          progress: 0,
-          popup: 40
-        };
-      } else if (width < 300) {
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: 0,
-          progress: Math.min(progressDesiredWidth, width - 40 - 1),
-          popup: 40
-        };
-      } else {
-        return {
-          projectInfo: this.state.projectInfoWidth,
-          scriptName: (width - 40) / 2 - 1,
-          progress: Math.min(progressDesiredWidth, (width - 40) / 2 - 1),
-          popup: 40
-        };
-      }
-    }
+    return {
+      projectInfo: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4),
+      scriptName: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4),
+      progress: Math.min(this.state.lessonProgressFullWidth, (width - 40) / 4),
+      popup: 40,
+      finishLink: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4)
+    };
   }
 
   onLessonProgressFullWidth = lessonProgressFullWidth => {
     if (lessonProgressFullWidth !== this.state.lessonProgressFullWidth) {
       this.setState({lessonProgressFullWidth});
+    }
+  };
+
+  onProjectInfoFullWidth = projectInfoFullWidth => {
+    if (projectInfoFullWidth !== this.state.projectInfoFullWidth) {
+      this.setState({projectInfoFullWidth});
     }
   };
 
@@ -189,14 +141,13 @@ class HeaderMiddle extends React.Component {
             id="project_info_container"
             style={{
               float: 'left',
+              width: widths.projectInfo,
               visibility: widths.projectInfo === 0 ? 'hidden' : undefined
             }}
           >
             <ProjectInfo
-              onComponentResize={projectInfoWidth => {
-                this.setState({projectInfoWidth});
-              }}
               width={widths.projectInfo}
+              onSize={this.onProjectInfoFullWidth}
             />
           </div>
 
