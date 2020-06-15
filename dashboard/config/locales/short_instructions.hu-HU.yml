@@ -859,6 +859,13 @@ hu-HU:
         gyapjút gyűjts a két báránytól.
       Overworld Shear Sheep_2019: Itt a birkanyírás ideje! Használd a nyír parancsot,
         hogy gyapjút gyűjts a két báránytól.
+      Standalone_Artist_1: Üdvözöljük a művészeket! Először is próbálj meg készíteni
+        egy egyszerű négyzetet a Fordulj jobbra és az Előrelépni blokkok használatával.Legyen
+        minden oldal 100 képpont hosszúságú.
+      Standalone_Artist_2: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint
+        150 pixel hosszúságú oldalakkal.
+      Standalone_Artist_3: Le tudod rajzolni ezt a hatszöget 100 képpontos oldalakkal
+        és 60 fokos fordulatokkal?
       Standalone_Artist_8: Itt van a "Rajzolj egy alakzatot" függvény amit a hatszögek
         rajzolásához programoztunk. Futtasd a kódot, hogy lásd mit csinál, és aztán
         kísérletezz a függvénnyel, hogy lásd mi történik. Meg tudod csinálni hogy
