@@ -649,6 +649,10 @@ cs-CZ:
         klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
         K dokončení úlohy se musíš dostat do cíle nahoře.
       OPD-K5-forloops-5: Pomoz včele sebrat nektar ze všech květů.
+      OPD-K5-projects-6: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám.
+      OPD-K5-projects-7: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády a
+        spolužáky. '
       Overworld Avoid Monsters: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
         a dostaň se do bezpečí svého přístřešku. '
       Overworld Avoid Monsters_2019: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
@@ -942,6 +946,10 @@ cs-CZ:
       courseB_starWars_prog1: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2018: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2019: '[][0] _"Přines ten šrot, BB-8!"_ '
+      courseC19_playLab_EOC5: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám.
+      courseC19_playLab_EOC6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
       courseC_PlayLab_events1: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
       courseC_PlayLab_events1_2018: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
       courseC_PlayLab_events1_2019: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
@@ -963,6 +971,71 @@ cs-CZ:
         doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
       courseC_PlayLab_events4_2019: Umíš napsat program tak, aby Jorge (aktér 1) šel
         doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
+      courseC_PlayLab_events5: Dokážeš napsat program, který zařídí, aby chobotnička
+        Oktávie řekla "Co je nového?", když na ní klikneš?
+      courseC_PlayLab_events5_2018: Dokážeš napsat program, který zařídí, aby chobotnička
+        Oktávie řekla "Co je nového?", když na ní klikneš?
+      courseC_PlayLab_events5_2019: Dokážeš napsat program, který zařídí, aby chobotnička
+        Oktávie řekla "Co je nového?", když na ní klikneš?
+      courseC_PlayLab_events6: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events6_2018: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events6_2019: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events7: Blok `opakuj do nekonečna` ti umožní spouštět kód znovu
+        a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna
+        chodil nahoru a dolů o 400 pixelů.
+      courseC_PlayLab_events7_2018: Blok `opakuj do nekonečna` ti umožní spouštět
+        kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do
+        nekonečna chodil nahoru a dolů o 400 pixelů.
+      courseC_PlayLab_events7_2019: Blok `opakuj do nekonečna` ti umožní spouštět
+        kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do
+        nekonečna chodil nahoru a dolů o 400 pixelů.
+      courseC_PlayLab_events8: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk \"zásah\"
+        a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo, spusť hru
+        a podívej, co se stane."
+      courseC_PlayLab_events8_2018: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane."
+      courseC_PlayLab_events8_2019: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane."
+      courseC_PlayLab_events9: |-
+        Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
+        Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
+      courseC_PlayLab_events9_2018: |-
+        Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
+        Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
+      courseC_PlayLab_events9_2019: |-
+        Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
+        Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
+      courseC_PlayLab_eventsA: |-
+        Přidej bloky k události `při spuštění` a změň pozadí a rychlost, se kterou se tučňák Valda pohybuje po obrazovce.
+
+        Spusť hru a ovládej Valdu šipkami dokud nepřipíšeš bod.
+      courseC_PlayLab_eventsA_2018: |-
+        Přidej bloky k události `při spuštění` a změň pozadí a rychlost, se kterou se tučňák Valda pohybuje po obrazovce.
+
+        Spusť hru a ovládej Valdu šipkami dokud nepřipíšeš bod.
+      courseC_PlayLab_eventsA_2019: |-
+        Přidej bloky k události `při spuštění` a změň pozadí a rychlost, se kterou se tučňák Valda pohybuje po obrazovce.
+
+        Spusť hru a ovládej Valdu šipkami dokud nepřipíšeš bod.
+      courseC_PlayLab_eventsA_embed_2019: Zahrajme si hru. Získej 5 bodů posunutím
+        tučňáka směrem k chobotničce.
+      courseC_PlayLab_eventsFP: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
+        klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
+        inspiraci, podívej se do nápovědy.
+      courseC_PlayLab_eventsFP_2018: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
+        klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
+        inspiraci, podívej se do nápovědy.
+      courseC_PlayLab_eventsFP_2019: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
+        klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
+        inspiraci, podívej se do nápovědy.
       courseC_artist_loops1b_2019: 'Teď změň směr, kterým se nálepka nakreslí, přidáním
         příkazu `otoč se` do tvého kódu. '
       courseC_artist_loops2a_2019: Teď zkus použít cyklus k nakreslení několika kopií
@@ -1558,6 +1631,8 @@ cs-CZ:
       courseE_farmer_concept2_2018: Posbírej všechny dýně.
       courseE_farmer_concept3: 'Zasyp díry na konci každé z cest. '
       courseE_farmer_concept3_2018: 'Zasyp díry na konci každé z cest. '
+      courseE_playLab_scaffold6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
       courseF_artist_for7: Udělej tři malé změny do kódu z poslední úrovni, abys to
         dosáhl!
       courseF_artist_for7_2018: Udělej tři malé změny do kódu z poslední úrovni, abys
