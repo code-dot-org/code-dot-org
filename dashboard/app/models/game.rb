@@ -229,6 +229,10 @@ class Game < ActiveRecord::Base
     [APPLAB, GAMELAB].include? app
   end
 
+  def use_azure_speech_service?
+    [APPLAB, GAMELAB].include? app
+  end
+
   def channel_backed?
     [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION, SPRITELAB].include? app
   end
