@@ -698,6 +698,19 @@ it-IT:
         content1: Descrizione qui
       CSD U2 L1 Overview:
         content1: Descrizione qui
+        markdown: |
+          # Panoramica
+
+          Questa lezione illustra gli utilizzi che un sito web potrebbe avere, sia dal punto di vista degli utenti che dei creatori. Il corso esplora una manciata dei siti web più utilizzati negli Stati Uniti e spiega come questi siti sono utili agli utenti ed anche come possono servire ai loro creatori.
+          ## Vocabolario
+
+          * **Sito Web** - Un sito connesso ad internet che ospita una o più pagine nel World Wide Web (Internet).
+
+          ## Risorce
+
+          * [Lo scopo dei siti web - Scheda attività](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Lo scopo dei siti web - Esempi](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: Descrizione qui
         markdown: |
@@ -1703,7 +1716,7 @@ it-IT:
 
           - **Descrizione di tutte le lezioni in italiano** - Sul sito di Programma il Futuro trovi la [descrizione di tutte le lezioni dei corsi A-F](https://programmailfuturo.it/come/primaria) corredate dai videotutorial in cui vengono eseguiti uno ad uno tutti gli esercizi. Ove disponibili, vi sono anche i video introduttivi doppiati in italiano.
 
-          - **Supporto in italiano** -  Puoi trovare un utile supporto all'apprendimento sul [forum italiano di Programma il Futuro](https://programmailfuturo.it/aiuto/forum-di-aiuto). Durante il corso, potrai usare il forum per condividere in maniera asincrona i tuoi pensieri, esperienze e domande con gli altri insegnanti impegnati su questi contenuti. Se ti blocchi e non riesci ad andare avanti durante il corso, chiedi aiuto al [servizio di supporto di Programma il Futuro](https://programmailfuturo.it/aiuto/invia-comunicazione?argomento=21).
+          - **Supporto in italiano** -  Puoi trovare un utile supporto all'apprendimento sul [forum italiano di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento). Durante il corso, potrai usare il forum per condividere in maniera asincrona i tuoi pensieri, esperienze e domande con gli altri insegnanti impegnati su questi contenuti. Se ti blocchi e non riesci ad andare avanti durante il corso, chiedi aiuto al [servizio di supporto di Programma il Futuro](https://programmailfuturo.it/aiuto/invia-comunicazione?argomento=21).
 
           - **Aiuto e comunità (in inglese)** - Accedendo a [support.code.org](https://support.code.org/) puoi porre domande, rispondere a domande di altri insegnanti e leggere le domande frequenti (FAQ) fornite dal team di Code.org. In questa pagina puoi contattare direttamente il team di Code.org per qualsiasi informazione.
 
@@ -1854,7 +1867,7 @@ it-IT:
           ad imparare in maniera informale dalle esperienze altrui o semplicemente
           per trovare supporto ed un gruppo di colleghi ai quali riferirti.<br/><br/>\n\n-
           **Continua a partecipare alla comunità degli insegnanti di Programma il
-          Futuro** -  Potrai usare il [forum italiano di Programma il Futuro](https://programmailfuturo.it/aiuto/forum-di-aiuto)
+          Futuro** -  Potrai usare il [forum italiano di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento)
           per condividere le tue strategie, porre quesiti, commentare le idee degli
           altri insegnanti e mettere la tua esperienza al servizio di chi ha bisogno
           di aiuto.<br/><br/>\n\nInoltre, se parli inglese...<br/><br/>\n\n> **Continue
@@ -2039,7 +2052,7 @@ it-IT:
           se impieghi più o meno tempo rispetto a quanto indicato! L'obiettivo principale
           è che tu possa divertirti, imparare i concetti fondamentali e applicare
           poi in classe quanto imparato nella maniera che più ti si addice.\n\n##
-          Connettiti\n\nPuoi trovare un utile supporto all'apprendimento sul <a href=\"https://programmailfuturo.it/aiuto/forum-di-aiuto\"
+          Connettiti\n\nPuoi trovare un utile supporto all'apprendimento sul <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\"
           target=\"_new\">forum italiano di Programma il Futuro</a>. Durante il corso,
           potrai usare il forum per condividere in maniera asincrona i tuoi pensieri,
           esperienze e domande con gli altri insegnanti impegnati su questi contenuti.
