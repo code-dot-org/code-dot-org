@@ -48,7 +48,7 @@ level 'CSD U1 processing fastest', progression: 'App: The Fastest Finger'
 level 'CSD U1 processing guess', progression: 'App: Guess the Number'
 level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
-lesson 'Apps and Storage'
+lesson 'Storage'
 level 'CSD U1L07 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U1 storage outfit', progression: 'App: Outfit Picker'
 level 'CSD U1 storage friends', progression: 'App: Friend Finder'

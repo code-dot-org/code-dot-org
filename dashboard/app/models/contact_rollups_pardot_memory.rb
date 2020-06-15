@@ -126,9 +126,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
     pardot_writer = PardotV2.new is_dry_run: is_dry_run
-    ActiveRecord::Base.connection.exec_query(query_new_contacts).each do |record|
-      data = JSON.parse(record['data']).deep_symbolize_keys
-      submissions, errors = pardot_writer.batch_create_prospects record['email'], data
+    ContactRollupsV2.retrieve_query_results(query_new_contacts).each do |record|
+      record.deep_symbolize_keys!
+      data = JSON.parse(record[:data]).deep_symbolize_keys
+
+      submissions, errors = pardot_writer.batch_create_prospects record[:email], data
       next if submissions.blank?
 
       request_count += 1
@@ -162,18 +164,19 @@ class ContactRollupsPardotMemory < ApplicationRecord
     rejected_prospects = 0
 
     pardot_writer = PardotV2.new is_dry_run: is_dry_run
-    ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
+    ContactRollupsV2.retrieve_query_results(query_updated_contacts).each do |record|
+      record.deep_symbolize_keys!
       # If pardot_id has changed since the last data sync, we should assume that
       # Pardot prospect data is currently empty and re-sync all contact data.
       old_prospect_data =
-        record['pardot_id_changed'] ?
+        record[:pardot_id_changed] ?
           {} :
-          JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
-      new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
+          JSON.parse(record[:data_synced] || '{}').deep_symbolize_keys
+      new_contact_data = JSON.parse(record[:data]).deep_symbolize_keys
 
       submissions, errors = pardot_writer.batch_update_prospects(
-        record['email'],
-        record['pardot_id'],
+        record[:email],
+        record[:pardot_id],
         old_prospect_data,
         new_contact_data
       )
