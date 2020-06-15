@@ -919,7 +919,8 @@ StudioApp.prototype.runChangeHandlers = function() {
   if (
     this.isRunning() &&
     this.editDuringRunAlert === undefined &&
-    (this.isUsingBlockly() || this.getCode() !== this.executingCode)
+    (this.isUsingBlockly() ||
+      this.getCode().trim() !== this.executingCode.trim())
   ) {
     // todo: if the change is an extra new line and the user didn't do it, ignore
     this.editDuringRunAlert = this.displayWorkspaceAlert(
