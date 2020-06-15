@@ -1,99 +1,21 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/editors/_applab.js')}
 
-.field
-  = f.label :slider_speed, 'Slider speed'
-  %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
-  = f.number_field :slider_speed, :step => 0.1
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
-
-= render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
-
-= render partial: 'levels/editors/fields/submittable', locals: {f: f}
-
-.field
-  = f.label :start_html, 'Starting design mode html'
-  %p
-    This should be equivalent to the level html created by design mode. Learn how to how to make them
-    =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Adding-Preloaded-Design-Elements-in-App-Lab', target: '_blank'
-
-  %p
-    IMPORTANT WARNING: If you have referenced images in the HTML and/or  CODE, then you need to get fully-qualified
-    code.org https URLS for these assets and update the HTML and the code to reflect these. You can quickly get full
-    image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.
-    Copy the result and paste it here (it should start with something like
-    #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
-  = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
-  :javascript
-    levelbuilder.initializeCodeMirror('level_start_html', 'html');
-
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
+= render partial: 'levels/editors/fields/debugger', locals: {f: f}
+= render partial: 'levels/editors/fields/applab_design_mode', locals: {f: f}
+= render partial: 'levels/editors/fields/applab_data', locals: {f: f}
+= render partial: 'levels/editors/fields/applab_turtle', locals: {f: f}
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'applab'}
-
-.field
-  = f.label 'Log Conditions'
-  Create a JSON array resembling the example if you want to add requirements that certain functions were executed. These will be checked when the Finish button is pressed.
-  %pre
-    = preserve do
-      :escaped
-        Example:
-        [
-          { "entries": ["function1", "function2"], "matchType": "exact", "minTimes": 1, "message": "You need to call both functions." },
-          { "entries": ["[forTest]", "moveTo", "randomNumber", "randomNumber"], "matchType": "inexact", "minTimes": 20, "message": "You need to call moveTo in a for loop." }
-        ]
-  = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
-  :javascript
-    levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
-  %p
-    Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
-
-.field
-  = f.label 'Table Data'
-  Step 1: Create a project at studio.code.org/p/applab and edit the data for a table in the data browser. Step 2: Copy the data via the debug area at the bottom of the table. Step 3: Paste the data below in the format { "tablename": <paste> }
-  %pre
-    = preserve do
-      :escaped
-        Example:
-        {
-          "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
-          "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
-        }
-  = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
-  :javascript
-    levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
-
-= render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
-
-.field
-  = f.label :data_library_tables,'Dataset Libraries'
-  = f.text_area :data_library_tables, value: @level.data_library_tables, readonly: true
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
-
-= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
+= render partial: 'levels/editors/fields/preload_assets', locals: {f: f}
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 
 :ruby
   script_data = {

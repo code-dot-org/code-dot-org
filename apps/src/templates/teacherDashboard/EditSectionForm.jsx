@@ -139,19 +139,19 @@ class EditSectionForm extends Component {
     } = this.props;
 
     /**
-    OAuth login types can not be changed.
-    Personal email login type can be changed to word OR picture login type.
+    OAuth and personal email login types can not be changed.
     Picture login type can be changed to word login type.
     Word login type can be changed to picture login type.
     **/
     const changeableLoginTypes = [
       SectionLoginType.word,
-      SectionLoginType.picture,
-      SectionLoginType.email
+      SectionLoginType.picture
     ];
 
     let sectionLoginTypeTransforms = {};
-    sectionLoginTypeTransforms[SectionLoginType.email] = changeableLoginTypes;
+    sectionLoginTypeTransforms[SectionLoginType.email] = [
+      SectionLoginType.email
+    ];
     sectionLoginTypeTransforms[SectionLoginType.picture] = [
       SectionLoginType.word,
       SectionLoginType.picture
@@ -167,15 +167,10 @@ class EditSectionForm extends Component {
       SectionLoginType.google_classroom
     ];
 
-    const validLoginTypes =
-      section.studentCount === 0
-        ? Object.values(SectionLoginType)
-        : sectionLoginTypeTransforms[section.loginType];
+    const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
 
     const showLoginTypeField =
-      !isNewSection &&
-      (section.studentCount === 0 ||
-        changeableLoginTypes.includes(section.loginType));
+      !isNewSection && changeableLoginTypes.includes(section.loginType);
 
     if (!section) {
       return null;

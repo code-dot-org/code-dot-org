@@ -1,6 +1,6 @@
 hidden false
 
-stage 'Artist'
+lesson 'Artist'
 level 'frozen line'
 level 'frozen perpendicular'
 level 'frozen square iterative'

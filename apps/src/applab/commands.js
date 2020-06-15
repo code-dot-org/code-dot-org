@@ -1004,7 +1004,7 @@ applabCommands.getAttribute = function(opts) {
   return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
-// Whitelist of HTML Element attributes which can be modified, to
+// Allowlist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
 var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
@@ -1159,7 +1159,7 @@ applabCommands.getImageURL = function(opts) {
       return element.getAttribute('data-canonical-image-url');
     } else if (
       element.tagName === 'LABEL' &&
-      element.className === 'img-upload'
+      $(element).hasClass('img-upload')
     ) {
       var fileObj = element.children[0].files[0];
       if (fileObj) {

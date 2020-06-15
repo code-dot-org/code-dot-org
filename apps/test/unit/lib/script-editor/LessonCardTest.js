@@ -10,8 +10,10 @@ describe('LessonCard', () => {
     moveLevelToLesson,
     addLevel,
     setLessonLockable,
-    setFlexCategory,
+    setLessonGroup,
     setTargetLesson,
+    moveLesson,
+    removeLesson,
     defaultProps;
 
   beforeEach(() => {
@@ -19,21 +21,28 @@ describe('LessonCard', () => {
     moveLevelToLesson = sinon.spy();
     addLevel = sinon.spy();
     setLessonLockable = sinon.spy();
-    setFlexCategory = sinon.spy();
+    setLessonGroup = sinon.spy();
     setTargetLesson = sinon.spy();
+    moveLesson = sinon.spy();
+    removeLesson = sinon.spy();
     defaultProps = {
       reorderLevel,
       moveLevelToLesson,
       addLevel,
       setLessonLockable,
+      moveLesson,
+      removeLesson,
       lessonsCount: 1,
+      lessonGroupsCount: 1,
       lesson: {
+        name: 'Lesson 1',
         levels: [],
         position: 1,
         lockable: false
       },
+      lessonGroupPosition: 1,
       lessonMetrics: {},
-      setFlexCategory,
+      setLessonGroup,
       setTargetLesson,
       targetLessonPos: null
     };

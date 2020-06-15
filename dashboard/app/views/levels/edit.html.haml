@@ -1,10 +1,17 @@
 %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 
 - content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
   %script{src: webpack_asset_path('js/levelbuilder.js')}
+  = javascript_include_tag 'jquery.handsontable.full'
 
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
+
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
   .field
     / dsl-defined levels specify a name directly in the DSL text
     - unless @level.is_a? DSLDefined
@@ -16,43 +23,42 @@
         %p the level cannot be renamed because it appears in a pilot script.
       - if @standalone
         %p the level cannot be renamed because it is a standalone project level.
-      .field
-        = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
   / Only enter name to create new records of certain level types.
-  - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
-    = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
-    = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
-    = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
-    = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
-    = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
-    = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
-    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
-    = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
+  - unless @level.is_a?(Fish) || (@level.new_record? && @level.is_a?(Blockly))
+    -# CSF Style Puzzles
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
-    = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval))
+    = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
+    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
+    = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
+    = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze #Karel is a special type of Maze
+    = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
+    -# *Labs
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
-    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
-    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
+    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
-    = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
-    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
-    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
-    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
-    = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
-    = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
-    = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
-    = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
+    -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
+    = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
+    = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
+    = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
+    = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
+    -# Other
+    = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
-    = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
-    // Note that many DSL levels also use this partial. See _dsl.html.haml
-    = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.include_teacher_only_markdown_editor?)
-    = render partial: 'levels/editors/fields/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/eval', locals: {f: f} if @level.is_a? Eval
+    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
+    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
+    = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
+    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
+    = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
+
   .field
     = f.hidden_field :published
   .actions

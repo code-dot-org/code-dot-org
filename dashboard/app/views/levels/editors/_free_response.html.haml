@@ -1,31 +1,7 @@
-.field
-  = f.label :title
-  %p Title to show on level pages (but not in level groups).
-  = f.text_field :title
-
-= render partial: 'levels/editors/fields/submittable', locals: {f: f}
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :peer_reviewable, description: "Is peer reviewable"}
-  %p
-    If checked, students that submit a solution for grading can have their
-    solution reviewed by peers.
-
-.field
-  = f.label :height
-  %p Height of the answer textarea in px.
-  = f.number_field :height, step: 50
-.field
-  = f.label :placeholder
-  %p Placeholder text to show in the answer textarea.
-  = f.text_field :placeholder
-.field
-  = f.label :solution
-  %p Optional solution markdown to display to teachers.
-  = f.text_area :solution, rows: 20
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_user_uploads, description: "Allow User Uploads"}
-  %p Let users upload files as solutions.
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :optional, description: "Optional"}
-  %p If checked, an assessment page will still be considered complete even if this question is left blank.
+= render partial: 'levels/editors/fields/free_response_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
