@@ -120,9 +120,22 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_pegasus_forms
+    # This query will extract student emails from pegasus.forms. Most of them come from
+    # students older than 16 via Petition submissions. However, there are about 167K
+    # emails from students between 13 and 16 who submitted petitions before May 2018.
+    #
+    # We started to anonymize emails from students younger than 16 since May 2018 because
+    # of GDPR requirements. We always anonymize emails from students younger than 13.
+    #
+    # @see:
+    #   https://code.org/privacy#studentemails
+    #   pegasus/sites.v3/code.org/views/petition_expand.haml
+    #   bin/oneoff/wipe_data/opt_out_petition_emails_under_16
+    #
     forms_query = <<~SQL
       SELECT email, kind, data->>'$.role_s' as role, MAX(updated_at) as updated_at
       FROM #{CDO.pegasus_db_name}.forms
+      WHERE email > '' and email != 'anonymous@code.org'
       GROUP BY email, kind, role
     SQL
 
