@@ -396,6 +396,8 @@ is:
       help_us: Hjálpaðu
       teach: Kenndu
       about: Um okkur
+      legal_privacy: Persónuverndarstefna
+      legal_tos: Skilmálar
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
