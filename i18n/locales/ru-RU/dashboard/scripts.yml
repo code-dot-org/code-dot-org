@@ -5347,6 +5347,8 @@ ru:
               name: Большое Событие
             Binary Bracelets:
               name: Двоичные браслеты
+            Powerful Passwords:
+              name: Надёжные пароли
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
           lesson_groups:
@@ -5361,6 +5363,8 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            Powerful Passwords:
+              name: Надёжные пароли
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:
@@ -6560,6 +6564,8 @@ ru:
               name: Циклы в исполнителе Художник
         coursec-2020:
           stages:
+            Powerful Passwords:
+              name: Надёжные пароли
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:

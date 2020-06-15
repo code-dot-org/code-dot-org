@@ -20,9 +20,15 @@ ru-RU:
       2-3 Artist 7:
         draw_rect:
           name: draw_rect
+          parameters:
+            width: ширина
+            height: высота
       2-3 Artist Debugging 10:
         draw square:
           name: нарисовать квадрат
+          parameters:
+            width: ширина
+            height: высота
         jump to middle:
           name: перейти к центру
         draw a circle:
@@ -181,6 +187,8 @@ ru-RU:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: собери нектар сделай мед
+          parameters:
+            honey: мед
       Course 4 Play Lab Params 1:
         jump:
           name: прыгнуть
@@ -189,12 +197,17 @@ ru-RU:
           name: перейти_на_новый_уровень
         score_points:
           name: засчитывать_очки
+          parameters:
+            points: очки
       Course 4 Play Lab Params 2:
         jump:
           name: прыгнуть
       Course 4 Play Lab Params 3:
         jump:
           name: прыгнуть
+          parameters:
+            height: высота
+            actor: персонаж
       Course 4 Play Lab Params 4:
         patrol:
           name: проверка
@@ -203,18 +216,30 @@ ru-RU:
       Course 4 Play Lab Params 5:
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
       Course 4 Play Lab Params 6:
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
       Course 4 Play Lab Params 7:
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
+            speed: скорость
       Course 4 Play Lab Params 8:
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
+            speed: скорость
       Course 4 Play Lab Params 9:
         score_points:
           name: засчитывать_очки
+          parameters:
+            points: очки
       Course 4 Play Lab Vars 1:
         set score:
           name: задать счет
@@ -229,6 +254,8 @@ ru-RU:
       Course 4 SCF 1a:
         get nectar:
           name: собрать нектар
+          parameters:
+            counter: счётчик
       Course 4 SCF 2:
         draw a square 20:
           name: нарисовать квадрат 20
@@ -243,6 +270,8 @@ ru-RU:
           name: выполнить что-то
         draw an octagon:
           name: нарисовать восьмиугольник
+          parameters:
+            length: длина
       'Course E: Play Lab Project':
         do something:
           name: выполнить что-то
@@ -256,6 +285,8 @@ ru-RU:
           name: перейти_на_новый_уровень
         score_points:
           name: засчитывать_очки
+          parameters:
+            points: очки
       Function intro Ryan:
         build bridge:
           name: построить мост
@@ -310,17 +341,27 @@ ru-RU:
       InspirationalArtwork:
         n-sided shape:
           name: фигура с n сторонами
+          parameters:
+            length: длина
         draw a loop:
           name: нарисовать цикл
+          parameters:
+            length: длина
         draw spiral circle:
           name: 'Нарисовать спиральный круг '
+          parameters:
+            size: размер
       InspirationalArtwork_2018:
         draw a loop:
           name: нарисовать цикл
+          parameters:
+            length: длина
         n-sided shape:
           name: фигура с n сторонами
         draw spiral circle:
           name: 'Нарисовать спиральный круг '
+          parameters:
+            size: размер
       K-1 Artist2 3:
         draw roof:
           name: нарисовать крышу
@@ -407,38 +448,66 @@ ru-RU:
           name: выполнить что-то
         draw a hexagon:
           name: нарисовать шестиугольник
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
         do something:
           name: выполнить что-то
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: нарисовать край спирали
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 15:
         draw a star:
           name: нарисовать звезду
+          parameters:
+            points: очки
+            length: длина
         draw a circle:
           name: нарисовать круг
         draw a pinwheel:
           name: нарисовать вертушку
+          parameters:
+            length: длина
+            repeat: повторить
         draw a triangle:
           name: нарисовать треугольник
+          parameters:
+            length: длина
         draw a shape:
           name: нарисовать фигуру
+          parameters:
+            length: длина
         draw a house:
           name: нарисовать дом
+          parameters:
+            length: длина
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 2:
         do something:
           name: выполнить что-то
@@ -448,49 +517,93 @@ ru-RU:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: нарисовать треугольник
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: нарисовать пятиугольник
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: нарисовать треугольник
+          parameters:
+            length: длина
         draw a hexagon:
           name: нарисовать шестиугольник
+          parameters:
+            length: длина
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
         draw a sqaure:
           name: нарисовать квадрат
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: нарисовать треугольник
+          parameters:
+            length: длина
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: длина
       NEW Course 4 Artist Params 9:
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
         do something:
           name: выполнить что-то
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       NEW Course 4 Play Lab Params 11:
         jump:
           name: прыгнуть
+          parameters:
+            height: высота
+            actor: персонаж
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
+            speed: скорость
       New Artist Project:
         draw a star:
           name: нарисовать звезду
+          parameters:
+            points: очки
+            length: длина
         draw a circle:
           name: нарисовать круг
         draw a pinwheel:
           name: нарисовать вертушку
+          parameters:
+            length: длина
+            repeat: повторить
         draw a triangle:
           name: нарисовать треугольник
+          parameters:
+            length: длина
         draw a shape:
           name: нарисовать фигуру
+          parameters:
+            length: длина
         draw a house:
           name: нарисовать дом
+          parameters:
+            length: длина
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
       New Minecraft Hero Project:
         function 1:
           name: функция 1
@@ -499,8 +612,14 @@ ru-RU:
       New Play Lab Project:
         jump:
           name: прыгнуть
+          parameters:
+            height: высота
+            actor: персонаж
         patrol:
           name: проверка
+          parameters:
+            actor: персонаж
+            speed: скорость
       Robot Doodle:
         draw head:
           name: нарисовать голову
@@ -576,6 +695,8 @@ ru-RU:
       course4_artist_fwp_challenge1:
         draw background:
           name: нарисовать фон
+          parameters:
+            color: цвет
         draw a polygon:
           name: нарисовать многоугольник
         draw a square 20:
@@ -588,9 +709,13 @@ ru-RU:
       course4_bee_fwp_challenge1:
         pick row:
           name: собрать ряд
+          parameters:
+            length: длина
       course4_bee_fwp_challenge2:
         pick row:
           name: собрать ряд
+          parameters:
+            length: длина
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"простое" решение'
@@ -608,6 +733,8 @@ ru-RU:
           name: 'нарисовать пламя
 
 '
+          parameters:
+            x: x
         draw fire:
           name: нарисовать огонь
       courseC_artist_prog3_2018:
@@ -615,6 +742,8 @@ ru-RU:
           name: 'нарисовать пламя
 
 '
+          parameters:
+            x: x
         draw fire:
           name: нарисовать огонь
       courseC_artist_prog3_2019:
@@ -622,6 +751,8 @@ ru-RU:
           name: 'нарисовать пламя
 
 '
+          parameters:
+            x: x
         draw fire:
           name: нарисовать огонь
       courseC_artist_prog4:
@@ -1000,6 +1131,9 @@ ru-RU:
           name: нарисовать многоугольник
         do something:
           name: выполнить что-то
+      courseE_bee_concept4:
+        honey nectar:
+          name: медовый нектар
       courseE_bee_functions1:
         do something:
           name: выполнить что-то
@@ -1070,6 +1204,9 @@ ru-RU:
           name: 'тыквенный прямоугольник
 
 '
+      courseE_farmer_functions10b:
+        navigate:
+          name: navigate
       courseE_farmer_functions11_predict:
         check and pick:
           name: 'проверить и собрать
@@ -1274,6 +1411,9 @@ ru-RU:
           name: 'огородный квадрат
 
 '
+      courseE_farmer_functions8b:
+        navigate:
+          name: navigate
       courseE_farmer_functions9a1_2018:
         garden square:
           name: 'огородный квадрат
@@ -1284,6 +1424,9 @@ ru-RU:
           name: 'огородный квадрат
 
 '
+      courseE_farmer_functions9b:
+        navigate:
+          name: navigate
       courseE_playLab_challenge1:
         win game:
           name: выиграть игру
@@ -1308,70 +1451,130 @@ ru-RU:
           name: нарисовать квадрат
         checker:
           name: проверщик
+          parameters:
+            size: размер
+            color: цвет
         do something:
           name: выполнить что-то
         Make gingham:
           name: Сделать зонтик
+          parameters:
+            size: размер
         black outline:
           name: черный контур
+          parameters:
+            length: длина
       courseF_artist_fwp2:
         draw a square:
           name: нарисовать квадрат
+          description: нарисовать квадрат с параметром "длина"
+          parameters:
+            length: длина
         checker:
           name: проверщик
+          parameters:
+            size: размер
+            color: цвет
         do something:
           name: выполнить что-то
         Make gingham:
           name: Сделать зонтик
+          parameters:
+            size: размер
         black outline:
           name: черный контур
+          parameters:
+            length: длина
       courseF_artist_fwp2_predict1:
         draw a square:
           name: нарисовать квадрат
+          description: нарисовать квадрат с параметром "длина"
+          parameters:
+            length: длина
       courseF_artist_fwp3:
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
         draw a square2:
           name: нарисовать квадрат2
+          parameters:
+            size: размер
         filled square:
           name: заполненный квадрат
+          parameters:
+            size: размер
+            color: цвет
         black outline:
           name: черный контур
+          parameters:
+            length: длина
       courseF_artist_fwp4:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       courseF_artist_fwp5:
         draw a polygon:
           name: нарисовать многоугольник
+          parameters:
+            length: длина
       courseF_artist_fwp6:
         draw a spiral edge:
           name: нарисовать край спирали
+          parameters:
+            length: длина
       courseF_artist_fwp7:
         draw a spiral edge:
           name: нарисовать край спирали
+          parameters:
+            length: длина
+            min: минимум
       courseF_artist_fwp8:
         draw a spiral edge:
           name: нарисовать край спирали
+          parameters:
+            length: длина
+            min: минимум
       courseF_artist_fwp9:
         draw a star:
           name: нарисовать звезду
+          parameters:
+            points: очки
+            length: длина
         draw a circle:
           name: нарисовать круг
         draw a pinwheel:
           name: нарисовать вертушку
+          parameters:
+            length: длина
+            repeat: повторить
         draw a triangle:
           name: нарисовать треугольник
+          parameters:
+            length: длина
         draw a shape:
           name: нарисовать фигуру
+          parameters:
+            length: длина
         draw a house:
           name: нарисовать дом
+          parameters:
+            length: длина
         draw a square:
           name: нарисовать квадрат
+          parameters:
+            length: длина
         draw a spiral edge:
           name: нарисовать край спирали
+          parameters:
+            length: длина
+            min: минимум
       courseF_artist_fwp_challenge1:
         draw background:
           name: нарисовать фон
+          parameters:
+            color: цвет
         draw a polygon:
           name: нарисовать многоугольник
         draw a square 20:
@@ -1385,6 +1588,8 @@ ru-RU:
           name: выполнить что-то
         draw an octagon:
           name: нарисовать восьмиугольник
+          parameters:
+            length: длина
       courseF_bee_conditionals2:
         move and check:
           name: переместиться и проверить
@@ -1455,27 +1660,43 @@ ru-RU:
       courseF_bee_fwp4:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            length: длина
       courseF_bee_fwp5:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: ширина
       courseF_bee_fwp6:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: ширина
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: ширина
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: ширина
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: ширина
       courseF_bee_fwp_challenge1:
         pick row:
           name: собрать ряд
+          parameters:
+            length: длина
       courseF_bee_fwp_challenge2:
         pick row:
           name: собрать ряд
+          parameters:
+            length: длина
       courseF_bee_variables_1_2018:
         collect row:
           name: 'собирать с ряда

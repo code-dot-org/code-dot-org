@@ -746,6 +746,7 @@ ru:
         csd_gamelab_conditional_statements: Условные операторы
         csd_gamelab_if_else: Операторы Если/Иначе
         CSF_SpriteLabIntro_CDEF: Это лаборатория спрайтов
+        CSF_Spritelab_MakeSprite_CDEF: Как создать спрайт в Лаборатории спрайтов?
         CSF_StarWars_ProjectIntro: Введение в проект Звездные войны
         mc_2018_intro: 'Майнкрафт: Водное путешествие. Введение'
         MC_2018_loops: 'Майнкрафт: Водное путешествие. Повторять пока'
@@ -753,14 +754,25 @@ ru:
         mc_2018_closing: 'Майнкрафт: Водное путешествие. Поздравления'
         hoc_dance_warmup: Танцевальная вечеринка - разминка
         hoc_dance_congrats: Танцевальная вечеринка – вечеринка началась!
+        what_is_cs: Что такое информатика?
+        lesson_planning: Планирование урока
         writing_first_program: Напишите вашу первую программу!
+        what_is_an_event: Что такое событие?
         csd_pair_programming: Программирование в парах
+        csd_gamelab_functions: Вызов и определение функций
         csd_applab_parameters: Процедуры с параметрами
+        csd_applab_loops: Циклы в Лаборатории приложений
+        CSF_Spritelab_MakeSprite_v2: Как создать спрайт?
+        csp-pd-welcome: Добро пожаловать в семью!
+        oceans_machine_learning: Машинное обучение
         hoc_dance_congrats_2019: Танцевальная вечеринка 2019 г. – вечеринка началась!
         hoc_dance_warmup_2019: Танцевальная вечеринка 2019 г. – подготовка
         hoc_dance_events_2019: Танцевальная вечеринка 2019 г. – события
         hoc_dance_measures_2019: Танцевальная вечеринка 2019 г. – такты
         hoc_dance_properties_2019: Танцевальная вечеринка 2019 г. – свойства
+        csd_what_computers_do: Что делают компьютеры?
+        csd_how_teamwork_works: Как устроена командная работа?
+        csd_teamwork_and_disagreement: Командная работа - устранение разногласий
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
