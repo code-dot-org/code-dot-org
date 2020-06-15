@@ -9,6 +9,13 @@ require_relative 'i18n_script_utils'
 require 'cdo/crowdin/utils'
 require 'cdo/crowdin/project'
 
+def with_elapsed
+  before = Time.now
+  yield
+  after = Time.now
+  return Time.at(after - before).utc.strftime('%H:%M:%S')
+end
+
 def sync_down
   I18nScriptUtils.with_synchronous_stdout do
     puts "Beginning sync down"
@@ -29,15 +36,11 @@ def sync_down
       utils = Crowdin::Utils.new(project, options)
 
       puts "Fetching list of changed files"
-      prefetch = Time.now
-      utils.fetch_changes
-      postfetch = Time.now
-      puts "Changes fetched in #{Time.at(postfetch - prefetch).utc.strftime('%H:%M:%S')}"
+      elapsed = with_elapsed {utils.fetch_changes}
+      puts "Changes fetched in #{elapsed}"
       puts "Downloading changed files"
-      predownload = Time.now
-      utils.download_changed_files
-      postdownload = Time.now
-      puts "Files downloaded in #{Time.at(postdownload - predownload).utc.strftime('%H:%M:%S')}"
+      elapsed = with_elapsed {utils.download_changed_files}
+      puts "Files downloaded in #{elapsed}"
     end
 
     puts "Sync down complete"
