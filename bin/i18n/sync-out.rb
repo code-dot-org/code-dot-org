@@ -259,11 +259,10 @@ def distribute_translations
 
     ### Pegasus markdown
     Dir.glob("i18n/locales/#{locale}/codeorg-markdown/**/*.*") do |loc_file|
+      destination_dir = "pegasus/sites.v3/code.org/i18n/public"
       relative_dir = File.dirname(loc_file.delete_prefix("i18n/locales/#{locale}/codeorg-markdown"))
       name = File.basename(loc_file, ".*")
-      dest_dir = "pegasus/sites.v3/code.org/i18n/public"
-      destination = File.join(dest_dir, relative_dir, "#{name}.#{locale}.md.partial")
-      puts "FileUtils.mv(#{loc_file}, #{destination})"
+      destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
       FileUtils.mv(loc_file, destination)
     end
 
