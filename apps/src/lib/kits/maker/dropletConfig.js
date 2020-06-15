@@ -11,6 +11,8 @@ import {
   SONG_1D
 } from './boards/circuitPlayground/PlaygroundConstants';
 
+import {MB_BUTTON_VARS} from './boards/microBit/MicroBitConstants';
+
 export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
@@ -394,9 +396,140 @@ const circuitPlaygroundBlocks = [
   }
 ];
 
+const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
-  {func: 'lightSensor.threshold', category: MICROBIT_CATEGORY, type: 'property'}
+  {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
+  {
+    func: 'on',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.on'
+  },
+  {
+    func: 'off',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.off'
+  },
+  {
+    func: 'toggle',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.toggle'
+  },
+  {
+    func: 'ledScreen.clear',
+    category: MICROBIT_CATEGORY
+  },
+  {
+    func: 'ledScreen.scrollNumber',
+    category: MICROBIT_CATEGORY,
+    params: ['100'],
+    paletteParams: ['number']
+  },
+  {
+    func: 'ledScreen.scrollString',
+    category: MICROBIT_CATEGORY,
+    params: ['"Hello World!"'],
+    paletteParams: ['string']
+  },
+
+  {
+    func: 'ledScreen.display',
+    category: MICROBIT_CATEGORY,
+    params: [
+      '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
+    ],
+    paletteParams: ['boardArray']
+  },
+  {
+    func: 'isPressed',
+    objectDropdown: {options: MB_BUTTON_VARS, dropdownOnly: true},
+    category: MICROBIT_CATEGORY,
+    blockPrefix: `${MB_BUTTON_VARS[0]}.`,
+    modeOptionName: '*.isPressed',
+    type: 'readonlyproperty',
+    tipPrefix: '[Button].'
+  },
+  {
+    func: 'accelerometer.getOrientation',
+    category: MICROBIT_CATEGORY,
+    type: 'value',
+    paletteParams: ['orientationType'],
+    params: ['"inclination"'],
+    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}
+  },
+  {
+    func: 'accelerometer.getAcceleration',
+    category: MICROBIT_CATEGORY,
+    type: 'value',
+    paletteParams: ['orientationType'],
+    params: ['"x"'],
+    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}
+  },
+  {
+    func: 'lightSensor.start',
+    category: MICROBIT_CATEGORY,
+    noAutocomplete: true
+  },
+  {
+    func: 'lightSensor.value',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'lightSensor.getAveragedValue',
+    category: MICROBIT_CATEGORY,
+    params: ['500'],
+    paletteParams: ['ms'],
+    type: 'value'
+  },
+  {
+    func: 'lightSensor.setScale',
+    category: MICROBIT_CATEGORY,
+    params: ['0', '100'],
+    paletteParams: ['low', 'high']
+  },
+  {
+    func: 'lightSensor.threshold',
+    category: MICROBIT_CATEGORY,
+    type: 'property'
+  },
+
+  {
+    func: 'soundSensor.start',
+    category: MICROBIT_CATEGORY,
+    noAutocomplete: true
+  },
+  {
+    func: 'soundSensor.value',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'soundSensor.getAveragedValue',
+    category: MICROBIT_CATEGORY,
+    params: ['500'],
+    paletteParams: ['ms'],
+    type: 'value'
+  },
+  {
+    func: 'soundSensor.setScale',
+    category: MICROBIT_CATEGORY,
+    params: ['0', '100'],
+    paletteParams: ['low', 'high']
+  },
+  {
+    func: 'soundSensor.threshold',
+    category: MICROBIT_CATEGORY,
+    type: 'property'
+  },
+
+  {func: 'compass.getHeading', category: MICROBIT_CATEGORY, type: 'value'},
+
+  {func: 'tempSensor.F', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
 ];
 
 export const categories = {
