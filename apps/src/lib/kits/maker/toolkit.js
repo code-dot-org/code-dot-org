@@ -158,7 +158,7 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    if (experiments.isEnabled(experiments.BETT_DEMO)) {
+    if (experiments.isEnabled(experiments.MICROBIT)) {
       //TODO - break out the applicable parts of findPortWithViableDevice
       return findPortWithViableDevice().then(() => new MicroBitBoard());
     } else {
