@@ -916,34 +916,20 @@ StudioApp.prototype.addChangeHandler = function(newHandler) {
 };
 
 StudioApp.prototype.runChangeHandlers = function() {
-  if (this.isRunning() && this.editDuringRunAlert === undefined) {
-    let currentlyExecutingCode = this.executingCode;
-    let currentCode = this.getCode();
-    if (this.isUsingBlockly()) {
-      // when you pick up a block of code in Blockly, it comments out that code
-      // and reorders the rest of the code so that the selected block is at the end.
-      // So, to check if the Blockly code has actually changed, we need to uncomment
-      // everything and put the code in alphabetical order to check for character differences
-      const codeWithoutComments = this.getCode()
-        .replace('\n/*\n', '')
-        .replace('*/', '');
-      currentCode = [...codeWithoutComments]
-        .sort((a, b) => a.localeCompare(b))
-        .join('');
-      currentlyExecutingCode = [...this.executingCode]
-        .sort((a, b) => a.localeCompare(b))
-        .join('');
-    }
-    if (currentCode !== currentlyExecutingCode) {
-      this.editDuringRunAlert = this.displayWorkspaceAlert(
-        'warning',
-        <div>
-          Your code has changed. Click "Reset" and then "Run" to run your code
-          again.
-        </div>,
-        true
-      );
-    }
+  if (
+    this.isRunning() &&
+    this.editDuringRunAlert === undefined &&
+    (this.isUsingBlockly() || this.getCode() !== this.executingCode)
+  ) {
+    // todo: if the change is an extra new line and the user didn't do it, ignore
+    this.editDuringRunAlert = this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        Your code has changed. Click "Reset" and then "Run" to run your code
+        again.
+      </div>,
+      true
+    );
   }
   if (!this.changeHandlers) {
     return;
@@ -981,7 +967,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
       this.editDuringRunAlert = undefined;
     }
   } else {
-    this.executingCode = this.getCode();
+    this.executingCode = this.getCode().trim();
   }
 
   if (this.hasContainedLevels) {
