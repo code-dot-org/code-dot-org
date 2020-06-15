@@ -128,7 +128,7 @@ sk:
         title: Podmienky a čiastkové funkcie
         desc: Parametre, ktoré pridáme k funkciám môžu spôsobiť to, že sa výstupy budú líšiť na základe konkrétnych vzorov. Predpokladajme, že chceme, aby parametre s niektorými hodnotami vytvárali výstupy na základe jedného vzoru, ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme podmieňovacie príkazy...
       CollisionDetection:
-        title: Kolízna detekcia a Pytagorova veta
+        title: Zisťovanie kolízií a Pytagorova veta
         desc: Určenie toho, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou väčšiny hier. V tejto lekcii sa pozrieme na to, ako sa Pytagorová veta a vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
         title: Cykly bez počítača

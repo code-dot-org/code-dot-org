@@ -745,6 +745,8 @@ sk:
     open_response_body: "Ďakujeme za Vašu reakciu!"
     correct_title: "Správne"
     correct_body: "To je správna odpoveď."
+  lesson_extras:
+    bonus_level: "Tekvica označuje miesto, kde by si mal :otočiť sa vpravo\". V opačnom prípade pokračuj ďalej, ale nezabudni pozbierať všetok šalát alebo kukuricu.\n*Každá skrytá plodina má iba jednu kukuricu alebo šalát.*"
   dialog:
     ok: "ok"
     startover_title: "Naozaj chceš začať odznova?"

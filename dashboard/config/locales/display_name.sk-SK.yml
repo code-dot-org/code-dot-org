@@ -132,13 +132,28 @@ sk-SK:
       CSD U3 Sprite Properties Map: Vlastnosti postáv
       CSD U3 Sprite Properties Map_2018: Vlastnosti postáv
       CSD U3 Sprite Properties Map_2019: Vlastnosti postáv
+      CSD U3 The Draw Loop Map: Cyklus kreslenia
+      CSD U3 The Draw Loop Map_2018: Cyklus kreslenia
+      CSD U3 The Draw Loop Map_2019: Cyklus kreslenia
       CSD U3 Variables Map: Premenné
       CSD U3 Variables Map_2018: Premenné
       CSD U3 Variables Map_2019: Premenné
+      CSD U3 collisions build isTouching: Detekcia kolízie
+      CSD U3 collisions build isTouching_2018: Detekcia kolízie
+      CSD U3 collisions build isTouching_2019: Detekcia kolízie
       CSD U3 function video: 'Video: Funkcie'
-      CSD U3 velocity map: Rýchlosť objektu Sprite
-      CSD U3 velocity map_2018: Rýchlosť objektu Sprite
-      CSD U3 velocity map_2019: Rýchlosť objektu Sprite
+      CSD U3 istouching map: Detekcie kolízie - prehľad
+      CSD U3 istouching map_2018: Detekcie kolízie - prehľad
+      CSD U3 istouching map_2019: Detekcie kolízie - prehľad
+      CSD U3 platform sample1: Príklad plošinovej skákacej hry
+      CSD U3 platform sample1_2018: Príklad plošinovej skákacej hry
+      CSD U3 platform sample1_2019: Príklad plošinovej skákacej hry
+      CSD U3 plotting shapes map: Tvorba tvarov v Game Labe
+      CSD U3 plotting shapes map_2018: Tvorba tvarov v Game Labe
+      CSD U3 plotting shapes map_2019: Tvorba tvarov v Game Labe
+      CSD U3 velocity map: Rýchlosť "sprite" objektu
+      CSD U3 velocity map_2018: Rýchlosť "sprite" objektu
+      CSD U3 velocity map_2019: Rýchlosť "sprite" objektu
       CSD U3L01 TFMD_2018: Prehľad lekcie
       CSD U3L01 TFMD_2019: Prehľad lekcie
       CSD U3L02 TFMD_2018: Prehľad lekcie
@@ -302,9 +317,9 @@ sk-SK:
       CSD U6L16 TFMD: Prehľad lekcie
       CSD U6L16 TFMD_2018: Prehľad lekcie
       CSD U6L16 TFMD_2019: Prehľad lekcie
-      'CSD: Animating Sprite Movement': 'Video: Pohyb objektu Sprite'
-      'CSD: Animating Sprite Movement_2018': 'Video: Pohyb objektu Sprite'
-      'CSD: Animating Sprite Movement_2019': 'Video: Pohyb objektu Sprite'
+      'CSD: Animating Sprite Movement': 'Video: Pohyb "sprite" objektu'
+      'CSD: Animating Sprite Movement_2018': 'Video: Pohyb "sprite" objektu'
+      'CSD: Animating Sprite Movement_2019': 'Video: Pohyb "sprite" objektu'
       'CSD: Drawing in Game Lab 1': 'Video: Kreslenie v Game Labe - 1. časť'
       'CSD: Drawing in Game Lab 1_2018': 'Video: Kreslenie v Game Labe - 1. časť'
       'CSD: Drawing in Game Lab 1_2019': 'Video: Kreslenie v Game Labe - 1. časť'
