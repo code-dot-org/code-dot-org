@@ -12,6 +12,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @pilot_script = create :script, pilot_experiment: 'my-experiment'
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
+    @no_progress_or_assignment_student = create :student
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
@@ -175,15 +176,21 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: do not redirect when showing latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2018.name}
+    assert_response :success
+  end
+
   test "show: redirect to latest stable version in family for student" do
-    sign_in create(:student)
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
   test "show: do not redirect student to latest stable version in family if they can view the script version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
-    sign_in create(:student)
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
