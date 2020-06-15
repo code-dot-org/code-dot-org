@@ -916,22 +916,42 @@ de-DE:
         zu erreichen.
       Crack Random Substitution: Anweisungen
       Crack a Caesar Cipher: Anweisungen
+      Dance Party 1-validated: 'Was denkst du das passieren wird, wenn du auf das
+        außerirdische Wesen (Alien) klickst?  '
+      Dance Party 2: Verändere das Verhalten in dem `___ fängt an___`-Block,  sodass
+        der Alien anfängt sich im Kreis zu drehen.
       Dance Party 2_2019: Ersetze den Baustein zum Verhalten im `sprite begins` Baustein
         durch einen anderen, der den Außerirdischen zum Drehen bringt!
+      Dance Party 3: 'Erstelle eine neue Fee namens ''Alien2'' und lasse sie eine
+        andere Tanzbewegung ausführen, wenn du darauf klickst. '
       Dance Party 3_2019: 'Erstelle ein neues Sprite, das wie ein rosa Alien aussieht,
         und lasse es dann eine beliebige Bewegung ausführen, wenn es angeklickt wird.  '
+      Dance Party 4: Erstelle jetzt eine dritte Fee namens 'Alien3‘ und lasse alle
+        deine Aliens in einer Reihe stehen.
       Dance Party 4_2019: Erstelle ein drittes Sprite, das wie ein gelber Außerirdischer
         aussieht, lass es einen Tanz machen, wenn es angeklickt wird, und setze alle
         deine Außerirdischen so ein, dass sie in einer horizontalen Linie stehen.
+      Dance Party 5: Füge Code hinzu, sodass die Farbe von jedem Alien verändert wird,
+        wenn du darauf klickst.
       Dance Party 5_2019: Erstelle ein einzelnes Tastendruckereignis mit dem Tastendruck-Ereignisbaustein.
         Für dieses Ereignis solltest du es so gestalten, dass beim Drücken einer Taste
         jeder deiner Aliens seine Farbe wechselt!
+      Dance Party 6: Benutze den 'stoppt alles'-Block, sodass jeder Alien aufhört
+        sich zu bewegen, wenn man darauf klickt.
       Dance Party 6_2019: Füge ein Sprite hinzu das wie eine Glocke aussieht, und
         füge dann ein Ereignis hinzu, bei dem jeder Außerirdische aufhört zu tanzen,
         wenn er angeklickt wird.
+      Dance Party 7: Füge eine neue Glockenfee namens 'myBell' hinzu, die alle Aliens
+        dieselben Tanzbewegungen ausführen lässt, wenn man darauf klickt.
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
+      Dance Party Freeplay: Erstelle jetzt deine eigene Alien-Disco!
+      Dance Party Freeplay_2019: Erstelle jetzt deine eigene Alien-Disco!
+      Dance Party Predict: 'Was denkst du das passieren wird, wenn du auf das außerirdische
+        Wesen (Alien) klickst?  '
+      Dance Party Predict_2019: 'Was denkst du das passieren wird, wenn du auf das
+        außerirdische Wesen (Alien) klickst?  '
       Dance_2019_01: 'Ziehe den Block <xml><block type="Dancelab_makeAnonymousDanceSprite"
         block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
         &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
@@ -1007,9 +1027,14 @@ de-DE:
       Dance_Party_extras_visible_2019: Wo sind sie hin? (Klicke auf "Mehr" für weitere
         Details)
       Find the Wizard: Baue, was immer du willst. Dies ist ein Beispiel für ein Zahlen-Ratespiel!
+      Fish Tank 2-validated: Verändere Dusty (das Tumbleweed) in einen Fisch.
       Fish Tank 2-validated_2019: Verwandle den Steppenläufer in jede Art von Fisch!
+      Fish Tank 3-validated: Ändere das Verhalten des Fischs, sodass dieser in einem
+        Tank herumschwimmt.
       Fish Tank 3-validated_2019: Ändere das Verhalten der Fische so, dass sie nach
         links und rechts schwimmen.
+      Fish Tank 4-validated: Benutze den 'Hintergrundfarbe einstellen'-Block, um den
+        Hintergrund blau zu machen.
       Fish Tank 4-validated_2019: Verwende den `Hintergrundfarbe einstellen` Baustein,
         um den Hintergrund auf eine beliebigen Farbe zu setzen.
       Fish Tank 5-validated: Unser Fisch ist ein wenig einsam. Füge dem Aquarium einen
@@ -1017,6 +1042,10 @@ de-DE:
       Fish Tank 5-validated_2019: Der Fisch ist abenteuerlustig und will neue Kreaturen
         im Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
         kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
+      Fish Tank 6-validated: Füge noch ein Verhalten hinzu, für den neuen Freund des
+        Fischs.
+      Fish Tank 6-validated_2019: Füge noch ein Verhalten hinzu, für den neuen Freund
+        des Fischs.
       Fish Tank 7-validated: Verwende einige neue Bausteine aus dem Werkzeugkasten,
         um dein Aquarium zu etwas Besonderem zu machen!
       Fish Tank 7-validated_2019: Verwende einige neue Bausteine aus dem Werkzeugkasten,
@@ -1426,6 +1455,8 @@ de-DE:
       OPD-K5-spritelab-6: Der Fisch ist abenteuerlustig und will neue Kreaturen im
         Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
         kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
+      OPD-K5-spritelab-7: Füge noch ein Verhalten hinzu, für den neuen Freund des
+        Fischs.
       OPD-K5-variables-2: Zeichne nun drei dieser Dreiecke direkt nebeneinander.
       OPD-K5-variables-5: Verschiebe die Länge von 50 in eine Variable, damit wir
         sie in den nächsten Rätseln verwenden können.
@@ -1580,6 +1611,22 @@ de-DE:
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
       Vigenere: Test
+      Virtual Pet 1: Was denkst du wird passieren, wenn du auf "Ausführen" drückst
+        und danach auf die Fee?
+      Virtual Pet 1 Predict: 'Was denkst du das passieren wird, wenn du auf das außerirdische
+        Wesen (Alien) klickst?  '
+      Virtual Pet 2: Erstelle einen **Event**, sodass sich ihre Farbe in Braun verändert,
+        wenn Geraldine die Pfütze berührt.
+      Virtual Pet 3: Füge eine neue Seifenfee auf dem Bildschirm hinzu.  Kannst du
+        es so programmieren, dass die Giraffe ihre normale Farbe zurückerhält, wenn
+        sie die Seife berührt?
+      Virtual Pet 4: Füge ein Verhalten an die Seife hinzu, sodass dieser bewegt werden
+        kann, und schleife sie dann hinüber um die Giraffe zu waschen!
+      Virtual Pet 5: Füge Aktionen an jeden Event hinzu, sodass die Giraffe um 5 Pixel
+        schrumpft, jedes Mal wenn sie mit einer Fee zusammenprallt.
+      Virtual Pet 6: Füge einen Apfel hinzu der bewirkt, dass jedes Mal wenn der Apfel
+        und die Giraffe einander berühren die Giraffe ihre ursprüngliche Größe wieder
+        erreicht.
       Virtual Pet 8_2019: "**Freispiel:** Was können Sie noch mit Ihrem Haustier machen?
         Versuchen Sie, was Sie wollen!"
       Virtual Pet Freeplay: 'Freispiel: Was kannst du deine Giraffe noch tun lassen? '
@@ -1674,6 +1721,8 @@ de-DE:
         hüpfen, bis er das Ziel trifft.
       bounce_7_sports: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball
         hüpfen, bis er das Ziel trifft.
+      comment_intro_maze_2018: Benutze den neuen 'Kommentar'-Block, um Erinnerungen
+        für dich selbst zu hinterlassen.
       course1_artist_loops_challenge1: |-
         Du kannst eine Schleife verwenden um viele Linien hintereinander zu zeichnen.
 
@@ -2129,19 +2178,32 @@ de-DE:
         links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2018: Verbinde den "nach links bewegen"-Block mit dem
         "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
+      courseA_playLab_events3_2019: Verbinde den ‚nach links bewegen‘-Block zu dem
+        ‚wenn links‘-Block, der bereits im Arbeitsraum zur Verfügung steht. Benutze
+        die Pfeiltasten, um Jorge nach der Flagge zu bewegen und die Ebene abzuschließen!
       courseA_playLab_events4: Füge Blöcke hinzu, für eine Bewegung nach rechts wenn
         die Pfeiltaste nach 'rechts' gedrückt wird.
       courseA_playLab_events4_2018: Füge einen weiteren Ereignisblock hinzu, damit
         sich Jorge beim Klicken auf die Schaltfläche `rechts` richtig bewegt.
+      courseA_playLab_events4_2019: Füge nun einen weiteren Event-Block hinzu, damit
+        sich Jorge nach rechts bewegt, wenn die rechte Pfeiltaste angeklickt wird.Benutze
+        die Pfeiltasten, um Jorge nach der Flagge zu bewegen und die Ebene abzuschließen!
       courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Tasten gedrückt werden.
       courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Tasten gedrückt werden.
+      courseA_playLab_events5_2019: Füge weitere Events hinzu, um Jorge aufwärts und
+        abwärts zu bewegen, wenn die `Aufwärts`- und `Abwärts`-Schalter gedrückt werden.
+        Lasse Jorge die Flaggen holen, um diese Ebene abzuschließen!
       courseA_playLab_events6: Mach das Ganze noch interessanter indem du den Hintergrund
         änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt wird.
       courseA_playLab_events6_2018: Mach das Ganze noch interessanter indem du den
         Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
         wird.
+      courseA_playLab_events6_2019: 'Gestalte es interessanter: Sorge dafür, dass
+        der Hintergrund sich ändert und ein zufälliger Sound erklingt, wenn Jorge
+        angeklickt wird. Klicke auf Jorge und teste es, wenn dein Programm fertig
+        ist. '
       courseA_playLab_events7: Füge alles Mögliche, was du möchtest zu diesem Spiel
         hinzu. Schaffst du es, dass der Dinosaurier verschwindet, wenn Jorge in ihn
         hineinläuft?
@@ -2470,8 +2532,18 @@ de-DE:
       courseB_playlab_events7: Mach dieses Spiel lustig, indem du den Ritter verschwinden
         lässt, wenn er auf dem Weg zu den Fahnen mit dem Drachen zusammenstößt! Spiele
         ein Geräusch ab, wenn sie zusammenstoßen, um das Ereignis lebendiger zu gestalten.
+      courseB_playlab_events7_2018: "1.  Stelle den Ritter so ein, dass er verschwindet,
+        wenn er auf den Drachen prallt.    \n2.  Spiele ein Geräusch ab, wenn beide
+        zusammenstoßen, damit es sich echter anfühlt. "
+      courseB_playlab_events7_2019: "1.  Stelle den Ritter so ein, dass er verschwindet,
+        wenn er auf den Drachen prallt.    \n2.  Spiele ein Geräusch ab, wenn beide
+        zusammenstoßen, damit es sich echter anfühlt. "
       courseB_playlab_eventsFP: Streng deine Fantasie an. Was kannst du tun, damit
         dieses Spiel mehr Spaß macht?
+      courseB_playlab_eventsFP_2018: "**Freispiel:** Benutze deine Fantasie. Was könnte
+        dieses Spiel zu noch mehr Spaß machen?"
+      courseB_playlab_eventsFP_2019: "**Freispiel:** Benutze deine Fantasie. Was könnte
+        dieses Spiel zu noch mehr Spaß machen?"
       courseB_playlab_events_challenge1: Programmiere so, dass sich die Tiere nach
         unten bewegen, wenn du ▼ drückst.
       courseB_playlab_events_challenge1_2018: Programmiere so, dass sich die Tiere
@@ -4210,9 +4282,33 @@ de-DE:
       courseE_farmer_ramp11b: Solange es einen Haufen gibt, entferne ihn.
       courseE_farmer_ramp11b_2018: Solange es einen Haufen gibt, entferne ihn.
       courseE_farmer_ramp11b_2019: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp12_forswap: Jetzt benutze verschachtelte Schleifen um dieses
+        Rätsel zu lösen.
+      courseE_farmer_ramp12_forswap_2018: Jetzt benutze verschachtelte Schleifen um
+        dieses Rätsel zu lösen.
+      courseE_farmer_ramp12_forswap_2019: Jetzt benutze verschachtelte Schleifen um
+        dieses Rätsel zu lösen.
       courseE_farmer_ramp12b: Solange es Salat gibt, pflücken den Salat!
       courseE_farmer_ramp12b_2018: Solange es Salat gibt, pflücken den Salat!
       courseE_farmer_ramp12b_2019: Solange es Salat gibt, pflücken den Salat!
+      courseE_farmer_ramp12c: Bewege dich vorwärts, bis du den Salat erreichst, und
+        pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12c_2018: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12c_2019: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12d: Bewege dich vorwärts, bis du den Salat erreichst, und
+        pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12d_2018: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12d_2019: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12e: Bewege dich vorwärts, bis du den Salat erreichst, und
+        pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12e_2018: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
+      courseE_farmer_ramp12e_2019: Bewege dich vorwärts, bis du den Salat erreichst,
+        und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.
       courseE_farmer_ramp12f: Bewege dich vorwärts, bis du den Salat erreichst, dann
         drehe dich nach links, **wenn** es einen Weg nach links gibt. Sonst drehe
         dich nach rechts.

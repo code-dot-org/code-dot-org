@@ -21,6 +21,12 @@ de-DE:
           nicht, drücke 'reset', ändere deinen Code, und drücke erneut 'start'.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Du befindest dich nun im Designmodus.
+      CSD U3 Boolean Predict:
+        '': Dieses Programm wird hier ein Ergebnis anzeigen
+      CSD U3 Boolean Predict_2018:
+        '': Dieses Programm wird hier ein Ergebnis anzeigen
+      CSD U3 Boolean Predict_2019:
+        '': Dieses Programm wird hier ein Ergebnis anzeigen
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Ändere die Zahl hier
       CSD U3 Variables Predict Where XY:
@@ -57,6 +63,12 @@ de-DE:
         CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
       CSD U3 abstraction looping_2019:
         CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
       CSD U3 abstraction tumbleweed:
         CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
       CSD U3 abstraction tumbleweed_2018:
@@ -65,12 +77,30 @@ de-DE:
         CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
       CSD U3 abstraction velocityX:
         CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
       CSD U3 abstraction velocityX_2018:
         CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
       CSD U3 abstraction velocityX_2019:
         CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
       CSD U3 abstraction velocityY:
         CSD_U3_L11_S5_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Schaue dir diesen Code an.
       CSD U3 abstraction velocityY_2018:
         CSD_U3_L11_S5_C1: Füge hier deinen Block hinzu.
       CSD U3 abstraction velocityY_2019:
@@ -81,6 +111,12 @@ de-DE:
         CSD_U3_L12_S2_C1: Füge hier deinen Block hinzu.
       CSD U3 collisions isTouching intro_2019:
         CSD_U3_L12_S2_C1: Füge hier deinen Block hinzu.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: Diese Bausteine zeigen die Punktzahl an.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: Diese Bausteine zeigen die Punktzahl an.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: Diese Bausteine zeigen die Punktzahl an.
       CSD U3 collisions types:
         CSD_U3_L13_S6_C1: Füge hier deinen Code hinzu.
       CSD U3 collisions types_2018:
@@ -129,6 +165,12 @@ de-DE:
       CSD U3 game variables_2019:
         CSD_U3_S18_L3_C1: Dieser Baustein erstellt eine neue Variable.
         CSD_U3_L18_S3_C2: Variablenbereich
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: Die Punktzahl wird hier ausgegeben.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: Die Punktzahl wird hier ausgegeben.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: Die Punktzahl wird hier ausgegeben.
       CSD U3 rect:
         CSD_U3_rect_c1: Hier ist der Code
         CSD_U3_rect_c2: Hier ist die "Ausführen"-Knopf
@@ -274,6 +316,9 @@ de-DE:
       InspirationalArtwork:
         InspirationalArtwork_1: Versuche, den neuen "Kommentar"-Block unter diesem
           Etikett zu verwenden, um Notizen für dich selbst in deinem Programm zu machen!
+      InspirationalArtwork_2018:
+        InspirationalArtwork_1: Versuche den 'Kommentar'-Block unter diesem Etikett
+          zu benutzen, um dir selbst Notizen innerhalb deines Programms zu hinterlassen!
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Mit "Ausführen" testest du dein Programm, wenn
           du fertig bist.
