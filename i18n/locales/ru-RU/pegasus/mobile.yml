@@ -1458,6 +1458,7 @@
   hoc2018_dance_teacher_resources_tile2_button: "Урок без компьютера"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "В партнерстве с"
   hoc2018_dance_amazon_about_future_engineer_button: "Узнать больше"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Попробуйте кодировать этим летом"
   hoc2018_dance_amazon_scholarship_programs_button: "Применить сейчас"
   hoc2018_dance_measure: "Такты"
   hoc2018_dance_measure_colon: 'Такты:'
@@ -1466,5 +1467,8 @@
   hoc2018_aquatic_video3: "Майнкрафт. Водное путешествие - Условия"
   hoc2018_aquatic_video4: "Майнкрафт. Водное путешествие - Поздравления"
   page_not_found_title: "Страница не найдена"
+  page_not_found_header: '404: страница не найдена'
   hoc2018_mc_with_microsoft: "В партнерстве с"
   hoc2018_mc_thank_microsoft: "Мы благодарим Microsoft за поддержку нашего видения и миссии, чтобы каждый ребенок имел возможность изучать информатику и навыки, необходимые для достижения успеха в 21 веке."
+  homepage_slot_text_title_at_home: "Учитесь дома"
+  homepage_slot_text_link_express_course: "Попробуйте экспресс-курс"
