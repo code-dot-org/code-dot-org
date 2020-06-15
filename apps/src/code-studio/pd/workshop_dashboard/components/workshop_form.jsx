@@ -43,7 +43,6 @@ import {
   Subjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   readOnlyInput: {
@@ -67,6 +66,14 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
+// When selecting whether a workshop is virtual through the UI,
+// a user is really selecting two things:
+//  a) whether the workshop is occurring virtually, and
+//  b) if there's a third party responsible for the content/structure of the workshop.
+// These two things are stored as separate attributes in the workshop model.
+const virtualWorkshopTypes = ['regional', 'friday_institute'];
+const thirdPartyProviders = ['friday_institute'];
+
 export class WorkshopForm extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -79,7 +86,7 @@ export class WorkshopForm extends React.Component {
       id: PropTypes.number.isRequired,
       facilitators: PropTypes.array.isRequired,
       location_name: PropTypes.string.isRequired,
-      location_address: PropTypes.string.isRequired,
+      location_address: PropTypes.string,
       capacity: PropTypes.number.isRequired,
       on_map: PropTypes.bool.isRequired,
       funded: PropTypes.bool.isRequired,
@@ -93,6 +100,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       virtual: PropTypes.bool,
+      third_party_provider: PropTypes.string,
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
@@ -132,7 +140,8 @@ export class WorkshopForm extends React.Component {
       showTypeOptionsHelpDisplay: false,
       regional_partner_id: '',
       virtual: false,
-      suppress_email: false
+      suppress_email: false,
+      third_party_provider: null
     };
 
     if (props.workshop) {
@@ -153,7 +162,8 @@ export class WorkshopForm extends React.Component {
           'regional_partner_id',
           'organizer',
           'virtual',
-          'suppress_email'
+          'suppress_email',
+          'third_party_provider'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -683,13 +693,25 @@ export class WorkshopForm extends React.Component {
 
   shouldConfirmSave() {
     const workshop = this.props.workshop;
+
     if (!workshop || workshop.enrolled_teacher_count === 0) {
       return false;
     }
+
+    // Don't ask if admins want to send updates with workshop changes for virtual workshops.
+    // Update emails are suppressed for virtual workshops.
+    if (this.state.virtual) {
+      return false;
+    }
+
+    // If location address is modified, then returned to blank,
+    // this.state.location_address is a blank string instead of null.
     return (
       this.state.sessionsModified ||
       this.state.location_name !== workshop.location_name ||
-      this.state.location_address !== workshop.location_address ||
+      (this.state.location_address === ''
+        ? null
+        : this.state.location_address) !== workshop.location_address ||
       this.state.notes !== workshop.notes
     );
   }
@@ -732,13 +754,33 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
+  currentVirtualStatus = () => {
+    const {virtual, third_party_provider} = this.state;
+
+    // First, check if the third party provider is a valid
+    // virtual workshop type.
+    if (virtualWorkshopTypes.includes(third_party_provider)) {
+      return third_party_provider;
+    } else if (virtual) {
+      return 'regional';
+    } else {
+      return 'in_person';
+    }
+  };
+
   handleVirtualChange = event => {
     // This field gets its own handler both so we can coerce its value to
     // boolean, and so we can enforce some business logic that says:
     // Virtual workshops ALWAYS suppress email.
-    const virtual = event.target.value === 'true';
+    const value = event.target.value;
+    const virtual = virtualWorkshopTypes.includes(value);
     const suppress_email = virtual || this.state.suppress_email;
-    this.setState({virtual, suppress_email});
+
+    this.setState({
+      virtual,
+      suppress_email,
+      third_party_provider: thirdPartyProviders.includes(value) ? value : null
+    });
   };
 
   handleSuppressEmailChange = event => {
@@ -807,6 +849,7 @@ export class WorkshopForm extends React.Component {
       notes: this.state.notes,
       virtual: this.state.virtual,
       suppress_email: this.state.suppress_email,
+      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -937,11 +980,6 @@ export class WorkshopForm extends React.Component {
         validation.style.location_name = 'error';
         validation.help.location_name = 'Required.';
       }
-      if (!this.state.location_address) {
-        validation.isValid = false;
-        validation.style.location_address = 'error';
-        validation.help.location_address = 'Required.';
-      }
       if (!this.state.capacity) {
         validation.isValid = false;
         validation.style.capacity = 'error';
@@ -991,69 +1029,64 @@ export class WorkshopForm extends React.Component {
             readOnly={this.props.readOnly}
           />
           <br />
-          {experiments.isEnabled(experiments.VIRTUAL_WORKSHOPS) && (
-            <Row>
-              <Col sm={5}>
-                <FormGroup validationState={validation.style.virtual}>
-                  <ControlLabel>
-                    Is this a virtual workshop?
-                    <HelpTip>
-                      <p>When a workshop is virtual, our system:</p>
-                      <ul>
-                        <li>
-                          Does not require you to enter a location address
-                        </li>
-                        <li>
-                          Will not send email notifications, such as enrollment
-                          receipts and workshop reminders
-                        </li>
-                        <li>
-                          Will send a post-workshop survey designed for virtual
-                          workshops
-                        </li>
-                      </ul>
-                    </HelpTip>
-                  </ControlLabel>
-                  <SelectIsVirtual
-                    value={this.state.virtual || false}
-                    onChange={this.handleVirtualChange}
-                    readOnly={this.props.readOnly}
-                  />
-                  <HelpBlock>{validation.help.virtual}</HelpBlock>
-                </FormGroup>
-              </Col>
-              <Col sm={5}>
-                <FormGroup validationState={validation.style.suppress_email}>
-                  <ControlLabel>
-                    Enable email notifications?
-                    <HelpTip>
-                      <p>
-                        Code.org can send email notifications about this
-                        workshop to your attendees on your behalf. Notifications
-                        may include:
-                      </p>
-                      <ul>
-                        <li>Enrollment receipts</li>
-                        <li>10-day and 3-day workshop reminders</li>
-                        <li>Updates when workshop details change</li>
-                      </ul>
-                      <p>
-                        Code.org will always email a post-workshop survey to
-                        participants, even if you disable workshop notifications
-                        here.
-                      </p>
-                    </HelpTip>
-                  </ControlLabel>
-                  <SelectSuppressEmail
-                    onChange={this.handleSuppressEmailChange}
-                    value={this.state.suppress_email || false}
-                    readOnly={this.props.readOnly || this.state.virtual}
-                  />
-                  <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-                </FormGroup>
-              </Col>
-            </Row>
-          )}
+          <Row>
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.virtual}>
+                <ControlLabel>
+                  Is this a virtual workshop?
+                  <HelpTip>
+                    <p>When a workshop is virtual, our system:</p>
+                    <ul>
+                      <li>
+                        Will not send most email notifications to enrollees,
+                        such as enrollment receipts and workshop reminders
+                      </li>
+                      <li>
+                        Will send a post-workshop survey designed for virtual
+                        workshops
+                      </li>
+                    </ul>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectIsVirtual
+                  value={this.currentVirtualStatus()}
+                  onChange={this.handleVirtualChange}
+                  readOnly={this.props.readOnly}
+                />
+                <HelpBlock>{validation.help.virtual}</HelpBlock>
+              </FormGroup>
+            </Col>
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.suppress_email}>
+                <ControlLabel>
+                  Enable email notifications?
+                  <HelpTip>
+                    <p>
+                      Code.org can send email notifications about this workshop
+                      to your attendees on your behalf. Notifications may
+                      include:
+                    </p>
+                    <ul>
+                      <li>Enrollment receipts</li>
+                      <li>10-day and 3-day workshop reminders</li>
+                      <li>Updates when workshop details change</li>
+                    </ul>
+                    <p>
+                      Code.org will always email a post-workshop survey to
+                      participants, even if you disable workshop notifications
+                      here.
+                    </p>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectSuppressEmail
+                  onChange={this.handleSuppressEmailChange}
+                  value={this.state.suppress_email || false}
+                  readOnly={this.props.readOnly || this.state.virtual}
+                />
+                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+              </FormGroup>
+            </Col>
+          </Row>
           <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
@@ -1072,8 +1105,8 @@ export class WorkshopForm extends React.Component {
               </FormGroup>
             </Col>
             <Col sm={6}>
-              <FormGroup validationState={validation.style.location_address}>
-                <ControlLabel>Location Address</ControlLabel>
+              <FormGroup>
+                <ControlLabel>Location Address (optional)</ControlLabel>
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
@@ -1089,7 +1122,6 @@ export class WorkshopForm extends React.Component {
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
-                <HelpBlock>{validation.help.location_address}</HelpBlock>
               </FormGroup>
             </Col>
           </Row>
@@ -1185,16 +1217,19 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     style={readOnly ? styles.readOnlyInput : undefined}
     disabled={readOnly}
   >
-    <option key={false} value={false}>
+    <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={true} value={true}>
-      Yes, this is a virtual workshop.
+    <option key={'friday_institute'} value={'friday_institute'}>
+      Yes, this is a Code.org-Friday Institute virtual workshop.
+    </option>
+    <option key={'regional'} value={'regional'}>
+      Yes, this is a regional virtual workshop.
     </option>
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
-  value: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };

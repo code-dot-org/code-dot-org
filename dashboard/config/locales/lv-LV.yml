@@ -196,6 +196,8 @@ lv:
       educate_hoc: Programmēšanas stunda
       about_us: Par mums
       about_partners: Partneri
+      legal_privacy: Privātuma politika
+      legal_tos: Nosacījumi
     user:
       classroom: Skolotāju mājas lapa
       label: Sveiki, %{username}

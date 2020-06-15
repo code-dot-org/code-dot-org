@@ -1105,6 +1105,123 @@ cs-CZ:
       courseB_starWars_prog9_2019:
         courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_PlayLab_events1:
+        courseC_PlayLab_events1_a: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2018:
+        courseC_PlayLab_events1_a: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2019:
+        courseC_PlayLab_events1_a: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events2:
+        courseC_PlayLab_events2_a: |-
+          Připoj k události `při spuštění` dva bloky:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
+          menu s čísly u bloku `aktér __ říká`.
+      courseC_PlayLab_events2_2018:
+        courseC_PlayLab_events2_a: |-
+          Připoj k události `při spuštění` dva bloky:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
+          menu s čísly u bloku `aktér __ říká`.
+      courseC_PlayLab_events2_2019:
+        courseC_PlayLab_events2_a: |-
+          Připoj k události `při spuštění` dva bloky:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
+          menu s čísly u bloku `aktér __ říká`.
+      courseC_PlayLab_events3:
+        courseC_PlayLab_events3_a: K vyřešení úlohy stačí jenom pohnout Jorgem o 25
+          pixelů v pravo.
+        courseC_PlayLab_events3_b: Máme nějaký blok, který by pohnul aktérem?
+        courseC_PlayLab_events3_c: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events3_2018:
+        courseC_PlayLab_events3_a: K vyřešení úlohy stačí jenom pohnout Jorgem o 25
+          pixelů v pravo.
+        courseC_PlayLab_events3_b: Máme nějaký blok, který by pohnul aktérem?
+        courseC_PlayLab_events3_c: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events3_2019:
+        courseC_PlayLab_events3_a: K vyřešení úlohy stačí jenom pohnout Jorgem o 25
+          pixelů v pravo.
+        courseC_PlayLab_events3_b: Máme nějaký blok, který by pohnul aktérem?
+        courseC_PlayLab_events3_c: |-
+          Připoj k události `při spuštění` následující blok:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events4:
+        courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
+          k Olivě, když se klikne na "Spustit".
+      courseC_PlayLab_events4_2018:
+        courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
+          k Olivě, když se klikne na "Spustit".
+      courseC_PlayLab_events4_2019:
+        courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
+          k Olivě, když se klikne na "Spustit".
       courseC_artist_loops1a:
         courseC_artist_loops1a_a: |-
           Budeš potřebovat tento blok:
@@ -1404,22 +1521,202 @@ cs-CZ:
       courseC_artist_loops7a_2019:
         courseC_artist_loops7a_a: Kruh má 360 stupňů. Když vynásobíš počet opakování
           a úhel otočení, tak by mělo vyjít 360. Vyzkoušej to s čísly nahoře.
+      courseC_artist_prog2:
+        courseC_artist_prog2_a: '*"Pokud použiješ blok <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          , nakreslím čáru."*'
+        courseC_artist_prog2_b: Máš problém s otáčením v rohu? Použij [0] blok.
+      courseC_artist_prog2_2018:
+        courseC_artist_prog2_a: '*"Pokud použiješ blok <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          , nakreslím čáru."*'
+        courseC_artist_prog2_b: Máš problém s otáčením v rohu? Použij [0] blok.
+      courseC_artist_prog2_2019:
+        courseC_artist_prog2_a: '*"Pokud použiješ blok <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          , nakreslím čáru."*'
+        courseC_artist_prog2_b: Máš problém s otáčením v rohu? Použij [0] blok.
+      courseC_artist_prog3:
+        courseC_artist_prog3_a: |-
+          Chceš-li vytvořit toto okno, nakresli čtverec se stranami o 100 pixelech.
+
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+        courseC_artist_prog3_b: Chceš udělat kratší kód? Zkus v této úloze použít
+          cyklus.
+      courseC_artist_prog3_2018:
+        courseC_artist_prog3_a: |-
+          Chceš-li vytvořit toto okno, nakresli čtverec se stranami o 100 pixelech.
+
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+        courseC_artist_prog3_b: Chceš udělat kratší kód? Zkus v této úloze použít
+          cyklus.
+      courseC_artist_prog3_2019:
+        courseC_artist_prog3_a: |-
+          Chceš-li vytvořit toto okno, nakresli čtverec se stranami o 100 pixelech.
+
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+          -   otoč se
+          -   posuň se vpřed
+        courseC_artist_prog3_b: Chceš udělat kratší kód? Zkus v této úloze použít
+          cyklus.
+      courseC_artist_prog4:
+        courseC_artist_prog4_a: K dokončení rakety stačí nahoře nakreslit trojúhelník!
+        courseC_artist_prog4_b: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
+        courseC_artist_prog4_c: |-
+          Chceš-li nakreslit trojúhelník, potřebuješ:
+
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
+      courseC_artist_prog4_2018:
+        courseC_artist_prog4_a: K dokončení rakety stačí nahoře nakreslit trojúhelník!
+        courseC_artist_prog4_b: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
+        courseC_artist_prog4_c: |-
+          Chceš-li nakreslit trojúhelník, potřebuješ:
+
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
+      courseC_artist_prog4_2019:
+        courseC_artist_prog4_a: K dokončení rakety stačí nahoře nakreslit trojúhelník!
+        courseC_artist_prog4_b: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
+        courseC_artist_prog4_c: |-
+          Chceš-li nakreslit trojúhelník, potřebuješ:
+
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
+          -   otoč se vlevo o 120 stupňů
+          -   posuň se vpřed
       courseC_artist_prog5:
+        courseC_artist_prog5_a: Zpomal šoupátko dolů až do okamžiku, kdy můžeš spustit
+          kód po řádku a zjistit, kde se něco pokazí.
         courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_artist_prog5_c: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
+        courseC_artist_prog5_d: Každé otočení by mělo být o 90 stupňů doprava.
       courseC_artist_prog5_2018:
+        courseC_artist_prog5_a: Zpomal šoupátko dolů až do okamžiku, kdy můžeš spustit
+          kód po řádku a zjistit, kde se něco pokazí.
         courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_artist_prog5_c: Pomocí rozbalovací nabídky v blocích můžeš změnit,
+          co dělají!
+        courseC_artist_prog5_d: Každé otočení by mělo být o 90 stupňů doprava.
       courseC_artist_prog5_2019:
+        courseC_artist_prog5_a: Zpomal šoupátko dolů až do okamžiku, kdy můžeš spustit
+          kód po řádku a zjistit, kde se něco pokazí.
         courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_artist_prog5_c: Pomocí rozbalovací nabídky v blocích můžeš změnit,
+          co dělají!
+        courseC_artist_prog5_d: Každé otočení by mělo být o 90 stupňů doprava.
+      courseC_artist_prog6:
+        courseC_artist_prog6_a: Umělec již čelí správnému způsobu, jak nakreslit svůj
+          první řádek.
+        courseC_artist_prog6_b: Tento diamant je opravdu jen čtverec, který stojí
+          na jeho rohu.
+        courseC_artist_prog6_c: Protože tento diamant je také čtverec, ujisti se,
+          že se otočí o 90 stupňů v rozích.
+      courseC_artist_prog6_2018:
+        courseC_artist_prog6_a: Umělec již čelí správnému způsobu, jak nakreslit svůj
+          první řádek.
+        courseC_artist_prog6_b: Tento diamant je opravdu jen čtverec, který stojí
+          na jeho rohu.
+        courseC_artist_prog6_c: Protože tento diamant je také čtverec, ujisti se,
+          že se otočí o 90 stupňů v rozích.
+      courseC_artist_prog6_2019:
+        courseC_artist_prog6_a: Umělec již čelí správnému způsobu, jak nakreslit svůj
+          první řádek.
+        courseC_artist_prog6_b: Tento diamant je opravdu jen čtverec, který stojí
+          na jeho rohu.
+        courseC_artist_prog6_c: Protože tento diamant je také čtverec, ujisti se,
+          že se otočí o 90 stupňů v rozích.
       courseC_artist_prog7:
+        courseC_artist_prog7_a: Každý úhel je buď 45 nebo 90 stupňů.
+        courseC_artist_prog7_b: |-
+          Funguje to v prvním kroku?\
+          A co druhý?\
+          Kde se to pokazí?\\
+        courseC_artist_prog7_c: Pomocí rozbalovací nabídky na otočných blocích můžeš
+          zjistit, jaký úhel potřebuješ!
+        courseC_artist_prog7_d: |-
+          Budeš potřebovat:
+
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 90 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+
+          Tento vzor opakuj dvakrát!
         courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_artist_prog7_2018:
+        courseC_artist_prog7_a: Každý úhel je buď 45 nebo 90 stupňů.
+        courseC_artist_prog7_b: |-
+          Funguje to v prvním kroku?\
+          A co druhý?\
+          Kde se to pokazí?\\
+        courseC_artist_prog7_c: Pomocí rozbalovací nabídky na otočných blocích můžeš
+          zjistit, jaký úhel potřebuješ!
+        courseC_artist_prog7_d: |-
+          Budeš potřebovat:
+
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 90 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+
+          Tento vzor opakuj dvakrát!
         courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_artist_prog7_2019:
+        courseC_artist_prog7_a: Každý úhel je buď 45 nebo 90 stupňů.
+        courseC_artist_prog7_b: |-
+          Funguje to v prvním kroku?\
+          A co druhý?\
+          Kde se to pokazí?\\
+        courseC_artist_prog7_c: Pomocí rozbalovací nabídky na otočných blocích můžeš
+          zjistit, jaký úhel potřebuješ!
+        courseC_artist_prog7_d: |-
+          Budeš potřebovat:
+
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 90 stupňů
+          -   posuň se vpřed
+          -   otoč se vpravo o 45 stupňů
+
+          Tento vzor opakuj dvakrát!
         courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_collector_loops_challenge2:
@@ -2319,6 +2616,9 @@ cs-CZ:
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
+      courseD_artist_ramp12:
+        courseD_artist_ramp12_c: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
       courseD_autorun_binary2_2019:
         courseD_artist_binary2_a: Klikni na `Spustit`, abys viděl program v akci!
       courseD_autorun_binary3_2019:
@@ -3026,6 +3326,12 @@ cs-CZ:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_ramp9:
+        courseD_artist_ramp12_b: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
+      courseE_artist_ramp9_2:
+        courseD_artist_ramp12_b: Pomocí rozbalovací nabídky na blocích `otočit` zjistíš,
+          jaký úhel potřebuješ!
       courseE_bee_functions6:
         courseE_bee_functions6_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
@@ -3058,6 +3364,78 @@ cs-CZ:
       courseE_farmer_functions5c:
         courseE_farmer_functions5c_b: Neboj se dělat chyby! Zkus používat bloky a
           spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseE_farmer_ramp11a:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11a_2018:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11a_2019:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12d_2018:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12d_2019:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12e_2018:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12e_2019:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12f:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12f_2018:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12f_2019:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g_2018:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g_2019:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
       courseF_artist_for3:
         courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.

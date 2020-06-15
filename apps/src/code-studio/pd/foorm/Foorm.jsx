@@ -38,11 +38,15 @@ export default class Foorm extends React.Component {
     matrix: {
       root: 'sv_q_matrix foorm-adjust-matrix'
     },
+    rating: {
+      root: 'sv_q_rating foorm-adjust-rating'
+    },
     navigation: {
       prev: 'sv_prev_button foorm-button',
       next: 'sv_next_button foorm-button foorm-button-right',
       complete: 'sv_complete_btn foorm-button'
-    }
+    },
+    row: 'sv_row foorm-adjust-row'
   };
 
   constructor(props) {

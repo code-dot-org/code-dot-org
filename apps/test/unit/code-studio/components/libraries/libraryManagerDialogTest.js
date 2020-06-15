@@ -120,7 +120,10 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('displays LibraryListItem when the project contains libraries', () => {
-      getProjectLibrariesStub.returns([{name: 'first'}, {name: 'second'}]);
+      getProjectLibrariesStub.returns([
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
+      ]);
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
@@ -133,7 +136,10 @@ describe('LibraryManagerDialog', () => {
     it('displays LibraryListItem when class libraries are available', () => {
       getProjectLibrariesStub.returns(undefined);
       getClassLibrariesStub.callsFake(callback =>
-        callback([{channel: '1'}, {channel: '2'}])
+        callback([
+          {channel: '1', sectionName: 'section'},
+          {channel: '2', sectionName: 'section'}
+        ])
       );
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -145,9 +151,15 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('displays all libraries from the project and the class', () => {
-      getProjectLibrariesStub.returns([{name: 'first'}, {name: 'second'}]);
+      getProjectLibrariesStub.returns([
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
+      ]);
       getClassLibrariesStub.callsFake(callback =>
-        callback([{channel: '1'}, {channel: '2'}])
+        callback([
+          {channel: '1', sectionName: 'section'},
+          {channel: '2', sectionName: 'section'}
+        ])
       );
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -156,6 +168,25 @@ describe('LibraryManagerDialog', () => {
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
       expect(wrapper.state().classLibraries).to.have.lengthOf(2);
       expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
+    });
+
+    it('allows filtering class libraries by section', () => {
+      getProjectLibrariesStub.returns(undefined);
+      getClassLibrariesStub.callsFake(callback =>
+        callback([
+          {channel: 'abc123', sectionName: 'section1'},
+          {channel: 'def456', sectionName: 'section2'},
+          {channel: 'ghi789', sectionName: 'section1'},
+          {channel: 'jkl1011', sectionName: 'section3'}
+        ])
+      );
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+      wrapper.instance().onOpen();
+      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
+      wrapper.setState({sectionFilter: 'section1'});
+      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
     });
 
     it('setLibraryToImport sets the import library', () => {
@@ -207,7 +238,11 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
-      getProjectLibrariesStub.returns([{name: 'first'}, {name: 'second'}]);
+      const projectLibraries = [
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
+      ];
+      getProjectLibrariesStub.returns(projectLibraries);
       let setProjectLibraries = sinon.spy(
         window.dashboard.project,
         'setProjectLibraries'
@@ -217,9 +252,9 @@ describe('LibraryManagerDialog', () => {
       );
       wrapper.instance().onOpen();
       expect(setProjectLibraries.notCalled).to.be.true;
-      wrapper.instance().removeLibrary('first');
-      expect(setProjectLibraries.withArgs([{name: 'second'}]).calledOnce).to.be
-        .true;
+      wrapper.instance().removeLibrary('abc123');
+      expect(setProjectLibraries.withArgs([projectLibraries[1]]).calledOnce).to
+        .be.true;
       window.dashboard.project.setProjectLibraries.restore();
     });
   });

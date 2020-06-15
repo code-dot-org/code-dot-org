@@ -65,6 +65,49 @@ zh-TW:
       2-3 Artist Functions 4:
         2-3_Artist_Functions_4_a: 藝術家需要在每個正方形之間轉 120 度才能完成這個設計。
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          記住上個關卡的程式：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: 你的下一個轉彎動作應該要在迴圈中程式碼的**最後面**。
       2-3 Artist Loops New 12:
         2-3_Artist Loops_New_12_a: 開始畫菱形之前，藝術家需要向左轉 60 度才能夠朝向正確的路徑。
@@ -75,6 +118,15 @@ zh-TW:
           在畫出一個菱形之後，藝術家已經面對了開始下一個的方向。
 
           因為這樣，我們不需要增加額外的`轉向-左方`積木。
+        2-3_Artist_Loops_New_13_b: |-
+          要做出每個菱形，藝術家需要：
+
+          -   移動
+          -   向右轉 120 度
+          -   移動
+          -   向右轉 60 度
+
+          然後再做一次相同的動作！
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: 這個藝術家需要向右轉 45 度之後才能開始繪畫。
         2-3_Artist_Loops_New_9_b: 這個 V 形，其實就只是半個正方形。怎樣的程式碼可以畫出半個正方形？
@@ -107,6 +159,24 @@ zh-TW:
       2-3 Bee Conditionals 14:
         2-3_Bee_Conditionals_14_a: 想不到要如何減少積木的使用量？試著把用在紫花上的程式套用到紅花上。
         2-3_Bee_Conditionals_14_b: 如果紅花變成紫花，想一想，要怎麼另外使用`重複`迴圈來減少代碼的使用？
+        2-3_Bee_Conditionals_14_c: |-
+          試試把它分成兩塊來完成：
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  收集花蜜 3 次
+
+          2.  向前移動 5 次
+
+          3.  檢查是否為花蜜，如果是就採集
+
+          4.  向左轉
+
+          5.  釀造蜂蜜
+
+          6.  向前移動 1 次
+
+          7.  釀造 2 個蜂蜜
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 請記住：每次你運行程式後，紫花的花蜜數會變成 0 或 1！
       2-3 Bee Conditionals 3:
@@ -399,6 +469,65 @@ zh-TW:
         Course_4_Artist_For_Loops_inspire_a: 這個程式的基礎和上個挑戰關卡很像…有些地方改了就是。
         Course_4_Artist_For_Loops_inspire_b: 試試看這個`計數`迴圈，從 3 算到 10，每次增加 1。
         Course_4_Artist_For_Loops_inspire_c: 在這個`計數`迴圈裡用了二個`重複`積木，不過第二個會轉成相反的方向。
+        Course_4_Artist_For_Loops_inspire_d: "**解答！**  \n\n<xml>\n  <block type=\"when_run\"
+          deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\"
+          inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n
+          \       <value name=\"FROM\">\n          <block type=\"math_number\">\n
+          \           <title name=\"NUM\">3</title>\n          </block>\n        </value>\n
+          \       <value name=\"TO\">\n          <block type=\"math_number\">\n            <title
+          name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value
+          name=\"BY\">\n          <block type=\"math_number\">\n            <title
+          name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement
+          name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n
+          \           <value name=\"TIMES\">\n              <block type=\"math_arithmetic\"
+          inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value
+          name=\"A\">\n                  <block type=\"variables_get\">\n                    <title
+          name=\"VAR\">counter</title>\n                  </block>\n                </value>\n
+          \               <value name=\"B\">\n                  <block type=\"math_number\">\n
+          \                   <title name=\"NUM\">1</title>\n                  </block>\n
+          \               </value>\n              </block>\n            </value>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move\"
+          inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n
+          \               <value name=\"VALUE\">\n                  <block type=\"math_number\">\n
+          \                   <title name=\"NUM\">40</title>\n                  </block>\n
+          \               </value>\n                <next>\n                  <block
+          type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n
+          \                   <value name=\"VALUE\">\n                      <block
+          type=\"math_arithmetic\" inline=\"true\">\n                        <title
+          name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n
+          \                         <block type=\"math_number\">\n                            <title
+          name=\"NUM\">360</title>\n                          </block>\n                        </value>\n
+          \                       <value name=\"B\">\n                          <block
+          type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n
+          \                         </block>\n                        </value>\n                      </block>\n
+          \                   </value>\n                  </block>\n                </next>\n
+          \             </block>\n            </statement>\n            <next>\n              <block
+          type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n
+          \                 <block type=\"math_arithmetic\" inline=\"true\">\n                    <title
+          name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block
+          type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n
+          \                     </block>\n                    </value>\n                    <value
+          name=\"B\">\n                      <block type=\"math_number\">\n                        <title
+          name=\"NUM\">1</title>\n                      </block>\n                    </value>\n
+          \                 </block>\n                </value>\n                <statement
+          name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n
+          \                   <title name=\"DIR\">moveForward</title>\n                    <value
+          name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title
+          name=\"NUM\">40</title>\n                      </block>\n                    </value>\n
+          \                   <next>\n                      <block type=\"draw_turn\"
+          inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n
+          \                       <value name=\"VALUE\">\n                          <block
+          type=\"math_arithmetic\" inline=\"true\">\n                            <title
+          name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n
+          \                             <block type=\"math_number\">\n                                <title
+          name=\"NUM\">360</title>\n                              </block>\n                            </value>\n
+          \                           <value name=\"B\">\n                              <block
+          type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n
+          \                             </block>\n                            </value>\n
+          \                         </block>\n                        </value>\n                      </block>\n
+          \                   </next>\n                  </block>\n                </statement>\n
+          \             </block>\n            </next>\n          </block>\n        </statement>\n
+          \     </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration:
         Course_4_Artist_Functions_Inspiration_a: 利用上個關卡的程式，再添加額外的`轉向-右方 3 度`積木到重複迴圈裡頭。
         Course_4_Artist_Functions_Inspiration_b: 試試把`重複迴圈`之外的轉向角度改成比 90 度大，轉向的指令還是要放在`計數迴圈`裡。
@@ -4274,9 +4403,9 @@ zh-TW:
             </block></xml>
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: 首先創建一個嵌套循環來創建四個八邊形。轉動45度生成八邊形。跳起來，然後每一個都轉90度。
-        courseD_artist_nestedLoops_challenge1_b: 添加代碼，在嵌套循環中繪製一個三角形。用120度的角度來改變你的三角形。
+        courseD_artist_nestedLoops_challenge1_b: 加入程式積木，在巢狀迴圈中繪製一個三角形。用120度的角度來改變你的三角形。
         courseD_artist_nestedLoops_challenge1_c: |-
-          使用嵌套循環：
+          使用巢狀迴圈：
 
           -   重複8次
           -   繪製一個八邊形
@@ -4288,13 +4417,35 @@ zh-TW:
         courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 這個矩形的寬是 200 像素，高是 100 像素。
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "你可以在 `重複` 積木中放置指令，好讓它們不斷重複執行。試試看！\n\n<xml>\n
+          \ \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: |-
           你能找到這樣一條路，能到達每一朵花和蜂巢，卻不會撞到任何樹木嗎？最好的道路是螺旋。
 
           **你可以不用左轉就可以解決這個問題。**
         courseD_bee_conditionals_challenge1_b: 在這個關卡中，每個空格可能有一朵花、一個蜂窩，或者什麼都沒有。這意味著你可以在每個正方形上重複執行`如果/否則`條件判斷。
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          就像 `如果在花朵上` 積木一樣，`重複 判斷 花蜜>0` 中的代碼只有當蜜蜂在花朵上時才運行。主要的不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: 本來的程式碼已經很好了 - 如果每一堆寶藏都只有一個能拿！
         courseC_maze_loops_challenge2_b: 使用迴圈，這樣你就不會`使用過多`的積木！
       course2_collector_prog_challenge1:
         courseC_collector_prog_challenge1_a: 您可以更頻繁地使用“收集”命令來收集額外的寶藏。
@@ -4303,6 +4454,33 @@ zh-TW:
       course2_harvester_loops_challenge1:
         courseC_harvester_loops_challenge1_a: 不用迴圈是不可能達成目標的！
         courseC_harvester_loops_challenge1_b: 你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。
+        courseC_harvester_loops_challenge1_c: |-
+          要採收前四個玉米的最佳方案是在一個 `重複` 積木裡使用另一個 `重複` 積木。你可以把這個規律套用在接下來的關卡！
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: 解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
@@ -4314,9 +4492,19 @@ zh-TW:
           只需 18 個積木就可以編出這個螺旋圖案！
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: 將此路徑看作三個不同的部分。每一個都有可以重複的規律。
+        courseC_maze_loops_challenge1_b: 在每個 `重複` 積木之間，你將需要 `轉向-左方` 或 `轉向-右方` 來讓 Scrat
+          準備好進入下個規律。
+        courseC_maze_loops_challenge1_c: |-
+          如果你已經走到這麼遠了，只要再 `轉向-左方` 然後 `移動-向前` 幾次而已。不要放棄！
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _如果你把我倒過來，要格外小心我的方向是否是正確的！_
         courseC_maze_programming_challenge2_b: 最短的解決方案只使用5個程式積木，但它使用的是“重複”程式積木！
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: 如果你再次呼叫函式，你可以在最後的角落建立相同的設計。你也可以「跳到」其他位置或是按你的意思改變整個東西！
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -4467,6 +4655,13 @@ zh-TW:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "開始先從 2 堆寶石中的每 1 堆只收集 2 顆寶石。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\n使用這些積木。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "接下來，收集這一排中剩下的寶石。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\n將這些模塊添加到您的程式。\n\n<xml><block type=\"maze_move\">\n                    <title
           name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n
@@ -4523,7 +4718,10 @@ zh-TW:
             </block>
           </xml>
       course3_farmer_condLoops_challenge1:
+        courseD_farmer_condLoops_challenge1_a: "「步進」按鈕在這一挑戰中會很有用。"
         courseD_farmer_condLoops_challenge1_b: 一般來說，如果您在一個南瓜上就只需要「pick pumpkin」（採摘南瓜）。如果您在一個南瓜上，您還需要做其他什麼？
+      course3_farmer_condLoops_challenge2:
+        courseD_farmer_condLoops_challenge2_a: 每個空間中每種蔬菜的數量都可能會變化。 `while` 迴圈(重複-判斷)可以幫忙！
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
         courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
@@ -4531,6 +4729,7 @@ zh-TW:
       course3_maze_debugging_challenge2:
         courseC_maze_debugging_challenge2_a: 有個解法，就是在每次轉向時添加更多的移動積木。
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+        courseC_maze_debugging_challenge2_c: 有兩條不同的路線可以讓你只使用「移動-向前」和 4 次轉向。如果你找到方法，使用「重複」積木還能更快！
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           當玩家贏得遊戲時，你可以執行以下操作：
@@ -4936,6 +5135,8 @@ zh-TW:
               </next>
             </block>
           </xml>
+      course4_harvester_nested_loops_challenge1:
+        courseD_harvester_nested_loops_challenge1_a: 你可能已經會使用迴圈來建立之字形圖案。如果你記得那個算法，可以在這裡做些補充。
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
           您需要工具箱中的其他模塊才能讓演員講話。

@@ -44,7 +44,7 @@ cs:
         title: 'Algoritmy ze života: Zasadit semínko'
         desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       BuildingAFoundation:
-        title: Budování nadace
+        title: Budování základů
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost), a studenti diskutují představu, že je trvalá, když věci se komplikují.
       GettingLoopy:
         title: Bláznění s cykly
@@ -159,7 +159,7 @@ cs:
         title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseC_unplugged_buildingAFoundation:
-        title: Budování nadace
+        title: Budování základů
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost), a studenti diskutují představu, že je trvalá, když věci se komplikují.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmy ze života: Papírová letadla'
@@ -302,6 +302,8 @@ cs:
       DigitalFootprint_2019:
         title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      GraphingData_2019:
+        title: Zobrazení dat
       courseE_simon_says_2019:
         title: Kuba řekl
         desc: "Zahraj si hru a přemýšlej, jaké příkazy jsou potřeba, abys došel ke správnému výsledku.\\r\n\\r\n![test image](https://code.org/images/logo.png)"

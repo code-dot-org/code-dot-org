@@ -1,14 +1,12 @@
 import {
-  blobToDataURI,
-  dataURIFromURI,
+  dataURIToBlob,
   dataURIToFramedBlob,
-  imageFromURI,
   toCanvas,
+  toImage,
   toImageData
 } from '@cdo/apps/imageUtils';
-import {assert, expect} from 'chai';
-import expectedPhantomPng from './expected-phantom.png';
-import expectedChromePng from './expected-chrome.png';
+import {assert} from 'chai';
+import expectedPng from './expected.png';
 import assertVisualMatch from '../../util/assertVisualMatch';
 
 const TEST_DATA_URI =
@@ -16,19 +14,39 @@ const TEST_DATA_URI =
 
 describe('image utils', () => {
   it('overlays an image inside the Artist frame', done => {
-    // Chrome and PhantomJS generate PNGs that _look_ the same but are are very different when
-    // you examine the files.  For now, we have fixtures for both since we want these tests to
-    // pass in both browsers.
-    const expectedPng = /PhantomJS/.test(window.navigator.userAgent)
-      ? expectedPhantomPng
-      : expectedChromePng;
     dataURIToFramedBlob(TEST_DATA_URI, actual => {
-      dataURIFromURI(expectedPng).then(expected => {
-        blobToDataURI(actual, actual => {
-          expect(expected).to.equal(actual);
-          done();
-        });
-      });
+      assertVisualMatch(expectedPng, actual)
+        .then(done)
+        .catch(done);
+    });
+  });
+
+  describe('toImage', () => {
+    it('returns an Image unchanged', async () => {
+      const image = await toImage(expectedPng);
+      assert.instanceOf(image, HTMLImageElement);
+      const result = await toImage(image);
+      assert(image === result);
+    });
+
+    it('converts an image URI to an Image', async () => {
+      assert.typeOf(expectedPng, 'string');
+      const result = await toImage(expectedPng);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(expectedPng, result);
+    });
+
+    it('converts a data URI to an Image', async () => {
+      const result = await toImage(TEST_DATA_URI);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(TEST_DATA_URI, result);
+    });
+
+    it('converts a blob to an Image', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toImage(blob);
+      assert.instanceOf(result, HTMLImageElement);
+      assertVisualMatch(TEST_DATA_URI, result);
     });
   });
 
@@ -40,17 +58,17 @@ describe('image utils', () => {
     });
 
     it('converts an image element to a canvas', async () => {
-      const image = await imageFromURI(expectedChromePng);
+      const image = await toImage(expectedPng);
       const result = await toCanvas(image);
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(image, result);
     });
 
     it('converts an image URI to a canvas', async () => {
-      assert.typeOf(expectedChromePng, 'string');
-      const result = await toCanvas(expectedChromePng);
+      assert.typeOf(expectedPng, 'string');
+      const result = await toCanvas(expectedPng);
       assert.instanceOf(result, HTMLCanvasElement);
-      assertVisualMatch(expectedChromePng, result);
+      assertVisualMatch(expectedPng, result);
     });
 
     it('converts a data URI to a canvas', async () => {
@@ -58,19 +76,18 @@ describe('image utils', () => {
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(TEST_DATA_URI, result);
     });
+
+    it('converts a blob to a canvas', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toCanvas(blob);
+      assert.instanceOf(result, HTMLCanvasElement);
+      assertVisualMatch(TEST_DATA_URI, result);
+    });
   });
 
   describe('toImageData', () => {
     it('returns ImageData unchanged', async () => {
-      // When we no longer support Phantom, we can generate
-      // an ImageData object this way:
-      // const imageData = new ImageData(8, 8);
-      const canvas = document.createElement('canvas');
-      canvas.width = 8;
-      canvas.height = 8;
-      const context = canvas.getContext('2d');
-      const imageData = context.getImageData(0, 0, 8, 8);
-
+      const imageData = new ImageData(8, 8);
       const result = await toImageData(imageData);
       assert(imageData === result);
     });
@@ -102,21 +119,28 @@ describe('image utils', () => {
     });
 
     it('converts an image element to an ImageData object', async () => {
-      const image = await imageFromURI(expectedChromePng);
+      const image = await toImage(expectedPng);
       const result = await toImageData(image);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
     });
 
     it('converts an image URI string to an ImageData object', async () => {
-      assert.typeOf(expectedChromePng, 'string');
-      const result = await toImageData(expectedChromePng);
+      assert.typeOf(expectedPng, 'string');
+      const result = await toImageData(expectedPng);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
     });
 
     it('converts a data URI string to an ImageData object', async () => {
       const result = await toImageData(TEST_DATA_URI);
+      assert.instanceOf(result, ImageData);
+      assert.equal(180000, result.data.length);
+    });
+
+    it('converts a blob to an ImageData object', async () => {
+      const blob = await dataURIToBlob(TEST_DATA_URI);
+      const result = await toImageData(blob);
       assert.instanceOf(result, ImageData);
       assert.equal(180000, result.data.length);
     });

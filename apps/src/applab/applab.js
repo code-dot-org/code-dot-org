@@ -5,7 +5,6 @@
  *
  */
 import $ from 'jquery';
-import cookies from 'js-cookie';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -79,6 +78,8 @@ import {
   expoCancelApkBuild
 } from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 
 /**
  * Create a namespace for the application.
@@ -213,14 +214,9 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
     }
   ].filter(item => item);
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
@@ -889,31 +885,29 @@ function setupReduxSubscribers(store) {
       tableType.PROJECT
     );
 
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
-      Applab.storage
-        .getLibraryManifest()
-        .then(result => store.dispatch(setLibraryManifest(result)));
-      // /v3/channels/<channel_id>/current_tables tracks which
-      // current tables the project has imported. Here we initialize the
-      // redux list of current tables and keep it in sync
-      let currentTableRef = getProjectDatabase().child('current_tables');
-      currentTableRef.on('child_added', snapshot => {
-        store.dispatch(
-          addTableName(
-            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
-            tableType.SHARED
-          )
-        );
-      });
-      currentTableRef.on('child_removed', snapshot => {
-        store.dispatch(
-          deleteTableName(
-            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
-          )
-        );
-      });
-    }
+    // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
+    Applab.storage
+      .getLibraryManifest()
+      .then(result => store.dispatch(setLibraryManifest(result)));
+    // /v3/channels/<channel_id>/current_tables tracks which
+    // current tables the project has imported. Here we initialize the
+    // redux list of current tables and keep it in sync
+    let currentTableRef = getProjectDatabase().child('current_tables');
+    currentTableRef.on('child_added', snapshot => {
+      store.dispatch(
+        addTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+          tableType.SHARED
+        )
+      );
+    });
+    currentTableRef.on('child_removed', snapshot => {
+      store.dispatch(
+        deleteTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+        )
+      );
+    });
   }
 }
 
@@ -1018,6 +1012,9 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css('background-color', white);
+  }
   Applab.tickCount = 0;
 };
 
@@ -1313,6 +1310,12 @@ Applab.beginVisualizationRun = function() {
   Applab.running = true;
   $('#headers').addClass('dimmed');
   $('#codeWorkspace').addClass('dimmed');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css(
+      'background-color',
+      workspace_running_background
+    );
+  }
   designMode.renderDesignWorkspace();
   queueOnTick();
 };
@@ -1386,10 +1389,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
     case DataView.TABLE: {
       let newTableType = getStore().getState().data.tableListMap[newTableName];
       let storageRef;
-      if (
-        experiments.isEnabled(experiments.APPLAB_DATASETS) &&
-        newTableType === tableType.SHARED
-      ) {
+      if (newTableType === tableType.SHARED) {
         storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
       } else {
         storageRef = projectStorageRef.child(`tables/${newTableName}/records`);

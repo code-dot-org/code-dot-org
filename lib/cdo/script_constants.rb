@@ -245,7 +245,13 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # A whitelist of all family names for scripts.
+  # An allowlist of all family names for courses.
+  COURSE_FAMILY_NAMES = [
+    CSD = 'csd'.freeze,
+    CSP = 'csp'.freeze,
+  ].freeze
+
+  # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
     # CSF
     COURSEA = 'coursea'.freeze,
@@ -263,6 +269,11 @@ module ScriptConstants
     CSP3 = 'csp3'.freeze,
     CSP4 = 'csp4'.freeze,
     CSP5 = 'csp5'.freeze,
+    CSP6 = 'csp6'.freeze,
+    CSP7 = 'csp7'.freeze,
+    CSP8 = 'csp8'.freeze,
+    CSP9 = 'csp9'.freeze,
+    CSP10 = 'csp10'.freeze,
     CSP_POSTAP = 'csppostap'.freeze,
     CSP_CREATE = 'csp-create'.freeze,
     CSP_EXPLORE = 'csp-explore'.freeze,
