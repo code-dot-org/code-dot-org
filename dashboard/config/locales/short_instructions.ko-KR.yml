@@ -1063,6 +1063,10 @@ ko-KR:
       bounce_7_sports: '"~할 때" 블록에 다른 블록들을 붙여보세요. 깃발에 닿을 때까지 공이 튀기도록 해보세요.'
       course1_maze_seq_challenge1: 길을 따라 움직여서, 바보 같은 돼지 녀석을 잡아줘. TNT 폭탄을 피하고, 깃털들이
         헝클어지지 않도록 해야 돼!
+      course2_artist_prog_challenge1: 동물들을 위한 공간을 그려주세요. 동물들을 위한 공간을 그리는 방법은 많이 있으니
+        마음껏 시도해보세요.  가장 적은 블럭을 사용해서 그린다면 6블럭이면 돼요. 하지만 원하는 만큼 블럭을 사용해서 그려도 됩니다!!
+      course2_artist_prog_challenge2: 길위에 있는 노란색 선을 그릴  수 있게 도와주세요!
+      course2_maze_programming_challenge1: 돼지가 숨어 있어요! 돼지에게 가는 길을 찾을 수 있게 도와줄래요?
       course4_artist_fwp_challenge1: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을
         모두 지우고 완전히 새로 만들어 봐도 됩니다.)
       courseA_maze_seq2: 코드를 수정해서 돼지를 잡을 수 있게 해주세요!
