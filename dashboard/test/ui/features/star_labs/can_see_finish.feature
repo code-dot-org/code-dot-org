@@ -68,9 +68,8 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
   Scenario: can see finish button on "Game Lab"
     And I check that the droplet free play level for "Game Lab" shows the finish button for mobile screens
 
-  @no_ie @no_safari @no_firefox @no_chrome
-  Scenario: can see finish button on "Minecraft Adventurer"
-    And I check that the minecraft free play level for "Minecraft Adventurer" shows the finish button for mobile screens
+  # Minecraft is tested in its own feature under /craft/ because when run with other scenarios,
+  # it often causes difficult-to-find memory errors due to the high memory usage of minecraft.
 
   # The following levels currently do not show finish button
   # in the viewport when play is pressed for iphone, but do on ipad
