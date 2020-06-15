@@ -30,6 +30,82 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
+  def self.extract_scripts_taught
+    source_sql = <<~SQL
+      SELECT u.email, sc.name AS script_name, c.name AS course_name, MAX(se.updated_at) AS updated_at
+      FROM sections AS se
+      JOIN users AS u ON se.user_id = u.id
+      JOIN scripts AS sc ON sc.id = se.script_id
+      LEFT JOIN course_scripts AS cs ON cs.script_id = se.script_id
+      LEFT JOIN courses AS c ON c.id = cs.course_id
+      WHERE u.email > ''
+      GROUP BY u.email, sc.name, c.name
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['script_name', 'course_name'], true, 'dashboard.sections')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_courses_taught
+    source_sql = <<~SQL
+      SELECT u.email, courses.name AS course_name, MAX(se.updated_at) AS updated_at
+      FROM users AS u
+      JOIN sections AS se ON se.user_id = u.id
+      JOIN courses ON courses.id = se.course_id
+      WHERE u.email > ''
+      GROUP BY u.email, courses.name
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['course_name'], true, 'dashboard.sections')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_professional_learning_attendance_old_attendance_model
+    # "section_type" is not null only in cases where sections was used for
+    # PD attendance. It's always null when a section represents an actual
+    # classroom of students (the vast majority of rows in the sections table).
+    source_sql = <<~SQL
+      SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
+        FROM users AS u
+        JOIN followers AS f on u.id = f.student_user_id
+        JOIN sections AS se on f.section_id = se.id
+        WHERE u.email > ''
+        AND se.section_type IS NOT NULL
+      GROUP BY 1,2
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['section_type'], true, 'dashboard.followers')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_professional_learning_attendance_new_attendance_model
+    source_sql = <<~SQL
+      SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
+        FROM pd_attendances AS pda
+        JOIN pd_sessions AS pds ON pds.id = pda.pd_session_id AND pds.deleted_at IS NULL
+        JOIN pd_workshops AS pdw ON pdw.id = pds.pd_workshop_id AND pdw.deleted_at IS NULL
+        JOIN users AS u ON u.id = pda.teacher_id
+        WHERE pda.deleted_at is null
+        AND u.email > ''
+      GROUP BY 1,2
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['course'], true, 'dashboard.pd_attendances')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  def self.extract_roles_from_user_permissions
+    source_sql = <<~SQL
+      SELECT u.email, up.permission, up.updated_at
+      FROM user_permissions AS up
+      JOIN users AS u on u.id = up.user_id
+      WHERE u.email > ''
+    SQL
+
+    query = get_extraction_query(source_sql, 'email', ['permission'], true, 'dashboard.user_permissions')
+    ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
   def self.extract_users_and_geos
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
