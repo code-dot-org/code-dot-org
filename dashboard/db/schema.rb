@@ -543,16 +543,16 @@ ActiveRecord::Schema.define(version: 20200611222103) do
 
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "game_id"
-    t.string   "name",                                                null: false
+    t.string   "name",                                                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
-    t.bigint   "ideal_level_source_id",                                            unsigned: true
+    t.bigint   "ideal_level_source_id",                                               unsigned: true
     t.integer  "user_id"
-    t.text     "properties",            limit: 65535
+    t.text     "properties",            limit: 16777215
     t.string   "type"
     t.string   "md5"
-    t.boolean  "published",                           default: false, null: false
+    t.boolean  "published",                              default: false, null: false
     t.text     "notes",                 limit: 65535
     t.text     "audit_log",             limit: 65535
     t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
