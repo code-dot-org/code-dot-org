@@ -78,15 +78,48 @@ module Crowdin
         files = changes.fetch(code, nil)
         next unless files.present?
         filenames = files.keys
-        locale_dir = File.join(@locales_dir, name)
 
         @logger.debug("#{name} (#{code}): #{filenames.length} files have changes")
         Parallel.each(filenames, in_threads: MAX_THREADS) do |file|
           response = @project.export_file(file, code)
-          dest = File.join(locale_dir, file)
+          dest = get_download_dest(file, language)
           FileUtils.mkdir_p(File.dirname(dest))
-          File.write(dest, response.body)
+          # Make sure to specify the encoding; we expect to get quite a lot
+          # of non-ASCII characters in this data
+          File.open(dest, "w:#{response.body.encoding}") do |destfile|
+            destfile.write(response.body)
+          end
         end
+      end
+    end
+
+    private
+
+    # Figure out where a given file should be downloaded to. Replaces the
+    # "translation" field in the Crowdin config files.
+    #
+    # Note that this solution relies on us encoding project-specific logic here
+    # in code. Other options would be to just download all files to the same
+    # place and have the sync-out manage finding them, or to replicate the
+    # crowdin config approach. Both solutions would be better than this in the
+    # long run, but this should provide for an easier transition from a
+    # Crowdin-CLI-managed sync to this more manual approach. Once that
+    # transition is complete, we will be in a better position to explore
+    # alternatives.
+    # @param file [String] - the path for the file, as returned by
+    #  Crowdin::Project#list_files
+    # @param language [Hash] - the entry for the language, as returned by
+    #  Crowdin::Project#languages
+    def get_download_dest(file, language)
+      case @project.id
+      when "codeorg"
+        return File.join(@locales_dir, language["name"], file)
+      when "codeorg-markdown"
+        return File.join(@locales_dir, language["name"], "codeorg-markdown", file)
+      when "hour-of-code"
+        return File.join(@locales_dir, language["name"], "hourofcode", file)
+      else
+        raise "Unknown project #{@project.id.inspect}"
       end
     end
   end
