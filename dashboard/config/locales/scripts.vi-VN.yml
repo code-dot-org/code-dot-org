@@ -10792,6 +10792,9 @@ vi:
               name: giai đoạn mới
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+          lessons:
+            Create PT - Complete the Task:
+              name: Tạo PT - hoàn thành nhiệm vụ
         csp9-2020:
           stages:
             new stage:
