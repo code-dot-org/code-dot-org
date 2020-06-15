@@ -21,6 +21,7 @@ import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -59,7 +60,7 @@ const FIREHOSE_DIALOG_TYPES = {
   WRONG_COUNT: 'wrong_count',
   APPLAB_NO_VALIDATE: 'applab_no_validate',
   NO_VALIDATE: 'no_validate',
-  SHARE_NO_COUNT: 'share_no_count',
+  SHARE_NO_VALIDATE: 'share_no_validate',
   DEFAULT: 'default'
 };
 let firehose_group = FIREHOSE_DIALOG_TYPES['DEFAULT'];
@@ -342,11 +343,13 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function() {
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: firehose_group,
-        event: 'replay_level'
-      });
+      if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
+        firehoseClient.putRecord({
+          study: FIREHOSE_STUDY,
+          study_group: firehose_group,
+          event: 'replay_level'
+        });
+      }
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
@@ -431,11 +434,13 @@ FeedbackUtils.prototype.displayFeedback = function(
     }
 
     dom.addClickTouchEvent(continueButton, function() {
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: firehose_group,
-        event: 'continue'
-      });
+      if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
+        firehoseClient.putRecord({
+          study: FIREHOSE_STUDY,
+          study_group: firehose_group,
+          event: 'continue'
+        });
+      }
       feedbackDialog.hide();
 
       if (options.response && options.response.puzzle_ratings_enabled) {
