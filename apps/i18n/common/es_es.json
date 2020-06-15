@@ -199,7 +199,7 @@
   "censusWebDesign": "Diseño web usando HTML o CSS",
   "challengeLevelIntro": "¡Los desafíos de rompecabezas son lecciones diseñadas para desarrollar tu cerebro! ¡Haz lo mejor que puedas!",
   "challengeLevelPassTitle": "¡Lo hiciste!",
-  "challengeLevelPassText": "Sin embargo, podrías haber terminado con solo {idealBlocks, plural, uno {1 bloque} other {# bloques}}. ¿Crees poder mejorar tu programa?",
+  "challengeLevelPassText": "Sin embargo, podrías haber terminado con solo {idealBlocks, plural, one {1 bloque} other {# bloques}}. ¿Crees poder mejorar tu programa?",
   "challengeLevelPerfectTitle": "¡desafío completado!",
   "challengeLevelSkip": "Omitir por ahora",
   "challengeLevelStart": "¡Estoy listo!",

@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Níl ag éirí linn do bheochan \"{animationName}\" a lódáil. Deimhnigh go bhfuil tú ceangailte leis an Idirlíon agus ansin athlódáil an leathanach. Má mhaireann an fhadhb, d'fhéadfadh sé go bhfuil an bheochan briste. Sa chás sin, ba chóir duit an bheochan a bhaint.",
   "reinfFeedbackMsg": "Tá tú críochnaithe! Cliceáil \"Ar aghaidh\" chun dul go dtí an chéad leibhéal eile.",
   "shareGame": "Comhroinn do chluiche:",
