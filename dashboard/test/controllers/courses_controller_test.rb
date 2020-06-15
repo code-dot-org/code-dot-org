@@ -101,7 +101,9 @@ class CoursesControllerTest < ActionController::TestCase
 
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
+    assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
 
+    get :show, params: {course_name: 'csp-2019'}
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
