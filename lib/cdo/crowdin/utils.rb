@@ -16,12 +16,15 @@ module Crowdin
     #  written out in JSON format
     # @param options.locales_dir [String, nil] path to directory where changed
     #  files should be downloaded
+    # @param options.locale_subdir [String, nil] name of directory within
+    #  locale-specific directory to which files should be downloaded
     # @param options.logger [Logger, nil]
     def initialize(project, options={})
       @project = project
       @changes_json = options.fetch(:changes_json, "/tmp/#{project.id}_changes.json")
       @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
       @locales_dir = options.fetch(:locales_dir, "/tmp/locales")
+      @locale_subdir = options.fetch(:locale_subdir, nil)
       @logger = options.fetch(:logger, Logger.new(STDOUT))
     end
 
@@ -79,10 +82,13 @@ module Crowdin
         next unless files.present?
         filenames = files.keys
 
+        # construct download directory; locale_subdir is optional, so compact
+        locale_dir = File.join([@locales_dir, language["name"], @locale_subdir].compact)
+
         @logger.debug("#{name} (#{code}): #{filenames.length} files have changes")
         Parallel.each(filenames, in_threads: MAX_THREADS) do |file|
           response = @project.export_file(file, code)
-          dest = get_download_dest(file, language)
+          dest = File.join(locale_dir, file)
           FileUtils.mkdir_p(File.dirname(dest))
           # Make sure to specify the encoding; we expect to get quite a lot
           # of non-ASCII characters in this data
@@ -90,36 +96,6 @@ module Crowdin
             destfile.write(response.body)
           end
         end
-      end
-    end
-
-    private
-
-    # Figure out where a given file should be downloaded to. Replaces the
-    # "translation" field in the Crowdin config files.
-    #
-    # Note that this solution relies on us encoding project-specific logic here
-    # in code. Other options would be to just download all files to the same
-    # place and have the sync-out manage finding them, or to replicate the
-    # crowdin config approach. Both solutions would be better than this in the
-    # long run, but this should provide for an easier transition from a
-    # Crowdin-CLI-managed sync to this more manual approach. Once that
-    # transition is complete, we will be in a better position to explore
-    # alternatives.
-    # @param file [String] - the path for the file, as returned by
-    #  Crowdin::Project#list_files
-    # @param language [Hash] - the entry for the language, as returned by
-    #  Crowdin::Project#languages
-    def get_download_dest(file, language)
-      case @project.id
-      when "codeorg"
-        return File.join(@locales_dir, language["name"], file)
-      when "codeorg-markdown"
-        return File.join(@locales_dir, language["name"], "codeorg-markdown", file)
-      when "hour-of-code"
-        return File.join(@locales_dir, language["name"], "hourofcode", file)
-      else
-        raise "Unknown project #{@project.id.inspect}"
       end
     end
   end
