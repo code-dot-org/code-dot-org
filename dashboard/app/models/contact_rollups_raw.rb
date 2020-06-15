@@ -119,6 +119,23 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
+  def self.extract_pegasus_forms
+    forms_query = <<~SQL
+      SELECT email, kind, data->>'$.role_s' as role, MAX(updated_at) as updated_at
+      FROM #{CDO.pegasus_db_name}.forms
+      GROUP BY email, kind, role
+    SQL
+
+    extraction_query = get_extraction_query(
+      forms_query,
+      'email',
+      %w(kind role),
+      true,
+      'pegasus.forms'
+    )
+    ContactRollupsV2.execute_query_in_transaction(extraction_query)
+  end
+
   def self.extract_pegasus_form_geos
     # TODO: how to run this method in Rails end-to-end tests? It reads from pegasus tables.
     form_geos_query = <<~SQL
