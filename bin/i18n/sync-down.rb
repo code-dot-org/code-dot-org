@@ -33,6 +33,16 @@ def sync_down
         locales_dir: File.join(I18N_SOURCE_DIR, '..'),
         logger: logger
       }
+
+      # download strings not in the regular codeorg project to
+      # a specific subdirectory within the locale directory
+      case name.to_s
+      when "codeorg-markdown"
+        options[:locale_subdir] = "codeorg-markdown"
+      when "hour-of-code"
+        options[:locale_subdir] = "hourofcode"
+      end
+
       utils = Crowdin::Utils.new(project, options)
 
       puts "Fetching list of changed files"
