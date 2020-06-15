@@ -22448,6 +22448,13 @@ zh-TW:
             Create PT - Complete the Task:
               name: 建立 PT - 完成任務
           title: CSP 單元 8 - 建立 PT 準備 ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              name: 建立 PT - 檢閱任務
+            Create PT - Make a Plan:
+              name: 建立 PT - 制定計畫
+            Create PT - Complete the Task:
+              name: 建立 PT - 完成任務
         csp9-2020:
           stages:
             new stage:
