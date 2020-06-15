@@ -16426,6 +16426,9 @@ tr:
               name: yeni kademe
             Create PT - Complete the Task:
               name: Performans Görevini Oluştur - Görevi Tamamla
+          lessons:
+            Create PT - Complete the Task:
+              name: Performans Görevini Oluştur - Görevi Tamamla
         csp9-2020:
           stages:
             new stage:
