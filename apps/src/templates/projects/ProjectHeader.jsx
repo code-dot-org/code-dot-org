@@ -17,7 +17,7 @@ export default class ProjectHeader extends React.Component {
     const projectCountWithCommas = this.props.projectCount.toLocaleString();
 
     return (
-      <div>
+      <div style={{display: 'flex'}}>
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
