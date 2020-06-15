@@ -329,13 +329,16 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - cloudformation:DescribeStacks
-                  - cloudwatch:GetMetricStatistics
                   - ec2:DescribeInstances
+                  - ec2:DescribeInstanceAttribute
                 Resource: '*'
               - Effect: Allow
-                Action: cloudformation:DescribeStackResource
-                Resource: '*'
+                Action:
+                  - ec2:StopInstances
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    ec2:ResourceTag/environment: adhoc
         - PolicyName: RDSBackup
           PolicyDocument:
             Statement:
