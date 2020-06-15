@@ -25,3 +25,5 @@ export const MB_COMPONENTS = [
   'Compass',
   'LightSensor'
 ];
+
+export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
