@@ -33,6 +33,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
           'schoolEligible' in sessionEligibilityData
             ? sessionEligibilityData.schoolEligible
             : null,
+        schoolId:
+          'schoolId' in sessionEligibilityData
+            ? sessionEligibilityData.schoolId
+            : null,
         consentAFE:
           'consentAFE' in sessionEligibilityData
             ? sessionEligibilityData.consentAFE
