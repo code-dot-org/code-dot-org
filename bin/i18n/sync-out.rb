@@ -257,6 +257,16 @@ def distribute_translations
       sanitize_data_and_write(translations_with_fallback, destination)
     end
 
+    ### Pegasus markdown
+    Dir.glob("i18n/locales/#{locale}/codeorg-markdown/**/*.*") do |loc_file|
+      relative_dir = File.dirname(loc_file.delete_prefix("i18n/locales/#{locale}/codeorg-markdown"))
+      name = File.basename(loc_file, ".*")
+      dest_dir = "pegasus/sites.v3/code.org/i18n/public"
+      destination = File.join(dest_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      puts "FileUtils.mv(#{loc_file}, #{destination})"
+      FileUtils.mv(loc_file, destination)
+    end
+
     ### Pegasus
     loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
