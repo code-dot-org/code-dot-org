@@ -1,5 +1,6 @@
 import * as api from './api';
 import _ from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
@@ -12,6 +13,7 @@ import {
 
 export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
+const MICROBIT_CATEGORY = 'micro:bit';
 
 const pixelType = '[ColorLed].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(
@@ -71,10 +73,10 @@ const createButtonProps = {
   params: ['0']
 };
 
-export const blocks = [
-  /**
-   * Generic Johnny-Five / Firmata blocks
-   */
+/**
+ * Generic Johnny-Five / Firmata blocks
+ */
+export const makerBlocks = [
   {
     func: 'pinMode',
     parent: api,
@@ -138,11 +140,13 @@ export const blocks = [
     ...createButtonProps,
     noAutocomplete: true,
     docFunc: 'createButton'
-  },
+  }
+];
 
-  /**
-   * Circuit-Playground-specific blocks
-   */
+/**
+ * Circuit-Playground-specific blocks
+ */
+const circuitPlaygroundBlocks = [
   {
     func: 'onBoardEvent',
     parent: api,
@@ -390,15 +394,33 @@ export const blocks = [
   }
 ];
 
+/* micro:bit specific blocks */
+const microBitBlocks = [
+  {func: 'lightSensor.threshold', category: MICROBIT_CATEGORY, type: 'property'}
+];
+
 export const categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
     rgb: color.droplet_cyan,
     blocks: []
-  },
-  [CIRCUIT_CATEGORY]: {
+  }
+};
+
+export let blocks = [];
+
+if (experiments.isEnabled(experiments.MICROBIT)) {
+  categories[MICROBIT_CATEGORY] = {
     color: 'red',
     rgb: color.droplet_red,
     blocks: []
-  }
-};
+  };
+  blocks = [...makerBlocks, ...microBitBlocks];
+} else {
+  categories[CIRCUIT_CATEGORY] = {
+    color: 'red',
+    rgb: color.droplet_red,
+    blocks: []
+  };
+  blocks = [...makerBlocks, ...circuitPlaygroundBlocks];
+}
