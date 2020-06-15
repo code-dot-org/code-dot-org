@@ -34,6 +34,7 @@ class XhrProxyController < ApplicationController
     api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
+    api.fungenerators.com
     api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
