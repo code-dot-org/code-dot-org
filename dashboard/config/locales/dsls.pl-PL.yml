@@ -346,7 +346,8 @@ pl-PL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Jaki jest największy kawałek tej piosenki, który możesz zdefiniować
+            jako refren tak, aby refren powtarzał się za każdym razem, gdy jest wywoływany?
         title: Test wielokrotnego wyboru
       4-5 Suncatchers Match 1:
         answers:
@@ -404,6 +405,8 @@ pl-PL:
         - {}
         - correct: true
         - {}
+        content2: Fioletowy kwiatek może mieć 3, 2 lub 1 nektar, ale nie wiesz ile.
+          Które bloki poprawnie sprawdzają i zbierają cały nektar z fioletowego kwiatka?
         questions:
         - text: Wybierz najlepsze bloki.
         title: 'Pszczółka, warunki: Test wielokrotnego wyboru'
