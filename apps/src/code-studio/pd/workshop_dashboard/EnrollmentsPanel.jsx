@@ -188,7 +188,7 @@ export default class EnrollmentsPanel extends React.Component {
       return null;
     }
 
-    if (useFoormSurvey(lastSessionDate, course)) {
+    if (useFoormSurvey(subject, lastSessionDate)) {
       return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
     } else if (subject === SubjectNames.SUBJECT_CSF_101) {
       // Pegasus-based results are no longer offered.
