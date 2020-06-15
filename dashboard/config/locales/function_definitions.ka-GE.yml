@@ -20,9 +20,15 @@ ka-GE:
       2-3 Artist 7:
         draw_rect:
           name: მართკუთხედის_დახატვა
+          parameters:
+            width: სიგრძე
+            height: სიმაღლე
       2-3 Artist Debugging 10:
         draw square:
           name: კვადრატის დახატვა
+          parameters:
+            width: სიგრძე
+            height: სიმაღლე
         jump to middle:
           name: შუაში გადახტომა
         draw a circle:
@@ -183,18 +189,49 @@ ka-GE:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: ნექტარის აღება თაფლის გაკეთება
+          parameters:
+            honey: თაფლი
       Course 4 Play Lab Params 1:
         jump:
           name: ახტომა
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: ქულები
       Course 4 Play Lab Params 2:
         jump:
           name: ახტომა
       Course 4 Play Lab Params 3:
         jump:
           name: ახტომა
+          parameters:
+            height: სიმაღლე
+            actor: პერსონაჟი
       Course 4 Play Lab Params 4:
         do something:
           name: გააკეთეთ რამე
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+            speed: სიჩქარე
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+            speed: სიჩქარე
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: ქულები
       Course 4 Play Lab Vars 1:
         set score:
           name: ქულის განსაზღვრა
@@ -209,6 +246,8 @@ ka-GE:
       Course 4 SCF 1a:
         get nectar:
           name: ნექტარის აღება
+          parameters:
+            counter: მრიცხველი
       Course 4 SCF 2:
         draw octagons:
           name: რვაკუთხედების დახატვა
@@ -219,12 +258,18 @@ ka-GE:
           name: გააკეთეთ რამე
         draw an octagon:
           name: რვაკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       'Course E: Play Lab Project':
         do something:
           name: გააკეთეთ რამე
       Find the Wizard:
         do something:
           name: გააკეთეთ რამე
+      FoodFight:
+        score_points:
+          parameters:
+            points: ქულები
       Function intro Ryan:
         build bridge:
           name: ხიდის აგება
@@ -273,6 +318,23 @@ ka-GE:
           name: სამკუთხედი
         square:
           name: კვადრატი
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: სიგრძე
+        draw a loop:
+          parameters:
+            length: სიგრძე
+        draw spiral circle:
+          parameters:
+            size: ზომა
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: სიგრძე
+        draw spiral circle:
+          parameters:
+            size: ზომა
       K-1 Artist2 3:
         draw roof:
           name: სახურავის დახატვა
@@ -351,35 +413,65 @@ ka-GE:
           name: გააკეთეთ რამე
         draw a hexagon:
           name: ექვსკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         do something:
           name: გააკეთეთ რამე
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 15:
         draw a star:
           name: ვარსკვლავის დახატვა
+          parameters:
+            points: ქულები
+            length: სიგრძე
         draw a circle:
           name: წრის დახატვა
         draw a pinwheel:
           name: ბზრიალას დახატვა
+          parameters:
+            length: სიგრძე
+            repeat: გაიმეორეთ
         draw a triangle:
           name: სამკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         draw a shape:
           name: ფორმის დახატვა
+          parameters:
+            length: სიგრძე
         draw a house:
           name: სახლის დახატვა
+          parameters:
+            length: სიგრძე
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 2:
         do something:
           name: გააკეთეთ რამე
@@ -389,47 +481,92 @@ ka-GE:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: სამკუთხედის დახატვა
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: ხუთკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: სამკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         draw a hexagon:
           name: ექვსკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
         draw a sqaure:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: სამკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: სიგრძე
       NEW Course 4 Artist Params 9:
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
         do something:
           name: გააკეთეთ რამე
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       NEW Course 4 Play Lab Params 11:
         jump:
           name: ახტომა
+          parameters:
+            height: სიმაღლე
+            actor: პერსონაჟი
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+            speed: სიჩქარე
       New Artist Project:
         draw a star:
           name: ვარსკვლავის დახატვა
+          parameters:
+            points: ქულები
+            length: სიგრძე
         draw a circle:
           name: წრის დახატვა
         draw a pinwheel:
           name: ბზრიალას დახატვა
+          parameters:
+            length: სიგრძე
+            repeat: გაიმეორეთ
         draw a triangle:
           name: სამკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         draw a shape:
           name: ფორმის დახატვა
+          parameters:
+            length: სიგრძე
         draw a house:
           name: სახლის დახატვა
+          parameters:
+            length: სიგრძე
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
       New Minecraft Hero Project:
         function 1:
           name: ფუნქცია 1
@@ -438,6 +575,13 @@ ka-GE:
       New Play Lab Project:
         jump:
           name: ახტომა
+          parameters:
+            height: სიმაღლე
+            actor: პერსონაჟი
+        patrol:
+          parameters:
+            actor: პერსონაჟი
+            speed: სიჩქარე
       Robot Doodle:
         draw head:
           name: თავის დახატვა
@@ -526,9 +670,13 @@ ka-GE:
       course4_bee_fwp_challenge1:
         pick row:
           name: მწკრივის არჩევა
+          parameters:
+            length: სიგრძე
       course4_bee_fwp_challenge2:
         pick row:
           name: მწკრივის არჩევა
+          parameters:
+            length: სიგრძე
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"მარტივი" გადაწყვეტა'
@@ -544,16 +692,22 @@ ka-GE:
       courseC_artist_prog3:
         draw flame:
           name: ალის დახატვა
+          parameters:
+            x: x
         draw fire:
           name: ცეცხლის დახატვა
       courseC_artist_prog3_2018:
         draw flame:
           name: ალის დახატვა
+          parameters:
+            x: x
         draw fire:
           name: ცეცხლის დახატვა
       courseC_artist_prog3_2019:
         draw flame:
           name: ალის დახატვა
+          parameters:
+            x: x
         draw fire:
           name: ცეცხლის დახატვა
       courseC_data wizard:
@@ -1135,42 +1289,110 @@ ka-GE:
       courseF_artist_fwp1:
         draw a square:
           name: კვადრატის დახატვა
+        checker:
+          parameters:
+            size: ზომა
         do something:
           name: გააკეთეთ რამე
+        Make gingham:
+          parameters:
+            size: ზომა
+        black outline:
+          parameters:
+            length: სიგრძე
       courseF_artist_fwp2:
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
+        checker:
+          parameters:
+            size: ზომა
         do something:
           name: გააკეთეთ რამე
+        Make gingham:
+          parameters:
+            size: ზომა
+        black outline:
+          parameters:
+            length: სიგრძე
       courseF_artist_fwp2_predict1:
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
       courseF_artist_fwp3:
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
+        draw a square2:
+          parameters:
+            size: ზომა
         filled square:
           name: შევსებული კვადრატი
+          parameters:
+            size: ზომა
+        black outline:
+          parameters:
+            length: სიგრძე
       courseF_artist_fwp4:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       courseF_artist_fwp5:
         draw a polygon:
           name: მრავალკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: სიგრძე
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: სიგრძე
+            min: მინ
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: სიგრძე
+            min: მინ
       courseF_artist_fwp9:
         draw a star:
           name: ვარსკვლავის დახატვა
+          parameters:
+            points: ქულები
+            length: სიგრძე
         draw a circle:
           name: წრის დახატვა
         draw a pinwheel:
           name: ბზრიალას დახატვა
+          parameters:
+            length: სიგრძე
+            repeat: გაიმეორეთ
         draw a triangle:
           name: სამკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
         draw a shape:
           name: ფორმის დახატვა
+          parameters:
+            length: სიგრძე
         draw a house:
           name: სახლის დახატვა
+          parameters:
+            length: სიგრძე
         draw a square:
           name: კვადრატის დახატვა
+          parameters:
+            length: სიგრძე
+        draw a spiral edge:
+          parameters:
+            length: სიგრძე
+            min: მინ
       courseF_artist_fwp_challenge1:
         draw background:
           name: ფონის დახატვა
@@ -1183,6 +1405,8 @@ ka-GE:
           name: გააკეთეთ რამე
         draw an octagon:
           name: რვაკუთხედის დახატვა
+          parameters:
+            length: სიგრძე
       courseF_bee_conditionals2:
         move and check:
           name: გადაადგილება და შემოწმება
@@ -1231,12 +1455,40 @@ ka-GE:
           name: გადაადგილება და შემოწმება
         check nectar or honey:
           name: ნექტარის ან თაფლის შემოწმება
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: სიგრძე
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: სიგრძე
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: სიგრძე
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: სიგრძე
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: სიგრძე
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: სიგრძე
       courseF_bee_fwp_challenge1:
         pick row:
           name: მწკრივის არჩევა
+          parameters:
+            length: სიგრძე
       courseF_bee_fwp_challenge2:
         pick row:
           name: მწკრივის არჩევა
+          parameters:
+            length: სიგრძე
       courseF_bee_variables_6_2018:
         collect stairs:
           name: კიბეების შეგროვება
