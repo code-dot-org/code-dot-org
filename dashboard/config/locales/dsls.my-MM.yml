@@ -1005,49 +1005,49 @@ my-MM:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
+        - text: ဃ
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
+        - text: ဃ
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
+        - text: ဃ
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: က
+        - text: ခ
+        - text: ဂ
         - {}
         questions:
         - {}

@@ -72,7 +72,7 @@ my:
     print: ပုံနှိပ်သည်
   race_interstitial:
     submit: ပေးပို့ပါ
-    decline: ပိတ်မည်
+    decline: ပိတ်ပါ
   project:
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ
