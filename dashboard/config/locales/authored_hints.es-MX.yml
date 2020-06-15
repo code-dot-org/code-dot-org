@@ -1103,6 +1103,7 @@ es-MX:
           </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Recuerde sus funciones desde la etapa 16.
+        Course_4_SCF_1a_b: "Mira esta ruta como tu ruta principal: \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Deberías considerar usar un "for loop". No para los pasos,
           sino para el parámetro de la función,.
         Course_4_SCF_1a_d: |-
@@ -1330,6 +1331,7 @@ es-MX:
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "Ten en cuenta que la forma de todos los puntos de miel
           es similar.   \n\nBuen lugar para una función!"
+        Course_4_SCF_1b_b: "Mira esta idea de cómo la abeja podría viajar: \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Deberías considerar usar un "for loop" para la distancia
           que recorre la abeja.
         Course_4_SCF_1b_d: |-
@@ -2937,6 +2939,12 @@ es-MX:
             </block>
           </xml>
       Course 4 SCV 2:
+        Course_4_SCV_2_a: |-
+          El imagen completo está compuesto de 10 de estes "flores":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...que están compuestos de 10 de estes decágonos:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Este diseño utiliza loops anidados (tres profundos). Todos
           los loops se ejecutan "lados" veces. '
         Course_4_SCV_2_c: El artista gira a la izquierda cuando crea cada decágono,
@@ -5194,23 +5202,12 @@ es-MX:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -12271,7 +12268,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12282,7 +12279,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12293,7 +12290,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12665,24 +12662,13 @@ es-MX:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -13066,8 +13052,6 @@ es-MX:
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga
           en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'Hay un nuevo loop: ''repetir hasta en la calabaza''.
-          ¿Puedes ver cómo usarlo en este desafío?'
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga
           en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!
       courseD_farmer_condLoops6:
