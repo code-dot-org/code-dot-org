@@ -5691,11 +5691,21 @@ zh-CN:
         - text: 仔细查看下面的代码，在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: '蜜蜂会在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+          correct: true
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          feedback: '错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          feedback: '错误。错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
         - text: 我不知道。
+          feedback: "“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。\n"
         questions:
         - text: 仔细查看下面的代码。在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_nestedLoops2_predict1:

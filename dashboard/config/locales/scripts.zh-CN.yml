@@ -94,6 +94,8 @@ zh-CN:
               name: 蜜蜂： 循环
             The Big Event:
               name: 大事件
+            'Studio: Create a Story':
+              name: 工作室：写故事
             Going Places Safely:
               name: 去安全的地方
             'Artist: Loops':
@@ -175,6 +177,8 @@ zh-CN:
               name: 大事件
             Flappy:
               name: Flappy Bird
+            'Studio: Create a Story':
+              name: 工作室：写故事
             Your Digital Footprint:
               name: 你的数字足迹
             'Artist: Nested Loops':
@@ -258,6 +262,10 @@ zh-CN:
               name: 小蜜蜂课程：调试
             Bounce:
               name: 跳
+            'Studio: Create a Story':
+              name: 工作室：写故事
+            'Studio: Create a Game':
+              name: 工作室：创造游戏
             Internet:
               name: 互联网
             Crowdsourcing:
@@ -1653,8 +1661,12 @@ zh-CN:
               name: HTTP 和抽象
             Practice PT - The Internet and Society:
               name: PT练习 - 互联网和社会
+            Tell Me a Secret - Encrypting Text:
+              name: 告诉我一个秘密 - 加密文字
             Cracking the Code:
               name: 解析代码
+            Encryption Algorithms:
+              name: 加密算法︰
             Alice and Bob and Asymmetric Keys:
               name: 爱丽丝和鲍勃与非对称密钥
             Public Key Crypto:
@@ -23053,6 +23065,13 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+            Create PT - Review the Task:
+              name: 创建表演任务 - 评审任务
+            Create PT - Make a Plan:
+              name: 创建表演任务 - 制定计划
+            Create PT - Complete the Task:
+              name: 创建 表演任务- 完成任务
+          lessons:
             Create PT - Review the Task:
               name: 创建表演任务 - 评审任务
             Create PT - Make a Plan:
