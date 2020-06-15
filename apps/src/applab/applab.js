@@ -79,6 +79,7 @@ import {
 } from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 
 /**
  * Create a namespace for the application.
@@ -1011,6 +1012,9 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css('background-color', white);
+  }
   Applab.tickCount = 0;
 };
 
@@ -1306,6 +1310,12 @@ Applab.beginVisualizationRun = function() {
   Applab.running = true;
   $('#headers').addClass('dimmed');
   $('#codeWorkspace').addClass('dimmed');
+  if (!Applab.isReadOnlyView) {
+    $('.droplet-main-canvas').css(
+      'background-color',
+      workspace_running_background
+    );
+  }
   designMode.renderDesignWorkspace();
   queueOnTick();
 };
