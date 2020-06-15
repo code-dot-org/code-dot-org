@@ -20,9 +20,15 @@ id-ID:
       2-3 Artist 7:
         draw_rect:
           name: gambar_persegi panjang
+          parameters:
+            width: lebar
+            height: tinggi
       2-3 Artist Debugging 10:
         draw square:
           name: gambar kotak
+          parameters:
+            width: lebar
+            height: tinggi
         jump to controller top left:
           name: lompat ke kiri atas pengontrol
         jump to middle:
@@ -33,6 +39,8 @@ id-ID:
           name: gambar sebuah tombol
         draw cord:
           name: gambar tali
+        draw R pad:
+          name: draw R pad
       2-3 Artist Debugging 5:
         draw left leg:
           name: gambar kaki kiri
@@ -40,6 +48,9 @@ id-ID:
           name: gambar kaki kanan
         draw body and arms:
           name: gambar tubuh dan lengan
+          parameters:
+            armlength: armlength
+            bodylength: bodylength
         draw a head:
           name: gambar sebuah kepala
       2-3 Artist Debugging 6:
@@ -62,6 +73,9 @@ id-ID:
           name: gambar D
         draw E:
           name: gambar E
+      2-3 Artist Functions 1:
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 10:
         big gear:
           name: gigi besar
@@ -79,9 +93,13 @@ id-ID:
       2-3 Artist Functions 2:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 3:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       2-3 Artist Functions 4:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -151,6 +169,9 @@ id-ID:
       4-5 Bee Debugging 8:
         get 5 nectar:
           name: dapatkan 5 nektar
+      4-5 Bee Debugging 9:
+        make all honey:
+          name: make all honey
       Alien Defender:
         game has been won:
           name: permainan telah dimenangkan
@@ -161,24 +182,199 @@ id-ID:
           name: cerita
         starting path:
           name: jalur permulaan
+      Course 4 Artist Binary 1:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 2:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 3:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 4:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 5:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 6:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary 7:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary Free Play 2:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary Free Play 2a:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary Free Play 2b:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      Course 4 Artist Binary pre1:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      Course 4 Artist Functions Inspiration:
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square 20px wide
+      Course 4 Artist Functions challenge:
+        draw a line of squares:
+          name: draw a line of squares
+          description: draw a 6 squares next to one another 6 squares long
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square 20px wide
+      Course 4 Bee Params 1:
+        get 3 nectar:
+          name: get 3 nectar
+      Course 4 Bee Params 2:
+        get 3 nectar:
+          name: get 3 nectar
+      Course 4 Bee Params 3:
+        get 3 nectar:
+          name: get 3 nectar
+          parameters:
+            direction: direction
+      Course 4 Bee Params 4:
+        get 3 nectar:
+          name: get 3 nectar
+          parameters:
+            direction: direction
       Course 4 Bee Params 5:
         get 5 nectar:
           name: dapatkan 5 nektar
+          parameters:
+            direction: direction
       Course 4 Bee Params 6:
         get 5 nectar:
           name: dapatkan 5 nektar
+          parameters:
+            direction: direction
+            nectar units: nectar units
+      Course 4 Bee Params 7:
+        get many nectar:
+          name: get many nectar
+          description: Collect a given number of nectar in either direction
+          parameters:
+            direction: direction
+            nectars: nectars
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          name: get nectar make honey
+          description: Move in a direction to either collect nectar or make honey.
+          parameters:
+            direction: direction
+            nectars: nectars
+            honey: madu
       Course 4 Play Lab Params 1:
         jump:
           name: lompat
+          description: Makes the main character jump up 100 pixels
+      Course 4 Play Lab Params 10:
+        level_up:
+          name: level_up
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: poin
       Course 4 Play Lab Params 2:
         jump:
           name: lompat
+          description: Makes the main character jump up 'height' pixels
       Course 4 Play Lab Params 3:
         jump:
           name: lompat
+          description: Makes the given actor jump the given height
+          parameters:
+            height: tinggi
+            actor: aktor
       Course 4 Play Lab Params 4:
+        patrol:
+          name: patrol
+          description: Move a sprite up an down
         do something:
           name: buat sesuatu
+      Course 4 Play Lab Params 5:
+        patrol:
+          name: patrol
+          description: Move a sprite up an down
+          parameters:
+            actor: aktor
+      Course 4 Play Lab Params 6:
+        patrol:
+          name: patrol
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: aktor
+      Course 4 Play Lab Params 7:
+        patrol:
+          name: patrol
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: aktor
+            speed: kecepatan
+      Course 4 Play Lab Params 8:
+        patrol:
+          name: patrol
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: aktor
+            speed: kecepatan
+      Course 4 Play Lab Params 9:
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: poin
       Course 4 Play Lab Vars 1:
         set score:
           name: tetapkan skor
@@ -188,12 +384,46 @@ id-ID:
       Course 4 SCF 1:
         draw a hexagon:
           name: menggambar segi enam
+        draw a line of hexagons:
+          name: draw a line of hexagons
+        shift down/forward:
+          name: shift down/forward
+        shift down/backward:
+          name: shift down/backward
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
       Course 4 SCF 1a:
         get nectar:
           name: Dapatkan madu
+          parameters:
+            dir: dir
+            counter: Pencacah
+      Course 4 SCF 1b:
+        make honey up and over:
+          name: make honey up and over
+      Course 4 SCF 2:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
+        draw octagons:
+          name: draw octagons
+          parameters:
+            numOctagons: numOctagons
+        draw an octagon:
+          name: draw an octagon
+        shift down:
+          name: shift down
       Course 4 SCF 3:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: buat sesuatu
+        draw an octagon:
+          name: draw an octagon
+          parameters:
+            length: panjang
       'Course E: Play Lab Project':
         do something:
           name: buat sesuatu
@@ -202,31 +432,197 @@ id-ID:
           name: periksa tebak
         do something:
           name: buat sesuatu
+      FoodFight:
+        level_up:
+          name: level_up
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
+        score_points:
+          name: score_points
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: poin
+      Function intro Ryan:
+        build bridge:
+          name: build bridge
+      Function intro Ryan_2019:
+        build bridge:
+          name: build bridge
       Geometric Sun:
+        draw a door:
+          name: draw a door
+        draw grass:
+          name: draw grass
+        draw windows:
+          name: draw windows
+        rectangle:
+          name: rectangle
+          description: lol
+        sun:
+          name: sun
         diamond:
           name: berlian
+        window:
+          name: window
         draw a house:
           name: gambar sebuah rumah
+        triangle:
+          name: triangle
+        square:
+          name: square
+          description: lol
       Geometric Sun_2018:
+        draw a door:
+          name: draw a door
+        draw grass:
+          name: draw grass
+        draw windows:
+          name: draw windows
+        rectangle:
+          name: rectangle
+          description: lol
+        sun:
+          name: sun
         diamond:
           name: berlian
+        window:
+          name: window
         draw a house:
           name: gambar sebuah rumah
+        triangle:
+          name: triangle
+        square:
+          name: square
+          description: lol
       Guess The Number:
         check guess:
           name: periksa tebak
+          parameters:
+            theGuess: theGuess
+      InspirationalArtwork:
+        n-sided shape:
+          name: n-sided shape
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+          parameters:
+            sides: sides
+            length: panjang
+        draw a loop:
+          name: draw a loop
+          parameters:
+            length: panjang
+            sides: sides
+        draw spiral circle:
+          name: draw spiral circle
+          parameters:
+            size: ukuran
+      InspirationalArtwork_2018:
+        draw a loop:
+          name: draw a loop
+          parameters:
+            length: panjang
+            sides: sides
+        n-sided shape:
+          name: n-sided shape
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+        draw spiral circle:
+          name: draw spiral circle
+          parameters:
+            size: ukuran
+      K-1 Artist2 3:
+        draw roof:
+          name: draw roof
+      K-1 Artist2 4:
+        draw rectangle:
+          name: draw rectangle
+      K-1 Artist2 5:
+        draw rectangle:
+          name: draw rectangle
+      MC_HOC_2017_07_Cole:
+        clear path:
+          name: clear path
+      MC_HOC_2017_07_Cole_2019:
+        clear path:
+          name: clear path
+      MC_HOC_2017_10_RETRY:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: fix long path
+        fix short path:
+          name: fix short path
+      MC_HOC_2017_Ali:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: build short bridge
+        build long bridge:
+          name: build long bridge
+      MC_HOC_2017_FP20x20:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
+      NEW Course 4 Artist Functions 11:
+        draw a line of  squares:
+          name: draw a line of  squares
+          description: draw a 6 squares next to one another 6 squares long
+        draw a square 20:
+          name: draw a square 20
+          description: Draw a square with sides 20 pixels long
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 12:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 13:
+        draw a square 20:
+          name: draw a square 20
+        draw a line of squares:
+          name: draw a line of squares
+      NEW Course 4 Artist Functions 14:
+        empty function:
+          name: empty function
+        draw a line of squares:
+          name: draw a line of squares
+          description: 'draw a line of squares '
+        draw a square 40:
+          name: draw a square 40
+          description: Draw a square with sides length 40
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: menggambar sebuah persegi empat
       NEW Course 4 Artist Functions 4:
         draw a square:
           name: menggambar sebuah persegi empat
+          description: draws a square that is 100 pixels in size
       NEW Course 4 Artist Functions 7:
         draw a square:
           name: menggambar sebuah persegi empat
       NEW Course 4 Artist Functions 8:
         draw a triangle:
           name: menggambar sebuah segitiga
+          description: 'draws a triangle that is 100 pixels in size
+
+'
       NEW Course 4 Artist Functions 9:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -235,25 +631,89 @@ id-ID:
       NEW Course 4 Artist Params 1:
         draw a square:
           name: menggambar sebuah persegi empat
+        Draw a triangle:
+          name: Draw a triangle
       NEW Course 4 Artist Params 10:
         do something:
           name: buat sesuatu
         draw a hexagon:
           name: menggambar segi enam
+          description: draw a hexagon that is 100 pixels in size with a length parameter
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+            length: panjang
         do something:
           name: buat sesuatu
+          parameters:
+            sides: sides
+            length: panjang
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: panjang
+            sides: sides
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: panjang
+            sides: sides
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: panjang
+            sides: sides
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: panjang
+            sides: sides
       NEW Course 4 Artist Params 15:
         draw a star:
           name: menggambar bintang
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          name: draw a shape
+          parameters:
+            sides: sides
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
+            sides: sides
       NEW Course 4 Artist Params 2:
         do something:
           name: buat sesuatu
@@ -263,71 +723,254 @@ id-ID:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: menggambar sebuah segitiga
+          description: draw a triangle that is 50 pixels in size
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          name: draw a triangle with length
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          name: draw a pentagon
+          description: draw a pentagon that is 100 pixels
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
         draw a hexagon:
           name: menggambar segi enam
+          description: draw a hexagon that is 100 pixels in size
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          description: draw a square that is 100 pixels' length in size
+          parameters:
+            length: panjang
+        draw a sqaure:
+          name: draw a sqaure
+          description: draw a square that is 100 pixels in size
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: menggambar sebuah segitiga
+          description: 'draw a triangle with length parameter
+
+'
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          name: draw a triangle with length
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 9:
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
         do something:
           name: buat sesuatu
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: panjang
+            sides: sides
       NEW Course 4 Play Lab Params 11:
         jump:
           name: lompat
+          description: jump function block with height and actor parameter
+          parameters:
+            height: tinggi
+            actor: aktor
+        patrol:
+          name: patrol
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: aktor
+            speed: kecepatan
       New Artist Project:
         draw a star:
           name: menggambar bintang
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          name: draw a shape
+          parameters:
+            sides: sides
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
+      New Minecraft Hero Project:
+        function 1:
+          name: function 1
+        function 2:
+          name: function 2
       New Play Lab Project:
         jump:
           name: lompat
+          description: jump function block with height and actor parameter
+          parameters:
+            height: tinggi
+            actor: aktor
+        patrol:
+          name: patrol
+          description: a patrol function that has a actor and speed parameter
+          parameters:
+            actor: aktor
+            speed: kecepatan
       Robot Doodle:
+        25 pixel square:
+          name: 25 pixel square
         draw head:
           name: gambar kepala
+        draw eye:
+          name: draw eye
       Robot Doodle_2018:
+        25 pixel square:
+          name: 25 pixel square
         draw head:
           name: gambar kepala
+        draw eye:
+          name: draw eye
       Standalone_Artist_7:
         draw a flower:
           name: menggambar bunga
+      Standalone_Artist_8:
+        draw a shape:
+          name: draw a shape
       Standalone_Artist_9:
         my function:
           name: Fungsiku
+      course1_artist_loops_challenge1:
+        '"simple" solution':
+          name: '"simple" solution'
       course1_artist_loops_challenge2:
         potential solution:
           name: Kemungkinan solusi
       course3_artist_functions_challenge1:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       course3_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       course3_bee_functions_challenge1:
         do something:
           name: buat sesuatu
+        get 3 nectar or honey:
+          name: get 3 nectar or honey
       course3_bee_functions_challenge2:
         do something:
           name: buat sesuatu
+        move and collect:
+          name: move and collect
+      course3_bee_functions_challenge3:
+        check nectar or honey:
+          name: check nectar or honey
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+      course3_bee_functions_challenge4:
+        check nectar or honey:
+          name: check nectar or honey
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+        move and check:
+          name: move and check
+      course3_playLab_challenge1:
+        win game:
+          name: win game
+        lose game:
+          name: lose game
+        keep playing:
+          name: keep playing
+      course4_artist_binary_challenge1:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      course4_artist_binary_challenge2:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      course4_artist_concept_challenge2:
+        draw pinwheel:
+          name: draw pinwheel
       course4_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       course4_artist_fwp_challenge1:
+        draw background:
+          name: draw background
+          parameters:
+            color: warna
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: buat sesuatu
+      course4_bee_for_challenge1:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      course4_bee_fwp_challenge1:
+        pick row:
+          name: pick row
+          parameters:
+            length: panjang
+      course4_bee_fwp_challenge2:
+        pick row:
+          name: pick row
+          parameters:
+            length: panjang
+      courseA_artist_loops_challenge1:
+        '"simple" solution':
+          name: '"simple" solution'
       courseB_artist_loops_challenge2:
         potential solution:
           name: Kemungkinan solusi
@@ -337,9 +980,331 @@ id-ID:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: Kemungkinan solusi
+      courseC_artist_prog3:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
+      courseC_artist_prog3_2018:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
+      courseC_artist_prog3_2019:
+        draw flame:
+          name: draw flame
+          parameters:
+            x: x
+        draw fire:
+          name: draw fire
+      courseC_artist_prog4:
+        booster:
+          name: booster
+      courseC_artist_prog4_2018:
+        booster:
+          name: booster
+      courseC_artist_prog4_2019:
+        booster:
+          name: booster
       courseC_data wizard:
         do something:
           name: buat sesuatu
+      courseD_artist_binary1:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_artist_binary1_2018:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_artist_binary1_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_artist_binary2:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary2_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary2_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary3:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary3_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary3_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary4:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary4_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary4_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary5:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary5_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary5_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary6:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary6_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary6_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary7:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary7_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary7_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8_predict1:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8_predict1_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary8_predict1_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binaryFP_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binaryFP_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary_challenge1_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary_challenge1_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary_challenge2_2018:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_artist_binary_challenge2_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_autorun_binary2_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_autorun_binary3_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_autorun_binary4_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_autorun_binary5_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_autorun_binary6_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_autorun_binary7_2019:
+        draw bit:
+          name: draw bit
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+      courseD_autorun_binary8_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseD_autorun_binary8_predict1_2019:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      courseE_Dogger_2:
+        stop_everything:
+          name: stop_everything
+        lose:
+          name: lose
       courseE_artist_concept1:
         do something:
           name: buat sesuatu
@@ -351,36 +1316,76 @@ id-ID:
       courseE_artist_concept4:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw a line of squares:
+          name: draw a line of squares
+        draw a plane of squares:
+          name: draw a plane of squares
       courseE_artist_concept4_2018:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw a line of squares:
+          name: draw a line of squares
+        draw a plane of squares:
+          name: draw a plane of squares
       courseE_artist_concept_challenge1:
         do something:
           name: buat sesuatu
       courseE_artist_concept_challenge1_2018:
         do something:
           name: buat sesuatu
+      courseE_artist_concept_challenge2:
+        draw pinwheel:
+          name: draw pinwheel
+      courseE_artist_concept_challenge2_2018:
+        draw pinwheel:
+          name: draw pinwheel
+      courseE_artist_functions1:
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions10:
         do something:
           name: buat sesuatu
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
       courseE_artist_functions10_2018:
         do something:
           name: buat sesuatu
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
       courseE_artist_functions10_2019:
         do something:
           name: buat sesuatu
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+      courseE_artist_functions1_copy:
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_2018:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_2019:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions2_copy:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions3_2018:
         draw a star:
           name: menggambar bintang
@@ -406,24 +1411,41 @@ id-ID:
         draw a star:
           name: menggambar bintang
       courseE_artist_functions7:
+        draw a window:
+          name: draw a window
         draw a house:
           name: gambar sebuah rumah
       courseE_artist_functions7_2018:
+        draw a window:
+          name: draw a window
         draw a house:
           name: gambar sebuah rumah
+      courseE_artist_functions7_2019:
+        draw a window:
+          name: draw a window
       courseE_artist_functions8:
         do something:
           name: buat sesuatu
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
       courseE_artist_functions8_2018:
         do something:
           name: buat sesuatu
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
       courseE_artist_functions8_2019:
         do something:
           name: buat sesuatu
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
       courseE_artist_functions8a_2018:
@@ -437,83 +1459,149 @@ id-ID:
         do something:
           name: buat sesuatu
       courseE_artist_functions8b_2018:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
       courseE_artist_functions8c_2018:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
+        staggered squares:
+          name: staggered squares
       courseE_artist_functions9:
         do something:
           name: buat sesuatu
         draw triangle:
           name: gambar segitiga
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functions9_2018:
         do something:
           name: buat sesuatu
         draw triangle:
           name: gambar segitiga
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functions9_2019:
         do something:
           name: buat sesuatu
         draw triangle:
           name: gambar segitiga
+        draw line of triangles:
+          name: draw line of triangles
       courseE_artist_functionsProj_2018:
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: draw hexagon
+        draw line of hexagons:
+          name: draw line of hexagons
+        staggered squares:
+          name: staggered squares
+        draw a line of squares:
+          name: draw a line of squares
         draw square:
           name: gambar kotak
       courseE_artist_functions_challenge1:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_challenge1_2018:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_challenge1_2019:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_challenge2:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_challenge2_2018:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_challenge2_2019:
+        my design:
+          name: my design
         do something:
           name: buat sesuatu
       courseE_artist_functions_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_2018:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_2019:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict1_copy:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw ear stems:
+          name: draw ear stems
       courseE_artist_functions_predict2:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: buat sesuatu
       courseE_artist_functions_predict2_2018:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: buat sesuatu
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: draw line of polygons
+        draw polygon:
+          name: draw polygon
         do something:
           name: buat sesuatu
       courseE_bee_concept4:
@@ -555,18 +1643,45 @@ id-ID:
       courseE_bee_functions_challenge1:
         do something:
           name: buat sesuatu
+        get 3 nectar or honey:
+          name: get 3 nectar or honey
       courseE_bee_functions_challenge2:
         do something:
           name: buat sesuatu
+        move and collect:
+          name: move and collect
       courseE_farmer_concept1:
         do something:
           name: buat sesuatu
       courseE_farmer_concept2:
         do something:
           name: buat sesuatu
+        get pumpkin:
+          name: get pumpkin
+      courseE_farmer_concept2_2018:
+        get pumpkin:
+          name: get pumpkin
       courseE_farmer_concept3:
         do something:
           name: buat sesuatu
+      courseE_farmer_functions10a1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
+      courseE_farmer_functions10a1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+        pumpkin square:
+          name: pumpkin square
       courseE_farmer_functions10b:
         navigate:
           name: navigasi
@@ -577,12 +1692,98 @@ id-ID:
           name: temukan labu
         wander path:
           name: jalur susuran
+      courseE_farmer_functions11_predict_2018:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions11_predict_2019:
+        pick along path:
+          name: pick along path
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: check square for corn
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions13_2018:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions13_2019:
+        pick along path:
+          name: pick along path
+        check for corn:
+          name: check for corn
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
+      courseE_farmer_functions1a_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions1a_2019:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2018:
+        check square for corn:
+          name: check square for corn
+      courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: check square for corn
       courseE_farmer_functions2ba:
         corn and pumpkin:
           name: jagung dan labu
+      courseE_farmer_functions2ba_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
       courseE_farmer_functions3c:
         corn and pumpkin:
           name: jagung dan labu
+      courseE_farmer_functions3c1_2018:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c1_2019:
+        pick along path:
+          name: pick along path
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2018:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
+      courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: check square for corn
+        get all pumpkins:
+          name: get all pumpkins
       courseE_farmer_functions4b:
         corn and pumpkin:
           name: jagung dan labu
@@ -592,12 +1793,37 @@ id-ID:
       courseE_farmer_functions6c:
         corn and pumpkin:
           name: jagung dan labu
+      courseE_farmer_functions7a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions7a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2019:
+        garden square:
+          name: garden square
       courseE_farmer_functions8b:
         navigate:
           name: navigasi
+      courseE_farmer_functions9a1_2018:
+        garden square:
+          name: garden square
+      courseE_farmer_functions9a1_2019:
+        garden square:
+          name: garden square
       courseE_farmer_functions9b:
         navigate:
           name: navigasi
+      courseE_playLab_challenge1:
+        win game:
+          name: win game
+        lose game:
+          name: lose game
+        keep playing:
+          name: keep playing
       courseE_playLab_scaffold1:
         do something:
           name: buat sesuatu
@@ -615,72 +1841,305 @@ id-ID:
           name: menggambar sebuah persegi empat
         checker:
           name: pemeriksa
+          parameters:
+            size: ukuran
+            color: warna
         do something:
           name: buat sesuatu
         Make gingham:
           name: Buat genggang
+          parameters:
+            size: ukuran
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
       courseF_artist_fwp2:
         draw a square:
           name: menggambar sebuah persegi empat
           description: gambar persegi empat dengan parameter panjang
+          parameters:
+            length: panjang
         checker:
           name: pemeriksa
+          parameters:
+            size: ukuran
+            color: warna
         do something:
           name: buat sesuatu
         Make gingham:
           name: Buat genggang
+          parameters:
+            size: ukuran
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
       courseF_artist_fwp2_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
           description: gambar persegi empat dengan parameter panjang
+          parameters:
+            length: panjang
       courseF_artist_fwp3:
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
         draw a square2:
           name: draw a square2
+          parameters:
+            size: ukuran
         filled square:
           name: persegi empat terisi
+          parameters:
+            size: ukuran
+            color: warna
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
+      courseF_artist_fwp4:
+        draw a polygon:
+          name: draw a polygon
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: panjang
+            sides: sides
+      courseF_artist_fwp5:
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            length: panjang
+            sides: sides
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: panjang
+            sides: sides
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: panjang
+            sides: sides
+            min: menit
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: panjang
+            sides: sides
+            min: menit
       courseF_artist_fwp9:
         draw a star:
           name: menggambar bintang
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
+        draw a pinwheel:
+          name: draw a pinwheel
+          parameters:
+            sides: sides
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          name: draw a shape
+          parameters:
+            sides: sides
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
+        draw a spiral edge:
+          name: draw a spiral edge
+          parameters:
+            length: panjang
+            sides: sides
+            min: menit
       courseF_artist_fwp_challenge1:
+        draw background:
+          name: draw background
+          parameters:
+            color: warna
+        draw a polygon:
+          name: draw a polygon
+          parameters:
+            sides: sides
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: buat sesuatu
       courseF_artist_fwp_challenge2:
+        draw a square 20:
+          name: draw a square 20
+          description: draw a square of size 20 pixels
         do something:
           name: buat sesuatu
+        draw an octagon:
+          name: draw an octagon
+          parameters:
+            length: panjang
+      courseF_bee_conditionals2:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_for_challenge1:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter:
+          name: move and get nectar with counter
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: move and get nectar with counter
       courseF_bee_functions2:
         get only nectar:
           name: dapatkan nektar saja
       courseF_bee_functions3:
         only make honey:
           name: buat madu saja
+      courseF_bee_functions3a:
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions4:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions5a:
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions6:
+        get nectar make honey:
+          name: get nectar make honey
+      courseF_bee_functions7:
+        get nectar make honey:
+          name: get nectar make honey
       courseF_bee_functions8a:
         do something:
           name: buat sesuatu
+        get nectar make honey:
+          name: get nectar make honey
+      courseF_bee_functionsPre7:
+        get nectar make honey:
+          name: get nectar make honey
+      courseF_bee_functions_challenge1:
+        row of nectar:
+          name: row of nectar
+        rowOfNectar:
+          name: rowOfNectar
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_functions_challenge2:
+        rowOfNectar:
+          name: rowOfNectar
+        move and check:
+          name: move and check
+        check nectar or honey:
+          name: check nectar or honey
+      courseF_bee_fwp2:
+        rowOfNectar:
+          name: rowOfNectar
+      courseF_bee_fwp3:
+        rowOfNectar:
+          name: rowOfNectar
+      courseF_bee_fwp4:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            length: panjang
+      courseF_bee_fwp5:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            width: lebar
+      courseF_bee_fwp6:
+        rowOfNectar:
+          name: rowOfNectar
+          parameters:
+            width: lebar
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
+      courseF_bee_fwp_challenge1:
+        pick row:
+          name: pick row
+          parameters:
+            length: panjang
+      courseF_bee_fwp_challenge2:
+        pick row:
+          name: pick row
+          parameters:
+            length: panjang
+      courseF_bee_variables_1_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_1_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_2_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_3_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_4_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2018:
+        collect row:
+          name: collect row
+      courseF_bee_variables_5_2019:
+        collect row:
+          name: collect row
+      courseF_bee_variables_6_2018:
+        collect stairs:
+          name: collect stairs
+      courseF_bee_variables_6_2019:
+        collect stairs:
+          name: collect stairs
       courseF_bee_variables_7_2018:
         collect:
           name: kumpulkan
@@ -688,8 +2147,47 @@ id-ID:
         collect:
           name: kumpulkan
       courseF_bee_variables_8_2018:
+        move and increment:
+          name: move and increment
         collect:
           name: kumpulkan
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: move and increment
         collect:
           name: kumpulkan
+      grade5_artist_binary11:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      grade5_artist_binary4:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      grade5_artist_binary5:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      grade5_artist_binary8:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
+      grade5_artist_binary9:
+        draw:
+          name: draw
+          parameters:
+            binary: binary
+        draw bit:
+          name: draw bit
