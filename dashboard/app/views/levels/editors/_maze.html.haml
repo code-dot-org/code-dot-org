@@ -6,9 +6,9 @@
 = render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
 = render partial: 'levels/editors/fields/grid', locals: {f: f}
 
-= render partial: 'levels/editors/fields/maze_editors', locals: {f: f}
-= render partial: 'levels/editors/fields/karel_editors', locals: {f: f} if @level.is_a? Karel
+= render partial: 'levels/editors/fields/maze_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/karel_fields', locals: {f: f} if @level.is_a? Karel
 
-= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f}
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
 = render partial: 'levels/editors/fields/callouts', locals: {f: f}
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}

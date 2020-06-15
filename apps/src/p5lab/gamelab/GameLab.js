@@ -23,4 +23,22 @@ GameLab.prototype.init = function(config) {
   return P5Lab.prototype.init.call(this, config);
 };
 
+GameLab.prototype.resetHandler = function(ignore) {
+  if (!this.studioApp_.config.readonlyWorkspace) {
+    $('.droplet-main-canvas').css('background-color', '#FFF');
+    $('.droplet-transition-container').css('background-color', '#FFF');
+    $('.ace_scroller').css('background-color', '#FFF');
+  }
+  P5Lab.prototype.resetHandler.call(this, ignore);
+};
+
+GameLab.prototype.runButtonClick = function() {
+  if (!this.studioApp_.config.readonlyWorkspace) {
+    $('.droplet-main-canvas').css('background-color', '#E5E5E5');
+    $('.droplet-transition-container').css('background-color', '#E5E5E5');
+    $('.ace_scroller').css('background-color', '#E5E5E5');
+  }
+  P5Lab.prototype.runButtonClick.call(this);
+};
+
 module.exports = GameLab;
