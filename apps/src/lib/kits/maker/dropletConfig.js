@@ -4,8 +4,8 @@ import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
   N_COLOR_LEDS,
-  BUTTON_VARS,
-  COMPONENT_EVENTS,
+  CP_BUTTON_VARS,
+  CP_COMPONENT_EVENTS,
   SONG_CHARGE,
   SONG_1D
 } from './boards/circuitPlayground/PlaygroundConstants';
@@ -26,26 +26,14 @@ export function stringifySong(song) {
 }
 
 /**
- * Relies on `this` being the Droplet socket when in droplet mode, and, in
- * text mode, this.parent being undefined.
- * @param {AceEditor} editor
- * @returns {Array.<string>}
- */
-const boardEventDropdownGenerator = function(editor) {
-  return getBoardEventDropdownForParam(
-    getFirstParam('onBoardEvent', this.parent, editor)
-  );
-};
-
-/**
  * Generate an array of dropdown strings appropriate for the second
  * parameter to onBoardEvent, given a particular first parameter to
  * onBoardEvent.
  * @param {string} firstParam - first parameter to onBoardEvent
  */
-export function getBoardEventDropdownForParam(firstParam) {
+export function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
-  const idealOptions = COMPONENT_EVENTS[firstParam];
+  const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
     return _.chain(idealOptions)
       .sort()
@@ -55,7 +43,7 @@ export function getBoardEventDropdownForParam(firstParam) {
   }
 
   // If we can't find an ideal subset, use all possible
-  return _.chain(COMPONENT_EVENTS)
+  return _.chain(componentEvents)
     .values()
     .flatten()
     .sort()
@@ -67,7 +55,7 @@ export function getBoardEventDropdownForParam(firstParam) {
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
+export const additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {
@@ -162,7 +150,15 @@ export const blocks = [
     paletteParams: ['component', 'event', 'callback'],
     params: ['buttonL', '"down"', 'function(event) {\n  \n}'],
     allowFunctionDrop: {2: true},
-    dropdown: {0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator}
+    dropdown: {
+      0: Object.keys(CP_COMPONENT_EVENTS),
+      1: function(editor) {
+        return getBoardEventDropdownForParam(
+          getFirstParam('onBoardEvent', this.parent, editor),
+          CP_COMPONENT_EVENTS
+        );
+      }
+    }
   },
 
   {
@@ -324,9 +320,9 @@ export const blocks = [
   // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'isPressed',
-    objectDropdown: {options: BUTTON_VARS, dropdownOnly: true},
+    objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
     category: CIRCUIT_CATEGORY,
-    blockPrefix: `${BUTTON_VARS[0]}.`,
+    blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.isPressed',
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
@@ -334,9 +330,9 @@ export const blocks = [
   // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'holdtime',
-    objectDropdown: {options: BUTTON_VARS, dropdownOnly: true},
+    objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
     category: CIRCUIT_CATEGORY,
-    blockPrefix: `${BUTTON_VARS[0]}.`,
+    blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.holdtime',
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
