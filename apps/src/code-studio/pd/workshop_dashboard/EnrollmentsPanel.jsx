@@ -187,7 +187,7 @@ export default class EnrollmentsPanel extends React.Component {
       return null;
     }
 
-    if (useFoormSurvey(lastSessionDate, course)) {
+    if (useFoormSurvey(subject, lastSessionDate)) {
       return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
     } else {
       return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
