@@ -29,7 +29,7 @@ class ContactRollupsRaw < ApplicationRecord
     query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
-  
+
   def self.extract_scripts_taught
     source_sql = <<~SQL
       SELECT u.email, sc.name AS script_name, c.name AS course_name, MAX(se.updated_at) AS updated_at
@@ -105,7 +105,7 @@ class ContactRollupsRaw < ApplicationRecord
     query = get_extraction_query(source_sql, 'email', ['permission'], true, 'dashboard.user_permissions')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
-  
+
   def self.extract_user_geos
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
