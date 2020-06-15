@@ -450,7 +450,6 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
-      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
@@ -713,7 +712,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
-  get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
+  get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
+  get 'foorm/preview', to: 'foorm_preview#index'
 
   get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
