@@ -20,9 +20,15 @@ ar-SA:
       2-3 Artist 7:
         draw_rect:
           name: ارسم_مستطيل
+          parameters:
+            width: العرض
+            height: الارتفاع
       2-3 Artist Debugging 10:
         draw square:
           name: ارسم مربع
+          parameters:
+            width: العرض
+            height: الارتفاع
         jump to controller top left:
           name: الانتقال إلى وحدة التحكم لأعلى اليسار
         jump to middle:
@@ -251,6 +257,8 @@ ar-SA:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: احصل على الرحيق اصنع العسل
+          parameters:
+            honey: العسل
       Course 4 Play Lab Params 1:
         jump:
           name: قفز
@@ -259,12 +267,17 @@ ar-SA:
           name: مستوى_أعلى
         score_points:
           name: سجل_نقاط
+          parameters:
+            points: نقاط
       Course 4 Play Lab Params 2:
         jump:
           name: قفز
       Course 4 Play Lab Params 3:
         jump:
           name: قفز
+          parameters:
+            height: الارتفاع
+            actor: الممثل
       Course 4 Play Lab Params 4:
         patrol:
           name: دورية
@@ -273,18 +286,30 @@ ar-SA:
       Course 4 Play Lab Params 5:
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
       Course 4 Play Lab Params 6:
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
       Course 4 Play Lab Params 7:
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
+            speed: السرعة
       Course 4 Play Lab Params 8:
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
+            speed: السرعة
       Course 4 Play Lab Params 9:
         score_points:
           name: سجل_نقاط
+          parameters:
+            points: نقاط
       Course 4 Play Lab Vars 1:
         set score:
           name: تعيين النتيجة
@@ -305,6 +330,8 @@ ar-SA:
       Course 4 SCF 1a:
         get nectar:
           name: الحصول على الرحيق
+          parameters:
+            counter: العداد
       Course 4 SCF 2:
         draw a square 20:
           name: ارسم مربع ٢٠
@@ -321,6 +348,8 @@ ar-SA:
           name: القيام بشيء ما
         draw an octagon:
           name: ارسم شكل ثماني
+          parameters:
+            length: الطول
       'Course E: Play Lab Project':
         do something:
           name: القيام بشيء ما
@@ -334,6 +363,8 @@ ar-SA:
           name: مستوى_أعلى
         score_points:
           name: سجل_نقاط
+          parameters:
+            points: نقاط
       Function intro Ryan:
         build bridge:
           name: ابن جسراً
@@ -388,17 +419,27 @@ ar-SA:
       InspirationalArtwork:
         n-sided shape:
           name: شكل بحواف -n
+          parameters:
+            length: الطول
         draw a loop:
           name: ارسم حلقة
+          parameters:
+            length: الطول
         draw spiral circle:
           name: قم برسم دائرة حلزونية
+          parameters:
+            size: الحجم
       InspirationalArtwork_2018:
         draw a loop:
           name: ارسم حلقة
+          parameters:
+            length: الطول
         n-sided shape:
           name: شكل بحواف -n
         draw spiral circle:
           name: قم برسم دائرة حلزونية
+          parameters:
+            size: الحجم
       MC_HOC_2017_07_Cole:
         clear path:
           name: طريق سالك
@@ -486,38 +527,66 @@ ar-SA:
           name: القيام بشيء ما
         draw a hexagon:
           name: رسم شكل سداسي
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
         do something:
           name: القيام بشيء ما
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: قم برسم حافة حلزونية
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 15:
         draw a star:
           name: رسم نجمة
+          parameters:
+            points: نقاط
+            length: الطول
         draw a circle:
           name: رسم دائرة
         draw a pinwheel:
           name: ارسم دولاب الهواء
+          parameters:
+            length: الطول
+            repeat: كرر
         draw a triangle:
           name: رسم مثلث
+          parameters:
+            length: الطول
         draw a shape:
           name: ارسم شكل
+          parameters:
+            length: الطول
         draw a house:
           name: رسم منزل
+          parameters:
+            length: الطول
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 2:
         do something:
           name: القيام بشيء ما
@@ -530,49 +599,91 @@ ar-SA:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: ارسم مثلث بطول
+          parameters:
+            length: الطول
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: رسم مثلث
+          parameters:
+            length: الطول
         draw a hexagon:
           name: رسم شكل سداسي
+          parameters:
+            length: الطول
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
         draw a sqaure:
           name: ارسم مربع
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: رسم مثلث
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: ارسم مثلث بطول
+          parameters:
+            length: الطول
       NEW Course 4 Artist Params 9:
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
         do something:
           name: القيام بشيء ما
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       NEW Course 4 Play Lab Params 11:
         jump:
           name: قفز
+          parameters:
+            height: الارتفاع
+            actor: الممثل
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
+            speed: السرعة
       New Artist Project:
         draw a star:
           name: رسم نجمة
+          parameters:
+            points: نقاط
+            length: الطول
         draw a circle:
           name: رسم دائرة
         draw a pinwheel:
           name: ارسم دولاب الهواء
+          parameters:
+            length: الطول
+            repeat: كرر
         draw a triangle:
           name: رسم مثلث
+          parameters:
+            length: الطول
         draw a shape:
           name: ارسم شكل
+          parameters:
+            length: الطول
         draw a house:
           name: رسم منزل
+          parameters:
+            length: الطول
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
       New Minecraft Hero Project:
         function 1:
           name: الدالة 1
@@ -581,8 +692,14 @@ ar-SA:
       New Play Lab Project:
         jump:
           name: قفز
+          parameters:
+            height: الارتفاع
+            actor: الممثل
         patrol:
           name: دورية
+          parameters:
+            actor: الممثل
+            speed: السرعة
       Robot Doodle:
         draw head:
           name: ارسم رأس
@@ -665,6 +782,8 @@ ar-SA:
       course4_artist_fwp_challenge1:
         draw background:
           name: ارسم خلفية
+          parameters:
+            color: لون
         draw a polygon:
           name: ارسم مضلع
         draw a square 20:
@@ -677,9 +796,13 @@ ar-SA:
       course4_bee_fwp_challenge1:
         pick row:
           name: اختر سطر
+          parameters:
+            length: الطول
       course4_bee_fwp_challenge2:
         pick row:
           name: اختر سطر
+          parameters:
+            length: الطول
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: حل "بسيط"
@@ -695,16 +818,22 @@ ar-SA:
       courseC_artist_prog3:
         draw flame:
           name: ارسم شعلة
+          parameters:
+            x: x
         draw fire:
           name: ارسم نار
       courseC_artist_prog3_2018:
         draw flame:
           name: ارسم شعلة
+          parameters:
+            x: x
         draw fire:
           name: ارسم نار
       courseC_artist_prog3_2019:
         draw flame:
           name: ارسم شعلة
+          parameters:
+            x: x
         draw fire:
           name: ارسم نار
       courseC_artist_prog4:
@@ -1371,70 +1500,128 @@ ar-SA:
           name: رسم مربع
         checker:
           name: فاحص
+          parameters:
+            size: الحجم
+            color: لون
         do something:
           name: القيام بشيء ما
         Make gingham:
           name: إنشاء نسيج مخطط
+          parameters:
+            size: الحجم
         black outline:
           name: مخطط تفصيلي أسود
+          parameters:
+            length: الطول
       courseF_artist_fwp2:
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
         checker:
           name: فاحص
+          parameters:
+            size: الحجم
+            color: لون
         do something:
           name: القيام بشيء ما
         Make gingham:
           name: إنشاء نسيج مخطط
+          parameters:
+            size: الحجم
         black outline:
           name: مخطط تفصيلي أسود
+          parameters:
+            length: الطول
       courseF_artist_fwp2_predict1:
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
       courseF_artist_fwp3:
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
         draw a square2:
           name: رسم المربع2
+          parameters:
+            size: الحجم
         filled square:
           name: مربع معبأ
+          parameters:
+            size: الحجم
+            color: لون
         black outline:
           name: مخطط تفصيلي أسود
+          parameters:
+            length: الطول
       courseF_artist_fwp4:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       courseF_artist_fwp5:
         draw a polygon:
           name: ارسم مضلع
+          parameters:
+            length: الطول
       courseF_artist_fwp6:
         draw a spiral edge:
           name: قم برسم حافة حلزونية
+          parameters:
+            length: الطول
       courseF_artist_fwp7:
         draw a spiral edge:
           name: قم برسم حافة حلزونية
+          parameters:
+            length: الطول
+            min: 'على الاقل '
       courseF_artist_fwp8:
         draw a spiral edge:
           name: قم برسم حافة حلزونية
+          parameters:
+            length: الطول
+            min: 'على الاقل '
       courseF_artist_fwp9:
         draw a star:
           name: رسم نجمة
+          parameters:
+            points: نقاط
+            length: الطول
         draw a circle:
           name: رسم دائرة
         draw a pinwheel:
           name: ارسم دولاب الهواء
+          parameters:
+            length: الطول
+            repeat: كرر
         draw a triangle:
           name: رسم مثلث
+          parameters:
+            length: الطول
         draw a shape:
           name: ارسم شكل
+          parameters:
+            length: الطول
         draw a house:
           name: رسم منزل
+          parameters:
+            length: الطول
         draw a square:
           name: رسم مربع
+          parameters:
+            length: الطول
         draw a spiral edge:
           name: قم برسم حافة حلزونية
+          parameters:
+            length: الطول
+            min: 'على الاقل '
       courseF_artist_fwp_challenge1:
         draw background:
           name: ارسم خلفية
+          parameters:
+            color: لون
         draw a polygon:
           name: ارسم مضلع
         draw a square 20:
@@ -1448,6 +1635,8 @@ ar-SA:
           name: القيام بشيء ما
         draw an octagon:
           name: ارسم شكل ثماني
+          parameters:
+            length: الطول
       courseF_bee_conditionals2:
         move and check:
           name: تحرك وتأكد
@@ -1518,27 +1707,43 @@ ar-SA:
       courseF_bee_fwp4:
         rowOfNectar:
           name: سطر_من_الرحيق
+          parameters:
+            length: الطول
       courseF_bee_fwp5:
         rowOfNectar:
           name: سطر_من_الرحيق
+          parameters:
+            width: العرض
       courseF_bee_fwp6:
         rowOfNectar:
           name: سطر_من_الرحيق
+          parameters:
+            width: العرض
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: العرض
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: العرض
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: العرض
       courseF_bee_fwp_challenge1:
         pick row:
           name: اختر سطر
+          parameters:
+            length: الطول
       courseF_bee_fwp_challenge2:
         pick row:
           name: اختر سطر
+          parameters:
+            length: الطول
       courseF_bee_variables_1_2018:
         collect row:
           name: جمع الصف

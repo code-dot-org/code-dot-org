@@ -17,12 +17,14 @@ ar:
       Game/Score: لعبة/نقطة
       Games/Score: ألعاب/نقطة
       Groups: المجموعات
+      Input: الإدخال
       Locations: مواقع
       Logic: المنطق
       Loops: الحلقات
       Math: العمليات الحسابية
       Numbers: أرقام
       Properties: عقارات
+      Sprites: النقوش المتحركة
       Text: النص
       Variables: المتغيرات
       'Variables ': 'المتغيرات '

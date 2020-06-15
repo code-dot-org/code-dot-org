@@ -39,6 +39,7 @@ ar:
         Custom: الرسام
         CustomStudio: مختبر اللعب
         Gamelab: أداة Game Lab
+        Spritelab: مختبر النقوش المتحركة
     trophy:
       name:
         Bronze: برونزية
@@ -559,11 +560,14 @@ ar:
         C4_unplugged_forloops: للحلقات
         C4_unplugged_parameters: تأليف الأغاني مع المعلمات
         C4_unplugged_binary: ثنائي
+        CSF_a_b_artist_loops: الحلقات في الرسام
         CSF_artist_angles: الزوايا في الرسام
         CSF_collector_k1_blocks: 'أساسيات علوم الكمبيوتر: المجمِّع'
         CSF_collector_repeat_loops: المجمِّع يكرر الحلقات البرمجية
         CSF_collector_text_blocks: 'أساسيات علوم الكمبيوتر: المجمِّع'
         CSF_create_functions: إنشاء دوال
+        CSF_debugging_k1_blocks: تصحيح الأخطاء
+        CSF_debugging_text_blocks: تصحيح الأخطاء
         CSF_EF_cs_matters: مسائل علوم الكمبيوتر
         CSF_maze_intro_k1_blocks: مقدمة إلى Code Studio
         CSF_maze_intro_text_blocks: مقدمة إلى Code Studio
@@ -690,10 +694,13 @@ ar:
         applab_intro_sounds: أصوات وصور - مختبر التطبيقات
         applab_intro_designmode: وضع التصميم - مختبر التطبيقات
         applab_intro_share: تقاسم تطبيقك - مختبر التطبيقات
+        csd_applab_arrays: مقدمة عن المجموعات الوصفية
         CSF_skinOverview_Harvester: الحصادة
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: الحلقات مع BB-8
         CSF_harvester_skinOverview_K-1: الحصادة
+        CSF_harvester_loops_K1: الحلقات في الحاصدة
         CSF_scrat_loops_K1: الحلقات في العصر الجليدي
         CSF_scrat_loops_CF: الحلقات في العصر الجليدي
         CSF_if_allskins: الكتلة البرمجية if
@@ -713,7 +720,11 @@ ar:
         mc_2018_conditionals: 'Minecraft: سفر مائي شرطي'
         mc_2018_closing: 'Minecraft: سفر مائي تهانينا'
         hoc_dance_warmup: حفلة الرقص - تسخينات
+        hoc_dance_events: الحفلة الراقصة - الأحداث
+        hoc_dance_properties: الحفلة الراقصة - الخصائص
         hoc_dance_congrats: حفلة الرقص - البداية!
+        c_and_c_great_to_create: أنه لشعور عظيم أن تقوم بالإنشاء واللعب بإنصاف
+        c_and_c_digital_sharing: المشاركة الرقمية
         teaching_csf_how_it_works: 'تدريس أساسيات علوم الكمبيوتر: كيف تنجز الدورات'
         elem_pd_2: المدرسة الابتدائية لعلوم الكمبيوتر - PD فيديو 2/2
         what_is_cs: ما علوم الكمبيوتر؟
@@ -736,10 +747,12 @@ ar:
 '
         csd_applab_parameters: الدوال والمعاملات
         csd_applab_loops: الحلقات البرمجية في مشروع App Lab
+        csd_problem_solving_process: عملية حل المشكلات
         CSF_Going_Places_Safely: الحي الذي أقطنه عبر الإنترنت
         CSF_SpriteLab_Intro_v2: التعريف بمشروع Sprite Lab (مختبر سبرايت)
         CSF_Spritelab_MakeSprite_v2: كيف تصنع "سبرايت"
         CSF_SpriteLab_SpritesInAction_v2: العفاريت تتحرك
+        csd_debugging: تصحيح الأخطاء
         csd_applab_designmode_short: وضع التصميم في مشروع App Lab
         csp-pd-welcome: مرحبًا بك في العائلة!
         CSF-Teaching-Problem-Solving: تدريس حل المشكلات ضمن أساسيات علوم الكمبيوتر
@@ -763,6 +776,8 @@ ar:
         csd_what_computers_do: ما الذي تفعله أجهزة الكمبيوتر؟
         csf_my_online_neighborhood_2020: الحي الذي أقطنه عبر الإنترنت
         csf_follow_the_digital_trail: اتبع المسلك الرقمي
+        csf_private_and_personal_information: المعلومات الخاصة والشخصية
+        csd_what_computers_are: ما هو الكمبيوتر؟
         codebreak_e01: 'برنامج Code Break 1.0: الخوارزميات مع هيل هاربر'
         codebreak_e02: 'برنامج Code Break 2.0: النماذج الأولية مع مارك كوبان وليندسي
           سكوت'
