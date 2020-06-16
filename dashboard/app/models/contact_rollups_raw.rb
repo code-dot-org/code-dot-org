@@ -22,13 +22,13 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_parent_emails
     source_sql = <<~SQL
-      SELECT parent_email AS email, 1 AS parent_email, MAX(updated_at) AS updated_at
+      SELECT parent_email AS email, 1 AS is_parent, MAX(updated_at) AS updated_at
       FROM users
       WHERE parent_email > ''
       GROUP BY parent_email
     SQL
 
-    query = get_extraction_query('dashboard.users', source_sql, 'parent_email')
+    query = get_extraction_query('dashboard.users', source_sql, 'is_parent')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
