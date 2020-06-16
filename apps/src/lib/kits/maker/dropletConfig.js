@@ -11,7 +11,10 @@ import {
   SONG_1D
 } from './boards/circuitPlayground/PlaygroundConstants';
 
-import {MB_BUTTON_VARS} from './boards/microBit/MicroBitConstants';
+import {
+  MB_BUTTON_VARS,
+  MB_COMPONENT_EVENTS
+} from './boards/microBit/MicroBitConstants';
 
 export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
@@ -399,6 +402,23 @@ const circuitPlaygroundBlocks = [
 const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
+  {
+    func: 'onBoardEvent',
+    parent: api,
+    category: MICROBIT_CATEGORY,
+    paletteParams: ['component', 'event', 'callback'],
+    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    allowFunctionDrop: {2: true},
+    dropdown: {
+      0: Object.keys(MB_COMPONENT_EVENTS),
+      1: function(editor) {
+        return getBoardEventDropdownForParam(
+          getFirstParam('onBoardEvent', this.parent, editor),
+          MB_COMPONENT_EVENTS
+        );
+      }
+    }
+  },
   {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
   {
     func: 'on',
