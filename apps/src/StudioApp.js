@@ -927,8 +927,8 @@ StudioApp.prototype.runChangeHandlers = function() {
     this.editDuringRunAlert = this.displayWorkspaceAlert(
       'warning',
       <div>
-        Your code has changed. Click "Reset" and then "Run" to run your code
-        again.
+        Your code may have changed. Click "Reset" and then "Run" to run your
+        code again.
       </div>,
       true
     );
@@ -3088,7 +3088,11 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   }
 
   var toolbarWidth;
-  if (this.usingBlockly_) {
+  if (this.usingBlockly_ && this.config.app === 'craft') {
+    // craft has a slightly different way of constructing the toolbox so we need to use
+    // the toolbox header's width to get the width of the actual toolbox.
+    toolbarWidth = $('#toolbox-header').width();
+  } else if (this.usingBlockly_) {
     toolbarWidth = $('.blocklyToolboxDiv').width();
   } else {
     toolbarWidth =
