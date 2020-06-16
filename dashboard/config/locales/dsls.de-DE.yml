@@ -541,8 +541,82 @@ de-DE:
         title: Labyrinth Multiple-Choice
       Begin planning your project:
         content1: hier die Beschreibung
+        markdown: '# Der EntwurfsprozessDer Entwurf von Software bedeutet, dass du
+          beinahe immer sehr viele, kleine Probleme lösen musst. Das Hauptproblem
+          in dem Entwurf von Software ist zu wissen, was du überhaupt an erster Stelle
+          kreieren wolltest.Dieser Prozess ist nützlich für sehr viel verschiedene
+          Dinge, aber wir werden uns hauptsächlich auf die Anwendung für App-Design
+          konzentrieren.<!-- Übersetzte die Begriffe "Definieren“, "Vorbereiten“,
+          "Versuchen“, "Reflektieren“, und verändere die Fontgröße und die Positionierung
+          nach Bedarf--><div style="position: relative; text-align: center; font-size:
+          1em">  <img src="https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png"
+          alt="Entwurfsprozess" style="width: 50%;">  <div style="position: absolute;
+          top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Definiere</div>   <div
+          style="position: absolute; top: 52%; left: 61%; transform: translateX(-61%);
+          font-weight: bold;">Vorbereiten</div>  <div style="position: absolute; top:
+          79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Try</div>  <div
+          style="position: absolute; top: 52%; left: 39%; transform: translateX(-39%);
+          font-weight: bold;">Reflektiere</div></div>* **Definiere**  * Was für ein
+          App möchtest du gerne kreieren?  * Was sind deine Einschränkungen?  * Wie
+          sieht der Erfolg aus?* **Vorbereitung**  * Brainstorming / Erforsche mögliche
+          Elemente  * Vergleiche die Vor- und Nachteile  * Erstelle einen Plan* **Versuche**  *
+          Führe deinen Plan aus* **Reflektiere**  * Inwieweit sind deine Resultate
+          vergleichbar mit den Zielen, die du dir während der Definition des App gesetzt
+          hattest?  * Was kannst du daraus lernen, oder was kannst du das nächste
+          Mal besser tun?  * Welche neue Probleme hast du entdeckt?# Wie es aussiehtIm
+          Lauf der nächsten paar Wochen wirst du die Möglichkeit haben, Experimente
+          mit bestehenden Spielen auszuführen und dein eigenes Spiel zu entwerfen,
+          auf der Basis von dem was du gelernt hast. Nach der Erstellung eines Spiels
+          wird dir außerdem die Gelegenheit gegeben, dies an andere vorzustellen und
+          deren Feedback zu erhalten. All diese Schritte sind von kritischer Wichtigkeit
+          in der Softwareindustrie, und die Möglichkeit mit diesen Elementen des Entwurfsprozesses
+          zu üben, wird dir helfen bessere Produkte auf effizientere Weise zu erstellen.Hier
+          ist was die kommenden Wochen enthalten werden, während wir mehr über den
+          Entwurfsprozess lernen:1. **Definition und Vorbereitung**   * Spielen mit
+          bestehenden Spielen, um neue Ideen zu bekommen und Grenzen zu verstehen   *
+          Brainstorming und Planung deiner neuen oder modifizierten App1. **Versuche**   *
+          Folge deinem Plan und baue deine App1. **Reflektieren und bearbeiten**   *
+          Tausche ab mit anderen in deiner Gruppe, was helfen wird deine Projekte
+          zu verbessern1. **Vorstellen**   * Stelle dein Endprodukt vor!'
       Begin planning your project_2018:
         content1: hier die Beschreibung
+        markdown: '# Der EntwurfsprozessDer Entwurf von Software bedeutet, dass du
+          beinahe immer sehr viele, kleine Probleme lösen musst. Das Hauptproblem
+          in dem Entwurf von Software ist zu wissen, was du überhaupt an erster Stelle
+          kreieren wolltest.Dieser Prozess ist nützlich für sehr viel verschiedene
+          Dinge, aber wir werden uns hauptsächlich auf die Anwendung für App-Design
+          konzentrieren.<!-- Übersetzte die Begriffe "Definieren“, "Vorbereiten“,
+          "Versuchen“, "Reflektieren“, und verändere die Fontgröße und die Positionierung
+          nach Bedarf--><div style="position: relative; text-align: center; font-size:
+          1em">  <img src="https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png"
+          alt="Entwurfsprozess" style="width: 50%;">  <div style="position: absolute;
+          top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Definiere</div>   <div
+          style="position: absolute; top: 52%; left: 61%; transform: translateX(-61%);
+          font-weight: bold;">Vorbereiten</div>  <div style="position: absolute; top:
+          79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Try</div>  <div
+          style="position: absolute; top: 52%; left: 39%; transform: translateX(-39%);
+          font-weight: bold;">Reflektiere</div></div>* **Definiere**  * Was für ein
+          App möchtest du gerne kreieren?  * Was sind deine Einschränkungen?  * Wie
+          sieht der Erfolg aus?* **Vorbereitung**  * Brainstorming / Erforsche mögliche
+          Elemente  * Vergleiche die Vor- und Nachteile  * Erstelle einen Plan* **Versuche**  *
+          Führe deinen Plan aus* **Reflektiere**  * Inwieweit sind deine Resultate
+          vergleichbar mit den Zielen, die du dir während der Definition des App gesetzt
+          hattest?  * Was kannst du daraus lernen, oder was kannst du das nächste
+          Mal besser tun?  * Welche neue Probleme hast du entdeckt?# Wie es aussiehtIm
+          Lauf der nächsten paar Wochen wirst du die Möglichkeit haben, Experimente
+          mit bestehenden Spielen auszuführen und dein eigenes Spiel zu entwerfen,
+          auf der Basis von dem was du gelernt hast. Nach der Erstellung eines Spiels
+          wird dir außerdem die Gelegenheit gegeben, dies an andere vorzustellen und
+          deren Feedback zu erhalten. All diese Schritte sind von kritischer Wichtigkeit
+          in der Softwareindustrie, und die Möglichkeit mit diesen Elementen des Entwurfsprozesses
+          zu üben, wird dir helfen bessere Produkte auf effizientere Weise zu erstellen.Hier
+          ist was die kommenden Wochen enthalten werden, während wir mehr über den
+          Entwurfsprozess lernen:1. **Definition und Vorbereitung**   * Spielen mit
+          bestehenden Spielen, um neue Ideen zu bekommen und Grenzen zu verstehen   *
+          Brainstorming und Planung deiner neuen oder modifizierten App1. **Versuche**   *
+          Folge deinem Plan und baue deine App1. **Reflektieren und bearbeiten**   *
+          Tausche ab mit anderen in deiner Gruppe, was helfen wird deine Projekte
+          zu verbessern1. **Vorstellen**   * Stelle dein Endprodukt vor!'
       Begin planning your project_2018_2019:
         content1: hier die Beschreibung
         markdown: |+
@@ -632,6 +706,7 @@ de-DE:
           &lt;h1&gt; Speck &lt;/h1&gt;
           &lt;h6&gt; Waffeln &lt;/h6&gt;
           </pre>
+        title: Überschriften-Schnellprüfung
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -651,6 +726,7 @@ de-DE:
           &lt;h1&gt; Speck &lt;/h1&gt;
           &lt;h6&gt; Waffeln &lt;/h6&gt;
           </pre>
+        title: Überschriften-Schnellprüfung
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -670,6 +746,7 @@ de-DE:
           &lt;h1&gt; Speck &lt;/h1&gt;
           &lt;h6&gt; Waffeln &lt;/h6&gt;
           </pre>
+        title: Überschriften-Schnellprüfung
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Übersicht
@@ -772,6 +849,9 @@ de-DE:
         content1: hier die Beschreibung
       CSD U2 L6 Overview:
         content1: hier die Beschreibung
+      CSD U2 L7 Overview:
+        teacher_markdown: "* [Lizenzierung Deiner Arbeit - Aktivitätenleitfadenbeispiel]
+          (https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
       CSD U2 Top Websites:
@@ -863,6 +943,7 @@ de-DE:
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
+        title: Listen-Schnellprüfung
       CSD U2 lists match_2018:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -888,6 +969,7 @@ de-DE:
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
+        title: Listen-Schnellprüfung
       CSD U2 lists match_2018_2019:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -913,6 +995,7 @@ de-DE:
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
+        title: Listen-Schnellprüfung
       CSD U2 project guide:
         content1: hier die Beschreibung
       CSD U2 project guide_2018:
@@ -1004,12 +1087,54 @@ de-DE:
         content1: hier die Beschreibung
       CSD U3 Card Examples_2018_2019:
         content1: hier die Beschreibung
+      CSD U3 Entertainment:
+        markdown: |-
+          # Starte deine Suche
+
+          Recherchiere, um mehr darüber herauszufinden welche Bedeutung Informatik und Programmierung für das Thema Unterhaltung haben. Suche nach "Informatik und &#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;" mit verschiedenen Begriffen aus der Unterhaltung wie zum Beispiel: Film, Fernsehen, Musik, Spiele, Animation, Mode ... .
+      CSD U3 Entertainment_2018_2019:
+        markdown: |-
+          # Starte deine Suche
+
+          Recherchiere, um mehr darüber herauszufinden welche Bedeutung Informatik und Programmierung für das Thema Unterhaltung haben. Suche nach "Informatik und &#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;" mit verschiedenen Begriffen aus der Unterhaltung wie zum Beispiel: Film, Fernsehen, Musik, Spiele, Animation, Mode ... .
+        teacher_markdown: "Dies ist eine Liste von (englischsprachigen) Webseiten,
+          die den Lernenden den Einstieg erleichtern können. Diese Seiten sind im
+          Allgemeinen für die Schule geeignet. Da der Inhalt sich sich häufig ändert
+          **empfehlen wir dringend, dass Sie jede Seite auf unangemessene Inhalte
+          überprüfen, bevor Sie diese mit den Schülerinnen und Schülern teilen**.\n\n[key]\n\n##
+          Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)\n\n###
+          Überblick\n\nDiese Website enthält die Neuigkeiten über Disney. Mancher
+          wird vielleicht überrascht sein von der großen Bedeutung, die Informatik
+          in all ihren verschiedenen Formen für die Unterhaltung spielt. Da dies keine
+          Website ist, die sich speziell auf Informatik konzentriert, muss man die
+          Suchfunktion verwenden, um relevante Artikel zu finden (zum Beispiel mit
+          einer Suche nach COMPUTER SIENCE oder TECHNOLOGY).  \n\n### Relevante Bereiche\n\n*
+          Film/TV\n* Animation\n* Robotik/Animatronic\n* Spiele\n\n## Videos zum Projekt
+          \"Critical Path\" - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)\n\n###
+          Überblick\n\nAuf dieser Webseite kann man Videos von Personen finden, die
+          in verschiedenen Bereichen der Spieleindustrie arbeiten und darüber sprechen,
+          was sie tun.\n\n### Relevante Bereiche\n\n* Spiele\n* Animation\n* Kunst\n\n##
+          Musik-Denkfabrik - [musicthinktank.com](http://www.musicthinktank.com/)\n\n###
+          Überblick\n\n\"Music Think Tank\" ist ein Blog, der sich an Menschen richtet,
+          die in der Musikindustrie arbeiten. Die Seite ist keine Informatik-spezifische
+          Webseite, aber wenn Sie nach \"computer science\" oder \"programming\" suchen,
+          werden Sie einige interessante Artikel finden.\n\n### Relevante Bereiche\n\n*
+          Musik\n\n## Podcast zur kreativen Codierung - [creativecodingpodcast.com](http://creativecodingpodcast.com/)\n\n###
+          Überblick Überblick\n\nObwohl dieser Podcast nicht viel über formelle professionelle
+          Programme (wie z.B. Menschen, die damit ihren Lebensunterhalt verdienen)
+          aussagt, ist er doch eine gute Quelle, um zu sehen, auf welch vielfältige
+          Weise Amateure mit Code Unterhaltung machen.\n\n### Relevante Bereiche\n\n*
+          Alle\n\n[/key]"
       CSD U3 Functions Prediction define first:
         answers:
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das rote Quadrat wird gezeichnet, aber das grüne nicht. Du kannst
+            keine Funktionen aufrufen, nachdem sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das grüne Quadrat wird gezeichnet, aber das rote nicht. Du kannst
+            keine Funktionen aufrufen, bevor sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
         - correct: true
@@ -1022,10 +1147,14 @@ de-DE:
             unten zu halten!
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das rote Quadrat wird gezeichnet, aber das grüne nicht. Du kannst
+            keine Funktionen aufrufen, nachdem sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das grüne Quadrat wird gezeichnet, aber das rote nicht. Du kannst
+            keine Funktionen aufrufen, bevor sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
         - correct: true
@@ -1038,10 +1167,14 @@ de-DE:
             unten zu halten!
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das rote Quadrat wird gezeichnet, aber das grüne nicht. Du kannst
+            keine Funktionen aufrufen, nachdem sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
-        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+        - text: Das grüne Quadrat wird gezeichnet, aber das rote nicht. Du kannst
+            keine Funktionen aufrufen, bevor sie erstellt wurden.
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
             werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
             unten zu halten!
         - correct: true
@@ -3420,13 +3553,20 @@ de-DE:
 '
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Die Biene bekommt an jeder Blüte Nektar und bei jeder Wabe Honig.
+          correct: true
           feedback: Richtig!
         - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
             den Waben zu holen.
+          feedback: 'Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene an jeder Blüte Nektar und an jeder Wabe Honig erhält. '
         - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
             den Waben zu holen.
+          feedback: Falsch. Falsch. Der 'wenn an der Blume'-Block lässt die Biene
+            Nektar an jeder Blume einsammeln, und Honig an jeder Honigwabe herstellen.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein `wenn an der Blüte` lässt die Biene an jeder Blüte
+            Nektar und an jeder Wabe Honig erhalten.
         questions:
         - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
             nach passieren, wenn du auf "Ausführen" klickst? Denke daran: Hinter jeder
@@ -4082,7 +4222,9 @@ de-DE:
 
       courseF_bee_variables_8a_2018:
         answers:
-        - feedback: Falsch.  Der Name Ihrer Variable hat keinen Einfluss auf ihren
+        - text: Die Biene wird keinen Nektar einsammeln, weil diese Variable nicht
+            "sammeln" genannt wurde.
+          feedback: Falsch.  Der Name Ihrer Variable hat keinen Einfluss auf ihren
             Wert.
         - text: Die Biene sammelt nur 2 Portionen Nektar.
           correct: true
@@ -4091,6 +4233,9 @@ de-DE:
           feedback: Falsch.  Die Variable wird vor den letzten beiden Funktionsaufrufen
             auf 0 zurückgesetzt.
         - text: Ich weiß es nicht.
+          feedback: Die Variable wird vor den letzten beiden Funktionsaufrufen auf
+            0 zurückgesetzt, wo eine 1 jedesmal hinzugefügt wird. Die Biene sammelt
+            dann 2 Einheiten von Nektar ein.
         questions:
         - text: Sieh Dir den Code unten an.  Wie viele Einheiten Nektar wird die Biene
             am Ende sammeln?
@@ -4099,7 +4244,9 @@ de-DE:
 '
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - feedback: Falsch.  Der Name Ihrer Variable hat keinen Einfluss auf ihren
+        - text: Die Biene wird keinen Nektar einsammeln, weil diese Variable nicht
+            "sammeln" genannt wurde.
+          feedback: Falsch.  Der Name Ihrer Variable hat keinen Einfluss auf ihren
             Wert.
         - text: Die Biene sammelt nur 2 Portionen Nektar.
           correct: true
@@ -4108,6 +4255,9 @@ de-DE:
           feedback: Falsch.  Die Variable wird vor den letzten beiden Funktionsaufrufen
             auf 0 zurückgesetzt.
         - text: Ich weiß es nicht.
+          feedback: Die Variable wird vor den letzten beiden Funktionsaufrufen auf
+            0 zurückgesetzt, wo eine 1 jedesmal hinzugefügt wird. Die Biene sammelt
+            dann 2 Einheiten von Nektar ein.
         questions:
         - text: Sieh Dir den Code unten an.  Wie viele Einheiten Nektar wird die Biene
             am Ende sammeln?
@@ -4147,14 +4297,59 @@ de-DE:
 '
       courseF_markdown_algorithms_end:
         content1: Test Markdown Lehrbuchseite
+        markdown: '# **Du hast gerade etwas über "Algorithmen“ gelernt!**  ### **Ein
+          Algorithmus ist einfach eine Liste von Schritten, um eine bestimmte Aufgabe
+          abarbeiten zu können**. Was Spaß macht an Algorithmen ist, dass du selbst
+          Schritt-für-Schritt entscheiden kannst was geschieht.### Wenn du einen Algorithmus
+          für eine Maschine schreibst, dann wird dies ein **Programm** genannt.  ---##
+          **Vokabular dass du kennen musst*** ### **Algorithmus** - Eine Liste von
+          Schritten um eine Aufgabe abzuarbeiten* ### **Programm** - Ein Algorithmus,
+          der mit dem Ziel codiert wurde, etwas auf einer Maschine laufen zu lassen.'
       courseF_markdown_algorithms_intro:
         content1: Test Markdown Lehrbuchseite
+        markdown: |-
+          # **In dieser Lektion...**
+
+          ### Hast du jemals gewollt, einem Anderen genau zu sagen was er tun muss? Hören die immer auf dich?
+
+          ### Heute wirst du eine Maschine sagen was sie tun muss, Schritt-für-Schritt, und sie wird dir zuhören!---
+
+          ## **Blöcke die du kennen musst**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Test Markdown Lehrbuchseite
+        markdown: '# **Du hast gerade die Anwendung von "bedingten Befehlen“ gelernt!**###
+          Bedingte Befehle sind äußerst nützlich in der Informatik. Stelle dir vor,
+          dass du in deine Lieblingswebsite einloggen willst und gerade dabei bist
+          dein Kennwort einzugeben. Die Website muss bedingte Befehle benutzen um
+          zu überprüfen *ob* das Kennwort, welches du eingegeben hast, mit dem Kennwort
+          übereinstimmt, das mit deinem Anwendernamen gespeichert wurde. ### `Falls
+          sie identisch sind kannst du einloggen! ### `Sonst'', schicke dem Anwender
+          eine Fehlerbotschaft.  ---## **Vokabular dass du kennen musst*** ### **Bedingung**
+          - Etwas, das durch ein Programm überprüft wird, bevor eine Aktion ausgeführt
+          werden darf.* ### **Bedingte Befehle** - Anweisungen, die nur unter bestimmten
+          Bedingungen ausgeführt werden können.'
       courseF_markdown_conditionals_intro:
         content1: Test Markdown Lehrbuchseite
+        markdown: "# **In dieser Lektion...**### **Bedingungen** sind Sachen die wahr
+          oder falsch sein können. ### Du wirst lernen wie du Bedingungen in einem
+          Programm benutzen kannst, um Sachen ausführen zu lassen, 'während', 'bis'
+          oder 'wenn' etwas wahr ist!---## **Die Blöcke die du kennen musst**![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)"
       courseF_markdown_debugging_end:
         content1: Test Markdown Lehrbuchseite
+        markdown: '# **Du hast gerade gelernt was "Debugging“ ist!**### **Ein Bug
+          ist etwas das schief geht.** Es ist ein Fehler in einem Programm. Wenn du
+          diese Fehler findest und reparierst dann bist du am **debuggen** eine Problems.###
+          Dabei musst du **Ausdauer** üben, ein anderes Wort für nicht aufgeben, um
+          all die Bugs zu finden und zu reparieren---## **Vokabular dass du kennen
+          musst*** ### **Bug** - Ein Teil eines Programms das nicht richtig funktioniert.*
+          ### **Debugging** - Das Finden und Reparieren von Problemen in einem Algorithmus
+          oder einem Programm.* ### **Ausdauer** - Nicht aufgeben'
       courseF_markdown_debugging_intro:
         content1: Test Markdown Lehrbuchseite
         markdown: "# In dieser Lektion...\n\n### Woran denkst du, wenn du an Bugs
@@ -4202,12 +4397,42 @@ de-DE:
           Rätseln ganz einfach! \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_loops_end:
         content1: Test Markdown Lehrbuchseite
+        markdown: '# **Du hast gerade gelernt was "Schleifen“ sind!**  ### **Eine
+          Schleife ist ein programmierter Prozess der andauernd wiederholt wird.**
+          Ein anderes Wort für etwas immer wieder tun ist wiederholen.### Schleifen
+          sind echt nützlich für die Wiederholung von Mustern. Es könnte nützlich
+          sein, das Programm erst ohne Schleifen auszuschreiben, um danach ein Muster
+          zu finden. ### Wenn du ein Muster siehst, nimm es und stecke es in einen
+          ''wiederholen''-Block!---## **Vokabular dass du kennen musst*** ### **Schleife**
+          - Ein programmierter Prozess der andauernd wiederholt wird* ### **Wiederholung**
+          - Etwas immer wieder tun'
       courseF_markdown_loops_intro:
         content1: Test Markdown Lehrbuchseite
+        markdown: "# In dieser Lektion...### Stelle dir vor, dass du Figuren **5**
+          Mal vorwärts bewegen möchtest. Dies könnte ziemlich einfach sein - schleife
+          einfach **5** 'vorwärts bewegen'-Blocks heraus. Jetzt stelle dir aber vor,
+          dass du deine Figur **5000** Mal vorwärts bewegen willst!### Wie lange würde
+          es dich nehmen um **5,000**-Blocks herauszuschleifen? ### Wünschst du dir,
+          dass es einen leichteren Weg geben könnte als dies? Den gibt es!---## Blocks
+          die du kennen musst![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
       courseF_markdown_nestedloops_end:
         content1: Test Markdown Lehrbuchseite
+        markdown: '# **Du hast gerade "verschachtelte Schleifen“ gelernt!**### **Eine
+          verschachtelte Schleife ist eine Schleife innerhalb einer anderen Schleife.**
+          Du kannst dies als eine äußere Schleife sehen, in der eine andere Schleife
+          sich einnistet und gemütlich gemacht hat.### Geschachtelte Schleifen sind
+          fantastisch, für das Wiederholen der Muster von Mustern. Sie können äußerst
+          leistungsfähig sein, wenn sie korrekt benutzt werden!---## **Vokabular dass
+          du kennen musst**### __Geschachtelte Schleifen__ - Eine Schleife innerhalb
+          einer Schleife.'
       courseF_markdown_nestedloops_intro:
         content1: Test Markdown Lehrbuchseite
+        markdown: "# **In dieser Lektion...**### Hast du dich jemals gefragt, was
+          passieren würde, falls du eine Schleife *innerhalb einer anderen Schleife*
+          unterbringen würdest*? ### Es könnte dich etwas verrückt machen!### Wenn
+          eine normale Schleife gut für die Wiederholung von Mustern ist, für was
+          denkst du wäre eine Schleife, innerhalb einer anderen Schleife gut? Lass
+          uns das herausfinden!---## **Blocks die du kennen musst**![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)"
       courseF_markdown_variables_end:
         content1: Test Markdown Lehrbuchseite
         markdown: "# **Du hast gerade gelernt, was \"Variablen\" sind!** \n\n### Damit
@@ -4490,6 +4715,9 @@ de-DE:
             Nektar bekommen, sonst macht sie Honig.
 
 '
+        markdown: 'Manchmal bedeckt eine Wolke eine Blüte, manchmal bedeckt sie eine
+          Wabe! In jedem Fall befindet sich unter jeder dieser Wolken entweder **eine**
+          Blüte oder **eine** Wabe! '
         questions:
         - text: 'Schau dir den nachfolgenden Code genau an. Was passiert deiner Meinung
             nach, wenn du auf "Ausführen" klickst?
@@ -4550,6 +4778,9 @@ de-DE:
 
 '
         - text: 'Ich weiß es nicht. '
+          feedback: Die 'Für'-Schleife wird es der Biene möglich machen, die richtige
+            Menge von Nektar einzusammeln, aber sie ist so eingestellt, dass nur 4
+            Blumen erreicht werden können.
         markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
           viel einfacher! \n"
         questions:
@@ -4578,6 +4809,9 @@ de-DE:
 
 '
         - text: 'Ich weiß es nicht. '
+          feedback: Die 'Für'-Schleife wird es der Biene möglich machen, die richtige
+            Menge von Nektar einzusammeln, aber sie ist so eingestellt, dass nur 4
+            Blumen erreicht werden können.
         markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
           viel einfacher! \n"
         questions:

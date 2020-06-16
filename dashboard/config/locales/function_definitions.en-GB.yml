@@ -8,7 +8,14 @@ en-GB:
       2-3 Artist 3.4:
         draw a circle:
           name: dibujar un circulo
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: height
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: height
         draw a circle:
           name: dibujar un circulo
       2-3 Artist Functions 11:
@@ -38,6 +45,10 @@ en-GB:
       4-5 Artist 7:
         draw a circle:
           name: dibujar un circulo
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: honey
       Course 4 Play Lab Params 1:
         jump:
           name: jump
@@ -47,9 +58,28 @@ en-GB:
       Course 4 Play Lab Params 3:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
       Course 4 Play Lab Params 4:
         do something:
           name: do something
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: actor
       Course 4 Play Lab Vars 1:
         set score:
           name: set score
@@ -110,6 +140,9 @@ en-GB:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
@@ -143,11 +176,20 @@ en-GB:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
       New Artist Project:
         draw a star:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
@@ -157,6 +199,12 @@ en-GB:
       New Play Lab Project:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
       Standalone_Artist_7:
         draw a flower:
           name: dibujar una flor
@@ -178,6 +226,18 @@ en-GB:
       course4_artist_fwp_challenge1:
         do something:
           name: do something
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
         do something:
           name: do something
@@ -377,17 +437,31 @@ en-GB:
       courseF_artist_fwp3:
         draw a square:
           name: dibuja un cuadrado
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
           name: dibuja una casa
         draw a square:
           name: dibuja un cuadrado
+        draw a spiral edge:
+          parameters:
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: do something

@@ -20,9 +20,15 @@ mn-MN:
       2-3 Artist 7:
         draw_rect:
           name: зурах_шулуун
+          parameters:
+            width: өргөн
+            height: өндөр
       2-3 Artist Debugging 10:
         draw square:
           name: квадрат -г зураарай
+          parameters:
+            width: өргөн
+            height: өндөр
         jump to controller top left:
           name: удирдлагын зүүн дээд рүү үсрэх
         jump to middle:
@@ -260,6 +266,8 @@ mn-MN:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: шүүс цуглуулах зөгийн бал хийх
+          parameters:
+            honey: зөгийн бал
       Course 4 Play Lab Params 1:
         jump:
           name: үсрэх
@@ -268,12 +276,17 @@ mn-MN:
           name: түвшин_ахих
         score_points:
           name: оноо_авах
+          parameters:
+            points: цэгүүд
       Course 4 Play Lab Params 2:
         jump:
           name: үсрэх
       Course 4 Play Lab Params 3:
         jump:
           name: үсрэх
+          parameters:
+            height: өндөр
+            actor: жүжигчин
       Course 4 Play Lab Params 4:
         patrol:
           name: эргүүл
@@ -282,18 +295,30 @@ mn-MN:
       Course 4 Play Lab Params 5:
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
       Course 4 Play Lab Params 6:
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
       Course 4 Play Lab Params 7:
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Course 4 Play Lab Params 8:
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Course 4 Play Lab Params 9:
         score_points:
           name: оноо_авах
+          parameters:
+            points: цэгүүд
       Course 4 Play Lab Vars 1:
         set score:
           name: оноо тохируулах
@@ -314,6 +339,8 @@ mn-MN:
       Course 4 SCF 1a:
         get nectar:
           name: шүүс цуглуулах
+          parameters:
+            counter: тоологч
       Course 4 SCF 1b:
         make honey up and over:
           name: зөгийн бал хийж, давтаарай
@@ -333,6 +360,8 @@ mn-MN:
           name: ямар нэг юм хийх
         draw an octagon:
           name: найман өнцөгт зурах
+          parameters:
+            length: урт
       'Course E: Play Lab Project':
         do something:
           name: ямар нэг юм хийх
@@ -346,6 +375,8 @@ mn-MN:
           name: түвшин_ахих
         score_points:
           name: оноо_авах
+          parameters:
+            points: цэгүүд
       Geometric Sun:
         draw a door:
           name: хаалга зурах
@@ -394,17 +425,27 @@ mn-MN:
       InspirationalArtwork:
         n-sided shape:
           name: n-талт дүрс
+          parameters:
+            length: урт
         draw a loop:
           name: гогцоо зурах
+          parameters:
+            length: урт
         draw spiral circle:
           name: спираль тойрог зурах
+          parameters:
+            size: хэмжээ
       InspirationalArtwork_2018:
         draw a loop:
           name: гогцоо зурах
+          parameters:
+            length: урт
         n-sided shape:
           name: n-талт дүрс
         draw spiral circle:
           name: спираль тойрог зурах
+          parameters:
+            size: хэмжээ
       K-1 Artist2 3:
         draw roof:
           name: дээвэр зураарай
@@ -467,38 +508,66 @@ mn-MN:
           name: ямар нэг юм хийх
         draw a hexagon:
           name: зургаан өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
         do something:
           name: ямар нэг юм хийх
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 15:
         draw a star:
           name: од зурах
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 2:
         do something:
           name: ямар нэг юм хийх
@@ -511,57 +580,103 @@ mn-MN:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: урттай гурвалжин зураарай
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: таван өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a hexagon:
           name: зургаан өнцөгт зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         draw a sqaure:
           name: квадрат зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: урттай гурвалжин зураарай
+          parameters:
+            length: урт
       NEW Course 4 Artist Params 9:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         do something:
           name: ямар нэг юм хийх
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       NEW Course 4 Play Lab Params 11:
         jump:
           name: үсрэх
+          parameters:
+            height: өндөр
+            actor: жүжигчин
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       New Artist Project:
         draw a star:
           name: од зурах
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
       New Play Lab Project:
         jump:
           name: үсрэх
+          parameters:
+            height: өндөр
+            actor: жүжигчин
         patrol:
           name: эргүүл
+          parameters:
+            actor: жүжигчин
+            speed: хурд
       Robot Doodle:
         25 pixel square:
           name: 25 пикселийн квадрат
@@ -655,6 +770,8 @@ mn-MN:
       course4_artist_fwp_challenge1:
         draw background:
           name: суурь өнгийг зурах
+          parameters:
+            color: өнгө
         draw a polygon:
           name: олон өнцөгт зурах
         draw a square 20:
@@ -667,9 +784,13 @@ mn-MN:
       course4_bee_fwp_challenge1:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       course4_bee_fwp_challenge2:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"энгийн" шийдэл'
@@ -685,16 +806,22 @@ mn-MN:
       courseC_artist_prog3:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog3_2018:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog3_2019:
         draw flame:
           name: дөл зурах
+          parameters:
+            x: x
         draw fire:
           name: гал зурах
       courseC_artist_prog4:
@@ -1316,70 +1443,128 @@ mn-MN:
           name: квадрат зурах
         checker:
           name: шалгагч
+          parameters:
+            size: хэмжээ
+            color: өнгө
         do something:
           name: ямар нэг юм хийх
         Make gingham:
           name: Даавуу хийгээрэй
+          parameters:
+            size: хэмжээ
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp2:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         checker:
           name: шалгагч
+          parameters:
+            size: хэмжээ
+            color: өнгө
         do something:
           name: ямар нэг юм хийх
         Make gingham:
           name: Даавуу хийгээрэй
+          parameters:
+            size: хэмжээ
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp2_predict1:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
       courseF_artist_fwp3:
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         draw a square2:
           name: квадрат2-г зураарай
+          parameters:
+            size: хэмжээ
         filled square:
           name: бөглөсөн квадрат
+          parameters:
+            size: хэмжээ
+            color: өнгө
         black outline:
           name: хар тойм
+          parameters:
+            length: урт
       courseF_artist_fwp4:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       courseF_artist_fwp5:
         draw a polygon:
           name: олон өнцөгт зурах
+          parameters:
+            length: урт
       courseF_artist_fwp6:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
       courseF_artist_fwp7:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            min: хамгийн бага
       courseF_artist_fwp8:
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            min: хамгийн бага
       courseF_artist_fwp9:
         draw a star:
           name: од зурах
+          parameters:
+            points: цэгүүд
+            length: урт
         draw a circle:
           name: тойрог зурах
         draw a pinwheel:
           name: хавчаар зурах
+          parameters:
+            length: урт
+            repeat: давтах
         draw a triangle:
           name: гурвалжин зурах
+          parameters:
+            length: урт
         draw a shape:
           name: дүрс зурах
+          parameters:
+            length: урт
         draw a house:
           name: байшин зурах
+          parameters:
+            length: урт
         draw a square:
           name: квадрат зурах
+          parameters:
+            length: урт
         draw a spiral edge:
           name: спираль ирмэгийг зураарай
+          parameters:
+            length: урт
+            min: хамгийн бага
       courseF_artist_fwp_challenge1:
         draw background:
           name: суурь өнгийг зурах
+          parameters:
+            color: өнгө
         draw a polygon:
           name: олон өнцөгт зурах
         draw a square 20:
@@ -1393,6 +1578,8 @@ mn-MN:
           name: ямар нэг юм хийх
         draw an octagon:
           name: найман өнцөгт зурах
+          parameters:
+            length: урт
       courseF_bee_conditionals2:
         move and check:
           name: хөдөлж, шалгаарай
@@ -1463,27 +1650,43 @@ mn-MN:
       courseF_bee_fwp4:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            length: урт
       courseF_bee_fwp5:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            width: өргөн
       courseF_bee_fwp6:
         rowOfNectar:
           name: шүүсНийэгнээ
+          parameters:
+            width: өргөн
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: шүүсНийэгнээЭсвэлЗөгийнбал
+          parameters:
+            width: өргөн
       courseF_bee_fwp_challenge1:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       courseF_bee_fwp_challenge2:
         pick row:
           name: эгнээ сонгох
+          parameters:
+            length: урт
       courseF_bee_variables_7_2018:
         collect:
           name: цуглуулах

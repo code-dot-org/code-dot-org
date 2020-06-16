@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Het lijkt erop dat we een probleem hebben met het laden van je animatie \"{animationName}\". Zorg ervoor dat je een goede internetconnectie hebt en probeer de site opnieuw te laden. Als dit probleem aanhoudt, kan het zo zijn dat je animatie niet werkt. In dat geval, moet je de animatie verwijderen.",
   "reinfFeedbackMsg": "Je bent klaar! Klik op \"Doorgaan\" om verder te gaan naar het volgende level.",
   "shareGame": "Deel je spel met anderen:",

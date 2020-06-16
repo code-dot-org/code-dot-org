@@ -30546,6 +30546,13 @@ fr:
               name: Créer PT - Faire un Plan
             Create PT - Complete the Task:
               name: Créer PT Préparation - Accomplir la Tâche
+          lessons:
+            Create PT - Review the Task:
+              name: Créer PT - Revoir la Tâche
+            Create PT - Make a Plan:
+              name: Créer PT - Faire un Plan
+            Create PT - Complete the Task:
+              name: Créer PT Préparation - Accomplir la Tâche
         csp9-2020:
           stages:
             new stage:
