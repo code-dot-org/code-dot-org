@@ -30,7 +30,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       sources: 'dashboard.users',
     )
     refute_nil result
-    assert_equal({'is_parent' => 1}, result.data)
+    assert_equal({'parent_email' => 1}, result.data)
   end
 
   test 'get_extraction_query can import when no data column is given' do
