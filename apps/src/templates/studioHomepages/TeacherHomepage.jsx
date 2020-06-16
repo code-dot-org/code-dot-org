@@ -14,9 +14,7 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
-import DonorTeacherBanner, {
-  donorTeacherBannerOptionsShape
-} from '@cdo/apps/templates/DonorTeacherBanner';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 
 const styles = {
   clear: {
@@ -38,7 +36,6 @@ export default class TeacherHomepage extends Component {
     ncesSchoolId: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
     donorBannerName: PropTypes.string,
-    donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
@@ -160,7 +157,6 @@ export default class TeacherHomepage extends Component {
       ncesSchoolId,
       censusQuestion,
       schoolYear,
-      donorTeacherBannerOptions,
       teacherId,
       teacherName,
       teacherEmail,
@@ -226,11 +222,7 @@ export default class TeacherHomepage extends Component {
         )}
         {isEnglish && this.state.donorBannerName && (
           <div>
-            <DonorTeacherBanner
-              options={donorTeacherBannerOptions}
-              showPegasusLink={true}
-              source="teacher_home"
-            />
+            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
             <div style={styles.clear} />
           </div>
         )}
