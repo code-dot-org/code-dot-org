@@ -4,7 +4,6 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 $(document).ready(init);
 
 async function init() {
-  console.log('in init');
   initResponsive();
   if (await hasSchoolDonor('Amazon')) {
     $('.show-if-eligible').show();
