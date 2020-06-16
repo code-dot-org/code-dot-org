@@ -1,3 +1,4 @@
+require 'webmock/minitest'
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
@@ -77,6 +78,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab project level has sharing meta tags' do
+    stub_request(:post, "https://.api.cognitive.microsoft.com/sts/v1.0/issueToken").to_return(status: 200, body: "", headers: {})
     channel = 'fake-channel'
     get :show, params: {key: 'applab', channel_id: channel, share: true}
 
@@ -205,6 +207,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'shared applab project does not get redirected if under 13' do
+    stub_request(:post, "https://.api.cognitive.microsoft.com/sts/v1.0/issueToken").to_return(status: 200, body: "", headers: {})
     sign_in_with_request create(:young_student)
 
     get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
@@ -213,6 +216,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'shared applab project does not get redirected if over 13' do
+    stub_request(:post, "https://.api.cognitive.microsoft.com/sts/v1.0/issueToken").to_return(status: 200, body: "", headers: {})
     sign_in_with_request create(:student)
 
     # We can't make successful requests for both applab and gamelab within the
