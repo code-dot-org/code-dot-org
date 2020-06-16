@@ -1,33 +1,5 @@
--# Put these all into one React component that manages their spacing:
--#   .script_name_container
--#   .progress_container
--#   .header_finished_link
--#   .header_popup_link
--#
--# Importantly, that component must be able to find out what its own width is,
--# up front, so that it can render all these things spaced appropriately.
--#
--# One question: who should create this component?
--# It seems likely that it should be the header.js' header.build function
-
--# We'll attach the new React stuff to this
+-# We'll attach to this using React
 .header_level
-
--# Let's first replace all this in header.js
-  .header_level
-    -# _header_progress.js attaches ScriptName DOM component here.
-    .script_name_container
-
-    -# header.js' header.build function calls
-    -# progress.js' progress.renderStageProgress
-    -# which attaches LessonProgress here.
-    .progress_container
-
-    .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
-    .header_popup_link{style: 'display: none;'}
-      .header_popup_link_glyph
-        &#x25BC;
-      .header_popup_link_text= t(:more)
 
 .hidden_components{style: "display: none"}
   .header_popup_components

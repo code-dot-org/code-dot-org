@@ -60,7 +60,7 @@ class HeaderMiddle extends React.Component {
     if (
       !this.state.addedPopupComponents &&
       this.refs.header_popup_components &&
-      this.props.lessonData.num_script_lessons > 1
+      true // this.props.lessonData.num_script_lessons > 1
     ) {
       $('.header_popup_components')
         .appendTo(ReactDOM.findDOMNode(this.refs.header_popup_components))
@@ -85,14 +85,6 @@ class HeaderMiddle extends React.Component {
   // Return the desired widths for the items that are showing.
   getWidths() {
     const width = this.state.width;
-    /*const progressDesiredWidth = this.props.projectInfoOnly
-      ? 0
-      : this.state.lessonProgressFullWidth + 10;
-    const showPopup =
-      this.props.lessonData && this.props.lessonData.num_script_lessons > 1; // || progressDesiredWidth < progressActualWidth;
-    const showFinish =
-      this.props.lessonData && this.props.lessonData.finishLink;
-    */
 
     if (this.props.projectInfoOnly) {
       return {
@@ -104,12 +96,48 @@ class HeaderMiddle extends React.Component {
       };
     }
 
+    const progressDesiredWidth = this.state.lessonProgressFullWidth + 10;
+
+    const showFinish = !!(
+      this.props.lessonData && this.props.lessonData.finishLink
+    );
+
+    // projectInfo gets no more than 30% of the entire width
+    const projectInfoWidth = Math.min(
+      this.state.projectInfoFullWidth,
+      width * 0.3
+    );
+
+    let remainingWidth = width - projectInfoWidth;
+
+    // progress gets no more than 60% of the remaining width
+    const progressWidth = Math.min(progressDesiredWidth, remainingWidth * 0.6);
+
+    remainingWidth = remainingWidth - progressWidth;
+
+    // do we show popup?
+    const showPopup =
+      (this.props.lessonData && this.props.lessonData.num_script_lessons > 1) ||
+      progressWidth < progressDesiredWidth;
+
+    const popupWidth = showPopup ? 40 : 0;
+
+    remainingWidth = remainingWidth - popupWidth;
+
+    // finish link gets 1/3 of remaining space
+    const finishLinkWidth = showFinish ? remainingWidth * 0.3 : 0;
+
+    remainingWidth = remainingWidth - finishLinkWidth;
+
+    // script name gets the rest
+    const scriptNameWidth = showFinish ? remainingWidth : remainingWidth;
+
     return {
-      projectInfo: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4),
-      scriptName: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4),
-      progress: Math.min(this.state.lessonProgressFullWidth, (width - 40) / 4),
-      popup: 40,
-      finishLink: Math.min(this.state.projectInfoFullWidth, (width - 40) / 4)
+      projectInfo: projectInfoWidth,
+      scriptName: scriptNameWidth,
+      progress: progressWidth,
+      popup: popupWidth,
+      finishLink: finishLinkWidth
     };
   }
 
@@ -126,7 +154,7 @@ class HeaderMiddle extends React.Component {
   };
 
   render() {
-    const {projectInfoOnly, scriptNameData, lessonData} = this.props;
+    const {scriptNameData, lessonData} = this.props;
 
     const widths = this.getWidths();
 
@@ -151,7 +179,7 @@ class HeaderMiddle extends React.Component {
             />
           </div>
 
-          {extraScriptNameData && (
+          {widths.scriptName !== 0 && (
             <div
               id="script_name_container"
               style={{
@@ -167,7 +195,7 @@ class HeaderMiddle extends React.Component {
             </div>
           )}
 
-          {!projectInfoOnly && (
+          {widths.progress !== 0 && (
             <div
               id="lesson_progress_container"
               style={{
@@ -183,7 +211,18 @@ class HeaderMiddle extends React.Component {
             </div>
           )}
 
-          {lessonData && (
+          <div
+            id="header_popup_container"
+            style={{
+              float: 'left',
+              width: widths.popup,
+              visibility: widths.popup === 0 ? 'hidden' : undefined
+            }}
+          >
+            <ProtectedStatefulDiv ref="header_popup_components" />
+          </div>
+
+          {widths.finishLink !== 0 && (
             <div
               id="finish_link_container"
               style={{float: 'left', width: widths.finishLink}}
@@ -191,15 +230,6 @@ class HeaderMiddle extends React.Component {
               <div className="header_finished_link" style={styles.finishedLink}>
                 <a href={lessonData.finishLink}>{lessonData.finishText}</a>
               </div>
-            </div>
-          )}
-
-          {lessonData && lessonData.num_script_lessons > 1 && (
-            <div
-              id="header_popup_container"
-              style={{float: 'left', width: widths.popup}}
-            >
-              <ProtectedStatefulDiv ref="header_popup_components" />
             </div>
           )}
         </div>
