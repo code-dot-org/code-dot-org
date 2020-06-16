@@ -1,1 +1,0 @@
-Host the rubric sampling model in a flask app that takes API requests from code.org and returns it.
