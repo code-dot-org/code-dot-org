@@ -7,6 +7,9 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
+import {isEmail} from '@cdo/apps/util/formatValidation';
+
+const VALIDATION_STATE_ERROR = 'error';
 
 const styles = {
   wrong_school: {
@@ -36,7 +39,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       csta: false,
       awsEducate: false,
       consentAFE: false,
-      consentCSTA: false
+      consentCSTA: false,
+      errors: {}
     };
   }
 
@@ -44,7 +48,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
-  onContinue = () => {
+  submit = () => {
     const requiredFormData = _.pick(this.state, [
       'firstName',
       'lastName',
@@ -76,6 +80,62 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       ...consentCSTA
     });
   };
+
+  onContinue = () => {
+    if (this.validateRequiredFields()) {
+      this.submit();
+    }
+  };
+
+  checkValidationState = elementId => {
+    return this.state.errors.hasOwnProperty(elementId);
+  };
+
+  validateRequiredFields = () => {
+    let errors = this.getErrors();
+    const missingRequiredFields = this.getMissingRequiredFields();
+
+    if (missingRequiredFields.length || Object.keys(errors).length) {
+      let requiredFieldsErrors = {};
+      missingRequiredFields.forEach(f => {
+        requiredFieldsErrors[f] = '';
+      });
+      errors = {...errors, ...requiredFieldsErrors};
+      this.setState({errors: errors});
+      return false;
+    }
+    return true;
+  };
+
+  getErrors = () => {
+    const errors = {};
+
+    if (this.state.email) {
+      if (!isEmail(this.state.email)) {
+        errors.email = 'Must be a valid email address';
+      }
+    }
+
+    return errors;
+  };
+
+  getMissingRequiredFields() {
+    const requiredFields = ['firstName', 'lastName', 'consentAFE'];
+
+    if (this.state.csta) {
+      requiredFields.push('consentCSTA');
+    }
+
+    if (this.state.inspirationKit) {
+      requiredFields.push('street1', 'city', 'state', 'zip');
+    }
+
+    const missingRequiredFields = requiredFields.filter(f => {
+      return !this.state[f];
+    });
+
+    return missingRequiredFields;
+  }
 
   render() {
     // TO DO: gray out school dropdown and disable editing
@@ -115,6 +175,11 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             type="text"
             required={true}
             onChange={this.handleChange}
+            validationState={
+              this.state.errors.hasOwnProperty('firstName')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
           />
           <FieldGroup
             id="lastName"
@@ -122,6 +187,11 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             type="text"
             required={true}
             onChange={this.handleChange}
+            validationState={
+              this.state.errors.hasOwnProperty('lastName')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
           />
           <div>
             How can Amazon Future Engineer help you grow computer science at
@@ -136,7 +206,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.inspirationKit}
           />
           {this.state.inspirationKit && (
-            <ShippingAddressFormGroup handleChange={this.handleChange} />
+            <ShippingAddressFormGroup
+              handleChange={this.handleChange}
+              checkValidationState={this.checkValidationState}
+            />
           )}
           <SingleCheckbox
             name="csta"
@@ -161,6 +234,11 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 label="I give Code.org permission to share my name, email address, and school name, address, and NCES ID with the Computer Science Teachers Association. I provide my consent to the use of my personal data as described in the CSTA Privacy Policy (required if you want a CSTA Plus membership)."
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
+                validationState={
+                  this.state.errors.hasOwnProperty('consentCSTA')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
               />
             </div>
           )}
@@ -181,6 +259,11 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               Amazon’s Privacy Policy."
             onChange={this.handleChange}
             value={this.state.consentAFE}
+            validationState={
+              this.state.errors.hasOwnProperty('consentAFE')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
             required={true}
           />
           <div>
@@ -203,7 +286,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 // Just takes handleChange as argument, returns form?
 class ShippingAddressFormGroup extends React.Component {
   static propTypes = {
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
+    checkValidationState: PropTypes.func.isRequired
   };
 
   handleChange = change => {
@@ -224,6 +308,11 @@ class ShippingAddressFormGroup extends React.Component {
           type="text"
           required={true}
           onChange={this.handleChange}
+          validationState={
+            this.props.checkValidationState('street1')
+              ? VALIDATION_STATE_ERROR
+              : null
+          }
         />
         <FieldGroup
           id="street2"
@@ -238,6 +327,11 @@ class ShippingAddressFormGroup extends React.Component {
           type="text"
           required={true}
           onChange={this.handleChange}
+          validationState={
+            this.props.checkValidationState('city')
+              ? VALIDATION_STATE_ERROR
+              : null
+          }
         />
         <FieldGroup
           id="state"
@@ -245,6 +339,11 @@ class ShippingAddressFormGroup extends React.Component {
           type="text"
           required={true}
           onChange={this.handleChange}
+          validationState={
+            this.props.checkValidationState('state')
+              ? VALIDATION_STATE_ERROR
+              : null
+          }
         />
         <FieldGroup
           id="zip"
@@ -252,6 +351,11 @@ class ShippingAddressFormGroup extends React.Component {
           type="number"
           required={true}
           onChange={this.handleChange}
+          validationState={
+            this.props.checkValidationState('zip')
+              ? VALIDATION_STATE_ERROR
+              : null
+          }
         />
       </div>
     );
