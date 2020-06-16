@@ -165,7 +165,7 @@
   personalize_certificate: "تخصيص شهادتك"
   print_batch_certificates: "اطبع مجموعة شهادات"
   print_certificates: "إطْبَع الشَهَادَات"
-  certificate_sponsor_message: "%{اسم_الراعي} تقدم بهدية سخية لرعاية تعلمك."
+  certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلمك."
   print_ice_art_from_frozen: "اطبع فن الثلج من البرامج التعليمية المجمدة"
   want_a_blank_certificate_template: "هل ترغب في قالب شهادة فارغ لكتابة أسماء طلابك؟"
   landscape_recommended_certificates: "يوصى باختيار **Landscape** عندما تطبع الشهادات."
