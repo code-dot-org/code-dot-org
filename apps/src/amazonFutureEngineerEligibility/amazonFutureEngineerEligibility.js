@@ -11,13 +11,19 @@ function showAmazonFutureEngineerEligibility() {
   );
 
   let signedIn = false;
+  let schoolData = {};
+
   $.ajax({
     type: 'GET',
-    url: '/dashboardapi/v1/users/me/contact_details'
+    url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
   })
     .done(results => {
+      // This request returns a 403 if the user isn't signed in.
+      signedIn = true;
+
       if (results) {
-        signedIn = true;
+        schoolData = results;
+        console.log(results);
       }
     })
     .complete(() => {
@@ -25,7 +31,11 @@ function showAmazonFutureEngineerEligibility() {
       // where amazonFutureEngineerEligibilityElement could be null or not an array.
       ReactDOM.render(
         // Need to update API endpoint and source page ID (not sure if even needed)
-        <AmazonFutureEngineerEligibility signedIn={signedIn} />,
+        <AmazonFutureEngineerEligibility
+          signedIn={signedIn}
+          schoolId={schoolData.nces_school_id || ''}
+          schoolEligible={schoolData.afe_high_needs || null}
+        />,
         amazonFutureEngineerEligibilityElement[0]
       );
     });
