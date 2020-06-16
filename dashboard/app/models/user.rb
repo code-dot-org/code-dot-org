@@ -806,7 +806,7 @@ class User < ActiveRecord::Base
     return false unless managing_own_credentials?
 
     # Password is required for:
-    # New users with no encrypted_password set and users changing their password.
+    # New users with no encrypted_password set
     !persisted? && encrypted_password.blank?
   end
 
