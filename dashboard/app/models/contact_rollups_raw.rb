@@ -69,8 +69,8 @@ class ContactRollupsRaw < ApplicationRecord
     source_sql = <<~SQL
       SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
         FROM users AS u
-        JOIN followers AS f on u.id = f.student_user_id
-        JOIN sections AS se on f.section_id = se.id
+        JOIN followers AS f ON u.id = f.student_user_id
+        JOIN sections AS se ON f.section_id = se.id
         WHERE u.email > ''
         AND se.section_type IS NOT NULL
       GROUP BY 1,2
@@ -100,7 +100,7 @@ class ContactRollupsRaw < ApplicationRecord
     source_sql = <<~SQL
       SELECT u.email, up.permission, up.updated_at
       FROM user_permissions AS up
-      JOIN users AS u on u.id = up.user_id
+      JOIN users AS u ON u.id = up.user_id
       WHERE u.email > ''
     SQL
 
@@ -113,12 +113,11 @@ class ContactRollupsRaw < ApplicationRecord
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
     teacher_and_geo_query = <<~SQL
       SELECT
-        t.email, t.id as user_id,
+        t.email, t.id AS user_id,
         ug.city, ug.state, ug.postal_code, ug.country,
-        MAX(GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at))) as updated_at
+        MAX(GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at))) AS updated_at
       FROM (#{teacher_query('id, email, updated_at')}) AS t
-      LEFT OUTER JOIN user_geos AS ug
-      ON t.id = ug.user_id
+      LEFT OUTER JOIN user_geos AS ug ON t.id = ug.user_id
       GROUP BY email, t.id, city, state, postal_code, country
     SQL
 
@@ -136,9 +135,8 @@ class ContactRollupsRaw < ApplicationRecord
         e.email,
         w.course,
         MAX(GREATEST(e.updated_at, IFNULL(w.updated_at, e.updated_at))) AS updated_at
-      FROM pd_enrollments as e
-      LEFT OUTER JOIN pd_workshops as w
-      ON e.pd_workshop_id = w.id
+      FROM pd_enrollments AS e
+      LEFT OUTER JOIN pd_workshops AS w ON e.pd_workshop_id = w.id
       WHERE email > ''
       GROUP BY email, course
     SQL
@@ -166,10 +164,8 @@ class ContactRollupsRaw < ApplicationRecord
         s.city, s.state, s.zip,
         MAX(GREATEST(s.updated_at, si.updated_at, t.updated_at)) AS updated_at
       FROM schools AS s
-      INNER JOIN school_infos AS si
-      ON s.id = si.school_id
-      INNER JOIN (#{teacher_query('email, school_info_id, updated_at')}) AS t
-      ON si.id = t.school_info_id
+      INNER JOIN school_infos AS si ON s.id = si.school_id
+      INNER JOIN (#{teacher_query('email, school_info_id, updated_at')}) AS t ON si.id = t.school_info_id
       GROUP BY email, city, state, zip
     SQL
 
@@ -195,9 +191,9 @@ class ContactRollupsRaw < ApplicationRecord
     #   bin/oneoff/wipe_data/opt_out_petition_emails_under_16
     #
     forms_query = <<~SQL
-      SELECT email, kind, data->>'$.role_s' as role, MAX(updated_at) as updated_at
+      SELECT email, kind, data->>'$.role_s' AS role, MAX(updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.forms
-      WHERE email > '' and email != 'anonymous@code.org'
+      WHERE email > '' AND email != 'anonymous@code.org'
       GROUP BY email, kind, role
     SQL
 
@@ -217,8 +213,7 @@ class ContactRollupsRaw < ApplicationRecord
         fg.city, fg.state, fg.postal_code, fg.country,
         MAX(fg.updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.forms AS f
-      INNER JOIN #{CDO.pegasus_db_name}.form_geos AS fg
-      ON f.id = fg.form_id
+      INNER JOIN #{CDO.pegasus_db_name}.form_geos AS fg ON f.id = fg.form_id
       WHERE email > ''
       GROUP BY email, city, state, postal_code, country
     SQL
