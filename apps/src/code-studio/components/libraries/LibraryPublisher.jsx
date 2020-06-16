@@ -423,6 +423,7 @@ export default class LibraryPublisher extends React.Component {
           {onShareTeacherLibrary && (
             <Button
               __useDeprecatedTag
+              id="ui-test-manage-libraries"
               style={{marginTop: 20, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
               text={i18n.manageLibraries()}
