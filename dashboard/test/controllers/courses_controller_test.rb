@@ -144,8 +144,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect teacher to latest stable version in course family" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
 
     get :show, params: {course_name: 'csp-2017'}
 
