@@ -466,6 +466,6 @@ Outputs:
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:
-    Value: <%=cdn_enabled ? subdomain('origin') : subdomain%>
+    Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
     Description: SSH server name
 <%end-%>
