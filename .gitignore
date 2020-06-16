@@ -67,8 +67,4 @@ npm-debug.log
 /rebuild-shared
 /rebuild-code-studio
 /tools/scripts/brokenLinkChecker/node_modules/
-
-flask/data_utils/data
-flask/rubric/checkpoints
-flask/rubric/data
 node_modules/
