@@ -18,12 +18,12 @@ function showAmazonFutureEngineerEligibility() {
     url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
   })
     .done(results => {
-      // This request returns a 403 if the user isn't signed in.
+      // This request returns a 403 if the user isn't signed in,
+      // and 204 (no content) if a user is signed in to a student account.
       signedIn = true;
 
       if (results) {
         schoolData = results;
-        console.log(results);
       }
     })
     .complete(() => {
