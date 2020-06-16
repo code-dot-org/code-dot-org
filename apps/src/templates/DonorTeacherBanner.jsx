@@ -16,21 +16,8 @@ const styles = {
     marginRight: 7,
     marginTop: 15
   },
-  checkbox: {
-    margin: '0 7px 4px 0',
-    cursor: 'pointer',
-    verticalAlign: 'middle'
-  },
-  checkboxDisabled: {
-    margin: '0 7px 4px 0',
-    cursor: 'not-allowed',
-    verticalAlign: 'middle'
-  },
   clear: {
     clear: 'both'
-  },
-  error: {
-    color: color.red
   },
   header: {
     marginTop: 10,
@@ -64,28 +51,10 @@ const styles = {
     verticalAlign: 'top',
     marginRight: 10,
     cursor: 'pointer'
-  },
-  red: {
-    color: color.red
   }
 };
-
-export const donorTeacherBannerOptionsShape = PropTypes.shape({
-  teacherFirstName: PropTypes.string,
-  teacherSecondName: PropTypes.string,
-  teacherEmail: PropTypes.string,
-  ncesSchoolId: PropTypes.string,
-  schoolAddress1: PropTypes.string,
-  schoolAddress2: PropTypes.string,
-  schoolAddress3: PropTypes.string,
-  schoolCity: PropTypes.string,
-  schoolState: PropTypes.string,
-  schoolZip: PropTypes.string
-});
-
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
-    options: donorTeacherBannerOptionsShape,
     showPegasusLink: PropTypes.bool,
     source: PropTypes.string.isRequired
   };
@@ -111,7 +80,7 @@ export default class DonorTeacherBanner extends Component {
         data_string: $('input[name="nces-id"]').val()
       });
 
-      // redirect to form
+      // redirect to form on amazon-future-engineer page
       window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
     }
 
@@ -143,19 +112,6 @@ export default class DonorTeacherBanner extends Component {
 
   renderDonorForm() {
     const buttonDisabled = this.state.participate === undefined;
-
-    const optionFields = {
-      teacherFirstName: 'first-name',
-      teacherSecondName: 'last-name',
-      teacherEmail: 'email',
-      ncesSchoolId: 'nces-id',
-      schoolAddress1: 'school-address-1',
-      schoolAddress2: 'school-address-2',
-      schoolAddress3: 'school-address-3',
-      schoolCity: 'school-city',
-      schoolState: 'school-state',
-      schoolZip: 'school-zip'
-    };
 
     return (
       <div style={styles.main}>
@@ -212,24 +168,6 @@ export default class DonorTeacherBanner extends Component {
               </label>
             </div>
           </div>
-
-          <form
-            id="hidden_form"
-            action="https://www.amazonfutureengineer.com/teacher-form"
-            method="post"
-            target="_blank"
-          >
-            {Object.keys(optionFields)
-              .filter(key => this.props.options[key])
-              .map(key => (
-                <input
-                  key={key}
-                  type="hidden"
-                  name={optionFields[key]}
-                  value={this.props.options[key]}
-                />
-              ))}
-          </form>
 
           <Button
             __useDeprecatedTag
