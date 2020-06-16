@@ -158,32 +158,39 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 ### Windows
 
-With the release of Windows Subsystem for Linux (WSL), you can run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
+Windows Subsystem for Linux (WSL) allows you to run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
 
-It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. 
+It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [here](https://www.microsoft.com/en-us/software-download/windows10).
 
-In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [here](https://www.microsoft.com/en-us/software-download/windows10).
-
-1. Install WSL (unabridged instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
+1. Enable WSL (unabridged instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
     1. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
     1. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
     1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
-1. Install Ubuntu. When writing these steps, the Windows Store App titled simply 'Ubuntu' (which is Ubuntu 20.04) was used successfully. However, the Ubuntu setup steps above are for 16.04, so you may feel like using that instead if you fear future complications beyond setup.
-    * [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link) OR
-    * Manually download and install Ubuntu 16.04 from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual). There are installation instructions linked to from that page.
-1. Before you launch WSL for the first time, you may need to turn on virtualization in your BIOS settings.
-1. Run `wsl` from the command line (or search for 'Ubuntu' in the Start Menu) and WSL will complete installation.
+1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 16.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+1. Make sure virtualization is turned on your BIOS settings.
+1. Run `wsl` from the command line (or search for 'Ubuntu' in the Start Menu) for the first time and WSL will complete installation in the resulting terminal window.
 
-From here, you can follow the [Ubuntu procedure](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting) above, followed by the [overview instructions](#overview), WITH the following things to be aware of:
-1. In step 2, you will probably run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
-1. You may have to run `sudo /etc/init.d/mysql restart` before step 9.
-1. If during git clone you encounter the error `the remote end hung up unexpectedly`, it's because the repo is BIG (over 6 GB compressed). You could always try increasing the http buffer with something like `git config --global http.postBuffer 1048576000`, but it's probably easier to just download the code-dot-org-staging zip file directly from GitHub. 
-   1. If you do this, you cannot use File Explorer to move the zip archive to your Linux directory. Instead run `mv /mnt/c/<DOWNLOAD_PATH> ~` from WSL. 
-   1. Once you've unzipped the archive, you may need to run `git init` inside of the unzipped repo, or else you may receive the error message `ln: failed to create symbolic link '.git/hooks/pre-commit': No such file or directory`
-1. Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
-1. One last note from this author: running `bundle exec rake install` took me over an hour to complete. I ran the sql query as suggested and didn't notice any change in the last couple of rows; I also tried running with `--trace` but it doesn't tell you much after you see `RAILS_ENV=development RACK_ENV=development bundle exec rake dashboard:setup_db`...so you may just have to cross your fingers and hope things finish!
+From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting), _with the following observations_...
+* In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
+* Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
+
+...followed by the [overview instructions](#overview), _with the following observations_:
+* When running `git clone`, you may encounter the error
+    ```
+    error: RPC failed; curl 56 GnuTLS recv error (-24): Decryption has failed.
+    fatal: the remote end hung up unexpectedly
+    fatal: early EOF
+    fatal: index-pack failed
+    ```
+   This is because the repo is BIG (over 6 GB compressed). There are many possible solutions proffered online, but it's probably easier to just download the repo's zip file directly from GitHub. A couple of notes if you go this route:
+   * You cannot use File Explorer to move the zip archive to your Linux directory. Instead, WSL sees your `C:/` drive at `/mnt/c`, so run something like `mv /mnt/c/<DOWNLOAD_PATH> ~` from within WSL. 
+   * Once you've extracted it, run `git init` inside of the unzipped repo to properly set up `.git/hooks` (or else you may receive the error message `ln: failed to create symbolic link '.git/hooks/pre-commit': No such file or directory`)
+   * Running `git pull` (after you've added the staging remote using `git remote add origin https://github.com/code-dot-org/code-dot-org.git`), you may encounter the same error as the one described when running `git clone`. Again, it 
+* Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
+* One last note from this author: running `bundle exec rake install` took me over an hour to complete. I ran the sql query as suggested and didn't notice any change in the last couple of rows; I also tried running with `--trace` but it doesn't tell you much after you see `RAILS_ENV=development RACK_ENV=development bundle exec rake dashboard:setup_db`...so you may just have to cross your fingers and hope things finish!
 
 ### Alternative: Use an Ubuntu VM
 
