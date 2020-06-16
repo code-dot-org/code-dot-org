@@ -6,6 +6,7 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 const styles = {
   intro: {
@@ -15,6 +16,8 @@ const styles = {
 
 const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
+const VALIDATION_STATE_ERROR = 'error';
+
 export default class AmazonFutureEngineerEligibility extends React.Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired
@@ -23,25 +26,20 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
-    let sessionEligibilityData =
-      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+    let sessionEligibilityData = JSON.parse(
+      sessionStorage.getItem(sessionStorageKey)
+    ) || {
+      schoolEligible: null,
+      schoolId: null,
+      consentAFE: false,
+      submitted: false
+    };
+
+    sessionEligibilityData.signedIn = this.props.signedIn;
 
     this.state = {
-      formData: {
-        signedIn: this.props.signedIn,
-        schoolEligible:
-          'schoolEligible' in sessionEligibilityData
-            ? sessionEligibilityData.schoolEligible
-            : null,
-        schoolId:
-          'schoolId' in sessionEligibilityData
-            ? sessionEligibilityData.schoolId
-            : null,
-        consentAFE:
-          'consentAFE' in sessionEligibilityData
-            ? sessionEligibilityData.consentAFE
-            : false
-      }
+      formData: sessionEligibilityData,
+      errors: {}
     };
   }
 
@@ -56,9 +54,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     );
   };
 
-  handleClickCheckEligibility = () => {
+  submit = () => {
     // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
-
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
     }
@@ -70,6 +67,50 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     }).done(schoolData => {
       this.handleEligibility(schoolData.afe_high_needs);
     });
+  };
+
+  validateRequiredFields = () => {
+    let errors = this.getErrors();
+    const missingRequiredFields = this.getMissingRequiredFields();
+
+    if (missingRequiredFields.length || Object.keys(errors).length) {
+      let requiredFieldsErrors = {};
+      missingRequiredFields.forEach(f => {
+        requiredFieldsErrors[f] = '';
+      });
+      errors = {...errors, ...requiredFieldsErrors};
+      this.setState({errors: errors});
+      return false;
+    }
+    return true;
+  };
+
+  getErrors = () => {
+    const errors = {};
+
+    if (this.state.formData.email) {
+      if (!isEmail(this.state.formData.email)) {
+        errors.email = 'Must be a valid email address';
+      }
+    }
+
+    return errors;
+  };
+
+  getMissingRequiredFields() {
+    const requiredFields = ['email', 'schoolId'];
+
+    const missingRequiredFields = requiredFields.filter(f => {
+      return !this.state.formData[f];
+    });
+
+    return missingRequiredFields;
+  }
+
+  handleClickCheckEligibility = () => {
+    if (this.validateRequiredFields()) {
+      this.submit();
+    }
   };
 
   handleEligibility(isEligible) {
@@ -155,12 +196,27 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 type="text"
                 required={true}
                 onChange={this.updateFormData}
+                validationState={
+                  this.state.errors.hasOwnProperty('email')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorMessage={this.state.errors.email}
               />
-              <SchoolAutocompleteDropdownWithLabel
-                setField={this.handleSchoolDropdownChange}
-                showRequiredIndicator={true}
-                value={formData.schoolId}
-              />
+              <FormGroup
+                id="schoolIdWrapper"
+                validationState={
+                  this.state.errors.hasOwnProperty('schoolId')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+              >
+                <SchoolAutocompleteDropdownWithLabel
+                  setField={this.handleSchoolDropdownChange}
+                  showRequiredIndicator={true}
+                  value={formData.schoolId}
+                />
+              </FormGroup>
               <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
               </Button>
