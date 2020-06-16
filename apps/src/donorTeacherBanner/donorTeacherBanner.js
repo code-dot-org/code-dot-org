@@ -14,42 +14,15 @@ $(document).ready(init);
 
 function showDonorTeacherBanner() {
   const donorTeacherBannerElements = $('.donor-teacher-banner-container');
-  let options = {};
 
-  $.ajax({
-    type: 'GET',
-    url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
-  })
-    .done(results => {
-      if (results) {
-        options = {
-          teacherFirstName: results.teacher_first_name,
-          teacherSecondName: results.teacher_second_name,
-          teacherEmail: results.teacher_email,
-          ncesSchoolId: results.nces_school_id,
-          schoolAddress1: results.school_address_1,
-          schoolAddress2: results.school_address_2,
-          schoolAddress3: results.school_address_2,
-          schoolCity: results.school_city,
-          schoolState: results.school_state,
-          schoolZip: results.school_zip
-        };
-      }
-    })
-    .complete(() => {
-      donorTeacherBannerElements.each((index, donorTeacherBannerElement) => {
-        ReactDOM.render(
-          <Provider store={getStore()}>
-            <DonorTeacherBanner
-              options={options}
-              showPegasusLink={false}
-              source="marketing"
-            />
-          </Provider>,
-          donorTeacherBannerElement
-        );
-      });
-    });
+  donorTeacherBannerElements.each((index, donorTeacherBannerElement) => {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <DonorTeacherBanner showPegasusLink={false} source="marketing" />
+      </Provider>,
+      donorTeacherBannerElement
+    );
+  });
 }
 
 async function init() {
@@ -57,9 +30,6 @@ async function init() {
   if (await hasSchoolDonor('Amazon')) {
     showDonorTeacherBanner();
     $('.show-if-eligible').show();
-    if (window.location.hash === '#sign-up-today') {
-      document.getElementById('sign-up-today').scrollIntoView(true);
-    }
   } else {
     $('.show-if-not-eligible').show();
   }
