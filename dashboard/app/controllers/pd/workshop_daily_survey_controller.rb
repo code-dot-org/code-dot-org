@@ -614,7 +614,8 @@ module Pd
         regional_partner_name: regional_partner_name,
         is_virtual: workshop.virtual?,
         num_facilitators: workshop.facilitators.count,
-        day: day
+        day: day,
+        is_friday_institute: workshop.friday_institute?
       }
     end
   end

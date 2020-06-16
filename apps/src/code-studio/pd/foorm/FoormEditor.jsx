@@ -51,7 +51,8 @@ class FoormEditor extends React.Component {
           facilitator_position: 2
         }
       ],
-      day: 1
+      day: 1,
+      is_friday_institute: false
     };
   }
 
@@ -175,6 +176,16 @@ class FoormEditor extends React.Component {
                   onChange={e => this.setState({is_virtual: e.target.value})}
                 />
               </label>
+              <label>
+                is_friday_institute <br />
+                <input
+                  type="boolean"
+                  value={this.state.is_friday_institute}
+                  onChange={e =>
+                    this.setState({is_friday_institute: e.target.value})
+                  }
+                />
+              </label>
 
               <label>
                 day <br />
@@ -201,7 +212,8 @@ class FoormEditor extends React.Component {
                   workshop_subject: this.state.workshop_subject,
                   regional_partner_name: this.state.regional_partner_name,
                   is_virtual: this.state.is_virtual,
-                  day: this.state.day
+                  day: this.state.day,
+                  is_friday_institute: this.state.is_friday_institute
                 }}
               />
             )}
