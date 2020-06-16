@@ -923,13 +923,11 @@ StudioApp.prototype.runChangeHandlers = function() {
     (this.isUsingBlockly() ||
       this.getCode().trim() !== this.executingCode.trim())
   ) {
-    // todo: if the change is an extra new line and the user didn't do it, ignore
+    // we trim the whitespace from the start and end of the code before comparing in droplet
+    // because droplet sometimes adds an extra newline when switching from block to code mode
     this.editDuringRunAlert = this.displayWorkspaceAlert(
       'warning',
-      <div>
-        Your code may have changed. Click "Reset" and then "Run" to run your
-        code again.
-      </div>,
+      <div>{msg.editDuringRunMessage()}</div>,
       true
     );
   }
