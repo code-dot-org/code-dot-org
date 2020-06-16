@@ -23,7 +23,8 @@ class ContactRollupsProcessed < ApplicationRecord
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
     # Process the aggregated data row by row and save the results to DB in batches.
     batch = []
-    ActiveRecord::Base.connection.exec_query(get_data_aggregation_query).each do |contact|
+    ContactRollupsV2.retrieve_query_results(get_data_aggregation_query).each do |contact|
+      contact.deep_stringify_keys!
       contact_data = parse_contact_data(contact['all_data_and_metadata'])
 
       processed_contact_data = {}
