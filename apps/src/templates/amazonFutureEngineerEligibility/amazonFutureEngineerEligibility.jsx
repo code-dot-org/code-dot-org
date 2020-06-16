@@ -98,8 +98,25 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     return <AmazonFutureEngineerAccountConfirmation />;
   };
 
+  submitToAFE = () => {
+    // returns a promise
+    return fetch('/dashboardapi/v1/afe_submit_2020', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.formData)
+    });
+  };
+
   loadCompletionPage = () => {
+    // Dedupe with loadConfirmationPage -- probably belongs in onContinue
+    this.saveToSessionStorage();
+
     // Do API calls here.
+    if (!this.state.formData.submitted) {
+      this.submitToAFE();
+    }
 
     // Notes on to dos for CSTA API call:
     // may need to make NCES ID 12 digits.
