@@ -25815,7 +25815,7 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
-            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya: &1
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
           title: Code Break
           description_audience: ''
@@ -25847,7 +25847,8 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
-            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya: *1
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -26014,7 +26015,7 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
-            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya: &2
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
           title: Code Break for Younger Students
           description_audience: ''
@@ -26046,7 +26047,8 @@ en:
               name: AI with Kat Graham & Kate Park
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
-            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya: *2
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
         no-lg:
           stages:
             new stage:
