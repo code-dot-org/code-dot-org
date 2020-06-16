@@ -19,6 +19,10 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
     @partner_script = create :script, editor_experiment: 'platformization-partners'
 
+    @student_coursez_2017 = create :student
+    @section_coursez_2017 = create :section, script: @coursez_2017
+    @section_coursez_2017.add_student(@student_coursez_2017)
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -192,6 +196,12 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to assigned version for student" do
+    sign_in @student_coursez_2017
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
   end
 
   test "show: do not redirect student to latest stable version in family if they can view the script version" do
