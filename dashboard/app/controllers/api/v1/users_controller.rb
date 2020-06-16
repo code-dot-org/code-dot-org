@@ -47,7 +47,8 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         school_address_3: teachers_school&.address_line3,
         school_city: teachers_school&.city,
         school_state: teachers_school&.state,
-        school_zip: teachers_school&.zip
+        school_zip: teachers_school&.zip,
+        afe_high_needs: teachers_school&.afe_high_needs?
       }
     else
       head :no_content
