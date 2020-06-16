@@ -50,7 +50,7 @@ FactoryGirl.define do
   factory :user do
     birthday Time.zone.today - 21.years
     email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
-    encrypted_password "00secret"
+    password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
@@ -280,6 +280,16 @@ FactoryGirl.define do
       trait :without_email do
         email ''
         hashed_email nil
+      end
+    end
+
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
       end
     end
 
