@@ -15,18 +15,20 @@ class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
   def self.extract_email_preferences
-    query = get_extraction_query('email_preferences', 'email', ['opt_in'])
+    select_query = 'SELECT email, opt_in, updated_at FROM email_preferences'
+    query = get_extraction_query('dashboard.email_preferences', select_query, 'opt_in')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
   def self.extract_parent_emails
     source_sql = <<~SQL
-      SELECT parent_email, MAX(updated_at) AS updated_at
+      SELECT parent_email AS email, 1 AS is_parent, MAX(updated_at) AS updated_at
       FROM users
       WHERE parent_email > ''
       GROUP BY parent_email
     SQL
-    query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
+
+    query = get_extraction_query('dashboard.users', source_sql, 'is_parent')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -42,7 +44,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY u.email, sc.name, c.name
     SQL
 
-    query = get_extraction_query(source_sql, 'email', ['script_name', 'course_name'], true, 'dashboard.sections')
+    query = get_extraction_query('dashboard.sections', source_sql, 'script_name', 'course_name')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -56,7 +58,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY u.email, courses.name
     SQL
 
-    query = get_extraction_query(source_sql, 'email', ['course_name'], true, 'dashboard.sections')
+    query = get_extraction_query('dashboard.sections', source_sql, 'course_name')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -74,7 +76,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY 1,2
     SQL
 
-    query = get_extraction_query(source_sql, 'email', ['section_type'], true, 'dashboard.followers')
+    query = get_extraction_query('dashboard.followers', source_sql, 'section_type')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -90,7 +92,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY 1,2
     SQL
 
-    query = get_extraction_query(source_sql, 'email', ['course'], true, 'dashboard.pd_attendances')
+    query = get_extraction_query('dashboard.pd_attendances', source_sql, 'course')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -102,7 +104,7 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE u.email > ''
     SQL
 
-    query = get_extraction_query(source_sql, 'email', ['permission'], true, 'dashboard.user_permissions')
+    query = get_extraction_query('dashboard.user_permissions', source_sql, 'permission')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
@@ -120,11 +122,9 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     extraction_query = get_extraction_query(
+      'dashboard.users',
       teacher_and_geo_query,
-      'email',
-      %w(user_id city state postal_code country),
-      true,
-      'dashboard.users'
+      'user_id', 'city', 'state', 'postal_code', 'country'
     )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
@@ -141,31 +141,19 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY email, course
     SQL
 
-    extraction_query = get_extraction_query(
-      enrollment_email_query,
-      'email',
-      ['course'],
-      true,
-      'dashboard.pd_enrollments'
-    )
+    extraction_query = get_extraction_query('dashboard.pd_enrollments', enrollment_email_query, 'course')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
   def self.extract_census_submissions
     submitter_query = <<~SQL
-      SELECT submitter_email_address, submitter_role, MAX(updated_at) AS updated_at
+      SELECT submitter_email_address AS email, submitter_role, MAX(updated_at) AS updated_at
       FROM census_submissions
       WHERE submitter_email_address > ''
       GROUP BY submitter_email_address, submitter_role
     SQL
 
-    extraction_query = get_extraction_query(
-      submitter_query,
-      'submitter_email_address',
-      ['submitter_role'],
-      true,
-      'dashboard.census_submissions'
-    )
+    extraction_query = get_extraction_query('dashboard.census_submissions', submitter_query, 'submitter_role')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
@@ -182,11 +170,9 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     extraction_query = get_extraction_query(
+      'dashboard.schools',
       school_geos_query,
-      'email',
-      %w(city state zip),
-      true,
-      'dashboard.schools'
+      'city', 'state', 'zip'
     )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
@@ -212,11 +198,9 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     extraction_query = get_extraction_query(
+      'pegasus.forms',
       forms_query,
-      'email',
-      %w(kind role),
-      true,
-      'pegasus.forms'
+      'kind', 'role'
     )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
@@ -235,11 +219,9 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     extraction_query = get_extraction_query(
+      'pegasus.form_geos',
       form_geos_query,
-      'email',
-      %w(city state postal_code country),
-      true,
-      'pegasus.form_geos'
+      'city', 'state', 'postal_code', 'country'
     )
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
@@ -258,13 +240,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY email
     SQL
 
-    extraction_query = get_extraction_query(
-      contact_query,
-      'email',
-      ['unsubscribed_at'],
-      true,
-      'pegasus.contacts'
-    )
+    extraction_query = get_extraction_query('pegasus.contacts', contact_query, 'unsubscribed_at')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
@@ -278,31 +254,23 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
   end
 
-  # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
-  # @param email_column [String] Column in source table we want to insert ino the email column
-  # @param data_columns [Array] Columns we want reshaped into a single JSON object
-  # @param source_is_subquery [Boolean] (default false) Set to true if source is a subquery, rather than a table name
-  # @param source_name [String] (default nil) Name for source (non-nil if using a subquery)
+  # @param source_name [String] The source table contains data we want to extract
+  # @param select_query [String] Query to select data from the source table
+  # @param data_columns [String] Columns we want reshaped into a single JSON object
   # @return [String] A SQL statement to extract and reshape data from the source table.
-  def self.get_extraction_query(source, email_column, data_columns, source_is_subquery=false, source_name=nil)
-    if source_name.nil? && source_is_subquery
-      raise 'Source name required if source is a subquery'
-    end
-
-    source_name ||= "dashboard.#{source}"
-    wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
-
+  def self.get_extraction_query(source_name, select_query, *data_columns)
     <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+      INSERT INTO #{ContactRollupsRaw.table_name}
+        (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
-        #{email_column},
+        email,
         '#{source_name}' AS sources,
         #{create_json_object(data_columns)} AS data,
         updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM #{wrapped_source}
-      WHERE #{email_column} IS NOT NULL AND #{email_column} != ''
+      FROM (#{select_query}) AS subquery
+      WHERE email > ''
     SQL
   end
 
