@@ -22322,6 +22322,13 @@ pt-BR:
             Create PT - Complete the Task:
               name: Criar PT - Complete a Tarefa
           title: CSP Unidade 8 – Preparação para o Create PT (2020-2021)
+          lessons:
+            Create PT - Review the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT - Make a Plan:
+              name: Criar PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
         csp9-2020:
           stages:
             new stage:

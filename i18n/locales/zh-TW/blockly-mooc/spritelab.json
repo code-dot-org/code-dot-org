@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "好像是在加載動畫“{animationName}”時遇到了問題。確保互聯網連接良好，然後嘗試重新加載頁面。如果問題仍然存在，則可能是該動畫已經損壞。在此情況下，你可能需要通過刪除該動畫來繼續。",
   "reinfFeedbackMsg": "大功告成！ 點擊“繼續”進入下一個關卡。",
   "shareGame": "分享你的遊戲：",

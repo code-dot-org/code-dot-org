@@ -99,12 +99,12 @@ ko-KR:
         title: 미로 퍼즐 짝맞추기
       2-3 Maze Multi 2:
         answers:
-        - {}
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
         - correct: true
         - {}
         - {}
         questions:
-        - {}
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
         title: 미로 퍼즐 객관식
       2-3 Relay Programming Multi 1:
         answers:

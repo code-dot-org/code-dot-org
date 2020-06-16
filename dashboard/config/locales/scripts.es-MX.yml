@@ -102,6 +102,8 @@ es-MX:
               name: 'Abeja: Bucle'
             The Big Event:
               name: El gran evento
+            'Studio: Create a Story':
+              name: 'Estudio: Crear una Historia'
             Going Places Safely:
               name: Ir a sitios seguros
             'Artist: Loops':
@@ -187,6 +189,8 @@ es-MX:
               name: El gran evento
             Flappy:
               name: Flappy
+            'Studio: Create a Story':
+              name: 'Estudio: Crear una Historia'
             Your Digital Footprint:
               name: Tu huella dactilar
             'Artist: Nested Loops':
@@ -277,6 +281,10 @@ es-MX:
               name: 'Abeja: depuración'
             Bounce:
               name: Rebotar
+            'Studio: Create a Story':
+              name: 'Estudio: Crear una Historia'
+            'Studio: Create a Game':
+              name: 'Estudio: Crear un Juego'
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1765,8 +1773,12 @@ es-MX:
               name: HTTP y abstracción
             Practice PT - The Internet and Society:
               name: PT de práctica - Internet y la sociedad
+            Tell Me a Secret - Encrypting Text:
+              name: Cuentame Un Secreto - Encriptación de Texto
             Cracking the Code:
               name: Descifrar el código
+            Encryption Algorithms:
+              name: Encriptación de Algoritmos
             Alice and Bob and Asymmetric Keys:
               name: Alice, Bob y las claves asimétricas
             Public Key Crypto:
@@ -18745,6 +18757,10 @@ es-MX:
               name: Funciones en Minecraft
             Learning Sprites with Sprite Lab:
               name: Aprender sprites con Laboratorio de Sprite
+            Events with Sprite Lab:
+              name: Eventos con el Laboratorio de sprites
+            Loops with the Artist:
+              name: Loops con el Artista
             Nested Loops in the Maze:
               name: Bucles anidados en el Laberinto
             Envelope Variables:
@@ -18759,6 +18775,8 @@ es-MX:
               name: Bucles `desde` en Artista
             Internet:
               name: Internet
+            Virtual Pet:
+              name: Mascota Virtual
             The Power of Words:
               name: El poder de las palabras
             Crowdsourcing:
@@ -20088,6 +20106,9 @@ es-MX:
               name: Eventos en Play Lab
             Picturing Data:
               name: Gráficos de datos
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Fin del Proyecto del Curso: Crear un Juego de Laboratorio de
+                Ocio'
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -26736,16 +26757,28 @@ es-MX:
               name: Revisión de condicionales
         csp7-pilot:
           stages:
+            Parameters and Returns Explore:
+              name: Explorar Parámetros y Regresos
             Libraries Explore:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
             Parameters and Return Practice:
               name: Práctica de parámetros y valores de retorno
+            Project - Make a Library Part 1:
+              name: Proyecto - Hacer un Biblioteca Parte 1
+            Project - Make a Library Part 2:
+              name: Proyecto - Hacer un Biblioteca Parte 2
+            Project - Make a Library Part 3:
+              name: Proyecto - Hacer un Biblioteca Parte 3
             Unit 7 STUDENT Survey:
               name: Unidad 7, encuesta para ESTUDIANTES
+            Unit 7 TEACHER Survey:
+              name: Encuesta de la Unidad 7 para DOCENTES
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
+            "[OLD] Parameters and Return Make":
+              name: "[OLD] Hacer Parámetros y Regreso"
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parámetros y valores de retorno
@@ -26762,17 +26795,35 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+            Project - Make a Library Part 1:
+              name: Proyecto - Hacer un Biblioteca Parte 1
+            Project - Make a Library Part 2:
+              name: Proyecto - Hacer un Biblioteca Parte 2
+            Project - Make a Library Part 3:
+              name: Proyecto - Hacer un Biblioteca Parte 3
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
             Unit 7 STUDENT Survey:
               name: Unidad 7, encuesta para ESTUDIANTES
+            Unit 7 TEACHER Survey:
+              name: Encuesta de la Unidad 7 para DOCENTES
+            "[OLD] Parameters and Return Make":
+              name: "[OLD] Hacer Parámetros y Regreso"
         csp8-pilot:
           stages:
             new stage:
               name: nueva etapa
+            Create PT - Review the Task:
+              name: Create de PT - Revisar la Tarea
+            Create PT - Make a Plan:
+              name: Create de PT - Hacer un Plan
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
           lessons:
+            Create PT - Review the Task:
+              name: Create de PT - Revisar la Tarea
+            Create PT - Make a Plan:
+              name: Create de PT - Hacer un Plan
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
         csp4-2020:
@@ -26943,8 +26994,16 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+            Project - Make a Library Part 1:
+              name: Proyecto - Hacer un Biblioteca Parte 1
+            Project - Make a Library Part 2:
+              name: Proyecto - Hacer un Biblioteca Parte 2
+            Project - Make a Library Part 3:
+              name: Proyecto - Hacer un Biblioteca Parte 3
             Unit 7 STUDENT Survey:
               name: Unidad 7, encuesta para ESTUDIANTES
+            Unit 7 TEACHER Survey:
+              name: Encuesta de la Unidad 7 para DOCENTES
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
           lesson_groups:
@@ -26959,6 +27018,12 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+            Project - Make a Library Part 1:
+              name: Proyecto - Hacer un Biblioteca Parte 1
+            Project - Make a Library Part 2:
+              name: Proyecto - Hacer un Biblioteca Parte 2
+            Project - Make a Library Part 3:
+              name: Proyecto - Hacer un Biblioteca Parte 3
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
         csd2-projects-temp:
@@ -27383,6 +27448,56 @@ es-MX:
                 en parejas, aunque se puede hacer individualmente.
             Post-Project Test:
               name: Prueba posterior al proyecto
+            'Lesson 1: Intro to Problem Solving - Paper Tower':
+              name: 'Lección 1: Introducción a Resolución de Problemas - Torre de
+                Papel'
+            'Lesson 3: Exploring Problem Solving - Games Theme':
+              name: 'Lección 3: Explorar Resolución de Problemas - Tema de Juegos'
+            'Lesson 3: Exploring Problem Solving - Animals Theme':
+              name: 'Lección 3: Explorar Resolución de Problemas - Tema de Animales'
+            'Paper Tower (Lesson 1: Intro to Problem Solving)':
+              name: 'El Torre de Papel (Lección 1: Introducción a la Resolución de
+                Problemas)'
+            " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)":
+              name: " La Mesa de Periódico (Lección 1 Alterna: Introducción a la Resolución
+                de Problemas)"
+            'Spaghetti Bridge (Alt. Lesson 1: Intro to Problem Solving)':
+              name: 'Puente de Espaguetis (Lección 1 Alterna: Introducción de la Resolución
+                de Problemas)'
+            'Games Theme (Lesson 3: Exploring Problem Solving)':
+              name: 'Tema de Juegos (Lección 3: Explorar la Resolución de Problemas)'
+            'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)':
+              name: 'Explorar la Resolución de Problemas (Lección 3: Explorar la Resolución
+                de Problemas)'
+            'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'La Mesa de Periódicos (Lección 1 Alterna: Introducción a la Resolución
+                de Problemas)'
+            'Spaghetti Bridge (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'El Puente de Espaguetis (Lección 1 Alterna: Introducción a la
+                Resolución de Problemas)'
+            'Games Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Tema de Juegos (Lección 3 Alterna: Explorar la Resolución de
+                Problemas)'
+            'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Explorar la Resolución de Problemas (Lección 3 Alterna: Explorar
+                la Resolución de Problemas)'
+            'Paper Tower (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'El Torre de Papel (Lección 1 Alterna: Introducción a la Resolución
+                de Problemas)'
+            'Animals Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Tema de Animales (Lección 3 Alterna: Explorar la Resolución de
+                Problemas)'
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - La Mesa de Periódicos
+                (Lección 1 Alterna)
+            Spaghetti Bridge (Alternate Lesson 1):
+              name: El Puente de Espaguetis (Lección 1 Alterna)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - El Puente de Espaguetis
+                (Lección 1 Alterna)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - El Torre de Papel
+                (Lección 1 Alterna)
           lesson_groups:
             cspSurvey:
               display_name: Encuesta
@@ -27413,6 +27528,15 @@ es-MX:
               name: Proyecto - Propuesta de aplicación
             Post-Project Test:
               name: Prueba posterior al proyecto
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - La Mesa de Periódicos
+                (Lección 1 Alterna)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - El Puente de Espaguetis
+                (Lección 1 Alterna)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Introducción a la Resolución de Problemas - El Torre de Papel
+                (Lección 1 Alterna)
         csd4-2020:
           title: CSD Unidad 4 - El proceso de diseño ('19-'20)
           description: La Unidad 4 introduce los impactos sociales más amplios que
@@ -29145,6 +29269,9 @@ es-MX:
               name: Eventos en Play Lab
             Picturing Data:
               name: Gráficos de datos
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Fin del Proyecto del Curso: Crear un Juego de Laboratorio de
+                Ocio'
         coursed-2020:
           title: Curso D (2019)
           description: Los estudiantes desarrollan su comprensión de bucles anidados,
@@ -29867,6 +29994,10 @@ es-MX:
               name: Funciones en Minecraft
             Learning Sprites with Sprite Lab:
               name: Aprender sprites con Laboratorio de Sprite
+            Events with Sprite Lab:
+              name: Eventos con el Laboratorio de sprites
+            Loops with the Artist:
+              name: Loops con el Artista
             Nested Loops in the Maze:
               name: Bucles anidados en el Laberinto
             The Power of Words:
@@ -29885,6 +30016,8 @@ es-MX:
               name: Bucles `desde` en Abeja
             For Loops in Artist:
               name: Bucles `desde` en Artista
+            Virtual Pet:
+              name: Mascota Virtual
             End of Course Project:
               name: Proyecto de fin de curso
         express-2020:
@@ -30257,6 +30390,17 @@ es-MX:
           stages:
             new stage:
               name: nueva etapa
+            Create PT - Review the Task:
+              name: Create de PT - Revisar la Tarea
+            Create PT - Make a Plan:
+              name: Create de PT - Hacer un Plan
+            Create PT - Complete the Task:
+              name: PT de creación - Completar la tarea
+          lessons:
+            Create PT - Review the Task:
+              name: Create de PT - Revisar la Tarea
+            Create PT - Make a Plan:
+              name: Create de PT - Hacer un Plan
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
         csp9-2020:

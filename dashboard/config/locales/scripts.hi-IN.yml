@@ -29230,6 +29230,9 @@ hi:
               name: नया चरण
             Create PT - Complete the Task:
               name: PT बनाएं - कार्य पूरा करें
+          lessons:
+            Create PT - Complete the Task:
+              name: PT बनाएं - कार्य पूरा करें
         csp9-2020:
           stages:
             new stage:

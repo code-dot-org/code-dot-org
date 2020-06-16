@@ -20,9 +20,15 @@ zh-CN:
       2-3 Artist 7:
         draw_rect:
           name: draw_rect
+          parameters:
+            width: 宽度
+            height: 高度
       2-3 Artist Debugging 10:
         draw square:
           name: 画一个正方形
+          parameters:
+            width: 宽度
+            height: 高度
         jump to controller top left:
           name: 跳到左上控制
         jump to middle:
@@ -260,6 +266,8 @@ zh-CN:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: 获取花蜜酿蜂蜜
+          parameters:
+            honey: 蜂蜜
       Course 4 Play Lab Params 1:
         jump:
           name: 跳跃
@@ -268,12 +276,17 @@ zh-CN:
           name: 升级
         score_points:
           name: 积分
+          parameters:
+            points: 分数
       Course 4 Play Lab Params 2:
         jump:
           name: 跳跃
       Course 4 Play Lab Params 3:
         jump:
           name: 跳跃
+          parameters:
+            height: 高度
+            actor: 角色
       Course 4 Play Lab Params 4:
         patrol:
           name: 巡逻
@@ -282,18 +295,30 @@ zh-CN:
       Course 4 Play Lab Params 5:
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
       Course 4 Play Lab Params 6:
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
       Course 4 Play Lab Params 7:
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
+            speed: 速度
       Course 4 Play Lab Params 8:
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
+            speed: 速度
       Course 4 Play Lab Params 9:
         score_points:
           name: 积分
+          parameters:
+            points: 分数
       Course 4 Play Lab Vars 1:
         set score:
           name: 设置得分
@@ -314,6 +339,8 @@ zh-CN:
       Course 4 SCF 1a:
         get nectar:
           name: 采花蜜
+          parameters:
+            counter: counter
       Course 4 SCF 1b:
         make honey up and over:
           name: 酿制蜂蜜然后结束
@@ -333,6 +360,8 @@ zh-CN:
           name: 做点什么
         draw an octagon:
           name: 画一个八边形
+          parameters:
+            length: 长度
       'Course E: Play Lab Project':
         do something:
           name: 做点什么
@@ -346,6 +375,8 @@ zh-CN:
           name: 升级
         score_points:
           name: 积分
+          parameters:
+            points: 分数
       Function intro Ryan:
         build bridge:
           name: 建一个桥
@@ -400,17 +431,27 @@ zh-CN:
       InspirationalArtwork:
         n-sided shape:
           name: n边形
+          parameters:
+            length: 长度
         draw a loop:
           name: 画一个循环
+          parameters:
+            length: 长度
         draw spiral circle:
           name: 画螺旋圈
+          parameters:
+            size: 大小
       InspirationalArtwork_2018:
         draw a loop:
           name: 画一个循环
+          parameters:
+            length: 长度
         n-sided shape:
           name: n边形
         draw spiral circle:
           name: 画螺旋圈
+          parameters:
+            size: 大小
       K-1 Artist2 3:
         draw roof:
           name: 画屋顶
@@ -509,38 +550,66 @@ zh-CN:
           name: 做点什么
         draw a hexagon:
           name: 画一个六边形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
         do something:
           name: 做点什么
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: 画一条螺旋边
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 15:
         draw a star:
           name: 画一个星星
+          parameters:
+            points: 分数
+            length: 长度
         draw a circle:
           name: 画一个圆圈
         draw a pinwheel:
           name: 画一个风车
+          parameters:
+            length: 长度
+            repeat: 重复
         draw a triangle:
           name: 画一个三角形
+          parameters:
+            length: 长度
         draw a shape:
           name: 画一个图形
+          parameters:
+            length: 长度
         draw a house:
           name: 画一个房子
+          parameters:
+            length: 长度
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 2:
         do something:
           name: 做点什么
@@ -553,52 +622,92 @@ zh-CN:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: 给定长度画一个三角形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: 画一个五边形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: 画一个三角形
+          parameters:
+            length: 长度
         draw a hexagon:
           name: 画一个六边形
+          parameters:
+            length: 长度
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
         draw a sqaure:
           name: 画一个正方形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: 画一个三角形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: 给定长度画一个三角形
+          parameters:
+            length: 长度
       NEW Course 4 Artist Params 9:
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
         do something:
           name: 做点什么
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       NEW Course 4 Play Lab Params 11:
         jump:
           name: 跳跃
+          parameters:
+            height: 高度
+            actor: 角色
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
+            speed: 速度
       New Artist Project:
         draw a star:
           name: 画一个星星
+          parameters:
+            points: 分数
+            length: 长度
         draw a circle:
           name: 画一个圆圈
         draw a pinwheel:
           name: 画一个风车
+          parameters:
+            length: 长度
+            repeat: 重复
         draw a triangle:
           name: 画一个三角形
+          parameters:
+            length: 长度
         draw a shape:
           name: 画一个图形
+          parameters:
+            length: 长度
         draw a house:
           name: 画一个房子
+          parameters:
+            length: 长度
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
       New Minecraft Hero Project:
         function 1:
           name: 函数1
@@ -607,8 +716,14 @@ zh-CN:
       New Play Lab Project:
         jump:
           name: 跳跃
+          parameters:
+            height: 高度
+            actor: 角色
         patrol:
           name: 巡逻
+          parameters:
+            actor: 角色
+            speed: 速度
       Robot Doodle:
         25 pixel square:
           name: 25像素正方形
@@ -702,6 +817,8 @@ zh-CN:
       course4_artist_fwp_challenge1:
         draw background:
           name: 绘制背景
+          parameters:
+            color: 颜色
         draw a polygon:
           name: 画一个多边形
         draw a square 20:
@@ -714,9 +831,13 @@ zh-CN:
       course4_bee_fwp_challenge1:
         pick row:
           name: 选行
+          parameters:
+            length: 长度
       course4_bee_fwp_challenge2:
         pick row:
           name: 选行
+          parameters:
+            length: 长度
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"简单" 解决方案'
@@ -732,16 +853,22 @@ zh-CN:
       courseC_artist_prog3:
         draw flame:
           name: 绘制火焰
+          parameters:
+            x: x
         draw fire:
           name: 绘制火焰
       courseC_artist_prog3_2018:
         draw flame:
           name: 绘制火焰
+          parameters:
+            x: x
         draw fire:
           name: 绘制火焰
       courseC_artist_prog3_2019:
         draw flame:
           name: 绘制火焰
+          parameters:
+            x: x
         draw fire:
           name: 绘制火焰
       courseC_artist_prog4:
@@ -1502,70 +1629,128 @@ zh-CN:
           name: 画一个正方形
         checker:
           name: 检查
+          parameters:
+            size: 大小
+            color: 颜色
         do something:
           name: 做点什么
         Make gingham:
           name: 制作格子布
+          parameters:
+            size: 大小
         black outline:
           name: 黑色边框
+          parameters:
+            length: 长度
       courseF_artist_fwp2:
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
         checker:
           name: 检查
+          parameters:
+            size: 大小
+            color: 颜色
         do something:
           name: 做点什么
         Make gingham:
           name: 制作格子布
+          parameters:
+            size: 大小
         black outline:
           name: 黑色边框
+          parameters:
+            length: 长度
       courseF_artist_fwp2_predict1:
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
       courseF_artist_fwp3:
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
         draw a square2:
           name: 画一个大小2的方块
+          parameters:
+            size: 大小
         filled square:
           name: 填充正方形
+          parameters:
+            size: 大小
+            color: 颜色
         black outline:
           name: 黑色边框
+          parameters:
+            length: 长度
       courseF_artist_fwp4:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       courseF_artist_fwp5:
         draw a polygon:
           name: 画一个多边形
+          parameters:
+            length: 长度
       courseF_artist_fwp6:
         draw a spiral edge:
           name: 画一条螺旋边
+          parameters:
+            length: 长度
       courseF_artist_fwp7:
         draw a spiral edge:
           name: 画一条螺旋边
+          parameters:
+            length: 长度
+            min: 最小
       courseF_artist_fwp8:
         draw a spiral edge:
           name: 画一条螺旋边
+          parameters:
+            length: 长度
+            min: 最小
       courseF_artist_fwp9:
         draw a star:
           name: 画一个星星
+          parameters:
+            points: 分数
+            length: 长度
         draw a circle:
           name: 画一个圆圈
         draw a pinwheel:
           name: 画一个风车
+          parameters:
+            length: 长度
+            repeat: 重复
         draw a triangle:
           name: 画一个三角形
+          parameters:
+            length: 长度
         draw a shape:
           name: 画一个图形
+          parameters:
+            length: 长度
         draw a house:
           name: 画一个房子
+          parameters:
+            length: 长度
         draw a square:
           name: 画一个正方形
+          parameters:
+            length: 长度
         draw a spiral edge:
           name: 画一条螺旋边
+          parameters:
+            length: 长度
+            min: 最小
       courseF_artist_fwp_challenge1:
         draw background:
           name: 绘制背景
+          parameters:
+            color: 颜色
         draw a polygon:
           name: 画一个多边形
         draw a square 20:
@@ -1579,6 +1764,8 @@ zh-CN:
           name: 做点什么
         draw an octagon:
           name: 画一个八边形
+          parameters:
+            length: 长度
       courseF_bee_conditionals2:
         move and check:
           name: 移动并检查
@@ -1649,27 +1836,43 @@ zh-CN:
       courseF_bee_fwp4:
         rowOfNectar:
           name: 一排花蜜
+          parameters:
+            length: 长度
       courseF_bee_fwp5:
         rowOfNectar:
           name: 一排花蜜
+          parameters:
+            width: 宽度
       courseF_bee_fwp6:
         rowOfNectar:
           name: 一排花蜜
+          parameters:
+            width: 宽度
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: 一行花蜜或蜂蜜
+          parameters:
+            width: 宽度
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: 一行花蜜或蜂蜜
+          parameters:
+            width: 宽度
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: 一行花蜜或蜂蜜
+          parameters:
+            width: 宽度
       courseF_bee_fwp_challenge1:
         pick row:
           name: 选行
+          parameters:
+            length: 长度
       courseF_bee_fwp_challenge2:
         pick row:
           name: 选行
+          parameters:
+            length: 长度
       courseF_bee_variables_1_2018:
         collect row:
           name: 按行收集
