@@ -329,13 +329,16 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - cloudformation:DescribeStacks
-                  - cloudwatch:GetMetricStatistics
                   - ec2:DescribeInstances
+                  - ec2:DescribeInstanceAttribute
                 Resource: '*'
               - Effect: Allow
-                Action: cloudformation:DescribeStackResource
-                Resource: '*'
+                Action:
+                  - ec2:StopInstances
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    ec2:ResourceTag/environment: adhoc
         - PolicyName: RDSBackup
           PolicyDocument:
             Statement:
@@ -463,6 +466,6 @@ Outputs:
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:
-    Value: <%=cdn_enabled ? subdomain('origin') : subdomain%>
+    Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
     Description: SSH server name
 <%end-%>

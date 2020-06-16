@@ -22987,6 +22987,14 @@ en:
               name: Your Web Page - Prepare
               description_student: "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, the class engages in the \"prepare\" stage of the problem solving process, deciding what elements and style their web pages will have.  They review the different HTML, CSS, and digital citizenship guidelines, then design and plan their pages, downloading and documenting the images they will need. Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do."
               description_teacher: "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, students engage in the \"prepare\" stage of the problem solving process, deciding what elements and style their web page will have.  They begin by reviewing the different HTML, CSS, and digital citizenship guidelines they will need in building their web pages.  They then describe and sketch their pages, listing the tags and styles they will use to get the layout and design that they decided on.  Then then move online to find and download the images they will need for their pages.  Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do."
+            Project - Personal Web Page:
+              name: Project - Personal Web Page
+            Websites for a Purpose:
+              name: Websites for a Purpose
+            Linking Pages:
+              name: Linking Pages
+            Using Images:
+              name: Using Images
           lesson_groups:
             csd2_1:
               display_name: 'Chapter 1: Web Content and HTML'
@@ -23041,6 +23049,14 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+            Project - Personal Web Page:
+              name: Project - Personal Web Page
+            Websites for a Purpose:
+              name: Websites for a Purpose
+            Linking Pages:
+              name: Linking Pages
+            Using Images:
+              name: Using Images
         csd1-2020:
           title: CSD Unit 1 - Problem Solving and Computing
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -23161,6 +23177,8 @@ en:
               name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
               description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson the class applies the problem solving process to three different problems: a maze, a logic puzzle, and planning field day activity. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems."
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
+            Storage:
+              name: Storage
           lesson_groups:
             cspSurvey:
               display_name: Survey
@@ -23201,6 +23219,8 @@ en:
               name: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
+            Storage:
+              name: Storage
         csd4-2020:
           title: CSD Unit 4 - The Design Process
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -23399,6 +23419,8 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Project - Make a Recommendation:
+              name: Project - Make a Recommendation
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -23441,6 +23463,8 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+            Project - Make a Recommendation:
+              name: Project - Make a Recommendation
         csd6-2020:
           title: CSD Unit 6 - Physical Computing ('20-'21)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -23564,7 +23588,7 @@ en:
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
         csd3-2020:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD Unit 3 - Interactive Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -23714,6 +23738,8 @@ en:
               name: 'Mini-Project: Flyer Game'
               description_student: "**Question of the Day:  How can the new types collisions and modeling movement be used to create a game?**\r\n\r\nThe class uses what it has learned about simulating gravity and the different types of collisions  to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer they would like, then use a structured process to program the game in Code Studio."
               description_teacher: "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio."
+            Sprites:
+              name: Sprites
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -23780,6 +23806,8 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+            Sprites:
+              name: Sprites
         moneppo-1:
           stages: {}
           lesson_groups: {}
@@ -25817,6 +25845,8 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -25849,6 +25879,11 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+<<<<<<< HEAD
+=======
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
+>>>>>>> 9c537eb5410e0c47d4ded1f6816dcffea505daf7
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -26017,6 +26052,8 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
@@ -26049,6 +26086,11 @@ en:
               name: Abstraction with Susan Wojcicki & China Anne McClain
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya
+<<<<<<< HEAD
+=======
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia
+>>>>>>> 9c537eb5410e0c47d4ded1f6816dcffea505daf7
         no-lg:
           stages:
             new stage:
@@ -26113,3 +26155,7 @@ en:
               name: Unit 5 Assessment 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+        gamelabprojects:
+          stages: {}
+          lessons: {}
+          lesson_groups: {}
