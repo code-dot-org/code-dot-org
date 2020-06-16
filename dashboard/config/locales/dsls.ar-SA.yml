@@ -1420,7 +1420,7 @@ ar-SA:
         - correct: true
           feedback: صحيح!
         - feedback: غير صحيح
-        - {}
+        - feedback: غير صحيح
         questions:
         - {}
       behaviors 4 predict:
@@ -1429,7 +1429,7 @@ ar-SA:
         - correct: true
           feedback: صحيح!
         - {}
-        - {}
+        - feedback: غير صحيح
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:

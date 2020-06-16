@@ -225,6 +225,10 @@ zh-TW:
         dance_callout_11_b: 新的程式積木！
       Dance_Party_11_5:
         dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
+      Fish Tank 3-validated_2019:
+        spritelab_comment: '使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。
+
+'
       Function intro Ryan:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Function intro Ryan_2019:
@@ -244,6 +248,10 @@ zh-TW:
         Infinity_repeat_callout: 放置移動積木到這裡面
       InspirationalArtwork:
         InspirationalArtwork_1: 嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！
+      InspirationalArtwork_2018:
+        InspirationalArtwork_1: '嘗試使用該標籤下的`註釋`積木在程式中留下註釋！
+
+'
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: 當你準備好時，點擊「運行」試試你的程式。
       MC HOC 2016 New Walk:
@@ -287,6 +295,10 @@ zh-TW:
         courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
       OPD-K5-projects-4:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      OPD-K5-spritelab-3:
+        spritelab_comment: '使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。
+
+'
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
       OPD-K5-variables-5:
@@ -321,6 +333,28 @@ zh-TW:
         craft_what_is_iron: 開採這塊鐵礦！
       Underground Iron_2019:
         craft_what_is_iron: 開採這塊鐵礦！
+      Virtual Pet 2_2019:
+        '': '請按一下這裡！
+
+'
+      behaviors 1:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
+      behaviors 3a:
+        behavior_callout: '為什麼這個行為對中間的星星不起作用？
+
+'
+        star2_callout: '刪除這個服裝積木，用「這個精靈」積木代替。
+
+'
+        this_sprite_callout: '將下面的服裝積木替換成這個。
+
+'
+      behaviors 4:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
       behaviors 5:
         behaviors_edit: 給這個行為添加程式。
       behaviors free play:
@@ -468,6 +502,14 @@ zh-TW:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_artist_loops1a_2019:
+        jumpto_callout: '這個積木對這個專案非常重要。請務必使用它！
+
+'
+      courseC_artist_loops1b_2019:
+        sticker2: '把這個新增到你的程式中間。
+
+'
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
       courseC_artist_loopsPrePre1a_2018:
@@ -494,6 +536,18 @@ zh-TW:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: 灰化的程式積木無法被刪除！
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_1: '這些灰色積木被鎖定了，無法刪除！
+
+'
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: '這些積木被鎖定了，無法刪除！
+
+'
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming1_2018:
@@ -578,6 +632,14 @@ zh-TW:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 使用這個積木來收集寶藏。
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: '你需要使用`重複 判斷 前面有路`積木來解決這個關卡。
+
+'
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: '你需要使用`重複 判斷 前面有路`積木來解決這個關卡。
+
+'
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_intro5a_2019:
@@ -602,6 +664,9 @@ zh-TW:
         stone_block_2: 灰色積木是用石頭製成的，不能扔掉。
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        stone_block_2: '灰色的積木是不能扔掉的。
+
+'
       courseD_maze_ramp4:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_ramp4_2018:
@@ -642,6 +707,10 @@ zh-TW:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
+      courseE_aboutme_2:
+        '': '請按一下這裡！
+
+'
       courseE_artist_functions1:
         courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
       courseE_artist_functions1_copy:
@@ -786,6 +855,18 @@ zh-TW:
         courseF_playlab_variables5c_1: 您將在這裡找到變數模塊。
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: 在這裡找到「ask」模塊！
+      coursea_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: '在將所有的積木連在一起後，按「執行」啟動程式。
+
+'
+      coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: '在將所有的積木連在一起後，按「執行」啟動程式。
+
+'
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross:

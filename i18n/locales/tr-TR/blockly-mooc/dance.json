@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Bir tuşa bastınız, ama dansçınız tepki vermedi.",
   "danceFeedbackNeedTwoDancers": "İki dansçı yapmanız ggerekir",
   "danceFeedbackOnlyOneDancerMoved": "Dansçılarınızdan sadece biri hareket etti.",
-  "danceFeedbackNeedLead": "Ayrıca, <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> bloğuyla bir baş dansçı oluşturmanız gerekir.",
+  "danceFeedbackNeedLead": "Ayrıca, <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> bloğuyla bir baş dansçı oluşturmanız gerekir.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> bloğuyla ile bir grup yedek dansçı oluşturmanız gerekir.",
   "danceFeedbackSetSize": "Müzik başladıktan sonra en az bir dansçının boyutunu değiştirmeniz gerekir.",
   "measure": "Ölçü:"
