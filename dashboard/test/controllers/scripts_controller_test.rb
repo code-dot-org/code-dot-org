@@ -192,8 +192,18 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
+  test "show: redirect from older version to latest stable version in family for logged out user" do
+    get :show, params: {id: @coursez_2017.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
   test "show: redirect from new unstable version to latest stable version in family for student" do
     sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to to latest stable version in family for logged out user" do
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
