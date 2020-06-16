@@ -9,6 +9,12 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # Execute a SQL query in a transaction in the dashboard database.
+  # Does not return query results.
+  # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
+  #
+  # This method is used to write to the database.
+  # @see +retrieve_query_results+ method to fetch data from the database.
   def self.execute_query_in_transaction(query)
     # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
     # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
@@ -28,9 +34,25 @@ class ContactRollupsV2
     end
   end
 
+  # Execute a query in the dashboard database and returns query results.
+  # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
+  #
+  # This method is mostly used to read data from the database.
+  # @see +execute_query_in_transaction+ method to simply execute a query in the database.
+  def self.retrieve_query_results(query)
+    # @see comments in +execute_query_in_transaction+ method for explanation
+    # why we have to use ActiveRecord connection in a test environment.
+    if Rails.env.test?
+      ActiveRecord::Base.connection.exec_query(query)
+    else
+      # Sequel::Database#[] method returns a Sequel::Dataset, which fetch records only when needed.
+      DASHBOARD_DB_WRITER[query]
+    end
+  end
+
   def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
-    @log_collector = LogCollector.new('Contact Rollups')
+    @log_collector = LogCollector.new('ContactRollupsV2')
   end
 
   # Build contact rollups and sync the results to Pardot.
@@ -47,6 +69,7 @@ class ContactRollupsV2
   # Then, process them and save the results into ContactRollupsProcessed.
   # The results are copied over to ContactRollupsFinal to be used for further analysis.
   def collect_and_process_contacts
+    start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
       truncate_or_delete_table ContactRollupsProcessed
@@ -55,7 +78,6 @@ class ContactRollupsV2
     @log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
       ContactRollupsRaw.extract_email_preferences
     end
-
     @log_collector.time!('Extracts parent emails from dashboard.users') do
       ContactRollupsRaw.extract_parent_emails
     end
@@ -68,9 +90,14 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsFinal
       ContactRollupsFinal.insert_from_processed_table
     end
+  ensure
+    @log_collector.record_metrics(
+      {CollectAndProcessContactsDuration: Time.now - start_time}
+    )
   end
 
   def sync_new_contacts_with_pardot
+    start_time = Time.now
     unless @is_dry_run
       @log_collector.time!('Downloads new email-Pardot ID mappings') do
         ContactRollupsPardotMemory.download_pardot_ids
@@ -78,7 +105,14 @@ class ContactRollupsV2
     end
 
     @log_collector.time!('Creates new Pardot prospects') do
-      ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
+      results = ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        {
+          ProspectsCreated: results[:accepted_prospects],
+          ProspectsRejected: results[:rejected_prospects],
+          CreateAPICalls: results[:request_count]
+        }
+      )
     end
 
     unless @is_dry_run
@@ -88,17 +122,63 @@ class ContactRollupsV2
     end
   rescue StandardError => e
     @log_collector.record_exception e
+  ensure
+    @log_collector.record_metrics(
+      {SyncNewContactsDuration: Time.now - start_time}
+    )
   end
 
   def sync_updated_contacts_with_pardot
+    start_time = Time.now
     @log_collector.time_and_continue('Updates existing Pardot prospects') do
-      ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
+      results = ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        {
+          ProspectsUpdated: results[:updated_prospects],
+          ProspectUpdatesRejected: results[:rejected_prospects],
+          UpdateAPICalls: results[:request_count]
+        }
+      )
     end
+  ensure
+    @log_collector.record_metrics(
+      {SyncUpdatedContactsDuration: Time.now - start_time}
+    )
   end
 
+  def get_table_metrics
+    {
+      RawRows: ContactRollupsRaw.count,
+      ProcessedRows: ContactRollupsProcessed.count,
+      FinalRows: ContactRollupsProcessed.count,
+      PardotMemoryRows: ContactRollupsPardotMemory.count
+    }
+  end
+
+  def print_logs
+    CDO.log.info @log_collector
+  end
+
+  # Send logs and metrics to external systems such as AWS CloudWatch and Slack
+  # unless in dry-run mode.
   def report_results
-    # TODO: Add reporting to log file, slack channel and AWS CloudWatch.
-    puts @log_collector
+    @log_collector.record_metrics(get_table_metrics)
+    upload_metrics unless @is_dry_run
+    # TODO: Report to slack channel
+    print_logs
+  end
+
+  # Upload pipeline metrics to AWS CloudWatch.
+  # https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2
+  def upload_metrics
+    aws_metrics = @log_collector.metrics.map do |key, value|
+      {
+        metric_name: key,
+        value: value,
+        dimensions: [{name: "Environment", value: CDO.rack_env}]
+      }
+    end
+    Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
   end
 
   private
