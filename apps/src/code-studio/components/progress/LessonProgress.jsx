@@ -137,18 +137,10 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    /*const {showLevels, showLessonExtrasProgressBubble} = getShowLevels(
-      levels,
-      width,
-      lessonExtrasUrl && !lessonTrophyEnabled
-    );*/
-    const showLevels = levels;
-    const showLessonExtrasProgressBubble = false;
-
     const {
       headerFullProgressOffset,
       vignetteStyle
-    } = this.getFullProgressOffset(); // -180;
+    } = this.getFullProgressOffset();
 
     return (
       <div
@@ -163,7 +155,7 @@ class LessonProgress extends Component {
           style={{...styles.headerFullProgress, left: headerFullProgressOffset}}
         >
           {lessonTrophyEnabled && <div style={styles.spacer} />}
-          {showLevels.map((level, index) => (
+          {levels.map((level, index) => (
             <div
               key={index}
               ref={level.isCurrentLevel ? 'currentLevel' : null}
@@ -181,7 +173,7 @@ class LessonProgress extends Component {
               />
             </div>
           ))}
-          {showLessonExtrasProgressBubble && (
+          {lessonExtrasUrl && !lessonTrophyEnabled && (
             <LessonExtrasProgressBubble
               lessonExtrasUrl={lessonExtrasUrl}
               perfect={onLessonExtras}
