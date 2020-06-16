@@ -206,7 +206,6 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_pegasus_form_geos
-    # TODO: how to run this method in Rails end-to-end tests? It reads from pegasus tables.
     form_geos_query = <<~SQL
       SELECT
         f.email,
@@ -214,7 +213,7 @@ class ContactRollupsRaw < ApplicationRecord
         MAX(fg.updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.forms AS f
       INNER JOIN #{CDO.pegasus_db_name}.form_geos AS fg ON f.id = fg.form_id
-      WHERE email > ''
+      WHERE email > '' AND email != 'anonymous@code.org'
       GROUP BY email, city, state, postal_code, country
     SQL
 
@@ -236,7 +235,9 @@ class ContactRollupsRaw < ApplicationRecord
     contact_query = <<~SQL
       SELECT email, MAX(unsubscribed_at) AS unsubscribed_at, MAX(updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.contacts
-      WHERE email > '' AND unsubscribed_at IS NOT NULL
+      WHERE email > ''
+        AND email != 'anonymous@code.org'
+        AND unsubscribed_at IS NOT NULL
       GROUP BY email
     SQL
 
