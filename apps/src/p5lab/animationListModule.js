@@ -292,7 +292,7 @@ export function setInitialAnimationList(
         !animation.sourceUrl ||
         animation.sourceUrl.includes(dashboard.project.getCurrentId())
       ) {
-        // The animation was created by the user. Skip.
+        // The animation was created by the project owner. Skip.
         return;
       }
 
