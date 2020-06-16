@@ -1,0 +1,128 @@
+#!/usr/bin/env ruby
+
+# This script fetches covid19 data and uploads to the shared firebase channel.
+require_relative '../../../deployment'
+require 'cdo/only_one'
+require 'net/http'
+require 'csv'
+require 'date'
+require 'datapackage'
+require_relative '../../../shared/middleware/helpers/firebase_helper'
+
+US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
+MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)
+MAX_WEEKS = 26 # there are 188 countries, and the table must be less than 5000 total rows (5000/188 = 26.5)
+
+def get_us_covid19_data
+  response = Net::HTTP.get_response(URI(US_DATA_URL))
+  return unless response.code == '200'
+  response.body.force_encoding('utf-8')
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift #first line is column names
+
+  # Group records by date
+  daily_data = {}
+  lines.each do |line|
+    record = {}
+    parsed_date = Date.strptime(line[0], "%Y-%m-%d")
+    formatted_date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
+    record['Date'] = formatted_date
+    record['State'] = line[1]
+    # skip column 2 (FIPS code)
+    record['Confirmed New Cases'] = line[3].to_i
+    record['Deaths'] = line[4].to_i
+    if daily_data[formatted_date].nil?
+      daily_data[formatted_date] = []
+    end
+    daily_data[formatted_date].push record
+  end
+
+  # Truncate to MAX_DAYS most recent days
+  days = if daily_data.length > MAX_DAYS
+           daily_data.keys.slice(daily_data.length - MAX_DAYS, MAX_DAYS)
+         else
+           daily_data.keys
+         end
+
+  # Add id to each record
+  columns = ['id', 'Date', 'State', 'Confirmed New Cases', 'Deaths']
+  records = {}
+  id = 1
+  days.each do |day|
+    day_records = daily_data[day]
+    day_records.each do |record|
+      record['id'] = id
+      records[id] = record.to_json
+      id += 1
+    end
+  end
+
+  return records, columns
+end
+
+def get_world_covid19_data
+  package = DataPackage::Package.new('https://datahub.io/core/covid-19/datapackage.json')
+  resource = package.resources.find {|r| r['name'] == "countries-aggregated_csv"}
+  return unless resource
+  response = Net::HTTP.get_response(URI(resource['path']))
+  return unless response.code == '200'
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift #first line is column names
+  weekly_data = {}
+
+  # Aggregate daily data by week
+  lines.each do |line|
+    parsed_date = Date.strptime(line[0], "%Y-%m-%d")
+    if weekly_data[parsed_date.cweek].nil?
+      weekly_data[parsed_date.cweek] = {}
+    end
+    if weekly_data[parsed_date.cweek][line[1]].nil?
+      weekly_data[parsed_date.cweek][line[1]] = {confirmed: 0, recovered: 0, deaths: 0}
+    end
+    country = weekly_data[parsed_date.cweek][line[1]]
+    country[:confirmed] += line[2].to_i
+    country[:recovered] += line[3].to_i
+    country[:deaths] += line[4].to_i
+  end
+
+  # Truncate to MAX_WEEKS most recent weeks
+  weeks = if weekly_data.length > MAX_WEEKS
+            weekly_data.keys.slice(weekly_data.length - MAX_WEEKS, MAX_WEEKS)
+          else
+            weekly_data.keys
+          end
+
+  columns = ['id', 'Date', 'Country', 'Confirmed New Cases', 'Recovered', 'Deaths']
+  records = {}
+  id = 1
+  weeks.each do |week_number|
+    date = Date.commercial(2020, week_number)
+    countries = weekly_data[week_number]
+    countries.each do |country, counts|
+      record = {}
+      record['id'] = id
+      record['Date'] = date.strftime('%a %-m/%-d') # ex Wed 1/7
+      record['Country'] = country
+      record['Confirmed New Cases'] = counts[:confirmed]
+      record['Recovered'] = counts[:recovered]
+      record['Deaths'] = counts[:deaths]
+
+      records[id] = record.to_json
+      id += 1
+    end
+  end
+  return records, columns
+end
+
+def main
+  fb = FirebaseHelper.new('shared')
+  records, columns = get_us_covid19_data
+  fb.upload_live_table('COVID-19 Cases per US State', records, columns)
+
+  records, columns = get_world_covid19_data
+  fb.upload_live_table('COVID-19 Cases per Country', records, columns)
+end
+
+main if only_one_running?(__FILE__)
