@@ -311,7 +311,7 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
@@ -623,6 +623,26 @@ cs-CZ:
       OPD-K5-events-6: "Teď přidáme počítání bodů, když se Flappy vyhne překážce.
         \ \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl jeden
         bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí trubek."
+      OPD-K5-projects-2: "Je úžasné, co jsem se už naučili! Teď uděláme hru krok po
+        kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která bude ve
+        tvé hře. "
+      OPD-K5-projects-3: |-
+        Použij bloky událostí a akcí, aby se postava dala ovládat šipkami.
+
+        K vyřešení úlohy obejdi s postavou všechny šipky.
+      OPD-K5-projects-4: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      OPD-K5-projects-5: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni pravidla, jak získat 5 bodů nebo hru vyhrát.
+      OPD-K5-projects-6: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám". Až budeš mít
+        hotovo klikni na "Dokončit"!
+      OPD-K5-projects-7: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády a
+        spolužáky. '
       Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
         věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
@@ -872,6 +892,50 @@ cs-CZ:
         _"To zvládneš!"_'
       courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"To zvládneš!"_'
+      courseC19_playLab_EOC1: "Je úžasné, co jsem se už naučili! Teď uděláme hru krok
+        po kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která bude
+        ve tvé hře. "
+      courseC19_playLab_EOC2: |-
+        Použij bloky událostí a akcí, aby se postava dala ovládat šipkami.
+
+        K vyřešení úlohy obejdi s postavou všechny šipky.
+      courseC19_playLab_EOC3: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      courseC19_playLab_EOC4: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni pravidla, jak získat 5 bodů nebo hru vyhrát.
+      courseC19_playLab_EOC5: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám". Až budeš mít
+        hotovo klikni na "Dokončit"!
+      courseC19_playLab_EOC6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
+      courseC_PlayLab_events6_2019: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events7: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events8: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk \"zásah\"
+        a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo, spusť hru
+        a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_artist_loops1a_2019: |-
         **Volná hra:** Pojďme vybudovat něco většího hezky krok po kroku!
 
@@ -2386,6 +2450,22 @@ cs-CZ:
         **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
       courseE_farmer_ramp12g_2019: Posuň se dopředu až k salátu, potom zaboč doleva
         **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_playLab_scaffold1: "Je úžasné, co jsem se už naučili! Teď uděláme hru
+        krok po kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která
+        bude ve tvé hře. "
+      courseE_playLab_scaffold3: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      courseE_playLab_scaffold4: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni, jak získat 10 bodů.
+      courseE_playLab_scaffold5: Dobrá práce. Teď máš základní součásti funkční hry
+        hotové. Teď bude jen chtít doladit, aby odpovídala tvým představám. Přidej
+        podmínku jak vyhrát nebo prohrát hru a hraj dokud tu podmínku nesplníš.
+      courseE_playLab_scaffold6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
       courseF_bee_conditionals10: |-
         Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
 

@@ -28504,6 +28504,9 @@ mn:
               name: шинэ шат
             Create PT - Complete the Task:
               name: PT үүсгэх - Даалгаврыг дуусгах
+          lessons:
+            Create PT - Complete the Task:
+              name: PT үүсгэх - Даалгаврыг дуусгах
         csp9-2020:
           stages:
             new stage:
