@@ -2932,7 +2932,7 @@ el:
             csp_project:
               display_name: Έργο
         dance-extras:
-          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -3092,7 +3092,7 @@ el:
               display_name: Επισκόπηση
         dance-extras-gallery:
           title: Συνεχίστε να Χορεύετε
-          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -3608,7 +3608,7 @@ el:
             Sprite Lab:
               name: Sprite Lab
         dance-extras-2019:
-          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
         csp4-preview:
           lesson_groups:
             csp_variables:

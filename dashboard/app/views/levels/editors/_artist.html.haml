@@ -9,9 +9,9 @@
   - level_type = ['anna', 'elsa'].include?(@level.skin) ? 'frozen' : 'artist'
   = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: level_type}
 
-= render partial: 'levels/editors/fields/artist_editors', locals: {f: f}
+= render partial: 'levels/editors/fields/artist_fields', locals: {f: f}
 
-= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f}
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
 = render partial: 'levels/editors/fields/callouts', locals: {f: f}
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 

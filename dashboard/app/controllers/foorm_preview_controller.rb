@@ -51,6 +51,7 @@ class FoormPreviewController < ApplicationController
       workshop_subject: params[:workshopSubject] || "Sample Subject",
       regional_partner_name: params[:regionalPartnerName] || "Regional Partner A",
       is_virtual: params[:isVirtual] == 'true' || false,
+      is_friday_institute: params[:isFridayInstitute] == 'true' || false,
       num_facilitators: 3
     }
 
