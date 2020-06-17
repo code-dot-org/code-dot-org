@@ -213,16 +213,16 @@ class Homepage
           links:
             [
               {
-                text: "homepage_slot_text_link_code_break",
-                url: "/break"
-              },
-              {
                 text: "homepage_slot_text_link_do_hoc",
                 url: "/hourofcode/overview"
               },
               {
                 text: "homepage_slot_text_link_express_course",
                 url: "/educate/curriculum/express-course"
+              },
+              {
+                text: "homepage_slot_text_link_code_break",
+                url: "/break"
               }
             ]
         },
