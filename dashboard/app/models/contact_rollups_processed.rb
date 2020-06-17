@@ -18,6 +18,13 @@ class ContactRollupsProcessed < ApplicationRecord
 
   DEFAULT_BATCH_SIZE = 10000
 
+  # These JSON object keys are used to compile data from a contact_rollups_raw record
+  # into a JSON object. They are shorten to single characters to reduce the size of
+  # GROUP_CONCAT result and increase performance.
+  SOURCES_KEY = 's'.freeze
+  DATA_KEY = 'd'.freeze
+  DATA_UPDATED_AT_KEY = 'u'.freeze
+
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param [Integer] batch_size number of records to save per INSERT statement.
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
@@ -51,7 +58,11 @@ class ContactRollupsProcessed < ApplicationRecord
     data_transformation_query = <<-SQL.squish
       SELECT
         email,
-        JSON_OBJECT('sources', sources, 'data', data, 'data_updated_at', data_updated_at) AS data_and_metadata
+        JSON_OBJECT(
+          '#{SOURCES_KEY}', sources,
+          '#{DATA_KEY}', data,
+          '#{DATA_UPDATED_AT_KEY}', data_updated_at
+        ) AS data_and_metadata
       FROM contact_rollups_raw
     SQL
 
@@ -79,9 +90,9 @@ class ContactRollupsProcessed < ApplicationRecord
     {}.tap do |output|
       parsed_items.each do |item|
         # In a valid item, only data value could be null
-        sources = item['sources']
-        data = item['data'] || {}
-        data_updated_at = Time.find_zone('UTC').parse(item['data_updated_at'])
+        sources = item[SOURCES_KEY]
+        data = item[DATA_KEY] || {}
+        data_updated_at = Time.find_zone('UTC').parse(item[DATA_UPDATED_AT_KEY])
 
         output[sources] = data.merge('data_updated_at' => data_updated_at)
       end
