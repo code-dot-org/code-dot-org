@@ -79,12 +79,10 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   test 'applab only remixes Sources and Assets buckets' do
-    stub_request(:post, "https://.api.cognitive.microsoft.com/sts/v1.0/issueToken").to_return(status: 200, body: "", headers: {})
     assert_only_remixes_sources_assets 'applab'
   end
 
   test 'gamelab only remixes Sources, Assets and Animations buckets' do
-    stub_request(:post, "https://.api.cognitive.microsoft.com/sts/v1.0/issueToken").to_return(status: 200, body: "", headers: {})
     assert_only_remixes_sources_assets_animations 'gamelab'
   end
 
