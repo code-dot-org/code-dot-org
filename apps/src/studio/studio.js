@@ -6383,15 +6383,19 @@ Studio.setSpritesStop = function(opts) {
 };
 
 Studio.setSpritesChase = function(opts) {
-  getSpritesByName(opts.spriteName).forEach(sprite =>
-    sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex)
-  );
+  if (Studio.sprite[opts.targetSpriteIndex]) {
+    getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex)
+    );
+  }
 };
 
 Studio.setSpritesFlee = function(opts) {
-  getSpritesByName(opts.spriteName).forEach(sprite =>
-    sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex)
-  );
+  if (Studio.sprite[opts.targetSpriteIndex]) {
+    getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex)
+    );
+  }
 };
 
 Studio.setSpritesSpeed = function(opts) {
