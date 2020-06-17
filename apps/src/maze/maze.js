@@ -314,16 +314,17 @@ module.exports = class Maze {
   }
 
   /**
-   * Added by Mike Wu.
-   * Make POST request to feedback server. Send code blocks.
+   * Added for rubric sampling project.
+   * Make POST request to AWS SageMaker server and returns
+   * a vector of probabilities over possible features.
    */
-  sendFeedback_(code) {
+  genFeedback(code) {
     var userId = appOptions.userId;
     var levelId = appOptions.serverLevelId;
     $.ajax({
       url: FEEDBACK_SERVER_URL,
       data: JSON.stringify({
-        code: code,
+        program: code,
         userId: userId,
         levelId: levelId
       }),
@@ -340,7 +341,7 @@ module.exports = class Maze {
         var hint = {
           hintType: 'non-contextual',
           hintId: hintId,
-          markdown: result.hint,
+          markdown: result[0].en,
           alreadySeen: false
         };
 
@@ -367,11 +368,11 @@ module.exports = class Maze {
       }
       code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
 
-      // Make Ajax request to feedback server
+      // Make Ajax request to rubric sampling server
       let codeXML = Blockly.Xml.domToText(
         Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
       );
-      this.sendFeedback_(codeXML);
+      this.genFeedback(codeXML);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();

@@ -67,4 +67,3 @@ npm-debug.log
 /rebuild-shared
 /rebuild-code-studio
 /tools/scripts/brokenLinkChecker/node_modules/
-node_modules/
