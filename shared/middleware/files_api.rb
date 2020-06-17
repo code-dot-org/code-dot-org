@@ -143,6 +143,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     if endpoint == 'libraries'
+      puts "REQUESTING LIBRARY"
       dont_cache
     end
     get_file(endpoint, encrypted_channel_id, filename)
@@ -201,6 +202,7 @@ class FilesApi < Sinatra::Base
     NewRelic::Agent.ignore_enduser rescue nil
 
     buckets = get_bucket_impl(endpoint).new
+    puts "CREATED BUCKET" if endpoint == 'libraries'
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
 
@@ -223,10 +225,13 @@ class FilesApi < Sinatra::Base
       response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
     end
 
+    puts "GETTING FILE" if endpoint == 'libraries'
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
+    puts "GOT FILE" if endpoint == 'libraries'
+    p result
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
