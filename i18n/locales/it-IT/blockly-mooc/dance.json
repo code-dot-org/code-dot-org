@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Hai premuto un tasto, ma il tuo ballerino non ha risposto.",
   "danceFeedbackNeedTwoDancers": "Devi creare due ballerini.",
   "danceFeedbackOnlyOneDancerMoved": "Solo una dei tuoi ballerini si è mosso.",
-  "danceFeedbackNeedLead": "È inoltre necessario creare un ballerino principale con il blocco <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "È inoltre necessario creare un ballerino principale con il blocco <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "È necessario creare un gruppo di ballerini di riserva con il blocco <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "È necessario modificare le dimensioni di almeno un ballerino dopo l'inizio della musica.",
   "measure": "Battuta:"

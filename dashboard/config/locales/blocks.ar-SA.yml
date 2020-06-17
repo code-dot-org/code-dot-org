@@ -1024,6 +1024,7 @@ ar:
         options:
           CHOICE:
             '"this"': هذا
+            '"other"': أخرى
       gamelab_hideTitleScreen:
         text: إخفاء شاشة العنوان
       gamelab_isTouchingEdges:

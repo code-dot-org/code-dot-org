@@ -30,16 +30,14 @@ class CoursesController < ApplicationController
     # csp and csd are each "course families", each containing multiple "course versions".
     # When the url of a course family is requested, redirect to a specific course version.
     #
-    # For now, Hard-code the redirection logic because there are only two course
-    # families to worry about. In the future we will want to make this redirect
-    # happen based on the data in the DB so it can be configured via levelbuilder.
-    redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-    case params[:course_name]
-    when 'csd'
-      redirect_to "/courses/csd-2019#{redirect_query_string}"
-      return
-    when 'csp'
-      redirect_to "/courses/csp-2019#{redirect_query_string}"
+    # For now, use hard-coded list to determine whether the given course_name is actually
+    if ScriptConstants::COURSE_FAMILY_NAMES.include?(params[:course_name])
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to_course = Course.all_courses.
+          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          sort_by(&:version_year).
+          last
+      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
       return
     end
 
