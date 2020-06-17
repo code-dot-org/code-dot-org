@@ -5605,7 +5605,7 @@ Studio.fixSpriteLocation = function() {
  */
 Studio.setSprite = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError('Incorrect parameter: ' + opts.value);
+    return;
   }
 
   var spriteValue = opts.value.toLowerCase().trim();
@@ -5617,12 +5617,12 @@ Studio.setSprite = function(opts) {
 
   var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
-    throw new RangeError('Incorrect parameter: ' + opts.value);
+    return;
   }
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError('Incorrect parameter: ' + spriteIndex);
+    return;
   }
   var sprite = Studio.sprite[spriteIndex];
 
