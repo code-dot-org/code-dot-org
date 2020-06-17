@@ -201,8 +201,12 @@ describe('NetSimUtils', function() {
 
     it('ignores trailing slash in the URL', function() {
       expect('s-csp1-stage-3-puzzle-2')
-        .to.equal(urlToKey('https://studio.code.org/s/csp1/stage/3/puzzle/2'))
-        .to.equal(urlToKey('https://studio.code.org/s/csp1/stage/3/puzzle/2/'));
+        .to.equal(
+          urlToKey('https://studio.code.org/s/csp1-2019/stage/3/puzzle/2')
+        )
+        .to.equal(
+          urlToKey('https://studio.code.org/s/csp1-2019/stage/3/puzzle/2/')
+        );
     });
   });
 });
