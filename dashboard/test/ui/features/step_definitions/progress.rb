@@ -80,6 +80,12 @@ Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, le
   verify_progress(selector, test_result)
 end
 
+Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|
+  wait_short_until do
+    verify_progress(selector, test_result)
+  end
+end
+
 # PLC Progress
 Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
-import MarkdownSpan from '../components/markdownSpan';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   lineItem: {
@@ -22,7 +22,9 @@ const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan style={props.style}>{`${props.text}${suffix}`}</MarkdownSpan>
+    <span style={props.style}>
+      <InlineMarkdown markdown={`${props.text}${suffix}`} />
+    </span>
   );
 };
 Question.propTypes = {

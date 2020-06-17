@@ -4,6 +4,7 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
+import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 
 const styles = {
   input: {
@@ -28,6 +29,9 @@ export default class CourseEditor extends Component {
     title: PropTypes.string.isRequired,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
+    visible: PropTypes.bool.isRequired,
+    isStable: PropTypes.bool.isRequired,
+    pilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
@@ -95,6 +99,25 @@ export default class CourseEditor extends Component {
               </option>
             ))}
           </select>
+        </label>
+        <VisibleAndPilotExperiment
+          visible={this.props.visible}
+          pilotExperiment={this.props.pilotExperiment}
+          paramName="visible"
+        />
+        <label>
+          Can be recommended (aka stable)
+          <input
+            name="is_stable"
+            type="checkbox"
+            defaultChecked={this.props.isStable}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked, this course will be eligible to be the recommended
+            version of the course. The most recent eligible version will be the
+            recommended version.
+          </p>
         </label>
         <label>
           Short Description (used in course cards on homepage)

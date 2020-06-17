@@ -1,7 +1,14 @@
 {
+  "https://studio.code.org/s/csd3-2017/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nThe class is asked to consider the \"problems\" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, they will explore how Computer Science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.\n\n\n## Resources\n\n* [CS in Entertainment - Activity Guide](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)\n",
+      "teacher_markdown": "* [CS in Entertainment](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))\n\n\n"
+    }
+  },
   "https://studio.code.org/s/csd3-2017/stage/1/puzzle/2": {
     "dsls": {
-      "markdown": "# Starting Your Search\n\nTo find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for \"Computer science and &#95;&#95;&#95;&#95;&#95;&#95;\" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.\n\n\n"
+      "markdown": "# Starting Your Search\n\nTo find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for \"Computer science and &#95;&#95;&#95;&#95;&#95;&#95;\" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.\n\n\n",
+      "teacher_markdown": "Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.\n\n## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)\n\n### Overview\n\nThis site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.\n\n### Relevant fields\n\n* Film/TV\n* Animation\n* Robotics/Animatronics\n* Games\n\n## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)\n\n### Overview\n\nVideos featuring a range of people working in diverse areas of the game industry, talking about what they do.\n\n### Relevant Fields\n\n* Games\n* Animation\n* Art\n\n## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)\n\n### Overview\n\nMusic Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for \"computer science\" or \"programming\" will reveal some interesting articles.\n\n### Relevant Fields\n\n* Music\n\n## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)\n\n### Overview\n\nWhile this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.\n\n### Relevant Fields\n\n* All\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/1/puzzle/3": {
@@ -20,7 +27,8 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/2/puzzle/1": {
     "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n"
+      "markdown": "# Overview\n\nThis lesson explores the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab.The class uses a Game Lab tool  to interactively place shapes on Game Lab's 400 by 400 grid. Partners then take turns instructing each other how to draw a hidden image using this tool, accounting for many of the challenges of programming in Game Lab.\n\n\n## Resources\n\n* [Drawing Shapes - Activity Guide](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)\n",
+      "teacher_markdown": "[key]\n\n* [Drawing Shapes](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))\n\n[/key]\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/2/puzzle/2": {
@@ -29,12 +37,13 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/3/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. The lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.\n## Vocabulary\n\n* **Bug** - Part of a program that does not work correctly.\n* **Debugging** - Finding and fixing problems in your algorithm or program.\n* **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n## Introduced Code\n\n* [ellipse()](//docs.code.org/gamelab/ellipse/)\n* [rect()](//docs.code.org/gamelab/rect/)\n* [fill()](//docs.code.org/gamelab/fill/)\n\n"
+      "markdown": "# Overview\n\nThe class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. The lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.\n## Vocabulary\n\n* **Bug** - Part of a program that does not work correctly.\n* **Debugging** - Finding and fixing problems in your algorithm or program.\n* **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n## Introduced Code\n\n* [ellipse()](//studio.code.org/docs/gamelab/ellipse/)\n* [rect()](//studio.code.org/docs/gamelab/rect/)\n* [fill()](//studio.code.org/docs/gamelab/fill/)\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/3/puzzle/2": {
     "display_name": "Introduction to Game Lab",
     "long_instructions": "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n-   Look at the line of code in the workspace below these instructions ( [Show me where][0] ) and discuss with your partner where you think the shape will be drawn on the grid.\n-   Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where][1] )\n-   Change the numbers inside the block, then try running the program again.\n-   Try to place the rectangle near the bottom right of the screen.",
+    "teacher_markdown": "# Tour of Game Lab\n\nDepending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.",
     "callouts": {
       "CSD_U3_rect_c1": "Here is the code",
       "CSD_U3_rect_c2": "Here is the \"Run\" button."
@@ -73,13 +82,15 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/3/puzzle/9": {
     "long_instructions": "<img src=\"https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png\" style=\"float:right;width:150px;\">\n\n# Debugging\n\nOften, code doesn't work the first time it runs, and programmers have to debug it.  The code below is supposed to make the picture on the right, but the programmer got confused about which order the code should be in, as well as how to put a square in the right place on the screen.\n\n# Do This\n\n-   Look at the code in the workspace.\n-   Change the code so it makes the picture on the right.\n    -   (You'll need to move one line of code AND change the coordinates of the square.)",
+    "teacher_markdown": "This is a good puzzle to use as an assessment of whether or not students understand the basics of sequencing and positioning shapes in Game Lab.",
     "callouts": {
       "CSD_U3_rect_c1": "Here is the code",
       "CSD_U3_rect_c2": "Drag this block into the code area."
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/3/puzzle/10": {
-    "display_name": "Plotting Shapes in Game Lab"
+    "display_name": "Plotting Shapes in Game Lab",
+    "teacher_markdown": "# Simplified Shapes\n\nThe `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes."
   },
   "https://studio.code.org/s/csd3-2017/stage/3/puzzle/11": {
     "display_name": "Challenge: Draw an Image",
@@ -99,7 +110,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/4/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.\n## Vocabulary\n\n* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.\n\n## Introduced Code\n\n* [background()](//docs.code.org/gamelab/background/)\n* [ellipse()](//docs.code.org/gamelab/ellipse/)\n* [rect()](//docs.code.org/gamelab/rect/)\n* [randomNumber()](//docs.code.org/gamelab/randomNumber/)\n\n"
+      "markdown": "# Overview\n\nThis lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.\n## Vocabulary\n\n* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.\n\n## Introduced Code\n\n* [background()](//studio.code.org/docs/gamelab/background/)\n* [ellipse()](//studio.code.org/docs/gamelab/ellipse/)\n* [rect()](//studio.code.org/docs/gamelab/rect/)\n* [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/4/puzzle/2": {
@@ -141,7 +152,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/5/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson introduces variables as a way to label a number in a program or save a randomly generated value. The class begins the lesson with a very basic description of the purpose of a variable and practices using the new blocks.  Afterwards, the class uses variables to save a random number, allowing the programs to use the same random number multiple times.\n## Vocabulary\n\n* **Variable** - A placeholder for a piece of information that can change.\n\n## Introduced Code\n\n* [Declare a variable](//docs.code.org/gamelab/declareNoAssign_x/)\n* [Declare and assign a value to a variable](//docs.code.org/gamelab/declareAssign_x/)\n\n## Resources\n\n* [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))\n"
+      "markdown": "# Overview\n\nThis lesson introduces variables as a way to label a number in a program or save a randomly generated value. The class begins the lesson with a very basic description of the purpose of a variable and practices using the new blocks.  Afterwards, the class uses variables to save a random number, allowing the programs to use the same random number multiple times.\n## Vocabulary\n\n* **Variable** - A placeholder for a piece of information that can change.\n\n## Introduced Code\n\n* [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)\n* [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)\n\n## Resources\n\n* [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/5/puzzle/3": {
@@ -196,7 +207,8 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/6/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn order to create more interesting and detailed images, the class is introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.  At the end of the lesson, everyone creates a scene using sprites.\n## Vocabulary\n\n* **Property** - Attributes that describe an object's characteristics\n* **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.\n\n## Introduced Code\n\n* [drawSprites()](//docs.code.org/gamelab/drawSprites/)\n* [sprite.scale](//docs.code.org/gamelab/scale/)\n* [var sprite = createSprite()](//docs.code.org/gamelab/createSprite/)\n\n## Resources\n\n* [Sprite Scene Planning - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn order to create more interesting and detailed images, the class is introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.  At the end of the lesson, everyone creates a scene using sprites.\n## Vocabulary\n\n* **Property** - Attributes that describe an object's characteristics\n* **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.\n\n## Introduced Code\n\n* [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)\n* [sprite.scale](//studio.code.org/docs/gamelab/scale/)\n* [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)\n\n## Resources\n\n* [Sprite Scene Planning - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)\n",
+      "teacher_markdown": "* [Sprite Scene Planning](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/6/puzzle/2": {
@@ -216,27 +228,27 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "When run, where will the sprite <code>mySprite</code> be located?"
-            }
-          ],
           "answers": [
             {
-              "text": "<img src=\"https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png\" style=\"width: 150px; border: 1px solid\">",
+              "text": "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)",
               "correct": false
             },
             {
-              "text": "<img src=\"https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png\" style=\"width: 150px; border: 1px solid\">",
+              "text": "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)",
+              "correct": false
+            },
+            {
+              "text": "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)",
               "correct": true
             },
             {
-              "text": "<img src=\"https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png\" style=\"width: 150px; border: 1px solid\">",
+              "text": "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)",
               "correct": false
-            },
+            }
+          ],
+          "questions": [
             {
-              "text": "<img src=\"https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png\" style=\"width: 150px; border: 1px solid\">",
-              "correct": false
+              "text": "When run, where will the sprite `mySprite` be located?"
             }
           ]
         }
@@ -259,7 +271,8 @@
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/6/puzzle/10": {
-    "long_instructions": "# Upload your own image\n\nYou can also use the Animation tab to upload or draw your own image.\n\n# Do This\n\nYou are going to make a flying kite. You can search the web for an image or create a new animation from scratch by drawing your own kite.\n\n-   Download your kite image. Images with transparent backgrounds work best.\n-   Open the animations tab.\n-   Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png\" style=\"width:50px\"> to upload an image.\n-   Select the file from your computer.\n-   Rename your image so it is easy to remember. To rename it click the text below the image.\n-   Back in code mode, use `sprite.setAnimation()` to make your `kite` sprite show your new animation.\n\nDon't worry if your kite image is too big! You'll learn how to fix that in the next level."
+    "long_instructions": "# Upload your own image\n\nYou can also use the Animation tab to upload or draw your own image.\n\n# Do This\n\nYou are going to make a flying kite. You can search the web for an image or create a new animation from scratch by drawing your own kite.\n\n-   Download your kite image. Images with transparent backgrounds work best.\n-   Open the animations tab.\n-   Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png\" style=\"width:50px\"> to upload an image.\n-   Select the file from your computer.\n-   Rename your image so it is easy to remember. To rename it click the text below the image.\n-   Back in code mode, use `sprite.setAnimation()` to make your `kite` sprite show your new animation.\n\nDon't worry if your kite image is too big! You'll learn how to fix that in the next level.",
+    "teacher_markdown": "# Recommended Search Engines\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n-   [Creative Commons Search][0]\n-   [Google Image Advanced Search][1]\n-   [Wikimedia Commons][2]\n-   [Flickr Creative Commons][3]"
   },
   "https://studio.code.org/s/csd3-2017/stage/6/puzzle/11": {
     "long_instructions": "# Resizing with Scale\n\nIn the _Sprites_ drawer of the toolbox, you'll see a new block called `sprite.scale`. It lets you change the size of a sprite in relation to its original size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` makes your sprite half as big, while `sprite.scale = 2` makes it twice as big.\n\n# Do This\n\nThe program should already include your newly uploaded image, but it's probably not the _perfect_ size. Use `sprite.scale` to change the size of your `kite` sprite.\n\n_Hint: the order of your code matters! You need to add `sprite.scale` **after** you've created the sprite, but **before** you draw the sprite with `drawSprites()`. For clarity, try to keep all of your sprite code together at the top of your program._"
@@ -296,7 +309,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/7/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson introduces the draw loop, one of the core programming paradigms in Game Lab.  The class combines the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Afterwards, everyone uses what they learned to update the sprite scene from the previous lesson.\n## Vocabulary\n\n* **Animation** - a series of images that create the illusion of motion by being shown rapidly one after the other\n* **Frame** - a single image within an animation\n* **Frame Rate** - the rate at which frames in an animation are shown, typically measured in frames per second\n\n## Introduced Code\n\n* [World.frameRate](//docs.code.org/gamelab/World.frameRate/)\n* [function draw() {}](//docs.code.org/gamelab/draw/)\n\n\n"
+      "markdown": "# Overview\n\nThis lesson introduces the draw loop, one of the core programming paradigms in Game Lab.  The class combines the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Afterwards, everyone uses what they learned to update the sprite scene from the previous lesson.\n## Vocabulary\n\n* **Animation** - a series of images that create the illusion of motion by being shown rapidly one after the other\n* **Frame** - a single image within an animation\n* **Frame Rate** - the rate at which frames in an animation are shown, typically measured in frames per second\n\n## Introduced Code\n\n* [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)\n* [function draw() {}](//studio.code.org/docs/gamelab/draw/)\n\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/7/puzzle/2": {
@@ -312,6 +325,7 @@
     "long_instructions": "<img src=\"https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45 PM.png\" style=\"float:right;width:150px\">\n\n# Using the Draw Loop\n\nNow it's your turn to do some work with the draw loop. Remember that the code inside the draw loop is run by Game Lab over and over again.\n\n# Do This\n\n-   Add code to this program so that your drawing has orange circles being drawn, too.\n-   Move on when your program looks like the picture to the right."
   },
   "https://studio.code.org/s/csd3-2017/stage/7/puzzle/6": {
+    "teacher_markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.",
     "contained levels": [
       {
         "long_instructions": "# Predict\n\nThis program has one small difference that will make it run a little differently. Again though, remember:\n\n-   All your code outside the draw loop is run first, one time\n-   All your code inside the draw loop is run over and over forever\n\nWhat will this program do? Write your prediction below."
@@ -343,7 +357,8 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/8/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis unplugged lesson explores the underlying behavior of variables. Using notecards and string to simulate variables within a program, the class implements a few short programs. Once comfortable with this syntax, the class uses the same process with sprite properties, tracking a sprite's progress across the screen.\n## Vocabulary\n\n* **Expression** - Any valid unit of code that resolves to a value.\n* **Variable** - A placeholder for a piece of information that can change.\n\n\n## Resources\n\n* [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)\n* [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThis unplugged lesson explores the underlying behavior of variables. Using notecards and string to simulate variables within a program, the class implements a few short programs. Once comfortable with this syntax, the class uses the same process with sprite properties, tracking a sprite's progress across the screen.\n## Vocabulary\n\n* **Expression** - Any valid unit of code that resolves to a value.\n* **Variable** - A placeholder for a piece of information that can change.\n\n\n## Resources\n\n* [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)\n* [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)\n",
+      "teacher_markdown": "* [Variables Unplugged](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY) - Activity Guide Key ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/9/puzzle/1": {
@@ -375,27 +390,27 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read this program and predict which of the following animations will be produced."
-            }
-          ],
           "answers": [
             {
-              "text": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)",
               "correct": false
             },
             {
-              "text": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)",
               "correct": false
             },
             {
-              "text": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)",
               "correct": true
             },
             {
-              "text": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)",
               "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read this program and predict which of the following animations will be produced."
             }
           ]
         }
@@ -446,7 +461,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/11/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.\n## Vocabulary\n\n* **Boolean Expression** - in programming, an expression that evaluates to True or False. \n* **If-Statement** - The common programming structure that implements \"conditional statements\".\n\n## Introduced Code\n\n* [If statement](//docs.code.org/gamelab/ifBlock/)\n* [Less than operator](//docs.code.org/gamelab/lessThanOperator/)\n* [Inequality operator](//docs.code.org/gamelab/inequalityOperator/)\n* [Less than or equal operator](//docs.code.org/gamelab/lessThanOrEqualOperator/)\n* [Greater than operator](//docs.code.org/gamelab/greaterThanOperator/)\n* [Equality operator](//docs.code.org/gamelab/equalityOperator/)\n* [Greater than or equal operator](//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+      "markdown": "# Overview\n\nThe class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.\n## Vocabulary\n\n* **Boolean Expression** - in programming, an expression that evaluates to True or False. \n* **If-Statement** - The common programming structure that implements \"conditional statements\".\n\n## Introduced Code\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/)\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)\n* [Equality operator](//studio.code.org/docs/gamelab/equalityOperator/)\n* [Greater than or equal operator](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/11/puzzle/2": {
@@ -457,31 +472,31 @@
     "contained levels": [
       {
         "dsls": {
-          "title": "title",
+          "answers": [
+            {
+              "text": "true  \nfalse  \ntrue",
+              "correct": true
+            },
+            {
+              "text": "0  \n200  \n100",
+              "correct": false
+            },
+            {
+              "text": "true  \nerror  \ntrue",
+              "correct": false
+            },
+            {
+              "text": "false  \ntrue  \nfalse",
+              "correct": false
+            }
+          ],
+          "markdown": "# Boolean Expressions\n\nDecision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.\n\n# Predict\n\nRead the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question\n",
           "questions": [
             {
               "text": "Which result will be printed in the console by this program?"
             }
           ],
-          "answers": [
-            {
-              "text": "true<br>false<br>true",
-              "correct": true
-            },
-            {
-              "text": "  0<br>200<br>100",
-              "correct": false
-            },
-            {
-              "text": "  true<br>error<br>true",
-              "correct": false
-            },
-            {
-              "text": "  false<br>true<br>false",
-              "correct": false
-            }
-          ],
-          "markdown": "# Boolean Expressions\n\nDecision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.\n\n# Predict\n\nRead the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question\n"
+          "title": "title"
         }
       }
     ]
@@ -499,7 +514,23 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/11/puzzle/6": {
     "dsls": {
-      "title": "Matching: Comparison Operators",
+      "answers": [
+        {
+          "text": "dog.rotation &lt; cat.rotation"
+        },
+        {
+          "text": "dog.x &lt; cat.x"
+        },
+        {
+          "text": "dog.scale &gt; cat.scale"
+        },
+        {
+          "text": "dog.x &gt; cat.x"
+        },
+        {
+          "text": "dog.x == cat.x"
+        }
+      ],
       "content1": "Match the boolean expression to the English description.",
       "questions": [
         {
@@ -518,23 +549,7 @@
           "text": "Is the dog sprite's x equal to the cat sprite's x?"
         }
       ],
-      "answers": [
-        {
-          "text": "dog.rotation &lt; cat.rotation"
-        },
-        {
-          "text": "dog.x &lt; cat.x"
-        },
-        {
-          "text": "dog.scale &gt; cat.scale"
-        },
-        {
-          "text": "dog.x &gt; cat.x"
-        },
-        {
-          "text": "dog.x == cat.x"
-        }
-      ]
+      "title": "Matching: Comparison Operators"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/11/puzzle/7": {
@@ -564,7 +579,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/12/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nFollowing the introduction to booleans and if statements in the previous lesson, students are introduced to a new block called keyDown() which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson students will have written programs that take keyboard input from the user to control sprites on the screen.\n\n## Introduced Code\n\n* [keyDown()](//docs.code.org/gamelab/keyDown/)\n\n## Resources\n\n* [Boolean Expressions](https://youtu.be/y3rCKJNOwpA) - Video ([download](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))\n"
+      "markdown": "# Overview\n\nFollowing the introduction to booleans and if statements in the previous lesson, students are introduced to a new block called keyDown() which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson students will have written programs that take keyboard input from the user to control sprites on the screen.\n\n## Introduced Code\n\n* [keyDown()](//studio.code.org/docs/gamelab/keyDown/)\n\n## Resources\n\n* [Boolean Expressions](https://youtu.be/y3rCKJNOwpA) - Video ([download](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/12/puzzle/2": {
@@ -613,7 +628,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/13/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class continues to explore ways to use conditional statements to take user input. In addition to the simple keyDown() command learned yesterday, the class learns about several other keyboard input commands as well as ways to take mouse input.\n## Vocabulary\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n## Introduced Code\n\n* [keyWentUp()](//docs.code.org/gamelab/keyWentUp/)\n* [mouseWentDown()](//docs.code.org/gamelab/mouseWentDown/)\n* [mouseWentUp()](//docs.code.org/gamelab/mouseWentUp/)\n* [keyWentDown()](//docs.code.org/gamelab/keyWentDown/)\n* [mouseDown()](//docs.code.org/gamelab/mouseDown/)\n* [mouseDidMove()](//docs.code.org/gamelab/mouseDidMove/)\n* [sprite.visible](//docs.code.org/gamelab/visible/)\n* [If/else statement](//docs.code.org/gamelab/ifElseBlock/)\n\n"
+      "markdown": "# Overview\n\nThe class continues to explore ways to use conditional statements to take user input. In addition to the simple keyDown() command learned yesterday, the class learns about several other keyboard input commands as well as ways to take mouse input.\n## Vocabulary\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n## Introduced Code\n\n* [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)\n* [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)\n* [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)\n* [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)\n* [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)\n* [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)\n* [sprite.visible](//studio.code.org/docs/gamelab/visible/)\n* [If/else statement](//studio.code.org/docs/gamelab/ifElseBlock/)\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/13/puzzle/2": {
@@ -645,7 +660,17 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/13/puzzle/9": {
     "dsls": {
-      "title": "Matching: Responding to Keypresses",
+      "answers": [
+        {
+          "text": "keyWentDown()"
+        },
+        {
+          "text": "keyWentUp()"
+        },
+        {
+          "text": "keyDown()"
+        }
+      ],
       "content1": "Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.",
       "questions": [
         {
@@ -658,17 +683,7 @@
           "text": "Is true the whole time the key is pressed or held down."
         }
       ],
-      "answers": [
-        {
-          "text": "keyWentDown()"
-        },
-        {
-          "text": "keyWentUp()"
-        },
-        {
-          "text": "keyDown()"
-        }
-      ]
+      "title": "Matching: Responding to Keypresses"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/13/puzzle/10": {
@@ -690,7 +705,8 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/14/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this cumulative project for Chapter 1, the class plans for and develops an interactive greeting card using all of the programming techniques they've learned to this point.\n\n\n## Resources\n\n* [Interactive Card - Project Guide](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)\n* [Interactive Card - Rubric](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)\n* [Interactive Card - Peer Review](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this cumulative project for Chapter 1, the class plans for and develops an interactive greeting card using all of the programming techniques they've learned to this point.\n\n\n## Resources\n\n* [Interactive Card - Project Guide](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)\n* [Interactive Card - Rubric](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)\n* [Interactive Card - Peer Review](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)\n",
+      "teacher_markdown": "* [Interactive Card](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))\n* [Interactive Card](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/14/puzzle/2": {
@@ -711,9 +727,14 @@
   "https://studio.code.org/s/csd3-2017/stage/14/puzzle/7": {
     "long_instructions": "# Finishing Touches\n\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\n\n# Do This\n\nConsider adding any of the following to finish up your card:\n\n-   Text\n-   Additional images for your sprites\n-   Subtle animation in the background\n-   Sound effects  (Can you figure out now to do this?)\n-   More ways for a user to interact with your card"
   },
+  "https://studio.code.org/s/csd3-2017/stage/14/puzzle/8": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
   "https://studio.code.org/s/csd3-2017/stage/15/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nAfter a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.\n\n## Introduced Code\n\n* [sprite.velocityY](//docs.code.org/gamelab/velocityY/)\n* [sprite.velocityX](//docs.code.org/gamelab/velocityX/)\n* [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)\n"
+      "markdown": "# Overview\n\nAfter a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.\n\n## Introduced Code\n\n* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)\n* [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)\n* [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/15/puzzle/2": {
@@ -792,18 +813,14 @@
     "display_name": "Free Play",
     "long_instructions": "# Free Play\n\nUse what you've learned to create whatever you like.  When you're finished, you can click  [][0]  to send your creation to a friend, or [][1] to send it to your Projects Gallery."
   },
-  "https://studio.code.org/s/csd3-2017/stage/16/puzzle/1": {
-    "dsls": {
-      "markdown": "# Overview\n\nThe class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.\n## Vocabulary\n\n* **Abstraction** - Pulling out specific differences to make one solution work for multiple problems.\n* **Debugging** - Finding and fixing problems in your algorithm or program.\n* **If-Statement** - The common programming structure that implements \"conditional statements\".\n\n## Introduced Code\n\n* [sprite.debug](//docs.code.org/gamelab/debug/)\n* [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)\n\n## Resources\n\n* [Collision Detection - Activity Guide](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)\n"
-    }
-  },
   "https://studio.code.org/s/csd3-2017/stage/16/puzzle/2": {
     "display_name": "Sample Game",
     "long_instructions": "# Frog Jump\n\nLook at the frog jumping game to the left.   It looks like the game from the last lesson, but the frog moves the mushroom if it hits it.  What code do you think would help the computer to know whether two sprites are touching?\n\n[//]: # \"https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png\"\n\n[//]: # \"https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png\"\n\n[//]: # \"https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png\""
   },
   "https://studio.code.org/s/csd3-2017/stage/16/puzzle/3": {
     "display_name": "Collision Detection",
-    "long_instructions": "# Balloon\n\nThe code below uses the sprites' x and y positions to check whether they are touching.  It will change the balloon sprite's animation when the tack touches it.  Use the arrow keys to move the tack until it touches the balloon.\n\n# Do This\n\n-   You do not need to change any code on this level.\n-   Read the if statements inside the draw loop and find the different sprite properties and how they are compared.\n-   Discuss the code with your partner.  Would you want to write this code every time you checked whether sprites were touching?\n\n[//]: # \"https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png\"\n\n[//]: # \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\"\n\n[//]: # \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\""
+    "long_instructions": "# Balloon\n\nThe code below uses the sprites' x and y positions to check whether they are touching.  It will change the balloon sprite's animation when the tack touches it.  Use the arrow keys to move the tack until it touches the balloon.\n\n# Do This\n\n-   You do not need to change any code on this level.\n-   Read the if statements inside the draw loop and find the different sprite properties and how they are compared.\n-   Discuss the code with your partner.  Would you want to write this code every time you checked whether sprites were touching?\n\n[//]: # \"https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png\"\n\n[//]: # \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\"\n\n[//]: # \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\"",
+    "teacher_markdown": "The code in this level is overwhelming.  The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions.  They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier."
   },
   "https://studio.code.org/s/csd3-2017/stage/16/puzzle/4": {
     "long_instructions": "# isTouching()\n\nWriting out the math each time you want to check whether two sprites are touching can take a while, so a programmer created the `isTouching` block, which can check whether one sprite is touching another sprite (the _target_).  The computer is still doing the same math as in the previous program, but you don't have to worry about it because another programmer already did that work.\n\n# Do This\n\nInside the draw loop, drag the `isTouching` block into the `if` block.     ( [Show me where][0] )\n\n_Hint: Don't forget to change the \"sprite\" to \"balloon\" and the \"target\" to \"tack\"._\n\n[//]: # \"https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png\"\n\n[//]: # \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\"\n\n[//]: # \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\"",
@@ -815,7 +832,7 @@
     "long_instructions": "# Applesauce\n\nWhen the apple hits the blender, the blender should turn on.\n\n# Do This\n\nUse the `isTouching` block to make the blender shake back and forth when the apple sprite touches the blender sprite.  The shaking motion is already coded using the random block, so you just have to check when the two sprites are touching.\n\n_Challenge: Can you make the apple disappear when it touches the blender?_\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\""
   },
   "https://studio.code.org/s/csd3-2017/stage/16/puzzle/6": {
-    "long_instructions": "# Making Sounds\n\nYou can also use code to play a blender sound.\n\n# Do This\n\nUse the `playSound` block from the \"World\" drawer to play the \"<https://docs.code.org/sounds/blender.mp3>\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: [][0]\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\"\n\n[//]: # \"https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png\""
+    "long_instructions": "# Making Sounds\n\nYou can also use code to play a blender sound.\n\n# Do This\n\nUse the `playSound` block from the \"World\" drawer to play the \"<https://studio.code.org/docs/sounds/blender.mp3>\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: [][0]\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\"\n\n[//]: # \"https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png\""
   },
   "https://studio.code.org/s/csd3-2017/stage/16/puzzle/7": {
     "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\nUse the `if`, `isTouching`, and `setAnimation` blocks to change the horse sprite's image when the rainbow touches it.  The unicorn image is already loaded in the animations tab for you.\n\n[//]: # \"https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png\"\n\n[//]: # \"https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png\"\n\n[//]: # \"https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png\"\n\n[//]: # \"https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png\""
@@ -840,13 +857,9 @@
     "display_name": "Free Play",
     "long_instructions": "# Free Play\n\nUse what you've learned to create whatever you like.  When you're finished, you can click  [][0]  to send your creation to a friend, or [][1] to send it to your Projects Gallery."
   },
-  "https://studio.code.org/s/csd3-2017/stage/17/puzzle/1": {
-    "dsls": {
-      "markdown": "# Overview\n\nThe class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. \n\n\n"
-    }
-  },
   "https://studio.code.org/s/csd3-2017/stage/17/puzzle/2": {
     "display_name": "Velocity and the Counter Pattern",
+    "teacher_markdown": "!!!tip\n\n    This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code.",
     "contained levels": [
       {
         "long_instructions": "# Velocity and the Counter Pattern\n\nUsing the counter pattern with a sprite's x and y property makes a sprite move smoothly across the screen. In this program **the counter pattern is being used with the `sprite.velocityX` property** instead.\n\n# Predict\n\nWhat do you think will happen when the code is run? Why? Once you're ready you can run the code to find out."
@@ -904,7 +917,7 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/18/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).\n## Vocabulary\n\n* **Abstraction** - Pulling out specific differences to make one solution work for multiple problems.\n\n## Introduced Code\n\n* [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)\n* [sprite.collide()](//docs.code.org/gamelab/collide/)\n* [sprite.displace()](//docs.code.org/gamelab/displace/)\n* [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)\n* [sprite.bounce()](//docs.code.org/gamelab/bounce/)\n* [sprite.bounciness](//docs.code.org/gamelab/bounciness/)\n\n"
+      "markdown": "# Overview\n\nThe class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).\n## Vocabulary\n\n* **Abstraction** - Pulling out specific differences to make one solution work for multiple problems.\n\n## Introduced Code\n\n* [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)\n* [sprite.collide()](//studio.code.org/docs/gamelab/collide/)\n* [sprite.displace()](//studio.code.org/docs/gamelab/displace/)\n* [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)\n* [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)\n* [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/18/puzzle/2": {
@@ -968,11 +981,12 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.\n## Vocabulary\n\n* **Function** - A piece of code that you can easily call over and over again.\n\n## Introduced Code\n\n* [Define a function](//docs.code.org/gamelab/functionParams_none/)\n* [Call a function](//docs.code.org/gamelab/callMyFunction/)\n\n"
+      "markdown": "# Overview\n\nThis lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.\n## Vocabulary\n\n* **Function** - A piece of code that you can easily call over and over again.\n\n## Introduced Code\n\n* [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)\n* [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/2": {
-    "long_instructions": "# Calling Functions\n\nFunctions let you build your own blocks and decide what code goes inside of them. This is the command that lets you create a new function.\n\n[][0]\n\nYou use or \"call\" your function like any other block by using the name you gave it.\n\n[][1]\n\nThe blocks to create and call functions can be found in the \"Functions\" tab of the palette.\n\n[][2]\n\n# Do This\n\nThis program has already created 2 functions. Only one of them is being called.\n\n-   **Call the second function** to reveal the full image. Use the function that is being called as a guide.\n-   **Tip:** Just as with all other blocks, spelling and capitalization are important here."
+    "long_instructions": "# Calling Functions\n\nFunctions let you build your own blocks and decide what code goes inside of them. This is the command that lets you create a new function.\n\n[][0]\n\nYou use or \"call\" your function like any other block by using the name you gave it.\n\n[][1]\n\nThe blocks to create and call functions can be found in the \"Functions\" tab of the palette.\n\n[][2]\n\n# Do This\n\nThis program has already created 2 functions. Only one of them is being called.\n\n-   **Call the second function** to reveal the full image. Use the function that is being called as a guide.\n-   **Tip:** Just as with all other blocks, spelling and capitalization are important here.",
+    "teacher_markdown": "**Introducing Functions**\n\nIn these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code."
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/3": {
     "long_instructions": "# Reordering Code\n\nPlacing code inside functions makes it easy to read and make changes to. Good names for functions indicate what your program is doing to a reader. You can call your functions in a different order to quickly make significant changes to how your program runs.\n\n# Do This\n\nThis program has already created 4 functions that draw parts of a scene. Unfortunately it's not coming out right.\n\n-   **Read the 4 functions** to know what they do\n-   **Call the functions** in an order that draws the scene in the way that looks best to you"
@@ -1012,7 +1026,8 @@
     "long_instructions": "# Calling Functions in the Draw Loop\n\nYou can call a function inside the draw loop, just as you would anywhere else in your code.\n\n# Do This\n\nA function that will draw a background has been created for you. A sprite has been created to move across the background.\n\n-   **Call the function inside the draw loop** so that the sprite appears on top of the background.\n-   **Note:** Don't create functions inside the draw loop. Make them at the bottom of your code."
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/6": {
-    "long_instructions": "# Calling Functions Multiple Times\n\nYou'll often want to use the same code at many places in your program. Once you've created a function you can call it as many times as you like.\n\n# Do This\n\nThis code creates a sprite that moves across the screen once. How can you make it go back across the screen?\n\n-   **Note:** The function is already called once at the beginning of your program\n-   Read the condition of the **if-statement** inside the draw loop. Why do you think it's there?\n-   Use this if-statement and the function written for you to make the sprite move across the screen multiple times."
+    "long_instructions": "# Calling Functions Multiple Times\n\nYou'll often want to use the same code at many places in your program. Once you've created a function you can call it as many times as you like.\n\n# Do This\n\nThis code creates a sprite that moves across the screen once. How can you make it go back across the screen?\n\n-   **Note:** The function is already called once at the beginning of your program\n-   Read the condition of the **if-statement** inside the draw loop. Why do you think it's there?\n-   Use this if-statement and the function written for you to make the sprite move across the screen multiple times.",
+    "teacher_markdown": "**Why Use Functions** \n\nThis and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/7": {
     "long_instructions": "# Making Changes to Functions\n\nA nice benefit of using functions to remove repeated code is that you can now easily make changes to multiple places in your code. Just change how you create the functions, and your program will now use the new code everywhere your function is called.\n\n# Do This\n\nMake changes to the `setFlyer` function so that the flyer starts at a random Y location between 0 and 400, and moves at a random velocity every time he is reset."
@@ -1021,7 +1036,8 @@
     "long_instructions": "# Creating Functions to Organize Code\n\nIn Game Lab all the action is happening in the draw loop, but too much complex code makes it really confusing to read. To keep your draw loop easy to read, use functions for larger chunks of code. You can call them inside the draw loop and define them below. This is a really good example of using **abstraction** to think about problems at a high level and worry about details later.\n\n<img src=\"https://images.code.org/1a5beeaad6e55c5b27a43604be4f039a-image-1475199750468.42.07 PM.png\" style=\"float:right;width:150px\">\n\n# Do This\n\nThis program should draw a daytime scene or a nighttime scene, depending on the location of the mouse. The draw loop describes what needs to happen but one of the functions hasn't been written yet.\n\n-   **Write the `drawNight` function** which has been created but is empty.\n-   Hint: Look at the picture to the right for how your night image should look. Can you use the `drawDay` function to help you at all?"
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/9": {
-    "long_instructions": "# Write Your Own Function\n\nTime to practice writing functions of your own. This is a very simple game in which coins fall from the sky and the bunny tries to catch them. All you need to do is write the function that sets up the coin.\n\n# Do This\n\n-   **Read and run the code** that already exists to make sure you know how it works.\n-   **Write the code for the `setCoin`** function to make the coin fall from the sky.\n-   You can go look at some of the previous levels if you need help."
+    "long_instructions": "# Write Your Own Function\n\nTime to practice writing functions of your own. This is a very simple game in which coins fall from the sky and the bunny tries to catch them. All you need to do is write the function that sets up the coin.\n\n# Do This\n\n-   **Read and run the code** that already exists to make sure you know how it works.\n-   **Write the code for the `setCoin`** function to make the coin fall from the sky.\n-   You can go look at some of the previous levels if you need help.",
+    "teacher_markdown": "**Functions in Context** \n\nIn this and the next two lessons, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
   },
   "https://studio.code.org/s/csd3-2017/stage/19/puzzle/10": {
     "long_instructions": "# Catch the Coin, Increase the Score\n\nLet's make that score change now, too, to complete the game. You'll need to be able to tell when the bunny is touching the coin and then reset it.\n\n# Do This\n\n-   Use an **if-statement** and the **isTouching** block to increase the score when the bunny catches the coin.\n-   Make sure you're **calling your function** to reset the coin once it's been caught.\n-   Play the game and **randomize the velocity of the coin** to a range that you think is fun."
@@ -1094,7 +1110,8 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/21/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game.  After looking at a sample game, the class defines what their games will look like and uses a structured process to build them.  Finally, the class reflects on how the games could be improved, and implements those changes.\n\n\n## Resources\n\n* [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game.  After looking at a sample game, the class defines what their games will look like and uses a structured process to build them.  Finally, the class reflects on how the games could be improved, and implements those changes.\n\n\n## Resources\n\n* [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)\n",
+      "teacher_markdown": "* [Planning Your Platform Game](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/21/puzzle/2": {
@@ -1103,7 +1120,6 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/21/puzzle/3": {
     "dsls": {
-      "title": "Build a Platform Jumper",
       "content1": "description here",
       "markdown": "# Build a Platform Jumper\n\nIn the next several levels, you'll be building a platform jumper game.  Before you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher before clicking to the next level.\n"
     }
@@ -1178,12 +1194,12 @@
   },
   "https://studio.code.org/s/csd3-2017/stage/22/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class plans and builds original games using the project guide from the previous two lessons. Working individually or in pairs, the class plans, develops, and gives feedback on the games.  After incorporating the peer feedback, the class shares out the completed games.\n\n\n## Resources\n\n* [Make Your Own Game - Project Guide](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)\n* [Make Your Own Game - Rubric](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)\n* [Make Your Own Game - Peer Review](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThe class plans and builds original games using the project guide from the previous two lessons. Working individually or in pairs, the class plans, develops, and gives feedback on the games.  After incorporating the peer feedback, the class shares out the completed games.\n\n\n## Resources\n\n* [Make Your Own Game - Project Guide](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)\n* [Make Your Own Game - Rubric](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)\n* [Make Your Own Game - Peer Review](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n",
+      "teacher_markdown": "* [Make Your Own Game](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))\n* [Make Your Own Game](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))\n"
     }
   },
   "https://studio.code.org/s/csd3-2017/stage/22/puzzle/2": {
     "dsls": {
-      "title": "Create Your Own Game",
       "content1": "description here",
       "markdown": "# Create your own game\n\nNow that you have all the skills you need, it's time to make your own game!\n\nWith a partner, brainstorm some different ideas for your game.  You can think about the games you've already seen, or look at some more sample games to give you ideas.\n\n[<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\" style=\"width: 200px; float: left; margin: 10px;\">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)\n\n[<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png\" style=\"width: 200px; float: left; margin: 10px;\">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)\n\n[<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png\" style=\"width: 200px; margin: 10px;\">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)\n\n[<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png\" style=\"width: 200px; margin: 10px;\">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)\n\nOnce you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game.  You'll spend the next few levels creating your game.\n"
     }
@@ -1226,5 +1242,21 @@
   "https://studio.code.org/s/csd3-2017/stage/22/puzzle/12": {
     "display_name": "Project - Finishing Touches",
     "long_instructions": "# Finishing Touches\n\nNow that you have the basis for your game, it's time to add some finishing touches.\n\nTo make your game even better, try making at least two improvements to it. You can use the list below to help you, or you can come up with your own improvements that you'd like to make.\n\n-   Find a way to keep your player from going off the edges of the screen.\n-   Add a different item for your player to collect or avoid that are worth different point values.\n-   Make a variable to keep track of how many lives your player has, and then end the game when the lives run out.\n-   Add sprites that move in the background of your game.\n-   Make another background to switch to when the score gets even higher, or when the game ends.\n-   Give your game a way to end. Possible events to end your game could be the score reaching a certain value, or the amount of lives to keep the game running runs out.\n-   If your game has platforms, try making the objects in your game interact with these platforms in some way."
+  },
+  "https://studio.code.org/s/csd3-2017/stage/22/puzzle/13": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd3-2017/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "CS Discoveries End of Semester Student Survey"
+    }
+  },
+  "https://studio.code.org/s/csd3-2017/lockable/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n",
+      "teacher_markdown": "**Please have your students complete this survey!!!**\n\n* You can see anonymized results of the survey in your teacher dashboard\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well, where you can provide your own input, which you will be notified about via email.\n\n**Note:**\n\n* The button on this page redirects to [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)\n* If you prefer you can set \"Student Post-Course Survey\" as the current unit for your section from the dropdown menu in the teacher dashboard.\n"
+    }
   }
 }

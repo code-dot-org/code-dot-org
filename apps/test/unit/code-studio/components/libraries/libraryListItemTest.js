@@ -13,7 +13,7 @@ describe('LibraryListItem', () => {
     const wrapper = shallow(
       <LibraryListItem
         library={{}}
-        onRefresh={() => {}}
+        onUpdate={() => {}}
         onRemove={() => {}}
         onAdd={() => {}}
       />

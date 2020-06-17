@@ -15,17 +15,18 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative 'hoc_sync_utils'
 
-CLEAR = "\r\033[K"
-
 def sync_out
   rename_from_crowdin_name_to_locale
   restore_redacted_files
   distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
+  restore_markdown_headers
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  I18nScriptUtils.with_synchronous_stdout do
+    I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  end
 end
 
 # Files downloaded from Crowdin are organized by language name; rename folders
@@ -67,16 +68,25 @@ end
 def restore_redacted_files
   total_locales = Languages.get_locale.count
   original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
+  if original_files.empty?
+    raise <<~ERR
+      No original files found from which to restore.
+
+      Originals are created by running the sync-in, but are not persisted in
+      git; this likely happened because a sync-out was attempted without a
+      corresponding sync-in.
+    ERR
+  end
   Languages.get_locale.each_with_index do |prop, locale_index|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    original_files.each_with_index do |original_path, file_index|
+    puts "Restoring #{locale} (#{locale_index}/#{total_locales})"
+    original_files.each do |original_path|
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
-      print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales}) file #{file_index}/#{original_files.count}"
       $stdout.flush
 
       if original_path.include? "course_content"
@@ -181,6 +191,7 @@ def distribute_course_content(locale)
 
     course_strings.each do |level_url, level_strings|
       level = I18nScriptUtils.get_level_from_url(level_url)
+      next unless level.present?
       locale_strings.deep_merge! serialize_i18n_strings(level, level_strings)
     end
   end
@@ -200,7 +211,7 @@ def distribute_translations
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
-    print "#{CLEAR}Distributing #{locale} (#{i}/#{total_locales})"
+    puts "Distributing #{locale} (#{i}/#{total_locales})"
     $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -228,10 +239,22 @@ def distribute_translations
     end
 
     ### Blockly Core
+    # Blockly doesn't know how to fall back to English, so here we manually and
+    # explicitly default all untranslated strings to English.
+    blockly_english = JSON.load(File.open("i18n/locales/source/blockly-core/core.json"))
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
+      translations = JSON.load(File.open(loc_file))
+      # Create a hash containing all translations, with English strings in
+      # place of any missing translations. We do this as 'english merge
+      # translations' rather than 'translations merge english' to ensure that
+      # we include all the keys from English, regardless of which keys are in
+      # the translations hash.
+      translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
+        translation.empty? ? english : translation
+      end
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
-      sanitize_file_and_write(loc_file, destination)
+      sanitize_data_and_write(translations_with_fallback, destination)
     end
 
     ### Pegasus
@@ -240,7 +263,7 @@ def distribute_translations
     sanitize_file_and_write(loc_file, destination)
   end
 
-  puts "#{CLEAR}Distribution finished!"
+  puts "Distribution finished!"
 end
 
 # For untranslated apps, copy English file for all locales
@@ -259,7 +282,32 @@ end
 def rebuild_blockly_js_files
   I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps') do
-    puts `yarn build`
+    _stdout, stderr, status = Open3.capture3('yarn build')
+    unless status == 0
+      puts "Error building apps:"
+      puts stderr
+    end
+  end
+end
+
+# In the sync in, we slice the YAML headers of the files we upload to crowdin
+# down to just the part we want to translate (ie, the title). Here, we
+# reinflate the header with all the values from the source file.
+def restore_markdown_headers
+  Dir.glob("pegasus/sites.v3/code.org/i18n/public/**/*.md.partial").each do |path|
+    # Find the source version of this file
+    source_path = path.sub(/\/i18n\/public\//, "/public/").sub(/[a-z]+-[A-Z]+.md.partial/, "md.partial")
+    unless File.exist? source_path
+      # Because we give _all_ files coming from crowdin the partial
+      # extension, we can't know for sure whether or not the source also uses
+      # that extension unless we check both with and without.
+      source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
+    end
+    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    I18nScriptUtils.sanitize_header!(header)
+    restored_header = source_header.merge(header)
+    I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
   end
 end
 

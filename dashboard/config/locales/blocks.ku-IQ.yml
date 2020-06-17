@@ -1236,6 +1236,14 @@ ku:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ {DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': باکوور
+            '"East"': ڕۆژهەڵات
+            '"South"': باشوور
+            '"West"': ڕۆژئاوا
       aalab_prompt:
         text: پرسیار بکە {MESSAGE}
       aalab_scene:
@@ -1244,6 +1252,10 @@ ku:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': هەڕەمەکی
       binary_drawBin:
         text: دووانی بکێشە {BIN}
       binary_drawBinScreen:

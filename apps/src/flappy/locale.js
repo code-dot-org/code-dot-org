@@ -1,3 +1,4 @@
 // locale for flappy
 
-module.exports = window.blockly.flappy_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('flappy_locale');

@@ -1840,7 +1840,7 @@ ko-KR:
 
           -   댄서가 화면에 나타나도록 하세요.
 
-          \*이 단계는 4번째 마디 이후에 끝납니다.
+          _이 단계는 4번째 마디 이후에 끝납니다._
         challenges: |-
           \*\* 선택 과제\*\*
 
@@ -1853,7 +1853,7 @@ ko-KR:
 
           -   댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
 
-          \*이 단계는 8번째 마디 후에 끝납니다.
+          _이 단계는 8번째 마디 후에 끝납니다._
       CourseD_Dance_Party_03:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -1901,35 +1901,35 @@ ko-KR:
 
           -   댄서 한 명 이상의 색조를 변경하세요.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       CourseD_Dance_Party_10:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   댄서 두 명 이상의 속성을 변경해야 합니다.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다_
       CourseD_Dance_Party_11:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   창의력을 발휘하세요!
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       CourseD_Dance_Party_11_5:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   창의력을 발휘하세요!
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       CourseD_Dance_Party_11b:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
-          -   ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
+          -   `왼쪽 화살표 누를 때` 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
           볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?"
@@ -1944,7 +1944,7 @@ ko-KR:
 
           -   댄서가 화면에 나타나도록 하세요.
 
-          \*이 단계는 4번째 마디 이후에 끝납니다.
+          _이 단계는 4번째 마디 이후에 끝납니다._
         challenges: |-
           **선택 과제**
 
@@ -1962,7 +1962,7 @@ ko-KR:
         challenges: |-
           **선택 과제**
 
-          -   <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> 블록을 한 개 이상 사용하세요.
+          <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> 블록을 한 개 이상 사용하세요.
       Dance_2019_03:
         validation: |-
           **이 레벨은 어떻게 통과하죠?**
@@ -1981,7 +1981,7 @@ ko-KR:
 
           -   댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
 
-          \*이 단계는 8번째 마디 후에 끝납니다.
+          _이 단계는 8번째 마디 후에 끝납니다._
       Dance_2019_05:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -2052,7 +2052,7 @@ ko-KR:
 
           -   댄서가 화면에 나타나도록 하세요.
 
-          \*이 단계는 4번째 마디 이후에 끝납니다.
+          _이 단계는 4번째 마디 이후에 끝납니다._
         challenges: |-
           \*\* 선택 과제\*\*
 
@@ -2065,7 +2065,7 @@ ko-KR:
 
           -   댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
 
-          \*이 단계는 8번째 마디 후에 끝납니다.
+          _이 단계는 8번째 마디 후에 끝납니다._
       Dance_Party_03:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -2080,10 +2080,12 @@ ko-KR:
           -   노래의 7번째 마디 중간에 배경 효과를 변경해야 합니다.
 
           _이 단계는 10번째 마디 후 끝납니다._
-        challenges: |-
-          **선택 과제**
-
-          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
+        challenges: "**선택 과제** \n\n<xml><block type=\"Dancelab_atTimestamp\"><title
+          name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+          이벤트 블록들 밑에 새로 추가한 블록을 연결해 노래의 각기 다른 지점에서 배경 효과 변화를 주세요."
+      Dance_Party_05:
+        validation: "**이 레벨은 어떻게 통과하죠?** \n\n레벨이 끝나기 전에 댄서가 최소 4가지 춤동작을 순환하게 해야 합니다.
+          \n\n_이 레벨은 12마디 후에 끝납니다._"
       Dance_Party_06:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -2113,35 +2115,37 @@ ko-KR:
 
           -   댄서 한 명 이상의 색조를 변경하세요.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       Dance_Party_10:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   댄서 두 명 이상의 속성을 변경해야 합니다.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다_
       Dance_Party_11:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   창의력을 발휘하세요!
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       Dance_Party_11_5:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
           -   창의력을 발휘하세요!
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
       Dance_Party_11b:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
-          -   ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
+          -   `왼쪽 화살표 누를 때` 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
 
-          \*이 단계는 8번째 마디 이후에 끝납니다.
+          _이 단계는 8번째 마디 이후에 끝납니다._
+      Dance_Party_extras_alternate_2019:
+        alternate: 교대 블록은 “댄서” 카테고리에 있습니다.
       Function intro Ryan:
         Function_intro_Ryan_b: 함수를 올바르게 호출할 경우 이동 경로입니다.
         Function_intro_Ryan_a: 프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 해결해보세요.
@@ -2385,6 +2389,8 @@ ko-KR:
           반복문이 계산 중일 때마다 증분이 매번 카운터 변수에 추가됩니다.
 
           그 번호 뒤에 번호를 얻기 위해 각 번호에 무엇을 추가해야합니까?
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Overworld Avoid Monsters:
         mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
         mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
@@ -2499,6 +2505,8 @@ ko-KR:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: '반복 블럭안에 실행 블럭들을 넣으면 반복해서 실행이 됩니다. 한번 해보세요! '
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
@@ -2692,6 +2700,9 @@ ko-KR:
         courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
+          일이 발생하는지 확인하십시오.  '
+      courseC_starWars_loops7_copy:
         courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseD_artist_nestedLoops3:
@@ -2910,6 +2921,10 @@ ko-KR:
         courseE_artist_functions1_a: '이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은
           앞쪽으로 175픽셀을 이동해야 할 것입니다.  '
         courseE_artist_functions1_b: '안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요. '
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: '이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은
+          앞쪽으로 175픽셀을 이동해야 할 것입니다.  '
+        courseE_artist_functions1_b: '안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요. '
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
@@ -2923,6 +2938,12 @@ ko-KR:
           \-100 + 75픽셀 앞으로 이동
           \-함수 사용
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          여러분의 프로그램은 반드시:
+          \-함수 사용
+          \-100 + 75픽셀 앞으로 이동
+          \-함수 사용
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
           \-함수 사용

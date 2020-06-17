@@ -1,17 +1,17 @@
 {
-  "https://studio.code.org/s/hourofcode/stage/1/puzzle/16": {
+  "https://studio.code.org/hoc/16": {
     "short_instructions": "Acorn! Acorn! Acorn! Use an \"if\" block to get me there with the fewest number of blocks."
   },
-  "https://studio.code.org/s/hourofcode/stage/1/puzzle/17": {
+  "https://studio.code.org/hoc/17": {
     "short_instructions": "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
   },
-  "https://studio.code.org/s/hourofcode/stage/1/puzzle/18": {
+  "https://studio.code.org/hoc/18": {
     "short_instructions": "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block."
   },
-  "https://studio.code.org/s/hourofcode/stage/1/puzzle/19": {
+  "https://studio.code.org/hoc/19": {
     "short_instructions": "One more practice of the \"if-else\" block, can you get it right on your first try?"
   },
-  "https://studio.code.org/s/hourofcode/stage/1/puzzle/20": {
+  "https://studio.code.org/hoc/20": {
     "short_instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!"
   }
 }

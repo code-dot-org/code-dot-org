@@ -1,7 +1,7 @@
 - @header['social'].each_pair do |property, content|
   %meta{property:property, content:content}
 
-- if header['noindex']
+- if @header['noindex']
   %meta{name: "robots", content: "noindex"}
 
 %title= page_title_with_tagline

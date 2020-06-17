@@ -12,6 +12,38 @@ describe('Action Commands', () => {
     makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
   });
 
+  describe('bounceOff', () => {
+    it('changes direction if sprites are touching', () => {
+      makeSprite({name: 'spriteName1', location: {x: 200, y: 200}});
+      commands.changePropBy({name: 'spriteName1'}, 'direction', 180);
+      makeSprite({name: 'spriteName2', location: {x: 200, y: 200}});
+      commands.bounceOff({name: 'spriteName1'}, {name: 'spriteName2'});
+      expect(
+        spriteCommands.getProp({name: 'spriteName1'}, 'direction')
+      ).to.equal(0);
+      expect(spriteCommands.getProp({name: 'spriteName1'}, 'x')).to.equal(201);
+      expect(
+        spriteCommands.getProp({name: 'spriteName2'}, 'direction')
+      ).to.equal(180);
+      expect(spriteCommands.getProp({name: 'spriteName2'}, 'x')).to.equal(199);
+    });
+
+    it('does not change direction if sprites are not touching', () => {
+      makeSprite({name: 'spriteName1', location: {x: 0, y: 0}});
+      commands.changePropBy({name: 'spriteName1'}, 'direction', 180);
+      makeSprite({name: 'spriteName2', location: {x: 400, y: 400}});
+      commands.bounceOff({name: 'spriteName1'}, {name: 'spriteName2'});
+      expect(
+        spriteCommands.getProp({name: 'spriteName1'}, 'direction')
+      ).to.equal(180);
+      expect(spriteCommands.getProp({name: 'spriteName1'}, 'x')).to.equal(0);
+      expect(
+        spriteCommands.getProp({name: 'spriteName2'}, 'direction')
+      ).to.equal(0);
+      expect(spriteCommands.getProp({name: 'spriteName2'}, 'x')).to.equal(400);
+    });
+  });
+
   it('changePropBy', () => {
     makeSprite({name: spriteName, location: {x: 123, y: 321}});
     commands.changePropBy({name: spriteName}, 'x', 100);
@@ -29,6 +61,19 @@ describe('Action Commands', () => {
     expect(spriteCommands.getProp({name: spriteName}, 'direction')).to.equal(
       40
     );
+  });
+
+  it('isTouchingSprite', () => {
+    makeSprite({name: 'spriteName1', location: {x: 0, y: 0}});
+    makeSprite({name: 'spriteName2', location: {x: 200, y: 200}});
+    makeSprite({name: 'spriteName3', location: {x: 200, y: 200}});
+
+    expect(
+      commands.isTouchingSprite({name: 'spriteName1'}, {name: 'spriteName2'})
+    ).to.be.false;
+    expect(
+      commands.isTouchingSprite({name: 'spriteName3'}, {name: 'spriteName2'})
+    ).to.be.true;
   });
 
   it('jumpTo', () => {

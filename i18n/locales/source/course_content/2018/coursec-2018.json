@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursec-2018/stage/1/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
+  },
   "https://studio.code.org/s/coursec-2018/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
@@ -91,11 +94,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will end up one step short of the pig.",
@@ -116,6 +114,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "This code gets the bird perfectly to the pig."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read through the code below very carefully. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -202,11 +205,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -227,6 +225,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -251,6 +254,9 @@
       "courseC_maze_debugging_challenge2_b": "If you are getting stuck, try debugging the code.  Where does it go wrong?",
       "courseC_maze_debugging_challenge2_c": "There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!\n\n[][0]"
     }
+  },
+  "https://studio.code.org/s/coursec-2018/stage/4/puzzle/1": {
+    "title": "Real-life Algorithms: Paper Planes"
   },
   "https://studio.code.org/s/coursec-2018/stage/5/puzzle/2": {
     "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
@@ -335,11 +341,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at this code carefully. What do you think will happen when the program runs?"
-            }
-          ],
           "answers": [
             {
               "text": "Laurel will collect 4 pieces of treasure using this code.",
@@ -360,6 +361,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Laurel tries to collect treasure where there is none and it causes an error."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at this code carefully. What do you think will happen when the program runs?"
             }
           ]
         }
@@ -403,9 +409,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/6/puzzle/5": {
@@ -416,8 +429,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/6/puzzle/6": {
@@ -458,11 +473,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -484,6 +494,11 @@
               "correct": false,
               "feedback": "The artist draws a square."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
+            }
           ]
         }
       }
@@ -504,6 +519,9 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
+  "https://studio.code.org/s/coursec-2018/stage/7/puzzle/1": {
+    "title": "Getting Loopy"
+  },
   "https://studio.code.org/s/coursec-2018/stage/8/puzzle/2": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "long_instructions": "[][0] _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: [][1]",
@@ -518,11 +536,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will not move.",
@@ -543,6 +556,11 @@
               "text": "I don't know",
               "correct": false,
               "feedback": "The repeat block will make the BB-8 move forward 5 times."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -622,11 +640,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will travel too far in the first loop.",
@@ -647,6 +660,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -848,11 +866,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -873,6 +886,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"
             }
           ]
         }
@@ -896,6 +914,9 @@
       "courseC_harvester_loops_challenge2_c": "This zig-zag pattern can be repeated twice to finish the puzzle with just 20 blocks!\n\n[][0]",
       "courseC_harvester_loops_challenge2_d": "This spiral pattern can be coded with just 18 blocks!\n\n[][0]"
     }
+  },
+  "https://studio.code.org/s/coursec-2018/stage/11/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/coursec-2018/stage/12/puzzle/2": {
     "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
@@ -964,6 +985,9 @@
   "https://studio.code.org/s/coursec-2018/stage/12/puzzle/11": {
     "short_instructions": "Create your own Flappy game! ",
     "long_instructions": "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
+  },
+  "https://studio.code.org/s/coursec-2018/stage/13/puzzle/1": {
+    "title": "Unplugged Activity"
   },
   "https://studio.code.org/s/coursec-2018/stage/14/puzzle/1": {
     "short_instructions": "Make Jorge the Dog (actor 1) say \"Hi there.\"",
@@ -1189,5 +1213,8 @@
   },
   "https://studio.code.org/s/coursec-2018/stage/15/puzzle/14": {
     "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far."
+  },
+  "https://studio.code.org/s/coursec-2018/stage/16/puzzle/1": {
+    "title": "Binary Bracelets"
   }
 }

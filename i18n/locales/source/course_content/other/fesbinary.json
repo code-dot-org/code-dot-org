@@ -1,46 +1,83 @@
 {
+  "https://studio.code.org/s/fesbinary/stage/1/puzzle/1": {
+    "title": "Binary Images"
+  },
   "https://studio.code.org/s/fesbinary/stage/1/puzzle/2": {
     "short_instructions": "Encode an image of anything you like using binary. The binary language will be represented with '0' and '1' only.",
     "long_instructions": "# Make your own image of any size\n\n[][0]\n[][1]\n[][2]\n[][3]\n[][4]\n[][5]\n[][6]\n\n**Directions:**\n\n-   Encode an image of anything you like using `binary`.\n-   The binary language will be represented with `0` and `1` only.\n-   You might want to do some planning and sketching with graph paper first. \n-   Depict something, perhaps your name written out, your initials, an icon or logo of some sort.\n-   Get creative! The image doesn't have to be a perfect square, it can be long and skinny."
   },
   "https://studio.code.org/s/fesbinary/stage/2/puzzle/1": {
     "short_instructions": "Each binary string represents one row of this picture. Can you rearrange them so it draws a smiley face instead of a frowny face?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/2/puzzle/2": {
     "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/2/puzzle/3": {
     "short_instructions": "Finish this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/2/puzzle/4": {
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/2/puzzle/5": {
     "short_instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing",
       "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
@@ -52,9 +89,16 @@
       "courseD_artist_binary1_b": "The artist will draw a white space for every 1 and a black space for every 0.",
       "courseD_artist_binary1_c": "This is how you can input your binary code:\n\n[][0]"
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/3": {
@@ -63,9 +107,16 @@
     "authored_hints": {
       "courseD_artist_binary2_a": "Just click `Run` to see this program in action!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/4": {
@@ -74,9 +125,16 @@
     "authored_hints": {
       "courseD_artist_binary2_a": "Just click `Run` to see this program in action!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/5": {
@@ -85,9 +143,16 @@
       "courseD_artist_binary3_a": "One of the four binary patterns in the toolbox will solve this puzzle!",
       "courseD_artist_binary3_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/6": {
@@ -96,9 +161,16 @@
       "courseD_artist_binary4_a": "Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?",
       "courseD_artist_binary4_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/7": {
@@ -108,9 +180,16 @@
       "courseD_artist_binary5_b": "You only need to switch two rows to make a smile.",
       "courseD_artist_binary5_c": "If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern."
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/8": {
@@ -119,9 +198,16 @@
       "courseD_artist_binary6_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary6_b": "You can build your binary string a bit at a time, and keep testing!"
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/9": {
@@ -130,9 +216,16 @@
       "courseD_artist_binary7_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary7_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/10": {
@@ -142,25 +235,34 @@
       "courseD_artist_binary8_b": "Try running the code first to see what you have to work with.",
       "courseD_artist_binary8_c": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/11": {
     "short_instructions": "Finish the code to create this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  Which image will it create after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "A",
@@ -183,7 +285,12 @@
               "feedback": "Correct!"
             }
           ],
-          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n"
+          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. Which image will it create after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -206,7 +313,8 @@
   },
   "https://studio.code.org/s/fesbinary/stage/5/puzzle/1": {
     "dsls": {
-      "markdown": "# Problem Solving - Computers and Logic: Lesson 6 - Processing with Bits\n\n## Background\n\nIn this lesson you'll learn how computers process binary information as you design bit-level filters of simple images.\n\n# Resources\n\n* [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n"
+      "markdown": "# Problem Solving - Computers and Logic: Lesson 6 - Processing with Bits\n\n## Background\n\nIn this lesson you'll learn how computers process binary information as you design bit-level filters of simple images.\n\n# Resources\n\n* [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n",
+      "teacher_markdown": "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8) - Answer Key\n"
     }
   },
   "https://studio.code.org/s/fesbinary/stage/5/puzzle/2": {

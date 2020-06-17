@@ -77,7 +77,8 @@ tinasupport@gmail.com                                                |
 henrylee@i3dprinter.com.hk                                             |
 | Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | www.iamai.hk   
 johnson.chu@iamai.hk                                                          |
-| Indien                                | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
+| Indien                                | CodeTigers                                                        | Sandeep Sheokand                   | https://www.codetigers.com   
+sandeep.sheokand@gmail.com                                      |
 | Indien                                | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
 | Indien                                | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
 shoaib.dar@thepijam.org                                            |

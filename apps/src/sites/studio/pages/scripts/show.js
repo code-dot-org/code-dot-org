@@ -12,6 +12,7 @@ import plcHeaderReducer, {
 import scriptAnnouncementReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
 
@@ -21,6 +22,8 @@ function initPage() {
 
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
+  registerReducers({locales});
+  store.dispatch(setLocaleEnglishName(scriptData.locale));
 
   if (plcBreadcrumb) {
     // Dispatch breadcrumb props so that ScriptOverviewHeader can add the breadcrumb

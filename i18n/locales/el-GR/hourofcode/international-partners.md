@@ -77,7 +77,8 @@ tinasupport@gmail.com                                                |
 henrylee@i3dprinter.com.hk                                             |
 | Χονγκ Κονγκ                                 | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | www.iamai.hk   
 johnson.chu@iamai.hk                                                          |
-| Ινδία                                       | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
+| Ινδία                                       | CodeTigers                                                        | Sandeep Sheokand                   | https://www.codetigers.com   
+sandeep.sheokand@gmail.com                                      |
 | Ινδία                                       | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
 | Ινδία                                       | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
 shoaib.dar@thepijam.org                                            |

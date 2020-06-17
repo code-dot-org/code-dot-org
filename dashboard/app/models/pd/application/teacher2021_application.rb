@@ -38,8 +38,6 @@ module Pd::Application
   class Teacher2021Application < TeacherApplicationBase
     include Pd::Teacher2021ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     PRINCIPAL_APPROVAL_STATE = [
       NOT_REQUIRED = 'Not required',
       IN_PROGRESS = 'Incomplete - Principal email sent on ',
@@ -47,6 +45,30 @@ module Pd::Application
     ]
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
+
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      accepted_no_cost_registration
+      declined
+      waitlisted
+      registration_sent
+    )
+
+    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
+    # have an assigned workshop to be set to one of these statuses because they
+    # trigger emails with a link to the workshop registration form
+    WORKSHOP_REQUIRED_STATUSES = %w(
+      accepted_no_cost_registration
+      registration_sent
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    validates_uniqueness_of :user_id
+    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
+
+    before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
       status_log
@@ -68,29 +90,6 @@ module Pd::Application
         withdrawn
       )
     end
-
-    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
-    # In these decision emails, status and email_type are the same.
-    AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
-      declined
-      waitlisted
-      registration_sent
-    )
-
-    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
-    # have an assigned workshop to be set to one of these statuses because they
-    # trigger emails with a link to the workshop registration form
-    WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
-    )
-
-    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
-
-    before_save :log_status, if: -> {status_changed?}
-
-    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
@@ -705,6 +704,8 @@ module Pd::Application
           if school_stats
             if [:title_i_status, :students_total, :urm_percent].include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
+            elsif k == :rural_status
+              row.push(school_stats.rural_school?)
             else
               row.push(school_stats.percent_of_students(school_stats[k]) || "")
             end
@@ -740,16 +741,14 @@ module Pd::Application
 
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
-      bonus_points_scores = {}
 
       # Section 2
       if course == 'csd'
-        meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
-
+        meets_minimum_criteria_scores[:csd_which_grades] =
+          (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
       elsif course == 'csp'
-        meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
-
-        bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
+        meets_minimum_criteria_scores[:csp_which_grades] =
+          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
       end
 
       if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
@@ -779,9 +778,6 @@ module Pd::Application
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
 
-      # Section 5
-      bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
-
       # Principal Approval
       if responses[:principal_approval]
         meets_minimum_criteria_scores[:principal_approval] =
@@ -797,12 +793,12 @@ module Pd::Application
           end
 
         meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
-            YES
+          if responses[:principal_wont_replace_existing_course].start_with?(YES)
+            NO
           elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
           else
-            NO
+            YES
           end
 
         school_stats = get_latest_school_stats(school_id)
@@ -836,7 +832,6 @@ module Pd::Application
           {
             meets_minimum_criteria_scores: meets_minimum_criteria_scores,
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
-            bonus_points_scores: bonus_points_scores
           }
         ) {|key, old, new| key == :replace_existing ? new : old}.to_json
       )
@@ -877,7 +872,7 @@ module Pd::Application
 
     # @override
     def total_score
-      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+      0
     end
 
     # @override
@@ -963,7 +958,6 @@ module Pd::Application
       {
         meets_minimum_criteria_scores: {},
         meets_scholarship_criteria_scores: {},
-        bonus_points_scores: {}
       }
     end
   end

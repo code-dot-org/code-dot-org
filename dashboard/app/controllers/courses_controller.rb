@@ -20,8 +20,8 @@ class CoursesController < ApplicationController
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
-        courses = Course.valid_courses(user: current_user)
-        render json: courses
+        course_infos = Course.valid_course_infos(user: current_user)
+        render json: course_infos
       end
     end
   end
@@ -30,16 +30,14 @@ class CoursesController < ApplicationController
     # csp and csd are each "course families", each containing multiple "course versions".
     # When the url of a course family is requested, redirect to a specific course version.
     #
-    # For now, Hard-code the redirection logic because there are only two course
-    # families to worry about. In the future we will want to make this redirect
-    # happen based on the data in the DB so it can be configured via levelbuilder.
-    redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-    case params[:course_name]
-    when 'csd'
-      redirect_to "/courses/csd-2019#{redirect_query_string}"
-      return
-    when 'csp'
-      redirect_to "/courses/csp-2019#{redirect_query_string}"
+    # For now, use hard-coded list to determine whether the given course_name is actually
+    if ScriptConstants::COURSE_FAMILY_NAMES.include?(params[:course_name])
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to_course = Course.all_courses.
+          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          sort_by(&:version_year).
+          last
+      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
       return
     end
 
@@ -64,6 +62,14 @@ class CoursesController < ApplicationController
       user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: course.plc_course)]
       render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
       return
+    end
+
+    if course.pilot?
+      authenticate_user!
+      unless course.has_pilot_access?(current_user)
+        render :no_access
+        return
+      end
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
@@ -95,8 +101,8 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    # Convert has_verified_resources from a string ("on") to a boolean.
-    params[:has_verified_resources] = !!params[:has_verified_resources]
+    # Convert checkbox values from a string ("on") to a boolean.
+    [:has_verified_resources, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     course.update(course_params)
     redirect_to course
   end
@@ -121,7 +127,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment, :visible, :is_stable).to_h
   end
 
   def set_redirect_override

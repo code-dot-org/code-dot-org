@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -32,6 +32,16 @@ class Level < ActiveRecord::Base
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+
+  # We store parent-child relationships in a self-referential join table.
+  # In order to define a has_many / through relationship in both directions,
+  # we must define two separate associations to the same join table.
+
+  has_many :levels_parent_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
+  has_many :parent_levels, through: :levels_parent_levels, inverse_of: :child_levels
+
+  has_many :levels_child_levels, -> {order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
+  has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -74,6 +84,7 @@ class Level < ActiveRecord::Base
     editor_experiment
     teacher_markdown
     bubble_choice_description
+    thumbnail_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -154,6 +165,12 @@ class Level < ActiveRecord::Base
     !unplugged?
   end
 
+  # This does not include DSL levels which also use teacher markdown
+  # but access it in a different way
+  def include_teacher_only_markdown_editor?
+    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
+  end
+
   def enable_scrolling?
     is_a?(Blockly)
   end
@@ -232,7 +249,8 @@ class Level < ActiveRecord::Base
       end
     rescue Encryption::KeyMissingError
       # developers and adhoc environments must be able to seed levels without properties_encryption_key
-      raise unless rack_env?(:development) || rack_env?(:adhoc)
+      non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
+      raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
@@ -617,6 +635,19 @@ class Level < ActiveRecord::Base
 
   def age_13_required?
     false
+  end
+
+  def localized_teacher_markdown
+    if should_localize?
+      I18n.t(
+        name,
+        scope: [:data, "teacher_markdown"],
+        default: properties['teacher_markdown'],
+        smart: true
+      )
+    else
+      properties['teacher_markdown']
+    end
   end
 
   private

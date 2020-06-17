@@ -20,7 +20,8 @@ const styles = {
     paddingTop: 16,
     paddingBottom: 8,
     paddingLeft: 20,
-    paddingRight: 12
+    paddingRight: 12,
+    width: 268
   }
 };
 

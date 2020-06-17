@@ -17,7 +17,7 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         levels: {},
         # second stage because first is unplugged
-        current_stage: script.stages[1].id,
+        current_stage: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -36,7 +36,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_stage: script.stages[1].id,
+        current_stage: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -66,11 +66,20 @@ class UsersHelperTest < ActionView::TestCase
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
 
-    # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
-    level.save!
+    # Create a LevelGroup level from DSL.
+    level_group_dsl = <<-DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+    DSL
+    level = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     # Create a ScriptLevel joining this level to the script.
     script_level = create :script_level, script: script, levels: [level], assessment: true
@@ -105,7 +114,7 @@ class UsersHelperTest < ActionView::TestCase
           "#{ul.level_id}_1" => {}
         },
         # second stage because first is unplugged
-        current_stage: script_level.stage.id,
+        current_stage: script_level.lesson.id,
         completed: false
       },
       summarize_user_progress(script, user)
@@ -135,7 +144,7 @@ class UsersHelperTest < ActionView::TestCase
           result: ActivityConstants::BEST_PASS_RESULT
         }
       },
-      current_stage: script_level.stage.id,
+      current_stage: script_level.lesson.id,
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)
@@ -146,16 +155,15 @@ class UsersHelperTest < ActionView::TestCase
     script = create :script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :stage, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
@@ -252,17 +260,16 @@ class UsersHelperTest < ActionView::TestCase
     script = create :script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 
     # create a stage that is NOT lockable
-    stage = create :stage, name: 'Stage1', script: script, lockable: false
+    stage = create :lesson, name: 'Stage1', script: script, lockable: false
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?

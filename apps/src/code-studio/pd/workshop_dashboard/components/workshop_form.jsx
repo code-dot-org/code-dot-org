@@ -42,12 +42,19 @@ import {
   Courses,
   Subjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none'
+  },
+  noFeeContainer: {
+    paddingBottom: 7
+  },
+  yesFeeRadio: {
+    width: '100%'
   }
 };
 
@@ -58,6 +65,14 @@ const placeholderSession = {
   startTime: '9:00am',
   endTime: '5:00pm'
 };
+
+// When selecting whether a workshop is virtual through the UI,
+// a user is really selecting two things:
+//  a) whether the workshop is occurring virtually, and
+//  b) if there's a third party responsible for the content/structure of the workshop.
+// These two things are stored as separate attributes in the workshop model.
+const virtualWorkshopTypes = ['regional', 'friday_institute'];
+const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
   static contextTypes = {
@@ -71,18 +86,22 @@ export class WorkshopForm extends React.Component {
       id: PropTypes.number.isRequired,
       facilitators: PropTypes.array.isRequired,
       location_name: PropTypes.string.isRequired,
-      location_address: PropTypes.string.isRequired,
+      location_address: PropTypes.string,
       capacity: PropTypes.number.isRequired,
       on_map: PropTypes.bool.isRequired,
       funded: PropTypes.bool.isRequired,
       funding_type: PropTypes.string,
       course: PropTypes.string.isRequired,
       subject: PropTypes.string,
+      fee: PropTypes.string,
       notes: PropTypes.string,
       sessions: PropTypes.array.isRequired,
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
+      virtual: PropTypes.bool,
+      third_party_provider: PropTypes.string,
+      suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string
@@ -112,13 +131,17 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
+      fee: null,
       notes: '',
       sessions: [placeholderSession],
       destroyedSessions: [],
       availableFacilitators: [],
       showSaveConfirmation: false,
       showTypeOptionsHelpDisplay: false,
-      regional_partner_id: ''
+      regional_partner_id: '',
+      virtual: false,
+      suppress_email: false,
+      third_party_provider: null
     };
 
     if (props.workshop) {
@@ -134,9 +157,13 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
+          'fee',
           'notes',
           'regional_partner_id',
-          'organizer'
+          'organizer',
+          'virtual',
+          'suppress_email',
+          'third_party_provider'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -396,7 +423,7 @@ export class WorkshopForm extends React.Component {
           text: 'Yes, it is funded. Please pay the Facilitator directly.'
         }
       );
-    } else {
+    } else if (this.state.subject !== 'Workshop for Returning Teachers') {
       options.push({
         value: {funded: true, funding_type: null},
         text: 'Yes, it is funded.'
@@ -444,6 +471,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const showFeeInput = isCsf;
     const showMapChoice = isCsf;
 
     return (
@@ -452,6 +480,7 @@ export class WorkshopForm extends React.Component {
           Workshop Type Options&nbsp;
           {isCsf && <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>}
         </ControlLabel>
+        <div style={{height: 7}}>&nbsp;</div>
         {this.state.showTypeOptionsHelpDisplay && isCsf && (
           <FormGroup>
             <p>
@@ -468,7 +497,14 @@ export class WorkshopForm extends React.Component {
         )}
         <Row>
           <Col smOffset={1}>
+            <Row>
+              {showFeeInput && (
+                <Col sm={6}>{this.renderFeeInput(validation)}</Col>
+              )}
+            </Row>
             {showMapChoice && this.renderOnMapRadios(validation)}
+            {/* A small gap to resemble the gap below the fee input. */}
+            {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
@@ -576,6 +612,58 @@ export class WorkshopForm extends React.Component {
     }
   }
 
+  renderFeeInput(validation) {
+    // If state.fee is null, there is no fee and no custom fee message.
+    // If state.fee is '', the user needs to provide a custom fee message.
+
+    const customizeFee = this.state.fee !== null;
+
+    return (
+      <FormGroup validationState={validation.style.fee}>
+        <ControlLabel>Fee information for participants</ControlLabel>
+
+        <div style={styles.noFeeContainer}>
+          <Radio
+            checked={!customizeFee}
+            inline
+            name="customize_fee"
+            value="no"
+            onChange={this.handleCustomizeFeeChange}
+            style={this.getInputStyle()}
+            disabled={this.props.readOnly}
+          >
+            No cost!
+          </Radio>
+        </div>
+
+        <div>
+          <Radio
+            checked={customizeFee}
+            inline
+            name="customize_fee"
+            value="yes"
+            onChange={this.handleCustomizeFeeChange}
+            style={{...this.getInputStyle(), ...styles.yesFeeRadio}}
+            disabled={this.props.readOnly}
+          >
+            <FormControl
+              type="text"
+              value={this.state.fee || ''}
+              id="fee"
+              name="fee"
+              onChange={this.handleFieldChange}
+              maxLength={30}
+              style={this.getInputStyle()}
+              disabled={this.props.readOnly || !customizeFee}
+              placeholder="Fee information"
+            />
+            <HelpBlock>{validation.help.fee}</HelpBlock>
+          </Radio>
+        </div>
+      </FormGroup>
+    );
+  }
+
   getInputStyle() {
     return this.props.readOnly && styles.readOnlyInput;
   }
@@ -605,13 +693,25 @@ export class WorkshopForm extends React.Component {
 
   shouldConfirmSave() {
     const workshop = this.props.workshop;
+
     if (!workshop || workshop.enrolled_teacher_count === 0) {
       return false;
     }
+
+    // Don't ask if admins want to send updates with workshop changes for virtual workshops.
+    // Update emails are suppressed for virtual workshops.
+    if (this.state.virtual) {
+      return false;
+    }
+
+    // If location address is modified, then returned to blank,
+    // this.state.location_address is a blank string instead of null.
     return (
       this.state.sessionsModified ||
       this.state.location_name !== workshop.location_name ||
-      this.state.location_address !== workshop.location_address ||
+      (this.state.location_address === ''
+        ? null
+        : this.state.location_address) !== workshop.location_address ||
       this.state.notes !== workshop.notes
     );
   }
@@ -654,6 +754,42 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
+  currentVirtualStatus = () => {
+    const {virtual, third_party_provider} = this.state;
+
+    // First, check if the third party provider is a valid
+    // virtual workshop type.
+    if (virtualWorkshopTypes.includes(third_party_provider)) {
+      return third_party_provider;
+    } else if (virtual) {
+      return 'regional';
+    } else {
+      return 'in_person';
+    }
+  };
+
+  handleVirtualChange = event => {
+    // This field gets its own handler both so we can coerce its value to
+    // boolean, and so we can enforce some business logic that says:
+    // Virtual workshops ALWAYS suppress email.
+    const value = event.target.value;
+    const virtual = virtualWorkshopTypes.includes(value);
+    const suppress_email = virtual || this.state.suppress_email;
+
+    this.setState({
+      virtual,
+      suppress_email,
+      third_party_provider: thirdPartyProviders.includes(value) ? value : null
+    });
+  };
+
+  handleSuppressEmailChange = event => {
+    // This field gets its own handler so we can coerce its value to boolean
+    // before we save it to React state.
+    const suppress_email = event.target.value === 'true';
+    this.setState({suppress_email});
+  };
+
   handleRegionalPartnerSelect = selection => {
     this.setState({regional_partner_id: selection ? selection.value : null});
   };
@@ -682,10 +818,20 @@ export class WorkshopForm extends React.Component {
     this.setState({
       facilitators: [],
       subject: null,
+      fee: null,
       funded: '',
       funding_type: null
     });
     this.loadAvailableFacilitators(course);
+  };
+
+  handleCustomizeFeeChange = event => {
+    const customizeFee = event.target.value === 'yes';
+    const fee = customizeFee ? '' : null;
+
+    this.setState({
+      fee
+    });
   };
 
   save(notify = false) {
@@ -699,7 +845,11 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
+      fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
+      virtual: this.state.virtual,
+      suppress_email: this.state.suppress_email,
+      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -830,11 +980,6 @@ export class WorkshopForm extends React.Component {
         validation.style.location_name = 'error';
         validation.help.location_name = 'Required.';
       }
-      if (!this.state.location_address) {
-        validation.isValid = false;
-        validation.style.location_address = 'error';
-        validation.help.location_address = 'Required.';
-      }
       if (!this.state.capacity) {
         validation.isValid = false;
         validation.style.capacity = 'error';
@@ -859,6 +1004,11 @@ export class WorkshopForm extends React.Component {
         validation.style.funded = 'error';
         validation.help.funded = 'Required';
       }
+      if (this.state.fee === '') {
+        validation.isValid = false;
+        validation.style.fee = 'error';
+        validation.help.fee = 'Required';
+      }
     }
     return validation;
   }
@@ -880,6 +1030,64 @@ export class WorkshopForm extends React.Component {
           />
           <br />
           <Row>
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.virtual}>
+                <ControlLabel>
+                  Is this a virtual workshop?
+                  <HelpTip>
+                    <p>When a workshop is virtual, our system:</p>
+                    <ul>
+                      <li>
+                        Will not send most email notifications to enrollees,
+                        such as enrollment receipts and workshop reminders
+                      </li>
+                      <li>
+                        Will send a post-workshop survey designed for virtual
+                        workshops
+                      </li>
+                    </ul>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectIsVirtual
+                  value={this.currentVirtualStatus()}
+                  onChange={this.handleVirtualChange}
+                  readOnly={this.props.readOnly}
+                />
+                <HelpBlock>{validation.help.virtual}</HelpBlock>
+              </FormGroup>
+            </Col>
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.suppress_email}>
+                <ControlLabel>
+                  Enable email notifications?
+                  <HelpTip>
+                    <p>
+                      Code.org can send email notifications about this workshop
+                      to your attendees on your behalf. Notifications may
+                      include:
+                    </p>
+                    <ul>
+                      <li>Enrollment receipts</li>
+                      <li>10-day and 3-day workshop reminders</li>
+                      <li>Updates when workshop details change</li>
+                    </ul>
+                    <p>
+                      Code.org will always email a post-workshop survey to
+                      participants, even if you disable workshop notifications
+                      here.
+                    </p>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectSuppressEmail
+                  onChange={this.handleSuppressEmailChange}
+                  value={this.state.suppress_email || false}
+                  readOnly={this.props.readOnly || this.state.virtual}
+                />
+                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
                 <ControlLabel>Location Name</ControlLabel>
@@ -897,8 +1105,8 @@ export class WorkshopForm extends React.Component {
               </FormGroup>
             </Col>
             <Col sm={6}>
-              <FormGroup validationState={validation.style.location_address}>
-                <ControlLabel>Location Address</ControlLabel>
+              <FormGroup>
+                <ControlLabel>Location Address (optional)</ControlLabel>
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
@@ -914,7 +1122,6 @@ export class WorkshopForm extends React.Component {
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
-                <HelpBlock>{validation.help.location_address}</HelpBlock>
               </FormGroup>
             </Col>
           </Row>
@@ -999,3 +1206,54 @@ export default connect(state => ({
   permission: state.workshopDashboard.permission,
   facilitatorCourses: state.workshopDashboard.facilitatorCourses
 }))(WorkshopForm);
+
+const SelectIsVirtual = ({value, readOnly, onChange}) => (
+  <FormControl
+    componentClass="select"
+    value={value}
+    id="virtual"
+    name="virtual"
+    onChange={onChange}
+    style={readOnly ? styles.readOnlyInput : undefined}
+    disabled={readOnly}
+  >
+    <option key={'in_person'} value={'in_person'}>
+      No, this is an in-person workshop.
+    </option>
+    <option key={'friday_institute'} value={'friday_institute'}>
+      Yes, this is a Code.org-Friday Institute virtual workshop.
+    </option>
+    <option key={'regional'} value={'regional'}>
+      Yes, this is a regional virtual workshop.
+    </option>
+  </FormControl>
+);
+SelectIsVirtual.propTypes = {
+  value: PropTypes.string.isRequired,
+  readOnly: PropTypes.bool,
+  onChange: PropTypes.func.isRequired
+};
+
+const SelectSuppressEmail = ({value, readOnly, onChange}) => (
+  <FormControl
+    componentClass="select"
+    value={value}
+    id="suppress_email"
+    name="suppress_email"
+    onChange={onChange}
+    style={readOnly ? styles.readOnlyInput : undefined}
+    disabled={readOnly}
+  >
+    <option key={false} value={false}>
+      Yes, send notifications on my behalf.
+    </option>
+    <option key={true} value={true}>
+      No, I will handle communication with attendees myself.
+    </option>
+  </FormControl>
+);
+SelectSuppressEmail.propTypes = {
+  value: PropTypes.bool.isRequired,
+  readOnly: PropTypes.bool,
+  onChange: PropTypes.func.isRequired
+};

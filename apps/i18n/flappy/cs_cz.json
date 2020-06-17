@@ -16,7 +16,7 @@
   "flappySpecificFail": "Tvůj kód vypadá dobře - zamává při každém kliknutí. Ale musíš kliknout víckrát, aby ses dostal k cíli.",
   "incrementPlayerScore": "přidej bod",
   "incrementPlayerScoreTooltip": "Přidá aktuálnímu hráči jeden bod.",
-  "nextLevel": "Dobrá práce! Dokončil jsi tuto hádanku.",
+  "nextLevel": "Dobrá práce! Úloha úspěšně splněna.",
   "no": "Ne",
   "numBlocksNeeded": "Tato hádanka může být vyřešena pomoci %1 bloků.",
   "playSoundRandom": "přehrát náhodný zvuk",

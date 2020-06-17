@@ -758,7 +758,7 @@ def run_feature(browser, feature, options)
     ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
+    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)

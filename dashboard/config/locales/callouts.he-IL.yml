@@ -92,6 +92,9 @@ he-IL:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
+      Course 4 Bee 1:
+        if_bee_nectar: השתמשו בפקודה "If" כדי להחליט אם הדבורה צריכה לקבל צוף או להכין
+          דבש
       Course 4 Bee Params 2:
         edit_get_nectar: השתמש בכפתור הזה לערוך את הפונקציה ולשנות את הכיוון שהדבורה
           תסתובב אליה כדי לאסוף את הצוף.
@@ -106,6 +109,8 @@ he-IL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: חפשו פה בלוקים של "כל הברווזים"
       Dance_2019_01:
         dance_callout_01: בחרו כאן את סוג הרקדן.
       Dance_2019_02:
@@ -133,6 +138,8 @@ he-IL:
       Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: חפשו פה בלוקים של "כל הברווזים"
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
           קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
@@ -167,6 +174,24 @@ he-IL:
         craft_what_is_iron: כרו את הברזל הזה!
       Underground Iron_2019:
         craft_what_is_iron: כרו את הברזל הזה!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
+      courseB_maze_seq1:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
       courseC_maze_programming3:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
@@ -183,6 +208,9 @@ he-IL:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_farmer_while7_2018:

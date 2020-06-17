@@ -2,7 +2,7 @@
 title: Ressourcer
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
@@ -170,4 +170,4 @@ I'm writing to invite you to join our Hour of Code event and speak at our kickof
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-{{ signup_button }}
+{{ tilmeld_knap }}

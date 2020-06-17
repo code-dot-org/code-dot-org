@@ -9,7 +9,6 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 class ManageStudents extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
-    pegasusUrlPrefix: PropTypes.string,
 
     // Provided by redux
     sectionId: PropTypes.number,
@@ -22,12 +21,7 @@ class ManageStudents extends React.Component {
   }
 
   render() {
-    const {
-      sectionId,
-      studioUrlPrefix,
-      pegasusUrlPrefix,
-      isLoadingStudents
-    } = this.props;
+    const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
 
     return (
       <div>
@@ -35,10 +29,7 @@ class ManageStudents extends React.Component {
         {!isLoadingStudents && (
           <div>
             <SyncOmniAuthSectionControl sectionId={sectionId} />
-            <ManageStudentsTable
-              studioUrlPrefix={studioUrlPrefix}
-              pegasusUrlPrefix={pegasusUrlPrefix}
-            />
+            <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
           </div>
         )}
       </div>

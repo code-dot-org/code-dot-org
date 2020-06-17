@@ -8,6 +8,10 @@
     ],
     "func": "checkTouching",
     "blockText": "{CONDITION} {SPRITE1} touches {SPRITE2}",
+    "miniToolboxBlocks": [
+      "gamelab_subjectSpritePointer",
+      "gamelab_objectSpritePointer"
+    ],
     "callbackParams": [
       "extraArgs"
     ],

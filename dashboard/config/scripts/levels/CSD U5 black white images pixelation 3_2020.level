@@ -1,0 +1,25 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-02-18T17:32:47.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Do This\r\n\r\nThe width and height sliders are set incorrectly for this image so it doesn't look like anything. Change them until you find the image.\r\n\r\n![](https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png)",
+    "instructions_important": "false",
+    "display_name": "Black and White Pixelation Widget",
+    "version": "1",
+    "hex": "false",
+    "skip_dialog": true,
+    "href": "pixelation/pixelation.html",
+    "data": "111111111111101111111111101111100111101111100001101111100001110000000111110000000111110000000111110111110111110111110111110111110111111111111111",
+    "short_instructions": "Change the width and height sliders to find the image (click here to see more)",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 16373,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Pixelation>

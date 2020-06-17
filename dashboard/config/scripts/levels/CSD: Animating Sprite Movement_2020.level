@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:57:25.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "video_key": "csd_gamelab_sprites_2",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Sprite Movement",
+    "parent_level_id": 18516,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n* What is the counter pattern?\r\n* How does the counter pattern move sprites across the screen?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nStudents may describe the counter patten in various ways.  Make sure that they go beyond just stating the blocks or code that the counter pattern uses.  They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop.  This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\r\n\r\nWhen a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.  Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-18 23:17:30 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

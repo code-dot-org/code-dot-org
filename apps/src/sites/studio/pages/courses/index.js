@@ -22,6 +22,7 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
     coursesData.modernelementarycoursesavailable;
+  const specialAnnouncement = coursesData.specialAnnouncement;
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -33,6 +34,7 @@ function showCourses() {
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
+        specialAnnouncement={specialAnnouncement}
       />
     </Provider>,
     document.getElementById('courses-container')

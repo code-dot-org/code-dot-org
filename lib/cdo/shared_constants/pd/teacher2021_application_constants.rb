@@ -264,19 +264,10 @@ module Pd
       # Scholarship requirements
       free_lunch_percent: YES_NO,
       underrepresented_minority_percent: YES_NO,
-      # Bonus Points
-      csp_how_offer: [2, 0],
-      race: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.
     SCOREABLE_QUESTIONS = {
-      bonus_points: [
-        :csp_how_offer,
-        :free_lunch_percent,
-        :underrepresented_minority_percent,
-        :race,
-      ],
       scholarship_questions: [
         :underrepresented_minority_percent,
         :free_lunch_percent,

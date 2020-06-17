@@ -92,6 +92,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
       )}
       {assignmentPaths.length < 1 && (
         <Button
+          __useDeprecatedTag
           text={i18n.coursesCardAction()}
           href={'/courses'}
           color={Button.ButtonColor.gray}
@@ -131,6 +132,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
+        __useDeprecatedTag
         text={i18n.addStudents()}
         href={manageStudentsUrl}
         color={Button.ButtonColor.gray}

@@ -18,6 +18,8 @@
 
 = render partial: 'how_to_cancel'
 
+= render partial: 'covid_19'
+
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
   %h3
     Pre-Workshop Tech Setup
@@ -27,6 +29,8 @@
     In order to save time during the workshop for more exploration, we ask that you install the Maker App
     before attending the workshop. Directions for setting up the Maker App can be found at
     = link_to('https://studio.code.org/maker/setup', 'https://studio.code.org/maker/setup') + '.'
+    School- or district-owned laptops may require administrator permission to download Maker App,
+    so we encourage you to start this process soon.
 
 - if @workshop.local_summer? && @is_reminder
   %h3
@@ -42,7 +46,7 @@
     = render partial: 'csp_pre_course_reading'
 
 %p
-  If you have any accessibility needs or food allergies, please let the workshop organizer know so they can make appropriate accommodation plans and answer any of your questions. You can reach them at
+  If you have any accessibility needs or food allergies, please contact the workshop organizer to discuss appropriate accommodation plans and to answer any of your questions. You can reach them at
   = mail_to(@workshop.organizer.email) + '.'
 
 %p
@@ -58,4 +62,6 @@
 %p
   P.S. Connect with other computer science teachers on Twitter
   = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank"
-  for inspiration and great tips on bringing computer science to every school. Speaking of social media, if you don't want your photo taken or posted at the workshop, make sure the facilitator knows before the workshop begins.
+  for inspiration and great tips on bringing computer science to every school. We encourage you and other workshop attendees to post photos from the workshop to social media, and help
+  = link_to 'spread awareness about computer science.', 'http://bit.ly/38Ivp20', target: "_blank"
+  However, if you don't want your photo taken, just make sure the facilitator knows before the workshop begins.

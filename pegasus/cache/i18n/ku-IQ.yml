@@ -18,6 +18,8 @@ ku-TR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">ئایا تۆ مامۆستای زانستی کۆمپیوتەری؟ تکایە سەیری سەرچاوەكانی
     تری هەفتەی فێرکاری زانستی کۆمپیوتەر بكە</a>'
+  csedweek_banner_teachers_text: ئایا تۆ مامۆستای زانستی کۆمپیوتەری؟ تکایە سەیری سەرچاوەكانی
+    تری هەفتەی فێرکاری زانستی کۆمپیوتەر بكە
   n_have_learned_an_hoc: <h1>تاقیبكەوە</h1><h2>"كاتژمێرێك كۆدنووسین"</h2><h3># بەشداربوو</h3>
   anybody_can_learn: هەموو کەسێک دەتوانێت فێربێت.
   learn_now: ئێستا فێربە
@@ -25,8 +27,6 @@ ku-TR:
     کۆمپیوتەری پێبدرێت
   petition_sign_message: 'ئەگەر ڕەزامەندی، ناوت تۆماربكە و داخڵی لیستی ئیمەیلە تایبەتەكانمان
     بە و بەشداربە لەگەڵ # کەسی تر.'
-  petition_sign_message_support: 'ئەگەر دەتەوێت پاڵپشتمان بیت، ناوت تۆماربكە واخڵی
-    لیستی ئیمەیلە تایبەتەكانمان بە و بەشداربە لەگەڵ # کەسی تر.'
   petition_join_others: 'بەشداربە لەگەڵ # کەسی تر'
   name: ناو
   email: پۆستی ئەلیكترۆنی
@@ -276,6 +276,7 @@ ku-TR:
   homepage_action_text_learn: دەست بە فێربوون بکە
   homepage_action_text_signpetition: داواکە واژووبکە
   homepage_signpetition_dropdown: داواکەمان واژوو بکە &#x25BE;
+  homepage_signpetition_dropdown_text: من ڕازیم
   homepage_banner_text_link: زیاتر فێرببە
   homepage_banner_privacy_link: زیاتر فێرببە
   homepage_banner_20k_teachers_link: زیاتر فێرببە
@@ -419,6 +420,7 @@ ku-TR:
   header_courses: خولەكان
   header_course_catalog: پێرستی کۆرس
   header_educate_hoc: كاژێری كۆدنووسی
+  header_legal_tos: بڕگەکان
   user_header_settings: هەژمارەکەم
   user_header_logout: دەرچوون
   user_header_signin: چوونەژوورەوە

@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
 import {shallow} from 'enzyme';
@@ -6,14 +6,25 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import cookies from 'js-cookie';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import FakeStorage from '../../util/FakeStorage';
 
 describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
-    signedIn: false
+    signedIn: false,
+    storage: new FakeStorage()
   };
 
-  afterEach(() => sessionStorage.clear());
+  before(() => {
+    replaceOnWindow('dashboard', {
+      rack_env: 'unit_test'
+    });
+  });
+
+  after(() => {
+    restoreOnWindow('dashboard');
+  });
 
   it('renders null if signed in', () => {
     const wrapper = shallow(
@@ -30,9 +41,11 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    sessionStorage.setItem('anon_over13', true);
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
+    getItem.withArgs('anon_over13').returns('true');
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
+    getItem.restore();
   });
 
   it('renders a dialog otherwise', () => {
@@ -46,11 +59,9 @@ describe('SignInOrAgeDialog', () => {
     instance.ageDropdown = {
       getValue: () => '12'
     };
-    wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click');
-    assert.strictEqual(sessionStorage.getItem('anon_over13'), null);
+    assert.equal(wrapper.state().tooYoung, false);
+    instance.onClickAgeOk();
+    assert.equal(wrapper.state().tooYoung, true);
     assert.equal(
       wrapper
         .find('BaseDialog div > div')
@@ -69,12 +80,7 @@ describe('SignInOrAgeDialog', () => {
   });
 
   describe('redirect', () => {
-    let stashedRackEnv;
-
     beforeEach(() => {
-      stashedRackEnv = window.dashboard.rack_env;
-      window.dashboard.rack_env = 'unit_test';
-
       sinon.stub(utils, 'reload');
       sinon.stub(cookies, 'remove');
     });
@@ -82,10 +88,10 @@ describe('SignInOrAgeDialog', () => {
       utils.reload.restore();
       cookies.get.restore && cookies.get.restore();
       cookies.remove.restore();
-      window.dashboard.rack_env = stashedRackEnv;
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
+      const setItemSpy = sinon.spy(defaultProps.storage, 'setItem');
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
       sinon.stub(cookies, 'get').returns('something');
@@ -99,7 +105,8 @@ describe('SignInOrAgeDialog', () => {
         .find('Button')
         .at(1)
         .simulate('click');
-      assert.strictEqual(sessionStorage.getItem('anon_over13'), 'true');
+      assert(setItemSpy.calledOnce);
+      assert(setItemSpy.calledWith('anon_over13', true));
       assert(utils.reload.called);
       assert(
         cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
@@ -107,6 +114,7 @@ describe('SignInOrAgeDialog', () => {
           domain: '.code.org'
         })
       );
+      setItemSpy.restore();
     });
 
     it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
@@ -115,11 +123,9 @@ describe('SignInOrAgeDialog', () => {
       instance.ageDropdown = {
         getValue: () => '13'
       };
-      wrapper
-        .find('Button')
-        .at(1)
-        .simulate('click');
+      instance.onClickAgeOk();
       assert.equal(utils.reload.called, false);
+      assert.equal(wrapper.state().open, false);
     });
   });
 });

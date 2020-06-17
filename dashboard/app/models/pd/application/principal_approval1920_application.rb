@@ -38,14 +38,15 @@ module Pd::Application
   class PrincipalApproval1920Application < PrincipalApprovalApplicationBase
     include Pd::PrincipalApproval1920ApplicationConstants
 
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1920Application',
+               primary_key: :application_guid, foreign_key: :application_guid
+
+    validates_presence_of :teacher_application
+
     # @override
     def year
       YEAR_19_20
     end
-
-    validates_presence_of :teacher_application
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1920Application',
-      primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true

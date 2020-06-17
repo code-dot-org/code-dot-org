@@ -19,12 +19,12 @@ cs:
       Games/Score: Hry/Skóre
       Groups: Skupiny
       Locations: Umístění
-      Logic: Logika
-      Loops: Smyčky
-      Math: Matematika
+      Logic: Logické
+      Loops: Cykly
+      Math: Matematické
       Numbers: Čísla
       Properties: Vlastnosti
-      Text: text
+      Text: Text
       Variables: Proměnné
       'Variables ': 'Proměnné '
-      World: Svět
+      World: Prostředí

@@ -1,8 +1,8 @@
 name 'csp-u2-exam1-routing_2020'
 height 'auto'
 
-question 'This diagram shows a number of computing devices connected to the Internet  with each line representing a direct connection.
-<br> <br>
+question 'This diagram shows a number of computing devices connected to the Internet with each line representing a direct connection.  
+&nbsp;   
 Device A is attempting to send data over the Internet to Device E. Which of the following is true of how the data will travel through the network?'
 wrong ‘The data will always travel through Device B as it is the shortest path’
 wrong ‘The data will never be sent to Device G since there are other shorter paths available’

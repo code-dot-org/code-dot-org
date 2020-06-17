@@ -138,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+그래서 [SCHOOL NAME] 학생 [X number] 명은 컴퓨터 공학 교육 주간(12월 3~9일) 동안 한 명도 빠짐없이 역사상 가장 큰 학습의 장인 아워 오브 코드에 참여합니다.
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 

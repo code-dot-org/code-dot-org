@@ -60,6 +60,8 @@ eu-ES:
       NEW Course 4 Bee For Loops 5:
         actions_category: Tresna kutxak look berria dauka! "Akzioak" blokeak hemen
           daude orain.
+      New Frozen Project:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
       Overworld Chop Trees:
         craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
       Overworld Chop Trees_2019:
@@ -95,6 +97,9 @@ eu-ES:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
           duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
+          duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
           duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
       frozen circle function with parameter:

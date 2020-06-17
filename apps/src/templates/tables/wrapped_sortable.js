@@ -42,12 +42,21 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
       );
     }
 
+    // Disable wrapping on the sorting icon to ensure that the header will
+    // never wrap such that the sorting icon is on a row all on its own.
+    //
+    // Note that we could apply this style to the whole header cell, but that
+    // would prevent any wrapping from happening at all; because we want to
+    // allow for the possibility of long header names that _should_ wrap, this
+    // provides a nice compromise.
+    const sortIconSpanStyle = {whiteSpace: 'nowrap'};
+
     return {
       ...newProps,
       style: Object.assign({}, {cursor: 'pointer'}),
       children: (
         <span style={styles.container}>
-          <span>{sortIcon}</span>
+          <span style={sortIconSpanStyle}>{sortIcon}</span>
           <span>{label}</span>
         </span>
       )

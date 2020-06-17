@@ -1,0 +1,73 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:22.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "setProperty"
+        ],
+        "matchType": "exact",
+        "minTimes": 5,
+        "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      }
+    ],
+    "long_instructions": "# Let's make one square slightly different\r\n\r\nAdd two lines to the bottom of your code that look like this:\r\n\r\n![](https://images.code.org/abec0079a632f5e6ad7be28beb30763a-image-1490105722035.png)\r\n\r\nWhat does this do? We're doing two things...\r\n\r\n1. Creating a variable to hold the RGB string of a different color, and \r\n2. Overwriting the background color of one of the buttons after having just set it a few lines earlier\r\n\r\nThis means your code will change the background color of one of the buttons a few lines after you just set the color in the first place but it will happen so fast you won't notice. This will be useful later on.\r\n\r\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17248,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-20 14:21:48 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 12:35:14 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

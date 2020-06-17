@@ -1,5 +1,6 @@
 require 'cdo/azure_content_moderator'
 require 'honeybadger/ruby'
+require 'cdo/firehose'
 
 module ImageModeration
   # Returns a content rating from an external service.
@@ -18,6 +19,14 @@ module ImageModeration
     # behavior is to allow everything through, but we also want to notify
     # Honeybadger so that we can figure out exactly what is going wrong.
     Honeybadger.notify(err)
+
+    # Log to firehose as well, to have longer-lived data
+    FirehoseClient.instance.put_record(
+      study: 'azure-content-moderation',
+      study_group: 'v1',
+      event: 'moderation-error',
+      data_string: err
+    )
     :everyone
   end
 end

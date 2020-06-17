@@ -68,14 +68,18 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
-  const SerialPortType = isNodeSerialAvailable()
-    ? SerialPort
-    : ChromeSerialPort;
-  return new Promise((resolve, reject) => {
-    SerialPortType.list((error, list) =>
-      error ? reject(error) : resolve(list)
-    );
-  });
+  let SerialPortType;
+  if (isNodeSerialAvailable()) {
+    SerialPortType = SerialPort;
+    return SerialPortType.list();
+  } else {
+    SerialPortType = ChromeSerialPort;
+    return new Promise((resolve, reject) => {
+      SerialPortType.list((error, list) =>
+        error ? reject(error) : resolve(list)
+      );
+    });
+  }
 }
 
 /**

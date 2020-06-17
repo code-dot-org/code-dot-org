@@ -1,0 +1,14 @@
+name 'CSD U3 drawing challenges_2020_virtual'
+editor_experiment ''
+display_name 'Drawing Challenges'
+description 'Remember this is a choice level and you can try out as many drawing challenges as you like. Make sure you feel comfortable with drawing with shapes before you move on to the next lesson.'
+
+sublevels
+
+level 'CSD U3 drawing challenge 2'
+level 'CSD U3 drawing challenge 3'
+level 'CSD U3 drawing challenge no fill_pilot'
+level 'CSD U3 picture_pilot'
+level 'CSD U3 challenge face_pilot'
+level 'CSD U3 challenge new shape_pilot'
+level 'CSD U3 L3 Freeplay_pilot'

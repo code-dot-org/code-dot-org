@@ -16,7 +16,7 @@
       - @content_learning_modules.each do |content_module|
         %p
           %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: preselected_module_ids.include?(content_module.id)}
-            = content_module.stage.localized_name
+            = content_module.lesson.localized_name
 
     .module_type_section
       %h3= t('plc.preview_assignments.practice_focus_header')
@@ -28,7 +28,7 @@
       - @practice_learning_modules.each do |practice_module|
         %p
           %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: preselected_module_ids.include?(practice_module.id)}
-            = practice_module.stage.localized_name
+            = practice_module.lesson.localized_name
 
   #submit_tag_container
     = submit_tag(t('plc.preview_assignments.confirm_focus_areas'), id: 'confirm-assignments', class: 'btn btn-primary pull-right')

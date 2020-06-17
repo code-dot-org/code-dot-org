@@ -1,0 +1,14 @@
+%h1= I18n.t('maker.google_oauth.login_with_google')
+
+%p= I18n.t('maker.google_oauth.copy_code')
+
+= text_field_tag :maker_code, @secret_code, readonly: true
+= button_tag I18n.t(:copy), id: "btn-copy"
+
+:javascript
+  $(document).ready(function() {
+    $('#btn-copy').click(function() {
+      $('#maker_code').select();
+      document.execCommand("copy");
+    });
+  });

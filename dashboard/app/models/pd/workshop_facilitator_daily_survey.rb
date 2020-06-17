@@ -30,38 +30,6 @@ module Pd
     include JotFormBackedForm
     include Pd::WorkshopSurveyConstants
 
-    belongs_to :user
-    belongs_to :pd_session, class_name: 'Pd::Session'
-    belongs_to :pd_workshop, class_name: 'Pd::Workshop'
-    belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
-
-    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
-      message: 'already has a submission for this workshop, session, facilitator, and form'
-
-    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
-    def set_workshop_from_session
-      self.pd_workshop_id = pd_session&.pd_workshop_id
-    end
-
-    # @override
-    def self.attribute_mapping
-      {
-        user_id: 'userId',
-        pd_session_id: 'sessionId',
-        pd_workshop_id: 'workshopId',
-        facilitator_id: 'facilitatorId',
-        day: 'day'
-      }
-    end
-
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :pd_session_id,
-      :facilitator_id,
-      :day
-    )
-
     # Different categories have different valid days
     # Not identical to the one in WorkshopDailySurvey
     VALID_DAYS = {
@@ -83,7 +51,38 @@ module Pd
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
 
+    belongs_to :user
+    belongs_to :pd_session, class_name: 'Pd::Session'
+    belongs_to :pd_workshop, class_name: 'Pd::Workshop'
+    belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
+
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
+      message: 'already has a submission for this workshop, session, facilitator, and form'
+
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :pd_session_id,
+      :facilitator_id,
+      :day
+    )
     validate :day_for_subject
+
+    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
+    def set_workshop_from_session
+      self.pd_workshop_id = pd_session&.pd_workshop_id
+    end
+
+    # @override
+    def self.attribute_mapping
+      {
+        user_id: 'userId',
+        pd_session_id: 'sessionId',
+        pd_workshop_id: 'workshopId',
+        facilitator_id: 'facilitatorId',
+        day: 'day'
+      }
+    end
 
     def self.form_ids_for_subjects(subjects)
       subjects.map do |subject|

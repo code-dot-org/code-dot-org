@@ -1,0 +1,84 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:53.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "start_blocks": "onEvent(\"button1\",\"click\", function(){\r\n  setProperty(\"screen1\",\"background-color\",\"blue\");\r\n});",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "palette_category_at_start": "uicontrols",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"blueButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 120px; background-color: rgb(0, 0, 188); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 4px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; font-size: 32px; position: absolute; left: 100px; top: 175px;\">BLUE!</button></div></div>",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "true",
+    "parent_level_id": 17085,
+    "name_suffix": "_virtual",
+    "long_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**Do this:** Verify that the button IDs match the event-handlers.  Look for error messages in the **\"Debug Console\"**\r\n\r\n![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\r\n\r\n**Remember:** You can see the ID of a UI element by just hovering your mouse over it.\r\n\r\n<details><summary><strong>Need a hint? Click here:</strong>\r\n</summary>\r\n<ol>\r\nRun the program and inspect the error messages in the Debug Console. Keep in mind, an error message *only* indicates where the computer ran into trouble.  It doesn't tell you the root cause of the problem, necessarily.\r\n\r\n<li>\r\nInvestigate: Use the <b>error message as a clue</b> to investigate the possible problem.</li><li>\r\nFix it: Make a change that you think will fix the problem.</li><li>\r\nRun the program and verify that not only are there no error messages but the program works as intended (screen background changes color).</li><li>\r\nDidn't work? Repeat the steps above.  And stick with it!  You'll get it eventually.</li>\r\n</ol>\r\n</details>\r\n\r\n<details>\r\n\r\n<summary>\r\n<strong>Need another hint? Click here:</strong>\r\n</summary>\r\n\r\n<li>In this case the ID of the button does not match the ID in the onEvent command</li>\r\n<li>The error message is saying: \"you're telling me to listen to events on a UI Element with id 'button1' and no such thing exists!\" </li><br>\r\nThere are two ways to fix this:<br>\r\n<li>Change the ID in the event handler code to match the button ID in design mode.</li>\r\n<li>...or Change the button ID in design mode to match the event handler</li>\r\n\r\n</details>\r\n\r\n",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-11 00:53:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-07-30 17:37:14 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-04-01 21:03:26 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 21:17:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 13:54:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:59:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 16:48:36 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 20:16:31 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-04-22 20:31:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

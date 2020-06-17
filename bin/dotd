@@ -97,7 +97,7 @@ def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
+  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -110,6 +110,7 @@ def do_dtp(dotd_name)
   )
   print_database_changes production_pr_number
   dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
+    DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"

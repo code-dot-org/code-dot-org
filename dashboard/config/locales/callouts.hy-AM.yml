@@ -58,6 +58,8 @@ hy-AM:
       NEW Course 4 Bee For Loops 5:
         actions_category: 'Այդ գործիքը վանդակը ստացավ նոր տեսք! "Գործողություններ"
           արգելափակում են այստեղ:'
+      New Frozen Project:
+        snowflake_dropdown: Օգտագործեք այս իջնող ստեղծել տարբեր snowflakes!
       Overworld Chop Trees:
         craft_callout_preplaced: Weve put some blocks here to get you started
       Overworld Chop Trees_2019:

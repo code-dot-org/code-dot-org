@@ -42,6 +42,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_receipt__csp_for_returning_teachers
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+  end
+
   def teacher_enrollment_receipt__formatted_notes
     notes = <<-NOTES.strip_heredoc
       This is a multi-line, formatted notes section, with preserved whitespace:
@@ -131,6 +135,49 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_enrollment_receipt__facilitator
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_FACILITATOR
+  end
+
+  def teacher_enrollment_reminder__facilitator
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_for_returning_teachers_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 3}
+  end
+
+  def teacher_follow_up__csf_intro_with_rp
+    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
+    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
+
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {
+        facilitators: [facilitator1, facilitator2],
+        regional_partner: regional_partner
+      }
+  end
+
+  def teacher_follow_up__csf_intro_three_facilitators
+    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
+    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
+    facilitator3 = build :facilitator, name: 'Frannie Facilitator', email: 'frannie_facilitator@example.net'
+
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {
+        facilitators: [facilitator1, facilitator2, facilitator3]
+      }
+  end
+
   def teacher_follow_up__csf_intro
     mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
   end
@@ -211,6 +258,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def exit_survey__csd_1
     mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+  end
+
+  def exit_survey__csp_for_returning_teachers
+    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+  end
+
+  def exit_survey__csf_pre_foorm
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {sessions_from: Date.new(2020, 5, 4)}
   end
 
   private

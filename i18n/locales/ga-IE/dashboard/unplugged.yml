@@ -26,7 +26,7 @@ ga:
         title: Teibíocht
         desc: Cuireann an ceacht seo an gnáthamh laethúil atá ag na daltaí le chéile le cluiche cosúil le Mad Libs, chun cabhrú leo foghlaim faoi cé chomh héifeachtach atá an teibiú.
       Unplug9:
-        title: Códáil sealaíochta
+        title: Códáil Sealaíochta
         desc: 'Glacann an ceacht seo smaoineamh ó ghníomhaíocht roimhe seo (4. Ríomhchlárú ar Ghrafpháipéar), agus úsáideann sé na scileanna sin chun béim a chur ar chúpla bunphrionsabal tábhachtach: ríomhchláir a scríobh a fheidhmíonn de réir oird, agus iad a sheiceáil le haghaidh "fabhtanna" go minic.'
       Unplug10:
         title: An tIdirlíon
@@ -114,26 +114,41 @@ ga:
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
       VideoGamesCoordinatePlanes:
         title: Físchluichí agus Plánaí Comhordanáidí
+        desc: Foghlaim gur é an t-ailgéabar atá mar bhonn ag na cluichí ríomhaire gur breá leat a bheith ag imirt! Pléigh an bealach go mbaintear úsáid as sloinn ailgéabracha agus as an bplána comhordanáideach chun tuiscint a fháil ar an tslí a n-oibríonn físchluichí. Ansin tosaigh ag pleanáil don fhíschluiche a chruthóidh tú féin.
       Contracts:
         title: Conarthaí, Fearann, agus Raon
+        desc: Tugann conarthaí bealach dúinn chun feidhmeanna a thuiscint agus a phlé. Sa cheacht seo, breathnóimid ar an gcaoi a chabhraíonn conarthaí linn tuiscint a fháil ar theanga ríomhchlárúcháin nua, nó ar fheidhm nua.
       DesignRecipe:
         title: Oideas Dearaidh
+        desc: Sa chéim roimhe seo, cumadh feidhmeanna sách simplí - ach le feidhmeanna níos casta, teastaíonn cur chuige níos machnamhaí. Is cur chuige struchtúrtha é an Oideas Dearaidh chun feidhmeanna a chumadh. Cuirtear cásanna tástála san áireamh chun deimhniú go n-oibríonn an fheidhm mar is ceart.
       Booleans:
         title: Athróga Boole agus Loighic
+        desc: Is iad Athróga Boole an ceathrú chineál sonraí (agus an ceann deireanach) a fhoghlaimeoidh tú faoi sa chúrsa seo.  Sa ghníomhaíocht seo, foghlaimeoidh tú céard iad Athróga Boole, agus an bealach a chabhraíonn siad linn agus muid ag cumadh feidhmeanna a smaoiníonn go loighiciúil
       ConditionalsPiecewiseFunctions:
         title: Coinníollacha agus Feidhmeanna Breacleanúnacha
       CollisionDetection:
         title: Aimsiú Imbhuailte agus an teoirim Phíotagarásach
+        desc: Gné thábhachtach de roinnt mhaith chluichí is ea déanamh amach cén uair a theagmhaíonn rudaí le chéile.  Sa cheacht seo, breathnóimid ar úsáid Theoirim Phíotagarásach agus Foirmle an Fhaid chun fad a thomhais idir dhá phointe ar phlána, agus chun déanamh amach an bhfuil an dá phointe (nó carachtair i gcluiche) i dteagmháil.
+      courseA_unplugged_loops:
+        desc: Sa cheacht seo, foghlaimeoidh tú faoi lúba!
       courseB_unplugged_MRF:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Sa cheacht seo, déanfaidh tú 'ríomhchlárú' ar do chairde!
       courseB_unplugged_loopyMRF:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Díreach ar nós "Mo Chairde Róbatacha", beidh tú ag déanamh "ríomhchlárú" ar do chairde, ach ag úsáid lúb an t-am seo!
       courseC_Unplugged_ScreenOutTheMean:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
       courseD_unplugged_digitalCitizenship:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard atá i gceist le bheith i do Shárshaoránach Digiteach.
+      courseE_unplugged_privateInformation:
+        title: 'Oideachas Stuaime: Sonraí Príobháideacha agus Pearsanta '
+        desc: Inniú foghlaimeoidh tú an difríocht idir fhaisnéis phríobháideach agus fhaisnéis phearsanta.
       courseF_unplugged_powerOfWords:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
       courseAB_unplugged_plantASeed:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
@@ -165,7 +180,7 @@ ga:
         title: Ríomhchlárú ar Ghrafpháipéar
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
       courseD_unplugged_relayProgramming:
-        title: Códáil sealaíochta
+        title: Códáil Sealaíochta
         desc: Glacfaidh na daltaí páirt i rás sealaíochta, ag rith trasna na páirce chun algartam a scríobh, bunaithe ar Ríomhchlárú ar Ghrafpháipéar. Ní féidir leo ach treoir amháin a scríobh sa turas, agus má tá botún ann, caithfidh siad gach rud a scriosadh agus tosú ón bpointe sin.
       courseD_unplugged_conditionalsCards:
         title: Coinníollacha le Cártaí
@@ -174,6 +189,7 @@ ga:
         title: Íomhánna Dénártha
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
       courseE_unplugged_diceRace:
+        title: 'Algartaim Fhíorshaoil: Rás Dísle'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil. Mar chuid den cheacht seo, aithneoidh agus scríobhfaidh na daltaí an t-algartam taobh thiar de chluiche díslí.
       courseE_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
@@ -199,8 +215,13 @@ ga:
       courseF_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
         desc: 'Ceann de na struchtúir is iontaí sa ríomheolaíocht é an fheidhm. Is éard atá ann ná píosa cóid beag is féidir a úsáid arís is arís eile mar chuid de ríomhchlár níos mó. Tar éis an cheacht seo, tuigfidh na daltaí an fáth a bhfuil feidhmeanna chomh háisiúil.  '
+      swipeRightPassThrough:
+        title: Seisiún Earcaíochta
+      swipeRightPassThrough-test123:
+        title: Seisiún Earcaíochta
       courseB_unplugged_MRF_2018:
         title: Mo Chairde Róbatacha
+        desc: Foghlaim an ríomhchlárú trí cód a scríobh do do chairde!
       PlantASeed_2018:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
@@ -210,6 +231,8 @@ ga:
       GoingPlacesSafely_2018:
         title: Ag Taisteal Slán Sábháilte
         desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
+      courseA_unplugged_loops_2018:
+        desc: Sa cheacht seo, foghlaimeoidh tú faoi lúba!
       BigEvent_2018:
         title: An Teagmhas Mór
         desc: Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an gcnaipe a bhí brúite.
@@ -218,8 +241,10 @@ ga:
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
       courseD_unplugged_digitalCitizenship_2018:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard atá i gceist le bheith i do Shárshaoránach Digiteach.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
       Conditionals_2018:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
@@ -240,28 +265,61 @@ ga:
         desc: Déanfaidh gach dalta bráisléad mar léiriú dénártha ar an chéad litir ina (h)ainm. Foghlaimeoidh na daltaí gur féidir sonraí a stóráil agus a léiriú ar níos mó ná bealach amháin.
       MoveItMoveIt_2018:
         title: Bog é, Bog é
+      courseB_unplugged_CnC_2018:
+        title: Bí Cruthaitheach; Bí Cothrom.
+        desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar an bpróiseas cruthaitheach - próiseas de chomhroinnt agus spreagadh.  Chomh maith leis seo, cuirtear chun cinn an cheapadóireacht chruthaitheach, agus an gá a bheith cóir maidir le hobair chruthaitheach.
+      courseE_unplugged_CnC_2018:
+        desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
       RelayProgramming_2018:
-        title: Códáil sealaíochta
+        title: Códáil Sealaíochta
+        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh treorach.
       courseB_unplugged_MRF_2019:
         title: Mo Chairde Róbatacha
+        desc: Foghlaim an ríomhchlárú trí cód a scríobh do do chairde!
+      BuildingAFoundation_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Ríomhchlárú ar Ghrafpháipéar
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
       RelayProgramming_2018_2019:
-        title: Códáil sealaíochta
+        title: Códáil Sealaíochta
+        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh treorach.
       courseD_unplugged_digitalCitizenship_2019:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard atá i gceist le bheith i do Shárshaoránach Digiteach.
       BinaryImages_2019:
         title: Íomhánna Dénártha
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
+      SongwritingParameters_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
+      Internet_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.Internet_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Bí Lúbach
         desc: Tugann an ceacht seo buneolas ar lúba (treoracha athdhéanta) sa ríomhchlárú trí ghníomhaíocht damhsa. Foghlaimeoidh na daltaí cóiréagrafaíocht shimplí agus déanfaidh siad an damhsa arís is aris eile.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Gníomhaíocht Dhíphlugáilte
+        desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
       BigEvent_2019:
         title: An Teagmhas Mór
         desc: Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an gcnaipe a bhí brúite.
@@ -280,13 +338,19 @@ ga:
       GoingPlacesSafely_2019:
         title: Ag Taisteal Slán Sábháilte
         desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
+      courseA_unplugged_loops_2019:
+        desc: Sa cheacht seo, foghlaimeoidh tú faoi lúba!
       MoveItMoveIt_2019:
         title: Bog é, Bog é
       DigitalFootprint_2019:
         title: Do Lorg Digiteach
         desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg digiteach seo.
+      courseB_unplugged_CnC_2019:
+        title: Bí Cruthaitheach; Bí Cothrom.
+        desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar an bpróiseas cruthaitheach - próiseas de chomhroinnt agus spreagadh.  Chomh maith leis seo, cuirtear chun cinn an cheapadóireacht chruthaitheach, agus an gá a bheith cóir maidir le hobair chruthaitheach.
       timeforcs_demo_crowdsourcing:
         title: Sluafhoinsiú
+        desc: '_Josh note: in contrast with the first lesson, I''ve formatted this one just like a typical unplugged lesson._'
       timeforcs_demo_conditionals:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."

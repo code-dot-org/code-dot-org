@@ -1,3 +1,4 @@
 // locale for bounce
 
-module.exports = window.blockly.bounce_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('bounce_locale');

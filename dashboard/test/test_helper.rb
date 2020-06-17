@@ -42,6 +42,8 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+CDO.stubs(override_pegasus: nil)
+CDO.stubs(override_dashboard: nil)
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -320,7 +322,7 @@ class ActiveSupport::TestCase
   #     freeze_time
   #     #...
   def self.freeze_time(time=nil)
-    time ||= Date.today + 9.hours
+    time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
     end
@@ -524,7 +526,6 @@ class ActionController::TestCase
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
     assert_select 'meta[content="@codeorg"][name="twitter:site"]'
-    assert_select 'meta[content="photo"][name="twitter:card"]'
 
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
@@ -537,6 +538,12 @@ class ActionController::TestCase
       assert_select "meta[content='#{opts[:image_url]}'][#{attr}='#{namespace}:image']" if opts[:image_url]
       assert_select "meta[content='#{opts[:image_width]}'][#{attr}='#{namespace}:image:width']" if opts[:image_width]
       assert_select "meta[content='#{opts[:image_height]}'][#{attr}='#{namespace}:image:height']" if opts[:image_height]
+    end
+
+    if opts[:small_thumbnail]
+      assert_select 'meta[content="summary"][name="twitter:card"]'
+    else
+      assert_select 'meta[content="photo"][name="twitter:card"]'
     end
 
     if opts[:apple_mobile_web_app]

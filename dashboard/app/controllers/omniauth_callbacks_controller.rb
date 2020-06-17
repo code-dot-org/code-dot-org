@@ -22,6 +22,39 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # POST /users/auth/maker_google_oauth2
+  def maker_google_oauth2
+    if params[:secret_code].nil_or_empty?
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_no_code')
+      return render 'maker/login_code'
+    end
+
+    secret = Encryption.decrypt_string_utf8(params[:secret_code])
+    time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
+    time_difference = (Time.now - time) / 1.minute
+
+    # Reject - code was generated more than 5 minutes ago or incorrect provider
+    if time_difference >= 5
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
+      return render 'maker/login_code'
+    elsif !secret.ends_with?('google_oauth2')
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
+      return render 'maker/login_code'
+    else
+      secret.slice!(AuthenticationOption::GOOGLE)
+    end
+
+    # Check user id all numbers
+    if secret.scan(/\D/).empty?
+      # Look up user and use devise to sign user in
+      user = AuthenticationOption.find_by(credential_type: AuthenticationOption::GOOGLE, authentication_id: secret)&.user
+      sign_in_and_redirect user
+    else
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')
+      render 'maker/login_code'
+    end
+  end
+
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
@@ -106,7 +139,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     if auth_option.save
-      flash.notice = I18n.t('user.account_successfully_updated')
+      provider = I18n.t(auth_option.credential_type, scope: "auth", default: "")
+      flash.notice = auth_option.email.blank? ?
+        I18n.t('user.auth_option_saved_no_email', provider: provider) :
+        I18n.t('user.auth_option_saved', provider: provider, email: auth_option.email)
     else
       flash.alert = get_connect_provider_errors(auth_option)
     end
@@ -143,7 +179,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_user user
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover user
       sign_in_user user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
       email_already_taken_redirect \

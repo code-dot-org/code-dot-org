@@ -7,7 +7,8 @@ import IconLibrary from './IconLibrary';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 
 const extensionFilter = {
-  image: '.jpg, .jpeg, .gif, .png',
+  // Note: .jfif files will be converted to .jpg by the server.
+  image: '.jpg, .jpeg, .jfif, .gif, .png',
   audio: '.mp3',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
 };
@@ -83,7 +84,7 @@ export default class ImagePicker extends React.Component {
       !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = (
-        <div>
+        <div id="modeSwitch">
           <p onClick={this.setFileMode} style={styles.fileModeToggle}>
             My Files
           </p>

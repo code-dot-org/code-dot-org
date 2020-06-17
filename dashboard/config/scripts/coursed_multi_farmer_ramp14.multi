@@ -1,5 +1,5 @@
 name 'courseD_multi_farmer_ramp14'
-question 'Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?'
+question 'Take a good look at the code below. How many pumpkins will the farmer collect after you click "Run"?'
 right 'The farmer will collect 4 pumpkins.', feedback: 'Correct!'
 wrong 'The farmer will collect 5 pumpkins.', feedback: 'Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
 wrong 'The farmer will collect all 8 pumpkins.', feedback: 'Incorrect. The farmer doesn\'t try to pick a pumpkin after each move up. Only each move to the right.'

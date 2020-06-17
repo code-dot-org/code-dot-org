@@ -63,6 +63,10 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': diamond
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -322,7 +326,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -331,7 +337,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -357,11 +365,6 @@ ne:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
-        options:
-          OPTION:
-            '"show"': देखाउ
-            '"hide"': लुकेको
       binary_move:
         options:
           DIR:

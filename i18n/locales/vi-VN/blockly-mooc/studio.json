@@ -34,6 +34,7 @@
   "bird": "Con chim",
   "calloutPutCommandsHereRunStart": "Để các thanh lệnh ở đây cho chúng chạy khi chương trình bắt đầu",
   "calloutBlocklyPlaceGoUpHere": "Để khối \"tiến lên\" ở đây để tiến lên trước",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Nhấp vào tiêu đề của sự kiện để xem chức năng của khối trong sự kiện đó.",
   "calloutUseArrowButtons": "Giữ các nút trên màn hình hoặc nhấn các phím mũi tên trên bàn phím để điều khiển hướng đi",
   "calloutUseArrowButtonsAutoSteer": "Các dòng mã bạn viết bị ẩn đi nhưng bạn vẫn có thể dùng phím mũi tên để di chuyển",

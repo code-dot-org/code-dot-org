@@ -329,11 +329,11 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 };
 
 /**
- * @param {!string} url
+ * @param {!string} id of the sound. This is a URL for sounds played via playURL.
  * @returns {boolean} whether the given sound is currently playing.
  */
-Sounds.prototype.isPlayingURL = function(url) {
-  var sound = this.soundsById[url];
+Sounds.prototype.isPlaying = function(id) {
+  var sound = this.soundsById[id];
   if (sound) {
     return sound.isPlaying();
   }

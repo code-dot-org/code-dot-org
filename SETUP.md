@@ -53,7 +53,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
     <details>
         <summary>Troubleshoot: <code>Formula.sha1</code> is disabled or <code>Error: pdftk: undefined method sha1' for #&lt;Class:...&gt;</code></summary>
 
@@ -64,9 +64,6 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
         If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
     </details>
-
-
-1. Install PhantomJS: `brew cask install phantomjs`
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
     1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -120,10 +117,12 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
+1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
+
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
@@ -146,20 +145,23 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
     1. `sudo apt-get update && sudo apt-get install yarn=1.16.0-1`
     1. `yarn --version` Double check the version of yarn is correct.
+1. Make it so that you can run apps tests locally
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+        1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
-   1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
+    1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
-   1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
-      cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
-   1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
-   1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
+    1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
+       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
+    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
+    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
 * Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
-  1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
+  1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
@@ -173,7 +175,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
-     * **Step 4: Storage**: Increase storage to 32GiB
+     * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
@@ -210,10 +212,6 @@ If you want to make JavaScript changes and have them take effect locally, you'll
 1. Run `bundle exec rake package` for the changes to take effect.
 
 This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
-
-If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
-
-    new_relic_license_key: <license key here>
 
 ## Editor configuration
 
@@ -291,7 +289,7 @@ OS X: when running `bundle install`, you may need to also run `xcode-select --in
 ### Recommended hardware
 While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
-- Storage: The repository takes up 16GB
+- Storage: The repository takes up 20GB
 
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso

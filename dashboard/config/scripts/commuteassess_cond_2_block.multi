@@ -1,10 +1,14 @@
 name 'CommuteAssess - Cond 2 - block'
 question 'What will be displayed after running this code?'
-wrong '<pre>All done.</pre>'
-wrong '<pre>Inside the if. </pre>'
-right '<pre>Inside the if. <br>All done.</pre>'
-wrong '<pre>Inside the else. <br>All done.</pre>'
-wrong '<pre>Inside the if. <br>Inside the else. <br>All done.</pre>'
+wrong '`All done.`'
+wrong '`Inside the if.`'
+right '`Inside the if.`  
+`All done.`'
+wrong '`Inside the else.`  
+`All done.`'
+wrong '`Inside the if.`  
+`Inside the else.`  
+`All done.`'
 
 markdown <<MARKDOWN
 ![](https://images.code.org/25998f71dad01951719e0a6c95bf4ea1-image-1482507408209.png)

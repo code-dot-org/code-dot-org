@@ -1,4 +1,5 @@
 name 'CSP_Final_instructions'
+editor_experiment ''
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
@@ -46,7 +47,6 @@ That's all for the instructions.  Click "Start Test" below to start the test.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-
 #### To see / review student answers
 
 1. Go to your [teacher dashboard](https://code.org/teacher-dashboard#/)
@@ -55,8 +55,8 @@ teacher_markdown <<MARKDOWN
 4. Click **Assessments**
 5. From the course selector dropdown, **select cspassessment**
 6. For all students who have *submitted* their assessment, you will see two tables:
-  * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on
-  * The second table is a comprehensive list of each answer to each question submitted by each student
+   * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on
+   * The second table is a comprehensive list of each answer to each question submitted by each student
 
     Above both of these tables is a **Download (or export) as csv** button - allowing you to process answers in a spreadsheet (recommended).
 
@@ -67,4 +67,5 @@ teacher_markdown <<MARKDOWN
 You should make clear rules with your students about unsubmitting a test. Students might think this is a good way to change an answer after the test is over (i.e. cheat) but you'll see a timestamp of when the student submitted the test.  
 
 It's suggested that you simply establish that you will not consider scoring or grading any tests after a particular time.  If it was not submitted before the specified deadline, it's like you didn't receive it.
+
 MARKDOWN

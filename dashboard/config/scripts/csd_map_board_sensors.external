@@ -1,6 +1,6 @@
 name 'CSD Map: Board Sensors'
 display_name 'Analog Sensors'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/maker_sensors/" type="text/html"  style="width: 100%; height: 1100px;"></object>
+<object data="https://studio.code.org/docs/csd/maker_sensors/" type="text/html"  style="width: 100%; height: 1100px;"></object>
 
 MARKDOWN

@@ -101,4 +101,11 @@ class CachingTest < ActionDispatch::IntegrationTest
     end
     assert_response :success
   end
+
+  test 'should cache script after initialization' do
+    Script.script_cache_to_cache
+    assert_queries(0, ignore_filters: [], capture_filters: [/script\.rb.*get_from_cache/]) do
+      get '/s/course1/stage/3/puzzle/1'
+    end
+  end
 end

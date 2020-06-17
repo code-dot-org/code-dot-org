@@ -38,15 +38,15 @@ class LevelDslTest < ActiveSupport::TestCase
       }
     }
     i18n_expected = {
-      'title' => 'title1',
-      'content1' => 'desc1',
-      'questions' => [{'text' => 'q1'}],
       'answers' => [
         {'text' => 'w1', 'correct' => false},
         {'text' => 'w2', 'correct' => false},
         {'text' => 'r1', 'correct' => true},
         {'text' => 'w3', 'correct' => false}
       ],
+      'content1' => 'desc1',
+      'questions' => [{'text' => 'q1'}],
+      'title' => 'title1',
     }
     assert_equal expected, output
     assert_equal i18n_expected.to_yaml, i18n.to_yaml
@@ -65,8 +65,8 @@ class LevelDslTest < ActiveSupport::TestCase
 
   test 'test Evaluation Question' do
     script = create :script
-    stage1 = create(:stage, name: 'Stage1', script: script)
-    stage2 = create(:stage, name: 'Stage2', script: script)
+    stage1 = create(:lesson, name: 'Stage1', script: script)
+    stage2 = create(:lesson, name: 'Stage2', script: script)
     input_dsl = <<~DSL
       name 'Test question'
       display_name 'Test override question'

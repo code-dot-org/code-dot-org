@@ -29,7 +29,9 @@ import {
   deleteColumnName,
   renameColumnName,
   addMissingColumns,
-  getColumnsRef
+  getColumnsRef,
+  getColumnNamesFromRecords,
+  getColumnNamesSnapshot
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
@@ -47,6 +49,19 @@ function getKeysRef() {
   let kv = getProjectDatabase().child('storage/keys');
   return kv;
 }
+
+FirebaseStorage.getLibraryManifest = function() {
+  return getSharedDatabase()
+    .child('metadata/manifest')
+    .once('value')
+    .then(snapshot => snapshot.val());
+};
+
+FirebaseStorage.getColumnsForTable = function(tableName, tableType) {
+  let database =
+    tableType === 'shared' ? getSharedDatabase() : getProjectDatabase();
+  return getColumnNamesSnapshot(database, tableName);
+};
 
 /**
  * @return {Promise<boolean>} whether the project channel exists
@@ -77,6 +92,15 @@ FirebaseStorage.clearAllData = function(onSuccess, onError) {
  */
 FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
   key = fixKeyName(key, onError);
+  try {
+    validateFirebaseKey(key);
+  } catch (e) {
+    onError({
+      type: WarningType.KEY_INVALID,
+      msg: `The key is invalid. ${e.message}`
+    });
+    return;
+  }
 
   const keyRef = getKeysRef().child(key);
   keyRef.once(
@@ -220,6 +244,12 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
       );
       return recordRef.set(JSON.stringify(record));
     })
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords([JSON.stringify(record)])
+      )
+    )
     .then(() => onSuccess(record), onError);
 };
 
@@ -377,6 +407,12 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
+          .then(() =>
+            addMissingColumns(
+              tableName,
+              getColumnNamesFromRecords([recordJson])
+            )
+          )
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -546,7 +582,11 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     })
     .then(snapshot => {
       getRecordsRef(tableName).set(snapshot.val());
+      return snapshot;
     })
+    .then(snapshot =>
+      addMissingColumns(tableName, getColumnNamesFromRecords(snapshot.val()))
+    )
     .then(onSuccess, onError);
 };
 
@@ -605,6 +645,7 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
           return Promise.resolve();
         });
     })
+    .then(() => addColumnName(tableName, 'id'))
     .then(onSuccess, onError);
 };
 
@@ -941,7 +982,7 @@ function parseRecordsDataFromCsv(csvData) {
     records.forEach((record, index) => {
       const id = index + 1;
       for (const key in record) {
-        record[key] = castValue(record[key]);
+        record[key] = castValue(record[key], /* allowUnquotedStrings */ true);
       }
       record.id = id;
       recordsData[id] = JSON.stringify(record);
@@ -1007,7 +1048,12 @@ function overwriteTableData(tableName, recordsData) {
         rowCount: count
       });
     })
-    .then(() => addMissingColumns(tableName));
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords(Object.values(recordsData))
+      )
+    );
 }
 
 FirebaseStorage.importCsv = function(

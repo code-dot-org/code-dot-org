@@ -145,6 +145,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     containerId: 'app',
     embed: testData.embed,
     firebaseName: 'test-firebase-name',
+    firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     onFeedback: finished,

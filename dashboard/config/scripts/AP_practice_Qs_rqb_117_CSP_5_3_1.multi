@@ -1,11 +1,9 @@
 name 'AP_practice_Qs_rqb_117_CSP_5_3_1'
 type 'multi2'
 wrong 'Reduced debugging time'
-right 'Faster run time
-'
+right 'Faster run time'
 right 'Increases creative expression'
-wrong 'Reduced coding time
-'
+wrong 'Reduced coding time'
 markdown <<MARKDOWN
 Which of the following are NOT advantages of using procedures? (Select two)
 

@@ -1,0 +1,76 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:57.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Design Mode: Layering and Deleting\r\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\" style=\"width: 150px; float: right\">User interface elements can overlap one another, so you'll want the ability to change the order or **depth** at which each one is shown. \r\n\r\n**You Try it:** Use the **depth** and **delete** tools to **create the \"After\" image** (shown below).\r\n\r\n* **Scroll to the bottom of the Properties tab** you'll find buttons which allow you to easily **change the depth** of an element.\r\n* **Change the depth** of elements by using the double or single arrows.\r\n  * Click the double arrow to send all the way to front or back.\r\n  * Click the single arrow to move up or down one layer.\r\n\r\n\r\n<table>\r\n<tr>\r\n\t<th style=\"text-align:center\">Before</th>\r\n    <th style=\"text-align:center\">After</th>\r\n</tr>\r\n<tr>\r\n\t<td align=center><img src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\" style=\"width:200px ; border: solid 1px black\"></td>\r\n    <td style=\"text-align:center\"><img src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\" style=\"width:200px; border: solid 1px black\"></td>\r\n</tr>\r\n</table>\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "short_instructions": "Fix the layout of the bullseye game. (Click to see full instructions)",
+    "start_blocks": "onEvent(\"redtarget\", \"click\", function() {\r\n  console.log(\"User Clicked Red\");\r\n});\r\nonEvent(\"yellowtarget\", \"click\", function() {\r\n  console.log(\"User Clicked Yellow\");\r\n});\r\nonEvent(\"bluetarget\", \"click\", function() {\r\n  console.log(\"User Clicked Blue\");\r\n});",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern divApplabDesignMode\" tabindex=\"1\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(0, 0, 0); width: 237px; height: 25px; position: absolute; left: 40px; top: 20px; font-size: 20px;\" id=\"label1\">LET'S PLAY BULLSEYE</label>\r\n    <img src=\"https://images.code.org/7069b172faaca6bb7a53a53d12726eb7-image-1444676157548.35.27 PM.png\" id=\"redtarget\" style=\"height: 100px; width: 90px; position: absolute; left: 210px; top: 165px; margin: 0px;\" data-canonical-image-url=\"https://images.code.org/7069b172faaca6bb7a53a53d12726eb7-image-1444676157548.35.27 PM.png\"/>\r\n    <img src=\"https://images.code.org/48bbd80cb5e059c238c6fa8d480d8c17-image-1444676162430.39.19%20PM.png\" id=\"yellowtarget\" style=\"height: 200px; position: absolute; left: 0px; top: 120px; margin: 0px; width: 200px;\" data-canonical-image-url=\"https://images.code.org/48bbd80cb5e059c238c6fa8d480d8c17-image-1444676162430.39.19%20PM.png\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); width: 186px; height: 25px; position: absolute; left: 65px; top: 80px; font-size: 20px;\" id=\"label2\">Click the Bullseye!</label>\r\n    <img src=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\" id=\"bulleyePic1\" style=\"height: 30px; width: 30px; position: absolute; left: 205px; top: 0px; margin: 0px;\" data-canonical-image-url=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\"/>\r\n    <img src=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\" id=\"bulleyePic2\" style=\"width: 30px; position: absolute; left: 265px; top: 0px; margin: 0px; height: 30px;\" data-canonical-image-url=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\"/>\r\n    <img src=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\" id=\"bulleyePic3\" style=\"height: 30px; width: 30px; position: absolute; left: 65px; top: 0px; margin: 0px;\" data-canonical-image-url=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\"/>\r\n    <img src=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\" id=\"bulleyePic4\" style=\"height: 30px; width: 30px; position: absolute; left: 0px; top: 0px; margin: 0px;\" data-canonical-image-url=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\"/>\r\n    <img src=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\" id=\"bulleyePic5\" style=\"width: 30px; position: absolute; left: 135px; top: 0px; margin: 0px; height: 30px;\" data-canonical-image-url=\"https://images.code.org/85da3647a4894ed7fa12fcf5679796cc-image-1444676170439.33.59%20PM.png\"/>\r\n    <img src=\"https://images.code.org/5ea8bc93d65f019175dff0ae2ad26277-image-1444676160386.35.32%20PM.png\" id=\"bluetarget\" style=\"height: 300px; width: 300px; position: absolute; left: 5px; top: 150px; margin: 0px;\" data-canonical-image-url=\"https://images.code.org/5ea8bc93d65f019175dff0ae2ad26277-image-1444676160386.35.32%20PM.png\"/>\r\n  </div>\r\n</div>",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "DT0qfO/yLwEZeJphEi3U4pMBzIahA/iqKGqv7HdAhJ5ykquX/wcPuF5aSP0V\nOjhG\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "show_debug_watch": "true",
+    "parent_level_id": 17104,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 03:45:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-03 16:43:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 16:44:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -220,11 +221,7 @@ export const editSectionProperties = props => ({
  */
 export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
 
-/**
- * Submit staged section changes to the server.
- * Closes UI and updates section table on success.
- */
-export const finishEditingSection = () => (dispatch, getState) => {
+export const submitEditingSection = (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
@@ -233,20 +230,50 @@ export const finishEditingSection = () => (dispatch, getState) => {
     ? '/dashboardapi/sections'
     : `/dashboardapi/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
+  return $.ajax({
+    url: dataUrl,
+    method: httpMethod,
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(serverSectionFromSection(section))
+  });
+};
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
+export const finishEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
-    $.ajax({
-      url: dataUrl,
-      method: httpMethod,
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section))
-    })
+    submitEditingSection(dispatch, getState)
       .done(result => {
         dispatch({
           type: EDIT_SECTION_SUCCESS,
           sectionId: section.id,
           serverSection: result
         });
-        resolve();
+        resolve(result);
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
+};
+
+export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
+        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -418,6 +445,7 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
+  stageExtrasScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -704,6 +732,7 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       initialCourseId: initialSectionData.courseId,
       initialScriptId: initialSectionData.scriptId,
+      initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -729,7 +758,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -773,6 +802,22 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    if (section.loginType !== state.initialLoginType) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'edit-section-details',
+          event: 'change-login-type',
+          data_json: JSON.stringify({
+            sectionId: section.id,
+            initialLoginType: state.initialLoginType,
+            updatedLoginType: section.loginType
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+
     let assignmentData = {
       section_id: section.id,
       section_creation_timestamp: section.createdAt,
@@ -789,12 +834,15 @@ export default function teacherSections(state = initialState, action) {
       !(typeof assignmentData.script_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
-      firehoseClient.putRecord({
-        study: 'assignment',
-        study_group: 'v1',
-        event: newSection ? 'create_section' : 'edit_section_details',
-        data_json: JSON.stringify(assignmentData)
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'assignment',
+          study_group: 'v1',
+          event: newSection ? 'create_section' : 'edit_section_details',
+          data_json: JSON.stringify(assignmentData)
+        },
+        {includeUserId: true}
+      );
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -987,6 +1035,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -998,7 +1050,7 @@ export const sectionFromServerSection = serverSection => ({
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
@@ -1033,7 +1085,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,

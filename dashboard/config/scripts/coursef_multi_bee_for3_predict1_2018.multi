@@ -1,5 +1,5 @@
 name 'courseF_multi_bee_for3_predict1_2018'
-question 'Read the code below.  What will happen when you click "Run"?'
+question 'Read the code below. What will happen when you click "Run"?'
 wrong 'The bee will move forward and collect all of the nectar from every flower. ', feedback: 'Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.'
 right 'The bee will move forward and collect all of the nectar from every flower, except for one.', feedback: 'Correct!'
 wrong 'The bee will move forward and collect one nectar from each flower. ', feedback: 'Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.'

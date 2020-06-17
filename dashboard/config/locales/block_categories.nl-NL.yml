@@ -3,14 +3,28 @@ nl:
   data:
     block_categories:
       Actions: Acties
+      Advanced: Geavanceerd
+      Behaviors: Gedrag
+      Brushes: Borstels
       Color: Kleur
+      Comment: Commentaar
+      Comments: Opmerkingen
       Conditionals: Voorwaardelijke instructies
       Dancers: Dansers
+      Default: Standaard
       Events: Gebeurtenissen
       Functions: Functies
+      'Functions ': 'Functies '
+      Game/Score: Spel/Score
+      Games/Score: Spellen/Score
       Groups: Groepen
+      Locations: Locaties
       Logic: Logica
       Loops: Lussen
       Math: wiskundige
+      Numbers: Getallen
+      Properties: Eigenschappen
       Text: Tekst
       Variables: Variabelen
+      'Variables ': 'Variabelen '
+      World: Wereld

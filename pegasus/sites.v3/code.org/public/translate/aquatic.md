@@ -16,12 +16,10 @@ Translations for the tutorial progression are done on Crowdin and translations f
 When you click on the following links you will first be asked to select your language.
 
 1. [Minecraft title](https://crowdin.com/translate/codeorg/63/enus-#q=aquatic+title)
-1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/551/enus-#q=%22HOC+2018%22) and [here](https://crowdin.com/translate/codeorg/318/enus-#q=%22HOC+2018%22)
-1. [Tutorial blocks](https://crowdin.com/translate/codeorg/639/enus-#q=craft_)
-1. [Tutorial hints](https://crowdin.com/translate/codeorg/552/enus-#q=%22HOC+2018%22)
+1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/all/enus-af#q=https%3A%2F%2Fstudio.code.org%2Fs%2Fcoursee-2019%2Fstage%2F3%2Fpuzzle%2F) and [congratulations message](https://crowdin.com/translate/codeorg/171466/enus-af#2033820)
+1. [Tutorial blocks](https://crowdin.com/translate/codeorg/all/enus-af#q=https%3A%2F%2Fstudio.code.org%2Fs%2Faquatic%2Fstage%2F1%2Fpuzzle%2F)
 1. [Strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/all/enus-#q=hoc2018_mc)
-1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-#q=mc_2018)
-1. [Video notes](https://crowdin.com/translate/codeorg/46/enus-#q=mc_2018) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
+1. [Video notes](https://crowdin.com/translate/codeorg/all/enus-af#q=https%3A%2F%2Fstudio.code.org%2Fs%2Fcoursee-2019%2Fstage%2F3%2Fpuzzle%2F) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
 
 ## Translating the video captions
 

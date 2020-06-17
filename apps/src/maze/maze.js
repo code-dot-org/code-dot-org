@@ -47,6 +47,7 @@ module.exports = class Maze {
       stepSpeed: 5
     };
 
+    this.shouldSpeedUpInfiniteLoops = true;
     this.stepSpeed = 100;
     this.animating_ = false;
 
@@ -96,7 +97,9 @@ module.exports = class Maze {
 
     this.controller = new MazeController(level, skin, config, {
       methods: {
-        playAudio: studioApp().playAudio.bind(studioApp()),
+        playAudio: (sound, options) => {
+          studioApp().playAudio(sound, {...options, noOverlap: true});
+        },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
         getTestResults: studioApp().getTestResults.bind(studioApp())
@@ -213,23 +216,10 @@ module.exports = class Maze {
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={studioApp().init.bind(studioApp(), config)}
-          rotateContainerWidth={MOBILE_PORTRAIT_WIDTH}
         />
       </Provider>,
       document.getElementById(config.containerId)
     );
-
-    // studioApp.init calls fixViewportForSmallScreens_ which incorrectly
-    // positions the "Rotate Container" image on iOS devices. We correct this
-    // by calling fixViewportForSpecificWidthForSmallScreens_ after the init is
-    // finished.
-    var viewport = document.querySelector('meta[name="viewport"]');
-    if (viewport) {
-      studioApp().fixViewportForSpecificWidthForSmallScreens_(
-        viewport,
-        MOBILE_PORTRAIT_WIDTH
-      );
-    }
   }
 
   /**
@@ -405,8 +395,9 @@ module.exports = class Maze {
           // and failures
           var successes = [];
           var failures = [];
+          const numGrids = this.controller.map.staticGrids.length;
 
-          this.controller.map.staticGrids.forEach((grid, i) => {
+          for (let i = 0; i < numGrids; i++) {
             this.controller.map.useGridWithId(i);
             this.controller.subtype.reset();
 
@@ -420,6 +411,16 @@ module.exports = class Maze {
             this.onExecutionFinish_();
             if (this.executionInfo.terminationValue() === true) {
               successes.push(i);
+            } else if (this.executionInfo.terminationValue() === Infinity) {
+              // terminationValue Infinity means executing took more than the maximum number of steps
+              // so we have declared it to be an infinite loop. If there are a lot of map configurations that result
+              // in infinite loops, the time required to check each one is perceived as buggy/glitchy. To prevent this
+              // perceived lag,  we should stop checking map configurations as soon as we detect an infinite loop
+              // and immediately show the result. It is possible that there is an infinite loop
+              // on only some map configurations. In these cases, we should always show the map configuration
+              // with first infinite loop we detect.
+              failures = [i];
+              break;
             } else {
               failures.push(i);
             }
@@ -428,7 +429,7 @@ module.exports = class Maze {
             this.controller.subtype.drawer.reset();
             this.prepareForExecution_();
             studioApp().reset(false);
-          });
+          }
 
           // The user's code needs to succeed against all possible grids
           // to be considered actually successful; if there are any
@@ -464,7 +465,7 @@ module.exports = class Maze {
           // possible
           this.result = ResultType.TIMEOUT;
           this.executionInfo.queueAction('finish', null);
-          this.stepSpeed = 0;
+          this.stepSpeed = this.shouldSpeedUpInfiniteLoops ? 0 : 100;
           break;
         case true:
           this.result = ResultType.SUCCESS;
@@ -554,11 +555,6 @@ module.exports = class Maze {
     }
 
     this.animating_ = true;
-
-    if (studioApp().isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
 
     this.controller.animationsController.stopIdling();
 
@@ -659,7 +655,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 1e4
+      ticks: 1000
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
@@ -820,10 +816,6 @@ module.exports = class Maze {
         stepButton.removeAttribute('disabled');
       } else {
         this.animating_ = false;
-        if (studioApp().isUsingBlockly()) {
-          // reenable toolbox
-          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-        }
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now

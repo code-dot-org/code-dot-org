@@ -5,10 +5,9 @@ layout: wide_index
 :ruby
   @header["title"] = hoc_s(:map_title)
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
   = view :header
 %h2.center-text= view :hoc_events_counter
 = view :hoc_events_map
-.footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+.footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals:{events_url: resolve_url('/events')})

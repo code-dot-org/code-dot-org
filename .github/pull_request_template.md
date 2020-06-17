@@ -1,7 +1,5 @@
-# Description
-
 <!--
-  A summary of the change, including any relevant motivation and context.
+  Your description goes here: A summary of the change, including any relevant motivation and context.
 
   If relevant, include a description both of the existing behavior and of the new behavior.
 -->

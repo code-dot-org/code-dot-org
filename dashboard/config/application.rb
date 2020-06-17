@@ -26,15 +26,15 @@ module Dashboard
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
-      require 'cdo/rack/whitelist'
+      require 'cdo/rack/allowlist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
       require 'rack/cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
 
-      config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
+      config.middleware.insert_after Rack::Cache, Rack::Allowlist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
     end
 
@@ -108,6 +108,7 @@ module Dashboard
       # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
       # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
       I18n.fallbacks.map(es: :'es-MX')
+      I18n.fallbacks.map(pt: :'pt-BR')
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.

@@ -290,6 +290,12 @@ ne-NP:
       NEW Course 4 Bee For Loops 8: |-
         You've got this! What should your
         increment be to collect 3, 6, 9, 12, 15 nectar?
+      New Gumball Project: Create anything you like and share it!
+      New Ice Age Project: Create anything you like and share it!
+      New Infinity Project: Create anything you like and share it!
+      New Sports Project: 'Create your own game! You''re in charge here: you can change
+        all the rules, mix and match sports, get creative! When you''re done, click
+        Finish to let friends try your game on their phones.'
       Overworld Avoid Monsters: |-
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
@@ -683,19 +689,3 @@ ne-NP:
         by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with
         the bits?"
       k-1 maze 1: Can you make me move West to get to the pig?
-      scrat 16: |-
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
-      scrat 17: |-
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
-      scrat 18: |-
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
-      scrat 19: |-
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20: |-
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!

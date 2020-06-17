@@ -2,7 +2,7 @@ name 'CSPU5_predict_turtleDriver_logicError'
 wrong 'Buttons won\'t work because the button IDs are not descriptive enough'
 right 'Button IDs assigned to wrong event handlers. "Go Forth" button makes the turtle turn left, and "Turn Left" makes the turtle move forward.'
 wrong 'Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward'
-wrong 'Trick Question! There actually are no errors.  The program will work as intended.'
+wrong 'Trick Question! There actually are no errors. The program will work as intended.'
 
 markdown <<MARKDOWN
 # Predict Again!

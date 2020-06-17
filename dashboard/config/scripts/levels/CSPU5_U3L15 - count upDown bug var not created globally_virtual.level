@@ -1,0 +1,75 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:06.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setText": null,
+      "declareAssign_x": null,
+      "assign_x": null,
+      "console.log": null,
+      "addOperator": null,
+      "subtractOperator": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Find the bug in the program and fix it. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "start_blocks": "var Count = 0;\r\nonEvent(\"upButton\", \"click\", function() {\r\n  var count = Count + 1;\r\n  setText(\"countDisplayLabel\", count);\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n  count = count - 1;\r\n  setText(\"countDisplayLabel\", count);\r\n});",
+    "long_instructions": "# Bug Squash!\r\n\r\nThis program has a few different bugs that are related to the same problem.\r\n\r\n# Do This:\r\n* **Run the program.**\r\n* **To see the bug:**\r\n  * Click the up arrow several times.\r\n  * Click the down arrow.\r\n* **Look at the code and fix the problem.**\r\n* **Read about the common mistake** by expanding the area below.\r\n* **Once you've fixed the issue, move on.**\r\n\r\n<details>\r\n\r\n<summary><big><strong>Read about the common mistake here...</strong></big> [click to expand]</summary>\r\n\r\n<big>...thinking you're referencing a global variable when you're not.</big><br>\r\n\r\nA common mistake is basically a syntax/spelling error. These mistakes can be really tricky to work out because you *think* you know what you wrote, but the computer doesn't see it that way :)\r\n<p></p>\r\n\r\n\r\n</details>\r\n\r\n\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"gamePlayScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 45px; overflow: hidden; word-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 273px; height: 50px; position: absolute; left: 25px; top: 10px;\" id=\"label1\">Let's Count!</label>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(0, 173, 188); max-width: 320px; width: 191px; height: 111px; position: absolute; left: 120px; top: 100px; font-size: 50px;\" id=\"countDisplayLabel\">0</label>\r\n    <button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 100px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 215px; background-image: url(https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\" data-canonical-image-url=\"https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg\"/>\r\n    <button id=\"downButton\" data-canonical-image-url=\"https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg\" style=\"padding: 0px; margin: 0px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 175px; top: 220px; height: 100px; background-image: url(https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 143px; height: 18px; position: absolute; left: 85px; top: 355px;\" id=\"label6\">Click on the arrows!</label>\r\n  </div>\r\n</div>",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "slider_speed": "1.0",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "parent_level_id": 17160,
+    "name_suffix": "_virtual",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 04:27:19 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

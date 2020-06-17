@@ -1188,6 +1188,17 @@ sv:
         text: "Detta är ett \"Upprepa för evigt\"-block. Allt inuti detta block kommer att hända för evigt i spelet. Om vi vill att en skådespelare gör något om och om igen utan att spelaren att gör något så lägger vi dessa block inne i ett \"Upprepa för evigt\"-block."
       3:
         text: "I nästa pussel är vårt mål att hjälpa skådespelaren gör ett jobb kontinuerligt. När du lär dig hur upprepa-kommandon fungerar så kommer du att spara massor av tid senare när du bygger ditt eget spel."
+    mc_2016_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+        text: "Om du någonsin vill ta bort ett block, dra bort den från stacken och dra den tillbaka in i verktygslådan."
+      9:
     hoc_dance_events_2019:
       1:
       2:

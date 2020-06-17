@@ -34,6 +34,7 @@
   "bird": "zog",
   "calloutPutCommandsHereRunStart": "Vendos komanda këtu për ti ekzekutuar kur programi starton",
   "calloutBlocklyPlaceGoUpHere": "Vendos një bllok \"shko lart\" për të shkuar lart",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Klikoni në kokën e eventeve që të shikoni blloqet e funksionit të eventeve.",
   "calloutUseArrowButtons": "Shtypni këta butona ose shigjetat në tastierën tuaj që të ekzekutoni eventet e lëvizjeve",
   "calloutUseArrowButtonsAutoSteer": "Ne kemi fshehur kodin që keni shkruar, por ju akoma mundeni të përdorni shigjetat për të lëvizur",

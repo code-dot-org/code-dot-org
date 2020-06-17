@@ -255,8 +255,8 @@ te:
             '"seconds"': సెకండ్లు
       Dancelab_ifDanceIs:
         text: |-
-          "ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
-          {DO1} {DO2}"
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై
@@ -272,8 +272,8 @@ te:
             MOVES.Rest: ఏదీ కాదు
       Dancelab_ifTime:
         text: |-
-          "ఒకవేళ {UNIT} అయితే {OP} {N}
-          {DO1} {DO2}"
+          ఒకవేళ {UNIT} అయితే {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': మెజర్స్
@@ -340,6 +340,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -357,6 +358,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -453,6 +455,7 @@ te:
             '"vintage"': వింటేజ్
             '"warm"': వామ్
       Dancelab_setBackgroundEffectWithPalette:
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
@@ -981,8 +984,8 @@ te:
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_ifDanceIs:
         text: |-
-          "ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
-          {DO1} {DO2}"
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై

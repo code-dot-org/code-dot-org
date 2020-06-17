@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
+import objectFitImages from 'object-fit-images';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -22,7 +23,6 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
-import {applabObjectFitImages} from './applabObjectFitImages';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 
@@ -31,6 +31,8 @@ export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
+
+let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
 var clipboardElement = null;
@@ -383,6 +385,8 @@ designMode.updateProperty = function(
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
+      } else if (DATA_PREFIX_REGEX.test(value)) {
+        element.src = value;
       } else {
         element.src =
           value === ''
@@ -1373,9 +1377,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  setTimeout(() => {
-    applabObjectFitImages();
-  }, 0);
+  setTimeout(() => objectFitImages(), 0);
 }
 
 /**
@@ -1679,7 +1681,12 @@ designMode.renderDesignWorkspace = function(element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    screenIds: designMode.getAllScreenIds()
+    screenIds: designMode.getAllScreenIds(),
+    currentTheme: elementLibrary.getCurrentTheme(designMode.activeScreen()),
+    handleScreenChange: designMode.onPropertyChange.bind(
+      this,
+      designMode.activeScreen()
+    )
   };
   ReactDOM.render(
     <Provider store={getStore()}>

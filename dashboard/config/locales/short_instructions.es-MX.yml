@@ -740,6 +740,9 @@ es-MX:
       Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
         imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
         ¡Necesitas remover algo!"
+      Course 4 Artist For Loops Challenge: "**Desafío:** ¿Puedes resolver cómo usar
+        todo que has aprendido para crear este imagen de polígono, todo con lados
+        de 40 píxeles?"
       Course 4 Artist For Loops inspire: 'Inspiración de juego libre: ¡Ahora has aprendido
         todo lo que necesitas saber para hacer un patrón como éste! Si te inspira
         esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por
@@ -791,6 +794,9 @@ es-MX:
         forma siga siendo el mismo, sin importa cuántos lados tenga? Consejo: Tendrás
         que usar tus bloques de matemáticas (360 dividido por "caras" en dos lugares
         esta vez) '
+      Course 4 Bee 1: "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa
+        el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue
+        el néctar un vez SÓLO si hay un flor."
       Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
         para ver si es una flor o un panal...de lo contrario, ¡haz miel!
       Course 4 Bee 3: El objeto desconocido es una flor o un panal de miel. Ahora
@@ -937,6 +943,8 @@ es-MX:
         la derecha?
       Course 4 SCF 1a: "¿Puedes averiguar cómo recolectar todo este néctar con la
         menor cantidad de bloques posibles?"
+      Course 4 SCF 1b: "¿Puedes resolver cómo colectar todo de este miel con la mínima
+        cantidad posible de bloques?"
       Course 4 SCF 2: 'Utiliza lo que aprendiste en la lección anterior para dibujar
         una imagen como ésta. Nota: El código se vuelve más simple si incorporas parámetros. '
       Course 4 SCF 3: 'Utiliza lo que aprendiste en la lección anterior para dibujar
@@ -1535,6 +1543,73 @@ es-MX:
         de texto para enviar información basada en texto de un lado a otro. Con un
         protocolo basado en texto, puede representar y comunicar fácilmente todo tipo
         de información. '
+      New Artist Project: "¡Dibuja algo impresionante! Tu código ha sido guardado
+        como un proyecto al que puedes regresar en cualquier momento."
+      New Basketball Project: Crea tu propio juego de básquetbol. Puedes cambiar todas
+        las reglas. Cuando hayas terminado, haz clic en Compartir para que tus amigos
+        prueben tu juego en sus teléfonos.
+      New Bounce Project: Crea tu propio juego "Rebote". Puedes cambiar todos los
+        efectos visuales y las reglas. Cuando estés listo, haz clic en Compartir para
+        que tus amigos prueben tu juego en sus teléfonos.
+      New Gumball Project: "¡Crea cualquier cosa que desees compartir!"
+      New Ice Age Project: "¡Crea cualquier cosa que desees compartir!"
+      New Infinity Project: "¡Crea cualquier cosa que desees compartir!"
+      New Minecraft Hero Project: "**Improvisación:**  ¡Es hora de explorar por tu
+        cuenta!"
+      New Sports Project: '¡Crea tu propio juego! Ahora estás al mando: puedes cambiar
+        todas las reglas y combinar deportes. ¡Despliega toda tu creatividad! Cuando
+        estés listo, haz clic en "Finalizar" para que tus amigos prueben tu juego
+        en sus teléfonos.'
+      OPD-K5 whats your plan: Tómate un momento ahora para considerar cómo y cuándo
+        completarás este curso en línea para asegurarte de obtener el mayor beneficio
+        de la experiencia. Cuando hayas armado un buen plan, sigue profundizando en
+        los Fundamentos de la Ciencia de la Computación.
+      OPD-K5-events-2: Agrega el bloque `cantidad normal de aleteo` al evento `cuando
+        hagas clic` y, a continuación, presiona "Ejecutar". Haz clic o toca en el
+        espacio de juego para mover a Flappy hacia el objetivo.
+      OPD-K5-events-3: Intenta agregar un bloque que establezca la velocidad cuando
+        se presiona el botón "Ejecutar". Juega y apunta al objetivo para continuar.
+      OPD-K5-events-4: Conecta el bloque `juego final` al evento `cuando toque el
+        suelo`. Juega y estrella al pájaro contra el suelo para continuar.
+      OPD-K5-events-5: Conecta el bloque al evento `cuando golpee un obstáculo` para
+        que el juego finalice cuando Flappy choque contra el primer grupo de tuberías.
+      OPD-K5-events-6: Agrega un bloque al evento `cuando pase un obstáculo`, y luego
+        presiona "Ejecutar" para que Flappy vuele a través del primer grupo de tuberías
+        y, así, anotar un punto.
+      OPD-K5-forloops-1: Recoge el néctar de cada flor con la menor cantidad de bloques
+        posible.
+      OPD-K5-forloops-2: Escribe el código para ayudar a la abeja a recoger todo el
+        néctar.
+      OPD-K5-forloops-5: Ayuda a la abeja a recoger todo el néctar.
+      OPD-K5-forloops-6: Cuenta en forma regresiva de 5 a 1, de a 1, para intentar
+        recoger este néctar.
+      OPD-K5-forloops-7: Usa un incremento de 2 para intentar recoger estas flores.
+      OPD-K5-projects-2: Escoge un fondo y un mapa, y luego un actor para que sea
+        el héroe de tu juego.
+      OPD-K5-projects-3: Usa eventos y acciones para que tu héroe se mueva. Llega
+        a los objetivos.
+      OPD-K5-projects-4: Agrega dos o más actores a tu juego y haz que se muevan.
+      OPD-K5-projects-5: Encuentra formas interesantes de cambiar el puntaje en tu
+        juego. Obtén el puntaje para mostrar algo más que 0 para continuar.
+      OPD-K5-projects-6: "¡Buen trabajo! Tienes todos los componentes básicos de un
+        juego que funciona. Ahora pasa algo de tiempo asegurándote de que el juego
+        funcione de la manera que quieres."
+      OPD-K5-projects-7: "¡Has terminado! Ahora puedes jugar tu juego o compartirlo
+        con tus amigos o compañeros!"
+      OPD-K5-spritelab-2: Convierte a Dusty (la planta rodadora) en un pez.
+      OPD-K5-spritelab-3: Cambia el comportamiento del pez para que se mueva alrededor
+        del tanque.
+      OPD-K5-spritelab-4: Usa el bloque `configurar color de fondo` para hacer azul
+        el fondo.
+      OPD-K5-spritelab-7: Añade un comportamiento al nuevo amigo del pescado.
+      OPD-K5-variables-2: 'Ahora dibuja tres de esos triángulos, uno al lado del otro.   '
+      OPD-K5-variables-5: Mueve la longitud de 50 a una variable, para que podamos
+        usarla en los próximos desafíos.
+      OPD-K5-variables-6: Ahora usa la variable 'longitud' para hacer que el artista
+        salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los
+        triángulos.
+      OPD-K5-variables-7: Agrega otro grupo de loops al final de tu código para agregar
+        tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!
       Overworld Avoid Monsters: Ir contra un Creeper no es buena idea. Evítalos con
         cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2019: Ir contra un Creeper no es buena idea. Evítalos
@@ -1578,23 +1653,25 @@ es-MX:
         lana de ambas ovejas.
       Overworld Shear Sheep_2019: ¡Hora de esquilar! Usa el comando "esquilar" para
         obtener lana de ambas ovejas.
-      Pixelation - Lesson 15 - Color Shades: Te iniciamos con la fila de sombras de
+      Pixelation - Lesson 15 - Color Shades: Comenzamos con la fila de sombras de
         rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando
         la fila inferior de la imagen con sombras de un color diferente. Aquí tienes
         un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
       Pixelation - Lesson 15 - Color Shades 4x4: 'Comenzamos con la imagen 4x4 que
-        Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores
-        utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con
-        tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos
+        Maddie creó en el video. Tu tarea es llenar una cuadrícula de 4x4 con colores
+        utilizando 12 bits por pixel. Estos son los requisitos: Fila 1: llenar con
+        tonos de rojo. Fila 2: tonos de verde. Fila 3: tonos de azul. Fila 4: tonos
         de gris.'
       Pixelation - Lesson 15 - Complete 3-bit color: Comenzamos con la imagen de 4x2
-        que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine
-        la imagen descubriendo los dos colores que faltan y codifíquelos.
+        que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termina
+        la imagen descubriendo los dos colores que faltan y codifícalos.
+      Pixelation 4x4 Empty: El ancho y la altura ahora están codificados en los datos
+        de pixeles. ¿Puedes descubrir cómo ajustar las dimensiones?
       Pixelation Bee: 'Esta imagen más grande de una abeja codifica el color con 12
-        bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel.
-        Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits.
-        Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta
-        24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+        bits por pixel, pero ver en hex hace más fácil ver el color de cada pixel.
+        Si cambias al modo binario (sujétate el sombrero), es un montón de bits. Aquí
+        hay otra cosa sorprendente para probar: desliza los bits por pixel hasta 24
+        bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
       Pixelation Flappy: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits
         por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente
         imagen que es aún más sofisticada, pero más fácil de entender.
@@ -2124,6 +2201,8 @@ es-MX:
         el cerdo! '
       courseA_maze_seq10_2019: 'Desafío: ¡Evita el TNT para que el pájaro llegue hasta
         el cerdo! '
+      courseA_maze_seq10_copy: 'Desafío: ¡Rodea el TNT para que el pájaro llegue hasta
+        el cerdo! '
       courseA_maze_seq11: Muévete en una dirección, y luego en otra, para que el pájaro
         llegue hasta el cerdo.
       courseA_maze_seq11_2018: Muévete en una dirección, y luego en otra, para que
@@ -2144,6 +2223,7 @@ es-MX:
       courseA_maze_seq5: Inténtalo tu mismo/a desde el comienzo.
       courseA_maze_seq5_2018: Prueba este.
       courseA_maze_seq5_2019: Prueba este.
+      courseA_maze_seq5_copy: Inténtalo tu mismo/a desde el comienzo.
       courseA_maze_seq5a_2018: "¿Qué puedes agregar al final de este código para que
         el pájaro llegue hasta el cerdo?"
       courseA_maze_seq5a_2019: "¿Qué puedes agregar al final de este código para que
@@ -2154,13 +2234,19 @@ es-MX:
         el pájaro pueda llegar hasta el cerdo!"
       courseA_maze_seq6_2019: "¡Mueve en una dirección, y luego en otra, para que
         el pájaro pueda llegar hasta el cerdo!"
+      courseA_maze_seq6_copy: "¡Mueve en una dirección, y luego en otra, para que
+        el pájaro pueda llegar hasta el cerdo!"
       courseA_maze_seq7: "¡Descubre qué falta y luego agrega bloques para que el pájaro
         llegue hasta el cerdo!"
+      courseA_maze_seq7_copy: "¡Descubre qué falta y luego agrega bloques para que
+        el pájaro llegue hasta el cerdo!"
       courseA_maze_seq8: "¡Resuelve este nivel y haz que el pájaro llegue hasta el
         cerdo!"
       courseA_maze_seq8_2018: "¡Resuelve este nivel y haz que el pájaro llegue hasta
         el cerdo!"
       courseA_maze_seq8_2019: "¡Resuelve este nivel y haz que el pájaro llegue hasta
+        el cerdo!"
+      courseA_maze_seq8_copy: "¡Resuelve este nivel y haz que el pájaro llegue hasta
         el cerdo!"
       courseA_maze_seq9: "¡Añade bloques para depurar este nivel y que el pájaro llegue
         hasta el cerdo!"
@@ -2189,25 +2275,17 @@ es-MX:
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events3_2018: Conecta el bloque `mover a la izquierda` al bloque
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
-      courseA_playLab_events3_2019: Conecta el bloque `mover a la izquierda` al bloque
-        de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events4: Agrega bloques para moverte a la derecha si se hace
         clic en el botón `derecha`.
       courseA_playLab_events4_2018: Agrega otro bloque de evento para que Jorge se
-        mueva a la derecha si haces clic en el botón `derecha`.
-      courseA_playLab_events4_2019: Agrega otro bloque de evento para que Jorge se
         mueva a la derecha si haces clic en el botón `derecha`.
       courseA_playLab_events5: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
       courseA_playLab_events5_2018: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
-      courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
-        y hacia abajo si se presionan los botones `arriba` y `abajo`.
       courseA_playLab_events6: "¡Hazlo aún más interesante! Cambia el fondo y reproduce
         un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events6_2018: "¡Hazlo aún más interesante! Cambia el fondo y
-        reproduce un sonido aleatorio cuando se hace clic en Jorge."
-      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
         reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7: Agrega todo lo que quieras a este juego. ¿Puedes hacer
         que el dinosaurio desaparezca cuando Jorge se encuentra con él?
@@ -3156,11 +3234,15 @@ es-MX:
         bucle que utilice un solo bloque dentro de un bloque `repetir`.
       courseC_starWars_loops2_2019: Para obtener toda la chatarra, intenta crear un
         bucle que utilice un solo bloque dentro de un bloque `repetir`.
+      courseC_starWars_loops2_copy: Para obtener toda la chatarra, intenta crear un
+        bucle que utilice un solo bloque dentro de un bloque `repetir`.
       courseC_starWars_loops4: En este desafío, ¡dos bucles `repetir` te ayudarán
         a llevar a BB-8 hasta la chatarra con la menor cantidad de bloques posible!
       courseC_starWars_loops4_2018: En este desafío, ¡dos bucles `repetir` te ayudarán
         a llevar a BB-8 hasta la chatarra con la menor cantidad de bloques posible!
       courseC_starWars_loops4_2019: En este desafío, ¡dos bucles `repetir` te ayudarán
+        a llevar a BB-8 hasta la chatarra con la menor cantidad de bloques posible!
+      courseC_starWars_loops4_copy: En este desafío, ¡dos bucles `repetir` te ayudarán
         a llevar a BB-8 hasta la chatarra con la menor cantidad de bloques posible!
       courseC_starWars_loops5: "¡Haz que BB-8 recoja toda la chatarra lo más rápido
         posible!"
@@ -3168,11 +3250,15 @@ es-MX:
         rápido posible!"
       courseC_starWars_loops5_2019: "¡Haz que BB-8 recoja toda la chatarra lo más
         rápido posible!"
+      courseC_starWars_loops5_copy: "¡Haz que BB-8 recoja toda la chatarra lo más
+        rápido posible!"
       courseC_starWars_loops6: "¡Los bucles pueden funcionar con más de un bloque
         adentro! ¿Podrías hacer un bucle con esta secuencia?"
       courseC_starWars_loops6_2018: "¡Los bucles pueden funcionar con más de un bloque
         adentro! ¿Podrías hacer un bucle con esta secuencia?"
       courseC_starWars_loops6_2019: "¡Los bucles pueden funcionar con más de un bloque
+        adentro! ¿Podrías hacer un bucle con esta secuencia?"
+      courseC_starWars_loops6_copy: "¡Los bucles pueden funcionar con más de un bloque
         adentro! ¿Podrías hacer un bucle con esta secuencia?"
       courseC_starWars_loops7: "¿Puedes conseguir toda la chatarra con un solo bucle?
         Intenta programar todo y luego busca el código que se repite para ponerlo
@@ -3181,6 +3267,9 @@ es-MX:
         bucle? Intenta programar todo y luego busca el código que se repite para ponerlo
         en un bucle."
       courseC_starWars_loops7_2019: "¿Puedes conseguir toda la chatarra con un solo
+        bucle? Intenta programar todo y luego busca el código que se repite para ponerlo
+        en un bucle."
+      courseC_starWars_loops7_copy: "¿Puedes conseguir toda la chatarra con un solo
         bucle? Intenta programar todo y luego busca el código que se repite para ponerlo
         en un bucle."
       courseC_starWars_loops9: "¡Usa lo que has aprendido para recoger toda la chatarra!"
@@ -3442,11 +3531,15 @@ es-MX:
         Si hay una flor, recoge el néctar.
       courseD_bee_conditionals1_predict1_2019: Mira si hay una flor debajo de la nube.
         Si hay una flor, recoge el néctar.
+      courseD_bee_conditionals1_predict1_copy: Mira si hay una flor debajo de la nube.
+        Si hay una flor, recoge el néctar.
       courseD_bee_conditionals2: 'Antes de recoger el néctar, mira debajo de cada
         nube para ver si hay una flor escondida.  '
       courseD_bee_conditionals2_2018: 'Antes de recoger el néctar, mira debajo de
         cada nube para ver si hay una flor escondida.  '
       courseD_bee_conditionals2_2019: 'Antes de recoger el néctar, mira debajo de
+        cada nube para ver si hay una flor escondida.  '
+      courseD_bee_conditionals2_copy: 'Antes de recoger el néctar, mira debajo de
         cada nube para ver si hay una flor escondida.  '
       courseD_bee_conditionals3: |-
         Ayuda a la abeja a recoger todo el néctar.
@@ -3460,17 +3553,25 @@ es-MX:
         Ayuda a la abeja a recoger todo el néctar.
 
         Solo puedes recoger el néctar de las flores, pero puedes revisar todos los espacios para ver si hay una flor.
+      courseD_bee_conditionals3_copy: |-
+        Ayuda a la abeja a recoger todo el néctar.
+
+        Solo puedes recoger el néctar de las flores, pero puedes revisar todos los espacios para ver si hay una flor.
       courseD_bee_conditionals4: Obtén todo el néctar con la menor cantidad de bloques
         posible.
       courseD_bee_conditionals4_2018: Obtén todo el néctar con la menor cantidad de
         bloques posible.
       courseD_bee_conditionals4_2019: Obtén todo el néctar con la menor cantidad de
         bloques posible.
+      courseD_bee_conditionals4_copy: Obtén todo el néctar con la menor cantidad de
+        bloques posible.
       courseD_bee_conditionals5: Recoge todo el néctar con la menor cantidad de bloques
         posible
       courseD_bee_conditionals5_2018: Recoge todo el néctar con la menor cantidad
         de bloques posible
       courseD_bee_conditionals5_2019: Recoge todo el néctar con la menor cantidad
+        de bloques posible
+      courseD_bee_conditionals5_copy: Recoge todo el néctar con la menor cantidad
         de bloques posible
       courseD_bee_conditionals6: Algunas de estas nubes pueden tener una panal debajo
         de ellas. ¡Asegúrate de revisar si hay un panal escondido debajo de cada nube!
@@ -4010,23 +4111,34 @@ es-MX:
         de 25 pixeles.
       courseE_artist_functions10_2019: Esta vez, usa líneas de 8 hexágonos con lados
         de 25 pixeles.
+      courseE_artist_functions1_copy: |-
+        Usa cuadrados con lados de 100 pixeles para ayudar al zombi a dibujar gafas.\
+        El puente entre las gafas es de 75 pixeles de largo.
       courseE_artist_functions2: Esta vez, usa la función `dibujar un cuadrado` para
         crear los vasos.
       courseE_artist_functions2_2018: 'Usa la función `dibujar un cuadrado` para crear
         las gafas. '
       courseE_artist_functions2_2019: 'Usa la función `dibujar un cuadrado` para crear
         las gafas. '
+      courseE_artist_functions2_copy: Esta vez, usa la función `dibujar un cuadrado`
+        para crear los vasos.
       courseE_artist_functions3: Puedes agregar un bloque `repetir` para hacer este
         dibujo.
       courseE_artist_functions3_2018: Desarrolla una función que creará esta estrella.
       courseE_artist_functions3_2019: Desarrolla una función que creará esta estrella.
+      courseE_artist_functions3_copy: Puedes agregar un bloque `repetir` para hacer
+        este dibujo.
       courseE_artist_functions4: Ahora que puedes dibujar una estrella, ¡intenta dibujar
         cuatro!
+      courseE_artist_functions4_copy: Ahora que puedes dibujar una estrella, ¡intenta
+        dibujar cuatro!
       courseE_artist_functions5: Dibuja solamente esas tres estrellas para finalizar
         este desafío.
       courseE_artist_functions5_2018: Dibuja solamente esas tres estrellas para finalizar
         este desafío.
       courseE_artist_functions5_2019: Dibuja solamente esas tres estrellas para finalizar
+        este desafío.
+      courseE_artist_functions5_copy: Dibuja solamente esas tres estrellas para finalizar
         este desafío.
       courseE_artist_functions6: Dibuja un cuadrado para crear esta ventana. Luego,
         gira 90 grados antes de dibujar otro, y así sucesivamente.
@@ -4752,6 +4864,18 @@ es-MX:
       iceage_warn_ice_age: Cambia la escena a un fondo con hielo y configura la velocidad
         de Sid (actor 1) en rápido.
       k-1 maze 1: "¿Me llevarías al Oeste para agarrar al cerdo? "
+      mike3bit: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos
+        dejado de lado los últimos píxeles. Termina la imagen descubriendo qué colores
+        faltan y codificándolos.
+      mike3bitbird: Este es un ejemplo de una imagen hecha con color de 3 bits. Intenta
+        cambiarlo para entender cómo funciona. Si deseas restablecer la imagen, presiona
+        "Comenzar de nuevo".
+      mike3bitfreeplay: "¡Haz algo increíble y compártelo con tus compañeros de clase!
+        Puedes copiar y pegar el valor de un píxel para usarlo repetidamente."
+      mike3bitmario: |-
+        Un codificador binario descuidado escribió UN 0 o 1 adicional en algún lugar dentro de los datos de esta imagen. ¡La parte adicional que está causando que Mario falle!
+
+        ¡Elimina el bit adicional para restaurar a Mario a la normalidad!
       ramp_artist_loops1: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2018: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2019: Avanza 60 pixeles para completar este desafío.
@@ -4786,14 +4910,3 @@ es-MX:
       ramp_artist_loops9: Dibuja un cuadrado para resolver este desafío.
       ramp_artist_loops9_2018: Dibuja un cuadrado para resolver este desafío.
       ramp_artist_loops9_2019: Dibuja un cuadrado para resolver este desafío.
-      scrat 16: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque "si" para llevarme
-        hasta allí con el menor número de bloques.
-      scrat 17: Ok, vamos a hacerlo de nuevo para practicar - éste no es muy diferente,
-        ¡pero ten cuidado con la pared!
-      scrat 18: El bloque "If-else" verifica una condición y después hace una cosa
-        u otra. Para llevarme a la bellota intenta usar este nuevo bloque.
-      scrat 19: Una práctica más del bloque "si-sino", ¿puedes hacerlo bien en tu
-        primer intento?
-      scrat 20: "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
-        más complejo? Si lo haces correctamente, puedo caminar cualquier camino curvo
-        sin importar su longitud. ¡Date prisa! ¡El hielo se está derritiendo!"

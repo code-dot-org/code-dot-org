@@ -32,7 +32,6 @@
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
-    = render partial: 'layouts/javascript_strings'
   %body
     - if session[:assumed_identity]
       - if Rails.env.production?
@@ -84,7 +83,7 @@
         - unless view_options[:no_footer] || view_options[:small_footer]
           .push
 
-      - if view_options[:small_footer]
+      - if view_options[:small_footer] && !view_options[:no_footer]
         = render partial: 'layouts/small_footer', locals: {channel: view_options[:channel]}
 
       - if view_options[:responsive_content]
@@ -103,5 +102,5 @@
       = render partial: 'shared/maybe_set_hoc_secret'
 
     = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
-
+    = render partial: 'layouts/parent_email_banner'
     = yield :body_scripts

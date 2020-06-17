@@ -1,5 +1,5 @@
 name 'Circuit Playground Map: LEDS'
 display_name 'Circuit Playground: LEDs'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/maker_leds/" type="text/html"  style="width: 100%; height: 700px;"></object>
+<object data="https://studio.code.org/docs/csd/maker_leds/" type="text/html"  style="width: 100%; height: 700px;"></object>
 MARKDOWN

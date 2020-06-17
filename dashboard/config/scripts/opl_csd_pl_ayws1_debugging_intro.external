@@ -1,0 +1,18 @@
+name 'OPL - CSD-PL AYWS1 Debugging Intro'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Debugging
+
+## What is debugging?
+
+Debugging is the process of finding and fixing problems in code. It is a major part of programming and a critical skill for students to develop. 
+
+
+## How does debugging connect to the curriculum?
+
+Occasionally students will encounter a debugging level where they are explicitly asked to identify and fix bugs in provided code. While these are great opportunities to highlight specific kinds of errors and misconceptions, it is important to build a culture of constant debugging, as debugging is not an activity that is done in isolated moments.
+
+MARKDOWN

@@ -117,7 +117,8 @@ fi-FI:
       CourseD_Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -218,7 +219,8 @@ fi-FI:
       Dance_2019_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -326,7 +328,8 @@ fi-FI:
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -422,6 +425,8 @@ fi-FI:
           \*Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
 
           _Tämä taso päättyy 8 tahdin jälkeen._
+      Dance_Party_extras_alternate_2019:
+        alternate: Vaihtoehtoinen lohko on Tanssijat-luokassa.
       Function intro Ryan:
         Function_intro_Ryan_a: Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile
           tehtävän selvittämistä kutsumalla sitä kaksi kertaa.
@@ -567,6 +572,12 @@ fi-FI:
           piirrät seuraavan neliön.
         courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun
           teet lasit.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Jokaisella neliöllä on 100 kuvapisteen sivut,
+          se tarkoittaa, että sinun täytyy siirtyä eteenpäin 175 kuvapistettä ennenkuin
+          piirrät seuraavan neliön.
+        courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun
+          teet lasit.
       courseE_artist_functions2:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
@@ -574,5 +585,8 @@ fi-FI:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"

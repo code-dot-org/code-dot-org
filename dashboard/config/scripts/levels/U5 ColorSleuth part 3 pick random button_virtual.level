@@ -1,0 +1,82 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:23.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "setProperty"
+        ],
+        "matchType": "exact",
+        "minTimes": 5,
+        "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      },
+      {
+        "entries": [
+          "randomNumber"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "There should be a call to randomNumber(min,max) in the code as part of generating a random button ID like \"button\"+some number"
+      }
+    ],
+    "teacher_markdown": "**Common Mistake**\r\n\r\n* It's likely that some students will forget to remove the quotation marks and accidentally try to use `\"randButtonID\"` as the id in setProperty like this:\r\n\r\n`setProperty(\"randButtonID\", \"background-color\", diffColor);`\r\n\r\nThere should be no quotation marks *because you want to use the value stored in randButtonID not the string \"randButtonID\".*  It should look like the example in the instructions:\r\n\r\n`setProperty(randButtonID, \"background-color\", diffColor);`\r\n",
+    "long_instructions": "# How to pick a random button\r\n\r\n<img src=\"https://images.code.org/cfa13bbc3d8e09f4ed6ccd38d46558be-image-1481036468174.png\" style=\"float: right\">\r\n\r\nNext, the app needs pick one of the squares at random to be a different color than the rest. Also, you don't want the color to be orange every time. Notice how all the buttons have IDs that are pretty much the same. <em>\"button1\", \"button2\", \"button3\", \"button4\"</em>.  There's a pattern.  It's always: <em>\"button\" + some number</em>\r\n\r\nYou can use <code>randomNumber</code> as the number, and then add it onto the string \"button\" using `+` to generate one of the button IDs like this: \r\n\r\n<code>var randButtonId = \"button\"+randomNumber(1,4);</code>\r\n\r\n## Do This:\r\n* Pick a button at random to make a different color\r\n\r\nNotice that there is really only one new line - to make the `randButtonID` variable.  \r\n\r\n\t\tvar diffColor = rgb(250, 175, 20);\t\r\n\t--> var randButtonId = \"button\"+randomNumber(1,4);\r\n\t\tsetProperty(randButtonId, \"background-color\", diffColor);\r\n\r\n* Replace *\"button3\"* as the id in setProperty with *randButtonID*.\r\n* Add `console.log(randButtonId)` to your code after you create the button ID so you can see which button is supposed to have the different color.  It might be hard to spot!\r\n\r\n<details><summary><strong>Stuck?</strong> [Read about a common problem.]</summary>\r\n\r\n* It's common to forget to remove the quotation marks and accidentally try to use `\"randButtonID\"` as the id in setProperty like this:\r\n\r\n`setProperty(\"randButtonID\", \"background-color\", diffColor);`\r\n\r\nThere should be no quotation marks *because you want to use the value stored in the randButtonID variable, not the string \"randButtonID\".*  It should look like the example in the instructions:\r\n\r\n`setProperty(randButtonID, \"background-color\", diffColor);`\r\n\r\n</details>",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17250,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "Add log conditions for randomNumber",
+  "audit_log": "[{\"changed_at\":\"2020-04-20 14:34:36 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 14:50:11 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 12:41:32 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-04-22 20:09:03 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -34,6 +34,7 @@
   "bird": "թռչուն",
   "calloutPutCommandsHereRunStart": "Ներդրեք հրամանները այստեղ էլ նրանց ետեւից վազել, երբ ծրագիրը սկսում",
   "calloutBlocklyPlaceGoUpHere": "Տեղի է \"գնալ մինչեւ \" բլոկի այստեղ գնալ մինչեւ",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Սեղմիր իրադարձությունների տողի տեսնել, միջոցառումը ֆունկցիան նյութից.",
   "calloutUseArrowButtons": "Անցկացնել ներքեւ այս կոճակները կամ arrow ստեղները ձեր ստեղնաշարի կաշխատեցնի այդ քայլին իրադարձությունները",
   "calloutUseArrowButtonsAutoSteer": "Մենք թաքցրել կոդը դուք գրել, բայց դուք կարող եք դեռ օգտագործել arrow բանալիները է շարժվել",

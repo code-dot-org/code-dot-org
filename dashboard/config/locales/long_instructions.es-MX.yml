@@ -4754,22 +4754,6 @@ es-MX:
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
         -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
-      CSD U3 - conditionals - first conditional_2019: |-
-        <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
-
-        # Sentencia si
-
-        Las expresiones booleanas que usaste anteriormente nos permiten hacer preguntas, pero, para _responder esas preguntas_, necesitamos usar una sentencia `si`.
-
-        Las sentencias `si` suelen ir dentro de tu bucle dibujar porque queremos comprobarlas cada vez que se ejecuta el bucle.
-
-        # Haz esto
-
-        Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
-
-        -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
-        -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - transition: |-
         # Expresiones booleanas
 
@@ -7125,6 +7109,14 @@ es-MX:
 
         ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2018: |-
+        # Dibujar figuras
+
+        Explora esta herramienta que te permite dibujar diferentes figuras de colores.
+
+        Asegúrate de presionar "Ejecutar" y prueba activar la cuadrícula para colocar las figuras con precisión.
+
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
+      CSD U3 Plotting Shapes Shape Lab_2019: |-
         # Dibujar figuras
 
         Explora esta herramienta que te permite dibujar diferentes figuras de colores.
@@ -14916,9 +14908,9 @@ es-MX:
       CSDU4 - Design Mode - 17: |-
         # Actualización de ID y depuración con el registro de la consola
 
-        Aquí tenemos un par de botones con controladores de eventos y sentencias de `registro.consola`, ¡pero todos están cambiados!
+        Aquí tenemos un par de botones con controladores de eventos y sentencias de `console.log()`, ¡pero todos están cambiados!
 
-        Deberíamos haberles dado a los botones mejores nombres de identificación para poder distinguir la diferencia en función de la identificación. **¿Puedes actualizar los nombres de ID y los mensajes `registro.consola` para que coincidan con el botón correcto?**
+        Deberíamos haberles dado a los botones mejores nombres de identificación para poder distinguir la diferencia en función de la identificación. **¿Puedes actualizar los nombres de ID y los mensajes `console.log()` para que coincidan con el botón correcto?**
 
         # Hacer esto
 
@@ -14926,7 +14918,7 @@ es-MX:
 
         -   Cambia al Modo de código y observa que los **desplegables de ID se han actualizado para incluir los nuevos ID**. (Aún debes seleccionar la ID correcta del menú desplegable).
 
-        -   **Actualiza los mensajes `registro.consola`** para que coincidan con los botones.
+        -   **Actualiza los mensajes `console.log()`** para que coincidan con los botones.
       CSDU4 - Design Mode - 18: "# Capas y eliminación\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
         style=\"width: 200px; float: right\">Los elementos de la interfaz de usuario
         pueden superponerse entre sí, por lo que querrás la posibilidad de cambiar
@@ -14995,13 +14987,13 @@ es-MX:
 
         Las aplicaciones controladas por eventos están formadas por elementos que pueden desencadenar eventos (como botones) y fragmentos de código llamados **controladores de eventos**. Los controladores de eventos son comandos que "observan" que ciertos eventos ocurran en tu programa, y ​​luego ejecutan alguna función cuando ocurre un evento.
 
-        Cuando creas un controlador de eventos por primera vez desde el Modo de diseño, coloca un bloque `registro.consola ()` para ayudarte a probar el evento, pero puedes colocar casi cualquier código que desees dentro del controlador de eventos.
+        Cuando creas un controlador de eventos por primera vez desde el Modo de diseño, coloca un bloque `console.log()` para ayudarte a probar el evento, pero puedes colocar casi cualquier código que desees dentro del controlador de eventos.
 
         # Hacer esto
 
         La caja de herramientas tiene un nuevo bloque llamado `configurarTexto` que te permite cambiar el texto de un elemento en la pantalla. Vas a modificar el controlador de eventos de botón para que cambie el texto del título al hacer clic.
 
-        -   Arrastra un bloque `configurarTexto ()` al _interior_ de la función de devolución de llamada `enEvento ()` (donde está actualmente el bloque `registro.consola ()`)
+        -   Arrastra un bloque `configurarTexto ()` al _interior_ de la función de devolución de llamada `enEvento ()` (donde está actualmente el bloque `console.log()`)
         -   En el menú desplegable del bloque, selecciona "EtiquetaDeTítulo" (la identificación del elemento que deseas cambiar)
         -   En la segunda entrada del bloque, reemplaza "texto" con un nuevo título para la aplicación
         -   Ejecuta tu programa y haz clic en el botón para verlo funcionar
@@ -15414,7 +15406,7 @@ es-MX:
       CSDU6 - UI and Inputs - getText: |-
         # obtenerTexto
 
-        Intenta configurar un controlador de eventos que obtenga el texto del menú desplegable siempre que un usuario seleccione un nuevo elemento del menú desplegable. Necesitarás usar el getter `obtenerTexto()`. Siempre que uses un getter, debes guardarlo en una variable. Usa `registro.consola()` para asegurarte de que funciona.
+        Intenta configurar un controlador de eventos que obtenga el texto del menú desplegable siempre que un usuario seleccione un nuevo elemento del menú desplegable. Necesitarás usar el getter `obtenerTexto()`. Siempre que uses un getter, debes guardarlo en una variable. Usa `console.log()` para asegurarte de que funciona.
       CSDU6 - UI and Inputs - hide show: |-
         # Ocultar y mostrar
 
@@ -16169,6 +16161,42 @@ es-MX:
         puedes verificar si el interruptor de alternar está en la posición `open`
         o `close` en otra parte de tu programa. \n\n¿Qué cosas diferentes hace el
         botón cuando el interruptor de alternar está en `open` o `close`?"
+      Course 4 Artist 1: "Ayúdame dibujar una caja.\\\n(Cada línea es 200 píxeles
+        largo) "
+      Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
+        width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tiempo de Juego:**
+        Aquí está el código para un cuadro interesante.   \n\n¿Qué pasa cuando lo
+        repites varias veces, girando entre cada iteración?\n\nNota que los giros
+        añaden hasta _420 grados_, que significa que cuando tu artista está hecho
+        de dibujar, estará mirando una dirección diferente que cuando empezaste. Esa
+        nueva dirección es exactamente _60 grados_ a la _derecha_ de dónde comenzaste.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repite
+        4</b></summary>\n<br/>\n\nSi quieres tener un círculo completo en sólo 4 repeticiones,
+        tienes que el artista gire un total de **360 grados/4 = 90 grados** cada vez.
+        Puedes hacerlo por añadir un bloque extra 'girar a la derecha por 30 grados'
+        al loop exterior (dado que **60+30 = 90**.)\n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repite
+        6</b></summary>\n<br/>\n\nCuando repites el cuadro tal cual por 6 veces, consigues
+        un rotación total de **6x60 grados** que es un ciclo completo de **360 grado**.\n\n<img
+        src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"
+        \ width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repite
+        12</b></summary>\n\n<br/>\n\nSi quieres repetir el imágen 12 veces, necesitas
+        que el artista gira un total de **360 grados/12 = 30 grados** cada iteración.
+        Eso significa que tendrás que ajustar el artista detrás un poco con 'girar
+        izquierda por 30 grados' antes que lo repitas el cuadro otra vez.\n\n<br/><br/>\n<img
+        src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n\n</details>\n</h4>\n\n¡Ahora
+        es tu turno! ¿Puedes recrear cada imagen por repetir el cuadro inicial?  "
+      Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
+        width=\"200px\"/>\n\n¡Ahora para un reto! \n\nAquí está un diseño que usa
+        sólo bloques que ya se han mostrado. ¿Puedes revolver cómo recrearlo? No dudes
+        en usar prueba y error. No eres esperado de obtenerlo la primera vez.\n\nEl
+        cuadro repetido es casi identical a lo de último puzzle, excepto que la longitud
+        usada en el primero loop es un poco más pequeño. "
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png" width="250px"/>
+
+        Inspiración de Juego Libre: ¡Ahora has aprendido todo que tienes que saber para hacer un estampado como este! Si este imagen te inspira, trata de hacer algo similar. Si no, crea algo todo tuyo.
       Course 4 Artist 13: "¿Aún jugando? ¡Aquí hay un lienzo en blanco en donde usted
         podrá diseñar lo que quiera!"
       Course 4 Artist 2: "¿Puedes enlazar este código para que dibuje de gris el cuadrado?"
@@ -16183,6 +16211,8 @@ es-MX:
         simétrico. Los triángulos son equiláteros y tienen 50 píxeles de longitud.
       Course 4 Artist 6: 'Completa el código para dibujar estos triángulos. Sugerencia:
         3 triángulos en una rotación de 360 grados.'
+      Course 4 Artist 7: 'Ahora anida este loop dentro del otro loop para dibujar
+        10 triángulos. '
       Course 4 Artist 8: Dibuje este sol enlazando este bloque de código íntegramente
         12 veces.
       Course 4 Artist 8a: "¿Recuerdas esta forma? ¡Ahora vamos a dejarte construirla
@@ -16196,8 +16226,19 @@ es-MX:
         hacia abajo.  \n\n* * *\n\nEl artista llenará los cuadrados cuando vea un
         1 y los ignorará cuando vea un 0. \n\n* * *\n\n**Ejecuta este código para
         ver cómo el artista usa el sistema binario para dibujar este patrón.**"
+      Course 4 Artist Binary Free Play 2b: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Ahora has aprendido
+        todo que tienes que saber para crear un estampado como este! \n\nSi este imagen
+        te inspira, trata de hacer algo similar. Si no, crea algo todo de tu mismo.
+        \n<br/>"
       Course 4 Artist For Loops 1: 'Dibuje este triángulo que tiene un tamaño de 50
         píxeles. Sugerencia: Use un bloque de repetición.'
+      Course 4 Artist For Loops 11: "¿Recuerdas de escenario previo dónde usamos un
+        variable para controlar el número de lados en una forma? Vamos a hacer lo
+        mísmo con el variable 'ficha' ahora. \n\nEste estampado empieza con un triángulo
+        y añade un lado cada vez hasta que dibuje un decágono (10 lados). Cada lado
+        debería ser 100 píxeles de largo. \n\n¿Cómo usarías el variable 'ficha' de
+        'for' loop para recrear este dibujo?"
       Course 4 Artist For Loops 11a: ¡Vamos a poner todo junto! Usando tu conocimiento
         de "ciclos for" y del "contador", crea este dibujo donde cada forma tiene
         dos partes más que la anterior. Asegúrate de que cada lado sea 10 veces más
@@ -16207,6 +16248,12 @@ es-MX:
         Si giras un poco más o menos de lo que lo harías normalmente para una forma, crearás un efecto nítido.
 
         Prueba usar una parte del código del último nivel, pero gira 89 grados para crear esta espiral cuadrada torcida.
+      Course 4 Artist For Loops 15: "**Juego Libre:** Trata de hacer algunos dibujos
+        tuyos usando los 'for loops'. Hemos añadido pocos variables para ti también."
+      Course 4 Artist For Loops 2: |-
+        He puesto el código para dibujar un triángulo dentro un 'for loop' que cuenta 50 hasta 100 por 10.
+
+        **NOTA:** Asegura que ves el código_antes_que\_hagas un clic en "Run".
       Course 4 Artist For Loops 3: El triángulo más pequeño tiene 20 píxeles de lado,
         el más grande tiene 200 píxeles de lado y cada triángulo es 20 píxeles más
         grande que el anterior. Actualiza el bucle "for" para dibujar estos triángulos.
@@ -16219,28 +16266,94 @@ es-MX:
       Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
         imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
         ¡Necesitas remover algo!"
+      Course 4 Artist For Loops Challenge: |-
+        **Desafío:** ¿Puedes resolver cómo usar todo que has aprendido para crear este imagen de polígono, todo con lados de 40 píxeles?
+
+        Acuérdate que para crear un espiral, no puedes cerrar el polígono. Significa que cada forma tendrá que tener un lado menos que normal.
+      Course 4 Artist For Loops inspire: |-
+        <br/><br/>
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
+        <br/><br/>
+        **Inspiración de Juego-Libre:** ¡Ahora has aprendido todo que tienes que saber para crear un estampado como este! Si esta pictura te inspira, trata de crear algo similar. Si no, crea algo todo de tú mísmo.
+      Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Ahora has aprendido
+        que tienes que saber para crear un estampado como este! \n\nSi esta pictura
+        te inspira, trata de hacer algo similar. Si no, crea algo todo de tu mísmo. "
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"
+        width=\"250px\"/>\n\n**Nivel de Desafío:** Usa lo que has aprendido en esta
+        etapa y otras para resolver cómo hacer el dibujo arriba. "
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Has aprendido todo que
+        tienes que saber para crear un estampado como este! Si este imagen te inspira,
+        trata de hacer algo similar. Si no, crea algo de tú mísmo. "
+      Course 4 Artist Vars 1: "Dibujemos un triángulo equilátero. \n\nTiene que ser
+        exactamente 100 píxeles largo por cada lado.\n\n<br/>"
+      Course 4 Artist Vars 11: "Aquí están más códigos complicados que usan los mísmos
+        conceptos del último puzzle - ¿a qué debes asignar el variable \"lados\" para
+        dibujar esta imagen hecha de cuadros?\n\n<p style=\"font-size:small; padding:
+        15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;\">\n\tSólo
+        para divertirse: ¡Trata de usar números diferentes para ver lo que pasa al
+        adorno!\n</p>"
+      Course 4 Artist Vars 12: |-
+        Asignemos el variable ' lados' a 5. ¡Cuántos más lados añadamos a este algoritmo, más grande este estampado enterno será!
+
+        Nota que hay otro variable llamado 'longitud'.
+        Ahora podemos usar el variable en cualquier sitio dónde tenemos un bloque 'mover adelante'.
+
+        Asigna el variable 'longitud' a 75 para esta forma.
+      Course 4 Artist Vars 13: "Cuando una forma tiene muchs lados, cada lado tiene
+        que ser más corto si quieres el estampado entero para caber en la pantalla.\n\nRecreemos
+        el algoritmo para este estampado asombroso, pero en lugar de asignar manualmente
+        el variable 'longitud', usemos un bloque de matemática con el variable 'lados'
+        dentro para asegurar que cada forma quepa correctamente. \n\nEl perímetro
+        de cada polígono es 300 píxeles."
       Course 4 Artist Vars 14: 'Juego Gratis: revísalo, ahora tu algoritmo está anidado
         dentro de otro circuito. Experimenta cambiando los valores de tus dos variables
         para dibujar patrones asombrosos.'
+      Course 4 Artist Vars 2: En lugar de usar 'mover adelante por 150', el bloque
+        'mover' ahora está referiendo a un variable llamado 'longitud'. ¿Puedes asignar
+        'longitud' a 150 para dibujar este nuevo triángulo?
       Course 4 Artist Vars 4: Ahora quiero hacer un rectángulo que es dos veces tan
         alto como ancho. Tenemos una variable llamada "ancho" que se encuentra a 100.
         ¿Puedes usar los bloques de matemáticas para completar el código?
+      Course 4 Artist Vars 6: "Aquí hay el código que puede dibujar cualquier polīgono
+        regular. \n\nHay un nuevo variable llamado 'lados' que está asignado a 4.
+        \n\n¿Puedes usar el variable 'lados' (sumado al bloque de matemática)  para
+        girar la cantidad correcta a pesar de cuántos lados están en el polígono?"
       Course 4 Artist Vars 7: Utiliza lo que aprendiste en el rompecabezas anterior
         para crear el hexágono usando la variable "lados". Vé cómo puedes cambiar
         solo una variable para dibujar un triángulo, cuadrado, pentágono u octágono?
+      Course 4 Artist Vars 8: "**Juego libre:** Experimento con el número de lados
+        de esta forma. ¿Puedes cambiar el algoritmo de modo que el tamaño total de
+        la forma sigue siendo el mismo, independiente de cuántos lados tenga? "
+      Course 4 Bee 1: "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa
+        el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue
+        el néctar un vez **SÓLO** si hay un flor."
       Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
         para ver si es una flor o un panal...de lo contrario, ¡haz miel!
+      Course 4 Bee 3: "El objeto desconocido es o un flor o un panal. \n\nEsta vez,
+        usa el bloque 'si/si no' para colectar un néctar **si** es un flor, **si no**
+        haz una miel (porque entonces sería un panal)."
       Course 4 Bee Params 1: Use la función "obtener néctar 3" que gira, mueve para
         recoger el néctar y luego regresa a su ubicación original. Escriba una secuencia
         para recoger todo el néctar usando "obtener néctar 3".
       Course 4 Bee Params 2: Modifique la función "obtener néctar 3" de tal manera
         que me haga girar a la derecha hacia las flores en vez de a la izquierda.
+      Course 4 Bee Params 3: "¡Ahora hay flores en ambos lados! \n\nHemos añadido
+        variables llamados 'izquierda' y 'derecha' por ti para usar, y ahora hay un
+        parámetro llamado 'dirección' dentro 'consigue 3 néctar'. \n\n**Edita 'consigue
+        3 néctar' para que la abeja gire a la dirección correcta cuando los variables
+        'izquierda' o 'derecha' están pasados en la función.**"
       Course 4 Bee Params 5: Vamos a empezar desde cero. ¿Puedes crear una nueva función
         llamada `recoger 5 néctares` con un parámetro de dirección?
       Course 4 Bee Params 6: ¿No sería genial si pudiéramos recolectar todo este néctar
         con una sola función? Intenta agregar un nuevo parámetro a tu función "nectars"
         para controlar la cantidad de néctar para recolectar. ¡Probablemente quieras
         renombrar la función también!
+      Course 4 Bee Params 7: |-
+        Trata de usar tu nueva función para colectar todo de este néctar.
+
+        <br/>
       Course 4 Bee Params 8: 'Desafío: ¡Ahora hay que ocuparse de la miel! Vuelve
         a escribir tu función para usar las dos el número de unidades de miel y el
         número de unidades de néctar. ¿Cómo utilizarías esos números para decidir
@@ -16255,6 +16368,20 @@ es-MX:
       Course 4 Play Lab Params 1: Aquí está la función denominada "salto" que permite
         que tu personaje principal salte hasta 100 píxeles. Use la función salto para
         recoger todas las banderas.
+      Course 4 Play Lab Params 10: |-
+        Hemos añadido la última función para ti.
+
+        <hr/>
+
+        Usa una declaración 'si' para programar tu juego para llamar la función 'subir_de_nivel' sólo cuando 'puntaje_de_jugador' se ponga mayor que un número cierto.
+
+        </h4>
+
+        *Por ejemplo: 'puntaje_de_jugador' >6*
+
+        <hr/>
+
+        _Juega el juego, y hazlo a nivel 3 para mover al próximo desafío._
       Course 4 Play Lab Params 3: Añadimos otro parámetro a la función salto para
         poder usar otros actores. Cada actor es representado por un número, empezando
         por uno. Edita la función de "salto" para que utilice el parámetro "actor"
@@ -16264,6 +16391,10 @@ es-MX:
       Course 4 Play Lab Params 5: Llene el parámetro de entrada "actor" de tal manera
         que podamos llamar la función "patrulla" para cada uno de los actores. Recuerde,
         los actores corresponden a los números 1, 2 y 3.
+      Course 4 Play Lab Params 6: Añade el otro parámetro llamado 'velocidad' a la
+        función 'patrulla'. Trata de usar un bloque 'velocidad fija' con el nuevo
+        parámetro 'velocidad' para ayudar el pingüino a conseguir las ambas banderas
+        antes que los otros sprites consigan aún una.
       Course 4 Play Lab Params 7: "¡Vamos a divertirnos! Mira el código dado para
         ver si puedes averiguar qué es lo que hace cada bloque. Cuando termines, usa
         las flechas de tu teclado para controlar el Perro y colecta todas las banderas."
@@ -16277,10 +16408,26 @@ es-MX:
       Course 4 Play Lab Vars 2: ¡Esa carrera en ese último problema no fue justa!
         Cambie la variable de "velocidad\_perro" para asegurarse de que puede recoger
         más banderas que el Gato. ¡El primero en recoger 10 banderas gana!
+      Course 4 Play Lab Vars 3: |-
+        ¡Aquí está un juego nuevo!
+
+        No tienes que cambiar ninguno en este nivel.
+
+        **Direcciones:** Usa la flecha izquierda y derecha para moverse, y la flecha arriba para saltar. Vea si puede colectar todas las banderas.
       Course 4 Play Lab Vars 4: "Ahora estamos utilizando una variable llamada `altura`
         para controlar cuán alto puede saltar el perro. Actaliza la variable `altura`
         para que así el perro pueda saltar lo suficiente para alcanzar las banderas.
         \n "
+      Course 4 Play Lab Vars 6: |-
+        ¿En nuestro juego, cómo marcamos puntos?
+
+        1.  Añade 1 a tu variable `puntos` cada vez el Perro pega el Gato con un pedazo de pastel.
+
+        2.  Usa el evento 'cuando el actor 2 toca algo' para desencadenar una actualización a tu puntuación. Puedes aumentar tu variable por asignar 'puntos = puntos +1.'
+
+        3.  Consigue tu puntuación hasta para pasar el nivel.
+
+        **Nota:** ¡Usa la flecha derecha para tirar el pastel!
       Course 4 Play Lab Vars 7: Bien, ahora asegurémonos que este juego no sea muy
         fácil - cada vez que el Perro (actor 1) es golpeado por una bola de fuego
         usted debe perder un punto. Empiece con 10 puntos de tal manera que no sea
@@ -16296,6 +16443,8 @@ es-MX:
       Course 4 Play Labs For Loops 1: Vamos a hacer que el perro diga todos los números
         desde el 1 hasta el 100. Usa un ciclo y un bloque contador para decir la variable
         contador cada vez que se ejecute el ciclo.
+      Course 4 Playlab For Loop Freeplay: "**Juego Libre:** ¡Usa todo que has aprendido
+        hasta ahora para hacer un juego que incluye un 'for' loop!"
       Course 4 Playlab For Loops 4b: "¡Ahora, estos dos personajes van a correr! \\\r
         \\\r cada uno de ellos se moverá 'contador' pasos en un momento, pero sus
         contadores tendrán diferentes valores debido a los bucles 'for'.\\\r \\\r
@@ -16303,6 +16452,36 @@ es-MX:
         sea un empate?"
       Course 4 Playlab For Loops 5b: Ajusta el intervalo de los bucles 'for' para
         que ambos personajes terminen exactamente en el mismo lugar.
+      Course 4 Playlab For Loops 6b: |-
+        ¡Ahora vamos a usar 'for' loops en una manera diferente!
+
+        ¡Este juego se pone difícil porque el tiempo entre las desapariciones se reduce rápidamente!
+
+        <hr/>
+
+        **¡Edita este 'for' loop para crear un juego que es divertido para ti para jugar!**
+
+        <hr/>
+
+        Presiona "Operar " y haz un clic en "Señora Unicornio" tantas vezes como puedes. ¿Puedes nuestro marcador de 24?
+      Course 4 SCF 1: "**Súper Desafío de las Funciones:** Usa las funciones sugeridas
+        para dibujar cuatro filas de hexágonos. ¿Notas cómo nuestra filas pares son
+        movidas a la derecha?"
+      Course 4 SCF 1a: "**Súper Desafío de las Funciones:** ¿Puedes resolver cómo
+        colectar todo de este néctar con la mínima cantidad posible de bloques?"
+      Course 4 SCF 1b: "**Súper Desafío de las Funciones:** ¿Puedes resolver cómo
+        colectar todo de este miel con la mínima cantidad posible de bloques?"
+      Course 4 SCF 2: "**Súper Desafío de las Funciones:** Usa lo que aprendiste en
+        el previo nivel para dibujar un imagen como este.\n_Nota: El código se pone
+        más sencillo si incorporas parámetros._ "
+      Course 4 SCF 3: |-
+        ""Súper Desafío de las Funciones:\*\* Usa lo que aprendiste en el previo nivel para dibujar un imagen como este.
+
+        _Nota: El código se pone más sencillo si incorporas parámetros._
+
+        <br/>
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>
       Course 4 SCFL 1a: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
         llegue hasta su bellota con la menor cantidad de bloques posible?"
       Course 4 SCFL 1b: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
@@ -16522,7 +16701,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16737,6 +16916,26 @@ es-MX:
         a la sala\n-   Agregar más cosas con las que los usuarios pueden interactuar
         en la sala\n-   Hacer que tu código secreto sea aleatorio\n-   Agregar más
         salas"
+      Frequency Analysis: |-
+        # ¡Descifra un código de sustitución aleatoria!
+
+        Los mensajes cifrados con el **cifrado César** son muy fáciles de descifrar. ¿Qué pasa si en lugar de cambiar todo el alfabeto, asignamos cada letra del alfabeto a una letra aleatoria diferente del alfabeto? Esto se llama **cifrado de sustitución aleatoria**.
+
+        En esta versión de la herramienta, interactuarás más con los gráficos que muestran la frecuencia de las letras. Al analizar la frecuencia de las letras en el mensaje de entrada cifrado en comparación con la frecuencia de las letras en una prosa típica en inglés, puedes comenzar a reducir cuáles podrían ser algunas de las asignaciones de letras. ¿Sabías que _'E'_ es la letra más común utilizada en el idioma inglés? Tal vez la letra más común en tu texto cifrado se asigna a la letra _'E'_, ¡pero tal vez no! Tendrás que adivinar un poco y verificar si esa sustitución tiene sentido.
+
+        # Haz esto
+
+        -   Carga el **ejemplo de mensaje (difícil)** del menú desplegable de mensajes. Esto cargará un mensaje que ha sido cifrado con un cifrado de sustitución aleatorio.\
+            ![](https://images.code.org/04c6230c9607110126581c298bc09183-image-1443569176380.gif)
+
+        -   Descifrarás el mensaje adivinando a qué debe corresponde cada letra del alfabeto contenida en el texto cifrado original. Puedes hacerlo arrastrando las letras azules del alfabeto directamente debajo de la letra naranja que deseas cambiar en el texto cifrado original. Las letras que se han cambiado usando tus conjeturas ya no se resaltarán en naranja en la ventana de mensajes a la izquierda.
+
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        -   Juega con algunas de las opciones de clasificación disponibles en la pestaña de cifrado de sustitución aleatoria para obtener diferentes vistas de las frecuencias de las letras en el texto de entrada, así como el texto estándar en inglés.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ¡Mira cuánto tardas en descifrar el cifrado! ¿Es un buen método para cifrar datos secretos?
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra
         en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar
         el río! \\\r\n \\\r\nAjusta el pequeño bloque verde en tu área de trabajo
@@ -16747,6 +16946,120 @@ es-MX:
         el río! \\\r\n \\\r\nAjusta el pequeño bloque verde en tu área de trabajo
         dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la
         antorcha de piedra rojiza [redstone_torch]."
+      Gamelab StartScreen Change State: |-
+        # Cambiar el estado
+
+        Ahora que puedes mostrar una pantalla diferente según el estado de tu programa, necesitarás una forma de cambiar entre estados. Para pasar del estado "inicial" al estado "jugando", puedes hacer que el usuario presione la tecla "s". \*\* Solo\*\* querrás que el programa verifique la pulsación de la tecla cuando el programa está en el estado "inicial", de modo que para esto, tu código irá dentro del condicional "inicial". Poner un bloque `si` dentro de otro se llama **anidar** condicionales.
+
+        ## Hacer esto
+
+        -   Dentro de la sentencia `si` que verifica" iniciar", agrega una nueva sentencia `si` que verifica si el usuario ha presionado la tecla "s". (`si (teclaAbajo ("s")) {`)
+        -   Dentro de tu nueva sentencia `si`, configura el valor de tu variable `estadoDeJuego` en "jugando". (`estadoDeJuego = "jugando";`)
+        -   Prueba el código iniciando el juego y presionando "s". El juego debe comenzar a jugarse después de presionar la tecla.
+
+        Si el juego no se inicia en la pantalla de inicio, verifica que cuando se crea la variable `estadoDeJuego` al comienzo del programa, su valor sea "comienzo". (`var estadoDeJuego = "comenzar";`)
+      Gamelab StartScreen Check State: |-
+        # Comprobando el estado del juego
+
+        Ahora que tienes el estado de tu juego almacenado en una variable, puedes verificarlo para determinar qué debe mostrarse. Esto debería suceder dentro del ciclo de extracción, ya que es algo que cambiará a medida que se ejecute el programa. El programa debe verificar si el juego está en el estado "jugando" y solo ejecutar el programa si lo está. Podemos preocuparnos por los otros estados más tarde.
+
+        ## Hacer esto
+
+        -   Dentro del ciclo de dibujo, agrega una condicional (sentencia `si`).
+        -   Para la condición, verifica si `EstadoDeJuego ==" jugar"`.
+        -   Mueve el resto del código del ciclo de extracción dentro de la sentencia `si`, de modo que solo se ejecute si el juego se está "jugando".
+        -   Ejecuta el programa. No debería pasar nada porque el juego todavía está en el estado "inicial".
+        -   Vuelve a donde estableciste el valor de tu variable `EstadoDeJuego` y cámbialo de "comenzar" a "jugar ".
+        -   Ejecuta el juego nuevamente, y se deberías jugar normalmente, porque ahora está en el estado "jugando".
+        -   Cambia el valor de la variable de nuevo a "inicio".
+
+        (Es importante encontrar formas de verificar tu código a medida que avanza, en lugar de esperar hasta el final de muchos cambios complejos para ejecutarlo. Al verificar los estados de juego y de inicio, sabes que tu condicional funciona correctamente y que el juego se debe jugar mientras estás en el estado "jugando").
+      Gamelab StartScreen Check States: |-
+        # Verificar todos los estados
+
+        En este momento, el único estado con el que tu programa puede intervenir es "jugar", pero puedes agregar más condicionales para dar cuenta de los otros tres estados.
+
+        ## Hacer esto
+
+        -   Dentro del ciclo de empate, agrega tres sentencia `si` más que verifiquen `EstadoDeJuego == "comenzar"`, `EstadoDeJuego == "ganado"`y `EstadoDeJuego == "perdido"`, respectivamente.
+        -   Dentro de cada sentencia `si`, agrega código que dibuje texto en la pantalla, para que puedas ver los resultados de los diferentes estados. También es posible que desees utilizar `dibujarSprites` para que puedas ver la imagen de fondo y los sprites del jugador, pero asegúrate de dibujar el texto en la parte superior de los sprites.
+        -   Verifica tu código ejecutando el programa en los diferentes estados. (No te preocupes aún por hacerlos perfectos, solo asegúrate de que los condicionales funcionen como deberían).
+
+        Para realizar un seguimiento de tu código, puede resultarte útil crear una función para cada una de las diferentes pantallas de texto, y luego llamar a esas funciones dentro de los condicionales.
+      Gamelab StartScreen End Game: |-
+        # Finalizar el juego
+
+        A continuación, deberás agregar un código que cambie el estado del juego cuando pierdas. Desplázate hasta la parte inferior del programa, a la función `estadoDelJuego`. Dentro de la función, el programa verifica el puntaje y las variables de vida para verificar si el usuario debe ganar o perder el juego. En lugar de mostrar un mensaje de ganar o perder, querrás cambiar el estado del juego a "ganado" o "perdido";
+
+        ## Hacer esto
+
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Ganaste!", 35, 200);` con `estadoDeJuego = "ganado"`.
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Perdiste!", 35, 200);` con `estadoDeJuego = "perdido"`.
+        -   Comprueba tu código ejecutando el juego y perdiendo.
+        -   Comprueba tu código ejecutando el juego y ganando.
+
+        (Para que el juego sea mucho más fácil de ganar, cambia el número original de vidas a 1000 reemplazando `var vidas = 3;` a `var vidas = 1000;`.)
+      Gamelab StartScreen Hide Sprites: |-
+        # Ocultar y mostrar sprites
+
+        Es posible que prefieras que la plataforma, la moneda y los sprites de roca solo sean visibles cuando se juega. Puedes cambiar la configuración del juego para establecer su propiedad visible en 'falso' al comienzo del juego, luego establecerlo en 'verdadero' cuando comienzas el juego, y luego 'falso' nuevamente cuando el juego se gana o se pierde.
+
+        ## Hacer esto
+
+        -   Agrega código después de crear tus plataformas, grupos de sprites de oro y rocas que establezcan las propiedades visibles de esos grupos de sprites en 'falso' (por ejemplo, 'plataformas.establecerVisibleCadaUna (falso);\`)
+        -   En los mismos tres lugares donde estableces `estadoDeJuego = "jugando";`, establece las propiedades visibles de los grupos de sprites en `verdadero`.
+        -   En los mismos lugares donde estableces `estadoDeJuego = "perdido";` y `estadoDeJuego = "ganado";`, configura los grupos de sprites en visibles
+        -   Comprueba tu código ejecutando el juego y perdiendo, y reiniciando el juego.
+        -   Verifica tu código ejecutando el juego y ganando, y reiniciando el juego.
+      Gamelab StartScreen Intro: |-
+        # Pantallas de inicio y fin
+
+        Este tutorial te enseñará cómo crear pantallas de inicio y finalización en Laboratorio de juegos, así como reiniciar el juego desde la pantalla final.
+
+        Pulsa ejecutar para jugar el juego de la izquierda. Sigue las instrucciones en la pantalla de inicio para jugar. Una vez que termines el juego, sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la próxima burbuja, verás el código para jugar y comenzarás a agregar tus propias pantallas de inicio y finalización.
+
+        ## Pantalla de inicio
+
+        La pantalla de inicio es la pantalla introductoria que aparece antes de que el usuario comience a jugar. Por lo general, tiene el título del juego y algunas instrucciones básicas para jugar. También podría incluir el desarrollador del juego.
+
+        ## Pantalla final
+
+        La pantalla final aparece después de que el usuario haya ganado o perdido el juego. A veces incluye el puntaje final, las clasificaciones de los jugadores u otra información. También puede tener una opción para volver a jugar.
+      Gamelab StartScreen Restart Game: |-
+        # Reiniciar el juego
+
+        Por último, deberás agregar código que reinicie el juego. Esto es similar a como comenzaste el juego haciendo que el usuario presione la tecla "s". Esta vez, deberás verificar durante los estados "perdido" y "ganado". Si el usuario presiona la tecla "r" durante uno de estos estados, debes reiniciar el juego configurando `estadoDeJuego` en "jugando" y también restableciendo las variables `puntaje` y `vidas` a 0 y 3, respectivamente.
+
+        ## Hacer esto
+
+        -   Dentro de la sentencia `si (estadoDeJuego =="perdido") {`, agrega una sentencia si que verifique si el usuario ha presionado la tecla "r".
+        -   Dentro de tu nueva sentencia `si`, establece `puntaje` en 0, `vidas` en 3 y `estadoDeJuego` en "jugando".
+        -   Dentro de la sentencia `si (estadoDeJuego == "ganado") {`, agrega una sentencia si que verifique si el usuario ha presionado la tecla "r".
+        -   Dentro de tu nueva sentencia `si`, establece `puntaje` en 0, `vidas` en 3 y `estadoDeJuego` en "jugando".
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Perdiste!", 35, 200);` con `estadoDeJuego = "perdido"`.
+        -   Comprueba tu código ejecutando el juego y perdiendo, y reiniciando el juego.
+        -   Verifica tu código ejecutando el juego y ganando, y reiniciando el juego.
+      Gamelab StartScreen State: |-
+        # Variable de estado del juego
+
+        Nuestro juego de muestra tenía cuatro escenarios diferentes (o **estados**) que debemos seguir para mostrar la pantalla correcta: "comenzar", "jugar", "ganar" y "perder". El primer paso para agregar una pantalla de inicio o fin al juego es crear una variable para realizar un seguimiento de los cambios en el estado del juego.
+
+        ## Hacer esto
+
+        -   Declara una variable llamada `EstadoDeJuego` al comienzo del programa. (Un buen lugar para hacer esto sería cerca de donde se declaran `puntaje` y `vidas`.
+        -   Establece el valor inicial de tu variable `EstadoDeJuego` en "comenzar "
+
+        (Debido a que aún no estás utilizando esta variable, verás un triángulo de advertencia junto a la línea donde se declara. Tampoco afectará la forma en que se ejecuta el programa).
+      Gamelab StartScreen base code: |-
+        # Código de juego
+
+        Este es el código para el juego sin las pantallas de inicio y finalización. La función `EstatusDeJuego` (llamada en la línea 43 y definida en la línea 208) verifica si el usuario ha ganado o perdido, pero solo agrega un mensaje de texto a la pantalla. La jugabilidad también continúa incluso después de que termina el juego.
+
+        ## Hacer esto
+
+        Lee el código, en particular el código antes del ciclo de dibujo (líneas 1-24), dentro del ciclo de dibujo (líneas 27-43) y dentro de la función `EstatusDeJuego` (líneas 209-224). Está bien si no entiendes todo en el juego, pero debes ver que el código antes del ciclo de dibujo configura los sprites, y el código dentro del ciclo de control controla el juego.
       Geometric Sun: "**Idea para un proyecto:** usa ideas geométricas como formas
         para crear un patrón. ¡Esto requiere persistencia y planificación!"
       Geometric Sun_2018: "**Idea para un proyecto:** usa ideas geométricas como formas
@@ -16934,8 +17247,19 @@ es-MX:
         editarlas y crear las tuyas."
       NEW Course 4 Artist Functions 1: "¿Puedes dibujar un cuadrado de 100 píxeles
         de largo usando un ciclo?"
+      NEW Course 4 Artist Functions 11: "Ahora queremos crear una nueva función llamada
+        'dibujar una línea de cuadros' que dibuja seis cuadros todos en una fila.
+        \n\n¿Puedes construir esta función usando esta función 'dibujar un cuadro
+        20' que creamos para ti?\n<br/><br/>\n\n_Nota: Ve que hemos cambiado un bolígrafo
+        a ser mucho más fino. ¡Haz un clic en \"editar\" para la función 'dibujar
+        un cuadro 20' para ver cómo!_"
       NEW Course 4 Artist Functions 12: Utiliza la función "trazar una línea de cuadrados"
         del rompecabezas anterior para trazar este patrón.
+      NEW Course 4 Artist Functions 13: "¿Puedes dibujar una forma de estrella usando
+        la función 'dibujar una línea de cuadros'? \n\n(¡Asegúrate a 'mover adelante'
+        60 píxeles antes que gires 144 grados!)"
+      NEW Course 4 Artist Functions 14: "¡Es el tiempo de juego-libre! ¡Dibuja cualquier
+        que te guste!"
       NEW Course 4 Artist Functions 2: "¿Puedes dibujar 3 cuadrados de 20 píxeles
         separado uno del otro? Sugerencia: cada cuadrado es de una medida de 100 píxeles "
       NEW Course 4 Artist Functions 3: Aquí está el nuevo tipo de Bloque. Es llamado
@@ -16943,6 +17267,11 @@ es-MX:
       NEW Course 4 Artist Functions 4: 'Utiliza la función "dibujar un cuadrado" para
         dibujar este patrón. Pista: tendrás que usar un bloque "girar a la derecha
         120 grados" después de cada cuadrado.'
+      NEW Course 4 Artist Functions 7: "¿Estás entendiendo cómo usar los bloques de
+        función? Modifiquemos 'dibujar un cuadro' para que dibuje cuadros que son
+        200 píxeles de tamaño. \n\nHaz un clic en 'editar' para entrar el editor de
+        la función 'dibujar un cuadro'.\n\nAcuérdate a hacer un clic en 'Cerrar' para
+        salir del editor de la función. "
       NEW Course 4 Artist Functions 8: Te hemos dado la mayoría del código para crear
         una función. Sin embargo, parece que falta algo. ¿Puedes editar la definición
         de la función para dibujar el triángulo?
@@ -16952,19 +17281,37 @@ es-MX:
         con lados de 50 píxeles. Haz clic en "editar" para empezar.
       NEW Course 4 Artist Params 10: 'Crea un bloque de función "dibujar un hexágono"
         con un parámetro de longitud. Pista: este hexágono tiene 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 11: "¿Puedes resolver cómo dibujar esta forma? \n\nEdita
+        esta función para usar el parámetro 'lados."
       NEW Course 4 Artist Params 12: "¿Puedes completar este dibujo? Los lados de
         todas las formas son 100 píxeles de largo."
       NEW Course 4 Artist Params 12a: Esta imagen es similar a la última. ¿Se puede
         utilizar un "ciclo for" con tu función para hacer este diseño?
+      NEW Course 4 Artist Params 13: "Editemos esta función 'dibujar un polígono.
+        \n\nYa tiene un parámetro 'lados. Ahora, añadamos un parámetro 'longitud'.
+        \n\nEl perímetro de cada forma es 200 píxeles. ¿Recuerdas la ecuación que
+        hace las formas al mismo tamaño cuando ellas tienen un número diferente de
+        lados?"
+      NEW Course 4 Artist Params 14: "Edita 'dibujar un borde espiral' para usar los
+        parámetros 'longitud' y 'lados', luego recrea estas formas.\n\n-   La longitud
+        del lado más corto del cuadro es 5 píxeles.\n-   La longitud del lado más
+        corto del triángulo es 10 píxeles.\n-   La longitud del lado más corto del
+        hexágono es 2 píxeles.\n-   Todos aumentan a 100 píxeles. "
       NEW Course 4 Artist Params 15: 'Juego libre: estas son las funciones que has
         escrito, y algunas más con las que podrás jugar. ¡Experimenta con el ancho
         del lápiz para crear dibujos diferentes!'
       NEW Course 4 Artist Params 2: Crea una función `dibujar triángulo` desde cero
         para crear un triángulo con lados de 50 pixeles.
+      NEW Course 4 Artist Params 3: "Ahora usemos la función para dibujar 5 triángulos
+        en una fila. \n\nCada triángulo es 30 píxeles de distancia."
       NEW Course 4 Artist Params 4: ¿Notas algo diferente en estos bloques de función?
         Haz clic en "Ejecutar" para ver qué pasa.
       NEW Course 4 Artist Params 5: 'Llena en el ??? en el bloque de entrada del parámetro
         de longitud. Sugerencia: El Pentágono es de 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 6: "Completa el parámetro 'longitud' para dibujar
+        estas formas por recolocar '???' con los números correcto. \n\nEl cuadro y
+        el triángulo tienen lados de 100 píxeles.\\\nLos lados del hexágono son 75
+        píxeles de largo. "
       NEW Course 4 Artist Params 7: "¿Puedes completar este dibujo? Sugerencia: cada
         triángulo es 25 píxeles más grande que el último. El primer triángulo es de
         25 píxeles de tamaño."
@@ -16981,6 +17328,9 @@ es-MX:
       NEW Course 4 Artist Vars 12: Modifica este algoritmo para que utilice la variable
         "lados" en lugar de un número fijo para dibujar un pentágono. Reemplaza el
         número 5 con la variable "lados" y usa el bloque "establecer lados".
+      NEW Course 4 Artist Vars 2: 'Arrastra un bloque de número al bloque ''asignar
+        longitud'' y al bloque ''repetir \_ veces'' para dibujar una colección de
+        triángulos de 50 píxeles. '
       NEW Course 4 Artist Vars 4: Vamos a intentarlo otra vez. Ahora, vamos a hacer
         este diseño cool con un hexágono de 60 píxeles.
       NEW Course 4 Artist Vars 6: ¿Me puedes ayudar a dibujar este patrón cool dejando
@@ -16996,6 +17346,9 @@ es-MX:
         juntos, luego haz clic en "Ejecutar" para ver cómo funciona. '
       NEW Course 4 Bee For Loops 4: 'Reemplaza el ??? en el bucle for con la mayor
         cantidad de néctar que la abeja debe recoger. '
+      NEW Course 4 Bee For Loops 4 4: Ahora tenemos que 'avanzar' 'contador' veces,
+        luego 'conseguir néctar' 'contador' veces. ¿Puedes usar dos loops de repitición
+        para resolver este desafío?
       NEW Course 4 Bee For Loops 5: También puedes utilizar un 'loop para' para la
         cuenta regresiva. Intenta juntar este néctar haciendo cuenta regresiva de
         5 a 1 de a 1.
@@ -17008,9 +17361,278 @@ es-MX:
         ¡Vamos a recoger algo de néctar!"
       NEW Course 4 Bee For Loops 8: "¡Lo tienes! \n\n¿Cuál debería ser tu **incremento**
         para recoger 3, 6, 9, 12 y 15 néctares?"
+      NetSim Standalone Automatic DNS: |-
+        # Sistema de nombres de dominio (DNS)
+
+        En esta versión del Simulador de Internet, se le proporciona un Sistema de Nombres de Dominio (DNS) que conoce las direcciones IP de todas las computadoras conectadas. Solo puedes ver los nombres de host de otras computadoras conectadas.\
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)
+
+        La dirección del DNS es siempre \<yourRouterNumber>.15. Envía un mensaje con el protocolo `GET [hostname]`, por ejemplo `GET Bob2`, al DNS para obtener la dirección de otro estudiante. Puedes realizar un seguimiento de las respuestas en la sección Notas, en la pestaña DNS.\
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Broadcast: |-
+        # Difundir mensajes en el Simulador de Internet
+
+        En esta versión de simulador de Internet, puedes conectarte con hasta 5 personas más en una habitación. Cuando envías mensajes en la sala, todos los reciben. ¿Cuáles son algunos de los desafíos de este sistema y cómo podrías resolverlos?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Classroom Routers: |-
+        # Enrutamiento de mensajes
+
+        En esta versión de Simulador de Internet, todos se conectan a un enrutador y tienen una dirección específica. Para enviar mensajes, debes dirigir tu mensaje a la dirección específica del destinatario, y el enrutador se encargará de entregarlo a la computadora correcta. Si hay otros enrutadores creados en tu clase, ¡solicita la dirección de uno de tus compañeros de clase y envíales un mensaje! Mira el enrutador de registro para ver la ruta que tomaron los mensajes a través de la red.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Freeplay: |-
+        # Juego Libre del Simulador de Internet
+
+        En esta versión del Simulador del Internet, la mayoría de las opciones están activadas y son configurables. Los mensajes se pueden enviar a cualquier enrutador dentro de la clase, y los mensajes tomarán diferentes caminos para llegar a su destino.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Manual DNS: |-
+        # Introducción a DNS
+
+        En esta versión del simulador, no puedes ver las direcciones de los otros estudiantes. En cambio, uno de ustedes debe actuar como un servicio de nombres, para ayudar a compartir direcciones entre sí. Desde la pestaña DNS en la columna izquierda, una persona puede asumir el control como DNS.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Packets TCP: |-
+        # Paquetes y hacer que Internet sea confiable
+
+        Los mensajes en Internet pueden tomar muchos caminos para llegar a su destino y, a veces, a lo largo del camino, el mensaje se descarta. En esta versión del Simulador de Internet:
+
+        -   Hay un 10% de posibilidades de que se descarte un paquete
+        -   Varios paquetes pueden tomar diferentes caminos hacia el destino
+        -   El tamaño máximo predeterminado del paquete se establece en 6 caracteres adicionales
+
+        Tu profesor maestro entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone SendAB: |-
+        # Envío de bits con el Simulador de Internet
+
+        Tú y tu pareja comparten un solo cable que solo puede estar en el estado A o en el estado B. Puedes configurar el cable en cualquier estado en cualquier momento, y puedes leer el estado del cable en cualquier momento. ¿Puedes encontrar una manera de comunicarte efectivamente solo con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers: |-
+        # Envío de números con el Simulador de Internet
+
+        ¡Tú y tu pareja ahora pueden enviar mensajes de manera confiable de un lado a otro sin coordinación adicional! Si bien siempre envías bits de un lado a otro, también puedes representar esos bits como números decimales. ¿Qué tipo de información puedes representar con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers Ascii: |-
+        # Envío de texto con el Simulador de Internet
+
+        Ahora que has transmitido información representada como números decimales, puedes asignar esos números a caracteres de texto para enviar información basada en texto de un lado a otro. Con un protocolo basado en texto, puedes representar y comunicar fácilmente todo tipo de información.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      New Minecraft Hero Project: "**Improvisación:** ¡Ahora es cosa tuya! Usa el
+        código del Agent para ayudarte a explorar este mundo."
+      OPD-K5 CS Video: |-
+        ## Primeros pasos: ¿Por qué los fundamentos de la informática (CS)?
+
+        Completarás este curso gratuito a tu propio ritmo utilizando la misma plataforma de aprendizaje que puedes usar en el aula con tus alumnos.
+
+        Comencemos por aprender un poco sobre los Fundamentos de la informática (CS) y cómo ha funcionado para los profesores y estudiantes de todo el mundo. En el siguiente nivel, cubriremos cómo interactuar con la plataforma de aprendizaje CS Fundamentals, que utilizará para completar este curso.
+
+        > ## Reflexionar
+        >
+        > ¿Cuáles son tus primeras impresiones de los Fundamentos de Ciencias de la Computación?
+        >
+        > [Tuitea tus pensamientos](https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
+        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: |-
+        ## Conocer los Fundamentos de la Ciencia de la Computación
+
+        Comencemos por aprender un poco sobre los Fundamentos de la Ciencia de la Computación y cómo ha funcionado para los docentes y estudiantes de todo el mundo.
+      OPD-K5 Closing: |-
+        > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
+        >
+        > [Regístrate ahora] [0] para continuar aprendiendo ciencias de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarte con otros educadores apasionados en tu área.
+      OPD-K5 Closing_copy: |-
+        > **Si disfrutaste este curso, inscríbete en un taller en persona:**
+        >
+        > <a href="http://code.org/professional-development-workshops" target="blank">Regístrate ahora</a> para continuar aprendiendo ciencia de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarse con otros educadores apasionados en tu área.
+      OPD-K5 EventsVid: |-
+        Mira este video que define los "eventos" y muestra cómo funcionan en Fundamentos de la Ciencias de la Computación. Después, probarás algunos desafíos que requieren que codifiques eventos.
+
+        > Un evento es una línea de código que le dice a tu computadora que "escuche" que algo suceda y luego tome una acción. Por ejemplo, en las páginas web, a menudo puedes mostrar un menú desplegable cuando pasas el mouse sobre la barra de navegación. El "desplazamiento del mouse" es un "evento" que desencadena una acción.
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 FirstProgram_copy: Mira el video a continuación, que explica un programa
+        en el que los jóvenes estudiantes escribirán en el <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Curso A</a>. En la siguiente página, ¡podrás escribir un programa
+        similar propio!
+      OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
+        planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
+        cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
+        como en línea. Puedes encontrar la lista completa de planes de lecciones para
+        cada curso a continuación:\n<br/>\n<br/> \n[Planes de lecciones del Curso
+        A] [0] <br/>\n[Planes de lecciones del Curso B] [1] <br/>\n[Planes de lecciones
+        del Curso C] [2] <br/>\n[Planes de lecciones del Curso D] [3] <br/>\n[Planes
+        de lecciones del Curso E] [4] <br/>\n[Planes de lecciones del curso F] [5]
+        <br/>\n\nSin embargo, es posible que desees adaptar estas lecciones o crear
+        las suyas propias. El siguiente video explica la estructura de las lecciones
+        de Fundamentos de las Ciencias de la Computación, pero también proporciona
+        consejos en caso de que desees desarrollar tus propias lecciones."
+      OPD-K5 Problem Solving: |-
+        # Mejores prácticas > Solución de problemas metacognitivos
+
+        Enseñar explícitamente estrategias de resolución de problemas metacognitivos antes, durante y después de la codificación es extremadamente importante para ayudar a los estudiantes a procesar su aprendizaje. La resolución de problemas megacognitivos implica pensar en el proceso de pensamiento en sí mismo y reflexionar sobre cómo resolver los problemas. Mira el video a continuación para conocer la "Receta de resolución de desafíos" de Code.org que puede ayudar a los estudiantes a tener éxito con problemas difíciles:
+
+        [Esta hoja de trabajo] [0] detalla los diferentes pasos de la Receta de resolución de desafíos.
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Reflexionar:
+        >
+        > ¿Cómo podrías enseñar explícitamente la resolución de problemas en tu aula de informática?
+        >
+        > [Tuitea tus pensamientos] [1] y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartir en Twitter</h4></a>
+      OPD-K5 RepeatBlock: Mira el video a continuación, que explica cómo funcionan
+        los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
+        la Computación.
+      OPD-K5 RepeatBlock_copy: Mira el video a continuación, que explica cómo funcionan
+        los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
+        la Computación.
+      OPD-K5 Unplugged Video: |-
+        ## Mirando hacia el futuro > "Desconectado"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Al enseñar ciencias de la computación, puedes pensar que sería mejor tener acceso a la tecnología de nivel superior: computadoras nuevas, Internet rápido, las últimas aplicaciones. Pero en Code.org, hemos descubierto que algunas de las lecciones de computación más impactantes en realidad están "desconectadas" o se llevan a cabo con poca o ninguna tecnología. En estas lecciones, los estudiantes aprenden conceptos informáticos sin una computadora.
+
+        Es por eso que todos nuestros cursos de Fundamentos de la Ciencia de la Computación usan actividades desconectadas para introducir conceptos de informática con manipuladores físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. Un ejemplo de esto sería hacer un baile de movimientos repetidos con la clase para comprender el concepto de cómo los bucles repiten comandos en un programa de computadora. De esta manera, cuando los estudiantes continúan escribiendo programas usando bucles, la actividad desconectada los ha configurado con algo con lo que ya están familiarizados y pueden relacionar este nuevo concepto con esa actividad.
+
+        Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
+
+        **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 Unplugged Video_copy: |-
+        ¡Puede parecer contraproducente enseñar ciencias de la computación lejos de la computadora! Sin embargo, hemos descubierto que algunas de las lecciones más impactantes son en realidad "fuera de línea" o realizadas con poca o ninguna tecnología.
+
+        Todos nuestros cursos de Fundamentos de la Ciencia de la Computación utilizan actividades fuera de línea para introducir conceptos de ciencia de la computación con objetos didácticos físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. También utilizamos actividades desconectadas para enseñar conceptos importantes que no son programación, como la ciudadanía digital. Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
+      OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
+        O "¿Por qué algunos programas de computadora se escriben con palabras y otros
+        se escriben con imágenes?" Si es así, mira este video; es una gran introducción
+        al campo de la ciencia de la computación.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        ¿Alguna vez te has preguntado qué es la ciencia de la computación o qué tipos de lenguajes de programa existen? Este video proporciona una introducción al campo de la ciencia de la computación.
+        </span>
+      OPD-K5 conditionals free response: |-
+        # Reflexionar sobre condicionales
+
+        En esta lección, exploramos cómo los condicionales ayudan a los programadores a agregar lógica a su código.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de condicionales a tus alumnos? ¿Cuál es el beneficio de escribir un diario como práctica docente para la ciencia de la computación?
+      OPD-K5 events free response: |-
+        # Reflexionar sobre eventos
+
+        En esta lección, precalentaste tus habilidades de codificación mediante el uso de eventos para desencadenar ciertas acciones en tu programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de eventos a tus alumnos? ¿Cuáles son los pasos que podrías seguir para depurar un programa?
+      OPD-K5 for loops free response: |-
+        # Reflexionar sobre bucles para
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de bucles para a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 functions free response: |-
+        # Reflexionar sobre las funciones
+
+        En esta lección, exploramos cómo las funciones pueden convertirte en un mejor y más rápido programador al permitirte reutilizar segmentos de tu código. En la próxima lección, veremos el concepto de variables.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de funciones a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 loops free response: |-
+        # Reflexionar sobre los bucles
+
+        En esta lección, exploramos cómo se pueden usar los bucles para hacer que el código sea más eficiente. En la próxima lección, veremos cómo los eventos pueden agregar interactividad a un programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo puedes conectar el concepto de bucles con la experiencia previa de tus alumnos fuera de la clase de Ciencias de la Computación? ¿Cuáles son los beneficios de la programación en pareja y cómo podrías usarla al enseñar esta lección?
+      OPD-K5 projects free response: |-
+        # Reflexionar sobre proyectos de fin de curso
+
+        Tómate un momento para reflexionar. ¿Cómo usarías los proyectos de fin de curso en tu clase? ¿Cuál es el beneficio de que los estudiantes completen un proyecto?
+      OPD-K5 sequencing free response: |-
+        # Reflexionar sobre la secuenciación
+
+        ¡Felicidades! Acabas de escribir un código. ¡Eres oficialmente un programador!
+
+        ¿Notaste que el último desafío fue un poco más difícil? Fue un desafío de reto. Los desafíos de reto están destinados a ampliar los límites de lo que harán los estudiantes. Dejamos en claro que deben intentarse, pero no exigimos que se completen para que los estudiantes tengan éxito en la lección.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo describirías la diferencia entre ciencia de la computación y codificación? ¿Cómo explicarías la secuenciación y los algoritmos a tus alumnos?
+      OPD-K5 sprite lab free response: "# Reflexiona en Laboratorio de sprites\n\nTómate
+        un momento para reflexionar. ¿Cómo usarías el Laboratorio de sprites en tu
+        clase? "
+      OPD-K5 variables free response: |-
+        # Reflexionar sobre variables
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de variables a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 whats your plan: |-
+        # ¿Cuál es tu plan?
+
+        A lo largo del curso, se te pedirá que escribas reflexiones sobre lo que has aprendido. Una vez que envíes tu respuesta, se guardará y siempre podrás volver a ella. La revisaremos al final de este curso en línea.
+
+        Tómate un momento para reflexionar. ¿Cómo y cuándo completarás este curso en línea para asegurarte de obtener el mayor beneficio de la experiencia?
+      OPD-K5-events-2: "Agrega el bloque `cantidad normal de aleteo` al evento `cuando
+        hagas clic`, y luego presiona \"Ejecutar\".  \n\n* * *\n\nHaz clic o toca
+        en el espacio de juego para mover a Flappy hacia el objetivo."
+      OPD-K5-events-3: "El evento `cuando se ejecute` te permite ejecutar el código
+        tan pronto como comience tu juego.  \n\nIntenta agregar un bloque que establezca
+        el nivel de velocidad cuando se presiona el botón \"Ejecutar\". \n\n* * *\n\nJuega
+        y aletea hacia el objetivo para continuar."
+      OPD-K5-events-4: "Ahora hemos agregado el suelo. \n\nAgrega el bloque `finalizar
+        el juego` al evento `cuando toque el suelo`. \n\n* * *\n\nJuega y estrella
+        el pájaro en el suelo para continuar."
+      OPD-K5-events-5: "Flappy volará a través de los obstáculos a menos que escribas
+        el código para hacerlo chocar. \n\nAgrega un bloque al evento `cuando golpee
+        un obstáculo` para que el juego termine si Flappy se estrella contra el primer
+        grupo de tuberías."
+      OPD-K5-events-6: "Hemos agregado un marcador para contar los puntos cuando Flappy
+        pasa los obstáculos.  \n\nAgrega un bloque al evento `cuando pase un obstáculo`
+        que anote un punto, y luego presiona \"Ejecutar\" para que Floppy vuele a
+        través del primer grupo de tuberías."
+      OPD-K5-forloops-2: "Escribe el código para ayudar a la abeja a recoger todo
+        el néctar.\\\r\n\\\r\nNecesitarás muchos bloques para este desafío, pero aprenderemos
+        una manera más fácil en el próximo desafío."
+      OPD-K5-forloops-6: "También puedes usar el bucle 'para' para hacer cuenta regresiva.\\\r\n\\\r\nIntenta
+        juntar este néctar contando regresivamente de **5** a **1** de **1** en uno."
+      OPD-K5-forloops-7: "El último número en tu bucle 'para' se llama **incremento**.
+        Cada vez que el bucle es ejecutado, la variable contador cambia por el valor
+        del **incremento**.\\\r\n\\\r\nIntenta recoger estas flores usando un **incremento**
+        de 2."
+      OPD-K5-projects-2: "¡Es sorprendente cuánto has aprendido! Vamos a hacer un
+        juego paso a paso.\\\r\n\\\r\nUsando nuevos bloques de la caja de herramientas,
+        escoge un nuevo fondo, luego escoge un actor para que esté en tu juego."
+      OPD-K5-projects-3: "Usa bloques como manejadores de eventos y acciones para
+        hacer que tu jugador se mueva de acuerdo a las flechas de tu teclado.  \\\r\n\\\r\nLleva
+        al jugador hasta los blancos para completar este desafío."
+      OPD-K5-projects-4: "¡Agreguemos más personajes a tu juego!\\\r\n\\\r\nUsa el
+        bloque 'establecer actor' para agregar más personajes luego mueve el objetivo
+        para completar el desafío."
+      OPD-K5-projects-5: "Personajes múltiples y hacer que los actores se muevan es
+        un gran comienzo para un juego, pero necesitamos hacer más para hacer que
+        se sienta como un juego real. ¡Agreguemos un puntaje!\\\r\n\\\r\nUsa bloques
+        de eventos como el 'cuando actores tocan' para cambiar el puntaje. Marca 10
+        puntos para completar el rompecabezas."
+      OPD-K5-projects-6: "¡Gran trabajo! Tienes todos los componentes básicos de un
+        juego funcionando. Ahora dedica algún tiempo asegurándote que el juego funcione
+        de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego
+        juega hasta que necesites una de esa condiciones."
+      OPD-K5-projects-7: "¡Has terminado! Ahora puedes jugar tu juego o compartirlo
+        con tus amigos o compañeros!"
+      OPD-K5-variables-1: |-
+        Vamos a dibujar un triángulo equilátero.
+
+        Tiene que tener lados de 50 pixeles de largo.
+      OPD-K5-variables-2: "Ahora usa otro loop  para dibujar tres de esos triángulos
+        uno al lado del otro. \\\r\n\\\r\nPuedes anidar el código dentro del interior
+        de tu último desafío."
+      OPD-K5-variables-5: "Antes de que las cosas se compliquen, ¿puedes mover la
+        longitud de 50 a una variable para usarla en los próximos desafíos? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Ahora usa la variable 'longitud' para hacer que el artista
+        salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los
+        triángulos.
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Camina hacia el árbol y usa el comando del bloque `destruir`
         para talarlo.
@@ -17035,6 +17657,11 @@ es-MX:
         obtener lana de ambas ovejas."
       Overworld Shear Sheep_2019: "¡Es hora de esquilar! Usa el comando `esquilar`
         para obtener lana de ambas ovejas."
+      Pixelation - Lesson 15 - Color Shades: |-
+        # Pixelación en color: tarea 2
+
+        **Instrucciones:**
+        <img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style="width: 150px; float:right">Comenzamos con la fila de tonos de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando la fila inferior de la imagen con sombras de un color diferente. Aquí hay un ejemplo con algunos tonos de azul. ¡Prueba tu propio color!
       Pixelation - Lesson 15 - Color Shades 4x4: "# Pixelación: tarea 3\n\n<img src
         = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right;
         margin:0 20px\" width=200>\n**Instrucciones:**\nComenzamos con la imagen 4x4
@@ -17047,6 +17674,18 @@ es-MX:
         1\n\n**Instrucciones:**\n\n-   Comenzaremos con la imagen 4x2 que creó Maddie,
         pero excluiremos los últimos dos cuadrados. \n-   Averigua qué dos colores
         faltan y codifícalos para terminar la imagen."
+      Pixelation 4x4 Empty: El ancho y la altura ahora están codificados en los datos
+        de pixeles. ¿Puedes descubrir cómo ajustar las dimensiones?
+      Pixelation Bee: "# Ejemplo de 12 bits por pixel\n\n-   Esta imagen más grande
+        de una abeja codifica el color con 12 bits por pixel, pero ver en hex hace
+        más fácil ver el color de cada pixel. \n-   Si cambias al modo binario (sujétate
+        el sombrero), es un montón de bits. \n-   Aquí hay otra cosa sorprendente
+        para probar: desliza los bits por pixel hasta 24 bits por pixel. ¿Qué sucede?
+        ¿Puedes explicar este comportamiento?"
+      Pixelation Flappy: |-
+        # Ejemplo de más bits por pixel
+
+        Esta es una imagen más grande a 9 bits por pixel. Con 9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
       Predict Loop I: |-
         # Predicción
 
@@ -18060,10 +18699,114 @@ es-MX:
         que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
         de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
         editarlas y crear las tuyas."
+      Vigenere: |-
+        # Cifra y descifra un mensaje con el cifrado Vigenère
+
+        Esta es una versión interactiva del cifrado Vigenère que anima el cifrado y descifrado a medida que ocurre, dado un fragmento de texto para cifrar o descifrar y la clave.
+
+        # Haz esto
+
+        ### Cifra un mensaje
+
+        Haz clic en Recorrer varias veces y rastrea lo que está sucediendo. Presta atención a:
+
+        -   Cómo se produce el texto cifrado
+        -   ¿Qué sucede cuando llegas al último carácter de la clave?
+        -   Después de recorrer algunos personajes, haz clic en Reproducir para ver el resto animado
+        -   Presiona Reiniciar y reproduce la animación nuevamente. Puedes usar el control deslizante de velocidad para acelerarlo o desacelerarlo
+
+        ![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)
+
+        ### Descifrar un mensaje
+
+        Cifra un mensaje como el anterior y luego:
+
+        -   Resalta y copia el texto cifrado
+        -   Pégalo en el área de texto sin formato. Importante: no cambies la clave
+        -   Cambia el control Cifrar/Descifrar a Descifrar
+        -   Presiona Recorrer varias veces y luego Reproducir
+
+        Deberías ver emerger el texto original.\
+        ![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)
+
+        ¿Qué tan difícil sería descifrar un mensaje cifrado con este cifrado? ¿La longitud de la clave hace la diferencia?
+      Virtual Pet 2_2019: "¡Ahora es tu turno para crear tu propia mascota virtual!
+        Empieza por escogiendo una apariencia que te guste. \n\n1.  Haz un clic en
+        el tabulador de **disfraces** en el extremo superior izquierdo de tu pantalla
+        (junto a **Código**). \n2.  Edita el disfraz inicial, o añade un nuevo que
+        te guste. \n3.  Cambia el disfraz del sprite a tu propio en el código abajo.\n4.
+        \ ¡Haz un clic en **Corre** para ver la nueva apariencia de tu mascota!"
+      Virtual Pet 3_2019: |-
+        ¡Crea eventos para que tu mascota mueva en control!
+
+        Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
+
+        ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      Virtual Pet 4_2019: "1.  Añade **dos** sprites a tu mundo. \n2.  Haz un sprite
+        aparecer como lo que a tu mascota le gusta comer, y lo otro como lo que no
+        le gusta comer.\n3.  Haz cada sprite de comida empezar el comportamiento de
+        **errar** inmediatamente después de que aparezca."
+      Virtual Pet 5_2019: |-
+        ¡Usa <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> con <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> para **estimular** a "comer" en tu mundo virtual!
+
+        1.  Crea un evento que hace uno de tus sprites de comida saltar a una ubicación al azar cuando tu mascota lo toque.
+        2.  Repite lo de arriba para el otro sprite de comida.
+      Virtual Pet 6_2019: "¡Usa <xml><block type=\"variables_set\" block-text=\"the
+        set variable block\"><title name=\"VAR\">energy</title></block></xml> con
+        <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
+        name=\"VAR\">energy</title></block></xml> para hacer que comer comida afecte
+        la energía de tu mascota! ¡Cuanta más energía lo tenga, más rápido se mueve!
+        \n\n1.  Asigna la variable 'energía' a 5 cuando el programa empiece.\n2.  Cuando
+        tu mascota coma la comida que le **gusta**, añade 1 a 'energía.\n3.  Cuando
+        tu mascota coma la comida que **no le gusta**, establece 'energía' a 5\n4.
+        \ Cambia cada evento de tecla de fecha  para que tu mascota ahora se mueva
+        'energía' píxeles en lugar de un número específico."
+      Virtual Pet 7_2019: "¡Puedes chequear el valor de la 'energía' de tu mascota
+        con <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>,
+        un bloque nuevo encontrado en la categorîa 'Mundo'! \n\nCrea un evento que
+        hace el valor de 'energía' imprimido cuando el sprite de mascota esté pinchado. "
       'Widget: Text Compression': Busca patrones (palabras o frases repetidas) en
         el texto. Ingresa los patrones que ves en el diccionario de la derecha. A
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
         el patrón en el texto.
+      behaviors 1: |-
+        ¡Haz una predicción! Estudia el código.
+
+        -   El sprite girará.
+        -   El sprite se reducirá.
+        -   El sprite moverá.
+        -   El sprite cambiará colores.
+      behaviors 2: |-
+        ¡Vuela el cohete hasta las estrellas!
+
+        -   Cambia el comportamiento del cohete para que vuele hacia arriba en la área de exhibidor.
+      behaviors 3: |-
+        ¡Ayuda el vagabundo aventajar el robot!
+
+        -   Edita el comportamiento del sprite de vagabundo (arriba) para que vaya más rápidamente que el robot.
+      behaviors 3a: |-
+        El <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml> bloque debería ser usado en lugar del bloque 'costume'. Este lo hará para cualquier sprite, en cualquier caso de qué disfraz usa.
+
+        **Depurar:** ¡Haz todas las estrellas girar en la misma dirección!
+      behaviors 4: "¡Haz una predicción! ¿Cuál vereda seguirá satélite para alcanzar
+        el sistema solar?"
+      behaviors 5: |-
+        Escribe tu propio comportamiento.
+
+        -   Escribe un nuevo comportamiento por este astronauta para dirigirlo hacia uno de los cuatro barcos en la área de exhibidor.
+      behaviors 6: |-
+        Hacer la pelota rodar.
+
+        -   Crea un comportamiento nuevo y úsalo para hacer la pelota rodar. Tu comportamiento debería combinar dos acciones diferentes.
+
+        ![](<https://images.code.org/4c81af6da51ce5b8ce83e9056dbfe34c-image-1567714812224.2019-09-05 16_19_45.gif>)
+      behaviors 7: |-
+        ¡Conduce hacia el horizonte!
+
+        -   Crea un comportamiento nuevo y úsalo para que el coche mueva hacia arriba (norte) y se reduzca. Si lo haces correcto, se vería conduciendo hacia el horizonte.
+
+        ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
+      behaviors free play: "**Juego libre:** ¡Crea tu propio escena del espacio exterior!"
       comment_intro_maze_2018: "_\"Estoy confundido. Ayúdame a recordar cómo resolver
         este laberinto.\"_    \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
         y usa el nuevo bloque <xml><block type=\"comment\">\n    <title name=\"TEXT\">
@@ -18175,6 +18918,8 @@ es-MX:
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios
         para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo
         con algo totalmente diferente)
+      course4_artist_variables_challenge1: "¿Puedes crear un variable 'longitud' y
+        usarlo para crear este adorno interesante?"
       course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar.
         Hay unas pocas acciones que querrás repetir 'contador' veces.
       course4_bee_fwp_challenge1: Usa un bucle `desde` en una función para recoger
@@ -18434,6 +19179,9 @@ es-MX:
       courseA_collector_preLoops2: "¡Genial! ¡Ahora puedes agregar el código tú mismo!
         \n\nColoca un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         en la parte inferior del programa y haz clic en \"Ejecutar\"."
+      courseA_collector_preLoops3: Para agarrar el tesoro, encaja dos bloques ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        en la parte inferior del programa y haz clic en "Ejecutar".
       courseA_collector_preLoops7: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
           <xml><block type="collector_collect"/></xml>
@@ -18560,6 +19308,10 @@ es-MX:
         hasta el cerdo!"
       courseA_maze_seq10_2019: "**Desafío:** ¡Evita el TNT para que el pájaro llegue
         hasta el cerdo!"
+      courseA_maze_seq10_copy: |-
+        **Desafío:** ¡Rodea el TNT para que el pájaro llegue hasta el cerdo!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         ¡Es tiempo de un desafío más corto! Muévete en una dirección, y luego en otra, para que el pájaro llegue hasta el cerdo.
 
@@ -18599,6 +19351,10 @@ es-MX:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Prueba este.
       courseA_maze_seq5_2019: Prueba este.
+      courseA_maze_seq5_copy: |-
+        Inténtalo tú mismo desde el comienzo.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"¡Aquí cerdito, cerdito!"_
 
@@ -18615,7 +19371,15 @@ es-MX:
         el pájaro pueda llegar hasta el cerdo!"
       courseA_maze_seq6_2019: "¡Mueve en una dirección, y luego en otra, para que
         el pájaro pueda llegar hasta el cerdo!"
+      courseA_maze_seq6_copy: |-
+        ¡Muéveme en una dirección, y luego en otra, para que pueda llegar hasta el cerdo!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -18627,6 +19391,10 @@ es-MX:
         el cerdo!"
       courseA_maze_seq8_2019: "¡Resuelve este nivel y haz que el pájaro llegue hasta
         el cerdo!"
+      courseA_maze_seq8_copy: |-
+        ¡Resuelve este nivel y haz que el pájaro llegue hasta el cerdo!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Desafío:** Agrega bloques para depurar este nivel y que el pájaro llegue hasta el cerdo.
 
@@ -18674,16 +19442,10 @@ es-MX:
         la derecha si haces clic en el botón de flecha derecha.
       courseA_playLab_events4_2018: Ahora, agrega otro bloque de evento para que Jorge
         se mueva a la derecha si haces clic en el botón de flecha derecha.
-      courseA_playLab_events4_2019: Ahora, agrega otro bloque de evento para que Jorge
-        se mueva a la derecha si haces clic en el botón de flecha derecha.
       courseA_playLab_events5: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2018: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
-      courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
-        y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
-      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
-        reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7_2018: _Juego libre:_ Agrega todo lo que quieras a este
         juego. ¿Puedes hacer que el dinosaurio desaparezca cuando Jorge se encuentra
         con él?
@@ -19911,6 +20673,10 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
 
         Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
+
+        Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -19923,11 +20689,17 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"¡Vamos BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
@@ -19938,6 +20710,10 @@ es-MX:
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
+
+        ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
@@ -19953,6 +20729,10 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -19962,6 +20742,10 @@ es-MX:
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
@@ -20479,6 +21263,10 @@ es-MX:
         _"¡Esta nube está bloqueando mi vista!"_
 
         Revisa para ver si hay una flor debajo de la nube. Si hay una flor, recoge el néctar.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"¡Esta nube está bloqueando mi vista!"_
+
+        Revisa para ver si hay una flor debajo de la nube. Si hay una flor, recoge el néctar.
       courseD_bee_conditionals2: "¡Más nubes! \n\nRevisa debajo de cada nube para
         ver si hay alguna flor escondida antes de sacar el néctar. Si hay una flor
         debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
@@ -20488,6 +21276,10 @@ es-MX:
         flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
         que no todas las nubes esconden lo mismo!"
       courseD_bee_conditionals2_2019: "¡Más nubes! \n\nRevisa debajo de cada nube
+        para ver si hay alguna flor escondida antes de sacar el néctar. Si hay una
+        flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
+        que no todas las nubes esconden lo mismo!"
+      courseD_bee_conditionals2_copy: "¡Más nubes! \n\nRevisa debajo de cada nube
         para ver si hay alguna flor escondida antes de sacar el néctar. Si hay una
         flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
         que no todas las nubes esconden lo mismo!"
@@ -20502,6 +21294,10 @@ es-MX:
         puedes revisar todos los espacios por si hay alguna flor. Si hay una flor
         debajo de cualquiera de estas nubes, la abeja necesitará recoger el néctar
         _una vez_.
+      courseD_bee_conditionals3_copy: Solo puedes recoger néctar de las flores, pero
+        puedes revisar todos los espacios por si hay alguna flor. Si hay una flor
+        debajo de cualquiera de estas nubes, la abeja necesitará recoger el néctar
+        _una vez_.
       courseD_bee_conditionals4: |-
         En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
 
@@ -20511,6 +21307,10 @@ es-MX:
 
         Obtén todo el néctar con la menor cantidad de bloques posible.
       courseD_bee_conditionals4_2019: |-
+        En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
+
+        Obtén todo el néctar con la menor cantidad de bloques posible.
+      courseD_bee_conditionals4_copy: |-
         En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
 
         Obtén todo el néctar con la menor cantidad de bloques posible.
@@ -21337,6 +22137,11 @@ es-MX:
         -   Para hacer cada hexágono, repite el lado 6 veces, girando 60 grados.
         -   Salta 25 pixeles entre cada hexágono.
         -   Para dibujar un diamante, necesitarás alternar entre giros de 60 grados y 120 grados.
+      courseE_artist_functions1_copy: |-
+        _"¡Yo zombi artista. Yo amar dibujar!"_
+
+        Usa cuadrados con lados de 100 pixeles para ayudar al zombi a dibujar gafas.\
+        El puente entre las gafas es de 75 pixeles de largo.
       courseE_artist_functions2: |-
         ¡Las funciones te permiten definir nuevos bloques!
 
@@ -21351,6 +22156,14 @@ es-MX:
       courseE_artist_functions2_2019: "Aquí hay una función llamada `dibujar un cuadrado`.
         Úsala para completar este dibujo. \\\r\n\\_\\_\\_\\\r\n\\\r\nLos cuadrados
         están separados por 75 pixeles."
+      courseE_artist_functions2_copy: |-
+        ¡Las funciones te permiten definir nuevos bloques!
+
+        Hemos movido los bloques necesarios para dibujar un cuadrado a una función llamada `dibujar un cuadrado`. Esta vez, usa la función `dibujar un cuadrado` para crear las gafas.
+
+        * * *
+
+        Los cuadrados están separados por 75 pixeles.
       courseE_artist_functions3: "Volveremos a las funciones en breve. Tomémonos un
         descanso para practicar cómo hacer una estrella. \n\nPuedes agregar un bloque
         `repetir` para hacer este dibujo."
@@ -21360,7 +22173,16 @@ es-MX:
       courseE_artist_functions3_2019: "Volveremos a las funciones en breve. Tomémonos
         un descanso para practicar cómo hacer una estrella. \\\r\n\\\r\nPuedes hacer
         este dibujo agregando un bloque de repetición"
+      courseE_artist_functions3_copy: "Volveremos a las funciones en breve. Tomémonos
+        un descanso para practicar cómo hacer una estrella. \n\nPuedes agregar un
+        bloque `repetir` para hacer este dibujo."
       courseE_artist_functions4: |-
+        Ahora que puedes dibujar una estrella, ¡intenta dibujar cuatro!
+
+        -   Cada punta de la estrella tiene 25 pixeles de largo
+        -   Gira 45 grados entre las puntas
+        -   Salta 100 pixeles entre cada estrella
+      courseE_artist_functions4_copy: |-
         Ahora que puedes dibujar una estrella, ¡intenta dibujar cuatro!
 
         -   Cada punta de la estrella tiene 25 pixeles de largo
@@ -21376,6 +22198,10 @@ es-MX:
       courseE_artist_functions5_2019: "¿Cuándo dibujar tres estrellas es más díficil
         que dibujar cuatro? ¡Cuándo también tienes que saltar por sobre la luna!\\\r\n\\\r\nDibuja
         sólo esas tres estrellas para terminar el desafío"
+      courseE_artist_functions5_copy: |-
+        ¿Cuándo dibujar tres estrellas es más difícil que dibujar cuatro? ¡Cuando también tienes que saltar sobre la luna!
+
+        Dibuja esas tres estrellas para terminar el desafío.
       courseE_artist_functions6: |-
         ¡Lo estás haciendo muy bien!
 
@@ -21485,6 +22311,8 @@ es-MX:
       courseE_artist_functions_predict1_2018: 'Este es un desafío que usa una función
         que hemos definido. '
       courseE_artist_functions_predict1_2019: 'Este es un desafío que usa una función
+        que hemos definido. '
+      courseE_artist_functions_predict1_copy: 'Este es un desafío que usa una función
         que hemos definido. '
       courseE_artist_ramp8: |-
         ¡Genial! ¡Ahora vamos a usar el bucle `repetir` para hacer un cuadrado con el Artista! Los bloques para el artista son un poco diferentes a los de otros desafíos, pero la idea es la misma.
@@ -22434,6 +23262,24 @@ es-MX:
         Vamos a dibujar un triángulo equilátero.
 
         Tiene que tener lados de 50 pixeles de largo.
+      grade5_pixelation: |-
+        # Haz tu propia imagen de cualquier tamaño
+
+        ![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)
+        ![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)
+        ![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)
+        ![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)
+        ![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)
+        ![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)
+        ![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)
+
+        **Instrucciones:**
+
+        -   Codifica una imagen de cualquier cosa que quieras usando `binario`.
+        -   El lenguaje binario se representará solo con `0` y `1`.
+        -   Es posible que primero desees planificar y dibujar con papel cuadriculado.
+        -   Representa algo, tal vez, tu nombre escrito, tus iniciales, un ícono o logotipo de algún tipo.
+        -   ¡Sé creativo! La imagen no tiene que ser un cuadrado perfecto, puede ser larga y delgada.
       iceage_click_hello: |-
         ¿Puedes ayudar a Sid a llamar a sus amigos cada vez que haces clic en él?\
         Una vez que estés listo, presiona "Ejecutar". ¡Haz clic en Sid para ver cómo funciona tu código!
@@ -22471,6 +23317,35 @@ es-MX:
         una tormenta de hielo! \\\r\nCambia la escena a un fondo helado y establece
         la velocidad de Sid (actor 1) en rápido.\\\r\nPresiona \"Ejecutar\" y mueve
         a Sid hacia Diego para que le advierta."
+      mike3bit: |-
+        Color de 3 bits
+
+        **Instrucciones:**
+
+        -   Comenzamos con la imagen 4x2 que Maddie estaba creando, pero hemos dejado de lado los últimos píxeles.
+        -   Termina la imagen descubriendo qué colores faltan y codificándolos.
+      mike3bitbird: |-
+        Color de 3 bits
+
+        Este es un ejemplo de una imagen hecha con color de 3 bits. Intenta cambiarlo para entender cómo funciona.
+
+        _Si deseas restablecer la imagen, presiona "Comenzar de nuevo"._
+      mike3bitfreeplay: |-
+        Color de 3 bits
+
+        Tienes una última oportunidad para experimentar y ser creativo con el widget de pixelación. ¡Haz algo increíble y compártelo con tus compañeros de clase!
+
+        -   _Sugerencia:_ puedes copiar y pegar el valor de un píxel para usarlo repetidamente.
+      mike3bitmario: |-
+        Color de 3 bits
+
+        **Reto:**
+
+        Un codificador binario descuidado escribió UN 0 o 1 adicional en algún lugar dentro de los datos de esta imagen. ¡La parte adicional que está causando que Mario falle!
+
+        ¡Elimina el bit adicional para restaurar a Mario a la normalidad!
+
+        ![](<https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57 AM.png>)
       ramp_artist_loops1: |-
         ¡Que día más hermoso!
 
@@ -22551,3 +23426,17 @@ es-MX:
         de 200 pixeles.
       ramp_artist_loops9_2019: Resuelve este desafío dibujando un cuadrado de lados
         de 200 pixeles.
+      simconfig: |-
+        # Modificar y Predecir
+
+        Escoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.
+
+        Después de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?
+      simstarter: |-
+        # Coleccionando los Datos
+
+        Ejecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:
+
+        -   ¿Cuántas manzanas coleccionó el elefante?
+        -   ¿Cuántas manzanas coleccionó hipopótamo?
+        -   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?

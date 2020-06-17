@@ -1,0 +1,119 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Fill in the background of the screen with your favorite color. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.1",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Set the pen color to some new color (we made ours pink)\r\n\t* Note: even if you just want the default dot color - black - explicitly set the color to black here.\r\n\r\n2. Using that color, make a dot so big that it fills the screen.\r\n\r\n3. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "1BGuDFM7uEZl6pyE4htEwvCr4jRQunQDBOVSKFMlGmxTrl79bqHTgZNgv8SQ\n/kZM\n",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and dot() without any loops."
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to set the pen color at least twice. Once for the big dot, and once prior to the the next 3 dots."
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "To complete this task you need to draw at least 4 dots"
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to moveForward at least twice. Make sure you use a parameter too!"
+      }
+    ],
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
+    "show_debug_watch": "false",
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a snowman.  We check that the student:\r\n\r\n* set the `penColor` at least twice\r\n* made 4 dots\r\n* moved forward twice.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 16918,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:31:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:31:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-02 23:28:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

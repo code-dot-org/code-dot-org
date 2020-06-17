@@ -15,6 +15,13 @@ id:
         Untuk mengakses layanan ini, hentikan program yang terpasang dan coba lagi.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: tidak valid. Perhatikan bahwa setiap tautan hanya dapat digunakan
+                satu kali untuk mereset kata sandi Anda, dan hanya tautan yang paling
+                baru terkirim akan berfungsi.
       messages:
         blank: diperlukan
         blank_plural: diperlukan
@@ -47,9 +54,10 @@ id:
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Mengisi informasi berikut untuk
           menyelesaikan membuat akun Code.org dengan **%{provider}** untuk **%{email}**.
+        reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         error:
           future: tidak mungkin di masa depan
-  beta: Percobaan
+  beta: versi uji-coba
   hello: Halo dunia
   welcome_back: Selamat datang kembali, %{name}
   your_professional_learning_plan: Rencana Pembelajaran Profesional Anda
@@ -65,7 +73,9 @@ id:
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   join_section:
     code:
+      title: Bergabunglah dengan bagian di Code.org
       placeholder: Kode Bagian (ABCDEF)
+      instructions_short: Masukkan 6 huruf bagian kode anda
       submit: Bergabung
   add_hint_form:
     placeholder: Masukkan pentunjuk anda disini
@@ -167,8 +177,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
-      saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
     student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
       hukum izin untuk menggunakan layanan Code.org.
     agree_us_website: Saya setuju untuk menggunakan sebuah situs web yang berbasis
@@ -190,6 +198,12 @@ id:
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
+    parent_account_checkbox: 'Saya adalah orang tua/wali yang mendaftar atas nama
+      anak saya '
+    parent_account_email_progress_permission: Bisakah kami sesekali mengirimkan email
+      kabar mengenai perkembangan dan proyek anak Anda, serta kabar mengenai kursus
+      dan ilmu komputer mereka? [(Lihat kebijakan privasi kami)](%{privacy_policy_url})
+    parent_account_email_label: Email Orang Tua/Wali
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -256,6 +270,7 @@ id:
       %{name}
   parent_mailer:
     student_associated_subject: Masukkan code informasi Code.org
+    parent_email_added_subject: Selamat datang di Code.org!
   teacher_mailer:
     new_teacher_subject: Selamat datang di Code.org!
     delete_teacher_subject: 'Code.org pemberitahuan: Akun anda telah dihapus'
@@ -327,19 +342,22 @@ id:
       finished_hoc: Saya selesai!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
       my_dashboard: Dasbor saya
-      course_catalog: Katalog kursus
+      course_catalog: Katalog Kursus
       project_gallery: Proyek
       sections: Sesi
       help_support: Bantuan dan dukungan
       report_bug: Laporkan masalah
+      report_abuse: Laporkan penyalahgunaan
       teacher_community: Komunitas guru
-      professional_learning: Belajar profesional
+      professional_learning: Pembelajaran profesional
       documentation: Dokumentasi
       tutorials: Tutorial
       app_lab_documentation: Dokumentasi aplikasi Lab
       app_lab_tutorials: Tutorial aplikasi Lab
       game_lab_documentation: Dokumentasi lab permainan
       game_lab_tutorials: Tutorial lab permainan
+      sprite_lab_documentation: Dokumentasi Lab Sprite
+      sprite_lab_tutorials: Tutorial Lab Sprite
       educate_overview: Ikhtisar Pendidik
       educate_elementary: Sekolah Dasar
       educate_middle: Sekolah Menengah Pertama
@@ -365,6 +383,9 @@ id:
       help_us: Bantu Kami
       teach: Mengajar
       about: Tentang
+      legal: Privasi & Hukum
+      legal_privacy: Kebijakan privasi
+      legal_tos: Ketentuan Layanan
     user:
       classroom: Beranda guru
       district_dashboard: Wilayah Dashboard
@@ -393,17 +414,20 @@ id:
       flappy: Flappy
       frozen: Frozen
       gamelab: Laboratorium Game
-      gamelab_jr: Lab permainan (beta)
+      gamelab_jr: Game Lab (beta)
       gumball: Dunia Gumball yang menakjubkan
       iceage: Zaman Es
-      infinity: "∞"
+      infinity: Tidak terhingga
       makerlab: Pembuat Toolkit
       minecraft_adventurer: Petualang Minecraft
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Sambungan Kode'
       minecraft_designer: Minecraft
-      minecraft_hero: Pahlawan Minecraft
+      minecraft_hero: Minecraft Hero
       playlab: Play Lab/Lab Permainan
-      playlab_k1: Lab bermain (pra-pembaca)
+      playlab_k1: Play Lab (pra-pembaca)
+      sports: Olahraga
+      spritelab: Sprite Lab
       starwars: Perang Bintang
       starwarsblocks: Star wars(blok)
       starwarsblocks_hour: Star wars(blok)
@@ -511,6 +535,15 @@ id:
     update: Perbarui Akun
     account_successfully_updated: Akun sukses diperbarui.
     update_email: Update
+    for_parents_and_guardians: Untuk Orang Tua dan Wali
+    link_a_parent_email: Tautkan alamat email orang tua/wali ke akun ini untuk menerima
+      kabar perkembangan dan proyek anak Anda. Anda juga dapat menggunakan alamat
+      email ini untuk pemulihan kata sandi.
+    parent_guardian_email_label: Email orang tua/wali
+    none: Tidak Ada
+    only_one_parent_email_supported_warning: 'Catatan: kami hanya dapat mendukung
+      satu alamat email orang tua/wali per akun siswa untuk saat ini.'
+    encrypted: dienkripsi
   user_level:
     completed: Selesai
     tried: Telah mencoba
@@ -561,6 +594,8 @@ id:
     choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
       ini
     print_certificate: Cetak Sertifikat
+  certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk
+    mensponsori pembelajaran Anda."
   move_students:
     new_section_dne: Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan
       kode bagian berbeda.
@@ -651,6 +686,7 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban
@@ -774,6 +810,7 @@ id:
     hero:
       title: Minecraft
     sports:
+      title: Olahraga
       body: Membuat sebuah pertandingan basket atau mencampur dan mencocokkan di cabang
         olahraga.
     text-compression:
@@ -801,25 +838,6 @@ id:
         suatu pelajaran tunggal dan konsep untuk kelas anda.
       audience: Usia 14+
       cta: Pelajari caranya
-  gallery:
-    students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
-    students_made_these_with_code: Siswa membuat ini dengan kode program!
-    picture_count: Masa lalu <b>%{days}</b> hari, siswa-siswa telah membuat <b>%{count}</b>
-      gambar dengan pemrograman komputer. Klik gambar untuk melihat jalannya setiap
-      program.
-    activity_count: Dalam <b>%{days}</b> hari terakhir, para siswa telah membuat <b>%{count}</b>
-      app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
-      dan tangkapan layar untuk melihat jalannya tiap program.
-    want_to_make_your_own: Mau membuat sendiri ?
-    how_to_save: Tingkat terakhir pada tutorial ini, klik "Finish" dan "Save" untuk
-      menyimpan pekerjaan ke galeri.
-    more: lebih &rarr;
-    caption_by_name_age: oleh %{name}, usia %{age}
-    caption_time_ago: "%{time_ago} yang lalu"
-    header: Galeri
-    header_playlab: Play Lab/Lab Permainan
-    header_artist: Artis
-    report_abuse: Laporkan Penyalahgunaan
   landing:
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
@@ -828,6 +846,8 @@ id:
     help_support: Bantuan dan dukungan
     documentation: Dokumentasi
     tutorials: Tutorial
+  free_response:
+    placeholder: Masukkan jawaban Anda di sini
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
@@ -887,10 +907,10 @@ id:
     correct_body: Itu jawaban yang benar.
   dialog:
     ok: Oke!
-    startover_title: Kamu yakin ingin memulainya dari awal?
+    startover_title: Apakah Anda yakin Anda ingin memulai dari awal?
     startover_body: Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan
       penambahan atau perubahan data.
-    startover_ok: Mulai kembali
+    startover_ok: Memulai kembali
     startover_cancel: Batal
   time:
     hour: 1 jam
@@ -928,6 +948,8 @@ id:
       Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>
     accept_label_markdown: Saya menyetujui [Syarat dan Ketentuan](%{tos_url}) dan
       [Kebijakan Pribadi](%{privacy_url})
+    accept_tos: Dengan mendaftar di Code.org, Anda setuju dengan [Ketentuan Layanan](%{tos_url})
+      dan [Kebijakan Privasi](%{privacy_url}) kami.
     accept: Terima
     print: Cetak
     reminder_desc: Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat
@@ -1062,79 +1084,7 @@ id:
     instructor_feedback: Umpan balik instruktur
     peer_feedback: Peer Feedback
     outdated: Umpan balik ini telah ditambahkan sebelumnya diserahkan versi
-  flex_category:
-    required: Tinjauan
-    content: Konten
-    ramp_up: Jalan-Naik
-    main_course: Kursus Utama
-    extra_course_content: Isi Kursus Tambahan
-    csf_e_1: Jalur naik tujuan E (opsional)
-    csf_e_2: Isi kursus E
-    csf_f_1: Jalur naik tujuan F (opsional)
-    csf_f_2: Isi kursus F
-    csf_digcit: Kewarganegaraaan Digital
-    csf_jigsaw: Teka-teki
-    csf_sequencing: Urutan
-    csf_loops: Loop
-    csf_events: kegiatan
-    csf_online_safety: Keamanan daring
-    csf_binary: Biner
-    csf_conditionals: Kondisi
-    csf_nested_loops: Perulangan bercabang
-    csf_functions: fungsi
-    csf_variables: variabel
-    csf_for_loops: Untuk Pengulangan
-    csf_internet: Internet
-    csf_impacts: Dampak dari Komputasi
-    csf_warmup: Berlatih
-    csd1_1: 'Bab 1: Proses Pemecahan Masalah'
-    csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
-    csd2_1: 'Bab 1: Konten Web dan HTML'
-    csd2_2: 'Bab 2: Styling dan CSS'
-    csd3_1: 'Bab 1: Gambar dan Animasi'
-    csd3_2: 'Bab 2: Bangunan Permainan'
-    csd4_1: 'Bab 1: User Centered Design'
-    csd4_2: 'Bab 2: Aplikasi Prototyping'
-    csd5_1: 'Bab 1: Yang Mewakili Informasi'
-    csd5_2: 'Bab 2: Memecahkan Masalah Data'
-    csd6_1: 'Bab 1: Pemrograman dengan Hardware'
-    csd6_2: 'Bab 2: Membangun Prototipe Fisik'
-    csd_survey: Survei Pasca Kursus
-    csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
-    csp1_2: 'Bab 2: Menciptakan Internet'
-    csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
-    csp2_2: 'Bab 2: Memanipulasi dan Visualing Data'
-    csp3_1: 'Bab 1: Bahasa Pemrograman dan Algoritma'
-    csp4_1: 'Bab 1: Dunia Big Data dan Enkripsi'
-    csp5_1: 'Bab 1: Pemrograman Event-Driven'
-    csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
-    cspSurvey: Survei
-    cspAssessment: Bab Penilaian
-    csp_ap_1: 'Bab 1: Pengaturan Teknologi AP'
-    csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
-    csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
-    csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
-    csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
-    csp2_1_2018: 'Unit 2: informasi digital'
-    csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
-    csp4_1_2018: 'Unit 4: Big data dan privasi'
-    csp_variables: variabel
-    csp_conditionals: Kondisi
-    csp_functions: fungsi
-    csp_project: Proyek
-    csp_lists: List
-    csp_loops: Loop
-    csp_traversals: Melintang
-    csp_libraries: Perpustakaan
-    csp_parameters_return_values: Parameter dan Nilai Balik
-    dlp: Anjuran Refleksi
-    time4cs_c1: Everglades dan Ekosistemnya
-    time4cs_c2: Tantai Makanan di Everglades
-    time4cs_c3: Hidup di Everglades
-    time4cs_c4: Dampak Invasi pada Everglades
-    time4cs_c5: Masyarakat Mempengaruhi Perubahan di Everglades
-    k5_getting_started: Dapat Dimulai
-    k5_next_steps: Langkah berikutnya
+    peer_review: Penelaahan Sejawat
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan
@@ -1231,7 +1181,7 @@ id:
       email_alternate: Email alternatif
       gender: Identitas gender
       school_name: Nama Sekolah
-      school_city: Kota sekolah
+      school_city: Kota Sekolah
       school_country: Negara Sekolah
       ages: Umur berapa kamu mengajar tahun ini?
       subjects: Subjek mana kamu mengajar tahun ini?
@@ -1274,9 +1224,11 @@ id:
         music: Musik
         art: Seni
       resources:
+        khan: Akademi khan
         kodable: Kodable
         lightbot: Lightbot
       robotics:
+        grok: Mempelajari Grok
         kodable: Kodable
       workshop_course:
         csd: Penemuan CS
@@ -1288,9 +1240,19 @@ id:
   cookie_banner:
     accept: Saya setuju
   gdpr_dialog:
+    heading: Apakah Anda setuju untuk menggunakan sebuah situs web yang berbasis di
+      Amerika Serikat?
+    message: Data dari penggunaan Anda atas situs ini dapat dikirimkan ke dan disimpan
+      atau diproses di Amerika Serikat.
     true: Ya
   page_not_found_title: Halaman tidak ditemukan
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
+  copy: Salin
+  parent_email_banner:
+    text: "**Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk mendapatkan
+      kabar perkemabgan dan proyek anak Anda!"
+    link_your_email: Tautkan email Anda
+    not_now: Lain kali

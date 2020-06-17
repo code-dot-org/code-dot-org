@@ -1,0 +1,19 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#bubble_choice"}}
+  Bubble Choice & Lesson Extras
+
+#bubble_choice.in.collapse
+  - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+    .field
+      = f.label :display_name
+      %p Set the name that will show for this level on the parent level. Also will override how this level is displayed on the Course Overview page. Limit to 25 characters
+      = f.text_field :display_name, placeholder: '(defaults to Name)', maxlength: 25, style: 'width: 50%'
+
+  .field
+    = f.label :bubble_choice_description, 'Level description'
+    %p
+      Description of this level and why a student would want to choose it. Must be 200 characters or less.
+    = f.text_area :bubble_choice_description, rows: 3, class: "input-block-level", maxlength: 200
+
+  .field
+  = f.label :thumbnail_url, 'Optional thumbnail URL (overrides default thumbnail)'
+  = f.text_field :thumbnail_url

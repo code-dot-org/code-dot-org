@@ -1,0 +1,11 @@
+name 'CSD Web Headings challenge_2020_virtual'
+editor_experiment ''
+display_name 'HTML Headings'
+description 'Here are some extra HTML codes to try out..'
+
+sublevels
+level 'CSD Web Headings line break'
+level 'CSD Web Headings hr'
+level 'CSD Web Headings Special Character 1'
+level 'CSD Web Headings Special Character 2'
+level 'CSD Web Headings Special Character 3'

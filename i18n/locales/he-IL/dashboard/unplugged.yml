@@ -59,6 +59,8 @@ he:
       ForLoopFun:
         title: כיף עם לולאת "עבור"
         desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב, אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
+      SongwritingWithParameters:
+        title: כתיבת שירים
       BinaryImages:
         title: תמונות בינאריות
       DesignRecipe:
@@ -99,6 +101,8 @@ he:
         title: התניות עם כרטיסים
       courseD_unplugged_binaryImages:
         title: תמונות בינאריות
+      courseE_unplugged_songwritingParameters:
+        title: כתיבת שירים
       courseE_unplugged_internet:
         title: אינטרנט
       courseE_unplugged_songwriting:
@@ -108,6 +112,8 @@ he:
       courseF_unplugged_forLoopFun:
         title: כיף עם לולאת "עבור"
         desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב, אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
+      courseF_unplugged_songwritingParameters:
+        title: כתיבת שירים
       courseB_unplugged_MRF_2018:
         title: חברי הרובוטיים
       PlantASeed_2018:

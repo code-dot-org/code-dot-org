@@ -119,6 +119,7 @@ class RegionalPartner < ActiveRecord::Base
     pd_workshops.
       future.
       where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
+      order_by_scheduled_start.
       map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
@@ -180,9 +181,13 @@ class RegionalPartner < ActiveRecord::Base
   # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
   # state.
   # @param [String] zip_code
-  def self.find_by_zip(zip_code)
+  def self.find_by_zip(zip_code_raw)
     partner = nil
     state = nil
+
+    # Force to be a string, ignore "-" and anything after it,
+    # and only allow digits 0-9.
+    zip_code = zip_code_raw.to_s.split("-")[0]&.tr('^0-9', '')
 
     if RegexpUtils.us_zip_code?(zip_code)
       # Try to find the matching partner using the ZIP code.

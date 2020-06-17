@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -26,7 +26,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  before_save :fix_examples
+  before_save :fix_examples, :update_goal_override
 
   serialized_attrs %w(
     level_url
@@ -74,11 +74,11 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
-    thumbnail_url
     include_shared_functions
     preload_asset_list
     skip_autosave
     skip_run_save
+    goal_override
   )
 
   before_save :update_ideal_level_source
@@ -360,6 +360,8 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
+        level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
       end
 
@@ -409,6 +411,7 @@ class Blockly < Level
     options.freeze
   end
 
+  # FND-985 Create shared API to get localized level properties.
   def get_localized_property(property_name)
     if should_localize? && try(property_name)
       I18n.t(
@@ -496,22 +499,67 @@ class Blockly < Level
       function_name = function.at_xpath('./title[@name="NAME"]')
       next unless function_name
       localized_name = I18n.t(
-        function_name.content,
-        scope: [:data, :function_names, name],
+        "name",
+        scope: [:data, :function_definitions, name, function_name.content],
         default: nil,
         smart: true
       )
+      original_function_name = function_name.content
       function_name.content = localized_name if localized_name
+      # The description and parameter declarations are in a mutation.
+      # If this function doesn't have a mutation, it won't have a
+      # description or parameters, so we can move on.
+      function_mutation = function.at_xpath('./mutation')
+      next unless function_mutation
+      function_description = function_mutation.at_xpath('./description')
+      localized_description = I18n.t(
+        "description",
+        scope: [:data, :function_definitions, name, original_function_name],
+        default: nil,
+        smart: true
+      )
+      function_description.content = localized_description if localized_description
+      # Translate the "declared" parameter names
+      function_mutation.xpath("./arg").each do |parameter|
+        localized_parameter = I18n.t(
+          parameter["name"],
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter["name"] = localized_parameter if localized_parameter
+      end
+      # Replace usages of parameters with their translated name
+      function.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        parameter_name = parameter.content
+        localized_parameter = I18n.t(
+          parameter_name,
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter.content = localized_parameter if localized_parameter
+      end
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
       next unless mutation
+      mutation_name = mutation.attr('name')
       localized_name = I18n.t(
-        mutation.attr('name'),
-        scope: [:data, :function_names, name],
+        "name",
+        scope: [:data, :function_definitions, name, mutation.attr('name')],
         default: nil,
         smart: true
       )
+      mutation.xpath('./arg').each do |arg|
+        localized_parameter = I18n.t(
+          arg["name"],
+          scope: [:data, :function_definitions, name, mutation_name, :parameters],
+          default: nil,
+          smart: true
+        )
+        arg["name"] = localized_parameter if localized_parameter
+      end
       mutation.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip
@@ -608,5 +656,11 @@ class Blockly < Level
       level_object[:config]["args"] = arguments
     end
     level_objects_copy
+  end
+
+  def update_goal_override
+    if goal_override&.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
   end
 end

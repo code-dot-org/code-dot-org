@@ -112,4 +112,6 @@ cron-user-hierarchy-pii:
 cron-user-levels:
 - dashboard.user_levels
 cron-level-sources-pii:
-- dashboard.level_sources
+- dashboard.level_sources:
+    skip_staging_table: true
+    schedule: 'weekly'

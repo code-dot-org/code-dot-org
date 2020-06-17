@@ -2,10 +2,18 @@ name 'CSD U3 Boolean MC_2018_2019_pilot'
 title 'title'
 description ''
 question 'Which result will be printed in the console by this program?'
-right 'true<br>false<br>true'
-wrong '  0<br>200<br>100'
-wrong '  true<br>error<br>true'
-wrong '  false<br>true<br>false'
+right 'true  
+false  
+true'
+wrong '0  
+200  
+100'
+wrong 'true  
+error  
+true'
+wrong 'false  
+true  
+false'
 
 markdown <<MARKDOWN
 # Boolean Expressions

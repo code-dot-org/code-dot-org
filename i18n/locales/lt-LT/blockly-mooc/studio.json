@@ -34,6 +34,7 @@
   "bird": "paukštis",
   "calloutPutCommandsHereRunStart": "Perkelk komandas čia, kad jos veiktų, kai prasidės programa",
   "calloutBlocklyPlaceGoUpHere": "Įdėk blokelį „judėk aukštyn“ čia, kad galėtum judėti aukštyn",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Paspausk žodį „Įvykiai“, kad pamatytum visus įvykių komandų blokus.",
   "calloutUseArrowButtons": "Nuspausk ir laikyk šiuos mygtukus arba rodyklių klavišus savo klaviatūroje, kad įvyktų daugiau įvykių",
   "calloutUseArrowButtonsAutoSteer": "Mes paslėpėme kodą, kurį tu parašei, bet tu vis dar gali naudoti rodyklių klavišus judėjimui",

@@ -9,6 +9,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
@@ -26,13 +27,20 @@ import {
   saveAllStudents,
   editAll,
   TransferStatus,
-  TransferType
+  TransferType,
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
+import DownloadParentLetter from './DownloadParentLetter';
+import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   headerName: {
@@ -44,15 +52,26 @@ const styles = {
     width: '20%',
     float: 'left'
   },
-  buttonRow: {
-    display: 'flex'
+  button: {
+    float: 'left'
   },
   buttonWithMargin: {
-    marginRight: 5
+    marginRight: 5,
+    float: 'left'
   },
   verticalAlign: {
     display: 'flex',
     alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
   }
 };
 
@@ -120,7 +139,6 @@ export const sortRows = (data, columnIndexList, orderList) => {
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
-    pegasusUrlPrefix: PropTypes.string,
 
     // Provided by redux
     sectionId: PropTypes.number,
@@ -142,7 +160,8 @@ class ManageStudentsTable extends Component {
         direction: 'asc',
         position: 0
       }
-    }
+    },
+    showCopiedMsg: false
   };
 
   renderTransferSuccessNotification = () => {
@@ -193,6 +212,41 @@ class ManageStudentsTable extends Component {
   };
 
   // Cell formatters.
+
+  passwordHeaderFormatter = () => {
+    const {loginType} = this.props;
+    const passwordLabels = {};
+    passwordLabels[SectionLoginType.picture] = i18n.picturePassword();
+    passwordLabels[SectionLoginType.word] = i18n.secretWords();
+    passwordLabels[SectionLoginType.email] = i18n.password();
+    const passwordTooltips = {};
+    passwordTooltips[
+      SectionLoginType.picture
+    ] = i18n.editSectionLoginTypePicDesc();
+    passwordTooltips[
+      SectionLoginType.word
+    ] = i18n.editSectionLoginTypeWordDesc();
+    passwordTooltips[
+      SectionLoginType.email
+    ] = i18n.editSectionLoginTypeEmailDesc();
+    return (
+      <span style={styles.verticalAlign}>
+        <div data-for="password" data-tip="" id="password-header">
+          {passwordLabels[loginType]}
+        </div>
+        <ReactTooltip
+          id="password"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>{passwordTooltips[loginType]}</div>
+        </ReactTooltip>
+      </span>
+    );
+  };
 
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
@@ -294,6 +348,7 @@ class ManageStudentsTable extends Component {
       <div>
         {numberOfEditingRows > 1 && (
           <Button
+            __useDeprecatedTag
             onClick={this.props.saveAllStudents}
             color={Button.ButtonColor.orange}
             text={i18n.saveAll()}
@@ -378,8 +433,6 @@ class ManageStudentsTable extends Component {
 
   getColumns = sortable => {
     const {loginType} = this.props;
-    const passwordLabel =
-      loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
     let dataColumns = [
       {
         property: 'name',
@@ -450,7 +503,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'password',
         header: {
-          label: passwordLabel,
+          formatters: [this.passwordHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -532,6 +585,35 @@ class ManageStudentsTable extends Component {
     return dataColumns;
   };
 
+  copySectionCode = () => {
+    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
+    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
+    copyToClipboard(joinLink);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'copy-section-code-join-link',
+        data_json: JSON.stringify({
+          sectionId: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
+    this.setState({showCopiedMsg: true});
+    setTimeout(() => {
+      this.setState({showCopiedMsg: false});
+    }, 5000);
+    clearTimeout();
+  };
+
+  onPrintLoginCards = () => {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    window.open(url, '_blank');
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -557,7 +639,8 @@ class ManageStudentsTable extends Component {
       loginType,
       transferStatus,
       transferData,
-      sectionId
+      sectionId,
+      sectionCode
     } = this.props;
     return (
       <div>
@@ -583,19 +666,62 @@ class ManageStudentsTable extends Component {
         )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
-        <div style={styles.buttonRow}>
+        <div>
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.buttonWithMargin}>
-              <AddMultipleStudents />
+              <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
           )}
           {this.isMoveStudentsEnabled() && (
-            <MoveStudents
-              studentData={this.studentDataMinusBlanks()}
-              transferData={transferData}
-              transferStatus={transferStatus}
+            <div style={styles.button}>
+              <MoveStudents
+                studentData={this.studentDataMinusBlanks()}
+                transferData={transferData}
+                transferStatus={transferStatus}
+              />
+            </div>
+          )}
+          {(loginType === SectionLoginType.word ||
+            loginType === SectionLoginType.picture) && (
+            <div style={styles.button}>
+              <PrintLoginCards
+                sectionId={this.props.sectionId}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                }
+                onPrintLoginCards={this.onPrintLoginCards}
+              />
+            </div>
+          )}
+          <div style={styles.button}>
+            <DownloadParentLetter
+              sectionId={this.props.sectionId}
+              buttonMetricsCategory={
+                ParentLetterButtonMetricsCategory.ABOVE_TABLE
+              }
             />
+          </div>
+          {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
+            <div
+              style={styles.sectionCodeBox}
+              data-for="section-code"
+              data-tip
+              onClick={this.copySectionCode}
+            >
+              {!this.state.showCopiedMsg && (
+                <span>
+                  <span>{i18n.sectionCodeWithColon()}</span>
+                  <span style={styles.sectionCode}>{sectionCode}</span>
+                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
+                    <div>{i18n.copySectionCodeTooltip()}</div>
+                  </ReactTooltip>
+                </span>
+              )}
+              {this.state.showCopiedMsg && (
+                <span>{i18n.copySectionCodeSuccess()}</span>
+              )}
+            </div>
           )}
         </div>
         <Table.Provider
@@ -611,7 +737,6 @@ class ManageStudentsTable extends Component {
           loginType={loginType}
           sectionCode={this.props.sectionCode}
           studioUrlPrefix={this.props.studioUrlPrefix}
-          pegasusUrlPrefix={this.props.pegasusUrlPrefix}
         />
       </div>
     );

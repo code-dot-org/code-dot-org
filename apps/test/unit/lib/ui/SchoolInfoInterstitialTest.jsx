@@ -51,12 +51,14 @@ describe('SchoolInfoInterstitial', () => {
           </div>
           <div>
             <Button
+              __useDeprecatedTag
               text={i18n.dismiss()}
               onClick={wrapper
                 .find('Button[id="dismiss-button"]')
                 .prop('onClick')}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.save()}
               onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
             />

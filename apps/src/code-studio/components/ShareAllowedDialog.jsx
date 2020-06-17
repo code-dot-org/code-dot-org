@@ -12,20 +12,15 @@ import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {
-  hideShareDialog,
-  unpublishProject,
-  showLibraryCreationDialog
-} from './shareDialogRedux';
+import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
-import LibraryClientApi from './libraries/LibraryClientApi';
+import QRCode from 'qrcode.react';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -128,6 +123,20 @@ const styles = {
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
   }
 };
 
@@ -148,12 +157,8 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
-    librariesEnabled: PropTypes.bool,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -171,7 +176,6 @@ class ShareAllowedDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
-    openLibraryCreationDialog: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool
@@ -312,7 +316,6 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
-    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -346,14 +349,14 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">
-                  {this.props.i18n.t('project.share_title')}
-                </p>
+                <p className="dialog-title">{i18n.shareTitle()}</p>
                 {this.props.isAbusive && (
                   <AbuseError
                     i18n={{
-                      tos: this.props.i18n.t('project.abuse.tos'),
-                      contact_us: this.props.i18n.t('project.abuse.contact_us')
+                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                      contact_us: i18n.contactUs({
+                        url: 'https://code.org/contact'
+                      })
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -361,18 +364,14 @@ class ShareAllowedDialog extends React.Component {
                   />
                 )}
                 {showShareWarning && (
-                  <p style={styles.shareWarning}>
-                    {this.props.i18n.t('project.share_u13_warning')}
-                  </p>
+                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>
-                      {this.props.i18n.t('project.share_copy_link')}
-                    </p>
+                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
                     <input
                       type="text"
                       id="sharing-input"
@@ -423,16 +422,6 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
-                    this.props.librariesEnabled) && (
-                    <button
-                      type="button"
-                      onClick={this.props.openLibraryCreationDialog}
-                      style={styles.button}
-                    >
-                      {i18n.shareLibrary()}
-                    </button>
-                  )}
                   <DownloadReplayVideoButton
                     style={styles.button}
                     onError={this.replayVideoNotFound}
@@ -477,12 +466,25 @@ class ShareAllowedDialog extends React.Component {
                   )}
                 </div>
                 {this.state.showSendToPhone && (
-                  <SendToPhone
-                    channelId={this.props.channelId}
-                    appType={this.props.appType}
-                    isLegacyShare={false}
-                    styles={{label: {marginTop: 15, marginBottom: 0}}}
-                  />
+                  <div>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
+                        />
+                      </div>
+                      <div style={styles.sendToPhoneRight}>
+                        <label>{i18n.scanQRCode()}</label>
+                        <QRCode
+                          value={this.props.shareUrl + '?qr=true'}
+                          size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
                 )}
                 {canPublish && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
@@ -502,7 +504,6 @@ class ShareAllowedDialog extends React.Component {
                   {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
-                      i18n={this.props.i18n}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -517,7 +518,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog clientApi={libraryClientAPI} />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }
@@ -529,7 +530,6 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
-    librariesEnabled: state.pageConstants.librariesEnabled,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending
   }),
@@ -541,10 +541,6 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
-    },
-    openLibraryCreationDialog() {
-      dispatch(showLibraryCreationDialog());
-      dispatch(hideShareDialog());
     }
   })
 )(ShareAllowedDialog);

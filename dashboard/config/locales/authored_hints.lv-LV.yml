@@ -121,6 +121,12 @@ lv-LV:
         Course_4_SCF_2_a: Katram astoņstūrim mala ir 40 punktus gara.
         Course_4_SCF_2_b: Katrā horizontālajā līnijā ir 136 punktu lēciens starp katru
           astoņstūri.
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Centieties, lai Robots Aģents uzbūvē dažus tiltus,
+          lai Alekss vai Stīvs varētu staigāt ap kartes malām.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_b: Īsākais risinājums iespējams ar tikai
           5 blokiem, bet tas izmanto "atkārtot" bloku!
@@ -143,7 +149,18 @@ lv-LV:
         courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
           ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
       courseE_artist_functions2:
+        courseD_artist_functions2_a: |-
+          Tavai programmai nepieciešams:
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
 

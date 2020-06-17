@@ -1,9 +1,16 @@
 name 'CSD U2 Test Debug_pilot'
+editor_experiment ''
 title 'Question 4'
-question 'A student is using a stylesheet to make all the paragraphs on the website green, but it\’s not working on index.html, even though it works on the other web pages.  What could be causing the problem? <ol><li>The student forgot to link the stylesheet to the index.html page.</li>
-<li>The student did not upload the images used in the index.html page.</li><li>The student accidentally misspelled “green” in the stylesheet.</li></ol>'
 right '1 only'
 wrong '3 only'
 wrong '1 and 2 only'
 wrong '1 and 3 only'
 wrong '1, 2, and 3'
+
+markdown <<MARKDOWN
+A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem?
+
+1. The student forgot to link the stylesheet to the index.html page.
+1. The student did not upload the images used in the index.html page.
+1. The student accidentally misspelled “green” in the stylesheet.
+MARKDOWN

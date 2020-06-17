@@ -45,6 +45,20 @@ describe('ProgressBubble', () => {
     assert(wrapper.is('div'));
   });
 
+  it('shows letter in bubble when level has a letter', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          letter: 'a'
+        }}
+      />
+    );
+
+    expect(wrapper.find('#test-bubble-letter')).to.have.lengthOf(1);
+  });
+
   it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 

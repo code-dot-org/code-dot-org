@@ -8,10 +8,10 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
+import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';

@@ -166,8 +166,8 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year,
-                  :description_short, :description_student,
+                  :family_name, :version_year, :visible, :is_stable,
+                  :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions, :show_assign_button], summary.keys
     assert_equal 'my-course', summary[:name]
@@ -193,17 +193,20 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test 'summarize_version' do
-    create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
-    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, is_stable: true)
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, is_stable: true)
+    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', visible: true)
+    csp_2020 = create(:course, name: 'csp-2020', family_name: 'csp', version_year: '2019')
 
-    summary = csp_2018.summarize_versions
-    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
-    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+    [csp_2017, csp_2018, csp_2019].each do |c|
+      summary = c.summarize_versions
+      assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+      assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+    end
 
-    summary = csp_2019.summarize_versions
-    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
-    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+    # Result should include self, even if it's not visible
+    summary = csp_2020.summarize_versions
+    assert_equal ['csp-2020', 'csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
   end
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
@@ -478,14 +481,20 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "valid_courses" do
-    # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp-2017')
+    csp = create(:course, name: 'csp-2017', visible: true, is_stable: true)
+    # Should still be in valid_courses if visible and not stable
+    csd = create(:course, name: 'csd-2017', visible: true)
+    create(:course, name: 'madeup')
+
+    assert_equal [csp, csd], Course.valid_courses
+  end
+
+  test "assignable_info" do
+    csp = create(:course, name: 'csp-2017', visible: true, is_stable: true)
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
-    csd = create(:course, name: 'csd-2017')
-    create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
     create(:course_script, position: 2, course: csp, script: csp2)
@@ -498,20 +507,12 @@ class CourseTest < ActiveSupport::TestCase
     )
     create(:course_script, position: 3, course: csp, script: csp3)
 
-    courses = Course.valid_courses
-
-    # one entry for each 2017 course that is in ScriptConstants
-    assert_equal 2, courses.length
-    assert_equal csd.id, courses[0][:id]
-    assert_equal csp.id, courses[1][:id]
-
-    csp_assign_info = courses[1]
+    csp_assign_info = csp.assignable_info
 
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
     assert_equal 'csp-2017', csp_assign_info[:script_name]
-    assert_equal 0, csp_assign_info[:position]
-    assert_equal(0, csp_assign_info[:category_priority])
+    assert_equal(-1, csp_assign_info[:category_priority])
 
     # has localized name, category
     assert_equal "Computer Science Principles ('17-'18)", csp_assign_info[:name]
@@ -522,83 +523,48 @@ class CourseTest < ActiveSupport::TestCase
 
     # teacher without experiment has default script_ids
     teacher = create(:teacher)
-    courses = Course.valid_courses(user: teacher)
-    assert_equal csp.id, courses[1][:id]
-    csp_assign_info = courses[1]
+    csp_assign_info = csp.assignable_info(teacher)
+    assert_equal csp.id, csp_assign_info[:id]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
     # teacher with experiment has alternate script_ids
     teacher_with_experiment = create(:teacher)
     experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    courses = Course.valid_courses(user: teacher_with_experiment)
-    assert_equal csp.id, courses[1][:id]
-    csp_assign_info = courses[1]
+    csp_assign_info = csp.assignable_info(teacher_with_experiment)
+    assert_equal csp.id, csp_assign_info[:id]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
     experiment.destroy
   end
 
-  test "valid_courses all versions" do
-    # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp-2017')
-    csp1 = create(:script, name: 'csp1')
-    csp2 = create(:script, name: 'csp2')
-    csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
-    csp3 = create(:script, name: 'csp3')
-    csp18 = create(:course, name: 'csp-2018')
-    csd = create(:course, name: 'csd-2017')
-    csd18 = create(:course, name: 'csd-2018')
-    create(:course, name: 'madeup')
+  test "self.valid_courses: omits pilot courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :course, pilot_experiment: 'my-experiment'
+    assert Course.any?(&:pilot?)
 
-    create(:course_script, position: 1, course: csp, script: csp1)
-    create(:course_script, position: 2, course: csp, script: csp2)
-    create(:course_script,
-      position: 2,
-      course: csp,
-      script: csp2_alt,
-      experiment_name: 'csp2-alt-experiment',
-      default_script: csp2
-    )
-    create(:course_script, position: 3, course: csp, script: csp3)
+    refute Course.valid_courses(user: student).any?(&:pilot_experiment)
+    refute Course.valid_courses(user: teacher).any?(&:pilot_experiment)
+    assert Course.valid_courses(user: pilot_teacher).any?(&:pilot_experiment)
+    assert Course.valid_courses(user: levelbuilder).any?(&:pilot_experiment)
+  end
 
-    courses = Course.valid_courses
+  test "valid_courses: pilot experiment results not cached" do
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
 
-    # one entry for each 2017 and 2018 course in ScriptConstants
-    assert_equal 4, courses.length
-    assert_equal csd.id, courses[0][:id]
-    assert_equal csd18.id, courses[1][:id]
-    assert_equal csp.id, courses[2][:id]
-    assert_equal csp18.id, courses[3][:id]
+    csp_2019 = create :course, name: 'csp-2019', visible: true
+    csp_2020 = create :course, name: 'csp-2020', pilot_experiment: 'my-experiment'
 
-    csp_assign_info = courses[2]
-
-    # has fields from ScriptConstants::Assignable_Info
-    assert_equal csp.id, csp_assign_info[:id]
-    assert_equal 'csp-2017', csp_assign_info[:script_name]
-    assert_equal 0, csp_assign_info[:position]
-    assert_equal(0, csp_assign_info[:category_priority])
-
-    # has localized name, category
-    assert_equal "Computer Science Principles ('17-'18)", csp_assign_info[:name]
-    assert_equal 'Full Courses', csp_assign_info[:category]
-
-    # has script_ids
-    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
-
-    # teacher without experiment has default script_ids
-    teacher = create(:teacher)
-    courses = Course.valid_courses(user: teacher)
-    assert_equal csp.id, courses[2][:id]
-    csp_assign_info = courses[2]
-    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
-
-    # teacher with experiment has alternate script_ids
-    teacher_with_experiment = create(:teacher)
-    experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    courses = Course.valid_courses(user: teacher_with_experiment)
-    assert_equal csp.id, courses[2][:id]
-    csp_assign_info = courses[2]
-    assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
-    experiment.destroy
+    assert_equal Course.valid_courses, [csp_2019]
+    assert_equal Course.valid_courses(user: teacher), [csp_2019]
+    # We had a caching bug where valid_courses with a user with pilot experiment would mutate the value stored
+    # in the Rails cache, causing the course behind the experiment to be returned for all calls afterwards.
+    # Verify that the results are still correct after this call.
+    assert_equal Course.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
+    assert_equal Course.valid_courses, [csp_2019]
+    assert_equal Course.valid_courses(user: teacher), [csp_2019]
   end
 
   test "update_teacher_resources" do
@@ -606,5 +572,73 @@ class CourseTest < ActiveSupport::TestCase
     course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
 
     assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
+  end
+
+  test 'has pilot access' do
+    course = create :course
+    pilot_course = create :course, pilot_experiment: 'my-experiment'
+    script_in_pilot_course = create :script
+    create :course_script, course: pilot_course, script: script_in_pilot_course, position: 1
+
+    student = create :student
+    teacher = create :teacher
+
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is assigned to a pilot course
+    pilot_section = create :section, user: pilot_teacher, course: pilot_course
+    assigned_pilot_student = create(:follower, section: pilot_section).student_user
+
+    # teacher in a pilot teacher's section, assigned to the course
+    teacher_in_section = create :teacher
+    create(:follower, section: pilot_section, student_user: teacher_in_section)
+
+    # student who has progress in a pilot course, but is not currently assigned to it
+    other_section = create :section, user: pilot_teacher, course: pilot_course
+    pilot_student_with_progress = create :student
+    create(:follower, section: other_section, student_user: pilot_student_with_progress)
+    create :user_script, user: pilot_student_with_progress, script: script_in_pilot_course
+
+    # student of pilot teacher, without assignment or progress
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
+    levelbuilder = create :levelbuilder
+
+    refute course.pilot?
+    refute course.has_pilot_access?
+    refute course.has_pilot_access?(student)
+    refute course.has_pilot_access?(teacher)
+    refute course.has_pilot_access?(pilot_teacher)
+    refute course.has_pilot_access?(assigned_pilot_student)
+    refute course.has_pilot_access?(teacher_in_section)
+    refute course.has_pilot_access?(pilot_student_with_progress)
+    refute course.has_pilot_access?(student_of_pilot_teacher)
+    refute course.has_pilot_access?(levelbuilder)
+
+    assert pilot_course.pilot?
+    refute pilot_course.has_pilot_access?
+    refute pilot_course.has_pilot_access?(student)
+    refute pilot_course.has_pilot_access?(teacher)
+    assert pilot_course.has_pilot_access?(pilot_teacher)
+    assert pilot_course.has_pilot_access?(assigned_pilot_student)
+    assert pilot_course.has_pilot_access?(teacher_in_section)
+    assert pilot_course.has_pilot_access?(pilot_student_with_progress)
+    refute course.has_pilot_access?(student_of_pilot_teacher)
+    assert pilot_course.has_pilot_access?(levelbuilder)
+  end
+
+  test 'has any pilot access' do
+    student = create :student
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :course, pilot_experiment: 'my-experiment'
+    levelbuilder = create :levelbuilder
+
+    refute Course.has_any_pilot_access?
+    refute Course.has_any_pilot_access?(student)
+    refute Course.has_any_pilot_access?(teacher)
+    assert Course.has_any_pilot_access?(pilot_teacher)
+    assert Course.has_any_pilot_access?(levelbuilder)
   end
 end

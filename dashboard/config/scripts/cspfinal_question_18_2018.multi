@@ -1,5 +1,6 @@
 name 'CSPFinal_Question_18_2018'
-question 'The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?'
+editor_experiment ''
+question 'The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image. What type of transformation is the photographer using on the digital image?'
 right 'Lossless transformation'
 wrong 'Lossy transformation'
 wrong 'Multiband transformation'
@@ -10,11 +11,11 @@ The answer is "lossless" transformation because there is a computational process
 
 This question is tricky for a few reasons: 
 
-0. it is carefully formulated with starting assumptions and values that ensure the transformation is lossless. If you applied this transformation willy-nilly it *might* be lossless (see below). 
+1. it is carefully formulated with starting assumptions and values that ensure the transformation is lossless. If you applied this transformation willy-nilly it *might* be lossless (see below). 
 
-1. it applies the terms lossy and lossless outside the context they are usually presented (compression)
+2. it applies the terms lossy and lossless outside the context they are usually presented (compression)
 
-2. because of the fact that the data is being transformed and overwritten, you might be tricked into thinking that the data is "lost".   But the transformation itself is lossless because you can apply a computational process to the transformed data to recover every bit of the original information.
+3. because of the fact that the data is being transformed and overwritten, you might be tricked into thinking that the data is "lost".   But the transformation itself is lossless because you can apply a computational process to the transformed data to recover every bit of the original information.
 
 It would be "lossy" if the transformation did something that would *not* let you recover every bit.  
 

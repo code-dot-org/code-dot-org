@@ -44,10 +44,10 @@
     .lesson-plan
       %h2
         = t('lesson_plan')
-      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_html_url, target: '_blank'}
+      %a.btn.pdf-button{href: @script_level.lesson.lesson_plan_html_url, target: '_blank'}
         = t('view_lesson_plan')
       - if has_pegasus_lesson_pdf
-        %a.btn.pdf-button{href: @script_level.stage.lesson_plan_pdf_url, target: '_blank'}
+        %a.btn.pdf-button{href: @script_level.lesson.lesson_plan_pdf_url, target: '_blank'}
           = t('pdf_download')
 
 :javascript

@@ -147,39 +147,6 @@ body {
 
 /* styling for the embedded dashboard components... */
 
-#user_hero #welcome {
-  margin-top:10px;
-  margin-bottom:5px;
-  font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
-}
-
-#user_hero #continue_button {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  height: 22px;
-  background-color: rgb(255, 164, 0) ;
-  border-color: rgb(255, 164, 0) ;
-}
-
-#user_hero #student_progress {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #left_off {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #classroom {
-  font-family: 'Gotham 5r', sans-serif;
-  font-size:16px;
-  margin-top:10px;
-}
-
 #sign_in_or_user .button-signin {
   text-decoration: none;
   -webkit-appearance: none;

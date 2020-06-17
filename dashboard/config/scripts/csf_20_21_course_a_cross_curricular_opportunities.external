@@ -1,0 +1,50 @@
+name 'csf_20-21_course_a_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course A: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course A: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+### new 
+
+<details><summary>
+
+**Language**
+
+</summary>
+
+* **K.L.6** - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
+
+</details>
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **K.SL.1** - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
+
+* **K.SL.2** - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
+
+* **K.SL.5** - Add drawings or other visual displays to descriptions as desired to provide additional detail.
+
+</details>
+
+## Common Core Math Standards
+
+<details><summary>
+
+**Geometry**
+
+</summary>
+
+* **K.G.A.1** - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
+
+</details>
+
+
+MARKDOWN

@@ -5,12 +5,25 @@ class LevelGroupDSL < LevelDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @hash[:pages] = []
     @hash[:texts] = []
     @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
-    @i18n_strings = Hash.new({})
+    @pages = []
+  end
+
+  # @override
+  def parse_output
+    super.merge(pages: @pages)
+  end
+
+  # @override
+  def self.i18n_fields
+    super + %w(
+      description
+      description_short
+      title
+    )
   end
 
   integer :id
@@ -22,7 +35,7 @@ class LevelGroupDSL < LevelDSL
 
   def page
     @current_page_level_names = []
-    @hash[:pages] << {levels: @current_page_level_names}
+    @pages << {levels: @current_page_level_names}
   end
 
   def text(name)
@@ -73,13 +86,6 @@ class LevelGroupDSL < LevelDSL
   # students' submissions for such levels.
   def anonymous(text)
     @hash[:anonymous] = text
-  end
-
-  def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    @i18n_strings
   end
 
   def self.serialize(level)

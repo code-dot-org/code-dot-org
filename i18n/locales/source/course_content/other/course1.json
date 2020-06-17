@@ -1,13 +1,9 @@
 {
+  "https://studio.code.org/s/course1/stage/1/puzzle/1": {
+    "title": "Happy Maps"
+  },
   "https://studio.code.org/s/course1/stage/1/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
-      "questions": [
-        {
-          "text": "Which arrow gets the Flurb to the treasure?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/up.png",
@@ -25,18 +21,21 @@
           "text": "/script_assets/k_1_images/unplugged_images/right.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+      "questions": [
+        {
+          "text": "Which arrow gets the Flurb to the treasure?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course1/stage/2/puzzle/1": {
+    "title": "Move it, Move it"
   },
   "https://studio.code.org/s/course1/stage/2/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png",
-      "questions": [
-        {
-          "text": "Which algorithm gets the Flurb to the flowers?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/rightright.png",
@@ -54,7 +53,14 @@
           "text": "/script_assets/k_1_images/unplugged_images/leftdown.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png",
+      "questions": [
+        {
+          "text": "Which algorithm gets the Flurb to the flowers?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/4/puzzle/1": {
@@ -98,13 +104,6 @@
   },
   "https://studio.code.org/s/course1/stage/4/puzzle/14": {
     "dsls": {
-      "title": "Maze",
-      "content1": "/script_assets/k_1_images/maze_images/maze_WS.png, 500",
-      "questions": [
-        {
-          "text": "Which answer solves this level?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/move_blocks/EN.png",
@@ -122,14 +121,33 @@
           "text": "/script_assets/k_1_images/move_blocks/WN.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/maze_images/maze_WS.png, 500",
+      "questions": [
+        {
+          "text": "Which answer solves this level?"
+        }
+      ],
+      "title": "Maze"
     }
   },
   "https://studio.code.org/s/course1/stage/4/puzzle/15": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/move_blocks/EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WSS.png"
+        }
+      ],
       "content2": "Match the puzzles and blocks",
-      "pre_title": "Instructions",
       "questions": [
         {
           "text": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -144,20 +162,7 @@
           "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/move_blocks/EN.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/move_blocks/ENE.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/move_blocks/WW.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/move_blocks/WSS.png"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course1/stage/4/extras?level_name=course1_maze_seq_challenge1": {
@@ -209,13 +214,6 @@
   },
   "https://studio.code.org/s/course1/stage/5/puzzle/12": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/maze_images/EESq.png, 700",
-      "questions": [
-        {
-          "text": "Which choice should be the final block?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/move_blocks/N.png",
@@ -233,7 +231,14 @@
           "text": "/script_assets/k_1_images/move_blocks/W.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/maze_images/EESq.png, 700",
+      "questions": [
+        {
+          "text": "Which choice should be the final block?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/5/extras?level_name=course1_maze_debugging_challenge1": {
@@ -251,15 +256,11 @@
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the middle path."
     }
   },
+  "https://studio.code.org/s/course1/stage/6/puzzle/1": {
+    "title": "Real-life Algorithms: Plant a Seed"
+  },
   "https://studio.code.org/s/course1/stage/6/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
-      "questions": [
-        {
-          "text": "Which step should go at the beginning of this algorithm?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
@@ -273,18 +274,18 @@
           "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+      "questions": [
+        {
+          "text": "Which step should go at the beginning of this algorithm?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/6/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
-      "questions": [
-        {
-          "text": "Which step should fill in the blank for this algorithm?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
@@ -298,7 +299,14 @@
           "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+      "questions": [
+        {
+          "text": "Which step should fill in the blank for this algorithm?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/7/puzzle/1": {
@@ -342,13 +350,35 @@
   },
   "https://studio.code.org/s/course1/stage/7/puzzle/14": {
     "dsls": {
-      "title": "Multiple Choice",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/bee_images/nectar.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/bee_images/2nectar.png",
+          "correct": true
+        },
+        {
+          "text": "/script_assets/k_1_images/bee_images/3nectar.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/bee_images/4nectar.png",
+          "correct": false
+        }
+      ],
       "content1": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png",
       "questions": [
         {
           "text": "How many nectars is this?"
         }
       ],
+      "title": "Multiple Choice"
+    }
+  },
+  "https://studio.code.org/s/course1/stage/7/puzzle/15": {
+    "dsls": {
       "answers": [
         {
           "text": "/script_assets/k_1_images/bee_images/nectar.png",
@@ -356,7 +386,7 @@
         },
         {
           "text": "/script_assets/k_1_images/bee_images/2nectar.png",
-          "correct": true
+          "correct": false
         },
         {
           "text": "/script_assets/k_1_images/bee_images/3nectar.png",
@@ -364,38 +394,16 @@
         },
         {
           "text": "/script_assets/k_1_images/bee_images/4nectar.png",
-          "correct": false
+          "correct": true
         }
-      ]
-    }
-  },
-  "https://studio.code.org/s/course1/stage/7/puzzle/15": {
-    "dsls": {
-      "title": "Multiple Choice",
+      ],
       "content1": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png",
       "questions": [
         {
           "text": "How many nectars is this?"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/bee_images/nectar.png",
-          "correct": false
-        },
-        {
-          "text": "/script_assets/k_1_images/bee_images/2nectar.png",
-          "correct": false
-        },
-        {
-          "text": "/script_assets/k_1_images/bee_images/3nectar.png",
-          "correct": false
-        },
-        {
-          "text": "/script_assets/k_1_images/bee_images/4nectar.png",
-          "correct": true
-        }
-      ]
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/8/puzzle/1": {
@@ -430,13 +438,6 @@
   },
   "https://studio.code.org/s/course1/stage/8/puzzle/11": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks solve this puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/artist_images/W-S-S.png",
@@ -454,18 +455,18 @@
           "text": "/script_assets/k_1_images/artist_images/E-S.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks solve this puzzle?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/8/puzzle/12": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/artist_images/square.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks draw the square?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/artist_images/N-E-S-W.png",
@@ -483,7 +484,14 @@
           "text": "/script_assets/k_1_images/artist_images/N-W-S-E.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/artist_images/square.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks draw the square?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/8/extras?level_name=course1_artist_loops_challenge1": {
@@ -494,8 +502,10 @@
       "courseA_artist_loops_challenge1_c": "[][0]",
       "courseA_artist_loops_challenge1_d": "[][0]"
     },
-    "function_names": {
-      "\"simple\" solution": "\"simple\" solution"
+    "function_definitions": {
+      "\"simple\" solution": {
+        "name": "\"simple\" solution"
+      }
     }
   },
   "https://studio.code.org/s/course1/stage/8/extras?level_name=course1_artist_loops_challenge2": {
@@ -504,9 +514,14 @@
     "authored_hints": {
       "harvey_tictactoe": "You can use `jump` blocks to move to other spaces."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
+  },
+  "https://studio.code.org/s/course1/stage/9/puzzle/1": {
+    "title": "Building a Foundation"
   },
   "https://studio.code.org/s/course1/stage/9/puzzle/2": {
     "short_instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!"
@@ -519,20 +534,26 @@
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/3": {
     "short_instructions": "Draw a square above the other square",
-    "function_names": {
-      "draw roof": "draw roof"
+    "function_definitions": {
+      "draw roof": {
+        "name": "draw roof"
+      }
     }
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/4": {
     "short_instructions": "Draw a rectangle to complete the bridge.",
-    "function_names": {
-      "draw rectangle": "draw rectangle"
+    "function_definitions": {
+      "draw rectangle": {
+        "name": "draw rectangle"
+      }
     }
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/5": {
     "short_instructions": "Draw a rectangle to complete the bridge supports",
-    "function_names": {
-      "draw rectangle": "draw rectangle"
+    "function_definitions": {
+      "draw rectangle": {
+        "name": "draw rectangle"
+      }
     }
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/6": {
@@ -546,7 +567,20 @@
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/9": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/artist_images/medium_circle.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/artist_images/small_square.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/artist_images/large_triangle.png"
+        }
+      ],
       "content2": "Match the shapes based on type.",
       "questions": [
         {
@@ -562,20 +596,7 @@
           "text": "/script_assets/k_1_images/artist_images/small_triangle.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/artist_images/small_square.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/artist_images/large_triangle.png"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/10": {
@@ -583,13 +604,6 @@
   },
   "https://studio.code.org/s/course1/stage/11/puzzle/11": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/search_images/move.png, 450",
-      "questions": [
-        {
-          "text": "Which blocks spell \"MOVE\"?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/move_blocks/EEES.png",
@@ -603,18 +617,18 @@
           "text": "/script_assets/k_1_images/move_blocks/ESSS.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/search_images/move.png, 450",
+      "questions": [
+        {
+          "text": "Which blocks spell \"MOVE\"?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/11/puzzle/12": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/search_images/square.png, 700",
-      "questions": [
-        {
-          "text": "Which word is spelled?"
-        }
-      ],
       "answers": [
         {
           "text": "SET",
@@ -628,18 +642,21 @@
           "text": "SOUTH",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/search_images/square.png, 700",
+      "questions": [
+        {
+          "text": "Which word is spelled?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course1/stage/12/puzzle/1": {
+    "title": "Getting Loopy"
   },
   "https://studio.code.org/s/course1/stage/12/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png",
-      "questions": [
-        {
-          "text": "How would you simplify this sequence with loops?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png",
@@ -653,7 +670,14 @@
           "text": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png",
+      "questions": [
+        {
+          "text": "How would you simplify this sequence with loops?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/13/puzzle/1": {
@@ -704,13 +728,6 @@
   },
   "https://studio.code.org/s/course1/stage/13/puzzle/13": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
-      "questions": [
-        {
-          "text": "Which repeat block is the same?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
@@ -724,18 +741,18 @@
           "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+      "questions": [
+        {
+          "text": "Which repeat block is the same?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/13/puzzle/14": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
-      "questions": [
-        {
-          "text": "Pick the correct repeat block."
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/move_blocks/r3_S.png",
@@ -749,7 +766,14 @@
           "text": "/script_assets/k_1_images/move_blocks/r3_SE.png",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
+      "questions": [
+        {
+          "text": "Pick the correct repeat block."
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/13/extras?level_name=course1_collector_loops_challenge1": {
@@ -810,7 +834,20 @@
   },
   "https://studio.code.org/s/course1/stage/14/puzzle/13": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/NNN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/EEEEE.png"
+        }
+      ],
       "content2": "Match the blocks",
       "questions": [
         {
@@ -826,20 +863,7 @@
           "text": "/script_assets/k_1_images/move_blocks/r5_E.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/move_blocks/NNN.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/move_blocks/EEEEE.png"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course1/stage/14/extras?level_name=course1_collector_loops_challenge3": {
@@ -860,9 +884,22 @@
       "courseB_collector_loops_challenge2_d": "Try this solution:\n\n[blockly block][0]"
     }
   },
+  "https://studio.code.org/s/course1/stage/15/puzzle/1": {
+    "title": "The Big Event"
+  },
   "https://studio.code.org/s/course1/stage/15/puzzle/2": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        }
+      ],
       "content1": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png",
       "content2": "Match the button combination to the dance moves.",
       "questions": [
@@ -876,17 +913,7 @@
           "text": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course1/stage/16/extras?level_name=course1_playlab_events_challenge1": {
@@ -909,14 +936,11 @@
       "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
     }
   },
+  "https://studio.code.org/s/course1/stage/17/puzzle/1": {
+    "title": "Going Places Safely"
+  },
   "https://studio.code.org/s/course1/stage/17/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which information should you <strong>not</strong> share online?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png",
@@ -930,7 +954,13 @@
           "text": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which information should you **not** share online?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course1/stage/18/puzzle/1": {

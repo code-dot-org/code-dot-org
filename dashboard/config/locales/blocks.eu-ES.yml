@@ -267,6 +267,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           FORMAT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -835,11 +836,10 @@ eu:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': erakutsi
-            '"hide"': ezkutatu
+            '"random"': ausazkoa
       binary_move:
         options:
           DIR:

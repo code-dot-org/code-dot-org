@@ -444,7 +444,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
-  # Table: dashboard.gallery_activities
   # Table: dashboard.assessment_activities
   #
 
@@ -465,20 +464,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
-
-  test 'disconnects gallery activities from level sources' do
-    user = create :student
-    gallery_activity = create :gallery_activity, user: user
-
-    refute_nil gallery_activity.level_source_id
-
-    purge_user user
-    gallery_activity.reload
-
-    assert_nil gallery_activity.level_source_id
-
-    assert_logged "Cleaned 1 GalleryActivity"
-  end
 
   test 'disconnects assessment activities from level sources' do
     user = create :student
@@ -956,6 +941,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     contact.reload
     assert_equal '{}', contact.form_data
+  end
+
+  #
+  # Table: dashboard.pd_regional_partner_mini_contacts
+  #
+
+  test "clears form_data from pd_regional_partner_mini_contacts" do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
+
+    teacher = create :teacher
+    mini_contact = create :pd_regional_partner_mini_contact, user: teacher
+    refute_equal '{}', mini_contact.form_data
+
+    purge_user mini_contact.user
+
+    mini_contact.reload
+    assert_equal '{}', mini_contact.form_data
   end
 
   #
@@ -1855,6 +1857,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         refute_empty contact_rollups.where(id: contact_rollups_id_b)
       end
     end
+  end
+
+  #
+  # contact rollups V2
+  #
+
+  test "account deletion stages email for removal from pardot via purge_user" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_user teacher
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
+  end
+
+  test "account deletion stages email for removal from pardot via purge_all_accounts_with_email" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_all_accounts_with_email teacher_email
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
   end
 
   #

@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-02-18T17:57:25.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# The Counter Pattern\r\n\r\nThis pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\r\n    \r\nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\r\n\r\n# Do This\r\n\r\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\r\n\r\n* **Read the program** and make a prediction of what the output will be.\r\n* **Run the program** to check your prediction.\r\n* **Discuss with a neighbor**. Can you explain what you observed?\r\n\r\n",
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18518,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

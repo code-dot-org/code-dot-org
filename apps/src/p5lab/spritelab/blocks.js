@@ -1,13 +1,16 @@
 /* global dashboard */
+/* global appOptions */
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
+import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
 import {Goal, show} from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
+import spritelabMsg from '@cdo/spritelab/locale';
 
 function sprites() {
   const animationList = getStore().getState().animationList;
@@ -88,7 +91,7 @@ const customInputTypes = {
       currentInputRow.appendTitle(button, inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return `(${block.getTitleValue(arg.name)})`;
     }
   },
   locationVariableDropdown: {
@@ -161,7 +164,7 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: 'Draw',
+            text: i18n.draw(),
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
@@ -172,7 +175,7 @@ const customInputTypes = {
             }
           },
           {
-            text: 'More',
+            text: i18n.more(),
             action: () => {
               getStore().dispatch(show(Goal.NEW_ANIMATION));
             }
@@ -192,12 +195,41 @@ const customInputTypes = {
   },
   spritePointer: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          block.shortString = spritelabMsg.clicked();
+          block.longString = spritelabMsg.clickedSprite();
+          break;
+        case 'gamelab_subjectSpritePointer':
+          block.shortString = spritelabMsg.subject();
+          block.longString = spritelabMsg.subjectSprite();
+          break;
+        case 'gamelab_objectSpritePointer':
+          block.shortString = spritelabMsg.object();
+          block.longString = spritelabMsg.objectSprite();
+          break;
+        default:
+          // unsupported block for spritePointer, leave the block text blank
+          block.shortString = '';
+          block.longString = '';
+      }
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+        .appendTitle(block.longString)
+        .appendTitle(new Blockly.FieldImage('', 1, 1), inputConfig.name);
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_subjectSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_objectSpritePointer':
+          return '{id: extraArgs.target}';
+        default:
+          // unsupported block for spritePointer, returning undefined here
+          // will match the behavior of an empty socket.
+          return undefined;
+      }
     }
   },
   spritePicker: {
@@ -276,9 +308,9 @@ export default {
 
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
-        FUNCTION_HEADER: 'Behavior',
-        FUNCTION_NAME_LABEL: 'Name your behavior:',
-        FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?'
+        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription()
       },
       'behavior_definition',
       {
@@ -377,7 +409,20 @@ export default {
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
-        if (Blockly.useModalFunctionEditor) {
+        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+
+        // If there is a toolbox with no categories and the level allows editing
+        // blocks, disallow editing the behavior, because renaming the behavior
+        // can break things.
+        if (
+          appOptions.level.toolbox &&
+          !appOptions.readonlyWorkspace &&
+          !Blockly.hasCategories
+        ) {
+          allowBehaviorEditing = false;
+        }
+
+        if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
           Blockly.bindEvent_(
             editLabel.fieldGroup_,
@@ -506,17 +551,25 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            'Create a Behavior',
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false
-    });
+
+    // NOTE: On the page where behaviors are created (the functions/#/edit page)
+    // blockInstallOptions is undefined.
+    if (
+      !blockInstallOptions ||
+      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
+    ) {
+      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+        initialize(flyout, cursor) {
+          if (behaviorEditor && !behaviorEditor.isOpen()) {
+            flyout.addButtonToFlyout_(
+              cursor,
+              i18n.createBlocklyBehavior(),
+              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+            );
+          }
+        },
+        addDefaultVar: false
+      });
+    }
   }
 };

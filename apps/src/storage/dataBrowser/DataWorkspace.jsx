@@ -1,7 +1,6 @@
 import {ApplabInterfaceMode} from '../../applab/constants';
 import {DataView} from '../constants';
 import DataOverview from './DataOverview';
-import KVPairs from './KVPairs';
 import DataTableView from './DataTableView';
 import Dialog from '../../templates/Dialog';
 import PropTypes from 'prop-types';
@@ -11,7 +10,6 @@ import {connect} from 'react-redux';
 import {clearWarning} from '../redux/data';
 import msg from '@cdo/locale';
 import color from '../../util/color';
-import experiments from '../../util/experiments';
 
 const styles = {
   container: {
@@ -20,7 +18,7 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    padding: experiments.isEnabled(experiments.APPLAB_DATASETS) ? 0 : 10,
+    padding: 0,
     backgroundColor: color.white,
     boxSizing: 'border-box',
     borderLeft: '1px solid gray',
@@ -64,13 +62,12 @@ class DataWorkspace extends React.Component {
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
-          {experiments.isEnabled(experiments.APPLAB_DATASETS) &&
-            (this.props.view === DataView.OVERVIEW ||
-              this.props.view === DataView.PROPERTIES) && (
-              <PaneSection id="library-header" style={styles.libraryHeader}>
-                <span id="library-header-span">{msg.dataLibraryHeader()}</span>
-              </PaneSection>
-            )}
+          {(this.props.view === DataView.OVERVIEW ||
+            this.props.view === DataView.PROPERTIES) && (
+            <PaneSection id="library-header" style={styles.libraryHeader}>
+              <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+            </PaneSection>
+          )}
           <div id="dataModeHeaders">
             <PaneButton
               id="data-mode-versions-header"
@@ -90,7 +87,6 @@ class DataWorkspace extends React.Component {
 
         <div id="data-mode-container" style={styles.container}>
           <DataOverview />
-          {!experiments.isEnabled(experiments.APPLAB_DATASETS) && <KVPairs />}
           <DataTableView />
         </div>
         <Dialog

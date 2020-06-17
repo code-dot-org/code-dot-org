@@ -73,7 +73,12 @@ class ExperimentsControllerTest < ActionController::TestCase
   ) do
     assert_nil flash[:alert]
     assert_includes flash[:notice], "You have successfully joined the experiment"
-    assert SingleUserExperiment.where(name: "2018-teacher-experience", min_user_id: @teacher.id)
+    assert SingleUserExperiment.where(
+      name: "2018-teacher-experience",
+      min_user_id: @teacher.id,
+      start_at: nil,
+      end_at: nil
+    )
   end
 
   test_user_gets_response_for(

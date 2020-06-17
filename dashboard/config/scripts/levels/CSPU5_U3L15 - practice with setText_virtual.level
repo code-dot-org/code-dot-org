@@ -1,0 +1,75 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:05.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setText": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"gamePlayScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 25px; overflow: hidden; word-wrap: break-word; color: rgb(0, 173, 188); max-width: 320px; width: 250px; height: 125px; position: absolute; left: 30px; top: 80px;\" id=\"countDisplayLabel\">click an arrow</label>\r\n    <button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 100px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 215px; background-image: url(https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\" data-canonical-image-url=\"https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg\"/>\r\n    <button id=\"downButton\" data-canonical-image-url=\"https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg\" style=\"padding: 0px; margin: 0px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 175px; top: 220px; height: 100px; background-image: url(https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\"/>\r\n  </div>\r\n</div>",
+    "start_blocks": "onEvent(\"upButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Up Arrow!\");\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n \r\n});\r\n",
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "uMpoKfzuZiDDkkhvCCXxc12dT6BdI9io8b7QqWC51Vy3vYtG+xI80IiGZnjM\nMbwa\n",
+    "parent_level_id": 17152,
+    "name_suffix": "_virtual",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "short_instructions": "Use setText to complete the click event handler for the down arrow. (Click to see full instructions)",
+    "long_instructions": "# Changing Elements on Screen \r\n\r\nThere's another way to display text in your app besides `console.log` and `write`.  \r\n\r\nThere is a new command called `setText` which will **change the text of a component on screen** given its id. \r\n\r\nLet's do a **very simple** example of using `setText`.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/5fc22aef5e8f5161f95a2507c1ec006b-image-1446056758249.gif\" style=\"float: right; width: 175px; border: solid 1px #AAAAAA\">\r\n\r\n* **Run the code** in the app.\r\n\r\n Look at the code for the \"upArrow\" event handler and how it sets the text of the label.\r\n\r\n* **Modify the code.**\r\n\r\n When the down arrow is clicked, set the text of the label to something else.\r\n\r\n* **GOAL:**\r\n  * Your only goal is to successfully use `setText` in this example app.\r\n  * The app should do something similar to the animated example at right.\r\n\r\nOnce you've got it functional, click Finish to move on.\r\n \r\n\r\n",
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-11 00:45:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:28:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-08 20:34:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

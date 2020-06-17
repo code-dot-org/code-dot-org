@@ -20,14 +20,15 @@ require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'
 require_relative '../../deployment'
+require_relative '../../lib/cdo/aws/s3'
 require_relative '../../lib/cdo/cdo_cli'
 require_relative '../../lib/cdo/png_utils'
 require_relative './constants'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
-DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
-SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/spriteCostumeLibrary.json".freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/gamelab/animationLibrary.json".freeze
+SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
 
@@ -100,6 +101,35 @@ class ManifestBuilder
 
         #{dim 'd[ o_0 ]b'}
     EOS
+
+    if @options[:spritelab] && @options[:upload_to_s3]
+      info "Uploading file to S3"
+      AWS::S3.upload_to_bucket(
+        DEFAULT_S3_BUCKET,
+        "manifests/spritelabCostumeLibrary.json",
+        JSON.pretty_generate(
+          {
+            # JSON-style file comment
+            '//': [
+              'Animation Library Manifest',
+              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+            ],
+
+            # Strip aliases from metadata - they're no longer needed since they
+            #   are represented in the alias map.
+            # Also sort for stable updates
+            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+            # Sort alias map for stable updates
+            'aliases': alias_map.sort.to_h
+          }
+        ),
+        acl: 'public-read',
+        no_random: true,
+        content_type: 'json'
+      )
+    end
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
@@ -195,8 +225,9 @@ The animation has been skipped.
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
   def get_animation_objects(bucket)
     animations_by_name = {}
-    bucket.objects.each do |object_summary|
-      animation_name = object_summary.key[/^[^.]+/]
+    prefix = @options[:spritelab] ? 'spritelab' : 'gamelab'
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/category[^.]+/]
       extension = object_summary.key[/(?<=\.)\w+$/]
       next if extension.nil? # Skip 'directory' objects
 
@@ -321,7 +352,7 @@ The animation has been skipped.
       metadata['version'] = objects['png'].object.version_id
 
       # Generate appropriate sourceUrl pointing to the animation library API
-      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{@options[:spritelab] ? 'spritelab' : 'gamelab'}/#{metadata['version']}/#{name}.png"
 
       # Populate sourceSize if not already present
       unless metadata.key?('sourceSize')
@@ -392,6 +423,10 @@ cli_parser = OptionParser.new do |opts|
 
   opts.on('-v', '--verbose', 'Use verbose log output') do
     options[:verbose] = true
+  end
+
+  opts.on('-u', '--upload', 'Upload Spritelab manifest to S3') do
+    options[:upload_to_s3] = true
   end
 
   opts.on_tail("-h", "--help", "Show this message") do

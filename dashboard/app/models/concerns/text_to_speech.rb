@@ -91,7 +91,7 @@ module TextToSpeech
   def self.tts_upload_to_s3(text, filename)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
-    return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
+    return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
     loc_voice = TextToSpeech.localized_voice
     url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE])
@@ -142,7 +142,7 @@ module TextToSpeech
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      tts_short_instructions_override || short_instructions || try(:localized_short_instructions) || ""
+      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || try(:localized_short_instructions)) || ""
     else
       TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end

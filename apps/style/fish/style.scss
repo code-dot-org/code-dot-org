@@ -18,6 +18,24 @@ button {
   font-size: 18px;
 }
 
+#pondTextMarkdown p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#pondTextMarkdown strong {
+  color: #eb5757;
+  font-weight: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
+}
+
+#pondTextMarkdown em {
+  color: #56c568;
+  font-style: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
+}
+
 /*
  * Primary aim is to fit the width up to 0.9 of the screen width.
  * Secondary aim is that the vertical fits on the screen.

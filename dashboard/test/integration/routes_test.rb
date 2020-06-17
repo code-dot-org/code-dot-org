@@ -12,10 +12,10 @@ class RoutesTest < ActionDispatch::IntegrationTest
 
   def test_dance_session_cookie_and_cache_headers
     script = Script.find_by_name('dance')
-    stage = create :stage, script: script, relative_position: 1
-    create :script_level, script: script, stage: stage
-    create :script_level, script: script, stage: stage, position: 12
-    create :script_level, script: script, stage: stage, position: 13
+    stage = create :lesson, script: script, relative_position: 1
+    create :script_level, script: script, lesson: stage
+    create :script_level, script: script, lesson: stage, position: 12
+    create :script_level, script: script, lesson: stage, position: 13
 
     get '/s/dance/stage/1/puzzle/1'
     assert_caching_enabled response.headers['Cache-Control'],

@@ -160,6 +160,12 @@ lt-LT:
           kvadratą.
         courseE_artist_functions1_b: Jeigu dukart nupieši kurią nors liniją – nieko
           baisaus.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Abiejų kvadratų kraštinės yra po 100 pikselių,
+          o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį
+          kvadratą.
+        courseE_artist_functions1_b: Jeigu dukart nupieši kurią nors liniją – nieko
+          baisaus.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Tavo programoje turi būti:
@@ -173,6 +179,12 @@ lt-LT:
           – Judama pirmyn 100 + 75 pikselių
           – Panaudota komanda
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Tavo programoje turi būti:
           – Panaudota komanda

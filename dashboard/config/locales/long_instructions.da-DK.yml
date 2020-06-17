@@ -145,6 +145,11 @@ da-DK:
         **Hvordan?:** I Kode indstilling tilføjer du en `onEvent()` til dit programmet for din "Right!" button. Tilføj en `setScreen()` blok inden i, som skifter til skærmen`"rightScreen"`.
 
         **Hjælp? Klik her:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD Problem Solving Process Video: |-
+        ## Spørgsmål til eftertanke
+
+        -   Hvordan fulgte du problemlæsnings processen i den sidste lektion?
+        -   Hvordan ville du kunne bruge den her process på et probelm i det hverdag??
       CourseD_Dance_Party_01: "_Lad os have et dance party!_ \n\nTræk blokken `Lav
         en ny` ind i arbejdsområdet, og tilslut den inden i `indstillings`-blokken,
         for at skabe din første danser. \n\n-   _Du kan også klikke på pæren til venstre,
@@ -321,7 +326,7 @@ da-DK:
 
         Du kan ændre dansetrinene, ændre danserenes egenskaber, eller gøre et hurtigt dansetrin én gang. Vær kreativ og kig efter nye blokke!
       Dance_Party_11_5: |-
-        Kig på denne blok:
+        "Tjek denne blok:
 
         <xml>
           <block type="Dancelab_makeNewDanceSpriteGroup">
@@ -330,9 +335,9 @@ da-DK:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
 
-        Nu kan du oprette en masse dansere på en gang!
+        Nu kan du oprette en flok dansere på en gang!
 
-        Prøv at bruge nogle af "alle ænderne" -blokkene til at skrive koden, som vil få alle ænderne til at danse sammen.
+        Prøv at bruge nogle af ""alle ænderne"" -blokkene til at skrive kode, der får alle ænderne til at danse sammen.".
       Dance_Party_11b: "Det er tid til en dansekonkurrence! Katten dipper, når du
         trykker på venstre piletast. Få Robotten til at \"droppe\" en gang når du
         trykker på højre piletast, og \"klappe\" en gang, når du trykker på pil op.
@@ -340,6 +345,17 @@ da-DK:
         så hurtigt som du kan!**"
       Dance_Party_12: Bliv groovy! Skab dit eget Dance Party som du kan dele med dine
         venner.
+      Dance_Party_extras_alternate_2019: |-
+        # Frem og tilbage!
+
+        Nogle gange har du måske lyst til selv at bestemme, hvordan danserne skal danse. Med denne nye blok kan du det.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Dansetrinene som du vælger foroven vil blive gentaget.
+
+        -   Kod dansetrinene for den forreste danser!
+        -   Brug forskellige talværdier til hastigheden af skiftene mellem trinene. Prøv med `1` eller `0.5` for at skiftene bliver hurtigere!
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
@@ -379,7 +395,7 @@ da-DK:
         \*Skift layout, når der trykkes på en tast
         \*Skift en egenskab, når danserne ændrer stilling
       Dance_Party_extras_layout_2019: |-
-        # Lad os stille op i formation!
+        # Let's Get in Formation!
 
         Tjek denne dans, der bruger blokken <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
 
@@ -467,6 +483,10 @@ da-DK:
       HOC 2018 Level_9b: Du har nået koralrevet, led nu efter **Havets hjerte** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Brug den blå og røde koral til at nå hen til **skattekisten** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Maze Loops 2: Brug gentag-blokken for at få mig hen til grisen!
+      MC HOC 2016 SCORE LEVEL: "I nogle spil kan du få en score. Leg fangeleg med
+        Jern Golems, og brug en <xml>  <block type=\"craft_addScore\">\n    <title
+        name=\"SCORE\">1</title>\n  </block></xml> blok, til at give dig selv point,
+        når du berør dem.  \n\n  Reach five points to win!"
       MC_HOC_2017_01_RETRY: "{currentPlayerName} er fanget inde i huset, men heldigvis
         er agenten klar til at hjælpe!   \\\r\n \\\r\n   \\\r\nKlik en \"gå fremad\"
         blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen
@@ -540,10 +560,39 @@ da-DK:
         til at hjælpe dig med at udforske verden."
       MC_HOC_2017_FP20x20_2019: "**Fri leg:** Nu er det op til dig! Brug agentens
         kode til at hjælpe dig med at udforske verden."
+      New Minecraft Hero Project: "**Fri leg:** Nu er det op til dig! Brug agentens
+        kode til at hjælpe dig med at udforske verden."
       Overworld Move to Sheep: Tilføje en "flyt fremad"-blok mere for at komme hen
         til fårene.
       Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
+      Standalone_Artist_2: Tegn denne diamant med 120 og 60 graders vinkler og 150
+        pixel lange sider.
+      Standalone_Artist_3: Kan du tegne denne sekskant med 100 pixel lange sider og
+        60 graders drejninger?
+      Standalone_Artist_4: Nu har du fået en ny blok at lege med, "gentag". Den vil
+        gentage et sæt af kommandoer. Hvad sker der hvis du "gentag"-er disse kommandoer
+        6 gange?
+      Standalone_Artist_5: Hvor mange gange skal du gentage denne diamant for at tegne
+        blomsten?
+      Standalone_Artist_5.5: 'Bemærk hvordan vi forenklede diamantkoden ved at bruge
+        en løkke eller "gentag"-blok. Du kan gentage hele sekvensen 12 gange for at
+        tegne blomsten. Tip: Du skal dreje 30 grader efter din diamant-løkke, så du
+        ikke bliver ved med at tegne oveni den samme diamant.'
+      Standalone_Artist_6: 'Gentag sekskant-koden seks gang for at tegne mønsteret.
+        Hvor mange grader skal du mon dreje hver gang? Tip: del antallet af grader
+        i en cirkel med det antal gentagelser du udfører.'
+      Standalone_Artist_7: 'En funktion er et andet programmeringsværktøj, som kan
+        hjælpe dig med at undgå at gentage dig selv. Denne funktion tegner en blomst,
+        så du kan bruge den hver gang du vil tegne en blomst. Brug denne blok og den
+        nye "hop"-blok til at tegne disse blomster. Tip: Blomsterne er 150 pixels
+        fra hinanden'
+      Standalone_Artist_8: Her er en funktion kaldet "Tegn en figur" som vi har programmeret
+        til at tegne sekskanter. Kør koden for at se, hvad den gør og eksperimenter
+        derefter med funktionen, for at se hvad der sker. Kan du tegne et mønster
+        af kvadrater, trekanter eller ottekanter?
+      Standalone_Artist_9: Lav nu præcis det billede du selv har lyst til! Du har
+        endda en tom funktion, som du kan få til at gøre lige hvad du vil!
       'Widget: Text Compression': Kig efter mønstre (gentagede ord eller vendinger)
         i teksten. Tilføj det mønster, som du finder til ordlisten til højre. Når
         du skriver ordet eller vendingen ind i ordlisten, vil et symbol for dette
@@ -678,6 +727,10 @@ da-DK:
         \*\*Udfording: Gå uden om TNT for at få fuglen hen til grisen!
 
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq10_copy: |-
+        \*\*Udfording: Gå uden om TNT for at få fuglen hen til grisen!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         Tid til en mindre opgave. Flyt i en retning, så en anden, for at komme hen til grisen!
 
@@ -705,6 +758,10 @@ da-DK:
         Prøv denne opgave selv helt fra begyndelsen.
 
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_copy: |-
+        Prøv denne opgave selv helt fra begyndelsen.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6: |-
         Flyt i en retning, så en anden, for at komme hen til grisen!
 
@@ -713,7 +770,15 @@ da-DK:
         grisen!
       courseA_maze_seq6_2019: Flyt i en retning, så en anden, for at komme hen til
         grisen!
+      courseA_maze_seq6_copy: |-
+        Flyt i en retning, så en anden, for at komme hen til grisen!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        Find ud af hvad der mangler, og tilføj så blokke, der får fuglen hen til grisen!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         Find ud af hvad der mangler, og tilføj så blokke, der får fuglen hen til grisen!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -723,6 +788,10 @@ da-DK:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2019: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_copy: |-
+        Løs dette level for at få fuglen hen til grisen!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Opgave:** Ret fejlene i koderne, ved at tilføje blokke for at få fuglen hen til grisen!
 
@@ -753,17 +822,45 @@ da-DK:
           </block></xml> blokken, som allerede er på arbejdsområdet.
 
         Få Jorge hen til flaget for at afslutte dette trin!
-      courseA_playLab_events3_2019: |-
-        Hjælp hunden Jorge med at bevæge sig, ved at forbinde <xml><block type="studio_move" block-text="move dog west">
-            <title name="SPRITE">1</title>
-            <title name="DIR">8</title>
-          </block></xml> blokken til <xml><block type="studio_whenArrow" block-text="when left arrow">
-            <title name="VALUE">left</title>
-          </block></xml> blokken, som allerede er på arbejdsområdet.
-
-        Få Jorge hen til flaget for at afslutte dette trin!
       courseA_playLab_events4: Tilføj nu flere blokke for at bevæge Jorge til højre,
         når der trykkes på 'højre' pileknap.
+      courseA_playLab_events5: Tilføj nogle handlinger, for at få Jorge til at bevæge
+        sig op og ned, når du trykker på 'op' og 'ned' pilene.
+      courseA_playLab_events5_2018: Tilføj nogle handlinger, for at få Jorge til at
+        bevæge sig op og ned, når du trykker på 'op' og 'ned' pilene.
+      courseA_playlab_events_challenge1: |-
+        Hvis du klikker på Olive vil Robin komme frem! Kan du skrive en kode, som får de øvrige figurer vist?
+
+        Sørg for at klikke på tips(elpæren) i denne opgave! Tipsene vil hjælpe dig med opgaven trin for trin!
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2018: |-
+        Hvis du klikker på Olive vil Robin komme frem! Kan du skrive en kode, som får de øvrige figurer vist?
+
+        Sørg for at klikke på tips(elpæren) i denne opgave! Tipsene vil hjælpe dig med opgaven trin for trin!
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2019: |-
+        Hvis du klikker på Olive vil Robin komme frem! Kan du skrive en kode, som får de øvrige figurer vist?
+
+        Sørg for at klikke på tips(elpæren) i denne opgave! Tipsene vil hjælpe dig med opgaven trin for trin!
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2: |-
+        Få alle til at gøre noget, når der bliver klikket på dem. Hvad skal dyrene sige? Hvad skal der ellers ske?
+
+        I denne opgave skal du klikke på elpæren. Der kan du få nogle sjove tips til hvad du kan prøve!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2018: |-
+        Få alle til at gøre noget, når der bliver klikket på dem. Hvad skal dyrene sige? Hvad skal der ellers ske?
+
+        I denne opgave skal du klikke på elpæren. Der kan du få nogle sjove tips til hvad du kan prøve!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2019: |-
+        Få alle til at gøre noget, når der bliver klikket på dem. Hvad skal dyrene sige? Hvad skal der ellers ske?
+
+        I denne opgave skal du klikke på elpæren. Der kan du få nogle sjove tips til hvad du kan prøve!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseB_collector_loops1: |-
         **Åben opgave:** Dette er Laurels eventyr! Bevæg Laurel rundt og saml så mange skatte som du kan.
 
@@ -775,6 +872,18 @@ da-DK:
       courseB_collector_loops3_2019: Hvordan kan Laurel samle alle 4 skatte med brug
         af kun én <xml><block type="maze_moveEast" block-text="move east"/></xml>
         blok?
+      courseB_collector_loops_challenge2a: |-
+        _"Prøv at samle skattene!"_
+
+        "Hjælp Laurel med at få mindst **5** skatte i denne opgave.
+      courseB_collector_loops_challenge2a_2018: |-
+        _"Prøv at samle skattene!"_
+
+        "Hjælp Laurel med at få mindst **5** skatte i denne opgave.
+      courseB_collector_loops_challenge2a_2019: |-
+        _"Prøv at samle skattene!"_
+
+        "Hjælp Laurel med at få mindst **5** skatte i denne opgave.
       courseD_bee_nestedLoops8: 'Indsaml al nektar fra alle blomster, og lav honning
         i alle bikuber. Brug indlejrede løkker. '
       courseD_bee_nestedLoops8_2018: 'Indsaml al nektar fra alle blomster, og lav

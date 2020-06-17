@@ -366,10 +366,15 @@ en:
           FORMAT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -845,7 +850,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
-        text: "{GROUP} stops {PROPERTY} following {RANGE}"
+        text: "{GROUP} stop {PROPERTY} following {RANGE}"
         options:
           GROUP:
             sprites: all
@@ -988,6 +993,8 @@ en:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -1037,6 +1044,8 @@ en:
         text: hide title screen
       gamelab_isTouchingEdges:
         text: "{SPRITE} is touching edges"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
       gamelab_keyPressed:
@@ -1095,6 +1104,8 @@ en:
             '"left"': left
       gamelab_mouseLocation:
         text: mouse location
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} pixels forward
       gamelab_moveInDirection:
@@ -1107,6 +1118,10 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1195,19 +1210,25 @@ en:
           collecting
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: show title screen {BREAK} title {TITLE} text {SUBTITLE}
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} clicked"
         options:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
           DIRECTION:
             '"right"': right
             '"left"': left
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
@@ -1664,6 +1685,14 @@ en:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       aalab_prompt:
         text: ask question {MESSAGE}
       aalab_scene:
@@ -1675,12 +1704,17 @@ en:
             '3': '3'
       aalab_setupStory:
         text: setup story
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
-            '"show"': show
-            '"hide"': hide
+            '"random"': random
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:

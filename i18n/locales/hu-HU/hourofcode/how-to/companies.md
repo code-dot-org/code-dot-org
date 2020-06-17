@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Hogyan tarts Kódolás Óráját - Cégek
 ---
 
 {{ signup_button }}
@@ -12,30 +12,30 @@ title: How to host an Hour of Code - Companies
 
 ## Vedd fel a kapcsolatot helyi iskolákkal és önkéntesekkel a "Hour of Code" eseménnyel kapcsolatban
 
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org lehetőséget nyújt az alkalmazottaidnak [csatlakozni]({{ urls/volunteer }}) a helyi osztálytermekhez, akik végzik a Kódolás Óráját, ahol megoszthatják tech karrierjük során szerzett tapasztalataikat és inspirálják a diákokat számítástechnika tudományok tanulására.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
+[<button>Iratkozz fel önkéntesnek!</button>]({{ urls/volunteer }}) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Alkalmazottaid bátorításához és osztálytermekhez való csatlakozásukról további információkat találhatsz a [vállalati partner útmutatónkban]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## További lehetőségek a "Hour of Code" esemény támogatására:
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
+- Kérd meg a vállalatigazgatódat, hogy [küldön egy levelet a cég összes beosztottjának]({{ promote/sample_emails }}), amelyben hangsúlyozza a számítástecnika tudomány fontosságát és bíztatja a dolgozókat ennek hirdetésére.
+- Tarts egy Kódolás Órája Happy Hour-t kollégáiddal, hogy kipróbáljátok a [tevékenységeket]({{ urls/learn }}).
 - Szervezz egy "Hour of Code" eseményt a tanulók egy helyi osztályának, vagy nonprofit partnereknek, melyet megrendezhetnek a cég irodájában. Nézd meg a "Hogyan szervezzek eseményt?" útmutatót lejjebb.
 
 # Hogyan szervezz egy "Hour of Code" eseményt
 
 ## 1. Népszerűsítsd a "Hour of Code" eseményedet
 
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Ösztönözz szoftvermérnököket a vállalatodnál, hogy látogasson be egy helyi osztályba segíteni a "Hour of Code" eseményt és hogy inspirálja a tanulókat, hogy számítástechnikát tanuljanak. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+- Népszerűsítsd [Kódolás Órája]({{ urls/promote }}) rendezvényed és bátoríts másokat is előadni.
+- Ösztönözz szoftvermérnököket a vállalatodnál, hogy látogasson be egy helyi osztályba segíteni a "Hour of Code" eseményt és hogy inspirálja a tanulókat, hogy számítástechnikát tanuljanak. [Iratkozz fel]({{ urls/volunteer_engineer }}), hogy legyen egy osztályteremhez kapcsolatod.
 
 ## 2. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Válassz tevékenységet
 
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Számos [vicces, egy órás tevékenységeket szervezünk]({{ urls/learn }}) minden korosztálynak, számos partnerrel közösen szervezve. [Próbáld ki!]({{ urls/learn }})
 
 **Minden "Hour of Code" gyakorlat** egy minimális felkészülési igényel a szervezőtől, de az eseményen mindenki a saját tempójában tud haladni, a képességének megfelelően.
 
@@ -69,13 +69,13 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 - Ha technológiai cég vagy tarts érdekes és látványos bemutatót és mutasd be, hogy milyen innováción dolgozik a vállalat éppen.
 - Ha nem egy technológiai cég vagy, akkor vitassátok meg, hogy milyen technológiák alkalmazásával lehetne problémákat megoldani és új célokat elérni.
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Itt]({{ urls/girls }}) találhatsz tippeket, hogy lányokat is inspirálj a számítástechnikára.
 
 ## 6. Kódoljunk!
 
 **Közvetlen részvétel**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Írj ki egy activity linket egy whiteboardra. A linket megtalálod a [választott activity információknál]({{ urls/learn }}) tárolva, a résztvevők száma alatt.
 - Fiatal tanulóknak töltsd be előre a bemutatókat, vagy mentsd el a könyvjelzők közé, hogy megtalálják.
 
 **Ha valaki megakad, nehézségbe ütközik, akkor az alábbiakat érdemes reagálni:**
@@ -90,8 +90,8 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 ## 7) Ünnepelj
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
+- [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
+- [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ promote/resources_stickers }}) matricákat.
 - [Rendelj egyedi pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) alkalmazottaidnak.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 

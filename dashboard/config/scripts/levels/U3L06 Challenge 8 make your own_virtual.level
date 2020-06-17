@@ -1,0 +1,136 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Create a drawing of your own. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.9",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# The Full Turtle API\r\n\r\nWe've added a few more commands to the toolbox. At this point you have access to every turtle command provided by App Lab. As we've already seen with our exploration of functions you can combine these commands to create more complex functionality, but at the lowest level all of your code will be making use of the set of commands provided by App Lab.\r\n\r\n<img src=\"https://images.code.org/7648c5293d04a57e4f715b5c08899ff9-image-1441996324573.png\" style=\"height: 250px; float: left; margin: 10px\">\r\n\r\nCode you write will always be based upon the commands that are provided by the programming language you are using. When several commands are provided in a logical chunk, like the set of turtle commands, we refer to them collectively as a **library** of functions. The total set of commands that a language provides access to is called the **application program interface**, or simply an **API**. \r\n\r\nAs you gain more experience you will gain familiarity with the API for the language you are using, but you will still want to return to the **API documentation** from time to time to remind yourself what functionality a language offers.\r\n\r\nCongratulations, you've really come a long way as a turtle artist! \r\n\r\n# Do This:\r\n\r\n**Draw whatever you like!**  The only requirements are:\r\n\r\n* use at least 3 different colors\r\n* use moveTo\r\n\r\nExplore the documentation for any new commands you see and use your skills as both an artist and user of **API documentation** to **draw something of your own choosing.**\r\n\r\nIf in doubt: try to re-create \"I [heart] CS\" drawing shown here.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "The term API is used somewhat ambiguously at times, often used to mean: a programming language, a library of commands provided by a language, or the documentation itself.  \r\n\r\nRemind students that they know how to write functions! And in their drawing, they might use them to make more sophisticated things.\r\n\r\n**The Full Turtle API:** Students are introduced to the term API - “Application Program Interface” - a term that means “the full set of commands provided to the programmer by the given language.”\r\n\r\nThe set of all turtle commands is revealed and students are asked to make any kind of drawing that they like.\r\n\r\nValidation note: Since this is a free form drawing we only check the bare minimum requirements: \r\n* set the `penColor` at least 3 times\r\n* called `moveTo` at least once.",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of arcRight() and arcLeft() without any loops."
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "Setting the pen color at least 3 times is a requirement"
+      },
+      {
+        "entries": [
+          "moveTo:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Using moveTo is a requirement."
+      }
+    ],
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 16923,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:48:23 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

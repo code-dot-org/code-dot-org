@@ -1,8 +1,8 @@
 name 'csp_U3_turtle_subgoal_q2_mc_2018'
-wrong '<img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">'
-wrong '<img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">'
-right '<img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">'
-wrong '<img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">'
+wrong 'https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png'
+wrong 'https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png'
+right 'https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png'
+wrong 'https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png'
 markdown <<MARKDOWN
 Which of the following blocks is *least* similar to the others?
 

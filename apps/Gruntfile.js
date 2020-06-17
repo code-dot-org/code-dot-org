@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import 'babel-polyfill';
+import '@babel/polyfill';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-15.4';
 import enzyme from 'enzyme';
@@ -197,7 +197,7 @@ describe('entry tests', () => {
         // blockly media, etc).
         {
           expand: true,
-          cwd: './node_modules/video.js/dist/video-js',
+          cwd: './node_modules/video.js/dist',
           src: ['**'],
           dest: 'build/package/video-js'
         }
@@ -208,12 +208,12 @@ describe('entry tests', () => {
         {
           expand: true,
           cwd: 'lib/blockly',
-          src: ['??_??.js'],
+          src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
-              /(.{2}_.{2})\.js/g,
+              /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
@@ -278,12 +278,6 @@ describe('entry tests', () => {
           cwd: 'lib/tooltipster',
           src: ['*.js'],
           dest: 'build/minifiable-lib/tooltipster/'
-        },
-        {
-          expand: true,
-          cwd: 'lib/marked',
-          src: ['marked*.js'],
-          dest: 'build/minifiable-lib/marked/'
         },
         {
           expand: true,
@@ -358,7 +352,8 @@ describe('entry tests', () => {
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
-          ]
+          ],
+          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -374,6 +369,9 @@ describe('entry tests', () => {
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
+      options: {
+        dest: 'build/locales'
+      },
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
@@ -517,19 +515,18 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
     'courses/show': './src/sites/studio/pages/courses/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'devise/registrations/_old_sign_up_form':
-      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
     essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+    'layouts/_parent_email_banner':
+      './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
@@ -552,11 +549,15 @@ describe('entry tests', () => {
     'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
+    'levels/_free_response':
+      './src/sites/studio/pages/levels/_free_response.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_teacher_markdown':
+      './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
@@ -567,7 +568,6 @@ describe('entry tests', () => {
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
-    'projects/public': './src/sites/studio/pages/projects/public.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
@@ -576,28 +576,44 @@ describe('entry tests', () => {
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js',
+    'teacher_dashboard/parent_letter':
+      './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
+    'admin_standards/index':
+      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'datasets/show': './src/sites/studio/pages/datasets/show.js',
+    'datasets/index': './src/sites/studio/pages/datasets/index.js',
+    'datasets/edit_manifest':
+      './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_blockly':
-      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_droplet':
-      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_blockly':
+      './src/sites/studio/pages/levels/editors/fields/_blockly.js',
+    'levels/editors/fields/_callouts':
+      './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+    'levels/editors/fields/_droplet':
+      './src/sites/studio/pages/levels/editors/fields/_droplet.js',
+    'levels/editors/fields/_grid':
+      './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_preload_assets':
+      './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+    'levels/editors/fields/_special_level_types':
+      './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+    'levels/editors/fields/_video':
+      './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
@@ -653,6 +669,10 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
+    'code.org/views/professional_learning_apply_banner':
+      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
+    'code.org/views/at_home_banner':
+      './src/sites/code.org/pages/views/at_home_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -675,6 +695,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/fit_weekend_registration/new':
       './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_daily_survey/new_general_foorm':
+      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
       './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel':
@@ -682,8 +704,6 @@ describe('entry tests', () => {
 
     'pd/professional_learning_landing/index':
       './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_contact/new.js',
     'pd/regional_partner_mini_contact/new':
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
@@ -692,7 +712,11 @@ describe('entry tests', () => {
 
     'peer_reviews/dashboard':
       './src/sites/studio/pages/peer_reviews/dashboard.js',
-    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
+
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
+    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
@@ -702,6 +726,10 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    // The blockly dependency is huge, so we currently control when it is
+    // loaded explicitly via script tags rather than via normal imports.
+    blockly: './src/sites/studio/pages/blockly.js',
+
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
@@ -727,7 +755,10 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
+
+    amazonFutureEngineerEligibility:
+      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
   };
 
   // Create a config for each of our bundles
@@ -749,10 +780,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function(val) {
-          return [
-            './src/util/idempotent-babel-polyfill',
-            'whatwg-fetch'
-          ].concat(val);
+          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
@@ -880,7 +908,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  'babel-polyfill',
+                  '@babel/polyfill',
                   'immutable',
                   'lodash',
                   'moment',

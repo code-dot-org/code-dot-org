@@ -48,7 +48,12 @@ class ButtonList extends React.Component {
     required: PropTypes.bool,
     validationState: PropTypes.string,
     errorText: PropTypes.string,
-    columnCount: PropTypes.number
+    columnCount: PropTypes.number,
+    suppressLineBreak: PropTypes.bool
+  };
+
+  static defaultProps = {
+    suppressLineBreak: false
   };
 
   handleChange = event => {
@@ -161,7 +166,7 @@ class ButtonList extends React.Component {
           {this.renderInputComponents()}
         </FormGroup>
         {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
-        <br />
+        {!this.props.suppressLineBreak && <br />}
       </FormGroup>
     );
   }

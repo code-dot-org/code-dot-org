@@ -40,17 +40,29 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include SchoolInfoDeduplicator
 
+    VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
+
+    PROGRAMS = {
+      csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
+      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+    }.freeze
+    PROGRAM_OPTIONS = PROGRAMS.values
+
+    GRADES = [
+      'Pre-K'.freeze,
+      'Kindergarten'.freeze,
+      *(1..12).map {|n| "Grade #{n}".freeze}
+    ].freeze
+
+    validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
+
+    before_validation :set_course_from_program
+    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+
     serialized_attrs %w(
       pd_workshop_id
     )
-
-    validate :scholarship_status_valid
-
-    def scholarship_status_valid
-      unless scholarship_status.nil? || Pd::ScholarshipInfoConstants::SCHOLARSHIP_STATUSES.include?(scholarship_status)
-        errors.add(:scholarship_status, 'is not included in the list.')
-      end
-    end
 
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:
@@ -85,32 +97,13 @@ module Pd::Application
       self.application_year = year
     end
 
-    validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-
-    VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
-
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}
-    before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
     end
 
-    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
-
-    PROGRAMS = {
-      csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
-      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
-    }.freeze
-    PROGRAM_OPTIONS = PROGRAMS.values
-
-    GRADES = [
-      'Pre-K'.freeze,
-      'Kindergarten'.freeze,
-      *(1..12).map {|n| "Grade #{n}".freeze}
-    ].freeze
 
     def self.options
       raise 'Abstract method must be overridden by inheriting class'

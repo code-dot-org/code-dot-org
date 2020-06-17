@@ -2,7 +2,7 @@
 - if @stage_extras
   - text = @stage.localized_title
 - else
-  - stage = @stage || @script_level.stage
+  - stage = @stage || @script_level.lesson
   - text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
 
 -# Pass along section_id param so that when teacher moves between lesson page and course overview

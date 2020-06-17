@@ -5,7 +5,7 @@ import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
-  locale: 'English',
+  localeEnglishName: 'English',
   section: {
     id: 11,
     name: 'foo',
@@ -316,7 +316,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          locale="Spanish"
+          localeEnglishName="Spanish"
           section={{
             ...defaultProps.section,
             courseId: null,
@@ -342,7 +342,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          locale="Slovak"
+          localeEnglishName="Slovak"
           section={{
             ...defaultProps.section,
             courseId: null,

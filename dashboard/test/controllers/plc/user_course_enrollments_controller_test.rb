@@ -26,13 +26,13 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       user_emails: 'invalid',
       plc_course_id: @plc_course.id
     }
-    assert_redirected_to action: :new, notice: 'The following users did not exist <li>invalid</li><br/>'
+    assert_redirected_to action: :new, notice: '1 user(s) did not exist: <li>invalid</li><br/>'
 
     post :create, params: {
       user_emails: "invalid\r\n#{@admin.email}",
       plc_course_id: @plc_course.id
     }
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
+    assert_redirected_to action: :new, notice: "1 enrollment(s) created: <li>#{@admin.email}</li><br/>1 user(s) did not exist: <li>invalid</li><br/>"
   end
 
   test 'validation failed' do
@@ -51,7 +51,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>"
+    assert_redirected_to action: :new, notice: "1 enrollment(s) created: <li>#{@admin.email}</li><br/>"
 
     user2 = create :teacher
     user3 = create :teacher
@@ -60,7 +60,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       user_emails: "#{user2.email}\r\n#{user3.email}",
       plc_course_id: @plc_course.id
     }
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{user2.email}</li><li>#{user3.email}</li><br/>"
+    assert_redirected_to action: :new, notice: "2 enrollment(s) created: <li>#{user2.email}</li><li>#{user3.email}</li><br/>"
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
 
@@ -71,7 +71,38 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>"
+    assert_redirected_to action: :new, notice: "1 enrollment(s) created: <li>#{@admin.email}</li><br/>"
+  end
+
+  test "only return first 10 enrollments created" do
+    @user_course_enrollment.destroy
+
+    teacher_emails = []
+    (1..12).each do |_|
+      teacher = create :teacher
+      teacher_emails << teacher.email
+    end
+
+    invalid_emails = []
+    (1..11).each do |i|
+      invalid_emails << "invalid#{i}"
+    end
+
+    emails = teacher_emails.join("\r\n")
+    emails += "\r\n" + invalid_emails.join("\r\n")
+
+    post :create, params: {
+      user_emails: emails,
+      plc_course_id: @plc_course.id
+    }
+
+    expected_teacher_emails = ""
+    teacher_emails[0..9].each {|email| expected_teacher_emails += "<li>#{email}</li>"}
+    expected_invalid_emails = ""
+    invalid_emails[0..9].each {|email| expected_invalid_emails += "<li>#{email}</li>"}
+    expected_notice = "12 enrollment(s) created. The first 10 are: #{expected_teacher_emails}<br/>" \
+      "11 user(s) did not exist. The first 10 are: #{expected_invalid_emails}<br/>"
+    assert_redirected_to action: :new, notice: expected_notice
   end
 
   test 'Enrollment is viewable in all possible enrollment states' do

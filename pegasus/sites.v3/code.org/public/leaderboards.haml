@@ -13,9 +13,10 @@ social:
   "twitter:image:width" : 759
   "twitter:image:height" : 208
 ---
+-twitter_message = I18n.t('who_has_done_hoc_donor', donor_twitter: get_random_donor_twitter)
 -facebook = {:u=>"https://www.facebook.com/photo.php?fbid=521364791293162"}
--twitter = {:url=>"http://#{request.site}/leaderboards", :related=>'codeorg', :hashtags=>'', :text=>I18n.t('who_has_done_hoc_donor', donor_twitter: get_random_donor_twitter)}
--twitter[:hashtags] = 'HourOfCode' unless I18n.t(:who_has_done_hoc_donor).include? '#HourOfCode'
+-twitter = {:url=>"http://#{request.site}/leaderboards", :related=>'codeorg', :hashtags=>'', :text=>twitter_message}
+-twitter[:hashtags] = 'HourOfCode' unless twitter_message.include? '#HourOfCode'
 
 -hoc_metrics = fetch_hoc_metrics
 -started = format_integer_with_commas(hoc_metrics['started'])

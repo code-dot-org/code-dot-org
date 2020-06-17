@@ -1,32 +1,32 @@
 {
-  "https://studio.code.org/s/flappy/stage/1/puzzle/1": {
+  "https://studio.code.org/flappy/1": {
     "short_instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/2": {
+  "https://studio.code.org/flappy/2": {
     "short_instructions": "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/3": {
+  "https://studio.code.org/flappy/3": {
     "short_instructions": "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/4": {
+  "https://studio.code.org/flappy/4": {
     "short_instructions": "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/5": {
+  "https://studio.code.org/flappy/5": {
     "short_instructions": "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/6": {
+  "https://studio.code.org/flappy/6": {
     "short_instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/7": {
+  "https://studio.code.org/flappy/7": {
     "short_instructions": "Next, try changing the scene by attaching another block to the \"when run\" block."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/8": {
+  "https://studio.code.org/flappy/8": {
     "short_instructions": "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/9": {
+  "https://studio.code.org/flappy/9": {
     "short_instructions": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0."
   },
-  "https://studio.code.org/s/flappy/stage/1/puzzle/10": {
+  "https://studio.code.org/flappy/10": {
     "short_instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
   }
 }

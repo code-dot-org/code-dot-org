@@ -74,6 +74,8 @@ require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -99,6 +101,7 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
+    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -110,7 +113,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
+    parent_email_banner_dismissed
   )
 
   # Include default devise modules. Others available are:
@@ -176,6 +179,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
+  end
+
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
@@ -200,6 +210,8 @@ class User < ActiveRecord::Base
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
+  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
+
   before_destroy :soft_delete_channels
 
   def save_email_preference
@@ -210,6 +222,19 @@ class User < ActiveRecord::Base
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
       )
     end
   end
@@ -358,13 +383,18 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :parent_email_update_only
+  attr_accessor :parent_email_preference_opt_in_required
+  attr_accessor :parent_email_preference_opt_in
+  attr_accessor :parent_email_preference_email
+  attr_accessor :parent_email_preference_request_ip
+  attr_accessor :parent_email_preference_source
+
   attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-
-  has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -428,6 +458,27 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
+  # Validations for adding parent email notifications
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+
+  def parent_email_preference_opt_in_required?
+    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
+    # user_type 'student' is the only type which supports have a parent_email associated with it.
+    parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_update_only?
+    parent_email_update_only == '1' && user_type == 'student'
+  end
+
+  def parent_email_preference_setup
+    self.parent_email = parent_email_preference_email
+  end
+
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
   validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
@@ -485,23 +536,22 @@ class User < ActiveRecord::Base
     true
   end
 
-  # Implement validation that refuses to set admin:true attribute unless
-  # there's a Code.org google sso option present.  Unmigrated users are
-  # not allowed to be admins.
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
   validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
 
     errors.add(:admin, 'must be a migrated user') unless migrated?
 
-    google_oauth = google_oauth_authentications
-    errors.add(:admin, 'must have Google OAuth') unless google_oauth&.present?
+    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
+    return if rack_env?(:development, :adhoc)
 
-    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
-  end
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
+      errors.add(:admin, 'must be a code.org account with only google oauth')
+    end
 
-  def google_oauth_authentications
-    authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
   end
 
   def fix_by_user_type
@@ -590,8 +640,9 @@ class User < ActiveRecord::Base
     nil
   end
 
-  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
-  validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
@@ -745,18 +796,42 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
+    # If the user is changing their password, then we should run all the password
+    # field verifications.
+    is_changing_password = password.present? || password_confirmation.present?
+    return true if is_changing_password
+
     # Password is not required if the user is not managing their own account
     # (i.e., someone is creating their account for them or the user is using OAuth).
     return false unless managing_own_credentials?
 
     # Password is required for:
-    # New users with no encrypted_password set and users changing their password.
-    new_without_password = !persisted? && encrypted_password.blank?
-    is_changing_password = password.present? || password_confirmation.present?
-    new_without_password || is_changing_password
+    # New users with no encrypted_password set
+    !persisted? && encrypted_password.blank?
   end
 
-  def email_required?
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+
+  # Determines if email is a required field for a teacher.
+  # Currently, we have some old teacher accounts which don't have an email
+  # address associated with them because it wasn't required when they were
+  # created. Those old accounts are allowed to skip the email validation.
+  def teacher_email_required?
+    # non-teachers are not relevant to this method.
+    return false unless teacher? && purged_at.nil?
+
+    # new teacher accounts should always require an email
+    return true unless created_at.present?
+
+    # existing accounts created after the email requirement must have an email.
+    # FND-1130: The created_at exception will no longer be required
+    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
+    # emails.
+    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
+  end
+
+  def email_or_hashed_email_required?
     return true if teacher?
     return false if manual?
     return false if sponsored?
@@ -887,6 +962,8 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+    # teachers do not need another adult to have access to their account.
+    self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
 
@@ -965,25 +1042,21 @@ class User < ActiveRecord::Base
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_words: params[:secret_words],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_picture_id: params[:secret_picture_id],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
   end
 
   def user_levels_by_level(script)
@@ -1404,6 +1477,7 @@ class User < ActiveRecord::Base
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
       self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
+      return self
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
       return nil
@@ -1917,12 +1991,12 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
-  def stage_extras_enabled?(script)
-    return false unless script.stage_extras_available?
+  def lesson_extras_enabled?(script)
+    return false unless script.lesson_extras_available?
     return true if teacher?
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.stage_extras
+      section.script_id == script.id && section.lesson_extras
     end
   end
 
@@ -2186,7 +2260,7 @@ class User < ActiveRecord::Base
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)

@@ -1,0 +1,34 @@
+name 'CSD U2 project guide_2018_2019_pilot_2020_virtual'
+display_name 'Project Guide'
+title 'Your Personal Website'
+description 'description here'
+markdown <<MARKDOWN
+# Your Personal Web Page
+
+In the next few levels, you'll be completing and publishing your personal web page.  This is your chance to share your ideas with the world, and also to show all the things that you have learned.
+
+You'll need...
+
+* Your completed project guide
+* The images you downloaded
+* The project rubric
+
+Here are the things you have learned...
+
+* How to use HTML to structure the content of your page
+* How to use CSS to style the text, colors, and layout of your page
+* How to format your code to make it easier to read
+* How to debug HTML and CSS code
+* How to use use images in a responsible way
+* How to protect your personal information online
+
+## Examples
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Planning Checkpoint
+
+Check over student plans before allowing them to continue on the rest of the levels.
+MARKDOWN

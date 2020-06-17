@@ -8,7 +8,8 @@ const styles = {
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    marginTop: 20
   },
   card: {
     marginBottom: 20

@@ -1,38 +1,25 @@
 name 'cspu5_assess3_bakeSale'
-encrypted '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
-iwisTzPXuTtd
-'
+editor_experiment ''
+wrong 'Change Line 1 to:  `var total = -1;`'
+wrong 'Change Line 2 to:  `while (itemsInCart >= 0){`'
+wrong 'Change Line 3 to: `total = promptNum(“Enter next item price”);`'
+right 'Add after line 3:    `numItems = numItems - 1;`'
+wrong 'Add after line 4:     `numItems = 0;`'
+markdown <<MARKDOWN
+Tiffany is writing a program to help manage a bake sale.  She writes the following code which prompts the user to enter the total number of items a person is buying and then a loop repeatedly prompts for the cost of each item.  She wrote the code but there is a problem: it runs in an infinite loop.  How can Tiffany change her code so it doesn’t loop forever?
+
+    0  var numItems = promptNum(“How many items?”);
+    1  var total = 0;
+    2  while (numItems > 0){
+    3    total = total + promptNum(“Enter next item price”);
+    4  }
+    5  console.log(“The total is” + total);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+Note that the condition for the while loop to keep running is the numItems must be greater than zero. Inside the while loop, the total price is incremented; however, the numItems is not changed. To fix this infinite loop, numItems must be decremented by one each time inside the loop until it reaches 0 items. To do so, numItems equals the current number of items minus one after the price of the current item is considered. So after line 3, this is inserted:
+
+		numItems = numItems - 1;
+MARKDOWN

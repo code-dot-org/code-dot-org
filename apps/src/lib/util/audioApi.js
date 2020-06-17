@@ -53,7 +53,7 @@ export const commands = {
     );
 
     const url = assetPrefix.fixPath(opts.url);
-    if (Sounds.getSingleton().isPlayingURL(url)) {
+    if (Sounds.getSingleton().isPlaying(url)) {
       if (opts.callback) {
         opts.callback(false);
       }
@@ -103,7 +103,7 @@ export const commands = {
 
     if (opts.url) {
       const url = assetPrefix.fixPath(opts.url);
-      if (Sounds.getSingleton().isPlayingURL(url)) {
+      if (Sounds.getSingleton().isPlaying(url)) {
         Sounds.getSingleton().stopLoopingAudio(url);
       }
     } else {

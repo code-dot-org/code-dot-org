@@ -1,10 +1,10 @@
 name 'U5L11 CFU For Each Psuedocode'
 title 'AP Pseudocode: Loops'
 description ''
-right '<code>[82, 0, 0, 97, 91]</code> '
-wrong '<code>[5, 0, 0, 5, 5]</code>'
-wrong '<code>[0, 37, 50, 0, 0]</code>'
-wrong '<code>[77, 37, 50, 92, 86]</code>'
+right '`[82, 0, 0, 97, 91]`'
+wrong '`[5, 0, 0, 5, 5]`'
+wrong '`[0, 37, 50, 0, 0]`'
+wrong '`[77, 37, 50, 92, 86]`'
 
 
 markdown <<MARKDOWN

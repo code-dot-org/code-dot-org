@@ -61,7 +61,7 @@ Computers are everywhere, changing every industry on the planet, but fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+[学校名] の[X番号] の生徒全員が、コンピューターサイエンス教育ウィーク（12月3〜9日）で史上最大の学習イベントHour of Code（アワー オブ コード）に参加しているのはそのためです。
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 

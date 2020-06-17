@@ -472,13 +472,14 @@ sl-SI:
           narišeš isti vzorec v preostalem kotu. Lahko dodaš tudi "Skoči do" drugih
           pozicij ali spremeniš vse, kar želiš!
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: |-
-          Začni tako, da se osredotočiš na zbiranje DVA dragulja iz vsakega od prvih dveh kupov.
-
-          \[] [0]
-          Uporabi te bloke.
-
-          [blockly block] [1]
+        courseD_collector_debugging_challenge2_a: "Začni tako, da se osredotočiš na
+          zbiranje DVA dragulja iz vsakega od prvih dveh kupov.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUporabi te bloke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Gumb "Zaženi" ti lahko zelo pomaga
           v tem izzivu.

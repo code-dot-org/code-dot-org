@@ -61,7 +61,7 @@ pd_enrollments_with_year as
     email, 
     user_id, 
     school_year,
-    json_extract_path_text(properties, 'role') as role
+    json_extract_path_text(pde.properties, 'role') as role
   from dashboard_production_pii.pd_enrollments pde
     join dashboard_production_pii.pd_workshops pw
         on pde.pd_workshop_id = pw.id

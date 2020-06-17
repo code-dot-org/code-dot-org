@@ -7,7 +7,7 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {PROJECT_TYPE_MAP} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const THUMBNAIL_SIZE = 50;
 

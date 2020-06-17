@@ -10,7 +10,7 @@ COMMENT_BLOCK_SOURCES = File.join(__dir__, 'fixtures', 'comment-block-sources.js
 class SourcesTest < FilesApiTestBase
   def setup
     # Stub out helpers that make remote API calls
-    WebPurify.stubs(:find_potential_profanity).returns false
+    ProfanityFilter.stubs(:find_potential_profanity).returns nil
     Geocoder.stubs(:find_potential_street_address).returns false
     NewRelic::Agent.reset_stub
 
@@ -189,7 +189,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # Given a program with profanity
-    WebPurify.stubs(:find_potential_profanity).returns true
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
 
     # owner can view
     @api.get_object(filename)
@@ -216,7 +216,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # Given a program with profanity or PII
-    WebPurify.stubs(:find_potential_profanity).returns true
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
 
     # owner can view
     @api.get_object(filename)

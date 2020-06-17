@@ -13,6 +13,8 @@
   header_about: "పరియచం"
   header_help_support: 'సహాయం మరియు మద్దతు '
   header_report_bug: "ఒక సమస్యను రిపోర్టు చేయండి"
+  header_legal_privacy: "గోప్యతా పాలసీ"
+  header_legal_tos: "సర్వీసు నిబంధనలు"
   user_header_signin: "సైన్ ఇన్"
   user_header_create: 'సృష్టించు '
   user_header_dance: "డాన్స్ పార్టీ"
@@ -21,3 +23,5 @@
   hoc2018_dance_party_box_title: "డాన్స్ పార్టీ"
   hoc2018_dance_measure: "మెజర్"
   hoc2018_dance_measure_colon: 'మెజర్:'
+  hoc2018_dance_video2: "డాన్స్ పార్టీ - ఈవెంట్స్"
+  hoc2018_dance_video3: "డాన్స్ పార్టీ - గుణాలు"

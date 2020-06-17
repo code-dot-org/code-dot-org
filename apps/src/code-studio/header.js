@@ -18,6 +18,8 @@ import {
 
 import progress from './progress';
 import {getStore} from '../redux';
+import msg from '@cdo/locale';
+import firehoseClient from '../lib/util/firehose';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -36,10 +38,10 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
- * @param {object} stageData{{
+ * @param {object} lessonData{{
  *   script_id: number,
  *   script_name: number,
- *   script_stages: id,
+ *   num_script_lessons: number,
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
@@ -60,7 +62,7 @@ const PUZZLE_PAGE_NONE = -1;
  */
 header.build = function(
   scriptData,
-  stageData,
+  lessonData,
   progressData,
   currentLevelId,
   puzzlePage,
@@ -68,28 +70,28 @@ header.build = function(
   stageExtrasEnabled
 ) {
   scriptData = scriptData || {};
-  stageData = stageData || {};
+  lessonData = lessonData || {};
   progressData = progressData || {};
 
   const scriptName = scriptData.name;
 
-  if (stageData.finishLink) {
+  if (lessonData.finishLink) {
     $('.header_finished_link')
       .show()
       .append(
         $('<a>')
-          .attr('href', stageData.finishLink)
-          .text(stageData.finishText)
+          .attr('href', lessonData.finishLink)
+          .text(lessonData.finishText)
       );
   }
-  if (stageData.script_stages > 1) {
+  if (lessonData.num_script_lessons > 1) {
     $('.header_popup_link').show();
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(
     scriptData,
-    stageData,
+    lessonData,
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
@@ -105,10 +107,20 @@ header.build = function(
   var isHeaderPopupVisible = false;
 
   function showHeaderPopup() {
+    firehoseClient.putRecord(
+      {
+        study: 'mini_view',
+        event: 'mini_view_opened',
+        data_json: JSON.stringify({
+          current_level_id: currentLevelId
+        })
+      },
+      {includeUserId: true}
+    );
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+    $('.header_popup_link_text').text(msg.lessAllCaps());
     $(document).on('click', hideHeaderPopup);
     progress.renderMiniView(
       $('.user-stats-block')[0],
@@ -130,7 +142,7 @@ header.build = function(
     }
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('more'));
+    $('.header_popup_link_text').text(msg.moreAllCaps());
     $(document).off('click', hideHeaderPopup);
     isHeaderPopupVisible = false;
   }

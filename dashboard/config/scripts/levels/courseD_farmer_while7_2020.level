@@ -1,0 +1,109 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-02-25T15:52:20.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "farmer",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "short_instructions": "Fill in the hole at the end of each of these paths.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "0",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.\",\"hint_id\":\"courseD_farmer_conditionals8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67bf5b89188b28ffa16d00c7dcd7e8ce/courseD_farmer_while7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Putting a `while path ahead` loop inside of a repeat loop can help you in this puzzle.\",\"hint_id\":\"courseD_farmer_conditionals8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c04ab9cb1b7f37b60b09fb7e667e151c/courseD_farmer_while7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What do you need to do at the end of each path?\",\"hint_id\":\"courseD_farmer_conditionals8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c325f4861dddc8f4acd542a9a65237ee/courseD_farmer_while7.mp3\"}]",
+    "ideal": "6",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "parent_level_id": 15116,
+    "name_suffix": "_2020",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_farmer_while7_2018_PathAhead\",\r\n  \"callout_text\": \"You'll need to use the `while path ahead` block in order to solve this puzzle.\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "include_shared_functions": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 15:33:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 01:39:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-26 15:53:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-26 16:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-26 16:04:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-26 16:07:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_dig"/>
+        <block type="maze_fill"/>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="maze_untilBlockedOrNotClear">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_fill">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

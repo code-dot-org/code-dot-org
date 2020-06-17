@@ -1,0 +1,51 @@
+name 'CSPU5_U3L14 - moving memory challenge_rules_virtual'
+editor_experiment ''
+title 'U3L19 - variable scope explanation pt2'
+description 'description here'
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+# Moving Memory Challenges
+
+The next several levels all present challenges related to "moving memory" around (or changing the values stored in variables) in your program.  
+
+**GOAL:** Set the value of the variable(s) to make the `console.log` statement display what it's supposed to.
+
+**Rules**:
+
+  * You may **only** add lines of code that re-assign values of variables provided.
+  * You may **only** use assignment (`=`) and arithmetic operators (`+` `-` `*` `/`).
+  * You **MAY NOT** type or introduce any numbers.
+  * You **MAY NOT** add or create any new variables.
+  * You **MAY NOT** change or alter the `console.log` statement at all.
+
+ 
+Example:
+<table>
+<tr>
+	<th>Code Provided</th>
+</tr>
+<tr>
+ <td >
+        <img src="https://images.code.org/bd3c9a918b22a2874ae77fc82289aab5-image-1447800921923.52.14.png"><br>
+        <br>The code you're given will have a few variables initialized to some values.  The last line will be one or more <code>console.log</code> statements with a comment indicating what the expected value to display should be.
+        <hr>
+    </td>
+</tr>
+<tr>
+	<th>A Possible Solution</th>
+</tr>
+<tr>
+	<td valign=top >
+    <img src="https://images.code.org/4742fed6bff4ad62411b9090f8468db0-image-1447800924556.54.37.png" >
+    <br><br>You need to add a line (or multiple lines) of code to re-assign the values in variables so the <code>console.log</code> statement displays what's expected.  In this example we show a solution on line 5.  Please note that there are several different things you could do. For example, you could go crazy and do something like: <strong>y = x + x + (x/x);</strong>.  What you do is up to you.
+    </td> 
+</tr>
+</table>
+<br><br>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

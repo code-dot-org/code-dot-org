@@ -1,7 +1,7 @@
 name 'CSD U1 IOSP match'
 title 'Question 2'
 height '55'
-description 'A team is making an app that will help people decide what outfit to wear in the morning.  Match four things that the app does with input, output, storage, and processing. '
+description 'A team is making an app that will help people decide what outfit to wear in the morning. Match four things that the app does with input, output, storage, and processing.'
 question 'Input'
 answer 'Gets the day\’s weather forecast from the Internet'
 question 'Output'

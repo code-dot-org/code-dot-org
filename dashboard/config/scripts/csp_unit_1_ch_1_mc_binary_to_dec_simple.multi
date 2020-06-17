@@ -1,7 +1,7 @@
 name 'CSP Unit 1 Ch 1 MC binary to dec simple'
 title 'Decimal to Binary'
 description ' '
-question 'What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?'
+question 'What is the 4-bit binary number for the decimal number _Ten (10)_?'
 wrong '0010'
 right '1010'
 wrong '0110'

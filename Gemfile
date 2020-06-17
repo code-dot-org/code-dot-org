@@ -13,12 +13,6 @@ end
 gem 'rails', '~> 5.0.7.2'
 gem 'rails-controller-testing'
 
-# Add CacheFile backend module.
-# Ref: https://github.com/svenfuchs/i18n/pull/423
-# Support numeric keys in Simple backend.
-# Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
-
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
@@ -64,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -139,7 +132,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
@@ -194,7 +187,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -221,7 +214,6 @@ gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 gem 'jwt' # single signon for zendesk
 
 gem 'codemirror-rails' # edit code in textarea
-gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
@@ -243,9 +235,11 @@ gem 'aws-sdk-cloudfront', '~> 1'
 gem 'aws-sdk-cloudwatch', '~> 1'
 gem 'aws-sdk-cloudwatchlogs', '~> 1'
 gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-databasemigrationservice', '~> 1'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
 gem 'aws-sdk-firehose', '~> 1.6'
+gem 'aws-sdk-glue', '~> 1'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
@@ -348,3 +342,5 @@ gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
 gem 'require_all', require: false
+
+gem 'dotiw'

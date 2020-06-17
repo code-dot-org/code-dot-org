@@ -1,6 +1,7 @@
+tts true
 hidden 'false'
 
-stage 'Artist'
+lesson 'Artist'
 level 'Standalone_Artist_1'
 level 'Standalone_Artist_2'
 level 'Standalone_Artist_3'

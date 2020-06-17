@@ -353,11 +353,10 @@ bn:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': প্রদর্শন করুন
-            '"hide"': লুকিয়ে রাখুন
+            '"random"': এলোমেলো
       binary_move:
         options:
           DIR:

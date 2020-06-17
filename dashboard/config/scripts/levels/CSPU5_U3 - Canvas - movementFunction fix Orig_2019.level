@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Modify the \"Original\" button event handler so that it takes the movement of the mouse into account. (Click to see full instructions)",
-    "long_instructions": "# Fix the \"Original\" Button\r\n\r\nOur \"Original\" button is now slightly broken because the effect it renders doesn't match our new free-form drawing which takes the movement of the mouse into account - it just draws fixed-size cricles.\r\n\r\nLet's fix the \"Original\" button.\r\n\r\n# Do This:\r\n\r\nIn the event handler function for the \"Original\" button:\r\n\r\n* Change the value used for the radius from a fixed value to the same thing calculated for the free-form drawing. Since you wrote a function to do this calculation, it should be easy to call it from this code as well!\r\n* The **slight difference will be that you will be looping over the array of events.**  So the line of code that draws the circle might look like the one below. This line of code is certainly a mouthful, but it's basically the same as the line of code in your `mousemove` event handler; **it just references the event in the list instead.** <br><img src=\"https://images.code.org/dbb4cd9b98eba70aa2919a93544c1e03-image-1448314845862.40.21 PM.png\" style=\"width: 600px\">\r\n* **Test your program** to confirm that clicking the \"Original\" button creates the same effect that occurs when doing free-form drawing.\r\n\r\n![](https://images.code.org/4fcf033e87dc407d337941a7adc4766b-image-1448394246410.gif)",
+    "long_instructions": "# Fix the \"Original\" Button\r\n\r\nOur \"Original\" button is now slightly broken because the effect it renders doesn't match our new free-form drawing which takes the movement of the mouse into account - it just draws fixed-size circles.\r\n\r\nLet's fix the \"Original\" button.\r\n\r\n# Do This:\r\n\r\nIn the event handler function for the \"Original\" button:\r\n\r\n* Change the value used for the radius from a fixed value to the same thing calculated for the free-form drawing. Since you wrote a function to do this calculation, it should be easy to call it from this code as well!\r\n* The **slight difference will be that you will be looping over the array of events.**  So the line of code that draws the circle might look like the one below. This line of code is certainly a mouthful, but it's basically the same as the line of code in your `mousemove` event handler; **it just references the event in the list instead.** <br><img src=\"https://images.code.org/dbb4cd9b98eba70aa2919a93544c1e03-image-1448314845862.40.21 PM.png\" style=\"width: 600px\">\r\n* **Test your program** to confirm that clicking the \"Original\" button creates the same effect that occurs when doing free-form drawing.\r\n\r\n![](https://images.code.org/4fcf033e87dc407d337941a7adc4766b-image-1448394246410.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -44,9 +44,22 @@
     "parent_level_id": 13879,
     "name_suffix": "_2019",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-02-24 14:21:27 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

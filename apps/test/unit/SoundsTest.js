@@ -1,11 +1,11 @@
 import {expect} from '../util/deprecatedChai';
 import Sounds from '@cdo/apps/Sounds';
 import sinon from 'sinon';
+import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('Sounds', () => {
   const sounds = new Sounds();
-  const sourceURL =
-    'studio.code.org/api/v1/sound-library/KyZOBksdJiQSlvoiOzFGpryJiMexdfks/category_ui/click1.mp3';
+  const sourceURL = winMp3;
   sounds.register({id: sourceURL, mp3: sourceURL});
   const sound = sounds.soundsById[sourceURL];
   let spy;
