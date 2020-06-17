@@ -197,7 +197,14 @@ class StudioApp extends EventEmitter {
      */
     this.libraries = {};
 
+    /*
+     * Stores the alert that appears if the user edits code while its running. It will be unmounted and set to undefined on reset.
+     */
     this.editDuringRunAlert = undefined;
+
+    /*
+     * Stores the code at run. It's undefined if the code is not running.
+     */
     this.executingCode = undefined;
   }
 }
@@ -541,6 +548,24 @@ StudioApp.prototype.init = function(config) {
       />,
       startDialogDiv
     );
+  }
+  if (!config.readOnlyWorkspace) {
+    this.addChangeHandler(() => {
+      // if the code has changed (other than whitespace at the beginning or end) and the code is running,
+      // we want to show display an alert to tell the user to reset and run their code again. We trim the whitespace
+      // because droplet sometimes adds an extra newline when switching from block to code mode.
+      if (
+        this.isRunning() &&
+        this.editDuringRunAlert === undefined &&
+        this.getCode().trim() !== this.executingCode.trim()
+      ) {
+        this.editDuringRunAlert = this.displayWorkspaceAlert(
+          'warning',
+          <div>{msg.editDuringRunMessage()}</div>,
+          true
+        );
+      }
+    });
   }
 
   this.emit('afterInit');
@@ -917,20 +942,6 @@ StudioApp.prototype.addChangeHandler = function(newHandler) {
 };
 
 StudioApp.prototype.runChangeHandlers = function() {
-  if (
-    this.isRunning() &&
-    this.editDuringRunAlert === undefined &&
-    (this.isUsingBlockly() ||
-      this.getCode().trim() !== this.executingCode.trim())
-  ) {
-    // we trim the whitespace from the start and end of the code before comparing in droplet
-    // because droplet sometimes adds an extra newline when switching from block to code mode
-    this.editDuringRunAlert = this.displayWorkspaceAlert(
-      'warning',
-      <div>{msg.editDuringRunMessage()}</div>,
-      true
-    );
-  }
   if (!this.changeHandlers) {
     return;
   }
@@ -3164,24 +3175,17 @@ StudioApp.prototype.displayAlert = function(
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
+    container = $("<div class='react-alert ignore-transform'/>").css({
+      position: position,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      transform: 'scale(1.0)'
+    });
     if (props.bottom) {
-      container = $("<div class='react-alert ignore-transform'/>").css({
-        position: position,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 1000,
-        transform: 'scale(1.0)'
-      });
+      container[0].style.bottom = 0;
     } else {
-      container = $("<div class='react-alert ignore-transform'/>").css({
-        position: position,
-        left: 0,
-        right: 0,
-        top: 0,
-        zIndex: 1000,
-        transform: 'scale(1.0)'
-      });
+      container[0].style.top = 0;
     }
     parent.append(container);
   }
