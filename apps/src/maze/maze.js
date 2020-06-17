@@ -36,7 +36,9 @@ import {displayMissingBlockHints} from '../redux/authoredHints';
 import {setHasAuthoredHints} from '../redux/instructions';
 
 const MOBILE_PORTRAIT_WIDTH = 700;
-const FEEDBACK_SERVER_URL = 'http://localhost:5000/predict';
+// TODO: this url will likely change frequently; we should store it in a more transitory fashion.
+const FEEDBACK_SERVER_URL =
+  'https://0v23vmnl1e.execute-api.us-west-1.amazonaws.com/test/predictfeedback';
 
 module.exports = class Maze {
   constructor() {
@@ -323,28 +325,24 @@ module.exports = class Maze {
     var levelId = appOptions.serverLevelId;
     $.ajax({
       url: FEEDBACK_SERVER_URL,
-      data: JSON.stringify({
-        program: code,
-        userId: userId,
-        levelId: levelId
-      }),
+      data: JSON.stringify({program: code}),
       type: 'POST',
       crossDomain: true,
       dataType: 'json',
       accepts: 'application/json',
       contentType: 'application/json',
       success: function(result) {
+        var ps = JSON.parse(result.body);
         // Create hint ID.
         var hintId = 'feedback_ml_level=' + levelId + '_user=' + userId;
-
         // Add hint into the redux state.
         var hint = {
           hintType: 'non-contextual',
           hintId: hintId,
-          markdown: result[0].en,
+          markdown: ps[0].en,
           alreadySeen: false
         };
-
+        console.log(hint);
         // Indicate the question has hints.
         getStore().dispatch(setHasAuthoredHints(true));
         // Add new hint to redux queue.
