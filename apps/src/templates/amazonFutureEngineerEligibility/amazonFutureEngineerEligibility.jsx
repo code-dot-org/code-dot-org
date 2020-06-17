@@ -61,7 +61,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     }
 
     $.ajax({
-      url: '/dashboardapi/v1/schools/' + this.state.formData.schoolId,
+      url:
+        '/dashboardapi/v1/schools/' +
+        this.state.formData.schoolId +
+        '/afe_high_needs',
       type: 'get',
       dataType: 'json'
     }).done(schoolData => {

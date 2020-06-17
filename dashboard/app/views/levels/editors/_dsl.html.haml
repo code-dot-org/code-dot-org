@@ -2,7 +2,7 @@
   - content_for(:head) do
     %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
 
-= render partial: 'levels/editors/fields/dsl_editors', locals: {f: f}
+= render partial: 'levels/editors/fields/dsl_fields', locals: {f: f}
 = render partial: 'levels/editors/fields/video', locals: {f: f} if @level.is_a?(External)
 = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f} if @level.is_a?(LevelGroup) || @level.is_a?(Match)
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
