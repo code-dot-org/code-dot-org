@@ -141,6 +141,7 @@ img.video_thumbnail {
   padding-top: 0;
   min-height: 60px;
   position: relative;
+  user-select: none;
 
   .header {
     position: absolute;
@@ -1078,9 +1079,18 @@ input.header_input {
   height: 38px;
 }
 
+.header_popup_background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
 .header_popup {
-  display: none;
   position: absolute;
+  text-align: left;
   // Set to have a 4 px gap with the bottom of the header
   top: 48px;
   right: 0;
@@ -1116,15 +1126,6 @@ input.header_input {
   }
 }
 
-.header_popup_link {
-  min-width: 40px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  height: 26px;
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
@@ -1142,24 +1143,6 @@ input.header_input {
 .header_finished_link:hover {
   background-color: transparent;
   text-decoration: underline;
-}
-
-.header_popup_link:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.header_popup_link_glyph {
-  font-size: 22px;
-  color: $orange;
-  line-height: 10px;
-}
-
-.header_popup_link_text {
-  font-size: 10px;
-  color: $header_text;
-  display: inline-block;
-  line-height: 20px;
 }
 
 #alert {

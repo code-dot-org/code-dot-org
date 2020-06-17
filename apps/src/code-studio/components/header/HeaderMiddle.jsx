@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
+import HeaderPopup from '@cdo/apps/code-studio/components/header/HeaderPopup';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
@@ -28,7 +28,9 @@ class HeaderMiddle extends React.Component {
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
     lessonExtrasUrl: PropTypes.string,
-    children: PropTypes.node
+    scriptData: PropTypes.object,
+    currentLevelId: PropTypes.string,
+    linesOfCodeText: PropTypes.string
   };
 
   constructor(props) {
@@ -36,40 +38,17 @@ class HeaderMiddle extends React.Component {
 
     this.state = {
       width: this.getWidth(),
-      addedPopupComponents: false,
       lessonProgressFullWidth: 0,
       projectInfoFullWidth: 0
     };
   }
 
   componentDidMount() {
-    this.showPopupComponents();
+    this.updateLayout();
 
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('resize', this.updateLayoutListener);
     window.addEventListener('scroll', this.updateLayoutListener);
-  }
-
-  componentDidUpdate() {
-    this.showPopupComponents();
-  }
-
-  showPopupComponents() {
-    // The components used here are implemented in legacy HAML/CSS rather than React.
-
-    if (
-      !this.state.addedPopupComponents &&
-      this.refs.header_popup_components &&
-      true // this.props.lessonData.num_script_lessons > 1
-    ) {
-      $('.header_popup_components')
-        .appendTo(ReactDOM.findDOMNode(this.refs.header_popup_components))
-        .show();
-
-      $('.header_popup_link').show();
-
-      this.setState({addedPopupComponents: true});
-    }
   }
 
   getWidth() {
@@ -79,7 +58,11 @@ class HeaderMiddle extends React.Component {
   }
 
   updateLayout = () => {
-    this.setState({width: this.getWidth()});
+    this.setState({
+      width: this.getWidth(),
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height()
+    });
   };
 
   // Return the desired widths for the items that are showing.
@@ -154,7 +137,13 @@ class HeaderMiddle extends React.Component {
   };
 
   render() {
-    const {scriptNameData, lessonData} = this.props;
+    const {
+      scriptNameData,
+      lessonData,
+      scriptData,
+      currentLevelId,
+      linesOfCodeText
+    } = this.props;
 
     const widths = this.getWidths();
 
@@ -207,6 +196,27 @@ class HeaderMiddle extends React.Component {
               <LessonProgress
                 width={widths.progress}
                 onSize={this.onLessonProgressFullWidth}
+              />
+            </div>
+          )}
+
+          {widths.popup !== 0 && (
+            <div
+              id="header_popup_container"
+              style={{
+                float: 'left',
+                width: widths.popup,
+                windowWidth: this.state.windowWidth,
+                windowHeight: this.state.windowHeight,
+                visibility: widths.popup === 0 ? 'hidden' : undefined
+              }}
+            >
+              <HeaderPopup
+                scriptName={scriptData.name}
+                scriptData={scriptData}
+                currentLevelId={currentLevelId}
+                linesOfCodeText={linesOfCodeText}
+                windowHeight={this.state.windowHeight}
               />
             </div>
           )}

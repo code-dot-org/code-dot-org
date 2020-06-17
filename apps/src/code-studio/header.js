@@ -1,8 +1,5 @@
 /* globals dashboard */
 
-import $ from 'jquery';
-import _ from 'lodash';
-
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -22,8 +19,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
-import msg from '@cdo/locale';
-import firehoseClient from '../lib/util/firehose';
 
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
@@ -80,11 +75,12 @@ header.build = function(
   lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const scriptName = scriptData.name;
+  const linesOfCodeText = progressData.linesOfCodeText;
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
 
-  const renderedProgress = progress.renderStageProgress(
+  // Call this to set up the store I think.
+  progress.generateStageProgress(
     scriptData,
     lessonData,
     progressData,
@@ -96,90 +92,16 @@ header.build = function(
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <HeaderMiddle scriptNameData={scriptNameData} lessonData={lessonData}>
-        {renderedProgress}
-      </HeaderMiddle>
+      <HeaderMiddle
+        scriptNameData={scriptNameData}
+        lessonData={lessonData}
+        scriptData={scriptData}
+        currentLevelId={currentLevelId}
+        linesOfCodeText={linesOfCodeText}
+      />
     </Provider>,
     document.querySelector('.header_level')
   );
-
-  /**
-   * Track boolean "visible" state of header popup to avoid
-   * expensive lookup on window resize.
-   * @type {boolean}
-   */
-  var isHeaderPopupVisible = false;
-
-  function showHeaderPopup() {
-    firehoseClient.putRecord(
-      {
-        study: 'mini_view',
-        event: 'mini_view_opened',
-        data_json: JSON.stringify({
-          current_level_id: currentLevelId
-        })
-      },
-      {includeUserId: true}
-    );
-    sizeHeaderPopupToViewport();
-    $('.header_popup').show();
-    $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text(msg.lessAllCaps());
-    $(document).on('click', hideHeaderPopup);
-    progress.renderMiniView(
-      $('.user-stats-block')[0],
-      scriptName,
-      currentLevelId,
-      progressData.linesOfCodeText,
-      scriptData.student_detail_progress_view
-    );
-    isHeaderPopupVisible = true;
-  }
-  function hideHeaderPopup(event) {
-    // Clicks inside the popup shouldn't close it, unless it's on close button
-    const target = event && event.target;
-    if (
-      $('.header_popup').find(target).length > 0 &&
-      !$(event.target).hasClass('header_popup_close')
-    ) {
-      return;
-    }
-    $('.header_popup').hide();
-    $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(msg.moreAllCaps());
-    $(document).off('click', hideHeaderPopup);
-    isHeaderPopupVisible = false;
-  }
-
-  $('.header_popup_link').click(function(e) {
-    e.stopPropagation();
-    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
-  });
-
-  $(window).resize(
-    _.debounce(function() {
-      if (isHeaderPopupVisible) {
-        sizeHeaderPopupToViewport();
-      }
-    }, 250)
-  );
-
-  /**
-   * Adjust the maximum size of the popup's inner scroll area so that the whole popup
-   * will fit within the browser viewport.
-   */
-  function sizeHeaderPopupToViewport() {
-    var viewportHeight = $(window).height();
-    var headerWrapper = $('.header-wrapper');
-    var headerPopup = $('.header_popup');
-    var popupTop =
-      parseInt(headerWrapper.css('padding-top'), 10) +
-      parseInt(headerPopup.css('top'), 10);
-    var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
-    headerPopup
-      .find('.header_popup_scrollable')
-      .css('max-height', viewportHeight - (popupTop + popupBottom));
-  }
 };
 
 header.buildProjectInfoOnly = function() {
