@@ -1137,6 +1137,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (
+        handler &&
         handler.name === name &&
         (allowQueueExtension || 0 === handler.cmdQueue.length)
       ) {
@@ -1155,7 +1156,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
       }
     } else {
       // TODO (cpirich): support events with parameters
-      if (handler.name === name) {
+      if (handler && handler.name === name) {
         handler.func.apply(null, extraArgs);
       }
     }
@@ -4556,7 +4557,7 @@ Studio.executeQueue = function(name, oneOnly) {
     if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
-    if (handler.name === name && handler.cmdQueue.length) {
+    if (handler && handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
         if (Studio.callCmd(cmd)) {
           // Command executed immediately, remove from queue and continue
@@ -5888,7 +5889,7 @@ Studio.showTitleScreen = function(opts) {
 Studio.isCmdCurrentInQueue = function(cmdName, queueName) {
   var foundCmd = false;
   Studio.eventHandlers.forEach(function(handler) {
-    if (handler.name === queueName) {
+    if (handler && handler.name === queueName) {
       var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.name === cmdName) {
@@ -6642,6 +6643,7 @@ Studio.onEvent = function(opts) {
 Studio.allWhenRunBlocksComplete = function() {
   for (var i = 0; i < Studio.eventHandlers.length; i++) {
     if (
+      Studio.eventHandlers[i] &&
       Studio.eventHandlers[i].name === 'whenGameStarts' &&
       Studio.eventHandlers[i].cmdQueue.length !== 0
     ) {
@@ -6660,6 +6662,7 @@ Studio.timedOut = function() {
     } else if (
       Studio.eventHandlers.length === 0 ||
       (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0] &&
         Studio.eventHandlers[0].name === 'whenGameStarts' &&
         Studio.allWhenRunBlocksComplete())
     ) {
