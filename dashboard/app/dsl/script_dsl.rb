@@ -88,12 +88,12 @@ class ScriptDSL < BaseDSL
     # For scripts that don't use lesson groups create a blank non-user facing lesson group
     if @lesson_groups.empty?
       @lesson_groups << {
-          key: nil,
-          display_name: nil,
-          lessons: []
+        key: nil,
+        display_name: nil,
+        lessons: []
       }.compact
     end
-    
+
     if name
       @lesson_groups[@lesson_groups.length - 1][:lessons] << {
         name: name,
@@ -189,16 +189,9 @@ class ScriptDSL < BaseDSL
     progression = properties.delete(:progression)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
-    named = properties.delete(:named)
     assessment = properties.delete(:assessment)
-
-    if named
-      properties[:named_level] = true
-    end
-
-    if assessment
-      properties[:assessment] = true
-    end
+    named = properties.delete(:named)
+    bonus = properties.delete(:bonus)
 
     level = {
       name: name,
@@ -240,6 +233,9 @@ class ScriptDSL < BaseDSL
       end
     else
       script_level = {
+        assessment: assessment,
+        named_level: named,
+        bonus: bonus,
         levels: [level]
       }
 
