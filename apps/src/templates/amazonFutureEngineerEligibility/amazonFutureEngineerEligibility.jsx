@@ -206,20 +206,12 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 }
                 errorMessage={this.state.errors.email}
               />
-              <FormGroup
-                id="schoolIdWrapper"
-                validationState={
-                  this.state.errors.hasOwnProperty('schoolId')
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-              >
-                <SchoolAutocompleteDropdownWithLabel
-                  setField={this.handleSchoolDropdownChange}
-                  showRequiredIndicator={true}
-                  value={formData.schoolId}
-                />
-              </FormGroup>
+              <SchoolAutocompleteDropdownWithLabel
+                setField={this.handleSchoolDropdownChange}
+                showRequiredIndicator={true}
+                value={formData.schoolId}
+                showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+              />
               <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
               </Button>
