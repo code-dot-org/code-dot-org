@@ -1,7 +1,7 @@
 require 'cdo/firehose'
 
 class Api::V1::SchoolsController < ApplicationController
-  load_resource :school, only: :show
+  load_resource :school, only: [:show, :afe_high_needs]
 
   # GET /api/v1/schools/<school_district_id>/<school_type>
   def index
@@ -19,9 +19,7 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /api/v1/schools/:id/afe_high_needs
   def afe_high_needs
-    school = School.find(params[:id])
-
-    render json: school, serializer: Api::V1::SchoolSerializer
+    render json: @school, serializer: Api::V1::SchoolSerializer
   end
 
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
