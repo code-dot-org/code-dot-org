@@ -49,6 +49,67 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
+  def self.add_lessons(script, lesson_group, raw_lessons, current_lesson_position, current_chapter, current_lockable_count, current_non_lockable_count, new_suffix, editor_experiment)
+    lesson_group_lessons = []
+
+    lesson_position = current_lesson_position # Todo set to 0 when clean up position
+
+    # Todo Remove once clean up position
+    lockable_count = current_lockable_count
+    non_lockable_count = current_non_lockable_count
+    chapter = current_chapter
+
+    #Lessons
+    raw_lessons&.each do |raw_lesson|
+      # check if that lesson exists for the script otherwise create a new lesson
+      lesson = Lesson.find_or_create_by(
+        name: raw_lesson[:name],
+        script: script
+      ) do |s|
+        s.relative_position = 0 # will be updated below, but cant be null
+      end
+
+      if raw_lesson[:lockable]
+        lesson.assign_attributes(relative_position: (lockable_count += 1))
+      else
+        lesson.assign_attributes(relative_position: (non_lockable_count += 1))
+      end
+
+      if raw_lesson[:visible_after]
+        lesson.assign_attributes(visible_after: raw_lesson[:visible_after])
+      end
+
+      lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], absolute_position: (lesson_position += 1))
+      lesson.save! if lesson.changed?
+
+      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      #Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
+      lesson_group_lessons << lesson
+
+      # Todo Remove once clean up position
+      chapter += lesson.script_levels.length
+    end
+    lesson_group_lessons
+  end
+
+  # Go through all the script levels for this lesson, except the last one,
+  # and raise an exception if any of them are a multi-page assessment.
+  # (That's when the script level is marked assessment, and the level itself
+  # has a pages property and more than one page in that array.)
+  # This is because only the final level in a lesson can be a multi-page
+  # assessment.
+  def self.prevent_multi_page_assessment_outside_final_level(lesson)
+    lesson.script_levels.each do |script_level|
+      if !script_level.end_of_stage? && script_level.long_assessment?
+        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
+      end
+    end
+
+    if lesson.lockable && !lesson.script_levels.last.assessment?
+      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
+    end
+  end
+
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
@@ -151,7 +212,7 @@ class Lesson < ActiveRecord::Base
       # The last level in a lesson might be a long assessment, so add extra information
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
-      if last_script_level.long_assessment?
+      if last_script_level&.long_assessment?
         last_level_summary = lesson_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
         lesson_data[:levels] += extra_levels

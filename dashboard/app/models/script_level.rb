@@ -51,6 +51,50 @@ class ScriptLevel < ActiveRecord::Base
     challenge
   )
 
+  def self.add_script_levels(script, lesson, raw_script_levels, current_chapter, new_suffix, editor_experiment)
+    lesson_script_levels = []
+
+    # Todo Remove once clean up position
+    chapter = current_chapter
+
+    raw_script_levels&.each_with_index do |raw_script_level, index|
+      properties = raw_script_level.delete(:properties) || {}
+
+      if new_suffix && properties[:variants]
+        properties[:variants] = properties[:variants].map do |old_level_name, value|
+          ["#{old_level_name}_#{new_suffix}", value]
+        end.to_h
+      end
+
+      script_level_attributes = {
+        script_id: script.id,
+        chapter: (chapter += 1),
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment]
+      }
+
+      levels = Level.add_levels(script, raw_script_level[:levels], new_suffix, editor_experiment)
+
+      script_level_attributes[:properties] = properties.with_indifferent_access
+      script_level = script.script_levels.detect do |sl|
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+            sl.levels == levels
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
+        sl.levels = levels
+      end
+
+      script_level_attributes[:stage_id] = lesson.id
+      script_level_attributes[:position] = index + 1
+      script_level.reload
+      script_level.assign_attributes(script_level_attributes)
+      script_level.save! if script_level.changed?
+
+      lesson_script_levels << script_level
+    end
+    lesson_script_levels
+  end
+
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
