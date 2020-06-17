@@ -17,6 +17,13 @@ class Api::V1::SchoolsController < ApplicationController
     render json: @school, serializer: Api::V1::SchoolAutocomplete::Serializer
   end
 
+  # GET /api/v1/schools/:id/afe_high_needs
+  def afe_high_needs
+    school = School.find(params[:id])
+
+    render json: school, serializer: Api::V1::SchoolSerializer
+  end
+
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
     search_results = Api::V1::SchoolAutocomplete.get_matches(
