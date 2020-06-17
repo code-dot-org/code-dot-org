@@ -50,9 +50,20 @@ class ContactRollupsV2
     end
   end
 
+  # Set all database configurations the pipeline will need
+  def self.set_db_variables
+    # Set group_concat_max_len to 65535 (same as VARCHAR max length).
+    # Its default value is 1024, too short for the amount of data we need to concat.
+    # @see:
+    #   ContactRollupsProcessed.get_data_aggregation_query
+    #   https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len
+    DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
+  end
+
   def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
     @log_collector = LogCollector.new('ContactRollupsV2')
+    self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
