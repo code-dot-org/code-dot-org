@@ -757,8 +757,6 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
-
     amazonFutureEngineerEligibility:
       './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
   };
@@ -1143,8 +1141,7 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact',
-        'donorTeacherBanner'
+        'regionalPartnerMiniContact'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
