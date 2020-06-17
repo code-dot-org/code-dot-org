@@ -107,7 +107,8 @@ class ContactRollupsV2
     end
 
     @log_collector.time!('Processes all extracted data') do
-      ContactRollupsProcessed.import_from_raw_table
+      results = ContactRollupsProcessed.import_from_raw_table
+      @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
     end
 
     @log_collector.time!("Overwrites contact_rollups_final table") do
