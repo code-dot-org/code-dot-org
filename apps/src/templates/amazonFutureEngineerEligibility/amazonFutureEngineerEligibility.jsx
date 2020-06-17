@@ -71,7 +71,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       type: 'get',
       dataType: 'json'
     }).done(schoolData => {
-      console.log(schoolData);
       this.handleEligibility(schoolData.afe_high_needs);
     });
   };
