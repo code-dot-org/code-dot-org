@@ -10,7 +10,7 @@ ur-PK:
       CourseD_Dance_Party_02: |-
         "آئیے اس موس بارہ سنگا کو ڈانس کرنے دیتے ہیں!
 
-         <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
+         <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
 
         **پیمائشیں** موسیقی میں وقت شمار کرنے کے لئے استعمال کی جاتی ہیں۔ اس ٹیوٹوریل میں، ایک پیمائش چار دھڑکن طویل ہوتی ہے۔".
       CourseD_Dance_Party_03: "\"_اب ہم گرونگ کر رہے ہیں!_ \n\n ایک <xml><block type=\"Dancelab_atTimestamp\"
@@ -41,7 +41,7 @@ ur-PK:
         "اب ہم جانتے ہیں کہ ایک ڈانسر کی خصوصیات کو کیسے تبدیل کرنا ہے۔ ہم اس بلاک کا استعمال کرتے ہوئے ایک ہی خصوصیات کو خودکار طریقے سے میوزک کا جواب بھی دے سکتے ہیں:
         <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -128,7 +128,7 @@ ur-PK:
       Dance_Party_02: |-
         آئیے اس موس بارہ سنگا کو ڈانس کرنے دیتے ہیں!
 
-         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے \< <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
+         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے \< <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
 
         **پیمائشیں** موسیقی میں وقت شمار کرنے کے لئے استعمال کی جاتی ہیں۔ اس ٹیوٹوریل میں، ایک پیمائش چار دھڑکن طویل ہوتی ہے۔.
       Dance_Party_03: |-
@@ -159,7 +159,7 @@ ur-PK:
         "اب ہم جانتے ہیں کہ ایک ڈانسر کی خصوصیات کو کیسے تبدیل کرنا ہے۔ ہم اس بلاک کا استعمال کرتے ہوئے ایک ہی خصوصیات کو خودکار طریقے سے میوزک کا جواب بھی دے سکتے ہیں:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
