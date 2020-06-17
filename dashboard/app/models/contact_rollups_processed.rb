@@ -26,18 +26,27 @@ class ContactRollupsProcessed < ApplicationRecord
   DATA_UPDATED_AT_KEY = 'u'.freeze
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
-  # @param [Integer] batch_size number of records to save per INSERT statement.
+  # @param batch_size [Integer] number of records to save per INSERT statement.
+  # @return [Hash] number of valid and invalid contacts (emails) in the raw table
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
+    valid_contacts = 0
+    invalid_contacts = 0
+
     # Process the aggregated data row by row and save the results to DB in batches.
     batch = []
     ContactRollupsV2.retrieve_query_results(get_data_aggregation_query).each do |contact|
-      contact.deep_stringify_keys!
-      contact_data = parse_contact_data(contact['all_data_and_metadata'])
+      begin
+        contact.deep_stringify_keys!
+        contact_data = parse_contact_data(contact['all_data_and_metadata'])
+        valid_contacts += 1
+      rescue StandardError
+        invalid_contacts += 1
+        next
+      end
 
       processed_contact_data = {}
       processed_contact_data.merge!(extract_field(contact_data, 'dashboard.email_preferences', 'opt_in') || {})
       processed_contact_data.merge!(extract_updated_at(contact_data) || {})
-
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
@@ -48,8 +57,12 @@ class ContactRollupsProcessed < ApplicationRecord
         batch = []
       end
     end
-
     transaction {import! batch, validate: false} unless batch.empty?
+
+    {
+      valid_contacts: valid_contacts,
+      invalid_contacts: invalid_contacts
+    }
   end
 
   def self.get_data_aggregation_query
@@ -84,6 +97,9 @@ class ContactRollupsProcessed < ApplicationRecord
   #
   # @param [String] str represents a JSON array. Each array item is a hash {sources:String, data:Hash, data_updated_at:DateTime}.
   # @return [Hash] a hash with string keys {table_name => {field_name => value}}
+  #
+  # @raise [JSON::ParserError] if cannot parse the input string to JSON
+  # @raise [ArgumentError] if cannot parse a time value in the input string to Time
   def self.parse_contact_data(str)
     parsed_items = JSON.parse(str)
 
