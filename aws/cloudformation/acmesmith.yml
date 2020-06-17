@@ -1,4 +1,5 @@
-endpoint: https://acme-v01.api.letsencrypt.org/
+directory: https://acme-v02.api.letsencrypt.org/directory
+
 # For staging API, use this endpoint instead:
 #endpoint: https://acme-staging.api.letsencrypt.org/
 storage:
