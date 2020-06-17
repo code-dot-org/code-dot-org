@@ -141,7 +141,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
   submitToAFE = () => {
     // returns a promise
-    return fetch('/dashboardapi/v1/afe_submit_2020', {
+    return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
