@@ -111,7 +111,6 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   test 'parse_contact_data parses valid input' do
     time_str = '2020-03-11 15:01:26'
     time_parsed = Time.find_zone('UTC').parse(time_str)
-
     format_values = {
       sources_key: ContactRollupsProcessed::SOURCES_KEY,
       data_key: ContactRollupsProcessed::DATA_KEY,
@@ -121,6 +120,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     # Test inputs are JSON strings.
     # Use string +format+ method so we don't have to escape every double quotes.
+    # Example of a JSON string test: "[{\"s\": \"table1\", \"d\": null, \"u\": \"2020-03-11 15:01:26\"}]"
     tests = [
       {
         input: format(
