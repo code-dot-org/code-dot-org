@@ -203,7 +203,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
-  test "show: redirect from new unstable version to to latest stable version in family for logged out user" do
+  test "show: redirect from new unstable version to latest stable version in family for logged out user" do
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
@@ -214,6 +214,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
   end
 
+  # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
+  # or has made progress in a different version from the latest stable version. This test verifies that ultimately
+  # the student is not redirected if true is returned.
   test "show: do not redirect student to latest stable version in family if they can view the script version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     sign_in @no_progress_or_assignment_student
