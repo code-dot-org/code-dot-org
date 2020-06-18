@@ -198,6 +198,20 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :facilitator_enrollment_reminder, target: :facilitator
   end
 
+  def facilitator_post_workshop
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+
+    mail :facilitator_post_workshop,
+      target: :facilitator,
+      workshop_params: {
+        regional_partner: regional_partner
+      }
+  end
+
+  def facilitator_post_workshop_no_rp
+    mail :facilitator_post_workshop, target: :facilitator
+  end
+
   # The teacher_cancel_receipt has a variation for CSF. It's the same for all other courses.
   def teacher_cancel_receipt__general
     mail :teacher_cancel_receipt
