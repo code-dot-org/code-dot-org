@@ -42,12 +42,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_template 'courses/show'
   end
 
-  test "show: regular courses do not get titlized" do
-    assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {course_name: 'non_plc_course'}
-    end
-  end
-
   test "show: non existant course throws" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'nosuchcourse'}
