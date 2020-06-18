@@ -1,5 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: 'S3 Buckets'
+Parameters:
+  DeveloperAccount:
+    Type: String
+    NoEcho: true
 Resources:
   ## Create S3 bucket for student libraries
   LibraryBucket:
