@@ -162,7 +162,7 @@ class ScriptsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script
 
     if ScriptConstants::FAMILY_NAMES.include?(script_id)
-      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect')
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
     end
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
