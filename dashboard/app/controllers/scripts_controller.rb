@@ -162,26 +162,12 @@ class ScriptsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script
 
     if ScriptConstants::FAMILY_NAMES.include?(script_id)
-      log_redirect(script_id, @script.redirect_to)
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect')
     end
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
-  end
-
-  def log_redirect(old_script_name, new_script_name)
-    FirehoseClient.instance.put_record(
-      study: 'script-family-redirect',
-      event: 'unversioned-script-redirect',
-      data_string: request.path,
-      data_json: {
-        old_script_name: old_script_name,
-        new_script_name: new_script_name,
-        url: request.url,
-        referer: request.referer,
-      }.to_json
-    )
   end
 
   def script_params
