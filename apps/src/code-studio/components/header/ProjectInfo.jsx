@@ -23,6 +23,13 @@ const styles = {
   },
   projectInfo: {
     position: 'absolute'
+  },
+  headerVignetteRight: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    background:
+      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
 };
 
@@ -50,12 +57,19 @@ class ProjectInfo extends React.Component {
       return null;
     }
 
+    const fullWidth = $('.project_info').width();
+    const actualWidth = this.props.width;
+
+    const vignetteStyle =
+      actualWidth < fullWidth ? styles.headerVignetteRight : null;
+
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
       <div style={styles.headerContainer}>
         <div className="project_info" style={styles.projectInfo}>
           <HeaderComponent />
         </div>
+        <div id="vignette" style={vignetteStyle} />
       </div>
     );
   }
