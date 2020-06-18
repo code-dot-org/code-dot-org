@@ -1256,7 +1256,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.validAssignments,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
+      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
