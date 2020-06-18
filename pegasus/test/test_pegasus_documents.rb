@@ -37,6 +37,7 @@ class PegasusTest < Minitest::Test
       code.org/student
     ],
     301 => %w[
+      code.org/codebreaknow
       csedweek.org/resource_kit
     ],
     401 => %w[

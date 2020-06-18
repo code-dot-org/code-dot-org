@@ -163,28 +163,7 @@ describe('TopInstructions', () => {
         expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
       });
 
-      it('shows the Teacher Instructions on a level with markdown for CSF', () => {
-        const wrapper = shallow(
-          <TopInstructions
-            {...DEFAULT_PROPS}
-            noInstructionsWhenCollapsed={false}
-          />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(1);
-      });
-
-      it('does not show the Teacher Instructions on a level with markdown for CSP and CSD', () => {
+      it('shows the Teacher Instructions on a level with markdown', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -197,7 +176,7 @@ describe('TopInstructions', () => {
           token: null
         });
 
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
+        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(1);
       });
     });
 

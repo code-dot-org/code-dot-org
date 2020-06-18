@@ -10,6 +10,7 @@ import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
 import {Goal, show} from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
+import spritelabMsg from '@cdo/spritelab/locale';
 
 function sprites() {
   const animationList = getStore().getState().animationList;
@@ -194,9 +195,27 @@ const customInputTypes = {
   },
   spritePointer: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          block.shortString = spritelabMsg.clicked();
+          block.longString = spritelabMsg.clickedSprite();
+          break;
+        case 'gamelab_subjectSpritePointer':
+          block.shortString = spritelabMsg.subject();
+          block.longString = spritelabMsg.subjectSprite();
+          break;
+        case 'gamelab_objectSpritePointer':
+          block.shortString = spritelabMsg.object();
+          block.longString = spritelabMsg.objectSprite();
+          break;
+        default:
+          // unsupported block for spritePointer, leave the block text blank
+          block.shortString = '';
+          block.longString = '';
+      }
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+        .appendTitle(block.longString)
+        .appendTitle(new Blockly.FieldImage('', 1, 1), inputConfig.name);
     },
     generateCode(block, arg) {
       switch (block.type) {

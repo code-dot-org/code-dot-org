@@ -345,10 +345,17 @@ ar:
       sections: الأقسام
       help_support: مساعدة ودعم
       report_bug: أبلغ عن وجود خلل
+      report_abuse: الابلاغ عن سوء استخدام
       teacher_community: مجتمع المدرسين
       professional_learning: Professional learning
       documentation: الوثائق
       tutorials: الدروس
+      app_lab_documentation: توثيق معمل التطبيقات
+      app_lab_tutorials: معمل تطبيقات البرامج التعليمية
+      game_lab_documentation: تويثق معمل الألعاب
+      game_lab_tutorials: برامج تعليمية لمعمل الألعاب
+      sprite_lab_documentation: توثيق معمل العفاريت
+      sprite_lab_tutorials: برامج تعليمية لمعمل العفاريت
       educate_overview: لمحة عن المعلم
       educate_elementary: المدرسة الابتدائية
       educate_middle: المرحلة المتوسطة
@@ -374,6 +381,7 @@ ar:
       help_us: ساعدنا
       teach: التعليم
       about: حول
+      legal: الخصوصية والقانونية
       legal_privacy: سياسة الخصوصية
       legal_tos: شروط الخدمة
     user:
@@ -381,6 +389,7 @@ ar:
       district_dashboard: جزء لوحة المعلومات
       label: مرحباً %{username}
       stats: ستوديو كود
+      my_projects: مشروعاتي
       settings: حسابي
       logout: تسجيل الخروج
       signin: تسجيل الدخول
@@ -397,6 +406,7 @@ ar:
       artist_k1: الفنان (القارئ الأوّلي)
       basketball: كرة السلة
       bounce: الارتداد
+      calc: الحساب
       dance: حفلة الرقص
       eval: تقييم
       flappy: فلابي
@@ -414,7 +424,12 @@ ar:
       playlab: مختبر اللعب
       playlab_k1: Play Lab (القارئ الأوّلي)
       scratch: Scratch
+      sports: الأنشطة الرياضية
+      spritelab: مختبر النقوش المتحركة
       starwars: حرب النجوم "Star Wars"
+      starwarsblocks: حرب النجوم (بلوكات)
+      starwarsblocks_hour: حرب النجوم (بلوكات)
+      view_all: شاهد جميع المشاريع...
     popup:
       progress_for_user: تقدم %{name}
       progress: إنجازاتك
@@ -562,6 +577,7 @@ ar:
     no_primary_course: جرب الدورة تدريبية في "كود استوديو"
     choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
     print_certificate: طباعة الشهادة
+  certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلمك."
   move_students:
     new_section_dne: عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود
       قسم مختلف.
@@ -743,6 +759,7 @@ ar:
       audience: للأعمار 13 +
       cta: تعلم كيف
     hoc-encryption:
+      title: شفرة بسيطة
       body: سيتعلم الطلاب أساليب لإنشاء الرسائل المشفَّرة واختراقها.
     weblab:
       title: مختبر الويب (التجريبي)
@@ -756,6 +773,7 @@ ar:
       title: حرب النجوم "Star Wars"
     infinity:
       title: لعبة مختبر اللعب اللانهائية
+      body: استخدم "مختبر الألعاب" لإنشاء قصة أو لعبة ببطولة شخصيات ديزني إنفينيتي.
     minecraft:
       title: Minecraft
       body: استكشف عالم Minecraft عن طريق الكود.
@@ -769,8 +787,10 @@ ar:
       body: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة! رحلة عبر Minecraft
         مع البرمجة.
     sports:
+      title: الأنشطة الرياضية
       body: اصنع لعبة كرة السلة، أو قم بالخلط والمطابقة عبر الرياضات.
     text-compression:
+      title: ضغط النص
       body: في هذا الدرس، سيستعمل الطلاب أداة ضغط النص لضغطه بتغيير النماذج بالرموز.
     unplugged:
       title: درس غير موصول
@@ -1248,6 +1268,11 @@ ar:
     privacy_policy: سياسة الخصوصية
     logout: تسجيل الخروج
     true: نعم
+  page_not_found_title: لم يتم العثور على الصفحة
+  page_not_found_header: '404: لم يتم العثور على الصفحة'
+  page_not_found_description: الصفحة التي تبحث عنها غير موجودة في هذا العنوان. تحقق
+    من عنوان الشبكة وأعد التقديم. أو، ارجع إلى صفحتنا الرئيسية.
+  page_not_found_button: ارجع إلى صفحتنا الرئيسية
   copy: نسخ
   maker:
     google_oauth:
