@@ -43,7 +43,9 @@ class ProjectInfo extends React.Component {
   componentDidMount() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.project_info').width();
-    this.props.onSize(fullWidth);
+    if (this.props.onSize) {
+      this.props.onSize(fullWidth);
+    }
   }
 
   componentDidUpdate() {
