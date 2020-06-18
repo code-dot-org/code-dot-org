@@ -20,25 +20,29 @@ const VALIDATION_STATE_ERROR = 'error';
 
 export default class AmazonFutureEngineerEligibility extends React.Component {
   static propTypes = {
-    signedIn: PropTypes.bool.isRequired
+    signedIn: PropTypes.bool.isRequired,
+    schoolId: PropTypes.string,
+    schoolEligible: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
-    let sessionEligibilityData = JSON.parse(
-      sessionStorage.getItem(sessionStorageKey)
-    ) || {
-      schoolEligible: null,
-      schoolId: null,
-      consentAFE: false,
-      submitted: false
-    };
-
-    sessionEligibilityData.signedIn = this.props.signedIn;
+    let sessionEligibilityData =
+      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
 
     this.state = {
-      formData: sessionEligibilityData,
+      formData: {
+        signedIn: this.props.signedIn,
+        schoolEligible:
+          sessionEligibilityData.schoolEligible ||
+          this.props.schoolEligible ||
+          null,
+        schoolId:
+          sessionEligibilityData.schoolId || this.props.schoolId || null,
+        consentAFE: sessionEligibilityData.consentAFE || false,
+        submitted: sessionEligibilityData.submitted || false
+      },
       errors: {}
     };
   }
