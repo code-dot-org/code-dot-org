@@ -32,6 +32,8 @@ reporting = URI.parse((node['cdo-secrets']['reporting_db_writer'] || writer).to_
 
 # If this is an Aurora cluster, resolve instance-endpoint hostnames
 # to help with instance auto-discovery.
+node.default['cdo-secrets']['db_cluster_id'] = CDO.db_cluster_id
+
 if (is_aurora = !!node['cdo-secrets']['db_cluster_id'])
   [writer, reader, reporting].each {|server| server.host = get_cname(server.host)}
 end
