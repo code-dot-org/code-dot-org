@@ -112,14 +112,16 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     // lots of validation specified in spec, none currently being done.
     // need timestamp in appropriate format.
 
-    return <div>Completion!</div>;
+    // need to work on synchronicity of this --
+    // not sure if referral back from sign in page is working 100%
+    window.location = pegasus('/amazon-future-engineer/success');
   };
 
   render() {
     let {formData} = this.state;
 
     if (formData.schoolEligible === false) {
-      window.location = pegasus('/privacy');
+      window.location = pegasus('/amazon-future-engineer/ineligible');
     }
 
     // TO DO: Disable button until email and school are filled in
@@ -153,20 +155,20 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             </FormGroup>
           </div>
         )}
-        {formData.schoolEligible === true && formData.consentAFE === false && (
+        {formData.schoolEligible && !formData.consentAFE && (
           <AmazonFutureEngineerEligibilityForm
             email={formData.email}
             schoolId={formData.schoolId}
             onContinue={this.updateFormData}
           />
         )}
-        {formData.schoolEligible === true &&
-          formData.consentAFE === true &&
-          formData.signedIn === false &&
+        {formData.schoolEligible &&
+          formData.consentAFE &&
+          !formData.signedIn &&
           this.loadConfirmationPage()}
-        {formData.schoolEligible === true &&
-          formData.consentAFE === true &&
-          formData.signedIn === true &&
+        {formData.schoolEligible &&
+          formData.consentAFE &&
+          formData.signedIn &&
           this.loadCompletionPage()}
       </div>
     );
