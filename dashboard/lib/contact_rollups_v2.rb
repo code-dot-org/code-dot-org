@@ -87,10 +87,11 @@ class ContactRollupsV2
     end
 
     # Extract pegasus data
-    limit = Rails.env.test? ? 1 : nil
-    @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(limit)}
-    @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(limit)}
-    @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts(limit)}
+    unless Rails.env.test?
+      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms}
+      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos}
+      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts}
+    end
 
     # Extract dashboard data
     @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences}
