@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import HeaderPopup from '@cdo/apps/code-studio/components/header/HeaderPopup';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 
@@ -107,13 +106,18 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - popupWidth;
 
-    // finish link gets 1/3 of remaining space
-    const finishLinkWidth = showFinish ? remainingWidth * 0.3 : 0;
+    // script name gets between 50% on wide screens and 80% on narrow screens
+    const scriptNameWidth = this.getScaledValue(
+      300,
+      1000,
+      width,
+      remainingWidth * 0.8,
+      remainingWidth * 0.5
+    );
 
-    remainingWidth = remainingWidth - finishLinkWidth;
+    remainingWidth = remainingWidth - scriptNameWidth;
 
-    // script name gets the rest
-    const scriptNameWidth = showFinish ? remainingWidth : remainingWidth;
+    const finishLinkWidth = showFinish ? remainingWidth * 0.5 : 0;
 
     return {
       projectInfo: projectInfoWidth,
@@ -122,6 +126,19 @@ class HeaderMiddle extends React.Component {
       popup: popupWidth,
       finishLink: finishLinkWidth
     };
+  }
+
+  // e.g.
+  // getScaledValue(10, 20, 15, 100, 200) === 150
+  // getScaledValue(10, 20, 5, 100, 200) === 100
+  // getScaledValue(10, 20, 30, 100, 200) === 200
+
+  getScaledValue(minInput, maxInput, input, minOutput, maxOutput) {
+    const inputAmount = (input - minInput) / (maxInput - minInput);
+    const clampedInputAmount = Math.max(Math.min(inputAmount, 1), 0);
+    const scaledOutput =
+      minOutput + (maxOutput - minOutput) * clampedInputAmount;
+    return scaledOutput;
   }
 
   onLessonProgressFullWidth = lessonProgressFullWidth => {
@@ -148,7 +165,7 @@ class HeaderMiddle extends React.Component {
     const widths = this.getWidths();
 
     const extraScriptNameData = scriptNameData
-      ? {...scriptNameData, width: widths.scriptName}
+      ? {...scriptNameData, width: widths.scriptName - 10}
       : null;
 
     if (this.props.appLoaded) {
@@ -174,9 +191,10 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 textAlign: 'right',
-                //paddingRight: 10,
+                marginLeft: 5,
+                marginRight: 5,
                 boxSizing: 'border-box',
-                width: widths.scriptName,
+                width: widths.scriptName - 10,
                 visibility: widths.scriptName === 0 ? 'hidden' : undefined
               }}
             >
@@ -220,17 +238,6 @@ class HeaderMiddle extends React.Component {
               />
             </div>
           )}
-
-          <div
-            id="header_popup_container"
-            style={{
-              float: 'left',
-              width: widths.popup,
-              visibility: widths.popup === 0 ? 'hidden' : undefined
-            }}
-          >
-            <ProtectedStatefulDiv ref="header_popup_components" />
-          </div>
 
           {widths.finishLink !== 0 && (
             <div
