@@ -17,7 +17,9 @@ const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
 export default class AmazonFutureEngineerEligibility extends React.Component {
   static propTypes = {
-    signedIn: PropTypes.bool.isRequired
+    signedIn: PropTypes.bool.isRequired,
+    schoolId: PropTypes.string,
+    schoolEligible: PropTypes.bool
   };
 
   constructor(props) {
@@ -30,17 +32,12 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       formData: {
         signedIn: this.props.signedIn,
         schoolEligible:
-          'schoolEligible' in sessionEligibilityData
-            ? sessionEligibilityData.schoolEligible
-            : null,
+          sessionEligibilityData.schoolEligible ||
+          this.props.schoolEligible ||
+          null,
         schoolId:
-          'schoolId' in sessionEligibilityData
-            ? sessionEligibilityData.schoolId
-            : null,
-        consentAFE:
-          'consentAFE' in sessionEligibilityData
-            ? sessionEligibilityData.consentAFE
-            : false
+          sessionEligibilityData.schoolId || this.props.schoolId || null,
+        consentAFE: sessionEligibilityData.consentAFE || false
       }
     };
   }
