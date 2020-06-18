@@ -87,6 +87,10 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
+      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+        log_redirect(params[:script_id], new_script.name)
+      end
+
       # avoid a redirect loop if the string substitution failed
       if new_path == request.fullpath
         redirect_to build_script_level_path(new_script.starting_level)
@@ -261,6 +265,20 @@ class ScriptLevelsController < ApplicationController
   end
 
   private
+
+  def log_redirect(old_script_name, new_script_name)
+    FirehoseClient.instance.put_record(
+      study: 'script-family-redirect',
+      event: 'unversioned-script-level-redirect',
+      data_string: request.path,
+      data_json: {
+        old_script_name: old_script_name,
+        new_script_name: new_script_name,
+        url: request.url,
+        referer: request.referer,
+      }.to_json
+    )
+  end
 
   # Configure http caching for the given script. Caching is disabled unless the
   # Gatekeeper configuration for 'script' specifies that it is publicly
