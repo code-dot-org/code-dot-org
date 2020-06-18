@@ -127,16 +127,15 @@ export const commands = {
     );
     speechConfig.speechSynthesisOutputFormat =
       SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
-
-    let voice = appOptions.azureSpeechServiceLanguages['English']['female'];
-    if (
-      appOptions.azureSpeechServiceLanguages[opts.language] &&
-      appOptions.azureSpeechServiceLanguages[opts.language][opts.gender]
-    ) {
-      voice =
-        appOptions.azureSpeechServiceLanguages[opts.language][opts.gender];
-    }
-    const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
+    let appLanguages = appOptions.azureSpeechServiceLanguages;
+    let voice =
+      (appLanguages[opts.language] &&
+        appLanguages[opts.language][opts.gender]) ||
+      appLanguages['English']['female'];
+    const synthesizer = new SpeechSynthesizer(
+      speechConfig,
+      undefined /* AudioConfig */
+    );
     let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
       opts.text
     }</voice></speak>`;

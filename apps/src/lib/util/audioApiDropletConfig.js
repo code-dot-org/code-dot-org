@@ -42,7 +42,9 @@ const dropletConfig = {
     params: ['"Hello World!"', '"female"', '"en-US"'],
     dropdown: {
       1: ['"female"', '"male"'],
-      2: Object.keys(appOptions.azureSpeechServiceLanguages).map(x => `"${x}"`)
+      2: Object.keys(appOptions.azureSpeechServiceLanguages).map(
+        language => `"${language}"`
+      )
     },
     nativeCallsBackInterpreter: true,
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
