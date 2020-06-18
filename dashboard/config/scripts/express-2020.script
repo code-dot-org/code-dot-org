@@ -402,7 +402,6 @@ level 'Virtual Pet 7_2020'
 level 'Virtual Pet 8_2020'
 
 lesson 'Build A Project'
-level 'courseF_project_exemplars_2019_2020', progression: 'Example Projects'
-level 'CourseF_Project_SpriteLab_2020', progression: 'Sprite Lab Project'
-level 'Course F: Artist Project_2020', progression: 'Artist Project'
+level 'courseExpress_project_exemplars_2019_2020', progression: 'Example Projects'
+level 'courseExpress_EOC_2020', progression: 'Create your project'
 
