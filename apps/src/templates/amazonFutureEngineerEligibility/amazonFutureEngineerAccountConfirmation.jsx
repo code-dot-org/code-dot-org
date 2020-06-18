@@ -1,3 +1,4 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -9,6 +10,13 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         '/amazon-future-engineer-eligibility'
       )}`
     );
+  };
+
+  logSignUpButtonPress = () => {
+    firehoseClient.putRecord({
+      study: 'amazon-future-engineer-eligibility',
+      event: 'sign_up_button_press'
+    });
   };
 
   render() {
@@ -30,7 +38,11 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
           Already have a Code.org account?{' '}
           <a href={this.returnToURL('/users/sign_in')}>Sign in.</a>
         </div>
-        <Button id="sign_up" href={this.returnToURL('/users/sign_up')}>
+        <Button
+          id="sign_up"
+          href={this.returnToURL('/users/sign_up')}
+          onClick={this.logSignUpButtonPress}
+        >
           Sign up
         </Button>
       </div>
