@@ -92,36 +92,35 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
-    p = filename == 'library.json'
+    pr = filename == 'library.json'
     if_modified_since = nil if if_modified_since == ''
-    puts "GETTING #{encrypted_channel_id}" if p
+    puts "GETTING #{encrypted_channel_id}" if pr
 
     begin
       owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-      puts "decrypted #{encrypted_channel_id}"
+      puts "decrypted #{encrypted_channel_id}" if pr
     rescue ArgumentError, OpenSSL::Cipher::CipherError
-      puts "decrypting #{encrypted_channel_id} failed"
       return {status: 'NOT_FOUND'}
     end
     key = s3_path owner_id, storage_app_id, filename
-    puts "key #{key} for #{encrypted_channel_id}"
+    puts "key #{key} for #{encrypted_channel_id}" if pr
     begin
       s3_object = s3_get_object(key, if_modified_since, version)
-      puts "s3_object for #{encrypted_channel_id}----"
-      p s3_object
+      puts "s3_object for #{encrypted_channel_id}----" if pr
+      p s3_object if pr
 
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
-      puts "FAIL 1"
+      puts "FAIL 1 for #{encrypted_channel_id}" if pr
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
-      puts "FAIL 2"
+      puts "FAIL 2 for #{encrypted_channel_id}" if pr
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::NoSuchVersion
-      puts "FAIL 3"
+      puts "FAIL 3 for #{encrypted_channel_id}" if pr
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
-      puts "FAIL 3"
+      puts "FAIL 3 for #{encrypted_channel_id}" if pr
       # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
     end
