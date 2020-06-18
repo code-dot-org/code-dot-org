@@ -381,6 +381,11 @@ GEM
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
+    datapackage (0.0.4)
+      colorize
+      json
+      json-schema
+      rest-client
     debug_inspector (0.0.3)
     declarative (0.0.10)
     declarative-option (0.1.0)
@@ -503,6 +508,8 @@ GEM
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jsonapi-serializers (1.0.0)
       activesupport
     jumphash (0.1.0)
@@ -918,6 +925,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
+  datapackage
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
   dotiw
