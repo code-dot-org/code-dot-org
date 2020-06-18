@@ -17,24 +17,19 @@ def get_us_covid19_data
   response = Net::HTTP.get_response(URI(US_DATA_URL))
   return unless response.code == '200'
   response.body.force_encoding('utf-8')
-  csv = CSV.new(response.body)
-  lines = csv.read
-  lines.shift #first line is column names
+  lines = CSV.parse(response.body, headers: true)
 
   # Group records by date
   daily_data = {}
   lines.each do |line|
     record = {}
-    parsed_date = Date.strptime(line[0], "%Y-%m-%d")
+    parsed_date = Date.strptime(line.field("date"), "%Y-%m-%d")
     formatted_date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
     record['Date'] = formatted_date
-    record['State'] = line[1]
-    # skip column 2 (FIPS code)
-    record['Confirmed New Cases'] = line[3].to_i
-    record['Deaths'] = line[4].to_i
-    if daily_data[formatted_date].nil?
-      daily_data[formatted_date] = []
-    end
+    record['State'] = line.field("state")
+    record['Confirmed New Cases'] = line.field("cases").to_i
+    record['Deaths'] = line.field("deaths").to_i
+    daily_data[formatted_date] ||= []
     daily_data[formatted_date].push record
   end
 
@@ -67,24 +62,18 @@ def get_world_covid19_data
   return unless resource
   response = Net::HTTP.get_response(URI(resource['path']))
   return unless response.code == '200'
-  csv = CSV.new(response.body)
-  lines = csv.read
-  lines.shift #first line is column names
+  lines = CSV.parse(response.body, headers: true)
   weekly_data = {}
 
   # Aggregate daily data by week
   lines.each do |line|
-    parsed_date = Date.strptime(line[0], "%Y-%m-%d")
-    if weekly_data[parsed_date.cweek].nil?
-      weekly_data[parsed_date.cweek] = {}
-    end
-    if weekly_data[parsed_date.cweek][line[1]].nil?
-      weekly_data[parsed_date.cweek][line[1]] = {confirmed: 0, recovered: 0, deaths: 0}
-    end
-    country = weekly_data[parsed_date.cweek][line[1]]
-    country[:confirmed] += line[2].to_i
-    country[:recovered] += line[3].to_i
-    country[:deaths] += line[4].to_i
+    parsed_date = Date.strptime(line.field("Date"), "%Y-%m-%d")
+    weekly_data[parsed_date.cweek] ||= {}
+    weekly_data[parsed_date.cweek][line.field("Country")] ||= {confirmed: 0, recovered: 0, deaths: 0}
+    country = weekly_data[parsed_date.cweek][line.field("Country")]
+    country[:confirmed] += line.field("Confirmed").to_i
+    country[:recovered] += line.field("Recovered").to_i
+    country[:deaths] += line.field("Deaths").to_i
   end
 
   # Truncate to MAX_WEEKS most recent weeks
