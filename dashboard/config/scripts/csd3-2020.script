@@ -129,8 +129,9 @@ level 'CSD: Animating Sprite Movement_2020', progression: 'Video: Sprite Movemen
 level 'CSD U3 Sprite Movement Right_2020', progression: 'Skill Building'
 level 'CSD U3 Sprite Movement Left_2020', progression: 'Skill Building'
 level 'CSD U3 Diagonal Movement_2020', progression: 'Skill Building'
+level 'CSD U3 Sprite Movement Predict_2020', progression: 'Skill Building'
 level 'CSD web movement practice choice', progression: 'Practice'
-level 'CSD U3 Sprite Movement Predict_2020', progression: 'Assessment', assessment: true
+level 'CSD U3 Movement Fish_2020', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice', progression: 'Challenges'
 
 lesson 'Mini-Project: Animation'
