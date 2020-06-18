@@ -202,7 +202,10 @@ class FilesApi < Sinatra::Base
     NewRelic::Agent.ignore_enduser rescue nil
 
     buckets = get_bucket_impl(endpoint).new
+
+    puts "STARTING CHANNEL #{encrypted_channel_id}"
     puts "CREATED BUCKET" if endpoint == 'libraries'
+
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
 
@@ -249,8 +252,11 @@ class FilesApi < Sinatra::Base
     if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
     end
-    puts "RETURNING RESULT" if endpoint == 'libraries'
-    p result
+
+    if endpoint == 'libraries'
+      puts "RETURNING RESULT FOR #{encrypted_channel_id} ====================="
+      p result
+    end
 
     result[:body]
   end
