@@ -80,7 +80,7 @@ class LessonProgress extends Component {
     onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
-    onSize: PropTypes.func.isRequired
+    onSize: PropTypes.func
   };
 
   componentDidUpdate() {
