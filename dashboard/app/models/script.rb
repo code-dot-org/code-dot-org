@@ -508,6 +508,7 @@ class Script < ActiveRecord::Base
       data_json: {
         old_script_name: old_script_name,
         new_script_name: new_script_name,
+        method: request.method,
         url: request.url,
         referer: request.referer,
       }.to_json
