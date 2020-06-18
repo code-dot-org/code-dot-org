@@ -23,17 +23,18 @@ class LogCollector
   # Save exception if caught, do not re-raise. Caller's flow will continue as normal.
   #
   # @param action_name [string] a friendly name of the block being executed
-  def time(action_name = nil)
+  def time(action_name = '')
     return unless block_given?
+    info("Starting action '#{action_name}'...")
     start_time = Time.now
     yield
     info(
-      "#{action_name || 'Unnamed'} action completed without error in"\
+      "Action '#{action_name}' completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError => e
     error(
-      "#{action_name || 'Unnamed'} action exited with error in"\
+      "Action '#{action_name}' exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
     record_exception(e)
@@ -45,17 +46,18 @@ class LogCollector
   #
   # @param action_name [string] friendly name for the given block
   # @raise [StandardError] error encountered when executing the given block
-  def time!(action_name = nil)
+  def time!(action_name = '')
     return unless block_given?
+    info("Starting action '#{action_name}'...")
     start_time = Time.now
     yield
     info(
-      "#{action_name || 'Unnamed'} action completed without error in"\
+      "Action '#{action_name}' completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError
     error(
-      "#{action_name || 'Unnamed'} action exited with error in"\
+      "Action '#{action_name}' exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
     )
     # To be handled by caller
