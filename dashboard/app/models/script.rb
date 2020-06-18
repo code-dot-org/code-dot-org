@@ -467,7 +467,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US', log_request: {}, log_event_name: nil)
     return nil unless family_name
 
     family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
@@ -478,6 +478,7 @@ class Script < ActiveRecord::Base
       progress_script_ids = user.user_levels.map(&:script_id)
       script_ids = assigned_script_ids.concat(progress_script_ids).compact.uniq
       script_name = family_scripts.select {|s| script_ids.include?(s.id)}&.first&.name
+      log_redirect(family_name, script_name, log_request, log_event_name) if log_event_name
       return Script.new(redirect_to: script_name) if script_name
     end
 
@@ -497,6 +498,7 @@ class Script < ActiveRecord::Base
     end
 
     script_name = latest_version&.name
+    log_redirect(family_name, script_name, log_request, log_event_name) if script_name && log_event_name
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
