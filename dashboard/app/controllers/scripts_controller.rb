@@ -157,9 +157,13 @@ class ScriptsController < ApplicationController
   def set_script
     script_id = params[:id]
     @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale, log_request: request, log_event_name: 'unversioned-script-redirect') :
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script
+
+    if ScriptConstants::FAMILY_NAMES.include?(script_id)
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect')
+    end
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
