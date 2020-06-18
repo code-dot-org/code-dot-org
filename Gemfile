@@ -277,7 +277,7 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 0'
+gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
 gem 'bcrypt'
