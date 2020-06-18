@@ -561,7 +561,7 @@ StudioApp.prototype.init = function(config) {
       ) {
         this.editDuringRunAlert = this.displayWorkspaceAlert(
           'warning',
-          <div>{msg.editDuringRunMessage()}</div>,
+          React.createElement('div', {}, msg.editDuringRunMessage()),
           true
         );
       }
@@ -3081,21 +3081,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   alertContents,
   bottom = false
 ) {
-  let container;
-  if (bottom) {
-    container = this.displayAlert(
-      this.editCode ? '#codeTextbox' : '#codeWorkspace',
-      {type: type, sideMargin: 0, bottomMargin: 0, bottom: true},
-      alertContents
-    );
-  } else {
-    container = this.displayAlert(
-      '#codeWorkspace',
-      {type: type},
-      alertContents
-    );
-  }
-
   var toolbarWidth;
   if (this.usingBlockly_ && this.config.app === 'craft') {
     // craft has a slightly different way of constructing the toolbox so we need to use
@@ -3107,18 +3092,18 @@ StudioApp.prototype.displayWorkspaceAlert = function(
     toolbarWidth =
       $('.droplet-palette-element').width() + $('.droplet-gutter').width();
   }
-
-  if (bottom) {
-    $(container).css({
+  return this.displayAlert(
+    bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace',
+    {
+      type: type,
+      sideMargin: bottom ? 0 : undefined,
+      bottomMargin: bottom ? 0 : undefined,
+      top: bottom ? undefined : $('#headers').height(),
+      bottom: bottom,
       left: toolbarWidth
-    });
-  } else {
-    $(container).css({
-      left: toolbarWidth,
-      top: $('#headers').height()
-    });
-  }
-  return container;
+    },
+    alertContents
+  );
 };
 
 /**
@@ -3177,7 +3162,7 @@ StudioApp.prototype.displayAlert = function(
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
       position: position,
-      left: 0,
+      left: props.left ? props.left : 0,
       right: 0,
       zIndex: 1000,
       transform: 'scale(1.0)'
@@ -3185,7 +3170,7 @@ StudioApp.prototype.displayAlert = function(
     if (props.bottom) {
       container[0].style.bottom = 0;
     } else {
-      container[0].style.top = 0;
+      container[0].style.top = props.top ? `${props.top}px` : 0;
     }
     parent.append(container);
   }
