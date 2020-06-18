@@ -81,7 +81,6 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'regionalPartnerMiniContact',
-  'donorTeacherBanner',
   'amazonFutureEngineerEligibility',
 
   // other entry points
