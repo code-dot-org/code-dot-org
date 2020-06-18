@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
 import experiments from '@cdo/apps/util/experiments';
@@ -1002,6 +1003,7 @@ exports.createJsWrapperBlockCreator = function(
 
         if (
           miniToolboxBlocks &&
+          appOptions.level.miniToolbox &&
           experiments.isEnabled(experiments.MINI_TOOLBOX)
         ) {
           var toggle = new Blockly.FieldIcon('+');
