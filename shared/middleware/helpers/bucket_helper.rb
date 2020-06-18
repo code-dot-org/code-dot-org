@@ -105,7 +105,7 @@ class BucketHelper
     key = s3_path owner_id, storage_app_id, filename
     puts "key #{key} for #{encrypted_channel_id}" if pr
     begin
-      s3_object = s3_get_object(key, if_modified_since, version)
+      s3_object = s3_get_object(key, if_modified_since, version, pr)
       puts "s3_object for #{encrypted_channel_id}----" if pr
       p s3_object if pr
 
@@ -520,7 +520,15 @@ class BucketHelper
   end
 
   # Extracted so we can override with special behavior in AnimationBucket.
-  def s3_get_object(key, if_modified_since, version)
+  def s3_get_object(key, if_modified_since, version, pr = false)
+    if pr
+      puts "GETTING S3 OBJECT---"
+      p @bucket
+      p key
+      p if_modified_since
+      p version
+      puts "---S3 OBJECT DONE"
+    end
     s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 
