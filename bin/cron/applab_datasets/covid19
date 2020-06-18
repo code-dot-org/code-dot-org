@@ -27,8 +27,8 @@ def get_us_covid19_data
     formatted_date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
     record['Date'] = formatted_date
     record['State'] = line.field("state")
-    record['Confirmed New Cases'] = line.field("cases").to_i
-    record['Deaths'] = line.field("deaths").to_i
+    record['Total Confirmed Cases'] = line.field("cases").to_i
+    record['Total Deaths'] = line.field("deaths").to_i
     daily_data[formatted_date] ||= []
     daily_data[formatted_date].push record
   end
@@ -41,7 +41,7 @@ def get_us_covid19_data
          end
 
   # Add id to each record
-  columns = ['id', 'Date', 'State', 'Confirmed New Cases', 'Deaths']
+  columns = ['id', 'Date', 'State', 'Total Confirmed Cases', 'Total Deaths']
   records = {}
   id = 1
   days.each do |day|
