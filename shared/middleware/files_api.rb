@@ -203,7 +203,7 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
 
-    puts "STARTING CHANNEL #{encrypted_channel_id}"
+    puts "STARTING CHANNEL #{encrypted_channel_id}" if endpoint == 'libraries'
 
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
