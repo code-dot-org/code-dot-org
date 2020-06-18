@@ -1,0 +1,100 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+ALBUQUERQUE HIGH,NM-001-590,350006000024,0327,AP Computer Science A,14,*,*,7,*,*,*,*,*
+HIGHLAND HIGH,NM-001-520,350006000063,0327,AP Computer Science A,4,*,*,*,*,*,*,*,*
+LA CUEVA HIGH,NM-001-525,350006000698,0327,AP Computer Science A,23,*,*,*,*,*,*,*,*
+ATRISCO HERITAGE ACADEMY HS,NM-001-576,350006001037,0327,AP Computer Science A,9,*,*,*,*,*,*,*,*
+NEW MEXICO CONNECTIONS ACADEMY,NM-554-001,350016001096,0327,AP Computer Science A,1,*,*,*,*,*,*,*,*
+BLOOMFIELD HIGH,NM-066-026,350024000156,0327,AP Computer Science A,15,*,*,6,*,*,*,*,*
+CLOVIS HIGH,NM-012-036,350057000213,0327,AP Computer Science A,10,*,*,*,*,*,*,*,*
+PIEDRA VISTA HIGH,NM-065-006,350099000787,0327,AP Computer Science A,15,*,*,*,*,*,*,*,*
+HATCH VALLEY HIGH,NM-018-058,350123000344,0327,AP Computer Science A,20,10,*,*,*,*,*,*,*
+HOBBS HIGH,NM-033-058,350126000350,0327,AP Computer Science A,9,*,*,6,*,*,*,*,*
+LAS CRUCES HIGH,NM-017-075,350150000386,0327,AP Computer Science A,12,*,*,8,*,*,*,*,*
+CENTENNIAL HIGH SCHOOL,NM-017-018,350150001090,0327,AP Computer Science A,22,*,*,9,*,*,6,*,*
+LOS ALAMOS HIGH,NM-041-080,350165000431,0327,AP Computer Science A,31,9,*,*,*,*,*,*,*
+SANTA FE HIGH,NM-071-165,350237000551,0327,AP Computer Science A,29,7,*,10,*,*,*,*,*
+TAOS HIGH,NM-076-165,350252000583,0327,AP Computer Science A,2,*,*,*,*,*,*,*,*
+ACADEMY FOR TECHNOLOGY & CLASSICS,NM-071-024,350237000841,0327,AP Computer Science A,17,*,*,10,*,*,*,*,*
+RIO RANCHO CYBER ACADEMY,NM-083-018,350001000954,0336,AP Computer Science Principles,15,7,*,*,*,*,*,*,*
+DEL NORTE HIGH,NM-001-514,350006000044,0336,AP Computer Science Principles,30,9,*,20,*,*,*,17,7
+SANDIA HIGH,NM-001-550,350006000106,0336,AP Computer Science Principles,14,*,*,*,*,*,*,*,*
+LA CUEVA HIGH,NM-001-525,350006000698,0336,AP Computer Science Principles,64,17,*,13,*,*,*,*,*
+VOLCANO VISTA HIGH,NM-001-575,350006000966,0336,AP Computer Science Principles,17,*,*,7,*,*,*,*,*
+CORRALES INTERNATIONAL,NM-001-028,350006001028,0336,AP Computer Science Principles,13,7,*,6,*,*,*,*,*
+MORENO VALLEY HIGH,NM-008-003,350048000857,0336,AP Computer Science Principles,6,*,*,*,*,*,*,*,*
+CLOUDCROFT HIGH,NM-048-039,350054000207,0336,AP Computer Science Principles,6,*,*,*,*,*,*,*,*
+SANTA TERESA HIGH,NM-019-200,350108000323,0336,AP Computer Science Principles,35,12,*,*,*,*,*,*,*
+HATCH VALLEY HIGH,NM-018-058,350123000344,0336,AP Computer Science Principles,15,12,*,*,*,*,*,*,*
+LAS CRUCES HIGH,NM-017-075,350150000386,0336,AP Computer Science Principles,26,*,*,*,*,*,15,*,*
+ONATE HIGH,NM-017-130,350150000720,0336,AP Computer Science Principles,18,*,*,8,*,*,*,*,*
+CENTENNIAL HIGH SCHOOL,NM-017-018,350150001090,0336,AP Computer Science Principles,55,12,*,35,*,*,24,*,*
+POJOAQUE HIGH,NM-072-124,350207000483,0336,AP Computer Science Principles,23,10,*,19,*,*,7,*,*
+SANTA FE HIGH,NM-071-165,350237000551,0336,AP Computer Science Principles,22,8,*,8,*,*,8,*,*
+COLLEGE AND CAREER HIGH SCHOOL,NM-001-591,350006001100,0326,Computer Programming-Other Lang,1,*,*,*,*,*,*,*,*
+THE MASTERS PROGRAM,NM-519-001,350012501069,0326,Computer Programming-Other Lang,2,*,*,*,*,*,*,*,*
+ALBUQUERQUE INSTITUTE OF MATH & SCIENCE,NM-524-001,350013000921,0326,Computer Programming-Other Lang,1,*,*,*,*,*,*,*,*
+EARLY COLLEGE HIGH SCHOOL,NM-042-010,350069001144,0326,Computer Programming-Other Lang,1,*,*,*,*,*,*,*,*
+LORDSBURG HIGH,NM-029-082,350162000424,0326,Computer Programming-Other Lang,6,*,*,*,*,*,*,*,*
+LOVINGTON HIGH,NM-031-081,350174000448,0326,Computer Programming-Other Lang,32,*,*,25,*,*,18,*,*
+TAOS HIGH,NM-076-165,350252000583,0326,Computer Programming-Other Lang,7,*,*,*,*,*,*,*,*
+ACADEMY FOR TECHNOLOGY & CLASSICS,NM-071-024,350237000841,0326,Computer Programming-Other Lang,13,*,*,7,*,*,*,*,*
+MOUNTAIN VIEW MIDDLE,NM-083-105,350001000739,0323,Computer Science/Programming,19,*,*,8,*,*,6,*,*
+RIO RANCHO CYBER ACADEMY,NM-083-018,350001000954,0323,Computer Science/Programming,2,*,*,*,*,*,*,*,*
+CLEVELAND HIGH SCHOOL,NM-083-011,350001001024,0323,Computer Science/Programming,43,12,*,22,*,*,12,*,*
+COLLEGE AND CAREER HIGH SCHOOL,NM-001-591,350006001100,0323,Computer Science/Programming,3,*,*,*,*,*,*,*,*
+TECHNOLOGY LEADERSHIP HIGH SCHOOL,NM-001-753,350006001112,0323,Computer Science/Programming,47,25,*,34,*,*,*,10,6
+ARTESIA HIGH,NM-022-014,350012000127,0323,Computer Science/Programming,20,7,*,8,*,*,*,*,*
+THE ASK ACADEMY,NM-520-001,350012601070,0323,Computer Science/Programming,35,11,*,17,*,*,*,*,*
+ESTANCIA VALLEY CLASSICAL ACADEMY,NM-550-001,350015201085,0323,Computer Science/Programming,16,6,*,*,*,*,*,*,*
+WALATOWA CHARTER HIGH,NM-552-001,350015800883,0323,Computer Science/Programming,31,23,*,*,*,*,*,*,23
+TIERRA ENCANTADA CHARTER SCHOOL,NM-565-001,350017300950,0323,Computer Science/Programming,20,9,*,*,*,*,*,*,6
+TIERRA ENCANTADA CHARTER SCHOOL,NM-565-001,350017300950,0323,Computer Science/Programming,11,*,*,*,*,*,*,*,*
+BLOOMFIELD HIGH,NM-066-026,350024000156,0323,Computer Science/Programming,11,*,*,*,*,*,*,*,*
+CARLSBAD HIGH,NM-020-034,350030000163,0323,Computer Science/Programming,24,*,*,11,*,*,9,*,*
+CENTRAL HIGH,NM-067-035,350039000179,0323,Computer Science/Programming,14,*,*,*,*,*,*,*,6
+CENTRAL HIGH,NM-067-035,350039000179,0323,Computer Science/Programming,10,*,*,*,7,*,*,*,*
+NEWCOMB HIGH,NM-067-130,350039000654,0323,Computer Science/Programming,29,7,*,*,24,*,*,*,11
+MORENO VALLEY HIGH,NM-008-003,350048000857,0323,Computer Science/Programming,2,*,*,*,*,*,*,*,*
+COBRE HIGH,NM-024-036,350060000227,0323,Computer Science/Programming,15,*,*,12,*,*,*,*,*
+EARLY COLLEGE HIGH SCHOOL,NM-042-010,350069001144,0323,Computer Science/Programming,5,*,*,*,*,*,*,*,*
+EUNICE HIGH,NM-032-050,350096000622,0323,Computer Science/Programming,1,*,*,*,*,*,*,*,*
+SANTA TERESA HIGH,NM-019-200,350108000323,0323,Computer Science/Programming,2,*,*,*,*,*,*,*,*
+MIYAMURA HIGH SCHOOL,NM-043-073,350111000768,0323,Computer Science/Programming,74,26,*,15,55,*,*,9,22
+LAS CRUCES HIGH,NM-017-075,350150000386,0323,Computer Science/Programming,87,22,*,63,*,*,41,9,7
+ONATE HIGH,NM-017-130,350150000720,0323,Computer Science/Programming,7,*,*,*,*,*,*,*,*
+RIO GRANDE PREPARATORY INSTITUTE,NM-017-012,350150000932,0323,Computer Science/Programming,21,11,*,16,*,*,*,*,*
+CENTENNIAL HIGH SCHOOL,NM-017-018,350150001090,0323,Computer Science/Programming,11,*,*,6,*,*,*,*,*
+CENTENNIAL HIGH SCHOOL,NM-017-018,350150001090,0323,Computer Science/Programming,65,11,*,42,*,*,22,6,*
+LOS ALAMOS HIGH,NM-041-080,350165000431,0323,Computer Science/Programming,59,17,*,19,*,*,8,8,*
+TOPPER FRESHMAN ACADEMY,NM-041-079,350165001122,0323,Computer Science/Programming,17,*,*,*,*,*,*,*,*
+LOS LUNAS HIGH,NM-086-085,350168000439,0323,Computer Science/Programming,33,14,*,21,*,*,22,*,*
+PECOS HIGH,NM-070-124,350201000478,0323,Computer Science/Programming,1,*,*,*,*,*,*,*,*
+PENASCO HIGH,NM-077-123,350204000481,0323,Computer Science/Programming,1,*,*,*,*,*,*,*,*
+PENASCO HIGH,NM-077-123,350204000481,0323,Computer Science/Programming,9,*,*,*,*,*,*,*,*
+PENASCO MIDDLE,NM-077-128,350204000695,0323,Computer Science/Programming,10,*,*,*,*,*,*,*,*
+GODDARD HIGH,NM-004-130,350225000513,0323,Computer Science/Programming,30,9,*,19,*,*,12,*,*
+SANTA FE HIGH,NM-071-165,350237000551,0323,Computer Science/Programming,61,10,*,41,*,*,30,12,7
+CLIFF HIGH,NM-023-034,350243000560,0323,Computer Science/Programming,3,*,*,*,*,*,*,*,*
+TAOS HIGH,NM-076-165,350252000583,0323,Computer Science/Programming,16,*,*,10,*,*,*,*,*
+ZUNI HIGH,NM-089-190,350280000676,0323,Computer Science/Programming,10,*,*,*,*,*,*,*,*
+MIDDLE COLLEGE HIGH SCHOOL CHARTER - GALLUP,NM-043-097,350111000860,0323,Computer Science/Programming,11,7,*,*,*,*,*,*,*
+ALBUQUERQUE HIGH,NM-001-590,350006000024,0324,Programming,26,*,*,11,*,*,10,*,*
+DEL NORTE HIGH,NM-001-514,350006000044,0324,Programming,27,9,*,14,*,*,*,*,6
+CAREER ENRICHMENT,NM-001-592,350006000456,0324,Programming,21,*,*,10,*,*,8,*,*
+MARK ARMIJO ACADEMY,NM-001-039,350006000821,0324,Programming,5,*,*,*,*,*,*,*,*
+EL CAMINO REAL ACADEMY,NM-001-069,350006000854,0324,Programming,5,*,*,*,*,*,*,*,*
+ATRISCO HERITAGE ACADEMY HS,NM-001-576,350006001037,0324,Programming,30,10,*,*,*,*,*,*,*
+INTERNATIONAL SCHOOL AT MESA DEL SOL,NM-001-781,350006001056,0324,Programming,18,9,*,15,*,*,8,9,*
+NEX GEN ACADEMY,NM-001-516,350006001075,0324,Programming,4,*,*,*,*,*,*,*,*
+ALBUQUERQUE INSTITUTE OF MATH & SCIENCE,NM-524-001,350013000921,0324,Programming,1,*,*,*,*,*,*,*,*
+SW AERONAUTICS MATHEMATICS AND SCIENCE ACADEMY,NM-544-001,350015101088,0324,Programming,4,*,*,*,*,*,*,*,*
+BLOOMFIELD HIGH,NM-066-026,350024000156,0324,Programming,4,*,*,*,*,*,*,*,*
+JEFFERSON MONTESSORI,NM-020-001,350030000859,0324,Programming,45,25,*,17,*,*,16,15,*
+PECOS CONNECTIONS ACADEMY,NM-020-005,350030001127,0324,Programming,5,*,*,*,*,*,*,*,*
+ESTANCIA HIGH,NM-080-050,350093000279,0324,Programming,2,*,*,*,*,*,*,*,*
+EUNICE HIGH,NM-032-050,350096000622,0324,Programming,1,*,*,*,*,*,*,*,*
+CENTENNIAL HIGH SCHOOL,NM-017-018,350150001090,0324,Programming,32,22,*,23,*,*,19,*,*
+PORTALES HIGH,NM-057-124,350210000488,0324,Programming,1,*,*,*,*,*,*,*,*
+CAPITAL HIGH,NM-071-020,350237000724,0324,Programming,75,22,*,*,*,*,*,13,22
+SOCORRO HIGH,NM-074-160,350246000571,0324,Programming,27,10,*,17,*,*,*,*,*
+NATIVE AMERICAN COMMUNITY ACADEMY,NM-001-006,350006000918,0324,Programming,1,*,*,*,*,*,*,*,*
