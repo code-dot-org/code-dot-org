@@ -60,9 +60,20 @@ class ContactRollupsV2
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
   end
 
-  def initialize(is_dry_run: false)
+  attr_accessor :limit
+
+  # @param is_dry_run [Boolean] If true, do not send requests to Pardot and do not
+  #   update ContactRollupsPardotMemory table.
+  # @param limit_extraction [Integer] The maximum number of rows to get from each
+  #   extraction method. The default value is nil, which means getting all rows.
+  def initialize(is_dry_run: false, limit_extraction: nil)
     @is_dry_run = is_dry_run
+    @limit = limit_extraction
     @log_collector = LogCollector.new('ContactRollupsV2')
+    @log_collector.info("Initialization params: "\
+      "is_dry_run: #{is_dry_run}, "\
+      "limit_extraction = #{limit_extraction}"
+    )
     self.class.set_db_variables
   end
 
@@ -88,26 +99,26 @@ class ContactRollupsV2
 
     # Extract pegasus data
     unless Rails.env.test?
-      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms}
-      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos}
-      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts}
+      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(@limit)}
+      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(@limit)}
+      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts(@limit)}
     end
 
     # Extract dashboard data
-    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences}
-    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails}
-    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught}
-    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught}
-    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions}
-    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos}
-    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments}
-    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions}
-    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos}
+    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
+    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
+    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught(@limit)}
+    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught(@limit)}
+    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions(@limit)}
+    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos(@limit)}
+    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
+    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
+    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
     @log_collector.time!('extract_professional_learning_attendance_old') do
-      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model
+      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model(@limit)
     end
     @log_collector.time!('extract_professional_learning_attendance_new') do
-      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model
+      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model(@limit)
     end
 
     @log_collector.time!('Processes all extracted data') do
