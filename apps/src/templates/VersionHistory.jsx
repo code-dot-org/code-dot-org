@@ -5,6 +5,7 @@ import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '../utils';
+import i18n from '@cdo/locale';
 
 /**
  * A component for viewing project version history.
@@ -64,7 +65,7 @@ export default class VersionHistory extends React.Component {
    * Called if the server responds with an error when loading an API request.
    */
   onAjaxFailure = () => {
-    this.setState({statusMessage: 'An error occurred.'});
+    this.setState({statusMessage: i18n.versionHistory_ajaxFailure()});
   };
 
   /**
@@ -141,21 +142,21 @@ export default class VersionHistory extends React.Component {
     } else if (this.state.confirmingClearPuzzle) {
       body = (
         <div>
-          <p>Are you sure you want to clear all progress for this level&#63;</p>
+          <p>{i18n.versionHistory_clearProgress_prompt()}</p>
           <button
             type="button"
             id="confirm-button"
             style={{float: 'right'}}
             onClick={this.onClearPuzzle}
           >
-            Start Over
+            {i18n.versionHistory_clearProgress_confirm()}
           </button>
           <button
             type="button"
             id="again-button"
             onClick={this.onCancelClearPuzzle}
           >
-            Cancel
+            {i18n.versionHistory_clearProgress_cancel()}
           </button>
         </div>
       );
@@ -184,7 +185,9 @@ export default class VersionHistory extends React.Component {
                 {rows}
                 <tr>
                   <td>
-                    <p style={{margin: 0}}>Initial version</p>
+                    <p style={{margin: 0}}>
+                      {i18n.versionHistory_initialVersion_label()}
+                    </p>
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                     <button
@@ -193,7 +196,7 @@ export default class VersionHistory extends React.Component {
                       onClick={this.onConfirmClearPuzzle}
                       style={{float: 'right'}}
                     >
-                      Start over
+                      {i18n.versionHistory_clearProgress_confirm()}
                     </button>
                   </td>
                 </tr>
@@ -206,7 +209,7 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <p className="dialog-title">Version History</p>
+        <p className="dialog-title">{i18n.versionHistory_header()}</p>
         {body}
         {this.state.statusMessage}
       </div>

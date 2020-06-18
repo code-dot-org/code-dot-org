@@ -67,7 +67,7 @@ export default class VersionRow extends React.Component {
       <tr className="versionRow">
         <td>
           <p>
-            Saved <UnlocalizedTimeAgo dateString={this.props.lastModified} />
+            <UnlocalizedTimeAgo dateString={this.props.lastModified} />
           </p>
           {this.getLastModifiedTimestamp()}
         </td>
