@@ -65,15 +65,19 @@ def get_world_covid19_data
   lines = CSV.parse(response.body, headers: true)
   weekly_data = {}
 
-  # Aggregate daily data by week
+  # Group records by week
   lines.each do |line|
     parsed_date = Date.strptime(line.field("Date"), "%Y-%m-%d")
-    weekly_data[parsed_date.cweek] ||= {}
-    weekly_data[parsed_date.cweek][line.field("Country")] ||= {confirmed: 0, recovered: 0, deaths: 0}
-    country = weekly_data[parsed_date.cweek][line.field("Country")]
-    country[:confirmed] += line.field("Confirmed").to_i
-    country[:recovered] += line.field("Recovered").to_i
-    country[:deaths] += line.field("Deaths").to_i
+    next unless parsed_date.wday == 0 # Downsample to one data point per week
+    formatted_date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
+    record = {}
+    record['Date'] = formatted_date
+    record['Country'] = line.field("Country")
+    record['Total Confirmed Cases'] = line.field("Confirmed").to_i
+    record['Total Recovered'] = line.field("Recovered").to_i
+    record['Total Deaths'] = line.field("Deaths").to_i
+    weekly_data[formatted_date] ||= []
+    weekly_data[formatted_date].push record
   end
 
   # Truncate to MAX_WEEKS most recent weeks
@@ -83,21 +87,14 @@ def get_world_covid19_data
             weekly_data.keys
           end
 
-  columns = ['id', 'Date', 'Country', 'Confirmed New Cases', 'Recovered', 'Deaths']
+  # Add id to each record
+  columns = ['id', 'Date', 'Country', 'Total Confirmed Cases', 'Total Recovered', 'Total Deaths']
   records = {}
   id = 1
-  weeks.each do |week_number|
-    date = Date.commercial(2020, week_number)
-    countries = weekly_data[week_number]
-    countries.each do |country, counts|
-      record = {}
+  weeks.each do |week|
+    week_records = weekly_data[week]
+    week_records.each do |record|
       record['id'] = id
-      record['Date'] = date.strftime('%a %-m/%-d') # ex Wed 1/7
-      record['Country'] = country
-      record['Confirmed New Cases'] = counts[:confirmed]
-      record['Recovered'] = counts[:recovered]
-      record['Deaths'] = counts[:deaths]
-
       records[id] = record.to_json
       id += 1
     end
