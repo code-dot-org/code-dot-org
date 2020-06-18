@@ -10,12 +10,35 @@ function showAmazonFutureEngineerEligibility() {
     '.amazon-future-engineer-eligibility-container'
   );
 
-  ReactDOM.render(
-    // TO DO: confirm that there's no case where this might be used
-    // where amazonFutureEngineerEligibilityElement could be null or not an array.
-    <AmazonFutureEngineerEligibility />,
-    amazonFutureEngineerEligibilityElement[0]
-  );
+  let signedIn = false;
+  let schoolData = {};
+
+  $.ajax({
+    type: 'GET',
+    url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
+  })
+    .done(results => {
+      // This request returns a 403 if the user isn't signed in,
+      // and 204 (no content) if a user is signed in to a student account.
+      signedIn = true;
+
+      if (results) {
+        schoolData = results;
+      }
+    })
+    .complete(() => {
+      // TO DO: confirm that there's no case where this might be used
+      // where amazonFutureEngineerEligibilityElement could be null or not an array.
+      ReactDOM.render(
+        // Need to update API endpoint and source page ID (not sure if even needed)
+        <AmazonFutureEngineerEligibility
+          signedIn={signedIn}
+          schoolId={schoolData.nces_school_id || ''}
+          schoolEligible={schoolData.afe_high_needs || null}
+        />,
+        amazonFutureEngineerEligibilityElement[0]
+      );
+    });
 }
 
 async function init() {

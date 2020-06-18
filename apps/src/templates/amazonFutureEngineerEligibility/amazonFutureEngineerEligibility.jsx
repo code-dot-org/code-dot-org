@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 const styles = {
   intro: {
@@ -11,41 +14,180 @@ const styles = {
   }
 };
 
+const sessionStorageKey = 'AmazonFutureEngineerEligibility';
+
+const VALIDATION_STATE_ERROR = 'error';
+
 export default class AmazonFutureEngineerEligibility extends React.Component {
+  static propTypes = {
+    signedIn: PropTypes.bool.isRequired,
+    schoolId: PropTypes.string,
+    schoolEligible: PropTypes.bool
+  };
+
   constructor(props) {
     super(props);
 
+    let sessionEligibilityData =
+      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+
     this.state = {
-      schoolEligible: null,
-      consent: false,
-      email: ''
+      formData: {
+        signedIn: this.props.signedIn,
+        schoolEligible:
+          sessionEligibilityData.schoolEligible ||
+          this.props.schoolEligible ||
+          null,
+        schoolId:
+          sessionEligibilityData.schoolId || this.props.schoolId || null,
+        consentAFE: sessionEligibilityData.consentAFE || false,
+        submitted: sessionEligibilityData.submitted || false
+      },
+      errors: {}
     };
   }
 
-  handleChange = change => {
-    this.setState(change);
+  updateFormData = change => {
+    this.setState({formData: {...this.state.formData, ...change}});
+  };
+
+  saveToSessionStorage = () => {
+    sessionStorage.setItem(
+      sessionStorageKey,
+      JSON.stringify(this.state.formData)
+    );
   };
 
   submit = () => {
-    // TO DO: actually check whether a school is eligible
     // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
-    this.setState({
-      schoolEligible: true
+    if (this.state.formData.schoolId === '-1') {
+      this.handleEligibility(false);
+    }
+
+    $.ajax({
+      url:
+        '/dashboardapi/v1/schools/' +
+        this.state.formData.schoolId +
+        '/afe_high_needs',
+      type: 'get',
+      dataType: 'json'
+    }).done(schoolData => {
+      this.handleEligibility(schoolData.afe_high_needs);
     });
   };
 
-  handleSchoolDropdownChange = (field, event) => {
+  validateRequiredFields = () => {
+    let errors = this.getErrors();
+    const missingRequiredFields = this.getMissingRequiredFields();
+
+    if (missingRequiredFields.length || Object.keys(errors).length) {
+      let requiredFieldsErrors = {};
+      missingRequiredFields.forEach(f => {
+        requiredFieldsErrors[f] = '';
+      });
+      errors = {...errors, ...requiredFieldsErrors};
+      this.setState({errors: errors});
+      return false;
+    }
+    return true;
+  };
+
+  getErrors = () => {
+    const errors = {};
+
+    if (this.state.formData.email) {
+      if (!isEmail(this.state.formData.email)) {
+        errors.email = 'Must be a valid email address';
+      }
+    }
+
+    return errors;
+  };
+
+  getMissingRequiredFields() {
+    const requiredFields = ['email', 'schoolId'];
+
+    const missingRequiredFields = requiredFields.filter(f => {
+      return !this.state.formData[f];
+    });
+
+    return missingRequiredFields;
+  }
+
+  handleClickCheckEligibility = () => {
+    if (this.validateRequiredFields()) {
+      this.submit();
+    }
+  };
+
+  handleEligibility(isEligible) {
     this.setState({
+      formData: {...this.state.formData, ...{schoolEligible: isEligible}}
+    });
+    this.saveToSessionStorage();
+
+    if (!isEligible) {
+      window.location = pegasus('/privacy');
+    }
+  }
+
+  handleSchoolDropdownChange = (field, event) => {
+    const newData = {
       schoolId: event ? event.value : '',
       schoolName: event ? event.label : ''
+    };
+
+    this.updateFormData(newData);
+  };
+
+  loadConfirmationPage = () => {
+    this.saveToSessionStorage();
+
+    return <AmazonFutureEngineerAccountConfirmation />;
+  };
+
+  submitToAFE = () => {
+    // returns a promise
+    return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.formData)
     });
+  };
+
+  loadCompletionPage = () => {
+    // Dedupe with loadConfirmationPage -- probably belongs in onContinue
+    this.saveToSessionStorage();
+
+    // Do API calls here.
+    if (!this.state.formData.submitted) {
+      this.submitToAFE();
+    }
+
+    // Notes on to dos for CSTA API call:
+    // may need to make NCES ID 12 digits.
+    // CSTA wants school district?
+    // school name may be too verbose currently.
+    // what if some of these are missing?
+    // lots of validation specified in spec, none currently being done.
+    // need timestamp in appropriate format.
+
+    return <div>Completion!</div>;
   };
 
   render() {
-    // TO DO: figure out how FormGroup id/className were used in regional partner mini contact
+    let {formData} = this.state;
+
+    if (formData.schoolEligible === false) {
+      window.location = pegasus('/privacy');
+    }
+
+    // TO DO: Disable button until email and school are filled in
     return (
       <div>
-        {this.state.schoolEligible === null && (
+        {formData.schoolEligible === null && (
           <div>
             <h2>Am I eligible?</h2>
             <FormGroup id="amazon-future-engineer-eligiblity-intro">
@@ -59,30 +201,42 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 id="email"
                 label="Email"
                 type="text"
-                required={false}
-                onChange={this.handleChange}
+                required={true}
+                onChange={this.updateFormData}
+                validationState={
+                  this.state.errors.hasOwnProperty('email')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorMessage={this.state.errors.email}
               />
               <SchoolAutocompleteDropdownWithLabel
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
-                value={this.state.schoolId}
+                value={formData.schoolId}
+                showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
               />
-              <Button id="submit" onClick={this.submit}>
+              <Button id="submit" onClick={this.handleClickCheckEligibility}>
                 Find out if I'm eligible
               </Button>
             </FormGroup>
           </div>
         )}
-        {this.state.schoolEligible === true && this.state.consent === false && (
+        {formData.schoolEligible === true && formData.consentAFE === false && (
           <AmazonFutureEngineerEligibilityForm
-            email={this.state.email}
-            schoolId={this.state.schoolId}
-            onContinue={this.handleChange}
+            email={formData.email}
+            schoolId={formData.schoolId}
+            onContinue={this.updateFormData}
           />
         )}
-        {this.state.schoolEligible !== null && this.state.consent === true && (
-          <AmazonFutureEngineerAccountConfirmation />
-        )}
+        {formData.schoolEligible === true &&
+          formData.consentAFE === true &&
+          formData.signedIn === false &&
+          this.loadConfirmationPage()}
+        {formData.schoolEligible === true &&
+          formData.consentAFE === true &&
+          formData.signedIn === true &&
+          this.loadCompletionPage()}
       </div>
     );
   }
