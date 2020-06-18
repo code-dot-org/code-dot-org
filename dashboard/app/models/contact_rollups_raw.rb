@@ -14,25 +14,30 @@
 class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
-  def self.extract_email_preferences
-    select_query = 'SELECT email, opt_in, updated_at FROM email_preferences'
+  def self.extract_email_preferences(limit = nil)
+    select_query = <<-SQL
+      SELECT email, opt_in, updated_at FROM email_preferences
+    SQL
+    select_query += "LIMIT #{limit}" unless limit.nil?
+
     query = get_extraction_query('dashboard.email_preferences', select_query, 'opt_in')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_parent_emails
+  def self.extract_parent_emails(limit = nil)
     source_sql = <<~SQL
       SELECT parent_email AS email, 1 AS is_parent, MAX(updated_at) AS updated_at
       FROM users
       WHERE parent_email > ''
       GROUP BY parent_email
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.users', source_sql, 'is_parent')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_scripts_taught
+  def self.extract_scripts_taught(limit = nil)
     source_sql = <<~SQL
       SELECT u.email, sc.name AS script_name, c.name AS course_name, MAX(se.updated_at) AS updated_at
       FROM sections AS se
@@ -43,12 +48,13 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE u.email > ''
       GROUP BY u.email, sc.name, c.name
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.sections', source_sql, 'script_name', 'course_name')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_courses_taught
+  def self.extract_courses_taught(limit = nil)
     source_sql = <<~SQL
       SELECT u.email, courses.name AS course_name, MAX(se.updated_at) AS updated_at
       FROM users AS u
@@ -57,12 +63,13 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE u.email > ''
       GROUP BY u.email, courses.name
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.sections', source_sql, 'course_name')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_professional_learning_attendance_old_attendance_model
+  def self.extract_professional_learning_attendance_old_attendance_model(limit = nil)
     # "section_type" is not null only in cases where sections was used for
     # PD attendance. It's always null when a section represents an actual
     # classroom of students (the vast majority of rows in the sections table).
@@ -75,12 +82,13 @@ class ContactRollupsRaw < ApplicationRecord
         AND se.section_type IS NOT NULL
       GROUP BY 1,2
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.followers', source_sql, 'section_type')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_professional_learning_attendance_new_attendance_model
+  def self.extract_professional_learning_attendance_new_attendance_model(limit = nil)
     source_sql = <<~SQL
       SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
         FROM pd_attendances AS pda
@@ -91,24 +99,26 @@ class ContactRollupsRaw < ApplicationRecord
         AND u.email > ''
       GROUP BY 1,2
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.pd_attendances', source_sql, 'course')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_roles_from_user_permissions
+  def self.extract_roles_from_user_permissions(limit = nil)
     source_sql = <<~SQL
       SELECT u.email, up.permission, up.updated_at
       FROM user_permissions AS up
       JOIN users AS u ON u.id = up.user_id
       WHERE u.email > ''
     SQL
+    source_sql += "LIMIT #{limit}" unless limit.nil?
 
     query = get_extraction_query('dashboard.user_permissions', source_sql, 'permission')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_users_and_geos
+  def self.extract_users_and_geos(limit = nil)
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
     teacher_and_geo_query = <<~SQL
@@ -120,6 +130,7 @@ class ContactRollupsRaw < ApplicationRecord
       LEFT OUTER JOIN user_geos AS ug ON t.id = ug.user_id
       GROUP BY email, t.id, city, state, postal_code, country
     SQL
+    teacher_and_geo_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query(
       'dashboard.users',
@@ -129,7 +140,7 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_pd_enrollments
+  def self.extract_pd_enrollments(limit = nil)
     enrollment_email_query = <<~SQL
       SELECT
         e.email,
@@ -140,24 +151,26 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE email > ''
       GROUP BY email, course
     SQL
+    enrollment_email_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query('dashboard.pd_enrollments', enrollment_email_query, 'course')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_census_submissions
+  def self.extract_census_submissions(limit = nil)
     submitter_query = <<~SQL
       SELECT submitter_email_address AS email, submitter_role, MAX(updated_at) AS updated_at
       FROM census_submissions
       WHERE submitter_email_address > ''
       GROUP BY submitter_email_address, submitter_role
     SQL
+    submitter_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query('dashboard.census_submissions', submitter_query, 'submitter_role')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_school_geos
+  def self.extract_school_geos(limit = nil)
     school_geos_query = <<~SQL
       SELECT
         t.email,
@@ -168,6 +181,7 @@ class ContactRollupsRaw < ApplicationRecord
       INNER JOIN (#{teacher_query('email, school_info_id, updated_at')}) AS t ON si.id = t.school_info_id
       GROUP BY email, city, state, zip
     SQL
+    school_geos_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query(
       'dashboard.schools',
