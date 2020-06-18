@@ -204,7 +204,6 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
 
     puts "STARTING CHANNEL #{encrypted_channel_id}"
-    puts "CREATED BUCKET" if endpoint == 'libraries'
 
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
@@ -228,7 +227,6 @@ class FilesApi < Sinatra::Base
       response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
     end
 
-    puts "GETTING FILE" if endpoint == 'libraries'
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
