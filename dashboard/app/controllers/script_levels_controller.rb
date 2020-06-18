@@ -88,7 +88,7 @@ class ScriptLevelsController < ApplicationController
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
       if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect')
+        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
       # avoid a redirect loop if the string substitution failed
