@@ -92,35 +92,23 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
-    pr = filename == 'library.json'
     if_modified_since = nil if if_modified_since == ''
-    puts "GETTING #{encrypted_channel_id}" if pr
-
     begin
       owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-      puts "decrypted #{encrypted_channel_id}" if pr
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return {status: 'NOT_FOUND'}
     end
     key = s3_path owner_id, storage_app_id, filename
-    puts "key #{key} for #{encrypted_channel_id}" if pr
     begin
-      s3_object = s3_get_object(key, if_modified_since, version, pr)
-      puts "s3_object for #{encrypted_channel_id}----" if pr
-      p s3_object if pr
-
+      s3_object = s3_get_object(key, if_modified_since, version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
-      puts "FAIL 1 for #{encrypted_channel_id}" if pr
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
-      puts "FAIL 2 for #{encrypted_channel_id}" if pr
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::NoSuchVersion
-      puts "FAIL 3 for #{encrypted_channel_id}" if pr
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
-      puts "FAIL 3 for #{encrypted_channel_id}" if pr
       # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
     end
@@ -520,15 +508,7 @@ class BucketHelper
   end
 
   # Extracted so we can override with special behavior in AnimationBucket.
-  def s3_get_object(key, if_modified_since, version, pr = false)
-    if pr
-      puts "GETTING S3 OBJECT---"
-      p @bucket
-      p key
-      p if_modified_since
-      p version
-      puts "---S3 OBJECT DONE"
-    end
+  def s3_get_object(key, if_modified_since, version)
     s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 

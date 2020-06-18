@@ -143,7 +143,6 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     if endpoint == 'libraries'
-      puts "REQUESTING LIBRARY"
       dont_cache
     end
     get_file(endpoint, encrypted_channel_id, filename)
@@ -202,9 +201,6 @@ class FilesApi < Sinatra::Base
     NewRelic::Agent.ignore_enduser rescue nil
 
     buckets = get_bucket_impl(endpoint).new
-
-    puts "STARTING CHANNEL #{encrypted_channel_id}" if endpoint == 'libraries'
-
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
 
@@ -231,15 +227,12 @@ class FilesApi < Sinatra::Base
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
-    puts "GOT FILE" if endpoint == 'libraries'
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
-
-    puts "METADATA DONE" if endpoint == 'libraries'
 
     if code_projects_domain_root_route && html?(response.headers)
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
@@ -249,11 +242,6 @@ class FilesApi < Sinatra::Base
 
     if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
-    end
-
-    if endpoint == 'libraries'
-      puts "RETURNING RESULT FOR #{encrypted_channel_id} ====================="
-      p result
     end
 
     result[:body]
