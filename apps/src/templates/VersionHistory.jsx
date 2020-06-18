@@ -177,17 +177,13 @@ export default class VersionHistory extends React.Component {
 
       body = (
         <div>
-          <div
-            style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}
-          >
+          <div style={{maxHeight: '330px', overflowX: 'auto', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
                 <tr>
                   <td>
-                    <p style={{margin: 0}}>
-                      {i18n.versionHistory_initialVersion_label()}
-                    </p>
+                    <p>{i18n.versionHistory_initialVersion_label()}</p>
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                     <button
@@ -209,7 +205,7 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <p className="dialog-title">{i18n.versionHistory_header()}</p>
+        <h1 className="dialog-title">{i18n.versionHistory_header()}</h1>
         {body}
         {this.state.statusMessage}
       </div>
