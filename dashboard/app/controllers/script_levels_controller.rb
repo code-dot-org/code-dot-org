@@ -87,6 +87,10 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
+      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect')
+      end
+
       # avoid a redirect loop if the string substitution failed
       if new_path == request.fullpath
         redirect_to build_script_level_path(new_script.starting_level)
@@ -253,7 +257,7 @@ class ScriptLevelsController < ApplicationController
   def self.get_script(request)
     script_id = request.params[:script_id]
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale, log_request: request, log_event_name: 'unversioned-script-level-redirect') :
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
