@@ -37,7 +37,7 @@ class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
     width: PropTypes.number,
-    onSize: PropTypes.func.isRequired
+    onSize: PropTypes.func
   };
 
   componentDidMount() {
