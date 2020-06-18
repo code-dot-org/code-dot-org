@@ -48,7 +48,7 @@ Resources:
               - 'arn:aws:s3:::cdo-v3-libraries'
             Condition:
               StringLike:
-                - 's3:prefix': 'libraries_circle/*'
+                - 's3:Prefix': 'libraries_circle/*'
             Principal:
               {
                 AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
