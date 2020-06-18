@@ -130,7 +130,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def friday_institute_workshops_must_be_virtual
-    if third_party_provider == 'friday_institute' && !virtual?
+    if friday_institute? && !virtual?
       errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
@@ -850,5 +850,9 @@ class Pd::Workshop < ActiveRecord::Base
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
     last_day
+  end
+
+  def friday_institute?
+    third_party_provider == 'friday_institute'
   end
 end

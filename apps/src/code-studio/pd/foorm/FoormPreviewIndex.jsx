@@ -29,7 +29,8 @@ export default class FoormPreviewIndex extends React.Component {
     {id: 'workshopCourse', caption: 'Workshop course', type: 'text'},
     {id: 'workshopSubject', caption: 'Workshop subject', type: 'text'},
     {id: 'regionalPartnerName', caption: 'Regional partner name', type: 'text'},
-    {id: 'isVirtual', caption: 'Is virtual', type: 'checkbox'}
+    {id: 'isVirtual', caption: 'Is virtual', type: 'checkbox'},
+    {id: 'isFridayInstitute', caption: 'Is Friday Institute', type: 'checkbox'}
   ];
 
   constructor(props) {
