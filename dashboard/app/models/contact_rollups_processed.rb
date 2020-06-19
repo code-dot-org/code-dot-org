@@ -92,11 +92,24 @@ class ContactRollupsProcessed < ApplicationRecord
     SQL
   end
 
-  # Parses a JSON string contains all data and metadata of a contact.
-  # It will throw exception if cannot parse the entire input string.
+  # Parses a JSON string containing contact data and metadata.
+  # Throw exception if cannot parse the entire input string.
   #
-  # @param [String] str represents a JSON array. Each array item is a hash {sources:String, data:Hash, data_updated_at:DateTime}.
-  # @return [Hash] a hash with string keys {table_name => {field_name => value}}
+  # @example
+  #   Input string:
+  #     '[{"sources":"table1", "data":{"opt_in":1}, "data_updated_at":"2020-06-16"}]'
+  #   Output hash:
+  #     {
+  #       'table1'=>{
+  #         'opt_in'=>{'value'=>1, 'data_updated_at'=>2020-06-16},
+  #         'last_data_updated_at'=>2020-06-16
+  #       }
+  #     }
+  #
+  # @pa3ram str [String] a JSON array string.
+  #   Each array item is a hash {'sources'=>String, 'data'=>Hash, 'data_updated_at'=>DateTime}.
+  # @return [Hash] a hash with string keys.
+  #   Output format: {source_table => {field_name => [{'value'=>String, 'data_updated_at'=>DateTime}]}}
   #
   # @raise [JSON::ParserError] if cannot parse the input string to JSON
   # @raise [ArgumentError] if cannot parse a time value in the input string to Time
@@ -105,12 +118,22 @@ class ContactRollupsProcessed < ApplicationRecord
 
     {}.tap do |output|
       parsed_items.each do |item|
-        # In a valid item, only data value could be null
+        # In a valid item, only +data+ value could be null
         sources = item[SOURCES_KEY]
         data = item[DATA_KEY] || {}
         data_updated_at = Time.find_zone('UTC').parse(item[DATA_UPDATED_AT_KEY])
 
-        output[sources] = data.merge('data_updated_at' => data_updated_at)
+        output[sources] ||= {}
+        data.each_pair do |field, value|
+          next if value.nil?
+          output[sources][field] ||= []
+          output[sources][field] << {'value' => value, 'data_updated_at' => data_updated_at}
+        end
+
+        # if !output[sources].key?('last_data_updated_at') ||
+        #   data_updated_at > output[sources]['last_data_updated_at']
+        #   output[sources]['last_data_updated_at'] = data_updated_at
+        # end
       end
     end
   end
