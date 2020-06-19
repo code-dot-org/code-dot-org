@@ -61,16 +61,35 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'extract_field' do
-    table = 'dashboard.email_preferences'
-    field = 'opt_in'
+    table = 'pegasus.form_geos'
+    field = 'state'
 
     test_cases = [
-      {input: [{}, nil, nil], expected_output: nil},
-      {input: [{table => {}}, table, field], expected_output: nil},
-      {input: [{'dashboard.another_table' => {opt_in: 1}}, table, field], expected_output: nil},
-      {input: [{table => {'opt_in' => 0}}, table, field], expected_output: {opt_in: 0}},
-      {input: [{table => {'opt_in' => 1}}, table, field], expected_output: {opt_in: 1}},
-      {input: [{table => {'opt_in' => nil}}, table, field], expected_output: {opt_in: nil}}
+      # 3 input params are: contact_data, table, field
+      {
+        input: [{}, nil, nil],
+        expected_output: nil
+      },
+      {
+        input: [{table => {}}, table, field],
+        expected_output: nil
+      },
+      {
+        input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
+        expected_output: nil
+      },
+      {
+        input: [{table => {field => [{'value' => nil}]}}, table, field],
+        expected_output: [nil]
+      },
+      {
+        input: [{table => {field => [{'value' => 'WA'}]}}, table, field],
+        expected_output: ['WA']
+      },
+      {
+        input: [{table => {field => [{'value' => 'WA'}, {'value' => 'OR'}]}}, table, field],
+        expected_output: %w[WA OR]
+      },
     ]
 
     test_cases.each_with_index do |test, index|
