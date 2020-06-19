@@ -65,6 +65,8 @@ class HeaderMiddle extends React.Component {
   };
 
   // Return the desired widths for the items that are showing.
+  // Also return whether we are only showing the HeaderPopup because we are
+  // cropping the progress, and otherwise wouldn't show it.
   getWidths() {
     const width = this.state.width;
 
@@ -97,10 +99,14 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - progressWidth;
 
-    // do we show popup?
-    const showPopup =
-      (this.props.lessonData && this.props.lessonData.num_script_lessons > 1) ||
-      progressWidth < progressDesiredWidth;
+    let showPopup = false;
+    let showPopupBecauseProgressCropped = false;
+    if (this.props.lessonData && this.props.lessonData.num_script_lessons > 1) {
+      showPopup = true;
+    } else if (progressWidth < progressDesiredWidth) {
+      showPopup = true;
+      showPopupBecauseProgressCropped = true;
+    }
 
     const popupWidth = showPopup ? 40 : 0;
 
@@ -124,7 +130,8 @@ class HeaderMiddle extends React.Component {
       scriptName: scriptNameWidth,
       progress: progressWidth,
       popup: popupWidth,
-      finishLink: finishLinkWidth
+      finishLink: finishLinkWidth,
+      showPopupBecauseProgressCropped: showPopupBecauseProgressCropped
     };
   }
 
@@ -235,6 +242,7 @@ class HeaderMiddle extends React.Component {
                 currentLevelId={currentLevelId}
                 linesOfCodeText={linesOfCodeText}
                 windowHeight={this.state.windowHeight}
+                minimal={widths.showPopupBecauseProgressCropped}
               />
             </div>
           )}

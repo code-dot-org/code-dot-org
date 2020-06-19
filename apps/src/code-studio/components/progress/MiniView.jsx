@@ -22,6 +22,7 @@ const styles = {
 class MiniView extends React.Component {
   static propTypes = {
     linesOfCodeText: PropTypes.string,
+    minimal: PropTypes.bool,
 
     // redux backed
     isSummaryView: PropTypes.bool.isRequired,
@@ -38,7 +39,8 @@ class MiniView extends React.Component {
       hasGroups,
       scriptName,
       hasFullProgress,
-      selectedSectionId
+      selectedSectionId,
+      minimal
     } = this.props;
 
     let body;
@@ -59,6 +61,7 @@ class MiniView extends React.Component {
             onOverviewPage={false}
             excludeCsfColumnInLegend={false}
             teacherResources={[]}
+            minimal={minimal}
           />
         </div>
       );
@@ -66,11 +69,13 @@ class MiniView extends React.Component {
 
     return (
       <div>
-        <MiniViewTopRow
-          scriptName={scriptName}
-          linesOfCodeText={linesOfCodeText}
-          selectedSectionId={selectedSectionId}
-        />
+        {!minimal && (
+          <MiniViewTopRow
+            scriptName={scriptName}
+            linesOfCodeText={linesOfCodeText}
+            selectedSectionId={selectedSectionId}
+          />
+        )}
         {body}
       </div>
     );
