@@ -1017,6 +1017,15 @@ $default-modal-width: 640px;
   }
 }
 
+@keyframes header_fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header_middle {
   display: flex;
   flex-shrink: 1;
@@ -1056,7 +1065,7 @@ $default-modal-width: 640px;
 
 .header_right {
   float: right;
-  margin-right: 11px;
+  margin-right: 13px;
   flex-shrink: 0;
   flex-grow: 0;
   display: flex;
