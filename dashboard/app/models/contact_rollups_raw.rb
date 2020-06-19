@@ -177,7 +177,8 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_pegasus_forms
+  # @param limit [Integer, String] maximum number of rows to extract
+  def self.extract_pegasus_forms(limit = nil)
     # This query will extract student emails from pegasus.forms. Most of them come from
     # students older than 16 via Petition submissions. However, there are about 167K
     # emails from students between 13 and 16 who submitted petitions before May 2018.
@@ -196,6 +197,7 @@ class ContactRollupsRaw < ApplicationRecord
       WHERE email > '' AND email != 'anonymous@code.org'
       GROUP BY email, kind, role
     SQL
+    forms_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query(
       'pegasus.forms',
@@ -205,8 +207,8 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_pegasus_form_geos
-    # TODO: how to run this method in Rails end-to-end tests? It reads from pegasus tables.
+  # @param limit [Integer, String] maximum number of rows to extract
+  def self.extract_pegasus_form_geos(limit = nil)
     form_geos_query = <<~SQL
       SELECT
         f.email,
@@ -214,9 +216,10 @@ class ContactRollupsRaw < ApplicationRecord
         MAX(fg.updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.forms AS f
       INNER JOIN #{CDO.pegasus_db_name}.form_geos AS fg ON f.id = fg.form_id
-      WHERE email > ''
+      WHERE email > '' AND email != 'anonymous@code.org'
       GROUP BY email, city, state, postal_code, country
     SQL
+    form_geos_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query(
       'pegasus.form_geos',
@@ -226,7 +229,8 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
   end
 
-  def self.extract_pegasus_contacts
+  # @param limit [Integer, String] maximum number of rows to extract
+  def self.extract_pegasus_contacts(limit = nil)
     # pegasus.contacts contains emails collected from pegasus.forms and
     # dashboard.census_submissions (using +Poste2.create_recipient+ method).
     # Those emails are already extracted, we only care about +unsubscribed_at+ column here.
@@ -236,9 +240,12 @@ class ContactRollupsRaw < ApplicationRecord
     contact_query = <<~SQL
       SELECT email, MAX(unsubscribed_at) AS unsubscribed_at, MAX(updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.contacts
-      WHERE email > '' AND unsubscribed_at IS NOT NULL
+      WHERE email > ''
+        AND email != 'anonymous@code.org'
+        AND unsubscribed_at IS NOT NULL
       GROUP BY email
     SQL
+    contact_query += "LIMIT #{limit}" unless limit.nil?
 
     extraction_query = get_extraction_query('pegasus.contacts', contact_query, 'unsubscribed_at')
     ContactRollupsV2.execute_query_in_transaction(extraction_query)
