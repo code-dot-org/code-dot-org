@@ -1141,6 +1141,7 @@ input.header_input {
   font-size: 16px;
   overflow: hidden;
   padding-left: 5px;
+  box-sizing: border-box;
 
   a {
     display: block;

@@ -124,7 +124,7 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - scriptNameWidth;
 
-    const finishLinkWidth = showFinish ? remainingWidth * 0.5 : 0;
+    const finishLinkWidth = showFinish ? remainingWidth : 0;
 
     return {
       projectInfo: projectInfoWidth,
