@@ -98,30 +98,30 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
-  test 'extract_updated_at' do
+  test 'extract_updated_at with valid input' do
     base_time = Time.now.utc - 7.days
     tests = [
       {
-        input: {'table1' => {'data_updated_at' => base_time}},
+        input: {'table1' => {'last_data_updated_at' => base_time}},
         expected_output: {updated_at: base_time}
       },
       {
         input: {
-          'table1' => {'data_updated_at' => base_time - 1.day},
-          'table2' => {'data_updated_at' => base_time + 1.day},
-          'table3' => {'data_updated_at' => base_time},
+          'table1' => {'last_data_updated_at' => base_time - 1.day},
+          'table2' => {'last_data_updated_at' => base_time + 1.day},
+          'table3' => {'last_data_updated_at' => base_time},
         },
         expected_output: {updated_at: base_time + 1.day}
       }
     ]
 
-    # Test valid inputs
     tests.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_updated_at(test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
 
-    # Test invalid input
+  test 'extract_updated_at with invalid input' do
     assert_raise StandardError do
       ContactRollupsProcessed.extract_updated_at({'table' => {}})
     end
