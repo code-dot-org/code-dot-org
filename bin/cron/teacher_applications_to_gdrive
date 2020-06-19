@@ -6,11 +6,10 @@ require_relative '../../dashboard/config/environment'
 require 'cdo/google/sheet'
 require 'honeybadger/ruby'
 
-# Writes teacher application data for this year into
+# Returns a set of teacher application data to be written to
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
-def update_tabs(sheet)
-  # Update application sheet
+def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
                      free_reduced_lunch_percent urm_percent accepted_at)]
@@ -46,35 +45,18 @@ def update_tabs(sheet)
     ]
   end
 
-  sheet.export(
-    sheet_name: 'all_apps',
-    rows: applications
-  )
-end
-
-def notify_of_external_sharing(sheet)
-  # List of external emails that we can share this document with.
-  # This list is saved in DCDO as an array. To append a new value to this list:
-  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
-  allowed_list = DCDO.get('external_emails_with_application_data_access', [])
-  external_emails = sheet.external_emails_with_access - allowed_list
-
-  if external_emails.present?
-    email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
-    error_msg = "Document containing PII information is shared to "\
-      "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
-      "Please check with PLC team that this is intentional!"
-
-    Honeybadger.notify error_msg
-    puts error_msg
-  end
+  applications
 end
 
 def main
+  # This list is saved in DCDO as an array. To append a new value to this list:
+  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
+  allowed_list = DCDO.get('external_emails_with_application_data_access', [])
+
   # Uses a Google Cloud service account to access Google Drive
   sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
-  update_tabs(sheet)
-  notify_of_external_sharing(sheet)
+  sheet.export(tab_name: 'all_apps', rows: get_rows)
+  sheet.notify_of_external_sharing(allowed_list)
 end
 
 main

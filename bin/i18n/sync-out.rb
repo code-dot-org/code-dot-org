@@ -24,7 +24,7 @@ def sync_out
   restore_markdown_headers
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  I18nScriptUtils.with_syncronous_stdout do
+  I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
 end

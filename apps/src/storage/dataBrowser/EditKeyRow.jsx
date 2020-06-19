@@ -3,7 +3,6 @@ import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import experiments from '@cdo/apps/util/experiments';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
@@ -25,8 +24,6 @@ class EditKeyRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
-  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
-
   componentDidMount() {
     this.isMounted_ = true;
   }
@@ -44,9 +41,7 @@ class EditKeyRow extends React.Component {
     });
 
   handleSave = () => {
-    if (this.inExperiment) {
-      this.props.hideError();
-    }
+    this.props.hideError();
     try {
       this.setState({isSaving: true});
       const newValue = castValue(
@@ -60,10 +55,8 @@ class EditKeyRow extends React.Component {
         msg => console.warn(msg)
       );
     } catch (e) {
-      if (this.inExperiment) {
-        this.setState({isSaving: false});
-        this.props.showError();
-      }
+      this.setState({isSaving: false});
+      this.props.showError();
     }
   };
 

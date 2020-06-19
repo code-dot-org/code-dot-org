@@ -1883,6 +1883,8 @@ pt-PT:
   header_teacher_community: Comunidade de professores
   header_help_support: Ajuda e suporte
   header_report_bug: Comunicar um problema
+  header_legal_privacy: Política de privacidade
+  header_legal_tos: Termos de utilização
   header_tutorials: Tutoriais
   header_documentation: Documentação
   user_header_label: Olá, %{username}

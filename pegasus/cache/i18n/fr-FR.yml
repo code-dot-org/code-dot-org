@@ -2199,6 +2199,8 @@ fr-FR:
   header_teacher_community: Communauté des enseignants
   header_help_support: 'Aide et support '
   header_report_bug: Rapporter un problème
+  header_legal_privacy: Politique de confidentialité
+  header_legal_tos: Conditions Générales d'Utilisation
   header_tutorials: Didacticiels
   app_lab_documentation: Documentation sur le Labo des Applis
   app_lab_tutorials: Tutoriels du Labo des Applis
