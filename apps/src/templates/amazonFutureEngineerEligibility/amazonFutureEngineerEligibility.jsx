@@ -114,14 +114,14 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     // need to work on synchronicity of this --
     // not sure if referral back from sign in page is working 100%
-    window.location = pegasus('/amazon-future-engineer/success');
+    window.location = pegasus('/afe/success');
   };
 
   render() {
     let {formData} = this.state;
 
     if (formData.schoolEligible === false) {
-      window.location = pegasus('/amazon-future-engineer/ineligible');
+      window.location = pegasus('/afe/benefits');
     }
 
     // TO DO: Disable button until email and school are filled in
@@ -159,7 +159,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
           <AmazonFutureEngineerEligibilityForm
             email={formData.email}
             schoolId={formData.schoolId}
-            onContinue={this.updateFormData}
+            updateFormData={this.updateFormData}
           />
         )}
         {formData.schoolEligible &&
