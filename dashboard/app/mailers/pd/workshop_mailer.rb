@@ -147,7 +147,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = workshop
     @cancel_url = '#'
     @is_reminder = true
-    @survey_url = 'https://form.jotform.com/201595646393161'
+    @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%b %d %Y').strip
 

@@ -298,6 +298,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
 
     workshop.end!
 
