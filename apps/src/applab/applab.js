@@ -1274,7 +1274,7 @@ Applab.execute = function() {
         handleExecutionError(
           'Error',
           Number(matchedLineNumber[1]) + 1,
-          "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional."
+          commonMsg.droplet_parsing_error()
         );
         return;
       }
