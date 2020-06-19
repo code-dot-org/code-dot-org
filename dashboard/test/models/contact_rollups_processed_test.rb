@@ -127,21 +127,28 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           '[{"%{sources_key}": "table1", "%{data_key}": null, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+        expected_output: {'table1' => {}}
       },
       {
         input: format(
           '[{"%{sources_key}": "table1", "%{data_key}": {}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+        expected_output: {'table1' => {}}
+      },
+      {
+        input: format(
+          '[{"%{sources_key}": "table1", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
+        ),
+        expected_output: {'table1' => {}}
       },
       {
         input: format(
           '[{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed}}
+        expected_output: {'table1' => {'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}]}}
       },
       {
         input: format('['\
@@ -150,8 +157,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           format_values
         ),
         expected_output: {
-          'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed},
-          'table2' => {'state' => 'WA', 'data_updated_at' => time_parsed}
+          'table1' => {'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}]},
+          'table2' => {'state' => [{'value' => 'WA', 'data_updated_at' => time_parsed}]}
         }
       }
     ]
