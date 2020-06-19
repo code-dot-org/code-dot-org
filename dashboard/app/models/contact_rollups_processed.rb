@@ -46,7 +46,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
       processed_contact_data = {}
       processed_contact_data.merge!(extract_opt_in(contact_data))
-      processed_contact_data.merge!(extract_updated_at(contact_data) || {})
+      processed_contact_data.merge!(extract_updated_at(contact_data))
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
@@ -168,10 +168,11 @@ class ContactRollupsProcessed < ApplicationRecord
   #
   # @raise [StandardError] if couldn't find non-nil data_updated_at value
   def self.extract_updated_at(contact_data)
-    max_data_updated_at = contact_data.values.map do |item|
-      # There MUST be a non-nil data_updated_at value in each item.
-      # @see parse_contact_data method and ContactRollupsRaw schema.
-      item['data_updated_at']
+    # contact_data contains data from multiple sources (tables).
+    # For each source, there MUST be a non-nil last_data_updated_at value.
+    # @see the output of +parse_contact_data+ method.
+    max_data_updated_at = contact_data.values.map do |source_data|
+      source_data['last_data_updated_at']
     end.max
 
     raise 'Missing data_updated_at value' unless max_data_updated_at
