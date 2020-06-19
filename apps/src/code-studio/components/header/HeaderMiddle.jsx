@@ -13,7 +13,8 @@ const styles = {
   headerMiddleContent: {
     width: '100%',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    animation: 'header_fadein 0.4s'
   },
   finishedLink: {
     width: '100%'
