@@ -9,8 +9,14 @@ zu:
           stages:
             Infinity:
               name: Akugcini noma utalagu
+          lessons:
+            Infinity:
+              name: Akugcini noma utalagu
         csd2-2017:
           stages:
+            Lists:
+              name: Umbhalo olandelanayo
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd6-draft:
@@ -29,12 +35,21 @@ zu:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+          lessons:
+            Lists:
+              name: Umbhalo olandelanayo
         csd2-2018:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+          lessons:
+            Lists:
+              name: Umbhalo olandelanayo
         csd2-2019:
           stages:
+            Lists:
+              name: Umbhalo olandelanayo
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csp5-pilot-staging:
@@ -55,5 +70,8 @@ zu:
               display_name: Umbhalo olandelanayo
         csd3-2020:
           stages:
+            Text:
+              name: Umbhalo
+          lessons:
             Text:
               name: Umbhalo

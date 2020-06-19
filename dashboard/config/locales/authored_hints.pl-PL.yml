@@ -325,7 +325,13 @@ pl-PL:
         4-5_Artist_8_a: "Dłuższe boki mają po 240 pikseli.  Oznacza to, że 2 krótsze
           boki mają razem: \n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nIle to \\*\\*
           320/2 \\*\\*? "
+        4-5_Artist_8_b: "Ten obrazek może być zrobiony na 2 metody!  \n\n-   Narysuj
+          dwa prostokąty o długości **120** i wysokości **160**, z pokrywającym się
+          bokiem\n\n-   Narysuj jeden prostokąt o długości **240** i wysokości **160**.
+          Potem dodaj linię po środku."
       4-5 Artist 9:
+        4-5_Artist_9_a: 'Jeżeli trójkąt jest równoboczny, to wszystkie boki i wszystkie
+          kąty są takie same.  '
         4-5_Artist_9_b: Trzeba będzie narysować trzy trójkąty tej samej wielkości.
           Nie zapomnij, aby skoczyć na nową pozycję, po narysowaniu każdego z nich.
       4-5 Artist Assessment 1:
@@ -1355,6 +1361,11 @@ pl-PL:
           ostrożny, bym obrócił się w dobrą stronę!_
         courseC_maze_programming_challenge2_b: Najkrótszym rozwiązaniem jest użycie
           5 bloków, ale wykorzystuje blok `repeat`!
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam projekt w ostatnim rogu. Możesz też "skoczyć
+          do" innych pozycji albo zmienić wszystko całkowicie w jaki tylko chcesz
+          sposób!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
@@ -1366,6 +1377,9 @@ pl-PL:
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny
           w tym wyzwaniu.
+      course3_farmer_condLoops_challenge2:
+        courseD_farmer_condLoops_challenge2_a: 'Ilość każdego warzywa w różnych polach
+          zmienia się. Użyj do nich pętli "dopóki". '
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_b: Ścieżka Scrata jest w kształcie prostokąta!
           Musi obrócić się tak samo za każdym razem!

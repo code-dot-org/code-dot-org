@@ -1,7 +1,7 @@
 ---
 mt-MT:
   data:
-    function_defintions:
+    function_definitions:
       Course 4 Play Lab Params 4:
         do something:
           name: Agħmel xi ħaġa
@@ -20,12 +20,20 @@ mt-MT:
       NEW Course 4 Artist Params 11:
         do something:
           name: Agħmel xi ħaġa
+      NEW Course 4 Artist Params 15:
+        draw a pinwheel:
+          parameters:
+            repeat: Irrepeti
       NEW Course 4 Artist Params 2:
         do something:
           name: Agħmel xi ħaġa
       NEW Course 4 Artist Params 9:
         do something:
           name: Agħmel xi ħaġa
+      New Artist Project:
+        draw a pinwheel:
+          parameters:
+            repeat: Irrepeti
       course3_artist_functions_challenge1:
         do something:
           name: Agħmel xi ħaġa
@@ -164,6 +172,10 @@ mt-MT:
       courseF_artist_fwp2:
         do something:
           name: Agħmel xi ħaġa
+      courseF_artist_fwp9:
+        draw a pinwheel:
+          parameters:
+            repeat: Irrepeti
       courseF_artist_fwp_challenge1:
         do something:
           name: Agħmel xi ħaġa

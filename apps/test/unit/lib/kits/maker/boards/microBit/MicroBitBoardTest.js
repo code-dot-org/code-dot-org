@@ -4,18 +4,13 @@ import {MicrobitStubBoard} from '../makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import _ from 'lodash';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {
+  EXTERNAL_PINS,
+  MB_COMPONENT_COUNT,
+  MB_COMPONENTS
+} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
-
-const MB_CONSTRUCTOR_COUNT = 4;
-const MB_COMPONENT_COUNT = 6;
-const MB_COMPONENTS = [
-  'LedScreen',
-  'MicroBitButton',
-  'Accelerometer',
-  'MicroBitThermometer'
-];
 
 describe('MicroBitBoard', () => {
   let board;
@@ -75,7 +70,7 @@ describe('MicroBitBoard', () => {
 
         it(`correct number of them`, () => {
           expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
-            MB_CONSTRUCTOR_COUNT
+            MB_COMPONENTS.length
           );
         });
 
@@ -103,7 +98,7 @@ describe('MicroBitBoard', () => {
         });
 
         it(`correct number of them`, () => {
-          let globalPropsCount = MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT;
+          let globalPropsCount = MB_COMPONENTS.length + MB_COMPONENT_COUNT;
           expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
             globalPropsCount
           );
@@ -159,6 +154,30 @@ describe('MicroBitBoard', () => {
           });
         });
 
+        describe('lightSensor', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.lightSensor;
+          });
+
+          it('value', () => {
+            expect(component).to.have.property('value');
+          });
+
+          it('threshold', () => {
+            expect(component).to.have.property('threshold');
+          });
+
+          it('start()', () => {
+            expect(component.start).to.be.a('function');
+          });
+
+          it('setRange()', () => {
+            expect(component.setRange).to.be.a('function');
+          });
+        });
+
         describe('accelerometer', () => {
           let component;
 
@@ -173,6 +192,18 @@ describe('MicroBitBoard', () => {
             expect(component.getAcceleration).to.be.a('function'));
         });
 
+        describe('compass', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.compass;
+          });
+
+          it('start()', () => expect(component.start).to.be.a('function'));
+          it('getHeading()', () =>
+            expect(component.getHeading).to.be.a('function'));
+        });
+
         describe('board', () => {
           it('exists', () => {
             expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
@@ -185,13 +216,17 @@ describe('MicroBitBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(6);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(
+          MB_COMPONENT_COUNT
+        );
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.ledScreen).to.be.a('object');
         expect(board.prewiredComponents_.tempSensor).to.be.a('object');
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
+        expect(board.prewiredComponents_.compass).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
+        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
     });
   });

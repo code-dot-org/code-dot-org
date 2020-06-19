@@ -1450,6 +1450,8 @@
   header_teacher_community: "Lehrer Community"
   header_help_support: 'Hilfe und Support '
   header_report_bug: "Einen Fehler melden"
+  header_legal_privacy: "Datenschutzerklärung"
+  header_legal_tos: "AGBs"
   header_tutorials: "Einführungen"
   app_lab_documentation: "App Lab Dokumentation"
   app_lab_tutorials: "App Lab Tutorials"

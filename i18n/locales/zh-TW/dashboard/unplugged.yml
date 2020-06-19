@@ -322,6 +322,8 @@ zh-TW:
       BuildingAFoundation_2019:
         title: '翻譯不見了: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: '翻譯不見了: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: 我的愛迴圈機器人朋友
       Conditionals_2019:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
@@ -347,6 +349,7 @@ zh-TW:
         title: 二進制圖像
         desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
       courseE_unplugged_privateInformation_2019:
+        title: 私密與個人資訊
         desc: 本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。
       SongwritingParameters_2019:
         title: '翻譯不見了: en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -416,4 +419,5 @@ zh-TW:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
       TheRightApp_2019:
+        title: 合適的應用程式
         desc: "* 在現代社會，所有人都會使用電腦，尤其是智慧型手機。\\r* 智慧型手機應用程式（APP）可幫助大眾完成各種事情，例如與朋友對話、聆聽音樂、購物等，或是僅瀏覽網頁。\\r* 程式設計師必須瞭解他人的需要，並依據這些需要為他們設計 APP！\\r\\r![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -9,8 +9,14 @@ my:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         infinity:
           stages:
+            Infinity:
+              name: Infinity
+          lessons:
             Infinity:
               name: Infinity
         K5PD:
@@ -21,32 +27,56 @@ my:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD3:
           stages:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD-NexTech:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD-iZone:
           stages:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         allthethings:
           stages:
             Web Lab:
               name: Web Lab
+          lessons:
+            Web Lab:
+              name: Web Lab
         algebraPD2b:
           stages:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
+          lessons:
+            Computer Science Fundamentals:
+              name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
         algebraPD2:
           stages:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         mc:
@@ -57,8 +87,14 @@ my:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
         algebraFacilitator:
           stages:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         gradeKinder:
@@ -73,8 +109,16 @@ my:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         k5concepts:
           stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+          lessons:
             Loops:
               name: Loops
             Variables:
@@ -83,8 +127,14 @@ my:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
         csd2-2017:
           stages:
+            Lists:
+              name: စာရင်းများ
+          lessons:
             Lists:
               name: စာရင်းများ
         csd6-draft:
@@ -119,20 +169,35 @@ my:
           description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
           description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။
             Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
+          lessons:
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
         csd6-old:
           stages:
+            Lists:
+              name: စာရင်းများ
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-1819draft:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         csd3-2018:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         csd2-2018:
           stages:
+            Lists:
+              name: စာရင်းများ
+          lessons:
             Lists:
               name: စာရင်းများ
         coursee-2018:
@@ -181,8 +246,14 @@ my:
           stages:
             Lists:
               name: စာရင်းများ
+          lessons:
+            Lists:
+              name: စာရင်းများ
         csd3-2019:
           stages:
+            Variables:
+              name: Variables
+          lessons:
             Variables:
               name: Variables
         csp4-pilot:
@@ -237,6 +308,9 @@ my:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -245,6 +319,11 @@ my:
           stages:
             Computer Science Fundamentals:
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+          lessons:
             Loops:
               name: Loops
             Variables:
@@ -273,6 +352,11 @@ my:
               display_name: Loops
         csd3-2020:
           stages:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ
+          lessons:
             Variables:
               name: Variables
             Text:
@@ -311,7 +395,13 @@ my:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         csp5-virtual:
           stages:
+            Variables:
+              name: Variables
+          lessons:
             Variables:
               name: Variables

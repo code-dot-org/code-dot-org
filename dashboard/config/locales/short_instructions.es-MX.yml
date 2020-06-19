@@ -740,6 +740,9 @@ es-MX:
       Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
         imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
         ¡Necesitas remover algo!"
+      Course 4 Artist For Loops Challenge: "**Desafío:** ¿Puedes resolver cómo usar
+        todo que has aprendido para crear este imagen de polígono, todo con lados
+        de 40 píxeles?"
       Course 4 Artist For Loops inspire: 'Inspiración de juego libre: ¡Ahora has aprendido
         todo lo que necesitas saber para hacer un patrón como éste! Si te inspira
         esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por
@@ -791,6 +794,9 @@ es-MX:
         forma siga siendo el mismo, sin importa cuántos lados tenga? Consejo: Tendrás
         que usar tus bloques de matemáticas (360 dividido por "caras" en dos lugares
         esta vez) '
+      Course 4 Bee 1: "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa
+        el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue
+        el néctar un vez SÓLO si hay un flor."
       Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
         para ver si es una flor o un panal...de lo contrario, ¡haz miel!
       Course 4 Bee 3: El objeto desconocido es una flor o un panal de miel. Ahora
@@ -937,6 +943,8 @@ es-MX:
         la derecha?
       Course 4 SCF 1a: "¿Puedes averiguar cómo recolectar todo este néctar con la
         menor cantidad de bloques posibles?"
+      Course 4 SCF 1b: "¿Puedes resolver cómo colectar todo de este miel con la mínima
+        cantidad posible de bloques?"
       Course 4 SCF 2: 'Utiliza lo que aprendiste en la lección anterior para dibujar
         una imagen como ésta. Nota: El código se vuelve más simple si incorporas parámetros. '
       Course 4 SCF 3: 'Utiliza lo que aprendiste en la lección anterior para dibujar
@@ -1552,6 +1560,10 @@ es-MX:
         todas las reglas y combinar deportes. ¡Despliega toda tu creatividad! Cuando
         estés listo, haz clic en "Finalizar" para que tus amigos prueben tu juego
         en sus teléfonos.'
+      OPD-K5 whats your plan: Tómate un momento ahora para considerar cómo y cuándo
+        completarás este curso en línea para asegurarte de obtener el mayor beneficio
+        de la experiencia. Cuando hayas armado un buen plan, sigue profundizando en
+        los Fundamentos de la Ciencia de la Computación.
       OPD-K5-events-2: Agrega el bloque `cantidad normal de aleteo` al evento `cuando
         hagas clic` y, a continuación, presiona "Ejecutar". Haz clic o toca en el
         espacio de juego para mover a Flappy hacia el objetivo.

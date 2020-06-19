@@ -1187,6 +1187,8 @@
   header_project_gallery: "ծրագրեր"
   header_educate_hoc: "Կոդի ժամ"
   header_stats: "Վիճակագրություն"
+  header_legal_privacy: "Գաղտնիության քաղաքականություն"
+  header_legal_tos: "Ծառայությունների մատուցման պայմաններ"
   user_header_label: "Բարև %{username}"
   user_header_settings: "Իմ էջը"
   user_header_logout: "Դուրս գալ"

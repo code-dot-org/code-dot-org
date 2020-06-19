@@ -12,11 +12,16 @@ class ScriptsControllerTest < ActionController::TestCase
     @pilot_script = create :script, pilot_experiment: 'my-experiment'
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
+    @no_progress_or_assignment_student = create :student
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
     @partner_script = create :script, editor_experiment: 'platformization-partners'
+
+    @student_coursez_2017 = create :student
+    @section_coursez_2017 = create :section, script: @coursez_2017
+    @section_coursez_2017.add_student(@student_coursez_2017)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -175,15 +180,46 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  test "show: redirect to latest stable version in family for student" do
-    sign_in create(:student)
+  test "show: do not redirect when showing latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2018.name}
+    assert_response :success
+  end
+
+  test "show: redirect from older version to latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
+  test "show: redirect from older version to latest stable version in family for logged out user" do
+    get :show, params: {id: @coursez_2017.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version in family for logged out user" do
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to assigned version for student" do
+    sign_in @student_coursez_2017
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
+  end
+
+  # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
+  # or has made progress in a different version from the latest stable version. This test verifies that ultimately
+  # the student is not redirected if true is returned.
   test "show: do not redirect student to latest stable version in family if they can view the script version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
-    sign_in create(:student)
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
@@ -207,6 +243,15 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     get :edit, params: {id: 'course1'}
     assert_response :ok
+  end
+
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: 'course1'}
+    end
+    assert_redirected_to "/"
   end
 
   test "should get edit on test" do
@@ -551,7 +596,7 @@ class ScriptsControllerTest < ActionController::TestCase
     # omitted: professional_learning_course, script_announcements because
     # using fake values doesn't seem to work for them.
     general_params = {
-      hideable_stages: 'on',
+      hideable_lessons: 'on',
       project_widget_visible: 'on',
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
@@ -618,7 +663,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      stage 'stage 1'
+      lesson 'stage 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
@@ -710,7 +755,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.has_lesson_plan?
   end
 
-  test 'should redirect to latest stable version in script family' do
+  test 'should redirect to latest stable version in script family for student without progress or assignment' do
+    sign_in create(:student)
+
     dogs1 = create :script, name: 'dogs1', family_name: 'coursea', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
@@ -767,7 +814,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'course1'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
   end
 
   test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
@@ -780,7 +827,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 
@@ -794,7 +841,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    assert response.body.include? 'The lesson stage 1 will be visible after'
+    assert response.body.include? 'The lesson lesson 1 will be visible after'
     Timecop.return
   end
 
@@ -808,7 +855,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 
@@ -822,7 +869,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 end

@@ -51,6 +51,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
+    return if @workshop.suppress_email?
+
     mail content_type: 'text/html',
       from: from,
       subject: teacher_enrollment_subject(@workshop),
@@ -116,7 +118,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
-    return if @workshop.suppress_reminders?
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
       from: from,
@@ -131,7 +133,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders?
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -145,7 +147,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders?
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -158,6 +160,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    return if @workshop.suppress_email?
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -244,6 +248,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see Workshop.suppress_reminders? for
+  # other subject-specific suppression of reminder emails, and
+  # the Workshop serialized attribute 'suppress_email' for a third mechanism.
   # Virtual workshops should not have any mail sent.
   def check_should_send
     if @workshop.subject&.include? "Virtual"

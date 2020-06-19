@@ -13,6 +13,7 @@
 
 #below_viz_instructions {
   margin: 15px 0;
+  cursor: pointer;
 }
 
 .right {

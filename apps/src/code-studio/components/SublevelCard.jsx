@@ -64,10 +64,11 @@ const styles = {
   },
   title: {
     minHeight: 30,
-    fontSize: 20,
+    fontSize: 16,
     lineHeight: '25px',
     fontFamily: '"Gotham 5r"',
     color: color.teal,
+    marginBottom: 10,
     marginLeft: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',

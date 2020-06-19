@@ -46,6 +46,7 @@ fr-FR:
       CSD Polling Events Map: Attendre les évènements
       CSD Polling Events Map_2018: Attendre les évènements
       CSD Polling Events Map_2019: Attendre les évènements
+      CSD Problem Solving Process Video: Processus de Résolution De Problème
       CSD Set Scale Map: Modifier l’échelle des capteurs
       CSD Set Scale Map_2018: Modifier l’échelle des capteurs
       CSD Set Scale Map_2019: Modifier l’échelle des capteurs
@@ -635,12 +636,33 @@ fr-FR:
       'Course E: Artist Project': Cours E Projet Artistique
       'Course E: Artist Project_2018': Cours E Projet Artistique
       'Course E: Artist Project_2019': Cours E Projet Artistique
+      'Course F: Artist Project - Revise_2018': 'Réviser le Projet d''Artiste
+
+'
       'Course F: Artist Project_2018': Cours E Projet Artistique
       'Course F: Artist Project_2019': Cours E Projet Artistique
       CourseEF_video_IntroSpriteLab: Voici le Labo du Lutin
       CourseEF_video_IntroSpriteLab_2019: Voici le Labo du Lutin
       CourseEF_video_MakeSprite: Comment Créer un Lutin
       CourseEF_video_MakeSprite_2019: Comment Créer un Lutin
+      CourseE_Project_SpriteLab: 'Cours E Projet du Labo des Lutins
+
+'
+      CourseE_Project_SpriteLab_2019: 'Cours E Projet du Labo des Lutins
+
+'
+      CourseE_hoops: 'Lapin
+
+'
+      CourseF_Project_Revise_SpriteLab: 'Réviser le Projet du Labo des Lutins
+
+'
+      CourseF_Project_SpriteLab: 'Cours F Projet d''Artiste
+
+'
+      CourseF_Project_SpriteLab_2019: 'Cours F Projet d''Artiste
+
+'
       Dance_Party_extras_alternate_2019: Va et viens
       Dance_Party_extras_battle: Équipes de danse
       Dance_Party_extras_battle_2019: Équipes de danse
@@ -699,15 +721,24 @@ fr-FR:
       Oceans_Video_Machine_Learning: 'Vidéo : Apprentissage automatique'
       Oceans_Video_Societal_Implications: 'Vidéo : Conséquences sur la société'
       Oceans_Video_Training_Data: 'Vidéo : Données de formation'
+      Robot Doodle_2018: 'Gribouillis de Robot
+
+'
       The Accelerometer_2018: L’accéléromètre
       The Accelerometer_2019: L’accéléromètre
       courseA_video_Stevie: Stevie et le Grand Projet
       courseA_video_Stevie_2018: Stevie et le Grand Projet
       courseB_video_Unspotted: Les Bugs Passés Inaperçus
       courseB_video_Unspotted_2018: Les Bugs Passés Inaperçus
+      courseE_Dogger_2: 'Exemple de Dogger
+
+'
       courseF_artist_for1: Jeu Libre avec des Boucles For (Début)
       courseF_artist_for1_2018: Jeu Libre avec des Boucles For (Début)
       courseF_artist_for1_2019: Jeu Libre avec des Boucles For (Début)
+      courseF_project_1: 'Exemple de Projet du Labo des Lutins
+
+'
       courseF_video_csMatters: Projets de fin de cours
       courseF_video_csMatters_2018: 'Vidéo : Questions d’informatique'
       csd U3 conditional statements video: 'Vidéo : Instructions conditionnelles'

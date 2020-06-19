@@ -67,6 +67,41 @@ ro:
               name: 'Laboratorul de Joacă: Creează o Poveste'
             The Big Event:
               name: Marele eveniment
+          lessons:
+            Happy Maps:
+              name: Hărţi Fericite
+            Move it, Move it:
+              name: Mişcă-te, Mişcă-te
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puzzle: Află cum se realizeză glisarea și fixarea'
+            'Maze: Sequence':
+              name: 'Labirint: Secvenţă'
+            'Maze: Debugging':
+              name: 'Labirint: Depanare'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            'Bee: Sequence':
+              name: 'Albină: Secvenţă'
+            'Artist: Sequence':
+              name: 'Artist: Secvenţă'
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            'Artist: Shapes':
+              name: 'Artist: Forme'
+            Spelling Bee:
+              name: Albina de Ortografie
+            Getting Loopy:
+              name: Transformând în Buclă
+            'Maze: Loops':
+              name: 'Labirint: Bucle'
+            'Bee: Loops':
+              name: 'Albină: bucle'
+            The Big Event:
+              name: Marele eveniment
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
+            'Artist: Loops':
+              name: 'Artist: Bucle'
         course2:
           title: Cursul 2
           description: Cursul 2 este conceput pentru elevii care pot citi şi nu au
@@ -114,6 +149,43 @@ ro:
               name: Marele eveniment
             Your Digital Footprint:
               name: Amprenta ta Digitală
+          lessons:
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+            'Maze: Sequence':
+              name: 'Labirint: Secvenţă'
+            'Artist: Sequence':
+              name: 'Artist: Secvenţă'
+            Getting Loopy:
+              name: Transformând în Buclă
+            'Maze: Loops':
+              name: 'Labirint: Bucle'
+            'Artist: Loops':
+              name: 'Artist: Bucle'
+            'Bee: Loops':
+              name: 'Albină: bucle'
+            Relay programming:
+              name: Programare de releu
+            'Bee: Debugging':
+              name: 'Albină: Depanare'
+            'Artist: Debugging':
+              name: 'Artist: Depanare'
+            Conditionals:
+              name: Condiţionale
+            'Bee: Conditionals':
+              name: 'Albină: Condiţionale'
+            Binary Bracelets:
+              name: Brăţări Binare
+            The Big Event:
+              name: Marele eveniment
+            Flappy:
+              name: Flappy
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+            'Artist: Nested Loops':
+              name: 'Artist: Bucle Adunate'
         course3:
           title: Cursul 3
           description: Cursul 3 este conceput pentru elevii care au parcurs cursul
@@ -166,6 +238,45 @@ ro:
               name: 'Laboratorul de Joacă: Creează un Joc'
             'Studio: Create a Story':
               name: 'Laboratorul de Joacă: Creează o Poveste'
+          lessons:
+            Computational Thinking:
+              name: Gândire Computațională
+            Maze:
+              name: Labirint
+            Artist:
+              name: Artist
+            Functional Suncatchers:
+              name: Prinzători ai Soarelui Funcţionali
+            'Artist: Functions':
+              name: 'Artist: Funcţii'
+            'Bee: Functions':
+              name: 'Albină: Funcţii'
+            'Bee: Conditionals':
+              name: 'Albină: Condiţionale'
+            'Maze: Conditionals':
+              name: 'Labirint: Condiţionale'
+            Songwriting:
+              name: Compunând Cântece
+            Dice Race:
+              name: Cursă de Zaruri
+            'Artist: Nested Loops':
+              name: 'Artist: Bucle Adunate'
+            'Farmer: While Loops':
+              name: Fermier - Bucle "în timp ce"
+            'Bee: Nested Loops':
+              name: 'Albină: Bucle imbricate'
+            'Bee: Debugging':
+              name: 'Albină: Depanare'
+            Bounce:
+              name: Săritură
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            'Artist: Patterns':
+              name: 'Artist: Modele'
         playlab:
           title: Laborator de Joacă
           description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
@@ -173,11 +284,17 @@ ro:
           stages:
             Play Lab:
               name: Laborator de Joacă
+          lessons:
+            Play Lab:
+              name: Laborator de Joacă
         artist:
           title: Artist
           description: Desenează poze şi proiecte mişto cu Artistul!
           description_short: Desenează poze şi proiecte mişto cu Artistul!
           stages:
+            Artist:
+              name: Artist
+          lessons:
             Artist:
               name: Artist
         hourofcode:
@@ -190,6 +307,9 @@ ro:
             Maze:
               name: Labirint
           description_audience: "[șir gol]"
+          lessons:
+            Maze:
+              name: Labirint
         frozen:
           title: Programati cu Anna și Elsa
           description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei
@@ -199,6 +319,9 @@ ro:
           description_short: Hai să ne folosim de cod pentru a le alătura pe Anna
             şi Elsa în explorarea magiei şi frumuseţii de gheaţă.
           stages:
+            Artist:
+              name: Artist
+          lessons:
             Artist:
               name: Artist
         course4:
@@ -257,6 +380,51 @@ ro:
               name: 'Fără calculator: Compoziție muzicală cu parametri'
             'Unplugged: Tangrams':
               name: 'Fără calculator: Tangrame'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Fără calculator: Tangrame'
+            Maze and Bee:
+              name: Labirint şi albină
+            Artist:
+              name: Artist
+            'Unplugged: Envelope Variables':
+              name: 'Fără calculator: Variabile plic'
+            'Unplugged: Madlibs':
+              name: 'Fără calculator: Madlibs'
+            'Artist: Variables':
+              name: 'Artist: Variabile'
+            'Play Lab: Variables':
+              name: 'Laborator de joc: Variabile'
+            'Unplugged: For Loop Fun':
+              name: 'Fără calculator: Distracție cu Bucle Pentru'
+            'Bee: For Loops':
+              name: 'Albină: Pentru bucle'
+            'Artist: For Loops':
+              name: 'Artist: Bucle pentru'
+            'Play Lab: For Loops':
+              name: 'Laborator de joc: Bucle pentru'
+            'Artist: Functions':
+              name: 'Artist: Funcţii'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Fără calculator: Compoziție muzicală cu parametri'
+            'Artist: Functions with Parameters':
+              name: 'Artist: Funcţii cu parametri'
+            'Play Lab: Functions with Parameters':
+              name: 'Laborator de joc: Funcții cu parametri'
+            'Bee: Functions with Parameters':
+              name: 'Albină: Funcții cu parametri'
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
+            Super Challenge - Variables:
+              name: Super provocare - Variabile
+            Super Challenge - For Loops:
+              name: Super provocare - Buclele "pentru"
+            Super Challenge - Functions and Parameters:
+              name: Super provocare - Functii si Parametri
+            Extreme Challenge - Comprehensive:
+              name: Provocare extrema - Cuprinzatoare
         Course4pre:
           title: Curs 4 Condiţii prealabile
           description: O scurtă prezentare a conceptelor pentru elevii care nu au
@@ -283,6 +451,25 @@ ro:
               name: Fermier - Bucle "în timp ce"
             'Maze: Sequence':
               name: 'Labirint: Secvenţă'
+          lessons:
+            'Maze: Sequence':
+              name: 'Labirint: Secvenţă'
+            'Artist: Sequence':
+              name: 'Artist: Secvenţă'
+            'Artist: Loops':
+              name: 'Artist: Bucle'
+            'Bee: Conditionals':
+              name: 'Albină: Condiţionale'
+            'Artist: Nested Loops':
+              name: 'Artist: Bucle Adunate'
+            'Farmer: While Loops':
+              name: Fermier - Bucle "în timp ce"
+            'Bee: Nested Loops':
+              name: 'Albină: Bucle imbricate'
+            'Artist: Functions':
+              name: 'Artist: Funcţii'
+            'Bee: Debugging':
+              name: 'Albină: Depanare'
         usability:
           title: Testarea uzabilității
           description: O selecție din nivelurile cursului 4 pentru testarea uzabilității.
@@ -299,6 +486,17 @@ ro:
               name: Introducere
             Variables:
               name: Variabile
+          lessons:
+            Intro:
+              name: Introducere
+            Variables:
+              name: Variabile
+            For Loops:
+              name: Bucle Pentru
+            Functions and Functions with Parameters:
+              name: Funcții și funcții cu parametri
+            Binary:
+              name: Binar
         algebra:
           title: Informatică în Algebră
           description: Învață Programare Funcțională prin Algebră
@@ -343,6 +541,41 @@ ro:
               name: 'Fără calculator: Rețeta pentru design'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Fără calculator: Jocuri video și planuri de coordonate'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Fără calculator: Jocuri video și planuri de coordonate'
+            'Calc: Evaluation Blocks':
+              name: 'Calcul: Blocuri de evaluare'
+            'Eval: Strings and Images':
+              name: 'Evaluare: Șiruri și imagini'
+            'Unplugged: Contracts':
+              name: 'Fără calculator: Contracte'
+            'Eval: Writing Contracts':
+              name: 'Evaluare: Scrierea de contracte'
+            'Calc: Defining Variables':
+              name: 'Calcul: Definirea variabilelor'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Laboratorul de joc: Definirea de variabile (jocul mare)'
+            'Unplugged: The Design Recipe':
+              name: 'Fără calculator: Rețeta pentru design'
+            'Play Lab: Animation (Big Game)':
+              name: 'Laboratorul de joc: Animație (jocul mare)'
+            'Unplugged: Booleans':
+              name: 'Fără calculator: booleene'
+            'Eval: Boolean Operators':
+              name: 'Evaluare: Operatorii booleeni'
+            'Play Lab: Booleans':
+              name: 'Laboratorul de joc: Booleene'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Laboratorul de joc: Boolean (jocul mare)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Fără calculator: Condiționale și funcții pe porțiuni'
+            'Eval: Conditionals':
+              name: 'Evaluare: Condiționale'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Fără calculator: Detectarea de coliziuni și formula pentru distanță'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Laboratorul de joc: Detectarea de coliziuni (jocul mare)'
         infinity:
           title: Laborator de joacă Disney Infinity
           description: Folosește Laboratorul de Joacă pentru a crea o poveste sau
@@ -350,6 +583,9 @@ ro:
           description_short: Folosește Laboratorul de Joacă pentru a crea o poveste
             sau un joc cu personaje Disney Infinity.
           stages:
+            Infinity:
+              name: Infinit
+          lessons:
             Infinity:
               name: Infinit
         algebrademo:
@@ -367,6 +603,17 @@ ro:
               name: Blocuri de evaluare
             Making Pictures:
               name: Crearea Imaginilor
+            The Design Recipe:
+              name: Rețeta pentru design
+          lessons:
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Making Pictures:
+              name: Crearea Imaginilor
+            Defining Variables:
+              name: Definirea Variabilelor
+            Defining Simple Functions:
+              name: Definirea Funcțiilor Simple
             The Design Recipe:
               name: Rețeta pentru design
         K5PD:
@@ -421,6 +668,25 @@ ro:
               name: Peer to Peer - Transmiterea de numere
             Routers and addresses:
               name: Routere și adrese
+          lessons:
+            Overview and Setup Instructions:
+              name: Privire de ansamblu şi instrucţiuni de configurare
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: Peer to Peer - Transmiterea de biţi pe un cablu comun
+            Peer to Peer - Sending Numbers:
+              name: Peer to Peer - Transmiterea de numere
+            Broadcasting messages:
+              name: Difuzarea mesajelor
+            Routers and addresses:
+              name: Routere și adrese
+            Packets and Reliability:
+              name: Pachete şi fiabilitate
+            Manual DNS:
+              name: Manual DNS
+            Automatic DNS node:
+              name: Nod automat DNS
+            Internet Simulator Freeplay:
+              name: Joc liber cu simulator de internet
         pixelation:
           title: Pixelare
           description: Creaţi imagini cu biţi şi bytes.
@@ -437,6 +703,17 @@ ro:
               name: Joc liber cu pixelare color
             Color Pixelation Tutorial:
               name: Tutorial de pixelare color
+          lessons:
+            Black & White Pixelation Tutorial:
+              name: Tutorial de pixelare în alb și negru
+            Black & White Pixelation Freeplay:
+              name: Joc liber de pixelare în alb și negru
+            Color Pixelation Tutorial:
+              name: Tutorial de pixelare color
+            Color Pixelation Examples:
+              name: Exemple de pixelare color
+            Color Pixelation Freeplay:
+              name: Joc liber cu pixelare color
         20-hour:
           title: Introducere accelerată a cursului de informatică
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică
@@ -486,6 +763,47 @@ ro:
               name: Labirintul
             Wrap-up:
               name: Încheiere
+          lessons:
+            Introduction to Computer Science:
+              name: Introducere în Informatică
+            The Maze:
+              name: Labirintul
+            Computational Thinking:
+              name: Gândire Computațională
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
+            The Artist:
+              name: Artistul
+            Algorithms:
+              name: Algoritmi
+            The Artist 2:
+              name: Artistul 2
+            Functions:
+              name: Funcţii
+            The Farmer:
+              name: Fermierul
+            Conditionals:
+              name: Condiţionale
+            The Artist 3:
+              name: Artistul 3
+            Song Writing:
+              name: Compunere muzicală
+            The Farmer 2:
+              name: Fermierul 2
+            Abstraction:
+              name: Abstractizare
+            The Artist 4:
+              name: Artistul 4
+            Relay Programming:
+              name: Programare de releu
+            The Farmer 3:
+              name: Fermierul 3
+            The Internet:
+              name: Internetul
+            The Artist 5:
+              name: Artistul 5
+            Wrap-up:
+              name: Încheiere
         edit-code:
           title: Editează Codul
           description: Editează Codul
@@ -500,6 +818,15 @@ ro:
               name: Artistul
             The Maze:
               name: Labirintul
+          lessons:
+            The Maze:
+              name: Labirintul
+            Applab:
+              name: Laborator de Aplicații
+            The Artist:
+              name: Artistul
+            Play Lab:
+              name: Laborator de Joacă
         events:
           title: Evenimente
           description: Evenimente
@@ -514,6 +841,15 @@ ro:
               name: Evaluează
             Studio:
               name: Studio
+          lessons:
+            Bounce:
+              name: Săritură
+            Studio:
+              name: Studio
+            Calc:
+              name: Calculează
+            Eval:
+              name: Evaluează
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
@@ -521,6 +857,9 @@ ro:
           description_short: Creeaza propriul joc Flappy in mai putin de 10 minute!
           description_audience: "[șir gol]"
           stages:
+            Flappy Code:
+              name: Codul Flappy
+          lessons:
             Flappy Code:
               name: Codul Flappy
         jigsaw:
@@ -531,12 +870,18 @@ ro:
           stages:
             Jigsaw:
               name: Puzzle
+          lessons:
+            Jigsaw:
+              name: Puzzle
         step:
           title: Pas
           description: "[șir gol]"
           description_short: "[șir gol]"
           description_audience: "[șir gol]"
           stages:
+            Step:
+              name: Pas
+          lessons:
             Step:
               name: Pas
         Hour of Code:
@@ -548,14 +893,23 @@ ro:
           stages:
             Hour of Code 2013:
               name: Ora de Programare 2013
+          lessons:
+            Hour of Code 2013:
+              name: Ora de Programare 2013
         CodeStudioPuzzleChallenge:
           description_audience: "[șir gol]"
           stages:
             Puzzles:
               name: Puzzle-uri
+          lessons:
+            Puzzles:
+              name: Puzzle-uri
         Tutorial Video - Code Studio Puzzle Challenge:
           description_audience: "[șir gol]"
           stages:
+            Puzzles:
+              name: Puzzle-uri
+          lessons:
             Puzzles:
               name: Puzzle-uri
         cspunit1:
@@ -595,6 +949,37 @@ ro:
             Sending Numbers:
               name: Transmiterea numerelor
           description_audience: "[șir gol]"
+          lessons:
+            Personal Innovations:
+              name: Inovații personale
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Complex Messages:
+              name: Transmiterea de mesaje complexe
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+            Sending Bits in the Real World:
+              name: Transmiterea biților în lumea reală
+            Number Systems:
+              name: Sisteme de numere
+            Binary Numbers:
+              name: Numerele binare
+            Sending Numbers:
+              name: Transmiterea numerelor
+            Encoding Numbers in the Real World:
+              name: Codificarea numerelor în lumea reală
+            Encoding and Sending Text:
+              name: Codificarea și transmiterea de text
+            Sending Formatted Text:
+              name: Transmiterea de text formatat
+            Bytes and File Sizes:
+              name: Octeți și dimensiunile fișierelor
+            Encoding B&W Images:
+              name: Codificarea imaginilor în alb și negru
+            Encoding Color Images:
+              name: Codificarea imaginilor color
+            Lossy Compression and File Formats:
+              name: Compresie lossy şi formatare fișiere
         algebraPD:
           description_audience: "[șir gol]"
           stages:
@@ -608,6 +993,17 @@ ro:
               name: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra:
               name: De ce informatica ține de algebră
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Course Overview:
+              name: Prezentare generală a cursului
+            Why Computer Science belongs in Algebra:
+              name: De ce informatica ține de algebră
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         algPDmiami:
           description_audience: "[șir gol]"
           stages:
@@ -629,6 +1025,25 @@ ro:
               name: Jocul tău - Detectarea coliziunii
             Your Game - Player Movement:
               name: Jock tău - Mișcarea jucătorului
+          lessons:
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Strings and Images:
+              name: Șiruri și Imagini
+            Your Game - Animation:
+              name: Jocul tău - Animație
+            Booleans:
+              name: Booleene
+            Sam the Bat:
+              name: Liliacul Sam
+            Your Game - Booleans:
+              name: Jocul tău - Booleani
+            Luigi's Pizza:
+              name: Pizza lui Luigi
+            Your Game - Player Movement:
+              name: Jock tău - Mișcarea jucătorului
+            Your Game - Collision Detection:
+              name: Jocul tău - Detectarea coliziunii
         text-compression:
           description_audience: "[șir gol]"
         CSPPD:
@@ -638,6 +1053,11 @@ ro:
             Teaching Strategies:
               name: Strategii de predare
           description_audience: "[șir gol]"
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Teaching Strategies:
+              name: Strategii de predare
         CSPLessonSamples:
           description_audience: "[șir gol]"
           stages:
@@ -645,8 +1065,18 @@ ro:
               name: Lecția 14
             Lesson 15:
               name: Lecția 15
+          lessons:
+            Lesson 14:
+              name: Lecția 14
+            Lesson 15:
+              name: Lecția 15
         ECSPD:
           stages:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Teaching Strategies:
+              name: Strategii de predare
+          lessons:
             Introduction to PD:
               name: Introducere in Dezvoltarea Profesională
             Teaching Strategies:
@@ -677,9 +1107,36 @@ ro:
               name: Utilizarea modelelor în clasă
             What to Expect:
               name: La ce să ne așteptăm
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            What to Expect:
+              name: La ce să ne așteptăm
+            Introduction to Complex Adaptive Systems:
+              name: Introducere în sisteme complexe de adaptare
+            Introduction to Computational Science:
+              name: Introducere în știința computațională
+            Using Computer Models in Science:
+              name: Utilizarea modelelor computerizate în știință
+            Using Models in the Classroom:
+              name: Utilizarea modelelor în clasă
+            Dispositions and Classroom Culture:
+              name: Dispoziții și cultura de clasă
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Gândirea computațională și cadrul pentru educația științifică
+                de la grădiniță la clasa a 12-a
+            Introduction to StarLogo Nova:
+              name: Introducere în StarLogo Nova
+            The Tutorial:
+              name: Tutorialul
+            Post-Survey:
+              name: Post-sondaj
         rbo-reference:
           description_audience: "[șir gol]"
           stages:
+            reference:
+              name: referință
+          lessons:
             reference:
               name: referință
         cspunit3:
@@ -725,6 +1182,43 @@ ro:
               name: Utilizarea variabilelor în aplicații
             While Loops:
               name: Repetiții While
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
+            Events Unplugged:
+              name: Evenimente fără calculator
+            Event-Driven Programming and Debugging:
+              name: Programare pe bază de evenimente şi depanare
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+            Using Variables in Apps:
+              name: Utilizarea variabilelor în aplicații
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+            Introduction to Digital Assistants:
+              name: Introducere în asistenți digitali
+            Understanding Program Flow and Logic:
+              name: Înțelegerea fluxului și a logicii programelor
+            Introduction to Conditional Logic:
+              name: Introducere în logica condiționată
+            Compound Conditional Logic:
+              name: Logică condițională combinată
+            Digital Assistant Project:
+              name: 'Proiect: Asistent digital'
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
         algebraPD3:
           description_audience: "[șir gol]"
           stages:
@@ -742,14 +1236,39 @@ ro:
               name: Tabloul de bord al profesorilor
             The Design Recipe:
               name: Rețeta pentru design
+          lessons:
+            Course Overview:
+              name: Prezentare generală a cursului
+            Computer Science Pedagogy:
+              name: Pedagogia Informaticii
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Strings and Images:
+              name: Șiruri și Imagini
+            The Design Recipe:
+              name: Rețeta pentru design
+            Next Steps:
+              name: Pașii următori
         ECSPD-NexTech:
           stages:
             Introduction to PD:
               name: Introducere in Dezvoltarea Profesională
             Teaching Strategies:
               name: Strategii de predare
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Teaching Strategies:
+              name: Strategii de predare
         ECSPD-iZone:
           stages:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Teaching Strategies:
+              name: Strategii de predare
+          lessons:
             Introduction to PD:
               name: Introducere in Dezvoltarea Profesională
             Teaching Strategies:
@@ -767,6 +1286,17 @@ ro:
               name: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra:
               name: De ce informatica ține de algebră
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Course Overview:
+              name: Prezentare generală a cursului
+            Why Computer Science belongs in Algebra:
+              name: De ce informatica ține de algebră
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         algebraPD-iZone:
           description_audience: "[șir gol]"
           stages:
@@ -780,6 +1310,17 @@ ro:
               name: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra:
               name: De ce informatica ține de algebră
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Course Overview:
+              name: Prezentare generală a cursului
+            Why Computer Science belongs in Algebra:
+              name: De ce informatica ține de algebră
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         sciencePD-NexTech:
           description_audience: "[șir gol]"
           stages:
@@ -806,6 +1347,30 @@ ro:
               name: Utilizarea modelelor în clasă
             What to Expect:
               name: La ce să ne așteptăm
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            What to Expect:
+              name: La ce să ne așteptăm
+            Introduction to Complex Adaptive Systems:
+              name: Introducere în sisteme complexe de adaptare
+            Introduction to Computational Science:
+              name: Introducere în știința computațională
+            Using Computer Models in Science:
+              name: Utilizarea modelelor computerizate în știință
+            Using Models in the Classroom:
+              name: Utilizarea modelelor în clasă
+            Dispositions and Classroom Culture:
+              name: Dispoziții și cultura de clasă
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Gândirea computațională și cadrul pentru educația științifică
+                de la grădiniță la clasa a 12-a
+            Introduction to StarLogo Nova:
+              name: Introducere în StarLogo Nova
+            The Tutorial:
+              name: Tutorialul
+            Post-Survey:
+              name: Post-sondaj
         sciencePD-iZone:
           description_audience: "[șir gol]"
           stages:
@@ -832,6 +1397,30 @@ ro:
               name: Utilizarea modelelor în clasă
             What to Expect:
               name: La ce să ne așteptăm
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            What to Expect:
+              name: La ce să ne așteptăm
+            Introduction to Complex Adaptive Systems:
+              name: Introducere în sisteme complexe de adaptare
+            Introduction to Computational Science:
+              name: Introducere în știința computațională
+            Using Computer Models in Science:
+              name: Utilizarea modelelor computerizate în știință
+            Using Models in the Classroom:
+              name: Utilizarea modelelor în clasă
+            Dispositions and Classroom Culture:
+              name: Dispoziții și cultura de clasă
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Gândirea computațională și cadrul pentru educația științifică
+                de la grădiniță la clasa a 12-a
+            Introduction to StarLogo Nova:
+              name: Introducere în StarLogo Nova
+            The Tutorial:
+              name: Tutorialul
+            Post-Survey:
+              name: Post-sondaj
         sciencePD2:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -840,8 +1429,16 @@ ro:
               name: Bine ai venit!
             Wrap-Up:
               name: Revizuire
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
         sciencePD3:
           stages:
+            Welcome Back!:
+              name: Bine ați revenit!
+          lessons:
             Welcome Back!:
               name: Bine ați revenit!
         Testing:
@@ -873,6 +1470,23 @@ ro:
             The Need for DNS:
               name: Nevoia de DNS
           description_audience: "[șir gol]"
+          lessons:
+            The Internet:
+              name: Internetul
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Invent an Addressing Protocol:
+              name: Inventați un protocol de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+            Packets and Making a Reliable Internet:
+              name: Pachete și construcția unui internet fiabil
+            The Need for DNS:
+              name: Nevoia de DNS
+            DNS in the Real World:
+              name: DNS în lumea reală
+            Cracking the Code:
+              name: Spargerea codului
         algebraPD2a:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -894,6 +1508,23 @@ ro:
               name: Șiruri și Imagini
             The Design Recipe:
               name: Rețeta pentru design
+          lessons:
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Strings and Images:
+              name: Șiruri și Imagini
+            Defining Variables:
+              name: Definirea Variabilelor
+            The Design Recipe:
+              name: Rețeta pentru design
+            Booleans:
+              name: Booleene
+            Sam the Bat:
+              name: Liliacul Sam
+            Luigi's Pizza:
+              name: Pizza lui Luigi
+            Free Play:
+              name: Joc la liber
         allthethings:
           title: Toate lucrurile!
           description: Toate tipurile de nivel pentru testarea interfeței utilizatorului
@@ -944,6 +1575,51 @@ ro:
               name: Referință curriculum
             Sprite Lab:
               name: Laborator Sprite
+          lessons:
+            Jigsaw:
+              name: Puzzle
+            Maze:
+              name: Labirint
+            Artist:
+              name: Artist
+            Bee:
+              name: Albină
+            PlayLab:
+              name: Laborator de joacă
+            Farmer:
+              name: Fermier
+            Flappy:
+              name: Flappy
+            Bounce:
+              name: Săritură
+            Multi:
+              name: Multi
+            Match:
+              name: Meci
+            Odometer:
+              name: Kilometraj
+            Pixelation:
+              name: Pixelare
+            AppLab:
+              name: Laborator de Aplicații
+            Gamelab:
+              name: Laborator de joc
+            Studio:
+              name: Studio
+            Star wars:
+              name: Războiul stelelor
+            Minecraft:
+              name: Minecraft
+            Free Response:
+              name: Răspuns gratuit
+            Web Lab:
+              name: Laboratorul de web
+            Standalone video:
+              name: Videoclip independent
+            Curriculum Reference:
+              name: Referință curriculum
+            Sprite Lab:
+              name: Laborator Sprite
         algebraPD2b:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -971,6 +1647,29 @@ ro:
               name: Tabloul de bord al profesorilor
             Writing Contracts:
               name: Scrierea de contracte
+          lessons:
+            Course Overview:
+              name: Prezentare generală a cursului
+            Best Practices for Teaching Computer Science:
+              name: Cele mai bune practici în predarea informaticii
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Strings and Images:
+              name: Șiruri și Imagini
+            Writing Contracts:
+              name: Scrierea de contracte
+            Defining Variables:
+              name: Definirea Variabilelor
+            Defining Functions:
+              name: Definirea Funcțiilor
+            Booleans:
+              name: Booleene
+            'Eval: Conditionals':
+              name: 'Evaluare: Condiționale'
+            Next Steps:
+              name: Pașii următori
         cspfacilitator:
           description_audience: "[șir gol]"
           stages:
@@ -988,6 +1687,21 @@ ro:
               name: Widget de compresie text
             Welcome!:
               name: Bine ai venit!
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            Pixelation Widget:
+              name: Widget de pixelare
+            Text Compression Widget:
+              name: Widget de compresie text
+            Internet Simulator:
+              name: Simulator Internet
+            App Lab:
+              name: Laboratului Aplicației
+            Broadcast Lesson:
+              name: Lecţie de difuzare
+            Text Compression Lesson:
+              name: Lecţie de compresie text
         K5-OnlinePD:
           description_audience: "[șir gol]"
           stages:
@@ -1009,6 +1723,25 @@ ro:
               name: Pașii următori
             Planning:
               name: Planificare
+          lessons:
+            Computer Science Fundamentals:
+              name: Fundamentele informaticii
+            'Mastering the Basics: Sequencing':
+              name: 'Cum să stăpâniți elementele de bază: Secvențiere'
+            'Mastering the Basics: Loops':
+              name: 'Cum să stăpâniți elementele de bază: Bucle'
+            'Mastering the Basics: Conditionals':
+              name: 'Cum să stăpâniți elementele de bază: Condiționale'
+            'Mastering the Basics: Functions':
+              name: 'Cum să stăpâniți elementele de bază: Funcții'
+            'Mastering the Basics: Events':
+              name: 'Cum să stăpâniți elementele de bază: Evenimente'
+            Best Practices for Teaching Computer Science:
+              name: Cele mai bune practici în predarea informaticii
+            Planning:
+              name: Planificare
+            Next Steps:
+              name: Pașii următori
         ECSPD2:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1024,6 +1757,17 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Încheiere
         algebraPD2:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1035,11 +1779,23 @@ ro:
               name: Rețeta pentru design
             Welcome!:
               name: Bine ai venit!
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            The Design Recipe:
+              name: Rețeta pentru design
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         sciencePD2b:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
           description_audience: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -1055,9 +1811,19 @@ ro:
               name: Bine ai venit!
             Wrap-Up:
               name: Revizuire
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
         Equity-OnlinePD:
           description_audience: "[șir gol]"
           stages:
+            Creating Equitable Learning Environments:
+              name: Crearea mediilor de învăţare echitabile
+            Next Steps:
+              name: Pașii următori
+          lessons:
             Creating Equitable Learning Environments:
               name: Crearea mediilor de învăţare echitabile
             Next Steps:
@@ -1067,6 +1833,11 @@ ro:
           description_short: 'Etapa 2 online: Studiu de vara mixt'
           description_audience: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -1085,6 +1856,17 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Încheiere
         ECSPD2-NexTech:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1099,8 +1881,22 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Încheiere
         CSPPD2:
           stages:
+            Wrap Up and Next Steps:
+              name: Încheiere şi paşii următori
+          lessons:
             Wrap Up and Next Steps:
               name: Încheiere şi paşii următori
         odometer:
@@ -1125,6 +1921,25 @@ ro:
               name: Compunând Cântece
             The Big Event:
               name: Marele eveniment
+          lessons:
+            Happy Maps:
+              name: Hărţi Fericite
+            Move it, Move it:
+              name: Mişcă-te, Mişcă-te
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Getting Loopy:
+              name: Transformând în Buclă
+            The Big Event:
+              name: Marele eveniment
+            Binary Bracelets:
+              name: Brăţări Binare
+            Songwriting:
+              name: Compunând Cântece
         vigenere:
           description_audience: "[șir gol]"
         algebraPD3a:
@@ -1132,6 +1947,9 @@ ro:
         sciencePD3_pre1:
           description_audience: "[șir gol]"
           stages:
+            Welcome Back!:
+              name: Bine ați revenit!
+          lessons:
             Welcome Back!:
               name: Bine ați revenit!
         frequency_analysis:
@@ -1143,9 +1961,17 @@ ro:
               name: Prezentări generale ale lecției
             Teaching Strategies:
               name: Strategii de predare
+          lessons:
+            Teaching Strategies:
+              name: Strategii de predare
+            Lesson Overviews:
+              name: Prezentări generale ale lecției
         ECSPD3-Unit3:
           description_audience: "[șir gol]"
           stages:
+            Teaching Strategies:
+              name: Strategii de predare
+          lessons:
             Teaching Strategies:
               name: Strategii de predare
         ECSPD3-Unit4:
@@ -1153,14 +1979,23 @@ ro:
           stages:
             Teaching Strategies:
               name: Strategii de predare
+          lessons:
+            Teaching Strategies:
+              name: Strategii de predare
         ECSPD3-Unit5:
           description_audience: "[șir gol]"
           stages:
             Unit 5 Overview:
               name: Prezentare generală - Lecția 5
+          lessons:
+            Unit 5 Overview:
+              name: Prezentare generală - Lecția 5
         ECSPD3-Unit6:
           description_audience: "[șir gol]"
           stages:
+            Unit 6 Overview:
+              name: Prezentare generală - Lecția 6
+          lessons:
             Unit 6 Overview:
               name: Prezentare generală - Lecția 6
         cspunit4draft:
@@ -1183,6 +2018,15 @@ ro:
               name: Suport predare - Lecții 17-20
             Teaching Support - Lessons 4-7:
               name: Suport predare - Lecții 4-7
+          lessons:
+            Teaching Support - Lessons 1-3:
+              name: Suport predare - Lecții 1-3
+            Teaching Support - Lessons 4-7:
+              name: Suport predare - Lecții 4-7
+            Teaching Support - Lessons 13-16:
+              name: Suport predare - Lecții 13-16
+            Teaching Support - Lessons 17-20:
+              name: Suport predare - Lecții 17-20
         CSPPD3-Unit2:
           description_audience: "[șir gol]"
           stages:
@@ -1190,6 +2034,11 @@ ro:
               name: Prezentarea generală a provocării
             Unit 2 Overview:
               name: Prezentare generală - Lecția 2
+          lessons:
+            Unit 2 Overview:
+              name: Prezentare generală - Lecția 2
+            Challenge Overview:
+              name: Prezentarea generală a provocării
         Special Fun:
           description_audience: Vârste 10 - 18 ani
           description: "[șir gol]"
@@ -1204,12 +2053,20 @@ ro:
           stages:
             Ice Age Play Lab:
               name: Laboratorul Joaca Ice Age
+          lessons:
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
         CSPPD3-Unit3:
           stages:
             Challenge Overview:
               name: Prezentarea generală a provocării
             Unit 3 Overview:
               name: Prezentare generală - Lecția 3
+          lessons:
+            Unit 3 Overview:
+              name: Prezentare generală - Lecția 3
+            Challenge Overview:
+              name: Prezentarea generală a provocării
         cspunit3temp:
           description_short: Unitatea aceasta este o versiune pilot care nu mai este
             suportata. Poti gasi noua unitate la code.org/educate/csp.
@@ -1223,8 +2080,20 @@ ro:
               name: Matrice de prelucrare
             While Loops:
               name: Repetiții While
+          lessons:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
         CSP-Unit3-Support:
           stages:
+            Unit 3 Overview:
+              name: Prezentare generală - Lecția 3
+          lessons:
             Unit 3 Overview:
               name: Prezentare generală - Lecția 3
         gumball:
@@ -1232,6 +2101,9 @@ ro:
           description: Creeaza o poveste sau un joc cu Laboratorul Joaca Gumball!
           description_short: Creeaza o poveste sau un joc cu Laboratorul Joaca Gumball!
           stages:
+            Gumball Play Lab:
+              name: Laboratorul Joaca Gumball
+          lessons:
             Gumball Play Lab:
               name: Laboratorul Joaca Gumball
         starwars:
@@ -1244,6 +2116,9 @@ ro:
           stages:
             Hour of Code 2015:
               name: Ora de cod 2015
+          lessons:
+            Hour of Code 2015:
+              name: Ora de cod 2015
         starwarsblocks:
           title: 'Star Wars: Programarea unei galaxii'
           description: Învață să programezi droizi si creează-ți propriul joc Star
@@ -1252,6 +2127,9 @@ ro:
             Star Wars într-o galaxie foarte îndepărtată.
           description_audience: "[șir gol]"
           stages:
+            Hour of Code 2015:
+              name: Ora de cod 2015
+          lessons:
             Hour of Code 2015:
               name: Ora de cod 2015
         mc:
@@ -1263,15 +2141,26 @@ ro:
             Hour of Code 2015:
               name: Ora de cod 2015
           description_audience: "[șir gol]"
+          lessons:
+            Hour of Code 2015:
+              name: Ora de cod 2015
         oceans:
           description_audience: "[șir gol]"
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
               name: Prezentarea generală a provocării
+          lessons:
+            Challenge Overview:
+              name: Prezentarea generală a provocării
         ScienceP3OLPT3:
           description_audience: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -1292,6 +2181,13 @@ ro:
               name: Prezentare generală a Capitolului 1
             Chapter 2 Overview:
               name: Prezentare generală a Capitolului 2
+          lessons:
+            Chapter 1 Overview:
+              name: Prezentare generală a Capitolului 1
+            Chapter 2 Overview:
+              name: Prezentare generală a Capitolului 2
+            Challenge Overview:
+              name: Prezentarea generală a provocării
         cspunit6draft:
           description_audience: "[șir gol]"
         CSPPD3-Unit5:
@@ -1300,6 +2196,11 @@ ro:
               name: Prezentarea generală a provocării
             Unit 5 Overview:
               name: Prezentare generală - Lecția 5
+          lessons:
+            Unit 5 Overview:
+              name: Prezentare generală - Lecția 5
+            Challenge Overview:
+              name: Prezentarea generală a provocării
         cspunit6:
           description_audience: "[șir gol]"
         AlgebraA:
@@ -1317,6 +2218,19 @@ ro:
               name: 'Evaluare: Scrierea de contracte'
             'Unplugged: Contracts':
               name: 'Fără calculator: Contracte'
+            'Unplugged: The Design Recipe':
+              name: 'Fără calculator: Rețeta pentru design'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Calcul: Blocuri de evaluare'
+            'Eval: Strings and Images':
+              name: 'Evaluare: Șiruri și imagini'
+            'Unplugged: Contracts':
+              name: 'Fără calculator: Contracte'
+            'Eval: Writing Contracts':
+              name: 'Evaluare: Scrierea de contracte'
+            'Calc: Defining Variables':
+              name: 'Calcul: Definirea variabilelor'
             'Unplugged: The Design Recipe':
               name: 'Fără calculator: Rețeta pentru design'
         AlgebraB:
@@ -1347,6 +2261,29 @@ ro:
               name: 'Fără calculator: Condiționale și funcții pe porțiuni'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Fără calculator: Jocuri video și planuri de coordonate'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Fără calculator: Jocuri video și planuri de coordonate'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Laboratorul de joc: Definirea de variabile (jocul mare)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Laboratorul de joc: Animație (jocul mare)'
+            'Unplugged: Booleans':
+              name: 'Fără calculator: booleene'
+            'Eval: Boolean Operators':
+              name: 'Evaluare: Operatorii booleeni'
+            'Play Lab: Booleans':
+              name: 'Laboratorul de joc: Booleene'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Laboratorul de joc: Boolean (jocul mare)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Fără calculator: Condiționale și funcții pe porțiuni'
+            'Eval: Conditionals':
+              name: 'Evaluare: Condiționale'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Fără calculator: Detectarea de coliziuni și formula pentru distanță'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Laboratorul de joc: Detectarea de coliziuni (jocul mare)'
         algebraPD1:
           description_audience: "[șir gol]"
           stages:
@@ -1360,6 +2297,17 @@ ro:
               name: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra:
               name: De ce informatica ține de algebră
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Course Overview:
+              name: Prezentare generală a cursului
+            Why Computer Science belongs in Algebra:
+              name: De ce informatica ține de algebră
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         algebraPD3c:
           description_audience: "[șir gol]"
         csp1-2017:
@@ -1392,6 +2340,31 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Personal Innovations:
+              name: Inovații personale
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+            Number Systems:
+              name: Sisteme de numere
+            Binary Numbers:
+              name: Numerele binare
+            Sending Numbers:
+              name: Transmiterea numerelor
+            The Internet:
+              name: Internetul
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+            Packets and Making a Reliable Internet:
+              name: Pachete și construcția unui internet fiabil
+            The Need for DNS:
+              name: Nevoia de DNS
+            Post-Course Survey:
+              name: Chestionar după curs
         csp2-2017:
           description_audience: "[șir gol]"
           stages:
@@ -1408,6 +2381,17 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Bytes and File Sizes:
+              name: Octeți și dimensiunile fișierelor
+            Encoding B&W Images:
+              name: Codificarea imaginilor în alb și negru
+            Encoding Color Images:
+              name: Codificarea imaginilor color
+            Lossy Compression and File Formats:
+              name: Compresie lossy şi formatare fișiere
+            Post-Course Survey:
+              name: Chestionar după curs
         csp3-2017:
           description_short: Invata bazele programarii JavaScript printr-un design
             usor folosind desenul.
@@ -1430,6 +2414,17 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
+            Post-Course Survey:
+              name: Chestionar după curs
         csp4-2017:
           description_audience: "[șir gol]"
           stages:
@@ -1446,6 +2441,11 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Simple Encryption:
+              name: Criptare simplă
+            Post-Course Survey:
+              name: Chestionar după curs
         csp5-2017:
           description_audience: "[șir gol]"
           stages:
@@ -1482,6 +2482,21 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
+            Post-Course Survey:
+              name: Chestionar după curs
         csp6:
           description_audience: "[șir gol]"
         CSDU3-Draft:
@@ -1518,6 +2533,30 @@ ro:
               name: Utilizarea modelelor în clasă
             What to Expect:
               name: La ce să ne așteptăm
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            What to Expect:
+              name: La ce să ne așteptăm
+            Introduction to Complex Adaptive Systems:
+              name: Introducere în sisteme complexe de adaptare
+            Introduction to Computational Science:
+              name: Introducere în știința computațională
+            Using Computer Models in Science:
+              name: Utilizarea modelelor computerizate în știință
+            Using Models in the Classroom:
+              name: Utilizarea modelelor în clasă
+            Dispositions and Classroom Culture:
+              name: Dispoziții și cultura de clasă
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Gândirea computațională și cadrul pentru educația științifică
+                de la grădiniță la clasa a 12-a
+            Introduction to StarLogo Nova:
+              name: Introducere în StarLogo Nova
+            The Tutorial:
+              name: Tutorialul
+            Post-Survey:
+              name: Post-sondaj
         TEMP CSD Unit 3:
           description: "[șir gol]"
           description_short: Programare
@@ -1527,6 +2566,9 @@ ro:
         ECSPD1:
           description_audience: "[șir gol]"
           stages:
+            Wrap Up:
+              name: Încheiere
+          lessons:
             Wrap Up:
               name: Încheiere
         algebraFacilitator:
@@ -1540,6 +2582,15 @@ ro:
               name: Tabloul de bord al profesorilor
             Why Computer Science belongs in Algebra:
               name: De ce informatica ține de algebră
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            Why Computer Science belongs in Algebra:
+              name: De ce informatica ține de algebră
+            Evaluation Blocks:
+              name: Blocuri de evaluare
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         sciencePD1:
           description_audience: "[șir gol]"
           stages:
@@ -1566,6 +2617,30 @@ ro:
               name: Utilizarea modelelor în clasă
             What to Expect:
               name: La ce să ne așteptăm
+          lessons:
+            Introduction to PD:
+              name: Introducere in Dezvoltarea Profesională
+            What to Expect:
+              name: La ce să ne așteptăm
+            Introduction to Complex Adaptive Systems:
+              name: Introducere în sisteme complexe de adaptare
+            Introduction to Computational Science:
+              name: Introducere în știința computațională
+            Using Computer Models in Science:
+              name: Utilizarea modelelor computerizate în știință
+            Using Models in the Classroom:
+              name: Utilizarea modelelor în clasă
+            Dispositions and Classroom Culture:
+              name: Dispoziții și cultura de clasă
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Gândirea computațională și cadrul pentru educația științifică
+                de la grădiniță la clasa a 12-a
+            Introduction to StarLogo Nova:
+              name: Introducere în StarLogo Nova
+            The Tutorial:
+              name: Tutorialul
+            Post-Survey:
+              name: Post-sondaj
         cspoptional:
           description_audience: "[șir gol]"
         cspunit1-support:
@@ -1581,6 +2656,9 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
         test-teaching-ap-cs-unit-1:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -1594,6 +2672,9 @@ ro:
               display_name: Practicile de predare
         allthehiddenthings:
           stages:
+            Game Lab:
+              name: Game Lab
+          lessons:
             Game Lab:
               name: Game Lab
         cspunit1-support-test:
@@ -1618,6 +2699,9 @@ ro:
           stages:
             Artist Functions:
               name: Funcţii de Artist
+          lessons:
+            Artist Functions:
+              name: Funcţii de Artist
         artistExemplar:
           description_audience: Vârste 8 - 18 ani
         teachercon:
@@ -1640,12 +2724,32 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Lesson 1,4:
+              name: Lecția 1,4
+            Lesson 1,6:
+              name: Lecția 1,6
+            Lesson 1,9:
+              name: Lecția 1,9
+            Lesson 1,10:
+              name: Lecția 1,10
+            Lesson 1,11:
+              name: Lecția 1,11
+            Lesson 2,2:
+              name: Lecția 2,2
+            Lesson 2,3:
+              name: Lecția 2,3
+            Lesson 2,10:
+              name: Lecția 2,10
         kinderTest:
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
           stages:
+            'Bee: Conditionals':
+              name: 'Albină: Condiţionale'
+          lessons:
             'Bee: Conditionals':
               name: 'Albină: Condiţionale'
         gradeKinder:
@@ -1717,6 +2821,17 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Încheiere
         ecs-unit2:
           description_audience: "[șir gol]"
           stages:
@@ -1724,9 +2839,17 @@ ro:
               name: Prezentări generale ale lecției
             Teaching Strategies:
               name: Strategii de predare
+          lessons:
+            Teaching Strategies:
+              name: Strategii de predare
+            Lesson Overviews:
+              name: Prezentări generale ale lecției
         ecs-unit3:
           description_audience: "[șir gol]"
           stages:
+            Teaching Strategies:
+              name: Strategii de predare
+          lessons:
             Teaching Strategies:
               name: Strategii de predare
         ecs-unit4:
@@ -1734,14 +2857,23 @@ ro:
           stages:
             Teaching Strategies:
               name: Strategii de predare
+          lessons:
+            Teaching Strategies:
+              name: Strategii de predare
         ecs-unit5:
           description_audience: "[șir gol]"
           stages:
             Unit 5 Overview:
               name: Prezentare generală - Lecția 5
+          lessons:
+            Unit 5 Overview:
+              name: Prezentare generală - Lecția 5
         ecs-unit6:
           description_audience: "[șir gol]"
           stages:
+            Unit 6 Overview:
+              name: Prezentare generală - Lecția 6
+          lessons:
             Unit 6 Overview:
               name: Prezentare generală - Lecția 6
         grade3:
@@ -1780,6 +2912,23 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Lesson 1,4:
+              name: Lecția 1,4
+            Lesson 1,6:
+              name: Lecția 1,6
+            Lesson 1,9:
+              name: Lecția 1,9
+            Lesson 1,10:
+              name: Lecția 1,10
+            Lesson 1,11:
+              name: Lecția 1,11
+            Lesson 2,2:
+              name: Lecția 2,2
+            Lesson 2,3:
+              name: Lecția 2,3
+            Lesson 2,10:
+              name: Lecția 2,10
         csd3-2017:
           description_short: Programare
           description_audience: "[șir gol]"
@@ -1801,6 +2950,15 @@ ro:
               display_name: Sondaj
             csd_survey:
               display_name: Chestionar după curs
+          lessons:
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         grade2:
           stages:
             Flappy:
@@ -1841,6 +2999,27 @@ ro:
               name: Variabile
             While Loops:
               name: Repetiții While
+          lessons:
+            Events:
+              name: Evenimente
+            Loops:
+              name: Bucle
+            Nested Loops:
+              name: Repetiții imbricate
+            Conditionals:
+              name: Condiţionale
+            While Loops:
+              name: Repetiții While
+            Functions:
+              name: Funcţii
+            Variables:
+              name: Variabile
+            For Loops:
+              name: Bucle Pentru
+            Functions with Parameters:
+              name: Funcții cu Parametrii
+            Binary:
+              name: Binar
         algebrapdnext:
           description_audience: "[șir gol]"
           stages:
@@ -1850,6 +3029,13 @@ ro:
               name: Rețeta pentru design
             Welcome!:
               name: Bine ai venit!
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            The Design Recipe:
+              name: Rețeta pentru design
+            Teacher Dashboard:
+              name: Tabloul de bord al profesorilor
         csp-pre-survey:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -1914,6 +3100,9 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Unit 5 Overview:
+              name: Prezentare generală - Lecția 5
         csp1-support:
           description_audience: "[șir gol]"
           stages:
@@ -1934,12 +3123,26 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Lecții 2-3: Mesaje Binare'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Lecții 4-6: Codificarea și transmiterea numerelor'
+            'Lesson 7: Encoding and Sending Text':
+              name: 'Lecția7: Codificarea și transmiterea de text'
+            'Lesson 9: Internet Addressing':
+              name: 'Lecţiile 9: Adresare în internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Lecții 10 - 11: Routere, redundanță și pachete'
         basketball:
           title: Realizeaza un joc de baschet
           description_audience: "[șir gol]"
           description_short: Realizeaza un joc de baschet
           description: Realizeaza un joc de baschet
           stages:
+            Bounce:
+              name: Săritură
+          lessons:
             Bounce:
               name: Săritură
         sample-csp5:
@@ -1949,6 +3152,9 @@ ro:
         hoc-encryption:
           description_audience: "[șir gol]"
           stages:
+            Simple Encryption:
+              name: Criptare simplă
+          lessons:
             Simple Encryption:
               name: Criptare simplă
         fesbinary:
@@ -1976,6 +3182,9 @@ ro:
               display_name: 'Capitolul 2: Styling şi CSS'
             csd_survey:
               display_name: Chestionar după curs
+          lessons:
+            Lists:
+              name: Liste
         csp2-support:
           description_audience: "[șir gol]"
           stages:
@@ -1988,6 +3197,9 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Unit 2 Overview:
+              name: Prezentare generală - Lecția 2
         csd4-2017:
           description_audience: "[șir gol]"
           lesson_groups:
@@ -2007,9 +3219,15 @@ ro:
           stages:
             Minecraft Hour of Code Designer:
               name: Minecraft Designer Hour of Code
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: Minecraft Designer Hour of Code
         flappy-impact-study:
           description_audience: "[șir gol]"
           stages:
+            Flappy Code:
+              name: Codul Flappy
+          lessons:
             Flappy Code:
               name: Codul Flappy
         coursea-draft:
@@ -2019,9 +3237,19 @@ ro:
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
             Going Places Safely:
               name: Mergând în locuri în siguranţă
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
         courseb-draft:
           description_audience: "[șir gol]"
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
             Your Digital Footprint:
@@ -2037,6 +3265,13 @@ ro:
               name: Amprenta ta Digitală
             Building a Foundation:
               name: Construirea unei Fundaţii
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+            Binary Bracelets:
+              name: Brăţări Binare
         coursed-draft:
           description_audience: "[șir gol]"
           stages:
@@ -2052,6 +3287,19 @@ ro:
               name: Repetiții imbricate
             Introduction:
               name: Introducere
+          lessons:
+            Introduction:
+              name: Introducere
+            Nested Loops:
+              name: Repetiții imbricate
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
         coursee-draft:
           description_audience: "[șir gol]"
           stages:
@@ -2070,6 +3318,15 @@ ro:
               display_name: Conţinut
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Introduction:
+              name: Introducere
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         coursef-draft:
           description_audience: "[șir gol]"
           stages:
@@ -2088,6 +3345,17 @@ ro:
           lesson_groups:
             content:
               display_name: Conţinut
+          lessons:
+            Introduction:
+              name: Introducere
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Songwriting with Parameters:
+              name: Compoziții muzicale cu parametri
         classic-hoc-impact-study:
           description_audience: "[șir gol]"
           description_short: Încercați elemente de bază în informatică cu multe personaje
@@ -2102,6 +3370,9 @@ ro:
           stages:
             Hour of Code 2013:
               name: Ora de Programare 2013
+          lessons:
+            Hour of Code 2013:
+              name: Ora de Programare 2013
         sports:
           title: Propgrameaza propriul joc sport
           description_audience: "[șir gol]"
@@ -2110,12 +3381,20 @@ ro:
           stages:
             Sports:
               name: Sporturi
+          lessons:
+            Sports:
+              name: Sporturi
         2016_sciencePD-phase2b:
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -2130,12 +3409,20 @@ ro:
               name: Bine ai venit!
             Wrap-Up:
               name: Revizuire
+          lessons:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
         sciencepd3-2016:
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
           stages:
+            Welcome Back!:
+              name: Bine ați revenit!
+          lessons:
             Welcome Back!:
               name: Bine ați revenit!
         csp3-support:
@@ -2150,6 +3437,9 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Unit 3 Overview:
+              name: Prezentare generală - Lecția 3
         csdgraveyard:
           title: "[șir gol]"
           description_audience: "[șir gol]"
@@ -2170,6 +3460,11 @@ ro:
         sciencepd4:
           description_audience: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -2198,9 +3493,17 @@ ro:
           lesson_groups:
             content:
               display_name: Conţinut
+          lessons:
+            Binary:
+              name: Binar
         sciencepd5:
           description_audience: "[șir gol]"
           stages:
+            Welcome!:
+              name: Bine ai venit!
+            Wrap-Up:
+              name: Revizuire
+          lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
@@ -2217,6 +3520,9 @@ ro:
               display_name: Conţinut
             practice:
               display_name: Practicile de predare
+          lessons:
+            Unit 5 Overview:
+              name: Prezentare generală - Lecția 5
         csp6-support:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2230,6 +3536,9 @@ ro:
               display_name: Conţinut
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Post-Course Survey:
+              name: Chestionar după curs
         unit6-csd-draft:
           title: "[șir gol]"
           description_audience: "[șir gol]"
@@ -2252,8 +3561,14 @@ ro:
           lesson_groups:
             csd6_1:
               display_name: 'Capitolul 1: Programare cu hardware'
+          lessons:
+            Functions with Parameters:
+              name: Funcții cu Parametrii
         workshop-gamelab:
           stages:
+            Introduction:
+              name: Introducere
+          lessons:
             Introduction:
               name: Introducere
         csd5-draft:
@@ -2276,6 +3591,9 @@ ro:
           stages:
             Introduction:
               name: Introducere
+          lessons:
+            Introduction:
+              name: Introducere
         coursee-ramp:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2287,6 +3605,13 @@ ro:
               name: Condiţionale
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmi din viaţa reală: cursa de zaruri'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Algoritmi din viaţa reală: cursa de zaruri'
+            Introduction:
+              name: Introducere
+            Conditionals:
+              name: Condiţionale
         csd6-2017:
           description_audience: "[șir gol]"
           stages:
@@ -2345,6 +3670,11 @@ ro:
               name: Viteza
             Functions:
               name: Funcţii
+          lessons:
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         csd1-old:
           description_audience: "[șir gol]"
         csd2-draft:
@@ -2386,6 +3716,11 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Introduction:
+              name: Introducere
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
         csppostsurvey-staging:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2406,6 +3741,9 @@ ro:
               name: Împerecheaţi dispozitivele
           description_audience: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Peer Review:
+              name: Împerecheaţi dispozitivele
         artist-and-bb8:
           stages:
             Ice Age Play Lab:
@@ -2416,6 +3754,11 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Bounce:
+              name: Săritură
         coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2446,6 +3789,11 @@ ro:
           title: Curs A
           assignment_family_title: Curs A
           description_short: O introducere în informatică pentru preșcolari.
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2454,12 +3802,24 @@ ro:
           assignment_family_title: Curs B
           description_short: O introducere în informatică pentru preșcolari. (Similar
             cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
           title: Curs C
           assignment_family_title: Curs C
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+            Binary Bracelets:
+              name: Brăţări Binare
         coursed-2017:
           stages:
             Nested Loops:
@@ -2468,6 +3828,19 @@ ro:
           assignment_family_title: Curs D
           description_short: Acoperiți rapid conceptele din cursul C, apoi mergeți
             mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
+          lessons:
+            Introduction:
+              name: Introducere
+            Nested Loops:
+              name: Repetiții imbricate
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -2493,6 +3866,19 @@ ro:
               display_name: Conținut curs E
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Nested Loops:
+              name: Repetiții imbricate
+            Introduction:
+              name: Introducere
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         coursef-2017:
           stages:
             Building a Foundation:
@@ -2506,8 +3892,24 @@ ro:
               display_name: Avansare la Cursul F (Opțional)
             csf_f_2:
               display_name: Conținut curs F
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Introduction:
+              name: Introducere
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Songwriting with Parameters:
+              name: Compoziții muzicale cu parametri
         csdnovice:
           stages:
+            Wrap Up:
+              name: Încheiere
+          lessons:
             Wrap Up:
               name: Încheiere
         csp-explore-task:
@@ -2529,6 +3931,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csp1-dlp:
           lesson_groups:
             required:
@@ -2618,8 +4023,20 @@ ro:
           lesson_groups:
             content:
               display_name: Conţinut
+          lessons:
+            Introduction:
+              name: Introducere
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Nested Loops:
+              name: Repetiții imbricate
         pre-express-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Spelling Bee:
+              name: Albina de Ortografie
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
             Spelling Bee:
@@ -2656,6 +4073,15 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
         csd4-draft:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2693,6 +4119,15 @@ ro:
               display_name: Conținut curs E
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         new-d:
           stages:
             Introduction:
@@ -2714,6 +4149,21 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Introduction:
+              name: Introducere
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
         csp3-a:
           description_audience: "[șir gol]"
         new-express:
@@ -2730,6 +4180,13 @@ ro:
           lesson_groups:
             content:
               display_name: Conţinut
+          lessons:
+            Introduction:
+              name: Introducere
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Nested Loops:
+              name: Repetiții imbricate
         new-stages-sept-2017:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2754,6 +4211,15 @@ ro:
               display_name: Conținut curs E
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         new-f:
           stages:
             Building a Foundation:
@@ -2774,6 +4240,17 @@ ro:
               display_name: Avansare la Cursul F (Opțional)
             csf_f_2:
               display_name: Conținut curs F
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Songwriting with Parameters:
+              name: Compoziții muzicale cu parametri
         csd5-old:
           description_audience: "[șir gol]"
           lesson_groups:
@@ -2822,6 +4299,15 @@ ro:
           lesson_groups:
             cspAssessment:
               display_name: Evaluare capitol
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
         pwc:
           stages:
             Personal Innovations:
@@ -2830,6 +4316,11 @@ ro:
               name: Criptare simplă
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
+          lessons:
+            Personal Innovations:
+              name: Inovații personale
+            Simple Encryption:
+              name: Criptare simplă
         allthesurveys:
           description_audience: "[șir gol]"
           description: "[șir gol]"
@@ -2842,6 +4333,9 @@ ro:
             Minecraft Hour of Code:
               name: Ora de Programare Minecraft
           description_audience: "[șir gol]"
+          lessons:
+            Minecraft Hour of Code:
+              name: Ora de Programare Minecraft
         applab-intro-staging:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2854,6 +4348,9 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Post-Course Survey:
+              name: Chestionar după curs
         csp-create-2017:
           stages:
             Post-Course Survey:
@@ -2862,6 +4359,9 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Post-Course Survey:
+              name: Chestionar după curs
         csp3-reovery:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2911,6 +4411,19 @@ ro:
               display_name: Conținut curs E
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Nested Loops:
+              name: Repetiții imbricate
+            Introduction:
+              name: Introducere
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         course-f-2018:
           stages:
             Building a Foundation:
@@ -2933,6 +4446,19 @@ ro:
               display_name: Avansare la Cursul F (Opțional)
             csf_f_2:
               display_name: Conținut curs F
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Introduction:
+              name: Introducere
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Songwriting with Parameters:
+              name: Compoziții muzicale cu parametri
         csd6-old:
           stages:
             Lists:
@@ -2945,6 +4471,11 @@ ro:
           lesson_groups:
             csd6_1:
               display_name: 'Capitolul 1: Programare cu hardware'
+          lessons:
+            Lists:
+              name: Liste
+            For Loops:
+              name: Bucle Pentru
         unembeddedlevels:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2972,6 +4503,15 @@ ro:
               display_name: 'Capitolul 2: Cum facem jocuri'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         textbook:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -3005,6 +4545,15 @@ ro:
               display_name: 'Capitolul 2: Cum facem jocuri'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         csd2-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3017,6 +4566,9 @@ ro:
               display_name: 'Capitolul 2: Styling şi CSS'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Lists:
+              name: Liste
         coursea-2018:
           assignment_family_title: Curs A
           description_short: O introducere în informatică pentru preșcolari.
@@ -3051,6 +4603,11 @@ ro:
               description_student: "[șir gol]"
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie şi marele proiect
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
         express-2018:
           assignment_family_title: Curs Expres
           stages:
@@ -3188,6 +4745,27 @@ ro:
               name: Programare de releu
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
+          lessons:
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
+            Relay Programming:
+              name: Programare de releu
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Binary Bracelets:
+              name: Brăţări Binare
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         courseb-2018:
           assignment_family_title: Curs B
           stages:
@@ -3234,6 +4812,13 @@ ro:
               description_teacher: "[șir gol]"
             Move It, Move It:
               name: Mutaţi-l, mutați-l
+          lessons:
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         coursed-2018:
           assignment_family_title: Curs D
           stages:
@@ -3301,6 +4886,19 @@ ro:
               name: Programare pe Hârtie Milimetrică
             Relay Programming:
               name: Programare de releu
+          lessons:
+            Relay Programming:
+              name: Programare de releu
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
         jr-test:
           title: "[șir gol]"
           description_audience: "[șir gol]"
@@ -3365,6 +4963,13 @@ ro:
               name: Brăţări Binare
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+            Binary Bracelets:
+              name: Brăţări Binare
         csd6-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3423,6 +5028,9 @@ ro:
               display_name: 'Capitolul 1: Programare cu hardware'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Functions with Parameters:
+              name: Funcții cu Parametrii
         coursee-2018:
           assignment_family_title: Curs E
           stages:
@@ -3477,6 +5085,19 @@ ro:
               display_name: Conținut curs E
             extra_course_content:
               display_name: Conținut curs suplimentar
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Nested Loops:
+              name: Repetiții imbricate
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Conditionals:
+              name: Condiţionale
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         coursef-2018:
           assignment_family_title: Curs F
           description_short: Învățați toate conceptele din fundamentele informaticii
@@ -3531,6 +5152,15 @@ ro:
               display_name: Avansare la Cursul F (Opțional)
             csf_f_2:
               display_name: Conținut curs F
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
         csp1-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3599,6 +5229,29 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Personal Innovations:
+              name: Inovații personale
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+            Number Systems:
+              name: Sisteme de numere
+            Binary Numbers:
+              name: Numerele binare
+            Sending Numbers:
+              name: Transmiterea numerelor
+            The Internet:
+              name: Internetul
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+            Packets and Making a Reliable Internet:
+              name: Pachete și construcția unui internet fiabil
+            The Need for DNS:
+              name: Nevoia de DNS
         csd1-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3707,6 +5360,13 @@ ro:
               display_name: 'Unitatea 2: Informaţii digitale'
             cspAssessment:
               display_name: Evaluare capitol
+          lessons:
+            Bytes and File Sizes:
+              name: Octeți și dimensiunile fișierelor
+            Encoding B&W Images:
+              name: Codificarea imaginilor în alb și negru
+            Encoding Color Images:
+              name: Codificarea imaginilor color
         csp3-2018:
           description_short: Invata bazele programarii JavaScript printr-un design
             usor folosind desenul.
@@ -3759,6 +5419,15 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
         csp-explore-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3831,6 +5500,9 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Simple Encryption:
+              name: Criptare simplă
         csp5-2018:
           description_audience: "[șir gol]"
           stages:
@@ -3915,6 +5587,19 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
         csppostap-2018:
           description_audience: "[șir gol]"
           stages:
@@ -4039,6 +5724,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csd-apprentice-18:
           stages:
             Wrap Up:
@@ -4048,6 +5736,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csp-novice-18:
           stages:
             Wrap Up:
@@ -4057,6 +5748,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csp-apprentice-18:
           stages:
             Wrap Up:
@@ -4066,6 +5760,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4120,6 +5817,15 @@ ro:
               name: Amprenta ta Digitală
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie şi marele proiect
+          lessons:
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Spelling Bee:
+              name: Albina de Ortografie
         spritelab-validated:
           title: "[șir gol]"
           description_audience: "[șir gol]"
@@ -4166,6 +5872,9 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Artist:
+              name: Artist
         frozen-2018-test:
           description: "[șir gol]"
           description_short: "[șir gol]"
@@ -4175,6 +5884,9 @@ ro:
               name: Artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+          lessons:
+            Artist:
+              name: Artist
         dance:
           stages:
             Dance Party:
@@ -4183,6 +5895,9 @@ ro:
           description_audience: "[șir gol]"
           description_short: Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara și încă 25!
+          lessons:
+            Dance Party:
+              name: Petrecere dansantă
         frozen-2018-test-b:
           description: "[șir gol]"
           description_short: "[șir gol]"
@@ -4192,6 +5907,9 @@ ro:
               name: Artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+          lessons:
+            Artist:
+              name: Artist
         aquatic:
           description_audience: "[șir gol]"
         sconyers:
@@ -4297,6 +6015,15 @@ ro:
               display_name: Internet
             csf_digcit:
               display_name: Cetățenia Digitală
+          lessons:
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         dance-low:
           stages:
             Dance Party:
@@ -4341,6 +6068,21 @@ ro:
               display_name: Binar
             csf_digcit:
               display_name: Cetățenia Digitală
+          lessons:
+            Relay Programming:
+              name: Programare de releu
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            Dance Party:
+              name: Petrecere dansantă
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -4399,6 +6141,9 @@ ro:
               display_name: Repetiții imbricate
             csf_functions:
               display_name: Funcţii
+          lessons:
+            Conditionals:
+              name: Condiţionale
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4561,6 +6306,9 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+          lessons:
+            Dance Party:
+              name: Petrecere dansantă
         csd1-2019:
           description_audience: "[șir gol]"
           stages:
@@ -4612,6 +6360,9 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Binary Bracelets:
+              name: Brăţări Binare
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -4644,6 +6395,11 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4681,6 +6437,11 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4739,6 +6500,11 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Spelling Bee:
+              name: Albina de Ortografie
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4746,6 +6512,9 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         dani-test-script:
           title: "[șir gol]"
           description_audience: "[șir gol]"
@@ -4763,6 +6532,9 @@ ro:
               display_name: 'Capitolul 2: Styling şi CSS'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Lists:
+              name: Liste
         csd3-2019:
           description_short: Programare
           description_audience: "[șir gol]"
@@ -4788,6 +6560,15 @@ ro:
               display_name: 'Capitolul 2: Cum facem jocuri'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         csd4-2019:
           description_audience: "[șir gol]"
           lesson_groups:
@@ -4879,6 +6660,9 @@ ro:
               display_name: 'Capitolul 1: Programare cu hardware'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Functions with Parameters:
+              name: Funcții cu Parametrii
         csp4-pilot:
           stages:
             Surveys:
@@ -4963,6 +6747,29 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Personal Innovations:
+              name: Inovații personale
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+            Number Systems:
+              name: Sisteme de numere
+            Binary Numbers:
+              name: Numerele binare
+            Sending Numbers:
+              name: Transmiterea numerelor
+            The Internet:
+              name: Internetul
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+            Packets and Making a Reliable Internet:
+              name: Pachete și construcția unui internet fiabil
+            The Need for DNS:
+              name: Nevoia de DNS
         csp2-2019:
           description_audience: "[șir gol]"
           stages:
@@ -4997,6 +6804,13 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Bytes and File Sizes:
+              name: Octeți și dimensiunile fișierelor
+            Encoding B&W Images:
+              name: Codificarea imaginilor în alb și negru
+            Encoding Color Images:
+              name: Codificarea imaginilor color
         csp3-2019:
           description_short: Invata bazele programarii JavaScript printr-un design
             usor folosind desenul.
@@ -5047,6 +6861,15 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
         csp4-2019:
           description_audience: "[șir gol]"
           stages:
@@ -5092,6 +6915,9 @@ ro:
               display_name: Evaluare capitol
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Simple Encryption:
+              name: Criptare simplă
         csp5-2019:
           description_audience: "[șir gol]"
           stages:
@@ -5173,6 +6999,19 @@ ro:
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
         csp-explore-2019:
           description_audience: "[șir gol]"
           stages:
@@ -5281,6 +7120,9 @@ ro:
               display_name: Sondaj
             required:
               display_name: Prezentare generală
+          lessons:
+            Binary Numbers:
+              name: Numerele binare
         csd-tests:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5298,6 +7140,13 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+          lessons:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
         csp1-pilot-staging:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5429,6 +7278,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csd-test-saving-state:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5442,6 +7294,9 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Wrap Up:
+              name: Încheiere
         csd-sample-online:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5510,6 +7365,17 @@ ro:
               display_name: 'Capitolul 2: Cum facem jocuri'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Variables:
+              name: Variabile
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         csd-bugs:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5537,6 +7403,9 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         dlp19-csd-mod-fit:
           description: "[șir gol]"
           lesson_groups:
@@ -5643,6 +7512,11 @@ ro:
               display_name: Conţinut
             required:
               display_name: Prezentare generală
+          lessons:
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
         denny-science:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5656,6 +7530,11 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+          lessons:
+            Introduction:
+              name: Introducere
+            Nested Loops:
+              name: Repetiții imbricate
         csp6-pilot:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -5681,6 +7560,9 @@ ro:
             Dance Party:
               name: Petrecere dansantă
           description_audience: "[șir gol]"
+          lessons:
+            Dance Party:
+              name: Petrecere dansantă
         k5-onlinepd-2019:
           description_audience: "[șir gol]"
           stages:
@@ -5743,6 +7625,21 @@ ro:
           lesson_groups:
             k5_next_steps:
               display_name: Pașii următori
+          lessons:
+            Loops:
+              name: Bucle
+            Events:
+              name: Evenimente
+            Conditionals:
+              name: Condiţionale
+            Functions:
+              name: Funcţii
+            Variables:
+              name: Variabile
+            For Loops:
+              name: Bucle Pentru
+            Sprite Lab:
+              name: Laborator Sprite
         dance-extras-2019:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           description_audience: "[șir gol]"
@@ -5789,6 +7686,11 @@ ro:
               display_name: Repetiții imbricate
             csf_functions:
               display_name: Funcţii
+          lessons:
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
         time4cs-experiment-unit-2:
           description_audience: "[șir gol]"
         time4cs-control-unit-1:
@@ -5844,6 +7746,9 @@ ro:
               display_name: Cetățenia Digitală
             ramp_up:
               display_name: Avansare
+          lessons:
+            Conditionals:
+              name: Condiţionale
         time4cs-experiment-unit-1:
           description: "[șir gol]"
           description_short: "[șir gol]"
@@ -5897,6 +7802,9 @@ ro:
               display_name: Cetățenia Digitală
             ramp_up:
               display_name: Avansare
+          lessons:
+            Conditionals:
+              name: Condiţionale
         csp7-pilot:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -6078,6 +7986,9 @@ ro:
               display_name: 'Capitolul 1: Programare cu hardware'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Functions with Parameters:
+              name: Funcții cu Parametrii
         csd3-2020:
           description_short: Programare
           description_audience: "[șir gol]"
@@ -6110,6 +8021,19 @@ ro:
               display_name: 'Capitolul 2: Cum facem jocuri'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Variables:
+              name: Variabile
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         coursea-2020:
           description_short: O introducere în informatică pentru preșcolari.
           stages:
@@ -6124,6 +8048,9 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -6139,6 +8066,9 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -6154,6 +8084,9 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Binary Bracelets:
+              name: Brăţări Binare
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -6183,6 +8116,19 @@ ro:
               display_name: Binar
             csf_digcit:
               display_name: Cetățenia Digitală
+          lessons:
+            Relay Programming:
+              name: Programare de releu
+            Dance Party:
+              name: Petrecere dansantă
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+            Artist Binary:
+              name: Binar cu artist
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -6196,6 +8142,9 @@ ro:
               display_name: Repetiții imbricate
             csf_functions:
               display_name: Funcţii
+          lessons:
+            Conditionals:
+              name: Condiţionale
         coursef-2020:
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
@@ -6217,6 +8166,13 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+          lessons:
+            Envelope Variables:
+              name: Variabile de tip plic
+            Internet:
+              name: Internet
+            For Loop Fun:
+              name: Pentru distracția cu bucle
         express-2020:
           stages:
             Dance Party:
@@ -6315,6 +8271,9 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+          lessons:
+            Dance Party:
+              name: Petrecere dansantă
         pre-express-2020:
           stages:
             Learn to Drag and Drop:
@@ -6360,6 +8319,11 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          lessons:
+            Spelling Bee:
+              name: Albina de Ortografie
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         csp1-2020:
           stages:
             Binary Numbers:
@@ -6368,6 +8332,9 @@ ro:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(vechi) Unitatea 1: Informaţii digitale"
+          lessons:
+            Binary Numbers:
+              name: Numerele binare
         csp2-2020:
           stages:
             The Need for Addressing:
@@ -6375,6 +8342,11 @@ ro:
             Routers and Redundancy:
               name: Routere și redundanță
           description_audience: "[șir gol]"
+          lessons:
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
         csp3-2020:
           description_audience: "[șir gol]"
         csp6-2020:
@@ -6432,6 +8404,13 @@ ro:
             CS Principles Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+          lessons:
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+            Creating Functions:
+              name: Crearea de funcții
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
         csd3-virtual:
           description_short: Programare
           description_audience: "[șir gol]"
@@ -6472,6 +8451,13 @@ ro:
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
+          lessons:
+            Variables:
+              name: Variabile
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Conditionals:
+              name: Condiţionale
         jess-test-script:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -6609,6 +8595,11 @@ ro:
               description_teacher: "[șir gol]"
             Variables:
               name: Variabile
+          lessons:
+            Variables:
+              name: Variabile
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
         virtual-holding-place:
           stages:
             Velocity:
@@ -6624,6 +8615,11 @@ ro:
               display_name: Conţinut
             csd3_2:
               display_name: 'Capitolul 2: Cum facem jocuri'
+          lessons:
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
         code-break:
           stages:
             Algorithms:
@@ -6659,3 +8655,12 @@ ro:
             Processing Arrays:
               name: Matrice de prelucrare
           description_audience: "[șir gol]"
+          lessons:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare

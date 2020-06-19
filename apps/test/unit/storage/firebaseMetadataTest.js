@@ -38,17 +38,17 @@ describe('firebaseMetadata', () => {
   });
 
   it('adds column names', done => {
-    getColumnNamesSnapshot('mytable')
+    getColumnNamesSnapshot(getProjectDatabase(), 'mytable')
       .then(columnNames => {
         expect(columnNames).to.deep.equal([]);
         return addColumnName('mytable', 'foo');
       })
-      .then(() => getColumnNamesSnapshot('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo']);
         return addColumnName('mytable', 'bar');
       })
-      .then(() => getColumnNamesSnapshot('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo', 'bar']);
         done();
@@ -59,7 +59,7 @@ describe('firebaseMetadata', () => {
     addColumnName('mytable', 'foo')
       .then(() => addColumnName('mytable', 'bar'))
       .then(() => renameColumnName('mytable', 'bar', 'baz'))
-      .then(() => getColumnNamesSnapshot('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo', 'baz']);
         done();
@@ -70,7 +70,7 @@ describe('firebaseMetadata', () => {
     addColumnName('mytable', 'foo')
       .then(() => addColumnName('mytable', 'bar'))
       .then(() => deleteColumnName('mytable', 'foo'))
-      .then(() => getColumnNamesSnapshot('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['bar']);
         done();

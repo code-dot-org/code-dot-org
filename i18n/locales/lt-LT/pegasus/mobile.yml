@@ -782,6 +782,8 @@
   header_educate_tools: "Įrankiai ir vaizdo įrašai"
   header_teacher_community: "Mokytojų bendruomenė"
   header_report_bug: "Pranešti apie klaidą"
+  header_legal_privacy: "Privatumo politika"
+  header_legal_tos: "Naudojimo taisyklės"
   user_header_label: "Sveiki, %{username}"
   user_header_team: "Komanda"
   user_header_settings: "Mano paskyra"

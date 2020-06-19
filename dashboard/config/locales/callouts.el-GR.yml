@@ -2,6 +2,11 @@
 el-GR:
   data:
     callouts:
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Έγινε η οθόνη πράσινη; Αν ναι, πάτησε "Τερματισμός". Αν
+          όχι, πάτησε "Επαναφορά".
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: Βρίσκεσαι τώρα σε προβολή σχεδίασης.
       Course 4 Artist 4:
         repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί
           για να κάνει έναν πλήρη κύκλο
@@ -192,6 +197,7 @@ el-GR:
         snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
           διαφορετικές χιονονιφάδες!
       frozen line:
+        run: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου!
         move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
           "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
       frozen perpendicular:

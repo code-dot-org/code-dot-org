@@ -1088,7 +1088,7 @@ pl:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: zrobić nowy [ANIMATION_NAME]sprite[0] w {LOCATION}
+        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} twarz {DIRECTION}"
         options:

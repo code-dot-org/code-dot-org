@@ -45,9 +45,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      end
     end
   end
 
@@ -89,9 +91,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      end
     end
   end
 
@@ -106,50 +110,99 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      end
     end
   end
 
-  def self.create_new_pardot_prospects
+  def self.create_new_pardot_prospects(is_dry_run: false)
+    request_count = 0
+    accepted_prospects = 0
+    rejected_prospects = 0
+
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
-    pardot_writer = PardotV2.new
-    ActiveRecord::Base.connection.exec_query(query_new_contacts).each do |record|
-      data = JSON.parse(record['data']).deep_symbolize_keys
-      submissions, errors = pardot_writer.batch_create_prospects record['email'], data
-      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+    pardot_writer = PardotV2.new is_dry_run: is_dry_run
+    ContactRollupsV2.retrieve_query_results(query_new_contacts).each do |record|
+      record.deep_symbolize_keys!
+      data = JSON.parse(record[:data]).deep_symbolize_keys
+
+      submissions, errors = pardot_writer.batch_create_prospects record[:email], data
+      next if submissions.blank?
+
+      request_count += 1
+      accepted_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
     end
 
     # There could be prospects left in the batch because batch size is not yet big enough
     # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+    if submissions.present?
+      request_count += 1
+      accepted_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
+    end
+
+    CDO.log.info "[Dry run] #{accepted_prospects} total new prospects to be added to Pardot." if is_dry_run
+
+    {
+      request_count: request_count,
+      accepted_prospects: accepted_prospects,
+      rejected_prospects: rejected_prospects
+    }
   end
 
-  def self.update_pardot_prospects
-    pardot_writer = PardotV2.new
-    ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
+  def self.update_pardot_prospects(is_dry_run: false)
+    request_count = 0
+    updated_prospects = 0
+    rejected_prospects = 0
+
+    pardot_writer = PardotV2.new is_dry_run: is_dry_run
+    ContactRollupsV2.retrieve_query_results(query_updated_contacts).each do |record|
+      record.deep_symbolize_keys!
       # If pardot_id has changed since the last data sync, we should assume that
       # Pardot prospect data is currently empty and re-sync all contact data.
       old_prospect_data =
-        record['pardot_id_changed'] ?
+        record[:pardot_id_changed] ?
           {} :
-          JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
-      new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
+          JSON.parse(record[:data_synced] || '{}').deep_symbolize_keys
+      new_contact_data = JSON.parse(record[:data]).deep_symbolize_keys
 
       submissions, errors = pardot_writer.batch_update_prospects(
-        record['email'],
-        record['pardot_id'],
+        record[:email],
+        record[:pardot_id],
         old_prospect_data,
         new_contact_data
       )
-      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+      next if submissions.blank?
+
+      request_count += 1
+      updated_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
     end
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+    if submissions.present?
+      request_count += 1
+      updated_prospects += submissions.count - errors.count
+      rejected_prospects += errors.count
+      save_sync_results(submissions, errors, Time.now.utc) unless is_dry_run
+    end
+
+    CDO.log.info "[Dry run] #{updated_prospects} total prospects to be updated in Pardot." if is_dry_run
+
+    {
+      request_count: request_count,
+      updated_prospects: updated_prospects,
+      rejected_prospects: rejected_prospects
+    }
   end
 
   def self.query_new_contacts
@@ -158,13 +211,16 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # In addition, they must not be previously rejected by Pardot as invalid emails
     # or have been deleted by someone in Pardot.
     <<-SQL.squish
-      SELECT processed.email, processed.data
+      SELECT
+        processed.email,
+        processed.data
       FROM contact_rollups_processed AS processed
       LEFT OUTER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
       WHERE pardot.pardot_id IS NULL
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_EMAIL}')
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}')
+        AND pardot.marked_for_deletion_at IS NULL
     SQL
   end
 
@@ -177,8 +233,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # will resuscitate it as an active prospect.
     <<-SQL.squish
       SELECT
-        processed.email, processed.data,
-        pardot.pardot_id, pardot.data_synced,
+        processed.email,
+        processed.data,
+        pardot.pardot_id,
+        pardot.data_synced,
         COALESCE(pardot.pardot_id_updated_at > pardot.data_synced_at, FALSE) AS pardot_id_changed
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
@@ -190,6 +248,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
           OR (pardot.pardot_id_updated_at > pardot.data_synced_at)
         )
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}')
+        AND pardot.marked_for_deletion_at IS NULL
     SQL
   end
 
@@ -237,9 +296,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_data,
-      validate: false,
-      on_duplicate_key_update: [:data_synced, :data_synced_at]
+    transaction do
+      import! emails_and_data,
+        validate: false,
+        on_duplicate_key_update: [:data_synced, :data_synced_at]
+    end
   end
 
   def self.save_rejected_submissions(submissions, submitted_time)
@@ -251,8 +312,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_errors,
-      validate: false,
-      on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    transaction do
+      import! emails_and_errors,
+        validate: false,
+        on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    end
   end
 end

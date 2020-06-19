@@ -1066,6 +1066,8 @@
   header_teach: "Podučavaj"
   header_help_us: "Pomogni nam"
   header_help_support: 'Pomoć i podrška '
+  header_legal_privacy: "Pravila Privatnosti"
+  header_legal_tos: "Uvjeti"
   header_documentation: "Dokumentacija"
   user_header_label: "Zdravo, %{username}"
   user_header_team: "Tim"

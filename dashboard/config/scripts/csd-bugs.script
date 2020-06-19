@@ -1,12 +1,12 @@
 
-stage 'Game Lab Bugs'
+lesson 'Game Lab Bugs'
 level 'gamelab bug declare sprite in loop'
 level 'gamelab bug text behind sprites'
 level 'gamelab bug infinity mouse 1'
 level 'gamelab bug infinity mouse 2'
 level 'gamelab bug not a function'
 
-stage 'Immovable Crab'
+lesson 'Immovable Crab'
 level 'gamelab bug declare sprite in loop'
 level 'gamelab bug declare sprite in loop 1'
 level 'gamelab bug declare sprite in loop 2'

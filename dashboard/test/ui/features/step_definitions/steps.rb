@@ -345,7 +345,7 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
 end
 
 When /^I (?:open|close) the small footer menu$/ do
-  menu_selector = 'div.small-footer-base a.more-link'
+  menu_selector = 'div.small-footer-base button.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
@@ -354,6 +354,23 @@ end
 
 When /^I press menu item "([^"]*)"$/ do |menu_item_text|
   menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I (?:open|close) the help menu$/ do
+  help_menu_button_selector = '#help-icon'
+  steps %{
+    Then I wait until element "#{help_menu_button_selector}" is visible
+    And I click selector "#{help_menu_button_selector}"
+    Then I wait to see "#help-contents"
+  }
+end
+
+When /^I press help menu item "([^"]*)"$/ do |help_menu_item_id|
+  menu_item_selector = "#help-contents #{help_menu_item_id}"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
@@ -1013,6 +1030,12 @@ Given(/^I view the temp script edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I try to view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }
 end
 

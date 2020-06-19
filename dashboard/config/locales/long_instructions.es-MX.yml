@@ -16161,6 +16161,42 @@ es-MX:
         puedes verificar si el interruptor de alternar está en la posición `open`
         o `close` en otra parte de tu programa. \n\n¿Qué cosas diferentes hace el
         botón cuando el interruptor de alternar está en `open` o `close`?"
+      Course 4 Artist 1: "Ayúdame dibujar una caja.\\\n(Cada línea es 200 píxeles
+        largo) "
+      Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
+        width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tiempo de Juego:**
+        Aquí está el código para un cuadro interesante.   \n\n¿Qué pasa cuando lo
+        repites varias veces, girando entre cada iteración?\n\nNota que los giros
+        añaden hasta _420 grados_, que significa que cuando tu artista está hecho
+        de dibujar, estará mirando una dirección diferente que cuando empezaste. Esa
+        nueva dirección es exactamente _60 grados_ a la _derecha_ de dónde comenzaste.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repite
+        4</b></summary>\n<br/>\n\nSi quieres tener un círculo completo en sólo 4 repeticiones,
+        tienes que el artista gire un total de **360 grados/4 = 90 grados** cada vez.
+        Puedes hacerlo por añadir un bloque extra 'girar a la derecha por 30 grados'
+        al loop exterior (dado que **60+30 = 90**.)\n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repite
+        6</b></summary>\n<br/>\n\nCuando repites el cuadro tal cual por 6 veces, consigues
+        un rotación total de **6x60 grados** que es un ciclo completo de **360 grado**.\n\n<img
+        src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"
+        \ width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repite
+        12</b></summary>\n\n<br/>\n\nSi quieres repetir el imágen 12 veces, necesitas
+        que el artista gira un total de **360 grados/12 = 30 grados** cada iteración.
+        Eso significa que tendrás que ajustar el artista detrás un poco con 'girar
+        izquierda por 30 grados' antes que lo repitas el cuadro otra vez.\n\n<br/><br/>\n<img
+        src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"
+        width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n\n</details>\n</h4>\n\n¡Ahora
+        es tu turno! ¿Puedes recrear cada imagen por repetir el cuadro inicial?  "
+      Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
+        width=\"200px\"/>\n\n¡Ahora para un reto! \n\nAquí está un diseño que usa
+        sólo bloques que ya se han mostrado. ¿Puedes revolver cómo recrearlo? No dudes
+        en usar prueba y error. No eres esperado de obtenerlo la primera vez.\n\nEl
+        cuadro repetido es casi identical a lo de último puzzle, excepto que la longitud
+        usada en el primero loop es un poco más pequeño. "
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png" width="250px"/>
+
+        Inspiración de Juego Libre: ¡Ahora has aprendido todo que tienes que saber para hacer un estampado como este! Si este imagen te inspira, trata de hacer algo similar. Si no, crea algo todo tuyo.
       Course 4 Artist 13: "¿Aún jugando? ¡Aquí hay un lienzo en blanco en donde usted
         podrá diseñar lo que quiera!"
       Course 4 Artist 2: "¿Puedes enlazar este código para que dibuje de gris el cuadrado?"
@@ -16175,6 +16211,8 @@ es-MX:
         simétrico. Los triángulos son equiláteros y tienen 50 píxeles de longitud.
       Course 4 Artist 6: 'Completa el código para dibujar estos triángulos. Sugerencia:
         3 triángulos en una rotación de 360 grados.'
+      Course 4 Artist 7: 'Ahora anida este loop dentro del otro loop para dibujar
+        10 triángulos. '
       Course 4 Artist 8: Dibuje este sol enlazando este bloque de código íntegramente
         12 veces.
       Course 4 Artist 8a: "¿Recuerdas esta forma? ¡Ahora vamos a dejarte construirla
@@ -16188,8 +16226,19 @@ es-MX:
         hacia abajo.  \n\n* * *\n\nEl artista llenará los cuadrados cuando vea un
         1 y los ignorará cuando vea un 0. \n\n* * *\n\n**Ejecuta este código para
         ver cómo el artista usa el sistema binario para dibujar este patrón.**"
+      Course 4 Artist Binary Free Play 2b: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Ahora has aprendido
+        todo que tienes que saber para crear un estampado como este! \n\nSi este imagen
+        te inspira, trata de hacer algo similar. Si no, crea algo todo de tu mismo.
+        \n<br/>"
       Course 4 Artist For Loops 1: 'Dibuje este triángulo que tiene un tamaño de 50
         píxeles. Sugerencia: Use un bloque de repetición.'
+      Course 4 Artist For Loops 11: "¿Recuerdas de escenario previo dónde usamos un
+        variable para controlar el número de lados en una forma? Vamos a hacer lo
+        mísmo con el variable 'ficha' ahora. \n\nEste estampado empieza con un triángulo
+        y añade un lado cada vez hasta que dibuje un decágono (10 lados). Cada lado
+        debería ser 100 píxeles de largo. \n\n¿Cómo usarías el variable 'ficha' de
+        'for' loop para recrear este dibujo?"
       Course 4 Artist For Loops 11a: ¡Vamos a poner todo junto! Usando tu conocimiento
         de "ciclos for" y del "contador", crea este dibujo donde cada forma tiene
         dos partes más que la anterior. Asegúrate de que cada lado sea 10 veces más
@@ -16199,6 +16248,12 @@ es-MX:
         Si giras un poco más o menos de lo que lo harías normalmente para una forma, crearás un efecto nítido.
 
         Prueba usar una parte del código del último nivel, pero gira 89 grados para crear esta espiral cuadrada torcida.
+      Course 4 Artist For Loops 15: "**Juego Libre:** Trata de hacer algunos dibujos
+        tuyos usando los 'for loops'. Hemos añadido pocos variables para ti también."
+      Course 4 Artist For Loops 2: |-
+        He puesto el código para dibujar un triángulo dentro un 'for loop' que cuenta 50 hasta 100 por 10.
+
+        **NOTA:** Asegura que ves el código_antes_que\_hagas un clic en "Run".
       Course 4 Artist For Loops 3: El triángulo más pequeño tiene 20 píxeles de lado,
         el más grande tiene 200 píxeles de lado y cada triángulo es 20 píxeles más
         grande que el anterior. Actualiza el bucle "for" para dibujar estos triángulos.
@@ -16211,28 +16266,94 @@ es-MX:
       Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
         imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
         ¡Necesitas remover algo!"
+      Course 4 Artist For Loops Challenge: |-
+        **Desafío:** ¿Puedes resolver cómo usar todo que has aprendido para crear este imagen de polígono, todo con lados de 40 píxeles?
+
+        Acuérdate que para crear un espiral, no puedes cerrar el polígono. Significa que cada forma tendrá que tener un lado menos que normal.
+      Course 4 Artist For Loops inspire: |-
+        <br/><br/>
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
+        <br/><br/>
+        **Inspiración de Juego-Libre:** ¡Ahora has aprendido todo que tienes que saber para crear un estampado como este! Si esta pictura te inspira, trata de crear algo similar. Si no, crea algo todo de tú mísmo.
+      Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Ahora has aprendido
+        que tienes que saber para crear un estampado como este! \n\nSi esta pictura
+        te inspira, trata de hacer algo similar. Si no, crea algo todo de tu mísmo. "
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"
+        width=\"250px\"/>\n\n**Nivel de Desafío:** Usa lo que has aprendido en esta
+        etapa y otras para resolver cómo hacer el dibujo arriba. "
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
+        width=\"250px\"/>\n\n**Inspiración de Juego-Libre:** ¡Has aprendido todo que
+        tienes que saber para crear un estampado como este! Si este imagen te inspira,
+        trata de hacer algo similar. Si no, crea algo de tú mísmo. "
+      Course 4 Artist Vars 1: "Dibujemos un triángulo equilátero. \n\nTiene que ser
+        exactamente 100 píxeles largo por cada lado.\n\n<br/>"
+      Course 4 Artist Vars 11: "Aquí están más códigos complicados que usan los mísmos
+        conceptos del último puzzle - ¿a qué debes asignar el variable \"lados\" para
+        dibujar esta imagen hecha de cuadros?\n\n<p style=\"font-size:small; padding:
+        15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;\">\n\tSólo
+        para divertirse: ¡Trata de usar números diferentes para ver lo que pasa al
+        adorno!\n</p>"
+      Course 4 Artist Vars 12: |-
+        Asignemos el variable ' lados' a 5. ¡Cuántos más lados añadamos a este algoritmo, más grande este estampado enterno será!
+
+        Nota que hay otro variable llamado 'longitud'.
+        Ahora podemos usar el variable en cualquier sitio dónde tenemos un bloque 'mover adelante'.
+
+        Asigna el variable 'longitud' a 75 para esta forma.
+      Course 4 Artist Vars 13: "Cuando una forma tiene muchs lados, cada lado tiene
+        que ser más corto si quieres el estampado entero para caber en la pantalla.\n\nRecreemos
+        el algoritmo para este estampado asombroso, pero en lugar de asignar manualmente
+        el variable 'longitud', usemos un bloque de matemática con el variable 'lados'
+        dentro para asegurar que cada forma quepa correctamente. \n\nEl perímetro
+        de cada polígono es 300 píxeles."
       Course 4 Artist Vars 14: 'Juego Gratis: revísalo, ahora tu algoritmo está anidado
         dentro de otro circuito. Experimenta cambiando los valores de tus dos variables
         para dibujar patrones asombrosos.'
+      Course 4 Artist Vars 2: En lugar de usar 'mover adelante por 150', el bloque
+        'mover' ahora está referiendo a un variable llamado 'longitud'. ¿Puedes asignar
+        'longitud' a 150 para dibujar este nuevo triángulo?
       Course 4 Artist Vars 4: Ahora quiero hacer un rectángulo que es dos veces tan
         alto como ancho. Tenemos una variable llamada "ancho" que se encuentra a 100.
         ¿Puedes usar los bloques de matemáticas para completar el código?
+      Course 4 Artist Vars 6: "Aquí hay el código que puede dibujar cualquier polīgono
+        regular. \n\nHay un nuevo variable llamado 'lados' que está asignado a 4.
+        \n\n¿Puedes usar el variable 'lados' (sumado al bloque de matemática)  para
+        girar la cantidad correcta a pesar de cuántos lados están en el polígono?"
       Course 4 Artist Vars 7: Utiliza lo que aprendiste en el rompecabezas anterior
         para crear el hexágono usando la variable "lados". Vé cómo puedes cambiar
         solo una variable para dibujar un triángulo, cuadrado, pentágono u octágono?
+      Course 4 Artist Vars 8: "**Juego libre:** Experimento con el número de lados
+        de esta forma. ¿Puedes cambiar el algoritmo de modo que el tamaño total de
+        la forma sigue siendo el mismo, independiente de cuántos lados tenga? "
+      Course 4 Bee 1: "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa
+        el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue
+        el néctar un vez **SÓLO** si hay un flor."
       Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
         para ver si es una flor o un panal...de lo contrario, ¡haz miel!
+      Course 4 Bee 3: "El objeto desconocido es o un flor o un panal. \n\nEsta vez,
+        usa el bloque 'si/si no' para colectar un néctar **si** es un flor, **si no**
+        haz una miel (porque entonces sería un panal)."
       Course 4 Bee Params 1: Use la función "obtener néctar 3" que gira, mueve para
         recoger el néctar y luego regresa a su ubicación original. Escriba una secuencia
         para recoger todo el néctar usando "obtener néctar 3".
       Course 4 Bee Params 2: Modifique la función "obtener néctar 3" de tal manera
         que me haga girar a la derecha hacia las flores en vez de a la izquierda.
+      Course 4 Bee Params 3: "¡Ahora hay flores en ambos lados! \n\nHemos añadido
+        variables llamados 'izquierda' y 'derecha' por ti para usar, y ahora hay un
+        parámetro llamado 'dirección' dentro 'consigue 3 néctar'. \n\n**Edita 'consigue
+        3 néctar' para que la abeja gire a la dirección correcta cuando los variables
+        'izquierda' o 'derecha' están pasados en la función.**"
       Course 4 Bee Params 5: Vamos a empezar desde cero. ¿Puedes crear una nueva función
         llamada `recoger 5 néctares` con un parámetro de dirección?
       Course 4 Bee Params 6: ¿No sería genial si pudiéramos recolectar todo este néctar
         con una sola función? Intenta agregar un nuevo parámetro a tu función "nectars"
         para controlar la cantidad de néctar para recolectar. ¡Probablemente quieras
         renombrar la función también!
+      Course 4 Bee Params 7: |-
+        Trata de usar tu nueva función para colectar todo de este néctar.
+
+        <br/>
       Course 4 Bee Params 8: 'Desafío: ¡Ahora hay que ocuparse de la miel! Vuelve
         a escribir tu función para usar las dos el número de unidades de miel y el
         número de unidades de néctar. ¿Cómo utilizarías esos números para decidir
@@ -16247,6 +16368,20 @@ es-MX:
       Course 4 Play Lab Params 1: Aquí está la función denominada "salto" que permite
         que tu personaje principal salte hasta 100 píxeles. Use la función salto para
         recoger todas las banderas.
+      Course 4 Play Lab Params 10: |-
+        Hemos añadido la última función para ti.
+
+        <hr/>
+
+        Usa una declaración 'si' para programar tu juego para llamar la función 'subir_de_nivel' sólo cuando 'puntaje_de_jugador' se ponga mayor que un número cierto.
+
+        </h4>
+
+        *Por ejemplo: 'puntaje_de_jugador' >6*
+
+        <hr/>
+
+        _Juega el juego, y hazlo a nivel 3 para mover al próximo desafío._
       Course 4 Play Lab Params 3: Añadimos otro parámetro a la función salto para
         poder usar otros actores. Cada actor es representado por un número, empezando
         por uno. Edita la función de "salto" para que utilice el parámetro "actor"
@@ -16256,6 +16391,10 @@ es-MX:
       Course 4 Play Lab Params 5: Llene el parámetro de entrada "actor" de tal manera
         que podamos llamar la función "patrulla" para cada uno de los actores. Recuerde,
         los actores corresponden a los números 1, 2 y 3.
+      Course 4 Play Lab Params 6: Añade el otro parámetro llamado 'velocidad' a la
+        función 'patrulla'. Trata de usar un bloque 'velocidad fija' con el nuevo
+        parámetro 'velocidad' para ayudar el pingüino a conseguir las ambas banderas
+        antes que los otros sprites consigan aún una.
       Course 4 Play Lab Params 7: "¡Vamos a divertirnos! Mira el código dado para
         ver si puedes averiguar qué es lo que hace cada bloque. Cuando termines, usa
         las flechas de tu teclado para controlar el Perro y colecta todas las banderas."
@@ -16269,10 +16408,26 @@ es-MX:
       Course 4 Play Lab Vars 2: ¡Esa carrera en ese último problema no fue justa!
         Cambie la variable de "velocidad\_perro" para asegurarse de que puede recoger
         más banderas que el Gato. ¡El primero en recoger 10 banderas gana!
+      Course 4 Play Lab Vars 3: |-
+        ¡Aquí está un juego nuevo!
+
+        No tienes que cambiar ninguno en este nivel.
+
+        **Direcciones:** Usa la flecha izquierda y derecha para moverse, y la flecha arriba para saltar. Vea si puede colectar todas las banderas.
       Course 4 Play Lab Vars 4: "Ahora estamos utilizando una variable llamada `altura`
         para controlar cuán alto puede saltar el perro. Actaliza la variable `altura`
         para que así el perro pueda saltar lo suficiente para alcanzar las banderas.
         \n "
+      Course 4 Play Lab Vars 6: |-
+        ¿En nuestro juego, cómo marcamos puntos?
+
+        1.  Añade 1 a tu variable `puntos` cada vez el Perro pega el Gato con un pedazo de pastel.
+
+        2.  Usa el evento 'cuando el actor 2 toca algo' para desencadenar una actualización a tu puntuación. Puedes aumentar tu variable por asignar 'puntos = puntos +1.'
+
+        3.  Consigue tu puntuación hasta para pasar el nivel.
+
+        **Nota:** ¡Usa la flecha derecha para tirar el pastel!
       Course 4 Play Lab Vars 7: Bien, ahora asegurémonos que este juego no sea muy
         fácil - cada vez que el Perro (actor 1) es golpeado por una bola de fuego
         usted debe perder un punto. Empiece con 10 puntos de tal manera que no sea
@@ -16288,6 +16443,8 @@ es-MX:
       Course 4 Play Labs For Loops 1: Vamos a hacer que el perro diga todos los números
         desde el 1 hasta el 100. Usa un ciclo y un bloque contador para decir la variable
         contador cada vez que se ejecute el ciclo.
+      Course 4 Playlab For Loop Freeplay: "**Juego Libre:** ¡Usa todo que has aprendido
+        hasta ahora para hacer un juego que incluye un 'for' loop!"
       Course 4 Playlab For Loops 4b: "¡Ahora, estos dos personajes van a correr! \\\r
         \\\r cada uno de ellos se moverá 'contador' pasos en un momento, pero sus
         contadores tendrán diferentes valores debido a los bucles 'for'.\\\r \\\r
@@ -16295,6 +16452,36 @@ es-MX:
         sea un empate?"
       Course 4 Playlab For Loops 5b: Ajusta el intervalo de los bucles 'for' para
         que ambos personajes terminen exactamente en el mismo lugar.
+      Course 4 Playlab For Loops 6b: |-
+        ¡Ahora vamos a usar 'for' loops en una manera diferente!
+
+        ¡Este juego se pone difícil porque el tiempo entre las desapariciones se reduce rápidamente!
+
+        <hr/>
+
+        **¡Edita este 'for' loop para crear un juego que es divertido para ti para jugar!**
+
+        <hr/>
+
+        Presiona "Operar " y haz un clic en "Señora Unicornio" tantas vezes como puedes. ¿Puedes nuestro marcador de 24?
+      Course 4 SCF 1: "**Súper Desafío de las Funciones:** Usa las funciones sugeridas
+        para dibujar cuatro filas de hexágonos. ¿Notas cómo nuestra filas pares son
+        movidas a la derecha?"
+      Course 4 SCF 1a: "**Súper Desafío de las Funciones:** ¿Puedes resolver cómo
+        colectar todo de este néctar con la mínima cantidad posible de bloques?"
+      Course 4 SCF 1b: "**Súper Desafío de las Funciones:** ¿Puedes resolver cómo
+        colectar todo de este miel con la mínima cantidad posible de bloques?"
+      Course 4 SCF 2: "**Súper Desafío de las Funciones:** Usa lo que aprendiste en
+        el previo nivel para dibujar un imagen como este.\n_Nota: El código se pone
+        más sencillo si incorporas parámetros._ "
+      Course 4 SCF 3: |-
+        ""Súper Desafío de las Funciones:\*\* Usa lo que aprendiste en el previo nivel para dibujar un imagen como este.
+
+        _Nota: El código se pone más sencillo si incorporas parámetros._
+
+        <br/>
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>
       Course 4 SCFL 1a: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
         llegue hasta su bellota con la menor cantidad de bloques posible?"
       Course 4 SCFL 1b: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
@@ -17060,8 +17247,19 @@ es-MX:
         editarlas y crear las tuyas."
       NEW Course 4 Artist Functions 1: "¿Puedes dibujar un cuadrado de 100 píxeles
         de largo usando un ciclo?"
+      NEW Course 4 Artist Functions 11: "Ahora queremos crear una nueva función llamada
+        'dibujar una línea de cuadros' que dibuja seis cuadros todos en una fila.
+        \n\n¿Puedes construir esta función usando esta función 'dibujar un cuadro
+        20' que creamos para ti?\n<br/><br/>\n\n_Nota: Ve que hemos cambiado un bolígrafo
+        a ser mucho más fino. ¡Haz un clic en \"editar\" para la función 'dibujar
+        un cuadro 20' para ver cómo!_"
       NEW Course 4 Artist Functions 12: Utiliza la función "trazar una línea de cuadrados"
         del rompecabezas anterior para trazar este patrón.
+      NEW Course 4 Artist Functions 13: "¿Puedes dibujar una forma de estrella usando
+        la función 'dibujar una línea de cuadros'? \n\n(¡Asegúrate a 'mover adelante'
+        60 píxeles antes que gires 144 grados!)"
+      NEW Course 4 Artist Functions 14: "¡Es el tiempo de juego-libre! ¡Dibuja cualquier
+        que te guste!"
       NEW Course 4 Artist Functions 2: "¿Puedes dibujar 3 cuadrados de 20 píxeles
         separado uno del otro? Sugerencia: cada cuadrado es de una medida de 100 píxeles "
       NEW Course 4 Artist Functions 3: Aquí está el nuevo tipo de Bloque. Es llamado
@@ -17069,6 +17267,11 @@ es-MX:
       NEW Course 4 Artist Functions 4: 'Utiliza la función "dibujar un cuadrado" para
         dibujar este patrón. Pista: tendrás que usar un bloque "girar a la derecha
         120 grados" después de cada cuadrado.'
+      NEW Course 4 Artist Functions 7: "¿Estás entendiendo cómo usar los bloques de
+        función? Modifiquemos 'dibujar un cuadro' para que dibuje cuadros que son
+        200 píxeles de tamaño. \n\nHaz un clic en 'editar' para entrar el editor de
+        la función 'dibujar un cuadro'.\n\nAcuérdate a hacer un clic en 'Cerrar' para
+        salir del editor de la función. "
       NEW Course 4 Artist Functions 8: Te hemos dado la mayoría del código para crear
         una función. Sin embargo, parece que falta algo. ¿Puedes editar la definición
         de la función para dibujar el triángulo?
@@ -17078,19 +17281,37 @@ es-MX:
         con lados de 50 píxeles. Haz clic en "editar" para empezar.
       NEW Course 4 Artist Params 10: 'Crea un bloque de función "dibujar un hexágono"
         con un parámetro de longitud. Pista: este hexágono tiene 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 11: "¿Puedes resolver cómo dibujar esta forma? \n\nEdita
+        esta función para usar el parámetro 'lados."
       NEW Course 4 Artist Params 12: "¿Puedes completar este dibujo? Los lados de
         todas las formas son 100 píxeles de largo."
       NEW Course 4 Artist Params 12a: Esta imagen es similar a la última. ¿Se puede
         utilizar un "ciclo for" con tu función para hacer este diseño?
+      NEW Course 4 Artist Params 13: "Editemos esta función 'dibujar un polígono.
+        \n\nYa tiene un parámetro 'lados. Ahora, añadamos un parámetro 'longitud'.
+        \n\nEl perímetro de cada forma es 200 píxeles. ¿Recuerdas la ecuación que
+        hace las formas al mismo tamaño cuando ellas tienen un número diferente de
+        lados?"
+      NEW Course 4 Artist Params 14: "Edita 'dibujar un borde espiral' para usar los
+        parámetros 'longitud' y 'lados', luego recrea estas formas.\n\n-   La longitud
+        del lado más corto del cuadro es 5 píxeles.\n-   La longitud del lado más
+        corto del triángulo es 10 píxeles.\n-   La longitud del lado más corto del
+        hexágono es 2 píxeles.\n-   Todos aumentan a 100 píxeles. "
       NEW Course 4 Artist Params 15: 'Juego libre: estas son las funciones que has
         escrito, y algunas más con las que podrás jugar. ¡Experimenta con el ancho
         del lápiz para crear dibujos diferentes!'
       NEW Course 4 Artist Params 2: Crea una función `dibujar triángulo` desde cero
         para crear un triángulo con lados de 50 pixeles.
+      NEW Course 4 Artist Params 3: "Ahora usemos la función para dibujar 5 triángulos
+        en una fila. \n\nCada triángulo es 30 píxeles de distancia."
       NEW Course 4 Artist Params 4: ¿Notas algo diferente en estos bloques de función?
         Haz clic en "Ejecutar" para ver qué pasa.
       NEW Course 4 Artist Params 5: 'Llena en el ??? en el bloque de entrada del parámetro
         de longitud. Sugerencia: El Pentágono es de 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 6: "Completa el parámetro 'longitud' para dibujar
+        estas formas por recolocar '???' con los números correcto. \n\nEl cuadro y
+        el triángulo tienen lados de 100 píxeles.\\\nLos lados del hexágono son 75
+        píxeles de largo. "
       NEW Course 4 Artist Params 7: "¿Puedes completar este dibujo? Sugerencia: cada
         triángulo es 25 píxeles más grande que el último. El primer triángulo es de
         25 píxeles de tamaño."
@@ -17107,6 +17328,9 @@ es-MX:
       NEW Course 4 Artist Vars 12: Modifica este algoritmo para que utilice la variable
         "lados" en lugar de un número fijo para dibujar un pentágono. Reemplaza el
         número 5 con la variable "lados" y usa el bloque "establecer lados".
+      NEW Course 4 Artist Vars 2: 'Arrastra un bloque de número al bloque ''asignar
+        longitud'' y al bloque ''repetir \_ veces'' para dibujar una colección de
+        triángulos de 50 píxeles. '
       NEW Course 4 Artist Vars 4: Vamos a intentarlo otra vez. Ahora, vamos a hacer
         este diseño cool con un hexágono de 60 píxeles.
       NEW Course 4 Artist Vars 6: ¿Me puedes ayudar a dibujar este patrón cool dejando
@@ -17122,6 +17346,9 @@ es-MX:
         juntos, luego haz clic en "Ejecutar" para ver cómo funciona. '
       NEW Course 4 Bee For Loops 4: 'Reemplaza el ??? en el bucle for con la mayor
         cantidad de néctar que la abeja debe recoger. '
+      NEW Course 4 Bee For Loops 4 4: Ahora tenemos que 'avanzar' 'contador' veces,
+        luego 'conseguir néctar' 'contador' veces. ¿Puedes usar dos loops de repitición
+        para resolver este desafío?
       NEW Course 4 Bee For Loops 5: También puedes utilizar un 'loop para' para la
         cuenta regresiva. Intenta juntar este néctar haciendo cuenta regresiva de
         5 a 1 de a 1.
@@ -17213,10 +17440,18 @@ es-MX:
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
         > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: |-
+        ## Conocer los Fundamentos de la Ciencia de la Computación
+
+        Comencemos por aprender un poco sobre los Fundamentos de la Ciencia de la Computación y cómo ha funcionado para los docentes y estudiantes de todo el mundo.
       OPD-K5 Closing: |-
         > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
         >
         > [Regístrate ahora] [0] para continuar aprendiendo ciencias de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarte con otros educadores apasionados en tu área.
+      OPD-K5 Closing_copy: |-
+        > **Si disfrutaste este curso, inscríbete en un taller en persona:**
+        >
+        > <a href="http://code.org/professional-development-workshops" target="blank">Regístrate ahora</a> para continuar aprendiendo ciencia de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarse con otros educadores apasionados en tu área.
       OPD-K5 EventsVid: |-
         Mira este video que define los "eventos" y muestra cómo funcionan en Fundamentos de la Ciencias de la Computación. Después, probarás algunos desafíos que requieren que codifiques eventos.
 
@@ -17224,6 +17459,10 @@ es-MX:
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 FirstProgram_copy: Mira el video a continuación, que explica un programa
+        en el que los jóvenes estudiantes escribirán en el <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Curso A</a>. En la siguiente página, ¡podrás escribir un programa
+        similar propio!
       OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
         planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
         cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
@@ -17270,10 +17509,71 @@ es-MX:
         Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
 
         **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 Unplugged Video_copy: |-
+        ¡Puede parecer contraproducente enseñar ciencias de la computación lejos de la computadora! Sin embargo, hemos descubierto que algunas de las lecciones más impactantes son en realidad "fuera de línea" o realizadas con poca o ninguna tecnología.
+
+        Todos nuestros cursos de Fundamentos de la Ciencia de la Computación utilizan actividades fuera de línea para introducir conceptos de ciencia de la computación con objetos didácticos físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. También utilizamos actividades desconectadas para enseñar conceptos importantes que no son programación, como la ciudadanía digital. Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
       OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
         O "¿Por qué algunos programas de computadora se escriben con palabras y otros
         se escriben con imágenes?" Si es así, mira este video; es una gran introducción
         al campo de la ciencia de la computación.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        ¿Alguna vez te has preguntado qué es la ciencia de la computación o qué tipos de lenguajes de programa existen? Este video proporciona una introducción al campo de la ciencia de la computación.
+        </span>
+      OPD-K5 conditionals free response: |-
+        # Reflexionar sobre condicionales
+
+        En esta lección, exploramos cómo los condicionales ayudan a los programadores a agregar lógica a su código.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de condicionales a tus alumnos? ¿Cuál es el beneficio de escribir un diario como práctica docente para la ciencia de la computación?
+      OPD-K5 events free response: |-
+        # Reflexionar sobre eventos
+
+        En esta lección, precalentaste tus habilidades de codificación mediante el uso de eventos para desencadenar ciertas acciones en tu programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de eventos a tus alumnos? ¿Cuáles son los pasos que podrías seguir para depurar un programa?
+      OPD-K5 for loops free response: |-
+        # Reflexionar sobre bucles para
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de bucles para a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 functions free response: |-
+        # Reflexionar sobre las funciones
+
+        En esta lección, exploramos cómo las funciones pueden convertirte en un mejor y más rápido programador al permitirte reutilizar segmentos de tu código. En la próxima lección, veremos el concepto de variables.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de funciones a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 loops free response: |-
+        # Reflexionar sobre los bucles
+
+        En esta lección, exploramos cómo se pueden usar los bucles para hacer que el código sea más eficiente. En la próxima lección, veremos cómo los eventos pueden agregar interactividad a un programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo puedes conectar el concepto de bucles con la experiencia previa de tus alumnos fuera de la clase de Ciencias de la Computación? ¿Cuáles son los beneficios de la programación en pareja y cómo podrías usarla al enseñar esta lección?
+      OPD-K5 projects free response: |-
+        # Reflexionar sobre proyectos de fin de curso
+
+        Tómate un momento para reflexionar. ¿Cómo usarías los proyectos de fin de curso en tu clase? ¿Cuál es el beneficio de que los estudiantes completen un proyecto?
+      OPD-K5 sequencing free response: |-
+        # Reflexionar sobre la secuenciación
+
+        ¡Felicidades! Acabas de escribir un código. ¡Eres oficialmente un programador!
+
+        ¿Notaste que el último desafío fue un poco más difícil? Fue un desafío de reto. Los desafíos de reto están destinados a ampliar los límites de lo que harán los estudiantes. Dejamos en claro que deben intentarse, pero no exigimos que se completen para que los estudiantes tengan éxito en la lección.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo describirías la diferencia entre ciencia de la computación y codificación? ¿Cómo explicarías la secuenciación y los algoritmos a tus alumnos?
+      OPD-K5 sprite lab free response: "# Reflexiona en Laboratorio de sprites\n\nTómate
+        un momento para reflexionar. ¿Cómo usarías el Laboratorio de sprites en tu
+        clase? "
+      OPD-K5 variables free response: |-
+        # Reflexionar sobre variables
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de variables a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 whats your plan: |-
+        # ¿Cuál es tu plan?
+
+        A lo largo del curso, se te pedirá que escribas reflexiones sobre lo que has aprendido. Una vez que envíes tu respuesta, se guardará y siempre podrás volver a ella. La revisaremos al final de este curso en línea.
+
+        Tómate un momento para reflexionar. ¿Cómo y cuándo completarás este curso en línea para asegurarte de obtener el mayor beneficio de la experiencia?
       OPD-K5-events-2: "Agrega el bloque `cantidad normal de aleteo` al evento `cuando
         hagas clic`, y luego presiona \"Ejecutar\".  \n\n* * *\n\nHaz clic o toca
         en el espacio de juego para mover a Flappy hacia el objetivo."
@@ -18618,6 +18918,8 @@ es-MX:
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios
         para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo
         con algo totalmente diferente)
+      course4_artist_variables_challenge1: "¿Puedes crear un variable 'longitud' y
+        usarlo para crear este adorno interesante?"
       course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar.
         Hay unas pocas acciones que querrás repetir 'contador' veces.
       course4_bee_fwp_challenge1: Usa un bucle `desde` en una función para recoger
