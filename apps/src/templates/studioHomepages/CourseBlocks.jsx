@@ -12,13 +12,25 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class ExpressCourses extends Component {
+  componentDidMount() {
+    $('#pre-express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
+      .show();
+    $('#express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.express))
+      .show();
+  }
+
   render() {
     return (
       <ContentContainer
         heading={i18n.courseBlocksCsfExpressHeading()}
         description={i18n.courseBlocksCsfExpressDescription()}
       >
-        <CourseBlocks tiles={['#pre_express', '#express']} />
+        <div className="row">
+          <ProtectedStatefulDiv ref="pre_express" />
+          <ProtectedStatefulDiv ref="express" />
+        </div>
         <AcceleratedAndUnplugged />
       </ContentContainer>
     );
