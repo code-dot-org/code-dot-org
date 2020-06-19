@@ -45,7 +45,7 @@ class ContactRollupsProcessed < ApplicationRecord
       end
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_field(contact_data, 'dashboard.email_preferences', 'opt_in') || {})
+      processed_contact_data.merge!(extract_opt_in(contact_data))
       processed_contact_data.merge!(extract_updated_at(contact_data) || {})
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -125,7 +125,6 @@ class ContactRollupsProcessed < ApplicationRecord
 
         output[sources] ||= {}
         data.each_pair do |field, value|
-          next if value.nil?
           output[sources][field] ||= []
           output[sources][field] << {'value' => value, 'data_updated_at' => data_updated_at}
         end
@@ -138,15 +137,24 @@ class ContactRollupsProcessed < ApplicationRecord
     end
   end
 
-  # Extracts a given field from data compiled from multiple sources.
+  def self.extract_opt_in(contact_data)
+    values = extract_field(contact_data, 'dashboard.email_preferences', 'opt_in')
+    # Since there should be no more than one opt_in value per contact,
+    # we can just take the first value in the returned array.
+    return values.nil? ? {} : {opt_in: values.first}
+  end
+
+  # Extracts values of a field in a source table from contact data.
   #
-  # @param [Hash] contact_data compiled data from multiple source tables.
-  #   @see output of parse_contact_data method.
-  # @return [Hash, nil] a hash containing opt_in key and value (could be nil)
-  #   or nil if opt_in does not exist in the input.
+  # @param contact_data [Hash] compiled data from multiple source tables.
+  #   @see output of +parse_contact_data+ method.
+  # @param table [String]
+  # @param field [String]
+  # @return [Array, nil] an array of values, or nil if the field or table
+  #   does not exist in the contact_data.
   def self.extract_field(contact_data, table, field)
     return nil unless contact_data.key?(table) && contact_data[table].key?(field)
-    {field.to_sym => contact_data.dig(table, field)}
+    contact_data.dig(table, field).map {|item| item['value']}
   end
 
   # Extracts the latest data_updated_at value.

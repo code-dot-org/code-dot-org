@@ -141,7 +141,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           '[{"%{sources_key}": "table1", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {}}
+        expected_output: {'table1' => {'state' => ['value' => nil, 'data_updated_at' => time_parsed]}}
       },
       {
         input: format(
