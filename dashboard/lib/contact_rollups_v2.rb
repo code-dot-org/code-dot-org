@@ -72,7 +72,7 @@ class ContactRollupsV2
     @log_collector = LogCollector.new('ContactRollupsV2')
     @log_collector.info("Initialization params: "\
       "is_dry_run: #{is_dry_run}, "\
-      "limit_extraction = #{limit_extraction}"
+      "limit_extraction = #{limit_extraction || 'nil'}"
     )
     self.class.set_db_variables
   end
