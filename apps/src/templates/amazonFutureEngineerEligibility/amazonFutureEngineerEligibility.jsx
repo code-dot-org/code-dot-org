@@ -89,6 +89,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       this.setState({errors: errors});
       return false;
     }
+
+    this.setState({errors: errors});
     return true;
   };
 
@@ -127,7 +129,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      window.location = pegasus('/privacy');
+      window.location = pegasus('/afe/benefits');
     }
   }
 
