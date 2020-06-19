@@ -99,17 +99,21 @@ class ContactRollupsProcessed < ApplicationRecord
   #   Input string:
   #     '[{"sources":"table1", "data":{"opt_in":1}, "data_updated_at":"2020-06-16"}]'
   #   Output hash:
-  #     {
-  #       'table1'=>{
-  #         'opt_in'=>{'value'=>1, 'data_updated_at'=>2020-06-16},
-  #         'last_data_updated_at'=>2020-06-16
-  #       }
-  #     }
+  #     {'table1'=>{
+  #       'opt_in'=>[{'value'=>1, 'data_updated_at'=>2020-06-16}],
+  #       'last_data_updated_at'=>2020-06-6
+  #     }}
+  # @see parse_contact_data test for more examples
   #
-  # @pa3ram str [String] a JSON array string.
+  # @param str [String] a JSON array string.
   #   Each array item is a hash {'sources'=>String, 'data'=>Hash, 'data_updated_at'=>DateTime}.
+  #
   # @return [Hash] a hash with string keys.
-  #   Output format: {source_table => {field_name => [{'value'=>String, 'data_updated_at'=>DateTime}]}}
+  #   Output format:
+  #     {source_table => {
+  #       field_name => [{'value'=>String, 'data_updated_at'=>DateTime}]},
+  #       'last_data_updated_at'=>DateTime
+  #     }}
   #
   # @raise [JSON::ParserError] if cannot parse the input string to JSON
   # @raise [ArgumentError] if cannot parse a time value in the input string to Time
@@ -129,10 +133,10 @@ class ContactRollupsProcessed < ApplicationRecord
           output[sources][field] << {'value' => value, 'data_updated_at' => data_updated_at}
         end
 
-        # if !output[sources].key?('last_data_updated_at') ||
-        #   data_updated_at > output[sources]['last_data_updated_at']
-        #   output[sources]['last_data_updated_at'] = data_updated_at
-        # end
+        if !output[sources].key?('last_data_updated_at') ||
+          data_updated_at > output[sources]['last_data_updated_at']
+          output[sources]['last_data_updated_at'] = data_updated_at
+        end
       end
     end
   end
