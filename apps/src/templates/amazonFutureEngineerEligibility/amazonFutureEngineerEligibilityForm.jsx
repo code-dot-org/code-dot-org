@@ -24,7 +24,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    onContinue: PropTypes.func
+    updateFormData: PropTypes.func
   };
 
   constructor(props) {
@@ -42,6 +42,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
   handleChange = change => {
     this.setState(change);
+  };
+
+  resetSchool = event => {
+    // Does this also need to wipe school data from session storage?
+    //event.preventDefault();
+    this.props.updateFormData({schoolEligible: null, schoolId: null});
   };
 
   onContinue = () => {
@@ -70,7 +76,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
-    this.props.onContinue({
+    this.props.updateFormData({
       ...requiredFormData,
       ...shippingAddress,
       ...consentCSTA
@@ -106,7 +112,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             includeSchoolNotFoundCheckbox={false}
           />
           <div style={styles.wrong_school}>
-            Wrong school? Go back
+            Wrong school? <a onClick={this.resetSchool}>Go back</a>
             <br />
           </div>
           <FieldGroup
