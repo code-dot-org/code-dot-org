@@ -8,6 +8,7 @@ import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import project from '../code-studio/initApp/project';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import {findDropletParseErrors} from '@cdo/apps/util/dropletCommon';
 
 const BLOCKS_GLYPH_LIGHT =
   'data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
@@ -116,27 +117,33 @@ class DropletCodeToggle extends Component {
   toggle = () => {
     // are we trying to toggle from blocks to text (or the opposite)
     let fromBlocks = studioApp().currentlyUsingBlocks();
-
     let result;
+
+    let errorHandler = new JavaScriptModeErrorHandler();
+    let dropletErrors = findDropletParseErrors(
+      studioApp().editor,
+      (lineNumber, message) => errorHandler.outputError(message, lineNumber)
+    );
+
+    if (dropletErrors) {
+      studioApp().showToggleBlocksError();
+      return;
+    }
+
     try {
       result = studioApp().editor.toggleBlocks();
     } catch (err) {
       result = {error: err, nonDropletError: true};
     }
     if (result && result.error) {
+      // With the addition of the `findDropletParseErrors` above, this try/
+      // catch/log/displayError sequence shouldn't be needed. Remove this if
+      // instances of this being logged go to zero after this change is merged.
       logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
         dropletError: !result.nonDropletError,
         fromBlocks
       });
-      let errorHandler = new JavaScriptModeErrorHandler();
-      // result.error.message = "Line ###. Error Message"
-      let matchedLineNumber = result.error.message.match(/Line (\d+)./);
-      if (matchedLineNumber) {
-        errorHandler.outputError(
-          msg.droplet_parsing_error(),
-          Number(matchedLineNumber[1]) + 1
-        );
-      }
+
       studioApp().showToggleBlocksError();
     } else {
       studioApp().onDropletToggle();
