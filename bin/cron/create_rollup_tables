@@ -5,6 +5,7 @@
 
 require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
+exit unless only_one_running?(__FILE__)
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -237,4 +238,4 @@ def level_sources_multi_types_row(row_hash)
   ROW
 end
 
-main if only_one_running?(__FILE__)
+main
