@@ -43,6 +43,7 @@ class ScriptName extends React.Component {
             ? {...styles.scriptLinkWithUpdatedAt}
             : {}
         }
+        title={this.props.name}
       >
         {this.props.name}
       </a>

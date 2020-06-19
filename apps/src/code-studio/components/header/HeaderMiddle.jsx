@@ -253,7 +253,9 @@ class HeaderMiddle extends React.Component {
               style={{float: 'left', width: widths.finishLink}}
             >
               <div className="header_finished_link" style={styles.finishedLink}>
-                <a href={lessonData.finishLink}>{lessonData.finishText}</a>
+                <a href={lessonData.finishLink} title={lessonData.finishText}>
+                  {lessonData.finishText}
+                </a>
               </div>
             </div>
           )}
