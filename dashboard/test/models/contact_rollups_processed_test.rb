@@ -142,33 +142,67 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     # Example of a JSON string test: "[{\"s\": \"table1\", \"d\": null, \"u\": \"2020-03-11 15:01:26\"}]"
     tests = [
       {
+        # input data is null
         input: format(
           '[{"%{sources_key}": "table1", "%{data_key}": null, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {}}
+        expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
       },
+      # input data is an empty hash
       {
         input: format(
           '[{"%{sources_key}": "table1", "%{data_key}": {}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {}}
+        expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
       },
+      # input data has a valid key but its value is null
       {
         input: format(
-          '[{"%{sources_key}": "table1", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
+          '[{"%{sources_key}": "table2", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {'state' => ['value' => nil, 'data_updated_at' => time_parsed]}}
+        expected_output: {
+          'table2' => {
+            'state' => ['value' => nil, 'data_updated_at' => time_parsed],
+            'last_data_updated_at' => time_parsed
+          }
+        }
       },
+      # input data has valid key and value
       {
         input: format(
           '[{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),
-        expected_output: {'table1' => {'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}]}}
+        expected_output: {
+          'table1' => {
+            'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          }
+        }
       },
+      # input data has more than one value for a key
+      {
+        input: format(
+          '['\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},'\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str}"}'\
+          ']',
+          format_values
+        ),
+        expected_output: {
+          'table2' => {
+            'state' => [
+              {'value' => 'WA', 'data_updated_at' => time_parsed},
+              {'value' => 'OR', 'data_updated_at' => time_parsed}
+            ],
+            'last_data_updated_at' => time_parsed
+          }
+        }
+      },
+      # input data comes from 2 tables with different valid keys
       {
         input: format('['\
           '{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"},'\
@@ -176,8 +210,14 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           format_values
         ),
         expected_output: {
-          'table1' => {'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}]},
-          'table2' => {'state' => [{'value' => 'WA', 'data_updated_at' => time_parsed}]}
+          'table1' => {
+            'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          },
+          'table2' => {
+            'state' => [{'value' => 'WA', 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          }
         }
       }
     ]
