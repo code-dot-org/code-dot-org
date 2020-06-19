@@ -651,6 +651,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
+    'code.org/views/amazon_future_engineer':
+      './src/sites/code.org/pages/views/amazon_future_engineer.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -754,8 +756,6 @@ describe('entry tests', () => {
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
-
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
 
     amazonFutureEngineerEligibility:
       './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
@@ -1141,8 +1141,7 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact',
-        'donorTeacherBanner'
+        'regionalPartnerMiniContact'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
