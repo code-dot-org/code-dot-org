@@ -54,8 +54,12 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     create :contact_rollups_raw
 
     # Each extraction function will be called once per unique email address
-    ContactRollupsProcessed.expects(:extract_field).once
-    ContactRollupsProcessed.expects(:extract_updated_at).once
+    ContactRollupsProcessed.expects(:extract_opt_in).
+      once.
+      returns({opt_in: 1})
+    ContactRollupsProcessed.expects(:extract_updated_at).
+      once.
+      returns({updated_at: Time.now.utc})
 
     ContactRollupsProcessed.import_from_raw_table
   end
