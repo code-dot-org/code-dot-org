@@ -1035,6 +1035,23 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   }
   const userCodeStartOffset = code.length;
   code += this.studioApp_.getCode();
+  // Check that droplet can parse this code.
+  try {
+    debugger;
+    this.studioApp_.editor && this.studioApp_.editor.parse();
+  } catch (error) {
+    // error.message = Line ###. Error Message
+    let matchedLineNumber = error.message.match(/Line (\d+)./);
+    if (matchedLineNumber) {
+      this.handleExecutionError(
+        'Error',
+        Number(matchedLineNumber[1]) + 1,
+        "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional."
+      );
+      return;
+    }
+  }
+
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,

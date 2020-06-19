@@ -1264,6 +1264,22 @@ Applab.execute = function() {
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
 
+    // Check that droplet can parse this code.
+    try {
+      studioApp().editor.parse();
+    } catch (error) {
+      // error.message = Line ###. Error Message
+      let matchedLineNumber = error.message.match(/Line (\d+)./);
+      if (matchedLineNumber) {
+        handleExecutionError(
+          'Error',
+          Number(matchedLineNumber[1]) + 1,
+          "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional."
+        );
+        return;
+      }
+    }
+
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
