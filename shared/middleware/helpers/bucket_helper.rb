@@ -177,9 +177,6 @@ class BucketHelper
     key = s3_path owner_id, storage_app_id, filename
     response = s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
 
-    # Delete the old version, if doing an in-place replace
-    # s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
-
     response
   end
 
@@ -346,6 +343,13 @@ class BucketHelper
     track_list_operation 'BucketHelper.list_versions'
     s3.list_object_versions(bucket: @bucket, prefix: key).
       versions.
+      # Sort descending order by time stamp.
+      sort {|a, b| b.last_modified <=> a.last_modified}.
+      # Average student browser session is 20-30 minutes.
+      # A gap of this length in S3 Object Version history may indicate start of a new session.
+      slice_when {|a, b| (a.last_modified - b.last_modified) > 20.minutes}.
+      # Take the most recent Version from each user session.
+      map(&:first).
       map do |version|
         {
           versionId: version.version_id,
