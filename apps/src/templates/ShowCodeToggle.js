@@ -7,7 +7,7 @@ import {PaneButton} from './PaneHeader';
 import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import project from '../code-studio/initApp/project';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler'
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 
 const BLOCKS_GLYPH_LIGHT =
   'data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
@@ -133,7 +133,7 @@ class DropletCodeToggle extends Component {
       let matchedLineNumber = result.error.message.match(/Line (\d+)./);
       if (matchedLineNumber) {
         errorHandler.outputError(
-          "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional. ",
+          msg.droplet_parsing_error(),
           Number(matchedLineNumber[1]) + 1
         );
       }

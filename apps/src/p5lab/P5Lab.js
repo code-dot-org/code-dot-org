@@ -17,6 +17,7 @@ import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 var gamelabMsg = require('@cdo/gamelab/locale');
 var spritelabMsg = require('@cdo/spritelab/locale');
+import i18n from '@cdo/locale';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -1037,7 +1038,6 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   // Check that droplet can parse this code.
   try {
-    debugger;
     this.studioApp_.editor && this.studioApp_.editor.parse();
   } catch (error) {
     // error.message = Line ###. Error Message
@@ -1046,7 +1046,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
       this.handleExecutionError(
         'Error',
         Number(matchedLineNumber[1]) + 1,
-        "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional."
+        i18n.droplet_parsing_error()
       );
       return;
     }
