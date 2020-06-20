@@ -163,11 +163,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     // Dedupe with loadConfirmationPage -- probably belongs in onContinue
     this.saveToSessionStorage();
 
-    // Do API calls here.
-    if (!this.state.formData.submitted) {
-      this.submitToAFE();
-    }
-
     // Notes on to dos for CSTA API call:
     // may need to make NCES ID 12 digits.
     // CSTA wants school district?
@@ -176,6 +171,26 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     // lots of validation specified in spec, none currently being done.
     // need timestamp in appropriate format.
 
+    // Do API calls here.
+    console.log(this.state.formData);
+    if (!this.state.formData.submitted) {
+      this.submitToAFE().then(() => {
+        // This I do not think is working correctly
+        // because setting state causes rerender.
+        // Really, what I'd like to happen is:
+        //   a) send data to AFE,
+        //   b) on success, mark submitted as true
+        //     (doesn't actually have to be in formData, only relevant at session level)
+        //   c) then redirect to success page.
+        // I set state because state.formData and saveToSessionStorage are
+        // tightly coupled.
+        // Maybe they should be decoupled.
+        this.setState({
+          formData: {...this.state.formData, ...{submitted: true}}
+        });
+        this.saveToSessionStorage();
+      });
+    }
     // need to work on synchronicity of this --
     // not sure if referral back from sign in page is working 100%
     window.location = pegasus('/afe/success');
