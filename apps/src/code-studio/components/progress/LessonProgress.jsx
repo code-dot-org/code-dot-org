@@ -32,7 +32,8 @@ const styles = {
     alignItems: 'center',
     position: 'absolute',
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    height: '100%'
   },
   headerVignette: {
     width: '100%',
