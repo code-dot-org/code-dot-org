@@ -30,7 +30,8 @@ class HeaderMiddle extends React.Component {
     lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    linesOfCodeText: PropTypes.string
+    linesOfCodeText: PropTypes.string,
+    hasAppOptions: PropTypes.bool
   };
 
   constructor(props) {
@@ -167,7 +168,8 @@ class HeaderMiddle extends React.Component {
       lessonData,
       scriptData,
       currentLevelId,
-      linesOfCodeText
+      linesOfCodeText,
+      hasAppOptions
     } = this.props;
 
     const widths = this.getWidths();
@@ -176,7 +178,7 @@ class HeaderMiddle extends React.Component {
       ? {...scriptNameData, width: widths.scriptName - 10}
       : null;
 
-    if (this.props.appLoaded) {
+    if (!hasAppOptions || this.props.appLoaded) {
       return (
         <div id="header_middle_content;" style={styles.headerMiddleContent}>
           <div
