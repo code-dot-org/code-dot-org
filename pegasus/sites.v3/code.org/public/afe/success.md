@@ -1,5 +1,6 @@
 ---
 title: Amazon Future Engineer Successful Submit
+theme: responsive
 ---
 
 ## Congratulations! You have successfully signed up to participate in the Amazon Future Engineer program
