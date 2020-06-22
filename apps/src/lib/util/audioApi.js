@@ -119,7 +119,6 @@ export const commands = {
   playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
-
     const speechConfig = SpeechConfig.fromAuthorizationToken(
       appOptions.azureSpeechServiceToken,
       appOptions.azureSpeechServiceRegion
