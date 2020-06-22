@@ -1004,6 +1004,7 @@ exports.createJsWrapperBlockCreator = function(
         if (
           miniToolboxBlocks &&
           appOptions.level.miniToolbox &&
+          !appOptions.readonlyWorkspace &&
           experiments.isEnabled(experiments.MINI_TOOLBOX)
         ) {
           var toggle = new Blockly.FieldIcon('+');
