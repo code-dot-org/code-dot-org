@@ -551,6 +551,8 @@ id:
       BuildingAFoundation_2019:
         title: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Teman-teman Robot Saya yang Mengulang-ulang
       Conditionals_2019:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan
@@ -711,6 +713,7 @@ id:
           kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan
           satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
       TheRightApp_2019:
+        title: Aplikasi yang Tepat
         desc: "* Semua orang menggunakan komputer dewasa ini, terutama telepon pintar.\r\n*
           Aplikasi telepon pintar, atau \"aplikasi\", membantu orang melakukan hal-hal
           seperti berbicara dengan teman, mendengarkan musik, berbelanja, atau sekadar
