@@ -149,7 +149,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @is_reminder = true
     @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
     @regional_partner_name = @workshop.regional_partner&.name
-    @deadline = (Time.now + 10.days).strftime('%b %d %Y').strip
+    @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
+    @workshop_date = @workshop.sessions.size == 1 ?
+                       @workshop.sessions.first.start.strftime('%B %-d, %Y').strip :
+                       @workshop.friendly_date_range
 
     mail content_type: 'text/html',
          from: from_facilitators,
