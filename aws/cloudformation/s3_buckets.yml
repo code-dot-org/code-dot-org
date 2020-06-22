@@ -30,29 +30,19 @@ Resources:
       Bucket: !Ref LibraryBucket
       PolicyDocument:
         Statement:
-          - Sid: Grant Drone permission to objects created by CI tests.
-            Effect: 'Allow'
-            Action:
-              - 's3:*'
-            Resource:
-              - 'arn:aws:s3:::cdo-v3-libraries/libraries_circle/*'
-            Principal:
-              {
-                AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
-              }
-          - Sid: Grant Drone permission to list objects for CI tests.
-            Effect: 'Allow'
-            Action:
-              - 's3:ListBucket*'
-            Resource:
-              - 'arn:aws:s3:::cdo-v3-libraries'
-            Condition:
-              StringLike:
-                - 's3:Prefix': 'libraries_circle/*'
-            Principal:
-              {
-                AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
-              }
+        - Sid: Grant Drone permission to objects created by CI tests.
+          Effect: 'Allow'
+          Action: 's3:*'
+          Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_circle/*'
+          Principal: {AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]}
+        - Sid: Grant Drone permission to list objects for CI tests.
+          Effect: 'Allow'
+          Action: 's3:ListBucket*'
+          Resource: 'arn:aws:s3:::cdo-v3-libraries'
+          Condition:
+            StringLike:
+              's3:Prefix': 'libraries_circle/*'
+          Principal: {AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]}
   SpritelabAnimationBucket:
     Type: 'AWS::S3::Bucket'
     Properties:
