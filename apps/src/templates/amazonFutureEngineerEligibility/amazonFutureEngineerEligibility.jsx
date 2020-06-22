@@ -51,15 +51,15 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   // Otherwise, we ask them for their school information.
   checkInitialSchoolEligibility = sessionEligibilityData => {
     if (
-      sessionEligibilityData.schoolEligible === false ||
-      this.props.schoolEligible === false
-    ) {
-      window.location = pegasus('/afe/benefits');
-    } else if (
       sessionEligibilityData.schoolEligible === true ||
       this.props.schoolEligible === true
     ) {
       return true;
+    } else if (
+      sessionEligibilityData.schoolEligible === false ||
+      this.props.schoolEligible === false
+    ) {
+      window.location = pegasus('/afe/benefits');
     }
 
     return null;
