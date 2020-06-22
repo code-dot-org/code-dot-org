@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
 import experiments from '@cdo/apps/util/experiments';
@@ -1022,9 +1023,11 @@ exports.createJsWrapperBlockCreator = function(
             this.tray = !this.tray;
             this.render();
           });
-          this.appendDummyInput()
-            .appendTitle(toggle)
-            .appendTitle(' ');
+          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
           this.initMiniFlyout(miniToolboxXml);
         }
 
