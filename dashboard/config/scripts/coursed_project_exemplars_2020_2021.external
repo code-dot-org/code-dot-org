@@ -6,19 +6,18 @@ markdown <<MARKDOWN
 
 You are about to start your final project. Before you begin, spend some time looking at the example projects.
 
-## Sprite Lab
 
-| Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+| Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
 |---|---|
-| [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
-| Try adding text or a score to this game! | Try adding text or a score to this game! |
+| [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce \(Basketball\)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers \(Star Wars\)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+| The ball changes speed when it bounces! | Avoid the stormtroopers or they'll multiply! |
 
-## Artist
 
-| Pattern (Artist) | Snowflake Flowers (Frozen) |
+| Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
 |---|---|
-| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
-| Let's get creative with nested loops! | Let's get creative with functions! |
+| [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern \(Artist\)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers \(Frozen\)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+| Your backup dancers keep switching up their moves! | Try adding more color and background to this scene! |
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
