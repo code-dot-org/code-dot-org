@@ -213,9 +213,13 @@ const customInputTypes = {
           block.shortString = '';
           block.longString = '';
       }
+      block.thumbnailSize = 32;
       currentInputRow
-        .appendTitle(block.longString)
-        .appendTitle(new Blockly.FieldImage('', 1, 1), inputConfig.name);
+        .appendTitle(block.shortString)
+        .appendTitle(
+          new Blockly.FieldImage('', block.thumbnailSize, block.thumbnailSize),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       switch (block.type) {
