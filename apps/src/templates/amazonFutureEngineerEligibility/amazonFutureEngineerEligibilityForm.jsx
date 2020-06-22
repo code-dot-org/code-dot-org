@@ -1,3 +1,4 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap';
@@ -77,11 +78,19 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
-    this.props.updateFormData({
+    let submitData = {
       ...requiredFormData,
       ...shippingAddress,
       ...consentCSTA
+    };
+
+    firehoseClient.putRecord({
+      study: 'amazon-future-engineer-eligibility',
+      event: 'continue',
+      data_json: JSON.stringify(submitData)
     });
+
+    this.props.updateFormData(submitData);
   };
 
   onContinue = () => {

@@ -1,3 +1,4 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap';
@@ -22,7 +23,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     schoolId: PropTypes.string,
-    schoolEligible: PropTypes.bool
+    schoolEligible: PropTypes.bool,
+    accountEmail: PropTypes.string
   };
 
   constructor(props) {
@@ -88,6 +90,11 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submit = () => {
+    firehoseClient.putRecord({
+      study: 'amazon-future-engineer-eligibility',
+      event: 'submit_school_info'
+    });
+
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
     }
@@ -157,6 +164,11 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
+      firehoseClient.putRecord({
+        study: 'amazon-future-engineer-eligibility',
+        event: 'ineligible'
+      });
+
       window.location = pegasus('/afe/benefits');
     }
   }
@@ -171,6 +183,17 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submitToAFE = () => {
+    firehoseClient.putRecord({
+      study: 'amazon-future-engineer-eligibility',
+      event: 'submit_to_afe',
+      data_json: JSON.stringify({
+        accountEmail: this.props.accountEmail,
+        accountSchoolId: this.props.schoolId,
+        formEmail: this.state.formData.email,
+        formSchoolId: this.state.formData.schoolId
+      })
+    });
+
     // returns a promise
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
