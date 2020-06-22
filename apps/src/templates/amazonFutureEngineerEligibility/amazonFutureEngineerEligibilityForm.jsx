@@ -49,7 +49,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
-  resetSchool = event =>
+  resetSchool = () =>
     this.props.updateFormData({schoolEligible: null, schoolId: null});
 
   submit = () => {
