@@ -24,6 +24,10 @@
   .aligned-input-group
     = f.check_box :disable_param_editing, {}, 'false', 'true'
     = f.label :disable_param_editing, 'Enable param editing in function blocks'
+  - if (@level.instance_of?(GamelabJr))
+    .aligned-input-group
+      = f.check_box :mini_toolbox, {}, 'true', 'false'
+      = f.label :mini_toolbox, 'Enable mini toolbox for event blocks'
   .field
     = f.label :goal_override, 'Goal Override Object (Legacy Levels)'
     = f.text_area :goal_override, placeholder: '{"goalAnimation": "animatedGoal"}'
