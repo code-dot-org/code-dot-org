@@ -203,7 +203,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       window.location = pegasus('/afe/benefits');
     }
 
-    // TO DO: Disable button until email and school are filled in
     return (
       <div>
         {formData.schoolEligible === null && (
