@@ -46,6 +46,9 @@ es-MX:
           name: dibujar pierna derecha
         draw body and arms:
           name: dibujar cuerpo y brazos
+          parameters:
+            armlength: Longitud de brazo
+            bodylength: Longitud de cuerpo
         draw a head:
           name: dibuja una cabeza
       2-3 Artist Debugging 6:
@@ -658,6 +661,8 @@ es-MX:
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radio
         draw a pinwheel:
           name: dibujar un molinete
           parameters:
@@ -766,6 +771,8 @@ es-MX:
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radio
         draw a pinwheel:
           name: dibujar un molinete
           parameters:
@@ -1891,6 +1898,8 @@ es-MX:
         draw a circle:
           name: dibujar un círculo
           description: Dibuja un circulo especificando su radio
+          parameters:
+            radius: radio
         draw a pinwheel:
           name: dibujar un molinete
           parameters:
