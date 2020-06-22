@@ -1003,8 +1003,6 @@ exports.createJsWrapperBlockCreator = function(
 
         if (
           miniToolboxBlocks &&
-          appOptions.level.miniToolbox &&
-          !appOptions.readonlyWorkspace &&
           experiments.isEnabled(experiments.MINI_TOOLBOX)
         ) {
           var toggle = new Blockly.FieldIcon('+');
@@ -1025,9 +1023,11 @@ exports.createJsWrapperBlockCreator = function(
             this.tray = !this.tray;
             this.render();
           });
-          this.appendDummyInput()
-            .appendTitle(toggle)
-            .appendTitle(' ');
+          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
           this.initMiniFlyout(miniToolboxXml);
         }
 
