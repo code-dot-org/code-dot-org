@@ -145,8 +145,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop
-    @cancel_url = '#'
-    @is_reminder = true
     @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
