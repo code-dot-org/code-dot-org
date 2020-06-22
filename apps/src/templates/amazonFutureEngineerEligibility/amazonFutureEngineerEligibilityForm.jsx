@@ -48,10 +48,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
-  resetSchool = event => {
-    // Does this also need to wipe school data from session storage?
+  resetSchool = event =>
     this.props.updateFormData({schoolEligible: null, schoolId: null});
-  };
 
   submit = () => {
     const requiredFormData = _.pick(this.state, [
