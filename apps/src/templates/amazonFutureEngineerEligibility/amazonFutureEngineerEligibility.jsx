@@ -44,12 +44,17 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     };
   }
 
+  // If a user has gone through the eligibility flow,
+  // or has school information associated with their account,
+  // we use that for determining their eligibilty.
+  // Redirect to ineligible page ('/afe/benefits') if ineligible.
+  // Otherwise, we ask them for their school information.
   checkInitialSchoolEligibility = sessionEligibilityData => {
     if (
       sessionEligibilityData.schoolEligible === false ||
       this.props.schoolEligible === false
     ) {
-      return false;
+      window.location = pegasus('/afe/benefits');
     } else if (
       sessionEligibilityData.schoolEligible === true ||
       this.props.schoolEligible === true
@@ -67,6 +72,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.setState({formData: {...this.state.formData, ...change}}, callback);
   };
 
+  // Wrapper to allow saving data to session
+  // as a callback once a user submits the full eligibility form.
+  // Otherwise, component can be reloaded before data is stored to session,
+  // which can result in the incorrect component being rendered.
   updateAndStoreFormData = formData => {
     this.updateFormData(formData, this.saveToSessionStorage);
   };
@@ -79,7 +88,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submit = () => {
-    // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
     }
@@ -190,10 +198,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
   render() {
     let {formData} = this.state;
-
-    if (formData.schoolEligible === false) {
-      window.location = pegasus('/afe/benefits');
-    }
 
     return (
       <div>
