@@ -54,7 +54,7 @@ es:
         loop_until: Bloque repetir hasta que
         loop_while: Bloque mientras
         loop_for: Bloque contador
-        function: funciones
+        function: Funciones
         parameters: Funciones con parámetros
     level:
       instructions:
@@ -606,7 +606,7 @@ es:
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
-        C4_loops_zombie: vuelta
+        C4_loops_zombie: Bucles
         C4_bee_conditional: Condiciones de la Abeja
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Laboratorio de juego
@@ -678,7 +678,7 @@ es:
         csd_weblab_intro_3: Introducción al Laboratorio Web - Parte 3
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
-        csp_applab_loops: vuelta
+        csp_applab_loops: Bucles
         csp_concept_rgb: Un poco más de píxeles
         csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
           todo
@@ -778,7 +778,7 @@ es:
         CSF_if_allskins: El bloque `si`
         CSF_ifelse_allskins: Uso de bloques `si/si no`
         CSF_ifelseifelse_allskins: Uso de bloques `si/sino si/si no`
-        CSF_loops_AB: vuelta
+        CSF_loops_AB: Bucles
         csd_gamelab_booleans: Expresiones booleanas
         csd_gamelab_conditional_statements: Sentencias condicionales
         csd_gamelab_if_else: Sentencias `si/si no`
@@ -861,6 +861,8 @@ es:
           Keeler
         codebreak_e05: 'Code Break 5.0: Simulaciones y datos con Bill Gates'
         csd_how_teamwork_works: Cómo funciona el trabajo en equipo
+        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar la falta
+          de consenso'
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '
