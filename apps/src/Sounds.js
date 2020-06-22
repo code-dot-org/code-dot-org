@@ -328,6 +328,22 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
   }
 };
 
+Sounds.prototype.playBytes = function(bytes, playbackOptions) {
+  if (this.isMuted) {
+    return;
+  }
+  let soundConfig = {};
+  soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
+  soundConfig.allowHTML5Mobile =
+    playbackOptions && playbackOptions.allowHTML5Mobile;
+  soundConfig.playAfterLoad = true;
+  soundConfig.playAfterLoadOptions = playbackOptions;
+  soundConfig['bytes'] = bytes;
+  let sound = new Sound(soundConfig, this.audioContext);
+  sound.preload();
+  sound.play();
+};
+
 /**
  * @param {!string} id of the sound. This is a URL for sounds played via playURL.
  * @returns {boolean} whether the given sound is currently playing.

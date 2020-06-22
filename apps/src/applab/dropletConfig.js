@@ -235,6 +235,7 @@ export var blocks = [
   },
   {...audioApiDropletConfig.playSound, category: 'UI controls'},
   {...audioApiDropletConfig.stopSound, category: 'UI controls'},
+  {...audioApiDropletConfig.playSpeech, category: 'UI controls'},
   {
     func: 'showElement',
     parent: api,
