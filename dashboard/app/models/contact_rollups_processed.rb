@@ -97,11 +97,12 @@ class ContactRollupsProcessed < ApplicationRecord
   #
   # @example
   #   Input string:
-  #     '[{"sources":"table1", "data":{"opt_in":1}, "data_updated_at":"2020-06-16"}]'
+  #     '[{"s":"table1", "d":{"opt_in":1}, "u":"2020-06-16"}]'
+  #      @see values of SOURCES_KEY, DATA_KEY and DATA_UPDATED_AT_KEY
   #   Output hash:
   #     {'table1'=>{
   #       'opt_in'=>[{'value'=>1, 'data_updated_at'=>2020-06-16}],
-  #       'last_data_updated_at'=>2020-06-6
+  #       'last_data_updated_at'=>2020-06-16
   #     }}
   # @see parse_contact_data test for more examples
   #
