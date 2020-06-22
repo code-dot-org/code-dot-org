@@ -52,6 +52,41 @@ bs:
               name: 'Laboratorij Igara: Napravi Priču'
             The Big Event:
               name: Veliki Događaj
+          lessons:
+            Happy Maps:
+              name: Vesele Mape
+            Move it, Move it:
+              name: Pomakni, pomakni
+            'Jigsaw: Learn to drag and drop':
+              name: 'Slagalica: Nauči vući i ispustiti'
+            'Maze: Sequence':
+              name: 'Labirint: Dio'
+            'Maze: Debugging':
+              name: 'Labirint: Ispravljanje grešaka'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            'Bee: Sequence':
+              name: 'Pčela: Slijed'
+            'Artist: Sequence':
+              name: 'Umjetnik: Slijed'
+            Building a Foundation:
+              name: Izrada Temelja
+            'Artist: Shapes':
+              name: 'Umjetnik: Oblici'
+            Spelling Bee:
+              name: Spelovanje
+            Getting Loopy:
+              name: Zapetljavanje
+            'Maze: Loops':
+              name: 'Labirint: Petlje'
+            'Bee: Loops':
+              name: 'Pčela: Petlje'
+            The Big Event:
+              name: Veliki Događaj
+            Going Places Safely:
+              name: Sigurna Putovanja
+            'Artist: Loops':
+              name: 'Umjetnik: Petlje'
         course2:
           title: Kurs 2
           description: Početi sa Kurs 2 za učenike koji znaju čitati i bez prethodnog
@@ -98,6 +133,43 @@ bs:
               name: Veliki Događaj
             Your Digital Footprint:
               name: Digitalni otisak stopala
+          lessons:
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
+            'Real-life Algorithms: Paper Planes':
+              name: 'Stvarni algoritmi: Papirni Planovi'
+            'Maze: Sequence':
+              name: 'Labirint: Dio'
+            'Artist: Sequence':
+              name: 'Umjetnik: Slijed'
+            Getting Loopy:
+              name: Zapetljavanje
+            'Maze: Loops':
+              name: 'Labirint: Petlje'
+            'Artist: Loops':
+              name: 'Umjetnik: Petlje'
+            'Bee: Loops':
+              name: 'Pčela: Petlje'
+            Relay programming:
+              name: Prijenos programiranja
+            'Bee: Debugging':
+              name: 'Pčela: ispravljanje pogrešaka'
+            'Artist: Debugging':
+              name: 'Umjetnik: Ispravljanje grešaka'
+            Conditionals:
+              name: Uvjeti
+            'Bee: Conditionals':
+              name: 'Pčela: Uslovi'
+            Binary Bracelets:
+              name: Binarne narukvice
+            The Big Event:
+              name: Veliki Događaj
+            Flappy:
+              name: Flappy
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+            'Artist: Nested Loops':
+              name: 'Umjetnik: Ugniježdene Petlje'
         course3:
           title: Kurs 3
           description_short: Kurs 3 je nastavak Kursa 2.
@@ -145,11 +217,53 @@ bs:
               name: 'Laboratorij Igara: Napravi Igru'
             'Studio: Create a Story':
               name: 'Laboratorij Igara: Napravi Priču'
+          lessons:
+            Computational Thinking:
+              name: Računarsko razmišljanje
+            Maze:
+              name: Labirint
+            Artist:
+              name: Umjetnik
+            Functional Suncatchers:
+              name: Funkcionalni Vitraži
+            'Artist: Functions':
+              name: 'Umjetnik: Funkcije'
+            'Bee: Functions':
+              name: 'Pčela: Funkcije'
+            'Bee: Conditionals':
+              name: 'Pčela: Uslovi'
+            'Maze: Conditionals':
+              name: 'Labirint: Uvjeti'
+            Songwriting:
+              name: Pisanje pjesama
+            Dice Race:
+              name: Utrka Kockica
+            'Artist: Nested Loops':
+              name: 'Umjetnik: Ugniježdene Petlje'
+            'Farmer: While Loops':
+              name: 'Farmer: Dok Petlje'
+            'Bee: Nested Loops':
+              name: 'Pčela: Ugniježdene petlje'
+            'Bee: Debugging':
+              name: 'Pčela: ispravljanje pogrešaka'
+            Bounce:
+              name: Odskok
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Artist: Patterns':
+              name: 'Umjetnik: obrasci'
         playlab:
           title: Play Lab
           description: Napisati priču ili napraviti igru s Play Lab!
           description_short: Napisati priču ili napraviti igru s Play Lab!
           stages:
+            Play Lab:
+              name: Play Lab
+          lessons:
             Play Lab:
               name: Play Lab
         artist:
@@ -159,11 +273,17 @@ bs:
           stages:
             Artist:
               name: Umjetnik
+          lessons:
+            Artist:
+              name: Umjetnik
         hourofcode:
           description: Isprobaj osnove računarstva sa karakterima kao što su Angry
             Birds, Plants vs. Zombies i Scrat iz Ice Age!
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
           stages:
+            Maze:
+              name: Labirint
+          lessons:
             Maze:
               name: Labirint
         frozen:
@@ -174,6 +294,9 @@ bs:
           description_short: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju
             čaroliju i ljepotu leda.
           stages:
+            Artist:
+              name: Umjetnik
+          lessons:
             Artist:
               name: Umjetnik
         course4:
@@ -226,6 +349,51 @@ bs:
               name: 'Izvanmrežno: Pisanje pjesama s parametrima'
             'Unplugged: Tangrams':
               name: 'Izvanmrežno: Tangrami'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Izvanmrežno: Tangrami'
+            Maze and Bee:
+              name: Labirint i Pčela
+            Artist:
+              name: Umjetnik
+            'Unplugged: Envelope Variables':
+              name: 'Izvanmrežno: Varijable Omotnice'
+            'Unplugged: Madlibs':
+              name: 'Izvanmrežno: Madlibs'
+            'Artist: Variables':
+              name: 'Umjetnik: Varijable'
+            'Play Lab: Variables':
+              name: 'Laboratorij Igara: Varijable'
+            'Unplugged: For Loop Fun':
+              name: 'Izvanmrežno: Zabava sa Od-Do-Za Petljom'
+            'Bee: For Loops':
+              name: 'Pčela: Od-Do-Za Petlje'
+            'Artist: For Loops':
+              name: 'Umjetnik: Od-Do-Za Petlje'
+            'Play Lab: For Loops':
+              name: 'Laboratorij Igara: Od-Do-Za Petlje'
+            'Artist: Functions':
+              name: 'Umjetnik: Funkcije'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Izvanmrežno: Pisanje pjesama s parametrima'
+            'Artist: Functions with Parameters':
+              name: 'Umjetnik: Funkcije s Parametrima'
+            'Play Lab: Functions with Parameters':
+              name: 'Laboratorij Igara: Funkcije s Parametrima'
+            'Bee: Functions with Parameters':
+              name: 'Pčela: Funkcije s Parametrima'
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
+            Super Challenge - Variables:
+              name: Super izazov - varijable
+            Super Challenge - For Loops:
+              name: Super izazov - Za petlje
+            Super Challenge - Functions and Parameters:
+              name: Super izazov - funkcije i parametri
+            Extreme Challenge - Comprehensive:
+              name: Ekstremni izazov - sveobuhvatan
         Course4pre:
           title: Preduvjeti za Kurs 4
           description: Kratko objašnjenje pojmova za učenike koji nisu prošli Kurseve
@@ -251,6 +419,25 @@ bs:
               name: 'Farmer: Dok Petlje'
             'Maze: Sequence':
               name: 'Labirint: Dio'
+          lessons:
+            'Maze: Sequence':
+              name: 'Labirint: Dio'
+            'Artist: Sequence':
+              name: 'Umjetnik: Slijed'
+            'Artist: Loops':
+              name: 'Umjetnik: Petlje'
+            'Bee: Conditionals':
+              name: 'Pčela: Uslovi'
+            'Artist: Nested Loops':
+              name: 'Umjetnik: Ugniježdene Petlje'
+            'Farmer: While Loops':
+              name: 'Farmer: Dok Petlje'
+            'Bee: Nested Loops':
+              name: 'Pčela: Ugniježdene petlje'
+            'Artist: Functions':
+              name: 'Umjetnik: Funkcije'
+            'Bee: Debugging':
+              name: 'Pčela: ispravljanje pogrešaka'
         usability:
           title: Testiranje Upotrebljivosti
           description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
@@ -265,6 +452,17 @@ bs:
               name: Uvod
             Variables:
               name: Varijable
+          lessons:
+            Intro:
+              name: Uvod
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+            Functions and Functions with Parameters:
+              name: Funkcije i Funkcije sa Parametrima
+            Binary:
+              name: Binarno
         algebra:
           title: Računarstvo u Algebri
           description: Nauči Funkcionalno Programiranje kroz Algebru
@@ -310,6 +508,47 @@ bs:
               name: 'Izvanmređno: Dizajn recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+            'Calc: Evaluation Blocks':
+              name: 'Račun: Procjena blokova'
+            'Eval: Strings and Images':
+              name: 'Evaluacija: Veze i slike'
+            'Unplugged: Contracts':
+              name: 'Izvanmređno: Ugovori'
+            'Eval: Writing Contracts':
+              name: 'Evaluacija: Pisanje ugovora'
+            'Calc: Defining Variables':
+              name: 'Calc: Definisanje Varijabli'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Play Lab: Definisanje varijabli (Big Game)'
+            'Eval: Defining Functions':
+              name: 'Eval: Definiranje Funkcija'
+            'Unplugged: The Design Recipe':
+              name: 'Izvanmređno: Dizajn recept'
+            'Play Lab: Defining Functions':
+              name: 'Laboratorij Igara: Definiranje Funkcija'
+            'Eval: Functions':
+              name: 'Eval: Funkcije'
+            'Play Lab: Animation (Big Game)':
+              name: 'Play Lab: Animacija (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Izvanmrežno: Boolova algebra'
+            'Eval: Boolean Operators':
+              name: 'Evaluacija: Logički operatori'
+            'Play Lab: Booleans':
+              name: 'Play Lab: Logički'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Play Lab: Logički (Big Game)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Uslovna i izvedena funkcija'
+            'Eval: Conditionals':
+              name: 'Evaluacija: Uslovi'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Izvanmrežno: Detekcija sudara i udaljenost Formula'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Play Lab: Detekcije Kolizije (Big Game)'
         infinity:
           title: Disney Beskonačni Laboratorij Igranja
           description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili
@@ -317,6 +556,9 @@ bs:
           description_short: Upotrijebi Laboratorij Igranja da bi napravio/la priču
             ili igru u kojoj igraju karakteri Disney Beskonačnost.
           stages:
+            Infinity:
+              name: Beskonačnost
+          lessons:
             Infinity:
               name: Beskonačnost
         algebrademo:
@@ -334,6 +576,17 @@ bs:
               name: Blokovi Izvršenja
             Making Pictures:
               name: Pravljenje Slika
+            The Design Recipe:
+              name: Recept za Dizajn
+          lessons:
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Making Pictures:
+              name: Pravljenje Slika
+            Defining Variables:
+              name: Definiranje Varijabli
+            Defining Simple Functions:
+              name: Definiranje Jednostavnih Funkcija
             The Design Recipe:
               name: Recept za Dizajn
         K5PD:
@@ -407,6 +660,47 @@ bs:
               name: Labirint
             Wrap-up:
               name: Zamotavanje
+          lessons:
+            Introduction to Computer Science:
+              name: Uvod u računarstvo
+            The Maze:
+              name: Labirint
+            Computational Thinking:
+              name: Računarsko razmišljanje
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
+            The Artist:
+              name: Umjetnik
+            Algorithms:
+              name: Algoritmi
+            The Artist 2:
+              name: Umjetnik 2
+            Functions:
+              name: Funkcije
+            The Farmer:
+              name: Farmer
+            Conditionals:
+              name: Uvjeti
+            The Artist 3:
+              name: Umjetnik 3
+            Song Writing:
+              name: Pisanje Pjesmi
+            The Farmer 2:
+              name: Farmer 2
+            Abstraction:
+              name: Apstrakcija
+            The Artist 4:
+              name: Umjetnik 4
+            Relay Programming:
+              name: Prijenos programiranja
+            The Farmer 3:
+              name: Farmer 3
+            The Internet:
+              name: Internet
+            The Artist 5:
+              name: Umjetnik 5
+            Wrap-up:
+              name: Zamotavanje
         edit-code:
           title: Uredi kôd
           description: Uredi kôd
@@ -420,6 +714,15 @@ bs:
               name: Umjetnik
             The Maze:
               name: Labirint
+          lessons:
+            The Maze:
+              name: Labirint
+            Applab:
+              name: Applab
+            The Artist:
+              name: Umjetnik
+            Play Lab:
+              name: Play Lab
         events:
           title: Događaji
           description: Događaji
@@ -433,12 +736,24 @@ bs:
               name: Eval
             Studio:
               name: Studio
+          lessons:
+            Bounce:
+              name: Odskok
+            Studio:
+              name: Studio
+            Calc:
+              name: Calc
+            Eval:
+              name: Eval
         flappy:
           title: Flappy kôd
           description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
             naš tutorijal izrade Flappy kôda!
           description_short: Napiši vlastitu Flappy igru za manje od 10 minuta!
           stages:
+            Flappy Code:
+              name: Flappy kôd
+          lessons:
             Flappy Code:
               name: Flappy kôd
         jigsaw:
@@ -448,11 +763,17 @@ bs:
           stages:
             Jigsaw:
               name: Slagalica
+          lessons:
+            Jigsaw:
+              name: Slagalica
         step:
           title: Korak
           description: Upute korak po korak
           description_short: Upute korak po korak
           stages:
+            Step:
+              name: Korak
+          lessons:
             Step:
               name: Korak
         Hour of Code:
@@ -463,6 +784,9 @@ bs:
           stages:
             Hour of Code 2013:
               name: Sat Kodiranja 2013
+          lessons:
+            Hour of Code 2013:
+              name: Sat Kodiranja 2013
         CodeStudioPuzzleChallenge:
           title: Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
@@ -470,11 +794,17 @@ bs:
           stages:
             Puzzles:
               name: Zadaci
+          lessons:
+            Puzzles:
+              name: Zadaci
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
           description_short: Izazovi sam/a sebe!
           stages:
+            Puzzles:
+              name: Zadaci
+          lessons:
             Puzzles:
               name: Zadaci
         cspunit1:
@@ -495,6 +825,17 @@ bs:
               name: Slanje Bita u Stvarnom Svijetu
             Sending Numbers:
               name: Slanje brojeva
+          lessons:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Sending Bits in the Real World:
+              name: Slanje Bita u Stvarnom Svijetu
+            Number Systems:
+              name: Brojčani Sistemi
+            Binary Numbers:
+              name: Binarni Brojevi
+            Sending Numbers:
+              name: Slanje brojeva
         algebraPD:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -504,6 +845,13 @@ bs:
               name: Blokovi Izvršenja
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
         algPDmiami:
@@ -517,6 +865,15 @@ bs:
               name: Šišmiš Sem
             Strings and Images:
               name: Nizovi Karaktera i Slike
+          lessons:
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Strings and Images:
+              name: Nizovi Karaktera i Slike
+            Booleans:
+              name: Logika
+            Sam the Bat:
+              name: Šišmiš Sem
         CSPPD:
           stages:
             Introduction to PD:
@@ -525,9 +882,21 @@ bs:
               name: Strategije predavanja
             What is CSP?:
               name: Šta je CSP?
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            What is CSP?:
+              name: Šta je CSP?
+            Teaching Strategies:
+              name: Strategije predavanja
         CSPLessonSamples:
           title: Studio Kodiranja Primjeri za Lekciju
           stages:
+            Lesson 14:
+              name: Lekcija 14
+            Lesson 15:
+              name: Lekcija 15
+          lessons:
             Lesson 14:
               name: Lekcija 14
             Lesson 15:
@@ -540,16 +909,29 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
               name: Strategije predavanja
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Teaching Strategies:
+              name: Strategije predavanja
         sciencePD:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
         cspunit3:
           description_short: Istraži kako je digitalna informacija predstavljena i
             prenešena
           stages:
+            Creating Functions:
+              name: Kreiranje Funkcija
+            While Loops:
+              name: Dok petlje
+          lessons:
             Creating Functions:
               name: Kreiranje Funkcija
             While Loops:
@@ -568,6 +950,19 @@ bs:
               name: Nadzorna Ploča za Nastavnike
             The Design Recipe:
               name: Recept za Dizajn
+          lessons:
+            Computer Science Pedagogy:
+              name: Pedagogija Računarstva
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Strings and Images:
+              name: Nizovi Karaktera i Slike
+            The Design Recipe:
+              name: Recept za Dizajn
+            Next Steps:
+              name: Slijedeći Koraci
         ECSPD-NexTech:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -576,10 +971,20 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
               name: Strategije predavanja
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Teaching Strategies:
+              name: Strategije predavanja
         ECSPD-iZone:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Teaching Strategies:
+              name: Strategije predavanja
+          lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
@@ -595,6 +1000,13 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
         algebraPD-iZone:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -606,10 +1018,20 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
         sciencePD-NexTech:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+          lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
         sciencePD-iZone:
@@ -618,16 +1040,25 @@ bs:
           stages:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
         sciencePD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
         cspunit2:
           description_short: Istraži kako je digitalna informacija predstavljena i
             prenešena
           stages:
+            The Internet:
+              name: Internet
+          lessons:
             The Internet:
               name: Internet
         algebraPD2a:
@@ -649,6 +1080,21 @@ bs:
               name: Nizovi Karaktera i Slike
             The Design Recipe:
               name: Recept za Dizajn
+          lessons:
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Strings and Images:
+              name: Nizovi Karaktera i Slike
+            Defining Variables:
+              name: Definiranje Varijabli
+            The Design Recipe:
+              name: Recept za Dizajn
+            Booleans:
+              name: Logika
+            Sam the Bat:
+              name: Šišmiš Sem
+            Free Play:
+              name: Slobodno Igranje
         allthethings:
           stages:
             Artist:
@@ -667,6 +1113,27 @@ bs:
               name: Labirint
             Multi:
               name: Višestruki izbor
+            Pixelation:
+              name: Pikselizacija
+            Studio:
+              name: Studio
+          lessons:
+            Jigsaw:
+              name: Slagalica
+            Maze:
+              name: Labirint
+            Artist:
+              name: Umjetnik
+            Bee:
+              name: Pčela
+            Flappy:
+              name: Flappy
+            Bounce:
+              name: Odskok
+            Multi:
+              name: Višestruki izbor
+            Match:
+              name: Upari
             Pixelation:
               name: Pikselizacija
             Studio:
@@ -694,6 +1161,25 @@ bs:
               name: Nadzorna Ploča za Nastavnike
             Writing Contracts:
               name: Pisanje Ugovora
+          lessons:
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Strings and Images:
+              name: Nizovi Karaktera i Slike
+            Writing Contracts:
+              name: Pisanje Ugovora
+            Defining Variables:
+              name: Definiranje Varijabli
+            Defining Functions:
+              name: Definiranje Funkcija
+            Booleans:
+              name: Logika
+            'Eval: Conditionals':
+              name: 'Evaluacija: Uslovi'
+            Next Steps:
+              name: Slijedeći Koraci
         cspfacilitator:
           stages:
             App Lab:
@@ -702,12 +1188,24 @@ bs:
               name: Internet Simulator
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            Internet Simulator:
+              name: Internet Simulator
+            App Lab:
+              name: Laboratorij za Aplikacije
         K5-OnlinePD:
           stages:
             Next Steps:
               name: Slijedeći Koraci
             Planning:
               name: Planiranje
+          lessons:
+            Planning:
+              name: Planiranje
+            Next Steps:
+              name: Slijedeći Koraci
         ECSPD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -722,6 +1220,17 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Zamotavanje
         algebraPD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -732,10 +1241,20 @@ bs:
               name: Recept za Dizajn
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            The Design Recipe:
+              name: Recept za Dizajn
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
         sciencePD2b:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
+            Welcome!:
+              name: Dobrodošli!
+          lessons:
             Welcome!:
               name: Dobrodošli!
         science-PD2:
@@ -744,14 +1263,23 @@ bs:
           stages:
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
         Equity-OnlinePD:
           stages:
+            Next Steps:
+              name: Slijedeći Koraci
+          lessons:
             Next Steps:
               name: Slijedeći Koraci
         sciencePD2b-iZone:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
+            Welcome!:
+              name: Dobrodošli!
+          lessons:
             Welcome!:
               name: Dobrodošli!
         ECSPD2-iZone:
@@ -768,6 +1296,17 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Zamotavanje
         ECSPD2-NexTech:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -780,6 +1319,17 @@ bs:
               What Is a Computer?
             Welcome!:
               name: Dobrodošli!
+            Wrap-up:
+              name: Zamotavanje
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Zamotavanje
         asUnplugged:
@@ -802,22 +1352,53 @@ bs:
               name: Pisanje pjesama
             The Big Event:
               name: Veliki Događaj
+          lessons:
+            Happy Maps:
+              name: Vesele Mape
+            Move it, Move it:
+              name: Pomakni, pomakni
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
+            Building a Foundation:
+              name: Izrada Temelja
+            Getting Loopy:
+              name: Zapetljavanje
+            The Big Event:
+              name: Veliki Događaj
+            Binary Bracelets:
+              name: Binarne narukvice
+            Songwriting:
+              name: Pisanje pjesama
         algebraPD3a:
           title: Računarstvo u Algebri Profesionalni Razvoj
         ECSPD3-Unit2:
           stages:
             Teaching Strategies:
               name: Strategije predavanja
+          lessons:
+            Teaching Strategies:
+              name: Strategije predavanja
         ECSPD3-Unit3:
           stages:
+            Teaching Strategies:
+              name: Strategije predavanja
+          lessons:
             Teaching Strategies:
               name: Strategije predavanja
         ECSPD3-Unit4:
           stages:
             Teaching Strategies:
               name: Strategije predavanja
+          lessons:
+            Teaching Strategies:
+              name: Strategije predavanja
         ECSPD3-Unit5:
           stages:
+            Complete the Challenge:
+              name: Dovrši izazov
+          lessons:
             Complete the Challenge:
               name: Dovrši izazov
         cspunit4draft:
@@ -830,6 +1411,15 @@ bs:
               name: Kreiranje JavaScript objekata
             Why Make Apps?:
               name: Zašto praviti aplikacije?
+          lessons:
+            Cleaning Data:
+              name: Čišćenje podataka
+            Why Make Apps?:
+              name: Zašto praviti aplikacije?
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Compiling Data:
+              name: Kompiliranje podataka
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -842,8 +1432,18 @@ bs:
               name: Pregled izazova
             Complete the Challenge:
               name: Dovrši izazov
+          lessons:
+            Challenge Overview:
+              name: Pregled izazova
+            Complete the Challenge:
+              name: Dovrši izazov
         duino:
           stages:
+            Basic Circuits:
+              name: Osnovni krugovi
+            Making Music:
+              name: Pravljenje muzike
+          lessons:
             Basic Circuits:
               name: Osnovni krugovi
             Making Music:
@@ -853,11 +1453,17 @@ bs:
           stages:
             Halloween 2015:
               name: Noć vještica 2015
+          lessons:
+            Halloween 2015:
+              name: Noć vještica 2015
         SpecialSeries:
           description_audience: Dob 10+ (nakon Kursa 3)
           stages:
             Spring 2016:
               name: Proljeće 2016
+            Halloween 2015:
+              name: Noć vještica 2015
+          lessons:
             Halloween 2015:
               name: Noć vještica 2015
         iceage:
@@ -867,8 +1473,16 @@ bs:
           stages:
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+          lessons:
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
         CSPPD3-Unit3:
           stages:
+            Challenge Overview:
+              name: Pregled izazova
+            Complete the Challenge:
+              name: Dovrši izazov
+          lessons:
             Challenge Overview:
               name: Pregled izazova
             Complete the Challenge:
@@ -879,11 +1493,17 @@ bs:
           stages:
             While Loops:
               name: Dok petlje
+          lessons:
+            While Loops:
+              name: Dok petlje
         gumball:
           title: Slatkiši Play Lab
           description: Napisati priču ili napraviti igru s Gumball Play Lab!
           description_short: Napisati priču ili napraviti igru s Gumball Play Lab!
           stages:
+            Gumball Play Lab:
+              name: Slatkiši Play Lab
+          lessons:
             Gumball Play Lab:
               name: Slatkiši Play Lab
         starwars:
@@ -895,6 +1515,9 @@ bs:
           stages:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
+          lessons:
+            Hour of Code 2015:
+              name: Sat Kodiranja 2015
         starwarsblocks:
           title: 'Ratovi Zvijezda: Gradimo Galaksiju sa Kôdom'
           description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi
@@ -902,6 +1525,9 @@ bs:
           description_short: Nauči kako isprogramirati droide, i napravi vlastitu
             Ratovi Zvijezda igricu u galaksiji daleko daleko.
           stages:
+            Hour of Code 2015:
+              name: Sat Kodiranja 2015
+          lessons:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
         mc:
@@ -912,14 +1538,25 @@ bs:
           stages:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
+          lessons:
+            Hour of Code 2015:
+              name: Sat Kodiranja 2015
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
               name: Pregled izazova
             Complete the Challenge:
               name: Dovrši izazov
+          lessons:
+            Challenge Overview:
+              name: Pregled izazova
+            Complete the Challenge:
+              name: Dovrši izazov
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: Dobrodošli!
+          lessons:
             Welcome!:
               name: Dobrodošli!
         cspunit5:
@@ -931,8 +1568,16 @@ bs:
           stages:
             Cleaning Data:
               name: Čišćenje podataka
+          lessons:
+            Cleaning Data:
+              name: Čišćenje podataka
         CSPPD3-Unit4:
           stages:
+            Challenge Overview:
+              name: Pregled izazova
+            Complete the Challenge:
+              name: Dovrši izazov
+          lessons:
             Challenge Overview:
               name: Pregled izazova
             Complete the Challenge:
@@ -947,8 +1592,22 @@ bs:
               name: Završni projekat
             Sample Apps:
               name: Primjeri aplikacija
+          lessons:
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat
         CSPPD3-Unit5:
           stages:
+            Challenge Overview:
+              name: Pregled izazova
+            Complete the Challenge:
+              name: Dovrši izazov
+          lessons:
             Challenge Overview:
               name: Pregled izazova
             Complete the Challenge:
@@ -963,6 +1622,15 @@ bs:
               name: Završni projekat
             Sample Apps:
               name: Primjeri aplikacija
+          lessons:
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat
         AlgebraA:
           description: Nauči Funkcionalno Programiranje kroz Algebru
           description_short: Nauči Funkcionalno Programiranje kroz Algebru
@@ -985,6 +1653,25 @@ bs:
               name: 'Izvanmređno: Ugovori'
             'Unplugged: The Design Recipe':
               name: 'Izvanmređno: Dizajn recept'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Račun: Procjena blokova'
+            'Eval: Strings and Images':
+              name: 'Evaluacija: Veze i slike'
+            'Unplugged: Contracts':
+              name: 'Izvanmređno: Ugovori'
+            'Eval: Writing Contracts':
+              name: 'Evaluacija: Pisanje ugovora'
+            'Calc: Defining Variables':
+              name: 'Calc: Definisanje Varijabli'
+            'Eval: Defining Functions':
+              name: 'Eval: Definiranje Funkcija'
+            'Unplugged: The Design Recipe':
+              name: 'Izvanmređno: Dizajn recept'
+            'Eval: Functions':
+              name: 'Eval: Funkcije'
+            'Play Lab: Defining Functions':
+              name: 'Laboratorij Igara: Definiranje Funkcija'
         AlgebraB:
           title: Računarstvo u Algebri
           description: Nauči Funkcionalno Programiranje kroz Algebru
@@ -1012,6 +1699,29 @@ bs:
               name: 'Unplugged: Uslovna i izvedena funkcija'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Play Lab: Definisanje varijabli (Big Game)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Play Lab: Animacija (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Izvanmrežno: Boolova algebra'
+            'Eval: Boolean Operators':
+              name: 'Evaluacija: Logički operatori'
+            'Play Lab: Booleans':
+              name: 'Play Lab: Logički'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Play Lab: Logički (Big Game)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Uslovna i izvedena funkcija'
+            'Eval: Conditionals':
+              name: 'Evaluacija: Uslovi'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Izvanmrežno: Detekcija sudara i udaljenost Formula'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Play Lab: Detekcije Kolizije (Big Game)'
         algebraPD1:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -1020,6 +1730,13 @@ bs:
               name: Blokovi Izvršenja
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
         algebraPD3c:
@@ -1036,8 +1753,22 @@ bs:
               name: Slanje brojeva
             The Internet:
               name: Internet
+          lessons:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Number Systems:
+              name: Brojčani Sistemi
+            Binary Numbers:
+              name: Binarni Brojevi
+            Sending Numbers:
+              name: Slanje brojeva
+            The Internet:
+              name: Internet
         csp2-2017:
           stages:
+            Cleaning Data:
+              name: Čišćenje podataka
+          lessons:
             Cleaning Data:
               name: Čišćenje podataka
         csp3-2017:
@@ -1048,8 +1779,18 @@ bs:
               name: Kreativnost u algoritmima
             The Need for Algorithms:
               name: Potreba za algoritmima
+          lessons:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
         csp5-2017:
           stages:
+            While Loops:
+              name: Dok petlje
+          lessons:
             While Loops:
               name: Dok petlje
         CSDU3-Draft:
@@ -1060,6 +1801,9 @@ bs:
               name: Brzina
         2016_sciencePD_phase1:
           stages:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+          lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
         CSF_Secret_Sample:
@@ -1074,9 +1818,19 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          lessons:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+            Evaluation Blocks:
+              name: Blokovi Izvršenja
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
         sciencePD1:
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           stages:
+            Introduction to PD:
+              name: Uvod u Profesionalni Razvoj
+          lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
         cspunit1-support:
@@ -1086,6 +1840,9 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -1110,6 +1867,9 @@ bs:
           stages:
             Artist Functions:
               name: Umjetnik funkcije
+          lessons:
+            Artist Functions:
+              name: Umjetnik funkcije
         artistExemplar:
           description_audience: Godine 8+ (poslije Kursa 2)
         teachercon:
@@ -1118,6 +1878,9 @@ bs:
               display_name: Pregled
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'Pčela: Uslovi'
+          lessons:
             'Bee: Conditionals':
               name: 'Pčela: Uslovi'
         gradeKinder:
@@ -1178,16 +1941,36 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Zamotavanje
         ecs-unit2:
           stages:
+            Teaching Strategies:
+              name: Strategije predavanja
+          lessons:
             Teaching Strategies:
               name: Strategije predavanja
         ecs-unit3:
           stages:
             Teaching Strategies:
               name: Strategije predavanja
+          lessons:
+            Teaching Strategies:
+              name: Strategije predavanja
         ecs-unit4:
           stages:
+            Teaching Strategies:
+              name: Strategije predavanja
+          lessons:
             Teaching Strategies:
               name: Strategije predavanja
         ecs-unit5:
@@ -1220,6 +2003,15 @@ bs:
               name: Varijable
             Conditionals:
               name: Uvjeti
+          lessons:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
         grade2:
           stages:
             Flappy:
@@ -1252,6 +2044,27 @@ bs:
               name: Varijable
             While Loops:
               name: Dok petlje
+          lessons:
+            Events:
+              name: Događaji
+            Loops:
+              name: Petlje
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Conditionals:
+              name: Uvjeti
+            While Loops:
+              name: Dok petlje
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+            Binary:
+              name: Binarno
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -1260,8 +2073,18 @@ bs:
               name: Recept za Dizajn
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
+            The Design Recipe:
+              name: Recept za Dizajn
+            Teacher Dashboard:
+              name: Nadzorna Ploča za Nastavnike
         csd1-2017:
           stages:
+            Apps and Problem Solving:
+              name: Aplikacije i riješavanje problema
+          lessons:
             Apps and Problem Solving:
               name: Aplikacije i riješavanje problema
         csp-online-test:
@@ -1276,6 +2099,9 @@ bs:
           stages:
             Bounce:
               name: Odskok
+          lessons:
+            Bounce:
+              name: Odskok
         fesbinary:
           title: Binarno
           stages:
@@ -1287,6 +2113,9 @@ bs:
           stages:
             Classes:
               name: Razredi
+            Lists:
+              name: Liste
+          lessons:
             Lists:
               name: Liste
         csp2-support:
@@ -1303,14 +2132,27 @@ bs:
           stages:
             Flappy Code:
               name: Flappy kôd
+          lessons:
+            Flappy Code:
+              name: Flappy kôd
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
             Going Places Safely:
               name: Sigurna Putovanja
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Going Places Safely:
+              name: Sigurna Putovanja
         courseb-draft:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
             Your Digital Footprint:
@@ -1327,6 +2169,15 @@ bs:
               name: Digitalni otisak stopala
             Building a Foundation:
               name: Izrada Temelja
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            'Real-life Algorithms: Paper Planes':
+              name: 'Stvarni algoritmi: Papirni Planovi'
+            Loops in Maze:
+              name: Petlje u labirintu
+            Binary Bracelets:
+              name: Binarne narukvice
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1341,6 +2192,19 @@ bs:
               name: Ugniježdene Petlje
             Introduction:
               name: Uvod
+          lessons:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1357,6 +2221,19 @@ bs:
               name: Uvod
             Conditionals:
               name: Uvjeti
+          lessons:
+            Introduction:
+              name: Uvod
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1371,6 +2248,15 @@ bs:
               name: Uvod
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+          lessons:
+            Introduction:
+              name: Uvod
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
+            Build Your Project:
+              name: Napravite Vaš projekat
         classic-hoc-impact-study:
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
           stages:
@@ -1381,12 +2267,21 @@ bs:
           stages:
             Hour of Code 2013:
               name: Sat Kodiranja 2013
+          lessons:
+            Hour of Code 2013:
+              name: Sat Kodiranja 2013
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
         2016_sciencePD_phase2b:
           stages:
+            Welcome!:
+              name: Dobrodošli!
+          lessons:
             Welcome!:
               name: Dobrodošli!
         csp3-support:
@@ -1401,6 +2296,9 @@ bs:
           stages:
             Welcome!:
               name: Dobrodošli!
+          lessons:
+            Welcome!:
+              name: Dobrodošli!
         science-pd-ol-pt-5:
           stages:
             Welcome!:
@@ -1411,8 +2309,16 @@ bs:
               name: Binarno
             Snowflakes:
               name: Pahulje
+          lessons:
+            Snowflakes:
+              name: Pahulje
+            Binary:
+              name: Binarno
         sciencepd5:
           stages:
+            Welcome!:
+              name: Dobrodošli!
+          lessons:
             Welcome!:
               name: Dobrodošli!
         csp5-support:
@@ -1421,6 +2327,15 @@ bs:
               display_name: Pregled
         csppostap-2017:
           stages:
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat
+          lessons:
             Creating Javascript Objects:
               name: Kreiranje JavaScript objekata
             Deleting Records:
@@ -1443,8 +2358,16 @@ bs:
               name: Pravljenje muzike
             Functions with Parameters:
               name: Funkcije sa Parametrima
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
         workshop-gamelab:
           stages:
+            Introduction:
+              name: Uvod
+          lessons:
             Introduction:
               name: Uvod
         csd5-draft:
@@ -1463,8 +2386,16 @@ bs:
           stages:
             Introduction:
               name: Uvod
+          lessons:
+            Introduction:
+              name: Uvod
         coursee-ramp:
           stages:
+            Introduction:
+              name: Uvod
+            Conditionals:
+              name: Uvjeti
+          lessons:
             Introduction:
               name: Uvod
             Conditionals:
@@ -1509,6 +2440,11 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+          lessons:
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
         csd2-draft:
           stages:
             Images:
@@ -1537,12 +2473,25 @@ bs:
               name: Uvod
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+          lessons:
+            Introduction:
+              name: Uvod
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
         csd2-old:
           stages:
             Classes:
               name: Razredi
+          lessons:
+            Classes:
+              name: Razredi
         artist-and-bb8:
           stages:
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Bounce:
+              name: Odskok
+          lessons:
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
             Bounce:
@@ -1566,6 +2515,11 @@ bs:
           assignment_family_title: Kurs A
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Going Places Safely:
+              name: Sigurna Putovanja
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1574,16 +2528,41 @@ bs:
           assignment_family_title: Kurs B
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Stvarni algoritmi: Papirni Planovi'
             Loops in Maze:
               name: Petlje u labirintu
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            'Real-life Algorithms: Paper Planes':
+              name: 'Stvarni algoritmi: Papirni Planovi'
+            Binary Bracelets:
+              name: Binarne narukvice
         coursed-2017:
           stages:
             Nested Loops:
               name: Ugniježdene Petlje
+          lessons:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1598,6 +2577,23 @@ bs:
               name: Izrada Temelja
             Nested Loops:
               name: Ugniježdene Petlje
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Introduction:
+              name: Uvod
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-2017:
           stages:
             Ice Age Play Lab:
@@ -1614,6 +2610,19 @@ bs:
               name: Predstavite Vaš projekat
             Building a Foundation:
               name: Izrada Temelja
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Introduction:
+              name: Uvod
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         cspnovice:
           lesson_groups:
             required:
@@ -1684,6 +2693,17 @@ bs:
               name: Ugniježdene Petlje
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            Introduction:
+              name: Uvod
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1692,6 +2712,11 @@ bs:
               name: Spelovanje
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Spelling Bee:
+              name: Spelovanje
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1704,12 +2729,32 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
+          lessons:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
         e-f-ramp:
           stages:
             Building a Foundation:
               name: Izrada Temelja
             Nested Loops:
               name: Ugniježdene Petlje
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
             Conditionals:
               name: Uvjeti
             Build Your Project:
@@ -1736,6 +2781,19 @@ bs:
               name: Umjetnik Binarno
             Building a Foundation:
               name: Izrada Temelja
+          lessons:
+            Introduction:
+              name: Uvod
+            Building a Foundation:
+              name: Izrada Temelja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
         new-express:
           stages:
             Introduction:
@@ -1748,8 +2806,32 @@ bs:
               name: Izrada Temelja
             Nested Loops:
               name: Ugniježdene Petlje
+          lessons:
+            Introduction:
+              name: Uvod
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         new-e:
           stages:
+            Building a Foundation:
+              name: Izrada Temelja
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+          lessons:
             Building a Foundation:
               name: Izrada Temelja
             Conditionals:
@@ -1774,6 +2856,17 @@ bs:
               name: Napravite Vaš projekat
             Present Your Project:
               name: Predstavite Vaš projekat
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         csd5-old:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema
             podataka.
@@ -1788,12 +2881,39 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
+          lessons:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
         hero:
           stages:
             Minecraft Hour of Code:
               name: Sata Kodiranja Minecraft-a
+          lessons:
+            Minecraft Hour of Code:
+              name: Sata Kodiranja Minecraft-a
         course-e-2018:
           stages:
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Introduction:
+              name: Uvod
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+          lessons:
             Building a Foundation:
               name: Izrada Temelja
             Nested Loops:
@@ -1824,8 +2944,30 @@ bs:
               name: Napravite Vaš projekat
             Present Your Project:
               name: Predstavite Vaš projekat
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Introduction:
+              name: Uvod
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         csd6-old:
           stages:
+            Event Types:
+              name: Vrste događaja
+            Lists:
+              name: Liste
+            Lights:
+              name: Svjetla
+            For Loops:
+              name: Od-Do-Za Petlje
+          lessons:
             Event Types:
               name: Vrste događaja
             Lists:
@@ -1844,6 +2986,15 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
         csd3-2018:
           stages:
             Variables:
@@ -1854,8 +3005,20 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
         csd2-2018:
           stages:
+            Lists:
+              name: Liste
+          lessons:
             Lists:
               name: Liste
         coursea-2018:
@@ -1881,6 +3044,11 @@ bs:
               name: Sigurna Putovanja
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Going Places Safely:
+              name: Sigurna Putovanja
         express-2018:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -1917,6 +3085,27 @@ bs:
               name: Prijenos programiranja
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
+          lessons:
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Binary Bracelets:
+              name: Binarne narukvice
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         courseb-2018:
           assignment_family_title: Kurs B
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
@@ -1928,6 +3117,11 @@ bs:
               name: Digitalni otisak stopala
             Move It, Move It:
               name: Pomakni, Pomakni
+          lessons:
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1946,6 +3140,17 @@ bs:
               name: Papirno Programiranje Grafikona
             Relay Programming:
               name: Prijenos programiranja
+          lessons:
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1956,8 +3161,20 @@ bs:
               name: Veliki Događaj
             Binary Bracelets:
               name: Binarne narukvice
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            'Real-life Algorithms: Paper Planes':
+              name: 'Stvarni algoritmi: Papirni Planovi'
+            Binary Bracelets:
+              name: Binarne narukvice
         csd6-2018:
           stages:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+          lessons:
             Making Music:
               name: Pravljenje muzike
             Functions with Parameters:
@@ -1984,6 +3201,23 @@ bs:
               name: Uvjeti s Kartama
             Minecraft Hour of Code:
               name: Sata Kodiranja Minecraft-a
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2009,8 +3243,28 @@ bs:
               name: Predstavite Vaš projekat
             Conditionals with Cards:
               name: Uvjeti s Kartama
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
         csp1-2018:
           stages:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Number Systems:
+              name: Brojčani Sistemi
+            Binary Numbers:
+              name: Binarni Brojevi
+            Sending Numbers:
+              name: Slanje brojeva
+            The Internet:
+              name: Internet
+          lessons:
             Sending Binary Messages:
               name: Slanje Binarnih Poruka
             Number Systems:
@@ -2043,8 +3297,18 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
+          lessons:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
         csp5-2018:
           stages:
+            While Loops:
+              name: Dok petlje
+          lessons:
             While Loops:
               name: Dok petlje
         csppostap-2018:
@@ -2059,6 +3323,17 @@ bs:
               name: Završni projekat
             Cleaning Data:
               name: Čišćenje podataka
+          lessons:
+            Cleaning Data:
+              name: Čišćenje podataka
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -2143,6 +3418,13 @@ bs:
               name: Digitalni otisak stopala
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+          lessons:
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+            Spelling Bee:
+              name: Spelovanje
         fit-test:
           lesson_groups:
             required:
@@ -2151,8 +3433,14 @@ bs:
           stages:
             Artist:
               name: Umjetnik
+          lessons:
+            Artist:
+              name: Umjetnik
         frozen-2018-test:
           stages:
+            Artist:
+              name: Umjetnik
+          lessons:
             Artist:
               name: Umjetnik
         dance:
@@ -2160,8 +3448,14 @@ bs:
             Dance Party:
               name: Plesna zabava
           title: Plesna zabava
+          lessons:
+            Dance Party:
+              name: Plesna zabava
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Umjetnik
+          lessons:
             Artist:
               name: Umjetnik
         dance--draft:
@@ -2207,6 +3501,11 @@ bs:
               display_name: Internet
             csf_digcit:
               display_name: Digitalno Državljanstvo
+          lessons:
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -2236,6 +3535,19 @@ bs:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno Državljanstvo
+          lessons:
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            Dance Party:
+              name: Plesna zabava
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2263,6 +3575,9 @@ bs:
               display_name: Ugniježdene Petlje
             csf_functions:
               display_name: Funkcije
+          lessons:
+            Conditionals:
+              name: Uvjeti
         express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2298,6 +3613,9 @@ bs:
               display_name: Varijable
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+          lessons:
+            Dance Party:
+              name: Plesna zabava
         andrea-test:
           stages:
             'null':
@@ -2325,6 +3643,9 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Binary Bracelets:
+              name: Binarne narukvice
         coursea-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2355,6 +3676,9 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Going Places Safely:
+              name: Sigurna Putovanja
         courseb-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2377,6 +3701,11 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+            Move It, Move It:
+              name: Pomakni, Pomakni
         pre-express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2392,16 +3721,34 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Spelling Bee:
+              name: Spelovanje
         removed19:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
         csd2-2019:
           stages:
             Lists:
               name: Liste
+          lessons:
+            Lists:
+              name: Liste
         csd3-2019:
           stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+          lessons:
             Variables:
               name: Varijable
             Conditionals:
@@ -2422,6 +3769,11 @@ bs:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd6-2019:
           stages:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+          lessons:
             Making Music:
               name: Pravljenje muzike
             Functions with Parameters:
@@ -2448,8 +3800,26 @@ bs:
               name: Slanje brojeva
             The Internet:
               name: Internet
+          lessons:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Number Systems:
+              name: Brojčani Sistemi
+            Binary Numbers:
+              name: Binarni Brojevi
+            Sending Numbers:
+              name: Slanje brojeva
+            The Internet:
+              name: Internet
         csp3-2019:
           stages:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+          lessons:
             The Need for Algorithms:
               name: Potreba za algoritmima
             Creativity in Algorithms:
@@ -2460,8 +3830,22 @@ bs:
           stages:
             While Loops:
               name: Dok petlje
+          lessons:
+            While Loops:
+              name: Dok petlje
         csppostap-2019:
           stages:
+            Cleaning Data:
+              name: Čišćenje podataka
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat
+          lessons:
             Cleaning Data:
               name: Čišćenje podataka
             Creating Javascript Objects:
@@ -2483,6 +3867,9 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Binary Numbers:
+              name: Binarni Brojevi
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2491,6 +3878,13 @@ bs:
               name: Uvjeti s Kartama
             Building a Foundation:
               name: Izrada Temelja
+          lessons:
+            Building a Foundation:
+              name: Izrada Temelja
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2579,8 +3973,20 @@ bs:
               name: Liste
             Images:
               name: Slike
+          lessons:
+            Images:
+              name: Slike
         csd3-pilot:
           stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+          lessons:
             Variables:
               name: Varijable
             Conditionals:
@@ -2649,12 +4055,20 @@ bs:
               name: Uvod
             Nested Loops:
               name: Ugniježdene Petlje
+          lessons:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježdene Petlje
         csp6-pilot:
           lesson_groups:
             required:
               display_name: Pregled
         dance-2019:
           stages:
+            Dance Party:
+              name: Plesna zabava
+          lessons:
             Dance Party:
               name: Plesna zabava
         k5-onlinepd-2019:
@@ -2678,6 +4092,19 @@ bs:
           lesson_groups:
             k5_next_steps:
               display_name: Slijedeći Koraci
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
         dance-extras-2019:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         csp4-preview:
@@ -2707,6 +4134,11 @@ bs:
               display_name: Ugniježdene Petlje
             csf_functions:
               display_name: Funkcije
+          lessons:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -2720,6 +4152,9 @@ bs:
               display_name: Događaji
             csf_digcit:
               display_name: Digitalno Državljanstvo
+          lessons:
+            Conditionals:
+              name: Uvjeti
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -2733,6 +4168,9 @@ bs:
               display_name: Događaji
             csf_digcit:
               display_name: Digitalno Državljanstvo
+          lessons:
+            Conditionals:
+              name: Uvjeti
         csp7-pilot:
           lesson_groups:
             required:
@@ -2755,6 +4193,9 @@ bs:
           stages:
             Images:
               name: Slike
+          lessons:
+            Images:
+              name: Slike
         csd4-2020:
           lesson_groups:
             csd5_2:
@@ -2771,6 +4212,11 @@ bs:
               name: Pravljenje muzike
             Functions with Parameters:
               name: Funkcije sa Parametrima
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
         csd3-2020:
           stages:
             Variables:
@@ -2783,6 +4229,17 @@ bs:
               name: Funkcije
             Text:
               name: Tekst
+          lessons:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
         coursea-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2835,6 +4292,9 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Move It, Move It:
+              name: Pomakni, Pomakni
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -2850,6 +4310,9 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Binary Bracelets:
+              name: Binarne narukvice
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2875,6 +4338,17 @@ bs:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno Državljanstvo
+          lessons:
+            Relay Programming:
+              name: Prijenos programiranja
+            Dance Party:
+              name: Plesna zabava
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -2886,6 +4360,9 @@ bs:
               display_name: Ugniježdene Petlje
             csf_functions:
               display_name: Funkcije
+          lessons:
+            Conditionals:
+              name: Uvjeti
         coursef-2020:
           stages:
             Internet:
@@ -2899,6 +4376,9 @@ bs:
               display_name: Varijable
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+          lessons:
+            Internet:
+              name: Internet
         express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2916,6 +4396,9 @@ bs:
               display_name: Varijable
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+          lessons:
+            Dance Party:
+              name: Plesna zabava
         pre-express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2927,8 +4410,14 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          lessons:
+            Spelling Bee:
+              name: Spelovanje
         csp1-2020:
           stages:
+            Binary Numbers:
+              name: Binarni Brojevi
+          lessons:
             Binary Numbers:
               name: Binarni Brojevi
         csp3-virtual:
@@ -2937,6 +4426,9 @@ bs:
               name: Potreba za algoritmima
             Creativity in Algorithms:
               name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+          lessons:
             Creating Functions:
               name: Kreiranje Funkcija
         csd3-virtual:
@@ -2949,8 +4441,16 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
         csd2-virtual:
           stages:
+            Images:
+              name: Slike
+          lessons:
             Images:
               name: Slike
         csp5-virtual:
@@ -2959,8 +4459,16 @@ bs:
               name: Dok petlje
             Variables:
               name: Varijable
+          lessons:
+            Variables:
+              name: Varijable
         virtual-holding-place:
           stages:
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+          lessons:
             Velocity:
               name: Brzina
             Functions:
@@ -2973,5 +4481,8 @@ bs:
               name: Događaji
         csp5-virtual-part2:
           stages:
+            While Loops:
+              name: Dok petlje
+          lessons:
             While Loops:
               name: Dok petlje

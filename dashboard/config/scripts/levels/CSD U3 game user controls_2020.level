@@ -43,7 +43,7 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 18732,
     "name_suffix": "_2020",
-    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](../../20/puzzle/13) as an example.",
+    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 26 Puzzle 13](../../26/puzzle/13) as an example.",
     "reference_links": [
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",
@@ -62,11 +62,15 @@
       "/docs/concepts/javascript/functions/"
     ],
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-06 17:43:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-08-04 20:15:13 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-06 17:05:56 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-06 17:06:31 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-06 00:47:49 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:09 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-06 17:43:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-08-04 20:15:13 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-06 17:05:56 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-06 17:06:31 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-06 00:47:49 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:09 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-26 18:55:33 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-26 18:57:29 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

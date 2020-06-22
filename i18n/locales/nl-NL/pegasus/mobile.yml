@@ -315,7 +315,7 @@
   homepage_slot_text_link_donate: "Doneer"
   homepage_slot_text_link_shop: "T-shirts, hoeden, & meer"
   homepage_gallery_header: "Meer dan %{project_count} miljoen Code.org projecten gemaakt"
-  homepage_header_donors: "Code.org dankt zijn aanhangers"
+  homepage_header_donors: "Code.org bedankt haar sponsoren"
   homepage_donors_seall: "Alles weergeven"
   homepage_donors_donate: "Doneren"
   homepage_below_hero_announcement_text: "We nemen uw privacy serieus en met ingang van 25 mei zullen delen van ons privacybeleid geüpdatet worden."
@@ -1194,6 +1194,8 @@
   header_teacher_community: "Lerarengemeenschap"
   header_help_support: 'Hulp en ondersteuning'
   header_report_bug: "Rapporteer bugs"
+  header_legal_privacy: "Privacybeleid"
+  header_legal_tos: "Gebruiksvoorwaarden"
   header_tutorials: "Tutorials"
   header_documentation: "Documentatie"
   user_header_label: "Hallo %{username}"

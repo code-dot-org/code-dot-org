@@ -1050,7 +1050,7 @@ export const sectionFromServerSection = serverSection => ({
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
@@ -1085,7 +1085,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,

@@ -1,4 +1,3 @@
-@no_circle
 @single_session
 Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
 
@@ -48,11 +47,11 @@ Scenario: Translated function names in Spanish
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "es-MX" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  Then element "[block-id=6] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "es-MX" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=28] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "es-MX" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
 
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/hoc/15/lang/pt-br"
@@ -101,11 +100,11 @@ Scenario: Translated function names in Portuguese
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "pt-BR" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  Then element "[block-id=6] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "pt-BR" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=28] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "pt-BR" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
 
 Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/hoc/15/lang/ar-sa"
@@ -139,11 +138,11 @@ Scenario: Translated function names in Arabic
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "ar-SA" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  Then element "[block-id=6] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "ar-SA" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=28] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "ar-SA" text from key "data.function_names.2-3 Artist Functions 4.draw a square"
+  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
 
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/ar-sa"

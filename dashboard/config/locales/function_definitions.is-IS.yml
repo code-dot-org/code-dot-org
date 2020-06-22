@@ -1,7 +1,7 @@
 ---
 is-IS:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -20,9 +20,15 @@ is-IS:
       2-3 Artist 7:
         draw_rect:
           name: teikna_rétth
+          parameters:
+            width: breidd
+            height: hæð
       2-3 Artist Debugging 10:
         draw square:
           name: teikna ferning
+          parameters:
+            width: breidd
+            height: hæð
         jump to controller top left:
           name: hoppa efst til vinstri á stjórnborði
         jump to middle:
@@ -260,6 +266,8 @@ is-IS:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: safna blómasafa búa til hunang
+          parameters:
+            honey: hunang
       Course 4 Play Lab Params 1:
         jump:
           name: hoppa
@@ -268,12 +276,17 @@ is-IS:
           name: borð_upp
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Course 4 Play Lab Params 2:
         jump:
           name: hoppa
       Course 4 Play Lab Params 3:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
       Course 4 Play Lab Params 4:
         patrol:
           name: rása
@@ -282,18 +295,30 @@ is-IS:
       Course 4 Play Lab Params 5:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 6:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 7:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 8:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 9:
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Course 4 Play Lab Vars 1:
         set score:
           name: setja stig á
@@ -314,6 +339,8 @@ is-IS:
       Course 4 SCF 1a:
         get nectar:
           name: sækja blómasafa
+          parameters:
+            counter: teljari
       Course 4 SCF 1b:
         make honey up and over:
           name: gera hunang upp til hægri
@@ -333,6 +360,8 @@ is-IS:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       'Course E: Play Lab Project':
         do something:
           name: gera eitthvað
@@ -346,6 +375,8 @@ is-IS:
           name: borð_upp
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Function intro Ryan:
         build bridge:
           name: byggja brú
@@ -400,17 +431,27 @@ is-IS:
       InspirationalArtwork:
         n-sided shape:
           name: n-hliða form
+          parameters:
+            length: lengd
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       InspirationalArtwork_2018:
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
         n-sided shape:
           name: n-hliða form
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       K-1 Artist2 3:
         draw roof:
           name: teikna þak
@@ -509,38 +550,66 @@ is-IS:
           name: gera eitthvað
         draw a hexagon:
           name: teikna sexkant
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
         do something:
           name: gera eitthvað
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 15:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 2:
         do something:
           name: gera eitthvað
@@ -553,52 +622,92 @@ is-IS:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: teikna fimmhyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a hexagon:
           name: teikna sexkant
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a sqaure:
           name: teikna ferning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 9:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         do something:
           name: gera eitthvað
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Play Lab Params 11:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       New Artist Project:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       New Minecraft Hero Project:
         function 1:
           name: fall 1
@@ -607,8 +716,14 @@ is-IS:
       New Play Lab Project:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Robot Doodle:
         25 pixel square:
           name: 25 díla ferningur
@@ -702,6 +817,8 @@ is-IS:
       course4_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
         draw a square 20:
@@ -714,9 +831,13 @@ is-IS:
       course4_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       course4_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"einföld" lausn'
@@ -732,16 +853,22 @@ is-IS:
       courseC_artist_prog3:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2018:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2019:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog4:
@@ -1502,70 +1629,128 @@ is-IS:
           name: teikna ferning
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2_predict1:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       courseF_artist_fwp3:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a square2:
           name: teikna ferning2
+          parameters:
+            size: stærð
         filled square:
           name: fylltur ferningur
+          parameters:
+            size: stærð
+            color: litur
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp4:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       courseF_artist_fwp5:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       courseF_artist_fwp6:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
       courseF_artist_fwp7:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
         draw a square 20:
@@ -1579,6 +1764,8 @@ is-IS:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       courseF_bee_conditionals2:
         move and check:
           name: færa og athuga
@@ -1649,27 +1836,43 @@ is-IS:
       courseF_bee_fwp4:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            length: lengd
       courseF_bee_fwp5:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp6:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_variables_1_2018:
         collect row:
           name: safna röð

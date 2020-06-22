@@ -15,7 +15,7 @@ es-ES:
       Conditionals_2018: Condicionales
       Crowdsourcing: Colaboración Abierta
       Crowdsourcing_2018: 'traducción pendiente: en-US.data.unplugged.Crowdsourcing_2018.title'
-      DiceRace: 'Algoritmos de la vida real: Carrera de dados'
+      DiceRace: 'Algoritmos de la vida real: carrera de dados'
       DigitalCitizenship: Ciudadanía Digital
       DigitalFootprint: Tu huella Digital
       DigitalFootprint_2018: Tu huella Digital
@@ -47,7 +47,9 @@ es-ES:
       TangramAlgorithms: Algoritmos de tangram
       UnplugHappyMaps: Mapas Felices
       UnplugHappyMaps_2018: Mapas Felices
-      courseB_unplugged_CnC_2018: Es estupendo crear y jugar limpio
+      courseA_unplugged_loops: Bucles desconectados
+      courseA_unplugged_loops_2018: Bucles desconectados
+      courseB_unplugged_CnC_2018: Crear y jugar limpio es lo mejor
       courseB_unplugged_MRF: Actividad fuera de línea
       courseB_unplugged_MRF_2018: Mis amigos robóticos
       courseB_unplugged_loopyMRF: Actividad fuera de línea
@@ -55,8 +57,8 @@ es-ES:
       courseC_Unplugged_ScreenOutTheMean_2018: Actividad fuera de línea
       courseD_unplugged_digitalCitizenship: Actividad fuera de línea
       courseD_unplugged_digitalCitizenship_2018: Actividad fuera de línea
-      courseE_unplugged_CnC_2018: Compartir digital
-      courseE_unplugged_privateInformation: 'Educación de Sentido Común: Información
-        Privada y Personal '
+      courseE_unplugged_CnC_2018: Colaboración digital
+      courseE_unplugged_privateInformation: 'Common Sense Education: Información privada
+        y personal '
       courseF_unplugged_powerOfWords: Actividad fuera de línea
       courseF_unplugged_powerOfWords_2018: 'traducción pendiente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

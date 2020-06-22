@@ -1,1 +1,2179 @@
---- {}
+---
+id-ID:
+  data:
+    teacher_markdown:
+      CSD Problem Solving Process Video: |-
+        ## Discussion Goals
+
+        The first discussion question is part of the core activity in the rest of the lesson.  Students should take time working in their groups to think of specific things that they did that follow each step of the process.   The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.
+
+        The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains.  The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems, since the process will be used throughout the course in various domains.
+      CSD U1L02 TFMD_2018: "-   [The Problem Solving Process](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+        - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
+      CSD U1L02 TFMD_2019: "-   [The Problem Solving Process](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+        - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
+      CSD U1L03 TFMD_2018: |-
+        [KEY]
+
+        [Solving Problems KEY](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/) - Activity Guide ([PDF](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/export?format=doc))
+
+        [/KEY]
+      CSD U1L03 TFMD_2019: |-
+        [KEY]
+
+        [Solving Problems KEY](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/) - Activity Guide ([PDF](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1h0j3lonTjHF0rNffifR5R5OzuwmlpA-xfSYVmJnKQ54/export?format=doc))
+
+        [/KEY]
+      CSD U1L04 TFMD_2018: |-
+        [KEY]
+
+        [What is a Computer - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+        [/KEY]
+      CSD U1L04 TFMD_2019: |-
+        [KEY]
+
+        [What is a Computer - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+        [/KEY]
+      CSD U1L05 TFMD_2018: |-
+        [KEY]
+
+        [Input and Output - Exemplar](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))
+
+        [/KEY]
+      CSD U1L05 TFMD_2019: |-
+        [KEY]
+
+        [Input and Output - Version A Exemplar](https://docs.google.com/document/d/1eQlhscwLSTCWQqcy2W_dWlIjLqawFWyGRD2UrK0tdCw/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1eQlhscwLSTCWQqcy2W_dWlIjLqawFWyGRD2UrK0tdCw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1eQlhscwLSTCWQqcy2W_dWlIjLqawFWyGRD2UrK0tdCw/export?format=doc))
+
+        [Input and Output - Version B Exemplar](https://docs.google.com/document/d/1Wbk3NIlzqVVGcUXiL_yv6OGojdkbhCf0J572FsRk0oE/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1Wbk3NIlzqVVGcUXiL_yv6OGojdkbhCf0J572FsRk0oE/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Wbk3NIlzqVVGcUXiL_yv6OGojdkbhCf0J572FsRk0oE/export?format=doc))
+
+        [Input and Output - Version C Exemplar](https://docs.google.com/document/d/1hFbwVQogacouWeubdmGK4NdYMMD5k_WXUUkHWu9Asn0/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1hFbwVQogacouWeubdmGK4NdYMMD5k_WXUUkHWu9Asn0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hFbwVQogacouWeubdmGK4NdYMMD5k_WXUUkHWu9Asn0/export?format=doc))
+
+        [Input and Output - Version D Exemplar](https://docs.google.com/document/d/1jaBgpantM_0DfYQXJcbDA0Aa3btRiVKaagD37iC3AcI/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1jaBgpantM_0DfYQXJcbDA0Aa3btRiVKaagD37iC3AcI/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1jaBgpantM_0DfYQXJcbDA0Aa3btRiVKaagD37iC3AcI/export?format=doc))
+
+        [/KEY]
+      CSD U1L06 TFMD_2018: |-
+        [KEY]
+
+        -   [Card Sorting Algorithm](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))
+
+        [/KEY]
+      CSD U1L06 TFMD_2019: |-
+        [KEY]
+
+        -   [Card Sorting Algorithm](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))
+
+        [/KEY]
+      CSD U1L07 TFMD_2018: |-
+        [key]
+
+        -   [App Exploration](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/export?format=doc))
+
+        [/key]
+      CSD U1L07 TFMD_2019: |-
+        [key]
+
+        -   [App Exploration](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PD_VjGx5L7oBjAl0ij4qwcmsY08cR0gQEz4WLoEK0G4/export?format=doc))
+
+        [/key]
+      CSD U1L09 TFMD_2018: |-
+        [KEY]
+
+        -   [Apps and Problem Solving](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+        -   [Apps and Problem Solving](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+        [/KEY]
+      CSD U1L09 TFMD_2019: |-
+        [KEY]
+
+        -   [Apps and Problem Solving](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+        -   [Apps and Problem Solving](https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/edit) - Sample Marked Rubrics ([PDF](https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/export?format=doc))
+        -   [Apps and Problem Solving](https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/export?format=doc))
+            [/KEY]
+      CSD U2 CC Search Map: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   [Creative Commons Search](https://search.creativecommons.org/)
+        -   [Google Image Advanced Search](https://www.google.com/advanced_image_search)
+        -   [Wikimedia Commons](https://commons.wikimedia.org/)
+        -   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)
+
+        As with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom.  You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.
+      CSD U2 CC Search Map_2018: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   [Creative Commons Search](https://search.creativecommons.org/)
+        -   [Google Image Advanced Search](https://www.google.com/advanced_image_search)
+        -   [Wikimedia Commons](https://commons.wikimedia.org/)
+        -   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)
+
+        As with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom.  You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.
+      CSD U2 CC Search Map_2019: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   [Creative Commons Search](https://search.creativecommons.org/)
+        -   [Google Image Advanced Search](https://www.google.com/advanced_image_search)
+        -   [Wikimedia Commons](https://commons.wikimedia.org/)
+        -   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)
+
+        As with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom.  You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.
+      CSD U2 CSS explore CSS: Have students explore this level with a partner. Afterwards
+        lead a short share out so that partners can share with the class their responses
+        to the three questions in the instructions. The subsequent video should help
+        reinforce what students discovered so there's no need to lead a lengthy debrief
+        conversation.
+      CSD U2 CSS explore CSS_2018: Have students explore this level with a partner.
+        Afterwards lead a short share out so that partners can share with the class
+        their responses to the three questions in the instructions. The subsequent
+        video should help reinforce what students discovered so there's no need to
+        lead a lengthy debrief conversation.
+      CSD U2 CSS explore CSS_2019: Have students explore this level with a partner.
+        Afterwards lead a short share out so that partners can share with the class
+        their responses to the three questions in the instructions. The subsequent
+        video should help reinforce what students discovered so there's no need to
+        lead a lengthy debrief conversation.
+      CSD U2 HTML Adding Paragraphs pt 2: |-
+        This lesson has minimal programming in it. As you check students work, or better yet have them check one another's, all you need to be looking for is:
+
+        -   Students are writing their code inside of the body of the web page
+        -   Students are correctly using opening and closing `<p>` `</p>` tags
+        -   Students have made more than one paragraph
+        -   Students know how to use the Tips in the top right corner of the instructions
+      CSD U2 HTML Adding Paragraphs pt 2_2018: |-
+        This lesson has minimal programming in it. As you check students work, or better yet have them check one another's, all you need to be looking for is:
+
+        -   Students are writing their code inside of the body of the web page
+        -   Students are correctly using opening and closing `<p>` `</p>` tags
+        -   Students have made more than one paragraph
+        -   Students know how to use the Tips in the top right corner of the instructions
+      CSD U2 Headers map: |-
+        # Updating the Tags List
+
+        This map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster.
+      CSD U2 Headers map_2018: |-
+        # Updating the Tags List
+
+        This map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster.
+      CSD U2 Headers map_2019: |-
+        # Updating the Tags List
+
+        This map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster.
+      CSD U2 Heading Test: |-
+        # Check for Understanding
+
+        <img src="https://images.code.org/f2585aa9949e9653aa486ee2992af86c-image-1493413848179.07.14 PM.png" style="float:right; width: 300px;">
+
+        This page can be used as an assessment for the HTML tags introduced in this lesson and the last.  There is no one right answer for this level, but students should organize the text into some reasonable structure.  An example is included to the right.
+
+        <div class="clear"></div>
+      CSD U2 Heading Test_2018: |-
+        # Check for Understanding
+
+        <img src="https://images.code.org/f2585aa9949e9653aa486ee2992af86c-image-1493413848179.07.14 PM.png" style="float:right; width: 300px;">
+
+        This page can be used as an assessment for the HTML tags introduced in this lesson and the last.  There is no one right answer for this level, but students should organize the text into some reasonable structure.  An example is included to the right.
+
+        <div class="clear"></div>
+      CSD U2 Image Tag 1_2019: "Students may come across some image tags that include
+        a slash at the end, like this: \n`<img src=\"imgURL.jpg\" alt=\"my image\"
+        />`\n\nThese ending slashes are there to indicate that this tag is self-closing,
+        but they are optional and have no effect on the web page."
+      CSD U2 Inspector Warm Up: |-
+        ## HTML Discussion
+
+        You should bring students back together once they've spent a couple minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.
+
+        -   What text is appearing in both the code and the web page?
+        -   How is this language communicating extra information about the way to represent text?
+
+        The goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed.
+      CSD U2 Inspector Warm Up_2018: |-
+        ## HTML Discussion
+
+        You should bring students back together once they've spent a couple minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.
+
+        -   What text is appearing in both the code and the web page?
+        -   How is this language communicating extra information about the way to represent text?
+
+        The goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed.
+      CSD U2 Inspector Warm Up_2019: |-
+        ## HTML Discussion
+
+        You should bring students back together once they've spent a couple minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.
+
+        -   What text is appearing in both the code and the web page?
+        -   How is this language communicating extra information about the way to represent text?
+
+        The goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed.
+      CSD U2 Pair Programming Video_2019: |-
+        ## Discussion Goals
+
+        The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming.  As students discuss its potential benefits, make sure they understand that this is an industry standard practice, not just something done by learners in the classroom.
+      CSD U2 RGB summer: 'Color solution for Summer Yellow: (red, green, blue) = (255,
+        230, 100)'
+      CSD U2 RGB summer_2018: |-
+        [key]
+
+        Color solution for Summer Yellow: (red, green, blue) = (255, 230, 100)
+
+        [/key]
+      CSD U2 RGB summer_2019: |-
+        [key]
+
+        Color solution for Summer Yellow: (red, green, blue) = (255, 230, 100)
+
+        [/key]
+      CSD U2 RGB winter: 'Color solution for Winter Blue: (red, green, blue) = (195,
+        230, 255)'
+      CSD U2 RGB winter_2018: |-
+        [key]
+
+        Color solution for Winter Blue: (red, green, blue) = (195, 230, 255)
+
+        [/key]
+      CSD U2 RGB winter_2019: |-
+        [key]
+
+        Color solution for Winter Blue: (red, green, blue) = (195, 230, 255)
+
+        [/key]
+      CSD U2 Style Sheet Map: |-
+        # Introducing Content-Structure-Style
+
+        This map level, and in particular the first section, introduce the Content-Structure-Style paradigm that students will use to help understand the differences between HTML and CSS. While they have previously been using HTML tags to label and categorize their content, they're now learning how to control the style of the different elements in their page using CSS. Students may have some misconceptions at this point since their browser has used default styles for their different kinds of content (e.g. `<h1>` tags by default make text larger). As they move through these lessons they should come to see that tagging content really just allows the browser's default styles, or the styles they define using CSS, to be applied to the correct pieces of content in their web pages.
+      CSD U2 Style Sheet Map_2018: |-
+        # Introducing Content-Structure-Style
+
+        This map level, and in particular the first section, introduce the Content-Structure-Style paradigm that students will use to help understand the differences between HTML and CSS. While they have previously been using HTML tags to label and categorize their content, they're now learning how to control the style of the different elements in their page using CSS. Students may have some misconceptions at this point since their browser has used default styles for their different kinds of content (e.g. `<h1>` tags by default make text larger). As they move through these lessons they should come to see that tagging content really just allows the browser's default styles, or the styles they define using CSS, to be applied to the correct pieces of content in their web pages.
+      CSD U2 Style Sheet Map_2019: |-
+        # Introducing Content, Structure, and Style
+
+        This map level, and in particular the first section, introduces the Content-Structure-Style paradigm that students will use to help understand the differences between HTML (HyperText Markup Language)  and CSS (Cascading Style Sheets). While they have previously been using HTML tags to label and categorize their content, they're now learning how to control the style of the different elements in their page using CSS. Students may have some misconceptions at this point since their browser has used default styles for their different kinds of content (e.g. `<h1>` tags by default make text larger). As they move through these lessons they should come to see that tagging content really just allows the browser's default styles, or the styles they define using CSS, to be applied to the correct pieces of content in their web pages.
+
+        Some students may also be confused by the fact that "Content-Structure-Style" and "Cascading Style Sheets" have the same initial letters.  CSS stands for Cascading Style Sheets and refers to the language they will use to style their content.  Content-structure-style is a paradigm that they use to separate out the different information that the browser needs to render a page, but should not be abbreviated "C-S-S", to avoid confusion.
+      CSD U2 Text Properties Map: |-
+        # Differences in Browsers and Operating Systems
+
+        As mentioned in this map, you may find that different combinations of computers and browsers render fonts differently. While there is a common specification for how HTML and CSS should be read and displayed on the screen, each browser does so in a slightly different way, which can lead to the same page looking different on different computers. If your students encounter this, you can reassure them that it's a common challenge that web developers face.
+
+        In the case of `font-family: fantasy`, you can actually specify a list of fonts, from most to least specific. That way, if a user's computer has the exact font you specified, that's what they'll see, but if not the browser will try the next font on your list. To try and ensure that users see the font in the example image, you could write the css as `font-family: Papyrus, fantasy`. That way, even if a user's browser has a different default font for "fantasy", it will try to load the specific font "Papyrus" first.
+      CSD U2 Text Properties Map_2018: |-
+        # Differences in Browsers and Operating Systems
+
+        As mentioned in this map, you may find that different combinations of computers and browsers render fonts differently. While there is a common specification for how HTML and CSS should be read and displayed on the screen, each browser does so in a slightly different way, which can lead to the same page looking different on different computers. If your students encounter this, you can reassure them that it's a common challenge that web developers face.
+
+        In the case of `font-family: fantasy`, you can actually specify a list of fonts, from most to least specific. That way, if a user's computer has the exact font you specified, that's what they'll see, but if not the browser will try the next font on your list. To try and ensure that users see the font in the example image, you could write the css as `font-family: Papyrus, fantasy`. That way, even if a user's browser has a different default font for "fantasy", it will try to load the specific font "Papyrus" first.
+      CSD U2 Text Properties Map_2019: |-
+        # Differences in Browsers and Operating Systems
+
+        As mentioned in this map, you may find that different combinations of computers and browsers render fonts differently. While there is a common specification for how HTML and CSS should be read and displayed on the screen, each browser does so in a slightly different way, which can lead to the same page looking different on different computers. If your students encounter this, you can reassure them that it's a common challenge that web developers face.
+
+        In the case of `font-family: fantasy`, you can actually specify a list of fonts, from most to least specific. That way, if a user's computer has the exact font you specified, that's what they'll see, but if not the browser will try the next font on your list. To try and ensure that users see the font in the example image, you could write the css as `font-family: Papyrus, fantasy`. That way, even if a user's browser has a different default font for "fantasy", it will try to load the specific font "Papyrus" first.
+
+        If students want the page to show an exact font, they'll need to use a font from the web, so the browser can download that specific font to use when rendering the page.  More information on these fonts can be found at [Google Fonts](https://fonts.google.com/) and [W3Schools](https://www.w3schools.com/Css/css3_fonts.asp).
+      CSD U2 lists map: |-
+        # Review
+
+        Bring the class back together after all students have completed the previous level. You can track their progress in your Teacher Panel for that level. Review what students have learned about lists in the level progression. The previous level provides an opportunity to review both types of lists and how some common errors can affect how the list is displayed.  Students can also use this time to update their HTML tag lists with `<ul>`, `<ol>`, and `<li>`.
+      CSD U2 lists map_2018: |-
+        # Review
+
+        Bring the class back together after all students have completed the previous level. You can track their progress in your Teacher Panel for that level. Review what students have learned about lists in the level progression. The previous level provides an opportunity to review both types of lists and how some common errors can affect how the list is displayed.  Students can also use this time to update their HTML tag lists with `<ul>`, `<ol>`, and `<li>`.
+      CSD U2 lists map_2019: |-
+        # Review
+
+        Bring the class back together after all students have completed the previous level. You can track their progress in your Teacher Panel for that level. Review what students have learned about lists in the level progression. The previous level provides an opportunity to review both types of lists and how some common errors can affect how the list is displayed.  Students can also use this time to update their HTML tag lists with `<ul>`, `<ol>`, and `<li>`.
+      CSD U2 new page: The logistics of creating a new HTML page may be difficult
+        for students.  You can model creating a new page on this level so that students
+        see how the process works.
+      CSD U2 new page_2018: The logistics of creating a new HTML page may be difficult
+        for students.  You can model creating a new page on this level so that students
+        see how the process works.
+      CSD U2 new page_2019: The logistics of creating a new HTML page may be difficult
+        for students.  You can model creating a new page on this level so that students
+        see how the process works.
+      CSD U2 publish video: "## Discussion Goals\n\nThe video content is fairly straightforward,
+        but this is your last check in with students before they publish, so it's
+        a good time to make sure they have full thought through the implications of
+        publishing to the entire world.  They should make sure that they are not sharing
+        any sensitive information, and that they have the rights to use all the content
+        on the page.\n\nAs they began to share, they should also think about how they
+        respect the work of other website publishers, in particular their classmates.
+        \ You may want to take some time to establish classroom norms around how they
+        talk about and give feedback on their classmates' sites, as well as guidelines
+        for using code that others have written. "
+      CSD U2 text style font family_2019: |-
+        ## Note on fonts and font families
+
+        For a web browser to display a font, the font **must** be available on the device the web browser is running on.  There's no guarantee that any device has a particular font, so it's much safer to use font **families**, which allow for many different fonts that have the same general look at feel.
+
+        If students want to specify an exact font, they'll need to use a font from the web, so the browser can download that specific font to use when rendering the page.  More information on these fonts can be found at [Google Fonts](https://fonts.google.com/) and [W3Schools](https://www.w3schools.com/Css/css3_fonts.asp).
+      CSD U2L01 TFMD_2018: |-
+        [KEY]
+
+        -   [The Purpose of Websites - Exemplar](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))
+
+        [/KEY]
+      CSD U2L01 TFMD_2019: |-
+        [KEY]
+
+        -   [The Purpose of Websites - Exemplar](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))
+
+        [/KEY]
+      CSD U2L02 TFMD_2018: |-
+        [key]
+
+        -   [Personal Website Sketch] \(<https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing>) - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))
+
+        [/key]
+      CSD U2L02 TFMD_2019: |-
+        [key]
+
+        -   [Personal Website Sketch] \(<https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing>) - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))
+
+        [/key]
+      CSD U2L05 TFMD_2018: |-
+        [key]
+
+        -   [When Does Your Privacy Matter?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+        -   [Social Sleuth](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
+        [/key]
+      CSD U2L05 TFMD_2019: |-
+        [key]
+
+        -   [When Does Your Privacy Matter?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+        -   [Social Sleuth](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
+        [/key]
+      CSD U2L07 TFMD_2018: |-
+        [key]
+
+        -   [Licensing Your Work - Activity Guide Exemplar](https://docs.google.com/document/d/1xlupR9KtfmPaC4mTa5heSm6L9mzwTsuvEu1vd_6Z7ak/)
+
+        [/key]
+      CSD U2L07 TFMD_2019: |-
+        [key]
+
+        -   [Licensing Your Work - Activity Guide Exemplar](https://docs.google.com/document/d/1xlupR9KtfmPaC4mTa5heSm6L9mzwTsuvEu1vd_6Z7ak/)
+
+        [/key]
+      CSD U2L08 TFMD_2019: "**[Debugging](https://youtu.be/auv10y-dN4s)** - Video
+        ([download](https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4))"
+      CSD U2L09 TFMD_2018: |-
+        [key]
+
+        -   [Personal Website](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+        -   [Personal Website](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+
+        [/key]
+      CSD U2L09 TFMD_2019: |-
+        [key]
+
+        -   [Personal Website](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+        -   [Personal Website](https://docs.google.com/document/d/18Th4qixy8WMWtjNsVnQ6GUrmIj8YbPyK6ZYWJH2CfXw/edit) - Sample Marked Rubrics ([PDF](https://docs.google.com/document/d/18Th4qixy8WMWtjNsVnQ6GUrmIj8YbPyK6ZYWJH2CfXw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/18Th4qixy8WMWtjNsVnQ6GUrmIj8YbPyK6ZYWJH2CfXw/export?format=doc))
+        -   [Personal Website](https://docs.google.com/document/d/12ESS0l5kNICL_6D0h4FwVaVOkNjt94tFZaF00iD7tZw) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/12ESS0l5kNICL_6D0h4FwVaVOkNjt94tFZaF00iD7tZw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/12ESS0l5kNICL_6D0h4FwVaVOkNjt94tFZaF00iD7tZw/export?format=doc))
+            [/key]
+      CSD U2L12 TFMD_2018: |-
+        [KEY]
+
+        [Strange Yet True Animals - Key](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit) ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))
+
+        [/KEY]
+      CSD U2L12 TFMD_2019: |-
+        [KEY]
+
+        [Strange Yet True Animals - Key](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit) ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))
+
+        [/KEY]
+      CSD U2L13 TFMD_2018: |-
+        [key]
+
+        -   [RGB Colors](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?) - Activity Guide Key ([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))
+
+        [/key]
+      CSD U2L13 TFMD_2019: |-
+        [key]
+
+        -   [RGB Colors](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?) - Activity Guide Key ([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))
+
+        [/key]
+      CSD U2L14 TFMD_2018: |-
+        [key]
+
+        -   [Final Personal Website](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+        -   [Final Personal Website](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
+
+        [/key]
+      CSD U2L14 TFMD_2019: |-
+        [key]
+
+        -   [Final Personal Website](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+        -   [Final Personal Website](https://docs.google.com/document/d/1J9vOpHLTunexxF2Djf9tTXdehgDzc1VIoCh3VpuzA60/edit?usp=sharing) - Sample Marked Rubrics ([PDF](https://docs.google.com/document/d/1J9vOpHLTunexxF2Djf9tTXdehgDzc1VIoCh3VpuzA60/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1J9vOpHLTunexxF2Djf9tTXdehgDzc1VIoCh3VpuzA60/export?format=doc))
+        -   [Final Personal Website](https://docs.google.com/document/d/1WRMYZcPtivZE14O6QRyYXZHgG3snXHsmuhIHvHmNiK4/edit?usp=sharing) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1WRMYZcPtivZE14O6QRyYXZHgG3snXHsmuhIHvHmNiK4/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1WRMYZcPtivZE14O6QRyYXZHgG3snXHsmuhIHvHmNiK4/export?format=doc))
+
+        [/key]
+      CSD U3 - Booleans Video_2019: "## Discussion Goals\n\nStudents should be able
+        to explain that a Boolean expression is something that is either true or false,
+        similar to a yes or no question.  The more formal way to say this is that
+        Boolean expressions _evaluate_ to either true or false.  That means that when
+        the computer processes a Boolean expression, it checks to see whether the
+        expression describes a situation that is true or false, and then uses the
+        value of either true or false wherever the expression is found.\n\nSome examples
+        of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but
+        press students to think of expressions that might be better represented by
+        variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n\nSome examples
+        of Boolean expressions that evaluate to false are `4 == 7`, `schoolName ==
+        \"Hogwarts\"`, and `currentYear < 1000`. "
+      CSD U3 - Conditionals Video_2019: "## Discussion Goals\n\nMake sure students
+        are thinking of situations in which they want two different things to happen,
+        depending on the situation.  For example, they may say that they want one
+        animation if the sprite is moving to the left and a different animation if
+        the sprite is moving to the right.  Challenge the students to think about
+        when they would just use an `if` block, and when an `if/else` block is necessary.
+        \ "
+      CSD U3 AnimationsMulti defender make it your own_2019: This last level encourages
+        students to make the game their own. If students have made their way to this
+        point they have all the skills they need to progress through the curriculum,
+        so there is no pressure to complete any of the modifications suggested in
+        this level. If you have time, however, getting practice planning and implementing
+        new features will be a useful skill. Even just modifying the animations of
+        the game is an easy way students can make the game their own.
+      CSD U3 Complex Movement counter prediction gamelab: |-
+        !!!tip
+
+            This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code.
+      CSD U3 Complex Movement counter prediction gamelab_2018: |-
+        !!!tip
+
+            This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code.
+      CSD U3 Complex Movement counter prediction gamelab_2019: |-
+        !!!tip
+
+            This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code.
+      CSD U3 Draw Loop Plugged predict 2: Notice that the blue background is never
+        visible because it is immediately drawn over by the red background. Also there's
+        only ever one yellow dot visible since as the draw loop runs over and over
+        it is placing down new backgrounds.
+      CSD U3 Draw Loop Plugged predict 2_2018: Notice that the blue background is
+        never visible because it is immediately drawn over by the red background.
+        Also there's only ever one yellow dot visible since as the draw loop runs
+        over and over it is placing down new backgrounds.
+      CSD U3 Draw Loop Plugged predict 2_2019: Notice that the blue background is
+        never visible because it is immediately drawn over by the red background.
+        Also there's only ever one yellow dot visible since as the draw loop runs
+        over and over it is placing down new backgrounds.
+      CSD U3 Functions Call Function: |-
+        **Introducing Functions**
+
+        In these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code.
+      CSD U3 Functions Call Function_2018: |-
+        **Introducing Functions**
+
+        In these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code.
+      CSD U3 Functions Call Function_2019: |-
+        **Introducing Functions**
+
+        In these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code.
+      CSD U3 Functions Reset Sprite: "**Why Use Functions** \n\nThis and the next
+        two levels introduce three uses of functions, namely removing repetition in
+        programs, allowing code to quickly be changed at multiple points, and providing
+        organization in code. Students will need to write more of their own functions
+        in these levels."
+      CSD U3 Functions Reset Sprite_2018: "**Why Use Functions** \n\nThis and the
+        next two levels introduce three uses of functions, namely removing repetition
+        in programs, allowing code to quickly be changed at multiple points, and providing
+        organization in code. Students will need to write more of their own functions
+        in these levels."
+      CSD U3 Functions Reset Sprite_2019: "**Why Use Functions** \n\nThis and the
+        next two levels introduce three uses of functions, namely removing repetition
+        in programs, allowing code to quickly be changed at multiple points, and providing
+        organization in code. Students will need to write more of their own functions
+        in these levels."
+      CSD U3 Functions Write Reset: "**Functions in Context** \n\nIn this and the
+        next two lessons, students will use functions to organize code within a simple
+        game. While it is not identical to the side scroller, many of the skills and
+        uses of functions in these levels can and should be used when they complete
+        their side scroller."
+      CSD U3 Functions Write Reset_2018: "**Functions in Context** \n\nIn this and
+        the next two lessons, students will use functions to organize code within
+        a simple game. While it is not identical to the side scroller, many of the
+        skills and uses of functions in these levels can and should be used when they
+        complete their side scroller."
+      CSD U3 Functions Write Reset_2019: "**Functions in Context** \n\nIn this and
+        the next two lessons, students will use functions to organize code within
+        a simple game. While it is not identical to the side scroller, many of the
+        skills and uses of functions in these levels can and should be used when they
+        complete their side scroller."
+      CSD U3 Sprites anitab 2: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   [Creative Commons Search](https://search.creativecommons.org/)
+        -   [Google Image Advanced Search](https://www.google.com/advanced_image_search)
+        -   [Wikimedia Commons](https://commons.wikimedia.org/)
+        -   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)
+      CSD U3 Sprites anitab 2_2018: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   <a href="https://search.creativecommons.org/" target="new">Creative Commons Search</a>
+        -   <a href="https://www.google.com/advanced_image_search" target="new">Google Image Advanced Search</a>
+        -   <a href="https://commons.wikimedia.org/" target="new">Wikimedia Commons</a>
+        -   <a href="https://www.flickr.com/creativecommons/" target="new">Flickr Creative Commons</a>
+      CSD U3 Sprites anitab 2_2019: |-
+        # Recommended Search Engines
+
+        Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:
+
+        -   <a href="https://search.creativecommons.org/" target="new">Creative Commons Search</a>
+        -   <a href="https://www.google.com/advanced_image_search" target="new">Google Image Advanced Search</a>
+        -   <a href="https://commons.wikimedia.org/" target="new">Wikimedia Commons</a>
+        -   <a href="https://www.flickr.com/creativecommons/" target="new">Flickr Creative Commons</a>
+      CSD U3 Variables naming rules v2_2018: If students use variable names that start
+        with numbers, include spaces, or break other rules, the code may be forced
+        into text mode the next time that they go to that level or refresh the page.  To
+        get back into block mode, students will first need to fix the problem with
+        the variable names.  Use the red error squares to see where the bugs most
+        likely are, and once they are gone, click the "block mode" button at the top
+        right of the workspace.
+      CSD U3 Variables naming rules v2_2018_2019: If students use variable names that
+        start with numbers, include spaces, or break other rules, the code may be
+        forced into text mode the next time that they go to that level or refresh
+        the page.  To get back into block mode, students will first need to fix the
+        problem with the variable names.  Use the red error squares to see where the
+        bugs most likely are, and once they are gone, click the "block mode" button
+        at the top right of the workspace.
+      CSD U3 collisions build isTouching: The code in this level is overwhelming.  The
+        point is not that students understand every line, but that they see that it's
+        possible to check whether sprites are touching just by using their positions.  They
+        should understand that the `isTouching` block used in the next level automatically
+        runs the complicated code that they see here, but that it's hidden inside
+        the block to make programming easier.
+      CSD U3 collisions build isTouching_2018: The code in this level is overwhelming.  The
+        point is not that students understand every line, but that they see that it's
+        possible to check whether sprites are touching just by using their positions.  They
+        should understand that the `isTouching` block used in the next level automatically
+        runs the complicated code that they see here, but that it's hidden inside
+        the block to make programming easier.
+      CSD U3 collisions build isTouching_2019: The code in this level is overwhelming.  The
+        point is not that students understand every line, but that they see that it's
+        possible to check whether sprites are touching just by using their positions.  They
+        should understand that the `isTouching` block used in the next level automatically
+        runs the complicated code that they see here, but that it's hidden inside
+        the block to make programming easier.
+      CSD U3 debug: This is a good puzzle to use as an assessment of whether or not
+        students understand the basics of sequencing and positioning shapes in Game
+        Lab.
+      CSD U3 debug_2018: This is a good puzzle to use as an assessment of whether
+        or not students understand the basics of sequencing and positioning shapes
+        in Game Lab.
+      CSD U3 debug_2019: This is a good puzzle to use as an assessment of whether
+        or not students understand the basics of sequencing and positioning shapes
+        in Game Lab.
+      CSD U3 function video: |-
+        # Discussion Goals
+
+        Make sure students understand role of the two steps in using functions, as well as seeing functions as a form of "chunking" or abstraction.  The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code.    The function should be called at each place in the program that the student wants that block of code to run.
+      CSD U3 plotting shapes map: |-
+        # Simplified Shapes
+
+        The `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes.
+      CSD U3 plotting shapes map_2018: |-
+        # Simplified Shapes
+
+        The `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes.
+      CSD U3 plotting shapes map_2019: |-
+        # Simplified Shapes
+
+        The `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes.
+      CSD U3 rect: |-
+        # Tour of Game Lab
+
+        Depending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.
+      CSD U3 rect_2018: |-
+        # Tour of Game Lab
+
+        Depending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.
+      CSD U3 rect_2019: |-
+        # Tour of Game Lab
+
+        Depending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.
+      CSD U3L01 TFMD_2018: |-
+        [key]
+
+        -   [CS in Entertainment](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+        [/key]
+      CSD U3L01 TFMD_2019: |-
+        [key]
+
+        -   [CS in Entertainment](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+        [/key]
+      CSD U3L02 TFMD_2018: |-
+        [key]
+
+        -   [Drawing Shapes](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+        [/key]
+      CSD U3L02 TFMD_2019: |-
+        [key]
+
+        -   [Drawing Shapes](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+        [/key]
+      CSD U3L06 TFMD_2018: |-
+        [key]
+
+        -   [Sprite Scene Planning](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))
+
+        [/key]
+      CSD U3L06 TFMD_2019: |-
+        [key]
+
+        -   [Sprite Scene Planning](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))
+
+        [/key]
+      CSD U3L08 TFMD_2018: |-
+        [KEY]
+
+        -   [Variables Unplugged](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY) - Activity Guide Key ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))
+
+        [/KEY]
+      CSD U3L08 TFMD_2019: |-
+        [KEY]
+
+        -   [Variables Unplugged](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY) - Activity Guide Key ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))
+
+        [/KEY]
+      CSD U3L14 TFMD_2018: |-
+        [KEY]
+
+        -   [Interactive Card](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+        -   [Interactive Card](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+
+        [/KEY]
+      CSD U3L14 TFMD_2019: |-
+        [KEY]
+
+        -   [Interactive Card](https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/export?format=doc))
+        -   [Interactive Card](https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A) - Sample Marked Rubrics ([PDF](https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A/export?format=doc))
+        -   [Interactive Card](https://docs.google.com/document/d/1Hpl21687wuBuKgJ9zrbtMc421bd75MEjrd8wgXLJlEc) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1Hpl21687wuBuKgJ9zrbtMc421bd75MEjrd8wgXLJlEc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Hpl21687wuBuKgJ9zrbtMc421bd75MEjrd8wgXLJlEc/export?format=doc))
+
+        [/KEY]
+      CSD U3L16 TFMD_2018: |-
+        [KEY]
+
+        -   [Activity Guide  - Collision Detection](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/export?format=doc))
+
+        [/KEY]
+      CSD U3L16 TFMD_2019: |-
+        [KEY]
+
+        -   [Activity Guide  - Collision Detection](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/export?format=doc))
+
+        [/KEY]
+      CSD U3L21 TFMD_2018: |-
+        [KEY]
+
+        -   [Planning Your Platform Game](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))
+
+        [/KEY]
+      CSD U3L21 TFMD_2019: |-
+        [KEY]
+
+        -   [Planning Your Platform Game](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))
+
+        [/KEY]
+      CSD U3L22 TFMD_2018: |-
+        [key]
+
+        -   [Make Your Own Game](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+        -   [Make Your Own Game](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
+
+        [/key]
+      CSD U3L22 TFMD_2019: |-
+        [key]
+
+        -   [Make Your Own Game](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+        -   [Make Your Own Game](https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/edit) - Sample Marked Rubrics ([PDF](https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/export?format=doc))
+        -   [Make Your Own Game](https://docs.google.com/document/d/11yqLTJOPn11LeSNFfCtyvjyRvab3Q1DMorVNmoOLAf0/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/11yqLTJOPn11LeSNFfCtyvjyRvab3Q1DMorVNmoOLAf0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/11yqLTJOPn11LeSNFfCtyvjyRvab3Q1DMorVNmoOLAf0/export?format=doc))
+
+        [/key]
+      CSD U4 Change Screen Map: |-
+        #### Limited Programming Required
+
+        The goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6.
+      CSD U4 Change Screen Map_2018: |-
+        #### Limited Programming Required
+
+        The goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6.
+      CSD U4 Change Screen Map_2019: |-
+        #### Limited Programming Required
+
+        The goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6.
+      CSD U4 Design Elements Map: |-
+        #### Developing Good Programming Habits
+
+        Following clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app.
+      CSD U4 Design Elements Map_2018: |-
+        #### Developing Good Programming Habits
+
+        Following clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app.
+      CSD U4 Design Elements Map_2019: |-
+        #### Developing Good Programming Habits
+
+        Following clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app.
+      CSD U4 Importing Screens Map: |-
+        #### Promoting Teamwork
+
+        The following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:
+
+        -   Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls
+        -   Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID "screen1"
+        -   Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing
+
+        Once teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app.
+      CSD U4 Importing Screens Map_2018: |-
+        #### Promoting Teamwork
+
+        The following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:
+
+        -   Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls
+        -   Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID "screen1"
+        -   Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing
+
+        Once teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app.
+      CSD U4 Importing Screens Map_2019: |-
+        #### Promoting Teamwork
+
+        The following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:
+
+        -   Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls
+        -   Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID "screen1"
+        -   Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing
+
+        Once teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app.
+      CSD U4 Mult Screen Map: |-
+        #### Cards to Screens
+
+        To simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project.
+      CSD U4 Mult Screen Map_2018: |-
+        #### Cards to Screens
+
+        To simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project.
+      CSD U4 Mult Screen Map_2019: |-
+        #### Cards to Screens
+
+        To simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project.
+      CSD U4 User Input Map: "#### Just the Facts\n\nThere's a lot to consume here
+        and many of the details about how events work in App Lab are not totally necessary
+        to understand for our needs in this unit. If students are struggling with
+        how programming works in App Lab, focus on these essentials:\n\n-   There
+        is no `draw` loop that runs forever\n-   The `onEvent()` block specifies:\n
+        \   -   an element ID\n    -   an event (such as \"click\" or \"mouseover\")\n
+        \   -   code that should be run when the event occurs (this code is technically
+        an anonymous callback function, represented by the green block)\n-   Code
+        inside `onEvent()` blocks runs any time the specified event occurs\n\n####
+        Compared to Game Lab\n\nIn Game Lab, we might use the following code to check
+        if a sprite named \"button\" was clicked and do something about it:\n\n    function
+        draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t// Do something\n
+        \      \t}\n    }\n\nIn App Lab, given a button with the ID \"button\", we
+        could write the following code to achieve the same goal:\n\n    onEvent(\"button\",
+        \"click\", function () {\n    \t// Do something\n    });\n\nIn the App Lab
+        example, the function is just another argument passed to the onEvent function,
+        it just so happens that the argument must be a function itself. We could also
+        define the function separately and write this same program as follows:\n\n
+        \   function doSomething() {\n    \t// Do something\n    }\n\n    onEvent(\"button\",
+        \"click\", doSomething);\n\nIn the second example, notice that when we pass
+        the function `doSomething` to the `onEvent` function we _don't_ include the
+        parenthesis at the end. This is because we're actually passing the whole function
+        as an object."
+      CSD U4 User Input Map_2018: "#### Just the Facts\n\nThere's a lot to consume
+        here and many of the details about how events work in App Lab are not totally
+        necessary to understand for our needs in this unit. If students are struggling
+        with how programming works in App Lab, focus on these essentials:\n\n-   There
+        is no `draw` loop that runs forever\n-   The `onEvent()` block specifies:\n
+        \   -   an element ID\n    -   an event (such as \"click\" or \"mouseover\")\n
+        \   -   code that should be run when the event occurs (this code is technically
+        an anonymous callback function, represented by the green block)\n-   Code
+        inside `onEvent()` blocks runs any time the specified event occurs\n\n####
+        Compared to Game Lab\n\nIn Game Lab, we might use the following code to check
+        if a sprite named \"button\" was clicked and do something about it:\n\n    function
+        draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t// Do something\n
+        \      \t}\n    }\n\nIn App Lab, given a button with the ID \"button\", we
+        could write the following code to achieve the same goal:\n\n    onEvent(\"button\",
+        \"click\", function () {\n    \t// Do something\n    });\n\nIn the App Lab
+        example, the function is just another argument passed to the onEvent function,
+        it just so happens that the argument must be a function itself. We could also
+        define the function separately and write this same program as follows:\n\n
+        \   function doSomething() {\n    \t// Do something\n    }\n\n    onEvent(\"button\",
+        \"click\", doSomething);\n\nIn the second example, notice that when we pass
+        the function `doSomething` to the `onEvent` function we _don't_ include the
+        parenthesis at the end. This is because we're actually passing the whole function
+        as an object."
+      CSD U4 User Input Map_2019: "#### Just the Facts\n\nThere's a lot to consume
+        here and many of the details about how events work in App Lab are not totally
+        necessary to understand for our needs in this unit. If students are struggling
+        with how programming works in App Lab, focus on these essentials:\n\n-   There
+        is no `draw` loop that runs forever\n-   The `onEvent()` block specifies:\n
+        \   -   an element ID\n    -   an event (such as \"click\" or \"mouseover\")\n
+        \   -   code that should be run when the event occurs (this code is technically
+        an anonymous callback function, represented by the green block)\n-   Code
+        inside `onEvent()` blocks runs any time the specified event occurs\n\n####
+        Compared to Game Lab\n\nIn Game Lab, we might use the following code to check
+        if a sprite named \"button\" was clicked and do something about it:\n\n    function
+        draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t// Do something\n
+        \      \t}\n    }\n\nIn App Lab, given a button with the ID \"button\", we
+        could write the following code to achieve the same goal:\n\n    onEvent(\"button\",
+        \"click\", function () {\n    \t// Do something\n    });\n\nIn the App Lab
+        example, the function is just another argument passed to the onEvent function,
+        it just so happens that the argument must be a function itself. We could also
+        define the function separately and write this same program as follows:\n\n
+        \   function doSomething() {\n    \t// Do something\n    }\n\n    onEvent(\"button\",
+        \"click\", doSomething);\n\nIn the second example, notice that when we pass
+        the function `doSomething` to the `onEvent` function we _don't_ include the
+        parenthesis at the end. This is because we're actually passing the whole function
+        as an object."
+      CSD U4L01 autoSFLP_2019: |-
+        [key]
+
+        -   [Determine the User - Exemplar](https://docs.google.com/a/code.org/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/export?format=pdf) \| [DOCX](https://docs.google.com/a/code.org/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/edit?usp=sharing))
+
+        [/key]
+      CSD U4L02 autoSFLP_2019: |-
+        [key]
+
+        -   [Reacting as Your User Profile 1](https://docs.google.com/document/d/1VFvDunQ2ahFH9xp7aYv2CRvdh14z26o6XuCPfDPrq10/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1VFvDunQ2ahFH9xp7aYv2CRvdh14z26o6XuCPfDPrq10/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1VFvDunQ2ahFH9xp7aYv2CRvdh14z26o6XuCPfDPrq10/export?format=doc))
+        -   [Reacting as Your User Profile 2](https://docs.google.com/document/d/1aoekiZA8YNZiWOmJky1wQZkWWFf8KvJcNMZr-0h2Sys/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1aoekiZA8YNZiWOmJky1wQZkWWFf8KvJcNMZr-0h2Sys/export?format=pdf)\| [DOCX](https://docs.google.com/document/d/1aoekiZA8YNZiWOmJky1wQZkWWFf8KvJcNMZr-0h2Sys/export?format=doc)))
+        -   [Reacting as Your User Profile 3](https://docs.google.com/document/d/1Cx5M2WHzKr2mz-5oM_x49Si20gJ77RiRFd3ASRMNOaw/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1Cx5M2WHzKr2mz-5oM_x49Si20gJ77RiRFd3ASRMNOaw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Cx5M2WHzKr2mz-5oM_x49Si20gJ77RiRFd3ASRMNOaw/export?format=doc))
+        -   [Reacting as Your User Profile 4](https://docs.google.com/document/d/1KxWZEztMy7pZ6Ksg5OO0io7dLCJblKRcBpCoVkEpXfc/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1KxWZEztMy7pZ6Ksg5OO0io7dLCJblKRcBpCoVkEpXfc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1KxWZEztMy7pZ6Ksg5OO0io7dLCJblKRcBpCoVkEpXfc/export?format=doc))
+
+        [/key]
+      CSD U4L03 autoSFLP_2019: "-   [User Centered Design](https://docs.google.com/document/d/1XI02ssNt_W9zWRU1IsYtekN7KHWZ5sM48D5cjJAPlOs/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1XI02ssNt_W9zWRU1IsYtekN7KHWZ5sM48D5cjJAPlOs/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1XI02ssNt_W9zWRU1IsYtekN7KHWZ5sM48D5cjJAPlOs/export?format=doc))"
+      CSD U4L05 autoSFLP_2019: "-   [Improve a Screen](https://docs.google.com/document/d/1q3J_DQFPps7O5jOwRig_iApTNzVvagecx7rsjpeuNE8/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1q3J_DQFPps7O5jOwRig_iApTNzVvagecx7rsjpeuNE8/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1q3J_DQFPps7O5jOwRig_iApTNzVvagecx7rsjpeuNE8/export?format=doc))"
+      CSD U4L07 autoSFLP_2019: |-
+        [key]
+
+        -   [Paper Prototypes](https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s/export?format=doc))
+        -   [Paper Prototypes](https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6/export?format=doc))
+
+        [/key]
+      CSD U4L08 autoSFLP_2019: "-   [App Design Kickoff](https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/export?format=doc))"
+      CSD U4L09 autoSFLP_2019: "-   [Market Research](https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/export?format=doc))"
+      CSD U4L10 autoSFLP_2019: "-   [Prototype Brainstorming](https://docs.google.com/document/d/1JosYsD7aod4_3kDsqF2ndz6R0knkg0kbYrCHitNTHAU/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1JosYsD7aod4_3kDsqF2ndz6R0knkg0kbYrCHitNTHAU/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1JosYsD7aod4_3kDsqF2ndz6R0knkg0kbYrCHitNTHAU/export?format=doc))"
+      CSD U4L11 autoSFLP_2019: "-   [Paper Prototype User Testing](https://docs.google.com/document/d/17cUQMnlc3UJFUmCpHVC4NbGDBfyuK6QuRZGFT5ngahc/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/17cUQMnlc3UJFUmCpHVC4NbGDBfyuK6QuRZGFT5ngahc/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/17cUQMnlc3UJFUmCpHVC4NbGDBfyuK6QuRZGFT5ngahc/export?format=doc))"
+      CSD U4L14 autoSFLP_2019: "-   [App User Testing](https://docs.google.com/document/d/1wWZKNh7hqyXj6KaQJpOb506NOzgJE22mms2gzLGLZi4/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1wWZKNh7hqyXj6KaQJpOb506NOzgJE22mms2gzLGLZi4/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1wWZKNh7hqyXj6KaQJpOb506NOzgJE22mms2gzLGLZi4/export?format=doc))"
+      CSD U4L15 autoSFLP_2019: "-   [App User Testing Analysis](https://docs.google.com/document/d/16YNYRCr-OILf6j3X5Whi0ailjkD5TihVqJhlYvPfQ_Y/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/16YNYRCr-OILf6j3X5Whi0ailjkD5TihVqJhlYvPfQ_Y/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/16YNYRCr-OILf6j3X5Whi0ailjkD5TihVqJhlYvPfQ_Y/export?format=doc))"
+      CSD U4L16 autoSFLP_2019: |-
+        [key]
+
+        -   [App Presentation](https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8/export?format=doc))
+        -   [App Presentation](https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk) - Peer Review 1 ([PDF](https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk/export?format=doc))
+        -   [App Presentation](https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A/export?format=doc))
+        -   [App Presentation](https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0) - Peer Review 2 ([PDF](https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0/export?format=doc))
+
+        [/key]
+      CSD U5 Amazon Data Video: Check that students have answered the first two "Nyle"
+        questions on their activity guide before showing this video. After the video,
+        they should answer the third question.
+      CSD U5 Amazon Data Video_2018: Check that students have answered the first two
+        "Nyle" questions on their activity guide before showing this video. After
+        the video, they should answer the third question.
+      CSD U5 Amazon Data Video_2019: 'Check that students have answered the first
+        two "Nyle" questions on their activity guide before showing this video. After
+        the video, they should answer the third question: How does Amazon solve the
+        problem of advertising products only to those people who are likely to buy
+        them?'
+      CSD U5 Netflix Data Video: |-
+        Check that students have answered the first two "Web Pix" questions on their activity guide before showing this video.  After the video, they should answer the third question.
+
+        _You can hide the "For Teachers Only" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the "View as Student" option._
+      CSD U5 Netflix Data Video_2018: |-
+        Check that students have answered the first two "Web Pix" questions on their activity guide before showing this video.  After the video, they should answer the third question.
+
+        _You can hide the "For Teachers Only" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the "View as Student" option._
+      CSD U5 Netflix Data Video_2019: |-
+        Check that students have answered the first two "Web Pix" questions on their activity guide before showing this video.  After the video, they should answer the third question: How does Netflix solve the problem of collecting information about users and videos to make the best recommendation it can for each user?
+
+        _You can hide the "For Teachers Only" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the "View as Student" option._
+      CSD U5 Waze Data Video: Check that students have answered the first two "Routz"
+        questions on their activity guide before showing this video. After the video,
+        they should answer the third question.
+      CSD U5 Waze Data Video_2018: Check that students have answered the first two
+        "Routz" questions on their activity guide before showing this video. After
+        the video, they should answer the third question.
+      CSD U5 Waze Data Video_2019: 'Check that students have answered the first two
+        "Routz" questions on their activity guide before showing this video. After
+        the video, they should answer the third question: How does Waze solve the
+        problem of improving its data to give better directions?'
+      CSD U5 binary 1: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 1_2018: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 1_2019: |-
+        [key]
+
+        Answers for this level can be found in the exemplar linked on [Level 1](1).
+
+        [/key]
+      CSD U5 binary 2: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 2_2018: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 2_2019: |-
+        [key]
+
+        Answers for this level can be found in the exemplar linked on [Level 1](1).
+
+        [/key]
+      CSD U5 binary 4-new: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 4-new_2018: Answers for this level can be found in the exemplar
+        linked on [Level 1](1).
+      CSD U5 binary 4-new_2019: |-
+        [key]
+
+        Answers for this level can be found in the exemplar linked on [Level 1](1).
+
+        [/key]
+      CSD U5 binary 5-new: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 5-new_2018: Answers for this level can be found in the exemplar
+        linked on [Level 1](1).
+      CSD U5 binary 5-new_2019: |-
+        [key]
+
+        Answers for this level can be found in the exemplar linked on [Level 1](1).
+
+        [/key]
+      CSD U5 binary 6-new: Without knowing the length of each of the numbers, students
+        will not be certain of their answers, but they should be able to at least
+        find one possible solution.  Allow students to discuss any differences in
+        their answers.  They should eventually see that they need to know the bit
+        length of each number to answer the question.
+      CSD U5 binary 6-new_2018: Without knowing the length of each of the numbers,
+        students will not be certain of their answers, but they should be able to
+        at least find one possible solution.  Allow students to discuss any differences
+        in their answers.  They should eventually see that they need to know the bit
+        length of each number to answer the question.
+      CSD U5 binary 6-new_2019: Without knowing the length of each of the numbers,
+        students will not be certain of their answers, but they should be able to
+        at least find one possible solution.  Allow students to discuss any differences
+        in their answers.  They should eventually see that they need to know the bit
+        length of each number to answer the question.
+      CSD U5 binary 7-new: Answers for this level can be found in the exemplar linked
+        on [Level 1](1).
+      CSD U5 binary 7-new_2018: Answers for this level can be found in the exemplar
+        linked on [Level 1](1).
+      CSD U5 binary 7-new_2019: |-
+        [key]
+
+        Answers for this level can be found in the exemplar linked on [Level 1](1).
+
+        [/key]
+      CSD U5 binary video_2019: |-
+        ## Discussion Goals
+
+        Th goal of this discussion is to have the students think more deeply about the purpose of binary.  For the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number.  For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers.  In the end, the purpose of defining all data as numbers is less about the "reality" of what the ones and zeros represent, and more about how binary is traditionally interpreted.
+
+        For the second question, allow students to think of different ways that the computer would distinguish between different types of data.  While it's not necessary for students to come up with any specific answer, challenge them on any ways that involve human interpretation of context, such as knowing that a name is most likely text and an age is most likely a number.  Assure them that they will look at the problem again in a couple of lessons.
+      CSD U5L01 autoSFLP_2018: |-
+        [key]
+
+        -   [Representation Matters](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+        -   [Meals Data](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Resource ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+        [/key]
+      CSD U5L01 autoSFLP_2019: |-
+        [key]
+
+        -   [Representation Matters](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+        -   [Meals Data](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Resource ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+        [/key]
+      CSD U5L02 autoSFLP_2018: |-
+        [key]
+
+        -   [Representing Information](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+        -   [Representing Information](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Exemplar 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
+
+        [/key]
+      CSD U5L02 autoSFLP_2019: |-
+        [key]
+
+        -   [Representing Information](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=doc))
+        -   [Representing Information](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Exemplar 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf)\| [DOCX](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=doc)))
+
+        [/key]
+      CSD U5L03 autoSFLP_2018: |-
+        [key]
+
+        -   [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))
+
+        [/key]
+      CSD U5L03 autoSFLP_2019: |-
+        [key]
+
+        -   [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))
+
+        [/key]
+      CSD U5L05 autoSFLP_2018: |-
+        [key]
+
+        -   Representing Numbers - Exemplar ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) \| [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+        [/key]
+      CSD U5L05 autoSFLP_2019: |-
+        [key]
+
+        -   [Representing Numbers](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) - Exemplar ([PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=doc))
+
+        [/key]
+      CSD U5L06 autoSFLP_2018: |-
+        [key]
+
+        -   Keeping Data Secret - Exemplar ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))
+
+        [/key]
+      CSD U5L06 autoSFLP_2019: |-
+        [key]
+
+        -   [Keeping Data Secret](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks) - Exemplar ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=doc))
+
+        [/key]
+      CSD U5L07 autoSFLP_2018: |-
+        [key]
+
+        -   [Pet Records](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/) - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))
+
+        [/key]
+      CSD U5L07 autoSFLP_2019: |-
+        [key]
+
+        -   [Pet Records](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/) - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=doc))
+
+        [/key]
+      CSD U5L08 autoSFLP_2018: |-
+        [key]
+
+        -   Create a Representation - Project Guide ([Google Doc](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit) \| [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))
+
+        [/key]
+      CSD U5L08 autoSFLP_2019: |-
+        [key]
+
+        -   [Create a Representation](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I) - Project Guide ([PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=doc))
+        -   [Create a Representation](https://docs.google.com/document/d/1m00JmDi7nQhplCaQuGcLcy4Wr12NASBHnuRNw0ka11A) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/1m00JmDi7nQhplCaQuGcLcy4Wr12NASBHnuRNw0ka11A/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1m00JmDi7nQhplCaQuGcLcy4Wr12NASBHnuRNw0ka11A/export?format=doc))
+        -   [Create a Representation](https://docs.google.com/document/d/1CKiIik6T8Y-hk23FkP3Hh9nsLfGtJN2jD8uGXSA6-aA) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1CKiIik6T8Y-hk23FkP3Hh9nsLfGtJN2jD8uGXSA6-aA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1CKiIik6T8Y-hk23FkP3Hh9nsLfGtJN2jD8uGXSA6-aA/export?format=doc))
+
+        [/key]
+      CSD U5L09 autoSFLP_2018: |-
+        [key]
+
+        -   Problem Solving with Data - Exemplar ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))
+
+        [/key]
+      CSD U5L09 autoSFLP_2019: |-
+        [key]
+
+        -   [Problem Solving with Data](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok) - Exemplar ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=doc))
+
+        [/key]
+      CSD U5L10 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Data in the Real World](https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY) - Exemplar ([PDF](https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY/export?format=doc))
+
+        [/KEY]
+      CSD U5L11 autoSFLP_2018: |-
+        [KEY]
+
+        -   Structuring Data - Exemplar ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))
+
+        [/KEY]
+      CSD U5L11 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Structuring Data](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU) - Exemplar ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=doc))
+
+        [/KEY]
+      CSD U5L12 autoSFLP_2018: |-
+        [KEY]
+
+        -   [Making Decisions with Data](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))
+
+        [/KEY]
+      CSD U5L12 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Making Decisions with Data](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))
+
+        [/KEY]
+      CSD U5L13 autoSFLP_2018: |-
+        [KEY]
+
+        -   Interpreting Data - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))
+
+        [/KEY]
+      CSD U5L13 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Interpreting Data](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw) - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=doc))
+
+        [/KEY]
+      CSD U5L14 autoSFLP_2018: |-
+        [KEY]
+
+        -   Automating Data Decisions - Exemplar ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))
+
+        [/KEY]
+      CSD U5L14 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Automating Data Decisions](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4) - Exemplar ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=doc))
+
+        [/KEY]
+      CSD U5L15 autoSFLP_2018: |-
+        [KEY]
+
+        -   Make a Recommendation - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+        -   Make a Recommendation - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
+
+        [/KEY]
+      CSD U5L15 autoSFLP_2019: |-
+        [KEY]
+
+        -   [Make a Recommendation](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=doc))
+        -   [Make a Recommendation](https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo/export?format=doc))
+        -   [Make a Recommendation](https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc) - Peer Review Exemplar 1 ([PDF](https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/export?format=doc))
+        -   [Make a Recommendation](https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY/export?format=doc))
+        -   [Make a Recommendation](https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ) - Peer Review Exemplar 2 ([PDF](https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/export?format=doc))
+
+        [/KEY]
+      CSD U6 arrays video: |-
+        ## Discussion Goals
+
+        This is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video.  Students should understand that arrays are intended to hold several pieces of information, usually all of the same type.  Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again.  Programmers can access each element of the array by its **index**, or its position number in the array.  Students will have a chance to practice the exact syntax in the lesson.
+      CSD U6 circuit LED map: |-
+        #### Learning More About LEDs
+
+        We include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer](https://learn.adafruit.com/all-about-leds/overview).
+      CSD U6 circuit LED map_2018: |-
+        #### Learning More About LEDs
+
+        We include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer](https://learn.adafruit.com/all-about-leds/overview).
+      CSD U6 circuit LED map_2019: |-
+        #### Learning More About LEDs
+
+        We include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer](https://learn.adafruit.com/all-about-leds/overview).
+      CSD U6 circuit pinMode: |-
+        ### Why Are We Talking Pins?
+
+        You may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`).
+      CSD U6 circuit pinMode_2018: |-
+        ### Why Are We Talking Pins?
+
+        You may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`).
+      CSD U6 circuit pinMode_2019: |-
+        ### Why Are We Talking Pins?
+
+        You may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`).
+      CSD U6 functions paramters video_2019: |-
+        ## Discussion Goals
+
+        Students will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference.
+      CSD U6 hardware software video_2019: |-
+        ## Discussion Goals
+
+        The goal of this discussion is to highlight the difference between hardware and software.  Students should understand that hardware is the physical part of the computer, such as the chips and the wires, and the software is the programs that are running on the computer.  The operating system of the computer allows all the software on the computer to run at the same time, deciding how the different hardware resources will be shared.
+      CSD U6 tugowar variables 2: |-
+        ### Exposure to Functions with Parameters
+
+        Parameters are a powerful way to make functions more useful by giving them specific input. We are introducing this here primarily as a way to expose students to this concept, but functions with parameters won't be taught thoroughly until chapter 2. For students who are interested in experimenting more with this technique now, direct them to [the documentation](https://studio.code.org/docs/applab/functionParams_n/).
+      CSD U6 tugowar variables 2_2018: |-
+        ### Exposure to Functions with Parameters
+
+        Parameters are a powerful way to make functions more useful by giving them specific input. We are introducing this here primarily as a way to expose students to this concept, but functions with parameters won't be taught thoroughly until chapter 2. For students who are interested in experimenting more with this technique now, direct them to [the documentation](https://studio.code.org/docs/applab/functionParams_n/).
+      CSD U6 tugowar variables 2_2019: |-
+        ### Exposure to Functions with Parameters
+
+        Parameters are a powerful way to make functions more useful by giving them specific input. We are introducing this here primarily as a way to expose students to this concept, but functions with parameters won't be taught thoroughly until chapter 2. For students who are interested in experimenting more with this technique now, direct them to [the documentation](https://studio.code.org/docs/applab/functionParams_n/).
+      CSD U6L01 TFMD_2019: "-   [Computing Innovations](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/edit)
+        - Exemplar ([PDF](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/export?format=pdf)
+        \\| [DOCX](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/export?format=doc))"
+      CSD U6L09 TFMD_2019: |-
+        [key]
+
+        -   [Make a Game](https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q/export?format=doc))
+        -   [Make a Game](https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/export?format=doc))
+
+        [/key]
+      CSD U6L16 TFMD_2019: |-
+        [key]
+
+        -   [Prototype an Innovation](https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90) - Sample Marked Rubrics 1 ([PDF](https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90/export?format=doc))
+        -   [Prototype an Innovation](https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg) - Peer Review 1 ([PDF](https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg/export?format=doc))
+        -   [Prototype an Innovation](https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc) - Sample Marked Rubrics 2 ([PDF](https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc/export?format=doc))
+        -   [Prototype an Innovation](https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0) - Peer Review 2 ([PDF](https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0/export?format=doc))
+
+        [/key]
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Discussion Goals
+
+        After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.  Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots).  It's okay if students do not come to a particular conclusion about every device they can think of.
+
+        Students may not have had time to sufficiently reflect on the nature of input, output, storage, and processing, so their answers here may be vague, especially around processing.  They will be able to dig into these concepts more later in the unit.  Focus on input and output for now, and allow students to disagree on particulars of storage and processing, letting them know that they will have more opportunities to explore the subject.   For example, one common source of controversy around processing is whether some devices are processing information themselves, or whether the user is processing the information, while the device simply stores information (e.g. the abacus).
+      'CSD: Animating Sprite Movement_2019': |-
+        ## Discussion Goals
+
+        Students may describe the counter patten in various ways.  Make sure that they go beyond just stating the blocks or code that the counter pattern uses.  They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop.  This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.
+
+        When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.  Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.
+      'CSD: Animation Tab_2019': |-
+        ## Discussion Goals
+
+        Make sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the `setAnimation` block.  Students may be confused by the use of the word "animation" for single images, but in Game Lab, still images are considered "animations" with only one frame.
+
+        Students can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools.  Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.
+
+        ### Misconception Alert!
+
+        Many students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen.  In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen.  Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation.
+      'CSD: Drawing in Game Lab 1_2019': "## Discussion Goals\n\nMake sure students
+        understand how to access the block documentation by clicking on the blocks
+        inside the toolbox and clicking \"see examples\". \n\nAs students think of
+        ideas of why they might prefer to use block mode, make sure that they understand
+        that the block-based version of the programming language is just as legitimate
+        as the text-based version.  Students may offer that blocks make it easier
+        to remember the exact commands or that they don't have to worry about the
+        details of the parentheses or semicolons.  \n\n(Alternatively, advantages
+        to text might be that it's easier to edit or that the text takes up less space.)"
+      'CSD: Drawing in Game Lab 2_2019': |-
+        ## Discussion Goals
+
+        Stroke controls the border color of the shape, and fill controls the color inside of it.
+      'CSD: For Loop_2019': |-
+        ## Discussion Questions
+
+        For-loops are a very powerful construct, but this introduction intentionally only covers a small part of their functionality.  As students are more comfortable with loops, more functionality will be introduced.  For now, students should know that they can use a for loop to repeat a segment of code multiple times.  The segment should go wherever in the program that code will be run.   (This aspect of loops is highlighted to keep students from treating loops like functions and placing them at the bottom of the code.)
+      'CSD: Introduction to the Draw Loop_2019': |-
+        ## Discussion Goal
+
+        The draw function runs the same code over and over in a loop, which is why it's often called "the draw loop".   This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.
+
+        ### Misconception Alert!
+
+        When the draw loop runs, it does not "clear" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop.  If students do not add a "background" at the beginning of the draw loop, they will still see all the images drawn to the screen previously.
+      'CSD: Sprite Velocity_2019': |-
+        ## Discussion Goals
+
+        It may not be obvious to students why the velocity block is so powerful.  The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that).  If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.
+
+        As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.
+      'CSD: Sprites in Game Lab_2019': "## Discussion Goals\n\nSprites are a very
+        complex concept, and students may have difficulty understanding exactly what
+        they are.  The most important aspect for students to understand is that sprites
+        allow them to organize a lot of information about something that they want
+        to draw to the screen.  \n\nStudents should make the connection between properties
+        and variables, that both hold information that their program needs to run.
+        \ Properties are accessed through their sprites, and Game Lab sprites already
+        have specific properties that are automatically created when students create
+        each sprite, such as x position, height, and rotation.  \n\nSprites solve
+        the problem of organizing a lot of information about how something should
+        be drawn to a screen.  Rather than creating new variables to hold all of that
+        information, sprites use properties to hold all of the information about one
+        thing that is drawn to the screen."
+      CSDU4 Design Mode Video_2019: |-
+        ## Discussion Goals
+
+        The purpose of this video is to give students a quick tour of design mode in App Lab, which they will be using for the rest of the unit.  Students should know how to switch to design mode so that they can create the user interface of the app.  They should also recognize the various elements that can be added in design mode.  These are similar to those that they saw in the activity guide for Paper Prototypes, two lessons previously.
+      CSDU4 Project Bug Feature: |-
+        #### Implementing Features and Fixes Individually
+
+        Because App Lab is difficult for large groups of students to work on simultaneously, we have students work on implementing features and fixes individually or in pairs. The benefit of this approach is that it allows the team as a whole to explore more potential features than if they were working all on the same app, but it also means that each team member's app will diverge further from the others as more changes are made.
+
+        As an optional extension activity you could provide a day of work for students to share their changes with each other and attempt to integrate all of the added features into a single app.
+
+        #### Keeping Track of Changes
+
+        The more features students add to their app, the more likely they are to introduce new unforeseen bugs. To ensure that students always keep the most recent working copy of their app, encourage them make a remix before adding any new features. Make sure students leave the remix alone and return to this level to do their programming - this will ensure that when they go to submit their app for your review it is the most recent version.
+      CSDU4 Project Bug Feature_2018: |-
+        #### Implementing Features and Fixes Individually
+
+        Because App Lab is difficult for large groups of students to work on simultaneously, we have students work on implementing features and fixes individually or in pairs. The benefit of this approach is that it allows the team as a whole to explore more potential features than if they were working all on the same app, but it also means that each team member's app will diverge further from the others as more changes are made.
+
+        As an optional extension activity you could provide a day of work for students to share their changes with each other and attempt to integrate all of the added features into a single app.
+
+        #### Keeping Track of Changes
+
+        The more features students add to their app, the more likely they are to introduce new unforeseen bugs. To ensure that students always keep the most recent working copy of their app, encourage them make a remix before adding any new features. Make sure students leave the remix alone and return to this level to do their programming - this will ensure that when they go to submit their app for your review it is the most recent version.
+      CSDU4 Project Bug Feature_2019: |-
+        #### Implementing Features and Fixes Individually
+
+        Because App Lab is difficult for large groups of students to work on simultaneously, we have students work on implementing features and fixes individually or in pairs. The benefit of this approach is that it allows the team as a whole to explore more potential features than if they were working all on the same app, but it also means that each team member's app will diverge further from the others as more changes are made.
+
+        As an optional extension activity you could provide a day of work for students to share their changes with each other and attempt to integrate all of the added features into a single app.
+
+        #### Keeping Track of Changes
+
+        The more features students add to their app, the more likely they are to introduce new unforeseen bugs. To ensure that students always keep the most recent working copy of their app, encourage them make a remix before adding any new features. Make sure students leave the remix alone and return to this level to do their programming - this will ensure that when they go to submit their app for your review it is the most recent version.
+      CSDU4 Project Import: |-
+        #### Breaking for the Day
+
+        Depending on how much time you have in class, this can be a great point to break for the day. This and the next level can be quite time consuming, so if you are running short on time, consider jumping to the Screen Pair activity described in the Extension Activities for this lesson.
+
+        #### Team Time
+
+        Though students are working on their individual copies of their team app at this point, encourage teams to be active and vocal through this portion of the lesson. Any issues that students encounter when importing their teammates' screens can only be resolved through teamwork, and will likely be a problem for all members of the team.
+      CSDU4 Project Import_2018: |-
+        #### Breaking for the Day
+
+        Depending on how much time you have in class, this can be a great point to break for the day. This and the next level can be quite time consuming, so if you are running short on time, consider jumping to the Screen Pair activity described in the Extension Activities for this lesson.
+
+        #### Team Time
+
+        Though students are working on their individual copies of their team app at this point, encourage teams to be active and vocal through this portion of the lesson. Any issues that students encounter when importing their teammates' screens can only be resolved through teamwork, and will likely be a problem for all members of the team.
+      CSDU4 Project Import_2019: |-
+        #### Breaking for the Day
+
+        Depending on how much time you have in class, this can be a great point to break for the day. This and the next level can be quite time consuming, so if you are running short on time, consider jumping to the Screen Pair activity described in the Extension Activities for this lesson.
+
+        #### Team Time
+
+        Though students are working on their individual copies of their team app at this point, encourage teams to be active and vocal through this portion of the lesson. Any issues that students encounter when importing their teammates' screens can only be resolved through teamwork, and will likely be a problem for all members of the team.
+      Dance Party 2_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus mengeklik peri setelah menekan `Jalankan`.\n-
+        \  Peri perlu berputar."
+      Dance Party 3_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus membuat peri alien warna merah muda.\n-   Peri
+        alien warna merah muda harus memulai perilaku ketika diklik."
+      Dance Party 4_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus membuat tiga peri menggunakan kostum alien warna
+        biru, alien warna merah muda, dan alien warna kuning.\n-   Siswa harus mengatur
+        peri alien pada garis horizontal (dalam 50 piksel).\n-   Peri alien warna
+        kuning perlu memulai perilaku ketika diklik."
+      Dance Party 5_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus mengubah warna masing-masing dari tiga peri alien."
+      Dance Party 6_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Semua peri alien harus menghentikan perilaku mereka."
+      Dance Party 7_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Peri alien warna biru perlu memulai perilaku baru."
+      Dance Party Freeplay_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Gerakan Tarian Alien_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit satu kostum dalam proyek
+        mereka.\n-   Siswa harus membuat tiga peri dengan kostum unik."
+      Fish Tank 2-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit satu peri ikan dengan
+        perilaku aktif."
+      Fish Tank 3-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit satu peri ikan dengan
+        perilaku aktif.\n-   Peri ikan perlu bergerak ke kiri dan ke kanan. Hal ini
+        dapat dilakukan dengan mengubah perilakunya menjadi `berenang ke kiri dan
+        kanan`."
+      Fish Tank 4-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _NAMA PERKEMBANGAN_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus mengubah latar ke sesuatu selain warna putih."
+      Fish Tank 5-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus membuat dua peri unik, dan salah satunya harus
+        menjadi ikan."
+      Fish Tank 6-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Setiap peri harus memiliki perilaku aktif."
+      Fish Tank 7-validated_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Intro to Web Lab - Part 1_2019: |-
+        ## Discussion Goals
+
+        While there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code.  For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.
+
+        Although it's not part of the video, the instructions pane will also often include drop down questions and answers that students can use when they are completing an activity, and in some levels the tabs at the top of the instructions pane will take students to a "Help and Tips" area that includes reference information relevant to the activities.
+      Intro to Web Lab - Part 2_2019: "## Discussion Goals\n\nAs student discuss HTML
+        tags, make sure they understand that HTML tags are used to structure, or organize,
+        content on the screen.  Talking about the organization, structure, or role
+        of the content in the page (heading, paragraph, list, etc.) is more accurate
+        than talking about specific aspects of its appearance (such as size or spacing).
+        \ \n\nAlthough certain structural roles may be associated with appearance
+        (headings are larger), HTML does not specify anything in particular about
+        the appearance.  This allows users with different needs, such as the visually
+        impaired, to interact with the structured content in a way that makes the
+        most sense for them.  Later in the unit, students will learn about styles
+        and CSS, which allows them to specify exact size, color, and spacing to their
+        HTML elements.\n\nThe paragraph tag separates text into paragraphs.  You may
+        want to follow up this question by asking students how they think a web browser
+        for the blind might deal with paragraphs.  For example, while sighted people
+        may use spacing and new lines to separate out paragraphs, what should a screen
+        reader do?"
+      Introduction to Variables - Part 1_2019: |-
+        # Discussion Goals
+
+        Students should understand that variables hold information and an be accessed using their labels.  With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.
+
+        Numbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.
+      OPD-K5-spritelab-2: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit satu peri ikan dengan
+        perilaku aktif."
+      OPD-K5-spritelab-3: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit satu peri ikan dengan
+        perilaku aktif.\n-   Peri ikan perlu bergerak ke kiri dan ke kanan. Hal ini
+        dapat dilakukan dengan mengubah perilakunya menjadi `berenang ke kiri dan
+        kanan`."
+      OPD-K5-spritelab-4: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _NAMA PERKEMBANGAN_. Perkembangan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus mengubah latar ke sesuatu selain warna putih."
+      OPD-K5-spritelab-6: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus membuat dua peri unik, dan salah satunya harus
+        menjadi ikan."
+      OPD-K5-spritelab-7: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Ikan Berenang_. Perkembangan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-   Tingkatan
+        ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk
+        menentukan sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Setiap peri harus memiliki perilaku aktif."
+      Overworld Free Play 20x20_2019: Ini adalah tingkat permainan bebas. Ini bukan
+        hanya tempat terbaik untuk mengarahkan siswa yang mengalami kemajuan dengan
+        cepat, tetapi juga merupakan tempat bagi semua siswa agar benar-benar mengekspresikan
+        kreativitas mereka. Walaupun siswa tidak benar-benar diminta menulis kode
+        di tingkat ini, hal itu akan memungkinkan mereka menerapkan yang telah mereka
+        pelajari dengan cara yang lebih bermakna bagi mereka. Dorong siswa Anda meluangkan
+        waktu di sini.
+      U4 Model Design 1_2018: Students will be using App Lab to create a simple prototype
+        for their app.  Students who want to go further in making their apps functional
+        can learn more about App Lab, watch demo videos, and work through tutorials
+        at <https://code.org/educate/applab>.
+      U4 Model Design 1_2019: Students will be using App Lab to create a simple prototype
+        for their app.  Students who want to go further in making their apps functional
+        can learn more about App Lab, watch demo videos, and work through tutorials
+        at <https://code.org/educate/applab>.
+      U4 Model Program 1: |-
+        #### Catching Up
+
+        If students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href="https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/" target="_blank">https\://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href="5">Screen Import Map</a> for details.
+      U4 Model Program 1_2018: |-
+        #### Catching Up
+
+        If students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href="https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/" target="_blank">https\://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href="5">Screen Import Map</a> for details.
+      U4 Model Program 1_2019: |-
+        #### Catching Up
+
+        If students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href="https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/" target="_blank">https\://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href="5">Screen Import Map</a> for details.
+      'Video: Intro to CSS Part 2_2019': |-
+        ## Discussion Goals
+
+        Make sure all the students understand how to link to their stylesheet from each web page.
+      'Video: Intro to CSS_2019': |-
+        ## Discussion Goals
+
+        Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it.  So, for example, the structure could include different headings and paragraphs, but would say nothing about the color of text or how big it is displayed.  The style of the page is the specifics of its appearance.  Without a particular style, each web browser would decide how to display different web page elements on their own.
+
+        Styles are important to allow web developers to decide exactly how a web page looks on the screen.  Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page.  This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.
+      Virtual Pet 2_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Virtual Pet 3_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Virtual Pet 4_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        \\*Hewan Peliharaan Virtual. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan.\n\nTingkat
+        ini akan memvalidasi kode siswa dengan memeriksa bahwa kondisi berikut telah
+        dipenuhi:\n\n-   Siswa harus memiliki paling sedikit tiga peri."
+      Virtual Pet 5_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Virtual Pet 6_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Virtual Pet 7_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      Virtual Pet 8_2019: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Hewan Peliharaan Virtual_. Perkembangan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi gagasan mereka ketika mereka belajar.\n-
+        \  Tingkatan ini memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa
+        Anda untuk menentukan sendiri kapan mereka telah menyelesaikan setiap tugas.
+        Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia untuk langkah perkembangan
+        ini yang dapat dilihat dengan membuka panel guru di sebelah kanan."
+      behaviors free play: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      courseA_artist_loops12_2019: "Ini adalah tingkat permainan gratis. Ini bukan
+        hanya tempat yang bagus untuk mengarahkan siswa yang mengalami kemajuan dengan
+        cepat, tetapi juga merupakan tempat bagi semua siswa untuk benar-benar mengekspresikan
+        kreativitas mereka. Walaupun siswa tidak benar-benar diminta untuk menulis
+        kode apa pun di tingkat ini, hal itu akan memungkinkan mereka untuk menerapkan
+        apa yang telah mereka pelajari dengan cara yang lebih bermakna bagi mereka.
+        Dorong siswa Anda untuk meluangkan waktu di sini.\n\n-   Tingkat-tingkat ini
+        **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menciptakan sesuatu yang mereka sukai. Tidak ada jawaban yang benar! \n-   Contoh
+        solusi tersedia untuk tingkat ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseA_artist_loops_challenge1_2019: "Pelajaran tambahan ini adalah \"permainan
+        gratis\". Tingkat-tingkat ini memiliki beberapa karakteristik yang mungkin
+        ingin Anda jelajahi sebelum memulai. \n\n-   Tingkat-tingkat ini **tidak diperiksa
+        kebenarannya** untuk memungkinkan kreativitas yang lebih terbuka. Berdayakan
+        siswa Anda untuk menentukan sendiri kapan mereka telah menciptakan sesuatu
+        yang mereka sukai. Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia
+        untuk tingkat ini yang dapat dilihat dengan membuka panel guru di sebelah
+        kanan."
+      courseA_playLab_events7_2019: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      courseA_video_Stevie: "**PENTING:**  Kisah ini ditujukan untuk dibacakan dengan
+        lantang oleh guru yang berinteraksi dengan kelas.  Temukan PDF di <https://goo.gl/SZHo4z>
+        .   \n\n* * *\n\nJika Anda tidak dapat membaca kisah di kelas Anda, pastikan
+        untuk bertanya kepada siswa tentang video ini. Tujuannya adalah agar siswa
+        _tidak_ menonton secara pasif!\n\nT1) Dalam kisah ini, dua kata besar apa
+        yang dipelajari Stevie?\n\nT2) Apa yang dimaksud dengan \"frustrasi\"?\n\nT3)
+        Pernahkah Anda frustrasi?\n\nT4) Hal-hal apa yang dapat Anda lakukan ketika
+        Anda merasa frustrasi?\n\nT5) Apa itu \"ketekunan\"?\n\nT6) Mengapa ketekunan
+        adalah hal yang baik?\n\nT7) Hal apa yang dapat Anda lakukan untuk membuat
+        diri Anda tekun?"
+      courseA_video_Stevie_2018: "**PENTING:**  Kisah ini ditujukan untuk dibacakan
+        dengan lantang oleh guru yang berinteraksi dengan kelas.  Temukan PDF di <https://goo.gl/SZHo4z>
+        .   \n\n* * *\n\nJika Anda tidak dapat membaca kisah di kelas Anda, pastikan
+        untuk bertanya kepada siswa tentang video ini. Tujuannya adalah agar siswa
+        _tidak_ menonton secara pasif!\n\nT1) Dalam kisah ini, dua kata besar apa
+        yang dipelajari Stevie?\n\nT2) Apa yang dimaksud dengan \"frustrasi\"?\n\nT3)
+        Pernahkah Anda frustrasi?\n\nT4) Hal-hal apa yang dapat Anda lakukan ketika
+        Anda merasa frustrasi?\n\nT5) Apa itu \"ketekunan\"?\n\nT6) Mengapa ketekunan
+        adalah hal yang baik?\n\nT7) Hal apa yang dapat Anda lakukan untuk membuat
+        diri Anda tekun?"
+      courseB_artist_loops10_2019: "Ini adalah tingkat permainan gratis. Ini bukan
+        hanya tempat yang bagus untuk mengarahkan siswa yang mengalami kemajuan dengan
+        cepat, tetapi juga merupakan tempat bagi semua siswa untuk benar-benar mengekspresikan
+        kreativitas mereka. Walaupun siswa tidak benar-benar diminta untuk menulis
+        kode apa pun di tingkat ini, hal itu akan memungkinkan mereka untuk menerapkan
+        apa yang telah mereka pelajari dengan cara yang lebih bermakna bagi mereka.
+        Dorong siswa Anda untuk meluangkan waktu di sini.\n\n-   Tingkat-tingkat ini
+        **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menciptakan sesuatu yang mereka sukai. Tidak ada jawaban yang benar! \n-   Contoh
+        solusi tersedia untuk tingkat ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseB_playLab_events1_2019: Ini adalah tingkat permainan bebas. Karena muncul
+        di awal pelajaran, dimaksudkan agar berfungsi sebagai "kotak pasir" di mana
+        siswa dapat bereksperimen dengan blok baru. Walaupun siswa tidak benar-benar
+        diminta menulis kode di tingkat ini, hal itu akan memungkinkan mereka melakukan
+        penemuan sendiri sebelum diminta melakukan tugas tertentu. Dorong siswa Anda
+        meluangkan waktu di sini.
+      courseB_playlab_eventsFP_2019: Ini adalah tingkat permainan bebas. Ini bukan
+        hanya tempat terbaik untuk mengarahkan siswa yang mengalami kemajuan dengan
+        cepat, tetapi juga merupakan tempat bagi semua siswa agar benar-benar mengekspresikan
+        kreativitas mereka. Walaupun siswa tidak benar-benar diminta menulis kode
+        di tingkat ini, hal itu akan memungkinkan mereka menerapkan yang telah mereka
+        pelajari dengan cara yang lebih bermakna bagi mereka. Dorong siswa Anda meluangkan
+        waktu di sini.
+      courseB_playlab_events_challenge1_2019: "Pelajaran tambahan ini adalah \"permainan
+        gratis\". Tingkat-tingkat ini memiliki beberapa karakteristik yang mungkin
+        ingin Anda jelajahi sebelum memulai. \n\n-   Tingkat-tingkat ini **tidak diperiksa
+        kebenarannya** untuk memungkinkan kreativitas yang lebih terbuka. Berdayakan
+        siswa Anda untuk menentukan sendiri kapan mereka telah menciptakan sesuatu
+        yang mereka sukai. Tidak ada jawaban yang benar! \n-   Contoh solusi tersedia
+        untuk tingkat ini yang dapat dilihat dengan membuka panel guru di sebelah
+        kanan."
+      courseB_video_Unspotted: "**PENTING:**  Kisah ini ditujukan untuk dibacakan
+        dengan lantang oleh guru yang berinteraksi dengan kelas.  Temukan PDF di <https://goo.gl/q2BQ1a>
+        .   \n\n* * *\n\nJika Anda tidak dapat membaca kisah di kelas Anda, pastikan
+        untuk bertanya kepada siswa tentang video ini. Tujuannya adalah agar siswa
+        _tidak_ menonton secara pasif!\n\nT1) Dalam kisah ini, apa yang dilakukan
+        \"bug\"?\n\nT2) Dalam ilmu komputer, programmer berbicara tentang memiliki
+        \"bug\" dalam kode mereka. Menurut Anda, apa artinya?\n\nT3) Bagaimana Jasmine
+        dan JD menemukan bug yang mereka cari?\n\nT4) Dapatkah Anda mengingat cara
+        mencari bug ini?\n\n-   Berjalan langkah demi langkah.\n-   Apakah semuanya
+        baik pada langkah pertama?\n-   Apakah semuanya baik pada langkah kedua?\n-
+        \  Ketiga?\n-   Jika Anda menemukan sesuatu yang salah, lihat \"bug\" di sekitar
+        lokasi.\n-   Ketika Anda menemukan bug, beri nama, dan ucapkan dengan lantang!"
+      courseB_video_Unspotted_2018: "**PENTING:**  Kisah ini ditujukan untuk dibacakan
+        dengan lantang oleh guru yang berinteraksi dengan kelas.  Temukan PDF di <https://goo.gl/q2BQ1a>
+        .   \n\n* * *\n\nJika Anda tidak dapat membaca kisah di kelas Anda, pastikan
+        untuk bertanya kepada siswa tentang video ini. Tujuannya adalah agar siswa
+        _tidak_ menonton secara pasif!\n\nT1) Dalam kisah ini, apa yang dilakukan
+        \"bug\"?\n\nT2) Dalam ilmu komputer, programmer berbicara tentang memiliki
+        \"bug\" dalam kode mereka. Menurut Anda, apa artinya?\n\nT3) Bagaimana Jasmine
+        dan JD menemukan bug yang mereka cari?\n\nT4) Dapatkah Anda mengingat cara
+        mencari bug ini?\n\n-   Berjalan langkah demi langkah.\n-   Apakah semuanya
+        baik pada langkah pertama?\n-   Apakah semuanya baik pada langkah kedua?\n-
+        \  Ketiga?\n-   Jika Anda menemukan sesuatu yang salah, lihat \"bug\" di sekitar
+        lokasi.\n-   Ketika Anda menemukan bug, beri nama, dan ucapkan dengan lantang!"
+      courseC_PlayLab_eventsFP_2019: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      courseC_artist_loops1a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops1b_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops2a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops3a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting.\n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops4a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops5b_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops6a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops7a_2019: "This lesson contains a **mini-project** called
+        _Sticker Design_. This progression may feel very different from what has come
+        earlier in the course for you as well as your students. These levels have
+        some new characteristics you may want to explore before starting. \n\n-   The
+        code your students write in one level will automatically transfer over to
+        the other levels. This allows them to build gradually and iterate on their
+        ideas as they learn.\n-   These levels are **not checked for correctness**
+        to allow for more open-ended creativity. Empower your students to determine
+        for themselves when they have completed each task. There is no one right answer!
+        \n-   Example solutions are available for this step of the progression which
+        can be viewed by opening the teacher panel to the right."
+      courseC_artist_loops8a_2019: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      courseD_artist_project1_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan
+        ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada contoh
+        solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseD_artist_project1a_2019: "Pelajaran ini terdiri atas **proyek kecil**
+        yang disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-
+        \  Tingkatan ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas
+        yang lebih terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka
+        telah menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada
+        contoh solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka
+        panel guru di sebelah kanan."
+      courseD_artist_project2_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan
+        ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada contoh
+        solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseD_artist_project2a_2019: "Pelajaran ini terdiri atas **proyek kecil**
+        yang disebut _Kepingan Salju#2_. Kemajuan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-
+        \  Tingkatan ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas
+        yang lebih terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka
+        telah menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada
+        contoh solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka
+        panel guru di sebelah kanan."
+      courseD_artist_project3_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan
+        ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada contoh
+        solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseD_artist_project3a_2019: "Pelajaran ini terdiri atas **proyek kecil**
+        yang disebut _Kepingan Salju#2_. Kemajuan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-
+        \  Tingkatan ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas
+        yang lebih terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka
+        telah menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada
+        contoh solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka
+        panel guru di sebelah kanan."
+      courseD_artist_project4_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan
+        ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada contoh
+        solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka panel
+        guru di sebelah kanan."
+      courseD_artist_project4a_2019: "Pelajaran ini terdiri atas **proyek kecil**
+        yang disebut _Kepingan Salju#2_. Kemajuan ini mungkin terasa sangat berbeda
+        dari yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan
+        ini memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi
+        sebelum memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan
+        secara otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk
+        membangun secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-
+        \  Tingkatan ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas
+        yang lebih terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka
+        telah menyelesaikan setiap tugas. Tidak ada jawaban yang benar! \n-   Ada
+        contoh solusi untuk langkah perkembangan ini yang dapat dilihat dengan membuka
+        panel guru di sebelah kanan."
+      courseD_artist_project5_2019: "Pelajaran ini terdiri atas **proyek kecil** yang
+        disebut _Kepingan Salju#1_. Kemajuan ini mungkin terasa sangat berbeda dari
+        yang telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini
+        memiliki beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum
+        memulai. \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara
+        otomatis ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun
+        secara bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan
+        ini **tidak diperiksa kebenarannya** untuk memungkinkan kreativitas yang lebih
+        terbuka. Berdayakan siswa Anda untuk menentukan sendiri kapan mereka telah
+        menyelesaikan setiap tugas. Tidak ada jawaban yang benar! "
+      courseE_aboutme_2: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Poster Interaktif_. Kemajuan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan ini
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada jawaban yang
+        benar! \n-   Ada contoh solusi untuk langkah perkembangan ini yang dapat dilihat
+        dengan membuka panel guru di sebelah kanan."
+      courseE_aboutme_3: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Poster Interaktif_. Kemajuan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan ini
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada jawaban yang
+        benar! \n-   Ada contoh solusi untuk langkah perkembangan ini yang dapat dilihat
+        dengan membuka panel guru di sebelah kanan."
+      courseE_aboutme_4: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Poster Interaktif_. Kemajuan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan ini
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada jawaban yang
+        benar! \n-   Ada contoh solusi untuk langkah perkembangan ini yang dapat dilihat
+        dengan membuka panel guru di sebelah kanan.\n\nTingkat ini akan memvalidasi
+        kode siswa dengan memeriksa bahwa kondisi berikut telah dipenuhi:\n\n-   Siswa
+        harus membuat paling sedikit tiga peri."
+      courseE_aboutme_5: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Poster Interaktif_. Kemajuan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan ini
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada jawaban yang
+        benar! \n-   Ada contoh solusi untuk langkah perkembangan ini yang dapat dilihat
+        dengan membuka panel guru di sebelah kanan."
+      courseE_aboutme_6: "Pelajaran ini terdiri atas **proyek kecil** yang disebut
+        _Poster Interaktif_. Kemajuan ini mungkin terasa sangat berbeda dari yang
+        telah terjadi sebelumnya untuk Anda dan juga siswa Anda. Tingkatan ini memiliki
+        beberapa karakteristik baru yang mungkin ingin Anda jelajahi sebelum memulai.
+        \n\n-   Kode yang ditulis siswa Anda di satu tingkat akan secara otomatis
+        ditransfer ke tingkat lain. Hal ini memungkinkan mereka untuk membangun secara
+        bertahap dan mengulangi ide mereka ketika mereka belajar.\n-   Tingkatan ini
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menyelesaikan setiap tugas. Tidak ada jawaban yang
+        benar! \n-   Ada contoh solusi untuk langkah perkembangan ini yang dapat dilihat
+        dengan membuka panel guru di sebelah kanan."
+      courseF_artist_for10_2019: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      courseF_artist_variablesFP_2019: "Tingkat ini adalah \"permainan gratis\". Tingkat-tingkat
+        ini memiliki beberapa karakteristik yang mungkin ingin Anda jelajahi sebelum
+        memulai.\n\n-   Tingkat-tingkat ini **tidak diperiksa kebenarannya** untuk
+        memungkinkan kreativitas yang lebih terbuka. Berdayakan siswa Anda untuk menentukan
+        sendiri kapan mereka telah menciptakan sesuatu yang mereka sukai. Tidak ada
+        jawaban yang benar! \n-   Contoh solusi tersedia untuk tingkat ini yang dapat
+        dilihat dengan membuka panel guru di sebelah kanan."
+      csd U3 conditional statements video_2019: |-
+        ## Discussion Goals
+
+        The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations.  Encourage students to think of particular situations in which this would be the case.  For example, they might want their characters to move faster when a "bonus" is in effect, or maybe they want more enemies to appear when the player reaches a certain level.  Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.
+      csd u5 recommender sample: |-
+        Students can see and remix the code to this app at the following URL:
+
+        <https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view>
+      csd u5 recommender sample_2019: |-
+        Students can see and remix the code to this app at the following URL:
+
+        <https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view>
+      csd-pre-survey-2017-levelgroup_2018: |-
+        [key]
+
+        -   [Aluminum Boats - Exemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) \| [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+        [/key]
+      csd-pre-survey-levelgroup_2019: |-
+        [key]
+
+        -   [Aluminum Boats - Exemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) \| [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+        [/key]

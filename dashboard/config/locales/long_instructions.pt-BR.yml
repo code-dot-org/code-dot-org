@@ -20172,32 +20172,31 @@ pt-BR:
         com seus amigos.
       CourseE_HOC 2018 Level_1: Você precisa de suprimentos para a viagem adiante.
         Colete um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+        de um **baú** ![][1].
       CourseE_HOC 2018 Level_10: Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?
       CourseE_HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
-        em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         e concluirá seu desafio.
       CourseE_HOC 2018 Level_2: Usar um barco é bem melhor do que nadar no mar aberto.
         Vá até o final do cais e suba a bordo.
       CourseE_HOC 2018 Level_3: Pegue os remos e controle o barco pelo mar aberto
-        para pegar o **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
-      CourseE_HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        para pegar o **bacalhau** ![][0].
+      CourseE_HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![][0].
         Use um bloco de repetição para atravessar o oceano mais rápido.
-      CourseE_HOC 2018 Level_5: Há uma **concha de náutilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        escondida em algum lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      CourseE_HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
-        no caminho até as ruínas subaquáticas.
+      CourseE_HOC 2018 Level_5: Há uma **concha de náutilo** ![][0] escondida em algum
+        lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png).
+      CourseE_HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)no
+        caminho até as ruínas subaquáticas.
       CourseE_HOC 2018 Level_7a: Você encontrou as ruínas subaquáticas. No arenito,
         procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        que contém tesouro de **prismarinho** (<https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png>).
+        que contém tesouro de **prismarinho**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       CourseE_HOC 2018 Level_8: Primeiro icebergs, e agora lava? Sobreviva nesta ilha
         vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         no recife de coral.
       CourseE_HOC 2018 Level_9b: Você conseguiu chegar ao recife de corais. Agora,
-        procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
-        Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
-        do tesouro.
+        procure o **Coração do Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
+        Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Crack Random Substitution: |-
         # Decifre uma cifra de substituição aleatória!
 
@@ -20262,8 +20261,10 @@ pt-BR:
         </block></xml> para um diferente que fará o alienígena começar a girar!
       Dance Party 3: "Crie um novo sprite chamado `alien2`.\n\nFaça ele realizar um
         movimento de dança diferente quando clicado.  "
-      Dance Party 3_2019: "Crie um novo sprite que se pareça com um alien cor-de-rosa.
-        \nFaça ele realizar um movimento de dança diferente quando ele é clicado."
+      Dance Party 3_2019: |-
+        Crie um novo sprite que se pareça com um alien cor-de-rosa. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%">
+
+        Faça ele realizar um movimento de dança diferente quando ele é clicado.
       Dance Party 4: |-
         Crie um terceiro sprite chamado `alien3`.
 
@@ -20323,7 +20324,7 @@ pt-BR:
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
       Dance_2019_01: |-
-        Arraste o bloco [blockly block] [0] para a área de trabalho e conecte-o dentro do [blockly block] [1]
+        Arraste o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> para a área de trabalho e conecte-o dentro do <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>
           quadra.
 
           Escolha `gato` ou`preguiça` para criar seu primeiro dançarino.
@@ -20801,34 +20802,33 @@ pt-BR:
         como formas. Isso requer persistência e planejamento!"
       HOC 2018 Level_1: Você precisa de suprimentos para a viagem adiante. Colete
         um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+        de um **baú** ![][1].
       HOC 2018 Level_10: Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?
       HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
-        em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         e concluirá seu desafio.
       HOC 2018 Level_12: Parabéns! O mundo aquático aberto aguarda você. Construa
         um recife de coral. Um vulcão. Um naufrágio. Você decide.
       HOC 2018 Level_2: Usar um barco é bem melhor do que nadar no mar aberto. Vá
         até o final do cais e suba a bordo.
       HOC 2018 Level_3: Pegue os remos e controle o barco pelo mar aberto para pegar
-        o **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
-      HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
-        Use um bloco de repetição para atravessar o oceano mais rápido.
-      HOC 2018 Level_5: Há uma **concha de náutilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        escondida em algum lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
-        no caminho até as ruínas subaquáticas.
+        o **bacalhau** ![][0].
+      HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![][0]. Use um
+        bloco de repetição para atravessar o oceano mais rápido.
+      HOC 2018 Level_5: Há uma **concha de náutilo** ![][0] escondida em algum lugar.
+        Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png).
+      HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)no
+        caminho até as ruínas subaquáticas.
       HOC 2018 Level_7a: Você encontrou as ruínas subaquáticas. No arenito, procure
         um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        que contém tesouro de **prismarinho** (<https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png>).
+        que contém tesouro de **prismarinho**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       HOC 2018 Level_8: Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica
         e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         no recife de coral.
       HOC 2018 Level_9b: Você conseguiu chegar ao recife de corais. Agora, procure
-        o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
-        Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
-        do tesouro.
+        o **Coração do Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
+        Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       InspirationalArtwork: "Agora você já aprendeu tudo que precisa para fazer uma
         forma como essa! \n\nSe essa imagem te inspirar, tente fazer algo similar.
         Se não, crie algo por conta própria."
@@ -21349,7 +21349,7 @@ pt-BR:
       OPD-K5-spritelab-2: |-
         Vamos fazer um aquário!
 
-        Mude o sprite da bola de feno por qualquer peixe clicando no <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"bola de feno"</title></block></xml>.
+        Mude o sprite da bola de feno por qualquer peixe clicando no <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"tumbleweed"</title></block></xml>.
 
         Lembre-se de atualizar a fantasia do sprite em <xml><block type="gamelab_addBehaviorSimple" block-text="the add behavior block"></block></xml>.
       OPD-K5-spritelab-3: |-
@@ -21359,7 +21359,7 @@ pt-BR:
       OPD-K5-spritelab-4: |-
         Nosso aquário precisa de água!
 
-        Use o bloco <xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
+        Use o bloco<xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
             <value name="COLOR">
               <block type="colour_picker">
                 <title name="COLOUR">#0000ff</title>
@@ -23050,7 +23050,7 @@ pt-BR:
       courseA_collector_loops2: "Pegue todas as três pilhas! Mova Laurel para cada
         peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Pegue todas as três pilhas! Mova Laurel para
-        cada peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+        cada peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2019: 'Pegue todas as três pilhas! Mova Laurel para
         cada parte do tesouro, e depois use o bloco <xml><block type="collector_collect"
         block-text="get treasure"/></xml>. '
@@ -23171,7 +23171,7 @@ pt-BR:
         blocos  <xml><block type="when_run"/></xml> para terminar seu código, em seguida,
         clique em "Executar ▶".
       courseA_maze_ramp2_2019: Anexe os dois blocos <xml><block type="maze_moveEast"
-        block-text="move east"/></xml> ao bloco <xml><block type="when_run" block-text="when
+        block-text="move east"/></xml> ao bloco<xml><block type="when_run" block-text="when
         run"/></xml> para terminar seu código, em seguida, clique em "Executar ▶".
       courseA_maze_ramp3a_2018: Pegue um <xml><block type="maze_moveNorth"/></xml>
         da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar

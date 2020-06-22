@@ -1108,6 +1108,8 @@
   header_help_us: "Hjälp oss"
   header_about: "Om"
   header_report_bug: "Rapportera ett problem"
+  header_legal_privacy: "Sekretesspolicy"
+  header_legal_tos: "Villkor"
   header_documentation: "Dokumentation"
   user_header_label: "Hej %{username}"
   user_header_team: "Team"

@@ -4,8 +4,8 @@ module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
     setup_all do
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
-      @daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
-      @daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
+      @daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
+      @daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_post_survey')
       @csf_intro_post = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
       @parsed_forms_csd = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
@@ -27,7 +27,7 @@ module Pd::Foorm
             column_count: 7,
             type: "matrix",
             header: "Teacher Engagement",
-            form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"]
+            form_keys: ["surveys/pd/summer_workshop_post_survey.0"]
           },
           overall_success: {
             title: "How much do you agree or disagree with the following statements about the workshop overall?",
@@ -42,13 +42,13 @@ module Pd::Foorm
             column_count: 7,
             type: "matrix",
             header: "Overall Success",
-            form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"]
+            form_keys: ["surveys/pd/summer_workshop_post_survey.0"]
           },
           expertise_rating: {
             title: "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
             column_count: 5,
             type: "scale",
-            form_keys: %w(surveys/pd/workshop_daily_survey_day_0.0 surveys/pd/workshop_daily_survey_day_5.0)
+            form_keys: %w(surveys/pd/summer_workshop_pre_survey.0 surveys/pd/summer_workshop_post_survey.0)
           }
         }
       }

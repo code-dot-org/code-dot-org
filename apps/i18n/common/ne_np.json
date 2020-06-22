@@ -351,7 +351,6 @@
   "lockWhenDone": "Lock when students finish",
   "loginCard_sectionName": "Section Name",
   "loginType": "Login Type",
-  "loginTypePictureLongDescription": "This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.",
   "makerNewProjectButton": "प्रोजेक्ट सिर्जना गर्नुहोस्",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "manageLinkedAccounts_actions": "Actions",

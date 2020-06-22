@@ -1442,6 +1442,8 @@
   header_teacher_community: "Kennarasamfélag"
   header_help_support: 'Hjálp og stuðningur '
   header_report_bug: "Tilkynna galla"
+  header_legal_privacy: "Persónuverndarstefna"
+  header_legal_tos: "Skilmálar"
   header_tutorials: "Kennslutímar"
   app_lab_documentation: "Upplýsingar um Appsmiðju"
   app_lab_tutorials: "Kennsluefni Appsmiðju"

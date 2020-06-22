@@ -5,6 +5,9 @@ ar-SA:
       2-3 Artist Debugging 1:
         2-3_Artist_Debugging_1_a: لا يمتلك الفنان رز "خطوة"، لكن يمكنك سحب الشريط
           المنزلق إلى اليسار لمشاهدة تشغيل البرنامج ببطء.
+      4-5 Artist Patterns Free Play:
+        4-5_Artist_Patterns_Free_Play_1: كافة مربعاتك البرمجية منظمة في فئات. أنقر
+          على هذه الكلمات لترى أين ذهب كل شيء!
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: تذكّر، افحص لتتأكد ما إذا كان لكل غيمة زهرة. لست
           ملزمًا لفحص خلايا النحل بتاتًا.
@@ -85,6 +88,12 @@ ar-SA:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
+      Geometric Sun:
+        4-5_Artist_Patterns_Free_Play_1: كافة مربعاتك البرمجية منظمة في فئات. أنقر
+          على هذه الكلمات لترى أين ذهب كل شيء!
+      Geometric Sun_2018:
+        4-5_Artist_Patterns_Free_Play_1: كافة مربعاتك البرمجية منظمة في فئات. أنقر
+          على هذه الكلمات لترى أين ذهب كل شيء!
       Infinity_move_collide:
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
       Infinity_move_directions:
@@ -159,6 +168,9 @@ ar-SA:
           الدخول لحفظ هذا المشروع في حسابك!
       OPD-K5-forloops-5:
         courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى
+          التالي
       OPD-K5-spritelab-3:
         spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
           كيفية عمل التعليمات البرمجية الخاصة بك.
@@ -211,6 +223,16 @@ ar-SA:
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: استخدم هذه الحلقة لجمع كل الرحيق (أو
           العسل) من زهرة واحدة (أو من خلية نحل).
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: استخدم هذا الأمر لجعل النحل يتحرك
           للخلف.
@@ -222,6 +244,11 @@ ar-SA:
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
       course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: ستقوم الدالة بوظيفة رائعة حيال الذرة
           لكن ماذا عن أنواع الخضار الأخرى؟
@@ -432,6 +459,9 @@ ar-SA:
         courseB_playlab_events6_a: استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات.
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات.
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى
+          التالي
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
           التمساح!
@@ -492,6 +522,8 @@ ar-SA:
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات
           يمكنك جمعها.
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: المربعات الرمادية لا يمكن إلغائها.
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: هذه البلوكات الرمادية مقفلة ولا يمكنك حذفها!
       courseC_maze_debugging5_2019:
@@ -641,9 +673,11 @@ ar-SA:
       courseD_maze_ramp3:
         courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
           الأدوات من أجل الحذف بعيداً.
+        stone_block_2: المربعات الرمادية مصنوعة من الحجارة ولا يمكن رميها.
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
           الأدوات من أجل الحذف بعيداً.
+        stone_block_2: المربعات الرمادية مصنوعة من الحجارة ولا يمكن رميها.
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
           الأدوات من أجل الحذف بعيداً.
@@ -713,15 +747,108 @@ ar-SA:
           ويحتاج العديد من المحاولات لحلها.
       courseE_aboutme_2:
         '': انقر هنا!
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: لنبدأ في استخدام هذا المربع البرمجي للمساعدة
+          في إنشاء المربع الأول.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: لنبدأ في استخدام هذا المربع البرمجي للمساعدة
+          في إنشاء المربع الأول.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
+          جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
+          جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
+          جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
+          جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
+          هذه التسمية في مربع الأدوات.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
+          هذه التسمية في مربع الأدوات.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
+          هذه التسمية في مربع الأدوات.
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: يمكنك تغيير هذا الرقم.
         courseE_artist_ramp8_2: انقر هنا لطباعة رقم مرات تكرار تعليماتك البرمجية.
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: يمكنك تغيير هذا الرقم.
         courseE_artist_ramp8_2: انقر هنا لطباعة رقم مرات تكرار تعليماتك البرمجية.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
+          انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
+          انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
+          انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى
+          التالي
       courseF_artist_for1:
         courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
           البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.

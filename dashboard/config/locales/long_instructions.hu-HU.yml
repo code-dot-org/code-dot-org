@@ -985,6 +985,10 @@ hu-HU:
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      Standalone_Artist_2: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint
+        150 pixel hosszúságú oldalakkal.
+      Standalone_Artist_3: Le tudod rajzolni ezt a hatszöget 100 képpontos oldalakkal
+        és 60 fokos fordulatokkal?
       U4 Model Program 5_2019: "# A többi gomb felszerelése\n\nMost, hogy készült
         egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden
         gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik

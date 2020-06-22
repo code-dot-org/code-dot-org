@@ -316,6 +316,8 @@ he:
       help_us: "עזור לנו"
       teach: "למד"
       about: "אודות"
+      legal_privacy: "הצהרת פרטיות"
+      legal_tos: "תנאים"
     user:
       classroom: 'דף הבית של המורה'
       district_dashboard: 'לוח ניהול מחוזי'

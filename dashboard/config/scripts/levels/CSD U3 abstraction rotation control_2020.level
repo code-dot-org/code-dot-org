@@ -76,20 +76,24 @@
     "parent_level_id": 18606,
     "name_suffix": "_2020",
     "reference_links": [
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
       "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/javascript/if-statements/"
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "teacher_markdown": "# Inside versus outside the draw loop\r\n\r\nThis is a good time to remind students that code **outside** the draw loop is used to set up the program.  It is for how you want your program to **start**.  Code **inside** the draw loop is for things that are changing as the program is running, user interaction.  \r\n\r\nThere may be some confusion that the new blocks are animation (changing position) and yet have gone outside the draw loop up until this point.  That is because up until this point, the velocity has been set at the beginning of the program and not changed.  When students want the velocity to change during the program, it will need to go inside the draw loop."
+    "teacher_markdown": "# Inside versus outside the draw loop\r\n\r\nThis is a good time to remind students that code **outside** the draw loop is used to set up the program.  It is for how you want your program to **start**.  Code **inside** the draw loop is for things that are changing as the program is running, user interaction.  \r\n\r\nThere may be some confusion that the new blocks are animation (changing position) and yet have gone outside the draw loop up until this point.  That is because up until this point, the velocity has been set at the beginning of the program and not changed.  When students want the velocity to change during the program, it will need to go inside the draw loop.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:42:01 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:20:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:20:50 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-11-15 00:06:54 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-30 21:37:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:42:01 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:20:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:20:50 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-11-15 00:06:54 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-30 21:37:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:25:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -216,7 +216,7 @@
       "4-5_Artist_3_a": "If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:\n\n**600 - 200 - 200 = 200**\n\nThat means both short sides add up to 200 pixels.\n\n**What is 200 / 2?**",
       "4-5_Artist_3_b": "If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a flower": {
         "name": "draw a flower"
       }
@@ -243,7 +243,7 @@
   "https://studio.code.org/s/course3/stage/3/puzzle/7": {
     "short_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
     "long_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
-    "function_defintions": {
+    "function_definitions": {
       "draw a tree": {
         "name": "draw a tree"
       }
@@ -255,7 +255,7 @@
     "authored_hints": {
       "4-5_Artist_7_a": "Which angle is the smallest?  At which angle is the artist standing? "
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw triangle": {
         "name": "draw triangle"
       },
@@ -274,7 +274,7 @@
       "4-5_Artist_8_a": "The long sides are 240 pixels each.  That means that the 2 short sides must total:\n\n**800 - 240 - 240 = 320**\n\nWhat is **320/2** ? ",
       "4-5_Artist_8_b": "This image can be done 2 ways!  \n\n-   Draw two rectangles that are **120** long and **160** tall, with an overlapping side\n\n-   Draw one rectangle that is **240** long and **160** tall, then add a line in the middle."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw circle": {
         "name": "draw circle"
       },
@@ -435,7 +435,7 @@
       "2-3_Artist_Functions_1_a": "The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.",
       "2-3_Artist_Functions_1_b": "It is okay to draw overlapping lines to make your glasses."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw ear stems": {
         "name": "draw ear stems"
       }
@@ -447,7 +447,7 @@
     "authored_hints": {
       "2-3_Artist_Functions_2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a square": {
         "name": "draw a square"
       },
@@ -462,7 +462,7 @@
     "authored_hints": {
       "2-3_Artist_Functions_3_a": "**115 + 45 = 160**"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a square": {
         "name": "draw a square"
       },
@@ -477,7 +477,7 @@
     "authored_hints": {
       "2-3_Artist_Functions_4_a": "The artist needs to turn 120 degrees between each square to complete this design."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a square": {
         "name": "draw a square"
       }
@@ -489,7 +489,7 @@
     "authored_hints": {
       "2-3_Artist_Functions_11_a": "You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a hexagon": {
         "name": "draw a hexagon"
       }
@@ -498,7 +498,7 @@
   "https://studio.code.org/s/course3/stage/5/puzzle/6": {
     "short_instructions": "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
     "long_instructions": "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
-    "function_defintions": {
+    "function_definitions": {
       "draw a hexagon": {
         "name": "draw a hexagon"
       }
@@ -510,7 +510,7 @@
     "authored_hints": {
       "2-3_Artist_Functions_12_a": "Try running the code first to see what you need to add."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a flower": {
         "name": "draw a flower"
       }
@@ -519,7 +519,7 @@
   "https://studio.code.org/s/course3/stage/5/puzzle/8": {
     "short_instructions": "Freeplay: Here is a snowflake function. Experiment with it to create a winter scene! This is a free play level, so there is no puzzle to solve. Have fun!",
     "long_instructions": "**Freeplay:** Here is a snowflake function. Experiment with it to create a winter scene! \n\nThis is a free play level, so there is no puzzle to solve. Have fun!",
-    "function_defintions": {
+    "function_definitions": {
       "draw a snowflake": {
         "name": "draw a snowflake"
       }
@@ -528,7 +528,7 @@
   "https://studio.code.org/s/course3/stage/5/puzzle/9": {
     "short_instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
     "long_instructions": "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \n\nUse them to draw the inside of a machine!",
-    "function_defintions": {
+    "function_definitions": {
       "big gear": {
         "name": "big gear"
       },
@@ -572,7 +572,7 @@
       "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "my design": {
         "name": "my design"
       },
@@ -591,7 +591,7 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "my design": {
         "name": "my design"
       },
@@ -606,7 +606,7 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/2": {
     "short_instructions": "Functions are blocks of code that perform a task. Use the \"get 2 nectar\" function to collect the nectar from each flower.",
     "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower.",
-    "function_defintions": {
+    "function_definitions": {
       "get 2 nectar": {
         "name": "get 2 nectar"
       }
@@ -615,7 +615,7 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/3": {
     "short_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
     "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
-    "function_defintions": {
+    "function_definitions": {
       "get 5": {
         "name": "get 5"
       }
@@ -627,7 +627,7 @@
     "authored_hints": {
       "2-3_Bee_Functions_4_a": "You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again."
     },
-    "function_defintions": {
+    "function_definitions": {
       "move and get nectar": {
         "name": "move and get nectar"
       }
@@ -635,7 +635,7 @@
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/5": {
     "short_instructions": "There is now more nectar at the flowers. Edit the given function so that it collects 4 nectars and use it to collect all of the nectar from the flowers.",
-    "function_defintions": {
+    "function_definitions": {
       "move and get 4": {
         "name": "move and get 4"
       }
@@ -646,7 +646,7 @@
     "authored_hints": {
       "2-3_Bee_Functions_6_a": "You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again."
     },
-    "function_defintions": {
+    "function_definitions": {
       "move and get 4": {
         "name": "move and get 4"
       }
@@ -657,7 +657,7 @@
     "authored_hints": {
       "2-3_Bee_Functions_8_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n[][0]"
     },
-    "function_defintions": {
+    "function_definitions": {
       "get 7 nectar make 7 honey": {
         "name": "get 7 nectar make 7 honey"
       }
@@ -669,7 +669,7 @@
       "2-3_Bee_Functions_8_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "2-3_Bee_Functions_8_b": "Remember to build your code inside of the green function block.\n\n[][0]"
     },
-    "function_defintions": {
+    "function_definitions": {
       "get 7 make 7": {
         "name": "get 7 make 7"
       }
@@ -678,7 +678,7 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/9": {
     "short_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \n\nCreate a function that collects nectar only from purple flowers that have nectar.",
     "long_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \n\nCreate a function that collects nectar only from purple flowers that have nectar.",
-    "function_defintions": {
+    "function_definitions": {
       "collect purple nectar": {
         "name": "collect purple nectar"
       }
@@ -687,7 +687,7 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/10": {
     "short_instructions": "Assessment: Use the given function to collect nectar from each flower.",
     "long_instructions": "**Assessment:** Use the given function to collect nectar from each flower.",
-    "function_defintions": {
+    "function_definitions": {
       "get 7": {
         "name": "get 7"
       }
@@ -696,7 +696,7 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/11": {
     "short_instructions": "Assessment: Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
     "long_instructions": "**Assessment:** Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
-    "function_defintions": {
+    "function_definitions": {
       "move and get 3": {
         "name": "move and get 3"
       }
@@ -709,7 +709,7 @@
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "function_defintions": {
+    "function_definitions": {
       "do something": {
         "name": "do something"
       },
@@ -725,7 +725,7 @@
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "function_defintions": {
+    "function_definitions": {
       "do something": {
         "name": "do something"
       },
@@ -773,7 +773,7 @@
   "https://studio.code.org/s/course3/stage/7/puzzle/7": {
     "short_instructions": "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers.",
     "long_instructions": "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers.",
-    "function_defintions": {
+    "function_definitions": {
       "check purple flower": {
         "name": "check purple flower"
       }
@@ -782,7 +782,7 @@
   "https://studio.code.org/s/course3/stage/7/puzzle/8": {
     "short_instructions": "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey.",
     "long_instructions": "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey.",
-    "function_defintions": {
+    "function_definitions": {
       "check flower make honey": {
         "name": "check flower make honey"
       }
@@ -791,7 +791,7 @@
   "https://studio.code.org/s/course3/stage/7/puzzle/9": {
     "short_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. ",
     "long_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. ",
-    "function_defintions": {
+    "function_definitions": {
       "get nectar or make honey": {
         "name": "get nectar or make honey"
       }
@@ -1166,7 +1166,7 @@
       "courseF_bee_functions_challenge1_1": "What code should you put in this function?",
       "courseF_bee_functions_challenge1_2": "The \"check nectar or honey\" function can be used here if edit it to make honey multiple times."
     },
-    "function_defintions": {
+    "function_definitions": {
       "check nectar or honey": {
         "name": "check nectar or honey"
       },
@@ -1185,7 +1185,7 @@
       "courseF_bee_functions_challenge2_a": "If there is a path to the right, you should do the following:\n\n-   Get any nectar or make any honey.\n-   Turn right towards the side path.\n-   Move to the end of the side path.\n-   Turn right.\n\nIf you repeat the above actions twice, you will be ready to move back down the main path.\n\n**Only click for another hint if you want to see the full solution!**",
       "courseF_bee_functions_challenge2_b": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_defintions": {
+    "function_definitions": {
       "check nectar or honey": {
         "name": "check nectar or honey"
       },
@@ -1320,7 +1320,7 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/7": {
     "short_instructions": "The function is missing something...",
-    "function_defintions": {
+    "function_definitions": {
       "make 3 honey": {
         "name": "make 3 honey"
       }
@@ -1328,7 +1328,7 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/8": {
     "short_instructions": "This function is fine, but it isn't used properly.",
-    "function_defintions": {
+    "function_definitions": {
       "get 5 nectar": {
         "name": "get 5 nectar"
       }
@@ -1336,7 +1336,7 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/9": {
     "short_instructions": "Why isn't the bee making enough honey?",
-    "function_defintions": {
+    "function_definitions": {
       "make all honey": {
         "name": "make all honey"
       }
@@ -1422,7 +1422,7 @@
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     },
-    "function_defintions": {
+    "function_definitions": {
       "win game": {
         "name": "win game"
       },

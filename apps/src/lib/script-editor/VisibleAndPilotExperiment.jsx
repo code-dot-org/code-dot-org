@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   input: {
@@ -70,13 +71,15 @@ const VisibleInTeacherDashboard = props => (
       onChange={props.onChange}
       style={styles.checkbox}
     />
-    <p>
-      If checked this script will show up in the dropdown on the Teacher
-      Dashboard, for teachers to assign to students.
-      {props.disabled && (
-        <em> Disabled because a pilot experiment has been specified below.</em>
-      )}
-    </p>
+    <HelpTip>
+      <p>
+        If checked this script will show up in the dropdown on the Teacher
+        Dashboard, for teachers to assign to students.
+        {props.disabled && (
+          <em>Disabled because a pilot experiment has been specified below.</em>
+        )}
+      </p>
+    </HelpTip>
   </label>
 );
 VisibleInTeacherDashboard.propTypes = {
@@ -88,9 +91,13 @@ VisibleInTeacherDashboard.propTypes = {
 
 const PilotExperiment = props => (
   <label>
-    Pilot Experiment. If specified, this script will only be accessible to
-    levelbuilders, or to classrooms whose teacher has this user experiment
-    enabled.
+    Pilot Experiment
+    <HelpTip>
+      <p>
+        If specified, this script will only be accessible to levelbuilders, or
+        to classrooms whose teacher has this user experiment enabled.
+      </p>
+    </HelpTip>
     <input
       name="pilot_experiment"
       value={props.value || ''}

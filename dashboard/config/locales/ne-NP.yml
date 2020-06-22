@@ -217,6 +217,8 @@ ne:
       project_gallery: Projects
       educate_hoc: Hour of Code
       stats: Stats
+      legal_privacy: Privacy Policy
+      legal_tos: Terms of Service
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard

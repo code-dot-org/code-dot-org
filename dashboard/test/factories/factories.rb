@@ -29,7 +29,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_stage do
+  factory :section_hidden_lesson do
     section
     lesson
   end
@@ -280,6 +280,16 @@ FactoryGirl.define do
       trait :without_email do
         email ''
         hashed_email nil
+      end
+    end
+
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
       end
     end
 
@@ -736,6 +746,10 @@ FactoryGirl.define do
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
+
+    position do |lesson_group|
+      (lesson_group.script.lesson_groups.maximum(:position) || 0) + 1
+    end
   end
 
   factory :lesson do

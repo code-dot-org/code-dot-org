@@ -3,10 +3,20 @@ pl-PL:
   data:
     display_name:
       AB_Debug_Artist1: 'Debugowanie Artysty #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: 'Filmik: Tryb projektowania'
       App Lab Intro 8 - Video Getting Started: 'Video: Na początek'
+      App Lab Intro 8 - Video Images and Sounds: 'Filmik: Obrazy i dźwięki'
+      App Lab Intro 8 - Video Share Your App: 'Filmik: Udostępnij swoją aplikację'
       AppLab Intro 7 - Change Screen Color: Zmień kolor ekranu
       AppLab Intro 7 - Change Text 2: Zmień tekst
       AppLab Intro 7 - Full Text: Dwa Przyciski
+      AppLab Intro 7 - onEvent intro: Zrób tak, by przyciski działały
+      AppLab Intro 7 - onEvent twoButtons: Więcej treningu onEvent
+      AppLab Intro 7 - playSound: Używanie playSound
+      AppLab Intro 7 - thisOrThatAddButton: Tu czy Tam
+      AppLab Intro 7 - thisOrThatAddScreen: Tu czy Tam
+      AppLab Intro 7 - thisOrThatPersonalize: Tu czy Tam
+      AppLab Intro 7 - thisOrThatSetScreen: Tu czy Tam
       CSD Problem Solving Process Video: 'Nagranie: Proces Rozwiązywania Problemów'
       CSD U1L02 TFMD_2018: Przegląd lekcji
       CSD U1L02 TFMD_2019: Przegląd lekcji

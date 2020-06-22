@@ -261,7 +261,8 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "NO")
   end
 
-  test "High school lack of state data in a blacklist state does not override anything" do
+  test "High school lack of state data in a denylist state does not override anything" do
+    return if Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.empty?
     school_year = 2020
     school = create :census_school,
       :with_teaches_no_teacher_census_submission,
