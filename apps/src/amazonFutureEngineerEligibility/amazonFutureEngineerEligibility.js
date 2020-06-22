@@ -1,3 +1,4 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,6 +28,11 @@ function showAmazonFutureEngineerEligibility() {
       }
     })
     .complete(() => {
+      firehoseClient.putRecord({
+        study: 'amazon-future-engineer-eligibility',
+        event: 'start'
+      });
+
       // TO DO: confirm that there's no case where this might be used
       // where amazonFutureEngineerEligibilityElement could be null or not an array.
       ReactDOM.render(
@@ -34,6 +40,7 @@ function showAmazonFutureEngineerEligibility() {
           signedIn={signedIn}
           schoolId={schoolData.nces_school_id || ''}
           schoolEligible={schoolData.afe_high_needs || null}
+          accountEmail={schoolData.teacher_email || null}
         />,
         amazonFutureEngineerEligibilityElement[0]
       );
