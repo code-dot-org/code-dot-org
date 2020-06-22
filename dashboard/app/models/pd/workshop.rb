@@ -396,6 +396,8 @@ class Pd::Workshop < ActiveRecord::Base
   # for details.
   def self.process_ends
     end_on_or_after(Time.now - 2.days).each do |workshop|
+      # only process if the workshop has not already been processed or if workshop was
+      # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
       workshop.send_facilitator_post_surveys
