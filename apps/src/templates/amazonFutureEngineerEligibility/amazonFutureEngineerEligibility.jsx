@@ -28,27 +28,47 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
-    let sessionEligibilityData =
-      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+    let sessionEligibilityData = this.getSessionEligibilityData();
 
     this.state = {
       formData: {
         signedIn: this.props.signedIn,
-        schoolEligible:
-          sessionEligibilityData.schoolEligible ||
-          this.props.schoolEligible ||
-          null,
+        schoolEligible: this.checkInitialSchoolEligibility(
+          sessionEligibilityData
+        ),
         schoolId:
           sessionEligibilityData.schoolId || this.props.schoolId || null,
-        consentAFE: sessionEligibilityData.consentAFE || false,
-        submitted: sessionEligibilityData.submitted || false
+        consentAFE: sessionEligibilityData.consentAFE || false
       },
       errors: {}
     };
   }
 
-  updateFormData = change => {
-    this.setState({formData: {...this.state.formData, ...change}});
+  checkInitialSchoolEligibility = sessionEligibilityData => {
+    if (
+      sessionEligibilityData.schoolEligible === false ||
+      this.props.schoolEligible === false
+    ) {
+      return false;
+    } else if (
+      sessionEligibilityData.schoolEligible === true ||
+      this.props.schoolEligible === true
+    ) {
+      return true;
+    }
+
+    return null;
+  };
+
+  getSessionEligibilityData = () =>
+    JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+
+  updateFormData = (change, callback = () => {}) => {
+    this.setState({formData: {...this.state.formData, ...change}}, callback);
+  };
+
+  updateAndStoreFormData = formData => {
+    this.updateFormData(formData, this.saveToSessionStorage);
   };
 
   saveToSessionStorage = () => {
@@ -142,12 +162,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.updateFormData(newData);
   };
 
-  loadConfirmationPage = () => {
-    this.saveToSessionStorage();
-
-    return <AmazonFutureEngineerAccountConfirmation />;
-  };
-
   submitToAFE = () => {
     // returns a promise
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
@@ -160,39 +174,17 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   loadCompletionPage = () => {
-    // Dedupe with loadConfirmationPage -- probably belongs in onContinue
-    this.saveToSessionStorage();
+    let sessionEligibilityData = this.getSessionEligibilityData();
 
-    // Notes on to dos for CSTA API call:
-    // may need to make NCES ID 12 digits.
-    // CSTA wants school district?
-    // school name may be too verbose currently.
-    // what if some of these are missing?
-    // lots of validation specified in spec, none currently being done.
-    // need timestamp in appropriate format.
-
-    // Do API calls here.
-    console.log(this.state.formData);
-    if (!this.state.formData.submitted) {
+    if (!sessionEligibilityData.submitted) {
       this.submitToAFE().then(() => {
-        // This I do not think is working correctly
-        // because setting state causes rerender.
-        // Really, what I'd like to happen is:
-        //   a) send data to AFE,
-        //   b) on success, mark submitted as true
-        //     (doesn't actually have to be in formData, only relevant at session level)
-        //   c) then redirect to success page.
-        // I set state because state.formData and saveToSessionStorage are
-        // tightly coupled.
-        // Maybe they should be decoupled.
-        this.setState({
-          formData: {...this.state.formData, ...{submitted: true}}
-        });
-        this.saveToSessionStorage();
+        sessionStorage.setItem(
+          sessionStorageKey,
+          JSON.stringify(...sessionEligibilityData, ...{submitted: true})
+        );
       });
     }
-    // need to work on synchronicity of this --
-    // not sure if referral back from sign in page is working 100%
+
     window.location = pegasus('/afe/success');
   };
 
@@ -244,13 +236,12 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
           <AmazonFutureEngineerEligibilityForm
             email={formData.email}
             schoolId={formData.schoolId}
-            updateFormData={this.updateFormData}
+            updateFormData={this.updateAndStoreFormData}
           />
         )}
         {formData.schoolEligible &&
           formData.consentAFE &&
-          !formData.signedIn &&
-          this.loadConfirmationPage()}
+          !formData.signedIn && <AmazonFutureEngineerAccountConfirmation />}
         {formData.schoolEligible &&
           formData.consentAFE &&
           formData.signedIn &&
