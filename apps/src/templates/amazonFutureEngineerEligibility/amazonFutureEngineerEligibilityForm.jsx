@@ -143,9 +143,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 
   render() {
-    // TO DO: gray out school dropdown and disable editing
-    // TO DO: Add "Not your school? go back" link below school dropdown
-    // TO DO: Enforce that these required fields are actually required
     return (
       <div>
         <div>
