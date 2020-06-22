@@ -344,7 +344,7 @@ class BucketHelper
     s3.list_object_versions(bucket: @bucket, prefix: key).
       versions.
       # Sort descending order by time stamp.
-      sort {|a, b| b.last_modified <=> a.last_modified}.
+      sort_by(&:last_modified).reverse.
       # Average student browser session is 20-30 minutes.
       # A gap of this length in S3 Object Version history may indicate start of a new session.
       slice_when {|a, b| (a.last_modified - b.last_modified) > 20.minutes}.
