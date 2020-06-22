@@ -43,7 +43,7 @@ export const setSection = section => {
     id: section.id,
     script: section.script,
     students: sortedStudents,
-    stageExtras: section.stage_extras
+    stageExtras: section.lesson_extras
   };
   return {type: SET_SECTION, section: filteredSectionData};
 };

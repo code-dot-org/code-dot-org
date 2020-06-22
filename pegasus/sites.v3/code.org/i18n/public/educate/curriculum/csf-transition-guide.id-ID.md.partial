@@ -4,7 +4,7 @@ theme: responsive
 style_min: true
 ---
 
-# Kursus Pengajaran A-F
+# Mengajar Kursus A-F
 
 ## Daftar Isi
 
@@ -22,7 +22,7 @@ style_min: true
 ## Gambaran
 Gambaran pendidikan ilmu komputer telah sangat berubah sejak penyusunan kursus Dasar-dasar Ilmu Komputer yang asli. Awalnya, Kursus 1-4 dirancang sebagai titik awal untuk mendapatkan dasar-dasar, tanpa mempertimbangkan usia siswa yang mengikuti mata pelajaran.  Sekarang, jauh lebih banyak kabupaten, kota, dan negara telah melaksanakan kursus ilmu komputer mulai dari TK, guru yang menginginkan lebih banyak konten kursus tersebut untuk memahami siswa sampai sekolah menengah/SMP.
 
-Kursus Dasar-dasar Ilmu Komputer A-F, adalah jawaban kami atas masalah tersebut.  Penyusunan kurikulum setiap kelas memungkinkan kami untuk melihat ke masa lalu dan memikirkan kembali cara kami menyajikan materi.  Selain itu, memberikan kesempatan kepada kami untuk memperhatikan umpan balik dengan sepenuh hati dari komunitas guru berdedikasi yang telah mendukung kami dalam misi ini. Dirancang dengan bantuan beberapa ahli pendidikan CS sekolah dasar terbaik di seluruh dunia, Kursus A-F harus dianggap cukup mudah dilaksanakan tanpa pengembangan profesional tambahan, tetapi cukup baru disajikan kepada siswa yang telah menerima pelajaran kami di masa lalu.
+Kursus Dasar-dasar Ilmu Komputer A-F, adalah jawaban kami atas masalah tersebut.  Penyusunan kurikulum setiap kelas memungkinkan kami untuk melihat ke masa lalu dan memikirkan kembali cara kami menyajikan materi.  Selain itu, memberikan kesempatan kepada kami untuk memperhatikan masukan dengan sepenuh hati dari komunitas guru berdedikasi yang telah mendukung kami dalam misi ini. Dirancang dengan bantuan beberapa ahli CS education sekolah dasar terbaik di seluruh dunia, Kursus A-F harus dianggap cukup mudah dilaksanakan tanpa pengembangan profesional tambahan, tetapi cukup baru disajikan kepada siswa yang telah menerima pelajaran kami di masa lalu.
 
 * Kursus A: Taman Kanak-kanak
 * Kursus B: Kelas 1
@@ -33,7 +33,7 @@ Kursus Dasar-dasar Ilmu Komputer A-F, adalah jawaban kami atas masalah tersebut.
 * Kursus Kilat Pra-Pembaca: Taman Kanak-kanak - Kelas 1
 * Kursus Kilat: Kelas 2 - Kelas 5
 
-Pembaruan terbesar pada Dasar-dasar CS adalah konten akan dipindahkan dari empat kursus (Kursus 1-4) ke enam kursus yang selaras dengan setiap level kelas K-5 (Kursus A-F).  Dengan demikian, pelajaran menjadi lebih disesuaikan dengan tingkat yang tepat untuk membaca, matematika, dan perkembangan kognitif secara keseluruhan.  Perhatikan penambahan dua kursus “Kilat” yang berbeda, satu kursus untuk pra-pembaca dan satu kursus untuk semua nilai lainnya.  Mirip dengan versi rangkaian yang "dipercepat" sebelumnya.
+Pembaruan terbesar pada CS Fundamentals adalah konten akan dipindahkan dari empat kursus (Kursus 1-4) ke enam kursus yang selaras dengan setiap tingkat kelas K-5 (Kursus A-F).  Dengan demikian, pelajaran menjadi lebih disesuaikan dengan tingkat yang tepat untuk membaca, matematika, dan perkembangan kognitif secara keseluruhan.  Perhatikan penambahan dua kursus “Kilat” yang berbeda, satu kursus untuk pra-pembaca dan satu kursus untuk semua nilai lainnya.  Mirip dengan versi rangkaian yang "dipercepat" sebelumnya.
 
 <a id="newcourses"></a>
 
@@ -52,7 +52,7 @@ Sisa panduan ini akan menyajikan setiap gagasan secara lebih rinci, menawarkan k
 <a id="circletime"></a>
 
 ## Kisah Waktu Siklus (Kursus A dan B)
-Beberapa konsep sulit diajarkan melalui aktivitas dan teka-teki sendiri, terutama untuk siswa muda.  Itu sebabnya kami memperkenalkan sedikit kisah waktu siklus pada kurikulum Taman Kanak-kanak dan Kelas Satu. Kisah ini dimaksudkan untuk dibaca guru di semua kelas, dengan berhenti di setiap langkah untuk membahas gagasan kritis seperti debug, ketekunan, dan frustrasi.  Harapan kami adalah memungkinkan siswa mengalami konsep sulit ini melalui karakter kisah sehingga akan membantu mereka mengenali gagasan yang sama ketika mengikuti pelajaran di masa depan.
+Beberapa konsep yang sulit adalah mengajar melalui aktivitas dan teka-teki sendiri, terutama untuk siswa muda.  Itu sebabnya kami memperkenalkan sedikit kisah waktu siklus pada kurikulum Taman Kanak-kanak dan Kelas Satu. Kisah ini dimaksudkan untuk dibaca guru di semua kelas, dengan berhenti di setiap langkah untuk membahas gagasan kritis seperti debug, ketekunan, dan frustrasi.  Harapan kami adalah memungkinkan siswa mengalami konsep sulit ini melalui karakter kisah sehingga akan membantu mereka mengenali gagasan yang sama ketika mengikuti pelajaran di masa depan.
 
 Inilah maksud penggunaan kisah waktu siklus:
 
@@ -64,7 +64,7 @@ Inilah maksud penggunaan kisah waktu siklus:
 ### Ingatkan siswa tentang kisah sebelum mereka memulai aktivitas berikutnya.
   - Apakah Anda ingat gagasan utama yang kita bahas?
   - Bagaimana Anda memahami jika Anda melihat gagasan tersebut hari ini?
-  - Karakter apa yang diperlukan untuk menangani gagasan tersebut? Apa yang akan kamu lakukan?
+  - Karakter apa yang diperlukan untuk menangani gagasan tersebut? Apa yang akan Anda lakukan?
 
 ### Tunjukkan persamaan antara kisah dan situasi siswa ketika mereka berdekatan selama beraktivitas.
   - Jelaskan kepada siswa tentang posisi mereka yang menyerupai situasi dari buku tersebut.
@@ -86,7 +86,7 @@ Ingatlah bahwa siswa dapat mengikuti pelajaran dan mencoba kembali teka-teki yan
 
 Setelah siswa berhasil mengatasi tantangan, mereka akan menemukan beberapa latihan serupa dengan yang mungkin mereka alami pada paruh pertama tahapannya. Teka-teki tersebut sengaja dibuat untuk menguji pemahaman siswa tentang seberapa jelas subjek yang dipelajarinya.  Teka-teki tersebut mungkin tampak terlalu mudah, dengan mempertimbangkan teka-teki yang dialami sebelumnya, tetapi dibuat untuk menunjukkan tingkat kompetensi yang diinginkan dari tahap yang sesuai.
 
-Dalam beberapa kasus, kami mengakhiri pelajaran dengan tingkat gaya permainan bebas.  Tingkat tersebut mungkin tidak memiliki jawaban "salah", atau memungkinkan beberapa cara berbeda untuk menyelesaikan masalah utama.  Dorong siswa agar dapat memberikan kesempatan terbaik kepada mereka dan tidak hanya mengeklik "Lanjutkan" meskipun mereka dapat melakukannya.
+Dalam beberapa kasus, kami mengakhiri pelajaran kami dengan tingkat gaya permainan bebas.  Tingkat tersebut mungkin tidak memiliki jawaban "salah", atau memungkinkan beberapa cara berbeda untuk menyelesaikan masalah utama.  Dorong siswa agar dapat memberikan kesempatan terbaik kepada mereka dan tidak hanya mengeklik "Lanjutkan" meskipun mereka dapat melakukannya.
 
 Beberapa catatan akhir untuk bidang ini:
 
@@ -109,15 +109,15 @@ Sebagian besar, aktivitas menjembatani dapat dibuat dengan menggunakan subjek da
 ## Proyek Akhir Kursus (Kursus E & F)
 Untuk siswa yang lebih senior, kami telah memperkenalkan tugas akhir yang penting di Kursus E & F. Meskipun Code.org telah memberikan kemampuan membuat "proyek" selama beberapa waktu, kami menganggap hal itu akan menambah beberapa perspektif yang sangat dibutuhkan bagi siswa agar menjadi mampu merencanakan dan melaksanakan tugas mereka dalam konteks formal.
 
-Tugas akhir tentu saja relatif mudah.  Selama periode empat hingga lima minggu, siswa akan meninjau gagasan proyek, merencanakan aplikasi, membuat kode program, merevisi didasarkan pada umpan balik (kelas 5), lalu mempresentasikan hasil pekerjaan.  Setiap tahap tersebut dipandu melalui selebaran yang bermanfaat, serta rencana pelajaran guru yang menyoroti gambaran besar.
+Tugas akhir tentu saja relatif mudah.  Selama periode empat hingga lima minggu, siswa akan meninjau gagasan proyek, merencanakan aplikasi, membuat kode program, merevisi didasarkan pada masukan (kelas 5), lalu mempresentasikan hasil pekerjaan.  Setiap tahap tersebut dipandu melalui selebaran yang bermanfaat, serta rencana pelajaran guru yang menyoroti gambaran besar.
 
 **Review:** Siswa akan melihat beberapa proyek aspiratif, yang dibuat untuk memamerkan hal-hal menakjubkan sehingga dapat dilakukan dengan keterampilan yang telah mereka pelajari hingga kini.  Proyek tersebut telah dibuat baik di Play Lab maupun Artist, tetapi siswa bebas meninjau proyek dari Tynker, Scratch, atau bahkan bahasa berbasis teks jika guru merasa proyek tersebut layak.
 
-**Plan:** Tujuan di sini agar siswa duduk dan memikirkan yang benar-benar mungkin terjadi.  Mereka perlu memikirkan permainan yang mereka lihat, dan batas yang mereka hadapi ketika menyuntingnya.  Setelah itu, mereka akan membuat sketsa rencana untuk membuat sesuatu yang unik.  Siswa mungkin perlu diingatkan agar tetap realistis, karena mereka akan memiliki waktu dan sumber daya terbatas ketika membawa visi mereka ke dalam kehidupan.  Materi di sini mengasumsikan penggunaan Artist atau Play Lab, tetapi proyek dapat dipindahkan ke platform apa pun yang berfungsi untuk setiap kelas tertentu.
+**Plan:** Tujuan di sini agar siswa duduk dan memikirkan yang benar-benar mungkin terjadi.  Mereka perlu memikirkan permainan yang mereka lihat, dan batas yang mereka hadapi ketika menyuntingnya.  Setelah itu, mereka akan membuat sketsa rencana untuk membuat sesuatu yang unik.  Siswa mungkin perlu diingatkan agar tetap realistis, karena mereka akan memiliki waktu dan materi terbatas ketika membawa visi mereka ke dalam kehidupan.  Materi di sini mengasumsikan penggunaan Artist atau Play Lab, tetapi proyek dapat dipindahkan ke platform apa pun yang berfungsi untuk setiap kelas tertentu.
 
 **Build:** Suatu hari, tidak banyak waktu untuk melaksanakan rencana yang telah dituliskan di atas kertas.  Siswa akan menghadapi pilihan yang sulit ketika mencoba membuat sesuatu berfungsi ketika mereka mengalami hambatan satu demi satu.  Mereka akan belajar menyunting dan beradaptasi ketika bug dan batasan program mengubah persepsi mereka tentang hal yang dapat dicapai secara nyaman dalam jangka waktu terbatas.
 
-**Revise:** Untuk siswa yang lebih senior, satu hari merevisi program mereka didasarkan pada umpan balik teman sekelas dapat membantu meningkatkan produk akhir mereka, dan membiarkan mereka menginspirasi orang lain dengan hal yang telah mereka capai.  Siswa akan berlatih kritik konstruktif, serta curah gagasan dan ketekunan kelompok.
+**Revise:** Untuk siswa yang lebih senior, satu hari merevisi program mereka didasarkan pada masukan teman sekelas dapat membantu meningkatkan produk akhir mereka, dan membiarkan mereka menginspirasi orang lain dengan hal yang telah mereka capai.  Siswa akan berlatih kritik konstruktif, serta curah gagasan dan ketekunan kelompok.
 
 **Present:** Hampir satu bulan pembuatan, inilah kesempatan bagi siswa untuk berjuang dan bangga dengan seberapa jauh yang telah mereka miliki.  Rencana pelajaran kami mengasumsikan presentasi lisan, tetapi guru memiliki pilihan menyarankan presentasi tertulis atau multimedia sebagai gantinya.
 
@@ -126,7 +126,7 @@ Tanpa memperhatikan seberapa teliti siswa melibatkan diri dalam proyek, mereka p
 <a id="conclusion"></a>
 
 ## Kesimpulan
-Seperti yang dapat Anda lihat, Kursus A-F tentang Dasar-dasar Ilmu Komputer terdiri atas perbaikan yang menarik, dipengaruhi oleh umpan balik dari komunitas guru & fasilitator Dasar-dasar CS secara masif.
+Seperti yang dapat Anda lihat, Kursus A-F tentang Dasar-dasar Ilmu Komputer terdiri atas perbaikan yang menarik, dipengaruhi oleh masukan dari komunitas guru & fasilitator CS Fundamentals secara masif.
 
 Kami berharap ikhtisar ini bermanfaat.  Jika Anda memiliki pertanyaan atau komentar atas perubahan ini, kunjungi http://forum.code.org/c/csf dan posting di forum kami.  Kami pasti akan menjawab pertanyaan Anda secepat mungkin.  Sampai saat itu, berikut beberapa pertanyaan umum tentang Kursus A-F.
 

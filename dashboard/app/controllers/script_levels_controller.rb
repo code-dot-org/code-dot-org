@@ -169,7 +169,7 @@ class ScriptLevelsController < ApplicationController
     if stage_id
       # TODO(asher): change this to use a cache
       stage = Lesson.find(stage_id)
-      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      return head :forbidden unless stage.try(:script).try(:hideable_lessons)
       section.toggle_hidden_stage(stage, should_hide)
     else
       # We don't have a stage id, implying we instead want to toggle the hidden state of this script
@@ -195,7 +195,7 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.stage_extras && @section&.script&.name == params[:script_id]
+      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -452,6 +452,9 @@ class ScriptLevelsController < ApplicationController
       level_id: @level.id
     )
 
+    # for level groups, @level and @callback point to the parent level, so we
+    # generate a url which can be used to report sublevel progress (after
+    # appending the sublevel id).
     if @level.game.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,

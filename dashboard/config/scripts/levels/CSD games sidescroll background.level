@@ -77,15 +77,13 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "HzFO7oLW1rTQ+BatsfAeBcw3W3RpKKmKrvp5fLQUFp+Q4Ce0toxfEdIexQm9\nt7ex\n",
+    "encrypted_examples": "MqffHtBur0GfpH4+gMDSknhJKHAQJQ/cavBd3cwzA+p/fIKbkXUge/jnU4tM\nprSk6bk9LqNrTMS8/JnxmugsBQ==\n",
     "parent_level_id": 20813,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/"
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
@@ -96,7 +94,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 07:23:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:24:12 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 16:58:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:34:31 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:35:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 07:23:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:24:12 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 16:58:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:34:31 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:35:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-26 19:19:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-28 17:49:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

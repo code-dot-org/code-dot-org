@@ -1,0 +1,644 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+American Fork High,UT-01-01704,490003000002,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork High,UT-01-01704,490003000002,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Fork Jr High,UT-01-01404,490003000003,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeridge Jr High,UT-01-01406,490003000016,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi High,UT-01-01708,490003000017,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi High,UT-01-01708,490003000017,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi High,UT-01-01708,490003000017,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi High,UT-01-01708,490003000017,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi High,UT-01-01708,490003000017,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi Jr High,UT-01-01408,490003000018,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehi Jr High,UT-01-01408,490003000018,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orem High,UT-01-01712,490003000021,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orem High,UT-01-01712,490003000021,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orem Jr High,UT-01-01414,490003000022,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orem Jr High,UT-01-01414,490003000022,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove High,UT-01-01716,490003000024,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove High,UT-01-01716,490003000024,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove High,UT-01-01716,490003000024,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove High,UT-01-01716,490003000024,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove High,UT-01-01716,490003000024,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Grove Jr High,UT-01-01416,490003000025,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cache Alternative High,#N/A,490000500041,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bear River High,UT-03-03704,490009000043,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bear River High,UT-03-03704,490009000043,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bear River Middle,UT-03-03404,490009000044,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northridge High,UT-07-07711,490021000045,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northridge High,UT-07-07711,490021000045,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northridge High,UT-07-07711,490021000045,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northridge High,UT-07-07711,490021000045,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northridge High,UT-07-07711,490021000045,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Box Elder High,UT-03-03708,490009000046,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Box Elder High,UT-03-03708,490009000046,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Box Elder Middle,UT-03-03408,490009000047,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Ridge Jr High,UT-01-01410,490003000074,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Ridge Jr High,UT-01-01410,490003000074,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Canyon Jr High,UT-01-01412,490003000075,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Canyon Jr High,UT-01-01412,490003000075,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky View High,UT-04-04706,490012000083,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky View High,UT-04-04706,490012000083,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky View High,UT-04-04706,490012000083,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky View High,UT-04-04706,490012000083,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Cache Middle School,UT-04-04410,490012000084,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carbon High,UT-05-05704,490015000089,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mont Harmon Middle,UT-05-05412,490015000093,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mont Harmon Middle,UT-05-05412,490015000093,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful High,UT-07-07704,490021000105,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful High,UT-07-07704,490021000105,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful High,UT-07-07704,490021000105,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful High,UT-07-07704,490021000105,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful High,UT-07-07704,490021000105,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful Jr High,UT-07-07404,490021000106,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bountiful Jr High,UT-07-07404,490021000106,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centerville Jr High,UT-07-07406,490021000109,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Davis Jr High,UT-07-07408,490021000111,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Davis Jr High,UT-07-07408,490021000111,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clearfield High,UT-07-07706,490021000112,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clearfield High,UT-07-07706,490021000112,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davis High,UT-07-07708,490021000115,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davis High,UT-07-07708,490021000115,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davis High,UT-07-07708,490021000115,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaysville Jr High,UT-07-07410,490021000126,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaysville Jr High,UT-07-07410,490021000126,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Layton High,UT-07-07710,490021000128,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Millcreek Jr High,UT-07-07411,490021000133,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Davis Jr High,UT-07-07412,490021000135,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Davis Jr High,UT-07-07412,490021000135,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Davis Jr High,UT-07-07412,490021000135,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Layton Jr High,UT-07-07414,490021000136,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Layton Jr High,UT-07-07414,490021000136,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Layton Jr High,UT-07-07414,490021000136,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Davis Jr High,UT-07-07416,490021000142,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Davis Jr High,UT-07-07416,490021000142,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset Jr High,UT-07-07418,490021000145,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset Jr High,UT-07-07418,490021000145,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset Jr High,UT-07-07418,490021000145,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Viewmont High,UT-07-07712,490021000151,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woods Cross High,UT-07-07714,490021000157,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woods Cross High,UT-07-07714,490021000157,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woods Cross High,UT-07-07714,490021000157,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woods Cross High,UT-07-07714,490021000157,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Altamont High,UT-08-08704,490024000158,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roosevelt Jr High,UT-08-08404,490024000167,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairfield Jr High,UT-07-07402,490021000169,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairfield Jr High,UT-07-07402,490021000169,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union High,UT-08-08714,490024000171,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union High,UT-08-08714,490024000171,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emery High,UT-09-09706,490027000178,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emery High,UT-09-09706,490027000178,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emery High,UT-09-09706,490027000178,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green River High,UT-09-09704,490027000179,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bryce Valley High,UT-10-10704,490030000184,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Escalante High,UT-10-10708,490030000186,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Panguitch High,UT-10-10712,490030000188,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Panguitch High,UT-10-10712,490030000188,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grand County High,UT-11-11704,490033000191,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grand County High,UT-11-11704,490033000191,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elk Ridge Middle,UT-14-14413,490042000195,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elk Ridge Middle,UT-14-14413,490042000195,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Churchill Jr High,UT-12-12410,490036000205,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Snow Canyon High,UT-33-33725,490114000206,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Snow Canyon High,UT-33-33725,490114000206,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cottonwood High,UT-12-12702,490036000207,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cyprus High,UT-12-12704,490036000210,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cyprus High,UT-12-12704,490036000210,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Jr High,UT-12-12411,490036000215,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen Jr High,UT-12-12412,490036000216,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen Jr High,UT-12-12412,490036000216,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granger High,UT-12-12708,490036000218,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granger High,UT-12-12708,490036000218,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fremont High,UT-35-35706,490120000221,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Park Jr High,UT-12-12416,490036000223,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John F. Kennedy Jr High,UT-12-12422,490036000233,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kearns High,UT-12-12714,490036000234,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kearns Jr High,UT-12-12420,490036000235,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kearns Jr High,UT-12-12420,490036000235,35020000004,Intro to Python 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alice C. Harris Intermediate,#N/A,490000500239,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympus High,UT-12-12716,490036000248,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympus High,UT-12-12716,490036000248,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympus Jr High,UT-12-12424,490036000249,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympus Jr High,UT-12-12424,490036000249,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High,UT-12-12718,490036000261,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High,UT-12-12718,490036000261,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High,UT-12-12718,490036000261,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High,UT-12-12718,490036000261,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Valley Jr High,UT-12-12428,490036000267,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Lake Jr High,UT-12-12434,490036000272,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar City High,UT-13-13704,490039000278,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Middle,UT-13-13304,490039000280,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bingham High,UT-14-14704,490042000289,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bingham High,UT-14-14704,490042000289,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bingham High,UT-14-14704,490042000289,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brighton High,UT-42-42705,490014200291,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brighton High,UT-42-42705,490014200291,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brighton High,UT-42-42705,490014200291,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Middle,UT-42-42402,490014200293,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastmont Middle,UT-42-42403,490014200302,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest High,UT-42-42706,490014200305,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest High,UT-42-42706,490014200305,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest High,UT-42-42706,490014200305,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest High,UT-42-42706,490014200305,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan High,UT-42-42708,490014200307,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan High,UT-42-42708,490014200307,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan High,UT-42-42708,490014200307,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan High,UT-42-42708,490014200307,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Midvale Middle,UT-42-42404,490014200311,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Jordan Middle,#N/A,490000500316,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Valley High School,UT-14-14716,490042000329,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Jordan Middle,UT-14-14412,490042000330,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juab High,UT-15-15704,490045000334,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juab High,UT-15-15704,490045000334,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Copper Hills High,UT-14-14703,490042000346,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Copper Hills High,UT-14-14703,490042000346,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Copper Hills High,UT-14-14703,490042000346,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Copper Hills High,UT-14-14703,490042000346,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Logan High,UT-39-39704,490051000351,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Logan High,UT-39-39704,490051000351,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Logan High,UT-39-39704,490051000351,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Logan Middle,UT-39-39404,490051000352,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Logan Middle,UT-39-39404,490051000352,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delta High,UT-17-17704,490054000356,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delta High,UT-17-17704,490054000356,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delta Middle,UT-17-17311,490054000357,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpanogos High,UT-01-01718,490003000362,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan High,UT-18-18704,490057000363,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan High,UT-18-18704,490057000363,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan High,UT-18-18704,490057000363,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High,UT-01-01730,490003000366,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adele C. Young Intermediate,#N/A,490000500367,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adele C. Young Intermediate,#N/A,490000500367,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest Jr High,UT-40-40404,490060000369,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest Jr High,UT-40-40404,490060000369,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Murray High,UT-40-40704,490060000374,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Murray High,UT-40-40704,490060000374,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Murray High,UT-40-40704,490060000374,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Murray High,UT-40-40704,490060000374,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverview Jr High,UT-40-40412,490060000376,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Landmark High,UT-19-19720,490063000387,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Payson High,UT-19-19704,490063000390,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Payson High,UT-19-19704,490063000390,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Payson High,UT-19-19704,490063000390,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Payson Jr High,UT-19-19408,490063000391,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spanish Fork High,UT-19-19708,490063000399,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville High,UT-19-19712,490063000402,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville Jr High,UT-19-19424,490063000403,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springville Jr High,UT-19-19424,490063000403,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Sanpete High,UT-20-20704,490066000412,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Hills Middle,UT-14-14414,490042000428,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial Middle,UT-38-38404,490081000438,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High,UT-01-01709,490003000445,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High,UT-01-01709,490003000445,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High,UT-01-01709,490003000445,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High,UT-01-01709,490003000445,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lone Peak High,UT-01-01709,490003000445,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park City High,UT-22-22704,490075000447,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Piute High,UT-23-23708,490078000450,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dixon Middle,UT-38-38408,490081000452,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Provo High,UT-38-38704,490081000459,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timpview High,UT-38-38712,490081000466,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rich High,UT-24-24708,490084000471,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyon View High,UT-13-13712,490039000473,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bryant Middle,UT-36-36404,490087000477,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clayton Middle,UT-36-36408,490087000480,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spanish Fork Jr High,UT-19-19420,490063000482,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ecker Hill Middle,UT-22-22308,490075000485,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,UT-36-36704,490087000486,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glendale Middle,UT-36-36412,490087000492,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland High,UT-36-36708,490087000496,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000050,IB Computer Science SL 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000051,IB Computer Science SL 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000052,IB Computer Science HL 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,35020000053,IB Computer Science HL 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,UT-36-36716,490087000524,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albert R. Lyman Middle,UT-25-25308,490090000526,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Hills Middle,UT-14-14415,490042000531,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+San Juan High,UT-25-25708,490090000537,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+San Juan High,UT-25-25708,490090000537,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Sevier High,UT-26-26704,490093000542,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richfield High,UT-26-26708,490093000544,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Sevier High,UT-26-26712,490093000547,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gunnison Valley High,UT-27-27704,490096000550,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manti High,UT-27-27708,490096000553,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manti High,UT-27-27708,490096000553,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Summit High,UT-28-28704,490099000557,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tintic High,UT-29-29704,490102000560,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tintic High,UT-29-29704,490102000560,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tintic High,UT-29-29704,490102000560,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grantsville High,UT-30-30708,490105000566,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele High,UT-30-30712,490105000574,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele Jr High,UT-30-30404,490105000575,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uintah High,UT-31-31704,490108000585,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wasatch High,UT-32-32704,490111000594,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wasatch High,UT-32-32704,490111000594,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wasatch High,UT-32-32704,490111000594,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wasatch High,UT-32-32704,490111000594,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dixie High,UT-33-33704,490114000597,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Enterprise High,UT-33-33712,490114000599,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hurricane High,UT-33-33716,490114000601,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hurricane High,UT-33-33716,490114000601,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wayne High,UT-34-34704,490117000610,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wayne High,UT-34-34704,490117000610,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wayne High,UT-34-34704,490117000610,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonneville High,UT-35-35701,490120000613,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Ogden Jr High,UT-35-35402,490120000625,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pinnacle Canyon Academy,UT-86-86100,490000800629,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roy High,UT-35-35708,490120000634,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roy High,UT-35-35708,490120000634,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roy High,UT-35-35708,490120000634,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roy High,UT-35-35708,490120000634,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roy Jr High,UT-35-35404,490120000635,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sand Ridge Jr High,UT-35-35406,490120000637,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sand Ridge Jr High,UT-35-35406,490120000637,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Ogden Jr High,UT-35-35408,490120000638,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T.H. Bell Jr High,UT-35-35410,490120000639,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wahlquist Jr High,UT-35-35416,490120000643,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber High,UT-35-35704,490120000645,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber High,UT-35-35704,490120000645,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber High,UT-35-35704,490120000645,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber High,UT-35-35704,490120000645,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber High,UT-35-35704,490120000645,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alta High,UT-42-42702,490014200659,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverton High,UT-14-14710,490042000661,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehorse High,UT-25-25710,490090000667,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehorse High,UT-25-25710,490090000667,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Snowcrest Jr High,UT-35-35412,490120000669,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Peak High,UT-30-30740,490105000698,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Peak High,UT-30-30740,490105000698,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High,UT-01-01711,490003000706,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High,UT-01-01711,490003000706,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tabiona High,UT-08-08712,490024000711,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bennion Jr High,UT-12-12400,490036000715,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oquirrh Hills Middle,UT-14-14409,490042000720,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Horizonte Instruction & Training Center,UT-36-36750,490087000732,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+City Academy,UT-87-87700,490000900742,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+City Academy,UT-87-87700,490000900742,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington Jr High,UT-07-07409,490021000749,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington Jr High,UT-07-07409,490021000749,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mueller Park Jr High,UT-07-07413,490021000750,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mueller Park Jr High,UT-07-07413,490021000750,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scott M Matheson Jr High,UT-12-12423,490036000763,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taylorsville High,UT-12-12722,490036000764,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taylorsville High,UT-12-12722,490036000764,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Jordan High,UT-14-14718,490042000769,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Jordan High,UT-14-14718,490042000769,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Treasure Mtn. Junior High School,UT-22-22304,490075000773,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lava Ridge Intermediate,UT-33-33325,490114000779,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Crest High,UT-04-04702,490012000792,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monument Valley High,UT-25-25706,490090000802,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine View High,UT-33-33720,490114000807,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine View High,UT-33-33720,490114000807,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine View High,UT-33-33720,490114000807,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine View High,UT-33-33720,490114000807,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine View High,UT-33-33720,490114000807,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Joel P. Jensen Middle,UT-14-14406,490042000816,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyon View Jr High,UT-09-09404,490027000174,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain High,UT-07-07730,490021000823,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter Jr High,UT-12-12418,490036000829,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High,UT-38-38730,490081000836,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Hills Middle,UT-26-26330,490093000839,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Creek Middle School,UT-04-04330,490012000846,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse Jr High,UT-07-07420,490021000848,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse Jr High,UT-07-07420,490021000848,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Draper Park Middle,UT-42-42407,490014200875,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Jordan Middle,UT-14-14411,490042000896,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Jordan Middle,UT-14-14411,490042000896,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter High,UT-12-12710,490036000898,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter High,UT-12-12710,490036000898,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter High,UT-12-12710,490036000898,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter High,UT-12-12710,490036000898,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter High,UT-12-12710,490036000898,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Ridge High,UT-26-26716,490093000900,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy for Math Engineering & Science,UT-83-83700,490001700904,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timberline Middle,UT-01-01420,490003000909,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timberline Middle,UT-01-01420,490003000909,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Point Jr High,UT-07-07422,490021000923,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Point Jr High,UT-07-07422,490021000923,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juab Jr High,UT-15-15304,490045000952,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orion Jr High,UT-35-35405,490120000967,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orion Jr High,UT-35-35405,490120000967,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden Preparatory Academy,UT-68-68100,490005800989,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walden School of Liberal Arts,UT-81-81300,490006100991,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walden School of Liberal Arts,UT-81-81300,490006100991,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Preparatory Academy,UT-82-82100,490006200992,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Preparatory Academy,UT-82-82100,490006200992,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. for Math Engineering & Science,UT-A1-A1700,490006300993,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. for Math Engineering & Science,UT-A1-A1700,490006300993,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. for Math Engineering & Science,UT-A1-A1700,490006300993,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. for Math Engineering & Science,UT-A1-A1700,490006300993,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Academy,#N/A,490000500996,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Academy,#N/A,490000500996,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Itineris Early College High,UT-A5-A5700,490006700997,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Itineris Early College High,UT-A5-A5700,490006700997,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Davis Preparatory Academy,UT-A6-A6100,490006800998,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Leadership Academy,UT-8B-8B100,490003301056,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beehive Science & Technology Academy,UT-3B-3B700,490002301060,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beehive Science & Technology Academy,UT-3B-3B700,490002301060,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beehive Science & Technology Academy,UT-3B-3B700,490002301060,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beehive Science & Technology Academy,UT-3B-3B700,490002301060,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beehive Science & Technology Academy,UT-3B-3B700,490002301060,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort Herriman Middle,UT-14-14417,490042001075,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Navigator Pointe Academy,UT-9B-9B100,490003401088,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Star Academy,UT-5B-5B100,490002501089,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Star Academy,UT-5B-5B100,490002501089,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset Ridge Middle,UT-14-14416,490042001103,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset Ridge Middle,UT-14-14416,490042001103,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah County Academy of Science,UT-1B-1B700,490002001106,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah County Academy of Science,UT-1B-1B700,490002001106,35020013032,Computer Programming 2 CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah County Academy of Science,UT-1B-1B700,490002001106,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah County Academy of Science,UT-1B-1B700,490002001106,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah County Academy of Science,UT-1B-1B700,490002001106,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Willowcreek Middle,UT-01-01425,490003001109,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Willowcreek Middle,UT-01-01425,490003001109,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Technical Institute,UT-12-12775,490036001119,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Technical Institute,UT-12-12775,490036001119,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Technical Institute,UT-12-12775,490036001119,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Technical Institute,UT-12-12775,490036001119,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Technical Institute,UT-12-12775,490036001119,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyon View Middle,UT-13-13308,490039001122,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mapleton Junior High,UT-19-19404,490063001127,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Intech Collegiate High School,UT-2C-2C600,490003901129,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Intech Collegiate High School,UT-2C-2C600,490003901129,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Intech Collegiate High School,UT-2C-2C600,490003901129,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Intech Collegiate High School,UT-2C-2C600,490003901129,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Intech Collegiate High School,UT-2C-2C600,490003901129,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hurricane Intermediate,UT-33-33308,490114001134,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy,#N/A,490000501137,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy,#N/A,490000501137,35020000008,Exploring Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy,#N/A,490000501137,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy,#N/A,490000501137,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy,#N/A,490000501137,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse Arts Academy,#N/A,490000501145,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse Arts Academy,#N/A,490000501145,35020000036,Computer Science & Software Engineering,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountainville Academy,UT-8C-8C100,490005101152,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountainville Academy,UT-8C-8C100,490005101152,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paradigm High School,UT-9C-9C700,490005201153,35020000004,Intro to Python 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Diamond Fork Junior High,UT-19-19402,490063001157,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Diamond Fork Junior High,UT-19-19402,490063001157,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Nebo Junior High,UT-19-19406,490063001158,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maple Mountain High,UT-19-19702,490063001159,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maple Mountain High,UT-19-19702,490063001159,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem Hills High,UT-19-19706,490063001160,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Online K8,UT-33-33200,490114001161,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salt Lake Technology Center,UT-36-36749,490087001170,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salt Lake Technology Center,UT-36-36749,490087001170,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salt Lake Technology Center,UT-36-36749,490087001170,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Karl G. Maeser Preparatory Academy,UT-2E-2E700,490005601175,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stansbury High,UT-30-30720,490105001177,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Academy for Technology and Careers - North,UT-14-14741,490042001186,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyons Technical Education Center,UT-42-42740,490014201189,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyons Technical Education Center,UT-42-42740,490014201189,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyons Technical Education Center,UT-42-42740,490014201189,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Virtual Academy,UT-5F-5F700,490013001196,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Virtual Academy,UT-5F-5F700,490013001196,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Virtual Academy,UT-5F-5F700,490013001196,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Providence Hall,UT-9E-9E100,490012401202,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Syracuse High,UT-07-07716,490021001205,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salt Lake Center for Science Education,UT-4F-4F300,490012301208,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Venture Academy,UT-3F-3F100,490013301216,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quest Academy,UT-1F-1F100,490013201218,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quest Academy,UT-1F-1F100,490013201218,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quest Academy,UT-1F-1F100,490013201218,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merit College Preparatory Academy,UT-8E-8E700,490013101220,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Early Light Academy at Daybreak,UT-6F-6F300,490014001268,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Early Light Academy at Daybreak,UT-6F-6F300,490014001268,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden High,UT-37-37707,490072001271,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden High,UT-37-37707,490072001271,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden High,UT-37-37707,490072001271,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden High,UT-37-37707,490072001271,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ogden High,UT-37-37707,490072001271,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Legacy Jr High,UT-07-07424,490021001275,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Legacy Jr High,UT-07-07424,490021001275,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Lomond High,UT-37-37703,490072001281,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Lomond High,UT-37-37703,490072001281,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Lomond High,UT-37-37703,490072001281,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Lomond High,UT-37-37703,490072001281,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ben Lomond High,UT-37-37703,490072001281,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Heights Academy,UT-9F-9F600,490013801285,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Heights Academy,UT-9F-9F600,490013801285,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Heights Academy,UT-9F-9F600,490013801285,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Heights Academy,UT-9F-9F600,490013801285,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Ogden Junior High,UT-37-37415,490072001288,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Desert Hills High,UT-33-33703,490114001290,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Desert Hills High,UT-33-33703,490114001290,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Desert Hills High,UT-33-33703,490114001290,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westlake High,UT-01-01789,490003001293,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland Junior High,UT-37-37409,490072001294,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland Junior High,UT-37-37409,490072001294,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mound Fort Junior High,UT-37-37411,490072001295,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mound Fort Junior High,UT-37-37411,490072001295,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vista School,UT-12-12201,490036000268,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vista School,UT-12-12201,490036000268,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hawthorn Academy,#N/A,490000501298,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hawthorn Academy,#N/A,490000501298,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herriman High,UT-14-14707,490042001338,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Connections Academy,UT-2H-2H101,490015101386,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vista Heights Middle,UT-01-01490,490003001387,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem Junior High,UT-19-19416,490063001390,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem Junior High,UT-19-19416,490063001390,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele Community Learning Center,UT-30-30730,490105001401,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele Community Learning Center,UT-30-30730,490105001401,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele Community Learning Center,UT-30-30730,490105001401,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tooele Community Learning Center,UT-30-30730,490105001401,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial Jr High,UT-07-07426,490021001403,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial Jr High,UT-07-07426,490021001403,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Innovations High School,UT-36-36748,490087001422,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corner Canyon High,UT-42-42711,490014201428,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corner Canyon High,UT-42-42711,490014201428,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corner Canyon High,UT-42-42711,490014201428,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Polaris High School,UT-01-01782,490003001435,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Entheos Academy Magna,UT-3C-3C110,490004101437,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ascent Academies of Utah Farmington,UT-2J-2J300,490017401453,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ascent Academies of Utah Farmington,UT-2J-2J300,490017401453,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scholar Academy,UT-6J-6J100,490017001456,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,35020013032,Computer Programming 2 CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nebo Advanced Learning Center,UT-19-19747,490063001458,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Copper Mountain Middle,UT-14-14419,490042001459,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Military Academy,UT-2K-2K700,490017601463,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy - Pleasant Grove,UT-3D-3D300,490004201464,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spectrum Academy - Pleasant Grove,UT-3D-3D300,490004201464,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sevier Career and Technical Education Center,UT-26-26600,490093001465,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sevier Career and Technical Education Center,UT-26-26600,490093001465,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Academy - Independence,UT-A4-A4300,490006601469,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Academy - Independence,UT-A4-A4300,490006601469,5030000010,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Academy - Independence,UT-A4-A4300,490006601469,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Success DSU,UT-A9-A9710,490003701470,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Success DSU,UT-A9-A9710,490003701470,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Preparatory Academy - Draper #3,UT-74-74700,490000501471,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Preparatory Academy - Draper #3,UT-74-74700,490000501471,35020000041,A.P.  Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ascent Academies of Utah West Jordan,UT-2J-2J310,490017401472,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vanguard Academy,UT-1K-1K700,490018301475,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vanguard Academy,UT-1K-1K700,490018301475,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roots Charter High School,UT-3K-3K700,490017801477,5030000001,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roots Charter High School,UT-3K-3K700,490017801477,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber Innovation High School,UT-35-35725,490120001482,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber Innovation High School,UT-35-35725,490120001482,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber Innovation High School,UT-35-35725,490120001482,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weber Innovation High School,UT-35-35725,490120001482,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Academy of Innovation,UT-8K-8K700,490018601483,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Academy of Innovation,UT-8K-8K700,490018601483,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+American Academy of Innovation,UT-8K-8K700,490018601483,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,35020013040,Computer Programming Advanced CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyridge High School,UT-01-01785,490003001486,38010000032,Robotics 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeline High School,UT-04-04705,490012001487,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeline High School,UT-04-04705,490012001487,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeline High School,UT-04-04705,490012001487,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeline High School,UT-04-04705,490012001487,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeline High School,UT-04-04705,490012001487,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ascent Academies of Utah Lehi,UT-2J-2J320,490017401490,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Military Academy - Camp Williams,UT-2K-2K710,490017601501,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Military Academy - Camp Williams,UT-2K-2K710,490017601501,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Military Academy - Camp Williams,UT-2K-2K710,490017601501,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Utah Military Academy - Camp Williams,UT-2K-2K710,490017601501,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Diamond Ridge High School,UT-42-42750,490014201504,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Canyon High School,UT-04-04703,490012001512,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Canyon High School,UT-04-04703,490012001512,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Canyon High School,UT-04-04703,490012001512,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Canyon High School,UT-04-04703,490012001512,35020013032,Computer Programming 2 CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Canyon High School,UT-04-04703,490012001512,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Ridge High,#N/A,490000501525,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Ridge High,#N/A,490000501525,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Ridge High,#N/A,490000501525,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. of Math Engineering & Science - Ogden,#N/A,490000501528,35020013030,Computer Programming I CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+No. UT. Acad. of Math Engineering & Science - Ogden,#N/A,490000501528,35020013035,Computer Science Principles CE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canyons Virtual High School,UT-42-42777,490014201529,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silver Summit Academy,UT-28-28705,490099001534,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silver Summit Academy,UT-28-28705,490099001534,35020000035,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silver Summit Academy,UT-28-28705,490099001534,35020000040,Computer Programming Advanced,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington High,UT-07-07709,490021001537,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington High,UT-07-07709,490021001537,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington High,UT-07-07709,490021001537,35020000034,A.P. Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farmington High,UT-07-07709,490021001537,38010000031,Robotics 1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Valley High,UT-01-01721,490003001538,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Valley High,UT-01-01721,490003001538,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Valley High,UT-01-01721,490003001538,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Creek Middle School,#N/A,490000501540,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Polaris West High,#N/A,490000501553,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crimson Cliffs High,#N/A,490000501559,35020000030,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crimson Cliffs High,#N/A,490000501559,35020000032,Computer Programming 2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shoreline Junior High,#N/A,490000501569,35020000003,Creative Coding,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shoreline Junior High,#N/A,490000501569,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Mountain Middle,#N/A,490000501575,35020000007,Exploring Computer Science I  (CS),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

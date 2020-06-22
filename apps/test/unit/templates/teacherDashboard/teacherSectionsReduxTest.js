@@ -62,7 +62,7 @@ const sections = [
     login_type: 'picture',
     grade: '2',
     code: 'PMTKVH',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
@@ -78,7 +78,7 @@ const sections = [
     login_type: 'picture',
     grade: '11',
     code: 'DWGMFX',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -97,7 +97,7 @@ const sections = [
     login_type: 'email',
     grade: '10',
     code: 'WGYXTR',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
@@ -681,7 +681,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -884,7 +884,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -1115,7 +1115,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'picture',
       grade: '2',
       code: 'PMTKVH',
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       script: null,
       course_id: 29,
@@ -1131,7 +1131,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(
         section.sharing_disabled,

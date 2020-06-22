@@ -1461,7 +1461,7 @@ FactoryGirl.define do
   end
 
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_5"
+    form_name "surveys/pd/summer_workshop_post_survey"
     foorm_submission_metadata
 
     trait :answers_low do
@@ -1534,7 +1534,7 @@ FactoryGirl.define do
   end
 
   factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_0"
+    form_name "surveys/pd/summer_workshop_pre_survey"
     foorm_submission_metadata
 
     trait :answers_low do

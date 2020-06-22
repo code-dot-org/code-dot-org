@@ -1600,11 +1600,11 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_password? is true for user with or without a password' do
     student1 = create :student
-    refute_empty student1.encrypted_password
+    refute_nil student1.encrypted_password
     assert student1.can_edit_password?
 
-    student1 = create :student, encrypted_password: ''
-    assert_empty student1.encrypted_password
+    student1 = create :student, :without_encrypted_password
+    assert_nil student1.encrypted_password
     assert student1.can_edit_password?
   end
 
@@ -1619,12 +1619,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for student without a password' do
-    student = create :student, encrypted_password: ''
+    student = create :student, :without_encrypted_password
     assert student.can_edit_password?
   end
 
   test 'can_edit_password? is true for teacher without a password' do
-    teacher = create :teacher, encrypted_password: ''
+    teacher = create :teacher, :without_encrypted_password
     assert teacher.can_edit_password?
   end
 
@@ -1703,11 +1703,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'cannot delete own account if teacher-managed student' do
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    user = create(:student, encrypted_password: '')
-    create(:follower, student_user: user, section: picture_section)
-    user.reload
-
+    user = create :student_in_picture_section
     assert user.teacher_managed_account?
     refute user.can_delete_own_account?
   end
@@ -1771,7 +1767,7 @@ class UserTest < ActiveSupport::TestCase
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     [picture_section, word_section].each do |section|
-      student_without_password = create(:student, encrypted_password: '')
+      student_without_password = create(:student, :without_encrypted_password)
       create(:follower, student_user: student_without_password, section: section)
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
@@ -1801,11 +1797,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
-    student = create :student, encrypted_password: nil
-    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    section.students << student
-    student.reload
-
+    student = create :student, :migrated_imported_from_google_classroom
     assert student.roster_managed_account?
   end
 
@@ -3411,23 +3403,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'password_required? is false if user is not creating their own account' do
-    user = create :user
+    user = create :student, :without_encrypted_password
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
-  test 'password_required? is true for new users with no encrypted password' do
-    user = create :user, encrypted_password: nil
-    user.expects(:managing_own_credentials?).returns(true)
-    assert user.encrypted_password.nil?
-    assert user.password_required?
+  test 'new users require a password if no authentication provided' do
+    assert_raises(ActiveRecord::RecordInvalid) do
+      user = create :user, password: nil
+      assert !user.errors[:password].empty?
+    end
   end
 
   test 'password_required? is true for user changing their password' do
     user = create :user
     user.password = "mypassword"
     user.password_confirmation = "mypassword"
-    user.expects(:managing_own_credentials?).returns(true)
     assert user.password_required?
   end
 
@@ -3543,7 +3534,7 @@ class UserTest < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
 
-      @script = create(:script, hideable_stages: true)
+      @script = create(:script, hideable_lessons: true)
       @stage1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
       @stage2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
       @stage3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')
@@ -3587,14 +3578,14 @@ class UserTest < ActiveSupport::TestCase
     # Helper method that sets up some hidden stages for our two sections
     def hide_stages_in_sections(section1, section2)
       # stage 1 hidden in both sections
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @stage1.id)
 
       # stage 2 hidden in section 1
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @stage2.id)
 
       # stage 3 hidden in section 2
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @stage3.id)
     end
 
     # Same thing as hide_stages_in_sections, but hides scripts instead of stages
@@ -3627,7 +3618,7 @@ class UserTest < ActiveSupport::TestCase
       end
 
       # Hide the fifth lesson/stage
-      SectionHiddenStage.create(
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 5
       )
@@ -3652,7 +3643,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       # Hide the first lesson/stage
-      SectionHiddenStage.create(
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 1
       )
@@ -3800,14 +3791,14 @@ class UserTest < ActiveSupport::TestCase
       teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
 
       # stage 1 is hidden in the first section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
 
       # stage 1 and 2 are hidden in the second section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
 
       # stage 3 is hidden in the section in which the teacher is a member
-      SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
+      SectionHiddenLesson.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
 
       # only the stages hidden in the owned section are considered hidden
       expected = {

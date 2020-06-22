@@ -1,6 +1,5 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
-import experiments from '@cdo/apps/util/experiments';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
@@ -24,8 +23,6 @@ class AddTableRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
-  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
-
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
@@ -35,9 +32,7 @@ class AddTableRow extends React.Component {
 
   handleAdd = () => {
     try {
-      if (this.inExperiment) {
-        this.props.hideError();
-      }
+      this.props.hideError();
       const record = _.mapValues(this.state.newInput, inputString =>
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
@@ -49,10 +44,8 @@ class AddTableRow extends React.Component {
         msg => console.warn(msg)
       );
     } catch (e) {
-      if (this.inExperiment) {
-        this.setState({isSaving: false});
-        this.props.showError();
-      }
+      this.setState({isSaving: false});
+      this.props.showError();
     }
   };
 

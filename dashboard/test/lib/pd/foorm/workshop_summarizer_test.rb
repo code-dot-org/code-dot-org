@@ -4,8 +4,8 @@ module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
-      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
+      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
+      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
       @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
     end
 
@@ -23,10 +23,10 @@ module Pd::Foorm
       )
 
       expected_result = {
-        'Day 0': {
+        'Pre Workshop': {
           general: {
             response_count: 2,
-            'surveys/pd/workshop_daily_survey_day_0.0': {
+            'surveys/pd/summer_workshop_pre_survey.0': {
               course_length_weeks: {
                 '5_fewer': 1,
                 '30_more': 1
@@ -91,7 +91,7 @@ module Pd::Foorm
         ws_submissions
       ).with_indifferent_access
 
-      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
       expected_matrix_data = {
         demonstrated_knowledge: {"7": 1, "1": 1},
@@ -148,7 +148,7 @@ module Pd::Foorm
         healthy_relationship: {"1": 3}
       }.with_indifferent_access
 
-      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
 
       assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.id]

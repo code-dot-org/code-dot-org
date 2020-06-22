@@ -1,5 +1,5 @@
 daily_survey_day_0:
-  name: surveys/pd/workshop_daily_survey_day_0
+  name: surveys/pd/summer_workshop_pre_survey
   version: 0
   created_at: 2020-03-25 21:58:28
   updated_at: 2020-03-26 21:58:28
@@ -183,7 +183,7 @@ daily_survey_day_0:
     ]
   }'
 daily_survey_day_5:
-  name: surveys/pd/workshop_daily_survey_day_5
+  name: surveys/pd/summer_workshop_post_survey
   version: 0
   created_at: 2020-03-25 21:58:28
   updated_at: 2020-03-26 21:58:28
