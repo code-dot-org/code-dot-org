@@ -337,13 +337,11 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function() {
-      if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-        logDialogActions(
-          'replay_level',
-          options,
-          idealBlocks === Infinity ? null : isPerfect
-        );
-      }
+      logDialogActions(
+        'replay_level',
+        options,
+        idealBlocks === Infinity ? null : isPerfect
+      );
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
@@ -428,13 +426,11 @@ FeedbackUtils.prototype.displayFeedback = function(
     }
 
     dom.addClickTouchEvent(continueButton, function() {
-      if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-        logDialogActions(
-          'continue',
-          options,
-          idealBlocks === Infinity ? null : isPerfect
-        );
-      }
+      logDialogActions(
+        'continue',
+        options,
+        idealBlocks === Infinity ? null : isPerfect
+      );
       feedbackDialog.hide();
 
       if (options.response && options.response.puzzle_ratings_enabled) {
@@ -563,17 +559,19 @@ FeedbackUtils.prototype.displayFeedback = function(
 };
 
 function logDialogActions(event, options, isPerfect) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: firehose_event,
-    event: event,
-    data_json: JSON.stringify({
-      level_type: options.level ? options.level.skin : null,
-      level_id: options.response ? options.response.level_id : null,
-      level_path: options.response ? options.response.level_path : null,
-      isPerfectBlockCount: isPerfect
-    })
-  });
+  if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
+    firehoseClient.putRecord({
+      study: FIREHOSE_STUDY,
+      study_group: firehose_event,
+      event: event,
+      data_json: JSON.stringify({
+        level_type: options.level ? options.level.skin : null,
+        level_id: options.response ? options.response.level_id : null,
+        level_path: options.response ? options.response.level_path : null,
+        isPerfectBlockCount: isPerfect
+      })
+    });
+  }
 }
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
