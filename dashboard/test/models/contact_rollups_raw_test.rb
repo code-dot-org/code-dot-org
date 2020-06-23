@@ -33,6 +33,22 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal({'is_parent' => 1}, result.data)
   end
 
+  test 'extract_pd_enrollments teacher with multiple enrollments' do
+    teacher = create :teacher
+    csf_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
+    csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
+    create :pd_enrollment, email: teacher.email, workshop: csf_workshop
+    create :pd_enrollment, email: teacher.email, workshop: csd_workshop
+
+    assert_equal 0, ContactRollupsRaw.where(email: teacher.email).count
+    ContactRollupsRaw.extract_pd_enrollments
+
+    records = ContactRollupsRaw.where(email: teacher.email)
+    assert_equal 2, records.count
+    courses = records.map {|record| record[:data]['course']}.sort
+    assert_equal [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF], courses
+  end
+
   test 'get_extraction_query can import when no data column is given' do
     email_preference = create :email_preference
 
