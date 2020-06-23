@@ -15,4 +15,6 @@
 #
 
 class Foorm::MiscSurvey < ActiveRecord::Base
+  belongs_to :foorm_submission, class_name: 'Foorm::Submission'
+  belongs_to :user
 end
