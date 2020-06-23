@@ -47,6 +47,7 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data = {}
       processed_contact_data.merge!(extract_opt_in(contact_data))
       processed_contact_data.merge!(extract_user_id(contact_data))
+      processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
       processed_contact_data.merge!(extract_updated_at(contact_data))
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -155,6 +156,14 @@ class ContactRollupsProcessed < ApplicationRecord
     # Since there should be no more than one user_id per contact,
     # we can just take the first value in the returned array.
     return values.nil? ? {} : {user_id: values.first}
+  end
+
+  def self.extract_professional_learning_enrolled(contact_data)
+    values = extract_field(contact_data, 'dashboard.pd_enrollments', 'course')
+    # We only care about unique and non-nil values.
+    # The result is sorted to keep consistent order.
+    uniq_values = values&.uniq&.compact&.sort
+    return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values}
   end
 
   # Extracts values of a field in a source table from contact data.
