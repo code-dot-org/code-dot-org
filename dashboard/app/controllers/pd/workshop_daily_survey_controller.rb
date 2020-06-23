@@ -132,7 +132,9 @@ module Pd
     def new_general_foorm(survey_names, day:)
       # We may be redirecting from our legacy route which uses enrollment_code
       enrollment_code = params[:enrollmentCode] || params[:enrollment_code]
-      workshop = get_workshop_for_new_general(enrollment_code, current_user)
+      workshop = day == 0 ?
+                   get_workshop_for_pre_survey(enrollment_code, current_user) :
+                   get_workshop_for_new_general(enrollment_code, current_user)
       unless validate_enrolled(workshop)
         return
       end
@@ -509,6 +511,9 @@ module Pd
       end
     end
 
+    # Either get workshop for the given enrollment_code or look up
+    # the nearest workshop the user attended or was enrolled in, in that priority
+    # order.
     def get_workshop_for_new_general(enrollment_code, current_user)
       if enrollment_code
         Pd::Enrollment.find_by!(code: enrollment_code).workshop
@@ -517,6 +522,20 @@ module Pd
           where(course: [COURSE_CSD, COURSE_CSP]).
           where.not(subject: SUBJECT_FIT).
           nearest_attended_or_enrolled_in_by(current_user)
+      end
+    end
+
+    # Pre surveys should be filled out by a teacher without attendance so
+    # look up nearest workshop that the current_user is enrolled in if
+    # enrollment_code is not given.
+    def get_workshop_for_pre_survey(enrollment_code, current_user)
+      if enrollment_code
+        Pd::Enrollment.find_by!(code: enrollment_code).workshop
+      else
+        Workshop.
+          where(course: [COURSE_CSD, COURSE_CSP]).
+          where.not(subject: SUBJECT_FIT).
+          nearest_enrolled_in_by(current_user)
       end
     end
 
@@ -595,7 +614,8 @@ module Pd
         regional_partner_name: regional_partner_name,
         is_virtual: workshop.virtual?,
         num_facilitators: workshop.facilitators.count,
-        day: day
+        day: day,
+        is_friday_institute: workshop.friday_institute?
       }
     end
   end

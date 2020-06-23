@@ -168,23 +168,16 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.teachercon?
     end
 
-    # Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion
+    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion
     foorm_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
+        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)
     end
 
     # Filter out legacy (pre-Foorm) local summer and CSF Intro surveys so that we aren't
     # providing a link to fill them out.
     _, other_enrollments = other_enrollments.partition do |enrollment|
       (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
-    end
-
-    # we currently don't have a post survey for CSP for returning teachers.
-    # Once we do we will need to convert _ to a useful variable.
-    _, other_enrollments = other_enrollments.partition do |enrollment|
-      enrollment.workshop.course == Pd::Workshop::COURSE_CSP &&
-        enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
     end
 
     new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
@@ -232,10 +225,7 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
-      # TODO: This is a temporary, fake URL. Wire up a real one!
-      CDO.studio_url '/pd/workshop_survey/post'
-    elsif workshop.local_summer?
+    elsif workshop.csp_wfrt? || workshop.local_summer?
       CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.teachercon?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)

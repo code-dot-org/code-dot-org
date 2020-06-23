@@ -54,23 +54,46 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     create :contact_rollups_raw
 
     # Each extraction function will be called once per unique email address
-    ContactRollupsProcessed.expects(:extract_field).once
-    ContactRollupsProcessed.expects(:extract_updated_at).once
+    ContactRollupsProcessed.expects(:extract_opt_in).
+      once.
+      returns({opt_in: 1})
+    ContactRollupsProcessed.expects(:extract_updated_at).
+      once.
+      returns({updated_at: Time.now.utc})
 
     ContactRollupsProcessed.import_from_raw_table
   end
 
   test 'extract_field' do
-    table = 'dashboard.email_preferences'
-    field = 'opt_in'
+    table = 'pegasus.form_geos'
+    field = 'state'
 
     test_cases = [
-      {input: [{}, nil, nil], expected_output: nil},
-      {input: [{table => {}}, table, field], expected_output: nil},
-      {input: [{'dashboard.another_table' => {opt_in: 1}}, table, field], expected_output: nil},
-      {input: [{table => {'opt_in' => 0}}, table, field], expected_output: {opt_in: 0}},
-      {input: [{table => {'opt_in' => 1}}, table, field], expected_output: {opt_in: 1}},
-      {input: [{table => {'opt_in' => nil}}, table, field], expected_output: {opt_in: nil}}
+      # 3 input params are: contact_data, table, field
+      {
+        input: [{}, nil, nil],
+        expected_output: nil
+      },
+      {
+        input: [{table => {}}, table, field],
+        expected_output: nil
+      },
+      {
+        input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
+        expected_output: nil
+      },
+      {
+        input: [{table => {field => [{'value' => nil}]}}, table, field],
+        expected_output: [nil]
+      },
+      {
+        input: [{table => {field => [{'value' => 'WA'}]}}, table, field],
+        expected_output: ['WA']
+      },
+      {
+        input: [{table => {field => [{'value' => 'WA'}, {'value' => 'OR'}]}}, table, field],
+        expected_output: %w[WA OR]
+      },
     ]
 
     test_cases.each_with_index do |test, index|
@@ -79,61 +102,130 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
-  test 'extract_updated_at' do
+  test 'extract_updated_at with valid input' do
     base_time = Time.now.utc - 7.days
     tests = [
       {
-        input: {'table1' => {'data_updated_at' => base_time}},
+        input: {'table1' => {'last_data_updated_at' => base_time}},
         expected_output: {updated_at: base_time}
       },
       {
         input: {
-          'table1' => {'data_updated_at' => base_time - 1.day},
-          'table2' => {'data_updated_at' => base_time + 1.day},
-          'table3' => {'data_updated_at' => base_time},
+          'table1' => {'last_data_updated_at' => base_time - 1.day},
+          'table2' => {'last_data_updated_at' => base_time + 1.day},
+          'table3' => {'last_data_updated_at' => base_time},
         },
         expected_output: {updated_at: base_time + 1.day}
       }
     ]
 
-    # Test valid inputs
     tests.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_updated_at(test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
 
-    # Test invalid input
+  test 'extract_updated_at with invalid input' do
     assert_raise StandardError do
       ContactRollupsProcessed.extract_updated_at({'table' => {}})
     end
   end
 
   test 'parse_contact_data parses valid input' do
+    # TODO: (ha) break this long test into smaller ones
     time_str = '2020-03-11 15:01:26'
     time_parsed = Time.find_zone('UTC').parse(time_str)
+    time_str_2 = '2020-06-22 16:26:00'
+    time_parsed_2 = Time.find_zone('UTC').parse(time_str_2)
+    format_values = {
+      sources_key: ContactRollupsProcessed::SOURCES_KEY,
+      data_key: ContactRollupsProcessed::DATA_KEY,
+      data_updated_at_key: ContactRollupsProcessed::DATA_UPDATED_AT_KEY,
+      time_str: time_str,
+      time_str_2: time_str_2
+    }
 
+    # Test inputs are JSON strings.
+    # Use string +format+ method so we don't have to escape every double quotes.
+    # Example of a JSON string test: "[{\"s\": \"table1\", \"d\": null, \"u\": \"2020-03-11 15:01:26\"}]"
     tests = [
       {
-        input: format('[{"sources": "table1", "data": null, "data_updated_at": "%s"}]', time_str),
-        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+        # input data is null
+        input: format(
+          '[{"%{sources_key}": "table1", "%{data_key}": null, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
+        ),
+        expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
       },
+      # input data is an empty hash
       {
-        input: format('[{"sources": "table1", "data": {}, "data_updated_at": "%s"}]', time_str),
-        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+        input: format(
+          '[{"%{sources_key}": "table1", "%{data_key}": {}, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
+        ),
+        expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
       },
+      # input data has a valid key but its value is null
       {
-        input: format('[{"sources": "table1", "data": {"opt_in": 1}, "data_updated_at": "%s"}]', time_str),
-        expected_output: {'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed}}
-      },
-      {
-        input: format('['\
-          '{"sources": "table1", "data": {"opt_in": 1}, "data_updated_at": "%s"},'\
-          '{"sources": "table2", "data": {"state": "WA"}, "data_updated_at": "%s"}]',
-          time_str, time_str
+        input: format(
+          '[{"%{sources_key}": "table2", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
         ),
         expected_output: {
-          'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed},
-          'table2' => {'state' => 'WA', 'data_updated_at' => time_parsed}
+          'table2' => {
+            'state' => ['value' => nil, 'data_updated_at' => time_parsed],
+            'last_data_updated_at' => time_parsed
+          }
+        }
+      },
+      # input data has valid key and value
+      {
+        input: format(
+          '[{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
+        ),
+        expected_output: {
+          'table1' => {
+            'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          }
+        }
+      },
+      # input data has more than one value for a key and each value came in a different date
+      {
+        input: format(
+          '['\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},'\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str_2}"}'\
+          ']',
+          format_values
+        ),
+        expected_output: {
+          'table2' => {
+            'state' => [
+              {'value' => 'WA', 'data_updated_at' => time_parsed},
+              {'value' => 'OR', 'data_updated_at' => time_parsed_2}
+            ],
+            'last_data_updated_at' => time_parsed_2
+          }
+        }
+      },
+      # input data comes from 2 tables with different valid keys
+      {
+        input: format('['\
+          '{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"},'\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"}]',
+          format_values
+        ),
+        expected_output: {
+          'table1' => {
+            'opt_in' => [{'value' => 1, 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          },
+          'table2' => {
+            'state' => [{'value' => 'WA', 'data_updated_at' => time_parsed}],
+            'last_data_updated_at' => time_parsed
+          }
         }
       }
     ]
