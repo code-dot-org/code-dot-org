@@ -239,7 +239,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
+  resources :datasets, param: 'dataset_name', constraints: {dataset_name: /[^\/]+/}, only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
