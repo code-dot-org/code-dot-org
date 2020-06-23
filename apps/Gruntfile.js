@@ -83,7 +83,6 @@ describe('entry tests', () => {
     'netsim',
     'studio',
     'turtle',
-    'scratch',
     'weblab'
   ];
 
@@ -180,12 +179,7 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/media/skins/fish'
         },
-        {
-          expand: true,
-          cwd: 'node_modules/scratch-blocks/media',
-          src: ['**'],
-          dest: 'build/package/media/scratch-blocks'
-        },
+
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
         // we include them in our build and access them via static (non-fingerprinted)
@@ -427,12 +421,6 @@ describe('entry tests', () => {
           nocache: true
         },
         {
-          pattern: 'test/scratch/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
           pattern: 'test/storybook/**/*',
           watched: false,
           included: false,
@@ -478,15 +466,6 @@ describe('entry tests', () => {
         outputFile: 'integration.xml'
       }),
       files: [{src: ['test/integration-tests.js'], watched: false}]
-    },
-    scratch: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/scratch'
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'scratch.xml'
-      }),
-      files: [{src: ['test/scratch-tests.js'], watched: false}]
     },
     storybook: {
       coverageIstanbulReporter: {
@@ -1265,9 +1244,6 @@ describe('entry tests', () => {
   grunt.registerTask('storybookTest', ['karma:storybook']);
 
   grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
-
-  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
-  grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };
