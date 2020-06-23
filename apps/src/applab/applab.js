@@ -19,7 +19,11 @@ import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
 import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
-import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
+import {
+  getProjectDatabase,
+  getSharedDatabase,
+  getPathRef
+} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -881,7 +885,7 @@ function setupReduxSubscribers(store) {
 
   if (store.getState().pageConstants.hasDataMode) {
     subscribeToTable(
-      getProjectDatabase().child('counters/tables'),
+      getPathRef(getProjectDatabase(), 'counters/tables'),
       tableType.PROJECT
     );
 
@@ -892,7 +896,7 @@ function setupReduxSubscribers(store) {
     // /v3/channels/<channel_id>/current_tables tracks which
     // current tables the project has imported. Here we initialize the
     // redux list of current tables and keep it in sync
-    let currentTableRef = getProjectDatabase().child('current_tables');
+    let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
     currentTableRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
@@ -1352,12 +1356,12 @@ function onDataPreview(tableName) {
   onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
-
-  getSharedDatabase()
-    .child(`storage/tables/${tableName}/records`)
-    .once('value', snapshot => {
+  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once(
+    'value',
+    snapshot => {
       getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
-    });
+    }
+  );
 }
 
 /**
@@ -1369,20 +1373,20 @@ function onDataViewChange(view, oldTableName, newTableName) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
 
-  const projectStorageRef = getProjectDatabase().child('storage');
-  const sharedStorageRef = getSharedDatabase().child('storage');
+  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
+  const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
   // only unlistening from 'value' events here.
-  projectStorageRef.child('keys').off('value');
-  projectStorageRef.child(`tables/${oldTableName}/records`).off('value');
-  sharedStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  getPathRef(projectStorageRef, 'keys').off('value');
+  getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value');
+  getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value');
   getColumnsRef(getProjectDatabase(), oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
-      projectStorageRef.child('keys').on('value', snapshot => {
+      getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
         getStore().dispatch(updateKeyValueData(snapshot.val()));
       });
       return;
@@ -1390,9 +1394,15 @@ function onDataViewChange(view, oldTableName, newTableName) {
       let newTableType = getStore().getState().data.tableListMap[newTableName];
       let storageRef;
       if (newTableType === tableType.SHARED) {
-        storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
+        storageRef = getPathRef(
+          sharedStorageRef,
+          `tables/${newTableName}/records`
+        );
       } else {
-        storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
+        storageRef = getPathRef(
+          projectStorageRef,
+          `tables/${newTableName}/records`
+        );
       }
       onColumnsChange(
         newTableType === tableType.PROJECT
