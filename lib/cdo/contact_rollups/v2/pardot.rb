@@ -299,6 +299,8 @@ class PardotV2
       prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
 
+    prospect[:db_Has_Teacher_Account] = 'true' if contact[:user_id]
+
     prospect
   end
 
