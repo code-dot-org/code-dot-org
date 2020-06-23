@@ -31,22 +31,23 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'import_from_raw_table combines data from multiple records' do
-    assert 0, ContactRollupsRaw.count
-    assert 0, ContactRollupsProcessed.count
-
     base_time = Time.now.utc
     email = 'email@example.domain'
     create :contact_rollups_raw, email: email,
-      data: nil, data_updated_at: base_time - 1.day
+      sources: 'dashboard.users', data: nil, data_updated_at: base_time - 2.days
     create :contact_rollups_raw, email: email,
-      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time
+      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time - 1.day
+    create :contact_rollups_raw, email: email,
+      sources: 'dashboard.pd_enrollments', data: {course: Pd::Workshop::COURSE_CSF}, data_updated_at: base_time
 
+    refute ContactRollupsProcessed.find_by_email(email)
     ContactRollupsProcessed.import_from_raw_table
 
-    assert_equal 1, ContactRollupsProcessed.count
-    data = ContactRollupsProcessed.first.data
-    assert_equal 1, data['opt_in']
-    assert_equal base_time.to_i, Time.parse(data['updated_at']).to_i
+    record = ContactRollupsProcessed.find_by_email(email)
+    assert record
+    assert_equal 1, record.data['opt_in']
+    assert_equal [Pd::Workshop::COURSE_CSF], record.data['professional_learning_enrolled']
+    assert_equal base_time.to_i, Time.parse(record.data['updated_at']).to_i
   end
 
   test 'import_from_raw_table calls all extraction functions' do
