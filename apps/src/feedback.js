@@ -55,15 +55,7 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
 import ChallengeDialog from './templates/ChallengeDialog';
 
 const FIREHOSE_STUDY = 'feedback_dialog';
-const FIREHOSE_DIALOG_TYPES = {
-  CORRECT_COUNT: 'correct_count',
-  WRONG_COUNT: 'wrong_count',
-  APPLAB_NO_VALIDATE: 'applab_no_validate',
-  NO_VALIDATE: 'no_validate',
-  SHARE_NO_VALIDATE: 'share_no_validate',
-  DEFAULT: 'default'
-};
-let firehose_group = FIREHOSE_DIALOG_TYPES['DEFAULT'];
+let firehose_event = 'default';
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -276,11 +268,13 @@ FeedbackUtils.prototype.displayFeedback = function(
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
 
-  // If Firehose group already set away from default, don't override.
-  if (firehose_group === FIREHOSE_DIALOG_TYPES['DEFAULT']) {
-    firehose_group = isPerfect
-      ? FIREHOSE_DIALOG_TYPES['CORRECT_COUNT']
-      : FIREHOSE_DIALOG_TYPES['WRONG_COUNT'];
+  if (showingSharing) {
+    firehose_event = 'share';
+    if (idealBlocks !== Infinity) {
+      firehose_event += '_validate';
+    }
+  } else if (idealBlocks !== Infinity) {
+    firehose_event = 'validate';
   }
 
   if (getStore().getState().pageConstants.isChallengeLevel) {
@@ -344,11 +338,11 @@ FeedbackUtils.prototype.displayFeedback = function(
   if (againButton) {
     dom.addClickTouchEvent(againButton, function() {
       if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-        firehoseClient.putRecord({
-          study: FIREHOSE_STUDY,
-          study_group: firehose_group,
-          event: 'replay_level'
-        });
+        logDialogActions(
+          'replay_level',
+          options,
+          idealBlocks === Infinity ? null : isPerfect
+        );
       }
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
@@ -435,11 +429,11 @@ FeedbackUtils.prototype.displayFeedback = function(
 
     dom.addClickTouchEvent(continueButton, function() {
       if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-        firehoseClient.putRecord({
-          study: FIREHOSE_STUDY,
-          study_group: firehose_group,
-          event: 'continue'
-        });
+        logDialogActions(
+          'continue',
+          options,
+          idealBlocks === Infinity ? null : isPerfect
+        );
       }
       feedbackDialog.hide();
 
@@ -567,6 +561,20 @@ FeedbackUtils.prototype.displayFeedback = function(
     feedbackBlocks.render();
   }
 };
+
+function logDialogActions(event, options, isPerfect) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: firehose_event,
+    event: event,
+    data_json: JSON.stringify({
+      level_type: options.level ? options.level.skin : null,
+      level_id: options.response ? options.response.level_id : null,
+      level_path: options.response ? options.response.level_path : null,
+      isPerfectBlockCount: isPerfect
+    })
+  });
+}
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
   const store = getStore();
@@ -897,11 +905,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           } else {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
             message = message + reinfFeedbackMsg;
-          }
-          if (options.level.skin === 'applab') {
-            firehose_group = FIREHOSE_DIALOG_TYPES['APPLAB_NO_VALIDATE'];
-          } else {
-            firehose_group = FIREHOSE_DIALOG_TYPES['NO_VALIDATE'];
           }
         } else {
           var nextLevelMsg =
