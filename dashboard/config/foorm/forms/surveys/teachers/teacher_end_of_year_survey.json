@@ -1,0 +1,1333 @@
+{
+ "title": "converted from jotform",
+ "pages": [
+  {
+   "name": "page 1",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "csp_or_csd",
+     "visible": false,
+     "title": "[HIDDEN FIELD] For which course are you completing this survey?",
+     "hasOther": true,
+     "choices": [
+      "CS Principles",
+      "CS Discoveries"
+     ],
+     "otherText": "CS Fundamentals"
+    },
+    {
+     "type": "html",
+     "name": "clickTo57",
+     "html": "<p><span style=\"font-size: 18pt;\"><strong>Welcome to the 2019-20 {csp_or_csd} post-course survey</strong></span></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.\n</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are&nbsp;completely&nbsp;<strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong>&nbsp;aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take&nbsp;less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time.</strong></p>\n<p><strong>Your honesty and candor are appreciated.<br /></strong></p>"
+    },
+    {
+     "type": "html",
+     "name": "clickTo63",
+     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "weeks_per_session",
+     "title": "For a typical section of {csp_or_csd} that you teach, approximately how many WEEKS does the class run?",
+     "choices": [
+      "5 or fewer",
+      "6-10",
+      "11 - 15",
+      "16 - 20",
+      "21 - 30",
+      "30 or more"
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "minutes_per_week",
+     "title": "For a typical section of {csp_or_csd} that you teach, on average how many MINUTES PER WEEK does that section meet?",
+     "choices": [
+      "50 or less",
+      "51-100",
+      "101 - 150",
+      "151 - 200",
+      "201 - 250",
+      "251 - 300",
+      "301 or more"
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "csp_or_csd_required",
+     "title": "At your school is {csp_or_csd} a required or elective course?",
+     "choices": [
+      "Required",
+      "Elective"
+     ]
+    },
+    {
+     "type": "text",
+     "name": "question1",
+     "title": "What is the approximate total number of students you taught in {csp_or_csd} this year (across all sections)?"
+    },
+    {
+     "type": "radiogroup",
+     "name": "years_taught_codeorg",
+     "title": "How many years have you taught using the Code.org {csp_or_csd} curriculum?",
+     "hasOther": true,
+     "choices": [
+      {
+       "value": "This year is my first year (2019 / 2020)",
+       "text": "This year is my first year (2019 / 2020)"
+      },
+      {
+       "value": "2nd year (2018 / 2019)",
+       "text": "2nd year (2018 / 2019)"
+      },
+      {
+       "value": "3rd year (2017 / 2018)",
+       "text": "3rd year (2017 / 2018)"
+      },
+      {
+       "value": "4th year (2016 / 2017)",
+       "text": "4th year (2016 / 2017)"
+      }
+     ],
+     "otherText": "5th year (2015 / 2016)"
+    },
+    {
+     "type": "html",
+     "name": "clickTo154",
+     "visible": false,
+     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;&gt;&gt; CSP ONLY &lt;&lt;&lt;&lt;&lt;</span></p>"
+    },
+    {
+     "type": "checkbox",
+     "name": "csp_taught_as_ap",
+     "title": "This year I taught CS Principles as...[check all that apply]",
+     "choices": [
+      "An AP course",
+      "An honors course (non-AP)",
+      "A regular course (non-AP)"
+     ]
+    },
+    {
+     "type": "text",
+     "name": "question2",
+     "title": "Approximate number of my students who took the AP CS Principles exam this year:"
+    },
+    {
+     "type": "checkbox",
+     "name": "whatOther",
+     "title": "What other AP courses did you teach this school year (2019-20), if any? [check all that apply]",
+     "choices": [
+      "None",
+      "AP Computer Science A",
+      "AP Calculus (AB or BC)",
+      "AP Statistics",
+      "AP Sciences ",
+      "AP English",
+      "AP World Languages",
+      "AP History and Social Sciences",
+      "AP Arts",
+      "AP Capstone"
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "whatAre180",
+     "title": "What are your overall impressions teaching with the Code.org {csp_or_csd} curriculum this year?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "I_love_teaching_with_the_",
+       "text": "I love teaching with the curriculum."
+      },
+      {
+       "value": "I_completely_understand_t",
+       "text": "I completely understand the objectives of, and intention behind, the curriculum."
+      },
+      {
+       "value": "I_completely_understand_t",
+       "text": "I completely understand the teaching strategies I am supposed to use in the curriculum."
+      },
+      {
+       "value": "I_completely_understand_a",
+       "text": "I completely understand all of the tools and technologies I am supposed to use in the curriculum."
+      }
+     ]
+    },
+    {
+     "type": "rating",
+     "name": "overallI",
+     "title": "Overall, I would recommend teaching {csp_or_csd} to other teachers.",
+     "rateMin": 0,
+     "rateMax": 10,
+     "minRateDescription": "Not at all likely",
+     "maxRateDescription": "Extremely likely"
+    },
+    {
+     "type": "html",
+     "name": "clickTo190",
+     "html": "<p><strong><span style=\"font-size: 18pt;\">Professional Development</span></strong></p>\n<p><span style=\"font-size: 10pt;\">We're interested in knowing the types and characteristics of professional development activities you engage in.  </span></p>\n<p><span style=\"font-size: 10pt;\">When considering these items, please think about professional development for computer science or computer science teaching you participated in as a teacher.  Please <strong>don't include</strong> courses you took or education prior to becoming a teacher, or time you spent providing professional development for others.</span></p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "when_last_pd",
+     "title": "When did you most recently participate in professional development focused on computer science or computer science teaching?",
+     "choices": [
+      "Within the last 12 months",
+      "1-3 years ago",
+      "4–6 years ago",
+      "7–10 years ago",
+      "More than 10 years ago",
+      "Never"
+     ]
+    },
+    {
+     "type": "html",
+     "name": "clickTo175",
+     "visible": false,
+     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt; SHOW IF PD WITHIN LAST 3 YEARS &lt;&lt;</span></p>"
+    },
+    {
+     "type": "checkbox",
+     "name": "type_of_last_pd",
+     "title": "Within the last 3 years, which types of professional development related to computer science or computer science teaching have you had? (check all that apply)",
+     "choices": [
+      "I participated in Code.org's professional development program.",
+      "I attended another (non-Code.org) professional development program/workshop.",
+      "I attended a national, state, or regional computer science teacher association meeting.",
+      "I completed an online course/webinar.",
+      "I participated in a professional learning community/lesson study/teacher study group.",
+      "I received assistance or feedback from a formally designated coach/mentor.",
+      "I took a formal course for college credit."
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "reasons_for_no_PD",
+     "title": "If you DID NOT attend an in-person professional development program within the last 3 years, what were the strongest reasons why? (choose up to 2)",
+     "hasOther": true,
+     "choices": [
+      "N/A I did attend an in-person professional development program",
+      "Felt I didn't need it to teach the course successfully",
+      "Felt it wouldn't be worth the time/cost",
+      "Unaware of professional development programs in my area (or not available)",
+      "Did not have the time",
+      "Did not have financial support",
+      "Did not have school/admin support"
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "time_doing_pd",
+     "title": "What is the TOTAL amount of time you have spent on professional development related to computer science or computer science teaching in the last 3 years? (reference: a typical 5-day summer workshop is about 35 hours of PD)",
+     "choices": [
+      "Less than 6 hours",
+      "6‒15 hours",
+      "16‒35 hours",
+      "36‒80 hours",
+      "More than 80 hours"
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "pd_activities",
+     "title": "Considering all of your computer science-related professional development in the last 3 years, to what extent do the following describe your experiences? Complete the phrase: I had opportunities to...",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Not at all 1"
+      },
+      {
+       "value": "2",
+       "text": " 2 "
+      },
+      {
+       "value": "3",
+       "text": "Somewhat3"
+      },
+      {
+       "value": "4",
+       "text": "4"
+      },
+      {
+       "value": "5",
+       "text": "To a great extent 5"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Deepen_my_own_computer_sc",
+       "text": "Deepen my own computer science content knowledge, including programming."
+      },
+      {
+       "value": "Experience_lessons,_as_my",
+       "text": "Experience lessons, as my students would, from the units I use in my classroom. "
+      },
+      {
+       "value": "Examine_classroom_artifac",
+       "text": "Examine classroom artifacts (for example: student work samples, e-portfolios, videos of classroom instruction). "
+      },
+      {
+       "value": "Rehearse_instructional_pr",
+       "text": "Rehearse instructional practices during the professional development (meaning: try out, receive feedback, and reflect on those practices)."
+      },
+      {
+       "value": "Apply_what_I_learned_to_m",
+       "text": "Apply what I learned to my classroom and then come back and talk about it as part of the professional development."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "Show",
+     "visible": false,
+     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt; END&nbsp; SHOW IF PD WITHIN LAST 3 YEARS &lt;&lt;</span></p>"
+    },
+    {
+     "type": "html",
+     "name": "preparedness_heading",
+     "html": "<p><strong><span style=\"font-size: 14pt;\">Preparedness and Skills</span></strong></p>\n<p>{csp_or_csd} entails a number of skills that represent the intersection of content knowledge and particular practices.</p>\n<p>One way to self-assess your current skills is to think about \"how true\" it is that you could do certain things along a scale from \"Not true of me now\" to \"Very true of me now\".&nbsp; You can also think about it in terms of your own development and preparation for teaching.&nbsp;&nbsp;Please consider this response scale for the items that follow.</p>\n<table style=\"height: 40px; width: 95%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\">\n<tbody>\n<tr>\n<td style=\"width: 32px; text-align: center; vertical-align: top;\"><span style=\"font-size: 12pt;\"><strong>N/A</strong></span></td>\n<td style=\"width: 32px; text-align: center; vertical-align: top;\">&nbsp;</td>\n<td style=\"width: 130px; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 12pt;\"><strong>1<span style=\"color: #ffffff;\">----</span>2</strong></span></td>\n<td style=\"width: 181px; text-align: center; vertical-align: top;\"><span style=\"font-size: 12pt;\"><strong>3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</strong></span></td>\n<td style=\"width: 160.5px; text-align: center; vertical-align: top;\"><span style=\"font-size: 12pt;\"><strong>6<span style=\"color: #ffffff;\">----</span>7</strong></span></td>\n</tr>\n<tr>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\">&nbsp;</td>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\"><strong>&nbsp;</strong></td>\n<td style=\"width: 130px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">Not true of me now<br /></span></strong><em><span style=\"font-size: 10pt;\">need more development, </span><span style=\"font-size: 10pt;\"><br /></span><span style=\"font-size: 10pt;\">not well prepared<br /><br /></span></em></td>\n<td style=\"width: 181px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">Somewhat true of me now<br /></span></strong><em><span style=\"font-size: 10pt;\">in process developing, somewhat prepared</span></em><strong><span style=\"font-size: 10pt;\"><br /></span></strong></td>\n<td style=\"width: 160.5px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">Very true of me now<br /></span></strong><em><span style=\"font-size: 10pt;\">current strengths,</span></em><em><span style=\"font-size: 10pt;\"><br />well prepared</span></em><strong><span style=\"font-size: 10pt;\"><br /></span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 32px; border-top: 1px solid #aaaaaa; text-align: center; vertical-align: top;\" colspan=\"5\"><em><span style=\"font-size: 10pt;\">respond <strong>N/A</strong> if you think the skill is unnecessary or irrelevant for&nbsp;teaching computer science.</span></em></td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "matrix",
+     "name": "csp_skills",
+     "title": "Please rate the degree to which you can do the following things by completing the phrase: Right now I can...",
+     "columns": [
+      {
+       "value": "1",
+       "text": "N/A"
+      },
+      {
+       "value": "2",
+       "text": "1"
+      },
+      {
+       "value": "3",
+       "text": "2"
+      },
+      {
+       "value": "4",
+       "text": "3"
+      },
+      {
+       "value": "5",
+       "text": "4"
+      },
+      {
+       "value": "6",
+       "text": "5"
+      },
+      {
+       "value": "7",
+       "text": "6"
+      },
+      {
+       "value": "8",
+       "text": "7"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Use a structured problem solving process to iteratively improve a project.",
+       "text": "Use a structured problem solving process to iteratively improve a project."
+      },
+      {
+       "value": "Develop a program for creative expression, to satisfy personal curiosity, or to create new knowledge.",
+       "text": "Develop a program for creative expression, to satisfy personal curiosity, or to create new knowledge."
+      },
+      {
+       "value": "Make responsible decisions as both a creator and consumer of public content, considering the needs and rights of others.",
+       "text": "Make responsible decisions as both a creator and consumer of public content, considering the needs and rights of others."
+      },
+      {
+       "value": "Explain the differences between how humans and computers approach problems.",
+       "text": "Explain the differences between how humans and computers approach problems."
+      },
+      {
+       "value": "Explain the beneficial and harmful effects of computing.",
+       "text": "Explain the beneficial and harmful effects of computing."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "true_of_me_now_scale_display",
+     "html": "<p>&nbsp;</p>\n<table style=\"height: 40px; width: 95%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"2px\">\n<tbody>\n<tr>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\"><strong>N/A</strong></span></td>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\">&nbsp;</td>\n<td style=\"width: 130px; padding-top: 3px; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\"><strong>1<span style=\"color: #ffffff;\">----</span>2</strong></span></td>\n<td style=\"width: 181px; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\"><strong>3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</strong></span></td>\n<td style=\"width: 160.5px; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\"><strong>6<span style=\"color: #ffffff;\">----</span>7</strong></span></td>\n</tr>\n<tr>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\">&nbsp;</td>\n<td style=\"width: 32px; text-align: center; vertical-align: middle;\"><strong>&nbsp;</strong></td>\n<td style=\"width: 130px; text-align: center; vertical-align: middle;\"><strong><span style=\"font-size: 10pt;\">Not true of me now<br /></span></strong></td>\n<td style=\"width: 181px; text-align: center; vertical-align: middle;\"><strong><span style=\"font-size: 10pt;\">Somewhat true of me now<br /></span></strong></td>\n<td style=\"width: 160.5px; text-align: center; vertical-align: middle;\">\n<p><strong><span style=\"font-size: 10pt;\">Very true of me now</span><span style=\"font-size: 10pt;\"><br /></span></strong></p>\n</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "matrix",
+     "name": "codeorg_strategies_descriptive",
+     "title": "In teaching {csp_or_csd}, right now, I have teaching strategies or techniques that I use to...",
+     "columns": [
+      {
+       "value": "1",
+       "text": "N/A"
+      },
+      {
+       "value": "2",
+       "text": "1"
+      },
+      {
+       "value": "3",
+       "text": "2"
+      },
+      {
+       "value": "4",
+       "text": "3"
+      },
+      {
+       "value": "5",
+       "text": "4"
+      },
+      {
+       "value": "6",
+       "text": "5"
+      },
+      {
+       "value": "7",
+       "text": "6"
+      },
+      {
+       "value": "8",
+       "text": "7"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Ensure_that_students_work",
+       "text": "Ensure that students work collaboratively when writing code."
+      },
+      {
+       "value": "Create_a_classroom_cultur",
+       "text": "Create a classroom culture in which students regularly get feedback on their work from their peers."
+      },
+      {
+       "value": "Ensure_that_every_student",
+       "text": "Ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion. "
+      },
+      {
+       "value": "Create_a_culture_in_which",
+       "text": "Create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+      },
+      {
+       "value": "Provide_frequent_opportun",
+       "text": "Provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "concerns_teaching_cspd",
+     "title": "In thinking about teaching {csp_or_csd} again next year, I am concerned about...",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Not a concern"
+      },
+      {
+       "value": "2",
+       "text": "Minor concern"
+      },
+      {
+       "value": "3",
+       "text": "Major concern"
+      },
+      {
+       "value": "4",
+       "text": "My biggest concern"
+      }
+     ],
+     "rows": [
+      {
+       "value": "My_own_computer_science_c",
+       "text": "My own computer science content knowledge."
+      },
+      {
+       "value": "Code.org_course_materials",
+       "text": "Code.org course materials."
+      },
+      {
+       "value": "Systemic_supports_(distri",
+       "text": "Systemic supports (district, school, principal, community, parents, etc.)."
+      },
+      {
+       "value": "Other_CS_content_supports",
+       "text": "Other CS content supports (extra resources, materials, assessments, videos, online community, colleagues, online forums, etc.)."
+      },
+      {
+       "value": "The_amount_of_time_needed",
+       "text": "The amount of time needed to cover all the material."
+      },
+      {
+       "value": "Managing_and_understandin",
+       "text": "Managing and understanding the variety of technology I need to teach the course."
+      },
+      {
+       "value": "My_class_being_fully_enro",
+       "text": "My class being fully enrolled (or recruiting students into the class)"
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "clickTo",
+     "html": "<p><strong><span style=\"font-size: 14pt;\">Give advice to someone teaching {csp_or_csd} next year</span></strong></p>"
+    },
+    {
+     "type": "comment",
+     "name": "should_do",
+     "title": "What's something that a teacher walking into {csp_or_csd} next year definitely SHOULD do.",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "comment",
+     "name": "should_not_do",
+     "title": "What's something that a teacher walking into {csp_or_csd} next year definitely SHOULD NOT do.",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "html",
+     "name": "clickTo151",
+     "html": "<p style=\"text-align: left;\"><span style=\"font-size: 18pt;\"><strong>You and Your Computer Science Classroom</strong></span></p>\n<p style=\"text-align: left;\"><br />The following items ask how often you did certain things interacting with students while teaching {csp_or_csd}. </p>\n<p style=\"text-align: left;\">Please answer as <span style=\"text-decoration: underline;\"><em>candidly</em></span> as possible so as not to inflate or deflate the amount you do these things. <br /><br />Again, your responses are <em><span style=\"text-decoration: underline;\">confidential and not used to evaluate you or your teaching</span></em>. We are interested in capturing an accurate picture of Code.org CS classrooms across the country.</p>"
+    },
+    {
+     "type": "matrix",
+     "name": "teacher_facilitation_of_risk",
+     "title": "While teaching {csp_or_csd} this year, how often did YOU explicitly do the following?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Never"
+      },
+      {
+       "value": "2",
+       "text": "Rarely (a few times a year)"
+      },
+      {
+       "value": "3",
+       "text": "Sometimes (once or twice a month)"
+      },
+      {
+       "value": "4",
+       "text": "Often (once or twice a week)"
+      },
+      {
+       "value": "5",
+       "text": "Almost every lesson"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Encouraged_students_to_an",
+       "text": "Encouraged students to answer questions even if they were not sure they were correct."
+      },
+      {
+       "value": "Encouraged_students_to_ta",
+       "text": "Encouraged students to take risks and try new things even if they might make mistakes."
+      },
+      {
+       "value": "Encouraged_students_to_sh",
+       "text": "Encouraged students to share ideas if they were different from others."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "facilitation_cog_demanding_work",
+     "title": "While teaching {csp_or_csd}, how often did you explicitly ASK STUDENTS to do the following?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Never"
+      },
+      {
+       "value": "2",
+       "text": "Rarely (a few times a year)"
+      },
+      {
+       "value": "3",
+       "text": "Sometimes (once or twice a month)"
+      },
+      {
+       "value": "4",
+       "text": "Often (once or twice a week)"
+      },
+      {
+       "value": "5",
+       "text": "Almost every lesson"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Consider_alternative_appr",
+       "text": "Consider alternative approaches to their work."
+      },
+      {
+       "value": "Explain_the_logic_and_rea",
+       "text": "Explain the logic and reasoning supporting their solutions."
+      },
+      {
+       "value": "Explain_why_they_agree_or",
+       "text": "Explain why they agree or disagree with the work of other students."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "clickTo91",
+     "html": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><strong>Teaching Philosophy</strong></span></p>\n<p>Below are pairs of statements from computer science teachers describing various teaching philosophies, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\"><em><span style=\"color: #999999;\">...</span></em></td>\n<td style=\"text-align: center;\"><em><span style=\"color: #999999;\"> </span></em></td>\n<td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\"><em><span style=\"color: #999999;\">...</span></em></td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\">\n<tbody>\n<tr>\n<td style=\"border-bottom: 1px solid #cccccc; width: 15%; text-align: center;\"> </td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 12%;\"><strong>1</strong></td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 12%;\"><strong>2</strong></td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 12%;\"><strong>3</strong></td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 12%;\"><strong>4</strong></td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 12%;\"><strong>5</strong></td>\n<td style=\"border-bottom: 1px solid #cccccc; text-align: center; width: 15%;\"> </td>\n</tr>\n<tr>\n<td><span style=\"font-size: 10pt;\">Strongly aligned with A </span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 18pt;\">◉</span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 18pt;\">◉</span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 18pt;\">◉</span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 18pt;\">◉</span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 18pt;\">◉</span></td>\n<td><span style=\"font-size: 10pt;\">Strongly aligned with B</span></td>\n</tr>\n<tr>\n<td><strong><span style=\"font-size: 8pt;\"> </span></strong></td>\n<td><strong><span style=\"font-size: 8pt;\"> </span></strong></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 8pt;\"><em> Leaning towards A</em></span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 8pt;\"><em>  Neutral / Can't Decide</em></span></td>\n<td style=\"text-align: center;\"><span style=\"font-size: 8pt;\"><em>  Leaning towards B</em></span></td>\n<td><strong><span style=\"font-size: 8pt;\"> </span></strong></td>\n<td><strong><span style=\"font-size: 8pt;\"> </span></strong></td>\n</tr>\n</tbody>\n</table>\n<p>Please <strong>select the value 1-5</strong> that best shows how closely your own beliefs are to one of the statements in a given pair. Please respond freely based on your personal beliefs and philosophy - there is no wrong way to respond.</p>"
+    },
+    {
+     "type": "html",
+     "name": "leadLearner_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"As the teacher I need to have deep content expertise so that I can properly answer students&rsquo; questions and guide instruction appropriately.\"</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "leadLearner",
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "abccbv_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"For computer science instruction I think it&rsquo;s important to present students with appropriate terms and vocabulary before they explore a concept or problem in more depth. That way we&rsquo;re all 'speaking the same language&rsquo; from the outset.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"I like to present students with a computer science problem, or with tools that let them explore a concept before teaching the terms and vocabulary. I think that sometimes the terminology gets in the way of exploring the ideas.\"</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "abccbv",
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "recruitResponsibility_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">Computer science teachers’ responsibility is to promote their computer science classes broadly, to all students. The diversity of the class will reflect those most interested in taking a computer science class.</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">Computer science teachers have a responsibility to recruit a set of students into their classrooms that are representative of the school’s population in terms of diversity (gender, racial, socio-economic, etc.)</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "recruitResponsibility",
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "prioritizeTime_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">It’s important that the teacher prioritize their time and resources for students who have the most need.</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">The teacher should ensure that their time, and students’ access to resources are distributed equally for all.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "prioritizeTime",
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "instructionFocus_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material.</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "instructionFocus",
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "page6",
+     "html": "<p style=\"text-align: left;\"><span style=\"font-size: 18pt;\"><strong>Your Teaching Community</strong></span></p>"
+    },
+    {
+     "type": "matrix",
+     "name": "perceptions_of_comm_value_cs",
+     "title": "What are your perceptions about how your school and community values computer science? ",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "There_is_student_demand_f",
+       "text": "There is student demand for more computer science courses in my school."
+      },
+      {
+       "value": "My_school_leaders_tell_ot",
+       "text": "My school leaders tell others in our school about the benefits of offering computer science to students."
+      },
+      {
+       "value": "Counselors_at_my_school_c",
+       "text": "Counselors at my school communicate the benefits of computer science to all students."
+      },
+      {
+       "value": "Families_here_think_offer",
+       "text": "Families here think offering computer science is important."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "perceptions_of_support_at_school",
+     "title": "What are your perceptions about support for your teaching computer science at your school?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "I_think_most_other_teache",
+       "text": "I think most other teachers at my school don't understand what I do as a computer science teacher."
+      },
+      {
+       "value": "I_have_strong_administrat",
+       "text": "I have strong administrative support for teaching CS."
+      },
+      {
+       "value": "My_school_administration_",
+       "text": "My school administration is equipped to provide me with high quality feedback and evaluation of my CS instruction."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "connectedness_to_cs_ed_community",
+     "title": "What are your perceptions about your connectedness to the broader CS Education community?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "I_feel_connected_to_a_com",
+       "text": "I feel connected to a community of CS teachers."
+      },
+      {
+       "value": "When_I_need_help_teaching",
+       "text": "When I need help teaching CS I have someone to turn to."
+      },
+      {
+       "value": "I_know_CS_teacher_leaders",
+       "text": "I know CS teacher leaders and role models in my community."
+      },
+      {
+       "value": "I_feel_like_I'm_part_of_a",
+       "text": "I feel like I'm part of a broad CS Education movement."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "clickTo106",
+     "html": "<p><span style=\"font-size: 14pt;\"><strong>Your Teaching Background</strong></span></p>\n<p><span style=\"font-size: 10pt;\">Lastly, we'd like to know a little bit about you and your background.</span></p>"
+    },
+    {
+     "type": "text",
+     "name": "question3",
+     "title": "How many years have you taught at the K-12 level (any subject), including this school year?"
+    },
+    {
+     "type": "text",
+     "name": "question4",
+     "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level, including this school year?"
+    },
+    {
+     "type": "checkbox",
+     "name": "grade_levels_taught",
+     "title": "At what grade levels do you currently teach computer science? [select all that apply]",
+     "choices": [
+      "K-5",
+      "6-8",
+      "9-12",
+      "I do not currently teach computer science"
+     ]
+    },
+    {
+     "type": "text",
+     "name": "question5",
+     "title": "What is your year of birth?"
+    },
+    {
+     "type": "radiogroup",
+     "name": "gender",
+     "title": "What is your gender identity?",
+     "choices": [
+      "Female",
+      "Male",
+      "Non-binary",
+      "Preferred term not listed",
+      "Prefer not to answer"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "whatIs216",
+     "title": "What is your racial or ethnic identity?",
+     "choices": [
+      "American Indian/Alaska Native",
+      "Asian",
+      "Black or African American",
+      "Hispanic or Latino",
+      "Native Hawaiian or other Pacific Islander",
+      "White",
+      "Other",
+      "Prefer not to answer"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "other_classes_taught",
+     "title": "Are you responsible for teaching other (non-computer science) courses at your school? If so, please check all that apply.",
+     "hasOther": true,
+     "choices": [
+      "None",
+      "Math",
+      "English",
+      "History",
+      "Art (visual or performing)",
+      "Science (any area)",
+      "World Language",
+      "Business",
+      "Library"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "certification",
+     "title": "In which of the following areas are you certified? [select all that apply]",
+     "hasOther": true,
+     "choices": [
+      "None",
+      "Business",
+      "Career and/or Technology Education",
+      "Computer science",
+      "Engineering",
+      "Mathematics",
+      "Science (any area)"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "undergrad_degree",
+     "title": "In what area(s) is your primary undergraduate degree?",
+     "choices": [
+      "I don't have an undergraduate degree",
+      "Art or Music",
+      "Business",
+      "Computer Science",
+      "Education",
+      "Engineering",
+      "English/Language Arts",
+      "Foreign Language",
+      "Mathematics",
+      "Science",
+      "Social Sciences",
+      "Other"
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "cs_degree",
+     "title": "If you have a degree in computer science, what is the highest degree you have obtained?",
+     "choices": [
+      "My degree is in something other than computer science",
+      "Bachelor's degree in computer science",
+      "Master's degree in computer science",
+      "PhD in computer science"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "other_cs_experience",
+     "title": "What other computer science education experiences have you had? (check all that apply)",
+     "choices": [
+      "None",
+      "Online tutorials or classes, informally",
+      "Accredited courses online",
+      "Elementary or Middle School coursework",
+      "High School coursework",
+      "College coursework",
+      "In process of earning degree in computer science",
+      "Coding bootcamp (typically 10-15 weeks of intensive industry training)",
+      "IT or industry certification"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "experience_programming",
+     "title": "Did you have any experience working in computer science or related fields prior to becoming a teacher? (check all that apply)",
+     "choices": [
+      "None",
+      "Did computer programming as a hobby",
+      "Military service/training that included computer programming/software engineering",
+      "Full or part time job in the IT industry",
+      "Full or part-time job that included computer programming/software engineering"
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "anything_else_FR",
+     "title": "Is there anything else you’d like to tell us about your experience teaching {csp_or_csd}?",
+     "cols": 60,
+     "rows": 3
+    },
+    {
+     "type": "html",
+     "name": "clickTo138",
+     "html": "<p><span style=\"font-size: 12pt;\"><br /><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png\" /></span></p>\n<p><span style=\"font-size: 12pt;\">Thanks from Code.org for your time, commitment and passion for teaching&nbsp;{csp_or_csd} this year.</span>&nbsp;</p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "partner_swag",
+     "title": "Some of our partners want to support Code.org classrooms with free swag, supplies, and scholarship, mentorship, and internship opportunities for students. Would it be worthwhile for Code.org to create such a program?",
+     "choices": [
+      "Yes",
+      "No"
+     ]
+    },
+    {
+     "type": "html",
+     "name": "clickTo200",
+     "html": "<p><strong><span style=\"font-size: 14pt;\">Amazon Gift Card Confirmation</span></strong></p>\n<p><span style=\"font-size: 12pt;\">Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style=\"text-align: right;\"><span style=\"font-size: 8pt;\">*First 500 respondents will receive gift code. Please&nbsp;allow 1-2 weeks to receive code.&nbsp;</span></p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "wouldYou220",
+     "title": "Would you like to receive a $10 Amazon gift code for completing this survey?",
+     "choices": [
+      "Yes, please.",
+      "No, thanks."
+     ]
+    },
+    {
+     "type": "text",
+     "name": "pleaseEnter221",
+     "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent.  We have initially set it to the email address associated with this account. You may change the address to one at which you would prefer to receive the gift code."
+    },
+    {
+     "type": "text",
+     "name": "pleaseReenter",
+     "title": "Please re-enter the email address where you want your Amazon gift code sent."
+    },
+    {
+     "type": "html",
+     "name": "clickTo223",
+     "visible": false,
+     "html": "<p><span style=\"color: #800000;\">&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
+    },
+    {
+     "type": "html",
+     "name": "Warning",
+     "visible": false,
+     "html": "<p><span style=\"color: #339966;\">&nbsp;Addresses match!</span></p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "permission",
+     "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+     "choices": [
+      "Yes, I give permission to quote me and use my name.",
+      "Yes, I give permission to quote me, but I want to be anonymous.",
+      "No, I do not give permission to quote me."
+     ]
+    }
+   ],
+   "title": "converted questions"
+  },
+  {
+   "name": "page2",
+   "elements": [
+    {
+     "type": "html",
+     "name": "question7",
+     "html": "<p><span style=\"font-size: 18pt;\"><strong>Teacher at-home survey</strong></span></p>\n<p>Teaching Code.org at Home\n\nHow can Code.org help you instruct students while they are at home?\n\nPlease fill out this quick (5 minutes or less) survey to let us know how we can better serve you while your students are at home.\n\nThank you in advance for your answers and for all that you do for your students! "
+    },
+    {
+     "type": "radiogroup",
+     "name": "question6",
+     "title": "Which most accurately describes your current teaching situation?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "I'm currently providing remote/distance/virtual instruction for my classes."
+      },
+      {
+       "value": "item2",
+       "text": "I'm not yet providing remote/distance/virtual instruction for my classes, but I expect to in the near future."
+      },
+      {
+       "value": "item3",
+       "text": "I or my school are not currently planning to provide remote/distance/virtual instruction for any classes."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "question8",
+     "title": "How are you instructing your students while they are at home?",
+     "columns": [
+      {
+       "value": "Column 1",
+       "text": "None / Not Allowed"
+      },
+      {
+       "value": "Column 2",
+       "text": "A little bit"
+      },
+      {
+       "value": "Column 3",
+       "text": "Some"
+      },
+      {
+       "value": "Column 4",
+       "text": "Majority of instruction"
+      },
+      {
+       "value": "Column 5",
+       "text": "All instruction"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Row 1",
+       "text": "SYNCHRONOUS virtual meetings (Zoom, Skype, Hangouts, etc.)"
+      },
+      {
+       "value": "Row 2",
+       "text": "ASYNCHRONOUS (work assigned/distributed via email, learning platform, etc.)"
+      },
+      {
+       "value": "Row 3",
+       "text": "Non-virtual / non-technology (i.e. students receive printed packets, no/low tech)"
+      },
+      {
+       "value": "Row 4",
+       "text": "I hold \"office hours\" (students can contact me at set times through approved channels)."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "question9",
+     "title": "To the best of your knowledge, what types of devices are your students using (or have access to) for doing school work at home right now?",
+     "columns": [
+      {
+       "value": "Column 1",
+       "text": "Don't know"
+      },
+      {
+       "value": "Column 2",
+       "text": "No students"
+      },
+      {
+       "value": "Column 3",
+       "text": "Some students"
+      },
+      {
+       "value": "Column 4",
+       "text": "About half of students"
+      },
+      {
+       "value": "Column 5",
+       "text": "Most students"
+      },
+      {
+       "value": "Column 6",
+       "text": "All students"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Row 1",
+       "text": "Phone"
+      },
+      {
+       "value": "Row 2",
+       "text": "Tablet"
+      },
+      {
+       "value": "Row 3",
+       "text": "Chromebook"
+      },
+      {
+       "value": "Row 4",
+       "text": "Laptop/Desktop"
+      },
+      {
+       "value": "Row 5",
+       "text": "No device available"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "question10",
+     "title": "To the best of your knowledge, approximately what percent of students have adequate internet access at home that they can use for school work?\t",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "None"
+      },
+      {
+       "value": "item2",
+       "text": "Some Students - 25%"
+      },
+      {
+       "value": "item3",
+       "text": "About half of students - 50%"
+      },
+      {
+       "value": "item4",
+       "text": "Most students - 75%"
+      },
+      {
+       "value": "item5",
+       "text": "All Students - 100%"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "question11",
+     "title": "Which Code.org course(s) are you teaching now (or were you teaching prior to your school moving to remote/distance learning)? Check all that apply.\t(checkbox)",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "CS Fundamentals (Courses A-F)"
+      },
+      {
+       "value": "item2",
+       "text": "CS Discoveries"
+      },
+      {
+       "value": "item3",
+       "text": "CS Principles"
+      },
+      {
+       "value": "item4",
+       "text": "I don't know"
+      },
+      {
+       "value": "item5",
+       "text": "None"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "question12",
+     "title": "Which of the following best describes your plans to teach with Code.org materials while students are at home?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "I am no longer teaching Code.org or using Code.org materials."
+      },
+      {
+       "value": "item2",
+       "text": "I would like to continue teaching with Code.org materials but I probably cannot because it doesn’t convert well to my remote learning situation."
+      },
+      {
+       "value": "item3",
+       "text": "I'm using Code.org but not the same materials or lessons I was using before."
+      },
+      {
+       "value": "item4",
+       "text": "I'm planning to continue teaching my Code.org course with major modifications due to remote/at-home learning."
+      },
+      {
+       "value": "item5",
+       "text": "I'm planning to continue using Code.org materials pretty much the same as I was before."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "question13",
+     "title": "Please characterize the challenges you face with teaching your students Code.org remotely.",
+     "columns": [
+      {
+       "value": "Column 1",
+       "text": "Not a challenge"
+      },
+      {
+       "value": "Column 2",
+       "text": "Some challenges"
+      },
+      {
+       "value": "Column 3",
+       "text": "Huge challenge"
+      }
+     ],
+     "rows": [
+      {
+       "value": "Row 1",
+       "text": "Internet and device access for me or my students"
+      },
+      {
+       "value": "Row 2",
+       "text": "Providing support and assistance while students work"
+      },
+      {
+       "value": "Row 3",
+       "text": "Tracking student progress on assigned materials"
+      },
+      {
+       "value": "Row 4",
+       "text": "Providing feedback on work students have done"
+      },
+      {
+       "value": "Row 5",
+       "text": "Assigning new work"
+      },
+      {
+       "value": "Row 6",
+       "text": "Finding materials that students can work on independently"
+      },
+      {
+       "value": "Row 7",
+       "text": "Getting students their login information"
+      },
+      {
+       "value": "Row 8",
+       "text": "Finding materials to work on that don't require internet and device access"
+      },
+      {
+       "value": "Row 9",
+       "text": "Communicating with my students while they are at home"
+      },
+      {
+       "value": "Row 10",
+       "text": "Providing instruction on new concepts to my students"
+      },
+      {
+       "value": "Row 11",
+       "text": "Finding ways for students to collaborate"
+      }
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "question14",
+     "title": "What else can Code.org do to make our courses and materials more user-friendly for you and your students as you engage in remote/distance learning"
+    },
+    {
+     "type": "text",
+     "name": "question15",
+     "title": "5-digit Zip Code"
+    },
+    {
+     "type": "html",
+     "name": "question16",
+     "html": "<p><span style=\"font-size: 12pt;\"><br /><img style=\"display: block; margin-left: auto; margin-right: auto;\" <p><span style=\"font-size: 12pt;\">Thank you for everything you do as teachers to keep our children learning and engaged during these challenging times.\n</span>&nbsp;</p>"
+    }
+   ]
+  }
+ ]
+}
