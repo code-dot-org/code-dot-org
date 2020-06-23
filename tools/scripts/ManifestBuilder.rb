@@ -246,7 +246,6 @@ The animation has been skipped.
     animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
     strings = Hash.new
     animation_metadata.each do |_, metadata|
-      strings[metadata['name']] = metadata['name']
       next unless metadata['aliases']
       metadata['aliases'].each do |aliaz|
         strings[aliaz] = aliaz
