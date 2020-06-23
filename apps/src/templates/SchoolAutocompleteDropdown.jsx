@@ -13,7 +13,8 @@ export default class SchoolAutocompleteDropdown extends Component {
     value: PropTypes.string,
     fieldName: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
-    schoolFilter: PropTypes.func
+    schoolFilter: PropTypes.func,
+    disabled: PropTypes.bool
   };
 
   state = {
@@ -144,6 +145,7 @@ export default class SchoolAutocompleteDropdown extends Component {
         onChange={this.onChange}
         placeholder={i18n.searchForSchool()}
         searchPromptText={i18n.searchForSchoolPrompt()}
+        disabled={this.props.disabled}
       />
     );
   }
