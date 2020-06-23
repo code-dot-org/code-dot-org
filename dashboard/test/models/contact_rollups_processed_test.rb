@@ -132,13 +132,17 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'parse_contact_data parses valid input' do
+    # TODO: (ha) break this long test into smaller ones
     time_str = '2020-03-11 15:01:26'
     time_parsed = Time.find_zone('UTC').parse(time_str)
+    time_str_2 = '2020-06-22 16:26:00'
+    time_parsed_2 = Time.find_zone('UTC').parse(time_str_2)
     format_values = {
       sources_key: ContactRollupsProcessed::SOURCES_KEY,
       data_key: ContactRollupsProcessed::DATA_KEY,
       data_updated_at_key: ContactRollupsProcessed::DATA_UPDATED_AT_KEY,
-      time_str: time_str
+      time_str: time_str,
+      time_str_2: time_str_2
     }
 
     # Test inputs are JSON strings.
@@ -187,12 +191,12 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           }
         }
       },
-      # input data has more than one value for a key
+      # input data has more than one value for a key and each value came in a different date
       {
         input: format(
           '['\
           '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},'\
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str}"}'\
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str_2}"}'\
           ']',
           format_values
         ),
@@ -200,9 +204,9 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
           'table2' => {
             'state' => [
               {'value' => 'WA', 'data_updated_at' => time_parsed},
-              {'value' => 'OR', 'data_updated_at' => time_parsed}
+              {'value' => 'OR', 'data_updated_at' => time_parsed_2}
             ],
-            'last_data_updated_at' => time_parsed
+            'last_data_updated_at' => time_parsed_2
           }
         }
       },
