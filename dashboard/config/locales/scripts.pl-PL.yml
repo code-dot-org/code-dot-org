@@ -10356,6 +10356,12 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI z Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
           lessons:
             Episode 1 - Algorithms with Hill Harper:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
@@ -10375,6 +10381,12 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI z Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -10397,6 +10409,8 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
           title: Inscenizacja Code Break
           lessons:
             Conditionals with Sal Khan & Flo Vaughn:
@@ -10409,6 +10423,8 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
         code-break-younger-staging:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -10425,6 +10441,10 @@ pl:
               name: Zmienne z Yarą Shahidi i Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Wydarzenia z Macklemore & Scott Forstall
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
           lessons:
             Episode 1 - Algorithms with Hill Harper:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
@@ -10438,6 +10458,10 @@ pl:
               name: Zmienne z Yarą Shahidi i Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Wydarzenia z Macklemore & Scott Forstall
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
         code-break-younger:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -10460,6 +10484,12 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI z Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
           title: Code Break dla młodszych uczniów
           description: Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu,
             Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo,
@@ -10483,6 +10513,12 @@ pl:
               name: AI z Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI z Kat Graham & Kate Park
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
         no-lg:
           stages:
             new stage:

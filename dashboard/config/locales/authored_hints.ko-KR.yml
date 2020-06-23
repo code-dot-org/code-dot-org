@@ -2505,6 +2505,8 @@ ko-KR:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: '반복 블럭안에 실행 블럭들을 넣으면 반복해서 실행이 됩니다. 한번 해보세요! '
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.

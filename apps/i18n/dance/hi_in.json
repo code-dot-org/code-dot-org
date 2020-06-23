@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "आपने कोई बटन दबाया, लेकिन आपके डांसरने उसके अनुसार कुछ नहीं किया।",
   "danceFeedbackNeedTwoDancers": "आपको दो डांसर बनाने होंगे।",
   "danceFeedbackOnlyOneDancerMoved": "आपका सिर्फ़ एक ही डांसर हिला था।",
-  "danceFeedbackNeedLead": "आपको <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> ब्लॉक की मदद से एक मुख्य डांसर भी बनाना होगा।",
+  "danceFeedbackNeedLead": "आपको <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> ब्लॉक की मदद से एक मुख्य डांसर भी बनाना होगा।",
   "danceFeedbackNeedBackup": "आपकी पीछे डांस करने वाले डांसरों का समूह बनाने के लिए <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> की मदद लेनी होगी।",
   "danceFeedbackSetSize": "संगीत शुरू होने के बाद आपको कम से कम एक डांसर का आकार बदलना होगा।",
   "measure": "संगीत प्रविधि:"

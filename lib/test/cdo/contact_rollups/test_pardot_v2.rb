@@ -191,17 +191,20 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_convert_to_pardot_prospect
-    contacts = [
-      {email: 'test0@domain.com', pardot_id: 10, opt_in: 1},
-      {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
-    ]
-    expected_prospects = [
-      {email: 'test0@domain.com', id: 10, db_Opt_In: 'Yes'},
-      {email: 'test1@domain.com', id: nil}
+    tests = [
+      {
+        input: {email: 'test0@domain.com', pardot_id: 10, opt_in: 1, user_id: 111},
+        expected_output: {email: 'test0@domain.com', id: 10, db_Opt_In: 'Yes', db_Has_Teacher_Account: 'true'}
+      },
+      {
+        input: {email: 'test1@domain.com', pardot_id: nil, bad_key: true},
+        expected_output: {email: 'test1@domain.com', id: nil}
+      }
     ]
 
-    contacts.each_with_index do |contact, index|
-      assert_equal expected_prospects[index], PardotV2.convert_to_pardot_prospect(contact)
+    tests.each_with_index do |test, index|
+      output = PardotV2.convert_to_pardot_prospect test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
 
