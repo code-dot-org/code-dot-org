@@ -116,7 +116,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     }
     # output should not contains nil or duplicate values, and should be sorted
     expected_output = {
-      professional_learning_enrolled: [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF]
+      professional_learning_enrolled: "#{Pd::Workshop::COURSE_CSD},#{Pd::Workshop::COURSE_CSF}"
     }
 
     output = ContactRollupsProcessed.extract_professional_learning_enrolled(contact_data)

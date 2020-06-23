@@ -163,7 +163,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # We only care about unique and non-nil values.
     # The result is sorted to keep consistent order.
     uniq_values = values&.uniq&.compact&.sort
-    return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values}
+    return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
   end
 
   # Extracts values of a field in a source table from contact data.
