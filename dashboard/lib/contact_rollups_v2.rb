@@ -72,25 +72,23 @@ class ContactRollupsV2
     @log_collector = LogCollector.new('ContactRollupsV2')
     @log_collector.info("Initialization params: "\
       "is_dry_run: #{is_dry_run}, "\
-      "limit_extraction = #{limit_extraction}"
+      "limit_extraction = #{limit_extraction || 'nil'}"
     )
     self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
   def build_and_sync
-    collect_and_process_contacts
-
+    collect_contacts
+    process_contacts
     # These sync steps are independent, one could fail without affecting another.
-    # However, if the build step above fails, none of them should run.
+    # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
-  # Then, process them and save the results into ContactRollupsProcessed.
-  # The results are copied over to ContactRollupsFinal to be used for further analysis.
-  def collect_and_process_contacts
+  def collect_contacts
     start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
@@ -120,7 +118,16 @@ class ContactRollupsV2
     @log_collector.time!('extract_professional_learning_attendance_new') do
       ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model(@limit)
     end
+  ensure
+    @log_collector.record_metrics(
+      {CollectContactsDuration: Time.now - start_time}
+    )
+  end
 
+  # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
+  # The results are then copied over to ContactRollupsFinal for further analysis.
+  def process_contacts
+    start_time = Time.now
     @log_collector.time!('Processes all extracted data') do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
@@ -132,7 +139,7 @@ class ContactRollupsV2
     end
   ensure
     @log_collector.record_metrics(
-      {CollectAndProcessContactsDuration: Time.now - start_time}
+      {ProcessContactsDuration: Time.now - start_time}
     )
   end
 
