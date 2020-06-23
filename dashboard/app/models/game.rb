@@ -296,6 +296,7 @@ class Game < ActiveRecord::Base
     CurriculumReference:curriculum_reference
     Map:map
     CustomFlappy:flappy
+    Scratch:scratch
     Dance:dance
     Spritelab:spritelab
     BubbleChoice:bubble_choice
