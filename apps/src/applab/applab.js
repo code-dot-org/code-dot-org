@@ -22,7 +22,8 @@ import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {
   getProjectDatabase,
   getSharedDatabase,
-  getPathRef
+  getPathRef,
+  unescapeFirebaseKey
 } from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -867,19 +868,16 @@ function setupReduxSubscribers(store) {
   // new tables are added and removed.
   let subscribeToTable = function(tableRef, tableType) {
     tableRef.on('child_added', snapshot => {
-      store.dispatch(
-        addTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
-          tableType
-        )
-      );
+      let tableName =
+        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+      tableName = unescapeFirebaseKey(tableName);
+      store.dispatch(addTableName(tableName, tableType));
     });
     tableRef.on('child_removed', snapshot => {
-      store.dispatch(
-        deleteTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
-        )
-      );
+      let tableName =
+        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+      tableName = unescapeFirebaseKey(tableName);
+      store.dispatch(deleteTableName(tableName));
     });
   };
 
@@ -898,19 +896,16 @@ function setupReduxSubscribers(store) {
     // redux list of current tables and keep it in sync
     let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
     currentTableRef.on('child_added', snapshot => {
-      store.dispatch(
-        addTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
-          tableType.SHARED
-        )
-      );
+      let tableName =
+        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+      tableName = unescapeFirebaseKey(tableName);
+      store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
-      store.dispatch(
-        deleteTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
-        )
-      );
+      let tableName =
+        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+      tableName = unescapeFirebaseKey(tableName);
+      store.dispatch(deleteTableName(tableName));
     });
   }
 }
@@ -1387,7 +1382,13 @@ function onDataViewChange(view, oldTableName, newTableName) {
   switch (view) {
     case DataView.PROPERTIES:
       getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
-        getStore().dispatch(updateKeyValueData(snapshot.val()));
+        if (snapshot) {
+          getStore().dispatch(
+            updateKeyValueData(
+              _.mapKeys(snapshot.val(), (_, key) => unescapeFirebaseKey(key))
+            )
+          );
+        }
       });
       return;
     case DataView.TABLE: {
