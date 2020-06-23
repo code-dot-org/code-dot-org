@@ -107,6 +107,10 @@ function escapeFirebaseKey(key) {
   return key.replace(/\./g, '%2E');
 }
 
+export function unescapeFirebaseKey(key) {
+  return key.replace(/%2E/g, '.');
+}
+
 function getFirebase(environment) {
   let fb =
     environment === SHARED_ENV ? sharedFirebaseCache : projectFirebaseCache;
