@@ -866,10 +866,28 @@ hu-HU:
         150 pixel hosszúságú oldalakkal.
       Standalone_Artist_3: Le tudod rajzolni ezt a hatszöget 100 képpontos oldalakkal
         és 60 fokos fordulatokkal?
+      Standalone_Artist_4: Van egy új blokkod amivel játszadozhatsz - ez a ciklus,
+        ami egy előre meghatározott parancssort fog ismételni. Mi történik, ha ezeket
+        a parancsokat 6-szor megismételteted ?
+      Standalone_Artist_5: Hányszor kell megismételned a gyémántot, hogy a virágot
+        lerajzold?
+      Standalone_Artist_5.5: 'Figyeld meg, mennyire le tudtuk egyszerűsíteni a gyémánt-kódot
+        azáltal, hogy ciklusba szerveztük. Az egész sorozatot 12-szeres ciklusba szervezve
+        rajzolódik ki a virág. Tipp: A gyémánt ciklus után el kell fordulni 30 fokkal
+        azért, hogy ne ugyanarra a gyémántra rajzolj.'
+      Standalone_Artist_6: 'Szervezd 6-szoros ciklusba ezt a hatszög kódot az alakzat
+        elkészítéséhez. Hány fokot kell fordulni minden egyes alkalommal? Tipp: A
+        kör központi szögét oszd el a ciklusok számával.'
+      Standalone_Artist_7: 'A függvény egy újabb programozási eszköz, hogy elkerülhesd
+        ömagad ismétlését. Ez a függvény egy virágot rajzol, tehát bármikor használhatod
+        ha virágot szeretnél rajzolni. Használd együtt az új "ugrás" blokkal a virágok
+        rajzolásához. Tipp: A virágok 150 képpontra vannak egymástól'
       Standalone_Artist_8: Itt van a "Rajzolj egy alakzatot" függvény amit a hatszögek
         rajzolásához programoztunk. Futtasd a kódot, hogy lásd mit csinál, és aztán
         kísérletezz a függvénnyel, hogy lásd mi történik. Meg tudod csinálni hogy
         négyzeteket, háromszögeket vagy nyolcszögeket rajzoljon?
+      Standalone_Artist_9: Most gyerünk, készíts bármilyen képet, amilyet csak szeretnél!
+        Van még egy üres függvényed is ahhoz, hogy azt készíts, amit csak akarsz!
       Underground Avoiding Lava: Láva rejlik bizonyos blokkok alatt, amelyet le kell
         takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd
         az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.

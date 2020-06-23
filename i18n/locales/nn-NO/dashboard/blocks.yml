@@ -1039,6 +1039,8 @@ nn:
             '"West"': Vest
       gamelab_moveToward:
         text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
+      gamelab_objectSpritePointer:
+        text: klikka på {SPRITE}
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:
@@ -1093,6 +1095,8 @@ nn:
           CONDITION:
             '"when"': når
             '"while"': så lenge
+      gamelab_subjectSpritePointer:
+        text: klikka på {SPRITE}
       gamelab_turn:
         options:
           DIRECTION:
