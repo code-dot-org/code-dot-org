@@ -42,6 +42,7 @@ class AnimationPicker extends React.Component {
     getLibraryManifest: PropTypes.func.isRequired,
     categories: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -77,6 +78,7 @@ class AnimationPicker extends React.Component {
         getLibraryManifest={this.props.getLibraryManifest}
         categories={this.props.categories}
         hideUploadOption={this.props.hideUploadOption}
+        hideAnimationNames={this.props.hideAnimationNames}
       />
     );
   }

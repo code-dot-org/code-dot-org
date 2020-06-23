@@ -90,10 +90,8 @@
         var dataName = element.dataset.shortname;
         var id = element.dataset.id;
         if (storedName && !id) {
-          // unescape the storedName to support non-ASCII characters, but make
-          // sure to use textContent rather than innerHTML so the unescape
-          // doesn't create an HTML injection vulnerability.
-          element.textContent = element.textContent.replace(dataName, unescape(storedName));
+          // Use textContent to prevent HTML injection vulnerability
+          element.textContent = element.textContent.replace(dataName, decodeURI(storedName));
         }
       }
     }

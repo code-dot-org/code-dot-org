@@ -6,12 +6,16 @@ import {
   stringifySong,
   MAKER_CATEGORY
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
+import {CP_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {MB_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import * as commands from '@cdo/apps/lib/kits/maker/commands';
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {
     it('unknown first parameter dropdown contains all options', () => {
-      expect(getBoardEventDropdownForParam('unknown')).to.deep.equal([
+      expect(
+        getBoardEventDropdownForParam('unknown', CP_COMPONENT_EVENTS)
+      ).to.deep.equal([
         '"change"',
         '"close"',
         '"data"',
@@ -23,65 +27,75 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('buttonL dropdown', () => {
-      expect(getBoardEventDropdownForParam('buttonL')).to.deep.equal([
-        '"down"',
-        '"up"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('buttonL', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"down"', '"up"']);
     });
 
     it('buttonR dropdown', () => {
-      expect(getBoardEventDropdownForParam('buttonR')).to.deep.equal([
-        '"down"',
-        '"up"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('buttonR', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"down"', '"up"']);
     });
 
     it('toggleSwitch dropdown', () => {
-      expect(getBoardEventDropdownForParam('toggleSwitch')).to.deep.equal([
-        '"change"',
-        '"close"',
-        '"open"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('toggleSwitch', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"close"', '"open"']);
     });
 
     it('accelerometer dropdown', () => {
-      expect(getBoardEventDropdownForParam('accelerometer')).to.deep.equal([
-        '"change"',
-        '"data"',
-        '"shake"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('accelerometer', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"data"', '"shake"']);
     });
 
     it('soundSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('soundSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('soundSensor', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
     it('lightSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('lightSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('lightSensor', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
     it('tempSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('tempSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        getBoardEventDropdownForParam('tempSensor', CP_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
     // TODO (bbuchanan): Enable when captouch is on by default
     describe.skip('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {
-          expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal(
-            ['"down"', '"up"']
-          );
+          expect(
+            getBoardEventDropdownForParam(`touchPad${pin}`, CP_COMPONENT_EVENTS)
+          ).to.deep.equal(['"down"', '"up"']);
         });
       });
+    });
+
+    // micro:bit specific components
+    it('buttonA dropdown', () => {
+      expect(
+        getBoardEventDropdownForParam('buttonA', MB_COMPONENT_EVENTS)
+      ).to.deep.equal(['"down"', '"up"']);
+    });
+
+    it('buttonB dropdown', () => {
+      expect(
+        getBoardEventDropdownForParam('buttonB', MB_COMPONENT_EVENTS)
+      ).to.deep.equal(['"down"', '"up"']);
+    });
+
+    it('compass dropdown', () => {
+      expect(
+        getBoardEventDropdownForParam('compass', MB_COMPONENT_EVENTS)
+      ).to.deep.equal(['"change"', '"data"']);
     });
   });
 

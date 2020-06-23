@@ -4,8 +4,10 @@
   - script_data = { editorvideo: { video_infos: video_infos }.to_json }
   %script{src: webpack_asset_path('js/levels/editors/fields/_video.js'), data: script_data}
 
-.field
-  %h3 Video
+%h1.control-legend{data: {toggle: "collapse", target: "#video_area"}}
+  Video
+
+#video_area.in.collapse
   %p
     Add new videos by going to
     %a{href:"/videos/new"} the add video page

@@ -593,21 +593,27 @@ describe('entry tests', () => {
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_blockly':
-      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_droplet':
-      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_blockly':
+      './src/sites/studio/pages/levels/editors/fields/_blockly.js',
+    'levels/editors/fields/_callouts':
+      './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+    'levels/editors/fields/_droplet':
+      './src/sites/studio/pages/levels/editors/fields/_droplet.js',
+    'levels/editors/fields/_grid':
+      './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_preload_assets':
+      './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+    'levels/editors/fields/_special_level_types':
+      './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
@@ -645,6 +651,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
+    'code.org/views/amazon_future_engineer':
+      './src/sites/code.org/pages/views/amazon_future_engineer.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -709,6 +717,7 @@ describe('entry tests', () => {
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
     'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
   };
 
@@ -748,7 +757,8 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
+    amazonFutureEngineerEligibility:
+      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
   };
 
   // Create a config for each of our bundles
@@ -1131,8 +1141,7 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact',
-        'donorTeacherBanner'
+        'regionalPartnerMiniContact'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
