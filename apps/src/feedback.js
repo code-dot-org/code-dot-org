@@ -55,7 +55,7 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
 import ChallengeDialog from './templates/ChallengeDialog';
 
 const FIREHOSE_STUDY = 'feedback_dialog';
-let firehose_event = 'default';
+let dialog_type = 'default';
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -269,12 +269,12 @@ FeedbackUtils.prototype.displayFeedback = function(
     options.response && options.response.puzzle_ratings_enabled;
 
   if (showingSharing) {
-    firehose_event = 'share';
+    dialog_type = 'share';
     if (idealBlocks !== Infinity) {
-      firehose_event += '_validate';
+      dialog_type += '_validate';
     }
   } else if (idealBlocks !== Infinity) {
-    firehose_event = 'validate';
+    dialog_type = 'validate';
   }
 
   if (getStore().getState().pageConstants.isChallengeLevel) {
@@ -562,7 +562,7 @@ function logDialogActions(event, options, isPerfect) {
   if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
     firehoseClient.putRecord({
       study: FIREHOSE_STUDY,
-      study_group: firehose_event,
+      study_group: dialog_type,
       event: event,
       data_json: JSON.stringify({
         level_type: options.level ? options.level.skin : null,
