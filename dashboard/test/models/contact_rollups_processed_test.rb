@@ -102,6 +102,26 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_professional_learning_enrolled' do
+    contact_data = {
+      'dashboard.pd_enrollments' => {
+        'course' => [
+          {'value' => Pd::Workshop::COURSE_CSF},
+          {'value' => Pd::Workshop::COURSE_CSF},
+          {'value' => Pd::Workshop::COURSE_CSD},
+          {'value' => nil}
+        ]
+      }
+    }
+    # output should not contains nil or duplicate values, and should be sorted
+    expected_output = {
+      professional_learning_enrolled: [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF]
+    }
+
+    output = ContactRollupsProcessed.extract_professional_learning_enrolled(contact_data)
+    assert_equal expected_output, output
+  end
+
   test 'extract_updated_at with valid input' do
     base_time = Time.now.utc - 7.days
     tests = [
