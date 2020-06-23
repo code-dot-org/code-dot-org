@@ -829,7 +829,6 @@ var projects = (module.exports = {
       case 'dance':
       case 'eval':
       case 'flappy':
-      case 'scratch':
       case 'weblab':
       case 'gamelab':
       case 'spritelab':

@@ -205,8 +205,7 @@ StudioApp.prototype.configure = function(options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.scratch = options.level && options.level.scratch;
-  this.usingBlockly_ = !this.editCode && !this.scratch;
+  this.usingBlockly_ = !this.editCode;
 
   if (options.isEditorless) {
     this.editCode = false;
@@ -731,12 +730,6 @@ StudioApp.prototype.handleClearPuzzle = function(config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
-  } else if (this.scratch) {
-    const workspace = Blockly.getMainWorkspace();
-    workspace.clear();
-
-    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
-    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -1497,8 +1490,6 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-  } else if (this.scratch) {
-    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
