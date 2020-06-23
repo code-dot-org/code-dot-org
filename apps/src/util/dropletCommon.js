@@ -12,7 +12,7 @@ import trackEvent from '@cdo/apps/util/trackEvent';
  *                   Usage: errorCallback(lineNumber, errorMessage)
  * @returns {boolean} true if an error was detected. false otherwise.
  */
-export const findDropletParseErrors = (dropletEditor, errorCallback) => {
+const findDropletParseErrors = (dropletEditor, errorCallback) => {
   if (!dropletEditor) {
     return false;
   }
@@ -50,13 +50,14 @@ export const findDropletParseErrors = (dropletEditor, errorCallback) => {
         'CouldNotFindDropletParseErrorLineNumber',
         'DropletError:' + error.message
       );
-      errorCallback(
-        0 /* lineNumber */,
-        i18n.droplet_parsing_error() + ' ' + error.message
-      );
+      errorCallback(0 /* lineNumber */, error.message);
       return true;
     }
   }
 
   return false;
+};
+
+module.exports = {
+  findDropletParseErrors
 };
