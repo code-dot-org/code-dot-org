@@ -234,6 +234,8 @@ class Game < ActiveRecord::Base
 
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
+  # The list contains no longer used level types in order to maintain the order
+  # including: Scratch
   GAMES_BY_INDEX = %w(
     Maze:maze:maze_intro
     Artist:turtle:artist_intro
