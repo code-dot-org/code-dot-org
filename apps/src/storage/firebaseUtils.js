@@ -78,11 +78,14 @@ export function getConfigRef() {
 }
 
 export function getRecordsRef(tableName) {
-  return getProjectDatabase().child(`storage/tables/${tableName}/records`);
+  return getPathRef(
+    getProjectDatabase(),
+    `storage/tables/${tableName}/records`
+  );
 }
 
 export function getProjectCountersRef(tableName) {
-  return getProjectDatabase().child(`counters/tables/${tableName}`);
+  return getPathRef(getProjectDatabase(), `counters/tables/${tableName}`);
 }
 
 export function getSharedDatabase() {
@@ -94,6 +97,14 @@ export function getProjectDatabase() {
     config.firebaseChannelIdSuffix
   }`;
   return getFirebase(config.firebaseName).child(path);
+}
+
+export function getPathRef(dbRef, path) {
+  return dbRef.child(escapeFirebaseKey(path));
+}
+
+function escapeFirebaseKey(key) {
+  return key.replace(/\./g, '%2E');
 }
 
 function getFirebase(environment) {
@@ -137,7 +148,7 @@ export function isInitialized() {
 }
 
 // The following characters are illegal in firebase paths: .#$[]/
-const ILLEGAL_CHARACTERS_REGEX = /[\.\$#\[\]\/]/g;
+const ILLEGAL_CHARACTERS_REGEX = /[\$#\[\]\/]/g;
 
 /**
  * Replaces illegal characters in the firebase key with dashes.
@@ -150,7 +161,7 @@ export function fixFirebaseKey(key) {
 
 /**
  * Firebase keys must be UTF-8 encoded, can be a maximum of 768 bytes, and cannot contain
- * ., $, #, [, ], /, or ASCII control characters 0-31 or 127.
+ * $, #, [, ], /, or ASCII control characters 0-31 or 127.
  * @param {string} key
  * @throws with a helpful message if the key is invalid.
  */
@@ -165,7 +176,7 @@ export function validateFirebaseKey(key) {
     if (ILLEGAL_CHARACTERS_REGEX.test(key.charAt(i))) {
       throw new Error(
         `The name "${key}" contains an illegal character "${key.charAt(i)}".` +
-          ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.'
+          ' The characters "$", "#", "[", "]", and "/" are not allowed.'
       );
     }
     if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {
