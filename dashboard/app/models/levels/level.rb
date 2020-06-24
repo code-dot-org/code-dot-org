@@ -126,7 +126,7 @@ class Level < ActiveRecord::Base
       end
 
       unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+        raise ActiveRecord::RecordNotFound, "Level: #{raw_level.to_json}, Script: #{script.name}"
       end
 
       script_level_levels << level

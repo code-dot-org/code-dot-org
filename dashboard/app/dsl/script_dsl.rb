@@ -273,7 +273,9 @@ class ScriptDSL < BaseDSL
     i18n_stage_strings = {}
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
-      i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+      unless lesson_group[:key].nil?
+        i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+      end
       lesson_group[:lessons].each do |lesson|
         i18n_stage_strings[lesson[:name]] = {'name' => lesson[:name]}
       end
