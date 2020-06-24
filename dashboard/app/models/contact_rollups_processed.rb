@@ -160,8 +160,9 @@ class ContactRollupsProcessed < ApplicationRecord
 
   def self.extract_professional_learning_enrolled(contact_data)
     values = extract_field(contact_data, 'dashboard.pd_enrollments', 'course')
-    # We only care about unique and non-nil values.
-    # The result is sorted to keep consistent order.
+    # We only care about unique and non-nil values. The result is sorted to keep consistent order.
+    # Assuming that all course values are valid, so we don't have to do string cleaning.
+    # @see Pd::SharedWorkshopConstants::COURSES for the list of courses.
     uniq_values = values&.uniq&.compact&.sort
     return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
   end
