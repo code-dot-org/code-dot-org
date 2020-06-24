@@ -205,29 +205,29 @@ The animation has been skipped.
   end
 
   def upload_localized_manifest(locale, strings)
-    return unless @options[:spritelab]
+    return unless @options[:spritelab] && @options[:upload_to_s3]
 
     @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    @animation_objects ||= get_animation_objects(bucket)
+    @animation_objects ||= get_animation_objects(@bucket)
 
-    animation_metadata = build_animation_metadata(animation_objects, False)
+    puts strings
+    animation_metadata = build_animation_metadata(@animation_objects, {})
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)
+      puts metadata['aliases'] if metadata['aliases']
     end
     alias_map = build_alias_map(animation_metadata)
 
-    if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading file to S3"
-      AWS::S3.upload_to_bucket(
-        DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.#{locale}.json",
-        generate_json(animation_metadata, alias_map),
-        acl: 'public-read',
-        no_random: true,
-        content_type: 'json'
-      )
-    end
+    info "Uploading file to S3"
+    AWS::S3.upload_to_bucket(
+      DEFAULT_S3_BUCKET,
+      "manifests/spritelabCostumeLibrary.#{locale}.json",
+      generate_json(animation_metadata, alias_map),
+      acl: 'public-read',
+      no_random: true,
+      content_type: 'json'
+    )
   end
 
   # Given an S3 bucket, return map of animation file objects:
