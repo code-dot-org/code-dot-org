@@ -31919,3 +31919,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        dani-june-2020-test:
+          stages: &2 {}
+          lessons: *2
+          lesson_groups: {}
