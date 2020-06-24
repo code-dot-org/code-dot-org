@@ -139,7 +139,6 @@ export const commands = {
     synthesizer.speakSsmlAsync(
       ssml,
       result => {
-        console.log(result);
         let forceHTML5 = false;
         if (window.location.protocol === 'file:') {
           // There is no way to make ajax requests from html on the filesystem.  So
