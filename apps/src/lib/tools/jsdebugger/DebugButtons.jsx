@@ -125,6 +125,7 @@ export default connect(
               className="debugger_button"
               onClick={this.stepOver}
               disabled={!isPaused || !isAttached || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"
@@ -139,6 +140,7 @@ export default connect(
               className="debugger_button"
               onClick={this.stepOut}
               disabled={!isPaused || !isAttached || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"
@@ -155,6 +157,7 @@ export default connect(
               className="debugger_button"
               onClick={this.stepIn}
               disabled={(!isPaused && isAttached) || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"
