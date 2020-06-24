@@ -42,7 +42,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 
 ## Mobile Support Details
-Our Hour of Code tutorials (with the exception of Intro to App Lab) and CS Fundamentals courses can be used on mobile devices, but are not optimized for a mobile experience and have some known limitations. Specifically, touch targets may be too small, accessory elements may display offscreen, and text will be difficult to input using the on-screen keyboard. CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile devices.
+Our Hour of Code activities and CS Fundamentals courses can be used on mobile devices. While these activities should be usable, they are not optimized for a mobile experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). Note: the CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile devices.
 
 ## Videos
 
