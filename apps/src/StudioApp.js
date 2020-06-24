@@ -3087,14 +3087,13 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   parent.append(container);
   ReactDOM.render(
     <WorkspaceAlert
-      left={$('.droplet-palette-element').width()}
+      type={type}
       onClose={() => {
         ReactDOM.unmountComponentAtNode(container[0]);
       }}
-      isOpen={this.isOpen}
-      // isBlockly
-      // isCraft
-      // displayBottom
+      isBlockly={this.usingBlockly_}
+      isCraft={this.config.app === 'craft'}
+      displayBottom={bottom}
     >
       {alertContents}
     </WorkspaceAlert>,
@@ -3102,35 +3101,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   );
 
   return container[0];
-
-  // TODO: Clean displayAlert to remove sections that are specific to displayWorkspaceAlert
-  // TODO: Double check that the various uses of DisplayWorkspaceAlert still work
-
-  /*
-  var toolbarWidth;
-  if (this.usingBlockly_ && this.config.app === 'craft') {
-    // craft has a slightly different way of constructing the toolbox so we need to use
-    // the toolbox header's width to get the width of the actual toolbox.
-    toolbarWidth = $('#toolbox-header').width();
-  } else if (this.usingBlockly_) {
-    toolbarWidth = $('.blocklyToolboxDiv').width();
-  } else {
-    toolbarWidth =
-      $('.droplet-palette-element').width() + $('.droplet-gutter').width();
-  }
-  return this.displayAlert(
-    bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace',
-    {
-      type: type,
-      sideMargin: bottom ? 0 : undefined,
-      bottomMargin: bottom ? 0 : undefined,
-      top: bottom ? undefined : $('#headers').height(),
-      bottom: bottom,
-      left: toolbarWidth
-    },
-    alertContents
-  );
-*/
 };
 
 /**
@@ -3189,16 +3159,12 @@ StudioApp.prototype.displayAlert = function(
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
       position: position,
-      left: props.left ? props.left : 0,
+      left: 0,
       right: 0,
+      top: 0,
       zIndex: 1000,
       transform: 'scale(1.0)'
     });
-    if (props.bottom) {
-      container[0].style.bottom = 0;
-    } else {
-      container[0].style.top = props.top ? `${props.top}px` : 0;
-    }
     parent.append(container);
   }
   var renderElement = container[0];
@@ -3211,7 +3177,6 @@ StudioApp.prototype.displayAlert = function(
       onClose={handleAlertClose}
       type={props.type}
       sideMargin={props.sideMargin}
-      bottomMargin={props.bottomMargin}
       closeDelayMillis={props.closeDelayMillis}
       childPadding={props.childPadding}
     >
