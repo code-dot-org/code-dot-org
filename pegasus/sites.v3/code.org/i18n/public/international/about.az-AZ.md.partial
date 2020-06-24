@@ -7,7 +7,7 @@ video_player: true
 # Haqqımızda
 
 <div class="col-60">
-  Code.org® məktəblərdə kompüter elminə müraciətin genişləndirilməsinə, qadın və azlıqların qoşulmasını artırmağa həsr edilmiş qeyri-kommersiya təşkilatıdır. İstəyimiz, hər bir məktəbdəki hər bir şagirdin biologiya, kimya və ya cəbr öyrəndiyi kimi kompüter elmini öyrənmə imkanına da sahib olmasıdır. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org Amazon, Facebook, Google, Infosys Foundation, Microsoft və <a href="/about/donors">digərləri</a> daxil olmaqla bir çox səxavətli ianəçilər tərəfindən dəstəklənir.
+  Code.org® məktəblərdə informatikanın daha əlçatan olmağına, qadınlar və az təmsil olunan qrupların iştirakını artırmağa həsr edilmiş qeyri-kommersiya təşkilatıdır. Hədəfimiz hər bir məktəbdəki hər bir şagirdin biologiya, kimya və ya cəbr öyrəndiyi kimi informatikanı da öyrənmək imkanına malik olmasıdır. İbridai və orta məktəb səviyyəsində kompüter elminin tədrisi üçün ən geniş istifadə olunan tədris proqramını təqdim edirik və həmçinin hər il dünyadakı bütün şagirdlərin 10%-ni əhatə edən <a href="https://hourofcode.com">Kod Saatı</a> kampaniyasını təşkil edirik. Code.org Amazon, Facebook, Google, Infosys Foundation, Microsoft və <a href="/about/donors">digərləri</a> daxil olmaqla bir çox səxavətli ianəçilər tərəfindən dəstəklənir.
 </div>
 
 [col-40]
@@ -27,11 +27,11 @@ video_player: true
 Code.org 2013-cü ildə Hadi və Ali Partovi əkiz qardaşları tərəfindən [kompüter elmlərini tanıdan bir video](https://www.youtube.com/watch?v=nKIu9yen5nc) ilə başladıldı. Bu video bir günlük YouTube-da 1. yerdə oldu və 15,000 məktəb kömək üçün bizə müraciət etdi. O vaxtdan bəri, dünya miqyaslı bir hərəkatı dəstəkləyən tam bir təşkilat qurmaq üçün könüllülər heyətindən genişləndik. Keyfiyyətli kompüter elmləri təhsilinin uşaqların sadəcə bir qismi üçün deyil hamısı üçün mümkün olduğuna inanırıq.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## Biz Nə Edirik
+## Biz nə edirik
 
 Təhsil spektorunda işləyirik: [öz kurslarımızı](https://studio.code.org/courses) dizayn etmək və ya başqaları ilə əməkdaşlıq etmək, müəllimlərə təlim keçmək, böyük rayon məktəbləri ilə əməkdaşlıq etmək, hökümət siyasətlərinin dəyişdirilməsinə kömək etmək, tərəfdaşlıq yolu ilə beynəlxalq səviyyədə genişləndirir və stereotipləri qırmaq üçün marketinqlik edir. İşlərimiz, kompüter elmi təhsilinin yaradılması, maliyyələşdirilməsi və yayılmasına kömək edən saysız-hesabsız təşkilat və şəxslər tərəfindən onillik səylər əsasında qurulmuşdur. Daha geniş kompüter elmi təhsili cəmiyyətinin yorulmaz işi üçün minnətdarıq və illər ərzində təsirimizi artıran tərəfdaşlara və şəxlərə təşəkkürümüzü bildiririk.
 
-## Code.org Beynəlxalq Səviyyədə
+## Code.org beynəlxalq səviyyədə
 
 Veb saytımızın trafikinin 40%-dən çoxu Birləşmiş Ştatlar xaricindən gəlir və bu rəqəm artmağa davam edir. Kompüter elminə qlobal müraciəti genişləndirmək üçün komandamız, [100-dən çox beynəlxalq tərəfdaş](/about/partners) ilə sıx əməkdaşlıq edərək, onlara Kod Saatı-nı böyütməyə, siyasi dəyişikliklərini müdafiə etməyə və müəllimləri öyrətməyə kömək edir. Dünyanın hər yerində təhsil nazirlikləri ilə tərəfdaşlıq edərək və İqtisadi Əməkdaşlıq və İnkişaf Təşkilatı, Birləşmiş Millət Təhsil, Elm və Mədəniyyət Təşkilatı kimi beynəlxalq quruluşlarla işləyərək kompüter elmini beynəlxalq təhsil mühazirəsinin bir hissəsinə çeviririk.
 
@@ -49,6 +49,6 @@ Yaratdığımız bütün tədris proqramı mənbələri və məşğələləri [C
 
 ## Bizi izləyin
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+Məktəblərdə (K-12) informatika hərəkatındakı irəliləyişlər və "Code.org"un işi ilə bağlı [status yeniləmələri almaq üçün qeydiyyatdan keçin](/about/hear-from-us). Ya da "Code.org"u sosial mediada izləyin:
 
 {{ social_media_codeorg }}

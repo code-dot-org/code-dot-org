@@ -1087,6 +1087,8 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_objectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_playSound:
         text: פלייסאונד {SOUND}
       gamelab_pointInDirection:
@@ -1164,6 +1166,8 @@ he:
           CONDITION:
             '"when"': כאשר
             '"while"': כאשר
+      gamelab_subjectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_turn:
         text: הפוך {SPRITE} {DIRECTION} {N} מעלות
         options:
