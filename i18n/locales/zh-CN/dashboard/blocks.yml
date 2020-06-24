@@ -1097,6 +1097,8 @@ zh-CN:
             '"West"': 西
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
+      gamelab_objectSpritePointer:
+        text: 点击 {SPRITE}
       gamelab_playSound:
         text: 播放音效{SOUND}
       gamelab_pointInDirection:
@@ -1176,6 +1178,8 @@ zh-CN:
           CONDITION:
             '"when"': 当
             '"while"': 当
+      gamelab_subjectSpritePointer:
+        text: 点击 {SPRITE}
       gamelab_turn:
         text: "{SPRITE} 转 {DIRECTION} {N} 度"
         options:

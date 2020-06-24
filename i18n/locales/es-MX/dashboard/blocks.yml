@@ -1092,7 +1092,7 @@ es-MX:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_objectSpritePointer:
-        text: objeto {SPRITE}
+        text: clic en sprite
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:
@@ -1172,6 +1172,8 @@ es-MX:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_subjectSpritePointer:
+        text: clic en sprite
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:

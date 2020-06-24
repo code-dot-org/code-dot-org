@@ -698,6 +698,19 @@ it-IT:
         content1: Descrizione qui
       CSD U2 L1 Overview:
         content1: Descrizione qui
+        markdown: |
+          # Panoramica
+
+          Questa lezione illustra gli utilizzi che un sito web potrebbe avere, sia dal punto di vista degli utenti che dei creatori. Il corso esplora una manciata dei siti web più utilizzati negli Stati Uniti e spiega come questi siti sono utili agli utenti ed anche come possono servire ai loro creatori.
+          ## Vocabolario
+
+          * **Sito Web** - Un sito connesso ad internet che ospita una o più pagine nel World Wide Web (Internet).
+
+          ## Risorce
+
+          * [Lo scopo dei siti web - Scheda attività](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Lo scopo dei siti web - Esempi](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: Descrizione qui
         markdown: |
@@ -1691,6 +1704,37 @@ it-IT:
           ## Durata del corso
 
           Per completare questo corso online sono necessarie 3 - 7 ore, a seconda delle tue precedenti conoscenze e da quanto intendi approfondire le risorse messe a disposizione in Code.org.
+      OPD-K5 About_copy:
+        markdown: "# Benvenuti a \"Insegnare le basi dell'informatica\"\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n## A cosa serve questo corso online? \nQuesto
+          corso online vuole essere un'introduzione al curriculum e alle risorse informatiche
+          di Code.org sui fondamenti dell'informatica per gli insegnanti. Attraverso
+          la lettura, la visualizzazione di video, il completamento di enigmi interattivi
+          e la riflessione sul tuo apprendimento, svilupperai le tue abilità su come
+          insegnare Fondamenti di informatica in classe.\n\n## A chi è diretto questo
+          corso online?\nQuesto corso online è progettato per **insegnanti delle scuole
+          elementari interessati a insegnare ai loro studenti i fondamenti dell'informatica**.
+          Questo può variare da insegnanti di classe, a insegnanti di discipline scientifico-tecnologiche,
+          bibliotecari e tutti gli altri.\n\nSe sei un insegnante di <a href=\"https://code.org/educate/csd\"
+          target=\"blank\">scuola media</a> o <a href=\"https://code.org/educate/csp\"
+          target=\"blank\">superiore</a> interessato a insegnare i nostri corsi di
+          scuola media o superiore, ti consigliamo di approfondire <a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\">le continue opportunità di sviluppo professionale</a>.\n\n##
+          Imparerò l'informatica attraverso questo corso online?\nIl corso offre opportunità
+          per apprendere e mettere in pratica concetti di programmazione di base e
+          vedere come vengono presentati agli studenti nel curriculum, ma non è da
+          intendersi come un'introduzione completa all'informatica per adulti. Alla
+          fine del corso, forniremo altre risorse che possono aiutarti ad approfondire
+          i concetti di informatica.\n\n## È necessario avere qualche esperienza per
+          seguire questo corso online?\nNon è prevista alcuna esperienza precedente
+          con la programmazione o l'educazione informatica. \n\n## Quanto dura questo
+          corso online? \nIl completamento di questo corso online dovrebbe richiedere
+          tra le 4-6 ore.\n\n## Posso cambiare la dimensione del carattere del testo
+          in questo corso?\nSappiamo che il testo su questa piattaforma può apparire
+          piccolo! \n\nPer aumentare le dimensioni del carattere:\n- Su Mac, clicca
+          \"Comando\" e \"+\"\n- Su Windows, clicca \"Control\" e \"+\"\n\nPer ridurre
+          le dimensioni: \n- Su Mac, clicca \"Comando\" e \"-\" \n- Su Windows, clicca
+          \"Control\" e \"-\""
       OPD-K5 Assessment:
         markdown: |
           # Gestione della classe > Altre risorse disponibili
@@ -1703,7 +1747,7 @@ it-IT:
 
           - **Descrizione di tutte le lezioni in italiano** - Sul sito di Programma il Futuro trovi la [descrizione di tutte le lezioni dei corsi A-F](https://programmailfuturo.it/come/primaria) corredate dai videotutorial in cui vengono eseguiti uno ad uno tutti gli esercizi. Ove disponibili, vi sono anche i video introduttivi doppiati in italiano.
 
-          - **Supporto in italiano** -  Puoi trovare un utile supporto all'apprendimento sul [forum italiano di Programma il Futuro](https://programmailfuturo.it/aiuto/forum-di-aiuto). Durante il corso, potrai usare il forum per condividere in maniera asincrona i tuoi pensieri, esperienze e domande con gli altri insegnanti impegnati su questi contenuti. Se ti blocchi e non riesci ad andare avanti durante il corso, chiedi aiuto al [servizio di supporto di Programma il Futuro](https://programmailfuturo.it/aiuto/invia-comunicazione?argomento=21).
+          - **Supporto in italiano** -  Puoi trovare un utile supporto all'apprendimento sul [forum italiano di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento). Durante il corso, potrai usare il forum per condividere in maniera asincrona i tuoi pensieri, esperienze e domande con gli altri insegnanti impegnati su questi contenuti. Se ti blocchi e non riesci ad andare avanti durante il corso, chiedi aiuto al [servizio di supporto di Programma il Futuro](https://programmailfuturo.it/aiuto/invia-comunicazione?argomento=21).
 
           - **Aiuto e comunità (in inglese)** - Accedendo a [support.code.org](https://support.code.org/) puoi porre domande, rispondere a domande di altri insegnanti e leggere le domande frequenti (FAQ) fornite dal team di Code.org. In questa pagina puoi contattare direttamente il team di Code.org per qualsiasi informazione.
 
@@ -1814,6 +1858,30 @@ it-IT:
 
 
           > Questo è tutto! Potrai tornare a questo esercizio ogni volta che avrai bisogno di ripassare come funziona la piattaforma di apprendimento.
+      OPD-K5 CS Tips_copy:
+        markdown: |-
+          # Navigazione in questo corso online
+
+          Una volta completato questo corso, familiarizzerai con tutto ciò che Fondamenti di Informatica ha da offrire.
+
+          Se riscontri dei problemi, le informazioni di seguito ti aiuteranno a navigare e utilizzare questo spazio per l'apprendimento professionale mentre completi questo corso online. Torna liberamente a questo livello in qualsiasi momento!
+
+          ---
+
+          ## Nodi concettuali
+          La pagina principale di questo corso online è illustrata di seguito. Questa pagina è suddivisa in quattro **nodi concettuali**. Ciò rispecchia il modo in cui sono organizzati i corsi di Fondamenti di Informatica.
+
+          ![](https://images.code.org/5227343bf74975b4678e42b50fdcd085-image-1573235429162.50.02 AM.png)
+          ## Lezioni
+          Ogni sezione è composta da ** lezioni **, che rappresentano argomenti e idee diversi.
+
+          ## Livelli (bolle)
+          Ogni fase è composta da livelli, che sembrano bolle. **I diamanti** rappresentano livelli come questo, che contengono singoli video, letture o domande. Alcuni ** cerchi ** sono puzzle online che completerai per esercitarti con i concetti di programmazione. Altri **cerchi** sono domande a risposta libera, per le quali invierai una risposta e la rivedrai in seguito. I colori della bolla cambieranno in base ai tuoi progressi. In questo corso di formazione professionale online vedrai i seguenti tipi di bolle:
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
       OPD-K5 Celebrate:
         markdown: |-
           # I prossimi passi > Festeggiamo!
@@ -1854,7 +1922,7 @@ it-IT:
           ad imparare in maniera informale dalle esperienze altrui o semplicemente
           per trovare supporto ed un gruppo di colleghi ai quali riferirti.<br/><br/>\n\n-
           **Continua a partecipare alla comunità degli insegnanti di Programma il
-          Futuro** -  Potrai usare il [forum italiano di Programma il Futuro](https://programmailfuturo.it/aiuto/forum-di-aiuto)
+          Futuro** -  Potrai usare il [forum italiano di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento)
           per condividere le tue strategie, porre quesiti, commentare le idee degli
           altri insegnanti e mettere la tua esperienza al servizio di chi ha bisogno
           di aiuto.<br/><br/>\n\nInoltre, se parli inglese...<br/><br/>\n\n> **Continue
@@ -2004,6 +2072,78 @@ it-IT:
           - condividere la tua esperienza ed il tuo parere su questo corso.
 
           > **Nota** Le tempistiche indicate servono per aiutarti a pianificare la fruizione del corso, ma nota che puoi impiegare più o meno tempo per ogni lezione, in funzione delle tue conoscenze pregresse, dei tuoi interessi e delle tue capacità. Ricorda che questo corso è autogestito, puoi quindi interrompere, riprendere o ripetere qualunque lezione o livello in qualsiasi momento.
+      OPD-K5 Outline_copy:
+        markdown: "# Struttura del corso\n\nIl corso è diviso in quattro blocchi concettuali,
+          ognuno dei quali ha delle lezioni. Le lezioni sono strutturate su diversi
+          \"livelli\", che sono colloquialmente definiti bolle, fasi o puzzle da studenti
+          e insegnanti. Ecco una panoramica di ciò che imparerai completando l'intero
+          corso:\n\n## Iniziare\n\n### Lezione 1: Benvenuti a \"Insegnare le fondamenti
+          dell'informatica\" (15 minuti)\n- Rivedi i dettagli del corso\n- Comprendere
+          cos'è l'informatica e distinguere tra \"programmazione\" e informatica \"\n-
+          Identificare i vantaggi dell'insegnamento e dell'apprendimento dell'informatica\n-
+          Pianifica la partecipazione a questo corso\n\n### Lezione 2: Conoscere i
+          corsi di Fondamenti di Informatica (15-20 minuti)\n- Acquisire familiarità
+          con il contenuto e l'organizzazione dei corsi di Fondamenti d'Informatica\n-
+          Identificare quale corso è più appropriato per i propri studenti\n- Comprendere
+          l'importanza dell'insegnante nel curriculum di Fondamenti di informatica\n-
+          Comprendere i diversi tipi di lezioni sui Fondamenti di Informatica\n\n##
+          Concetti di base sulla programmazione e pratiche di insegnamento\n\n###
+          Lezione 3: Sequenziamento (15-45 minuti)\n- Definire il programma\" e \"l'algoritmo\"\n-
+          Identificare dove viene introdotto il sequenziamento nei corsi di Fondamenti
+          di Informatica\n- Utilizzare il motore di programmazione visiva Code.org
+          per scrivere programmi semplici\n- Esplorare una lezione scollegata sul
+          sequenziamento e riflettere sull'applicazione in classe\n- Pensa a come
+          utilizzare i piani di lezione\n\n### Lezione 4: I loop (15-45 minutes)\n-
+          Definire i \"loop\" e spiegarne l'importanza\n- Identificare dove vengono
+          introdotti i loop nei corsi di fondamenti di Informatica\n- Esplora una
+          lezione scollegata sui loop e rifletti sull'applicazione in classe\n- Esercitati
+          a programmare loop semplici\n- Comprendere i vantaggi della programmazione
+          in coppia\n\n### Lezione 5: Eventi (15-45 minuti)\n- Definire gli \"eventi\"
+          e spiegarne la loro importanza\n- Identifica dove vengono introdotti gli
+          eventi nei corsi di Fondamenti di Informatica\n- Esplora una lezione scollegata
+          sugli eventi e riflettere sull'applicazione in classe\n- Esercitati a programmare
+          eventi semplici\n- Comprendere il processo di debug\n\n### Lezione 6: Istruzioni
+          Condizionali (15-45 minuti)\n- Definire le \"Istruzioni Condizionali\" e
+          spiegarne l'importanza\n- Identifica dove vengono introdotte le Istruzioni
+          Condizionali nei corsi di Fondamenti di Informatica\n- Esplora una lezione
+          scollegata sui condizionali e riflettere sull'applicazione in classe\n-
+          Esercitati a programmare Istruzioni Condizionali semplici\n- Comprendere
+          la pratica di insegnamento del journaling\n\n### Lezione 7: Progetti di
+          fine corso (15-45 minuti)\n- Comprendere i vantaggi dei progetti di fine
+          corso\n- Identifica dove vengono introdotti i progetti di fine corso nei
+          corsi di Fondamenti di Informatica\n- Esercitati a programmare un progetto\n\n##
+          [Optional] Approfondimento: Corsi E ed F \nTi consigliamo di completare
+          questa sezione se stai insegnando Corsi E o F. Questa sezione approfondisce
+          alcuni dei concetti più difficili trattati in questi corsi per studenti
+          più grandi.\n\n### Lezione 8: Funzioni (30-45 minuti)\n- Identificare se
+          insegnerai ai corsi E o F agli studenti\n- Definire le \"funzioni\" e spiegarne
+          l'importanza\n- Identifica dove vengono introdotte le funzioni nei corsi
+          di Fondamenti d'Informatica\n- Esplora la lezione non collegata sulle funzioni
+          e rifletti sull'applicazione in classe\n- Esercitati a programmare semplici
+          funzioni\n\n### Lezione 9: Variabili (30-45 minuti)\n- Definire una \"variabile\"
+          e spiegarne l'importanza\n- Identifica dove vengono introdotte le variabili
+          nei corsi di Fondamenti di Informatica\n- Esplora la lezione non collegata
+          sulle variabili e rifletti sull'applicazione in classe\n- Esercitati nella
+          codifica con variabili\n\n### Lezione 10: Per Loop (30-45 minuti)\n- Definire
+          \"per loop\" e spiegarne l'importanza\n- Identifica dove vengono introdotti
+          i loop nei corsi di base di Informatica\n- Esplora la lezione scollegata
+          per i loop e rifletti sull'applicazione in classe\n- Esercitati a programmare
+          con i loop\n\n### Lezione 11: Laboratorio Sprite (15-45 minuti)\n- Definire
+          \"sprite\" e \"comportamento\"\n- Identificare dove vengono introdotti sprite
+          e comportamenti nei corsi di Informatica di base\n- Esplora l'ambiente di
+          programmazione del Laboratorio Sprite\n\n## Passaggi successivi\n\n### Lezione
+          12: Rivedi le tue riflessioni (15 minuti)\n- Rivedi le riflessioni che hai
+          fatto finora durante il corso\n\n### Lezione 13: Passaggi successivi (15
+          minuti)\n- Esplora le risorse dell'insegnante\n- Pianifica i prossimi passi
+          che puoi intraprendere per continuare il tuo apprendimento\n- Entra in contatto
+          con una comunità globale di colleghi educatori interessati all'insegnamento
+          dell'informatica\n- Condividi le tue conclusioni e commenti su questo corso\n\n>
+          **Nota**: I tempi suggeriti sono forniti sopra per aiutarti a pianificare
+          il tuo apprendimento.Tieni presente che potresti voler trascorrere più o
+          meno tempo in una determinata fase, a seconda delle tue conoscenze, interessi
+          e capacità precedenti. Tieni presente che questo corso è del tutto autonomo;
+          puoi sempre lasciare il corso e tornare o rivisitare qualsiasi stadio o
+          livello in qualsiasi momento. \n"
       OPD-K5 Pair:
         markdown: "# Linee guida > Programmazione in coppia\n\nUn'importante metodologia
           che molti insegnanti utilizzano per la gestione della classe consiste nella
@@ -2027,6 +2167,29 @@ it-IT:
           scoprire come proporre la programmazione in coppia ai tuoi studenti. \n\n[![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16
           PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)\n\n[Non riesci a vedere
           il video? Clicca qui](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)\n<br/>"
+      OPD-K5 Pair_copy:
+        markdown: "# Pratica di insegnamento: programmazione in coppia\n\nUn'importante
+          strategia di gestione della classe, usata da molti educatori, è il raggruppamento
+          strategico. A Code.org, suggeriamo di provare la strategia di raggruppamento
+          strategico utilizzata negli uffici del mondo reale delle principali aziende
+          tecnologiche: la programmazione in coppia.\n\n> **La programmazione in coppia**
+          si realizza quando due studenti usano un computer per scrivere insieme un
+          programma. \n\nLa ricerca dimostra che programmare in coppia:\n\n- Genera
+          programmi per studenti di qualità superiore rispetto ai programmi per studenti
+          non accoppiati\n- Riduce la cosiddetta \"mancanza di fiducia\" tra studenti
+          di sesso femminile e maschile, aumentando al contempo la sicurezza di programmazione
+          di tutti gli studenti\n\nIl National Center for Women & Information Technology
+          (NCWIT) dispone di<a href=\"http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf\"
+          target=\"blank\">molte risorse sui vantaggi della programmazione in coppia</a>.
+          \n\nGuarda questo video per capire come funziona la programmazione in coppia
+          e ascolta direttamente dagli studenti come migliora il loro apprendimento.\n\n<a
+          href=\"https://www.youtube.com/watch?v=vgkahOzFH2Q\" target=\"blank\">![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13
+          PM.png)</a>\n\n[Non riesci a vedere il video? Clicca qui](http://videos.code.org/2014/C1-pair-programming.mp4)\n<br/><br/>\nLa
+          programmazione in coppia oltre ad essere vantaggiosa per gli studenti viene
+          praticata da alcuni programmatori di computer professionisti. Guarda questo
+          video per scoprire come introdurre la programmazione in coppia per i tuoi
+          studenti.\n\n<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"blank\">![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16
+          PM.png)</a>\n\n[Non riesci a vedere il video? Clicca qui](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)\n<br/>"
       OPD-K5 Participation:
         markdown: "# Per cominciare > Organizza la tua partecipazione al corso \n\nPrima
           di iniziare, prenditi qualche minuto per analizzare le tue necessità di
@@ -2039,7 +2202,7 @@ it-IT:
           se impieghi più o meno tempo rispetto a quanto indicato! L'obiettivo principale
           è che tu possa divertirti, imparare i concetti fondamentali e applicare
           poi in classe quanto imparato nella maniera che più ti si addice.\n\n##
-          Connettiti\n\nPuoi trovare un utile supporto all'apprendimento sul <a href=\"https://programmailfuturo.it/aiuto/forum-di-aiuto\"
+          Connettiti\n\nPuoi trovare un utile supporto all'apprendimento sul <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\"
           target=\"_new\">forum italiano di Programma il Futuro</a>. Durante il corso,
           potrai usare il forum per condividere in maniera asincrona i tuoi pensieri,
           esperienze e domande con gli altri insegnanti impegnati su questi contenuti.
@@ -2063,6 +2226,31 @@ it-IT:
           è il tuo piano?\n\nOra prenditi del tempo per pianificare la fruizione di
           questo corso online, al fine di ottenere il massimo beneficio da questa
           esperienza. Dopo aver preparato il tuo piano puoi tuffarti nella prima lezione!"
+      OPD-K5 Participation_copy:
+        markdown: |-
+          # Pianificare la tua partecipazione
+
+          Prima di iniziare, prenditi un momento per valutare le tue esigenze di apprendimento, gli obiettivi e l'esperienza unica di apprendimento in un ambiente online e auto-stimolante, specialmente se questo è il tuo primo corso online!
+
+          ## Partecipa al sondaggio preliminare
+          Desideriamo che tu tragga il più possibile da questa formazione professionale.Per questo motivo, ti chiediamo di compilare<a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">questo breve sondaggio preliminare</a>. Il sondaggio ti chiederà di riflettere sui tuoi obiettivi per questo corso e ci dirà qualcosa su di te e su come possiamo supportarti.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">Partecipa al sondaggio preliminare</a>
+
+
+          ## Segui il tuo ritmo
+
+          Questo corso online autonomo è progettato per metterti al posto di guida e darti il controllo del tuo apprendimento. **Prenditi il tuo tempo e lavora attraverso il corso seguendo il tuo ritmo. I tempi consigliati sono indicati per ogni fase.** I tempi consigliati sono indicati per ogni fase.** Se ti ritrovi a passare più o meno tempo su una fase specifica, non preoccuparti! Il nostro obiettivo principale è farti divertire, apprendere le nozioni di base e applicare ciò che impari nella pratica della tua classe in qualunque modo funzioni meglio per te.
+
+          ## Trova supporto quando ne hai bisogno
+
+          Se, durante il corso, rimani bloccato in qualsiasi momento, vai a <a href="http://support.code.org" target="blank">support.code.org</a> e dai un'occhiata a <a href="https://forum.code.org/" target="blank">i nostri forum della community</a>. Probabilmente lì troverai la risposta alla tua domanda. Se non la trovi o sei ancora bloccato, puoi inviare un'e-mail <a href="mailto:support@code.org" target="blank">support@code.org</a> e un membro dello staff di Code.org ti risponderà al più presto.
+
+          Un altro modo per ottenere supporto, che consigliamo vivamente, è di lavorare attraverso questo corso online con un partner o un gruppo di colleghi!
+
+          ## Trova l'esperienza di apprendimento che funziona per te
+
+          Infine, l'apprendimento online non è per tutti. Questo corso non ha un istruttore o un meccanismo incorporato per comunicare in tempo reale con i tuoi colleghi. Se ti accorgi che hai bisogno di più attenzione individuale o sai di imparare meglio in un'aula del mondo reale in cui vi sono più opportunità di collaborazione e coinvolgimento, ti consigliamo di seguire una delle nostre <a href="http://code.org/professional-development-workshops" target="blank">opportunità di formazione professionale in presenza</a>.
       OPD-K5 PostSurvey:
         markdown: |-
           # Prima di terminare - Sondaggio finale
@@ -2170,6 +2358,28 @@ it-IT:
           > **Suggerimento didattico** - Sebbene l'informatica sia una materia ricca a complessa, in Code.org riteniamo che gli insegnanti e gli alunni abbiano bisogno di padroneggiare i concetti fondamentali, prima di tuffarsi in progetti di più alto livello. Questo corso insegna a te, l'insegnante, questi concetti fondamentali, in modo che tu possa poi supportare i tuoi alunni a fare altrettanto.
 
           Nella prossima lezione metteremo le basi per prepararti ai diversi ambienti e concetti presentati nel resto del corso. Poi, ci butteremo a capofitto ed inizieremo ad imparare i concetti di informatica veri e propri.
+      OPD-K5 Stage2Go_copy:
+        markdown: "# Riflessione\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\"
+          class=\"level-image\">\n\n## Fai una pausa e rifletti\nSperiamo che, fino
+          ad ora, questo corso ti abbia dato un'idea di cos'è l'informatica, perché
+          è importante e come i fondamenti d'informatica sono strutturati per insegnare
+          agli studenti delle scuole elementari concetti di base dell'informatica.
+          Prenditi un momento per fare una pausa e riflettere su ciò che ritieni di
+          aver appreso da questo corso finora, e torna a qualsiasi parte su cui potresti
+          aver avuto domande.\n\nRicorda che puoi sempre fare riferimento alla <a
+          href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\"
+          target=\"blank\">Guida al curriculum dei Fondamenti di Informatica</a> per
+          maggiori informazioni.\n\n## Cose da ricordare\nMentre prosegui in questo
+          corso, tieni presente: \n- Come in ogni disciplina, il percorso verso la
+          padronanza dell'informatica è infinito. Dai principianti ai veterani, **ognuno
+          ha qualcosa da imparare.** \n- La programmazione diventa più semplice ogni
+          volta che ci torni. **Non diventerai un esperto alla prima volta.**\n- Non
+          c'è modo di aggirarlo, l'atto della programmazione e **imparare a programmare
+          richiedono tempo, ma chiunque può farlo!**\n\n<br/>\n\n> **Apprendimenti
+          chiave:** L'obiettivo delle prossime lezioni non è quello di trasformarti
+          in un informatico, ma piuttosto di aiutarti a sentirti abbastanza a tuo
+          agio con i concetti chiave e le conoscenze che sarai entusiasta di poter
+          condividere con i tuoi studenti."
       OPD-K5 Stage2Overview:
         markdown: |-
           # Fondamenti di informatica > Sommario della lezione
@@ -2217,6 +2427,20 @@ it-IT:
           > **Come si svolge questa lezione** - La lezione inizia introducendo il nuovo concetto mediante un'attività tradizionale, in modo da fornirti un modello da utilizzare per presentare questo nuovo elemento ai tuoi alunni. Poi, tramite un video, ti presenteremo una serie di esercizi in cui ti verrà chiesto di applicare quello che hai imparato. Per completare gli esercizi, dovrai scrivere dei programmi usando i blocchi di istruzioni Blocky. Gli esercizi utilizzati in questa lezione sono tratti dal Corso A, indicato per alunni della scuola dell'infanzia. Concluderemo facendoti riflettere su come insegnare questi concetti ai tuoi alunni. Prevedi di impiegare tra 10 e 30 minuti per completare la lezione.
 
           Pronti? Partiamo!
+      OPD-K5 Stage3Start_copy:
+        markdown: |-
+          # Panoramica: Sequenziamento
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Nei livelli che seguono, apprenderai un concetto di programmazione attraverso lezioni scollegate e puzzle online. Per completare un puzzle, dovrai scrivere il codice usando i blocchi di codice Blockly. Apprenderai anche una pratica di insegnamento chiave.
+
+          ## Concetto di programmazione: Sequenziamento
+          - Sarai in grado di definire "algoritmo" e "programma"
+
+          ## Pratica di insegnamento: Utilizzare i piani di lezione
+          - Comprenderai l'importanza di utilizzare piani di lezione scollegati e collegati
+          - Avrai la possibilità di vedere ed esercitarti con le Guide alla pianificazione dell'implementazione della lezione
       OPD-K5 Stage3aGo:
         content1: Descrizione qui
         markdown: "#  Sequenze di istruzioni  > Lezione tradizionale\n\nCome anticipato,
@@ -2270,7 +2494,34 @@ it-IT:
           per proseguire.\nNella prossima lezione aggiungeremo complessità al nostro
           programma con l'introduzione dei cicli."
       OPD-K5 Stage3aGo_copy:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: "# Lezione scollegata: Mappe felici\n\nCi piace introdurre argomenti
+          di informatica con lezioni scollegate. Quindi, utilizziamo le attività ponte
+          per passare successivamente alle lezioni online. Partendo da queste lezioni
+          scollegate si introducono i concetti in modo facile e divertente. Una volta
+          che gli studenti acquistano familiarità con il concetto, quando arrivano
+          alle lezioni online, possono ricollegare tali lezioni all'attività scollegata.\n\nAttraversando
+          queste fasi di programmazione, inizieremo anche con esempi di lezioni scollegate.
+          Leggi il seguente programma di lezioni e guarda i video che lo accompagna,
+          pensando a come implementarlo in classe con i tuoi studenti.\n\n***\nFondamenti
+          di Informatica insegna principalmente agli studenti come scrivere programmi
+          per computer. A questo scopo, inizieremo con il **sequenziamento**. \n>
+          Il**Sequenziamento** descrive il semplice processo di ordinamento delle
+          fasi in modo lineare. \n\nAd esempio:\n- Passaggio 1: Fai bollire l'uovo
+          \n- Passaggio 2: Rompi l'uovo\n- Passaggio 3: Mangia l'uovo\n\nLe sequenze
+          sono la base degli **algoritmi**.\n> Gli**Algoritmi**  sono elenchi di passaggi
+          per completare un'attività. Quindi, i programmi sono algoritmi trascritti
+          in codice per l'esecuzione da parte di un computer.\n\n***\n## **1. Rivedi
+          il piano di lezione \"<a href=\"https://curriculum.code.org/csf-19/coursea/3/\"
+          target=\"blank\">Mappe felici</a>\" nel Corso A.**\n\nIl corso A è destinato
+          agli studenti della scuola materna.Il sequenziamento viene fuori anche in
+          altri corsi e puoi trovare esempi di quelle lezioni in fondo a questa pagina.\n\n##
+          **2. Guarda il video dello studente: Mappe felici (disponibile nel piano
+          delle lezioni)**\nQuesto è un video che potresti mostrare ai tuoi studenti
+          come supporto all'introduzione del concetto di sequenziamento per dare il
+          via alla lezione scollegata.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursea/3/\"
+          target=\"blank\">![](https://images.code.org/8871ce7afb8fa81eb805d4640e1b9a95-image-1573079151706.25.15
+          PM.png)</a>"
       OPD-K5 Stage4Go:
         markdown: |-
           # Cicli > Lezioni tradizionali
@@ -2322,6 +2573,20 @@ it-IT:
           > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
 
           Dopo che hai commentato nel forum, torna qui e clicca sul pulsante sottostante per proseguire.
+      OPD-K5 Stage4Go_copy:
+        markdown: |-
+          # Lezione scollegata: Diventare ripetitivi
+
+          > Un **ciclo** è un'azione che si ripete continuamente.
+          ****
+
+          ## **1. Revisione "<a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">Diventare ripetitivi</a>" Piano di lezione del corso B:**
+          Il corso B è destinato agli studenti di 1° elementare. I cicli sono presenti anche in altri corsi e puoi trovare esempi di quelle lezioni in fondo a questa pagina.
+
+          ## **2. Guarda il video dello studente: Diventare ripetitivi (trovato nel piano delle lezioni)**
+          Questo è un video che mostreresti ai tuoi studenti come supporto per introdurre il concetto di ciclo e dare il via alla lezione scollegata.
+          ***
+          <a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>
       OPD-K5 Stage4Review:
         markdown: |
           # Cicli > Riflessioni
@@ -2347,6 +2612,17 @@ it-IT:
           > **Come si svolge questa lezione** - Nei livelli che seguono presenteremo una lezione tradizionale ed una serie di esercizi tratti dal Corso C (adatti per la 2ª primaria) che trattano il concetto di "istruzione di ripetizione" (ciclo). Per completare gli esercizi dovrai scrivere del codice utilizzando la programmazione a blocchi. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
           Pronti? Partiamo!
+      OPD-K5 Stage4Start_copy:
+        markdown: |
+          # Panoramica: Cicli
+
+          <img src="https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg" class="level-image">
+
+          ## Concetto di programmazione
+          - Esercitati a programmare cicli semplici
+
+          ## Pratica di insegnamento: programmazione in coppia
+          - Comprendi i vantaggi della programmazione in coppia e come viene utilizzata nel mondo reale
       OPD-K5 Stage5Go:
         markdown: "# Istruzioni condizionali > Lezione tradizionale\n\n**1. Guarda
           la struttura della lezione \"[Istruzioni condizionali con le carte da gioco](https://curriculum.code.org/csf-18/coursed/13/)\"
@@ -2661,6 +2937,112 @@ it-IT:
            - **[Corso rapido pre-scolare](http://studio.code.org/s/pre-express)**: circa 20 ore (da 4 a 8 anni)
 
 
+      OPD-K5 Welcome 2_copy:
+        markdown: |-
+          # Corsi di Fondamenti di Informatica
+
+          L'obiettivo della formazione professionale di Code.org è preparare insegnanti come te a integrare l'informatica nelle loro classi e supportare la loro crescita come insegnanti. Dopo aver completato questo corso online, sarai pronto per insegnare uno o più dei seguenti corsi di Fondamenti di Informatica di Code.org nella tua classe.
+          **Prenditi un momento per guardare la tabella qui sotto e pensare a quale corso o corsi saranno più adatti ai tuoi studenti**.
+
+          <table style="width:100%; border-style:none;">
+            <tr>
+              <th style="background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;""">
+                <b><a href="https://curriculum.code.org/csf-19/coursea/" target="blank" style="color: white">Corso A</a></b><br/>
+                <i>Scuola materna</i>
+              </th>
+              <th style="background-color:#f1c232; text-align:center; border-style:none;""">
+                  <a href="https://curriculum.code.org/csf-19/courseb/" target="blank" style="color: white">Corso B</a><br/>
+                  <i>1° elementare</i>
+              </th>
+              <th style="background-color:#b8bf0d; text-align:center; border-style:none;""">
+                  <a href="https://curriculum.code.org/csf-19/coursec/" target="blank" style="color: white">Corso C</a><br/>
+                  <i>2° elementare</i>
+              </th>
+              <th style="background-color:#53bac2; text-align:center; border-style:none;""">
+                  <a href="https://curriculum.code.org/csf-19/coursed/" target="blank" style="color: white">Corso D</a><br/>
+                  <i>3° elementare</i>
+              </th>
+              <th style="background-color:#0094ca; text-align:center; border-style:none;""">
+                  <a href="https://curriculum.code.org/csf-19/coursee/" target="blank" style="color: white">Corso E</a><br/>
+                  <i>4° elementare</i>
+              </th>
+              <th style="background-color:#7664a0; text-align:center; border-style:none;""">
+                  <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" style="color: white">Corso F</a><br/>
+                  <i>5° elementare</i>
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">12 lezioni, ~12 ore da completare</td>
+              <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">12 lezioni, ~12 ore da completare</td>
+              <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">18 lezioni, ~18 ore da completare</td>
+              <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">18 lezioni, ~18 ore da completare</td>
+              <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lezioni, ~18-20 ore da completare</td>
+              <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">18 lezioni, ~20-22 ore da completare</td>
+            </tr>
+            <tr>
+              <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concetti</td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Cittadinanza digitale</li>
+                  <li>Sequencing</li>
+                  <li>Loop</li>
+                  <li>Eventi</li>
+                </ul>
+              </td>
+              <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Cittadinanza digitale</li>
+                  <li>Sequencing</li>
+                  <li>Loop</li>
+                  <li>Impatti dell'informatica</li>
+                  <li>Eventi</li>
+                </ul>
+              </td>
+              <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Cittadinanza digitale</li>
+                  <li>Sequencing</li>
+                  <li>Binary</li>
+                  <li>Loop</li>
+                  <li>Eventi</li>
+                  <li>Dati</li>
+                </ul>
+              </td>
+              <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Sequencing</li>
+                  <li>Eventi</li>
+                  <li>Loop</li>
+                  <li>Istruzioni Condizionali</li>
+                  <li>Binary</li>
+                  <li>Cittadinanza digitale</li>
+                </ul>
+              </td>
+              <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Sprite</li>
+                  <li>Cittadinanza digitale</li>
+                  <li>Impatti dell'informatica</li>
+                  <li>Cicli nidificati</li>
+                  <li>Funzioni</li>
+                </ul>
+              </td>
+              <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
+                <ul style="font-style:italic;">
+                  <li>Variabili</li>
+                  <li>Dati</li>
+                  <li>Per i Loop</li>
+                  <li>Internet</li>
+                  <li>Sprite</li>
+                  <li>Cittadinanza digitale</li>
+                  </ul>
+              </td>
+          </table>
+          <br/>
+
+          **In seguito, se vorrai vedere ancora più dettagli sui contenuti di ogni corso, puoi dare un'occhiata alla nostra <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview" target="blank">Guida al curriculum sui fondamenti dell'informatica</a>.**
       OPD-K5 What is Mastery:
         markdown: |-
           #  Uno sguardo avanti > Cosa si intende per padronanza?
@@ -2702,6 +3084,25 @@ it-IT:
           Nella **lezione 9** scoprirai i piani di studio e le risorse gratuite di Code.org per gli insegnanti. Potrai scegliere tra tutte le nostre risorse o anche sceglierne altre a tua discrezione. Completando questo corso avrai la padronanza dei concetti fondamentali che ti possono servire per seguire qualsiasi corso di informatica per principianti.
 
           Nelle **lezioni 10 e 11** ti suggeriremo materiali che potrai usare per approfondire o per sentirti più sicuro nell'insegnamento di questi concetti nella tua classe.
+      OPD-K5 What is Mastery_copy:
+        markdown: "# Guardando avanti\n\n## Pratiche didattiche\nNel prossimo nodo
+          concettuale, imparerai le seguenti pratiche di insegnamento:\n\n- Trovare
+          e utilizzare i piani di lezione\n- Programmazione in coppia\n- Debug\n-
+          Journaling\n\n## Concetti base di programmazione\nNel prossimo nodo concettuale,
+          farai esercizio con i seguenti concetti fondamentali di informatica:\n\n-
+          Sequenziamento\n- Cicli\n- Eventi\n- Istruzioni Condizionali\n\nIn queste
+          lezioni: \n- Definirai e spiegherai cosa si intende per concetto centrale
+          e perché è importante nell'informatica\n- Scriverai semplici programmi applicando
+          il concetto (usando la programmazione visiva per risolvere puzzle)\n- Rifletterai
+          su come potresti integrare il concetto nella pratica\n\n## Come faccio a
+          sapere se dovrei passare alla lezione successiva?\n\nQuando completi ogni
+          lezione, chiediti:\n\n- Potrei definire e spiegare l'importanza di questo
+          particolare concetto di base per qualcuno privo di conoscenze d'informatica?\n-
+          Sono riuscito a completare con successo i semplici puzzle di questa lezione?\n-
+          Ho delle idee su come usare quanto appreso in classe?\n\nSe hai risposto
+          sì a ogni domanda, passa alla lezione successiva. Se hai risposto no a una
+          qualsiasi delle domande, prima di proseguire, rivedi la lezione o approfondisci
+          l'argomento in uno dei corsi di base di Informatica."
       OPD-K5 Why teach CS:
         markdown: |-
           # Fondamenti di informatica > Perché si insegna l'informatica?
@@ -2715,6 +3116,34 @@ it-IT:
           <a href="http://code.org/educate/inspire" target="blank"><button class="default">Guarda video stimolanti >></button></a> <a href="http://code.org/promote" target="blank"><button class="default">Analizza le statistiche >></button></a>
 
           Dedica un po' di tempo per analizzare le statistiche e prendere nota di dati o fatti che ritieni particolarmente rilevanti ed interessanti.
+      OPD-K5 Why teach CS_copy:
+        markdown: "# Perché insegnare informatica?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
+          class=\"level-image\">\n\n### **Sviluppare abilità importanti**\nLa ricerca
+          mostra che l'informatica promuove il pensiero critico, la creatività, la
+          risoluzione dei problemi e l'impegno nelle abilità del mondo reale. \n\n###
+          **Migliorare le prestazioni in altre materie**\nNon è necessario essere
+          un insegnante tecnico-scientifico per vedere i benefici dell'informatica
+          nella tua classe. Un <a href=\"https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e\"
+          target=\"blank\">recente studio di ricerca</a> ha scoperto che le classi
+          con insegnanti intraprendenti vedono punteggi più alti nei test standardizzati
+          di inglese, matematica e scienze dopo aver impartito lezioni di Fondamenti
+          d'informatica. \n\n### **Acquisire sicurezza e interesse sin dall'inizio**\nSe
+          aspettiamo che il liceo o l'università introducano gli studenti all'informatica,
+          alcuni studenti avranno già deciso che l'informatica non fa per loro o sentiranno
+          di essere già troppo indietro rispetto agli studenti che la studiano fuori
+          dalla scuola.\n\nEsporre gli studenti all'informatica in età prescolare,
+          quando non sono obbligati a partecipare a una lezione come succede alle
+          superiori, consente a tutti gli studenti di vedere quanto è accessibile
+          la materia e decidere se gli piace.\n\n### **È divertente!**\nL'informatica
+          offre agli studenti l'opportunità di collaborare, essere creativi ed esprimersi!
+          \n\n### **Non sei ancora convinto?**\nCode.org ha molte risorse per aiutare
+          sia te, - che gli studenti, la tua amministrazione, i genitori e la tua
+          comunità -- a capire l'importanza dell'informatica in classe. Guarda le
+          nostre serie di video ispiratori, oltre ad alcune delle statistiche e prove
+          relative all'insegnamento dell'informatica, di seguito.\n\n> <a href=\"http://code.org/educate/inspire\"
+          target=\"blank\"><button class=\"default\">Esplora i video di ispirazione
+          >></button></a>\n\n> <a href=\"http://code.org/promote\" target=\"blank\"><button
+          class=\"default\">Esplora la ricerca >></button></a>\n\n<img src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">"
       OPD-K5 Younger Grades:
         markdown: |
           # Perché insegnare informatica nelle prime classi della scuola primaria?
@@ -2778,19 +3207,148 @@ it-IT:
       OPD-K5 journaling:
         content1: Descrizione qui
       OPD-K5 lesson implementation planning:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: "# Guide alla pianificazione dell'implementazione della lezione\n\nL'obiettivo
+          di queste domande è aiutarti a pensare e fare un piano dettagliato su come
+          insegnare le lezioni in modo da sfruttare le migliori pratiche di insegnamento
+          e supportare gli studenti. Pensa a queste domande mentre continui a imparare
+          concetti di programmazione di base e pratiche di insegnamento durante questo
+          corso di formazione professionale online.\n\n## Lezioni scollegate\nPuoi
+          trovare una versione stampabile di questa risorsa a pagina 43 della <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#heading=h.jhv35ofi4hkz\"
+          target=\"blank\">guida al curriculum</a>. \n\n|Cosa sta succedendo | Dove
+          può succedere questo nella lezione? | \n| ------------ | -----------------
+          |\n| **Approcci didattici da utilizzare in questa lezione** <br/>Quali tecniche
+          didattiche vuoi essere sicuro di usare in questa lezione? Dove le vuoi usare?
+          \ |    |\n| **Ruolo come insegnante** <br/>Quando/dove nella lezione vuoi
+          che l'intera classe discuta di un argomento? Quale ruolo prevedi di assumere
+          e quando? |  |\n| **Ambiente di classe e interazione degli studenti** <br/>Quando
+          vuoi che gli studenti interagiscano durante questa lezione? Come dovrebbe
+          essere?|  |\n| **Valutare l'apprendimento degli studenti durante la lezione**
+          <br/>Come puoi valutare se gli studenti hanno imparato ciò che devono imparare
+          durante questa lezione? |  |\n| **Riallacciarsi all'informatica** <br/>Dove
+          pensi che gli studenti potrebbero aver bisogno di una spinta per vedere
+          la connessione tra questa attività scollegata e l'informatica? Come pensi
+          di supportarlo?|  |\n| **Fare collegamenti** <br/>Dove c'è spazio in questa
+          lezione per stabilire connessioni con il mondo reale/altre cose che gli
+          studenti stanno imparando a scuola? |  |\n\n## Lezioni collegate\nPuoi trovare
+          una versione stampabile di questa risorsa a pagina 45 della <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#heading=h.jhv35ofi4hkz\"
+          target=\"blank\">guida al curriculum</a>. \n\n|Cosa sta succedendo | Dove
+          può succedere questo nella lezione? | \n| ------------ | -----------------
+          |\n| **Riallacciarsi alla lezione scollegata** <br/>In che modo imposterai
+          e sosterrai gli studenti per fargli vedere la connessione tra la precedente
+          lezione scollegata e questa lezione collegata?  |    |\n| **Approcci didattici
+          da utilizzare in questa lezione** <br/>Quali tecniche didattiche vuoi essere
+          sicuro di usare in questa lezione? Dove li vuoi usare?  |    |\n| **Ruolo
+          come insegnante** <br/>Quando/dove nella lezione vuoi che l'intera classe
+          discuta un argomento? Quale ruolo prevedi di assumere e quando? |  |\n|
+          **Ambiente di classe e interazione degli studenti** <br/>Quando vuoi che
+          gli studenti interagiscano durante questa lezione? Come dovrebbe essere?|
+          \ |\n| **Valutare l'apprendimento degli studenti durante la lezione** <br/>Come
+          puoi valutare se gli studenti hanno imparato ciò che dovevano imparare durante
+          questa lezione? |  |\n| ****Supporto per il debug <br/>Dove pensi che gli
+          studenti potrebbero aver bisogno di impegnarsi nel debug durante questa
+          lezione (quali livelli/attività)? Come puoi supportarli con quel debug?
+          |  |\n| **Fare collegamenti** <br/>Dove puoi trovare spazio in questa lezione
+          per stabilire connessioni con il mondo reale/altre cose che gli studenti
+          stanno imparando a scuola? |  |"
       OPD-K5 lesson plans:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: "# Piani delle lezioni\n\n## Dove trovo i piani delle lezioni?\nPuoi
+          vedere tutti i piani delle lezioni per tutti i corsi di Fondamenti di Informatica
+          <a href=\"https://curriculum.code.org/csf-19/\" target=\"blank\">qui</a>.
+          \n\n## Esistono piani di lezione per le lezioni scollegate *** e ***collegate?\nSì!
+          \n\n## Come sono strutturati i piani di lezione?\n\nOgni piano di lezione
+          ha una struttura comune progettata per facilitare la ricerca di ciò di cui
+          hai bisogno. Mentre pianifichi una lezione, ti consigliamo di iniziare con
+          la panoramica, quindi di rivedere l'attività principale per avere un'idea
+          più approfondita di ciò che accadrà nella lezione e quanto tempo potrebbe
+          richiedere.\n\n<img src=\"https://images.code.org/f5ada4cd79f47502741adc86ed6f4430-image-1571693286262.27.12
+          PM.png\">\n\n## Dove trovo maggiori informazioni sui piani di lezione?\nCi
+          sono molte altre informazioni sui piani di lezione nella <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\"
+          target=\"blank\">guida al curriculum</a>!"
       OPD-K5 loops introduced:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: |-
+          # Cicli: Dove sono stati introdotti?
+
+          Questo ti dà un'idea di quando i loop sono introdotti nei corsi A-F. Non è necessario andare a riguardare tutte queste lezioni --ci immergeremo in alcune in questa parte del corso online - ma sentiti libero di usare quanto segue come riferimento.
+
+          ## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank">Corso A</a>
+          - Lezione 7 (Scollegata): Cicli felici
+          - Lezione 8: Cicli con Scrat
+          - Lezione 9: Cicli con Laura
+          - Lezione 10: Scene oceaniche con cicli
+
+          ## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank">Corso B</a>
+          - Lezione 6 (Scollegata): Diventare ripetitivi
+          - Lezione 7: Cicli con la contadina
+          - Lezione 8: Cicli con Laura
+          - Lezione 9: Disegnare giardini con i cicli
+
+          ## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank">Corso C</a>
+          - Lezione 9: (Scollegata): I miei amici robot ripetitivi
+          - Lezione 10: Cicli con Rey e BB-8
+          - Lezione 11: Raccolta delle colture con i cicli
+          - Lezione 12: Guardando avanti con Minecraft
+          - Lezione 13: Sticker Art con i cicli
+
+          ## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank">Corso D</a>
+          - Lezione 7: Cicli nell'era glaciale
+          - Lezione 8: Disegnare forme con i cicli
+          - Lezione 9: Cicli annidati nel labirinto
       OPD-K5 project:
         content1: Descrizione qui
       OPD-K5 projects introduction:
         content1: Descrizione qui
       OPD-K5 role_of_teacher:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: |-
+          # Ruolo dell'insegnante
+
+          <img src="https://images.code.org/cd6529b3552a2911cb907aceb59932b1-image-1571688504066.JPG" class="level-image">
+
+          Crediamo che gli studenti imparino meglio con l'aiuto di un insegnante abilitato. I corsi di Fondamenti di Informatica A-F sono progettati per funzionare al meglio in un ambiente scolastico, impartiti da un insegnante impegnato .
+
+          Sappiamo che molti insegnanti non sono esperti d'informatica e, per questo motivo, progettiamo un curriculum con l'idea che l'istruttore fungerà da studente guida. Come studente guida, il ruolo dell'insegnante si sposta dall'essere la fonte della conoscenza all'essere un leader nella ricerca della conoscenza.
+
+          Il mantra del discente guida è: **"Potrei non conoscere la risposta, ma so che insieme possiamo arrivarci"**
+
+          Puoi leggere di più su come essere uno studente guida, così come altri approcci pedagogici ai nostri valori, nella <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#" target="blank">guida al curriculum</a>.
       OPD-K5 sequencing introduced:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: |
+          # Sequenziamento: Dove viene introdotto?
+
+          Questo ti dà un'idea di quando il sequenziamento è introdotto nei Corsi A-F. Non è necessario andare a guardare tutte queste lezioni - ci immergeremo in alcune in questa parte del corso online - ma sentiti libero di fare riferimento a queste, se necessario.
+
+          ## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank">Corso A</a>
+          - Lezione 2: Impara a trascinare e rilasciare
+          - Lezione 3 (Scollegato): Mappe felici
+          - Lezione 4: Sequenziamento con Scrat
+          - Lezione 5 (Programmare con Scrat)
+          - Lezione 6: Programmare con Rey e BB-8
+
+          ## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank">Corso B</a>
+          - Lezione 2 (Scollegato): Spostalo, Spostalo
+          - Lezione 3: Sequenziamento con Angry Birds
+          - Lezione 4: Programmare con Angry Birds
+          - Lezione 5: Programmare con la contadina
+
+          ## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank">Corso C</a>
+          - Lezione 3: (Scollegato): I miei amici robot, Jr
+          - Lezione 4: Programmare con Angry Birds
+          - Lezione 5: Debug nel labirinto
+          - Lezione 6: Collezionare tesori con Laura
+          - Lezione 7: Creare arte con il codice
+
+          ## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank">Corso D</a>
+          - Lezione 1 (Scollegato): Programmazione con carta millimetrata
+          - Lezione 2: Introduzione ai puzzle online
+          - Lezione 3: Programmazione relè
+          - Lezione 4: Debug con Laura
+
+          ## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank">Corso E</a>
+          - Lezione 1: Sequenziamento nel labirinto
       OPD-K5 sprite lab:
         content1: Descrizione qui
       OPD-K5 sprite lab introduction:
@@ -2800,9 +3358,43 @@ it-IT:
       OPD-K5 sprite lab video:
         content1: Descrizione qui
       OPD-K5 types of lessons:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: |
+          # Organizzazione di corsi di Fondamenti di Informatica
+
+          ## Nodi concettuali
+
+          Ogni corso di  Fondamenti di Informatica è organizzato in blocchi concettuali, le grandi idee che forniscono struttura a un corso. I Nodi concettuali rendono facile per gli insegnanti vedere a colpo d'occhio ciò che contiene un corso. **Code.org fornisce un<a href="http://curriculum.code.org/csf-19" target="blank">programma della lezione</a> per ogni lezione del curriculum, sia dentro che fuori dal computer**. I diversi tipi di lezioni in ogni blocco di concetti sono spiegati in dettaglio di seguito.
+
+          Per illustrare, ecco le cinque lezioni contenute nel concetto "Loop" del corso C, come appaiono nel corso.
+
+
+          <img src="https://images.code.org/953ebc5b17a97ee7fc9ee9261b4ee132-image-1571689334077.png">
+
+          ## Lezioni scollegate
+          **Queste lezioni sono realizzate lontano dal computer e sono spesso utilizzate per introdurre un nuovo concetto in modo pratico e tangibile.** Gli studenti lavoreranno spesso con carta e matita o manipolatori fisici.  Queste sono opportunità cinestesiche, intenzionalmente collocate, che aiutano gli studenti a comprendere concetti complicati traendo spunto da esperienze di vita reale. Spesso una lezione scollegata pone le basi per una successiva lezione di sviluppo delle competenze che investiga lo stesso concetto sul computer.
+
+          ## Lezioni collegate - Costruzione dell'abilità
+          **Queste lezioni si svolgono sul computer e offrono agli studenti una pratica strutturata con un nuovo strumento o un nuovo concetto di programmazione.** Queste progressioni di puzzle generalmente iniziano con una sequenza di puzzle di pratica che aumentano gradualmente fino a raggiungere un puzzle di sfida. Ci sono spesso ulteriori puzzle dopo la sfida che intenzionalmente diventano più facili per aiutare a costruire efficacia e fiducia alla fine della lezione.
+
+
+          ## Lezioni collegate - Applicazione
+          **Queste lezioni si svolgono sul computer e offrono agli studenti lo spazio per applicare i concetti appresi in modo creativo.** Queste lezioni in genere guidano gli studenti attraverso la creazione di un mini-progetto che per loro sarà unico in base alle loro decisioni creative. Qui non ci sono risposte giuste o sbagliate!
+
+          ## Progetti di fine corso
+          Ogni corso offre agli studenti l'opportunità di prendere ciò che hanno imparato al termine di una lezione e metterlo insieme in un progetto unico che rappresenta la propria creatività. Impareremo di più su questi progetti più avanti in questo corso.
       OPD-K5 using lesson plans:
-        content1: Descrizione qui
+        content1: descrizione qui
+        markdown: |-
+          # Pratica di insegnamento: utilizzo dei piani di lezione
+
+          <img src="https://images.code.org/bf355a9cc76e248efa509ee0cea0b10c-image-1573174157169.48.54 PM.png" class="level-image">
+
+          ## Qual è il vantaggio di seguire un piano di lezione (anche per le lezioni collegate)?
+
+          I piani di lezione collegati in genere hanno molte delle stesse caratteristiche delle loro controparti non collegate. Le lezioni inizieranno e finiranno con discussioni o attività che aiutano a motivare e sintetizzare l'apprendimento. I momenti chiave per il check-in con i tuoi studenti sono indicati nei piani di lezione. Gli studenti useranno un computer, ma i modi in cui gli studenti interagiscono tra loro e il tuo ruolo di insegnante sono ancora importanti considerazioni.
+
+          I piani di lezione offrono l'opportunità di introdurre concetti, far riflettere gli studenti su ciò che hanno imparato e collaborare.
       OPD-K5 variables:
         content1: Descrizione qui
       OPD-K5 variables introduction:
