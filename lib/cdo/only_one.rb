@@ -2,8 +2,8 @@
 # using `File#flock` (advisory lock) on the provided script path.
 # @return [Boolean] true if this is the only instance running.
 def only_one_running?(path)
-  !!((file = File.new(path)).
-    flock(File::LOCK_NB | File::LOCK_EX) &&
-    # Prevent locked files from being closed by garbage-collector.
-    ($only_one ||= []) << file)
+  !!File.new(path).
+    # Prevent locked Files from being auto-closed by garbage-collector.
+    tap {|f| f.autoclose = false}.
+    flock(File::LOCK_NB | File::LOCK_EX)
 end
