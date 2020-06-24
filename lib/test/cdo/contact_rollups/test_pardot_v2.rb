@@ -233,20 +233,25 @@ class PardotV2Test < Minitest::Test
       {
         # multi-value attribute has 1 value
         input: {
-          professional_learning_enrolled: COURSE_CSF
+          professional_learning_enrolled: COURSE_CSF,
+          professional_learning_attended: COURSE_CSF,
         },
         expected_output: {
-          db_Professional_Learning_Enrolled_0: COURSE_CSF
+          db_Professional_Learning_Enrolled_0: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSF,
         }
       },
       {
         # multi-value attribute has more than 1 value
         input: {
-          professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}"
+          professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
+          professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
-          db_Professional_Learning_Enrolled_1: COURSE_CSF
+          db_Professional_Learning_Enrolled_1: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSP,
+          db_Professional_Learning_Attended_1: COURSE_ECS,
         }
       }
     ]
