@@ -73,6 +73,7 @@ import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 
 var copyrightStrings;
 
@@ -3081,6 +3082,31 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   alertContents,
   bottom = false
 ) {
+  var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
+  var container = $('<div/>');
+  parent.append(container);
+  ReactDOM.render(
+    <WorkspaceAlert
+      left={$('.droplet-palette-element').width()}
+      onClose={() => {
+        ReactDOM.unmountComponentAtNode(container[0]);
+      }}
+      isOpen={this.isOpen}
+      // isBlockly
+      // isCraft
+      // displayBottom
+    >
+      {alertContents}
+    </WorkspaceAlert>,
+    container[0]
+  );
+
+  return container[0];
+
+  // TODO: Clean displayAlert to remove sections that are specific to displayWorkspaceAlert
+  // TODO: Double check that the various uses of DisplayWorkspaceAlert still work
+
+  /*
   var toolbarWidth;
   if (this.usingBlockly_ && this.config.app === 'craft') {
     // craft has a slightly different way of constructing the toolbox so we need to use
@@ -3104,6 +3130,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
     },
     alertContents
   );
+*/
 };
 
 /**
