@@ -7,7 +7,17 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
 
   def submit
     return head :forbidden unless current_user
-    post_request('fake_pardot_url.com', submit_params)
+    if CDO.afe_pardot_form_handler_url
+      post_request CDO.afe_pardot_form_handler_url, submit_params
+    else
+      # Success, with a message:
+      <<~RESPONSE
+        It looks like you haven't configured the
+        afe_pardot_form_handler_url property.
+        Set this up in your locals.yml if you are testing this feature locally
+        and need to check the request sent to AFE-Pardot.
+      RESPONSE
+    end
   end
 
   private
