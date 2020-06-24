@@ -109,7 +109,6 @@ module SharedConstants
     calc
     eval
     minecraft_codebuilder
-    scratch
     spritelab
     weblab
   )
