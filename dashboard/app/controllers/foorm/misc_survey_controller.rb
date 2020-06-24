@@ -12,7 +12,10 @@ module Foorm
       return render :no_teacher_email unless current_user.email.present?
 
       form_data = MiscSurvey.find_form_data(params[:misc_form_path])
+      return render_404 if !form_data || !form_data[:form_name]
+
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(form_data[:form_name])
+      return render_404 unless form_questions
 
       # Pass these params to the form to identify unique responses
       key_params = {
