@@ -3,7 +3,6 @@ require 'test_helper'
 class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationTest
   setup do
     CDO.stubs(:afe_pardot_form_handler_url).returns('fake_pardot_url.com')
-    @teacher = create :teacher
   end
 
   test 'logged out cannot submit' do
@@ -20,9 +19,9 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
   test 'submit returns BAD REQUEST when params are malformed' do
     Net::HTTP.expects(:post_form).never
-    sign_in create :teacher
 
     # Intentionally missing required field traffic-source
+    sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',
       params: valid_params.delete('traffic-source'), as: :json
 
@@ -31,8 +30,8 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
   test 'submit returns BAD REQUEST when params are missing' do
     Net::HTTP.stubs(:post_form)
-    sign_in create :teacher
 
+    sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit'
 
     assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
@@ -41,8 +40,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   test 'logged in can submit' do
     Net::HTTP.expects(:post_form).returns(FakeResponse.new)
 
-    sign_in(@teacher)
-
+    sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',
       params: valid_params, as: :json
 
