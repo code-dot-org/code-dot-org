@@ -21,6 +21,7 @@ class Foorm::MiscSurvey < ActiveRecord::Base
 
   def self.all_form_data
     [
+      # Placeholder survey configuration
       {
         form_name: 'surveys/pd/summer_workshop_daily_survey',
         misc_form_path: 'csd_sample',
@@ -28,10 +29,6 @@ class Foorm::MiscSurvey < ActiveRecord::Base
         allow_multiple_submissions: true
       }
     ]
-  end
-
-  def self.all_form_paths
-    all_form_data.pluck(:misc_form_path)
   end
 
   def self.find_form_data(misc_form_path)
