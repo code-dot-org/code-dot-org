@@ -442,6 +442,7 @@ ActiveRecord::Schema.define(version: 20200622222750) do
   create_table "foorm_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "foorm_submission_id", null: false
     t.integer  "user_id"
+    t.string   "misc_form_path"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["foorm_submission_id"], name: "index_misc_survey_foorm_submissions_on_foorm_id", unique: true, using: :btree
