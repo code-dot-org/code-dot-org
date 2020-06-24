@@ -5,6 +5,7 @@
 #  id                  :integer          not null, primary key
 #  foorm_submission_id :integer          not null
 #  user_id             :integer
+#  misc_form_path      :string(255)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #
