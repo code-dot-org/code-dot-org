@@ -7,7 +7,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'logged out cannot submit' do
-    # Add expectation that there are no HTTP requests to Pardot.
+    Net::HTTP.expects(:post_form).never
 
     post '/dashboardapi/v1/amazon_future_engineer_submit',
       params: {
