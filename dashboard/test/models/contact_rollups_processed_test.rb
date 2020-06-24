@@ -43,10 +43,9 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     refute ContactRollupsProcessed.find_by_email(email)
     ContactRollupsProcessed.import_from_raw_table
 
-    record = ContactRollupsProcessed.find_by_email(email)
-    assert record
+    record = ContactRollupsProcessed.find_by_email!(email)
     assert_equal 1, record.data['opt_in']
-    assert_equal [Pd::Workshop::COURSE_CSF], record.data['professional_learning_enrolled']
+    assert_equal Pd::Workshop::COURSE_CSF, record.data['professional_learning_enrolled']
     assert_equal base_time.to_i, Time.parse(record.data['updated_at']).to_i
   end
 
