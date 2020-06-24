@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationTest
   setup do
+    CDO.stubs(:afe_pardot_form_handler_url).returns('fake_pardot_url.com')
     @teacher = create :teacher
   end
 
