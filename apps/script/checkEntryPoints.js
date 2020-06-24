@@ -57,7 +57,6 @@ const SILENCED = [
   'netsim',
   'studio',
   'turtle',
-  'scratch',
   'weblab',
   'spritelab',
 
