@@ -8,6 +8,14 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     this.digitalCallbacks = [];
   }
 
+  connectBoard() {
+    return Promise.resolve()
+      .then(() => this.connect())
+      .then(() => {
+        return this.setAnalogSamplingInterval(50);
+      });
+  }
+
   setPinMode(pin, mode) {
     // If setting a pin to input, start tracking it immediately
     if (mode === 0) {

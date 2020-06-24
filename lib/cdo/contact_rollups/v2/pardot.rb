@@ -286,7 +286,8 @@ class PardotV2
         # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
         contact[key].split(',').each_with_index do |value, index|
-          prospect["#{prospect_info[:field]}_#{index}"] = value
+          split_key = "#{prospect_info[:field]}_#{index}".to_sym
+          prospect[split_key] = value
         end
       else
         prospect[prospect_info[:field]] = contact[key]
@@ -298,6 +299,8 @@ class PardotV2
     if contact.key?(:opt_in)
       prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
+
+    prospect[:db_Has_Teacher_Account] = 'true' if contact[:user_id]
 
     prospect
   end
