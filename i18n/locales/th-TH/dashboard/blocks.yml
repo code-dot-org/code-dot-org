@@ -1091,6 +1091,8 @@ th:
             '"West"': เวสต์
       gamelab_moveToward:
         text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
+      gamelab_objectSpritePointer:
+        text: "[SPRITE]คลิก[0]"
       gamelab_playSound:
         text: เล่นเสียง {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1170,8 @@ th:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
+      gamelab_subjectSpritePointer:
+        text: "[SPRITE]คลิก[0]"
       gamelab_turn:
         text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
         options:

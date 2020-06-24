@@ -16,25 +16,12 @@ title: Learning computer science when schools are closed in response to Covid19
 
 <br>
 
-<div class="breakoutquote" style="padding: 18px">
+## Code Break: Learn from the Code.org team and special guests!
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
 
-<div class="col-25">
-<a href="https://code.org/break"><img src="/images/athome/code-break-stacked.png" style="max-width: 85%; padding-left:25px"></a></div>
-
-<div class="col-70" style="padding-right:25px">
-
-<p style="border: 0;">Take a Code Break with Hadi Partovi and the Code.org team</p>
-<p style="font-size: 14px; border: 0">With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live, weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers.</p>
-<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Tune in</a> Wednesdays at 10am PT / 1pm ET. Learn more at <a href="https://code.org/break">code.org/break</a></p>
-<a href="/break"><button>Learn more</button></a>
-
-</div>
-
-<div class="clearboth">
-
-</div>
-
-</div>
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 ## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.

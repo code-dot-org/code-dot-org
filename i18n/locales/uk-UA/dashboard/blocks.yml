@@ -1091,6 +1091,8 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: Переміщення {SPRITE} Пікселів {DISTANCE} До {TARGET}
+      gamelab_objectSpritePointer:
+        text: натиснув {SPRITE}
       gamelab_playSound:
         text: ПлейЗвук {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1170,8 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_subjectSpritePointer:
+        text: натиснув {SPRITE}
       gamelab_turn:
         text: Свою чергу {SPRITE} {DIRECTION} {N} Градусів
         options:
