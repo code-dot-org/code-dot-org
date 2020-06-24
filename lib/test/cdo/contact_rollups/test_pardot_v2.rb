@@ -210,15 +210,8 @@ class PardotV2Test < Minitest::Test
         }
       },
       {
-        input: {
-          email: 'test1@domain.com',
-          pardot_id: nil,
-          bad_key: true
-        },
-        expected_output: {
-          email: 'test1@domain.com',
-          id: nil
-        }
+        input: {bad_key: true},
+        expected_output: {}
       }
     ]
 
