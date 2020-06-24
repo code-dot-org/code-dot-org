@@ -32,8 +32,12 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     let sessionEligibilityData = this.getSessionEligibilityData();
 
+    // Initial state is set by information that has been stored to the session.
+    // If none exists (ie, a user's first time visiting the page),
+    // set defaults that will ask them to provide school information.
     this.state = {
       formData: {
+        ...sessionEligibilityData,
         signedIn: this.props.signedIn,
         schoolEligible: this.checkInitialSchoolEligibility(
           sessionEligibilityData
@@ -49,6 +53,9 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   // If a user has gone through the eligibility flow,
   // or has school information associated with their account,
   // we use that for determining their eligibilty.
+  // If the school information associated with their account
+  // is ineligible, we still allow them to provide their school information
+  // in case their account information is out of date.
   // Redirect to ineligible page ('/afe/benefits') if ineligible.
   // Otherwise, we ask them for their school information.
   checkInitialSchoolEligibility = sessionEligibilityData => {
@@ -57,10 +64,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       this.props.schoolEligible === true
     ) {
       return true;
-    } else if (
-      sessionEligibilityData.schoolEligible === false ||
-      this.props.schoolEligible === false
-    ) {
+    } else if (sessionEligibilityData.schoolEligible === false) {
       window.location = pegasus('/afe/benefits');
     }
 
