@@ -892,7 +892,6 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         lesson_groups = script_data[:lesson_groups]
-        lessons = script_data[:lessons]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
@@ -904,7 +903,7 @@ class Script < ActiveRecord::Base
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
           properties: Script.build_property_hash(script_data).merge(new_properties)
-        }, lesson_groups, lessons]
+        }, lesson_groups]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -921,6 +920,8 @@ class Script < ActiveRecord::Base
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     script.lesson_groups = LessonGroup.add_lesson_groups(script, raw_lesson_groups, new_suffix, editor_experiment)
+
+    # DANI COME BACK HERE: need to find a way for script.lessons and script.script_levels to work
 
     script.generate_plc_objects
     script

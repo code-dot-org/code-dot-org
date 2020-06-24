@@ -83,7 +83,7 @@ class Lesson < ActiveRecord::Base
       lesson.save! if lesson.changed?
 
       lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
-      #Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
+      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
       lesson_group_lessons << lesson
 
       # Todo Remove once clean up position
