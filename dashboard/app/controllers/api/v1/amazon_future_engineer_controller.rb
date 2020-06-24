@@ -3,6 +3,7 @@ require 'cdo/contact_rollups/v2/pardot_helpers'
 class Api::V1::AmazonFutureEngineerController < ApplicationController
   include PardotHelpers
 
+  # Necessary since Pegasus pages use this controller via dashboardapi
   skip_before_action :verify_authenticity_token
 
   def submit
