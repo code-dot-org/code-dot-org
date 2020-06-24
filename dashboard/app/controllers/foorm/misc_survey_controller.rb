@@ -14,6 +14,8 @@ module Foorm
       form_data = MiscSurvey.find_form_data(params[:misc_form_path])
       return render_404 if !form_data || !form_data[:form_name]
 
+      return render :survey_closed if MiscSurvey.form_disabled?(params[:misc_form_path])
+
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(form_data[:form_name])
       return render_404 unless form_questions
 
