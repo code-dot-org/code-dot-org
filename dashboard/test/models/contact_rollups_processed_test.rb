@@ -72,26 +72,32 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     test_cases = [
       # 3 input params are: contact_data, table, field
       {
+        # all empty
         input: [{}, nil, nil],
         expected_output: nil
       },
       {
+        # table exists in contact data but field doesn't
         input: [{table => {}}, table, field],
         expected_output: nil
       },
       {
+        # field exists in contact data but table doesn't
         input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: nil
       },
       {
+        # table and field exists in contact data, field value is nil
         input: [{table => {field => [{'value' => nil}]}}, table, field],
         expected_output: [nil]
       },
       {
+        # table and field exists in contact data with non-nil value
         input: [{table => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: ['WA']
       },
       {
+        # table and field exist in contact data with multiple non-nil values
         input: [{table => {field => [{'value' => 'WA'}, {'value' => 'OR'}]}}, table, field],
         expected_output: %w[WA OR]
       },
