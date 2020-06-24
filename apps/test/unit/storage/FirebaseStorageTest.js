@@ -161,17 +161,13 @@ describe('FirebaseStorage', () => {
       }
     });
     it('escapes periods in the key', done => {
-      let didWarn = false;
       FirebaseStorage.setKeyValue(
         'foo.bar',
         'baz',
         () => verifyValue(),
-        err => {
-          didWarn = true;
-        }
+        err => console.log(err)
       );
       function verifyValue() {
-        expect(didWarn).to.be.false;
         getProjectDatabase()
           .child(`storage/keys`)
           .once('value')

@@ -74,7 +74,7 @@ export function resetConfigForTesting() {
 }
 
 export function getConfigRef() {
-  return getFirebase(config.firebaseName).child('v3/config/channels');
+  return getPathRef(getFirebase(config.firebaseName), 'v3/config/channels');
 }
 
 export function getRecordsRef(tableName) {
@@ -89,16 +89,23 @@ export function getProjectCountersRef(tableName) {
 }
 
 export function getSharedDatabase() {
-  return getFirebase(SHARED_ENV).child('v3/channels/shared');
+  return getPathRef(getFirebase(SHARED_ENV), 'v3/channels/shared');
 }
 
 export function getProjectDatabase() {
   const path = `v3/channels/${config.channelId}${
     config.firebaseChannelIdSuffix
   }`;
-  return getFirebase(config.firebaseName).child(path);
+  return getPathRef(getFirebase(config.firebaseName), path);
 }
 
+/**
+ * Safe wrapper for accessing a firebase node. Prefer this over using .child() directly
+ * because it ensures that periods will be escaped from the firebase key.
+ * @param dbRef - A firebase node
+ * @param path - a path relative to dbRef
+ * @return the firebase node at the specified path
+ */
 export function getPathRef(dbRef, path) {
   return dbRef.child(escapeFirebaseKey(path));
 }
