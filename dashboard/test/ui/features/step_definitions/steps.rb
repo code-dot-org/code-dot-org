@@ -1623,6 +1623,15 @@ Then /^"([^"]*)" contains the saved timestamp$/ do |css|
   expect(@timestamp).to eq(timestamp)
 end
 
+Then /^I save the text from "([^"]*)"$/ do |css|
+  @saved_text = @browser.find_element(css: css).text
+end
+
+Then /^"([^"]*)" contains the saved text$/ do |css|
+  saved_text = @browser.find_element(css: css).text
+  expect(@saved_text).to eq(saved_text)
+end
+
 When /^I switch to text mode$/ do
   steps <<-STEPS
     When I press "show-code-header"
