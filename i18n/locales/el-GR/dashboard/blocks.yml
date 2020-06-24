@@ -1087,6 +1087,8 @@ el:
             '"West"': Δυτικά
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
+      gamelab_objectSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
@@ -1164,6 +1166,8 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+      gamelab_subjectSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:
