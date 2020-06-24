@@ -31,22 +31,22 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'import_from_raw_table combines data from multiple records' do
-    assert 0, ContactRollupsRaw.count
-    assert 0, ContactRollupsProcessed.count
-
     base_time = Time.now.utc
     email = 'email@example.domain'
     create :contact_rollups_raw, email: email,
-      data: nil, data_updated_at: base_time - 1.day
+      sources: 'dashboard.users', data: nil, data_updated_at: base_time - 2.days
     create :contact_rollups_raw, email: email,
-      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time
+      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time - 1.day
+    create :contact_rollups_raw, email: email,
+      sources: 'dashboard.pd_enrollments', data: {course: Pd::Workshop::COURSE_CSF}, data_updated_at: base_time
 
+    refute ContactRollupsProcessed.find_by_email(email)
     ContactRollupsProcessed.import_from_raw_table
 
-    assert_equal 1, ContactRollupsProcessed.count
-    data = ContactRollupsProcessed.first.data
-    assert_equal 1, data['opt_in']
-    assert_equal base_time.to_i, Time.parse(data['updated_at']).to_i
+    record = ContactRollupsProcessed.find_by_email!(email)
+    assert_equal 1, record.data['opt_in']
+    assert_equal Pd::Workshop::COURSE_CSF, record.data['professional_learning_enrolled']
+    assert_equal base_time.to_i, Time.parse(record.data['updated_at']).to_i
   end
 
   test 'import_from_raw_table calls all extraction functions' do
@@ -71,26 +71,32 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     test_cases = [
       # 3 input params are: contact_data, table, field
       {
+        # all empty
         input: [{}, nil, nil],
         expected_output: nil
       },
       {
+        # table exists in contact data but field doesn't
         input: [{table => {}}, table, field],
         expected_output: nil
       },
       {
+        # field exists in contact data but table doesn't
         input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: nil
       },
       {
+        # table and field exists in contact data, field value is nil
         input: [{table => {field => [{'value' => nil}]}}, table, field],
         expected_output: [nil]
       },
       {
+        # table and field exists in contact data with non-nil value
         input: [{table => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: ['WA']
       },
       {
+        # table and field exist in contact data with multiple non-nil values
         input: [{table => {field => [{'value' => 'WA'}, {'value' => 'OR'}]}}, table, field],
         expected_output: %w[WA OR]
       },
@@ -100,6 +106,26 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       output = ContactRollupsProcessed.extract_field(*test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
+
+  test 'extract_professional_learning_enrolled' do
+    contact_data = {
+      'dashboard.pd_enrollments' => {
+        'course' => [
+          {'value' => Pd::Workshop::COURSE_CSF},
+          {'value' => Pd::Workshop::COURSE_CSF},
+          {'value' => Pd::Workshop::COURSE_CSD},
+          {'value' => nil}
+        ]
+      }
+    }
+    # output should not contains nil or duplicate values, and should be sorted
+    expected_output = {
+      professional_learning_enrolled: "#{Pd::Workshop::COURSE_CSD},#{Pd::Workshop::COURSE_CSF}"
+    }
+
+    output = ContactRollupsProcessed.extract_professional_learning_enrolled(contact_data)
+    assert_equal expected_output, output
   end
 
   test 'extract_updated_at with valid input' do
