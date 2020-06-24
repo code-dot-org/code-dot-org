@@ -40,7 +40,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     create :pd_enrollment, email: teacher.email, workshop: csf_workshop
     create :pd_enrollment, email: teacher.email, workshop: csd_workshop
 
-    assert_equal 0, ContactRollupsRaw.where(email: teacher.email).count
+    refute ContactRollupsRaw.find_by_email(teacher.email)
     ContactRollupsRaw.extract_pd_enrollments
 
     records = ContactRollupsRaw.where(email: teacher.email)
