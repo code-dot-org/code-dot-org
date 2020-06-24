@@ -28,6 +28,15 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
   end
 
+  test 'submit returns BAD REQUEST when params are missing' do
+    Net::HTTP.stubs(:post_form)
+    sign_in create :teacher
+
+    post '/dashboardapi/v1/amazon_future_engineer_submit'
+
+    assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
+  end
+
   test 'logged in can submit' do
     Net::HTTP.expects(:post_form).returns(FakeResponse.new)
 
