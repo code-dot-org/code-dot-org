@@ -47,6 +47,7 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data = {}
       processed_contact_data.merge!(extract_opt_in(contact_data))
       processed_contact_data.merge!(extract_user_id(contact_data))
+      processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
       processed_contact_data.merge!(extract_updated_at(contact_data))
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -157,6 +158,15 @@ class ContactRollupsProcessed < ApplicationRecord
     return values.nil? ? {} : {user_id: values.first}
   end
 
+  def self.extract_professional_learning_enrolled(contact_data)
+    values = extract_field(contact_data, 'dashboard.pd_enrollments', 'course')
+    # We only care about unique and non-nil values. The result is sorted to keep consistent order.
+    # Assuming that all course values are valid, so we don't have to do string cleaning.
+    # @see Pd::SharedWorkshopConstants::COURSES for the list of courses.
+    uniq_values = values&.uniq&.compact&.sort
+    return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
+  end
+
   # Extracts values of a field in a source table from contact data.
   #
   # @param contact_data [Hash] compiled data from multiple source tables.
@@ -186,9 +196,5 @@ class ContactRollupsProcessed < ApplicationRecord
 
     raise 'Missing data_updated_at value' unless max_data_updated_at
     {updated_at: max_data_updated_at}
-  end
-
-  def self.truncate_table
-    ActiveRecord::Base.connection.truncate(table_name)
   end
 end
