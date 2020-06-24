@@ -70,10 +70,6 @@ class ProjectsController < ApplicationController
       # public gallery, and to be published from the share dialog.
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
-    scratch: {
-      name: 'New Scratch Project',
-      levelbuilder_required: true,
-    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },

@@ -487,6 +487,7 @@ hu-HU:
       frozen freeplay:
         snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
       frozen line:
+        run: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat!
         move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
           blokk alá ahhoz, hogy Elsa előre lépjen
       frozen perpendicular:

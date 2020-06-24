@@ -1655,6 +1655,10 @@ it-IT:
       New Sports Project: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
         i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
         consentire agli amici di provare il tuo gioco sui loro telefoni.'
+      OPD-K5 whats your plan: Prenditi un momento per valutare come e quando completerai
+        questo corso online per assicurarti di ottenere il massimo beneficio dall'esperienza.
+        Quando hai delineato un buon piano, continua ad approfondire i Fondamenti
+        di Informatica.
       OPD-K5-events-2: Collega il blocco `sbatti le ali per un numero di volte normale`
         all'evento `quando si clicca`, quindi premi "Esegui". Clicca o tocca nello
         spazio di gioco per far volare Flappy verso la sua destinazione.
@@ -2324,7 +2328,7 @@ it-IT:
       courseA_maze_seq5: Prova questo da solo dall'inizio.
       courseA_maze_seq5_2018: Fai un tentativo.
       courseA_maze_seq5_2019: Fai un tentativo.
-      courseA_maze_seq5_copy: Prova questo da solo dall'inizio.
+      courseA_maze_seq5_copy: Provalo da solo dall'inizio.
       courseA_maze_seq5a_2018: Cosa devi aggiungere alla fine di questo programma
         per far arrivare l'uccellino fino al maialino?
       courseA_maze_seq5a_2019: Cosa devi aggiungere alla fine di questo programma
