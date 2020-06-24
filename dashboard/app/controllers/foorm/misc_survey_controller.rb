@@ -1,10 +1,11 @@
 module Foorm
   class MiscSurveyController < ApplicationController
     MISC_FOORM_SUBMIT_API = '/dashboardapi/v1/foorm/misc_survey_submission'
+
     # General misc survey.
     # GET '/form/:misc_form_path'
-    #
-    # The JotForm survey will redirect to thanks.
+    # misc_form_path references the configuration in foorm/misc_survey, which maps a
+    # form path to a set of survey variables and a form name.
     def new
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?
@@ -22,8 +23,6 @@ module Foorm
       unless form_data[:allow_multiple_submissions]
         return render :thanks if response_exists?(key_params)
       end
-
-      @form_params = {}
 
       @script_data = {
         props: {
