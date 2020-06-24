@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "short_instructions": "This version of the Internet Simulator looks a little different than the previous one. See if you can figure out the changes!\r\n\r\nYour challenge is to make arrangements to hang out after school with three different classmates, but without talking!  Your only communication can be through the Internet Simulator.  You may only meet with one student during each time slot",
+    "short_instructions": "Your challenge is to make arrangements to hang out after school with three different classmates, but without talking!  Your only communication can be through the Internet Simulator.  You may only meet with one student during each time slot",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -63,11 +63,12 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "show_type_hints": "false",
+    "long_instructions": "This version of the Internet Simulator looks a little different than the previous one. See if you can figure out the changes!\r\n\r\nYour challenge is to make arrangements to hang out after school with three different classmates, but without talking! Your only communication can be through the Internet Simulator. You may only meet with one student during each time slot.",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-10 16:45:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-19 18:38:30 +0000\",\"changed\":[\"short_instructions\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 16:45:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-19 18:38:30 +0000\",\"changed\":[\"short_instructions\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-23 13:08:04 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-23 13:09:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-23 13:10:50 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
