@@ -41,4 +41,9 @@ class Foorm::MiscSurvey < ActiveRecord::Base
       save!
     end
   end
+
+  def self.form_disabled?(misc_form_path)
+    disabled_forms = DCDO.get('foorm_misc_survey_disabled', [])
+    disabled_forms && disabled_forms.include?(misc_form_path)
+  end
 end
