@@ -30,7 +30,7 @@
     {
      "type": "html",
      "name": "Preamble",
-     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources over the entire 2019-20 academic year.</p>\n<p>We address teaching the course under &quot;normal&quot; circumstances, as well as remotely.</p>\n<p> </p>"
+     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We address teaching the course under &quot;normal&quot; circumstances, as well as remotely.</p>\n<p> </p>"
     },
     {
      "type": "checkbox",
@@ -76,6 +76,21 @@
       "Course 4",
       "Express",
       "20-hour"
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "question1",
+     "title": ">>TO DO<< ***IF CS Fundamentals*** What type of role applies best to you?",
+     "choices": [
+      "Classroom Teacher",
+      "Media Specialist",
+      "Tech Teacher",
+      "Librarian",
+      "School Administrator",
+      "District Administrator",
+      "Parent",
+      "Other"
      ]
     },
     {
@@ -242,7 +257,7 @@
     {
      "type": "matrix",
      "name": "challenges_normal",
-     "title": "Please characterize the challenges you face with teaching your students Code.org in your normal classroom.",
+     "title": "Please characterize the challenges you faced with teaching your students Code.org in your normal classroom.",
      "columns": [
       {
        "value": "1",
@@ -301,6 +316,10 @@
       {
        "value": "Finding_ways_for_students",
        "text": "Finding ways for students to collaborate"
+      },
+      {
+       "value": "Lack of integration with my school’s LMS",
+       "text": "Lack of integration with my school’s LMS"
       }
      ]
     },
@@ -445,6 +464,18 @@
     },
     {
      "type": "radiogroup",
+     "name": "use_of_cdo_when_remote",
+     "title": "Which of the following most closely describes how you taught your students with Code.org materials once you switched to remote learning.",
+     "choices": [
+      "I mostly stopped or greatly reduced using Code.org with my students.",
+      "I used Code.org courses and content, but NOT those that were part of the {course} course I was teaching originally.",
+      "I continued to teach my Code.org course but with major modifications to support remote learning.",
+      "I continued to teach my Code.org course more or less the same as I was before.",
+      "I did not switch to remote learning."
+     ]
+    },
+    {
+     "type": "radiogroup",
      "name": "video_conf_tool_remote",
      "title": "When teaching remotely what was the primary video conferencing technology you used?",
      "choices": [
@@ -483,18 +514,6 @@
       "SeeSaw",
       "Canvas",
       "Moodle"
-     ]
-    },
-    {
-     "type": "radiogroup",
-     "name": "use_of_cdo_when_remote",
-     "title": "Which of the following most closely describes how you taught your students with Code.org materials once you switched to remote learning.",
-     "choices": [
-      "I mostly stopped or greatly reduced using Code.org with my students.",
-      "I used Code.org courses and content, but NOT those that were part of the {course} course I was teaching originally.",
-      "I continued to teach my Code.org course but with major modifications to support remote learning.",
-      "I continued to teach my Code.org course more or less the same as I was before.",
-      "I did not switch to remote learning."
      ]
     },
     {
@@ -619,6 +638,10 @@
       {
        "value": "Finding_ways_for_students",
        "text": "Finding ways for students to collaborate"
+      },
+      {
+       "value": "Lack of integration with my school’s LMS",
+       "text": "Lack of integration with my school’s LMS"
       }
      ]
     },
@@ -969,6 +992,11 @@
       "Other",
       "Prefer not to answer"
      ]
+    },
+    {
+     "type": "text",
+     "name": "question2",
+     "title": "Zip code"
     },
     {
      "type": "checkbox",
