@@ -163,7 +163,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
   handleEligibility(isEligible) {
     this.setState({
-      formData: {...this.state.formData, ...{schoolEligible: isEligible}}
+      formData: {...this.state.formData, schoolEligible: isEligible}
     });
     this.saveToSessionStorage();
 
@@ -204,7 +204,11 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state.formData)
+      body: JSON.stringify({
+        ...this.state.formData,
+        trafficSource: 'AFE-code.org',
+        newCodeAccount: true
+      })
     });
   };
 
@@ -215,7 +219,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       this.submitToAFE().then(() => {
         sessionStorage.setItem(
           sessionStorageKey,
-          JSON.stringify(...sessionEligibilityData, ...{submitted: true})
+          JSON.stringify({...sessionEligibilityData, submitted: true})
         );
       });
     }
