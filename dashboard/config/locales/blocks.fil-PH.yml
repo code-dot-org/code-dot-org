@@ -1094,6 +1094,8 @@ fil:
             '"West"': West
       gamelab_moveToward:
         text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
+      gamelab_objectSpritePointer:
+        text: nag-click {SPRITE}
       gamelab_playSound:
         text: Ang ... {SOUND}
       gamelab_pointInDirection:
@@ -1174,6 +1176,8 @@ fil:
           CONDITION:
             '"when"': kelan
             '"while"': habang
+      gamelab_subjectSpritePointer:
+        text: nag-click {SPRITE}
       gamelab_turn:
         text: bumaling {SPRITE} {DIRECTION} {N} degrees
         options:

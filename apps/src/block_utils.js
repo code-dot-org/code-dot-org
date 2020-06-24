@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
 import experiments from '@cdo/apps/util/experiments';
@@ -1022,23 +1023,42 @@ exports.createJsWrapperBlockCreator = function(
             this.tray = !this.tray;
             this.render();
           });
-          this.appendDummyInput()
-            .appendTitle(toggle)
-            .appendTitle(' ');
+          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
           this.initMiniFlyout(miniToolboxXml);
         }
 
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
         // behavior and indicates the sibling block to shadow the value from
-        if (blockText === 'clicked {SPRITE}') {
+        if (this.type === 'gamelab_clickedSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow('gamelab_allSpritesWithAnimation');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_spriteClicked' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'subject sprite') {
+        if (this.type === 'gamelab_subjectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'object sprite') {
+        if (this.type === 'gamelab_objectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[2] &&
+              root.getConnections_()[2].targetBlock()
+          );
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);

@@ -130,7 +130,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def friday_institute_workshops_must_be_virtual
-    if third_party_provider == 'friday_institute' && !virtual?
+    if friday_institute? && !virtual?
       errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
@@ -396,10 +396,12 @@ class Pd::Workshop < ActiveRecord::Base
   # for details.
   def self.process_ends
     end_on_or_after(Time.now - 2.days).each do |workshop|
-      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
-        workshop.send_exit_surveys
-        workshop.update!(processed_at: Time.zone.now)
-      end
+      # only process if the workshop has not already been processed or if workshop was
+      # processed before the workshop ended.
+      next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
+      workshop.send_exit_surveys
+      workshop.send_facilitator_post_surveys
+      workshop.update!(processed_at: Time.zone.now)
     end
   end
 
@@ -542,6 +544,17 @@ class Pd::Workshop < ActiveRecord::Base
       end
 
       enrollment.send_exit_survey
+    end
+  end
+
+  # Send Post-surveys to facilitators of CSD and CSP workshops
+  def send_facilitator_post_surveys
+    if course == COURSE_CSD || course == COURSE_CSP
+      facilitators.each do |facilitator|
+        next unless facilitator.email
+
+        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
+      end
     end
   end
 
@@ -850,5 +863,9 @@ class Pd::Workshop < ActiveRecord::Base
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
     last_day
+  end
+
+  def friday_institute?
+    third_party_provider == 'friday_institute'
   end
 end

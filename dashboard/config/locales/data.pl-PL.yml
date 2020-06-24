@@ -796,6 +796,9 @@ pl:
         codebreak_e08: 'Odcinek 8.0 - Zmienne z Yarą Shahidi i Fuzzy Khosrowshahi '
         codebreak_e09: 'Code Break 9.0: Wydarzenia z Macklemore i Scottem Forstallem'
         codebreak_e10: 'Code Break 10.0: AI z Kat Graham i Kate Park'
+        codebreak_e11: Odcinek 11.0 - Abstrakcja z Susan Wojcicki & China Anne McClain
+        codebreak_e12: Odcinek 12.0 - Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą
+          Mejią Minaya
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

@@ -599,7 +599,16 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
 
     assert latest_in_english.can_view_version?(student, locale: 'it-it')
+    assert latest_in_english.can_view_version?(nil)
     assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+    assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
+  end
+
+  test 'can_view_version? is false if script is unstable and has no progress and is not assigned' do
+    unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
+    student = create :student
+
+    refute unstable.can_view_version?(student, locale: 'it-it')
   end
 
   test 'can_view_version? is true if student is assigned to script' do
