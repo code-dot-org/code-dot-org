@@ -734,10 +734,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
-
-    amazonFutureEngineerEligibility:
-      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };
 
   // Create a config for each of our bundles
