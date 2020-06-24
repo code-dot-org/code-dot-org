@@ -336,27 +336,39 @@ class BucketHelper
     result.deleted.count
   end
 
-  def list_versions(encrypted_channel_id, filename)
+  def list_versions(encrypted_channel_id, filename, prune_list = false)
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
     track_list_operation 'BucketHelper.list_versions'
-    s3.list_object_versions(bucket: @bucket, prefix: key).
-      versions.
-      # Sort descending order by time stamp.
-      sort_by(&:last_modified).reverse.
-      # Average student browser session is 20-30 minutes.
-      # A gap of this length in S3 Object Version history may indicate start of a new session.
-      slice_when {|a, b| (a.last_modified - b.last_modified) > 20.minutes}.
-      # Take the most recent Version from each user session.
-      map(&:first).
-      map do |version|
-        {
-          versionId: version.version_id,
-          lastModified: version.last_modified,
-          isLatest: version.is_latest
-        }
-      end
+    if prune_list
+      s3.list_object_versions(bucket: @bucket, prefix: key).
+        versions.
+        # Sort descending order by time stamp.
+        sort_by(&:last_modified).reverse.
+        # Average student browser session is 20-30 minutes.
+        # A gap of this length in S3 Object Version history may indicate start of a new session.
+        slice_when {|a, b| (a.last_modified - b.last_modified) > 20.minutes}.
+        # Take the most recent Version from each user session.
+        map(&:first).
+        map do |version|
+          {
+            versionId: version.version_id,
+            lastModified: version.last_modified,
+            isLatest: version.is_latest
+          }
+        end
+    else
+      s3.list_object_versions(bucket: @bucket, prefix: key).
+        versions.
+        map do |version|
+          {
+            versionId: version.version_id,
+            lastModified: version.last_modified,
+            isLatest: version.is_latest
+          }
+        end
+    end
   end
 
   # Used for testing

@@ -546,7 +546,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, true).to_json
   end
 
   #
@@ -784,7 +784,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    FileBucket.new.list_versions(encrypted_channel_id, FileBucket::MANIFEST_FILENAME).to_json
+    FileBucket.new.list_versions(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, true).to_json
   end
 
   #
