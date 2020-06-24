@@ -130,6 +130,57 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert_equal expected_output, output
   end
 
+  test 'extract_professional_learning_attended' do
+    tests = [
+      {
+        # Input doesn't have 1 of the 2 tables required, and doesn't have any fields required
+        input: {'dashboard.followers' => {}},
+        expected_output: {}
+      },
+      {
+        # Input has a non-nil valid section type
+        input: {
+          'dashboard.followers' => {'section_type' => [{'value' => SECTION_TYPE_MAP[COURSE_CSF]}]}
+        },
+        expected_output: {professional_learning_attended: COURSE_CSF}
+      },
+      {
+        # Input has a non-nil valid course
+        input: {
+          'dashboard.pd_attendances' => {'course' => [{'value' => COURSE_CSD}]}
+        },
+        expected_output: {professional_learning_attended: COURSE_CSD}
+      },
+      {
+        # Input contains both nil and multiple non-nil valid values from both required tables
+        input: {
+          'dashboard.followers' => {
+            'section_type' => [
+              {'value' => SECTION_TYPE_MAP[COURSE_CSF]},
+              {'value' => SECTION_TYPE_MAP[COURSE_ECS]},
+              {'value' => nil}
+            ]
+          },
+          'dashboard.pd_attendances' => {
+            'course' => [
+              {'value' => COURSE_CSD},
+              {'value' => COURSE_CSP},
+              {'value' => nil}
+            ]
+          }
+        },
+        expected_output: {
+          professional_learning_attended: "#{COURSE_CSD},#{COURSE_CSF},#{COURSE_CSP},#{COURSE_ECS}"
+        }
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_professional_learning_attended test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_updated_at with valid input' do
     base_time = Time.now.utc - 7.days
     tests = [
