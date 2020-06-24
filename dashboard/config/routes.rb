@@ -726,4 +726,6 @@ Dashboard::Application.routes.draw do
   post '/profanity/find', to: 'profanity#find'
 
   get '/help', to: redirect("https://support.code.org")
+
+  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 end
