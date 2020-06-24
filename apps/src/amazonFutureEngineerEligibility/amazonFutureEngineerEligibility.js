@@ -7,7 +7,7 @@ import AmazonFutureEngineerEligibility from '@cdo/apps/templates/amazonFutureEng
 $(document).ready(init);
 
 function showAmazonFutureEngineerEligibility() {
-  const amazonFutureEngineerEligibilityElement = $(
+  const amazonFutureEngineerEligibilityElements = $(
     '.amazon-future-engineer-eligibility-container'
   );
 
@@ -33,16 +33,18 @@ function showAmazonFutureEngineerEligibility() {
         event: 'start'
       });
 
-      // TO DO: confirm that there's no case where this might be used
-      // where amazonFutureEngineerEligibilityElement could be null or not an array.
-      ReactDOM.render(
-        <AmazonFutureEngineerEligibility
-          signedIn={signedIn}
-          schoolId={schoolData.nces_school_id || ''}
-          schoolEligible={schoolData.afe_high_needs || null}
-          accountEmail={schoolData.teacher_email || null}
-        />,
-        amazonFutureEngineerEligibilityElement[0]
+      amazonFutureEngineerEligibilityElements.each(
+        (index, amazonFutureEngineerEligibilityElement) => {
+          ReactDOM.render(
+            <AmazonFutureEngineerEligibility
+              signedIn={signedIn}
+              schoolId={schoolData.nces_school_id || ''}
+              schoolEligible={schoolData.afe_high_needs || null}
+              accountEmail={schoolData.teacher_email || null}
+            />,
+            amazonFutureEngineerEligibilityElement
+          );
+        }
       );
     });
 }
