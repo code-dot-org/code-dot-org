@@ -18,4 +18,23 @@
 class Foorm::MiscSurvey < ActiveRecord::Base
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
+
+  def self.all_form_data
+    [
+      {
+        form_name: 'surveys/pd/workshop_daily_survey_day_5',
+        misc_form_path: 'csd_sample',
+        variables: {course_name: 'csd'},
+        allow_multiple_submissions: false
+      }
+    ]
+  end
+
+  def self.all_form_paths
+    all_form_data.pluck(:misc_form_path)
+  end
+
+  def self.find_form_data(misc_form_path)
+    all_form_data.detect {|form_data| form_data[:misc_form_path] == misc_form_path}
+  end
 end
