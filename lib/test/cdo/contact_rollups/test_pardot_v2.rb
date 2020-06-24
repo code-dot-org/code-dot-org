@@ -193,15 +193,32 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_errors, errors
   end
 
-  def test_convert_to_pardot_prospect
+  def test_convert_to_pardot_prospect_single_value_attributes
     tests = [
       {
-        input: {email: 'test0@domain.com', pardot_id: 10, opt_in: 1, user_id: 111},
-        expected_output: {email: 'test0@domain.com', id: 10, db_Opt_In: 'Yes', db_Has_Teacher_Account: 'true'}
+        input: {
+          email: 'test0@domain.com',
+          pardot_id: 10,
+          opt_in: 1,
+          user_id: 111
+        },
+        expected_output: {
+          email: 'test0@domain.com',
+          id: 10,
+          db_Opt_In: 'Yes',
+          db_Has_Teacher_Account: 'true'
+        }
       },
       {
-        input: {email: 'test1@domain.com', pardot_id: nil, bad_key: true},
-        expected_output: {email: 'test1@domain.com', id: nil}
+        input: {
+          email: 'test1@domain.com',
+          pardot_id: nil,
+          bad_key: true
+        },
+        expected_output: {
+          email: 'test1@domain.com',
+          id: nil
+        }
       }
     ]
 
