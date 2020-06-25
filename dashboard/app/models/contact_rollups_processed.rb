@@ -183,6 +183,22 @@ class ContactRollupsProcessed < ApplicationRecord
     return uniq_courses.blank? ? {} : {professional_learning_attended: uniq_courses}
   end
 
+  def self.extract_hoc_organizer_years(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    hoc_years = kinds.uniq.map do |kind|
+      if kind == 'CSEdWeekEvent2013'
+        '2013'
+      else
+        # Get year from kind value, such as 'HocSignup2014' and 'HocSignup2019'
+        /HocSignup(?<year>\d{4})/.match(kind)&.[](:year)
+      end
+    end
+
+    # Only care about unique and non-nil value. The result is sorted to keep consistent order.
+    uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
+    return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
+  end
+
   # Extracts values of a field in a source table from contact data.
   #
   # @param contact_data [Hash] compiled data from multiple source tables.
