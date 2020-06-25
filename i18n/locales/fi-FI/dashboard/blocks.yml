@@ -1086,6 +1086,8 @@ fi:
             '"West"': Länsi
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
+      gamelab_objectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1163,6 +1165,8 @@ fi:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
+      gamelab_subjectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_turn:
         text: käännä {SPRITE} {DIRECTION} {N} astetta
         options:

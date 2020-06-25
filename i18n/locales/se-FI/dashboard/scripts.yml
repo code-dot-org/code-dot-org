@@ -19,8 +19,14 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+          lessons:
+            Events:
+              name: Dáhpáhusaid
         grade1:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid
         k5concepts:
@@ -91,5 +97,8 @@ se:
               display_name: Dáhpáhusaid
         code-break:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid

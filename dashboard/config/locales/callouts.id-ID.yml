@@ -20,42 +20,6 @@ id-ID:
           tekan ' Reset ', ubah kode Anda, dan tekan 'Run' lagi.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Anda sekarang dalam Mode desain.
-      CSD U3 - conditionals - transition:
-        CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 - conditionals - transition_2018:
-        CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 - conditionals - transition_2019:
-        CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 Boolean Predict:
-        '': This program will print out a result here
-      CSD U3 Boolean Predict_2018:
-        '': This program will print out a result here
-      CSD U3 Boolean Predict_2019:
-        '': This program will print out a result here
-      CSD U3 Sprites anitab 1:
-        '': Click this to open the Animation Tab
-      CSD U3 Sprites anitab 1_2018:
-        '': Click this to open the Animation Tab
-      CSD U3 Sprites anitab 1_2019:
-        '': Click this to open the Animation Tab
-      CSD U3 Sprites intro sprites:
-        '': Use this block to create a sprite
-      CSD U3 Sprites intro sprites_2018:
-        '': Use this block to create a sprite
-      CSD U3 Sprites intro sprites_2019:
-        '': Use this block to create a sprite
-      CSD U3 Sprites text:
-        '': Use this block to put text on the screen
-      CSD U3 Sprites text_2018:
-        '': Use this block to put text on the screen
-      CSD U3 Sprites text_2019:
-        '': Use this block to put text on the screen
-      CSD U3 UP_ARROW:
-        '': Add an if statement and place your movement code inside it
-      CSD U3 UP_ARROW_2018:
-        '': Add an if statement and place your movement code inside it
-      CSD U3 UP_ARROW_2018_2019:
-        '': Add an if statement and place your movement code inside it
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Ubah nomornya disini
       CSD U3 Variables Predict Where XY:
@@ -68,117 +32,6 @@ id-ID:
         CSD_U3_variables: Ubah nomornya disini
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Ubah nomornya disini
-      CSD U3 abstraction accelerateX:
-        CSD_U3_L11_S6_C1: Add your code here.
-      CSD U3 abstraction accelerateX_2018:
-        CSD_U3_L11_S6_C1: Add your code here.
-      CSD U3 abstraction accelerateX_2019:
-        CSD_U3_L11_S6_C1: Add your code here.
-      CSD U3 abstraction accelerateY:
-        CSD_U3_L11_S7_C1: Add your code here.
-      CSD U3 abstraction accelerateY_2018:
-        CSD_U3_L11_S7_C1: Add your code here.
-      CSD U3 abstraction accelerateY_2019:
-        CSD_U3_L11_S7_C1: Add your code here.
-      CSD U3 abstraction jump:
-        CSD_U3_L11_S17_C1: Look at this if statement
-        CSD_U3_L11_S17_C2: Send the frog back down here
-      CSD U3 abstraction jump_2018:
-        CSD_U3_L11_S17_C1: Look at this if statement
-        CSD_U3_L11_S17_C2: Send the frog back down here
-      CSD U3 abstraction jump_2018_2019:
-        CSD_U3_L11_S17_C1: Look at this if statement
-        CSD_U3_L11_S17_C2: Send the frog back down here
-      CSD U3 abstraction jumping:
-        CSD_U3_L13_S8_C1: Set the velocity here
-      CSD U3 abstraction jumping_2018:
-        CSD_U3_L13_S8_C1: Set the velocity here
-      CSD U3 abstraction jumping_2019:
-        CSD_U3_L13_S8_C1: Set the velocity here
-      CSD U3 abstraction looping:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction looping_2018:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction looping_2019:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction rotation:
-        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
-      CSD U3 abstraction rotation control:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction rotation control_2018:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction rotation control_2019:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction rotation_2018:
-        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
-      CSD U3 abstraction rotation_2019:
-        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
-      CSD U3 abstraction tumbleweed:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction tumbleweed_2018:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction tumbleweed_2019:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction velocityX:
-        CSD_U3_L11_S4_C1: Add your block here.
-      CSD U3 abstraction velocityX control:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX control_2018:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX control_2019:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX if-statements:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX if-statements_2018:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX if-statements_2019:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX_2018:
-        CSD_U3_L11_S4_C1: Add your block here.
-      CSD U3 abstraction velocityX_2019:
-        CSD_U3_L11_S4_C1: Add your block here.
-      CSD U3 abstraction velocityY:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction velocityY control:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityY control_2018:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityY control_2019:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityY_2018:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction velocityY_2019:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 collisions isTouching intro:
-        CSD_U3_L12_S2_C1: Add your block here.
-      CSD U3 collisions isTouching intro_2018:
-        CSD_U3_L12_S2_C1: Add your block here.
-      CSD U3 collisions isTouching intro_2019:
-        CSD_U3_L12_S2_C1: Add your block here.
-      CSD U3 collisions scoreboard:
-        CSD_U3_L12_S8_C1: These blocks display the score.
-        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
-          carrot go here.
-      CSD U3 collisions scoreboard_2018:
-        CSD_U3_L12_S8_C1: These blocks display the score.
-        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
-          carrot go here.
-      CSD U3 collisions scoreboard_2019:
-        CSD_U3_L12_S8_C1: These blocks display the score.
-        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
-          carrot go here.
-      CSD U3 collisions try blocks:
-        CSD_U3_L13_S6_C1: Change this block.
-      CSD U3 collisions try blocks_2018:
-        CSD_U3_L13_S6_C1: Change this block.
-      CSD U3 collisions try blocks_2019:
-        CSD_U3_L13_S6_C1: Change this block.
-      CSD U3 collisions types:
-        CSD_U3_L13_S6_C1: Add your code here.
-      CSD U3 collisions types_2018:
-        CSD_U3_L13_S6_C1: Add your code here.
-      CSD U3 collisions types_2019:
-        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
@@ -206,60 +59,6 @@ id-ID:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
-      CSD U3 game backgrounds:
-        CSD_U3_S18_L4_C1: This block calls your function.
-        CSD_U3_L18_S4_C2: Functions area
-      CSD U3 game backgrounds_2018:
-        CSD_U3_S18_L4_C1: This block calls your function.
-        CSD_U3_L18_S4_C2: Functions area
-      CSD U3 game backgrounds_2019:
-        CSD_U3_S18_L4_C1: This block calls your function.
-        CSD_U3_L18_S4_C2: Functions area
-      CSD U3 game variables:
-        CSD_U3_S18_L3_C1: This block creates a new variable.
-        CSD_U3_L18_S3_C2: Variables area
-      CSD U3 game variables_2018:
-        CSD_U3_S18_L3_C1: This block creates a new variable.
-        CSD_U3_L18_S3_C2: Variables area
-      CSD U3 game variables_2019:
-        CSD_U3_S18_L3_C1: This block creates a new variable.
-        CSD_U3_L18_S3_C2: Variables area
-      CSD U3 keydown conditional:
-        '': Add your block inside this if statement
-      CSD U3 keydown conditional_2018:
-        '': Add your block inside this if statement
-      CSD U3 keydown conditional_2018_2019:
-        '': Add your block inside this if statement
-      CSD U3 platform background1:
-        CSD_U3_L16_S3_C1: the function that draws the background
-        CSD_U3_L16_S3_C2: the code that calls the function
-        CSD_U3_L16_S3_C3: Change this function.
-      CSD U3 platform background1_2018:
-        CSD_U3_L16_S3_C1: the function that draws the background
-        CSD_U3_L16_S3_C2: the code that calls the function
-        CSD_U3_L16_S3_C3: Change this function.
-      CSD U3 platform background1_2019:
-        CSD_U3_L16_S3_C1: the function that draws the background
-        CSD_U3_L16_S3_C2: the code that calls the function
-        CSD_U3_L16_S3_C3: Change this function.
-      CSD U3 platform platform1:
-        CSD_U3_S17_L8_C1: This block creates a new sprite.
-      CSD U3 platform platform1_2018:
-        CSD_U3_S17_L8_C1: This block creates a new sprite.
-      CSD U3 platform platform1_2019:
-        CSD_U3_S17_L8_C1: This block creates a new sprite.
-      CSD U3 platform scoreboard:
-        CSD_U3_L17_S7_C1: Score is printed here.
-      CSD U3 platform scoreboard_2018:
-        CSD_U3_L17_S7_C1: Score is printed here.
-      CSD U3 platform scoreboard_2019:
-        CSD_U3_L17_S7_C1: Score is printed here.
-      CSD U3 platform variable1:
-        callout: This block creates a variable.
-      CSD U3 platform variable1_2018:
-        callout: This block creates a variable.
-      CSD U3 platform variable1_2019:
-        callout: This block creates a variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Berikut ini adalah tombol "Run".
@@ -282,12 +81,6 @@ id-ID:
         CSDU6L10_rainbow: Tambahkan kode anda disini
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: Tambahkan kode anda disini
-      CSD U6 getProperty input:
-        CSD_U6L06P03: Add your block here.
-      CSD U6 getProperty input_2018:
-        CSD_U6L06P03: Add your block here.
-      CSD U6 getProperty input_2019:
-        CSD_U6L06P03: Add your block here.
       CSD U6 light show:
         CSDUDL03P09: Apa kegunaan garis ini?
       CSD U6 light show_2018:
@@ -312,8 +105,6 @@ id-ID:
         CSD_U6_checkWin: Periksa apakah pemain telah menang
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Periksa apakah pemain telah menang
-      CSDU4 - Design Mode - 3:
-        '': Use the setText block to change the text of titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Masukkan jumlah waktu zombie harus bergerak untuk membuat
           lingkaran penuh
@@ -501,20 +292,8 @@ id-ID:
       NEW Course 4 Bee For Loops 5:
         actions_category: Kotak alat ini punya tampilan baru! Blok "Tindakan" berada
           di sini sekarang.
-      New Artist Project:
-        New Artist Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
       New Frozen Project:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
-      New Play Lab Project:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
       OPD-K5-forloops-5:
         courseF_bee_for4_1: Anda akan menemukan loop 'for` di sini!
       OPD-K5-projects-4:
@@ -658,8 +437,6 @@ id-ID:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
           yang dapat anda gunakan dalam puzzle ini.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
