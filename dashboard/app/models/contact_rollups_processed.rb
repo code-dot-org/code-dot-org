@@ -25,6 +25,9 @@ class ContactRollupsProcessed < ApplicationRecord
   DATA_KEY = 'd'.freeze
   DATA_UPDATED_AT_KEY = 'u'.freeze
 
+  # Reverse lookup from section_type to course
+  SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
+
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
@@ -48,6 +51,7 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data.merge!(extract_opt_in(contact_data))
       processed_contact_data.merge!(extract_user_id(contact_data))
       processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
+      processed_contact_data.merge!(extract_professional_learning_attended(contact_data))
       processed_contact_data.merge!(extract_updated_at(contact_data))
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -165,6 +169,18 @@ class ContactRollupsProcessed < ApplicationRecord
     # @see Pd::SharedWorkshopConstants::COURSES for the list of courses.
     uniq_values = values&.uniq&.compact&.sort
     return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
+  end
+
+  def self.extract_professional_learning_attended(contact_data)
+    # @see Pd::WorkshopConstants::SECTION_TYPES for section_type values
+    # and Pd::SharedWorkshopConstants::COURSES for course values.
+    section_types = extract_field(contact_data, 'dashboard.followers', 'section_type')
+    section_courses = section_types&.map {|section| SECTION_TYPE_INVERTED_MAP[section]} || []
+    courses = extract_field(contact_data, 'dashboard.pd_attendances', 'course') || []
+
+    # Only care about unique and non-nil value. The result is sorted to keep consistent order.
+    uniq_courses = (courses + section_courses).uniq.compact.sort.join(',')
+    return uniq_courses.blank? ? {} : {professional_learning_attended: uniq_courses}
   end
 
   # Extracts values of a field in a source table from contact data.
