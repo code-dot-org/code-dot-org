@@ -10,6 +10,7 @@ import {
   DIAMOND_BUBBLE_WIDTH,
   PILL_BUBBLE_WIDTH
 } from './multiGridConstants';
+import {SMALL_DOT_SIZE} from '@cdo/apps/templates/progress/progressStyles';
 import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
@@ -335,9 +336,8 @@ export const getColumnWidthsForDetailView = state => {
         width = width + PROGRESS_BUBBLE_WIDTH;
       }
       if (levels[levelIndex].sublevels) {
-        // TODO: import SMALL_DOT_SIZE from progressStyles
-        // TODO: make consistent with multiGridConstants
-        width = width + levels[levelIndex].sublevels.length * 18;
+        width =
+          width + levels[levelIndex].sublevels.length * SMALL_DOT_SIZE * 2;
       }
     }
     columnLengths.push(width || 0);

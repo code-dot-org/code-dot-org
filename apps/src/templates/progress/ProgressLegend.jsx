@@ -221,7 +221,7 @@ export default class ProgressLegend extends Component {
                 <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
-              <div style={styles.conAndTextDivBottom}>
+              <div style={styles.iconAndTextDivBottom}>
                 <FontAwesome icon="sitemap" style={styles.icon} />
                 {i18n.choiceLevel()}
               </div>
