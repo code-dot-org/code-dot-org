@@ -50,8 +50,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     };
   }
 
-  // If a user has gone through the eligibility flow,
-  // or has school information associated with their account,
+  // If a user has gone through the eligibility flow (sessionStorage),
+  // or has school information associated with their account (props),
   // we use that for determining their eligibilty.
   // If the school information associated with their account
   // is ineligible, we still allow them to provide their school information
@@ -59,10 +59,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   // Redirect to ineligible page ('/afe/start-codeorg') if ineligible.
   // Otherwise, we ask them for their school information.
   checkInitialSchoolEligibility = sessionEligibilityData => {
-    if (
-      sessionEligibilityData.schoolEligible === true ||
-      this.props.schoolEligible === true
-    ) {
+    if (sessionEligibilityData.schoolEligible || this.props.schoolEligible) {
       return true;
     } else if (sessionEligibilityData.schoolEligible === false) {
       window.location = pegasus('/afe/start-codeorg');
