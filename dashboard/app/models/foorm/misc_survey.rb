@@ -18,4 +18,27 @@
 class Foorm::MiscSurvey < ActiveRecord::Base
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
+
+  def self.all_form_data
+    [
+      # Placeholder survey configuration
+      {
+        form_name: 'surveys/pd/summer_workshop_daily_survey',
+        misc_form_path: 'csd_sample',
+        survey_data: {workshop_course: 'CS Discoveries'},
+        allow_multiple_submissions: true
+      }
+    ]
+  end
+
+  def self.find_form_data(misc_form_path)
+    all_form_data.detect {|form_data| form_data[:misc_form_path] == misc_form_path}
+  end
+
+  def save_with_foorm_submission(answers, form_name, form_version)
+    ActiveRecord::Base.transaction do
+      create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
+      save!
+    end
+  end
 end
