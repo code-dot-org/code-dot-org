@@ -632,6 +632,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
+    'code.org/views/amazon_future_engineer_eligibility':
+      './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
