@@ -35,6 +35,14 @@ export default class HeaderPopup extends Component {
     open: false
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      this.props.windowHeight !== nextProps.windowHeight ||
+      this.props.minimal !== nextProps.minimal ||
+      this.state.open !== nextState.open
+    );
+  }
+
   handleClickOpen = () => {
     this.setState({open: true});
 
@@ -56,6 +64,8 @@ export default class HeaderPopup extends Component {
   };
 
   render() {
+    console.log('HeaderPopup render');
+
     return (
       <div style={styles.container}>
         {!this.state.open && (

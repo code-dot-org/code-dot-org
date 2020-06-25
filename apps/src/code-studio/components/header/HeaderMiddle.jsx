@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
-import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
-import HeaderPopup from '@cdo/apps/code-studio/components/header/HeaderPopup';
+import ScriptName from './ScriptName';
+import ProjectInfo from './ProjectInfo';
+import HeaderPopup from './HeaderPopup';
+import HeaderFinish from './HeaderFinish';
+import LessonProgress from '../progress/LessonProgress.jsx';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
-
-import LessonProgress from '../progress/LessonProgress.jsx';
 
 const styles = {
   headerMiddleContent: {
@@ -39,8 +39,10 @@ class HeaderMiddle extends React.Component {
 
     this.state = {
       width: this.getWidth(),
-      lessonProgressFullWidth: 0,
-      projectInfoFullWidth: 0
+      scriptNameDesiredWidth: 0,
+      projectInfoDesiredWidth: 0,
+      lessonProgressDesiredWidth: 0,
+      finishDesiredWidth: 0
     };
   }
 
@@ -54,7 +56,6 @@ class HeaderMiddle extends React.Component {
 
   getWidth() {
     const width = $('.header_middle').width();
-    console.log('header_middle width', width);
     return width;
   }
 
@@ -74,30 +75,32 @@ class HeaderMiddle extends React.Component {
 
     if (this.props.projectInfoOnly) {
       return {
-        projectInfo: this.state.projectInfoFullWidth,
+        projectInfo: this.state.projectInfoDesiredWidth,
         scriptName: 0,
         progress: 0,
         popup: 0,
-        finishLink: 0
+        finish: 0
       };
     }
 
-    const progressDesiredWidth = this.state.lessonProgressFullWidth + 10;
+    const lessonProgresssDesiredWidth =
+      this.state.lessonProgressDesiredWidth + 10;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
     );
 
     // projectInfo gets no more than 30% of the entire width
-    const projectInfoWidth = Math.min(
-      this.state.projectInfoFullWidth,
-      width * 0.3
+    const projectInfoWidth = Math.floor(
+      Math.min(this.state.projectInfoDesiredWidth, width * 0.3)
     );
 
     let remainingWidth = width - projectInfoWidth;
 
     // progress gets no more than 60% of the remaining width
-    const progressWidth = Math.min(progressDesiredWidth, remainingWidth * 0.6);
+    const progressWidth = Math.floor(
+      Math.min(lessonProgresssDesiredWidth, remainingWidth * 0.6)
+    );
 
     remainingWidth = remainingWidth - progressWidth;
 
@@ -105,7 +108,7 @@ class HeaderMiddle extends React.Component {
     let showPopupBecauseProgressCropped = false;
     if (this.props.lessonData && this.props.lessonData.num_script_lessons > 1) {
       showPopup = true;
-    } else if (progressWidth < progressDesiredWidth) {
+    } else if (progressWidth < lessonProgresssDesiredWidth) {
       showPopup = true;
       showPopupBecauseProgressCropped = true;
     }
@@ -114,25 +117,51 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - popupWidth;
 
+    const finishWidth = showFinish
+      ? Math.min(remainingWidth / 2, this.state.finishDesiredWidth)
+      : 0;
+
+    remainingWidth = remainingWidth - finishWidth;
+
+    const scriptNameWidth = Math.min(
+      remainingWidth,
+      this.state.scriptNameDesiredWidth + 10
+    );
+
+    /*
     // script name gets between 50% on wide screens and 80% on narrow screens
-    const scriptNameWidth = this.getScaledValue(
-      300,
+    const scriptNameWidthMax = this.getScaledValue(
+      400,
       1000,
       width,
-      remainingWidth * 0.8,
+      remainingWidth * 0.9,
       remainingWidth * 0.5
     );
 
+    const scriptNameWidth = Math.floor(Math.min(
+      scriptNameWidthMax,
+      this.state.scriptNameDesiredWidth + 10
+    ));*/
+
     remainingWidth = remainingWidth - scriptNameWidth;
 
-    const finishLinkWidth = showFinish ? remainingWidth : 0;
+    /*
+    const headerMiddleLeftOffset = 74; // $('#header_middle_content').offset().left;
+    const windowWidth = $(window).width();
+    const widthUsed = width - remainingWidth;
+    const idealLeftPadding = (windowWidth - widthUsed)/2 - headerMiddleLeftOffset;
+    const leftWidth = Math.floor(Math.min(idealLeftPadding, remainingWidth));
+    */
+
+    const leftWidth = remainingWidth / 2;
 
     return {
+      left: leftWidth,
       projectInfo: projectInfoWidth,
       scriptName: scriptNameWidth,
       progress: progressWidth,
       popup: popupWidth,
-      finishLink: finishLinkWidth,
+      finish: finishWidth,
       showPopupBecauseProgressCropped: showPopupBecauseProgressCropped
     };
   }
@@ -150,18 +179,6 @@ class HeaderMiddle extends React.Component {
     return scaledOutput;
   }
 
-  onLessonProgressFullWidth = lessonProgressFullWidth => {
-    if (lessonProgressFullWidth !== this.state.lessonProgressFullWidth) {
-      this.setState({lessonProgressFullWidth});
-    }
-  };
-
-  onProjectInfoFullWidth = projectInfoFullWidth => {
-    if (projectInfoFullWidth !== this.state.projectInfoFullWidth) {
-      this.setState({projectInfoFullWidth});
-    }
-  };
-
   render() {
     const {
       scriptNameData,
@@ -175,12 +192,22 @@ class HeaderMiddle extends React.Component {
     const widths = this.getWidths();
 
     const extraScriptNameData = scriptNameData
-      ? {...scriptNameData, width: widths.scriptName - 10}
+      ? {
+          ...scriptNameData,
+          width: widths.scriptName - 10,
+          setDesiredWidth: width => {
+            if (Math.ceil(width) !== this.state.scriptNameDesiredWidth) {
+              this.setState({scriptNameDesiredWidth: Math.ceil(width)});
+            }
+          }
+        }
       : null;
 
     if (!hasAppOptions || this.props.appLoaded) {
+      console.log('HeaderMiddle render', this.getWidth());
+
       return (
-        <div id="header_middle_content;" style={styles.headerMiddleContent}>
+        <div id="header_middle_content" style={styles.headerMiddleContent}>
           <div
             id="project_info_container"
             style={{
@@ -191,11 +218,22 @@ class HeaderMiddle extends React.Component {
           >
             <ProjectInfo
               width={widths.projectInfo}
-              onSize={this.onProjectInfoFullWidth}
+              setDesiredWidth={width => {
+                if (Math.ceil(width) !== this.state.projectInfoDesiredWidth) {
+                  this.setState({projectInfoDesiredWidth: Math.ceil(width)});
+                }
+              }}
             />
           </div>
 
-          {widths.scriptName !== 0 && (
+          {widths.left !== 0 && (
+            <div
+              id="left_padding"
+              style={{float: 'left', width: widths.left}}
+            />
+          )}
+
+          {extraScriptNameData && (
             <div
               id="script_name_container"
               style={{
@@ -223,7 +261,15 @@ class HeaderMiddle extends React.Component {
             >
               <LessonProgress
                 width={widths.progress}
-                onSize={this.onLessonProgressFullWidth}
+                setDesiredWidth={width => {
+                  if (
+                    Math.ceil(width) !== this.state.lessonProgressDesiredWidth
+                  ) {
+                    this.setState({
+                      lessonProgressDesiredWidth: Math.ceil(width)
+                    });
+                  }
+                }}
               />
             </div>
           )}
@@ -250,18 +296,23 @@ class HeaderMiddle extends React.Component {
             </div>
           )}
 
-          {widths.finishLink !== 0 && (
-            <div
-              id="finish_link_container"
-              style={{float: 'left', width: widths.finishLink}}
-            >
-              <div className="header_finished_link" style={styles.finishedLink}>
-                <a href={lessonData.finishLink} title={lessonData.finishText}>
-                  {lessonData.finishText}
-                </a>
-              </div>
-            </div>
-          )}
+          <div
+            id="finish_link_container"
+            style={{float: 'left', width: widths.finish, height: 18}}
+          >
+            <HeaderFinish
+              lessonData={lessonData}
+              width={widths.finish}
+              setDesiredWidth={width => {
+                if (Math.ceil(width) !== this.state.finishDesiredWidth) {
+                  this.setState({finishDesiredWidth: Math.ceil(width)});
+                }
+              }}
+              style={{
+                visibility: widths.projectInfo === 0 ? 'hidden' : undefined
+              }}
+            />
+          </div>
         </div>
       );
     } else {
