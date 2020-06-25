@@ -48,11 +48,12 @@ class ContactRollupsProcessed < ApplicationRecord
       end
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_opt_in(contact_data))
-      processed_contact_data.merge!(extract_user_id(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_attended(contact_data))
-      processed_contact_data.merge!(extract_updated_at(contact_data))
+      processed_contact_data.merge! extract_opt_in(contact_data)
+      processed_contact_data.merge! extract_user_id(contact_data)
+      processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
+      processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+      processed_contact_data.merge! extract_updated_at(contact_data)
+      processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
