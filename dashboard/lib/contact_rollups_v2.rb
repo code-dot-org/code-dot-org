@@ -228,8 +228,6 @@ class ContactRollupsV2
     Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
   end
 
-  private
-
   # Using truncate allows us to re-use row IDs,
   # which is important in production so we don't overflow the table.
   # Deletion is required in test environments, as tests generally do
