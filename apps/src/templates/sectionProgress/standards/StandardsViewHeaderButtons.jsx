@@ -29,6 +29,7 @@ const styles = {
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
+    linkToStandardsOverview: PropTypes.string,
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
@@ -194,6 +195,7 @@ class StandardsViewHeaderButtons extends Component {
           handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
           sectionId={this.props.sectionId}
+          linkToStandardsOverview={this.props.linkToStandardsOverview}
         />
       </div>
     );

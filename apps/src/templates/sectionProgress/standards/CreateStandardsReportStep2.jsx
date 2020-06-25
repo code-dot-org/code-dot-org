@@ -25,6 +25,7 @@ const styles = {
 class CreateStandardsReportStep2 extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
+    linkToStandardsOverview: PropTypes.string,
     onBack: PropTypes.func.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     onCommentChange: PropTypes.func.isRequired,
@@ -56,7 +57,19 @@ class CreateStandardsReportStep2 extends Component {
             <SafeMarkdown markdown={i18n.createStandardsReportSuggestion1()} />
           </li>
           <li>
-            <SafeMarkdown markdown={i18n.createStandardsReportSuggestion2()} />
+            {this.props.linkToStandardsOverview && (
+              <SafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={i18n.createStandardsReportSuggestion2Link({
+                  standardsOverviewLink: this.props.linkToStandardsOverview
+                })}
+              />
+            )}
+            {!this.props.linkToStandardsOverview && (
+              <SafeMarkdown
+                markdown={i18n.createStandardsReportSuggestion2()}
+              />
+            )}
           </li>
           <li>
             <SafeMarkdown
