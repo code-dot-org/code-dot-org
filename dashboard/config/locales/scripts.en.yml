@@ -31919,3 +31919,31 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        ui-test-script-2017:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Lesson Group
+          title: UI Test Script 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        ui-test-script-2018:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Lesson Group
+          title: UI Test Script 2018
+          description_audience: ''
+          description_short: ''
+          description: ''

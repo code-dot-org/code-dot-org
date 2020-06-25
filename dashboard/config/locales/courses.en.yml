@@ -76,3 +76,13 @@ en:
           description_short: An introductory computer science course that empowers students to create authentic artifacts.
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+        ui-test-course-2018:
+          title: ui-test-course-2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        ui-test-course-2017:
+          title: ui-test-course-2017
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

@@ -1,7 +1,7 @@
 @no_mobile
 Feature: Using the teacher dashboard
 
-  Scenario: Visiting student name URLs in old and new teacher dashboard
+  Scenario: Visiting student name URLs in teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
 
