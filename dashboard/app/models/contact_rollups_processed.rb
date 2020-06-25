@@ -27,6 +27,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
+  HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
@@ -191,7 +192,7 @@ class ContactRollupsProcessed < ApplicationRecord
         '2013'
       else
         # Get year from kind value, such as 'HocSignup2014' and 'HocSignup2019'
-        /HocSignup(?<year>\d{4})/.match(kind)&.[](:year)
+        HOC_YEAR_PATTERN.match(kind)&.[](:year)
       end
     end
 
