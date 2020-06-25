@@ -31,7 +31,6 @@ experiments.MINI_TOOLBOX = 'miniToolbox';
 experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 
-
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
