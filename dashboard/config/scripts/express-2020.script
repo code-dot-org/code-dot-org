@@ -402,7 +402,7 @@ level 'Virtual Pet 6_2020'
 level 'Virtual Pet 7_2020'
 level 'Virtual Pet 8_2020'
 
-lesson_group 'end_of_course_project', display_name: 'Content'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project'
 level 'courseExpress_project_exemplars_2019_2020', progression: 'Example Projects'
 level 'courseExpress_EOC_2020', progression: 'Create your project'
