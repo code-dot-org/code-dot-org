@@ -256,7 +256,7 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_extract_prospect_from_response
-    fields = %w(email id db_Opt_In db_Roles)
+    fields = %w(email id db_Opt_In db_Roles db_Hour_of_Code_Organizer db_State)
     doc = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
@@ -268,17 +268,24 @@ class PardotV2Test < Minitest::Test
                 <value>Teacher</value>
                 <value>CSF Teacher</value>
             </db_Roles>
+            <db_Hour_of_Code_Organizer>2013</db_Hour_of_Code_Organizer>
+            <db_Name>TestName</db_Name>
           </prospect>
         </result>
       </rsp>
     XML
 
+    # In the sample response above, db_Roles and db_Hour_of_Code_Organizer are both
+    # multi-value fields, one has 2 values while one has only 1.
+    # db_State exists only in the list of fields, and db_Name exists only in the sample
+    # response, both should not be in the expected result.
     expected_prospect = {
       'id' => '1',
       'email' => 'test@domain.com',
       'db_Opt_In' => 'Yes',
-      'db_Roles_0' => 'Teacher',
-      'db_Roles_1' => 'CSF Teacher'
+      'db_Roles_0' => 'CSF Teacher',
+      'db_Roles_1' => 'Teacher',
+      'db_Hour_of_Code_Organizer_0' => '2013',
     }
 
     prospect_node = doc.xpath('/rsp/result/prospect').first
