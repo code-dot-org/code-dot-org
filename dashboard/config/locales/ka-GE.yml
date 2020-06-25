@@ -337,6 +337,8 @@ ka:
       help_us: დაგვეხმარე
       teach: ასწავლე
       about: გაიცანით
+      legal_privacy: კონფიდენციალურობის პოლიტიკა
+      legal_tos: მომსახურების პირობები
     user:
       classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი

@@ -22,7 +22,6 @@ class ContactRollupsFinal < ApplicationRecord
       SELECT *
       FROM contact_rollups_processed;
     SQL
-
-    transaction {ActiveRecord::Base.connection.exec_query(insert_sql)}
+    ContactRollupsV2.execute_query_in_transaction(insert_sql)
   end
 end

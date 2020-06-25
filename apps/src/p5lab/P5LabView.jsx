@@ -113,6 +113,7 @@ class P5LabView extends React.Component {
               getLibraryManifest={this.getLibraryManifest}
               categories={this.getCategories()}
               hideUploadOption={this.props.spriteLab}
+              hideAnimationNames={this.props.spriteLab}
             />
           )}
         </div>
@@ -141,6 +142,7 @@ class P5LabView extends React.Component {
         getLibraryManifest={this.getLibraryManifest}
         categories={this.getCategories()}
         hideUploadOption={this.props.spriteLab}
+        hideAnimationNames={this.props.spriteLab}
       />
     ) : (
       undefined

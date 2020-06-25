@@ -311,6 +311,8 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+      legal_privacy: "プライバシー ポリシー"
+      legal_tos: "利用規約"
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'

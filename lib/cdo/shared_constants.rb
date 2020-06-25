@@ -109,7 +109,6 @@ module SharedConstants
     calc
     eval
     minecraft_codebuilder
-    scratch
     spritelab
     weblab
   )
@@ -181,6 +180,7 @@ module SharedConstants
       "setRGB": null,
 
       // Data
+      "getColumn": null,
       "startWebRequest": null,
       "setKeyValue": null,
       "getKeyValue": null,
@@ -323,7 +323,23 @@ module SharedConstants
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+
+      // micro:bit
+      "on": null,
+      "off": null,
+      "toggle": null,
+      "ledScreen.display": null,
+      "ledScreen.clear": null,
+      "ledScreen.scrollNumber": null,
+      "ledScreen.scrollString": null,
+      "onBoardEvent": null,
+      "isPressed": null,
+      "lightSensor.value": null,
+      "lightSensor.getAveragedValue": null,
+      "lightSensor.setScale": null,
+      "lightSensor.threshold": null,
+      "compass.getHeading": null
     }
   JSON
 

@@ -921,6 +921,8 @@ ku:
             '"West"': ڕۆژئاوا
       gamelab_moveToward:
         text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
+      gamelab_objectSpritePointer:
+        text: کرتە کرا {SPRITE}
       gamelab_playSound:
         text: دەنگ هەڵکەر {SOUND}
       gamelab_pointInDirection:
@@ -990,6 +992,8 @@ ku:
         text: شاشەی ناونیشان پشانبدە {BREAK} ناونیشان {TITLE} دەق {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} کرتە کراوە"
+      gamelab_subjectSpritePointer:
+        text: کرتە کرا {SPRITE}
       gamelab_turn:
         text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
       gamelab_whenDownArrow:

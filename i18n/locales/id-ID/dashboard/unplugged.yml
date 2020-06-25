@@ -289,6 +289,8 @@ id:
       BuildingAFoundation_2019:
         title: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Teman-teman Robot Saya yang Mengulang-ulang
       Conditionals_2019:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
@@ -314,6 +316,7 @@ id:
         title: gambar Biner
         desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
       courseE_unplugged_privateInformation_2019:
+        title: Informasi Privat dan Pribadi
         desc: Dikembangkan oleh Pendidikan Akal Sehat, pelajaran ini mengajarkan perbedaan antara informasi yang aman untuk dibagikan secara online dengan informasi yang tidak aman.
       SongwritingParameters_2019:
         title: 'terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -383,4 +386,5 @@ id:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
       TheRightApp_2019:
+        title: Aplikasi yang Tepat
         desc: "* Semua orang menggunakan komputer dewasa ini, terutama telepon pintar.\\r\n* Aplikasi telepon pintar, atau \"aplikasi\", membantu orang melakukan hal-hal seperti berbicara dengan teman, mendengarkan musik, berbelanja, atau sekadar menjelajahi web.\\r\n* Pemrogram perlu memahami kebutuhan orang lain dan merancang aplikasi dengan mempertimbangkan kebutuhan tersebut!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"

@@ -776,6 +776,21 @@ cs-CZ:
           `když se dotkne překážky`.
       OPD-K5-events-6:
         courseC_flappy_events5_a: K dokončení úlohy bude potřeba blok `přidej bod`.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: Blokem `nastavit postavu 1 na ???` přidáš postavu
+          na obrazovku.
+        courseE_playLab_scaffold1_b: Přidej blok `nastavit postavu` k události `při
+          spuštění` aby se objevila hned po spuštění programu.
+        courseE_playLab_scaffold1_c: Nezapomeň nastavit pozadí pomocí bloku `nastavit`.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Klikni na rozbalovací nabídku u události `když
+          šipka ____` a nastav správný směr pohybu.
+        courseE_playLab_scaffold1_b: Budeš potřebovat čtyři události `když šipka`
+          a pod každou z nich bude blok na pohyb postavou.
+        courseE_playLab_scaffold1_c: Až budeš mít hotovo, budeš moct ovládat postavu
+          šipkami!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Blokem `bod` můžeš přidávat a odebírat body.
       Overworld Avoid Monsters:
         mc_8_a: Je tady na výběr z několika cest. Která je nejkratší?
         mc_8_b: Aby byl kód jednoduší, použij `opakuj` cykly.
@@ -1105,6 +1120,21 @@ cs-CZ:
       courseB_starWars_prog9_2019:
         courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC19_playLab_EOC1:
+        courseE_playLab_scaffold1_a: Blokem `nastavit postavu 1 na ???` přidáš postavu
+          na obrazovku.
+        courseE_playLab_scaffold1_b: Přidej blok `nastavit postavu` k události `při
+          spuštění` aby se objevila hned po spuštění programu.
+        courseE_playLab_scaffold1_c: Nezapomeň nastavit pozadí pomocí bloku `nastavit`.
+      courseC19_playLab_EOC2:
+        courseE_playLab_scaffold1_a: Klikni na rozbalovací nabídku u události `když
+          šipka ____` a nastav správný směr pohybu.
+        courseE_playLab_scaffold1_b: Budeš potřebovat čtyři události `když šipka`
+          a pod každou z nich bude blok na pohyb postavou.
+        courseE_playLab_scaffold1_c: Až budeš mít hotovo, budeš moct ovládat postavu
+          šipkami!
+      courseC19_playLab_EOC4:
+        courseE_playLab_scaffold4_a: Blokem `bod` můžeš přidávat a odebírat body.
       courseC_PlayLab_events1:
         courseC_PlayLab_events1_a: |-
           Připoj k události `při spuštění` následující blok:
@@ -1146,7 +1176,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events2_2018:
         courseC_PlayLab_events2_a: |-
           Připoj k události `při spuštění` dva bloky:
@@ -1158,7 +1188,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events2_2019:
         courseC_PlayLab_events2_a: |-
           Připoj k události `při spuštění` dva bloky:
@@ -1170,7 +1200,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events3:
         courseC_PlayLab_events3_a: K vyřešení úlohy stačí jenom pohnout Jorgem o 25
           pixelů v pravo.
@@ -1216,12 +1246,174 @@ cs-CZ:
       courseC_PlayLab_events4:
         courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
           k Olivě, když se klikne na "Spustit".
+        courseC_PlayLab_events4_a: K vyřešení úlohy bude třeba připojit blok `aktér
+          __ říká` k události `když se postava` event to solve this puzzle.
       courseC_PlayLab_events4_2018:
         courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
           k Olivě, když se klikne na "Spustit".
+        courseC_PlayLab_events4_a: K vyřešení úlohy bude třeba připojit blok `aktér
+          __ říká` k události `když se postava` event to solve this puzzle.
       courseC_PlayLab_events4_2019:
         courseC_PlayLab_events4_b: Jorge se musí posunout o **100** pixelů, aby došel
           k Olivě, když se klikne na "Spustit".
+        courseC_PlayLab_events4_a: K vyřešení úlohy bude třeba připojit blok `aktér
+          __ říká` k události `když se postava` event to solve this puzzle.
+      courseC_PlayLab_events5:
+        courseC_PlayLab_events5_a: Bude třeba vybrat z rozbalovací nabídky bloku `aktor
+          říká` možnost Co je nového?"
+        courseC_PlayLab_events5_b: 'Klikni na Oktávii až spustíš program a vyzkoušej,
+          jestli funguje správně. '
+      courseC_PlayLab_events5_2018:
+        courseC_PlayLab_events5_a: Bude třeba vybrat z rozbalovací nabídky bloku `aktor
+          říká` možnost Co je nového?"
+        courseC_PlayLab_events5_b: 'Klikni na Oktávii až spustíš program a vyzkoušej,
+          jestli funguje správně. '
+      courseC_PlayLab_events5_2019:
+        courseC_PlayLab_events5_a: Bude třeba vybrat z rozbalovací nabídky bloku `aktor
+          říká` možnost Co je nového?"
+        courseC_PlayLab_events5_b: 'Klikni na Oktávii až spustíš program a vyzkoušej,
+          jestli funguje správně. '
+      courseC_PlayLab_events6:
+        courseC_PlayLab_events6_a: Každý zelený blok `když šipka` by měl mít přiřazenou
+          akci.
+        courseC_PlayLab_events6_b: Použij rozbalovací nabídku v bloku `pohnout hercem`
+          a přiřaď správný směr pohybu Valdy.
+        courseC_PlayLab_events6_c: Až budeš mít hotovo, budeš moct ovládat Valdu na
+          obrazovce použitím šipek!
+      courseC_PlayLab_events6_2018:
+        courseC_PlayLab_events6_a: Každý zelený blok `když šipka` by měl mít přiřazenou
+          akci.
+        courseC_PlayLab_events6_b: Použij rozbalovací nabídku v bloku `pohnout hercem`
+          a přiřaď správný směr pohybu Valdy.
+        courseC_PlayLab_events6_c: Až budeš mít hotovo, budeš moct ovládat Valdu na
+          obrazovce použitím šipek!
+      courseC_PlayLab_events6_2019:
+        courseC_PlayLab_events6_a: Každý zelený blok `když šipka` by měl mít přiřazenou
+          akci.
+        courseC_PlayLab_events6_b: Použij rozbalovací nabídku v bloku `pohnout hercem`
+          a přiřaď správný směr pohybu Valdy.
+        courseC_PlayLab_events6_c: Až budeš mít hotovo, budeš moct ovládat Valdu na
+          obrazovce použitím šipek!
+      courseC_PlayLab_events7:
+        courseC_PlayLab_events7_a: 'K vyřešení úlohy bude třeba dát jak blok `pohnout
+          hercem 2 nahoru 400 pixelů` tak i blok `pohnout hercem 2 dolů 400 pixelů`
+          uvnitř bloku `opakuj do nekonečna`. '
+        courseC_PlayLab_events7_b: Blok `opakuj do nekonečna` nemusí být připojen
+          k žádné události. Poběží sám o sobě.
+      courseC_PlayLab_events7_2018:
+        courseC_PlayLab_events7_a: 'K vyřešení úlohy bude třeba dát jak blok `pohnout
+          hercem 2 nahoru 400 pixelů` tak i blok `pohnout hercem 2 dolů 400 pixelů`
+          uvnitř bloku `opakuj do nekonečna`. '
+        courseC_PlayLab_events7_b: Blok `opakuj do nekonečna` nemusí být připojen
+          k žádné události. Poběží sám o sobě.
+      courseC_PlayLab_events7_2019:
+        courseC_PlayLab_events7_a: 'K vyřešení úlohy bude třeba dát jak blok `pohnout
+          hercem 2 nahoru 400 pixelů` tak i blok `pohnout hercem 2 dolů 400 pixelů`
+          uvnitř bloku `opakuj do nekonečna`. '
+        courseC_PlayLab_events7_b: Blok `opakuj do nekonečna` nemusí být připojen
+          k žádné události. Poběží sám o sobě.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
+          k události `když se postava`.
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
+          zvuk`.
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
+          k události `když se postava`.
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
+          zvuk`.
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
+          k události `když se postava`.
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
+          zvuk`.
+      courseC_PlayLab_events9:
+        courseC_PlayLab_events9_a: K vyřešení úlohy budeš potřebovat blok `bod`.
+        courseC_PlayLab_events9_b: Ujisti se, že tvoje událost `když se postava` správně
+          nastavená, aby tam byl aktér **1** a aktér **3**.
+        courseC_PlayLab_events9_c: Můžeš mít na pracovní ploše vícero stejných událostí
+          `když se postava` najednou, takže nemusíš tu první mazat.
+      courseC_PlayLab_events9_2018:
+        courseC_PlayLab_events9_a: K vyřešení úlohy budeš potřebovat blok `bod`.
+        courseC_PlayLab_events9_b: Ujisti se, že tvoje událost `když se postava` správně
+          nastavená, aby tam byl aktér **1** a aktér **3**.
+        courseC_PlayLab_events9_c: Můžeš mít na pracovní ploše vícero stejných událostí
+          `když se postava` najednou, takže nemusíš tu první mazat.
+      courseC_PlayLab_events9_2019:
+        courseC_PlayLab_events9_a: K vyřešení úlohy budeš potřebovat blok `bod`.
+        courseC_PlayLab_events9_b: Ujisti se, že tvoje událost `když se postava` správně
+          nastavená, aby tam byl aktér **1** a aktér **3**.
+        courseC_PlayLab_events9_c: Můžeš mít na pracovní ploše vícero stejných událostí
+          `když se postava` najednou, takže nemusíš tu první mazat.
+      courseC_PlayLab_eventsA:
+        courseC_PlayLab_eventsA_a: K vyřešení úlohy budeš potřebovat bloky `nastavit
+          pozadí` a `nastavit postavu`.
+        courseC_PlayLab_eventsA_b: Událost `při spuštění` není na pracovní ploše.
+          Budeš ji muset vytvořit přetažením z panelu.
+      courseC_PlayLab_eventsA_2018:
+        courseC_PlayLab_eventsA_a: K vyřešení úlohy budeš potřebovat bloky `nastavit
+          pozadí` a `nastavit postavu`.
+        courseC_PlayLab_eventsA_b: Událost `při spuštění` není na pracovní ploše.
+          Budeš ji muset vytvořit přetažením z panelu.
+      courseC_PlayLab_eventsA_2019:
+        courseC_PlayLab_eventsA_a: K vyřešení úlohy budeš potřebovat bloky `nastavit
+          pozadí` a `nastavit postavu`.
+        courseC_PlayLab_eventsA_b: Událost `při spuštění` není na pracovní ploše.
+          Budeš ji muset vytvořit přetažením z panelu.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: 'Šipkami ovládáš tučňáka. V této úloze není třeba
+          psát žádný kód. '
+      courseC_PlayLab_eventsFP:
+        idea1: |-
+          _Potřebuješ inspiraci?_
+
+          **Kdo je tam?** Postavy se budou objevovat s náhodnými obrázky a nikdy neví, kdo se objeví jako další.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _Potřebuješ inspiraci?_
+
+          **Dobrodružná výprava** - Změň pozadí a nech postavy popsat, kde zrovna jsou.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potřebuješ inspiraci?_
+
+          **Pinball** - Ovládej postavy pomocí šipek (použij bloky `když šipka nahoru`, `když šipka dolů`), potom přehraj náhodné zvuky, když do sebe postavy na obrazovce narazí.
+      courseC_PlayLab_eventsFP_2018:
+        idea1: |-
+          _Potřebuješ inspiraci?_
+
+          **Kdo je tam?** Postavy se budou objevovat s náhodnými obrázky a nikdy neví, kdo se objeví jako další.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _Potřebuješ inspiraci?_
+
+          **Dobrodružná výprava** - Změň pozadí a nech postavy popsat, kde zrovna jsou.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potřebuješ inspiraci?_
+
+          **Pinball** - Ovládej postavy pomocí šipek (použij bloky `když šipka nahoru`, `když šipka dolů`), potom přehraj náhodné zvuky, když do sebe postavy na obrazovce narazí.
+      courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _Potřebuješ inspiraci?_
+
+          **Kdo je tam?** Postavy se budou objevovat s náhodnými obrázky a nikdy neví, kdo se objeví jako další.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _Potřebuješ inspiraci?_
+
+          **Dobrodružná výprava** - Změň pozadí a nech postavy popsat, kde zrovna jsou.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+        idea3: |-
+          _Potřebuješ inspiraci?_
+
+          **Pinball** - Ovládej postavy pomocí šipek (použij bloky `když šipka nahoru`, `když šipka dolů`), potom přehraj náhodné zvuky, když do sebe postavy na obrazovce narazí.
       courseC_artist_loops1a:
         courseC_artist_loops1a_a: |-
           Budeš potřebovat tento blok:
@@ -3436,6 +3628,21 @@ cs-CZ:
       courseE_farmer_ramp12g_2019:
         courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
           jestli má zahnout vlevo nebo vpravo.
+      courseE_playLab_scaffold1:
+        courseE_playLab_scaffold1_a: Blokem `nastavit postavu 1 na ???` přidáš postavu
+          na obrazovku.
+        courseE_playLab_scaffold1_b: Přidej blok `nastavit postavu` k události `při
+          spuštění` aby se objevila hned po spuštění programu.
+        courseE_playLab_scaffold1_c: Nezapomeň nastavit pozadí pomocí bloku `nastavit`.
+      courseE_playLab_scaffold2:
+        courseE_playLab_scaffold1_a: Klikni na rozbalovací nabídku u události `když
+          šipka ____` a nastav správný směr pohybu.
+        courseE_playLab_scaffold1_b: Budeš potřebovat čtyři události `když šipka`
+          a pod každou z nich bude blok na pohyb postavou.
+        courseE_playLab_scaffold1_c: Až budeš mít hotovo, budeš moct ovládat postavu
+          šipkami!
+      courseE_playLab_scaffold4:
+        courseE_playLab_scaffold4_a: Blokem `bod` můžeš přidávat a odebírat body.
       courseF_artist_for3:
         courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.

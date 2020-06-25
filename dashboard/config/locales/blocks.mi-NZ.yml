@@ -1030,6 +1030,8 @@ mi:
           DIRECTION:
             '"right"': matau
             '"left"': mauī
+      gamelab_objectSpritePointer:
+        text: pāwhiria {SPRITE}
       gamelab_randColor:
         text: tae matapōkere
       gamelab_randomColor:
@@ -1064,6 +1066,8 @@ mi:
           CONDITION:
             '"when"': ina
             '"while"': i te
+      gamelab_subjectSpritePointer:
+        text: pāwhiria {SPRITE}
       gamelab_turn:
         options:
           DIRECTION:

@@ -1089,6 +1089,8 @@ nl:
             '"West"': West
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
+      gamelab_objectSpritePointer:
+        text: geklikt {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1166,6 +1168,8 @@ nl:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
+      gamelab_subjectSpritePointer:
+        text: geklikt {SPRITE}
       gamelab_turn:
         text: draai {SPRITE} {DIRECTION} {N} graden
         options:

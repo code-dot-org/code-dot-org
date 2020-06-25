@@ -7899,30 +7899,27 @@ fr-FR:
         dans la boucle ! À quoi ça ressemble, maintenant ?    -    Change le motif
         sur ton pinceau pour plus de variété !    \* \* \*    ![extensible](https://images.code.org/edc53f27379e018e61a6ab9dcc2717ea-image-1560984648573.png)
         ![extensible](https://images.code.org/c41b00a743f245f98d2cfb66cb18e771-image-1560984690182.png)    ![extensible](https://images.code.org/4c8910f72a7f0cd81713ded7b866a883-image-1560984706203.png)
-      courseC_artist_loops7a: Попробуй изменить цикл "повторить", чтобы он выполнялся
-        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
-        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
-        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
-        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В этом
-        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
-        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-      courseC_artist_loops7a_2018: Попробуй изменить цикл "повторить", чтобы он выполнялся
-        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
-        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
-        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
-        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В этом
-        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
-        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-      courseC_artist_loops7a_2019: Попробуй изменить цикл "повторить", чтобы он выполнялся
-        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
-        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
-        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
-        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В первом
-        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
-        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-        ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
-        ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
-        ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loops7a: "Essaye de changer la boucle `répéter` pour exécuter
+        un nombre de fois différent. Jusqu'où dois-tu tourner pour faire le tour complet
+        d'un cercle?\n\n-   Essaie de changer le nombre de fois que tu tournes\n-
+        \  Essaie un virage à 60 degrés, 6 fois d'affilée \n-   Essaie un virage à
+        20 degrés, 18 fois d'affilée    \n\n* * *\n\nLa première image utilise un
+        pirate, un ninja et une girafe. Ils bouclent 18 fois avec un virage de 20
+        degrés.    \n\n[expandable]"
+      courseC_artist_loops7a_2018: "Essaye de changer la boucle `répéter` pour exécuter
+        un nombre de fois différent. Jusqu'où dois-tu tourner pour faire le tour complet
+        d'un cercle?\n\n-   Essaie de changer le nombre de fois que tu tournes\n-
+        \  Essaie un virage à 60 degrés, 6 fois d'affilée \n-   Essaie un virage à
+        20 degrés, 18 fois d'affilée    \n\n* * *\n\nLa première image utilise un
+        pirate, un ninja et une girafe. Ils bouclent 18 fois avec un virage de 20
+        degrés.    \n\n[expandable]"
+      courseC_artist_loops7a_2019: "Essaye de changer la boucle `répéter` pour exécuter
+        un nombre de fois différent. Jusqu'où dois-tu tourner pour faire le tour complet
+        d'un cercle?\n\n-   Essaie de changer le nombre de fois que tu tournes\n\n-
+        \  Essaie un virage à 60 degrés, 6 fois d'affilée \n\n-   Essaie un virage
+        à 20 degrés, 18 fois d'affilée    \n\n-   -   -   La première image utilise
+        un pirate, un ninja et une girafe. Ils bouclent 18 fois avec un virage de
+        20 degrés.    \n\n![extensible](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)\\\n![extensible](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)\\\n![extensible](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)\\\n![extensible](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)"
       courseC_artist_loops8a: |-
         Maintenant, crée quelque chose, par toi-même. Que se passe-t-il lorsque tu fais deux cercles distincts avec des autocollants différents ?
 
@@ -10986,8 +10983,10 @@ fr-FR:
         si tu souhaites utiliser la même fonction pour résoudre ce niveau.
       courseF_bee_variables_4_2018: "« Incroyable ! »   Modifie le code afin qu'il
         fonctionne pour cette énigme."
-      courseF_bee_variables_4_2019: '"Не будем останавливаться на достигнутом!" Измени
-        этот код так, чтобы он подошел для этой головоломки.'
+      courseF_bee_variables_4_2019: |-
+        « Continuons ! »
+
+        Modifie le code afin qu'il fonctionne pour cette énigme.
       courseF_playlab_variables1a: "Les variables peuvent être utilisées pour stocker
         le texte que tu souhaites utiliser ultérieurement. \n\nFais crier \"But !\",
         par Kiki, le joueur de football, en attribuant ce texte à la variable `crier`."
