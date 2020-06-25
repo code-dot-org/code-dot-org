@@ -294,6 +294,45 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_prospect, prospect
   end
 
+  def test_extract_prospect_from_response_is_consistent_with_other_method
+    # Convert contact data to prospect data for uploading to Pardot
+    contact_data = {
+      pardot_id: '10',
+      email: 'test@domain.com',
+      opt_in: 1,
+      user_id: 111,
+      roles: 'Teacher,CSF Teacher',
+      hoc_organizer_years: '2013'
+    }
+    prospect_to_upload = PardotV2.convert_to_pardot_prospect contact_data
+
+    # Assume the prospect is already uploaded to Pardot, download it to the database,
+    # and parse the response back to prospect data.
+    pardot_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok">
+        <result>
+          <prospect>
+            <id>10</id>
+            <email>test@domain.com</email>
+            <db_Opt_In>Yes</db_Opt_In>
+            <db_Has_Teacher_Account>true</db_Has_Teacher_Account>
+            <db_Roles>
+                <value>Teacher</value>
+                <value>CSF Teacher</value>
+            </db_Roles>
+            <db_Hour_of_Code_Organizer>2013</db_Hour_of_Code_Organizer>
+          </prospect>
+        </result>
+      </rsp>
+    XML
+    prospect_node = pardot_response.xpath('/rsp/result/prospect').first
+    prospect_fields = %w(id email db_Opt_In db_Has_Teacher_Account db_Roles db_Hour_of_Code_Organizer)
+    prospect_downloaded = PardotV2.extract_prospect_from_response(prospect_node, prospect_fields)
+
+    # The two prospect data must match.
+    assert_equal prospect_to_upload, prospect_downloaded.deep_symbolize_keys
+  end
+
   def test_build_batch_url
     base_url = PardotV2::BATCH_CREATE_URL
     prospects = [
