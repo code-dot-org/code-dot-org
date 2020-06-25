@@ -1089,6 +1089,8 @@ ru:
             '"West"': Запад
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
+      gamelab_objectSpritePointer:
+        text: Нажал {SPRITE}
       gamelab_patrollingUpDown:
         text: патрулирование вверх и вниз
       gamelab_playSound:
@@ -1168,6 +1170,8 @@ ru:
           CONDITION:
             '"when"': когда
             '"while"': пока
+      gamelab_subjectSpritePointer:
+        text: Нажал {SPRITE}
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:

@@ -1096,6 +1096,8 @@ fr:
             '"West"': L’Ouest
       gamelab_moveToward:
         text: déplacer {SPRITE} de {DISTANCE} pixels vers {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} cliqué"
       gamelab_playSound:
         text: jouer le son {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1170,8 @@ fr:
           CONDITION:
             '"when"': quand
             '"while"': tant que
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} cliqué"
       gamelab_turn:
         text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:

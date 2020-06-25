@@ -1,7 +1,10 @@
 require_relative '../../test_helper'
 require 'cdo/contact_rollups/v2/pardot'
+require 'cdo/shared_constants/pd/shared_workshop_constants.rb'
 
 class PardotV2Test < Minitest::Test
+  include Pd::SharedWorkshopConstants
+
   def test_retrieve_prospects_without_result
     empty_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok"><result></result></rsp>
@@ -190,18 +193,65 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_errors, errors
   end
 
-  def test_convert_to_pardot_prospect
-    contacts = [
-      {email: 'test0@domain.com', pardot_id: 10, opt_in: 1},
-      {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
-    ]
-    expected_prospects = [
-      {email: 'test0@domain.com', id: 10, db_Opt_In: 'Yes'},
-      {email: 'test1@domain.com', id: nil}
+  def test_convert_to_pardot_prospect_single_value_attributes
+    tests = [
+      {
+        input: {
+          email: 'test0@domain.com',
+          pardot_id: 10,
+          opt_in: 1,
+          user_id: 111
+        },
+        expected_output: {
+          email: 'test0@domain.com',
+          id: 10,
+          db_Opt_In: 'Yes',
+          db_Has_Teacher_Account: 'true'
+        }
+      },
+      {
+        input: {bad_key: true},
+        expected_output: {}
+      }
     ]
 
-    contacts.each_with_index do |contact, index|
-      assert_equal expected_prospects[index], PardotV2.convert_to_pardot_prospect(contact)
+    tests.each_with_index do |test, index|
+      output = PardotV2.convert_to_pardot_prospect test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  def test_convert_to_pardot_prospect_multi_value_attributes
+    tests = [
+      {
+        # multi-value attribute has 1 value
+        input: {
+          professional_learning_enrolled: COURSE_CSF,
+          professional_learning_attended: COURSE_CSF,
+        },
+        expected_output: {
+          db_Professional_Learning_Enrolled_0: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSF,
+        }
+      },
+      {
+        # multi-value attribute has more than 1 value
+        input: {
+          professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
+          professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
+        },
+        expected_output: {
+          db_Professional_Learning_Enrolled_0: COURSE_CSD,
+          db_Professional_Learning_Enrolled_1: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSP,
+          db_Professional_Learning_Attended_1: COURSE_ECS,
+        }
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = PardotV2.convert_to_pardot_prospect test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
 
