@@ -37,21 +37,21 @@ class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
     width: PropTypes.number,
-    onSize: PropTypes.func
+    setDesiredWidth: PropTypes.func
   };
 
   componentDidMount() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.project_info').width();
-    if (this.props.onSize) {
-      this.props.onSize(fullWidth);
+    if (this.props.setDesiredWidth) {
+      this.props.setDesiredWidth(fullWidth);
     }
   }
 
   componentDidUpdate() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.project_info').width();
-    this.props.onSize(fullWidth);
+    this.props.setDesiredWidth(fullWidth);
   }
 
   render() {
@@ -64,6 +64,8 @@ class ProjectInfo extends React.Component {
 
     const vignetteStyle =
       actualWidth < fullWidth ? styles.headerVignetteRight : null;
+
+    console.log('ProjectInfo render', this.props.width);
 
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (

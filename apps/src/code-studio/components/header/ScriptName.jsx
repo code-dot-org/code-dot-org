@@ -5,6 +5,14 @@ import {connect} from 'react-redux';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 const styles = {
+  headerContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 40
+  },
+  headerInner: {
+    position: 'absolute'
+  },
   scriptLinkWithUpdatedAt: {
     display: 'block'
   },
@@ -13,10 +21,17 @@ const styles = {
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
+    //whiteSpace: 'nowrap',
+    //overflow: 'hidden',
+    //textOverflow: 'ellipsis',
     display: 'inline-block'
+  },
+  headerVignetteRight: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    background:
+      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
 };
 
@@ -26,8 +41,31 @@ class ScriptName extends React.Component {
     href: PropTypes.string.isRequired,
     smallText: PropTypes.bool,
     showProjectUpdatedAt: PropTypes.bool,
-    width: PropTypes.number
+    width: PropTypes.number,
+    setDesiredWidth: PropTypes.func
   };
+
+  componentDidMount() {
+    // Report back to our parent how wide we would like to be.
+    const fullWidth = $('.script_name').width();
+    if (this.props.setDesiredWidth) {
+      this.props.setDesiredWidth(fullWidth);
+    }
+  }
+
+  componentDidUpdate() {
+    // Report back to our parent how wide we would like to be.
+    const fullWidth = $('.script_name').width();
+    this.props.setDesiredWidth(fullWidth);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      this.props.width !== nextProps.width ||
+      this.props.name !== nextProps.name ||
+      this.props.showProjectUpdatedAt !== nextProps.showProjectUpdatedAt
+    );
+  }
 
   renderScriptLink() {
     let className = 'header_text';
@@ -51,18 +89,44 @@ class ScriptName extends React.Component {
   }
 
   render() {
+    const fullWidth = $('.script_name').width();
+    const actualWidth = this.props.width;
+
+    const vignetteStyle =
+      actualWidth < fullWidth ? styles.headerVignetteRight : null;
+
+    console.log('ScriptName render', this.props.width);
+
     if (!this.props.showProjectUpdatedAt) {
-      return this.renderScriptLink();
+      return (
+        <div style={{...styles.headerContainer, height: 18}}>
+          <div className="script_name" style={styles.headerInner}>
+            {this.renderScriptLink()}
+          </div>
+          <div id="vignette" style={vignetteStyle} />
+        </div>
+      );
     }
 
     return (
-      <div style={styles.outerContainer}>
+      <div style={styles.headerContainer}>
         <div
-          style={{...styles.containerWithUpdatedAt, maxWidth: this.props.width}}
+          className="script_name"
+          style={{...styles.headerInner, height: 40}}
         >
-          {this.renderScriptLink()}
-          <ProjectUpdatedAt />
+          <div style={styles.outerContainer}>
+            <div
+              style={{
+                ...styles.containerWithUpdatedAt
+                //maxWidth: this.props.width
+              }}
+            >
+              {this.renderScriptLink()}
+              <ProjectUpdatedAt />
+            </div>
+          </div>
         </div>
+        <div id="vignette" style={vignetteStyle} />
       </div>
     );
   }

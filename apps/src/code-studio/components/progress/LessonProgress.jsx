@@ -81,13 +81,24 @@ class LessonProgress extends Component {
     onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
-    onSize: PropTypes.func
+    setDesiredWidth: PropTypes.func
   };
+
+  componentDidMount() {
+    const fullWidth = $('.full_progress').width();
+    if (this.props.setDesiredWidth) {
+      this.props.setDesiredWidth(fullWidth);
+    }
+  }
 
   componentDidUpdate() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.full_progress').width();
-    this.props.onSize(fullWidth);
+    this.props.setDesiredWidth(fullWidth);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.width !== nextProps.width;
   }
 
   getFullProgressOffset() {
@@ -142,6 +153,8 @@ class LessonProgress extends Component {
       headerFullProgressOffset,
       vignetteStyle
     } = this.getFullProgressOffset();
+
+    console.log('LessonProgress render', this.props.width);
 
     return (
       <div
