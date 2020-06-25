@@ -52,5 +52,3 @@ export default class WorkspaceAlert extends React.Component {
     );
   }
 }
-
-// TODO: Unit tests
