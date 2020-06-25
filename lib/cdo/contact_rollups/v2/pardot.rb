@@ -325,16 +325,20 @@ class PardotV2
         # Collect all text values for this field
         field_node = prospect_node.xpath(field)
         values = field_node.children.map(&:text)
+        next if values.empty?
 
-        if values.length == 1
-          prospect.merge!({field => values.first})
-        else
+        if MULTI_VALUE_PROSPECT_FIELDS.include? field.to_sym
           # For a multi-value field, to be consistent with how we update it to Pardot,
           # set key names as [field]_0, [field]_1, etc.
-          # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-          values.each_with_index do |value, index|
-            prospect.merge!("#{field}_#{index}" => value)
+          # @see +convert_to_pardot_prospect+ method and its tests.
+          #
+          # Sort the values to keep consistent order.
+          # @see extraction methods in ContactRollupsProcessed, e.g. +extract_professional_learning_enrolled+
+          values.sort.each_with_index do |value, index|
+            prospect["#{field}_#{index}"] = value
           end
+        else
+          prospect[field] = values.first
         end
       end
     end
