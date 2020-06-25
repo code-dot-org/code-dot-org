@@ -88,7 +88,7 @@ describe('Audio API', function() {
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
-      // Check executors map arguments to object correctly
+      // Check that executors map arguments to object correctly
       let spy = sinon.spy();
       injectExecuteCmd(spy);
       executors[funcName]('this is text', 'female', 'nothing');
