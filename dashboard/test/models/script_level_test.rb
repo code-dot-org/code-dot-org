@@ -109,15 +109,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'teacher panel summarize with progress on this level in another script' do
     sl = create(:script_level)
     student = create :student
-    create(:user_level, user: student, level: sl.level)
 
     sl_other = create(:script_level, levels: sl.levels)
-    ul_other = create(:user_level, user: student, level: sl.level)
-    ul_other.update(script: sl.script)
 
     User.track_level_progress(
       user_id: student.id,
-      level_id: sl_other.level.id,
+      level_id: sl_other.levels[0].id,
       script_id: sl_other.script.id,
       new_result: ActivityConstants::BEST_PASS_RESULT,
       submitted: true,
