@@ -1091,6 +1091,8 @@ ro:
             '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
+      gamelab_objectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1170,8 @@ ro:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
+      gamelab_subjectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_turn:
         text: întoarce {SPRITE} {DIRECTION} {N} grade
         options:

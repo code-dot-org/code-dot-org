@@ -1053,6 +1053,8 @@ ms:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
+      gamelab_objectSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1128,6 +1130,8 @@ ms:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
+      gamelab_subjectSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_turn:
         text: Menghidupkan {SPRITE} {DIRECTION} {N} Darjah
         options:
