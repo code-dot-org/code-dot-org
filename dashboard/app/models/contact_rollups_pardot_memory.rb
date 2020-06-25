@@ -24,6 +24,29 @@
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemory < ApplicationRecord
+  # All Pardot prospect fields we care about, used to sync
+  # contacts between the production database and Pardot.
+  # db_* are custom fields and sorted alphabetically.
+  # @see https://pi.pardot.com/prospectFieldCustom
+  PARDOT_FIELDS = %w(
+    id
+    email
+    opted_out
+    db_City
+    db_Country
+    db_Form_Roles
+    db_Forms_Submitted
+    db_Has_Teacher_Account
+    db_Hour_of_Code_Organizer
+    db_Imported
+    db_Opt_In
+    db_Postal_Code
+    db_Professional_Learning_Attended
+    db_Professional_Learning_Enrolled
+    db_Roles
+    db_State
+  ).freeze
+
   self.table_name = 'contact_rollups_pardot_memory'
 
   # Downloads and saves new email-Pardot ID mappings from Pardot.
@@ -61,25 +84,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
   def self.download_pardot_prospects(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
 
-    # Note: db_* fields are sorted alphabetically
-    fields = %w(
-      id
-      email
-      db_City
-      db_Country
-      db_Form_Roles
-      db_Forms_Submitted
-      db_Has_Teacher_Account
-      db_Hour_of_Code_Organizer
-      db_Opt_In
-      db_Postal_Code
-      db_Professional_Learning_Attended
-      db_Professional_Learning_Enrolled
-      db_Roles
-      db_State
-    )
-
-    PardotV2.retrieve_prospects(last_id, fields, limit) do |prospects|
+    PardotV2.retrieve_prospects(last_id, PARDOT_FIELDS, limit) do |prospects|
       current_time = Time.now.utc
       batch = prospects.map do |item|
         {
