@@ -3,18 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
-import {AnimationCategories} from '../gamelab/constants';
-import {CostumeCategories} from '../spritelab/constants';
-var msg = require('@cdo/locale');
-import animationLibrary from '../gamelab/animationLibrary.json';
-import spriteCostumeLibrary from '../spritelab/spriteCostumeLibrary.json';
+import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
@@ -43,38 +37,24 @@ const animationPickerStyles = {
   }
 };
 
-class AnimationPickerBody extends React.Component {
+export default class AnimationPickerBody extends React.Component {
   static propTypes = {
     is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool
+    getLibraryManifest: PropTypes.func.isRequired,
+    categories: PropTypes.object.isRequired,
+    hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    const initialState = {
-      searchQuery: '',
-      categoryQuery: '',
-      currentPage: 0,
-      libraryManifest: props.spriteLab ? spriteCostumeLibrary : animationLibrary
-    };
-    const {results, pageCount} = searchAssets(
-      initialState.searchQuery,
-      initialState.categoryQuery,
-      initialState.libraryManifest,
-      initialState.currentPage,
-      MAX_SEARCH_RESULTS
-    );
-    this.state = {
-      ...initialState,
-      results,
-      pageCount
-    };
-  }
+  state = {
+    searchQuery: '',
+    categoryQuery: '',
+    currentPage: 0
+  };
 
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
@@ -87,7 +67,7 @@ class AnimationPickerBody extends React.Component {
       categoryQuery = this.state.categoryQuery;
     }
     if (libraryManifest === undefined) {
-      libraryManifest = this.state.libraryManifest;
+      libraryManifest = this.props.getLibraryManifest();
     }
 
     return searchAssets(
@@ -105,14 +85,14 @@ class AnimationPickerBody extends React.Component {
     const nextPage = currentPage + 1;
     if (
       scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
-      nextPage <= pageCount
+      (!pageCount || nextPage <= pageCount)
     ) {
       const {results: newResults, pageCount} = this.searchAssetsWrapper(
         nextPage
       );
 
       this.setState({
-        results: [...results, ...newResults],
+        results: [...(results || []), ...newResults],
         currentPage: nextPage,
         pageCount
       });
@@ -147,13 +127,10 @@ class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    let categories = this.props.spriteLab
-      ? CostumeCategories
-      : AnimationCategories;
-    return Object.keys(categories).map(category => (
+    return Object.keys(this.props.categories).map(category => (
       <AnimationPickerListItem
         key={category}
-        label={categories[category]}
+        label={this.props.categories[category]}
         category={category}
         onClick={this.onCategoryChange}
       />
@@ -164,7 +141,7 @@ class AnimationPickerBody extends React.Component {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
-        label={animationProps.name}
+        label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
         onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
         playAnimations={this.props.playAnimations}
@@ -173,13 +150,18 @@ class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    const libraryManifest = this.props.getLibraryManifest();
+    if (!libraryManifest) {
+      return <div>{msg.loading()}</div>;
+    }
     const {searchQuery, categoryQuery, results} = this.state;
-    const {spriteLab, is13Plus, onDrawYourOwnClick, onUploadClick} = this.props;
-
-    let categories = spriteLab ? CostumeCategories : AnimationCategories;
-
-    // Hide the upload option for students in spritelab
-    let hideUploadOption = spriteLab;
+    const {
+      categories,
+      hideUploadOption,
+      is13Plus,
+      onDrawYourOwnClick,
+      onUploadClick
+    } = this.props;
 
     return (
       <div style={{marginBottom: 10}}>
@@ -188,7 +170,7 @@ class AnimationPickerBody extends React.Component {
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
-          placeholderText={i18n.animationSearchPlaceholder()}
+          placeholderText={msg.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
@@ -246,10 +228,6 @@ class AnimationPickerBody extends React.Component {
 }
 
 export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
-
-export default connect(state => ({
-  spriteLab: state.pageConstants.isBlockly
-}))(Radium(AnimationPickerBody));
 
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>

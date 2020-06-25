@@ -245,9 +245,13 @@
   "https://studio.code.org/s/course2/stage/4/puzzle/4": {
     "short_instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.",
     "long_instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.",
-    "function_names": {
-      "draw a circle": "draw a circle",
-      "draw a car": "draw a car"
+    "function_definitions": {
+      "draw a circle": {
+        "name": "draw a circle"
+      },
+      "draw a car": {
+        "name": "draw a car"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/4/puzzle/5": {
@@ -279,8 +283,14 @@
     "authored_hints": {
       "2-3_Artist_7_a": "The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square."
     },
-    "function_names": {
-      "draw_rect": "draw_rect"
+    "function_definitions": {
+      "draw_rect": {
+        "name": "draw_rect",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/4/puzzle/9": {
@@ -539,8 +549,10 @@
     "authored_hints": {
       "2-3_Artist_11_a": "Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? "
     },
-    "function_names": {
-      "x": "x"
+    "function_definitions": {
+      "x": {
+        "name": "x"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/6": {
@@ -549,10 +561,16 @@
     "authored_hints": {
       "2-3_Artist_12_a": "There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times."
     },
-    "function_names": {
-      "details": "details",
-      "draw eyebrow": "draw eyebrow",
-      "draw pupil": "draw pupil"
+    "function_definitions": {
+      "details": {
+        "name": "details"
+      },
+      "draw eyebrow": {
+        "name": "draw eyebrow"
+      },
+      "draw pupil": {
+        "name": "draw pupil"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/7": {
@@ -956,23 +974,47 @@
   "https://studio.code.org/s/course2/stage/11/puzzle/4": {
     "short_instructions": "The code that we have for the leg and foot is wrong. \n\nCan you fix it?",
     "long_instructions": "The code that we have for the leg and foot is wrong. \n\nCan you fix it?",
-    "function_names": {
-      "draw left leg": "draw left leg",
-      "draw right leg": "draw right leg",
-      "draw body and arms": "draw body and arms",
-      "draw a head": "draw a head"
+    "function_definitions": {
+      "draw left leg": {
+        "name": "draw left leg"
+      },
+      "draw right leg": {
+        "name": "draw right leg"
+      },
+      "draw body and arms": {
+        "name": "draw body and arms",
+        "parameters": {
+          "armlength": "armlength",
+          "bodylength": "bodylength"
+        }
+      },
+      "draw a head": {
+        "name": "draw a head"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/5": {
     "short_instructions": "Looks like I'm sitting on a chair that’s missing a leg!\n\nEdit the code to draw the last leg.",
     "long_instructions": "Looks like I'm sitting on a chair that’s missing a leg!\n\nEdit the code to draw the last leg.",
-    "function_names": {
-      "draw right leg": "draw right leg",
-      "draw sitting stick figure": "draw sitting stick figure",
-      "draw head": "draw head",
-      "draw arms": "draw arms",
-      "jump to neck": "jump to neck",
-      "draw left leg": "draw left leg"
+    "function_definitions": {
+      "draw right leg": {
+        "name": "draw right leg"
+      },
+      "draw sitting stick figure": {
+        "name": "draw sitting stick figure"
+      },
+      "draw head": {
+        "name": "draw head"
+      },
+      "draw arms": {
+        "name": "draw arms"
+      },
+      "jump to neck": {
+        "name": "jump to neck"
+      },
+      "draw left leg": {
+        "name": "draw left leg"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/6": {
@@ -981,10 +1023,16 @@
     "authored_hints": {
       "2-3_Artist_Debugging_7_a": "What happens if you have the artist move or jump backward after he draws the first line?"
     },
-    "function_names": {
-      "draw O": "draw O",
-      "draw D": "draw D",
-      "draw E": "draw E"
+    "function_definitions": {
+      "draw O": {
+        "name": "draw O"
+      },
+      "draw D": {
+        "name": "draw D"
+      },
+      "draw E": {
+        "name": "draw E"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/7": {
@@ -1009,14 +1057,32 @@
       "2-3_Artist_Debugging_10_a": "Remember, you want the control panel 10 pixels _wider_...so be sure to **add** 10 to whatever number you change.",
       "2-3_Artist_Debugging_10_b": "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
     },
-    "function_names": {
-      "draw square": "draw square",
-      "jump to controller top left": "jump to controller top left",
-      "jump to middle": "jump to middle",
-      "draw a circle": "draw a circle",
-      "draw a button": "draw a button",
-      "draw cord": "draw cord",
-      "draw R pad": "draw R pad"
+    "function_definitions": {
+      "draw square": {
+        "name": "draw square",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
+      },
+      "jump to controller top left": {
+        "name": "jump to controller top left"
+      },
+      "jump to middle": {
+        "name": "jump to middle"
+      },
+      "draw a circle": {
+        "name": "draw a circle"
+      },
+      "draw a button": {
+        "name": "draw a button"
+      },
+      "draw cord": {
+        "name": "draw cord"
+      },
+      "draw R pad": {
+        "name": "draw R pad"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/10": {

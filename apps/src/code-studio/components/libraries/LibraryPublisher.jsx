@@ -25,6 +25,11 @@ const styles = {
     width: 20,
     height: 20
   },
+  selectAllFunctionsLabel: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
   functionLabel: {
     margin: 0,
     fontSize: 20
@@ -397,7 +402,10 @@ export default class LibraryPublisher extends React.Component {
             checked={this.allFunctionsSelected()}
             onChange={this.toggleAllFunctionsSelected}
           />
-          <label htmlFor={selectAllCheckboxId} style={styles.functionLabel}>
+          <label
+            htmlFor={selectAllCheckboxId}
+            style={styles.selectAllFunctionsLabel}
+          >
             {i18n.selectAllFunctions()}
           </label>
         </div>

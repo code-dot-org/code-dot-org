@@ -1,6 +1,6 @@
-hideable_stages true
+hideable_lessons true
 
-stage 'Introduction'
+lesson 'Introduction'
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'

@@ -8,7 +8,6 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
-import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -71,7 +70,9 @@ import {
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 var copyrightStrings;
 
 /**
@@ -204,8 +205,7 @@ StudioApp.prototype.configure = function(options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.scratch = options.level && options.level.scratch;
-  this.usingBlockly_ = !this.editCode && !this.scratch;
+  this.usingBlockly_ = !this.editCode;
 
   if (options.isEditorless) {
     this.editCode = false;
@@ -280,22 +280,24 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <InstructionsDialogWrapper
-          showInstructionsDialog={autoClose => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-        />
-        <FinishDialog
-          onContinue={() => this.onContinue()}
-          getShareUrl={() => this.lastShareUrl}
-        />
-      </div>
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <div>
+          <InstructionsDialogWrapper
+            showInstructionsDialog={autoClose => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+          />
+          <FinishDialog
+            onContinue={() => this.onContinue()}
+            getShareUrl={() => this.lastShareUrl}
+          />
+        </div>
+      </Provider>,
+      document.body.appendChild(document.createElement('div'))
+    );
+  }
 
   if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
@@ -323,6 +325,18 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.level.iframeEmbedAppAndCode) {
+    StudioApp.prototype.handleIframeEmbedAppAndCode_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
+      wireframeShare: config.wireframeShare
+    });
+  }
+
   if (config.share) {
     this.handleSharing_({
       makeUrl: config.makeUrl,
@@ -332,13 +346,15 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
-  this.authoredHintsController_.init(
-    config.level.authoredHints,
-    hintsUsedIds,
-    config.scriptId,
-    config.serverLevelId
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+    this.authoredHintsController_.init(
+      config.level.authoredHints,
+      hintsUsedIds,
+      config.scriptId,
+      config.serverLevelId
+    );
+  }
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(
       config.authoredHintViewRequestsUrl
@@ -714,12 +730,6 @@ StudioApp.prototype.handleClearPuzzle = function(config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
-  } else if (this.scratch) {
-    const workspace = Blockly.getMainWorkspace();
-    workspace.clear();
-
-    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
-    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -806,7 +816,7 @@ export function makeFooterMenuItems() {
     },
     {
       text: msg.copyright(),
-      link: '#',
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
@@ -826,14 +836,9 @@ export function makeFooterMenuItems() {
     footerMenuItems.shift();
   }
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
@@ -859,7 +864,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
@@ -942,9 +948,26 @@ StudioApp.prototype.toggleRunReset = function(button) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+  if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
+    // craft has a darker color scheme than other blockly labs. It needs to
+    // toggle between different colors on run/reset or else, on run, the workspace
+    // would get lighter than the default.
+    if (showRun && this.config.app === 'craft') {
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#A1A1A1');
+    } else if (showRun) {
+      $('#codeWorkspace > .blocklySvg').css('background-color', white);
+    } else if (this.config.app === 'craft') {
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#7D7D7D');
+    } else {
+      $('#codeWorkspace > .blocklySvg').css(
+        'background-color',
+        workspace_running_background
+      );
+    }
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  $('.arrow').prop('disabled', showRun);
+  getStore().dispatch(setArrowButtonDisabled(showRun));
 };
 
 StudioApp.prototype.isRunning = function() {
@@ -1461,19 +1484,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
-
-    // If the small print and language selector are on the same line,
-    // the small print should float right.  Otherwise, it should float left.
-    var languageSelector = smallFooter.querySelector('form');
-    var smallPrint = smallFooter.querySelector('small');
-    if (
-      languageSelector &&
-      smallPrint.offsetTop === languageSelector.offsetTop
-    ) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:
@@ -1497,8 +1507,6 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-  } else if (this.scratch) {
-    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -2061,7 +2069,7 @@ StudioApp.prototype.configureDom = function(config) {
       document.body.className += ' embedded_iframe';
     }
 
-    if (config.pinWorkspaceToBottom) {
+    if (config.pinWorkspaceToBottom && !config.level.iframeEmbedAppAndCode) {
       var bodyElement = document.body;
       bodyElement.style.overflow = 'hidden';
       bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -2170,6 +2178,13 @@ StudioApp.prototype.handleHideSource_ = function(options) {
       }
     }
   }
+};
+
+StudioApp.prototype.handleIframeEmbedAppAndCode_ = function() {
+  document.body.style.backgroundColor = 'transparent';
+  document.body.className += 'iframe_embed_app_and_code';
+  var vizColumn = document.getElementById('visualizationColumn');
+  $(vizColumn).addClass('chromelessShare');
 };
 
 /**

@@ -61,8 +61,6 @@ apt_package %w(
   cmake
 )
 
-include_recipe 'cdo-mysql'
-
 include_recipe 'cdo-ruby'
 
 # Ensure the correct locale is generated and set as default (e.g. for Docker containers).
@@ -87,6 +85,7 @@ end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 
 include_recipe 'cdo-secrets'
+include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
@@ -105,6 +104,7 @@ if node['cdo-secrets']["build_apps"] ||
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'
   include_recipe 'cdo-apps::generate_pdf'
+  apt_package 'parallel' # Used by test-low-memory.sh to run apps tests in parallel
 end
 
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3

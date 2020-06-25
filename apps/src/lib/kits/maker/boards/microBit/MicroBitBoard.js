@@ -37,7 +37,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-      .then(() => this.boardClient_.connect())
+      .then(() => this.boardClient_.connectBoard())
       .then(() => this.initializeComponents());
   }
 

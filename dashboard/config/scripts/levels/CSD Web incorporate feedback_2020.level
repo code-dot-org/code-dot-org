@@ -14,18 +14,18 @@
     "name_suffix": "_2020",
     "submittable": "false",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/hyperlinks/",
+      "/docs/concepts/css/classes/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
       "/docs/concepts/html/images-in-html/",
       "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/hyperlinks/",
-      "/docs/concepts/css/style-sheets/",
       "/docs/concepts/css/style-sheets/",
       "/docs/concepts/css/text-properties/",
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/css/layout-properties/"
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
@@ -35,7 +35,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-12 21:00:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 23:48:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:16:49 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:11:46 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:47:57 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-12 21:00:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 23:48:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:16:49 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:11:46 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:47:57 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:06:04 +0000\",\"changed\":[\"reference_links\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,5 +1,5 @@
 daily_survey_day_0:
-  name: surveys/pd/workshop_daily_survey_day_0
+  name: surveys/pd/summer_workshop_pre_survey
   version: 0
   created_at: 2020-03-25 21:58:28
   updated_at: 2020-03-26 21:58:28
@@ -183,7 +183,7 @@ daily_survey_day_0:
     ]
   }'
 daily_survey_day_5:
-  name: surveys/pd/workshop_daily_survey_day_5
+  name: surveys/pd/summer_workshop_post_survey
   version: 0
   created_at: 2020-03-25 21:58:28
   updated_at: 2020-03-26 21:58:28
@@ -564,7 +564,7 @@ csf_intro_post_workshop:
          {
            "type": "matrix",
            "name": "facilitator_effectiveness",
-           "title": "During my workshop, {panel.facilitatorName} did the following:",
+           "title": "During my workshop, {panel.facilitator_name} did the following:",
            "columns": [
              {
                "value": "1",
@@ -625,15 +625,15 @@ csf_intro_post_workshop:
          {
            "type": "comment",
            "name": "k5_facilitator_did_well",
-           "title": "What were two things {panel.facilitatorName} did well?"
+           "title": "What were two things {panel.facilitator_name} did well?"
          },
          {
            "type": "comment",
            "name": "k5_facilitator_could_improve",
-           "title": "What were two things {panel.facilitatorName} could do better?"
+           "title": "What were two things {panel.facilitator_name} could do better?"
          }
        ],
-       "templateTitle": "Information about: {panel.facilitatorName}",
+       "templateTitle": "Information about: {panel.facilitator_name}",
        "allowAddPanel": false,
        "allowRemovePanel": false
      },{

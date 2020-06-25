@@ -38,6 +38,7 @@ module.exports.SpritelabReservedWords = [
   'text',
   'textAlign',
   'textSize',
+  'setup',
   // NativeSpriteLab.interpreted.js
   'extraArgs',
   'draw',
