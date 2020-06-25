@@ -244,8 +244,6 @@ module LevelsHelper
         question_options
       elsif @level.is_a? Widget
         widget_options
-      elsif @level.is_a? Scratch
-        scratch_options
       elsif @level.unplugged?
         unplugged_options
       else
@@ -335,19 +333,6 @@ module LevelsHelper
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
-    app_options
-  end
-
-  def scratch_options
-    app_options = {
-      baseUrl: Blockly.base_url,
-      skin: {},
-      app: 'scratch',
-    }
-    app_options[:level] = @level.properties.camelize_keys
-    app_options[:level][:scratch] = true
-    app_options[:level][:editCode] = false
-    app_options.merge! view_options.camelize_keys
     app_options
   end
 
