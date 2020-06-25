@@ -177,20 +177,8 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 * In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
 * Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
 
-...followed by the [overview instructions](#overview), _with the following observations_:
-* When running `git clone`, you may encounter the error
-    ```
-    error: RPC failed; curl 56 GnuTLS recv error (-24): Decryption has failed.
-    fatal: the remote end hung up unexpectedly
-    fatal: early EOF
-    fatal: index-pack failed
-    ```
-   This is because the repo is BIG (over 6 GB compressed). There are many possible solutions proffered online, but it's probably easier to just download the repo's zip file directly from GitHub. A couple of notes if you go this route:
-   * You cannot use File Explorer to move the zip archive to your Linux directory. Instead, WSL sees your `C:/` drive at `/mnt/c`, so run something like `mv /mnt/c/<DOWNLOAD_PATH> ~` from within WSL. 
-   * Once you've extracted it, run `git init` inside of the unzipped repo to properly set up `.git/hooks` (or else you may receive the error message `ln: failed to create symbolic link '.git/hooks/pre-commit': No such file or directory`)
-   * Running `git pull` (after you've added the staging remote using `git remote add origin https://github.com/code-dot-org/code-dot-org.git`), you may encounter the same error as the one described when running `git clone`. Again, it 
+...followed by the [overview instructions](#overview), _with the following observation_:
 * Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
-* One last note from this author: running `bundle exec rake install` took me over an hour to complete. I ran the sql query as suggested and didn't notice any change in the last couple of rows; I also tried running with `--trace` but it doesn't tell you much after you see `RAILS_ENV=development RACK_ENV=development bundle exec rake dashboard:setup_db`...so you may just have to cross your fingers and hope things finish!
 
 ### Alternative: Use an Ubuntu VM
 
