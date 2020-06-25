@@ -15,10 +15,22 @@ sk-SK:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať plásty.
       AppLab Intro 7 - Change Screen Color:
-        applab_hoc_finish: Zozelenela obrazovka? Ak áno, stlačte "Ukonči". Ak nie,
-          stlačte "Resetovať", zmeňte kód a kliknite znova na "Spustiť".
+        applab_hoc_finish: Zmenila sa farba obrazovky na zelenú? Ak áno, stlač "Dokončiť".
+          Ak nie, stlač "Obnoviť", zmeň kód a klikni znova na "Spustiť".
       AppLab Intro 7 - thisOrThatAddButton:
-        AppLabHoCFinal11: Teraz ste v dizajnovacom móde.
+        AppLabHoCFinal11: Teraz si v dizajnovom móde.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 Boolean Predict:
+        '': Tento program vypíše výsledok sem
+      CSD U3 Boolean Predict_2018:
+        '': Tento program vypíše výsledok sem
+      CSD U3 Boolean Predict_2019:
+        '': Tento program vypíše výsledok sem
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where XY:
@@ -291,9 +303,8 @@ sk-SK:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!
       New Play Lab Project:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky
-          vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie
-          do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé
+          bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spustiť" pre uloženie a spustenie
           vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?

@@ -303,6 +303,10 @@ class ScriptLevel < ActiveRecord::Base
       summary[:name] = level.display_name || level.name
     end
 
+    if bubble_choice?
+      summary[:sublevels] = level.summarize_sublevels(script_level: self)
+    end
+
     if Rails.application.config.levelbuilder_mode
       summary[:key] = level.key
       summary[:skin] = level.try(:skin)
@@ -471,7 +475,7 @@ class ScriptLevel < ActiveRecord::Base
   # it is contained in is hidden, or the script it is contained in is hidden.
   def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
+    !SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
       !SectionHiddenScript.find_by(script_id: lesson.script.id, section_id: section_id).nil?
   end
 

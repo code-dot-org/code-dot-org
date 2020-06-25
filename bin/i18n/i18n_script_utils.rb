@@ -1,6 +1,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 require 'cgi'
 require 'fileutils'
 require 'psych'
@@ -24,11 +24,11 @@ CROWDIN_PROJECTS = {
 
 class I18nScriptUtils
   # Because we log many of the i18n operations to slack, we often want to
-  # explicitly force stdout to operate syncronously, rather than buffering
+  # explicitly force stdout to operate synchronously, rather than buffering
   # output and dumping a whole lot of output into slack all at once.
   #
   # See the sync_up and sync_down methods in particular for usage.
-  def self.with_syncronous_stdout
+  def self.with_synchronous_stdout
     old_sync = $stdout.sync
     $stdout.sync = true
     yield

@@ -50,6 +50,13 @@ class HelpHeader
       }
     end
 
+    entries << {
+      title: I18n.t("#{loc_prefix}help_support"),
+      url: "https://support.code.org",
+      id: "support",
+      target: "_blank"
+    }
+
     if options[:level] || options[:script_level]
       report_url = options[:script_level] ?
         options[:script_level].report_bug_url(options[:request]) :
@@ -68,9 +75,9 @@ class HelpHeader
     end
 
     entries << {
-      title: I18n.t("#{loc_prefix}help_support"),
-      url: "https://support.code.org",
-      id: "support"
+      title: I18n.t("#{loc_prefix}report_abuse"),
+      url: "/report_abuse",
+      id: "report-abuse"
     }
 
     if options[:user_type] == "teacher"
@@ -90,9 +97,12 @@ class HelpHeader
     # https://developers.google.com/web/tools/lighthouse/audits/noopener
     entries.each do |entry|
       entry[:target] = "_blank"
-      entry[:rel] = "noopener noreferrer nofollow"
+      # We don't need to protect against cross-site issues if we are staying on our own site. We should avoid adding
+      # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
+      # which page the user probably wants to report.
+      entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
+                                                            blank?
     end
-
     entries
   end
 end

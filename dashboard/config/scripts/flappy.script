@@ -1,7 +1,7 @@
 id '6'
 hidden false
 
-stage 'Flappy Code'
+lesson 'Flappy Code'
 skin 'flappy'
 level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_1'

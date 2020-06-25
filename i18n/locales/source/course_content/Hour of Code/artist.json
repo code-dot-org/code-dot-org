@@ -29,22 +29,28 @@
   "https://studio.code.org/s/artist/stage/1/puzzle/8": {
     "short_instructions": "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart",
     "long_instructions": "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart",
-    "function_names": {
-      "draw a flower": "draw a flower"
+    "function_definitions": {
+      "draw a flower": {
+        "name": "draw a flower"
+      }
     }
   },
   "https://studio.code.org/s/artist/stage/1/puzzle/9": {
     "short_instructions": "Here's a function called \"Draw a shape\" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?",
     "long_instructions": "Here's a function called `Draw a shape` that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?",
-    "function_names": {
-      "draw a shape": "draw a shape"
+    "function_definitions": {
+      "draw a shape": {
+        "name": "draw a shape"
+      }
     }
   },
   "https://studio.code.org/s/artist/stage/1/puzzle/10": {
     "short_instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!",
     "long_instructions": "Now go ahead and make whatever picture you'd like! You've even got some new blocks and an empty function that you can make do whatever you want!",
-    "function_names": {
-      "my function": "my function"
+    "function_definitions": {
+      "my function": {
+        "name": "my function"
+      }
     }
   }
 }

@@ -1382,6 +1382,8 @@
   header_teacher_community: "Comunitate profesori"
   header_help_support: 'Ajutor și asistență '
   header_report_bug: "Raportare problemă"
+  header_legal_privacy: "Politică de confidențialitate"
+  header_legal_tos: "Termeni şi condiţii de utilizare"
   header_tutorials: "Tutoriale"
   header_documentation: "Documentație"
   user_header_label: "Salut %{username}"

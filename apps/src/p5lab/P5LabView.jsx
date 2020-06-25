@@ -18,6 +18,9 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
+import animationLibrary from './gamelab/animationLibrary.json';
+import {AnimationCategories} from './gamelab/constants';
+import {CostumeCategories} from './spritelab/constants';
 
 /**
  * Top-level React wrapper for GameLab
@@ -49,8 +52,25 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
+  getLibraryManifest = () => {
+    return this.state.libraryManifest;
+  };
+
+  getCategories() {
+    return this.props.spriteLab ? CostumeCategories : AnimationCategories;
+  }
+
   componentDidMount() {
     this.props.onMount();
+    if (this.props.spriteLab) {
+      fetch('/api/v1/animation-library/manifest/spritelab')
+        .then(response => response.json())
+        .then(libraryManifest => {
+          this.setState({libraryManifest});
+        });
+    } else {
+      this.setState({libraryManifest: animationLibrary});
+    }
   }
 
   renderCodeMode() {
@@ -90,6 +110,10 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
+              getLibraryManifest={this.getLibraryManifest}
+              categories={this.getCategories()}
+              hideUploadOption={this.props.spriteLab}
+              hideAnimationNames={this.props.spriteLab}
             />
           )}
         </div>
@@ -113,7 +137,13 @@ class P5LabView extends React.Component {
     const {allowAnimationMode, interfaceMode} = this.props;
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
-      <AnimationTab channelId={this.getChannelId()} />
+      <AnimationTab
+        channelId={this.getChannelId()}
+        getLibraryManifest={this.getLibraryManifest}
+        categories={this.getCategories()}
+        hideUploadOption={this.props.spriteLab}
+        hideAnimationNames={this.props.spriteLab}
+      />
     ) : (
       undefined
     );

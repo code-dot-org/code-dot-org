@@ -1375,6 +1375,8 @@
   header_teacher_community: "Öğretmen topluluğu"
   header_help_support: 'Yardım ve Destek '
   header_report_bug: "Hata bildir"
+  header_legal_privacy: "Gizlilik Politikası"
+  header_legal_tos: "Şartlar"
   header_tutorials: "Eğitmler"
   game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
   game_lab_tutorials: "Oyun Laboratuvar Eğitimi"

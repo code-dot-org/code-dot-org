@@ -23,12 +23,21 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+          lessons:
+            Events:
+              name: Dáhpáhusaid
         grade1:
           stages:
             Events:
               name: Dáhpáhusaid
+          lessons:
+            Events:
+              name: Dáhpáhusaid
         k5concepts:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid
         coursed-2019:
@@ -57,6 +66,9 @@ se:
               display_name: Dáhpáhusaid
         k5-onlinepd-2019:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid
         time4cs-control-unit-1:
@@ -89,5 +101,8 @@ se:
               display_name: Dáhpáhusaid
         code-break:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid

@@ -406,8 +406,10 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
   },
   "https://studio.code.org/s/pre-express-2017/stage/12/puzzle/1": {

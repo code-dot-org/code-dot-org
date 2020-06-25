@@ -1,7 +1,7 @@
-stage 'Algorithms: Tangrams'
+lesson 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
-stage 'Introduction'
+lesson 'Introduction'
 level 'courseE_video_ramp1'
 level 'courseF_maze_ramp1'
 level 'courseF_maze_ramp2'
@@ -20,7 +20,7 @@ level 'courseF_maze_ramp13'
 level 'courseF_maze_ramp7', challenge: true
 level 'courseF_external_ramp14'
 
-stage 'Ice Age Play Lab'
+lesson 'Ice Age Play Lab'
 skin 'iceage'
 video_key_for_next_level 'iceage_intro'
 level 'iceage_hello1'
@@ -47,7 +47,7 @@ level 'iceage_throw_hearts'
 skin 'iceage'
 level 'iceage_free_play'
 
-stage 'Conditionals and Functions in Bee'
+lesson 'Conditionals and Functions in Bee'
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'

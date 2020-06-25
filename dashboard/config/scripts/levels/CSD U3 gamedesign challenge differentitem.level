@@ -39,7 +39,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "GjyMCSiKmwQtXPVAwm6SAqDpMOkp1UzQlrRnxRh07V0YGy+qEp2C6eu85fWf\niKID\n",
+    "encrypted_examples": "GzopxfI0ETgQ/sdJDPcsS0v5lteaWoEGfg7NU30CvMevod8yNBWtED/zglYp\nj761FV9BglbfCTOmM1+3Ub8U1w==\n",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "display_name": "Add Different Items",
@@ -66,12 +66,12 @@
     "encrypted": "false",
     "bubble_choice_description": "Add a different item for your player to collect or avoid that are worth different point values",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "thumbnail_url": "https://images.code.org/6d1597c09329f2e44ca8d791eb04ceaa-image-1585852507674.png"
+    "thumbnail_url": "https://images.code.org/6d1597c09329f2e44ca8d791eb04ceaa-image-1585852507674.png",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 20:12:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 17:32:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-03 16:53:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 18:18:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:21:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:36:19 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 20:12:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 17:32:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-03 16:53:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 18:18:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:21:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:36:19 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-14 16:57:14 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-14 16:57:30 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

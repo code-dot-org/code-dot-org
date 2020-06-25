@@ -469,7 +469,7 @@ sk:
         text: "Potom, čo vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva skôr, než sa posunieme dopredu. Ak tam láva je, potrebujeme umiestniť kameň pred našu postavu skôr, než sa posunieme dopredu. Týmto spôsobom sa môžeme bezpečne posúvať dopredu. Je čas na ťaženie! A nezabudni použiť príkaz \"ak\", aby si si dal pri pohybe pozor."
     mc_congrats_share:
       1:
-        text: "Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy."
+        text: "Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!"
       2:
         text: "Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Vyberieš si sám."
       3:
@@ -478,7 +478,7 @@ sk:
         text: "Ak si dokončil svoj výtvor, vyber možnosť zdieľať, aby si získal odkaz a ukázal kamarátom svoj výtvor. Zabav sa!"
     mc_congrats_no_share:
       1:
-        text: "Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy."
+        text: "Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!"
       2:
         text: "Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Vyberieš si sám."
       3:
@@ -585,7 +585,7 @@ sk:
         text: "V poslednom rozbaľovacom zozname napíš hodnotu, ktorú chceš použiť. Blok ti poskytne návrh. Vždy je však môžné napísať vlastné farby alebo čísla."
       7:
         image: 'notes/applab_intro_welcome_7.png'
-        text: "Po dokončení sa blok číta ako veta: 'Nastav farbu pozadia pre button1 na zelenú.' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde.. Po Obnovení, môžeš pretiahnuť viac blokov pre zmenu iných častí aplikácie. Ako napríklad text!"
+        text: "Po dokončení sa blok číta ako veta: 'Nastav farbu pozadia pre button1 na zelenú.' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde. Po Obnovení, môžeš pretiahnuť viac blokov pre zmenu iných častí aplikácie. Ako napríklad text!"
       8:
         image: 'notes/applab_intro_welcome_8.png'
         text: "Teraz budeme pracovať v blokovom móde, ale App Lab tiež podporuje prácu s textom."
@@ -644,7 +644,7 @@ sk:
         text: "Ak chceš pridať obrázky do prvkov, stačí použiť blok setProperty. V druhom rozbaľovacom zozname vyber možnosť \"image\""
       6:
         image: 'notes/applab_intro_sounds_6.png'
-        text: "Potom vyberte \"Vybrať\" z tretieho rozbaľovacieho menu."
+        text: "Potom z tretieho rozbaľovacieho zoznamu vyber možnosť “Vyber si“."
       7:
         image: 'notes/applab_intro_sounds_7.png'
         text: "Odtiaľto môžeš nahrať obrázok z počítača alebo si môžeš vybrať z veľkého\nmnožstva ikon v knižnici ikon."
@@ -660,7 +660,7 @@ sk:
         text: "Pre vytvorenie aplikácií, musíš začať navrhovať obrazovky a prvky od základu. S App Lab je toto jednoduché vďaka Dizajn Módu."
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho módu."
+        text: "Pomocou tlačidla umiestneného nad appkou prepni AppLab do dizajnového módu."
       3:
         image: 'notes/applab_intro_designmode_3.png'
         text: "Nové prvky môžeš pridať ich pretiahnutím na obrazovku. Môžeš ich presunúť na rôzne miesta a zmeniť ich veľkosť pretiahnutím pravého dolného rohu."

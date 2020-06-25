@@ -1,5 +1,5 @@
 tts true
-stage 'TTS'
+lesson 'TTS'
 level 'allthethings_ttscsf contained'
 level 'allthethings_ttscsd'
 level 'allthethings_ttscsp contained'

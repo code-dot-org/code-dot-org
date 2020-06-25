@@ -988,6 +988,8 @@ vi-VN:
   header_about: Thông tin
   header_teacher_community: Cộng đồng giáo viên
   header_report_bug: Báo lỗi
+  header_legal_privacy: Chính sách riêng tư
+  header_legal_tos: Các điều khoản của Code.org
   header_tutorials: Hướng dẫn
   header_documentation: Tài liệu
   user_header_label: Chào %{username}

@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -355,7 +355,6 @@ class Level < ActiveRecord::Base
     'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Scratch', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget

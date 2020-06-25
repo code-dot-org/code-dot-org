@@ -112,11 +112,10 @@ class ScriptsController < ApplicationController
       beta: beta,
       betaWarning: beta_warning,
       levelKeyList: beta && Level.key_list,
-      stageLevelData: @script_file,
+      lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
-      flex_category_map: I18n.t('flex_category'),
       is_levelbuilder: current_user.levelbuilder?
     }
   end
@@ -162,6 +161,10 @@ class ScriptsController < ApplicationController
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script
 
+    if ScriptConstants::FAMILY_NAMES.include?(script_id)
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+    end
+
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
@@ -179,14 +182,14 @@ class ScriptsController < ApplicationController
       :version_year,
       :project_sharing,
       :login_required,
-      :hideable_stages,
+      :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :stage_extras_available,
+      :lesson_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
       :tts,

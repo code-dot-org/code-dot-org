@@ -45,6 +45,7 @@ export default storybook => {
             setField={action('setField')}
             level={defaultLevel}
             lessonPosition={1}
+            lessonGroupPosition={1}
           />
         </div>
       )
@@ -63,6 +64,7 @@ export default storybook => {
             setField={action('setField')}
             level={blocklyLevel}
             lessonPosition={1}
+            lessonGroupPosition={1}
           />
         </div>
       )

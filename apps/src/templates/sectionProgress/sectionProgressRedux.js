@@ -10,6 +10,7 @@ import {
   DIAMOND_BUBBLE_WIDTH,
   PILL_BUBBLE_WIDTH
 } from './multiGridConstants';
+import {SMALL_DOT_SIZE} from '@cdo/apps/templates/progress/progressStyles';
 import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
@@ -50,7 +51,7 @@ export const addScriptData = (scriptId, scriptData) => {
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.stages
+    stages: scriptData.lessons
   };
   return {type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData};
 };
@@ -333,6 +334,10 @@ export const getColumnWidthsForDetailView = state => {
       } else {
         // Circle bubble
         width = width + PROGRESS_BUBBLE_WIDTH;
+      }
+      if (levels[levelIndex].sublevels) {
+        width =
+          width + levels[levelIndex].sublevels.length * SMALL_DOT_SIZE * 2;
       }
     }
     columnLengths.push(width || 0);

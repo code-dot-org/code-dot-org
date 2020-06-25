@@ -409,9 +409,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/6/puzzle/5": {
@@ -422,8 +429,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2018/stage/6/puzzle/6": {

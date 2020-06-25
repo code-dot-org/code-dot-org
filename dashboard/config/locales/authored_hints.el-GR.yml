@@ -26,6 +26,8 @@ el-GR:
         2-3_Artist_4_a: Για να ολοκληρώσουμε το σπίτι, πρέπει απλά να σχεδιάσουμε
           ένα τετράγωνο!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Για να φτιάξεις αυτές τις μικρές γωνίες, θα πρέπει να στρίβεις
+          _περισσσότερο_ κάθε φορά, απ'' ότι έκανες με το τετράγωνο.   '
         2-3_Artist_6_b: Δεδομένου ότι ήδη κοιτάζω προς τα δεξιά, είναι πιο εύκολο
           να ξεκινήσετε προχωρώντας εμπρός, και στη συνέχεια, να κάνετε αριστερές
           στροφές για να δημιουργήσετε το τρίγωνο.
@@ -783,6 +785,42 @@ el-GR:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Μπορείς να χρησιμοποιήσεις μπλοκ "πήδα" για να μετακινηθείς
+          σε άλλα κενά.
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_b: Όταν τελειώσεις ένα σπιτάκι για τα πουλιά,
+          "πήδα" στο επόμενο!
+        courseA_artist_loops_challenge2_c: Θα χρειαστείς ΠΟΛΛΑ μπλοκ μέσα στο βρόγχο
+          γι' αυτή τη δοκιμασία.
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Άρχισε βάζοντας σε βρόγχο τις εντολές "κινήσου νότια" και "πάρε το θησαυρό".
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          Το μοτίβο στα βόρεια είναι λίγο διαφορετικό από αυτό στα νότια.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: Μερικές διαδρομές θα σε οδηγήσουν στη δυναμίτιδα,
+          αν προχωρήσεις πολύ.
+      course1_maze_debugging_challenge2:
+        courseB_maze_seq_challenge2_b: Αναδιάταξε τα μπλοκ και πάρε το μεσαίο μονοπάτι.
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Προσπάθησε να μετακινηθείς προς τα Δυτικά για
+          αρχή.
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Αν με στείλεις προς τα πίσω, να είσαι
+          προσεκτικός! Πρέπει να γυρίσω σωστά!_
+        courseC_maze_programming_challenge2_b: Η πιο σύντομη λύση χρησιμοποιεί μόνο
+          5 μπλοκ, αλλά χρησιμοποιεί το μπλοκ "επανάληψη"!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.

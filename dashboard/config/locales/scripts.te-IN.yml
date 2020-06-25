@@ -11,12 +11,21 @@ te:
           stages:
             Events:
               name: ఈవెంట్లు
+          lessons:
+            Events:
+              name: ఈవెంట్లు
         grade1:
           stages:
             Events:
               name: ఈవెంట్లు
+          lessons:
+            Events:
+              name: ఈవెంట్లు
         k5concepts:
           stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
             Events:
               name: ఈవెంట్లు
         dance:
@@ -24,16 +33,28 @@ te:
             Dance Party:
               name: డాన్స్ పార్టీ
           title: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         dance--draft:
           stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance-draft:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         dance-low:
           stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         coursed-2019:
@@ -43,8 +64,14 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         express-2019:
           stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         coursec-2019:
@@ -71,8 +98,14 @@ te:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         k5-onlinepd-2019:
           stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
             Events:
               name: ఈవెంట్లు
         time4cs-control-unit-1:
@@ -102,8 +135,14 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         express-2020:
           stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         pre-express-2020:
@@ -112,5 +151,8 @@ te:
               display_name: ఈవెంట్లు
         code-break:
           stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
             Events:
               name: ఈవెంట్లు
