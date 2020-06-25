@@ -216,7 +216,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.pre_reader_script_ids
-    Script.all.select(&:csf_tts_level?).pluck(:id)
+    Script.all.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -787,55 +787,8 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  def csf_tts_level?
+  def pre_reader_tts_level?
     k5_course?
-  end
-
-  private def csd_tts_level?
-    [
-      Script::CSD2_NAME,
-      Script::CSD3_NAME,
-      Script::CSD4_NAME,
-      Script::CSD6_NAME,
-      Script::CSD2_2018_NAME,
-      Script::CSD3_2018_NAME,
-      Script::CSD4_2018_NAME,
-      Script::CSD6_2018_NAME,
-      Script::CSD2_2019_NAME,
-      Script::CSD3_2019_NAME,
-      Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME,
-      Script::CSD1_PILOT_NAME,
-      Script::CSD2_PILOT_NAME,
-      Script::CSD3_PILOT_NAME
-    ].include?(name)
-  end
-
-  private def csp_tts_level?
-    [
-      Script::CSP17_UNIT3_NAME,
-      Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME,
-      Script::CSP3_2018_NAME,
-      Script::CSP5_2018_NAME,
-      Script::CSP_POSTAP_2018_NAME,
-      Script::CSP3_2019_NAME,
-      Script::CSP5_2019_NAME,
-      Script::CSP_POSTAP_2019_NAME
-    ].include?(name)
-  end
-
-  private def hoc_tts_level?
-    [
-      Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME,
-      Script::DANCE_PARTY_EXTRAS_NAME,
-      Script::DANCE_PARTY_2019_NAME,
-      Script::DANCE_PARTY_EXTRAS_2019_NAME,
-      Script::ARTIST_NAME,
-      Script::SPORTS_NAME,
-      Script::BASKETBALL_NAME
-    ].include?(name)
   end
 
   def text_to_speech_enabled?
