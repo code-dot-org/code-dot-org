@@ -24,12 +24,12 @@
     {
      "type": "html",
      "name": "welcome_preamble",
-     "html": "<p><span style=\"font-size: 18pt;\"><strong>[DRAFT 05.29.20]Welcome to the 2019-20 {course} post-course survey</strong></span></p>\n<p>Code.org relies on surveys as a crucial tool through we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated.<br /></strong></p>"
+     "html": "<p><span style='font-size: 18pt;'><strong>[DRAFT 05.29.20]Welcome to the 2019-20 {course} post-course survey</strong></span></p>\n<p>Code.org relies on surveys as a crucial tool through we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated.<br /></strong></p>"
     },
     {
      "type": "html",
      "name": "teaching_context_header",
-     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We recognize the unique nature of teaching this year with the COVID-19 outbreak affecting most, if not all, schools.  In this survey we address the impacts that COVID-19 had on your classroom, as well as what it was like teaching the coures under &quot;normal&quot; circumstances.</p>\n<p> Let's get started!</p>"
+     "html": "<p style='text-align: left;'><strong><span style='font-size: 18pt;'>Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We recognize the unique nature of teaching this year with the COVID-19 outbreak affecting most, if not all, schools.  In this survey we address the impacts that COVID-19 had on your classroom, as well as what it was like teaching the coures under &quot;normal&quot; circumstances.</p>\n<p> Let's get started!</p>"
     },
     {
      "type": "checkbox",
@@ -198,7 +198,7 @@
       }
      ],
      "visibleIf": "{course} = 'CS Fundamentals'",
-     "title": "CSF panel -- should show if course = \"CS Fundamentals\""
+     "title": "CSF panel -- should show if course = 'CS Fundamentals'"
     },
     {
      "type": "panel",
@@ -237,7 +237,7 @@
       }
      ],
      "visibleIf": "{course} = 'CS Discoveries'",
-     "title": "CSD Panel - show if course == \"CS DIscoveries\""
+     "title": "CSD Panel - show if course == 'CS DIscoveries'"
     },
     {
      "type": "panel",
@@ -346,7 +346,7 @@
       }
      ],
      "visibleIf": "{course} = 'CS Principles'",
-     "title": "CSP Panel - Show if course == \"CS Principles\""
+     "title": "CSP Panel - Show if course == 'CS Principles'"
     },
     {
      "type": "radiogroup",
@@ -397,7 +397,7 @@
     {
      "type": "html",
      "name": "pre_covid_preamble",
-     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n<p>We'd like you to reflect on your classroom <strong>prior</strong> the time your school switched to remote learning.  We'll refer to this as your \"<strong>normal</strong>\" classroom -- what your classroom was like under normal conditions.</p>\n<p>We'll ask about your classroom with remote learning in a later section.</p>"
+     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n<p>We'd like you to reflect on your classroom <strong>prior</strong> the time your school switched to remote learning.  We'll refer to this as your '<strong>normal</strong>' classroom -- what your classroom was like under normal conditions.</p>\n<p>We'll ask about your classroom with remote learning in a later section.</p>"
     },
     {
      "type": "radiogroup",
@@ -1471,12 +1471,12 @@
     {
      "type": "html",
      "name": "cdo_heart_you",
-     "html": "<p><span style=\"font-size: 12pt;\"><br /><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png\" /></span></p>\n<p><span style=\"font-size: 12pt;\">Thanks from Code.org for your time, commitment and passion for teaching&nbsp;{csp_or_csd} this year.</span>&nbsp;</p>"
+     "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, commitment and passion for teaching&nbsp;{csp_or_csd} this year.</span>&nbsp;</p>"
     },
     {
      "type": "html",
      "name": "gift_card_conf_header",
-     "html": "<p><strong><span style=\"font-size: 14pt;\">Amazon Gift Card Confirmation</span></strong></p>\n<p><span style=\"font-size: 12pt;\">Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style=\"text-align: right;\"><span style=\"font-size: 8pt;\">*First 250 respondents will receive gift code. Please allow 1-2 weeks to receive code. </span></p>"
+     "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: right;'><span style='font-size: 8pt;'>*First 250 respondents will receive gift code. Please allow 1-2 weeks to receive code. </span></p>"
     },
     {
      "type": "radiogroup",
@@ -1500,7 +1500,7 @@
       {
        "type": "text",
        "name": "gift_card_email",
-       "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent.  We have initially set it to the email address associated with this account. You may change the address to one at which you would prefer to receive the gift code.",
+       "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent.  We have initially set it to the email address associated with this account. You may change the address to one at which you would prefer to receive the gift code."
       },
       {
        "type": "text",
@@ -1512,14 +1512,14 @@
        "name": "addresse_dont_match_text",
        "visible": false,
        "visibleIf": "{gift_card_email} <> {gift_card_email_verify}",
-       "html": "<p><span style=\"color: #800000;\">&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
+       "html": "<p><span style='color: #800000;'>&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
       },
       {
        "type": "html",
        "name": "Warning",
        "visible": false,
        "visibleIf": "{gift_card_email} = {gift_card_email_verify}",
-       "html": "<p><span style=\"color: #339966;\">&nbsp;Addresses match!</span></p>"
+       "html": "<p><span style='color: #339966;'>&nbsp;Addresses match!</span></p>"
       }
      ],
      "visibleIf": "{gift_card_yes_no} = 'yes'",
