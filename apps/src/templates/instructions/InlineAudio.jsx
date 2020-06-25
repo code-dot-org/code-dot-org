@@ -292,6 +292,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    section: state.sectionData.section.autoplayEnabled
+    autoplayEnabled: state.sectionData.section.autoplayEnabled
   };
 })(StatelessInlineAudio);

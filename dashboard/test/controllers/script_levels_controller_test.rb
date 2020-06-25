@@ -1,4 +1,4 @@
-require 'test_helper'
+time I ran tests but those only had errors on my endrequire 'test_helper'
 require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase

@@ -25,6 +25,7 @@ describe('EditSectionForm', () => {
         section={noStudentsSection}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -83,6 +84,7 @@ describe('EditSectionForm', () => {
         section={testSection}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -120,6 +122,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -160,6 +163,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -182,6 +186,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -204,6 +209,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
