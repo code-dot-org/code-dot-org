@@ -1,5 +1,5 @@
 {
- "title": "converted from jotform",
+ "title": "Teacher end-of-year survey CSF, CSD, CSP",
  "pages": [
   {
    "name": "page 1",
@@ -13,7 +13,6 @@
     {
      "type": "text",
      "name": "course",
-     "visible": false,
      "title": "course"
     },
     {
@@ -24,168 +23,415 @@
     },
     {
      "type": "html",
-     "name": "clickTo57",
+     "name": "welcome_preamble",
      "html": "<p><span style=\"font-size: 18pt;\"><strong>[DRAFT 05.29.20]Welcome to the 2019-20 {course} post-course survey</strong></span></p>\n<p>Code.org relies on surveys as a crucial tool through we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated.<br /></strong></p>"
     },
     {
      "type": "html",
-     "name": "Preamble",
-     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We address teaching the course under &quot;normal&quot; circumstances, as well as remotely.</p>\n<p> </p>"
+     "name": "teaching_context_header",
+     "html": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 18pt;\">Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We recognize the unique nature of teaching this year with the COVID-19 outbreak affecting most, if not all, schools.  In this survey we address the impacts that COVID-19 had on your classroom, as well as what it was like teaching the coures under &quot;normal&quot; circumstances.</p>\n<p> Let's get started!</p>"
     },
     {
      "type": "checkbox",
      "name": "grade_levels_taught",
-     "title": "At what grade levels did you teach {course}? [select all that apply]",
+     "title": "At what grade levels did you teach {course} this year? [select all that apply]",
      "choices": [
-      "K",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-      "12+",
-      "N/A"
+      {
+       "value": "k",
+       "text": "K"
+      },
+      {
+       "value": "1",
+       "text": "1"
+      },
+      {
+       "value": "2",
+       "text": "2"
+      },
+      {
+       "value": "3",
+       "text": "3"
+      },
+      {
+       "value": "4",
+       "text": "4"
+      },
+      {
+       "value": "5",
+       "text": "5"
+      },
+      {
+       "value": "6",
+       "text": "6"
+      },
+      {
+       "value": "7",
+       "text": "7"
+      },
+      {
+       "value": "8",
+       "text": "8"
+      },
+      {
+       "value": "9",
+       "text": "9"
+      },
+      {
+       "value": "10",
+       "text": "10"
+      },
+      {
+       "value": "11",
+       "text": "11"
+      },
+      {
+       "value": "12",
+       "text": "12"
+      },
+      {
+       "value": "12_plus",
+       "text": "12+"
+      },
+      {
+       "value": "na",
+       "text": "N/A"
+      }
      ]
     },
     {
-     "type": "html",
-     "name": "input234",
-     "html": "<p><span style=\"background-color: #ffff00;\">TO DO:</span></p>\n<p><span style=\"background-color: #ffff00;\">Add logic based on course to <strong>choose which subcourses or units taught</strong>.</span></p>\n<p><span style=\"background-color: #ffff00;\">CSF: </span></p>\n<p><span style=\"background-color: #ffff00;\">* Course A, B, C, etc.</span></p>\n<p><span style=\"background-color: #ffff00;\">* What type of teacher are you (homeroom, library, tech, etc)</span></p>\n<p><span style=\"background-color: #ffff00;\">CSD: </span></p>\n<p><span style=\"background-color: #ffff00;\">* Unit 1, Unit 2, Unit 3, ...etc.</span></p>\n<p><span style=\"background-color: #ffff00;\">CSP: </span></p>\n<p><span style=\"background-color: #ffff00;\">* Unit 1, Unit 2, UNit 3, ...etc.</span></p>\n<p><span style=\"background-color: #ffff00;\">* as AP, honors, regular.</span></p>"
+     "type": "panel",
+     "name": "csf_panel",
+     "elements": [
+      {
+       "type": "checkbox",
+       "name": "csf_which_course",
+       "title": "Which courses of CS Fundamentals did you teach? Please check any courses you taught all or most of with students.",
+       "choices": [
+        {
+         "value": "course_a",
+         "text": "Course A"
+        },
+        {
+         "value": "course_b",
+         "text": "Course B"
+        },
+        {
+         "value": "course_c",
+         "text": "Course C"
+        },
+        {
+         "value": "course_d",
+         "text": "Course D"
+        },
+        {
+         "value": "course_e",
+         "text": "Course E"
+        },
+        {
+         "value": "course_f",
+         "text": "Course F"
+        },
+        {
+         "value": "course_1",
+         "text": "Course 1"
+        },
+        {
+         "value": "course_2",
+         "text": "Course 2"
+        },
+        {
+         "value": "course_3",
+         "text": "Course 3"
+        },
+        {
+         "value": "course_4",
+         "text": "Course 4"
+        },
+        {
+         "value": "express",
+         "text": "Express"
+        },
+        {
+         "value": "20_hour",
+         "text": "20-hour"
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "csf_teacher_role",
+       "title": "What type of role applies best to you?",
+       "choices": [
+        {
+         "value": "classroom_teacher",
+         "text": "Classroom Teacher"
+        },
+        {
+         "value": "media_specialist",
+         "text": "Media Specialist"
+        },
+        {
+         "value": "tech_teacher",
+         "text": "Tech Teacher"
+        },
+        {
+         "value": "librarian",
+         "text": "Librarian"
+        },
+        {
+         "value": "school_administrator",
+         "text": "School Administrator"
+        },
+        {
+         "value": "district_administrator",
+         "text": "District Administrator"
+        },
+        {
+         "value": "parent",
+         "text": "Parent"
+        },
+        {
+         "value": "other",
+         "text": "Other"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{course} = 'CS Fundamentals'",
+     "title": "CSF panel -- should show if course = \"CS Fundamentals\""
     },
     {
-     "type": "checkbox",
-     "name": "csf_which_course",
-     "title": "***IF CS Fundamentals*** Which courses of CS Fundamentals did you teach? Please check any courses you taught all or most of with students.",
-     "choices": [
-      "Course A",
-      "Course B",
-      "Course C",
-      "Course D",
-      "Course E",
-      "Course F",
-      "Course 1",
-      "Course 2",
-      "Course 3",
-      "Course 4",
-      "Express",
-      "20-hour"
-     ]
+     "type": "panel",
+     "name": "csd_panel",
+     "elements": [
+      {
+       "type": "checkbox",
+       "name": "csd_which_units",
+       "title": "Which units of CS Discoveries did you teach? Please check any units you taught all or most of.",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1 - Problem Solving"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5"
+        },
+        {
+         "value": "unit_6",
+         "text": "Unit 6"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{course} = 'CS Discoveries'",
+     "title": "CSD Panel - show if course == \"CS DIscoveries\""
     },
     {
-     "type": "checkbox",
-     "name": "question1",
-     "title": ">>TO DO<< ***IF CS Fundamentals*** What type of role applies best to you?",
-     "choices": [
-      "Classroom Teacher",
-      "Media Specialist",
-      "Tech Teacher",
-      "Librarian",
-      "School Administrator",
-      "District Administrator",
-      "Parent",
-      "Other"
-     ]
-    },
-    {
-     "type": "checkbox",
-     "name": "csd_which_units",
-     "title": "***IF CS DISCOVERIES*** Which units of CS Discoveries did you teach? Please check any units you taught all or most of.",
-     "choices": [
-      "Unit 1 - Problem Solving",
-      "Unit 2",
-      "Unit 3",
-      "Unit 4",
-      "Unit 5",
-      "Unit 6"
-     ]
-    },
-    {
-     "type": "checkbox",
-     "name": "csp_which_units",
-     "title": "***IF CS PRINCIPLES*** Which units of CS Pprinciples did you teach? Please check any units you taught all or most of.",
-     "choices": [
-      "Unit 1 - The Internet",
-      "Unit 2",
-      "Unit 3",
-      "Unit 4",
-      "Unit 5",
-      "Explore-PT Prep",
-      "Create PT Prep"
-     ]
-    },
-    {
-     "type": "checkbox",
-     "name": "csp_taught_as_ap",
-     "title": "***IF CS PRINCIPLES*** This year I taught CS Principles as...[check all that apply]",
-     "choices": [
-      "An AP course",
-      "An honors course (non-AP)",
-      "A regular course (non-AP)"
-     ]
+     "type": "panel",
+     "name": "csp_panel",
+     "elements": [
+      {
+       "type": "checkbox",
+       "name": "csp_which_units",
+       "title": "Which units of CS Principles did you teach? Please check any units you taught all or most of.",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1 - The Internet"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5"
+        },
+        {
+         "value": "explore_pt_prep",
+         "text": "Explore-PT Prep"
+        },
+        {
+         "value": "create_pt_prep",
+         "text": "Create PT Prep"
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "csp_taught_as_ap",
+       "title": "This year I taught CS Principles as...[check all that apply]",
+       "choices": [
+        {
+         "value": "ap",
+         "text": "An AP course"
+        },
+        {
+         "value": "honors",
+         "text": "An honors course (non-AP)"
+        },
+        {
+         "value": "non_AP",
+         "text": "A regular course (non-AP)"
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "other_ap_courses_taught",
+       "title": "What other AP courses did you teach this school year (2019-20), if any? [check all that apply]",
+       "choices": [
+        {
+         "value": "none",
+         "text": "None"
+        },
+        {
+         "value": "ap_computer_science_a",
+         "text": "AP Computer Science A"
+        },
+        {
+         "value": "ap_calculus__ab_or_bc_",
+         "text": "AP Calculus (AB or BC)"
+        },
+        {
+         "value": "ap_statistics",
+         "text": "AP Statistics"
+        },
+        {
+         "value": "ap_sciences",
+         "text": "AP Sciences"
+        },
+        {
+         "value": "ap_english",
+         "text": "AP English"
+        },
+        {
+         "value": "ap_world_languages",
+         "text": "AP World Languages"
+        },
+        {
+         "value": "ap_history_and_social_sci",
+         "text": "AP History and Social Sciences"
+        },
+        {
+         "value": "ap_arts",
+         "text": "AP Arts"
+        },
+        {
+         "value": "ap_capstone",
+         "text": "AP Capstone"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{course} = 'CS Principles'",
+     "title": "CSP Panel - Show if course == \"CS Principles\""
     },
     {
      "type": "radiogroup",
      "name": "course_required",
      "title": "At your school is {course} a required or elective course?  ",
      "choices": [
-      "Required (or part of a rotation that all students do at some point)",
-      "Elective",
-      "Integrated into other subjects or school activities."
+      {
+       "value": "required",
+       "text": "Required (or part of a rotation that all students do at some point)"
+      },
+      {
+       "value": "elective",
+       "text": "Elective"
+      },
+      {
+       "value": "integrated",
+       "text": "Integrated into other subjects or school activities."
+      }
      ]
     },
     {
      "type": "radiogroup",
      "name": "years_taught_codeorg",
-     "title": "How many years have you taught using the Code.org {csp_or_csd} curriculum?",
+     "title": "How many years have you taught using the Code.org {course} curriculum?",
      "choices": [
-      "This is my first year (2019-20)",
-      "2nd year (since 2018-19)",
-      "3rd year (since 2017-18)",
-      "4th year (since 2016-17)",
-      "5th year (since 2015-16)"
-     ]
-    },
-    {
-     "type": "checkbox",
-     "name": "other_ap_courses_taught",
-     "title": "***IF CS PRINCIPLES*** What other AP courses did you teach this school year (2018-19), if any? [check all that apply]",
-     "choices": [
-      "None",
-      "AP Computer Science A",
-      "AP Calculus (AB or BC)",
-      "AP Statistics",
-      "AP Sciences",
-      "AP English",
-      "AP World Languages",
-      "AP History and Social Sciences",
-      "AP Arts",
-      "AP Capstone"
+      {
+       "value": "1st",
+       "text": "This is my first year (2019-20)"
+      },
+      {
+       "value": "2nd",
+       "text": "2nd year (since 2018-19)"
+      },
+      {
+       "value": "3rd",
+       "text": "3rd year (since 2017-18)"
+      },
+      {
+       "value": "4th",
+       "text": "4th year (since 2016-17)"
+      },
+      {
+       "value": "5th",
+       "text": "5th year (since 2015-16)"
+      }
      ]
     },
     {
      "type": "html",
      "name": "pre_covid_preamble",
-     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched in all or in part to remote/virtual learning.</p>\n<p>We'd like you to reflect on your classroom <strong>prior</strong> the time your school switched to remote learning.  We'll refer to this as your \"<strong>normal</strong>\" classroom -- what your classroom was like under normal conditions.</p>\n<p>We'll ask about your classroom with remote learning in a later section.</p>"
+     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n<p>We'd like you to reflect on your classroom <strong>prior</strong> the time your school switched to remote learning.  We'll refer to this as your \"<strong>normal</strong>\" classroom -- what your classroom was like under normal conditions.</p>\n<p>We'll ask about your classroom with remote learning in a later section.</p>"
     },
     {
      "type": "radiogroup",
      "name": "mins_per_week_normal",
      "title": "For a typical section of {course} that you teach, on average how many MINUTES PER WEEK does that section meet under normal circumstances.?",
      "choices": [
-      "50 or less",
-      "51-100",
-      "101 - 150",
-      "151 - 200",
-      "201 - 250",
-      "251 - 300",
-      "301 or more"
+      {
+       "value": "50_or_less",
+       "text": "50 or less"
+      },
+      {
+       "value": "51_to_100",
+       "text": "51-100"
+      },
+      {
+       "value": "101_to_150",
+       "text": "101 - 150"
+      },
+      {
+       "value": "151_to_200",
+       "text": "151 - 200"
+      },
+      {
+       "value": "201_to_250",
+       "text": "201 - 250"
+      },
+      {
+       "value": "251_to_300",
+       "text": "251 - 300"
+      },
+      {
+       "value": "301_or_more",
+       "text": "301 or more"
+      }
      ]
     },
     {
@@ -193,12 +439,30 @@
      "name": "num_weeks_normal",
      "title": "For a typical section of {csp_or_csd} that you teach, approximately how many WEEKS does the class run under normal circumstances?",
      "choices": [
-      "5 or fewer",
-      "6-10",
-      "11 - 15",
-      "16 - 20",
-      "21 - 30",
-      "30 or more"
+      {
+       "value": "5_or_fewer",
+       "text": "5 or fewer"
+      },
+      {
+       "value": "6_to_10",
+       "text": "6-10"
+      },
+      {
+       "value": "11_to_15",
+       "text": "11 - 15"
+      },
+      {
+       "value": "16_to_20",
+       "text": "16 - 20"
+      },
+      {
+       "value": "21_to_30",
+       "text": "21 - 30"
+      },
+      {
+       "value": "30_or_more",
+       "text": "30 or more"
+      }
      ]
     },
     {
@@ -237,19 +501,19 @@
      ],
      "rows": [
       {
-       "value": "I_loved_teaching_with_the",
+       "value": "love_curriculum",
        "text": "I loved teaching with the curriculum."
       },
       {
-       "value": "This_curriculum_was_effec",
+       "value": "effective_for_students",
        "text": "This curriculum was effective for my students."
       },
       {
-       "value": "The_teaching_strategies_r",
+       "value": "strategies_are_clear",
        "text": "The teaching strategies recommended in the curriculum and lesson plans were clear to me."
       },
       {
-       "value": "The_tools_and_technologie",
+       "value": "tools_sensible_easy",
        "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
       }
      ]
@@ -260,65 +524,65 @@
      "title": "Please characterize the challenges you faced with teaching your students Code.org in your normal classroom.",
      "columns": [
       {
-       "value": "1",
+       "value": "not_challenge",
        "text": "Not a challenge"
       },
       {
-       "value": "2",
+       "value": "some_challenges",
        "text": "Some challenges"
       },
       {
-       "value": "3",
+       "value": "huge_challenge",
        "text": "Huge challenge"
       }
      ],
      "rows": [
       {
-       "value": "Internet_and_device_acces",
+       "value": "internet_device_access",
        "text": "Internet and device access for me or my students"
       },
       {
-       "value": "Providing_support_and_ass",
+       "value": "assisting_students",
        "text": "Providing support and assistance while students work"
       },
       {
-       "value": "Tracking_student_progress",
+       "value": "tracking_progress",
        "text": "Tracking student progress on assigned materials"
       },
       {
-       "value": "Providing_feedback_on_wor",
+       "value": "providing_feedback",
        "text": "Providing feedback on work students have done"
       },
       {
-       "value": "Assigning_new_work",
+       "value": "assigning_work",
        "text": "Assigning new work"
       },
       {
-       "value": "Finding_materials_that_st",
+       "value": "materials_for_indpendent_work",
        "text": "Finding materials that students can work on independently"
       },
       {
-       "value": "Getting_students_their_lo",
+       "value": "login_info",
        "text": "Getting students their login information"
       },
       {
-       "value": "Finding_materials_to_work",
+       "value": "materials_for_offline",
        "text": "Finding materials to work on that don't require internet and device access"
       },
       {
-       "value": "Communicating_with_my_stu",
+       "value": "communicating",
        "text": "Communicating with my students while they are at home"
       },
       {
-       "value": "Providing_instruction_on_",
+       "value": "instruction_new_concepts",
        "text": "Providing instruction on new concepts to my students"
       },
       {
-       "value": "Finding_ways_for_students",
+       "value": "student_collaboration",
        "text": "Finding ways for students to collaborate"
       },
       {
-       "value": "Lack of integration with my school’s LMS",
+       "value": "lms_integration",
        "text": "Lack of integration with my school’s LMS"
       }
      ]
@@ -358,23 +622,23 @@
      ],
      "rows": [
       {
-       "value": "Ask_students_to_write_cod",
+       "value": "pair_programming",
        "text": "Ask students to write code with another student?"
       },
       {
-       "value": "Ask_a_student_to_give_fee",
+       "value": "peer_feedback",
        "text": "Ask a student to give feedback on a classmate’s work?"
       },
       {
-       "value": "Ask_a_student_to_share_th",
+       "value": "think_pair_share",
        "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
       },
       {
-       "value": "Remind_students_that_fail",
+       "value": "normalize_failure",
        "text": "Remind students that failure is a normal and natural part of the problem solving process."
       },
       {
-       "value": "Gave_students_the_opportu",
+       "value": "journaling",
        "text": "Gave students the opportunity to write their thoughts down in a journal or on paper."
       }
      ]
@@ -407,11 +671,11 @@
      ],
      "rows": [
       {
-       "value": "Connected_lessons_or_acti",
+       "value": "connected_to_student_lives",
        "text": "Connected lessons or activities to students' lives (e.g., by asking about past experiences, or applying content to students' daily lives)."
       },
       {
-       "value": "Asked_students_to_conside",
+       "value": "connection_to_real_world",
        "text": "Asked students to consider relationships between lesson content and real world problems (meaning actual events or situations within or outside of school)."
       }
      ]
@@ -444,15 +708,15 @@
      ],
      "rows": [
       {
-       "value": "Consider_alternative_appr",
+       "value": "alternative_approaches",
        "text": "Consider alternative approaches to their work."
       },
       {
-       "value": "Explain_the_logic_and_rea",
+       "value": "explain_reasoning",
        "text": "Explain the logic and reasoning supporting their solutions."
       },
       {
-       "value": "Explain_why_they_agree_or",
+       "value": "peer_feedback",
        "text": "Explain why they agree or disagree with the work of other students."
       }
      ]
@@ -467,11 +731,26 @@
      "name": "use_of_cdo_when_remote",
      "title": "Which of the following most closely describes how you taught your students with Code.org materials once you switched to remote learning.",
      "choices": [
-      "I mostly stopped or greatly reduced using Code.org with my students.",
-      "I used Code.org courses and content, but NOT those that were part of the {course} course I was teaching originally.",
-      "I continued to teach my Code.org course but with major modifications to support remote learning.",
-      "I continued to teach my Code.org course more or less the same as I was before.",
-      "I did not switch to remote learning."
+      {
+       "value": "stopped",
+       "text": "I mostly stopped or greatly reduced using Code.org with my students."
+      },
+      {
+       "value": "switched_to_different_course",
+       "text": "I used Code.org courses and content, but NOT those that were part of the {course} course I was teaching originally."
+      },
+      {
+       "value": "major_modifications_for_remote",
+       "text": "I continued to teach my Code.org course but with major modifications to support remote learning."
+      },
+      {
+       "value": "same_as_before",
+       "text": "I continued to teach my Code.org course more or less the same as I was before."
+      },
+      {
+       "value": "never_went_remote",
+       "text": "I did not switch to remote learning."
+      }
      ]
     },
     {
@@ -479,12 +758,30 @@
      "name": "video_conf_tool_remote",
      "title": "When teaching remotely what was the primary video conferencing technology you used?",
      "choices": [
-      "None - I did not host class sessions via video conference",
-      "Zoom",
-      "Google Hangouts",
-      "Skype",
-      "Microsoft Teams",
-      "GoTo Meeting"
+      {
+       "value": "None",
+       "text": "None - I did not host class sessions via video conference"
+      },
+      {
+       "value": "Zoom",
+       "text": "Zoom"
+      },
+      {
+       "value": "Google Hangouts",
+       "text": "Google Hangouts"
+      },
+      {
+       "value": "Skype",
+       "text": "Skype"
+      },
+      {
+       "value": "Microsoft Teams",
+       "text": "Microsoft Teams"
+      },
+      {
+       "value": "GoTo Meeting",
+       "text": "GoTo Meeting"
+      }
      ]
     },
     {
@@ -492,34 +789,80 @@
      "name": "days_per_week_video_conf_remote",
      "title": "When teaching remotely how many DAYS PER WEEK did you teach via a class conference call?",
      "choices": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6+"
+      {
+       "value": "0",
+       "text": "0"
+      },
+      {
+       "value": "1",
+       "text": "1"
+      },
+      {
+       "value": "2",
+       "text": "2"
+      },
+      {
+       "value": "3",
+       "text": "3"
+      },
+      {
+       "value": "4",
+       "text": "4"
+      },
+      {
+       "value": "5",
+       "text": "5"
+      },
+      {
+       "value": "6_plus",
+       "text": "6+"
+      }
      ]
     },
     {
      "type": "radiogroup",
      "name": "lms_tool_remote",
      "title": "What is the primary LMS (Learning Management System) you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
+     "hasOther": true,
      "choices": [
-      "None - I don't really use an LMS",
-      "Powerschool",
-      "Schoology",
-      "Google Classroom",
-      "Chalkboard",
-      "SeeSaw",
-      "Canvas",
-      "Moodle"
+      {
+       "value": "none",
+       "text": "None - I don't really use an LMS"
+      },
+      {
+       "value": "powerschool",
+       "text": "Powerschool"
+      },
+      {
+       "value": "schoology",
+       "text": "Schoology"
+      },
+      {
+       "value": "google_classroom",
+       "text": "Google Classroom"
+      },
+      {
+       "value": "chalkboard",
+       "text": "Chalkboard"
+      },
+      {
+       "value": "seesaw",
+       "text": "SeeSaw"
+      },
+      {
+       "value": "canvas",
+       "text": "Canvas"
+      },
+      {
+       "value": "moodle",
+       "text": "Moodle"
+      }
      ]
     },
     {
      "type": "comment",
      "name": "drop_off_FR_remote",
-     "title": "We detected a significant drop off in student sign-ins once most schools in the country switched to remote learning.  From your perspective, what do you think accounted for this?  >>Would like this to have MC options based on hypotheses",
+     "title": "We detected a significant drop off in student sign-ins once most schools in the country switched to remote learning.  From your perspective, what do you think accounted for this?  ***Would like this to have MC options based on hypotheses***",
      "cols": 40,
      "rows": 6
     },
@@ -559,19 +902,19 @@
      ],
      "rows": [
       {
-       "value": "I_loved_teaching_with_the",
+       "value": "love_curriculum",
        "text": "I loved teaching with the curriculum."
       },
       {
-       "value": "This_curriculum_was_effec",
+       "value": "effective_for_students",
        "text": "This curriculum was effective for my students."
       },
       {
-       "value": "The_teaching_strategies_r",
+       "value": "strategies_are_clear",
        "text": "The teaching strategies recommended in the curriculum and lesson plans were clear to me."
       },
       {
-       "value": "The_tools_and_technologie",
+       "value": "tools_sensible_easy",
        "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
       }
      ]
@@ -582,65 +925,65 @@
      "title": "Please characterize the challenges you faced teaching your students with Code.org remotely. ",
      "columns": [
       {
-       "value": "1",
+       "value": "not_challenge",
        "text": "Not a challenge"
       },
       {
-       "value": "2",
+       "value": "some_challenges",
        "text": "Some challenges"
       },
       {
-       "value": "3",
+       "value": "huge_challenge",
        "text": "Huge challenge"
       }
      ],
      "rows": [
       {
-       "value": "Internet_and_device_acces",
+       "value": "internet_device_access",
        "text": "Internet and device access for me or my students"
       },
       {
-       "value": "Providing_support_and_ass",
+       "value": "assisting_students",
        "text": "Providing support and assistance while students work"
       },
       {
-       "value": "Tracking_student_progress",
+       "value": "tracking_progress",
        "text": "Tracking student progress on assigned materials"
       },
       {
-       "value": "Providing_feedback_on_wor",
+       "value": "providing_feedback",
        "text": "Providing feedback on work students have done"
       },
       {
-       "value": "Assigning_new_work",
+       "value": "assigning_work",
        "text": "Assigning new work"
       },
       {
-       "value": "Finding_materials_that_st",
+       "value": "materials_for_indpendent_work",
        "text": "Finding materials that students can work on independently"
       },
       {
-       "value": "Getting_students_their_lo",
+       "value": "login_info",
        "text": "Getting students their login information"
       },
       {
-       "value": "Finding_materials_to_work",
+       "value": "materials_for_offline",
        "text": "Finding materials to work on that don't require internet and device access"
       },
       {
-       "value": "Communicating_with_my_stu",
+       "value": "communicating",
        "text": "Communicating with my students while they are at home"
       },
       {
-       "value": "Providing_instruction_on_",
+       "value": "instruction_new_concepts",
        "text": "Providing instruction on new concepts to my students"
       },
       {
-       "value": "Finding_ways_for_students",
+       "value": "student_collaboration",
        "text": "Finding ways for students to collaborate"
       },
       {
-       "value": "Lack of integration with my school’s LMS",
+       "value": "lms_integration",
        "text": "Lack of integration with my school’s LMS"
       }
      ]
@@ -680,23 +1023,23 @@
      ],
      "rows": [
       {
-       "value": "Ask_students_to_write_cod",
+       "value": "pair_programming",
        "text": "Ask students to write code with another student?"
       },
       {
-       "value": "Ask_a_student_to_give_fee",
+       "value": "peer_feedback",
        "text": "Ask a student to give feedback on a classmate’s work?"
       },
       {
-       "value": "Ask_a_student_to_share_th",
+       "value": "think_pair_share",
        "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
       },
       {
-       "value": "Remind_students_that_fail",
+       "value": "normalize_failure",
        "text": "Remind students that failure is a normal and natural part of the problem solving process."
       },
       {
-       "value": "Gave_students_the_opportu",
+       "value": "journaling",
        "text": "Gave students the opportunity to write their thoughts down in a journal or on paper."
       }
      ]
@@ -729,11 +1072,11 @@
      ],
      "rows": [
       {
-       "value": "Connected_lessons_or_acti",
+       "value": "connected_to_student_lives",
        "text": "Connected lessons or activities to students' lives (e.g., by asking about past experiences, or applying content to students' daily lives)."
       },
       {
-       "value": "Asked_students_to_conside",
+       "value": "connection_to_real_world",
        "text": "Asked students to consider relationships between lesson content and real world problems (meaning actual events or situations within or outside of school)."
       }
      ]
@@ -766,22 +1109,22 @@
      ],
      "rows": [
       {
-       "value": "Consider_alternative_appr",
+       "value": "alternative_approaches",
        "text": "Consider alternative approaches to their work."
       },
       {
-       "value": "Explain_the_logic_and_rea",
+       "value": "explain_reasoning",
        "text": "Explain the logic and reasoning supporting their solutions."
       },
       {
-       "value": "Explain_why_they_agree_or",
+       "value": "peer_feedback",
        "text": "Explain why they agree or disagree with the work of other students."
       }
      ]
     },
     {
      "type": "html",
-     "name": "Community_heading",
+     "name": "community_heading",
      "html": "<h2>Your Teaching Community</h2>"
     },
     {
@@ -808,44 +1151,73 @@
      ],
      "rows": [
       {
-       "value": "Systemic_supports_(distri",
+       "value": "systemic_supports",
        "text": "Systemic supports (district, school, principal, community, families, etc.)."
       },
       {
-       "value": "The_amount_of_time_needed",
+       "value": "time_to_cover_material",
        "text": "The amount of time needed to cover all the material."
       },
       {
-       "value": "My_class_being_fully_enro",
+       "value": "class_fully_enrolled",
        "text": "My class being fully enrolled (or recruiting students into the class)"
       },
       {
-       "value": "Computer_science_being_of",
+       "value": "cs_being_offered_reomote",
        "text": "Computer science being offered by my school if students are at home"
       },
       {
-       "value": "Teaching_Code.org_materia",
+       "value": "teaching_cdo_remote",
        "text": "Teaching Code.org materials (specifically) if students are at home"
       },
       {
-       "value": "Teaching_computer_science",
+       "value": "teaching_cs_remote",
        "text": "Teaching computer science (in general) if students are at home"
       },
       {
-       "value": "Teaching_(in_general)_if_",
+       "value": "taching_in_general_remote",
        "text": "Teaching (in general) if students are at home"
       }
      ]
     },
     {
-     "type": "checkbox",
+     "type": "radiogroup",
      "name": "next_year_plan_to_open",
      "title": "To the best of your knowledge which best describes your school's plans for opening next school year.",
      "choices": [
-      "Fully remote.",
-      "Hybrid - some in-person, some remote.",
-      "Fully in-person."
+      {
+       "value": "full_remote",
+       "text": "Fully remote."
+      },
+      {
+       "value": "hybrid",
+       "text": "Hybrid - some in-person, some remote."
+      },
+      {
+       "value": "full_in_person",
+       "text": "Fully in-person."
+      }
      ]
+    },
+    {
+     "type": "rating",
+     "name": "pct_inperson_v_remote",
+     "visibleIf": "{next_year_plan_to_open} = 'hybrid'",
+     "title": "What % of class hours do anticipate having for in-person learning?",
+     "description": "(for example, choosing 20 means you anticipate 20% in-person, 80% remote)",
+     "rateMin": 0,
+     "rateMax": 100,
+     "rateStep": 10
+    },
+    {
+     "type": "rating",
+     "name": "pct_sync_v_async",
+     "visibleIf": "{next_year_plan_to_open} = 'full_remote'",
+     "title": "What % of class hours do anticipate having synchronously (i.e. class meets at a specific time via video conference)?",
+     "description": "(for example, choosing 20 means you anticipate your class will have 20% of class time synchronously, and 80% of class time asynchronously (students working on their own time/schedules)",
+     "rateMin": 0,
+     "rateMax": 100,
+     "rateStep": 10
     },
     {
      "type": "matrix",
@@ -883,19 +1255,19 @@
      ],
      "rows": [
       {
-       "value": "I_feel_connected_to_a_com",
+       "value": "connected_to_community",
        "text": "I feel connected to a community of CS teachers."
       },
       {
-       "value": "When_I_need_help_teaching",
+       "value": "someone_to_turn_to",
        "text": "When I need help teaching CS I have someone to turn to."
       },
       {
-       "value": "I_know_CS_teacher_leaders",
+       "value": "know_teacher_leaders",
        "text": "I know CS teacher leaders and role models in my community."
       },
       {
-       "value": "I_feel_like_I'm_part_of_a",
+       "value": "part_of_cs_movement",
        "text": "I feel like I'm part of a broad CS Education movement."
       }
      ]
@@ -936,27 +1308,27 @@
      ],
      "rows": [
       {
-       "value": "There_is_student_demand_f",
+       "value": "student_demand_for_cs",
        "text": "There is student demand for more computer science courses in my school."
       },
       {
-       "value": "My_school_leaders_tell_ot",
+       "value": "leaders_tell_benefits_of_cs",
        "text": "My school leaders tell others in our school about the benefits of offering computer science to students."
       },
       {
-       "value": "Counselors_at_my_school_c",
+       "value": "counselors_tell_benefits_of_cs",
        "text": "Counselors at my school communicate the benefits of computer science to all students."
       },
       {
-       "value": "Families_here_think_offer",
+       "value": "families_value_cs",
        "text": "Families here think offering computer science is important."
       },
       {
-       "value": "I_have_strong_administrat",
+       "value": "strong_admin_support",
        "text": "I have strong administrative support for teaching CS."
       },
       {
-       "value": "My_school_administration_",
+       "value": "quality_admin_feedback",
        "text": "My school administration provides me with high quality feedback and evaluation of my CS instruction."
       }
      ]
@@ -971,11 +1343,26 @@
      "name": "gender",
      "title": "What is your gender identity?",
      "choices": [
-      "Female",
-      "Male",
-      "Non-binary",
-      "Preferred term not listed",
-      "Prefer not to answer"
+      {
+       "value": "female",
+       "text": "Female"
+      },
+      {
+       "value": "male",
+       "text": "Male"
+      },
+      {
+       "value": "non_binary",
+       "text": "Non-binary"
+      },
+      {
+       "value": "preferred_term_not_listed",
+       "text": "Preferred term not listed"
+      },
+      {
+       "value": "prefer_not_to_answer",
+       "text": "Prefer not to answer"
+      }
      ]
     },
     {
@@ -983,19 +1370,43 @@
      "name": "race",
      "title": "What is your racial or ethnic identity?",
      "choices": [
-      "American Indian/Alaska Native",
-      "Asian",
-      "Black or African American",
-      "Hispanic or Latino",
-      "Native Hawaiian or other Pacific Islander",
-      "White",
-      "Other",
-      "Prefer not to answer"
+      {
+       "value": "am_indian_alaska_nat ",
+       "text": "American Indian/Alaska Native"
+      },
+      {
+       "value": "asian",
+       "text": "Asian"
+      },
+      {
+       "value": "black_aa",
+       "text": "Black or African American"
+      },
+      {
+       "value": "hispanic_latino",
+       "text": "Hispanic or Latino"
+      },
+      {
+       "value": "nat_hawaiian_pac_islander",
+       "text": "Native Hawaiian or other Pacific Islander"
+      },
+      {
+       "value": "white",
+       "text": "White"
+      },
+      {
+       "value": "other",
+       "text": "Other"
+      },
+      {
+       "value": "prefer_not_answer",
+       "text": "Prefer not to answer"
+      }
      ]
     },
     {
      "type": "text",
-     "name": "question2",
+     "name": "zip",
      "title": "Zip code"
     },
     {
@@ -1003,15 +1414,42 @@
      "name": "other_subjects_taught",
      "title": "Are you responsible for teaching other courses or subjects at your school? If so, please check all that apply.",
      "choices": [
-      "None",
-      "Math",
-      "English",
-      "History",
-      "Art (visual or performing)",
-      "Science (any area)",
-      "World Language",
-      "Business",
-      "Library"
+      {
+       "value": "none",
+       "text": "None"
+      },
+      {
+       "value": "math",
+       "text": "Math"
+      },
+      {
+       "value": "english",
+       "text": "English"
+      },
+      {
+       "value": "history",
+       "text": "History"
+      },
+      {
+       "value": "art",
+       "text": "Art (visual or performing)"
+      },
+      {
+       "value": "science",
+       "text": "Science (any area)"
+      },
+      {
+       "value": "world_language",
+       "text": "World Language"
+      },
+      {
+       "value": "business",
+       "text": "Business"
+      },
+      {
+       "value": "library",
+       "text": "Library"
+      }
      ]
     },
     {
@@ -1032,12 +1470,12 @@
     },
     {
      "type": "html",
-     "name": "clickTo138",
+     "name": "cdo_heart_you",
      "html": "<p><span style=\"font-size: 12pt;\"><br /><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png\" /></span></p>\n<p><span style=\"font-size: 12pt;\">Thanks from Code.org for your time, commitment and passion for teaching&nbsp;{csp_or_csd} this year.</span>&nbsp;</p>"
     },
     {
      "type": "html",
-     "name": "clickTo200",
+     "name": "gift_card_conf_header",
      "html": "<p><strong><span style=\"font-size: 14pt;\">Amazon Gift Card Confirmation</span></strong></p>\n<p><span style=\"font-size: 12pt;\">Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style=\"text-align: right;\"><span style=\"font-size: 8pt;\">*First 250 respondents will receive gift code. Please allow 1-2 weeks to receive code. </span></p>"
     },
     {
@@ -1045,40 +1483,65 @@
      "name": "gift_card_yes_no",
      "title": "Would you like to receive a $10 Amazon gift code for completing this survey?",
      "choices": [
-      "Yes, please.",
-      "No, thanks."
+      {
+       "value": "yes",
+       "text": "Yes, please."
+      },
+      {
+       "value": "no",
+       "text": "No, thanks."
+      }
      ]
     },
     {
-     "type": "text",
-     "name": "gift_card_email",
-     "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent.  We have initially set it to the email address associated with this account. You may change the address to one at which you would prefer to receive the gift code."
-    },
-    {
-     "type": "text",
-     "name": "gift_card_email_verify",
-     "title": "Please re-enter the email address where you want your Amazon gift code sent."
-    },
-    {
-     "type": "html",
-     "name": "clickTo223",
-     "visible": false,
-     "html": "<p><span style=\"color: #800000;\">&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
-    },
-    {
-     "type": "html",
-     "name": "Warning",
-     "visible": false,
-     "html": "<p><span style=\"color: #339966;\">&nbsp;Addresses match!</span></p>"
+     "type": "panel",
+     "name": "gift_card_email_panel",
+     "elements": [
+      {
+       "type": "text",
+       "name": "gift_card_email",
+       "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent.  We have initially set it to the email address associated with this account. You may change the address to one at which you would prefer to receive the gift code.",
+      },
+      {
+       "type": "text",
+       "name": "gift_card_email_verify",
+       "title": "Please re-enter the email address where you want your Amazon gift code sent."
+      },
+      {
+       "type": "html",
+       "name": "addresse_dont_match_text",
+       "visible": false,
+       "visibleIf": "{gift_card_email} <> {gift_card_email_verify}",
+       "html": "<p><span style=\"color: #800000;\">&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
+      },
+      {
+       "type": "html",
+       "name": "Warning",
+       "visible": false,
+       "visibleIf": "{gift_card_email} = {gift_card_email_verify}",
+       "html": "<p><span style=\"color: #339966;\">&nbsp;Addresses match!</span></p>"
+      }
+     ],
+     "visibleIf": "{gift_card_yes_no} = 'yes'",
+     "title": "Gift Card Email Panel"
     },
     {
      "type": "radiogroup",
      "name": "permission",
      "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
      "choices": [
-      "Yes, I give permission to quote me and use my name.",
-      "Yes, I give permission to quote me, but I want to be anonymous.",
-      "No, I do not give permission to quote me."
+      {
+       "value": "yes_with_name",
+       "text": "Yes, I give permission to quote me and use my name."
+      },
+      {
+       "value": "yes_anon",
+       "text": "Yes, I give permission to quote me, but I want to be anonymous."
+      },
+      {
+       "value": "no",
+       "text": "No, I do not give permission to quote me."
+      }
      ]
     }
    ],
