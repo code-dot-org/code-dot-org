@@ -3797,8 +3797,8 @@ pt-BR:
         - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
-        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        - text: "/script_assets/k_1_images/artist_images/N|E|S|W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Quais blocos formam o quadrado?

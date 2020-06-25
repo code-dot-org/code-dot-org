@@ -45,7 +45,8 @@ export default class Foorm extends React.Component {
       prev: 'sv_prev_button foorm-button',
       next: 'sv_next_button foorm-button foorm-button-right',
       complete: 'sv_complete_btn foorm-button'
-    }
+    },
+    row: 'sv_row foorm-adjust-row'
   };
 
   constructor(props) {

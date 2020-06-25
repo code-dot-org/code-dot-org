@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "I pēhi koe i tētahi pātuhi, engari kāore i uruparetia e tō kaikanikani.",
   "danceFeedbackNeedTwoDancers": "Me hanga koe kia rua ngā kaikanikani.",
   "danceFeedbackOnlyOneDancerMoved": "Kotahi anake o ō kaikanikani i neke.",
-  "danceFeedbackNeedLead": "Me hanga e koe kia kotahi te kaitātaki kaikanikani mā te paraka <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Me hanga e koe kia kotahi te kaitātaki kaikanikani mā te paraka <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Me hanga e koe tētahi rōpū kaitautoko kanikani mā te paraka <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Me panoni koe i te nui o tētahi, ētahi rānei o ngā kaikanikani, a muri i te tīmatanga o te waiata.",
   "measure": "Wāhanga:"

@@ -337,6 +337,8 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+      legal_privacy: "Gizlilik Politikası"
+      legal_tos: "Şartlar"
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'

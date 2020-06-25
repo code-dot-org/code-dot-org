@@ -170,15 +170,10 @@ class EditSectionForm extends Component {
       SectionLoginType.google_classroom
     ];
 
-    const validLoginTypes =
-      section.studentCount === 0
-        ? Object.values(SectionLoginType)
-        : sectionLoginTypeTransforms[section.loginType];
+    const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
 
     const showLoginTypeField =
-      !isNewSection &&
-      (section.studentCount === 0 ||
-        changeableLoginTypes.includes(section.loginType));
+      !isNewSection && changeableLoginTypes.includes(section.loginType);
 
     if (!section) {
       return null;

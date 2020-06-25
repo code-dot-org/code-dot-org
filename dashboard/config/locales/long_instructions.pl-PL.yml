@@ -72,10 +72,19 @@ pl-PL:
       2-3 Artist Functions 1: "\"Ja być zombie artysta. Ja kochać rysować!\" \n\nPomóż
         zombie narysować kwadratowe okulary.  \n\nPołączenie pomiędzy szkłami jest
         o 25 pikseli krótsze od szerokości kwadratów, która jest równa 100 pikseli."
+      2-3 Artist Functions 10: "**Zabawa:** Tutaj są dwie funkcje: jedna do narysowania
+        dużego koła zębatego i druga do narysowania małego.  \n\nUżyj ich do narysowania
+        środka maszyny!"
       2-3 Artist Functions 11: "Zmieniliśmy nazwę funkcji \"narysuj kwadrat\" na \"narysuj
         sześciokąt\", ale ona nadal robi nam kwadraty!  \n\nCzy potrafisz zmodyfikować
         funkcję \"narysuj sześciokąt\" tak, aby rysowała sześciokąt o bokach długości
         50 pikseli? \n\nNarysuj obrazek, używając nowej funkcji!"
+      2-3 Artist Functions 11.5: "Tu jest ta sama funkcja \"narysuj sześcian\". \n\nCo
+        się stanie, gdy zapętlisz główny program 6 razy, obracając się o 60 stopni
+        za każdym zapętleniem?"
+      2-3 Artist Functions 12: "Funkcje są naprawdę świetne do rysowania skomplikowanych
+        rzeczy wiele razy. \n\nCzy potrafisz użyć funkcji \"narysuj kwiatek\", aby
+        wypełnić resztę pudełka kwiatkami? Rośliny są oddalone od siebie o 100 pikseli."
       2-3 Artist Functions 2: "Funkcje pozwalają ci stwarzać nowe bloki! \n\nPrzerzuciliśmy
         bloki potrzebne do narysowania kwadratu do funkcji nazwanej \"narysuj kwadrat\".
         Tym razem użyj funkcji \"narysuj kwadrat\", aby stworzyć okulary. "
@@ -83,6 +92,9 @@ pl-PL:
         115, aby narysować większe okulary. \n\nKwadraty są teraz oddalone od siebie
         o 45 pikseli."
       2-3 Artist Functions 4: Teraz umieść funkcję w pętli, aby narysować te 3 kwadraty.
+      2-3 Artist Functions 9: "**Zabawa:** Tutaj jest funkcja śnieżynki. Poeksperymentuj
+        z nią, aby stworzyć zimową scenę! \n\nTo jest poziom wolnej gry, więc nie
+        ma łamigłówki do rozwiązania. Dobrej zabawy!"
       2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
         kwadrat o bokach, które mają 100 pikseli?<br/>
       2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
@@ -284,6 +296,29 @@ pl-PL:
         ten bardziej złożony wzór. Zauważ, jak diamenty pokrywają się teraz, spróbuj
         zmienić pierwszy blok "skocz do tyłu" ze 100 na 50 (o połowę bliżej) - a teraz
         jak daleko powinien pójść artysta w drugim bloku "skocz do tyłu"?
+      4-5 Bee Conditionals 1: "Ta chmurka zasłania mi widok! \n\nSprawdź, aby zobaczyć,
+        czy pod chmurką jest kwiatek i zbierz nektar tylko jeśli jest.\\\nUważaj,
+        to może się zmienić!"
+      4-5 Bee Conditionals 2: "Więcej chmurek! \n\nSprawdź, czy chmurka zasłania kwiatek
+        przed zebraniem nektaru.  \n\nPamiętaj: Nie wszystkie chmurki zasłaniają tą
+        samą rzecz!"
+      4-5 Bee Conditionals 4: "Czasami ta chmurka zasłania kwiatek, a czasem plaster
+        miodu! \n\nUżyj bloku jeśli/ w przeciwnym razie do zebrania nektaru jeśli
+        jest tam kwiatek.\\\nW przeciwnym razie wyprodukuj miód (ponieważ jest tam
+        plaster miodu)."
+      4-5 Bee Conditionals 5: |-
+        Pod każdą z tych chmurek będzie kwiatek albo plaster miodu!
+
+        Użyj bloku jeśli/ w przeciwnym razie do zebrania nektaru jeśli jest tam kwiatek.
+        W przeciwnym razie wyprodukuj miód (ponieważ jest tam plaster miodu).
+      4-5 Bee Conditionals 6: "Nie jestem pewna ile nektaru ma ten kwiatek, ale wiem,
+        że ma 1, 2 lub 3 nektary. \n\nPołącz bloki warunkowe (\"jeśli\" i/lub \"jeśli/
+        w przeciwnym razie\") do zebrania tylko takiej ilości nektaru, jaką kwiatek
+        ma. \n\nPamiętaj, że ilość nektaru może się zmienić za każdym razem, gdy uruchomisz
+        łamigłówkę!"
+      4-5 Bee Conditionals 7: "Te kwiatki mogą mieć 3, 2 lub 1 nektar. \n\nUkończ
+        funkcję \"sprawdź fioletowy kwiatek\" i użyj jej do zebrania całego nektaru
+        z kwiatków."
       4-5 Bee Conditionals 8: "Wypełnij wnętrze funkcji \"check flower make honey\"
         (sprawdź kwiat zrób miód). \\\r \\\r Twoja funkcja powinna sprawdzać, czy
         fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\\r Następnie.
@@ -302,7 +337,40 @@ pl-PL:
         komend."
       4-5 Maze Assessment 1: "**Sprawdzian:** Dojdź do słonecznika, używając możliwie
         najmniejszej liczby bloków."
+      4-5 Maze Conditionals 1: Użyj bloku "powtarzaj aż", by doprowadzić zombie do
+        słonecznika.
+      4-5 Maze Conditionals 10: "Czy potrafisz dodać tylko 3 bloki, aby pomóc zombie
+        rozwiązać bardziej skomplikowany labirynt? \n\nJeśli zrobisz to prawidłowo,
+        będzie on mógł przejść każdą krętą ścieżkę, nie ważne jakiej długości ona
+        jest!"
+      4-5 Maze Conditionals 2: Użyj bloku "powtarzaj aż", by doprowadzić zombie do
+        słonecznika.
+      4-5 Maze Conditionals 3: 'Użyj bloku "jeśli", aby pomóc me zdecydować, kiedy
+        mam skręcić. '
+      4-5 Maze Conditionals 4: Ok, rozwiąż ten zupełnie tak samo, jak ostatnią łamigłówkę,
+        ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtarzaj aż" razem.
+      4-5 Maze Conditionals 5: "Potrzeba mi słonecznika!  \n\n Użyj bloku `if`, aby
+        doprowadzić zombie do słonecznika z wykorzystaniem najmniejszej liczby bloków."
+      4-5 Maze Conditionals 6: "\"Jeść słonecznik!\"  \n\n Użyj bloku `if`, aby doprowadzić
+        zombie do słonecznika z wykorzystaniem najmniejszej liczby bloków."
+      4-5 Maze Conditionals 7: Rozwiązanie tej łamigłówki nie różni się za bardzo,
+        ale uważaj na chrupacze!
+      4-5 Maze Conditionals 8: "Blok \"jeśli/w przeciwnym razie\" sprawdza warunek
+        i potem wykonuje jedną ALBO drugą rzecz.\n\nUżyj tego nowego bloku, aby doprowadzić
+        mnie do słonecznika. "
+      4-5 Maze Conditionals 9: |-
+        Jeszcze jedna łamigłówka do poćwiczenia bloku "jeśli/w przeciwnym razie"!
+
+        Poprowadź palcem po trasie, aby zobaczyć czy dasz sobie radę za pierwszym razem.
+      4-5 Maze Conditionals Assessment 1: "**Sprawdzian:** Użyj bloków `repeat until`
+        i `if/else`, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej
+        liczby bloków."
+      4-5 Nested Loops 1: 'Ukończ kod, aby narysować te trójkąty. Pierwszy jest zrobiony
+        za ciebie. Wskazówka: 3 trójkąty w obrocie o 360 stopni.'
+      4-5 Nested Loops 2: "Teraz zagnieźdź tę pętlę wewnątrz kolejnej pętli, aby narysować
+        10 trójkątów.\\\nNazywa się to \"zagnieżdżona\" pętla. "
       4-5 Nested Loops 5: Umieść w pętli dany kod, aby utworzyć wiatrak.
+      4-5 Nested Loops 6: Czy potrafisz narysować sześciokąt, zapętlając kod na trójkąt?
       4-5 Nested Loops 9: Narysuj zęby w paszczy aligatora!
       4-5 While Loops 3: "Użyj możliwie jak najmniej bloków, aby ukończyć tę łamigłówkę!
         \\\r \\\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź
@@ -1088,8 +1156,16 @@ pl-PL:
         sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      course3_bee_functions_challenge2: Jesteś sam na sam z tym wyzwaniem!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
         aby rozwiązać tę łamigłówkę!
+      course3_farmer_condLoops_challenge1: "Dynie zaznaczają miejsce, w którym powinieneś
+        skręcić. _Skręć w prawo przy dyniach._ W przeciwnym razie idź dalej naprzód,
+        ale pamiętaj, aby zebrać całą sałatę lub kukurydzę po drodze. \n\n**Każdy
+        ukryty plon ma tylko jedną kukurydzę lub sałatę.**"
+      course3_farmer_condLoops_challenge2: "_\"To jest warzywny labirynt!\"_ \n\nSkręć
+        w prawo przy dyniach, a w lewo przy sałacie. Zbierz wszystko, aby ukończyć
+        poziom."
       course3_maze_debugging_challenge1: _"Czy ja tylko chodzę dookoła w kółko?"_
       course3_maze_debugging_challenge2: _"Jeśli będę skręcać zbyt często, może mi
         się zakręcić w głowie! Pomóż mi dotrzeć do świnki, używając tylko czterech

@@ -402,6 +402,8 @@ pt-BR:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
+      legal_privacy: Política de Privacidade
+      legal_tos: Termos de Serviço
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -931,6 +933,8 @@ pt-BR:
     open_response_body: Obrigado pela sua resposta!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  lesson_extras:
+    bonus_level: Level Bonus
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?

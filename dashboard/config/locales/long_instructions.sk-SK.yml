@@ -353,8 +353,14 @@ sk-SK:
         **Ako:** V móde kódu pridaj nový blok `onEvent()` do svojho programu pre tvoje tlačidlo Doprava! "Right!". Ďalej pridaj blok `setScreen()` do jeho vnútra, ktorý prepne obrazovku na pravú obrazovku `"rightScreen"`.
 
         **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD U3 - Booleans Video_2019: |-
+        ## Otázky na zamyslenie
+
+        -   Čo to je "logický výraz"?
+        -   Aký výraz vyhodnotí počítač ako "True" (pravda)?
+        -   Aký výraz vyhodnotí počítač ako "False" (nepravda)?
       CSD U3 - Conditionals Video_2019: |-
-        ## Otázka na diskusiu
+        ## Otázky na zamyslenie
 
         -   Kedy by sa ti v programe zišiel príkaz “if/else”? Nájdeš viacero príkladov?
       CSD U3 - complex - key up and down: |-
@@ -474,12 +480,12 @@ sk-SK:
       CSD U3 - conditionals - first conditional: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
         PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
         výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
-        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
-        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový výrok `if`. \n\nPodmienkové
+        výroky `if` budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
         ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
         autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
-        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
-        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        auta, pridaj výrok `if`.\n-   Presuň logický výraz z console.log do podmienky
+        výroku `if`.\n-   Do výroku `if` pridaj príkaz na zobrazenie textu „Winner“
         (alebo „Víťaz“)."
       CSD U3 - conditionals - first conditional 2_2018: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
         style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
@@ -514,22 +520,22 @@ sk-SK:
       CSD U3 - conditionals - first conditional_2018: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
         PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
         výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
-        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
-        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový výrok `if`. \n\nPodmienkové
+        výroky `if` budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
         ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
         autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
-        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
-        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        auta, pridaj výrok `if`.\n-   Presuň logický výraz z console.log do podmienky
+        výroku `if`.\n-   Do výroku `if` pridaj príkaz na zobrazenie textu „Winner“
         (alebo „Víťaz“)."
       CSD U3 - conditionals - first conditional_2019: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
         PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
         výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
-        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
-        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový výrok `if`. \n\nPodmienkové
+        výroky `if` budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
         ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
         autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
-        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
-        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        auta, pridaj výrok `if`.\n-   Presuň logický výraz z console.log do podmienky
+        výroku`if`.\n-   Do výroku `if` pridaj príkaz na zobrazenie textu „Winner“
         (alebo „Víťaz“)."
       CSD U3 - conditionals - transition: "# Logické výrazy\n\nV predchádzajúcich
         lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
@@ -561,34 +567,568 @@ sk-SK:
         výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
         x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
         sa výstup zmení? A prečo?"
-      CSD U3 AnimationsMulti defender move up down_2018: |-
-        # Pohyb hore a dole
+      CSD U3 AnimationsMulti Play Defender: "# Obráň svoj koláčik\n\nToto je príklad
+        obrannej hry, na ktorej budeš pracovať do konca tejto lekcie. Potrebuješ ochrániť
+        svoj koláčik. Posúvaj mimozemšťana pomocou šípok na klávesnici tak, aby zablokoval
+        lienky a odtlačil ich do vody. \n\n# Urob toto\n\nSpoj sa so svojím spolusediacim
+        a zapíšte si nasledovné informácie:\n\n-   Koľko „sprite“ objektov je použitých
+        v tejto hre. Ktoré sú to?\n-   Aké premenné sú potrebné na vytvorenie tejto
+        hry? Čo ukladajú?\n-   Ak by si rozdelil/a kód tejto hry do funkcií, aké by
+        to boli? Aké sú hlavné časti správania, ktoré by si musel/a vytvoriť vo svojom
+        kóde?"
+      CSD U3 AnimationsMulti Play Defender_2018: "# Obráň svoj koláčik\n\nToto je
+        príklad obrannej hry, na ktorej budeš pracovať do konca tejto lekcie. Potrebuješ
+        ochrániť svoj koláčik. Posúvaj mimozemšťana pomocou šípok na klávesnici tak,
+        aby zablokoval lienky a odtlačil ich do vody. \n\n# Urob toto\n\nSpoj sa so
+        svojím spolusediacim a zapíšte si nasledovné informácie:\n\n-   Koľko „sprite“
+        objektov je použitých v tejto hre. Ktoré sú to?\n-   Aké premenné sú potrebné
+        na vytvorenie tejto hry? Čo ukladajú?\n-   Ak by si rozdelil/a kód tejto hry
+        do funkcií, aké by to boli? Aké sú hlavné časti správania, ktoré by si musel/a
+        vytvoriť vo svojom kóde?"
+      CSD U3 AnimationsMulti Play Defender_2019: "# Obráň svoj koláčik\n\nToto je
+        príklad obrannej hry, na ktorej budeš pracovať do konca tejto lekcie. Potrebuješ
+        ochrániť svoj koláčik. Posúvaj mimozemšťana pomocou šípok na klávesnici tak,
+        aby zablokoval lienky a odtlačil ich do vody. \n\n# Urob toto\n\nSpoj sa so
+        svojím spolusediacim a zapíšte si nasledovné informácie:\n\n-   Koľko „sprite“
+        objektov je použitých v tejto hre. Ktoré sú to?\n-   Aké premenné sú potrebné
+        na vytvorenie tejto hry? Čo ukladajú?\n-   Ak by si rozdelil/a kód tejto hry
+        do funkcií, aké by to boli? Aké sú hlavné časti správania, ktoré by si musel/a
+        vytvoriť vo svojom kóde?"
+      CSD U3 AnimationsMulti defender animate cake enemies: |-
+        # Začíname: Nastav si animácie
 
-        Teraz sa naučíme, ako môžeš hýbať hracou postavičkou hore a dole.
+        Na začiatku lekcie sme si preštudovali sprievodcu projektom. Veľa práce na tom, aby sa nápady v ňom uvedené stali skutočnosťou sme už spravili. Aj zvyšok práce urobíme s jeho pomocou.
 
         # Urob toto
 
-        V tomto leveli budeš píš kód len do vnútra funkcie `movePlayer`.
+        Hneď na začiatok asi budeš pre všetky svoje "sprite" objekty potrebovať nejaké lepšie animácie:
 
-        -   Použi blok `if` spolu s `keyDown` pre zisťovanie, či bola stlačená klávesa „šípka nahor".
+        -   Na Karte animácií sú animácie pre každý tvoj „sprite“. Pozri sa, aké to sú.
+        -   Pridaj každému „sprite“ objektu vhodnú animáciu. **Zatiaľ použi tie, ktoré sme ti pripravili**, neskôr so ich budeš môcť zmeniť.
+        -   Ak si potrebuješ spomenúť, ako to urobiť, vráť sa k [úlohe 4](/s/csd3-2017/stage/20/puzzle/4).
+      CSD U3 AnimationsMulti defender animate cake enemies_2018: |-
+        # Začíname: Nastav si animácie
+
+        Na začiatku lekcie sme si preštudovali sprievodcu projektom. Veľa práce na tom, aby sa nápady v ňom uvedené stali skutočnosťou sme už spravili. Aj zvyšok práce urobíme s jeho pomocou.
+
+        # Urob toto
+
+        Hneď na začiatok asi budeš pre všetky svoje "sprite" objekty potrebovať nejaké lepšie animácie:
+
+        -   Na Karte animácií sú animácie pre každý tvoj „sprite“. Pozri sa, aké to sú.
+        -   Pridaj každému „sprite“ objektu vhodnú animáciu. **Zatiaľ použi tie, ktoré sme ti pripravili**, neskôr so ich budeš môcť zmeniť.
+        -   Ak si potrebuješ spomenúť, ako to urobiť, vráť sa k [úlohe 4](/s/csd3-2018/stage/20/puzzle/4).
+      CSD U3 AnimationsMulti defender animate cake enemies_2019: |-
+        # Začíname: Nastav si animácie
+
+        Na začiatku lekcie sme si preštudovali sprievodcu projektom. Veľa práce na tom, aby sa nápady v ňom uvedené stali skutočnosťou sme už spravili. Aj zvyšok práce urobíme s jeho pomocou.
+
+        # Urob toto
+
+        Hneď na začiatok asi budeš pre všetky svoje "sprite" objekty potrebovať nejaké lepšie animácie:
+
+        -   Na Karte animácií sú animácie pre každý tvoj „sprite“. Pozri sa, aké to sú.
+        -   Pridaj každému „sprite“ objektu vhodnú animáciu. **Zatiaľ použi tie, ktoré sme ti pripravili**, neskôr so ich budeš môcť zmeniť.
+        -   Ak si potrebuješ spomenúť, ako to urobiť, vráť sa k [úlohe 4](../../20/puzzle/4).
+      CSD U3 AnimationsMulti defender animate player: |-
+        # Zmena animácie postavičky hráča
+
+        V tomto momente je tvoja postavička otočená stále rovnakým smerom. Pomocou zmeny animácií ju môžeš urobiť realistickejšou. Tvoja postavička by mala meniť animácie medzi verziou pozerajúcou doľava a verziou pozerajúcou doprava  podľa toho, ktorá klávesa sa stlačila naposledy. Nezabúdaj, že animácie môžeš na karte Animácie jednoducho kopírovať aj upravovať.
+
+        # Urob toto
+
+        -   Na karte Animácie skopíruj animáciu „sprite“ objektu tvojej postavičky.
+        -   Otoč každý obrázok novej animácie tak, aby sa „sprite“ objekt pozeral opačným smerom.
+        -   Premenuj svoju novú animáciu.
+        -   Použi príkaz `setAnimation` vo vnútri funkcie `movePlayer` tak, aby postavička menila smer, ktorým sa pozerá, keď sa stlačia klávesy „šípka doľava“ a „šípka doprava“.
+      CSD U3 AnimationsMulti defender animate player_2018: |-
+        # Zmena animácie postavičky hráča
+
+        V tomto momente je tvoja postavička otočená stále rovnakým smerom. Pomocou zmeny animácií ju môžeš urobiť realistickejšou. Tvoja postavička by mala meniť animácie medzi verziou pozerajúcou doľava a verziou pozerajúcou doprava  podľa toho, ktorá klávesa sa stlačila naposledy. Nezabúdaj, že animácie môžeš na karte Animácie jednoducho kopírovať aj upravovať.
+
+        # Urob toto
+
+        -   Na karte Animácie skopíruj animáciu „sprite“ objektu tvojej postavičky.
+        -   Otoč každý obrázok novej animácie tak, aby sa „sprite“ objekt pozeral opačným smerom.
+        -   Premenuj svoju novú animáciu.
+        -   Použi príkaz `setAnimation` vo vnútri funkcie `movePlayer` tak, aby postavička menila smer, ktorým sa pozerá, keď sa stlačia klávesy „šípka doľava“ a „šípka doprava“.
+      CSD U3 AnimationsMulti defender animate player_2019: |-
+        # Zmena animácie postavičky hráča
+
+        V tomto momente je tvoja postavička otočená stále rovnakým smerom. Pomocou zmeny animácií ju môžeš urobiť realistickejšou. Tvoja postavička by mala meniť animácie medzi verziou pozerajúcou doľava a verziou pozerajúcou doprava  podľa toho, ktorá klávesa sa stlačila naposledy. Nezabúdaj, že animácie môžeš na karte Animácie jednoducho kopírovať aj upravovať.
+
+        # Urob toto
+
+        -   Na karte Animácie skopíruj animáciu „sprite“ objektu tvojej postavičky.
+        -   Otoč každý obrázok novej animácie tak, aby sa „sprite“ objekt pozeral opačným smerom.
+        -   Premenuj svoju novú animáciu.
+        -   Použi príkaz `setAnimation` vo vnútri funkcie `movePlayer` tak, aby postavička menila smer, ktorým sa pozerá, keď sa stlačia klávesy „šípka doľava“ a „šípka doprava“.
+      CSD U3 AnimationsMulti defender create set enemies: |-
+        # Vytváranie funkcií
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Tvoj program teraz obsahuje kód pre umiestnenie nepriateľov na dvoch miestach na náhodnej súradnici Y na ľavej strane obrazovky. Na odstránenie opakujúcich sa častí v tvojom programe môžeš radšej vytvoriť funkcie pre resetovanie každého z tvojich nepriateľov. To spraví tvoj program jednoduchším na čítanie, umožní ti ľahšie ho meniť a tiež rýchlo resetovať tvoje „sprite“ objekty na ostatných miestach v programe, ak tak budeš chcieť urobiť.
+
+        # Urob toto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Na konci svojho programu vytvor dve funkcie: `setEnemy1` a `setEnemy2`.
+        -   Do vnútra každej z týchto funkcií pridaj kód, ktorý umiestni nepriateľov na ľavú stranu obrazovky a na náhodnú súradnicu y.
+        -   Vždy, keď sa kód pre `setEnemy1` a `setEnemy2` objaví v tvojom programe, nahraď ho zavolaním funkcií, ktoré si práve vytvoril/a.
+      CSD U3 AnimationsMulti defender create set enemies_2018: |-
+        # Vytváranie funkcií
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Tvoj program teraz obsahuje kód pre umiestnenie nepriateľov na dvoch miestach na náhodnej súradnici Y na ľavej strane obrazovky. Na odstránenie opakujúcich sa častí v tvojom programe môžeš radšej vytvoriť funkcie pre resetovanie každého z tvojich nepriateľov. To spraví tvoj program jednoduchším na čítanie, umožní ti ľahšie ho meniť a tiež rýchlo resetovať tvoje „sprite“ objekty na ostatných miestach v programe, ak tak budeš chcieť urobiť.
+
+        # Urob toto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Na konci svojho programu vytvor dve funkcie: `setEnemy1` a `setEnemy2`.
+        -   Do vnútra každej z týchto funkcií pridaj kód, ktorý umiestni nepriateľov na ľavú stranu obrazovky a na náhodnú súradnicu y.
+        -   Vždy, keď sa kód pre `setEnemy1` a `setEnemy2` objaví v tvojom programe, nahraď ho zavolaním funkcií, ktoré si práve vytvoril/a.
+      CSD U3 AnimationsMulti defender create set enemies_2019: |-
+        # Vytváranie funkcií
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Tvoj program teraz obsahuje kód pre umiestnenie nepriateľov na dvoch miestach na náhodnej súradnici Y na ľavej strane obrazovky. Na odstránenie opakujúcich sa častí v tvojom programe môžeš radšej vytvoriť funkcie pre resetovanie každého z tvojich nepriateľov. To spraví tvoj program jednoduchším na čítanie, umožní ti ľahšie ho meniť a tiež rýchlo resetovať tvoje „sprite“ objekty na ostatných miestach v programe, ak tak budeš chcieť urobiť.
+
+        # Urob toto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Na konci svojho programu vytvor dve funkcie: `setEnemy1` a `setEnemy2`.
+        -   Do vnútra každej z týchto funkcií pridaj kód, ktorý umiestni nepriateľov na ľavú stranu obrazovky a na náhodnú súradnicu y.
+        -   Vždy, keď sa kód pre `setEnemy1` a `setEnemy2` objaví v tvojom programe, nahraď ho zavolaním funkcií, ktoré si práve vytvoril/a.
+      CSD U3 AnimationsMulti defender displace enemies: |-
+        # Premiestnenie nepriateľov
+
+        Je čas napísať kód pre interakcie „sprite“ objektov. „Sprite“ tvojej postavičky by mal posúvať nepriateľské „sprite“ objekty.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `displaceEnemies`.
+
+        -   Napíš kód, ktorý premiestni obidva nepriateľské „sprite“ objekty.
+        -   Otestuj svoj program a uisti sa, že tvoja postavička naozaj premiestňuje nepriateľov.  Tí by sa mali začať pohybovať doprava akonáhle sa hráč pohne preč.
+
+        _Nápoveda: Pomocou `sprite.debug` si môžeš zobraziť ohraničienia tvojich „sprite“ objektov a vyladiť  svoj program._
+      CSD U3 AnimationsMulti defender displace enemies_2018: |-
+        # Premiestnenie nepriateľov
+
+        Je čas napísať kód pre interakcie „sprite“ objektov. „Sprite“ tvojej postavičky by mal posúvať nepriateľské „sprite“ objekty.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `displaceEnemies`.
+
+        -   Napíš kód, ktorý premiestni obidva nepriateľské „sprite“ objekty.
+        -   Otestuj svoj program a uisti sa, že tvoja postavička naozaj premiestňuje nepriateľov.  Tí by sa mali začať pohybovať doprava akonáhle sa hráč pohne preč.
+
+        _Nápoveda: Pomocou `sprite.debug` si môžeš zobraziť ohraničienia tvojich „sprite“ objektov a vyladiť  svoj program._
+      CSD U3 AnimationsMulti defender displace enemies_2019: |-
+        # Premiestnenie nepriateľov
+
+        Je čas napísať kód pre interakcie „sprite“ objektov. „Sprite“ tvojej postavičky by mal posúvať nepriateľské „sprite“ objekty.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `displaceEnemies`.
+
+        -   Napíš kód, ktorý premiestni obidva nepriateľské „sprite“ objekty.
+        -   Otestuj svoj program a uisti sa, že tvoja postavička naozaj premiestňuje nepriateľov.  Tí by sa mali začať pohybovať doprava akonáhle sa hráč pohne preč.
+
+        _Nápoveda: Pomocou `sprite.debug` si môžeš zobraziť ohraničienia tvojich „sprite“ objektov a vyladiť  svoj program._
+      CSD U3 AnimationsMulti defender enemies move: |-
+        # Pohyb nepriateľov
+
+        Je načase napísať kód, ktorý zabezpečí pohyb nepriateľov. Na začiatok ich umiestni na náhodnú pozíciu s pohybom po obrazovke.
+
+        # Urob toto
+
+        Na začiatok programu, hneď ako vytvoríš nepriateľský „sprite“, napíš kód, ktorý ho umiestni na správnu pozíciu.
+
+        -   Použi `sprite.x` na nastavenie pozície x na 0.
+        -   Použi `sprite.y` na nastavenie pozície y na náhodné číslo medzi 150 a 250.
+        -   Použi `sprite.velocityX` na nastavenie rýchlosti x na 2.
+            Otestuj svoj program. Tvoje nepriateľské „sprite“ objekty by sa mali pohybovať po moste.
+      CSD U3 AnimationsMulti defender enemies move_2018: |-
+        # Pohyb nepriateľov
+
+        Je načase napísať kód, ktorý zabezpečí pohyb nepriateľov. Na začiatok ich umiestni na náhodnú pozíciu s pohybom po obrazovke.
+
+        # Urob toto
+
+        Na začiatok programu, hneď ako vytvoríš nepriateľský „sprite“, napíš kód, ktorý ho umiestni na správnu pozíciu.
+
+        -   Použi `sprite.x` na nastavenie pozície x na 0.
+        -   Použi `sprite.y` na nastavenie pozície y na náhodné číslo medzi 150 a 250.
+        -   Použi `sprite.velocityX` na nastavenie rýchlosti x na 2.
+            Otestuj svoj program. Tvoje nepriateľské „sprite“ objekty by sa mali pohybovať po moste.
+      CSD U3 AnimationsMulti defender enemies move_2019: |-
+        # Pohyb nepriateľov
+
+        Je načase napísať kód, ktorý zabezpečí pohyb nepriateľov. Na začiatok ich umiestni na náhodnú pozíciu s pohybom po obrazovke.
+
+        # Urob toto
+
+        Na začiatok programu, hneď ako vytvoríš nepriateľský „sprite“, napíš kód, ktorý ho umiestni na správnu pozíciu.
+
+        -   Použi `sprite.x` na nastavenie pozície x na 0.
+        -   Použi `sprite.y` na nastavenie pozície y na náhodné číslo medzi 150 a 250.
+        -   Použi `sprite.velocityX` na nastavenie rýchlosti x na 2.
+            Otestuj svoj program. Tvoje nepriateľské „sprite“ objekty by sa mali pohybovať po moste.
+      CSD U3 AnimationsMulti defender enemies touch cake: |-
+        # Dotknutie sa koláča
+
+        Ak sa nepriatelia dostanú až ku koláču, mali by sa znova zobraziť na ľavej strane obrazovky a skóre sa má znížiť. **Najprv napíšeme kód len pre jedného z nepriateľov**.
+
+        # Urob toto
+
+        Do vnútra funkcie `enemiesTouchCake` napíš kód, ktorý skontroluje, či sa lienka dotkne koláča. Ak áno, obnoví svoju pozíciu a zmení sa skóre.
+
+        -   Použi `if` a `isTouching` pre zistenie, či sa enemy1 dotkol koláča.
+        -   Do vnútra bloku `if` vlož kód, ktorý:
+            -   nastaví pozíciu X pre enemy1 naspäť na 0,
+            -   nastaví pozíciu Y pre enemy1  na náhodné číslo medzi 150 a 250,
+            -   zníži hodnotu počítadla skóre o 2.
+
+        (_Nápoveda: Môžeš prepoužiť niektoré časti kódu, ktorý už máš napísaný_)
+
+        Otestuj svoj kód. Jedna z lienok by sa mala resetovať, keď sa dostane až ku koláču, a skóre by sa malo znížiť o 2.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2: |-
+        # Dotknutie sa koláča: druhá lienka
+
+        Tvoj prvý nepriateľ by sa mal resetovať, keď sa dostane ku koláču. Nastav tak aj lienku číslo 2.
+
+        # Urob toto
+
+        Vo vnútri funkcie `enemiesTouchCake` by si mal/a mať kód, ktorý resetuje `enemy1`.
+
+        -   Skopíruj celý výraz `if`  z predchádzajúcej lekcie (použi klávesovú skratku Ctrl-C).
+        -   Vlož kód dovnútra funkcie `enemiesTouchCake`, hneď pod posledný riadok kódu v nej (použi klávesovú skratku Ctrl-V).
+        -   Zmeň názov „sprite“ objektu v tejto časti kódu z  enemy1 na  enemy2.
+
+        Otestuj svoj kód. Teraz by sa obidve lienky mali resetovať, keď sa dotknú koláča.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2_2018: |-
+        # Dotknutie sa koláča: druhá lienka
+
+        Tvoj prvý nepriateľ by sa mal resetovať, keď sa dostane ku koláču. Nastav tak aj lienku číslo 2.
+
+        # Urob toto
+
+        Vo vnútri funkcie `enemiesTouchCake` by si mal/a mať kód, ktorý resetuje `enemy1`.
+
+        -   Skopíruj celý výraz `if`  z predchádzajúcej lekcie (použi klávesovú skratku Ctrl-C).
+        -   Vlož kód dovnútra funkcie `enemiesTouchCake`, hneď pod posledný riadok kódu v nej (použi klávesovú skratku Ctrl-V).
+        -   Zmeň názov „sprite“ objektu v tejto časti kódu z  enemy1 na  enemy2.
+
+        Otestuj svoj kód. Teraz by sa obidve lienky mali resetovať, keď sa dotknú koláča.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2_2019: |-
+        # Dotknutie sa koláča: druhá lienka
+
+        Tvoj prvý nepriateľ by sa mal resetovať, keď sa dostane ku koláču. Nastav tak aj lienku číslo 2.
+
+        # Urob toto
+
+        Vo vnútri funkcie `enemiesTouchCake` by si mal/a mať kód, ktorý resetuje `enemy1`.
+
+        -   Skopíruj celý výraz `if`  z predchádzajúcej lekcie (použi klávesovú skratku Ctrl-C).
+        -   Vlož kód dovnútra funkcie `enemiesTouchCake`, hneď pod posledný riadok kódu v nej (použi klávesovú skratku Ctrl-V).
+        -   Zmeň názov „sprite“ objektu v tejto časti kódu z  enemy1 na  enemy2.
+
+        Otestuj svoj kód. Teraz by sa obidve lienky mali resetovať, keď sa dotknú koláča.
+      CSD U3 AnimationsMulti defender enemies touch cake_2018: |-
+        # Dotknutie sa koláča
+
+        Ak sa nepriatelia dostanú až ku koláču, mali by sa znova zobraziť na ľavej strane obrazovky a skóre sa má znížiť. **Najprv napíšeme kód len pre jedného z nepriateľov**.
+
+        # Urob toto
+
+        Do vnútra funkcie `enemiesTouchCake` napíš kód, ktorý skontroluje, či sa lienka dotkne koláča. Ak áno, obnoví svoju pozíciu a zmení sa skóre.
+
+        -   Použi `if` a `isTouching` pre zistenie, či sa enemy1 dotkol koláča.
+        -   Do vnútra bloku `if` vlož kód, ktorý:
+            -   nastaví pozíciu X pre enemy1 naspäť na 0,
+            -   nastaví pozíciu Y pre enemy1  na náhodné číslo medzi 150 a 250,
+            -   zníži hodnotu počítadla skóre o 2.
+
+        (_Nápoveda: Môžeš prepoužiť niektoré časti kódu, ktorý už máš napísaný_)
+
+        Otestuj svoj kód. Jedna z lienok by sa mala resetovať, keď sa dostane až ku koláču, a skóre by sa malo znížiť o 2.
+      CSD U3 AnimationsMulti defender enemies touch cake_2019: |-
+        # Dotknutie sa koláča
+
+        Ak sa nepriatelia dostanú až ku koláču, mali by sa znova zobraziť na ľavej strane obrazovky a skóre sa má znížiť. **Najprv napíšeme kód len pre jedného z nepriateľov**.
+
+        # Urob toto
+
+        Do vnútra funkcie `enemiesTouchCake` napíš kód, ktorý skontroluje, či sa lienka dotkne koláča. Ak áno, obnoví svoju pozíciu a zmení sa skóre.
+
+        -   Použi `if` a `isTouching` pre zistenie, či sa enemy1 dotkol koláča.
+        -   Do vnútra bloku `if` vlož kód, ktorý:
+            -   nastaví pozíciu X pre enemy1 naspäť na 0,
+            -   nastaví pozíciu Y pre enemy1  na náhodné číslo medzi 150 a 250,
+            -   zníži hodnotu počítadla skóre o 2.
+
+        (_Nápoveda: Môžeš prepoužiť niektoré časti kódu, ktorý už máš napísaný_)
+
+        Otestuj svoj kód. Jedna z lienok by sa mala resetovať, keď sa dostane až ku koláču, a skóre by sa malo znížiť o 2.
+      CSD U3 AnimationsMulti defender make it your own: |-
+        # Uprav si hru podľa seba
+
+        Práve si prešiel/la plánom na tvorbu hry niekoho iného, takže je čas vytvoriť si hru podľa seba. Aké ďalšie vlastnosti alebo funkcie chceš vytvoriť?
+
+        # Urob toto
+
+        Vyber si jednu z nasledovných možností alebo pridaj do programu niečo vlastné:
+
+        -   Zmeň výzor hry tak, aby postavička hráča i nepriateľov vyzerali inak ako doteraz.
+        -   Ukonči hru, keď sa nepriateľské postavičky dostanú ku koláču a zobraz konečné skóre. Ako bonus ukonči hru, až keď sa nepriatelia dostanú ku koláču 3-krát.
+        -   Nepriateľské postavičky sa budú pohybovať náhodnou rýchlosťou.
+        -   Vytvor nové pozadie, ktoré sa zobrazí len vtedy, keď hráč dosiahne vyššie skóre.
+      CSD U3 AnimationsMulti defender make it your own_2018: |-
+        # Uprav si hru podľa seba
+
+        Práve si prešiel/la plánom na tvorbu hry niekoho iného, takže je čas vytvoriť si hru podľa seba. Aké ďalšie vlastnosti alebo funkcie chceš vytvoriť?
+
+        # Urob toto
+
+        Vyber si jednu z nasledovných možností alebo pridaj do programu niečo vlastné:
+
+        -   Zmeň výzor hry tak, aby postavička hráča i nepriateľov vyzerali inak ako doteraz.
+        -   Ukonči hru, keď sa nepriateľské postavičky dostanú ku koláču a zobraz konečné skóre. Ako bonus ukonči hru, až keď sa nepriatelia dostanú ku koláču 3-krát.
+        -   Nepriateľské postavičky sa budú pohybovať náhodnou rýchlosťou.
+        -   Vytvor nové pozadie, ktoré sa zobrazí len vtedy, keď hráč dosiahne vyššie skóre.
+      CSD U3 AnimationsMulti defender make it your own_2019: |-
+        # Uprav si hru podľa seba
+
+        Práve si prešiel/la plánom na tvorbu hry niekoho iného, takže je čas vytvoriť si hru podľa seba. Aké ďalšie vlastnosti alebo funkcie chceš vytvoriť?
+
+        # Urob toto
+
+        Vyber si jednu z nasledovných možností alebo pridaj do programu niečo vlastné:
+
+        -   Zmeň výzor hry tak, aby postavička hráča i nepriateľov vyzerali inak ako doteraz.
+        -   Ukonči hru, keď sa nepriateľské postavičky dostanú ku koláču a zobraz konečné skóre. Ako bonus ukonči hru, až keď sa nepriatelia dostanú ku koláču 3-krát.
+        -   Nepriateľské postavičky sa budú pohybovať náhodnou rýchlosťou.
+        -   Vytvor nové pozadie, ktoré sa zobrazí len vtedy, keď hráč dosiahne vyššie skóre.
+      CSD U3 AnimationsMulti defender move player: |-
+        # Posun doľava a doprava
+
+        Teraz, keď sa nepriateľské „sprite“ objekty pohybujú správne, je čas napísať kód pre pohyb tvojho hráča. Nateraz potrebuješ pohybovať postavičkou len doľava a doprava a meniť jej animáciu.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód dovnútra funkcie `movePlayer`.
+
+        -   Použi blok `if` spolu s `keyDown` pre zistenie, či sa stlačila klávesa „šípka doprava“.
+        -   Použi `sprite.x` a kód pre počítanie na zvýšenie pozície x hráča o 3.
+        -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa „šípka doľava“. Tentokrát musíš pozíciu x hráča znížiť.
+
+        Otestuj svoju hru. Tvoj „sprite“ by sa mal na základe stlačenia šípiek pohybovať doľava a doprava.
+      CSD U3 AnimationsMulti defender move player_2018: |-
+        # Posun doľava a doprava
+
+        Teraz, keď sa nepriateľské „sprite“ objekty pohybujú správne, je čas napísať kód pre pohyb tvojho hráča. Nateraz potrebuješ pohybovať postavičkou len doľava a doprava a meniť jej animáciu.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód dovnútra funkcie `movePlayer`.
+
+        -   Použi blok `if` spolu s `keyDown` pre zistenie, či sa stlačila klávesa „šípka doprava“.
+        -   Použi `sprite.x` a kód pre počítanie na zvýšenie pozície x hráča o 3.
+        -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa „šípka doľava“. Tentokrát musíš pozíciu x hráča znížiť.
+
+        Otestuj svoju hru. Tvoj „sprite“ by sa mal na základe stlačenia šípiek pohybovať doľava a doprava.
+      CSD U3 AnimationsMulti defender move player_2019: |-
+        # Posun doľava a doprava
+
+        Teraz, keď sa nepriateľské „sprite“ objekty pohybujú správne, je čas napísať kód pre pohyb tvojho hráča. Nateraz potrebuješ pohybovať postavičkou len doľava a doprava a meniť jej animáciu.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód dovnútra funkcie `movePlayer`.
+
+        -   Použi blok `if` spolu s `keyDown` pre zistenie, či sa stlačila klávesa „šípka doprava“.
+        -   Použi `sprite.x` a kód pre počítanie na zvýšenie pozície x hráča o 3.
+        -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa „šípka doľava“. Tentokrát musíš pozíciu x hráča znížiť.
+
+        Otestuj svoju hru. Tvoj „sprite“ by sa mal na základe stlačenia šípiek pohybovať doľava a doprava.
+      CSD U3 AnimationsMulti defender move up down_2018: |-
+        # Pohyb hore a dole
+
+        Teraz sa naučíme, ako hráčom hýbať hore a dole.
+
+        # Urob toto
+
+        V tejto úlohe píš kód len do vnútra funkcie `movePlayer`.
+
+        -   Použi blok `if` spolu s `keyDown` pre zistenie, či bola stlačená klávesa „šípka nahor".
         -   Použi `sprite.y` a vzor pre počítanie pre zvýšenie pozície y hráča o 3.
-        -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa šípka "dole“. Tentokrát musíš pozíciu y hráča znížiť.
+        -   Použi ďalší blok `if` pre pohyb hráča dole, keď je stlačená klávesa šípka "dole“.
 
         Otestuj svoj kód. Postavička by sa teraz mala pohybovať všetkými 4 smermi.
       CSD U3 AnimationsMulti defender move up down_2019: |-
         # Pohyb hore a dole
 
-        Teraz sa naučíme, ako môžeš hýbať hracou postavičkou hore a dole.
+        Teraz sa naučíme, ako hráčom hýbať hore a dole.
 
         # Urob toto
 
-        V tomto leveli budeš píš kód len do vnútra funkcie `movePlayer`.
+        V tejto úlohe píš kód len do vnútra funkcie `movePlayer`.
 
-        -   Použi blok `if` spolu s `keyDown` pre zisťovanie, či bola stlačená klávesa „šípka nahor".
+        -   Použi blok `if` spolu s `keyDown` pre zistenie, či bola stlačená klávesa „šípka nahor".
         -   Použi `sprite.y` a vzor pre počítanie pre zvýšenie pozície y hráča o 3.
-        -   Použi ďalší blok `if` pre pohyb hráča doľava, keď je stlačená klávesa šípka "dole“. Tentokrát musíš pozíciu y hráča znížiť.
+        -   Použi ďalší blok `if` pre pohyb hráča dole, keď je stlačená klávesa šípka "dole“.
 
         Otestuj svoj kód. Postavička by sa teraz mala pohybovať všetkými 4 smermi.
+      CSD U3 AnimationsMulti defender touch water: |-
+        # Dotknutie sa vody
+
+        Poslednou časťou hry, pre ktorú musíš napísať kód, je resetovanie „sprite“ objektov, keď sa dotknú vody. Našťastie už máš napísané funkcie, ktoré resetujú každý „sprite“. Už ti chýba len dobrý spôsob na zistenie toho, keď ktorýkoľvek zo  „sprite“ objektov opustí most. Zační písaním kódu pre jedného nepriateľa a potom skopíruj a mierne uprav kód pre druhého nepriateľa.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `enemiesTouchWater`.
+
+        -   Použi výraz `if` pre kontrolu, či `enemy1` prepadol ponad most - skontroluj, či je jeho pozícia y nižšia ako 140. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset „sprite“ objektu,
+            -   pridaj 1 k skóre.
+        -   Použi výraz `if` pre kontrolu, či spadol pod most - skontroluj, či je jeho pozícia y väčšia ako 260. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset tohto objektu „sprite“.
+            -   pridaj 1 k skóre.
+        -   Otestuj svoj program pre „sprite“ objekt prvého nepriateľa.  Uisti sa, že sa „sprite“ objekt resetne a že sa hráčove skóre zvýši.
+        -   Keď to bude fungovať, skopíruj napísaný kód a vytvor rovnaké správanie pre `enemy2`. Budeš musieť zmeniť názov „sprite“ objektu a názov využitej funkcie.
+      CSD U3 AnimationsMulti defender touch water_2018: |-
+        # Dotknutie sa vody
+
+        Poslednou časťou hry, pre ktorú musíš napísať kód, je resetovanie „sprite“ objektov, keď sa dotknú vody. Našťastie už máš napísané funkcie, ktoré resetujú každý „sprite“. Už ti chýba len dobrý spôsob na zistenie toho, keď ktorýkoľvek zo  „sprite“ objektov opustí most. Zační písaním kódu pre jedného nepriateľa a potom skopíruj a mierne uprav kód pre druhého nepriateľa.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `enemiesTouchWater`.
+
+        -   Použi výraz `if` pre kontrolu, či `enemy1` prepadol ponad most - skontroluj, či je jeho pozícia y nižšia ako 140. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset „sprite“ objektu,
+            -   pridaj 1 k skóre.
+        -   Použi výraz `if` pre kontrolu, či spadol pod most - skontroluj, či je jeho pozícia y väčšia ako 260. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset tohto objektu „sprite“.
+            -   pridaj 1 k skóre.
+        -   Otestuj svoj program pre „sprite“ objekt prvého nepriateľa.  Uisti sa, že sa „sprite“ objekt resetne a že sa hráčove skóre zvýši.
+        -   Keď to bude fungovať, skopíruj napísaný kód a vytvor rovnaké správanie pre `enemy2`. Budeš musieť zmeniť názov „sprite“ objektu a názov využitej funkcie.
+      CSD U3 AnimationsMulti defender touch water_2019: |-
+        # Dotknutie sa vody
+
+        Poslednou časťou hry, pre ktorú musíš napísať kód, je resetovanie „sprite“ objektov, keď sa dotknú vody. Našťastie už máš napísané funkcie, ktoré resetujú každý „sprite“. Už ti chýba len dobrý spôsob na zistenie toho, keď ktorýkoľvek zo  „sprite“ objektov opustí most. Zační písaním kódu pre jedného nepriateľa a potom skopíruj a mierne uprav kód pre druhého nepriateľa.
+
+        # Urob toto
+
+        V tejto úlohe budeš písať kód vo vnútri funkcie `enemiesTouchWater`.
+
+        -   Použi výraz `if` pre kontrolu, či `enemy1` prepadol ponad most - skontroluj, či je jeho pozícia y nižšia ako 140. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset „sprite“ objektu,
+            -   pridaj 1 k skóre.
+        -   Použi výraz `if` pre kontrolu, či spadol pod most - skontroluj, či je jeho pozícia y väčšia ako 260. Vo vnútri tvojho výrazu:
+            -   použi svoju funkciu `setEnemy1` pre reset tohto objektu „sprite“.
+            -   pridaj 1 k skóre.
+        -   Otestuj svoj program pre „sprite“ objekt prvého nepriateľa.  Uisti sa, že sa „sprite“ objekt resetne a že sa hráčove skóre zvýši.
+        -   Keď to bude fungovať, skopíruj napísaný kód a vytvor rovnaké správanie pre `enemy2`. Budeš musieť zmeniť názov „sprite“ objektu a názov využitej funkcie.
+      CSD U3 AnimationsMulti introducing multiframe: |-
+        # Používanie „multiframe“ animácií
+
+        V príklade obrannej hry boli jednotlivé „sprite“ objekty animované. Predtým ako začneš s programovaním tejto hry, venuj chvíľu pozornosť týmto novým spôsobom animácie  „sprite“ objektov.
+
+        # Urob toto
+
+        Tento program už obsahuje niekoľko „sprite“ objektov, ale zatiaľ nemajú vytvorené žiadne animácie.
+
+        -   Prejdi na Kartu animácií a pozri sa na „multiframe“ animácie, ktoré už boli pridané do tvojho projektu. Vyber jednu pre každú z tvojich postáv.
+        -   Pamätaj, že animácie, ktoré máš na Karte animácií môžeš svojim "sprite" objektom priradiť pomocou príkazu `setAnimation`.
+      CSD U3 AnimationsMulti introducing multiframe_2018: |-
+        # Používanie „multiframe“ animácií
+
+        V príklade obrannej hry boli jednotlivé „sprite“ objekty animované. Predtým ako začneš s programovaním tejto hry, venuj chvíľu pozornosť týmto novým spôsobom animácie  „sprite“ objektov.
+
+        # Urob toto
+
+        Tento program už obsahuje niekoľko „sprite“ objektov, ale zatiaľ nemajú vytvorené žiadne animácie.
+
+        -   Prejdi na Kartu animácií a pozri sa na „multiframe“ animácie, ktoré už boli pridané do tvojho projektu. Vyber jednu pre každú z tvojich postáv.
+        -   Pamätaj, že animácie, ktoré máš na Karte animácií môžeš svojim "sprite" objektom priradiť pomocou príkazu `setAnimation`.
+      CSD U3 AnimationsMulti introducing multiframe_2019: |-
+        # Používanie „multiframe“ animácií
+
+        V príklade obrannej hry boli jednotlivé „sprite“ objekty animované. Predtým ako začneš s programovaním tejto hry, venuj chvíľu pozornosť týmto novým spôsobom animácie  „sprite“ objektov.
+
+        # Urob toto
+
+        Tento program už obsahuje niekoľko „sprite“ objektov, ale zatiaľ nemajú vytvorené žiadne animácie.
+
+        -   Prejdi na Kartu animácií a pozri sa na „multiframe“ animácie, ktoré už boli pridané do tvojho projektu. Vyber jednu pre každú z tvojich postáv.
+        -   Pamätaj, že animácie, ktoré máš na Karte animácií môžeš svojim "sprite" objektom priradiť pomocou príkazu `setAnimation`.
+      CSD U3 AnimationsMulti mirror animation: "# Úprava „multiframe“ animácií\n\nTvoje
+        „sprite“ objekty budú vyzerať oveľa realistickejšie, ak sa pri pohybe otočia.
+        „Multiframe“ animácie môžeš meniť aj v súvislosti so stlačením rôznych kláves
+        na klávesnici.\n\n# Urob toto\n\nPrečítaj si kód a spusti program. Uisti sa,
+        že vieš ako „sprite“ objekt odpovie na stlačenie klávesy so šípkami.\n\n-
+        \  Na Karte animácií vytvor kópiu  mimozemšťana kliknutím na nasledujúce tlačidlo:
+        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        PM.png>)\n-   Použi nástroj na preklopenie svojej animácie. Nezabudni pomocou
+        tohoto tlačidla otočiť obidve snímky:  ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        PM.png>) \n-   Svoju novú animáciu premenuj.\n-   Použi novú aj starú animáciu
+        tak, že tvár mimozemšťana bude pri pohybe zobrazená v správnom smere. Čo myslíš,
+        kde v kóde budeš potrebovať nastaviť animáciu „sprite“ objektu?"
+      CSD U3 AnimationsMulti mirror animation_2018: "# Úprava „multiframe“ animácií\n\nTvoje
+        „sprite“ objekty budú vyzerať oveľa realistickejšie, ak sa pri pohybe otočia.
+        „Multiframe“ animácie môžeš meniť aj v súvislosti so stlačením rôznych kláves
+        na klávesnici.\n\n# Urob toto\n\nPrečítaj si kód a spusti program. Uisti sa,
+        že vieš ako „sprite“ objekt odpovie na stlačenie klávesy so šípkami.\n\n-
+        \  Na Karte animácií vytvor kópiu  mimozemšťana kliknutím na nasledujúce tlačidlo:
+        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        PM.png>)\n-   Použi nástroj na preklopenie svojej animácie. Nezabudni pomocou
+        tohoto tlačidla otočiť obidve snímky:  ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        PM.png>) \n-   Svoju novú animáciu premenuj.\n-   Použi novú aj starú animáciu
+        tak, že tvár mimozemšťana bude pri pohybe zobrazená v správnom smere. Čo myslíš,
+        kde v kóde budeš potrebovať nastaviť animáciu „sprite“ objektu?"
+      CSD U3 AnimationsMulti mirror animation_2019: "# Úprava „multiframe“ animácií\n\nTvoje
+        „sprite“ objekty budú vyzerať oveľa realistickejšie, ak sa pri pohybe otočia.
+        „Multiframe“ animácie môžeš meniť aj v súvislosti so stlačením rôznych kláves
+        na klávesnici.\n\n# Urob toto\n\nPrečítaj si kód a spusti program. Uisti sa,
+        že vieš ako „sprite“ objekt odpovie na stlačenie klávesy so šípkami.\n\n-
+        \  Na Karte animácií vytvor kópiu  mimozemšťana kliknutím na nasledujúce tlačidlo:
+        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        PM.png>)\n-   Použi nástroj na preklopenie svojej animácie. Nezabudni pomocou
+        tohoto tlačidla otočiť obidve snímky:  ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        PM.png>) \n-   Svoju novú animáciu premenuj.\n-   Použi novú aj starú animáciu
+        tak, že tvár mimozemšťana bude pri pohybe zobrazená v správnom smere. Čo myslíš,
+        kde v kóde budeš potrebovať nastaviť animáciu „sprite“ objektu?"
+      CSD U3 AnimationsMulti slow down: "# Spomaľ\n\nDobrá práca! Je načase, aby sme
+        sa tieto tieto „multiframe“ animácie naučili ovládať. \n\n# Urob toto\n\nTvoje
+        „sprite“ objekty by mali byť animované, ale pohybujú sa prirýchlo.\n\n-   Vráť
+        sa späť na kartu Animácií. Pod každou animáciou uvidíš posúvač. ![](<https://images.code.org/169e11c1f6f55b607937fe9cb7e5e390-image-1476209267457.07.26
+        AM.png>)\n-   Použi tieto posúvače na spomalenie  animcií tak, aby vyzerali
+        realistickejšie."
+      CSD U3 AnimationsMulti slow down_2018: "# Spomaľ\n\nDobrá práca! Je načase,
+        aby sme sa tieto tieto „multiframe“ animácie naučili ovládať. \n\n# Urob toto\n\nTvoje
+        „sprite“ objekty by mali byť animované, ale pohybujú sa prirýchlo.\n\n-   Vráť
+        sa späť na kartu Animácií. Pod každou animáciou uvidíš posúvač. ![](<https://images.code.org/169e11c1f6f55b607937fe9cb7e5e390-image-1476209267457.07.26
+        AM.png>)\n-   Použi tieto posúvače na spomalenie  animcií tak, aby vyzerali
+        realistickejšie."
+      CSD U3 AnimationsMulti slow down_2019: "# Spomaľ\n\nDobrá práca! Je načase,
+        aby sme sa tieto tieto „multiframe“ animácie naučili ovládať. \n\n# Urob toto\n\nTvoje
+        „sprite“ objekty by mali byť animované, ale pohybujú sa prirýchlo.\n\n-   Vráť
+        sa späť na kartu Animácií. Pod každou animáciou uvidíš posúvač. ![](<https://images.code.org/169e11c1f6f55b607937fe9cb7e5e390-image-1476209267457.07.26
+        AM.png>)\n-   Použi tieto posúvače na spomalenie  animcií tak, aby vyzerali
+        realistickejšie."
       CSD U3 Boolean Modify_2018: |-
         # Logické výrazy
 
@@ -615,7 +1155,7 @@ sk-SK:
       CSD U3 Complex Movement counter prediction: |-
         # Rýchlosť pohybu a kód pre počítanie
 
-        Použitím kódu pre počítanie v atribútoch X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme kód pre počítanie použili namiesto bloku `sprite.velocityX` \*\*.
+        Použitím kódu pre počítanie pri pozícii X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme pre zmenu kód pre počítanie použili s blokom `sprite.velocityX` \*\*.
 
         # Porozmýšľaj
 
@@ -623,7 +1163,7 @@ sk-SK:
       CSD U3 Complex Movement counter prediction_2018: |-
         # Rýchlosť pohybu a kód pre počítanie
 
-        Použitím kódu pre počítanie v atribútoch X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme kód pre počítanie použili namiesto bloku `sprite.velocityX` \*\*.
+        Použitím kódu pre počítanie pri pozícii X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme pre zmenu kód pre počítanie použili s blokom `sprite.velocityX` \*\*.
 
         # Porozmýšľaj
 
@@ -631,7 +1171,7 @@ sk-SK:
       CSD U3 Complex Movement counter prediction_2019: |-
         # Rýchlosť pohybu a kód pre počítanie
 
-        Použitím kódu pre počítanie v atribútoch X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme kód pre počítanie použili namiesto bloku `sprite.velocityX` \*\*.
+        Použitím kódu pre počítanie pri pozícii X a Y „sprite” objektu docielime jeho plynulý pohyb po obrazovke. V tomto programe \*\*sme pre zmenu kód pre počítanie použili s blokom `sprite.velocityX` \*\*.
 
         # Porozmýšľaj
 
@@ -911,24 +1451,36 @@ sk-SK:
 
         -   Použi **výraz „if“** a dve rozdielne funkcie na nakreslenie svojich pozadí
         -   Potom napíš svoje funkcie mimo cyklu kreslenia. Môžeš sa rozhodnúť ktoré bude štandardné, a ktoré bláznivé pozadie. Zabav sa!
-      CSD U3 Functions Add IsTouching: "# Chyť mincu, zvýš skóre\n\nAby bola hra kompletná,
-        poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment, keď sa zajačik
-        dotkne mince, a vtedy ju resetnúť.\n\n# Urob toto\n\n-   Keď sa zajačik dotkne
-        mince, použi **výraz if** a blok **isTouching** na zvyšovanie skóre, \n-   Uisti
-        sa, že **tvoja funkcia** resetuje mince, keď boli chytené.\n-   Zahraj si
-        hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť."
-      CSD U3 Functions Add IsTouching_2018: "# Chyť mincu, zvýš skóre\n\nAby bola
-        hra kompletná, poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment,
-        keď sa zajačik dotkne mince, a vtedy ju resetnúť.\n\n# Urob toto\n\n-   Keď
-        sa zajačik dotkne mince, použi **výraz if** a blok **isTouching** na zvyšovanie
-        skóre, \n-   Uisti sa, že **tvoja funkcia** resetuje mince, keď boli chytené.\n-
-        \  Zahraj si hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť."
-      CSD U3 Functions Add IsTouching_2019: "# Chyť mincu, zvýš skóre\n\nAby bola
-        hra kompletná, poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment,
-        keď sa zajačik dotkne mince, a vtedy ju resetnúť.\n\n# Urob toto\n\n-   Keď
-        sa zajačik dotkne mince, použi **výraz if** a blok **isTouching** na zvyšovanie
-        skóre, \n-   Uisti sa, že **tvoja funkcia** resetuje mince, keď boli chytené.\n-
-        \  Zahraj si hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť."
+      CSD U3 Functions Add IsTouching: |-
+        # Chyť mincu, zvýš skóre
+
+        Aby bola hra kompletná, poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment, keď sa zajačik dotkne mince, a vtedy ju resetnúť.
+
+        # Urob toto
+
+        -   Keď sa zajačik dotkne mince, použi **výraz if** a blok **isTouching** na zvyšovanie skóre.
+        -   Uisti sa, že **tvoja funkcia** resetuje mince, keď boli chytené.
+        -   Zahraj si hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť.
+      CSD U3 Functions Add IsTouching_2018: |-
+        # Chyť mincu, zvýš skóre
+
+        Aby bola hra kompletná, poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment, keď sa zajačik dotkne mince, a vtedy ju resetnúť.
+
+        # Urob toto
+
+        -   Keď sa zajačik dotkne mince, použi **výraz if** a blok **isTouching** na zvyšovanie skóre.
+        -   Uisti sa, že **tvoja funkcia** resetuje mince, keď boli chytené.
+        -   Zahraj si hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť.
+      CSD U3 Functions Add IsTouching_2019: |-
+        # Chyť mincu, zvýš skóre
+
+        Aby bola hra kompletná, poďme nastaviť zvyšovanie skóre. Na to potrebujeme určiť moment, keď sa zajačik dotkne mince, a vtedy ju resetnúť.
+
+        # Urob toto
+
+        -   Keď sa zajačik dotkne mince, použi **výraz if** a blok **isTouching** na zvyšovanie skóre.
+        -   Uisti sa, že **tvoja funkcia** resetuje mince, keď boli chytené.
+        -   Zahraj si hru a nastavuj **rýchlosť mince náhodne**, kým ťa to bude baviť.
       CSD U3 Functions Call Draw Loop: |-
         # Volanie funkcie v cykle kreslenia
 
@@ -993,7 +1545,7 @@ sk-SK:
       CSD U3 Functions Create Function: |-
         # Vytváranie funkcií na organizáciu kódu
 
-        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšlať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
+        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšľať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
 
         <img src="https://images.code.org/1a5beeaad6e55c5b27a43604be4f039a-image-1475199750468.42.07 PM.png" style="float:right;width:150px">
 
@@ -1006,7 +1558,7 @@ sk-SK:
       CSD U3 Functions Create Function_2018: |-
         # Vytváranie funkcií na organizáciu kódu
 
-        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšlať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
+        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšľať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
 
         <img src="https://images.code.org/1a5beeaad6e55c5b27a43604be4f039a-image-1475199750468.42.07 PM.png" style="float:right;width:150px">
 
@@ -1019,7 +1571,7 @@ sk-SK:
       CSD U3 Functions Create Function_2019: |-
         # Vytváranie funkcií na organizáciu kódu
 
-        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšlať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
+        V Game Labe sa všetky akcie dejú v rámci cyklu kreslenia, ale príliš zložitý kód je neprehľadný. Aby si udržal/a prehľadnosť svojho kódu, na jeho väčšie časti používaj funkcie. Môžeš ich volať z priamo z cyklu a definovať ich nižšie. Toto je naozaj dobrý príklad využitia **abstrakcie:** rozmýšľať nad problémom na vyššej úrovni a zaoberať sa detailami neskôr.
 
         <img src="https://images.code.org/1a5beeaad6e55c5b27a43604be4f039a-image-1475199750468.42.07 PM.png" style="float:right;width:150px">
 
@@ -1851,7 +2403,7 @@ sk-SK:
 
         -   Použi kód pre počítanie s blokom `velocityY` tak, aby kameň počas pádu zrýchlil ( [Ukáž mi kde](#triggercallout=code_triggered) )
 
-        _Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal?_
+        \_Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal? A môže sa otáčať rýchlejšie a rýchlejšie? \_
       CSD U3 abstraction accelerateY up: |-
         # Stúpajúca bublina
 
@@ -1885,7 +2437,7 @@ sk-SK:
 
         -   Použi kód pre počítanie s blokom `velocityY` tak, aby kameň počas pádu zrýchlil ( [Ukáž mi kde](#triggercallout=code_triggered) )
 
-        _Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal?_
+        \_Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal? A môže sa otáčať rýchlejšie a rýchlejšie? \_
       CSD U3 abstraction accelerateY_2019: |-
         # Padajúci kameň
 
@@ -1895,7 +2447,7 @@ sk-SK:
 
         -   Použi kód pre počítanie s blokom `velocityY` tak, aby kameň počas pádu zrýchlil ( [Ukáž mi kde](#triggercallout=code_triggered) )
 
-        _Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal?_
+        \_Výzva: Dokážeš kameň prinútiť, aby sa počas pádu otáčal? A môže sa otáčať rýchlejšie a rýchlejšie? \_
       CSD U3 abstraction add coin: |-
         # Pridanie mince
 
@@ -1968,7 +2520,7 @@ sk-SK:
         cvičení si spomalil/a auto pomocou bloku `sprite.velocityX` a kódu pre počítanie.
         Vyzeralo to skoro ako keby bolo auto ťahané doľava. Ak použiješ rovnaký kód
         s blokom `sprite.velocityY`, bude to vyzerať, ako keby bol tvoj „sprite“ ťahaný
-        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň je letí do vzduchu,
+        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň vyletí do vzduchu,
         ale nikdy nepadne na zem.\n\n-   Použi blok `sprite.velocityY` s kódom pre
         počítanie tak, aby kameň spomalil a potom padal opačným smerom;\n-   Experimentuj
         s rôznymi hodnotami v tvojom kóde pre počítanie. Chceš, aby kameň spomaľoval
@@ -1979,7 +2531,7 @@ sk-SK:
         cvičení si spomalil/a auto pomocou bloku `sprite.velocityX` a kódu pre počítanie.
         Vyzeralo to skoro ako keby bolo auto ťahané doľava. Ak použiješ rovnaký kód
         s blokom `sprite.velocityY`, bude to vyzerať, ako keby bol tvoj „sprite“ ťahaný
-        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň je letí do vzduchu,
+        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň vyletí do vzduchu,
         ale nikdy nepadne na zem.\n\n-   Použi blok `sprite.velocityY` s kódom pre
         počítanie tak, aby kameň spomalil a potom padal opačným smerom;\n-   Experimentuj
         s rôznymi hodnotami v tvojom kóde pre počítanie. Chceš, aby kameň spomaľoval
@@ -1990,7 +2542,7 @@ sk-SK:
         cvičení si spomalil/a auto pomocou bloku `sprite.velocityX` a kódu pre počítanie.
         Vyzeralo to skoro ako keby bolo auto ťahané doľava. Ak použiješ rovnaký kód
         s blokom `sprite.velocityY`, bude to vyzerať, ako keby bol tvoj „sprite“ ťahaný
-        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň je letí do vzduchu,
+        nadol. A presne to robí gravitácia!\n\n# Urob toto\n\nKameň vyletí do vzduchu,
         ale nikdy nepadne na zem.\n\n-   Použi blok `sprite.velocityY` s kódom pre
         počítanie tak, aby kameň spomalil a potom padal opačným smerom;\n-   Experimentuj
         s rôznymi hodnotami v tvojom kóde pre počítanie. Chceš, aby kameň spomaľoval
@@ -2066,43 +2618,43 @@ sk-SK:
         V tomto leveli sa bude tvoj „sprite“ vznášať doprava po stlačení šípky vpravo.
 
         -   Do cyklu kreslenia pridaj výraz `if` a to pod výraz, ktorý si vytvoril/a pre šípku „nahor“.
-        -   Použi blok `keyDown`, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
+        -   Použi blok `keyDown` tak, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
         -   Vo vnútri bloku `if` použi kód pre počítanie v bloku `sprite.velocityX`, v ktorom sa pridá hodnota 0.1 k rýchlosti „sprite” objektu objektu na osi X.
 
         Spusti svoj kód, aby si videl/a, ako funguje. „Sprite“ by sa mal po stlačení klávesy šípky vpravo pohybovať doprava a vyskočiť po stlačení klávesy šípky hore. Smer vľavo doplníme v ďaľšom cvičení.
       CSD U3 abstraction left right counter 2: |-
-        # Vznášanie sa vľavo
+        # Vznášanie sa doľava
 
         V predchádzajúcom cvičení si sa naučil/a, ako „sprite“ posúvať doprava. Teraz sa naučíš, ako ho posúvať doľava. Mal/a by si už vedieť súčasne pracovať s rýchlosťou i kódom pre počítanie. Ak máš stále problém, opýtaj sa spolusediaceho/sediacej, alebo si pozri predošlé lekcie.
 
         # Urob toto
 
-        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípka vľavo začne daným smerom posúvať náš „sprite“;
+        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípky vľavo začne daným smerom posúvať náš „sprite“;
         -   Ubezpeč sa, že používaš súčasne rýchlosť i kód pre počítanie.
 
-        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovlypnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
+        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovplyvnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
       CSD U3 abstraction left right counter 2_2018: |-
-        # Vznášanie sa vľavo
+        # Vznášanie sa doľava
 
         V predchádzajúcom cvičení si sa naučil/a, ako „sprite“ posúvať doprava. Teraz sa naučíš, ako ho posúvať doľava. Mal/a by si už vedieť súčasne pracovať s rýchlosťou i kódom pre počítanie. Ak máš stále problém, opýtaj sa spolusediaceho/sediacej, alebo si pozri predošlé lekcie.
 
         # Urob toto
 
-        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípka vľavo začne daným smerom posúvať náš „sprite“;
+        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípky vľavo začne daným smerom posúvať náš „sprite“;
         -   Ubezpeč sa, že používaš súčasne rýchlosť i kód pre počítanie.
 
-        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovlypnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
+        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovplyvnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
       CSD U3 abstraction left right counter 2_2019: |-
-        # Vznášanie sa vľavo
+        # Vznášanie sa doľava
 
         V predchádzajúcom cvičení si sa naučil/a, ako „sprite“ posúvať doprava. Teraz sa naučíš, ako ho posúvať doľava. Mal/a by si už vedieť súčasne pracovať s rýchlosťou i kódom pre počítanie. Ak máš stále problém, opýtaj sa spolusediaceho/sediacej, alebo si pozri predošlé lekcie.
 
         # Urob toto
 
-        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípka vľavo začne daným smerom posúvať náš „sprite“;
+        -   Do cyklu kreslenia pridaj kód, ktorý po stlačení klávesy šípky vľavo začne daným smerom posúvať náš „sprite“;
         -   Ubezpeč sa, že používaš súčasne rýchlosť i kód pre počítanie.
 
-        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovlypnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
+        Keď dopíšeš kód, prejdi si ho spolu so spolusediacim/sediacou. Dá sa tvoj „sprite“ ľahko ovládať? Bude zážitok z hry ovplyvnený zmenou hodnoty, ktorú pridávaš alebo uberáš v kóde pre počítanie? Aká hra využívajúca tento kód by bola zábavná?
       CSD U3 abstraction left right counter_2018: |-
         # Vznášanie sa doprava
 
@@ -2113,7 +2665,7 @@ sk-SK:
         V tomto leveli sa bude tvoj „sprite“ vznášať doprava po stlačení šípky vpravo.
 
         -   Do cyklu kreslenia pridaj výraz `if` a to pod výraz, ktorý si vytvoril/a pre šípku „nahor“.
-        -   Použi blok `keyDown`, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
+        -   Použi blok `keyDown` tak, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
         -   Vo vnútri bloku `if` použi kód pre počítanie v bloku `sprite.velocityX`, v ktorom sa pridá hodnota 0.1 k rýchlosti „sprite” objektu objektu na osi X.
 
         Spusti svoj kód, aby si videl/a, ako funguje. „Sprite“ by sa mal po stlačení klávesy šípky vpravo pohybovať doprava a vyskočiť po stlačení klávesy šípky hore. Smer vľavo doplníme v ďaľšom cvičení.
@@ -2127,7 +2679,7 @@ sk-SK:
         V tomto leveli sa bude tvoj „sprite“ vznášať doprava po stlačení šípky vpravo.
 
         -   Do cyklu kreslenia pridaj výraz `if` a to pod výraz, ktorý si vytvoril/a pre šípku „nahor“.
-        -   Použi blok `keyDown`, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
+        -   Použi blok `keyDown` tak, aby výraz `if` reagoval na stlačenie klávesy so šípkou vpravo.
         -   Vo vnútri bloku `if` použi kód pre počítanie v bloku `sprite.velocityX`, v ktorom sa pridá hodnota 0.1 k rýchlosti „sprite” objektu objektu na osi X.
 
         Spusti svoj kód, aby si videl/a, ako funguje. „Sprite“ by sa mal po stlačení klávesy šípky vpravo pohybovať doprava a vyskočiť po stlačení klávesy šípky hore. Smer vľavo doplníme v ďaľšom cvičení.
@@ -3149,6 +3701,35 @@ sk-SK:
         -   Pridaj aspoň dva efekty, keď sa tvoje „sprite“ objekty stretnú.
 
         _Výzva: Do hornej časti obrazovky pridaj zobrazenie skóre._
+      CSD U3 collisions try blocks: "# Nové kolízne bloky\n\nMedzi nástroje boli pridané
+        tri nové typy interakcií: `sprite.collide()`, `sprite.bounce()`, a `sprite.bounceOff()`.
+        Čo si myslíš, ako ovplyvnia  „sprite” objekty?\n\n# Urob toto\n\n-   Vymeň
+        blok `sprite.displace()` za bloky `sprite.collide()`, `sprite.bounce()` a
+        `sprite.bounceOff()`. ([Ukáž mi kde](#triggercallout=code_triggered) )\n    -
+        \  _Pomôcka: Ak sa ti to nedarí spraviť pomocou blokov, prepni sa do textového
+        režimu._\n-   Diskutuj so susedom: Aký je rozdiel medzi týmito štyrmi typmi
+        interakcie? Čo si myslíš, že je účelom každého z blokov? \n\n[//]: # \"https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png\"\n\n[//]:
+        # \"https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png\""
+      CSD U3 collisions try blocks_2018: "# Nové kolízne bloky\n\nMedzi nástroje boli
+        pridané tri nové typy interakcií: `sprite.collide()`, `sprite.bounce()`, a
+        `sprite.bounceOff()`. Čo si myslíš, ako ovplyvnia  „sprite” objekty?\n\n#
+        Urob toto\n\n-   Vymeň blok `sprite.displace()` za bloky `sprite.collide()`,
+        `sprite.bounce()` a `sprite.bounceOff()`. ([Ukáž mi kde](#triggercallout=code_triggered)
+        )\n    -   _Pomôcka: Ak sa ti to nedarí spraviť pomocou blokov, prepni sa
+        do textového režimu._\n-   Diskutuj so susedom: Aký je rozdiel medzi týmito
+        štyrmi typmi interakcie? Čo si myslíš, že je účelom každého z blokov? \n\n[//]:
+        # \"https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png\"\n\n[//]:
+        # \"https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png\""
+      CSD U3 collisions try blocks_2019: "# Nové kolízne bloky\n\nMedzi nástroje boli
+        pridané tri nové typy interakcií: `sprite.collide()`, `sprite.bounce()`, a
+        `sprite.bounceOff()`. Čo si myslíš, ako ovplyvnia  „sprite” objekty?\n\n#
+        Urob toto\n\n-   Vymeň blok `sprite.displace()` za bloky `sprite.collide()`,
+        `sprite.bounce()` a `sprite.bounceOff()`. ([Ukáž mi kde](#triggercallout=code_triggered)
+        )\n    -   _Pomôcka: Ak sa ti to nedarí spraviť pomocou blokov, prepni sa
+        do textového režimu._\n-   Diskutuj so susedom: Aký je rozdiel medzi týmito
+        štyrmi typmi interakcie? Čo si myslíš, že je účelom každého z blokov? \n\n[//]:
+        # \"https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png\"\n\n[//]:
+        # \"https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png\""
       CSD U3 collisions turtle: |-
         # Oprava chýb v interakcii „sprite“ objektov
 
@@ -3185,6 +3766,116 @@ sk-SK:
         -   Spusti kód a skús prejsť s korytnačkou k stromu
         -   Pozri sa na kód a prediskutuj so spolusediacim, kde môže byť problém
         -   Oprav kód a spusti ho znova, aby si overil/a, že funguje správne
+      CSD U3 collisions types: |-
+        # Typy kolízií
+
+        V Game Labe používame štyri typy kolízií. Tieto bloky spôsobia interakciu medzi _„sprite“ objektom_ a _cieľom_.
+
+        ## displace
+
+        Blok `displace` spôsobí, že „sprite“ bude tlačiť cieľový objekt po celý čas, ako sa dotýkajú, pričom samotný „sprite“ pokračuje vo svojom pôvodnom pohybe.
+
+        ## collide
+
+        Blok `collide` spôsobí, že „sprite“ zastane v momente, keď sa dotkne cieľa. Ak sa cieľ pohybuje, posunie „sprite“ so sebou. Cieľ pokračuje vo svojom pôvodnom pohybe.
+
+        ## bounce
+
+        Blok `bounce` spôsobí, že „sprite“ a cieľ od seba po dotyku odskočia. Oba  „sprite” objekty zmenia svoj pohyb.
+
+        ## bounceOff
+
+        Blok `bounceOff` spôsobí, že „sprite“ objekt odskočí od cieľa. Cieľ pokračuje vo svojom pôvodnom pohybe.
+
+        # Urob toto
+
+        Vyber najlepší blok na simuláciu odrazu basketbalovej lopty od zeme. ( [Ukáž mi kde](#triggercallout=code_triggered) )
+
+        [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 collisions types_2018: |-
+        # Typy kolízií
+
+        V Game Labe používame štyri typy kolízií. Tieto bloky spôsobia interakciu medzi _„sprite“ objektom_ a _cieľom_.
+
+        ## displace
+
+        Blok `displace` spôsobí, že „sprite“ bude tlačiť cieľový objekt po celý čas, ako sa dotýkajú, pričom samotný „sprite“ pokračuje vo svojom pôvodnom pohybe.
+
+        ## collide
+
+        Blok `collide` spôsobí, že „sprite“ zastane v momente, keď sa dotkne cieľa. Ak sa cieľ pohybuje, posunie „sprite“ so sebou. Cieľ pokračuje vo svojom pôvodnom pohybe.
+
+        ## bounce
+
+        Blok `bounce` spôsobí, že „sprite“ a cieľ od seba po dotyku odskočia. Oba  „sprite” objekty zmenia svoj pohyb.
+
+        ## bounceOff
+
+        Blok `bounceOff` spôsobí, že „sprite“ objekt odskočí od cieľa. Cieľ pokračuje vo svojom pôvodnom pohybe.
+
+        # Urob toto
+
+        Vyber najlepší blok na simuláciu odrazu basketbalovej lopty od zeme. ( [Ukáž mi kde](#triggercallout=code_triggered) )
+
+        [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 collisions types_2019: |-
+        # Typy kolízií
+
+        V Game Labe používame štyri typy kolízií. Každý z týhto blokov spôsobí inú interakciu medzi _„sprite“ objektom_ a _cieľom_.
+
+        # Urob toto
+
+        Vyber najlepší blok na simuláciu odrazu basketbalovej lopty od zeme. ( [Ukáž mi kde](#triggercallout=code_triggered) )
+        \*Pomôcka: Vyskúšaj rôzne bloky, alebo si o nich prečítaj viac na záložke "Pomoc a tipy".
+        [//]\: # (<https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png>)
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 finishing touches: |-
+        # Finálne úpravy
+
+        Teraz, keď máš pripravený základ hry je vhodný čas pridať zopár vylepšení.
+
+        Aby bola tvoja hra ešte lepšia, skús ku nej pridať aspoň dve vylepšenia. Môžeš sa inšpirovať týmto zoznamom, alebo implementuj svoj vlastný nápad.
+
+        -   Zabezpeč, aby sa hráč nedostal mimo obrazovky.
+        -   Pridaj nový predmet, ktorý môže tvoj hráč zbierať a bude mať inú bodovú hodnotu. Alebo pridaj predmet, ktorému sa má vyhnuť.
+        -   Pridaj premennú, ktorá bude sledovať počet životov tvojho hráča a ukonči hru, keď hráč o všetky životy príde.
+        -   Pridaj "sprite" objekty, ktoré sa budú pohybovať na pozadí hry.
+        -   Pridaj ďalšie pozadie, ktoré sa zmení pri ešte vyššom skóre, alebo v momente, keď hra skončí.
+        -   Pridaj hre spôsob, akým sa ukončí. Môžeš ju ukončiť napríklad pri dosiahnutí určitého skóre, alebo keď hráč príde o všetky životy.
+        -   Ak má tvoja hra plošiny, nechaj, aby objekty hry s týmito plošinami na seba nejako pôsobili.
+      CSD U3 finishing touches_2018: |-
+        # Finálne úpravy
+
+        Teraz, keď máš pripravený základ hry je vhodný čas pridať zopár vylepšení.
+
+        Aby bola tvoja hra ešte lepšia, skús ku nej pridať aspoň dve vylepšenia. Môžeš sa inšpirovať týmto zoznamom, alebo implementuj svoj vlastný nápad.
+
+        -   Zabezpeč, aby sa hráč nedostal mimo obrazovky.
+        -   Pridaj nový predmet, ktorý môže tvoj hráč zbierať a bude mať inú bodovú hodnotu. Alebo pridaj predmet, ktorému sa má vyhnuť.
+        -   Pridaj premennú, ktorá bude sledovať počet životov tvojho hráča a ukonči hru, keď hráč o všetky životy príde.
+        -   Pridaj "sprite" objekty, ktoré sa budú pohybovať na pozadí hry.
+        -   Pridaj ďalšie pozadie, ktoré sa zmení pri ešte vyššom skóre, alebo v momente, keď hra skončí.
+        -   Pridaj hre spôsob, akým sa ukončí. Môžeš ju ukončiť napríklad pri dosiahnutí určitého skóre, alebo keď hráč príde o všetky životy.
+        -   Ak má tvoja hra plošiny, nechaj, aby objekty hry s týmito plošinami na seba nejako pôsobili.
+      CSD U3 finishing touches_2019: |-
+        # Finálne úpravy
+
+        Teraz, keď máš pripravený základ hry je vhodný čas pridať zopár vylepšení.
+
+        Aby bola tvoja hra ešte lepšia, skús ku nej pridať aspoň dve vylepšenia. Môžeš sa inšpirovať týmto zoznamom, alebo implementuj svoj vlastný nápad.
+
+        -   Zabezpeč, aby sa hráč nedostal mimo obrazovky.
+        -   Pridaj nový predmet, ktorý môže tvoj hráč zbierať a bude mať inú bodovú hodnotu. Alebo pridaj predmet, ktorému sa má vyhnuť.
+        -   Pridaj premennú, ktorá bude sledovať počet životov tvojho hráča a ukonči hru, keď hráč o všetky životy príde.
+        -   Pridaj "sprite" objekty, ktoré sa budú pohybovať na pozadí hry.
+        -   Pridaj ďalšie pozadie, ktoré sa zmení pri ešte vyššom skóre, alebo v momente, keď hra skončí.
+        -   Pridaj hre spôsob, akým sa ukončí. Môžeš ju ukončiť napríklad pri dosiahnutí určitého skóre, alebo keď hráč príde o všetky životy.
+        -   Ak má tvoja hra plošiny, nechaj, aby objekty hry s týmito plošinami na seba nejako pôsobili.
       CSD U3 function video: |-
         ## Otázky na zamyslenie
 
@@ -3192,32 +3883,221 @@ sk-SK:
             -   Aký kód by si vložil/a do **definície** funkcie?
             -   Kedy by si ju **zavolal/a**?
             -   Ako by si ju nazvala?
+      CSD U3 game animations: |-
+        # Vytvorenie animácií
+
+        Teraz na karte animácií vytvor svoje animácie. Nezabudni vytvoriť viacero animácií pokiaľ chceš, aby tvoje postavy menili svoj vzhľad na základe smeru pohybu.
+      CSD U3 game animations_2018: |-
+        # Vytvorenie animácií
+
+        Teraz na karte animácií vytvor svoje animácie. Nezabudni vytvoriť viacero animácií pokiaľ chceš, aby tvoje postavy menili svoj vzhľad na základe smeru pohybu.
+      CSD U3 game animations_2019: |-
+        # Vytvorenie animácií
+
+        Teraz na karte animácií vytvor svoje animácie. Nezabudni vytvoriť viacero animácií pokiaľ chceš, aby tvoje postavy menili svoj vzhľad na základe smeru pohybu.
+      CSD U3 game backgrounds: |-
+        # Vytvorenie pozadia
+
+        Ako ďalší krok si vytvoríme funkcie na vytvorenie pozadia. Niektoré hry majú len jedno pozadie, iné majú viac pozadí, ktoré sa vyberú na základe dosiahnutého skóre, alebo iného aspektu hry. Pre každé pozadie potrebuješ vytvoriť funkciu. Kód na výber správneho pozadia napíšeš v ďalšej úlohe.
+
+        -   [Ukáž mi blok na vytvorenie novej funkcie](#triggercallout=callout1)
+        -   [Ukáž mi, do ktorej časti kódu mám umiestniť moju funkciu](#triggercallout=callout2)
+
+        Po vytvorení funkcií ich otestuj tak, že ich vložíš do cyklu kreslenia. Test vykonaj pre každé pozadie zvlášť.
+
+        -   [Ukáž mi blok, ktorým zavolám moju funkciu](#triggercallout=callout3)
+      CSD U3 game backgrounds_2018: |-
+        # Vytvorenie pozadia
+
+        Ako ďalší krok si vytvoríme funkcie na vytvorenie pozadia. Niektoré hry majú len jedno pozadie, iné majú viac pozadí, ktoré sa vyberú na základe dosiahnutého skóre, alebo iného aspektu hry. Pre každé pozadie potrebuješ vytvoriť funkciu. Kód na výber správneho pozadia napíšeš v ďalšej úlohe.
+
+        -   [Ukáž mi blok na vytvorenie novej funkcie](#triggercallout=callout1)
+        -   [Ukáž mi, do ktorej časti kódu mám umiestniť moju funkciu](#triggercallout=callout2)
+
+        Po vytvorení funkcií ich otestuj tak, že ich vložíš do cyklu kreslenia. Test vykonaj pre každé pozadie zvlášť.
+
+        -   [Ukáž mi blok, ktorým zavolám moju funkciu](#triggercallout=callout3)
+      CSD U3 game backgrounds_2019: |-
+        # Vytvorenie pozadia
+
+        Ako ďalší krok si vytvoríme funkcie na vytvorenie pozadia. Niektoré hry majú len jedno pozadie, iné majú viac pozadí, ktoré sa vyberú na základe dosiahnutého skóre, alebo iného aspektu hry. Pre každé pozadie potrebuješ vytvoriť funkciu. Kód na výber správneho pozadia napíšeš v ďalšej úlohe.
+
+        -   [Ukáž mi blok na vytvorenie novej funkcie](#triggercallout=callout1)
+        -   [Ukáž mi, do ktorej časti kódu mám umiestniť moju funkciu](#triggercallout=callout2)
+
+        Po vytvorení funkcií ich otestuj tak, že ich vložíš do cyklu kreslenia. Test vykonaj pre každé pozadie zvlášť.
+
+        -   [Ukáž mi blok, ktorým zavolám moju funkciu](#triggercallout=callout3)
+      CSD U3 game choose background: |-
+        # Výber pozadia
+
+        Pozadie už máme nakreslené, teraz je načase napísať kód, ktorý rozhodne, ktoré pozadie náš program zobrazí. Ako  na to sme sa naučili v [Lekcii 19, úloha 11](/s/csd3-2017/stage/19/puzzle/11).
+
+        Kód po jeho napísaní nezabudni otestovať tak, že zmeníš počiatočnú hodnotu relevantných premenných a presvedčíš sa, že sa zobrazí správne pozadie.
+      CSD U3 game choose background_2018: |-
+        # Výber pozadia
+
+        Pozadie už máme nakreslené, teraz je načase napísať kód, ktorý rozhodne, ktoré pozadie náš program zobrazí. Ako  na to sme sa naučili v [Lekcii 19, úloha 11](../../19/puzzle/11).
+
+        Kód po jeho napísaní nezabudni otestovať tak, že zmeníš počiatočnú hodnotu relevantných premenných a presvedčíš sa, že sa zobrazí správne pozadie.
+      CSD U3 game choose background_2019: |-
+        # Výber pozadia
+
+        Pozadie už máme nakreslené, teraz je načase napísať kód, ktorý rozhodne, ktoré pozadie náš program zobrazí. Ako  na to sme sa naučili v [Lekcii 19, úloha 11](../../19/puzzle/11).
+
+        Kód po jeho napísaní nezabudni otestovať tak, že zmeníš počiatočnú hodnotu relevantných premenných a presvedčíš sa, že sa zobrazí správne pozadie.
       CSD U3 game create sprites_2018: |-
-        # Vytvor "sprite" objekty
+        # Vytvorenie "sprite" objektov
 
-        Vytvor "sprite" objekty a daj im počiatočné vlastnosti v časti kódu „Create Sprites”. Pre každý z nich by si mal/a:
+        Vytvor "sprite" objekty a v časti kódu „Create your sprites here” urči ich počiatočné vlastnosti . Pre každý z nich:
 
-        -   Vytvoriť ho na správnom mieste na obrazovke;
-        -   Nastaviť jeho animáciu (alebo farbu a veľkosť);
-        -   Ak je to potrebné, nastaviť jeho rýchlosť pohybu (velocity) a rýchlosť otáčania (rotation speed);
-        -   Ak je to potrebné, nastaviť jeho nárazník (collider) a „odrazivosť“ (bounciness).
+        -   Vytvor ho na správnom mieste na obrazovke;
+        -   Nastav mu animáciu (alebo farbu a veľkosť);
+        -   Ak je to potrebné, nastav rýchlosť jeho pohybu (velocity) a rýchlosť otáčania (rotation speed);
+        -   Ak je to potrebné, nastav mu obrys (collider) a odrazivosť (bounciness).
 
-        Každý "sprite" otestuj predtým, ako vytvoríš ďaľší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku, aby si otestoval/a, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
+        Každý "sprite" otestuj predtým, ako vytvoríš ďalší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku a otestuj, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
 
-        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jeho umiestnenie. Následne ju môžeš neskôr použiť.
+        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá zadefinuje jeho umiestnenie. V ďalšom kóde ju môžeš použiť.
       CSD U3 game create sprites_2019: |-
-        # Vytvor "sprite" objekty
+        # Vytvorenie "sprite" objektov
 
-        Vytvor "sprite" objekty a daj im počiatočné vlastnosti v časti kódu „Create Sprites”. Pre každý z nich by si mal/a:
+        Vytvor "sprite" objekty a v časti kódu „Create your sprites here” urči ich počiatočné vlastnosti . Pre každý z nich:
 
-        -   Vytvoriť ho na správnom mieste na obrazovke;
-        -   Nastaviť jeho animáciu (alebo farbu a veľkosť);
-        -   Ak je to potrebné, nastaviť jeho rýchlosť pohybu (velocity) a rýchlosť otáčania (rotation speed);
-        -   Ak je to potrebné, nastaviť jeho nárazník (collider) a „odrazivosť“ (bounciness).
+        -   Vytvor ho na správnom mieste na obrazovke;
+        -   Nastav mu animáciu (alebo farbu a veľkosť);
+        -   Ak je to potrebné, nastav rýchlosť jeho pohybu (velocity) a rýchlosť otáčania (rotation speed);
+        -   Ak je to potrebné, nastav mu obrys (collider) a odrazivosť (bounciness).
 
-        Každý "sprite" otestuj predtým, ako vytvoríš ďaľší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku, aby si otestoval/a, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
+        Každý "sprite" otestuj predtým, ako vytvoríš ďalší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku a otestuj, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
 
-        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jeho umiestnenie. Následne ju môžeš neskôr použiť.
+        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá zadefinuje jeho umiestnenie. V ďalšom kóde ju môžeš použiť.
+      CSD U3 game display boards: "# Zobrazenie počítadiel\n\nTeraz, keď už máš funkčné
+        pozadie, môžeš pridať zobrazenie akýchkoľvek počítadla niektorého z údajov.
+        Vo väčšine hier nájdeš zobrazenie aktuálneho skóre. Ak chceš, môžeš ku nemu
+        pridať aj informácie o počte životov, alebo iné počítadlo. Ak potrebuješ,
+        príklad počítadla nájdeš v [Lekcii 16, úloha 9](/s/csd3-2017/stage/16/puzzle/9).\n\nPre
+        každé zobrazené počítadlo:\n\n-   Vytvor funkciu, ktorá zobrazí informácie\n-
+        \  Použi túto funkciu v cykle kreslenia\n\nNakoniec nezabudni svoje počítadlá
+        otestovať tak, že zmeníš počiatočnú hodnotu svojich premenných  a overíš,
+        že sa hodnota na počítadle po spustení kódu zmení. "
+      CSD U3 game display boards_2018: "# Zobrazenie počítadiel\n\nTeraz, keď už máš
+        funkčné pozadie, môžeš pridať zobrazenie akýchkoľvek počítadla niektorého
+        z údajov. Vo väčšine hier nájdeš zobrazenie aktuálneho skóre. Ak chceš, môžeš
+        ku nemu pridať aj informácie o počte životov, alebo iné počítadlo. Ak potrebuješ,
+        príklad počítadla nájdeš v [Lekcii 16, úloha 9](../../16/puzzle/9).\n\nPre
+        každé zobrazené počítadlo:\n\n-   Vytvor funkciu, ktorá zobrazí informácie\n-
+        \  Použi túto funkciu v cykle kreslenia\n\nNakoniec nezabudni svoje počítadlá
+        otestovať tak, že zmeníš počiatočnú hodnotu svojich premenných  a overíš,
+        že sa hodnota na počítadle po spustení kódu zmení. "
+      CSD U3 game display boards_2019: "# Zobrazenie počítadiel\n\nTeraz, keď už máš
+        funkčné pozadie, môžeš pridať zobrazenie akýchkoľvek počítadla niektorého
+        z údajov. Vo väčšine hier nájdeš zobrazenie aktuálneho skóre. Ak chceš, môžeš
+        ku nemu pridať aj informácie o počte životov, alebo iné počítadlo. Ak potrebuješ,
+        príklad počítadla nájdeš v [Lekcii 16, úloha 9](../../16/puzzle/9).\n\nPre
+        každé zobrazené počítadlo:\n\n-   Vytvor funkciu, ktorá zobrazí informácie\n-
+        \  Použi túto funkciu v cykle kreslenia\n\nNakoniec nezabudni svoje počítadlá
+        otestovať tak, že zmeníš počiatočnú hodnotu svojich premenných  a overíš,
+        že sa hodnota na počítadle po spustení kódu zmení. "
+      CSD U3 game interactions: |-
+        # Interakcie "sprite" objektov
+
+        Posledným krokom je definovať funkcie, ktoré určia interakcie medzi jednotlivými "sprite" objektami. Potrebuješ funkciu pre každý typ interakcie. Príkladmi takýchto funkcií sú `collectItems` z [Lekcie 21, úloha 17](/s/csd3-2017/stage/21/puzzle/17) a `displaceEnemies` z [Lekcie 20, úloha 15](/s/csd3-2017/stage/20/puzzle/15).
+
+        Pre každú interakciu:
+
+        -   Vytvor funkciu v časti "Create your functions here"  na konci kódu
+        -   Zavolaj funkciu v rámci cyklu kreslenia
+
+        Keď pripravíš funkciu, otestuj ju a až potom sa pusti do ďalšej funkcie.
+      CSD U3 game interactions_2018: |-
+        # Interakcie "sprite" objektov
+
+        Posledným krokom je definovať funkcie, ktoré určia interakcie medzi jednotlivými "sprite" objektami. Potrebuješ funkciu pre každý typ interakcie. Príkladmi takýchto funkcií sú `collectItems` z [Lekcie 21, úloha 17](/s/csd3-2018/stage/21/puzzle/17) a `displaceEnemies` z [Lekcie 20, úloha 15](/s/csd3-2018/stage/20/puzzle/15).
+
+        Pre každú interakciu:
+
+        -   Vytvor funkciu v časti "Create your functions here"  na konci kódu
+        -   Zavolaj funkciu v rámci cyklu kreslenia
+
+        Keď pripravíš funkciu, otestuj ju a až potom sa pusti do ďalšej funkcie.
+      CSD U3 game interactions_2019: |-
+        # Interakcie "sprite" objektov
+
+        Posledným krokom je definovať funkcie, ktoré určia interakcie medzi jednotlivými "sprite" objektami. Potrebuješ funkciu pre každý typ interakcie. Príkladmi takýchto funkcií sú `collectItems` z [Lekcie 21, úloha 17](../../21/puzzle/17) a `displaceEnemies` z [Lekcie 20, úloha 15](../../20/puzzle/15).
+
+        Pre každú interakciu:
+
+        -   Vytvor funkciu v časti "Create your functions here"  na konci kódu
+        -   Zavolaj funkciu v rámci cyklu kreslenia
+
+        Keď pripravíš funkciu, otestuj ju a až potom sa pusti do ďalšej funkcie.
+      CSD U3 game sprite movement: |-
+        # Funkcie na pohyb "sprite" objektov
+
+        Teraz vytvoríme funkcie, pomocou ktorých sa naše "sprite" objekty budú pohybovať počas celej hry. Príkladmi funkcií z predchádzajúcich lekcií sú napríklad `loopPlatforms` v [Lekcii 21, úloha 9](/s/csd3-2017/stage/21/puzzle/9) a `playerFall` v [Lekcii 21, úloha 14](/s/csd3-2017/stage/21/puzzle/14).
+
+        Pre každý pohyb:
+
+        -   Vytvor funkciu, ktorá bude tvojim "sprite" objektom pohybovať želaným spôsosom
+        -   Zavolaj túto funkciu v cykle kreslenia
+      CSD U3 game sprite movement_2018: |-
+        # Funkcie na pohyb "sprite" objektov
+
+        Teraz vytvoríme funkcie, pomocou ktorých sa naše "sprite" objekty budú pohybovať počas celej hry. Príkladmi funkcií z predchádzajúcich lekcií sú napríklad `loopPlatforms` v [Lekcii 21, úloha 9](../../../stage/21/puzzle/9) a `playerFall` v [Lekcii 21, úloha 14](../../../stage/21/puzzle/14).
+
+        Pre každý pohyb:
+
+        -   Vytvor funkciu, ktorá bude tvojim "sprite" objektom pohybovať želaným spôsosom
+        -   Zavolaj túto funkciu v cykle kreslenia
+      CSD U3 game sprite movement_2019: |-
+        # Funkcie na pohyb "sprite" objektov
+
+        Teraz vytvoríme funkcie, pomocou ktorých sa naše "sprite" objekty budú pohybovať počas celej hry. Príkladmi funkcií z predchádzajúcich lekcií sú napríklad `loopPlatforms` v [Lekcii 21, úloha 9](../../../stage/21/puzzle/9) a `playerFall` v [Lekcii 21, úloha 14](../../../stage/21/puzzle/14).
+
+        Pre každý pohyb:
+
+        -   Vytvor funkciu, ktorá bude tvojim "sprite" objektom pohybovať želaným spôsosom
+        -   Zavolaj túto funkciu v cykle kreslenia
+      CSD U3 game user controls: |-
+        # Ovládanie počas hry
+
+        Teraz zabezpečíme, aby sme postavy našej hry vedeli ovládať. Vytvor funkciu, pomocou ktorej tvoje "sprite" objekty budú reagovať na obládanie hráčom hry tak, ako si si to definoval v Sprievodcovi projektom. Môžeš sa inšpirovať funkciou z [Lekcie 20, úloha 13](/s/csd3-2017/stage/20/puzzle/13).
+      CSD U3 game user controls_2018: |-
+        # Ovládanie počas hry
+
+        Teraz zabezpečíme, aby sme postavy našej hry vedeli ovládať. Vytvor funkciu, pomocou ktorej tvoje "sprite" objekty budú reagovať na obládanie hráčom hry tak, ako si si to definoval v Sprievodcovi projektom. Môžeš sa inšpirovať funkciou z [Lekcie 20, úloha 13](../../20/puzzle/13).
+      CSD U3 game user controls_2019: |-
+        # Ovládanie počas hry
+
+        Teraz zabezpečíme, aby sme postavy našej hry vedeli ovládať. Vytvor funkciu, pomocou ktorej tvoje "sprite" objekty budú reagovať na obládanie hráčom hry tak, ako si si to definoval v Sprievodcovi projektom. Môžeš sa inšpirovať funkciou z [Lekcie 20, úloha 13](../../20/puzzle/13).
+      CSD U3 game variables: |-
+        # Definícia premenných
+
+        Ako prvý krok potrebuješ vytvoriť všetky premenné a umiestniť ich na začiatok kódu (časť "Create your variables here").
+
+        -   [Ukáž mi blok](#triggercallout=callout1)
+        -   [Ukáž mi umiestnenie v kóde](#triggercallout=callout2)
+
+        Nezabudni, že každá premenná potrebuje názov a počiatočnú hodnotu. Túto hodnotu môžeš neskôr vo svojom kóde zmeniť.
+      CSD U3 game variables_2018: |-
+        # Definícia premenných
+
+        Ako prvý krok potrebuješ vytvoriť všetky premenné a umiestniť ich na začiatok kódu (časť "Create your variables here").
+
+        -   [Ukáž mi blok](#triggercallout=callout1)
+        -   [Ukáž mi umiestnenie v kóde](#triggercallout=callout2)
+
+        Nezabudni, že každá premenná potrebuje názov a počiatočnú hodnotu. Túto hodnotu môžeš neskôr vo svojom kóde zmeniť.
+      CSD U3 game variables_2019: |-
+        # Definícia premenných
+
+        Ako prvý krok potrebuješ vytvoriť všetky premenné a umiestniť ich na začiatok kódu (časť "Create your variables here").
+
+        -   [Ukáž mi blok](#triggercallout=callout1)
+        -   [Ukáž mi umiestnenie v kóde](#triggercallout=callout2)
+
+        Nezabudni, že každá premenná potrebuje názov a počiatočnú hodnotu. Túto hodnotu môžeš neskôr vo svojom kóde zmeniť.
       CSD U3 keydown conditional_2018: "# Zmena \"sprite\" objektov\n\nV poslednom
         leveli sme videli, že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená,
         a `false`, ak stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
@@ -3240,6 +4120,426 @@ sk-SK:
         `if`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva: Pri použití `setAnimation`
         bude nová animácia používaná, až kým ju opäť nezmeníš. Vieš upraviť kód tak,
         aby sa vždy, keď nie je stlačená žiadna klávesa, zobrazila žirafa?_"
+      CSD U3 platform background1: "# Pozadie\n\nAko prvú vec v tejto hre vytvoríme
+        pozadie. Vzorová hra mala dve rôzne pozadia, ktoré sa zobrazovali podľa skóre
+        hráča. \nPrvé pozadie už bolo pre teba vytvorené. Pozri sa na funkciu `background1`
+        v kóde nižšie a zisti, ako funguje. ([Show me where](#triggercallout=code_triggered1))\n\nAby
+        funkcia pozadia niečo robila, musíš ju zavolať vo vnútri cyklu kreslenia.
+        ([Show me where](#triggercallout=code_triggered2))\n\nV kóde nájdeš aj prázdnu
+        funkciu s názvom `background2`. ([Show me where](#triggercallout=code_triggered3))
+        \ Do tejto funkcie musíš dopísať nový kód, ktorým vytvoríš iné pozadie a potom
+        ho otestovať zavolaním funkcie vo vnútri cyklu kreslenia.\n\n# Urob toto\n\n-
+        \  Prečítaj si kód pre `background1`.\n-   Doplň funkciu `background2` novým
+        kódom pre vytvorenie druhého pozadia.\n-   Otestuj svoju funkciu `background2`
+        tak, že ju zavoláš vo vnútri cyklu kreslenia.\n\n_Nápoveda: Kód je  omnoho
+        jednoduchšie skopírovať a potom v ňom vykonať malé zmeny v textovom móde._"
+      CSD U3 platform background1_2018: "# Pozadie\n\nAko prvú vec v tejto hre vytvoríme
+        pozadie. Vzorová hra mala dve rôzne pozadia, ktoré sa zobrazovali podľa skóre
+        hráča. \nPrvé pozadie už bolo pre teba vytvorené. Pozri sa na funkciu `background1`
+        v kóde nižšie a zisti, ako funguje. ([Show me where](#triggercallout=code_triggered1))\n\nAby
+        funkcia pozadia niečo robila, musíš ju zavolať vo vnútri cyklu kreslenia.
+        ([Show me where](#triggercallout=code_triggered2))\n\nV kóde nájdeš aj prázdnu
+        funkciu s názvom `background2`. ([Show me where](#triggercallout=code_triggered3))
+        \ Do tejto funkcie musíš dopísať nový kód, ktorým vytvoríš iné pozadie a potom
+        ho otestovať zavolaním funkcie vo vnútri cyklu kreslenia.\n\n# Urob toto\n\n-
+        \  Prečítaj si kód pre `background1`.\n-   Doplň funkciu `background2` novým
+        kódom pre vytvorenie druhého pozadia.\n-   Otestuj svoju funkciu `background2`
+        tak, že ju zavoláš vo vnútri cyklu kreslenia.\n\n_Nápoveda: Kód je  omnoho
+        jednoduchšie skopírovať a potom v ňom vykonať malé zmeny v textovom móde._"
+      CSD U3 platform background1_2019: "# Pozadie\n\nAko prvú vec v tejto hre vytvoríme
+        pozadie. Vzorová hra mala dve rôzne pozadia, ktoré sa zobrazovali podľa skóre
+        hráča. \nPrvé pozadie už bolo pre teba vytvorené. Pozri sa na funkciu `background1`
+        v kóde nižšie a zisti, ako funguje. ([Show me where](#triggercallout=code_triggered1))\n\nAby
+        funkcia pozadia niečo robila, musíš ju zavolať vo vnútri cyklu kreslenia.
+        ([Show me where](#triggercallout=code_triggered2))\n\nV kóde nájdeš aj prázdnu
+        funkciu s názvom `background2`. ([Show me where](#triggercallout=code_triggered3))
+        \ Do tejto funkcie musíš dopísať nový kód, ktorým vytvoríš iné pozadie a potom
+        ho otestovať zavolaním funkcie vo vnútri cyklu kreslenia.\n\n# Urob toto\n\n-
+        \  Prečítaj si kód pre `background1`.\n-   Doplň funkciu `background2` novým
+        kódom pre vytvorenie druhého pozadia.\n-   Otestuj svoju funkciu `background2`
+        tak, že ju zavoláš vo vnútri cyklu kreslenia.\n\n_Nápoveda: Kód je  omnoho
+        jednoduchšie skopírovať a potom v ňom vykonať malé zmeny v textovom móde._"
+      CSD U3 platform background2: |-
+        # Výber pozadia
+
+        Teraz, keď už máš premennú na sledovanie skóre, môžeš ju použiť pre výber správne pozadia vo svojej hre. Príklad, ako meniť pozadia na základe hodnoty skóre nájdeš v [Lekcii 19, úloha 11](/s/csd3-2017/stage/19/puzzle/11)
+
+        # Urob toto
+
+        -   Vo vnútri cyklu kreslenia použi výraz `if` spolu s dvomi funkciami na nakreslenie pozadia tak, aby sa na základe skóre zobrazilo správne pozadie.
+        -   Otestuj svoj kód zmenou začiatočného skóre na 100 a potom ho spusti a over, či sa pozadie zmenilo.
+
+        _Výzva: Ak chceš mať aj tretie pozadie, môžeš kliknúť na znamienko „plus“ na spodnej člasti bloku `if`. Zobrazí sa ďalšie miesto pre tretiu funkciu pozadia, ako aj miesto na opätovnú kontrolu skóre._
+      CSD U3 platform background2_2018: |-
+        # Výber pozadia
+
+        Teraz, keď už máš premennú na sledovanie skóre, môžeš ju použiť pre výber správne pozadia vo svojej hre. Príklad, ako meniť pozadia na základe hodnoty skóre nájdeš v [Lekcii 19, úloha 11](/s/csd3-2018/stage/19/puzzle/11)
+
+        # Urob toto
+
+        -   Vo vnútri cyklu kreslenia použi výraz `if` spolu s dvomi funkciami na nakreslenie pozadia tak, aby sa na základe skóre zobrazilo správne pozadie.
+        -   Otestuj svoj kód zmenou začiatočného skóre na 100 a potom ho spusti a over, či sa pozadie zmenilo.
+
+        _Výzva: Ak chceš mať aj tretie pozadie, môžeš kliknúť na znamienko „plus“ na spodnej člasti bloku `if`. Zobrazí sa ďalšie miesto pre tretiu funkciu pozadia, ako aj miesto na opätovnú kontrolu skóre._
+      CSD U3 platform background2_2019: |-
+        # Výber pozadia
+
+        Teraz, keď už máš premennú na sledovanie skóre, môžeš ju použiť pre výber správne pozadia vo svojej hre. Príklad, ako meniť pozadia na základe hodnoty skóre nájdeš v [Lekcii 19, úloha 12](../../19/puzzle/12)
+
+        # Urob toto
+
+        -   Vo vnútri cyklu kreslenia použi výraz `if` spolu s dvomi funkciami na nakreslenie pozadia tak, aby sa na základe skóre zobrazilo správne pozadie.
+        -   Otestuj svoj kód zmenou začiatočného skóre na 100 a potom ho spusti a over, či sa pozadie zmenilo.
+
+        _Výzva: Ak chceš pridať tretie pozadie, môžeš kliknúť na znamienko „plus“ na spodnej člasti bloku `if`. Zobrazí sa ďalšie miesto pre tretiu funkciu pozadia, ako aj miesto na opätovnú kontrolu skóre._
+      CSD U3 platform challenge: "# Vylepši svoju hru\n\nVylepši svoju hru pridaním
+        dvoch alebo viac nápadov z posledných lekcií. Ako pomôcku môžeš použiť tento
+        zoznam. \n\n-   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        \n-   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava. \n-
+        \  Pridaj predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť. \n-   Pridaj
+        premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy
+        minú.\n-   Otoč hráča tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj
+        ďaľšie pozadie, ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď
+        sa predmety dotknú plošín, niečo sa stane."
+      CSD U3 platform challenge_2018: "# Vylepši svoju hru\n\nVylepši svoju hru pridaním
+        dvoch alebo viac nápadov z posledných lekcií. Ako pomôcku môžeš použiť tento
+        zoznam. \n\n-   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        \n-   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava. \n-
+        \  Pridaj predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť. \n-   Pridaj
+        premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy
+        minú.\n-   Otoč hráča tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj
+        ďaľšie pozadie, ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď
+        sa predmety dotknú plošín, niečo sa stane."
+      CSD U3 platform challenge_2019: "# Vylepši svoju hru\n\nVylepši svoju hru pridaním
+        dvoch alebo viac nápadov z posledných lekcií. Ako pomôcku môžeš použiť tento
+        zoznam. \n\n-   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        \n-   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava. \n-
+        \  Pridaj predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť. \n-   Pridaj
+        premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy
+        minú.\n-   Otoč hráča tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj
+        ďaľšie pozadie, ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď
+        sa predmety dotknú plošín, niečo sa stane."
+      CSD U3 platform items1: |-
+        # Vytvorenie predmetov
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Teraz potrebuješ pridať predmety, ktoré budú padať z hornej časti obrazovky. Tieto sa pohybujú rovnako ako plošiny, ale rýchlejšie. Aby bola hra zaujímavejšia, tieto predmety začínajú na náhodnej pozícii nad hornou hranicou obrazovky. Pre vzorovú hru stačí, aby pozícia „x“ bola náhodne medzi 50 a 350 a pozícia „y“ náhodne medzi -30 a -60
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu  v sekcii „create sprites" tvojho kódu.
+        -   Použi blok `randomNumber` vo vnútri bloku `createSprite` na spustenie objektu na náhodnej pozícii x aj y.
+        -   Použi `setAnimation` a `velocityY` na priradenie správneho obrázku k  jednotlivým „sprite“ objektom a ich spustenie z hornej časti obrazovky smerom nadol.
+        -   Spusti kód a otestuj svoje „sprite“ objekty.
+      CSD U3 platform items1_2018: |-
+        # Vytvorenie predmetov
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Teraz potrebuješ pridať predmety, ktoré budú padať z hornej časti obrazovky. Tieto sa pohybujú rovnako ako plošiny, ale rýchlejšie. Aby bola hra zaujímavejšia, tieto predmety začínajú na náhodnej pozícii nad hornou hranicou obrazovky. Pre vzorovú hru stačí, aby pozícia „x“ bola náhodne medzi 50 a 350 a pozícia „y“ náhodne medzi -30 a -60
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu  v sekcii „create sprites" tvojho kódu.
+        -   Použi blok `randomNumber` vo vnútri bloku `createSprite` na spustenie objektu na náhodnej pozícii x aj y.
+        -   Použi `setAnimation` a `velocityY` na priradenie správneho obrázku k  jednotlivým „sprite“ objektom a ich spustenie z hornej časti obrazovky smerom nadol.
+        -   Spusti kód a otestuj svoje „sprite“ objekty.
+      CSD U3 platform items1_2019: |-
+        # Vytvorenie predmetov
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Teraz potrebuješ pridať predmety, ktoré budú padať z hornej časti obrazovky. Tieto sa pohybujú rovnako ako plošiny, ale rýchlejšie. Aby bola hra zaujímavejšia, tieto predmety začínajú na náhodnej pozícii nad hornou hranicou obrazovky. Pre vzorovú hru stačí, aby pozícia „x“ bola náhodne medzi 50 a 350 a pozícia „y“ náhodne medzi -30 a -60
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu  v sekcii „create sprites" tvojho kódu.
+        -   Použi blok `randomNumber` vo vnútri bloku `createSprite` na spustenie objektu na náhodnej pozícii x aj y.
+        -   Použi `setAnimation` a `velocityY` na priradenie správneho obrázku k  jednotlivým „sprite“ objektom a ich spustenie z hornej časti obrazovky smerom nadol.
+        -   Spusti kód a otestuj svoje „sprite“ objekty.
+      CSD U3 platform items2: "# Zacyklenie predmetov\n\n<img src=\"https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif\"
+        style=\"float:right\">\n\nTeraz, keď tvoj „sprite“ premet padá, môžeš pridať
+        kód pre jeho opakovaný pád z hornej časti obrazovky. Toto je skoro to isté
+        ako sme robili pre „sprite“ objekt plošiny, ale tentokrát sa bude „sprite“
+        objekt po presunutí do hornej časti obrazovky vracať na náhodnú pozíciu x
+        i y. \n\n# Urob toto\n\n-   Vytvor funkciu `loopItems`, ktorá používa výraz
+        `if` na kontrolu toho, či sa „sprite“ objekt predmetu nachádza pod spodnou
+        časťou obrazovky. Ak sa tam nachádza, tak nech sa vráti naspäť na náhodnú
+        pozíciu x a y tak, ako sa stalo pri jeho prvom vytvorení.\n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia.\n-   Spusti kód  a otestuj svoj „sprite“."
+      CSD U3 platform items2_2018: "# Zacyklenie predmetov\n\n<img src=\"https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif\"
+        style=\"float:right\">\n\nTeraz, keď tvoj „sprite“ premet padá, môžeš pridať
+        kód pre jeho opakovaný pád z hornej časti obrazovky. Toto je skoro to isté
+        ako sme robili pre „sprite“ objekt plošiny, ale tentokrát sa bude „sprite“
+        objekt po presunutí do hornej časti obrazovky vracať na náhodnú pozíciu x
+        i y. \n\n# Urob toto\n\n-   Vytvor funkciu `loopItems`, ktorá používa výraz
+        `if` na kontrolu toho, či sa „sprite“ objekt predmetu nachádza pod spodnou
+        časťou obrazovky. Ak sa tam nachádza, tak nech sa vráti naspäť na náhodnú
+        pozíciu x a y tak, ako sa stalo pri jeho prvom vytvorení.\n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia.\n-   Spusti kód  a otestuj svoj „sprite“."
+      CSD U3 platform items2_2019: "# Zacyklenie predmetov\n\n<img src=\"https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif\"
+        style=\"float:right\">\n\nTeraz, keď tvoj „sprite“ premet padá, môžeš pridať
+        kód pre jeho opakovaný pád z hornej časti obrazovky. Toto je skoro to isté
+        ako sme robili pre „sprite“ objekt plošiny, ale tentokrát sa bude „sprite“
+        objekt po presunutí do hornej časti obrazovky vracať na náhodnú pozíciu x
+        i y. \n\n# Urob toto\n\n-   Vytvor funkciu `loopItems`, ktorá používa výraz
+        `if` na kontrolu toho, či sa „sprite“ objekt predmetu nachádza pod spodnou
+        časťou obrazovky. Ak sa tam nachádza, tak nech sa vráti naspäť na náhodnú
+        pozíciu x a y tak, ako sa stalo pri jeho prvom vytvorení.\n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia.\n-   Spusti kód  a otestuj svoj „sprite“."
+      CSD U3 platform items3: |-
+        # Vytvor si druhý predmet
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Teraz skopíruješ kód svojho prvého predmetu a vytvoríš druhý predmet. Pripomíname, že sa ti to bude robiť lepšie **v textovom móde**.
+
+        Skopírovať treba dve časti kódu: časť na začiatku, kde sme vytvorili predmet a potom časť v tvojej funkcii `loopItem`, kde sa predmet premiestni naspäť navrch obrazovky
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektov v novej časti kódu. Ak sa napríklad pôvodný „sprite“ objekt nazýva „star“, tak nový objekt môžeš nazvať „star2“.
+        -   Vo vnútri funkcie `loopItems` skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód vo vnútri funkcie.
+        -   Zmeň názov „sprite“ objektu v novej časti kódu.
+        -   Spusti kód a otestuj ho.
+      CSD U3 platform items3_2018: |-
+        # Vytvor si druhý predmet
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Teraz skopíruješ kód svojho prvého predmetu a vytvoríš druhý predmet. Pripomíname, že sa ti to bude robiť lepšie **v textovom móde**.
+
+        Skopírovať treba dve časti kódu: časť na začiatku, kde sme vytvorili predmet a potom časť v tvojej funkcii `loopItem`, kde sa predmet premiestni naspäť navrch obrazovky
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektov v novej časti kódu. Ak sa napríklad pôvodný „sprite“ objekt nazýva „star“, tak nový objekt môžeš nazvať „star2“.
+        -   Vo vnútri funkcie `loopItems` skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód vo vnútri funkcie.
+        -   Zmeň názov „sprite“ objektu v novej časti kódu.
+        -   Spusti kód a otestuj ho.
+      CSD U3 platform items3_2019: |-
+        # Vytvor si druhý predmet
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Teraz skopíruješ kód svojho prvého predmetu a vytvoríš druhý predmet. Pripomíname, že sa ti to bude robiť lepšie **v textovom móde**.
+
+        Skopírovať treba dve časti kódu: časť na začiatku, kde sme vytvorili predmet a potom časť v tvojej funkcii `loopItem`, kde sa predmet premiestni naspäť navrch obrazovky
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektov v novej časti kódu. Ak sa napríklad pôvodný „sprite“ objekt nazýva „star“, tak nový objekt môžeš nazvať „star2“.
+        -   Vo vnútri funkcie `loopItems` skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód vo vnútri funkcie.
+        -   Zmeň názov „sprite“ objektu v novej časti kódu.
+        -   Spusti kód a otestuj ho.
+      CSD U3 platform platform1: "# Vytvorenie „sprite“ objektu pre plošinu\n\n<img
+        src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nKeď už máš vytvorené pozadie aj premenné, je
+        čas na vytvorenie „sprite“ objektov. Najjednoduchšie bude začať vytvorením
+        „sprite“ objektov, ktoré sú súčasťou prostredia, ako sú napríklad plošiny.
+        Vzorová hra mala 2 „sprite“ objekty plošín. Začneme prvou plošinou, ktorú
+        otestujeme a až potom jej kód skopírujeme a upravíme na vytvorenie druhej
+        plošiny.\n\n# Urob toto\n\n-   Pozri sa na svoj pracovný list a vyber si plošinu,
+        ktorú chceš vytvoriť.\n-   V sekcii \"Create sprites\" (\"Vytvor „sprite“
+        objekty\") na začiatku kódu vytvor nové „sprite“ objekty  pomocou bloku `createSprite`
+        a priraď im správnu pozíciu aj názov. ([Show me the block](#triggercallout=callout))\n-
+        \  Použi bloky `setAnimation` a `velocityY` a priraď svojmu „sprite“ objektu
+        \ správny obrázok a rýchlosť smerom nadol.\n-   Otestuj svoj „sprite“ a over,
+        že sa hýbe správnym smerom. Možno budeš musieť upraviť jeho rýchlosť.\n\n_Nápoveda:
+        „Sprite“ objekt sa dostane mimo obrazovku a nevráti sa. Jeho zacyklenie nastavíš
+        v nasledujúcej úlohe._"
+      CSD U3 platform platform1_2018: "# Vytvorenie „sprite“ objektu pre plošinu\n\n<img
+        src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nKeď už máš vytvorené pozadie aj premenné, je
+        čas na vytvorenie „sprite“ objektov. Najjednoduchšie bude začať vytvorením
+        „sprite“ objektov, ktoré sú súčasťou prostredia, ako sú napríklad plošiny.
+        Vzorová hra mala 2 „sprite“ objekty plošín. Začneme prvou plošinou, ktorú
+        otestujeme a až potom jej kód skopírujeme a upravíme na vytvorenie druhej
+        plošiny.\n\n# Urob toto\n\n-   Pozri sa na svoj pracovný list a vyber si plošinu,
+        ktorú chceš vytvoriť.\n-   V sekcii \"Create sprites\" (\"Vytvor „sprite“
+        objekty\") na začiatku kódu vytvor nové „sprite“ objekty  pomocou bloku `createSprite`
+        a priraď im správnu pozíciu aj názov. ([Show me the block](#triggercallout=callout))\n-
+        \  Použi bloky `setAnimation` a `velocityY` a priraď svojmu „sprite“ objektu
+        \ správny obrázok a rýchlosť smerom nadol.\n-   Otestuj svoj „sprite“ a over,
+        že sa hýbe správnym smerom. Možno budeš musieť upraviť jeho rýchlosť.\n\n_Nápoveda:
+        „Sprite“ objekt sa dostane mimo obrazovku a nevráti sa. Jeho zacyklenie nastavíš
+        v nasledujúcej úlohe._"
+      CSD U3 platform platform1_2019: "# Vytvorenie „sprite“ objektu pre plošinu\n\n<img
+        src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nKeď už máš vytvorené pozadie aj premenné, je
+        čas na vytvorenie „sprite“ objektov. Najjednoduchšie bude začať vytvorením
+        „sprite“ objektov, ktoré sú súčasťou prostredia, ako sú napríklad plošiny.
+        Vzorová hra mala 2 „sprite“ objekty plošín. Začneme prvou plošinou, ktorú
+        otestujeme a až potom jej kód skopírujeme a upravíme na vytvorenie druhej
+        plošiny.\n\n# Urob toto\n\n-   Pozri sa na svoj pracovný list a vyber si plošinu,
+        ktorú chceš vytvoriť.\n-   V sekcii \"Create sprites\" (\"Vytvor „sprite“
+        objekty\") na začiatku kódu vytvor nové „sprite“ objekty  pomocou bloku `createSprite`
+        a priraď im správnu pozíciu aj názov. ([Show me the block](#triggercallout=callout))\n-
+        \  Použi bloky `setAnimation` a `velocityY` a priraď svojmu „sprite“ objektu
+        \ správny obrázok a rýchlosť smerom nadol.\n-   Otestuj svoj „sprite“ a over,
+        že sa hýbe správnym smerom. Možno budeš musieť upraviť jeho rýchlosť.\n\n_Nápoveda:
+        „Sprite“ objekt sa dostane mimo obrazovku a nevráti sa. Jeho zacyklenie nastavíš
+        v nasledujúcej úlohe._"
+      CSD U3 platform platform2: |-
+        # Zacyklenie „sprite“ objektu „plošina“
+
+        <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
+
+        Momentálne sa tvoj „sprite“  pre plošinu pohybuje nadol ale nevráti sa na vrch obrazovky. V [Lekcii 15, úloha 13](/s/csd3-2017/stage/15/puzzle/13) si môžeš pozrieť príklad toho, ako sa „sprite“ presúva dookola po obrazovke
+
+        # Urob toto
+
+        -   Použi blok `function` na vytvorenie funkcie `loopPlatforms` v spodnej časti kódu.
+        -   Použi výraz `if` vo vnútri tejto funkcie na kontrolu toho, či sa plošina dostala mimo spodnej časti obrazovky.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia v sekcii „Update sprites“.
+        -   Spusti kód a otestuj svoj „sprite“ objekt.
+
+        _Nápoveda: Akú hodnotu bude mať `platform.y` v momente, keď sa „sprite“ objekt dostane mimo spodného okraja obrazovky? Akú hodnotu by malo mať `platform.y`, keď sa plošina znova zobrazí v hornej časti obrazovky?_
+      CSD U3 platform platform2_2018: |-
+        # Zacyklenie „sprite“ objektu „plošina“
+
+        <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
+
+        Momentálne sa tvoj „sprite“  pre plošinu pohybuje nadol ale nevráti sa na vrch obrazovky. V [Lekcii 15, úloha 13](/s/csd3-2018/stage/15/puzzle/13) si môžeš pozrieť príklad toho, ako sa „sprite“ presúva dookola po obrazovke
+
+        # Urob toto
+
+        -   Použi blok `function` na vytvorenie funkcie `loopPlatforms` v spodnej časti kódu.
+        -   Použi výraz `if` vo vnútri tejto funkcie na kontrolu toho, či sa plošina dostala mimo spodnej časti obrazovky.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia v sekcii „Update sprites“.
+        -   Spusti kód a otestuj svoj „sprite“ objekt.
+
+        _Nápoveda: Akú hodnotu bude mať `platform.y` v momente, keď sa „sprite“ objekt dostane mimo spodného okraja obrazovky? Akú hodnotu by malo mať `platform.y`, keď sa plošina znova zobrazí v hornej časti obrazovky?_
+      CSD U3 platform platform2_2019: |-
+        # Zacyklenie „sprite“ objektu „plošina“
+
+        <img src="https://images.code.org/6bfe6dd078b2022315a7f54a38c90826-image-1476211068588.gif" style="float: right;">
+
+        Momentálne sa tvoj „sprite“  pre plošinu pohybuje nadol ale nevráti sa na vrch obrazovky. V [Lekcii 15, úloha 13](../../15/puzzle/13) si môžeš pozrieť príklad toho, ako sa „sprite“ presúva dookola po obrazovke
+
+        # Urob toto
+
+        -   Použi blok `function` na vytvorenie funkcie `loopPlatforms` v spodnej časti kódu.
+        -   Použi výraz `if` vo vnútri tejto funkcie na kontrolu toho, či sa plošina dostala mimo spodnej časti obrazovky.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia v sekcii „Update sprites“.
+        -   Spusti kód a otestuj svoj „sprite“ objekt.
+
+        _Nápoveda: Akú hodnotu bude mať `platform.y` v momente, keď sa „sprite“ objekt dostane mimo spodného okraja obrazovky? Akú hodnotu by malo mať `platform.y`, keď sa plošina znova zobrazí v hornej časti obrazovky?_
+      CSD U3 platform platform3: |-
+        # Vytvorenie druhej plošiny
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Vytvorenie druhej plošiny bude jednoduchšie, než vytvorenie tej prvej pretože môžeš skopírovať  veľkú časť už existujúceho kódu a potom v ňom spravíš len zopár malých zmien. Toto sa robí ľahšie v _textovom móde_.
+
+        Budeš potrebovať skopírovať 2 časti tvojho kódu: časť na začiatku, kde vytvoríš plošinu, a potom časť v tvojej funkcii `loopPlatforms`, v ktorej svoju plošinu premiestňuješ späť na hornú časť obrazovky.
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu „plošina“ (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektu v novej časti kódu. Napríklad, ak sa pôvodný „sprite“ objekt nazýva „plošina“/„platform“, novú plošinu môžeš nazvať ako „platform2“.
+        -   Zmeň začiatočnú pozíciu tvojej novej plošiny.
+        -   Vo vnútri funkcie `loopPlatform`, skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód, stále v tej istej funkcii.
+        -   Zmeň názov „sprite“ objektu v novom kóde.
+        -   Spusti kód a otestuj ho.
+
+        _Výzva: Plošiny sa pri zobrazení v hornej časti obrazovky môžu zobraziť na náhodnej pozícii x._
+      CSD U3 platform platform3_2018: |-
+        # Vytvorenie druhej plošiny
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Vytvorenie druhej plošiny bude jednoduchšie, než vytvorenie tej prvej pretože môžeš skopírovať  veľkú časť už existujúceho kódu a potom v ňom spravíš len zopár malých zmien. Toto sa robí ľahšie v _textovom móde_.
+
+        Budeš potrebovať skopírovať 2 časti tvojho kódu: časť na začiatku, kde vytvoríš plošinu, a potom časť v tvojej funkcii `loopPlatforms`, v ktorej svoju plošinu premiestňuješ späť na hornú časť obrazovky.
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu „plošina“ (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektu v novej časti kódu. Napríklad, ak sa pôvodný „sprite“ objekt nazýva „plošina“/„platform“, novú plošinu môžeš nazvať ako „platform2“.
+        -   Zmeň začiatočnú pozíciu tvojej novej plošiny.
+        -   Vo vnútri funkcie `loopPlatform`, skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód, stále v tej istej funkcii.
+        -   Zmeň názov „sprite“ objektu v novom kóde.
+        -   Spusti kód a otestuj ho.
+
+        _Výzva: Plošiny sa pri zobrazení v hornej časti obrazovky môžu zobraziť na náhodnej pozícii x._
+      CSD U3 platform platform3_2019: |-
+        # Vytvorenie druhej plošiny
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Vytvorenie druhej plošiny bude jednoduchšie, než vytvorenie tej prvej pretože môžeš skopírovať  veľkú časť už existujúceho kódu a potom v ňom spravíš len zopár malých zmien. Toto sa robí ľahšie v _textovom móde_.
+
+        Budeš potrebovať skopírovať 2 časti tvojho kódu: časť na začiatku, kde vytvoríš plošinu, a potom časť v tvojej funkcii `loopPlatforms`, v ktorej svoju plošinu premiestňuješ späť na hornú časť obrazovky.
+
+        # Urob toto
+
+        -   Skopíruj kód použitý na vytvorenie prvého „sprite“ objektu „plošina“ (`createSprite`, `setAnimation` a `velocityY`) a vlož ho hneď pod pôvodný kód.
+        -   Zmeň názvy „sprite“ objektu v novej časti kódu. Napríklad, ak sa pôvodný „sprite“ objekt nazýva „plošina“/„platform“, novú plošinu môžeš nazvať ako „platform2“.
+        -   Zmeň začiatočnú pozíciu tvojej novej plošiny.
+        -   Vo vnútri funkcie `loopPlatform`, skopíruj výraz `if` a potom ho vlož hneď pod pôvodný kód, stále v tej istej funkcii.
+        -   Zmeň názov „sprite“ objektu v novom kóde.
+        -   Spusti kód a otestuj ho.
+
+        _Výzva: Plošiny sa pri zobrazení v hornej časti obrazovky môžu zobraziť na náhodnej pozícii x._
+      CSD U3 platform player1: |-
+        # Vytvor hráča
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Konečne si môžeš vytvoriť svojho hráča. Tak, ako „sprite“ objekty predmetov, aj tvoj hráč spadne zhora. Na rozdiel od predmetov tvoj hráč počas pádu zrýchľuje, tak ako zrýchľujú predmety v skutočnosti. Toto mu umožní vyskakovať a znova spadnúť.
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu hráča s nápisom a štartovacou pozíciou určenou v pláne projektu.
+        -   Použi `setAnimation` na nastavenie správneho obrázku.
+        -   Vytvor funkciu `playerFall` , ktorá zabezpečí, že „sprite“ objekt „hráč“ spadne z hornej časti obrazovky. Kód vo vnútri funkcie by mal použiť `velocityY` spolu s kódom pre počítanie podobne, ako sme použili pri padajúcom kameni v [Lekcii 17, úlohe 4](/s/csd3-2017/stage/17/puzzle/4).
+        -   Zavolaj funkciu `playerFall` vo vnútri cyklu kreslenia.
+        -   Spusti kód a otestuj svojho hráča.
+      CSD U3 platform player1_2018: |-
+        # Vytvor hráča
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Konečne si môžeš vytvoriť svojho hráča. Tak, ako „sprite“ objekty predmetov, aj tvoj hráč spadne zhora. Na rozdiel od predmetov tvoj hráč počas pádu zrýchľuje, tak ako zrýchľujú predmety v skutočnosti. Toto mu umožní vyskakovať a znova spadnúť.
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu hráča s nápisom a štartovacou pozíciou určenou v pláne projektu.
+        -   Použi `setAnimation` na nastavenie správneho obrázku.
+        -   Vytvor funkciu `playerFall` , ktorá zabezpečí, že „sprite“ objekt „hráč“ spadne z hornej časti obrazovky. Kód vo vnútri funkcie by mal použiť `velocityY` spolu s kódom pre počítanie podobne, ako sme použili pri padajúcom kameni v [Lekcii 17, úlohe 4](/s/csd3-2018/stage/17/puzzle/4).
+        -   Zavolaj funkciu `playerFall` vo vnútri cyklu kreslenia.
+        -   Spusti kód a otestuj svojho hráča.
+      CSD U3 platform player1_2019: |-
+        # Vytvor hráča
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Konečne si môžeš vytvoriť svojho hráča. Tak, ako „sprite“ objekty predmetov, aj tvoj hráč spadne zhora. Na rozdiel od predmetov tvoj hráč počas pádu zrýchľuje, tak ako zrýchľujú predmety v skutočnosti. Toto mu umožní vyskakovať a znova spadnúť.
+
+        # Urob toto
+
+        -   Použi blok `createSprite` na vytvorenie „sprite“ objektu hráča s nápisom a štartovacou pozíciou určenou v pláne projektu.
+        -   Použi `setAnimation` na nastavenie správneho obrázku.
+        -   Vytvor funkciu `playerFall` , ktorá zabezpečí, že „sprite“ objekt „hráč“ spadne z hornej časti obrazovky. Kód vo vnútri funkcie by mal použiť `velocityY` spolu s kódom pre počítanie podobne, ako sme použili pri padajúcom kameni v [Lekcii 17, úlohe 4](../../17/puzzle/4).
+        -   Zavolaj funkciu `playerFall` vo vnútri cyklu kreslenia.
+        -   Spusti kód a otestuj svojho hráča.
+      CSD U3 platform player2: |-
+        # Používateľské rozhranie
+
+        V tejto úlohe pridaj ovládanie, ktorým hráč určí pohyb postavičky po obrazovke. Postavička sa musí vedieť pohybovať doľava po stlačení šípky doľava, doprava po stlačení šípky doprava a vyskočiť po stlačení medzerníka.
+
+        # Urob toto
+
+        -   Vytvor novú funkciu `controlPlayer` v časti „funkcie“ tvojho kódu.
+        -   Vo vnútri funkcie `controlPlayer` použi bloky `if`, `keyDown` a `sprite.x` pre pohyb tvojej postavy doľava a doprava pomocou klávesových šipok. Príklady nájdeš tu:  <a href="/s/csd3-2017/stage/12/puzzle/7" target="_blank"> Lekcia 12, úloha 7 </a>
+        -   Vo vnútri funkcie `controlPlayer` použi bloky `if`, `keyDown` a `velocityY` tak, aby postavička vyskočila vždy, keď sa stlačí šípka smerom nahor. Príklady nájdeš tu:  <a href="/s/csd3-2017/stage/15/puzzle/11" target="_blank"> Lekcia 15, úloha 11</a>.
+        -   Zavolaj funkciu `controlPlayer` vo vnútri cyklu kreslenia.
+        -   Spusti hru a otestuj svoj kód.
       CSD U3 platform player2_2018: |-
         # Používateľské rozhranie
 
@@ -3252,6 +4552,213 @@ sk-SK:
         -   Vo vnútri funkcie `controlPlayer` použi bloky `if`, `keyDown` a `velocityY` tak, aby postavička vyskočila vždy, keď sa stlačí šípka smerom nahor. Príklady nájdeš tu:  <a href="/s/csd3-2018/stage/15/puzzle/11" target="_blank"> Lesson 15 Puzzle 11</a>
         -   Zavolaj funkciu `controlPlayer` vo vnútri cyklu kreslenia.
         -   Spusti hru a otestuj svoj kód.
+      CSD U3 platform player2_2019: |-
+        # Používateľské rozhranie
+
+        V tejto úlohe pridaj ovládanie, ktorým hráč určí pohyb postavičky po obrazovke. Postavička sa musí vedieť pohybovať doľava po stlačení šípky doľava, doprava po stlačení šípky doprava a vyskočiť po stlačení medzerníka.
+
+        # Urob toto
+
+        -   Vytvor novú funkciu `controlPlayer` v časti „funkcie“ tvojho kódu.
+        -   Vo vnútri funkcie `controlPlayer` použi bloky `if`, `keyDown` a `sprite.x` pre pohyb tvojej postavy doľava a doprava pomocou klávesových šipok. Príklady nájdeš tu:   <a href="../../12/puzzle/7" target="_blank"> Lekcia 12, úloha 7 </a>.
+        -   Vo vnútri funkcie `controlPlayer` použi<a href="../../15/puzzle/11" target="_blank"> bloky `if`, `keyDown` a `velocityY` tak, aby postavička vyskočila vždy, keď sa stlačí šípka smerom nahor. Príklady nájdeš tu:   <a href="../../12/puzzle/7" target="_blank"> Lekcia 15, úloha 11</a>.
+        -   Zavolaj funkciu `controlPlayer` vo vnútri cyklu kreslenia.
+        -   Spusti hru a otestuj svoj kód.
+      CSD U3 platform player3: |-
+        # Interakcie hráča
+
+        Poslednou časťou tvorby hry je naprogramovanie interakcií hráča s ostatnými „sprite“ objektami. Najprv musí hráč pristáť na plošine.
+
+        # Urob toto
+
+        -   Vytvor funkciu `playerLands` a pridaj ju do časti „funkcie“ tvojho kódu.
+        -   Do vnútra funkcie pridaj blok `collide` tak, aby tvoja postavička vedela pristáť na obidvoch plošinách.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia.
+        -   Spusti hru a otestuj svoj kód.
+      CSD U3 platform player3_2018: |-
+        # Interakcie hráča
+
+        Poslednou časťou tvorby hry je naprogramovanie interakcií hráča s ostatnými „sprite“ objektami. Najprv musí hráč pristáť na plošine.
+
+        # Urob toto
+
+        -   Vytvor funkciu `playerLands` a pridaj ju do časti „funkcie“ tvojho kódu.
+        -   Do vnútra funkcie pridaj blok `collide` tak, aby tvoja postavička vedela pristáť na obidvoch plošinách.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia.
+        -   Spusti hru a otestuj svoj kód.
+      CSD U3 platform player3_2019: |-
+        # Interakcie hráča
+
+        Poslednou časťou tvorby hry je naprogramovanie interakcií hráča s ostatnými „sprite“ objektami. Najprv musí hráč pristáť na plošine.
+
+        # Urob toto
+
+        -   Vytvor funkciu `playerLands` a pridaj ju do časti „funkcie“ tvojho kódu.
+        -   Do vnútra funkcie pridaj blok `collide` tak, aby tvoja postavička vedela pristáť na obidvoch plošinách.
+        -   Zavolaj funkciu vo vnútri cyklu kreslenia.
+        -   Spusti hru a otestuj svoj kód.
+      CSD U3 platform player4: "# Zbieranie predmetov\n\nAko poslednú vec chceš, aby
+        tvoja postavička zbierala predmety padajúce zhora z obrazovky\n\n# Urob toto\n\n-
+        \  Vytvor funkciu `collectItems` a pridaj ju do časti „funkcie“ v tvojom kóde.\n-
+        \  Pridaj bloky `if` a `isTouching` na zmenu pozície x a y predmetov, keď
+        sa ich hráč dotkne. Ak potrebuješ návod, ako obnoviť pozíciu predmetu, pozri
+        sa do funkcie `loopItem`.\n-   Dovnútra výrazu `if` pridaj počítadlo skóre,
+        ktoré sa bude zvyšovať zakaždým, keď sa hráč dotkne predmetu. Príklad nájdeš
+        v [Lekcii 16, úloha 9](/s/csd3-2017/stage/16/puzzle/9) \n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia, v časti kódu „update sprites“.\n-   Spusti hru
+        a otestuj svoj kód."
+      CSD U3 platform player4_2018: "# Zbieranie predmetov\n\nAko poslednú vec chceš,
+        aby tvoja postavička zbierala predmety padajúce zhora z obrazovky\n\n# Urob
+        toto\n\n-   Vytvor funkciu `collectItems` a pridaj ju do časti „funkcie“ v
+        tvojom kóde.\n-   Pridaj bloky `if` a `isTouching` na zmenu pozície x a y
+        predmetov, keď sa ich hráč dotkne. Ak potrebuješ návod, ako obnoviť pozíciu
+        predmetu, pozri sa do funkcie `loopItem`.\n-   Dovnútra výrazu `if` pridaj
+        počítadlo skóre, ktoré sa bude zvyšovať zakaždým, keď sa hráč dotkne predmetu.
+        Príklad nájdeš v [Lekcii 16, úloha 9](/s/csd3-2018/stage/16/puzzle/9) \n-
+        \  Zavolaj funkciu vo vnútri cyklu kreslenia, v časti kódu „update sprites“.\n-
+        \  Spusti hru a otestuj svoj kód."
+      CSD U3 platform player4_2019: "# Zbieranie predmetov\n\nAko poslednú vec chceš,
+        aby tvoja postavička zbierala predmety padajúce zhora z obrazovky\n\n# Urob
+        toto\n\n-   Vytvor funkciu `collectItems` a pridaj ju do časti „funkcie“ v
+        tvojom kóde.\n-   Pridaj bloky `if` a `isTouching` na zmenu pozície x a y
+        predmetov, keď sa ich hráč dotkne. Ak potrebuješ návod, ako obnoviť pozíciu
+        predmetu, pozri sa do funkcie `loopItem`.\n-   Dovnútra výrazu `if` pridaj
+        počítadlo skóre, ktoré sa bude zvyšovať zakaždým, keď sa hráč dotkne predmetu.
+        Príklad nájdeš v [Lekcii 16, úloha 9](../../16/puzzle/9) \n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia, v časti kódu „update sprites“.\n-   Spusti hru
+        a otestuj svoj kód."
+      CSD U3 platform sample1: |-
+        # Plošinová skákacia hra
+
+        Hra naľavo je vzorovou plošinovou skákacou hrou. Stlač „Spustiť“ a vyskúšaj si ju. S mimozemšťanom môžeš skákať pomocou šípky hore a pohybovať sa s ním doľava a doprava pomocou šípiek. Body získaš zbieraním hviezd a ak dosiahneš dostatočne vysoké skóre, tak sa zmení pozadie.
+
+        Všetky bloky potrebné pre vytvorenie takejto hry už poznáš a vieš ich použiť, takže v tejto lekcii si naprogramuješ svoju vlastnú plošinovú skákaciu hru.
+      CSD U3 platform sample1_2018: |-
+        # Plošinová skákacia hra
+
+        Hra naľavo je vzorovou plošinovou skákacou hrou. Stlač „Spustiť“ a vyskúšaj si ju. S mimozemšťanom môžeš skákať pomocou šípky hore a pohybovať sa s ním doľava a doprava pomocou šípiek. Body získaš zbieraním hviezd a ak dosiahneš dostatočne vysoké skóre, tak sa zmení pozadie.
+
+        Všetky bloky potrebné pre vytvorenie takejto hry už poznáš a vieš ich použiť, takže v tejto lekcii si naprogramuješ svoju vlastnú plošinovú skákaciu hru.
+      CSD U3 platform sample1_2019: |-
+        # Plošinová skákacia hra
+
+        Hra naľavo je vzorovou plošinovou skákacou hrou. Stlač „Spustiť“ a vyskúšaj si ju. S mimozemšťanom môžeš skákať pomocou šípky hore a pohybovať sa s ním doľava a doprava pomocou šípiek. Body získaš zbieraním hviezd a ak dosiahneš dostatočne vysoké skóre, tak sa zmení pozadie.
+
+        Všetky bloky potrebné pre vytvorenie takejto hry už poznáš a vieš ich použiť, takže v tejto lekcii si naprogramuješ svoju vlastnú plošinovú skákaciu hru.
+      CSD U3 platform sample2: |-
+        # Lietadlový skokan
+
+        Tu máme ďalší príklad plošinovej hry, akurát s viac parametrami. Túto hru môžeš použiť ako inšpiráciu pre svoju vlastnú. Nájdeš tu napríklad „sprite“ objekt „minca“, ktorá pridáva život.
+
+        Vyber si jeden, alebo viac návrhov na vylepšenie hry:
+
+        -   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        -   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava.
+        -   Pridaj  predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť.
+        -   Pridaj premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy minú.
+      CSD U3 platform sample2_2018: |-
+        # Lietadlový skokan
+
+        Tu máme ďalší príklad plošinovej hry, akurát s viac parametrami. Túto hru môžeš použiť ako inšpiráciu pre svoju vlastnú. Nájdeš tu napríklad „sprite“ objekt „minca“, ktorá pridáva život.
+
+        Vyber si jeden, alebo viac návrhov na vylepšenie hry:
+
+        -   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        -   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava.
+        -   Pridaj  predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť.
+        -   Pridaj premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy minú.
+      CSD U3 platform sample2_2019: |-
+        # Lietadlový skokan
+
+        Tu máme ďalší príklad plošinovej hry, akurát s viac parametrami. Túto hru môžeš použiť ako inšpiráciu pre svoju vlastnú. Nájdeš tu napríklad „sprite“ objekt „minca“, ktorá pridáva život.
+
+        Vyber si jeden, alebo viac návrhov na vylepšenie hry:
+
+        -   Pre svoju postavičku, plošinu alebo predmety použi novú animáciu.
+        -   Zamedz postavičke pohnúť sa mimo obrazovky, a to doľava i doprava.
+        -   Pridaj  predmet, ktorý má hráč zbierať alebo ktorému sa má vyhnúť.
+        -   Pridaj premennú, ktorá bude hráčovi rátať počet životov a hru zastaví, ak sa mu životy minú.
+      CSD U3 platform sample3: "# Skákajúci zajačik\n\nTu máme ďalší príklad skákacej
+        hry. V tejto hre predmety počas pádu zrýchľujú a odrážajú sa od plošín.\n\nVyber
+        si jeden, alebo viac návrhov na vylepšenie tvojej hry: \n\n-   Otoč hráča
+        tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj ďaľšie pozadie,
+        ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď sa predmety
+        dotknú plošín, niečo sa stane."
+      CSD U3 platform sample3_2018: "# Skákajúci zajačik\n\nTu máme ďalší príklad
+        skákacej hry. V tejto hre predmety počas pádu zrýchľujú a odrážajú sa od plošín.\n\nVyber
+        si jeden, alebo viac návrhov na vylepšenie tvojej hry: \n\n-   Otoč hráča
+        tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj ďaľšie pozadie,
+        ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď sa predmety
+        dotknú plošín, niečo sa stane."
+      CSD U3 platform sample3_2019: "# Skákajúci zajačik\n\nTu máme ďalší príklad
+        skákacej hry. V tejto hre predmety počas pádu zrýchľujú a odrážajú sa od plošín.\n\nVyber
+        si jeden, alebo viac návrhov na vylepšenie tvojej hry: \n\n-   Otoč hráča
+        tak, aby sa vždy pozeral smerom, ktorým ide. \n-   Pridaj ďaľšie pozadie,
+        ktoré sa zobrazí po dosiahnutí ešte vyššieho skóre. \n-   Keď sa predmety
+        dotknú plošín, niečo sa stane."
+      CSD U3 platform scoreboard: "# Zobrazenie skóre v hre\n\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\"
+        style=\"float:right;\">\n\nSkóre určite potrebuješ vo svojej hre zobraziť.
+        Funkcia `showScore` už je napísaná, ale zobrazuje len text „Score“ a nie samotnú
+        hodnotu skóre. ([Show me where](#triggercallout=code_triggered)) Príklad fungujúceho
+        zobrazenia skóre nájdeš v [Lekcii 16, úlohe 9](/s/csd3-2017/stage/16/puzzle/9).\n\n#
+        Urob toto\n\n-   Prečítaj si kód vo funkcii `showScore`.\n-   Zavolaj funkciu
+        vo vnútri cyklu kreslenia hneď po nakreslení pozadia.\n-   Použi blok `text`
+        na zobrazenie skóre v hornej časti obrazovky.\n\nTeraz, keď už máš nakreslené
+        pozadie a zadefinované premenné, je načase vytvoriť objekty \"sprite\". Väčšinou
+        býva najjednoduchšie začať tými, ktoré sú súčasťou prostredia, ako napríklad
+        plošiny. "
+      CSD U3 platform scoreboard_2018: "# Zobrazenie skóre v hre\n\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\"
+        style=\"float:right;\">\n\nSkóre určite potrebuješ vo svojej hre zobraziť.
+        Funkcia `showScore` už je napísaná, ale zobrazuje len text „Score“ a nie samotnú
+        hodnotu skóre. ([Show me where](#triggercallout=code_triggered)) Príklad fungujúceho
+        zobrazenia skóre nájdeš v [Lekcii 16, úlohe 9](../../16/puzzle/9).\n\n# Urob
+        toto\n\n-   Prečítaj si kód vo funkcii `showScore`.\n-   Zavolaj funkciu vo
+        vnútri cyklu kreslenia hneď po nakreslení pozadia.\n-   Použi blok `text`
+        na zobrazenie skóre v hornej časti obrazovky.\n\nTeraz, keď už máš nakreslené
+        pozadie a zadefinované premenné, je načase vytvoriť objekty \"sprite\". Väčšinou
+        býva najjednoduchšie začať tými, ktoré sú súčasťou prostredia, ako napríklad
+        plošiny. "
+      CSD U3 platform scoreboard_2019: "# Zobrazenie skóre v hre\n\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\"
+        style=\"float:right;\">\n\nSkóre určite potrebuješ vo svojej hre zobraziť.
+        Funkcia `showScore` už je napísaná, ale zobrazuje len text „Score“ a nie samotnú
+        hodnotu skóre. ([Show me where](#triggercallout=code_triggered)) Príklad fungujúceho
+        zobrazenia skóre nájdeš v [Lekcii 16, úlohe 9](../../16/puzzle/9).\n\n# Urob
+        toto\n\n-   Prečítaj si kód vo funkcii `showScore`.\n-   Zavolaj funkciu vo
+        vnútri cyklu kreslenia hneď po nakreslení pozadia.\n-   Použi blok `text`
+        na zobrazenie skóre v hornej časti obrazovky.\n\nTeraz, keď už máš nakreslené
+        pozadie a zadefinované premenné, je načase vytvoriť objekty \"sprite\". Väčšinou
+        býva najjednoduchšie začať tými, ktoré sú súčasťou prostredia, ako napríklad
+        plošiny. "
+      CSD U3 platform variable1: |-
+        # Premenná „skóre“
+
+        Keď už máš vytvorené pozadia, musíš si vybrať, kedy sa ktoré z nich zobrazí. Pre toto potrebuješ premennú, v ktorej budeš ukladať aktuálne skore hráča.
+        Premennej priraď hodnotu už na samotnom začiatku programu. Takto bude premenná k dispozícií kedykoľvek po jej definovaní.
+
+        # Urob toto
+
+        -   Vytvor premennú na začiatku svojho programu. ( [Show me the block](#triggercallout=callout) )
+        -   Nastav skóre na 0.
+      CSD U3 platform variable1_2018: |-
+        # Premenná „skóre“
+
+        Keď už máš vytvorené pozadia, musíš si vybrať, kedy sa ktoré z nich zobrazí. Pre toto potrebuješ premennú, v ktorej budeš ukladať aktuálne skore hráča.
+        Premennej priraď hodnotu už na samotnom začiatku programu. Takto bude premenná k dispozícií kedykoľvek po jej definovaní.
+
+        # Urob toto
+
+        -   Vytvor premennú na začiatku svojho programu. ( [Show me the block](#triggercallout=callout) )
+        -   Nastav skóre na 0.
+      CSD U3 platform variable1_2019: |-
+        # Premenná „skóre“
+
+        Keď už máš vytvorené pozadia, musíš si vybrať, kedy sa ktoré z nich zobrazí. Pre toto potrebuješ premennú, v ktorej budeš ukladať aktuálne skore hráča.
+        Premennej priraď hodnotu už na samotnom začiatku programu. Takto bude premenná k dispozícií kedykoľvek po jej definovaní.
+
+        # Urob toto
+
+        -   Vytvor premennú na začiatku svojho programu. ( [Show me the block](#triggercallout=callout) )
+        -   Nastav skóre na 0.
       CSD U3 rect_2018: |-
         # Preskúmaj Game Lab
 
@@ -4086,7 +5593,7 @@ sk-SK:
 
         -   Uprav správanie roveru tak, aby bol rýchlejší ako robot.
       behaviors 3a: |-
-        Uprav správanie `rýchlo sa otočiť vpravo`.  Namiesto bloku pre kostými použi blok <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml>. V takom prípade bude fungovať pre všetky postavy bez ohľadu na ich kostými.
+        Uprav správanie `spinning right` (točenie vpravo).  Namiesto bloku pre kostýmy použi blok <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml>. V takom prípade bude funkcia fungovať pre všetky postavy bez ohľadu na ich kostým.
 
         **Odstráň chybu:** Nechaj sa všetky hviezdy točiť tým istým smerom!
       behaviors 4: Odhadni, čo sa bude diať! Ktorou cestou sa satelit vyberie k solárnemu
@@ -4107,6 +5614,8 @@ sk-SK:
 
         Komentáre slúžia len pre **teba** a nijako neovplyvnia vykonávanie programu.
       course1_artist_loops_challenge4: _"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"_
+      course1_maze_debugging_challenge1: Krokuj tento level. Odstráň zbytočné bloky
+        a pridaj chýbajúce bloky. Dostaň vtáčika k prasiatku!
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne
         bloky, ale sú v nesprávnom poradí!
       course2_artist_nestedLoops_challenge1: |-
@@ -4118,6 +5627,9 @@ sk-SK:
       course2_bee_conditionals_challenge1: "Pozberaj všetok nektár a vyrob z neho
         med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.\nSkontroluj
         každé pole a zisti, či je tam kvet, alebo plást. "
+      course2_bee_conditionals_challenge2: '"Zhromaždi všetok nektár a priprav všetok
+        med. Celý nektár môžeš zhromaždiť v jednom kvete pomocou slučky "pokiaľ nektár
+        >  0 vykonaj".'
       course2_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých
         **10** drahokamov?
       course2_harvester_loops_challenge1: Pozbieraj všetku kukuricu.
@@ -4387,6 +5899,9 @@ sk-SK:
       courseA_maze_ramp2_2018: Aby si dokončil tvoj kód, spoj oba bloky <xml><block
         type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml>, a potom
         stlač "▶ Spustiť".
+      courseA_maze_ramp2_2019: Na dokončenie tvojho kódu, pripoj oba bloky  <xml><block
+        type="maze_moveEast" block-text="move east"/></xml> na spodok bloku <xml><block
+        type="when_run" block-text="when run"/></xml>,  potom stlač "▶ Spustiť".
       courseA_maze_ramp3a_2018: Zober <xml><block type="maze_moveNorth"/></xml> z
         panelu nástrojov a pridaj ho na spodok ostatných blokov, aby si dokončíl tento
         kód, potom klikni "▶ Spustiť".
@@ -4412,10 +5927,10 @@ sk-SK:
         Čas na krátku hádanku! Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal ku prasiatku!
 
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
-      courseA_maze_seq11_2018: Čas na kratšiu úlohu! Aby ste dostali vtáka k prasiatku
-        sa najprv pohni jedným smerom a potom druhým.
-      courseA_maze_seq11_2019: Čas na kratšiu úlohu! Aby ste dostali vtáka k prasiatku
-        sa najprv pohni jedným smerom a potom druhým.
+      courseA_maze_seq11_2018: Čas na kratšiu úlohu! Aby si dostal/a vtáka k prasiatku,
+        tak sa najprv pohni jedným smerom a potom druhým.
+      courseA_maze_seq11_2019: Čas na kratšiu úlohu! Aby si dostal/a vtáka k prasiatku,
+        tak sa najprv pohni jedným smerom a potom druhým.
       courseA_maze_seq12_2018: Dostaň to prasiatko!
       courseA_maze_seq12_2019: Dostaň to prasiatko!
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
@@ -4451,6 +5966,12 @@ sk-SK:
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq_challenge1: Krokuj tento level. Odstráň zbytočné bloky a pridaj
+        chýbajúce bloky. Dostaň vtáčika k prasiatku!
+      courseA_maze_seq_challenge1_2018: Krokuj tento level. Odstráň zbytočné bloky
+        a pridaj chýbajúce bloky. Dostaň vtáčika k prasiatku!
+      courseA_maze_seq_challenge1_2019: Krokuj tento level. Odstráň zbytočné bloky
+        a pridaj chýbajúce bloky. Dostaň vtáčika k prasiatku!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_playLab_events1_2019: Toto je Play Lab. Presuň bloky do svojho pracovného
@@ -6397,6 +7918,15 @@ sk-SK:
       courseD_bee_conditionals_challenge1_2019: |-
         Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
         Skontroluj každé pole a zisti, či je tam kvet, alebo plást.
+      courseD_bee_conditionals_challenge2: '"Zhromaždi všetok nektár a priprav všetok
+        med. Celý nektár môžeš zhromaždiť v jednom kvete pomocou slučky "pokiaľ nektár
+        >  0 vykonaj".'
+      courseD_bee_conditionals_challenge2_2018: '"Zhromaždi všetok nektár a priprav
+        všetok med. Celý nektár môžeš zhromaždiť v jednom kvete pomocou slučky "pokiaľ
+        nektár >  0 vykonaj".'
+      courseD_bee_conditionals_challenge2_2019: '"Zhromaždi všetok nektár a priprav
+        všetok med. Celý nektár môžeš zhromaždiť v jednom kvete pomocou slučky "pokiaľ
+        nektár >  0 vykonaj".'
       courseD_bee_nestedLoops1: |-
         "_Chystá sa niečo **VČEĽKÉ**!_"
 
@@ -6700,6 +8230,15 @@ sk-SK:
         potom zober tekvicu.
       courseD_farmer_condLoops9_predict1_2019: Pozbieraj všetku kukuricu a šalát a
         potom zober tekvicu.
+      courseD_farmer_condLoops_challenge2: "\"Je to veľmi pestré rastlinné bludisko!\"\nPri
+        tekviciach odboč doprava, pri šaláte odboč doľava. Zhromaždi všetko na to,
+        aby si dokončil level. "
+      courseD_farmer_condLoops_challenge2_2018: "\"Je to veľmi pestré rastlinné bludisko!\"\nPri
+        tekviciach odboč doprava, pri šaláte odboč doľava. Zhromaždi všetko na to,
+        aby si dokončil level. "
+      courseD_farmer_condLoops_challenge2_2019: "\"Je to veľmi pestré rastlinné bludisko!\"\nPri
+        tekviciach odboč doprava, pri šaláte odboč doľava. Zhromaždi všetko na to,
+        aby si dokončil level. "
       courseD_farmer_while1: "_\"Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním
         poľa na mojej farme tak, aby bolo pripravené pre výsadbu!\"_  \n\n Presuň
         ma na hromadu hliny a použi blok \"odstráň\", aby si ju odstránil."
@@ -6763,6 +8302,12 @@ sk-SK:
         počtu blokov."
       courseD_farmer_while8_2019: "**Výzva:** Vyplň všetky jamy použitím čo njamenšieho
         počtu blokov."
+      courseD_farmer_while_challenge1: '"Vyplň všetky otvory a odstráň všetky kopy."'
+      courseD_farmer_while_challenge1_2018: '"Vyplň všetky otvory a odstráň všetky
+        kopy."'
+      courseD_farmer_while_challenge1_2019: '"Vyplň všetky otvory a odstráň všetky
+        kopy."'
+      courseD_farmer_while_challenge2: '"Vyplň všetky otvory a odstráň všetky kopy."'
       courseD_harvester_nested_loops_challenge1: _"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."_
@@ -6808,6 +8353,9 @@ sk-SK:
         sa poň dostať?
       courseD_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť
         Scratovi sa poň dostať?
+      courseD_maze_intro4_2019: '"Nájdi cestu a priveď ma k prasiatku."'
+      courseD_maze_intro5a_2019: '"Spočítaj opatrne medzery na mriežke!"'
+      courseD_maze_intro5c_2019: '"Daj si pozor na TNT! Pomôž Redovi dostať sa k prasiatku."'
       courseD_maze_nestedLoops3: |-
         _"Zombík hladný!"_
 
@@ -6888,6 +8436,7 @@ sk-SK:
         prasiatku!
       courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu
         k tomu prasiatku!
+      courseD_maze_ramp5a_2019: '"Spočítaj opatrne medzery na mriežke!"'
       courseD_maze_ramp5b: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať
         sa k prasiatku!"
       courseD_maze_ramp5b_2018: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi
@@ -7807,6 +9356,10 @@ sk-SK:
       coursea_maze_ramp1_2019: Aby sa vták dostal k prasiatku, pripoj blok <xml><block
         type="maze_moveEast" block-text="move east"/></xml> na spodok bloku <xml><block
         type="when_run" block-text="when run"/></xml> a stlač "▶ Spustiť"!
+      csd U3 conditional statements video_2019: |-
+        ## Otázka na zamyslenie
+
+        -   Kedy by sa ti hodilo použiť výraz `if`?
       frozen circle: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba
         nahradiť otázniky, aby sa nakreslila kružnica?
       frozen circle function: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10
@@ -7898,6 +9451,8 @@ sk-SK:
         príkaz v cykle opakuj?
       ramp_artist_loops4_2018: Čo sa stane ak pridáš obrat o 72 stupňov doprava ako
         posledný príkaz v cykle opakuj?
+      ramp_artist_loops4_2019: '"Takúto hviezdu vytvoríš opakovaním "posuň sa dopredu"
+        a "otoč sa vpravo o 144 stupňov.""'
       ramp_artist_loops5: |-
         Cykly nám pomáhajú písať kod jednoduchšie!
 

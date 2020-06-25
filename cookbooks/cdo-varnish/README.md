@@ -1,15 +1,19 @@
 # cdo-varnish Cookbook
+
 Installs and configures Varnish HTTP cache.
 
 ## Requirements
+
 Ubuntu 18.04
 
 #### apt packages installed (from PPA)
+
 - `varnish`
 - `varnish-modules`
 - `libvmod-accept` (built from source)
 
 ## Attributes
+
 `node['cdo-varnish']['cookie_headers']`: Map of [cookie key] => [HTTP header] extractions.
 Varnish will extract the listed cookies into custom HTTP request headers before forwarding to the origin.
 
@@ -36,9 +40,9 @@ HTTP cache layers.
     - Note: Objects are already cached based on the `Host` header by default.
     - Note: `headers` is currently only used by CloudFront, while Varnish
       caches objects based on the `Vary` HTTP response header.
-  - `cookies`: A whitelist array of HTTP cookie keys to pass to the origin and
+  - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and
     include in the cache key.
-    To whitelist all cookies for the path, pass `'all'`.
+    To allowlist all cookies for the path, pass `'all'`.
     To strip all cookies for the path, pass `'none'`.
   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
     specified origin. (Currently either `'dashboard'` or `'pegasus'`)
@@ -52,11 +56,13 @@ HTTP cache layers.
   Uses the same syntax as `behaviors` except `path` is not required.
 
 ## Running Tests
+
 The integration tests run using [Test Kitchen](http://kitchen.ci/).
 See `test/cookbooks/varnish_test/README.md` for more details.
 
 To test the cookbook, first make sure Docker is installed and running locally,
 run `bundle install` to install `test-kitchen` and dependencies, then run:
+
 - `bundle exec kitchen create` to create the machine image
 - `bundle exec kitchen converge` to install Chef and converge the cookbook in the
   platform environment

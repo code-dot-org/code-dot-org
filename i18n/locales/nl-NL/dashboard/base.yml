@@ -304,6 +304,8 @@ nl:
       help_us: "Help ons"
       teach: "Onderwijzen"
       about: "Over"
+      legal_privacy: "Privacybeleid"
+      legal_tos: "Gebruiksvoorwaarden"
     user:
       classroom: 'Startpagina voor de leerkracht'
       district_dashboard: 'Regio-overzicht'

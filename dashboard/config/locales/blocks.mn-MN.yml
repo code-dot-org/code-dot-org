@@ -1087,6 +1087,8 @@ mn:
             '"West"': Өрнөд
       gamelab_moveToward:
         text: "{SPRITE}-г {DISTANCE} пикселээр {TARGET} руу хөдөлгөх"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} дээр дарсан"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
       gamelab_pointInDirection:
@@ -1167,6 +1169,8 @@ mn:
           CONDITION:
             '"when"': хэзээ
             '"while"': байхад
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} дээр дарсан"
       gamelab_turn:
         text: "{SPRITE}-г {DIRECTION} рүү {N} хэмээ эргүүлэх"
         options:

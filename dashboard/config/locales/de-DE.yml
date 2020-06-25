@@ -410,6 +410,8 @@ de:
       help_us: Helfen Sie uns
       teach: Unterrichten
       about: Über
+      legal_privacy: Datenschutzerklärung
+      legal_tos: AGBs
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Landkreis-Dashboard
@@ -452,6 +454,7 @@ de:
       playlab_k1: Spielelabor (Leseanfänger)
       scratch: Scratch
       sports: Sport
+      spritelab: Sprite Lab
       starwars: Star Wars
       starwarsblocks: Star Wars (Bausteine)
       starwarsblocks_hour: Star Wars (Bausteine)

@@ -1085,6 +1085,8 @@ vi:
             '"West"': Phía Tây
       gamelab_moveToward:
         text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
+      gamelab_objectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_playSound:
         text: Âm thanh chơi {SOUND}
       gamelab_pointInDirection:
@@ -1171,6 +1173,8 @@ vi:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
+      gamelab_subjectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_turn:
         text: lần lượt {SPRITE} {DIRECTION} {N} độ
         options:

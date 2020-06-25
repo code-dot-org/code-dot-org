@@ -2160,6 +2160,7 @@ de-DE:
   user_header_gamelab: Spielelabor
   user_header_playlab: Spielelabor
   user_header_dance: Tanzparty
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Alle Projekte anzeigen...
@@ -2217,12 +2218,14 @@ de-DE:
     aus Google Classroom synchronisieren" auf der Registerkarte "Schüler verwalten":'
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto"
     auswählen:'
+  hero_name: 'Minecraft: Hero’s Journey'
   applab-intro_name: App Labor Einführung
   applab_tile_title: Einführung ins App-Labor (ab 13 Jahren)
   applab_tile_subtitle: Erstelle deine eigene App in JavaScript mit Blöcken. Oder
     nimm die Herausforderung an und erlerne textbasierte Programmation. (Nur Englisch)
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Lehrer-Leitfaden anzeigen
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren
     Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
   account_sign_up_child_accept_terms: Ich bestätige, dass ich die Erlaubnis meines
@@ -2339,6 +2342,8 @@ de-DE:
   hoc2018_mc_homepage_watch_video: Video ansehen
   hoc2018_mc_homepage_join_us: Mitmachen
   hoc2018_mc_homepage_try_it: Ausprobieren
+  hoc2018_mc_back: Minecraft ist zurück - mit einer brandneuen Aktivität für Hour
+    of Code!
   hoc2018_mc_back_journey: Minecraft präsentiert eine brandneue Aktivität zur Hour
     of Code! Entdecke die Welt von Minecraft mit Code.
   hoc2018_mc_teacher_guide: Lehrer-Leitfaden anzeigen

@@ -342,6 +342,8 @@ it:
       help_us: "Aiutaci"
       teach: "Insegna"
       about: "Informazioni"
+      legal_privacy: "Informativa sulla privacy"
+      legal_tos: "Termini di servizio"
     user:
       classroom: 'Cruscotto di Controllo dell''insegnante'
       district_dashboard: 'Dashboard'
