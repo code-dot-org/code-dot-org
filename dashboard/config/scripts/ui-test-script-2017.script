@@ -1,0 +1,9 @@
+hidden false
+family_name 'ui-test-script'
+version_year '2017'
+is_stable true
+
+lesson_group 'lg_1', display_name: 'Lesson Group'
+lesson 'Lesson'
+level 'ui-test-level-2017'
+
