@@ -298,6 +298,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
 
     workshop.end!
 
@@ -1344,6 +1345,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.valid?
 
     workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'workshops third_party_provider must be nil or from specified list' do
+    workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
+    refute workshop.valid?
+
+    workshop.third_party_provider = nil
     assert workshop.valid?
   end
 

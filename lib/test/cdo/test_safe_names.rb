@@ -26,8 +26,17 @@ class SafeNamesTest < Minitest::Test
     # Handles names that have other names as their strict subset
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
 
+    # Does not abbreviate first names when one is a strict subset of another
+    verify(['Anna', 'Annabel', 'Annabelle'], ['Anna', 'Annabel', 'Annabelle'])
+    # ...with or without last names
+    verify(
+      ['Ann', 'Anna Lemon', 'Annabel Lime', 'Annabelle Citron'],
+      ['Ann', 'Anna', 'Annabel', 'Annabelle']
+    )
+
     # Preserves duplicate names
     verify(['John Smith', 'John Smith'], ['John', 'John'])
+    verify(['John Smith', 'John Smith', 'John Smythe'], ['John Smi', 'John Smi', 'John Smy'])
 
     # Sorted by name
     verify(['Beth A', 'Alex Able', 'Cathy', 'Alex Aaron'], ['Alex Aa', 'Alex Ab', 'Beth', 'Cathy'])

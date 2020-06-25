@@ -5,9 +5,20 @@ require_relative '../../dashboard/lib/contact_rollups_v2'
 require 'cdo/only_one'
 
 def main
-  contact_rollups = ContactRollupsV2.new
+  # To avoid accidentally syncing bad data to Pardot, this script should run
+  # only in production. In other environments, it has to be in dry-run mode.
+  force_dry_run = !CDO.rack_env?(:production)
+  if force_dry_run
+    puts "Contact Rollups V2 will run in DRY-RUN mode in #{CDO.rack_env} environment."
+  else
+    puts "Contact Rollups V2 will run in NORMAL mode and will send updates to Pardot!"
+  end
+
+  contact_rollups = ContactRollupsV2.new(is_dry_run: force_dry_run)
   contact_rollups.collect_and_process_contacts
+  contact_rollups.sync_new_contacts_with_pardot
   contact_rollups.sync_updated_contacts_with_pardot
+ensure
   contact_rollups.report_results
 end
 
