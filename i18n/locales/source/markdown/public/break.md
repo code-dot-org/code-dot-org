@@ -12,7 +12,7 @@ title: Take a Code Break
 
 <a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">View  episodes</button></a>
 
-<p><br>While our live episodes have ended for now, you can still watch past episodes and try the activities. You can also find more resources for at home learning <a href="https://code.org/athome">here</a>.</p>
+<p><br>While our live episodes have ended for now, you can still watch past episodes and complete the activities. To keep the fun going, you can also try some of our recommended projects and activities for <a href="https://code.org/athome">learning at home</a>.</p>
 <br>
 
 <div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>

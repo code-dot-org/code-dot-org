@@ -1,5 +1,3 @@
-require 'aws/google'
-
 # Set AWS SDK environment variables from provided config and standardize on aws_* attributes
 ENV['AWS_ACCESS_KEY_ID'] ||= CDO.aws_access_key
 ENV['AWS_SECRET_ACCESS_KEY'] ||= CDO.aws_secret_key
@@ -11,6 +9,7 @@ ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
 if CDO.aws_role &&
   CDO.google_client_id &&
   CDO.google_client_secret
+  require 'aws/google'
   Aws::Google.config = {
     role_arn: CDO.aws_role,
     google_client_id: CDO.google_client_id,
