@@ -30,7 +30,8 @@ import {
   renameColumnName,
   addMissingColumns,
   getColumnsRef,
-  getColumnNamesFromRecords
+  getColumnNamesFromRecords,
+  getColumnNamesSnapshot
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
@@ -54,6 +55,12 @@ FirebaseStorage.getLibraryManifest = function() {
     .child('metadata/manifest')
     .once('value')
     .then(snapshot => snapshot.val());
+};
+
+FirebaseStorage.getColumnsForTable = function(tableName, tableType) {
+  let database =
+    tableType === 'shared' ? getSharedDatabase() : getProjectDatabase();
+  return getColumnNamesSnapshot(database, tableName);
 };
 
 /**

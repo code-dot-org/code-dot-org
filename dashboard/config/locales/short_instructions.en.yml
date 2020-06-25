@@ -6885,7 +6885,6 @@ en:
       subgoal U3L2 Using Simple Commands: Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.
       subgoalU3L2_TurtleSquare_right: Draw a square to the front and to the right of the starting location. (Click to show full instructions)
       template test: what's up
-      test-scratch-level: Short instructions for this level.
       testArtistForTestK: The Artist is trying to draw a line five times, but can't get it right.  Can you help?
       test_sarah: hi hi
       timeforcs_demo_sl_1: 'What do you think will happen when you click on the alien?  '

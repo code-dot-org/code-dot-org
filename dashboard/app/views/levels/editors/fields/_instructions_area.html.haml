@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#instructions_area"}}
+  Instructions Area
+
+#instructions_area.in.collapse
+  = render partial: 'levels/editors/fields/instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+  = render partial: 'levels/editors/fields/help_and_tips', locals: {f: f} if ((@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)) && !@level.is_a?(NetSim)
+  = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Weblab)
+  = render partial: 'levels/editors/fields/authored_hints', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly) && !@level.is_a?(NetSim)

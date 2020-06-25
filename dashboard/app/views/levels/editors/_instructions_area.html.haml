@@ -1,9 +1,0 @@
-%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#instructions_area"}}
-  Instructions Area
-
-#instructions_area.in.collapse
-  = render partial: 'levels/editors/fields/instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
-  = render partial: 'levels/editors/fields/help_and_tips', locals: {f: f}
-  // Note that many DSL levels also use this partial. See _dsl.html.haml
-  = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.include_teacher_only_markdown_editor?)
-  = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)

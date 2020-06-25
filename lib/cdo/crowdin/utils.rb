@@ -2,6 +2,11 @@ require 'json'
 require 'parallel'
 
 module Crowdin
+  # Crowdin's API is limited to 20 simultaneous requests. Limit our
+  # implementation to half that, just for safety.
+  # @see https://support.crowdin.com/api/api-integration-setup/#rate-limits
+  MAX_THREADS = 10
+
   class Utils
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
@@ -40,7 +45,7 @@ module Crowdin
         etags[language_code] ||= {}
         files = @project.list_files
 
-        changed_files = Parallel.map(files) do |file|
+        changed_files = Parallel.map(files, in_threads: MAX_THREADS) do |file|
           etag = etags[language_code].fetch(file, nil)
           response = @project.export_file(file, language_code, etag: etag, only_head: true)
           case response.code
@@ -76,7 +81,7 @@ module Crowdin
         locale_dir = File.join(@locales_dir, name)
 
         @logger.debug("#{name} (#{code}): #{filenames.length} files have changes")
-        Parallel.each(filenames) do |file|
+        Parallel.each(filenames, in_threads: MAX_THREADS) do |file|
           response = @project.export_file(file, code)
           dest = File.join(locale_dir, file)
           FileUtils.mkdir_p(File.dirname(dest))
