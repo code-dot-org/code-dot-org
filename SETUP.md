@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting), [Windows](#windows)
+   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -119,7 +119,9 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
+### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) 
+
+Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
@@ -173,7 +175,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 1. Make sure virtualization is turned on your BIOS settings.
 1. Run `wsl` from the command line (or search for 'Ubuntu' in the Start Menu) for the first time and WSL will complete installation in the resulting terminal window.
 
-From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-alternative-note-below-before-starting), _with the following observations_...
+From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso), _with the following observations_...
 * In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
 * Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
 
