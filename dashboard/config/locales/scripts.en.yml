@@ -29825,6 +29825,12 @@ en:
               name: Build A Project
               description_student: ''
               description_teacher: ''
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Behaviors with Sprite Lab:
+              name: Behaviors with Sprite Lab
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             csf_warmup:
               display_name: Warm-Up
@@ -29842,6 +29848,8 @@ en:
               display_name: For Loops
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: End of Course Project
           lessons:
             Dance Party:
               name: Dance Party
@@ -29955,6 +29963,12 @@ en:
               name: Build A Project
               description_student: ''
               description_teacher: ''
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Behaviors with Sprite Lab:
+              name: Behaviors with Sprite Lab
+            End of Course Project:
+              name: End of Course Project
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -31919,3 +31933,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        dani-june-2020-test:
+          stages: {}
+          lessons: {}
+          lesson_groups: {}
