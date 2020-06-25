@@ -283,8 +283,8 @@ class PardotV2
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
-  # @param [Hash] contact
-  # @return [Hash]
+  # @param contact [Hash] a hash with symbol keys
+  # @return [Hash] a hash with symbol keys
   def self.convert_to_pardot_prospect(contact)
     prospect = {}
 
@@ -293,8 +293,9 @@ class PardotV2
 
       if MULTI_VALUE_PROSPECT_FIELDS.include? prospect_field
         # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # Also sort its values to keep consistent order.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-        contact[contact_field].split(',').each_with_index do |value, index|
+        contact[contact_field].split(',').sort.each_with_index do |value, index|
           split_key = "#{prospect_field}_#{index}".to_sym
           prospect[split_key] = value
         end
@@ -329,11 +330,8 @@ class PardotV2
 
         if MULTI_VALUE_PROSPECT_FIELDS.include? field.to_sym
           # For a multi-value field, to be consistent with how we update it to Pardot,
-          # set key names as [field]_0, [field]_1, etc.
+          # set key names as [field]_0, [field]_1 etc., and sort its values.
           # @see +convert_to_pardot_prospect+ method and its tests.
-          #
-          # Sort the values to keep consistent order.
-          # @see extraction methods in ContactRollupsProcessed, e.g. +extract_professional_learning_enrolled+
           values.sort.each_with_index do |value, index|
             prospect["#{field}_#{index}"] = value
           end
