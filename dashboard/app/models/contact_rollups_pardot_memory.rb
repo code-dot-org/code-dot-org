@@ -105,6 +105,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.download_deleted_pardot_prospects(last_id = nil, limit = nil)
+    # Find emails that have been deleted in Pardot and mark them as such in our db.
+    # Don't need to download prospect data because Pardot data is derived from our
+    # production data. We have the source of truth to recreate those contacts if needed.
     PardotV2.retrieve_prospects(last_id, %w(id email), limit, true) do |deleted_prospects|
       current_time = Time.now.utc
       batch = deleted_prospects.map do |item|
