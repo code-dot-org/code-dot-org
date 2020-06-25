@@ -36,7 +36,6 @@ function showAmazonFutureEngineerEligibility() {
       // TO DO: confirm that there's no case where this might be used
       // where amazonFutureEngineerEligibilityElement could be null or not an array.
       ReactDOM.render(
-        // Need to update API endpoint and source page ID (not sure if even needed)
         <AmazonFutureEngineerEligibility
           signedIn={signedIn}
           schoolId={schoolData.nces_school_id || ''}
