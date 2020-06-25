@@ -73,6 +73,7 @@ import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 
 var copyrightStrings;
 
@@ -3081,29 +3082,25 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   alertContents,
   bottom = false
 ) {
-  var toolbarWidth;
-  if (this.usingBlockly_ && this.config.app === 'craft') {
-    // craft has a slightly different way of constructing the toolbox so we need to use
-    // the toolbox header's width to get the width of the actual toolbox.
-    toolbarWidth = $('#toolbox-header').width();
-  } else if (this.usingBlockly_) {
-    toolbarWidth = $('.blocklyToolboxDiv').width();
-  } else {
-    toolbarWidth =
-      $('.droplet-palette-element').width() + $('.droplet-gutter').width();
-  }
-  return this.displayAlert(
-    bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace',
-    {
-      type: type,
-      sideMargin: bottom ? 0 : undefined,
-      bottomMargin: bottom ? 0 : undefined,
-      top: bottom ? undefined : $('#headers').height(),
-      bottom: bottom,
-      left: toolbarWidth
-    },
-    alertContents
+  var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
+  var container = $('<div/>');
+  parent.append(container);
+  ReactDOM.render(
+    <WorkspaceAlert
+      type={type}
+      onClose={() => {
+        ReactDOM.unmountComponentAtNode(container[0]);
+      }}
+      isBlockly={this.usingBlockly_}
+      isCraft={this.config.app === 'craft'}
+      displayBottom={bottom}
+    >
+      {alertContents}
+    </WorkspaceAlert>,
+    container[0]
   );
+
+  return container[0];
 };
 
 /**
@@ -3162,16 +3159,12 @@ StudioApp.prototype.displayAlert = function(
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
       position: position,
-      left: props.left ? props.left : 0,
+      left: 0,
       right: 0,
+      top: 0,
       zIndex: 1000,
       transform: 'scale(1.0)'
     });
-    if (props.bottom) {
-      container[0].style.bottom = 0;
-    } else {
-      container[0].style.top = props.top ? `${props.top}px` : 0;
-    }
     parent.append(container);
   }
   var renderElement = container[0];
@@ -3184,7 +3177,6 @@ StudioApp.prototype.displayAlert = function(
       onClose={handleAlertClose}
       type={props.type}
       sideMargin={props.sideMargin}
-      bottomMargin={props.bottomMargin}
       closeDelayMillis={props.closeDelayMillis}
       childPadding={props.childPadding}
     >
