@@ -1,4 +1,4 @@
-Date of Last Revision: April 8, 2020
+Date of Last Revision: June 22, 2020
 
 ## About Code.org
 Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -160,7 +160,7 @@ Code.org does not directly collect or store payment instruments. Donations to Co
 When User accounts use a Student email address for login, Code.org does not store the email address provided by those Users in a retrievable format. Instead, we immediately create and store only a one-way hashed version of the email address (which cannot be converted back into the original address), and use it only for the purposes of login, account management, and password recovery. In fact, when creating or signing into a Student account, the actual account email address is never even transmitted to Code.org's servers. The only circumstance when Code.org's servers receive a Student's Code.org email address is if the Student forgets their password and asks to reset it. At that point, the Student is prompted to enter their email, which is used to send them a password reset link.
 
 ### Exceptions
-If a User contacts us via our customer support pages, we will store and use their email address in order to respond to them. If a User over the age of 13 signs our online petitions, or a User creates a Teacher account on Code.org or offers to help us as a software industry volunteer, we will store and use their email address just as we do for other advocates of our nonprofit mission.
+If a User contacts us via our customer support pages, we will store and use their email address in order to respond to them. If a User aged 16 or over signs our online petitions, or a User creates a Teacher account on Code.org or offers to help us as a software industry volunteer, we will store and use their email address just as we do for other advocates of our nonprofit mission.
 
 For a small minority of our Students, and only if they are over the age of 18, we may offer the opportunity to participate in a "longitudinal" study to understand the multi-year impact of learning computer science. Participation in such a study would be entirely optional. Students who receive an offer and choose to participate will be asked to provide their contact information (email address and optionally other forms of contact that may be more convenient for the Student). This contact information will not be shared with third parties, nor used in any way outside the purpose of such a study – to ask Students to participate in surveys. If we learn that we have inadvertently collected this information from a Student under 18, we will delete such information immediately.
 
@@ -168,7 +168,7 @@ For a small minority of our Students, and only if they are over the age of 18, w
 
 Code.org courses are designed to be used by Users of all ages, including children under the age of 13 with the involvement of and pre-authorization by their school, teacher, parent or legal guardian. In order to use features that involve uploading custom media files or sending messages within the school, we obtain prior consent from the Student’s teacher, other authorized school representative, or, in some cases, the parent or legal guardian.
 
-When children under the age of 13 attempt to sign our online petition supporting Code.org’s mission, the email addresses and names are discarded and are not stored on our server.
+When children under the age of 16 attempt to sign our online petition supporting Code.org’s mission, the email addresses and names are discarded and are not stored on our server.
 
 If Code.org learns that it has inadvertently collected Personal Information or Persistent Identifiers from children under the age of 13 without prior parental or teacher consent, Code.org will take appropriate steps to delete this information. If you are a teacher, parent or legal guardian of a Student on Code.org, you can ask us to deactivate the Student’s account, delete any hashed email address or inadvertently collected Personal Information or Persistent Identifiers, and request that we no longer allow the Student to submit their information to Code.org. To make such a request, please contact us at [https://code.org/contact](https://code.org/contact). Before processing your request, we may verify your identity and your relationship with the Student.
 
