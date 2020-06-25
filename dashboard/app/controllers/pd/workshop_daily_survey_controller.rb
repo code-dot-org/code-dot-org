@@ -516,7 +516,7 @@ module Pd
     # order.
     def get_workshop_for_new_general(enrollment_code, current_user)
       if enrollment_code
-        Pd::Enrollment.find_by!(code: enrollment_code).workshop
+        get_workshop_by_enrollment(enrollment_code, current_user)
       else
         Workshop.
           where(course: [COURSE_CSD, COURSE_CSP]).
@@ -530,13 +530,18 @@ module Pd
     # enrollment_code is not given.
     def get_workshop_for_pre_survey(enrollment_code, current_user)
       if enrollment_code
-        Pd::Enrollment.find_by!(code: enrollment_code).workshop
+        get_workshop_by_enrollment(enrollment_code, current_user)
       else
         Workshop.
           where(course: [COURSE_CSD, COURSE_CSP]).
           where.not(subject: SUBJECT_FIT).
           nearest_enrolled_in_by(current_user)
       end
+    end
+
+    def get_workshop_by_enrollment(enrollment_code, current_user)
+      enrollment = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)
+      enrollment && enrollment.workshop
     end
 
     def get_session_for_workshop_and_day(workshop, day)
