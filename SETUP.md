@@ -35,11 +35,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     </details>
 
 1. `bundle exec rake install`
-  * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
+    * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
   each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
   install is working correctly.
 1. `bundle exec rake build`
-  * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
+    * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
