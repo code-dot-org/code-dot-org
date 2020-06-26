@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ContactRollupsProcessedTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   test 'import_from_raw_table creates one row per email' do
     assert 0, ContactRollupsRaw.count
     assert 0, ContactRollupsProcessed.count
@@ -31,22 +33,22 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'import_from_raw_table combines data from multiple records' do
-    assert 0, ContactRollupsRaw.count
-    assert 0, ContactRollupsProcessed.count
-
     base_time = Time.now.utc
     email = 'email@example.domain'
     create :contact_rollups_raw, email: email,
-      data: nil, data_updated_at: base_time - 1.day
+      sources: 'dashboard.users', data: nil, data_updated_at: base_time - 2.days
     create :contact_rollups_raw, email: email,
-      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time
+      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time - 1.day
+    create :contact_rollups_raw, email: email,
+      sources: 'dashboard.pd_enrollments', data: {course: COURSE_CSF}, data_updated_at: base_time
 
+    refute ContactRollupsProcessed.find_by_email(email)
     ContactRollupsProcessed.import_from_raw_table
 
-    assert_equal 1, ContactRollupsProcessed.count
-    data = ContactRollupsProcessed.first.data
-    assert_equal 1, data['opt_in']
-    assert_equal base_time.to_i, Time.parse(data['updated_at']).to_i
+    record = ContactRollupsProcessed.find_by_email!(email)
+    assert_equal 1, record.data['opt_in']
+    assert_equal COURSE_CSF, record.data['professional_learning_enrolled']
+    assert_equal base_time.to_i, Time.parse(record.data['updated_at']).to_i
   end
 
   test 'import_from_raw_table calls all extraction functions' do
@@ -55,11 +57,15 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     # Each extraction function will be called once per unique email address
     ContactRollupsProcessed.expects(:extract_opt_in).
-      once.
-      returns({opt_in: 1})
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_user_id).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_professional_learning_enrolled).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_professional_learning_attended).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
-      once.
-      returns({updated_at: Time.now.utc})
+      once.returns({})
 
     ContactRollupsProcessed.import_from_raw_table
   end
@@ -71,26 +77,32 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     test_cases = [
       # 3 input params are: contact_data, table, field
       {
+        # all empty
         input: [{}, nil, nil],
         expected_output: nil
       },
       {
+        # table exists in contact data but field doesn't
         input: [{table => {}}, table, field],
         expected_output: nil
       },
       {
+        # field exists in contact data but table doesn't
         input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: nil
       },
       {
+        # table and field exists in contact data, field value is nil
         input: [{table => {field => [{'value' => nil}]}}, table, field],
         expected_output: [nil]
       },
       {
+        # table and field exists in contact data with non-nil value
         input: [{table => {field => [{'value' => 'WA'}]}}, table, field],
         expected_output: ['WA']
       },
       {
+        # table and field exist in contact data with multiple non-nil values
         input: [{table => {field => [{'value' => 'WA'}, {'value' => 'OR'}]}}, table, field],
         expected_output: %w[WA OR]
       },
@@ -98,6 +110,77 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     test_cases.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_field(*test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_professional_learning_enrolled' do
+    contact_data = {
+      'dashboard.pd_enrollments' => {
+        'course' => [
+          {'value' => COURSE_CSF},
+          {'value' => COURSE_CSF},
+          {'value' => COURSE_CSD},
+          {'value' => nil}
+        ]
+      }
+    }
+    # output should not contains nil or duplicate values, and should be sorted
+    expected_output = {
+      professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}"
+    }
+
+    output = ContactRollupsProcessed.extract_professional_learning_enrolled(contact_data)
+    assert_equal expected_output, output
+  end
+
+  test 'extract_professional_learning_attended' do
+    tests = [
+      {
+        # Input doesn't have 1 of the 2 tables required, and doesn't have any fields required
+        input: {'dashboard.followers' => {}},
+        expected_output: {}
+      },
+      {
+        # Input has a non-nil valid section type
+        input: {
+          'dashboard.followers' => {'section_type' => [{'value' => SECTION_TYPE_MAP[COURSE_CSF]}]}
+        },
+        expected_output: {professional_learning_attended: COURSE_CSF}
+      },
+      {
+        # Input has a non-nil valid course
+        input: {
+          'dashboard.pd_attendances' => {'course' => [{'value' => COURSE_CSD}]}
+        },
+        expected_output: {professional_learning_attended: COURSE_CSD}
+      },
+      {
+        # Input contains both nil and multiple non-nil valid values from both required tables
+        input: {
+          'dashboard.followers' => {
+            'section_type' => [
+              {'value' => SECTION_TYPE_MAP[COURSE_CSF]},
+              {'value' => SECTION_TYPE_MAP[COURSE_ECS]},
+              {'value' => nil}
+            ]
+          },
+          'dashboard.pd_attendances' => {
+            'course' => [
+              {'value' => COURSE_CSD},
+              {'value' => COURSE_CSP},
+              {'value' => nil}
+            ]
+          }
+        },
+        expected_output: {
+          professional_learning_attended: "#{COURSE_CSD},#{COURSE_CSF},#{COURSE_CSP},#{COURSE_ECS}"
+        }
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_professional_learning_attended test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
