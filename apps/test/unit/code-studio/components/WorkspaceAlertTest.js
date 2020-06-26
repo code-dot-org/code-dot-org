@@ -6,16 +6,19 @@ import $ from 'jquery';
 import sinon from 'sinon';
 
 describe('WorkspaceAlert', () => {
-  //let jQueryHeight;
-  /*beforeEach() => {
-    // do all the stubs for all the tests - width and height
-  }
-  afterEach() => {
-    $.fn.height.restore();// fix this
-    //jQueryHeight.restore();
-  }*/
+  let jQueryHeight;
+  let jQueryWidth;
+  beforeEach(() => {
+    jQueryHeight = sinon.stub($.fn, 'height');
+    jQueryWidth = sinon.stub($.fn, 'width');
+  });
+
+  afterEach(() => {
+    $.fn.height.restore();
+    $.fn.width.restore();
+  });
   it('can be at the top', () => {
-    var jQueryHeight = sinon.stub($.fn, 'height').returns(4);
+    jQueryHeight.returns(4);
     const top = mount(
       <WorkspaceAlert
         type="warning"
@@ -35,8 +38,6 @@ describe('WorkspaceAlert', () => {
         .first()
         .props().style.top
     ).to.equal(4);
-
-    $.fn.height.restore();
   });
 
   it('can be at the bottom', () => {
@@ -60,10 +61,7 @@ describe('WorkspaceAlert', () => {
   });
 
   it('isBlockly and isCraft uses #toolbox-header for left', () => {
-    var jQueryWidth = sinon
-      .stub($.fn, 'width')
-      .onCall(0)
-      .returns(1);
+    jQueryWidth.onCall(0).returns(1);
     const isBlocklyAndisCraft = mount(
       <WorkspaceAlert
         type="warning"
@@ -83,15 +81,10 @@ describe('WorkspaceAlert', () => {
         .first()
         .props().style.left
     ).to.equal(1);
-
-    $.fn.width.restore();
   });
 
   it('isBlockly and not isCraft uses .blocklyToolboxDiv for left', () => {
-    var jQueryWidth = sinon
-      .stub($.fn, 'width')
-      .onCall(0)
-      .returns(1);
+    jQueryWidth.onCall(0).returns(1);
     const isBlockly = mount(
       <WorkspaceAlert
         type="warning"
@@ -104,20 +97,17 @@ describe('WorkspaceAlert', () => {
       </WorkspaceAlert>
     );
     expect(jQueryWidth.callCount).to.equal(1);
-    expect(jQueryWidth.thisValues[1].selector).to.equal('.blocklyToolboxDiv');
+    expect(jQueryWidth.thisValues[0].selector).to.equal('.blocklyToolboxDiv');
     expect(
       isBlockly
         .find('div')
         .first()
         .props().style.left
     ).to.equal(1);
-
-    $.fn.width.restore();
   });
 
   it('not isBlockly and not isCraft uses .droplet-gutter and .droplet-palette-element for left', () => {
-    var jQueryWidth = sinon
-      .stub($.fn, 'width')
+    jQueryWidth
       .onCall(0)
       .returns(1)
       .returns(2);
@@ -139,11 +129,9 @@ describe('WorkspaceAlert', () => {
         .props().style.left
     ).to.equal(3);
     expect(jQueryWidth.callCount).to.equal(2);
-    expect(jQueryWidth.thisValues[2].selector).to.equal(
+    expect(jQueryWidth.thisValues[0].selector).to.equal(
       '.droplet-palette-element'
     );
-    expect(jQueryWidth.thisValues[3].selector).to.equal('.droplet-gutter');
-
-    $.fn.width.restore();
+    expect(jQueryWidth.thisValues[1].selector).to.equal('.droplet-gutter');
   });
 });
