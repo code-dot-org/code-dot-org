@@ -54,8 +54,8 @@
     "mini_rubric": "false",
     "encrypted_examples": "/6PI37QjbieRjPLjHxL0QMgo6pJ4i9VUUFf3dm6+dY/KueD1+dSl2MeUA2zW\nsmJLLJSf0QSShQNaSLKpymNkQA==\n",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
-      "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
     ],
     "preload_asset_list": null
   },
