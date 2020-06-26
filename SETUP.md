@@ -5,8 +5,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
+1. The Code.org repo is large, so kick off the downloading before setting up your system.
+    HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`
+    SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OSX](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -14,7 +17,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v8.15.0
      yarn --version  # --> 1.16.0
      ```
-1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler -v 1.17`
 1. `rbenv rehash`
 1. `cd code-dot-org`
@@ -48,6 +50,63 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## OS-specific prerequisites
+
+### OS X Catalina
+([Older Versions](#os-x-mojave--mavericks--yosemite--el-capitan--sierra))
+
+1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. Install Redis: `brew install redis`
+1. Run `brew install https://raw.githubusercontent.com/turforlag/homebrew-cervezas/master/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
+    <details>
+        <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
+
+        If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+    </details>
+1. Configure your shell
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+        ```
+        # Start rbenv
+        eval "$(rbenv init -)"
+        
+        # Load nvm function into the shell
+        export NVM_DIR=~/.nvm
+        source $(brew --prefix nvm)/nvm.sh
+
+        # Prevent problems related to the "Too many open files" error
+        ulimit -n 8192
+        ```
+    1. Pick up those changes: `source ~/.bash_profile`
+    1. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x)
+1. Set up MySQL
+    1. Force link 5.7 version: `brew link mysql@5.7 --force`
+    1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql@5.7/*.plist ~/Library/LaunchAgents`
+    1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.7.plist`
+1. Install Ruby 2.5.0
+    1. `rbenv install 2.5.0`
+    1. Set the global version of Ruby: `rbenv global 2.5.0`
+    1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
+1. Install Node and yarn
+    1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
+    1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
+    1. `npm install -g yarn@1.16.0`.
+    1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
+1. Install the Xcode Command Line Tools:
+    1. `xcode-select --install`
+    <details>
+              <summary>Troubleshoot: command line tools already installed</summary>
+              If it complains
+              ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
+              Make sure XCode is installed and up to date, then launch it to install the tools manually
+    </details>
+1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
+1. Prepare for `bundle install` ([more details](#bundle-install-tips))
+    1. `brew install openssl`
+    1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
+    1. `brew install v8@3.15`
+    1. `bundle config build.libv8 --with-system-v8`
+    1. `bundle config build.therubyracer --with-v8-dir=/usr/local/opt/v8@3.15`
+    1. [check rmagick version](#rmagick)
 
 ### OS X Mojave / Mavericks / Yosemite / El Capitan / Sierra
 
