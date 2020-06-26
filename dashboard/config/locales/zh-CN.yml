@@ -769,6 +769,8 @@ zh-CN:
     open_response_body: 感谢您的回复！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+  lesson_extras:
+    bonus_level: 更多关卡
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？
@@ -1090,8 +1092,13 @@ zh-CN:
   maker:
     google_oauth:
       login_with_google: 登录到Google的制作者应用
+      enter_code: 当你使用默认浏览器并使用Google账号登入时，请输入提示的代码
+      copy_code: 复制这段代码并粘贴到 Maker App 来登录到 Code.org
+      error_token_expired: 验证已过期，请重新登录获取一个新的验证码。
+      error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
+      error_invalid_user: 无效的用户ID，请重新登录。
       error_no_code: 请输入您的登录代码。
   parent_email_banner:
     text: "**你是一名父母还是监护人？**将你的电子邮箱链接到此帐户，以便随时了解你孩子的进度和项目！"
-    link_your_email: 链接你的电子邮箱
-    not_now: 不是现在
+    link_your_email: 填写电子邮箱
+    not_now: 以后再说

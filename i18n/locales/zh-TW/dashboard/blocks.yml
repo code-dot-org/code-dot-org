@@ -1200,6 +1200,8 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_subjectSpritePointer:
+        text: 點擊 {SPRITE}
       gamelab_tumbling:
         text: 翻滾
       gamelab_turn:
