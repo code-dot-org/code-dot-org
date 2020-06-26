@@ -165,7 +165,7 @@ describe('FirebaseStorage', () => {
         'foo.bar',
         'baz',
         () => verifyValue(),
-        err => console.log(err)
+        err => console.warn(err)
       );
       function verifyValue() {
         getProjectDatabase()
