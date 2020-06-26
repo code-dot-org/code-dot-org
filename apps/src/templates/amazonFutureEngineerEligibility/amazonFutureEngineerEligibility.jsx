@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+import color from '@cdo/apps/util/color';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
@@ -12,6 +13,10 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 const styles = {
   intro: {
     paddingBottom: 10
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
   }
 };
 
@@ -258,7 +263,11 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 value={formData.schoolId}
                 showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
               />
-              <Button id="submit" onClick={this.handleClickCheckEligibility}>
+              <Button
+                id="submit"
+                onClick={this.handleClickCheckEligibility}
+                style={styles.button}
+              >
                 Find out if I'm eligible
               </Button>
             </FormGroup>
