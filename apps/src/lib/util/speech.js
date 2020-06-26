@@ -17,7 +17,7 @@ export function textToSpeech(text, gender, token, region) {
   speechConfig.speechSynthesisOutputFormat =
     SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
-  let voice = gender === 'male' ? 'en-US-BenjaminRUS' : 'en-US-AriaRUS';
+  const voice = gender === 'male' ? 'en-US-BenjaminRUS' : 'en-US-AriaRUS';
   const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
   const ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${text}</voice></speak>`;
   synthesizer.speakSsmlAsync(
@@ -28,7 +28,7 @@ export function textToSpeech(text, gender, token, region) {
       // students export their apps and run them offline. At this point, their
       // uploaded sound files are exported as well, which means varnish is not
       // an issue.
-      let forceHTML5 = window.location.protocol === 'file:';
+      const forceHTML5 = window.location.protocol === 'file:';
       Sounds.getSingleton().playBytes(result.audioData, {
         volume: 1.0,
         loop: false,

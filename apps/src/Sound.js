@@ -365,41 +365,20 @@ Sound.prototype.getPlayableBytes = function() {
 
 Sound.prototype.preloadFile = function() {
   const file = this.getPlayableFile();
-  const bytes = this.getPlayableBytes();
-  if (!file && !bytes) {
+  if (!file) {
     return;
   }
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    if (file) {
-      this.preloadViaWebAudio(file, buffer => {
-        self.reusableBuffer = buffer;
-      });
-    } else {
-      self.audioContext.decodeAudioData(bytes, buffer => {
-        self.reusableBuffer = buffer;
-        // This is for Firefox since MP3 playback is being blocked in the SDK.
-        // This causes normal audio playback to fail here:
-        // https://github.com/microsoft/cognitive-services-speech-sdk-js/blob/1bc42c801f62b770327086d688a77b95e05628f7/src/sdk/Audio/SpeakerAudioDestination.ts#L66
-        // so our own Sound play needs to be used.
-        if (!MediaSource.isTypeSupported('audio/mpeg')) {
-          self.onSoundLoaded();
-        }
-      });
-    }
+    this.preloadViaWebAudio(file, buffer => {
+      self.reusableBuffer = buffer;
+    });
     return;
   }
 
   if (window.Audio) {
-    let audioElement;
-    if (file) {
-      audioElement = new window.Audio(file);
-    } else {
-      const blob = new Blob([bytes], {type: 'audio/mpeg3'});
-      const url = window.URL.createObjectURL(blob);
-      audioElement = new window.Audio(url);
-    }
+    let audioElement = new window.Audio(file);
     if (!audioElement || !audioElement.play) {
       return;
     }
