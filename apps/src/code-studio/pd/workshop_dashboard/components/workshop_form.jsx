@@ -334,49 +334,6 @@ export class WorkshopForm extends React.Component {
     this.setState({organizer: {id: parseInt(event.target.value)}});
   };
 
-  renderCourseSelect(validation) {
-    let allowedCourses;
-    if (
-      this.props.permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)
-    ) {
-      allowedCourses = Courses;
-    } else if (this.props.permission.has(Facilitator)) {
-      allowedCourses = this.props.facilitatorCourses;
-    } else {
-      console.error(
-        'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
-      );
-      allowedCourses = [];
-    }
-
-    const options = allowedCourses.map((course, i) => {
-      return (
-        <option key={i} value={course}>
-          {course}
-        </option>
-      );
-    });
-    const placeHolder = this.state.course ? null : <option />;
-    return (
-      <FormGroup validationState={validation.style.course}>
-        <ControlLabel>Course</ControlLabel>
-        <FormControl
-          componentClass="select"
-          value={this.state.course || ''}
-          id="course"
-          name="course"
-          onChange={this.handleCourseChange}
-          style={this.getInputStyle()}
-          disabled={this.props.readOnly}
-        >
-          {placeHolder}
-          {options}
-        </FormControl>
-        <HelpBlock>{validation.help.course}</HelpBlock>
-      </FormGroup>
-    );
-  }
-
   renderOnMapRadios(validation) {
     return (
       <FormGroup validationState={validation.style.on_map}>
@@ -1103,7 +1060,17 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
+            <Col sm={3}>
+              <CourseSelect
+                course={this.state.course}
+                facilitatorCourses={this.props.facilitatorCourses}
+                permission={this.props.permission}
+                readOnly={this.props.readOnly}
+                inputStyle={this.getInputStyle()}
+                validation={validation}
+                onChange={this.handleCourseChange}
+              />
+            </Col>
             <Col sm={3}>
               {this.shouldRenderSubject() && (
                 <SubjectSelect
@@ -1227,6 +1194,64 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
 SelectSuppressEmail.propTypes = {
   value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
+  onChange: PropTypes.func.isRequired
+};
+
+function CourseSelect({
+  course,
+  facilitatorCourses,
+  permission,
+  readOnly,
+  inputStyle,
+  validation,
+  onChange
+}) {
+  let allowedCourses;
+  if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
+    allowedCourses = Courses;
+  } else if (permission.has(Facilitator)) {
+    allowedCourses = facilitatorCourses;
+  } else {
+    console.error(
+      'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
+    );
+    allowedCourses = [];
+  }
+
+  const options = allowedCourses.map((course, i) => {
+    return (
+      <option key={i} value={course}>
+        {course}
+      </option>
+    );
+  });
+  const placeHolder = course ? null : <option />;
+  return (
+    <FormGroup validationState={validation.style.course}>
+      <ControlLabel>Course</ControlLabel>
+      <FormControl
+        componentClass="select"
+        value={course || ''}
+        id="course"
+        name="course"
+        onChange={onChange}
+        style={inputStyle}
+        disabled={readOnly}
+      >
+        {placeHolder}
+        {options}
+      </FormControl>
+      <HelpBlock>{validation.help.course}</HelpBlock>
+    </FormGroup>
+  );
+}
+CourseSelect.propTypes = {
+  course: PropTypes.string,
+  facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  permission: PermissionPropType.isRequired,
+  readOnly: PropTypes.bool,
+  inputStyle: PropTypes.object,
+  validation: PropTypes.object,
   onChange: PropTypes.func.isRequired
 };
 
