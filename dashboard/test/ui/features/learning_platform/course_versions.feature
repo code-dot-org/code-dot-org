@@ -68,7 +68,7 @@ Scenario: Versions warning announcement on script overview page
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
-  Given I am assigned to script "ui-test-script-2017"
+  Given I am assigned to script "ui-test-script-as-course-2017"
   When I am on "http://studio.code.org/s/ui-test-script-as-course-2017/next"
   And I wait until current URL contains "/s/ui-test-script-as-course-2017/stage/1/puzzle/1"
 
@@ -88,37 +88,43 @@ Scenario: Versions warning announcement on script overview page
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
+  # Generate progress in course 2
+  When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
+  And I click selector ".next-stage" once I see it
+  And I wait until current URL contains "/s/course2/stage/1/puzzle/2"
+
+  When I am on "http://studio.code.org/s/course1"
+  And I wait until element "#script-title" is visible
+  And element "#uitest-version-selector" is not visible
+  Then element ".announcement-notification:contains(newer version)" is not visible
+
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
   # Older script versions are not visible to students who are not assigned to them
-  When I am on "http://studio.code.org/s/ui-test-script-2017"
-  And I get redirected to "s/ui-test-script-2019" via "dashboard"
+  When I am on "http://studio.code.org/s/ui-test-script-as-course-2017"
+  And I get redirected to "s/ui-test-script-as-course-2019" via "dashboard"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
 
-  Given I am assigned to script "ui-test-script-2017"
-  When I am on "http://studio.code.org/s/ui-test-script-2017"
+  Given I am assigned to script "ui-test-script-as-course-2017"
+  When I am on "http://studio.code.org/s/ui-test-script-as-course-2017"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2019)" once I see it
-  Then I wait until I am on "http://studio.code.org/s/ui-test-script-2019"
+  Then I wait until I am on "http://studio.code.org/s/ui-test-script-as-course-2019"
 
   When I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2017)" once I see it
-  Then I wait until I am on "http://studio.code.org/s/ui-test-script-2017"
+  Then I wait until I am on "http://studio.code.org/s/ui-test-script-as-course-2017"
 
 @as_student
 @no_mobile
-
 Scenario: Course unit family names redirect to 2019 version
   When I am on "http://studio.code.org/s/csp3"
   And I get redirected to "/s/csp3-2019" via "dashboard"
-
-  When I am on "http://studio.code.org/s/csd3"
-  And I get redirected to "/s/csd3-2019" via "dashboard"
