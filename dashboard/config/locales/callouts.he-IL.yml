@@ -92,6 +92,9 @@ he-IL:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
+      Course 4 Bee 1:
+        if_bee_nectar: השתמשו בפקודה "If" כדי להחליט אם הדבורה צריכה לקבל צוף או להכין
+          דבש
       Course 4 Bee Params 2:
         edit_get_nectar: השתמש בכפתור הזה לערוך את הפונקציה ולשנות את הכיוון שהדבורה
           תסתובב אליה כדי לאסוף את הצוף.

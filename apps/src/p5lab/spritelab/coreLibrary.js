@@ -201,7 +201,10 @@ function whenTouchEvent(inputEvent) {
         if (!firedOnce) {
           // Sprites are overlapping, and we haven't fired yet for this collision,
           // so we should fire the callback
-          callbackArgList.push({sprite: sprite.id, target: target.id});
+          callbackArgList.push({
+            subjectSprite: sprite.id,
+            objectSprite: target.id
+          });
           firedOnce = true;
         }
       } else {
@@ -224,7 +227,10 @@ function whileTouchEvent(inputEvent) {
   sprites.forEach(sprite => {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
-        callbackArgList.push({sprite: sprite.id, target: target.id});
+        callbackArgList.push({
+          subjectSprite: sprite.id,
+          objectSprite: target.id
+        });
       }
     });
   });
@@ -237,7 +243,7 @@ function whenClickEvent(inputEvent, p5Inst) {
     let sprites = getSpriteArray(inputEvent.args.sprite);
     sprites.forEach(sprite => {
       if (p5Inst.mouseIsOver(sprite)) {
-        callbackArgList.push({sprite: sprite.id});
+        callbackArgList.push({clickedSprite: sprite.id});
       }
     });
   }
@@ -249,7 +255,7 @@ function whileClickEvent(inputEvent, p5Inst) {
   let sprites = getSpriteArray(inputEvent.args.sprite);
   sprites.forEach(sprite => {
     if (p5Inst.mousePressedOver(sprite)) {
-      callbackArgList.push({sprite: sprite.id});
+      callbackArgList.push({clickedSprite: sprite.id});
     }
   });
   return callbackArgList;

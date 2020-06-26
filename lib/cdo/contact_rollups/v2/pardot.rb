@@ -13,21 +13,30 @@ class PardotV2
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
 
+  # Map from contact fields to Pardot prospect fields
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
-    email: {field: :email},
-    pardot_id: {field: :id},
+    email: :email,
+    pardot_id: :id,
     # Note: db_* fields are sorted alphabetically
-    city: {field: :db_City},
-    country: {field: :db_Country},
-    form_roles: {field: :db_Form_Roles},
-    forms_submitted: {field: :db_Forms_Submitted},
-    hoc_organizer_years: {field: :db_Hour_of_Code_Organizer, multi: true},
-    postal_code: {field: :db_Postal_Code},
-    professional_learning_attended: {field: :db_Professional_Learning_Attended, multi: true},
-    professional_learning_enrolled: {field: :db_Professional_Learning_Enrolled, multi: true},
-    roles: {field: :db_Roles, multi: true},
-    state: {field: :db_State},
+    city: :db_City,
+    country: :db_Country,
+    form_roles: :db_Form_Roles,
+    forms_submitted: :db_Forms_Submitted,
+    hoc_organizer_years: :db_Hour_of_Code_Organizer,
+    postal_code: :db_Postal_Code,
+    professional_learning_attended: :db_Professional_Learning_Attended,
+    professional_learning_enrolled: :db_Professional_Learning_Enrolled,
+    roles: :db_Roles,
+    state: :db_State,
   }.freeze
+
+  # Pardot multi-value or multi-select fields
+  MULTI_VALUE_PROSPECT_FIELDS = [
+    :db_Hour_of_Code_Organizer,
+    :db_Professional_Learning_Attended,
+    :db_Professional_Learning_Enrolled,
+    :db_Roles
+  ].to_set
 
   def initialize(is_dry_run: false)
     @new_prospects = []
@@ -274,22 +283,24 @@ class PardotV2
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
-  # @param [Hash] contact
-  # @return [Hash]
+  # @param contact [Hash] a hash with symbol keys
+  # @return [Hash] a hash with symbol keys
   def self.convert_to_pardot_prospect(contact)
     prospect = {}
 
-    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |key, prospect_info|
-      next unless contact.key?(key)
+    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |contact_field, prospect_field|
+      next unless contact.key? contact_field
 
-      if prospect_info[:multi]
+      if MULTI_VALUE_PROSPECT_FIELDS.include? prospect_field
         # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # Also sort its values to keep consistent order.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-        contact[key].split(',').each_with_index do |value, index|
-          prospect["#{prospect_info[:field]}_#{index}"] = value
+        contact[contact_field].split(',').sort.each_with_index do |value, index|
+          split_key = "#{prospect_field}_#{index}".to_sym
+          prospect[split_key] = value
         end
       else
-        prospect[prospect_info[:field]] = contact[key]
+        prospect[prospect_field] = contact[contact_field]
       end
     end
 
@@ -298,6 +309,8 @@ class PardotV2
     if contact.key?(:opt_in)
       prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
+
+    prospect[:db_Has_Teacher_Account] = 'true' if contact[:user_id]
 
     prospect
   end
@@ -313,16 +326,17 @@ class PardotV2
         # Collect all text values for this field
         field_node = prospect_node.xpath(field)
         values = field_node.children.map(&:text)
+        next if values.empty?
 
-        if values.length == 1
-          prospect.merge!({field => values.first})
-        else
+        if MULTI_VALUE_PROSPECT_FIELDS.include? field.to_sym
           # For a multi-value field, to be consistent with how we update it to Pardot,
-          # set key names as [field]_0, [field]_1, etc.
-          # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-          values.each_with_index do |value, index|
-            prospect.merge!("#{field}_#{index}" => value)
+          # set key names as [field]_0, [field]_1 etc., and sort its values.
+          # @see +convert_to_pardot_prospect+ method and its tests.
+          values.sort.each_with_index do |value, index|
+            prospect["#{field}_#{index}"] = value
           end
+        else
+          prospect[field] = values.first
         end
       end
     end
