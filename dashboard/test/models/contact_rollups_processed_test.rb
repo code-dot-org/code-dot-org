@@ -66,6 +66,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_roles).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_state).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -295,6 +297,68 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     tests.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_roles test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_state' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'state' => [
+          {'value' => 'Washington', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'California', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    user_geos_input = {
+      'dashboard.user_geos' => {
+        'state' => [
+          {'value' => 'Texas', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Florida', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'state' => [
+          {'value' => 'IL', 'data_updated_at' => base_time},
+          {'value' => 'PA', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {state: 'California'}
+      },
+      {
+        input: user_geos_input,
+        expected_output: {state: 'Florida'}
+      },
+      {
+        input: schools_input,
+        expected_output: {state: 'Illinois'}
+      },
+      # user_geos data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(user_geos_input),
+        expected_output: {state: 'Florida'}
+      },
+      # schools data has higher priority than user_geos data
+      {
+        input: form_geos_input.merge(user_geos_input).merge(schools_input),
+        expected_output: {state: 'Illinois'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_state test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
