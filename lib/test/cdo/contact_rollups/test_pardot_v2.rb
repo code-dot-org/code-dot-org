@@ -202,6 +202,7 @@ class PardotV2Test < Minitest::Test
           opt_in: 1,
           user_id: 111,
           state: 'Washington',
+          country: 'United States',
         },
         expected_output: {
           email: 'test0@domain.com',
@@ -209,6 +210,7 @@ class PardotV2Test < Minitest::Test
           db_Opt_In: 'Yes',
           db_Has_Teacher_Account: 'true',
           db_State: 'Washington',
+          db_Country: 'United States',
         }
       },
       {
