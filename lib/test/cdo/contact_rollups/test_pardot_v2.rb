@@ -202,13 +202,15 @@ class PardotV2Test < Minitest::Test
           opt_in: 1,
           user_id: 111,
           state: 'Washington',
+          city: 'Seattle',
         },
         expected_output: {
           email: 'test0@domain.com',
           id: 10,
           db_Opt_In: 'Yes',
           db_Has_Teacher_Account: 'true',
-          db_State: 'Washington'
+          db_State: 'Washington',
+          db_City: 'Seattle',
         }
       },
       {
