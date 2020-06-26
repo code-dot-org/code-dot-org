@@ -1,4 +1,3 @@
-/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
 import experiments from '@cdo/apps/util/experiments';
@@ -1040,7 +1039,11 @@ exports.createJsWrapperBlockCreator = function(
               });
             }
           });
-          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+          if (
+            !window.appOptions ||
+            (window.appOptions.level.miniToolbox &&
+              !window.appOptions.readonlyWorkspace)
+          ) {
             this.appendDummyInput()
               .appendTitle(toggle)
               .appendTitle(' ');
