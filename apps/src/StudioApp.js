@@ -3085,20 +3085,21 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
-  ReactDOM.render(
-    <WorkspaceAlert
-      type={type}
-      onClose={() => {
+  console.log('show me the alert');
+  const workspaceAlert = React.createElement(
+    WorkspaceAlert,
+    {
+      type: type,
+      onClose: () => {
         ReactDOM.unmountComponentAtNode(container[0]);
-      }}
-      isBlockly={this.usingBlockly_}
-      isCraft={this.config.app === 'craft'}
-      displayBottom={bottom}
-    >
-      {alertContents}
-    </WorkspaceAlert>,
-    container[0]
+      },
+      isBlockly: this.usingBlockly_,
+      isCraft: this.config.app === 'craft',
+      displayBottom: bottom
+    },
+    alertContents
   );
+  ReactDOM.render(workspaceAlert, container[0]);
 
   return container[0];
 };
