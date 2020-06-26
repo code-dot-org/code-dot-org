@@ -199,4 +199,33 @@ DSL
     assert_empty BubbleChoice.parent_levels("sublevel_12") # contains sublevel name above
     assert_empty BubbleChoice.parent_levels("nonexistent level name")
   end
+
+  test 'clone with suffix copies sublevels' do
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    sublevel3 = create :level, name: 'sublevel_3'
+
+    # clone_with_suffix needs to be able to access the level object as well as
+    # its DSL text. Rather than create an actual DSL file, we stub the level's
+    # dsl_text method to return the DSL text. Since we've got the DSL text
+    # handy, also use it (rather than factories) to create the level itself.
+    # This approach also helps validate that the DSL text is correct and avoid
+    # any unintended inconsistencies between DSL text and factory calls.
+    input_dsl = <<~DSL
+      name 'bubble choice'
+      sublevels
+      level 'sublevel_1'
+      level 'sublevel_2'
+      level 'sublevel_3'
+    DSL
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
+    bubble_choice.stubs(:dsl_text).returns(input_dsl)
+
+    assert_equal [sublevel1, sublevel2, sublevel3], bubble_choice.sublevels
+
+    bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
+    puts bubble_choice_copy.properties
+    expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
+    assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)
+  end
 end
