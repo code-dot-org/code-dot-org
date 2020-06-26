@@ -185,6 +185,27 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_roles' do
+    tests = [
+      {input: {}, expected_output: {}},
+      {
+        input: {
+          'dashboard.sections' => {
+            'script_name' => [
+              {'value' => 'express-2019'}
+            ]
+          }
+        },
+        expected_output: {roles: 'CSF Teacher'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_roles test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_updated_at with valid input' do
     base_time = Time.now.utc - 7.days
     tests = [
