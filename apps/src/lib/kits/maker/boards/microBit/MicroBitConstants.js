@@ -25,3 +25,21 @@ export const MB_COMPONENTS = [
   'Compass',
   'LightSensor'
 ];
+
+export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
+export const MB_SENSOR_VARS = [
+  'soundSensor',
+  'lightSensor',
+  'tempSensor',
+  'compass'
+];
+
+const BUTTON_EVENTS = ['down', 'up'];
+const SENSOR_EVENTS = ['change', 'data'];
+
+export const MB_COMPONENT_EVENTS = {
+  buttonA: BUTTON_EVENTS,
+  buttonB: BUTTON_EVENTS,
+  accelerometer: ['change', 'data', 'shake']
+};
+MB_SENSOR_VARS.forEach(sensor => (MB_COMPONENT_EVENTS[sensor] = SENSOR_EVENTS));
