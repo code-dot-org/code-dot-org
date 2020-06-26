@@ -476,8 +476,7 @@ module LevelsHelper
 
   def azure_speech_service_options
     speech_service_options = {}
-
-    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
+    if @level.game.use_azure_speech_service? && CDO.azure_speech_service_region.present? && CDO.azure_speech_service_key.present?
       uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
       header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
       http = Net::HTTP.new(uri.host, uri.port)
@@ -488,7 +487,8 @@ module LevelsHelper
       speech_service_options[:azureSpeechServiceToken] = response.body
       speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
     end
-
+    speech_service_options
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
     speech_service_options
   end
 
