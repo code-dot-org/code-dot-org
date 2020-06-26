@@ -1,0 +1,7 @@
+hidden false
+version_year '2019'
+is_stable true
+
+lesson_group 'lg_1', display_name: 'Lesson Group'
+lesson 'Lesson'
+level 'U1L1 Student Lesson Introduction'
