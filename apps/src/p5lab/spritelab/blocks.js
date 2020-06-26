@@ -213,18 +213,22 @@ const customInputTypes = {
           block.shortString = '';
           block.longString = '';
       }
+      block.thumbnailSize = 32;
       currentInputRow
-        .appendTitle(block.longString)
-        .appendTitle(new Blockly.FieldImage('', 1, 1), inputConfig.name);
+        .appendTitle(block.shortString)
+        .appendTitle(
+          new Blockly.FieldImage('', block.thumbnailSize, block.thumbnailSize),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       switch (block.type) {
         case 'gamelab_clickedSpritePointer':
-          return '{id: extraArgs.sprite}';
+          return '{id: extraArgs.clickedSprite}';
         case 'gamelab_subjectSpritePointer':
-          return '{id: extraArgs.sprite}';
+          return '{id: extraArgs.subjectSprite}';
         case 'gamelab_objectSpritePointer':
-          return '{id: extraArgs.target}';
+          return '{id: extraArgs.objectSprite}';
         default:
           // unsupported block for spritePointer, returning undefined here
           // will match the behavior of an empty socket.

@@ -127,6 +127,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # Requests may not be sent immediately until batch size is big enough.
     pardot_writer = PardotV2.new is_dry_run: is_dry_run
     ContactRollupsV2.retrieve_query_results(query_new_contacts).each do |record|
+      # Sequel returns record with symbol keys, while ActiveRecord returns record with string keys.
+      # To be consistent, convert keys to symbols.
       record.deep_symbolize_keys!
       data = JSON.parse(record[:data]).deep_symbolize_keys
 

@@ -1115,10 +1115,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 #showVersionsModal {
   width: 700px;
   margin-left: -350px;
-}
-
-#showVersionsModal .versionRow p {
-  margin: 15px 0 0 0;
+  h1 {
+    border-bottom: solid 1px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  td {
+    vertical-align: middle;
+  }
+  tr:nth-child(even){
+    background-color: $lightest_purple;
+  }
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,

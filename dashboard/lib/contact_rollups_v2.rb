@@ -50,40 +50,87 @@ class ContactRollupsV2
     end
   end
 
-  def initialize(is_dry_run: false)
+  # Set all database configurations the pipeline will need
+  def self.set_db_variables
+    # Set group_concat_max_len to 65535 (same as VARCHAR max length).
+    # Its default value is 1024, too short for the amount of data we need to concat.
+    # @see:
+    #   ContactRollupsProcessed.get_data_aggregation_query
+    #   https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len
+    DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
+  end
+
+  attr_accessor :limit
+
+  # @param is_dry_run [Boolean] If true, do not send requests to Pardot and do not
+  #   update ContactRollupsPardotMemory table.
+  # @param limit_extraction [Integer] The maximum number of rows to get from each
+  #   extraction method. The default value is nil, which means getting all rows.
+  def initialize(is_dry_run: false, limit_extraction: nil)
     @is_dry_run = is_dry_run
+    @limit = limit_extraction
     @log_collector = LogCollector.new('ContactRollupsV2')
+    @log_collector.info("Initialization params: "\
+      "is_dry_run: #{is_dry_run}, "\
+      "limit_extraction = #{limit_extraction || 'nil'}"
+    )
+    self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
   def build_and_sync
-    collect_and_process_contacts
-
+    collect_contacts
+    process_contacts
     # These sync steps are independent, one could fail without affecting another.
-    # However, if the build step above fails, none of them should run.
+    # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
-  # Then, process them and save the results into ContactRollupsProcessed.
-  # The results are copied over to ContactRollupsFinal to be used for further analysis.
-  def collect_and_process_contacts
+  def collect_contacts
     start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    @log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
-      ContactRollupsRaw.extract_email_preferences
-    end
-    @log_collector.time!('Extracts parent emails from dashboard.users') do
-      ContactRollupsRaw.extract_parent_emails
+    # Extract pegasus data
+    unless Rails.env.test?
+      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(@limit)}
+      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(@limit)}
+      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts(@limit)}
     end
 
+    # Extract dashboard data
+    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
+    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
+    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught(@limit)}
+    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught(@limit)}
+    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions(@limit)}
+    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos(@limit)}
+    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
+    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
+    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
+    @log_collector.time!('extract_professional_learning_attendance_old') do
+      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model(@limit)
+    end
+    @log_collector.time!('extract_professional_learning_attendance_new') do
+      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model(@limit)
+    end
+  ensure
+    @log_collector.record_metrics(
+      {CollectContactsDuration: Time.now - start_time}
+    )
+  end
+
+  # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
+  # The results are then copied over to ContactRollupsFinal for further analysis.
+  def process_contacts
+    start_time = Time.now
     @log_collector.time!('Processes all extracted data') do
-      ContactRollupsProcessed.import_from_raw_table
+      results = ContactRollupsProcessed.import_from_raw_table
+      @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
     end
 
     @log_collector.time!("Overwrites contact_rollups_final table") do
@@ -92,7 +139,7 @@ class ContactRollupsV2
     end
   ensure
     @log_collector.record_metrics(
-      {CollectAndProcessContactsDuration: Time.now - start_time}
+      {ProcessContactsDuration: Time.now - start_time}
     )
   end
 
@@ -181,17 +228,15 @@ class ContactRollupsV2
     Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
   end
 
-  private
-
   # Using truncate allows us to re-use row IDs,
   # which is important in production so we don't overflow the table.
   # Deletion is required in test environments, as tests generally do
   # not allow you to execute TRUNCATE statements.
   def truncate_or_delete_table(model)
-    CDO.rack_env == :production ? truncate_table(model) : model.delete_all
+    CDO.rack_env == :test ? model.delete_all : truncate_table(model)
   end
 
   def truncate_table(model)
-    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{model.table_name}")
+    ActiveRecord::Base.connection.truncate(model.table_name)
   end
 end
