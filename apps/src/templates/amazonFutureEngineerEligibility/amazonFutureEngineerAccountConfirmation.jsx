@@ -5,11 +5,7 @@ import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   returnToURL = relativeDashboardPath => {
-    return studio(
-      `${relativeDashboardPath}?user_return_to=${pegasus(
-        '/amazon-future-engineer-eligibility'
-      )}`
-    );
+    return studio(`${relativeDashboardPath}?user_return_to=${pegasus('/afe')}`);
   };
 
   logSignUpButtonPress = () => {

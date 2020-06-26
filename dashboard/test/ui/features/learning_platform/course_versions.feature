@@ -115,7 +115,8 @@ Scenario: Switch versions using dropdown on script overview page
 
 @as_student
 @no_mobile
-Scenario: Course unit family names redirect to the 2019 version for CSD and CSP
+
+Scenario: Course unit family names redirect to 2019 version
   When I am on "http://studio.code.org/s/csp3"
   And I get redirected to "/s/csp3-2019" via "dashboard"
 

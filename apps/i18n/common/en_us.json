@@ -229,6 +229,7 @@
   "changeUserTypeModal_save_teacher": "Update to teacher account",
   "changeUserTypeModal_title": "Update account type",
   "changeUserTypeModal_unexpectedError": "An unexpected error has occurred.  Please wait a moment and try again.",
+  "choiceLevel": "Choice level",
   "choose": "Choose",
   "chooseActivity": "Choose from the following activities:",
   "chooseColumn": "Choose a column from \"{table}\"",
