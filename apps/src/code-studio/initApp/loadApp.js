@@ -491,9 +491,7 @@ const sourceHandler = {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
-      if (appOptions.level && appOptions.level.scratch) {
-        resolve(appOptions.getCode());
-      } else if (window.Blockly) {
+      if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly()
           ? currentLevelSource
