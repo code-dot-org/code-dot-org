@@ -287,7 +287,7 @@ module ScriptConstants
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
 
-    TEST = 'ui-test-script'.freeze
+    TEST = 'ui-test-course'.freeze
   ].freeze
 
   def self.script_in_category?(category, script)
