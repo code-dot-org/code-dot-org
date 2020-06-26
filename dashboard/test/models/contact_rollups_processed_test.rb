@@ -124,6 +124,53 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_field_latest_value' do
+    table = 'dashboard.schools'
+    field = 'state'
+    base_time = Time.now.utc
+
+    tests = [
+      # 3 input params are: contact_data, table, field
+      {
+        input: [{}, nil, nil],
+        expected_output: nil
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [{'value' => 'WA', 'data_updated_at' => base_time}]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'WA'
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [
+                {'value' => 'CA', 'data_updated_at' => base_time - 1.day},
+                {'value' => 'IL', 'data_updated_at' => base_time},
+                {'value' => 'NY', 'data_updated_at' => base_time - 2.days}
+              ]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'IL'
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_field_latest_value(*test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_professional_learning_enrolled' do
     contact_data = {
       'dashboard.pd_enrollments' => {
