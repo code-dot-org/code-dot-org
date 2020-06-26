@@ -54,16 +54,6 @@ export default class HeaderFinish extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    /*
-    console.log(
-      'HeaderFinish should',
-      this.props,
-      nextProps,
-      this.state,
-      nextState
-    );
-    */
-
     const lessonData = this.props.lessonData;
 
     return (

@@ -21,9 +21,6 @@ const styles = {
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    //whiteSpace: 'nowrap',
-    //overflow: 'hidden',
-    //textOverflow: 'ellipsis',
     display: 'inline-block'
   },
   headerVignetteRight: {
@@ -115,12 +112,7 @@ class ScriptName extends React.Component {
           style={{...styles.headerInner, height: 40}}
         >
           <div style={styles.outerContainer}>
-            <div
-              style={{
-                ...styles.containerWithUpdatedAt
-                //maxWidth: this.props.width
-              }}
-            >
+            <div style={styles.containerWithUpdatedAt}>
               {this.renderScriptLink()}
               <ProjectUpdatedAt />
             </div>

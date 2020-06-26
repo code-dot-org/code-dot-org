@@ -150,19 +150,20 @@
 
 - if should_show_progress
   :javascript
-    //<![CDATA[
-    dashboard.header.build(
-      #{script_data.to_json},
-      #{stage_data.to_json},
-      #{user_progress},
-      "#{uid}",
-      #{puzzle_page},
-      #{signed_in},
-      #{lesson_extras_enabled || 'null'},
-      #{script_name_data.to_json},
-      !!window.appOptions
-    )
-    //]]>
+    $(document).ready(function() {
+      //<![CDATA[
+      dashboard.header.build(
+        #{script_data.to_json},
+        #{stage_data.to_json},
+        #{user_progress},
+        "#{uid}",
+        #{puzzle_page},
+        #{signed_in},
+        #{lesson_extras_enabled || 'null'},
+        #{script_name_data.to_json}
+      )
+      //]]>
+    });
 
 - else  # !should_show_progress
   :javascript
