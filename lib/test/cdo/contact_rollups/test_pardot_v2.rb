@@ -228,10 +228,12 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: COURSE_CSF,
           professional_learning_attended: COURSE_CSF,
+          roles: 'Form Submitter',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSF,
+          db_Roles_0: 'Form Submitter',
         }
       },
       {
@@ -239,12 +241,15 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
           professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
+          roles: 'Form Submitter,Petition Signer',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
           db_Professional_Learning_Enrolled_1: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSP,
           db_Professional_Learning_Attended_1: COURSE_ECS,
+          db_Roles_0: 'Form Submitter',
+          db_Roles_1: 'Petition Signer',
         }
       }
     ]
