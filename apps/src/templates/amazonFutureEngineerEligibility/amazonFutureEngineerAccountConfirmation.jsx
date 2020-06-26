@@ -2,6 +2,14 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
+
+const styles = {
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
+  }
+};
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   returnToURL = relativeDashboardPath => {
@@ -36,7 +44,8 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         </div>
         <Button
           id="sign_up"
-          href={this.returnToURL('/users/sign_up')}
+          href={this.returnToURL('/users/sign_in')}
+          style={styles.button}
           onClick={this.logSignUpButtonPress}
         >
           Sign up
