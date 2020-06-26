@@ -28,6 +28,65 @@ class ContactRollupsProcessed < ApplicationRecord
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
 
+  FORM_KIND_TO_ROLE_MAP = {
+    Petition: "Petition Signer",
+    BringToSchool2013: 'Teacher',
+    ClassSubmission: 'Teacher',
+    DistrictPartnerSubmission: 'Teacher',
+    HelpUs2013: 'Teacher',
+    K5OnlineProfessionalDevelopmentPostSurvey: 'Teacher',
+    K5ProfessionalDevelopmentSurvey: 'Teacher',
+    ProfessionalDevelopmentWorkshop: 'Teacher',
+    ProfessionalDevelopmentWorkshopSignup: 'Teacher',
+  }
+
+  USER_PERMISSION_TO_ROLE_MAP = {
+    facilitator: 'Facilitator',
+    workshop_organizer: 'Workshop Organizer',
+    district_contact: 'District Contact',
+  }
+
+  # TODO: use curriculum_umbrella in scripts table instead of script name
+  CSF_SCRIPTS = %w(
+    20-hour
+    course1
+    course2
+    course3
+    course4
+    coursea-2017
+    coursea-2018
+    coursea-2019
+    coursea-2020
+    courseb-2017
+    courseb-2018
+    courseb-2019
+    courseb-2020
+    coursec-2017
+    coursec-2018
+    coursec-2019
+    coursec-2020
+    coursed-2017
+    coursed-2018
+    coursed-2019
+    coursed-2020
+    coursee-2017
+    coursee-2018
+    coursee-2019
+    coursee-2020
+    coursef-2017
+    coursef-2018
+    coursef-2019
+    coursef-2020
+    express-2017
+    express-2018
+    express-2019
+    express-2020
+    pre-express-2017
+    pre-express-2018
+    pre-express-2019
+    pre-express-2020
+  ).to_set
+
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
@@ -185,86 +244,34 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_roles(contact_data)
-    # - pegasus.forms (if any -> 'Form Submitter');
-    # - dashboard.census_submissions (if any -> 'Form Submitter');
-    # - pegasus.forms#kind (if kind is one of FORM_KINDS_TEACHER -> role = 'Teacher')
-    # - pegasus.forms#kind (if "Petition" -> role = "Petition Signer")
-    # - dashboard.users (if any -> 'Teacher');
-    # - dashboard.pd_enrollments (if any -> 'Teacher');
-    # - dashboard.users#is_parent (true -> 'Parent')
-    # - dashboard.user_permissions#permissions (then convert to "Facilitator", "Workshop Organizer", "District Contact"...)
-    # - dashboard.sections#course_name (from dashboard.courses, then convert to "CSD Teacher", "CSP Teacher"),
-    # - dashboard.sections#script_name,course_name (from dashboard.scripts and dashboard.courses, then convert to "CSF Teacher")
-    # - dashboard.census_submissions#submitter_role (if submitter role is 'TEACHER' -> role = 'Teacher')
-
     roles = []
-    roles << 'Form Submitter' if contact_data.key?('pegasus.forms') || contact_data.key?('dashboard.census_submissions')
-    roles << 'Teacher' if contact_data.dig('dashboard.users', 'user_id') || contact_data.key?('dashboard.pd_enrollments') || contact_data.key?('dashboard.pd_attendances') || contact_data.key?('dashboard.followers')
-    roles << 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
+    roles << 'Teacher' if contact_data.dig('dashboard.users', 'user_id') ||
+      contact_data.key?('dashboard.pd_enrollments') ||
+      contact_data.key?('dashboard.pd_attendances') ||
+      contact_data.key?('dashboard.followers')
+
+    submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+    roles << 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
 
     form_kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
-    form_kinds_to_roles = {
-      'Petition' => "Petition Signer",
-      'BringToSchool2013' => 'Teacher',
-      'ClassSubmission' => 'Teacher',
-      'DistrictPartnerSubmission' => 'Teacher',
-      'HelpUs2013' => 'Teacher',
-      'K5OnlineProfessionalDevelopmentPostSurvey' => 'Teacher',
-      'K5ProfessionalDevelopmentSurvey' => 'Teacher',
-      'ProfessionalDevelopmentWorkshop' => 'Teacher',
-      'ProfessionalDevelopmentWorkshopSignup' => 'Teacher',
-    }
-    roles += form_kinds.map {|kind| form_kinds_to_roles[kind]}
+    roles += form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]}
 
-    permissions = extract_field(contact_data, 'user_permissions', 'permission') || []
-    permissions_to_roles = {
-      'facilitator' => 'Facilitator',
-      'workshop_organizer' => 'Workshop Organizer',
-      'district_contact' => 'District Contact',
-    }
-    roles += permissions.map {|permission| permissions_to_roles[permission]}
-
-    # @see courses table, column name
+    # @see courses table, 'name' column
     courses = extract_field(contact_data, 'dashboard.sections', 'course_name') || []
     roles << 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
     roles << 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
 
+    # @see scripts table, 'name' column and properties->>'$.curriculum_umbrella' JSON text
     scripts = extract_field(contact_data, 'dashboard.sections', 'script_name') || []
-    csf_scripts = %w(
-      course1
-      course2
-      course3
-      course4
-      coursea-2017
-      courseb-2017
-      coursec-2017
-      coursed-2017
-      coursee-2017
-      coursef-2017
-      coursea-2018
-      courseb-2018
-      coursec-2018
-      coursed-2018
-      coursee-2018
-      coursef-2018
-      coursea-2019
-      courseb-2019
-      coursec-2019
-      coursed-2019
-      coursee-2019
-      coursef-2019
-      20-hour
-      express-2017
-      pre-express-2017
-      express-2018
-      pre-express-2018
-      express-2019
-      pre-express-2019
-    ).to_set
-    roles << 'CSF Teacher' if scripts.any? {|script| csf_scripts.include? script}
+    roles << 'CSF Teacher' if scripts.any? {|script| CSF_SCRIPTS.include? script}
 
-    submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
-    roles << 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
+    roles << 'Form Submitter' if contact_data.key?('pegasus.forms') ||
+      contact_data.key?('dashboard.census_submissions')
+
+    roles << 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
+
+    permissions = extract_field(contact_data, 'user_permissions', 'permission') || []
+    roles += permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]}
 
     uniq_roles = roles.uniq.compact.sort.join(',')
     uniq_roles.blank? ? {} : {roles: uniq_roles}
