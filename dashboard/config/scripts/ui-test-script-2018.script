@@ -1,9 +1,0 @@
-hidden false
-family_name 'ui-test-script'
-version_year '2018'
-is_stable true
-
-lesson_group 'lg_1', display_name: 'Lesson Group'
-lesson 'Lesson'
-level 'ui-test-level-2018'
-
