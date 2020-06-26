@@ -25,26 +25,7 @@ export default function CourseSelect({
   validation,
   onChange
 }) {
-  let allowedCourses;
-  if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
-    allowedCourses = Courses;
-  } else if (permission.has(Facilitator)) {
-    allowedCourses = facilitatorCourses;
-  } else {
-    console.error(
-      'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
-    );
-    allowedCourses = [];
-  }
-
-  const options = allowedCourses.map((course, i) => {
-    return (
-      <option key={i} value={course}>
-        {course}
-      </option>
-    );
-  });
-  const placeHolder = course ? null : <option />;
+  const allowedCourses = getAllowedCourses(permission, facilitatorCourses);
   return (
     <FormGroup validationState={validation.style.course}>
       <ControlLabel>Course</ControlLabel>
@@ -57,13 +38,18 @@ export default function CourseSelect({
         style={inputStyle}
         disabled={readOnly}
       >
-        {placeHolder}
-        {options}
+        {course ? null : <option />}
+        {allowedCourses.map((course, i) => (
+          <option key={i} value={course}>
+            {course}
+          </option>
+        ))}
       </FormControl>
       <HelpBlock>{validation.help.course}</HelpBlock>
     </FormGroup>
   );
 }
+
 CourseSelect.propTypes = {
   course: PropTypes.string,
   facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -73,3 +59,16 @@ CourseSelect.propTypes = {
   validation: PropTypes.object,
   onChange: PropTypes.func.isRequired
 };
+
+function getAllowedCourses(permission, facilitatorCourses) {
+  if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
+    return Courses;
+  } else if (permission.has(Facilitator)) {
+    return facilitatorCourses;
+  }
+
+  console.error(
+    'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
+  );
+  return [];
+}
