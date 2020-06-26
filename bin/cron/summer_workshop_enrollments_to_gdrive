@@ -16,8 +16,17 @@ LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
 
 def get_rows
   # Seed results array with a header row
-  results = [%w(teacher_email first_name last_name workshop_id
-                workshop_start_date workshop_course regional_partner)]
+  results = [
+    %w(
+      regional_partner
+      workshop_start_date
+      workshop_course
+      first_name
+      last_name
+      teacher_email
+      workshop_id
+    )
+  ]
 
   workshop_ids_this_year = Pd::Workshop.
     where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
@@ -31,13 +40,13 @@ def get_rows
 
   enrollments_this_year.find_each do |enrollment|
     results << [
-      enrollment.email,
-      enrollment.first_name,
-      enrollment.last_name,
-      enrollment.workshop.id,
+      enrollment.workshop.regional_partner&.name,
       enrollment.workshop.workshop_starting_date.to_date,
       enrollment.workshop.course,
-      enrollment.workshop.regional_partner&.name
+      enrollment.first_name,
+      enrollment.last_name,
+      enrollment.email,
+      enrollment.workshop.id
     ]
   end
 

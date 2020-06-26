@@ -177,7 +177,7 @@ sv-SE:
       Dance_Party_02: |-
         Låt oss få denna älg att dansa!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
 
         **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Dance_Party_03: "\"_Nu svänger det!_ \n\nLägg till ett <xml><block type=\"Dancelab_atTimestamp\"><title

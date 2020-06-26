@@ -1526,10 +1526,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.15":
-  version "3.5.15"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.15.tgz#6995cefddb2fd8472e5054a035b55eaae37fb269"
-  integrity sha512-e4Tg0CzoofUQBRjS9pcwBzzHidVsPp8fiNC+j5/srHubwef+PiK1NxeELj20YoBehefii+RQ20qM6HtxFXZY/Q==
+"@code-dot-org/blockly@3.5.23":
+  version "3.5.23"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.23.tgz#5935ca62404ba0ed8dbbc5c44cd3db9d30c918dc"
+  integrity sha512-zb6yK4vL5uYK18IcrxQk8uRrXxuMSrBTGoNs/89m9BHIAk46knGat1VB4U46OkZdjboMp+rg6kY5mVmbMo00MQ==
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -14219,26 +14219,6 @@ schema-utils@^1.0.0:
     ajv "^6.1.0"
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
-
-scratch-audio@v0.1.0-prerelease.1501163867:
-  version "0.1.0-prerelease.1501163867"
-  resolved "https://registry.yarnpkg.com/scratch-audio/-/scratch-audio-0.1.0-prerelease.1501163867.tgz#c8ecf44f9c42f6ea7dcec3cea01c9727db64c8d3"
-
-"scratch-blocks@ v0.1.0-prerelease.1501101334":
-  version "0.1.0-prerelease.1501101334"
-  resolved "https://registry.yarnpkg.com/scratch-blocks/-/scratch-blocks-0.1.0-prerelease.1501101334.tgz#cfa7fd7dd8dc0cd893f92ea9deaeec0c590a9765"
-
-scratch-render@v0.1.0-prerelease.1500038694:
-  version "0.1.0-prerelease.1500038694"
-  resolved "https://registry.yarnpkg.com/scratch-render/-/scratch-render-0.1.0-prerelease.1500038694.tgz#8cbc793ff2f9543e8b32f6968e749effa679977f"
-
-scratch-storage@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/scratch-storage/-/scratch-storage-0.2.0.tgz#cabcdeabf55b6a4b77401ef14bc8122aced0f3c5"
-
-scratch-vm@v0.1.0-prerelease.1501105826-prerelease.1501105849:
-  version "0.1.0-prerelease.1501105826-prerelease.1501105849"
-  resolved "https://registry.yarnpkg.com/scratch-vm/-/scratch-vm-0.1.0-prerelease.1501105826-prerelease.1501105849.tgz#de4fba044203965c59bfd7489314f6a6ddfbfdab"
 
 script-loader@^0.7.0:
   version "0.7.0"
