@@ -27,6 +27,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: 18,
+    pointerEvents: 'none',
     background:
       'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
