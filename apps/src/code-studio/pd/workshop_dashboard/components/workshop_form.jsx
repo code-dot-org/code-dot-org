@@ -698,6 +698,12 @@ export class WorkshopForm extends React.Component {
       return false;
     }
 
+    // Don't ask if admins want to send updates with workshop changes for virtual workshops.
+    // Update emails are suppressed for virtual workshops.
+    if (this.state.virtual) {
+      return false;
+    }
+
     // If location address is modified, then returned to blank,
     // this.state.location_address is a blank string instead of null.
     return (

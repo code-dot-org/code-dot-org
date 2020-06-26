@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
+import objectFitImages from 'object-fit-images';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -22,7 +23,6 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
-import {applabObjectFitImages} from './applabObjectFitImages';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 
@@ -1377,9 +1377,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  setTimeout(() => {
-    applabObjectFitImages();
-  }, 0);
+  setTimeout(() => objectFitImages(), 0);
 }
 
 /**
