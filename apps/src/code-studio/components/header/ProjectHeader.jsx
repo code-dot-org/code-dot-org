@@ -19,7 +19,7 @@ class ProjectHeader extends React.Component {
   render() {
     const {includeExportInProjectHeader} = this.props;
     return (
-      <div>
+      <div style={{display: 'flex'}}>
         <EditableProjectName />
         <ProjectShare />
         {includeExportInProjectHeader && <ProjectExport />}

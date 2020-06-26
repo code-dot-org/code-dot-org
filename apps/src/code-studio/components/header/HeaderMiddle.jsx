@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import ScriptName from './ScriptName';
 import ProjectInfo from './ProjectInfo';
+import ScriptName from './ScriptName';
+import LessonProgress from '../progress/LessonProgress.jsx';
 import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
-import LessonProgress from '../progress/LessonProgress.jsx';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 
@@ -24,14 +24,14 @@ const styles = {
 class HeaderMiddle extends React.Component {
   static propTypes = {
     projectInfoOnly: PropTypes.bool,
+    appLoadStarted: PropTypes.bool,
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
     lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    linesOfCodeText: PropTypes.string,
-    hasAppOptions: PropTypes.bool
+    linesOfCodeText: PropTypes.string
   };
 
   constructor(props) {
@@ -39,8 +39,8 @@ class HeaderMiddle extends React.Component {
 
     this.state = {
       width: this.getWidth(),
-      scriptNameDesiredWidth: 0,
       projectInfoDesiredWidth: 0,
+      scriptNameDesiredWidth: 0,
       lessonProgressDesiredWidth: 0,
       finishDesiredWidth: 0
     };
@@ -75,7 +75,9 @@ class HeaderMiddle extends React.Component {
 
     if (this.props.projectInfoOnly) {
       return {
-        projectInfo: this.state.projectInfoDesiredWidth,
+        projectInfo: Math.floor(
+          Math.min(this.state.projectInfoDesiredWidth, width)
+        ),
         scriptName: 0,
         progress: 0,
         popup: 0,
@@ -128,30 +130,7 @@ class HeaderMiddle extends React.Component {
       this.state.scriptNameDesiredWidth + 10
     );
 
-    /*
-    // script name gets between 50% on wide screens and 80% on narrow screens
-    const scriptNameWidthMax = this.getScaledValue(
-      400,
-      1000,
-      width,
-      remainingWidth * 0.9,
-      remainingWidth * 0.5
-    );
-
-    const scriptNameWidth = Math.floor(Math.min(
-      scriptNameWidthMax,
-      this.state.scriptNameDesiredWidth + 10
-    ));*/
-
     remainingWidth = remainingWidth - scriptNameWidth;
-
-    /*
-    const headerMiddleLeftOffset = 74; // $('#header_middle_content').offset().left;
-    const windowWidth = $(window).width();
-    const widthUsed = width - remainingWidth;
-    const idealLeftPadding = (windowWidth - widthUsed)/2 - headerMiddleLeftOffset;
-    const leftWidth = Math.floor(Math.min(idealLeftPadding, remainingWidth));
-    */
 
     const leftWidth = remainingWidth / 2;
 
@@ -166,27 +145,13 @@ class HeaderMiddle extends React.Component {
     };
   }
 
-  // e.g.
-  // getScaledValue(10, 20, 15, 100, 200) === 150
-  // getScaledValue(10, 20, 5, 100, 200) === 100
-  // getScaledValue(10, 20, 30, 100, 200) === 200
-
-  getScaledValue(minInput, maxInput, input, minOutput, maxOutput) {
-    const inputAmount = (input - minInput) / (maxInput - minInput);
-    const clampedInputAmount = Math.max(Math.min(inputAmount, 1), 0);
-    const scaledOutput =
-      minOutput + (maxOutput - minOutput) * clampedInputAmount;
-    return scaledOutput;
-  }
-
   render() {
     const {
       scriptNameData,
       lessonData,
       scriptData,
       currentLevelId,
-      linesOfCodeText,
-      hasAppOptions
+      linesOfCodeText
     } = this.props;
 
     const widths = this.getWidths();
@@ -203,7 +168,11 @@ class HeaderMiddle extends React.Component {
         }
       : null;
 
-    if (!hasAppOptions || this.props.appLoaded) {
+    // Hold off rendering if we have started but not finished the app load.
+    // appLoadStarted should begin before our first render, by virtue of
+    // this rendering not happening until document ready, but our app loads apparently
+    // do not do the same wait.
+    if (!this.props.appLoadStarted || this.props.appLoaded) {
       console.log('HeaderMiddle render', this.getWidth());
 
       return (
@@ -296,23 +265,25 @@ class HeaderMiddle extends React.Component {
             </div>
           )}
 
-          <div
-            id="finish_link_container"
-            style={{float: 'left', width: widths.finish, height: 18}}
-          >
-            <HeaderFinish
-              lessonData={lessonData}
-              width={widths.finish}
-              setDesiredWidth={width => {
-                if (Math.ceil(width) !== this.state.finishDesiredWidth) {
-                  this.setState({finishDesiredWidth: Math.ceil(width)});
-                }
-              }}
-              style={{
-                visibility: widths.projectInfo === 0 ? 'hidden' : undefined
-              }}
-            />
-          </div>
+          {this.props.lessonData && this.props.lessonData.finishLink && (
+            <div
+              id="finish_link_container"
+              style={{float: 'left', width: widths.finish, height: 18}}
+            >
+              <HeaderFinish
+                lessonData={lessonData}
+                width={widths.finish}
+                setDesiredWidth={width => {
+                  if (Math.ceil(width) !== this.state.finishDesiredWidth) {
+                    this.setState({finishDesiredWidth: Math.ceil(width)});
+                  }
+                }}
+                style={{
+                  visibility: widths.projectInfo === 0 ? 'hidden' : undefined
+                }}
+              />
+            </div>
+          )}
         </div>
       );
     } else {
@@ -322,6 +293,7 @@ class HeaderMiddle extends React.Component {
 }
 
 export default connect(state => ({
+  appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
   lessonExtrasUrl: lessonExtrasUrl(
     state.progress,

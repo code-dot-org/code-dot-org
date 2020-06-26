@@ -15,7 +15,8 @@ import NameFailureError from '../../NameFailureError';
 
 const styles = {
   buttonWrapper: {
-    float: 'left'
+    float: 'left',
+    display: 'flex'
   }
 };
 
