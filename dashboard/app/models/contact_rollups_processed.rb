@@ -29,7 +29,6 @@ class ContactRollupsProcessed < ApplicationRecord
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
 
   FORM_KIND_TO_ROLE_MAP = {
-    Petition: "Petition Signer",
     BringToSchool2013: 'Teacher',
     ClassSubmission: 'Teacher',
     DistrictPartnerSubmission: 'Teacher',
@@ -38,8 +37,10 @@ class ContactRollupsProcessed < ApplicationRecord
     K5ProfessionalDevelopmentSurvey: 'Teacher',
     ProfessionalDevelopmentWorkshop: 'Teacher',
     ProfessionalDevelopmentWorkshopSignup: 'Teacher',
+    Petition: "Petition Signer",
   }
 
+  # @see UserPermission::VALID_PERMISSIONS. We only care about a few permissions.
   USER_PERMISSION_TO_ROLE_MAP = {
     facilitator: 'Facilitator',
     workshop_organizer: 'Workshop Organizer',
