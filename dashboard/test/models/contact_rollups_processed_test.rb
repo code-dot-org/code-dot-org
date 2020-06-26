@@ -64,6 +64,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_professional_learning_attended).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_roles).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
