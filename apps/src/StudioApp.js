@@ -553,7 +553,7 @@ StudioApp.prototype.init = function(config) {
   if (!config.readOnlyWorkspace) {
     this.addChangeHandler(() => {
       // if the code has changed (other than whitespace at the beginning or end) and the code is running,
-      // we want to show display an alert to tell the user to reset and run their code again. We trim the whitespace
+      // we want to show an alert to tell the user to reset and run their code again. We trim the whitespace
       // because droplet sometimes adds an extra newline when switching from block to code mode.
       if (
         this.isRunning() &&
