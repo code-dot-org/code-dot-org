@@ -80,7 +80,7 @@ header.build = function(
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
 
-  // Call this to set up the store I think.
+  // Set up the store immediately.
   progress.generateStageProgress(
     scriptData,
     lessonData,
@@ -91,19 +91,24 @@ header.build = function(
     stageExtrasEnabled
   );
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <HeaderMiddle
-        scriptNameData={scriptNameData}
-        lessonData={lessonData}
-        scriptData={scriptData}
-        currentLevelId={currentLevelId}
-        linesOfCodeText={linesOfCodeText}
-        hasAppOptions={hasAppOptions}
-      />
-    </Provider>,
-    document.querySelector('.header_level')
-  );
+  // Hold off on rendering HeaderMiddle.  This will allow the "app load"
+  // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
+  // the opportunity to wait until the app is loaded before rendering.
+  $(document).ready(function() {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <HeaderMiddle
+          scriptNameData={scriptNameData}
+          lessonData={lessonData}
+          scriptData={scriptData}
+          currentLevelId={currentLevelId}
+          linesOfCodeText={linesOfCodeText}
+          hasAppOptions={hasAppOptions}
+        />
+      </Provider>,
+      document.querySelector('.header_level')
+    );
+  });
 };
 
 header.buildProjectInfoOnly = function() {

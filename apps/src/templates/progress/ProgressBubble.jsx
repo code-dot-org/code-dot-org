@@ -205,6 +205,7 @@ class ProgressBubble extends React.Component {
           levels={[level]}
           text={i18n.unpluggedActivity()}
           tooltip={this.props.hideToolTips ? null : tooltip}
+          progressStyle={true}
         />
       );
     }
