@@ -207,12 +207,10 @@ The animation has been skipped.
     @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
     @animation_objects ||= get_animation_objects(@bucket)
 
-    puts strings
     animation_metadata = build_animation_metadata(@animation_objects, {})
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)
-      puts metadata['aliases'] if metadata['aliases']
     end
     alias_map = build_alias_map(animation_metadata)
 
