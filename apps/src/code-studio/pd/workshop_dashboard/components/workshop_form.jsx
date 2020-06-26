@@ -34,15 +34,13 @@ import {
   PermissionPropType,
   WorkshopAdmin,
   Organizer,
-  Facilitator,
   ProgramManager,
   CsfFacilitator
 } from '../permission';
-import {
-  Courses,
-  Subjects
-} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import CourseSelect from './CourseSelect';
+import SubjectSelect from './SubjectSelect';
 
 const styles = {
   readOnlyInput: {
@@ -1194,107 +1192,5 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
 SelectSuppressEmail.propTypes = {
   value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
-};
-
-function CourseSelect({
-  course,
-  facilitatorCourses,
-  permission,
-  readOnly,
-  inputStyle,
-  validation,
-  onChange
-}) {
-  let allowedCourses;
-  if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
-    allowedCourses = Courses;
-  } else if (permission.has(Facilitator)) {
-    allowedCourses = facilitatorCourses;
-  } else {
-    console.error(
-      'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
-    );
-    allowedCourses = [];
-  }
-
-  const options = allowedCourses.map((course, i) => {
-    return (
-      <option key={i} value={course}>
-        {course}
-      </option>
-    );
-  });
-  const placeHolder = course ? null : <option />;
-  return (
-    <FormGroup validationState={validation.style.course}>
-      <ControlLabel>Course</ControlLabel>
-      <FormControl
-        componentClass="select"
-        value={course || ''}
-        id="course"
-        name="course"
-        onChange={onChange}
-        style={inputStyle}
-        disabled={readOnly}
-      >
-        {placeHolder}
-        {options}
-      </FormControl>
-      <HelpBlock>{validation.help.course}</HelpBlock>
-    </FormGroup>
-  );
-}
-CourseSelect.propTypes = {
-  course: PropTypes.string,
-  facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-  permission: PermissionPropType.isRequired,
-  readOnly: PropTypes.bool,
-  inputStyle: PropTypes.object,
-  validation: PropTypes.object,
-  onChange: PropTypes.func.isRequired
-};
-
-const SubjectSelect = ({
-  course,
-  subject,
-  readOnly,
-  inputStyle,
-  validation,
-  onChange
-}) => {
-  const options = Subjects[course].map((subject, i) => {
-    return (
-      <option key={i} value={subject}>
-        {subject}
-      </option>
-    );
-  });
-  const placeHolder = subject ? null : <option />;
-  return (
-    <FormGroup validationState={validation.style.subject}>
-      <ControlLabel>Subject</ControlLabel>
-      <FormControl
-        componentClass="select"
-        value={subject || ''}
-        id="subject"
-        name="subject"
-        onChange={onChange}
-        style={inputStyle}
-        disabled={readOnly}
-      >
-        {placeHolder}
-        {options}
-      </FormControl>
-      <HelpBlock>{validation.help.subject}</HelpBlock>
-    </FormGroup>
-  );
-};
-SubjectSelect.propTypes = {
-  course: PropTypes.string.isRequired,
-  subject: PropTypes.string,
-  readOnly: PropTypes.bool,
-  inputStyle: PropTypes.object,
-  validation: PropTypes.object,
   onChange: PropTypes.func.isRequired
 };
