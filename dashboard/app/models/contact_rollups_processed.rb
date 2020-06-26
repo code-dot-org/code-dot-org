@@ -68,6 +68,7 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_professional_learning_attended(contact_data)
         processed_contact_data.merge! extract_roles(contact_data)
         processed_contact_data.merge! extract_state(contact_data)
+        processed_contact_data.merge! extract_city(contact_data)
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
       rescue StandardError
@@ -265,6 +266,18 @@ class ContactRollupsProcessed < ApplicationRecord
 
     form_geo_state = extract_field_latest_value contact_data, 'pegasus.form_geos', 'state'
     form_geo_state.nil? ? {} : {state: form_geo_state}
+  end
+
+  def self.extract_city(contact_data)
+    # Priority: school city > user geo city > form geo city
+    school_city = extract_field_latest_value contact_data, 'dashboard.schools', 'city'
+    return {city: school_city} if school_city
+
+    user_geo_city = extract_field_latest_value contact_data, 'dashboard.user_geos', 'city'
+    return {city: user_geo_city} if user_geo_city
+
+    form_geo_city = extract_field_latest_value contact_data, 'pegasus.form_geos', 'city'
+    form_geo_city.nil? ? {} : {city: form_geo_city}
   end
 
   # Extract the latest value of a field in a source table from contact data.
