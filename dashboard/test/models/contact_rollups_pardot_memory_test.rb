@@ -125,6 +125,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         'forms_submitted' => 'Census,Petition',
         'form_roles' => 'engineer,teacher',
         'roles' => 'Form Submitter',
+        'state' => 'Washington',
       }
     refute ContactRollupsPardotMemory.find_by_email(contact.email)
     PardotV2.expects(:submit_batch_request).once.returns([])
@@ -142,6 +143,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       'db_Forms_Submitted' => 'Census,Petition',
       'db_Form_Roles' => 'engineer,teacher',
       'db_Roles_0' => 'Form Submitter',
+      'db_State' => 'Washington',
     }
     assert_equal expected_data_synced, record[:data_synced]
   end
