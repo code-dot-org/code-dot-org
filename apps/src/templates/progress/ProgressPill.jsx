@@ -18,7 +18,7 @@ const styles = {
     borderColor: color.lighter_gray,
     color: color.charcoal,
     display: 'flex',
-    fontSize: 12,
+    fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
@@ -32,6 +32,11 @@ const styles = {
     position: 'relative'
   },
   text: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    letterSpacing: -0.12
+  },
+  textProgressStyle: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
@@ -58,7 +63,8 @@ class ProgressPill extends React.Component {
     text: PropTypes.string,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    progressStyle: PropTypes.bool
   };
 
   render() {
@@ -68,7 +74,8 @@ class ProgressPill extends React.Component {
       text,
       tooltip,
       disabled,
-      selectedSectionId
+      selectedSectionId,
+      progressStyle
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -96,6 +103,8 @@ class ProgressPill extends React.Component {
     const levelIsAssessment =
       isLevelAssessment(levels[0]) && levels.length === 1;
 
+    const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
+
     return (
       <a
         href={url}
@@ -106,8 +115,9 @@ class ProgressPill extends React.Component {
           {icon && <FontAwesome icon={icon} />}
           {text && (
             <div
+              className="ProgressPillTextAndIcon"
               style={{
-                ...styles.text,
+                ...textStyle,
                 ...(icon && styles.iconMargin)
               }}
             >
