@@ -193,12 +193,13 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       {
         input: {
           'dashboard.sections' => {
-            'script_name' => [
-              {'value' => 'express-2019'}
+            'curriculum_umbrella' => [
+              {'value' => 'CSF'},
+              {'value' => 'CSD'}
             ]
           }
         },
-        expected_output: {roles: 'CSF Teacher'}
+        expected_output: {roles: 'CSD Teacher,CSF Teacher'}
       }
     ]
 

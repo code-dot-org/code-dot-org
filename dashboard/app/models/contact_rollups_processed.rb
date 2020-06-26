@@ -46,47 +46,6 @@ class ContactRollupsProcessed < ApplicationRecord
     district_contact: 'District Contact',
   }
 
-  # TODO: use curriculum_umbrella in scripts table instead of script name
-  CSF_SCRIPTS = %w(
-    20-hour
-    course1
-    course2
-    course3
-    course4
-    coursea-2017
-    coursea-2018
-    coursea-2019
-    coursea-2020
-    courseb-2017
-    courseb-2018
-    courseb-2019
-    courseb-2020
-    coursec-2017
-    coursec-2018
-    coursec-2019
-    coursec-2020
-    coursed-2017
-    coursed-2018
-    coursed-2019
-    coursed-2020
-    coursee-2017
-    coursee-2018
-    coursee-2019
-    coursee-2020
-    coursef-2017
-    coursef-2018
-    coursef-2019
-    coursef-2020
-    express-2017
-    express-2018
-    express-2019
-    express-2020
-    pre-express-2017
-    pre-express-2018
-    pre-express-2019
-    pre-express-2020
-  ).to_set
-
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
@@ -261,9 +220,11 @@ class ContactRollupsProcessed < ApplicationRecord
     roles << 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
     roles << 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
 
-    # @see scripts table, 'name' column and properties->>'$.curriculum_umbrella' JSON text
-    scripts = extract_field(contact_data, 'dashboard.sections', 'script_name') || []
-    roles << 'CSF Teacher' if scripts.any? {|script| CSF_SCRIPTS.include? script}
+    # @see Script model, csf?, csd? and csp? methods
+    umbrella = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
+    roles << 'CSF Teacher' if umbrella.any? {|u| u == 'CSF'}
+    roles << 'CSD Teacher' if umbrella.any? {|u| u == 'CSD'}
+    roles << 'CSP Teacher' if umbrella.any? {|u| u == 'CSP'}
 
     roles << 'Form Submitter' if contact_data.key?('pegasus.forms') ||
       contact_data.key?('dashboard.census_submissions')
