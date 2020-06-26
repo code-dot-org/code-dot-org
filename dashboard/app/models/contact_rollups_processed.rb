@@ -242,7 +242,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
     roles << 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
-    permissions = extract_field(contact_data, 'user_permissions', 'permission') || []
+    permissions = extract_field(contact_data, 'dashboard.user_permissions', 'permission') || []
     roles += permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]}
 
     # Only care about unique and non-nil values. Values are sorted before return.
