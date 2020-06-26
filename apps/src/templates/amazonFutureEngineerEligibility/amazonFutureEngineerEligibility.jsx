@@ -14,9 +14,18 @@ const styles = {
   intro: {
     paddingBottom: 10
   },
+  container: {
+    borderColor: color.teal,
+    borderWidth: 'thin',
+    borderStyle: 'solid',
+    padding: '10px 15px 10px 15px'
+  },
   button: {
     backgroundColor: color.orange,
     color: color.white
+  },
+  header: {
+    marginTop: '10px'
   }
 };
 
@@ -233,10 +242,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     let {formData} = this.state;
 
     return (
-      <div>
+      <div style={styles.container}>
         {formData.schoolEligible === null && (
           <div>
-            <h2>Am I eligible?</h2>
+            <h2 style={styles.header}>Am I eligible?</h2>
             <FormGroup id="amazon-future-engineer-eligiblity-intro">
               <div style={styles.intro}>
                 Enter your teacher email address and select your school below to
@@ -262,6 +271,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 showRequiredIndicator={true}
                 value={formData.schoolId}
                 showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+                style={styles.schoolInput}
               />
               <Button
                 id="submit"
