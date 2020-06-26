@@ -205,29 +205,35 @@ class ContactRollupsProcessed < ApplicationRecord
 
   def self.extract_roles(contact_data)
     roles = []
-    roles << 'Teacher' if contact_data.dig('dashboard.users', 'user_id') ||
+    # Contact is a teacher if they appears in any of the following tables
+    roles << 'Teacher' if
+      contact_data.dig('dashboard.users', 'user_id') ||
       contact_data.key?('dashboard.pd_enrollments') ||
       contact_data.key?('dashboard.pd_attendances') ||
       contact_data.key?('dashboard.followers')
 
+    # Contact is a teacher if they submit a census survey as a teacher
     submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
     roles << 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
 
+    # Contact is a teacher if they submit a (pegasus) form targeting teachers
     form_kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
     roles += form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]}
 
-    # @see courses table, 'name' column
+    # @see Course::FAMILY_NAMES
+    # TODO: extract course family_name (in properties column) instead of course name.
     courses = extract_field(contact_data, 'dashboard.sections', 'course_name') || []
     roles << 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
     roles << 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
 
     # @see Script model, csf?, csd? and csp? methods
-    umbrella = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
-    roles << 'CSF Teacher' if umbrella.any? {|u| u == 'CSF'}
-    roles << 'CSD Teacher' if umbrella.any? {|u| u == 'CSD'}
-    roles << 'CSP Teacher' if umbrella.any? {|u| u == 'CSP'}
+    curricula = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
+    roles << 'CSF Teacher' if curricula.any? {|curriculum| curriculum == 'CSF'}
+    roles << 'CSD Teacher' if curricula.any? {|curriculum| curriculum == 'CSD'}
+    roles << 'CSP Teacher' if curricula.any? {|curriculum| curriculum == 'CSP'}
 
-    roles << 'Form Submitter' if contact_data.key?('pegasus.forms') ||
+    roles << 'Form Submitter' if
+      contact_data.key?('pegasus.forms') ||
       contact_data.key?('dashboard.census_submissions')
 
     roles << 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
@@ -235,6 +241,7 @@ class ContactRollupsProcessed < ApplicationRecord
     permissions = extract_field(contact_data, 'user_permissions', 'permission') || []
     roles += permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]}
 
+    # Only care about unique and non-nil values. Values are sorted before return.
     uniq_roles = roles.uniq.compact.sort.join(',')
     uniq_roles.blank? ? {} : {roles: uniq_roles}
   end
