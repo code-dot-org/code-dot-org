@@ -573,37 +573,6 @@ export class WorkshopForm extends React.Component {
     );
   }
 
-  renderSubjectSelect(validation) {
-    if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
-        return (
-          <option key={i} value={subject}>
-            {subject}
-          </option>
-        );
-      });
-      const placeHolder = this.state.subject ? null : <option />;
-      return (
-        <FormGroup validationState={validation.style.subject}>
-          <ControlLabel>Subject</ControlLabel>
-          <FormControl
-            componentClass="select"
-            value={this.state.subject || ''}
-            id="subject"
-            name="subject"
-            onChange={this.handleFieldChange}
-            style={this.getInputStyle()}
-            disabled={this.props.readOnly}
-          >
-            {placeHolder}
-            {options}
-          </FormControl>
-          <HelpBlock>{validation.help.subject}</HelpBlock>
-        </FormGroup>
-      );
-    }
-  }
-
   renderFeeInput(validation) {
     // If state.fee is null, there is no fee and no custom fee message.
     // If state.fee is '', the user needs to provide a custom fee message.
@@ -1135,7 +1104,18 @@ export class WorkshopForm extends React.Component {
               </FormGroup>
             </Col>
             <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
-            <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
+            <Col sm={3}>
+              {this.shouldRenderSubject() && (
+                <SubjectSelect
+                  course={this.state.course}
+                  subject={this.state.subject}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  validation={validation}
+                  onChange={this.handleFieldChange}
+                />
+              )}
+            </Col>
           </Row>
           <Row>
             <Col sm={10}>
@@ -1247,5 +1227,49 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
 SelectSuppressEmail.propTypes = {
   value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
+  onChange: PropTypes.func.isRequired
+};
+
+const SubjectSelect = ({
+  course,
+  subject,
+  readOnly,
+  inputStyle,
+  validation,
+  onChange
+}) => {
+  const options = Subjects[course].map((subject, i) => {
+    return (
+      <option key={i} value={subject}>
+        {subject}
+      </option>
+    );
+  });
+  const placeHolder = subject ? null : <option />;
+  return (
+    <FormGroup validationState={validation.style.subject}>
+      <ControlLabel>Subject</ControlLabel>
+      <FormControl
+        componentClass="select"
+        value={subject || ''}
+        id="subject"
+        name="subject"
+        onChange={onChange}
+        style={inputStyle}
+        disabled={readOnly}
+      >
+        {placeHolder}
+        {options}
+      </FormControl>
+      <HelpBlock>{validation.help.subject}</HelpBlock>
+    </FormGroup>
+  );
+};
+SubjectSelect.propTypes = {
+  course: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  readOnly: PropTypes.bool,
+  inputStyle: PropTypes.object,
+  validation: PropTypes.object,
   onChange: PropTypes.func.isRequired
 };
