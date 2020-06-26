@@ -1062,6 +1062,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_objectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
@@ -1137,6 +1139,8 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_subjectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_turn:
         text: باری {SPRITE} {DIRECTION} {N} ڈگری
         options:

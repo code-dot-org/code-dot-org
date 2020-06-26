@@ -987,7 +987,7 @@ es:
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
       gamelab_clickedSpritePointer:
-        text: clic en sprite
+        text: clic en sprite {SPRITE}
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_createNewSprite:
@@ -1175,6 +1175,8 @@ es:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_subjectSpritePointer:
+        text: clic en sprite {SPRITE}
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:

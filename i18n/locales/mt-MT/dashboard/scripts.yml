@@ -23,11 +23,20 @@ mt:
           stages:
             'null':
               name: 'null'
+          lessons:
+            'null':
+              name: 'null'
         subgoal-labels-opt-in:
           stages:
             Thanks:
               name: Grazzi
+          lessons:
+            Thanks:
+              name: Grazzi
         andrea-test:
           stages:
+            'null':
+              name: 'null'
+          lessons:
             'null':
               name: 'null'

@@ -23,12 +23,21 @@ zu:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+          lessons:
+            Lists:
+              name: Umbhalo olandelanayo
         csd6-2017:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+          lessons:
+            Lists:
+              name: Umbhalo olandelanayo
         csd2-draft:
           stages:
+            Lists:
+              name: Umbhalo olandelanayo
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd6-old:
@@ -62,6 +71,9 @@ zu:
               display_name: Umbhalo olandelanayo
         csd2-pilot:
           stages:
+            Lists:
+              name: Umbhalo olandelanayo
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csp5-2020:

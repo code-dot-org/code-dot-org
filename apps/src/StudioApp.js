@@ -73,7 +73,6 @@ import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
-
 var copyrightStrings;
 
 /**
@@ -206,8 +205,7 @@ StudioApp.prototype.configure = function(options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.scratch = options.level && options.level.scratch;
-  this.usingBlockly_ = !this.editCode && !this.scratch;
+  this.usingBlockly_ = !this.editCode;
 
   if (options.isEditorless) {
     this.editCode = false;
@@ -732,12 +730,6 @@ StudioApp.prototype.handleClearPuzzle = function(config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
-  } else if (this.scratch) {
-    const workspace = Blockly.getMainWorkspace();
-    workspace.clear();
-
-    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
-    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -961,13 +953,16 @@ StudioApp.prototype.toggleRunReset = function(button) {
     // toggle between different colors on run/reset or else, on run, the workspace
     // would get lighter than the default.
     if (showRun && this.config.app === 'craft') {
-      $('.blocklySvg').css('background-color', '#A1A1A1');
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#A1A1A1');
     } else if (showRun) {
-      $('.blocklySvg').css('background-color', white);
+      $('#codeWorkspace > .blocklySvg').css('background-color', white);
     } else if (this.config.app === 'craft') {
-      $('.blocklySvg').css('background-color', '#7D7D7D');
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#7D7D7D');
     } else {
-      $('.blocklySvg').css('background-color', workspace_running_background);
+      $('#codeWorkspace > .blocklySvg').css(
+        'background-color',
+        workspace_running_background
+      );
     }
   }
 
@@ -1512,8 +1507,6 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-  } else if (this.scratch) {
-    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };

@@ -1084,6 +1084,8 @@ sv:
             '"West"': Väst
       gamelab_moveToward:
         text: Flytta {SPRITE} Pixlar {DISTANCE} Mot {TARGET}
+      gamelab_objectSpritePointer:
+        text: klickade {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1162,6 +1164,8 @@ sv:
           CONDITION:
             '"when"': när
             '"while"': medan
+      gamelab_subjectSpritePointer:
+        text: klickade {SPRITE}
       gamelab_turn:
         text: Vända {SPRITE} {DIRECTION} {N} Grader
         options:
