@@ -42,11 +42,22 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @online_url = ONLINE_URL
     @is_enrollment_receipt = true
 
+    # Facilitator training workshops use different email addresses
+    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
+      from = from_facilitators
+      reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
+    end
+
+    return if @workshop.suppress_email?
+
     mail content_type: 'text/html',
-      from: from_teacher,
+      from: from,
       subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+      reply_to: reply_to
   end
 
   def organizer_enrollment_receipt(enrollment)
@@ -98,13 +109,22 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
-    return if @workshop.suppress_reminders?
+    # Facilitator training workshops use a different email address
+    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
+      from = from_facilitators
+      reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
+    end
+
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
-      from: from_teacher,
+      from: from,
       subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+      reply_to: reply_to
   end
 
   def facilitator_enrollment_reminder(user, workshop)
@@ -113,7 +133,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders?
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -122,12 +142,29 @@ class Pd::WorkshopMailer < ActionMailer::Base
          reply_to: email_address(@user.name, @user.email)
   end
 
+  def facilitator_post_workshop(user, workshop)
+    @user = user
+    @workshop = workshop
+    @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
+    @regional_partner_name = @workshop.regional_partner&.name
+    @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
+    @workshop_date = @workshop.sessions.size == 1 ?
+                       @workshop.sessions.first.start.strftime('%B %-d, %Y').strip :
+                       @workshop.friendly_date_range
+
+    mail content_type: 'text/html',
+         from: from_facilitators,
+         subject: 'How did your workshop go?',
+         to: email_address(@user.name, @user.email),
+         reply_to: from_facilitators
+  end
+
   def organizer_enrollment_reminder(workshop)
     @workshop = workshop
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders?
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -140,6 +177,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    return if @workshop.suppress_email?
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -226,6 +265,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see Workshop.suppress_reminders? for
+  # other subject-specific suppression of reminder emails, and
+  # the Workshop serialized attribute 'suppress_email' for a third mechanism.
   # Virtual workshops should not have any mail sent.
   def check_should_send
     if @workshop.subject&.include? "Virtual"
@@ -249,6 +292,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   def from_teacher
     email_address('Code.org', 'teacher@code.org')
+  end
+
+  def from_facilitators
+    email_address('Code.org', 'facilitators@code.org')
   end
 
   def from_no_reply

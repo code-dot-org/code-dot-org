@@ -19,27 +19,15 @@ theme: responsive
 
 <br>
 
-<div class="breakoutquote" style="padding: 18px">
+## Code Break: Learn from the Code.org team and special guests!
 
-<div class="col-25">
-<a href="https://code.org/break"><img src="/images/athome/code-break-stacked.png" style="max-width: 85%; padding-left:25px"></a></div>
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
 
-<div class="col-70" style="padding-right:25px">
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-<p style="border: 0;">Take a Code Break with Hadi Partovi and the Code.org team</p>
-<p style="font-size: 14px; border: 0">With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live, weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers.</p>
-<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Tune in</a> Wednesdays at 10am PT / 1pm ET. Learn more at <a href="https://code.org/break">code.org/break</a></p>
-<a href="/break"><button>Learn more</button></a>
-
-</div>
-
-<div class="clearboth">
-
-</div>
-
-</div>
-
-## アワーオブコード：チュートリアル付きの自習教材に取り組んでみましょう
+## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
 * [ダンスパーティ](https://code.org/dance)：ケイティ・ペリーやショーン・メンデスなどなど豪華なスターの曲とダンスパーティをプログラムしよう
 * [マインクラフト](https://code.org/api/hour/begin/mc)：想像力と問題解決のチカラを使って、新しいワールドの旅をたのしもう
@@ -49,37 +37,13 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 * [そのほかのチュートリアル](https://code.org/hourofcode/overview)
 
 <p><a href="#top">トップにもどる</a></p>
+
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## 動画：教育用の3-5分の動画をみてみましょう
+## Videos: Watch these easy 3-5 minute educational videos
 
-<div class="col-33" style="padding-right: 20px;">
+{{ athome_videos }}
 
-{{ athome_vid_howcomputers }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">How Computers Work</a>: With an introduction by Bill Gates, <a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">this series</a> of six short videos is designed to be approachable for everyone and easy to understand.  The series explains what makes a computer a computer, how digital information is represented in 1s and 0s, how computer circuits work to manipulate digital information, and how a central processing unit (CPU) and operating system control the inputs, outputs, memory, and hardware of a computer.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-<div class="col-33" style="padding-right: 20px;">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">How the Internet Works</a>: This series of  <a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">eight short videos</a> features Vint Cerf, the inventor of TCP/IP, David Karp the founder of Tumblr to explain HTTP and HTML, Google's "Security Princess" to explain SSL and cybersecurity, and engineers from Microsoft.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-[Visit our video library.](https://code.org/educate/resources/videos)
 <br>
 
 <p><a href="#top">トップにもどる</a></p>
@@ -107,27 +71,14 @@ A great option for students getting started on their own. You'll learn the funda
 
 <hr />
 
-### **Turtle Programming in App Lab**
+{{ athome_olderstudents }}
 
-<div class="col-25" style="padding-right: 20px;">
-
-<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
-
-</div>
-
-<div class="col-75">
-
-<p>Adapted from our CS Principles course, this short, self-paced JavaScript module for 6th-12th graders is a great way to learn concepts that span all programming languages and tools. Ages 13+.</p>
-<a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
-
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both; margin-bottom: 30px"></div>
 
 <p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## アプリ制作についてApp Labで学ぶ
+## Learn to design and build apps with App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -148,7 +99,7 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## 手元にコンピュータがありませんか？ スマートフォンアプリをためしてみる
+## 手元にコンピュータがありませんか？ Try these smartphone apps
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -173,7 +124,7 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## インターネット接続環境が十分でないですか？ アンプラグドのアクティビティもみてみましょう
+## Limited or no internet access? Check out these unplugged activities
 * [ルビィのぼうけん](https://www.helloruby.com/play)：コンピュータやテクノロジー、プログラミングについて学習する世界一きまぐれな方法です。 コンピュータサイエンスに関して、たとえば問題の分解やパターンをみつけること、アルゴリズムを使って考えること、デバッグやコラボレーションがについて学習することができます。 *(4-10歳向け)*
 * [CSアンプラグド](https://csunplugged.org/en/)：コンピュータサイエンスに関して、カード、ひも、クレヨン、ときには体を動かしてゲームや問題をとくことで学習できる無料の指導教材を用意しています。 *(5-14歳向け)*
 
@@ -181,8 +132,8 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 
-## 先生向けの支援
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them. 
+## Support for teachers mid-course
+We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 

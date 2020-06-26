@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
-import {beginEditingSection} from './teacherSectionsRedux';
+import {beginEditingSection, getAssignmentName} from './teacherSectionsRedux';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
 
@@ -39,8 +39,8 @@ class TeacherDashboardHeader extends React.Component {
   static propTypes = {
     sections: PropTypes.object.isRequired,
     selectedSectionId: PropTypes.number.isRequired,
-    selectedSectionScript: PropTypes.object.isRequired,
-    openEditSectionDialog: PropTypes.func.isRequired
+    openEditSectionDialog: PropTypes.func.isRequired,
+    assignmentName: PropTypes.string
   };
 
   constructor(props) {
@@ -92,12 +92,14 @@ class TeacherDashboardHeader extends React.Component {
         <div style={styles.header}>
           <div>
             <h1>{this.selectedSection.name}</h1>
-            <div>
-              <span style={styles.sectionPrompt}>
-                {i18n.assignedToWithColon()}{' '}
-              </span>
-              {this.props.selectedSectionScript.name}
-            </div>
+            {this.props.assignmentName && (
+              <div id="assignment-name">
+                <span style={styles.sectionPrompt}>
+                  {i18n.assignedToWithColon()}{' '}
+                </span>
+                {this.props.assignmentName}
+              </div>
+            )}
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
@@ -138,12 +140,8 @@ export default connect(
   state => {
     let sections = state.teacherSections.sections;
     let selectedSectionId = state.teacherSections.selectedSectionId;
-
-    let selectedSectionScriptId = state.scriptSelection.scriptId;
-    let selectedSectionScript = state.scriptSelection.validScripts.filter(
-      script => script.id === selectedSectionScriptId
-    )[0];
-    return {sections, selectedSectionId, selectedSectionScript};
+    let assignmentName = getAssignmentName(state, selectedSectionId);
+    return {sections, selectedSectionId, assignmentName};
   },
   dispatch => {
     return {

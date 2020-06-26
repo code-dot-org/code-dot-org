@@ -12,6 +12,10 @@
     This is a reminder about your upcoming 5-day summer workshop on the Code.org
     = @workshop.course
     curriculum.
+- elsif @workshop.course == Pd::Workshop::COURSE_FACILITATOR
+  %p
+    I wanted to remind you about your upcoming Code.org summer workshop prep
+    session.
 - elsif @workshop.course == Pd::Workshop::COURSE_CSF
   %p
     I wanted to remind you about your upcoming Code.org
@@ -44,7 +48,7 @@
     your workshop, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
-- else
+- elsif @workshop.subject != Pd::Workshop::COURSE_FACILITATOR
   %p
     - if @workshop.course == Pd::Workshop::COURSE_CSF
       This is a great step towards bringing computer science to your classroom!
@@ -74,5 +78,7 @@
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
+-elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
+  = render partial: 'teacher_enrollment_details_facilitator'
 -else
   = render partial: 'teacher_enrollment_details'

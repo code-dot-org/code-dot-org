@@ -1,5 +1,7 @@
+/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
+import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -606,7 +608,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
-        defer: arg.defer
+        defer: arg.defer,
+        customOptions: arg.customOptions
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -866,6 +869,7 @@ exports.createJsWrapperBlockCreator = function(
    * @param {boolean} opts.simpleValue Just return the field value of the block.
    * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
    * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
+   * @param {string[]} opts.miniToolboxBlocks
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -889,7 +893,8 @@ exports.createJsWrapperBlockCreator = function(
       inline,
       simpleValue,
       extraArgs,
-      callbackParams
+      callbackParams,
+      miniToolboxBlocks
     },
     helperCode,
     pool
@@ -996,17 +1001,81 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
+        if (
+          miniToolboxBlocks &&
+          experiments.isEnabled(experiments.MINI_TOOLBOX)
+        ) {
+          var toggle = new Blockly.FieldIcon('+');
+          var miniToolboxXml = '<xml>';
+          miniToolboxBlocks.forEach(block => {
+            miniToolboxXml += `\n <block type="${block}"></block>`;
+          });
+          miniToolboxXml += '\n</xml>';
+          // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
+          this.isMiniFlyoutOpen = false;
+          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
+          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.isMiniFlyoutOpen) {
+              toggle.setText('+');
+            } else {
+              toggle.setText('-');
+            }
+            this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
+            this.render();
+            // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
+            // This has to happen after render() because some browsers don't render properly if the elements are not
+            // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
+            // the thumbnail image overlaps the label in Firefox, Edge, and IE.
+            if (this.isMiniFlyoutOpen) {
+              let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
+              let rootInputBlocks = this.getConnections_(true /* all */)
+                .filter(function(connection) {
+                  return connection.type === Blockly.INPUT_VALUE;
+                })
+                .map(function(connection) {
+                  return connection.targetBlock();
+                });
+              miniToolboxBlocks.forEach(function(block, index) {
+                block.shadowBlockValue_(rootInputBlocks[index]);
+              });
+            }
+          });
+          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
+          this.initMiniFlyout(miniToolboxXml);
+        }
+
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
         // behavior and indicates the sibling block to shadow the value from
-        if (blockText === 'clicked {SPRITE}') {
+        if (this.type === 'gamelab_clickedSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow('gamelab_allSpritesWithAnimation');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_spriteClicked' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'subject sprite') {
+        if (this.type === 'gamelab_subjectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'object sprite') {
+        if (this.type === 'gamelab_objectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[2] &&
+              root.getConnections_()[2].targetBlock()
+          );
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);

@@ -135,6 +135,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_enrollment_receipt__facilitator
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_FACILITATOR
+  end
+
+  def teacher_enrollment_reminder__facilitator
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
+      options: {days_before: 10}
+  end
+
   def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
       options: {days_before: 10}
@@ -187,6 +196,29 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def facilitator_enrollment_reminder
     mail :facilitator_enrollment_reminder, target: :facilitator
+  end
+
+  def facilitator_post_workshop_csp_summer
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSP,
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      target: :facilitator,
+      workshop_params: {
+        regional_partner: regional_partner,
+        num_sessions: 5
+      }
+  end
+
+  def facilitator_post_workshop_no_rp_csd_workshop_1
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSD,
+      Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1
+      }
   end
 
   # The teacher_cancel_receipt has a variation for CSF. It's the same for all other courses.
@@ -253,6 +285,11 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def exit_survey__csp_for_returning_teachers
     mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+  end
+
+  def exit_survey__csf_pre_foorm
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {sessions_from: Date.new(2020, 5, 4)}
   end
 
   private

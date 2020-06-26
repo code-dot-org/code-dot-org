@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -32,6 +32,16 @@ class Level < ActiveRecord::Base
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+
+  # We store parent-child relationships in a self-referential join table.
+  # In order to define a has_many / through relationship in both directions,
+  # we must define two separate associations to the same join table.
+
+  has_many :levels_parent_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
+  has_many :parent_levels, through: :levels_parent_levels, inverse_of: :child_levels
+
+  has_many :levels_child_levels, -> {order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
+  has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -345,7 +355,6 @@ class Level < ActiveRecord::Base
     'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Scratch', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget

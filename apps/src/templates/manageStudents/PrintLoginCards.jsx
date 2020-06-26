@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const styles = {
   button: {
@@ -13,25 +13,28 @@ const styles = {
 
 export default class PrintLoginCards extends Component {
   static propTypes = {
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
+    entryPointForMetrics: PropTypes.oneOf(
+      Object.values(PrintLoginCardsButtonMetricsCategory)
+    ),
+    onPrintLoginCards: PropTypes.func.isRequired
   };
 
-  onPrintLoginCards = () => {
-    const {sectionId} = this.props;
-    const url =
-      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
-    window.open(url, '_blank');
+  onClick = () => {
+    const {sectionId, entryPointForMetrics} = this.props;
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
         event: 'print-login-cards-button-click',
         data_json: JSON.stringify({
-          sectionId: sectionId
+          sectionId: sectionId,
+          entryPoint: entryPointForMetrics
         })
       },
       {includeUserId: true}
     );
+    this.props.onPrintLoginCards();
   };
 
   render() {
@@ -39,7 +42,7 @@ export default class PrintLoginCards extends Component {
       <div style={styles.button}>
         <Button
           __useDeprecatedTag
-          onClick={this.onPrintLoginCards}
+          onClick={this.onClick}
           target="_blank"
           color={Button.ButtonColor.gray}
           text={i18n.printLoginCards_button()}

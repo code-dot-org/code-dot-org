@@ -15,6 +15,7 @@ import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 import {CSF, CSD, CSP} from '../../application/ApplicationConstants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {useFoormSurvey} from '../workshop_summary_utils';
 
 const styles = {
   container: {
@@ -281,8 +282,20 @@ export default class WorkshopTable extends React.Component {
     );
   };
 
+  showSurveyUrl = (state, course, subject, date) => {
+    const pegasusBasedCsfIntro =
+      subject === SubjectNames.SUBJECT_CSF_101 &&
+      !useFoormSurvey(subject, date);
+
+    return (
+      (state === 'Ended' && !pegasusBasedCsfIntro) ||
+      ([CSD, CSP].includes(course) && subject !== SubjectNames.SUBJECT_FIT) ||
+      (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
+    );
+  };
+
   formatManagement = manageData => {
-    const {id, course, subject, state, date, canDelete} = manageData;
+    const {id, course, subject, state, date, canDelete, endDate} = manageData;
 
     return (
       <WorkshopManagement
@@ -293,12 +306,8 @@ export default class WorkshopTable extends React.Component {
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={canDelete ? this.props.onDelete : null}
-        showSurveyUrl={
-          state === 'Ended' ||
-          ([CSD, CSP].includes(course) &&
-            subject !== SubjectNames.SUBJECT_FIT) ||
-          (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
-        }
+        showSurveyUrl={this.showSurveyUrl(state, course, subject, date)}
+        endDate={endDate}
       />
     );
   };
@@ -319,7 +328,8 @@ export default class WorkshopTable extends React.Component {
           subject: row.subject,
           state: row.state,
           date: row.sessions[0].start,
-          canDelete: row.can_delete
+          canDelete: row.can_delete,
+          endDate: row.sessions[row.sessions.length - 1].end
         }
       })
     );

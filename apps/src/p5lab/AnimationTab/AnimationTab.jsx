@@ -62,6 +62,11 @@ class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
+    getLibraryManifest: PropTypes.func.isRequired,
+    categories: PropTypes.object.isRequired,
+    hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired,
+
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     selectedAnimation: shapes.AnimationKey
@@ -96,6 +101,10 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={this.props.channelId}
             allowedExtensions=".png,.jpg,.jpeg"
+            getLibraryManifest={this.props.getLibraryManifest}
+            categories={this.props.categories}
+            hideUploadOption={this.props.hideUploadOption}
+            hideAnimationNames={this.props.hideAnimationNames}
           />
         )}
       </div>

@@ -110,7 +110,7 @@ export const standardsData = [
   }
 ];
 
-export const stageId = 662;
+export const lessonId = 662;
 export const scriptId = 92;
 
 const scriptDataByScript = {
@@ -125,12 +125,12 @@ const scriptDataByScript = {
         script_id: 92,
         script_name: 'coursea-2019',
         script_stages: 3,
-        id: stageId,
+        id: lessonId,
         position: 1,
         relative_position: 1,
         name: 'Going Places Safely',
         title: 'Lesson 1: Going Places Safely',
-        flex_category: 'Digital Citizenship',
+        lesson_group_display_name: 'Digital Citizenship',
         lockable: false,
         levels: [],
         description_student: 'Learn the rules to safely visit places online.',
@@ -140,7 +140,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/1',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
       },
       {
@@ -152,7 +152,7 @@ const scriptDataByScript = {
         relative_position: 2,
         name: 'Learn to Drag and Drop',
         title: 'Lesson 2: Learn to Drag and Drop',
-        flex_category: 'Sequencing',
+        lesson_group_display_name: 'Sequencing',
         lockable: false,
         levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
         description_student: 'Click and drag to finish the puzzles.',
@@ -162,7 +162,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/2',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
       },
       {
@@ -174,7 +174,7 @@ const scriptDataByScript = {
         relative_position: 3,
         name: 'Happy Maps',
         title: 'Lesson 3: Happy Maps',
-        flex_category: 'Sequencing',
+        lesson_group_display_name: 'Sequencing',
         lockable: false,
         levels: [],
         description_student:
@@ -185,14 +185,14 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/3',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
       }
     ]
   }
 };
 
-export const pluggedStage = scriptDataByScript[scriptId].stages[1];
+export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
 
 const sectionCompletedLesson = {
   92: {
@@ -232,11 +232,11 @@ const sectionPartialCompletedLesson = {
   }
 };
 
-const studentLevelScoresByStageComplete = {
+const studentLevelScoresByLessonComplete = {
   92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
 };
 
-const studentLevelScoresByStageIncomplete = {
+const studentLevelScoresByLessonIncomplete = {
   92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
 };
 
@@ -261,7 +261,7 @@ export const fakeState = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: {92: {662: {}}}
+    studentLevelScoresByLesson: {92: {662: {}}}
   },
   teacherSections: teacherSections
 };
@@ -304,7 +304,7 @@ export const stateForTeacherMarkedCompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
@@ -320,7 +320,7 @@ export const stateForTeacherMarkedIncompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageIncomplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonIncomplete,
     selectedLessons: []
   },
   teacherSections: teacherSections
@@ -336,7 +336,7 @@ export const stateForTeacherMarkedAndProgress = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections

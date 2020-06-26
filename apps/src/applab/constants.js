@@ -43,26 +43,80 @@ export const themeOptions = [
   'robot'
 ];
 
-export const themeDisplayNames = [
-  'Default',
-  'Classic',
-  'Orange',
-  'Citrus',
-  'Ketchup and Mustard',
-  'Lemonade',
-  'Forest',
-  'Watermelon',
-  'Area 51',
-  'Polar',
-  'Glow in the Dark',
-  'Bubblegum',
-  'Millennial',
-  'Robot'
-];
+const THEME_ICON_BASE_URL = '/blockly/media/applab/theme_dropdown/';
 
-if (themeOptions.length !== themeDisplayNames.length) {
-  throw new Error('themeOptions length must equal themeDisplayNames length');
-}
+export const themeOptionsForSelect = [
+  {
+    option: 'default',
+    displayName: 'Default',
+    icon: THEME_ICON_BASE_URL + 'default.png'
+  },
+  {
+    option: 'classic',
+    displayName: 'Classic',
+    icon: THEME_ICON_BASE_URL + 'classic.png'
+  },
+  {
+    option: 'orange',
+    displayName: 'Orange',
+    icon: THEME_ICON_BASE_URL + 'orange.png'
+  },
+  {
+    option: 'citrus',
+    displayName: 'Citrus',
+    icon: THEME_ICON_BASE_URL + 'citrus.png'
+  },
+  {
+    option: 'ketchupAndMustard',
+    displayName: 'Ketchup and Mustard',
+    icon: THEME_ICON_BASE_URL + 'ketchup_and_mustard.png'
+  },
+  {
+    option: 'lemonade',
+    displayName: 'Lemonade',
+    icon: THEME_ICON_BASE_URL + 'lemonade.png'
+  },
+  {
+    option: 'forest',
+    displayName: 'Forest',
+    icon: THEME_ICON_BASE_URL + 'forest.png'
+  },
+  {
+    option: 'watermelon',
+    displayName: 'Watermelon',
+    icon: THEME_ICON_BASE_URL + 'watermelon.png'
+  },
+  {
+    option: 'area51',
+    displayName: 'Area 51',
+    icon: THEME_ICON_BASE_URL + 'area_51.png'
+  },
+  {
+    option: 'polar',
+    displayName: 'Polar',
+    icon: THEME_ICON_BASE_URL + 'polar.png'
+  },
+  {
+    option: 'glowInTheDark',
+    displayName: 'Glow in the Dark',
+    icon: THEME_ICON_BASE_URL + 'glow_in_the_dark.png'
+  },
+  {
+    option: 'bubblegum',
+    displayName: 'Bubblegum',
+    icon: THEME_ICON_BASE_URL + 'bubblegum.png'
+  },
+  {
+    option: 'millennial',
+    displayName: 'Millennial',
+    icon: THEME_ICON_BASE_URL + 'millennial.png'
+  },
+  {
+    option: 'robot',
+    displayName: 'Robot',
+    icon: THEME_ICON_BASE_URL + 'robot.png'
+  }
+];
 
 export const fontFamilyOptions = [
   'Arial',

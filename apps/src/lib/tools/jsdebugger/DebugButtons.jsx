@@ -7,6 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {actions, selectors} from './redux';
+import trackEvent from '../../../util/trackEvent';
 
 export default connect(
   state => ({
@@ -24,6 +25,7 @@ export default connect(
   class DebugButtons extends React.Component {
     static propTypes = {
       style: PropTypes.object,
+      userInteracted: PropTypes.bool,
 
       // from redux
       stepIn: PropTypes.func.isRequired,
@@ -33,6 +35,44 @@ export default connect(
       isPaused: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
       canRunNext: PropTypes.bool.isRequired
+    };
+
+    // Wrap button actions to add tracking of presses to investigate student use
+    // userInteracted tracks if the user has open/adjusted the debug console
+    togglePause = () => {
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
+      this.props.togglePause();
+    };
+
+    stepIn = () => {
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
+      this.props.stepIn();
+    };
+
+    stepOut = () => {
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
+      this.props.stepOut();
+    };
+
+    stepOver = () => {
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
+      this.props.stepOver();
     };
 
     render() {
@@ -51,7 +91,7 @@ export default connect(
               type="button"
               id="pauseButton"
               className="debugger_button"
-              onClick={this.props.togglePause}
+              onClick={this.togglePause}
               style={{display: canRunNext ? 'none' : 'inline-block'}}
               disabled={!isAttached}
             >
@@ -65,7 +105,7 @@ export default connect(
               type="button"
               id="continueButton"
               className="debugger_button"
-              onClick={this.props.togglePause}
+              onClick={this.togglePause}
               style={{display: canRunNext ? 'inline-block' : 'none'}}
             >
               <img
@@ -81,7 +121,7 @@ export default connect(
               type="button"
               id="stepOverButton"
               className="debugger_button"
-              onClick={this.props.stepOver}
+              onClick={this.stepOver}
               disabled={!isPaused || !isAttached}
             >
               <img
@@ -95,7 +135,7 @@ export default connect(
               type="button"
               id="stepOutButton"
               className="debugger_button"
-              onClick={this.props.stepOut}
+              onClick={this.stepOut}
               disabled={!isPaused || !isAttached}
             >
               <img
@@ -111,7 +151,7 @@ export default connect(
               type="button"
               id="stepInButton"
               className="debugger_button"
-              onClick={this.props.stepIn}
+              onClick={this.stepIn}
               disabled={!isPaused && isAttached}
             >
               <img

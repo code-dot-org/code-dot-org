@@ -262,8 +262,10 @@
     "callouts": {
       "arrows_move_actor": "Use the arrows to move the actor"
     },
-    "function_names": {
-      "set score": "set score"
+    "function_definitions": {
+      "set score": {
+        "name": "set score"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/2": {
@@ -272,8 +274,10 @@
     "authored_hints": {
       "Course_4_Play_Lab_Vars_2_a": "Make sure to set the number for `dog_speed` to something larger than `cat_speed`."
     },
-    "function_names": {
-      "set score": "set score"
+    "function_definitions": {
+      "set score": {
+        "name": "set score"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/3": {
@@ -373,8 +377,10 @@
   "https://studio.code.org/s/course4/stage/9/extras?level_name=course4_bee_for_challenge1": {
     "short_instructions": "Use this for loop to collect all of the nectar. There are a few actions that you will want to repeat 'counter' times.",
     "long_instructions": "Use this for loop to collect all of the nectar. There are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/10/puzzle/1": {
@@ -507,8 +513,10 @@
     "callouts": {
       "NEW_Course_4_Artist_Functions_3_1": "Click here to edit the new function so that it creates a square."
     },
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/4": {
@@ -517,8 +525,11 @@
     "authored_hints": {
       "NEW_Course_4_Artist_Functions_4_a": "You will have to use a `turn right by 120 degrees` block after each square."
     },
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draws a square that is 100 pixels in size"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/5": {
@@ -527,8 +538,10 @@
     "callouts": {
       "edit_function": "Click here to edit your function."
     },
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/6": {
@@ -537,8 +550,11 @@
     "callouts": {
       "edit_function": "Click here to edit your function."
     },
-    "function_names": {
-      "draw a triangle": "draw a triangle"
+    "function_definitions": {
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "description": "draws a triangle that is 100 pixels in size\n"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/7": {
@@ -548,26 +564,43 @@
       "NEW_Course_4_Artist_Functions_9_a": "Try running the code before you add any blocks.   What makes the drawing look a little off?",
       "NEW_Course_4_Artist_Functions_9_b": "If you can't quite put your finger on what's going wrong, try slowing down the artist's by moving the slider to the left."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw a triangle": "draw a triangle"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw a triangle": {
+        "name": "draw a triangle"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/8": {
     "short_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
     "long_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  \n\nCan you build this function using this `draw a square 20` function that we created for you?\n<br/><br/>\n\n_Note: See that we've changed the pen to be much thinner. Click \"edit\" on the `draw a square 20` function to see how!_",
-    "function_names": {
-      "draw a line of  squares": "draw a line of  squares",
-      "draw a square 20": "draw a square 20",
-      "draw a line of squares": "draw a line of squares"
+    "function_definitions": {
+      "draw a line of  squares": {
+        "name": "draw a line of  squares",
+        "description": "draw a 6 squares next to one another 6 squares long"
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "Draw a square with sides 20 pixels long"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/9": {
     "short_instructions": "Use the `draw a line of squares` function from the last puzzle to draw this pattern.",
     "long_instructions": "Use the `draw a line of squares` function from the last puzzle to draw this pattern.",
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "draw a line of squares": "draw a line of squares"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/10": {
@@ -577,9 +610,13 @@
       "NEW_Course_4_Artist_Functions_13_a": "Try editing the `draw a line of squares` function so that you don't have to call it twice.",
       "NEW_Course_4_Artist_Functions_13_c": "What code would you need if you were going to try to make a star using regular lines instead of boxes?"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "draw a line of squares": "draw a line of squares"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/11": {
@@ -594,9 +631,15 @@
     "callouts": {
       "Course_4_Artist_Functions_challenge_1": "Notice that we've sorted all of blocks and put them behind categories to keep things tidy.  Click here to find all of the blocks that you need."
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw a square 20": "draw a square 20"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares",
+        "description": "draw a 6 squares next to one another 6 squares long"
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "Draw a square 20px wide"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/12": {
@@ -607,18 +650,32 @@
       "Course_4_Artist_Functions_Inspiration_b": "Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.",
       "Course_4_Artist_Functions_Inspiration_c": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "Draw a square 20px wide"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/13": {
     "short_instructions": "Free-play time! ",
     "long_instructions": "It's free-play time! Draw anything you like!",
-    "function_names": {
-      "empty function": "empty function",
-      "draw a line of squares": "draw a line of squares",
-      "draw a square 40": "draw a square 40",
-      "draw a square 20": "draw a square 20"
+    "function_definitions": {
+      "empty function": {
+        "name": "empty function"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares",
+        "description": "draw a line of squares "
+      },
+      "draw a square 40": {
+        "name": "draw a square 40",
+        "description": "Draw a square with sides length 40"
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/extras?level_name=course4_artist_concept_challenge2": {
@@ -628,8 +685,10 @@
       "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
       "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw pinwheel": "draw pinwheel"
+    "function_definitions": {
+      "draw pinwheel": {
+        "name": "draw pinwheel"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/12/extras?level_name=course4_artist_functions_challenge2": {
@@ -642,9 +701,13 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/13/puzzle/1": {
@@ -653,9 +716,13 @@
   "https://studio.code.org/s/course4/stage/14/puzzle/1": {
     "short_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
     "long_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
-    "function_names": {
-      "draw a square": "draw a square",
-      "Draw a triangle": "Draw a triangle"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "Draw a triangle": {
+        "name": "Draw a triangle"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/2": {
@@ -666,54 +733,107 @@
       "name_function": null,
       "write_draw_triangle_function": null
     },
-    "function_names": {
-      "do something": "do something",
-      "draw a triangle": "draw a triangle"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "description": "draw a triangle"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/3": {
     "short_instructions": "Now let's use the function to draw 5 triangles in a row. Each triangle is 30 pixels apart.",
     "long_instructions": "Now let's use the function to draw 5 triangles in a row. \n\nEach triangle is 30 pixels apart.",
-    "function_names": {
-      "draw a triangle": "draw a triangle"
+    "function_definitions": {
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "description": "draw a triangle that is 50 pixels in size"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/4": {
     "short_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
     "long_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
-    "function_names": {
-      "draw a triangle with length": "draw a triangle with length"
+    "function_definitions": {
+      "draw a triangle with length": {
+        "name": "draw a triangle with length",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/5": {
     "short_instructions": "Replace the `???` in the `length` parameter input block. The pentagon has 100 pixel sides. ",
     "long_instructions": "Replace the `???` in the `length` parameter input block. \n\nThe pentagon has 100 pixel sides.",
-    "function_names": {
-      "draw a pentagon": "draw a pentagon"
+    "function_definitions": {
+      "draw a pentagon": {
+        "name": "draw a pentagon",
+        "description": "draw a pentagon that is 100 pixels",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/6": {
     "short_instructions": "Fill in the \"length\" parameter to draw these shapes by replacing the \"???\" with the right numbers. The square and triangle have 100 pixels sides while each side of the hexagon is 75 pixels long.",
     "long_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \n\nThe square and triangle have 100 pixel sides.\\\nThe hexagon sides are 75 pixels long. ",
-    "function_names": {
-      "draw a triangle": "draw a triangle",
-      "draw a hexagon": "draw a hexagon",
-      "draw a square": "draw a square",
-      "draw a sqaure": "draw a sqaure"
+    "function_definitions": {
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a hexagon": {
+        "name": "draw a hexagon",
+        "description": "draw a hexagon that is 100 pixels in size",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draw a square that is 100 pixels' length in size",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a sqaure": {
+        "name": "draw a sqaure",
+        "description": "draw a square that is 100 pixels in size",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/7": {
     "short_instructions": "Can you complete this drawing? The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.",
     "long_instructions": "Can you complete this drawing? \n\nThe sides of each triangle are 25 pixels larger than the last.\\\nThe first triangle has 25 pixel sides.",
-    "function_names": {
-      "draw a triangle": "draw a triangle"
+    "function_definitions": {
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "description": "draw a triangle with length parameter\n",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/8": {
     "short_instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "long_instructions": "The code for this triangle function is broken. \n\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
-    "function_names": {
-      "draw a triangle with length": "draw a triangle with length"
+    "function_definitions": {
+      "draw a triangle with length": {
+        "name": "draw a triangle with length",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/9": {
@@ -723,9 +843,16 @@
       "edit_add_parameter": "Click edit to add a parameter in your function",
       "add_and_drag_parameter": "Write in the name of your parameter here, click add, and then drag it into your function definition"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/10": {
@@ -734,9 +861,17 @@
     "callouts": {
       "create_function": "Click here to open the \"Functions\" flyout, then click the \"Create a Function\" button."
     },
-    "function_names": {
-      "do something": "do something",
-      "draw a hexagon": "draw a hexagon"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw a hexagon": {
+        "name": "draw a hexagon",
+        "description": "draw a hexagon that is 100 pixels in size with a length parameter",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/11": {
@@ -745,23 +880,49 @@
     "authored_hints": {
       "NEW_Course_4_Artist_Params_11_a": "There is more than one number that needs to be replaced by a variable inside the function."
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "do something": {
+        "name": "do something",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/12": {
     "short_instructions": "Can you complete this drawing? The sides of all the shapes are 100 pixels long.",
     "long_instructions": "Can you complete this drawing? \n\nThe sides of all the shapes are 100 pixels long.",
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/13": {
     "short_instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
     "long_instructions": "This image is similar to the last.  \n\nCan you use a `for` loop with your function to make this design?",
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/14": {
@@ -770,8 +931,14 @@
     "authored_hints": {
       "NEW_Course_4_Artist_Params_13_a": "You will need to divide the _perimeter_ by the number of sides in order to keep the shapes the same size overall. "
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/15": {
@@ -780,8 +947,14 @@
     "authored_hints": {
       "NEW_Course_4_Artist_Params_14_a": "It's okay to run the program a few times to figure out how the function works with different parameters."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/16": {
@@ -794,38 +967,104 @@
       "after": "When you're done with each \"petal\", be sure to `move forward` 20 pixels before you make a 60 degree rotation.",
       "solution": "**Solution**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/17": {
     "short_instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome! Play with the pen width to see how different your drawings look!",
     "long_instructions": "**Freeplay:** Here are the functions you've written, and some more for you to play with. Play with the pen width to see how different your drawings look!",
-    "function_names": {
-      "draw a star": "draw a star",
-      "draw a circle": "draw a circle",
-      "draw a pinwheel": "draw a pinwheel",
-      "draw a triangle": "draw a triangle",
-      "draw a shape": "draw a shape",
-      "draw a house": "draw a house",
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star",
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
+      },
+      "draw a circle": {
+        "name": "draw a circle",
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
+      },
+      "draw a pinwheel": {
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a shape": {
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a house": {
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/14/extras?level_name=course4_artist_fwp_challenge1": {
     "short_instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
     "long_instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
-    "function_names": {
-      "draw background": "draw background",
-      "draw a polygon": "draw a polygon",
-      "draw a square 20": "draw a square 20",
-      "do something": "do something"
+    "function_definitions": {
+      "draw background": {
+        "name": "draw background",
+        "parameters": {
+          "color": "color"
+        }
+      },
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides"
+        }
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/1": {
     "short_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. Run the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
     "long_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. \n\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
-    "function_names": {
-      "jump": "jump"
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "Makes the main character jump up 100 pixels"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/2": {
@@ -837,8 +1076,11 @@
     "callouts": {
       "Course_4 _Play_Lab_Params_2_1": "Click \"edit\" to update this function so that it uses the height parameter."
     },
-    "function_names": {
-      "jump": "jump"
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "Makes the main character jump up 'height' pixels"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/3": {
@@ -847,23 +1089,41 @@
     "callouts": {
       "edit_function": "Click here to edit your function."
     },
-    "function_names": {
-      "jump": "jump"
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "Makes the given actor jump the given height",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/4": {
     "short_instructions": "Here's a function called `patrol`. \n\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels.",
     "long_instructions": "Here's a function called `patrol`. \n\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels.",
-    "function_names": {
-      "patrol": "patrol",
-      "do something": "do something"
+    "function_definitions": {
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/5": {
     "short_instructions": "Edit the the \"patrol\" function to add an \"actor\" parameter, so that we can call it for each of the actors on the screen. Remember, the actors correspond to numbers 1, 2, and 3.",
     "long_instructions": "Edit the the `patrol` function to add an `actor` parameter, so that we can call it for each of the actors on the screen. Remember, the actors correspond to numbers 1, 2, and 3.",
-    "function_names": {
-      "patrol": "patrol"
+    "function_definitions": {
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down",
+        "parameters": {
+          "actor": "actor"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/6": {
@@ -872,52 +1132,103 @@
     "callouts": {
       "edit_add_parameter": "Click edit to add a parameter in your function"
     },
-    "function_names": {
-      "patrol": "patrol"
+    "function_definitions": {
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/7": {
     "short_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.\\\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\nNOTE: You don't need to make any changes to the program",
     "long_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \n\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\n\n**NOTE:** You don't need to make any changes to the program",
-    "function_names": {
-      "patrol": "patrol"
+    "function_definitions": {
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/8": {
     "short_instructions": "Use the `when actor touches` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "long_instructions": "Use the `when actor touches` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
-    "function_names": {
-      "patrol": "patrol"
+    "function_definitions": {
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/9": {
     "short_instructions": "Here's our game from an earlier stage, but most of the code is hidden. There’s a new function `score_points.`\n\nEdit the function so that a new parameter called `points` can be added to `player_score`. \n\nThe variable `player_score` should increase each time Dog tags Cat with pie, and decrease each time that Cat tags Dog with a sandwich.\n\nNote: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle. ",
     "long_instructions": "Here's our game from an earlier stage but most of the code is hidden. We've added a new function called `score_points.`\n\n* * *\n\n#### Edit the function so that a new parameter called `points` is added to `player_score`.\n\n#### The variable `player_score` should increase each time Dog tags Cat with pie, and decrease each time that Cat tags Dog with a sandwich.\n\n* * *\n\n_Note: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle._",
-    "function_names": {
-      "score_points": "score_points"
+    "function_definitions": {
+      "score_points": {
+        "name": "score_points",
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/10": {
     "short_instructions": "We've added one last function for you. \n\nUse an \"if\" statement to program your game to call the \"level\\_up\" function only when \"player\\_score\" becomes greater than a certain number.\n\nFor example: \"player\\_score\" > 6\n\nPlay the game, and make it to level 3 to move to the next puzzle. ",
     "long_instructions": "We've added one last function for you.\n\n<hr/>\n\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.\n\n</h4>\n\n*For example: `player_score` > 6*\n\n<hr/>\n\n_Play the game, and make it to level 3 to move to the next puzzle._",
-    "function_names": {
-      "level_up": "level_up",
-      "score_points": "score_points"
+    "function_definitions": {
+      "level_up": {
+        "name": "level_up",
+        "description": "Increase \"level\" by 1, reset points to 0, increase enemy speed, and choose a random background."
+      },
+      "score_points": {
+        "name": "score_points",
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/11": {
     "short_instructions": "It's free play time! Have fun with all the blocks in your tool box. ",
     "long_instructions": "It's free play time! Have fun with all the blocks in your tool box.\\\n<br/>\n\n<h5>\n<details>\n<summary><b>Need some ideas?</b></summary>\n\t<br>\n\t<h5>\n\t\t<ul>\n        \t<li><strong>Tag</strong> - Have character 2 patrol and use your arrow keys to make character 1 chase until they collide. </li>\n            <li><strong>Whack-a-Sprite</strong> - Have a character constantly pop up at a random location. Award points for clicking the sprite before it disappears. </li>\n            <li><strong>Best Guess</strong> - Make both characters disappear, change location to a random spot, then reappear as a random character.  Click on the first one and get a point...but if you click on the second one you LOSE a point! </li>\n        </ul>\n\t</h5>\n\n</details>\n</h5>",
-    "function_names": {
-      "jump": "jump",
-      "patrol": "patrol"
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "jump function block with height and actor parameter",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
+      },
+      "patrol": {
+        "name": "patrol",
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/1": {
     "short_instructions": "Write a sequence to collect all of the nectar using `get 3 nectar` which turns, moves to collect the nectar, and then returns to the original location.",
     "long_instructions": "Write a sequence to collect all of the nectar using `get 3 nectar` which turns, moves to collect the nectar, and then returns to the original location.",
-    "function_names": {
-      "get 3 nectar": "get 3 nectar"
+    "function_definitions": {
+      "get 3 nectar": {
+        "name": "get 3 nectar"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/2": {
@@ -926,35 +1237,58 @@
     "callouts": {
       "edit_get_nectar": "Use this button to edit the function and change the direction the Bee will turn to get the nectar."
     },
-    "function_names": {
-      "get 3 nectar": "get 3 nectar"
+    "function_definitions": {
+      "get 3 nectar": {
+        "name": "get 3 nectar"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/3": {
     "short_instructions": "Now there are flowers on both sides! We've added variables called \"left\" and \"right\" for you to use, and added a parameter called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\" so that the bee turns the correct direction when the variables \"left\" or \"right\" are passed into the function.  ",
     "long_instructions": "Now there are flowers on both sides!  \n\nWe've added variables called `left` and `right` for you to use, and now there is a parameter called `direction` inside `get 3 nectar`. \n\n**Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function.**",
-    "function_names": {
-      "get 3 nectar": "get 3 nectar"
+    "function_definitions": {
+      "get 3 nectar": {
+        "name": "get 3 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/4": {
     "short_instructions": "Try using your new function to collect nectar from all of the flowers. Remember to use the left and right variables.",
-    "function_names": {
-      "get 3 nectar": "get 3 nectar"
+    "function_definitions": {
+      "get 3 nectar": {
+        "name": "get 3 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/5": {
     "short_instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
     "long_instructions": "Let's start from scratch - can you create a new function called `get 5 nectar` with a direction parameter?",
-    "function_names": {
-      "get 5 nectar": "get 5 nectar"
+    "function_definitions": {
+      "get 5 nectar": {
+        "name": "get 5 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/6": {
     "short_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "long_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\n\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
-    "function_names": {
-      "get 5 nectar": "get 5 nectar"
+    "function_definitions": {
+      "get 5 nectar": {
+        "name": "get 5 nectar",
+        "parameters": {
+          "direction": "direction",
+          "nectar units": "nectar units"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/7": {
@@ -964,8 +1298,15 @@
       "notice_pattern": "Do you see a pattern in how the number of nectar changes? ",
       "count_with_for": "Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?"
     },
-    "function_names": {
-      "get many nectar": "get many nectar"
+    "function_definitions": {
+      "get many nectar": {
+        "name": "get many nectar",
+        "description": "Collect a given number of nectar in either direction",
+        "parameters": {
+          "direction": "direction",
+          "nectars": "nectars"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/8": {
@@ -974,8 +1315,16 @@
     "authored_hints": {
       "Course_4_Bee_Params_8_a": "It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0."
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey",
+        "description": "Move in a direction to either collect nectar or make honey.",
+        "parameters": {
+          "direction": "direction",
+          "nectars": "nectars",
+          "honey": "honey"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/extras?level_name=course4_bee_fwp_challenge1": {
@@ -988,8 +1337,13 @@
       "courseF_bee_fwp_challenge1_d": "Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.\nAfter the `for loop` you can just `move backward` **length times**.\n\nYou may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.",
       "courseF_bee_fwp_challenge1_e": "**Here is the solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/16/extras?level_name=course4_bee_fwp_challenge2": {
@@ -1004,8 +1358,13 @@
     "callouts": {
       "courseF_bee_fwp_challenge2_callout1": "This function will do a good job with corn, but what about the other vegetables?"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/17/puzzle/1": {
@@ -1014,66 +1373,129 @@
   "https://studio.code.org/s/course4/stage/18/puzzle/1": {
     "short_instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
     "long_instructions": "Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n\n<hr/>\n\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.\n\n<b>Use the blocks below to have the artist draw \"01010101\" in binary in the first row.</b>",
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/2": {
     "short_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\nRun this code to see how the artist uses binary to draw this pattern.",
     "long_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\n**Run this code to see how the artist uses binary to draw this pattern.**",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/3": {
     "short_instructions": "Which of these binary strings could you loop 8 times to draw this image?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/4": {
     "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/5": {
     "short_instructions": "Each binary string represents one row of this picture. Can you rearrange them so it draws a smiley face instead of a frowny face?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/6": {
     "short_instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/7": {
     "short_instructions": "What is the shortest binary string that you can repeat to draw this image?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/8": {
     "short_instructions": "Finish this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/9": {
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits?",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/10": {
@@ -1085,24 +1507,45 @@
       "Course_4_Artist_Binary_Free_Play_2b_c": "In each repeat you need `counter` for 1s and `16-(2 x counter)` for 0s.",
       "Course_4_Artist_Binary_Free_Play_2b_d": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/11": {
     "short_instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/extras?level_name=course4_artist_binary_challenge1": {
     "short_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/18/extras?level_name=course4_artist_binary_challenge2": {
@@ -1111,9 +1554,16 @@
     "authored_hints": {
       "courseD_artist_binary_challenge2_a": "The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.\n\nThere are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/19/puzzle/1": {
@@ -1270,8 +1720,10 @@
       "Course_4_SCF_1b_c": "You should consider using a `for loop` for the distance the bee travels.",
       "Course_4_SCF_1b_d": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "make honey up and over": "make honey up and over"
+    "function_definitions": {
+      "make honey up and over": {
+        "name": "make honey up and over"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/21/puzzle/2": {
@@ -1283,8 +1735,14 @@
       "Course_4_SCF_1a_c": "You should consider using a `for loop`. Not for the steps, but for the function parameter.",
       "Course_4_SCF_1a_d": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "get nectar": "get nectar"
+    "function_definitions": {
+      "get nectar": {
+        "name": "get nectar",
+        "parameters": {
+          "dir": "dir",
+          "counter": "counter"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/21/puzzle/3": {
@@ -1297,12 +1755,23 @@
       "Course_4_SCF_1_d": "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. ",
       "Course_4_SCF_1_e": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw a hexagon": "draw a hexagon",
-      "draw a line of hexagons": "draw a line of hexagons",
-      "shift down/forward": "shift down/forward",
-      "shift down/backward": "shift down/backward",
-      "draw a square 20": "draw a square 20"
+    "function_definitions": {
+      "draw a hexagon": {
+        "name": "draw a hexagon"
+      },
+      "draw a line of hexagons": {
+        "name": "draw a line of hexagons"
+      },
+      "shift down/forward": {
+        "name": "shift down/forward"
+      },
+      "shift down/backward": {
+        "name": "shift down/backward"
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/21/puzzle/4": {
@@ -1315,11 +1784,23 @@
       "Course_4_SCF_2_d": "Notice that because there are fewer octagons in the even rows, you don't have to jump back any further to get to the starting place for the odd rows.  \n\nThis means you can use the same function for all rows.",
       "Course_4_SCF_2_e": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "draw octagons": "draw octagons",
-      "draw an octagon": "draw an octagon",
-      "shift down": "shift down"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "draw octagons": {
+        "name": "draw octagons",
+        "parameters": {
+          "numOctagons": "numOctagons"
+        }
+      },
+      "draw an octagon": {
+        "name": "draw an octagon"
+      },
+      "shift down": {
+        "name": "shift down"
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/21/puzzle/5": {
@@ -1333,10 +1814,20 @@
       "Course_4_SCF_3_e": "Both the color of each octagon and the width of the pen are controlled by the `counter` variable.",
       "Course_4_SCF_3_f": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "do something": "do something",
-      "draw an octagon": "draw an octagon"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "draw an octagon": {
+        "name": "draw an octagon",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course4/stage/22/puzzle/1": {

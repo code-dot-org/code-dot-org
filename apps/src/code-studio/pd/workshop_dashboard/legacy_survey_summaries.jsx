@@ -69,27 +69,41 @@ export default class LegacySurveySummaries extends React.Component {
       );
     }
 
+    const {
+      csf_intro_post_workshop_from_pegasus,
+      csf_intro_post_workshop_from_pegasus_for_all_workshops,
+      csd_summer_workshops_from_jotform,
+      csp_summer_workshops_from_jotform
+    } = this.state.data;
+
     return (
       <div>
-        <LegacySurveySummaryTable
-          title="CSF Intro - my workshops"
-          data={this.state.data.csf_intro_post_workshop_from_pegasus}
-        />
-        <LegacySurveySummaryTable
-          title="CSF Intro - all workshops"
-          data={
-            this.state.data
-              .csf_intro_post_workshop_from_pegasus_for_all_workshops
-          }
-        />
-        <LegacySurveySummaryTable
-          title="CSD summer - my workshops"
-          data={this.state.data.csd_summer_workshops_from_jotform}
-        />
-        <LegacySurveySummaryTable
-          title="CSP summer - my workshops"
-          data={this.state.data.csp_summer_workshops_from_jotform}
-        />
+        {Object.keys(csf_intro_post_workshop_from_pegasus).length > 0 && (
+          <div>
+            <LegacySurveySummaryTable
+              title="CSF Intro - my workshops"
+              data={csf_intro_post_workshop_from_pegasus}
+            />
+            <LegacySurveySummaryTable
+              title="CSF Intro - all workshops"
+              data={csf_intro_post_workshop_from_pegasus_for_all_workshops}
+            />
+          </div>
+        )}
+
+        {Object.keys(csd_summer_workshops_from_jotform).length > 0 && (
+          <LegacySurveySummaryTable
+            title="CSD summer - my workshops"
+            data={csd_summer_workshops_from_jotform}
+          />
+        )}
+
+        {Object.keys(csp_summer_workshops_from_jotform).length > 0 && (
+          <LegacySurveySummaryTable
+            title="CSP summer - my workshops"
+            data={csp_summer_workshops_from_jotform}
+          />
+        )}
       </div>
     );
   }

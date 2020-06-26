@@ -6,7 +6,7 @@
 # which changes frequently such as news or sports scores.
 #
 # To reduce the likelihood of abuse, we only proxy content with an allowed
-# whitelist of JSON response types. We will need to monitor usage to detect
+# list of JSON response types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
@@ -34,6 +34,7 @@ class XhrProxyController < ApplicationController
     api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
+    api.fungenerators.com
     api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
@@ -50,6 +51,8 @@ class XhrProxyController < ApplicationController
     bible-api.com
     code.org
     compete.hsctf.com
+    covidtracking.com
+    cryptonator.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
@@ -66,6 +69,7 @@ class XhrProxyController < ApplicationController
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    maps.googleapis.com
     opentdb.com
     pokeapi.co
     qrng.anu.edu.au
@@ -73,6 +77,7 @@ class XhrProxyController < ApplicationController
     quizlet.com
     rejseplanen.dk
     maker.ifttt.com
+    maps.googleapis.com
     noaa.gov
     numbersapi.com
     pastebin.com

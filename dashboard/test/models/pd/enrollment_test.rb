@@ -102,7 +102,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_intro_workshop = build :csf_intro_workshop
     csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
 
-    assert_equal "/pd/workshop_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal "/pd/pre_workshop_survey/#{csp_academic_year_workshop_enrollment.code}",
       URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path
@@ -111,7 +111,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    csf_workshop = create :csf_workshop, :ended
+    csf_workshop_legacy = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 4)
+    csf_enrollment_legacy = create :pd_enrollment, workshop: csf_workshop_legacy
+
+    csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
@@ -129,15 +132,20 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teachercon_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
     teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
 
+    csp_wfrt = create :csp_wfrt, :ended
+    csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
+
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment_legacy.code}"], csf_enrollment_legacy.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
-    assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
   end
 
   test 'exit_survey_url falls back to last valid day' do
@@ -299,22 +307,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollments = [
       enrollment_no_survey = create(:pd_enrollment),
-      enrollment_with_unprocessed_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234),
+      enrollment_with_processed_survey = create(:pd_enrollment, :from_user),
       enrollment_in_unfinished_teachercon = teachercon1.enrollments.first,
       enrollment_in_finished_teachercon = teachercon2.enrollments.first,
       enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
     ]
 
-    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey, enrollment_in_finished_teachercon_did_survey]
-    without_surveys = [enrollment_no_survey, enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon]
-    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
-        [
-          {source_id: enrollment_with_unprocessed_survey.id.to_s},
-          {source_id: enrollment_with_processed_survey.id.to_s}
-        ]
-      )
-    )
+    create :csf_intro_post_workshop_submission,
+      :answers_high,
+      user: enrollment_with_processed_survey.user,
+      pd_workshop_id: enrollment_with_processed_survey.workshop.id
+
+    with_surveys = [enrollment_in_finished_teachercon_did_survey, enrollment_with_processed_survey]
+    without_surveys = [enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon, enrollment_no_survey]
 
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
@@ -329,7 +334,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user
+    create :day_5_workshop_foorm_submission,
+      :answers_high,
+      user: enrollment.user,
+      pd_workshop_id: enrollment.workshop.id
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 

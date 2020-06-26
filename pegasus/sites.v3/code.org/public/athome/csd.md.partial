@@ -35,7 +35,7 @@ Students can continue working on online lessons if they have reliable computers 
 
 <div class="col-75">
 
-<p><strong>Give students a self paced project to keep their skills fresh:</strong> Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We have created a [step-by-step guide](/athome/project-ideas) for current CSD teachers interested in assigning students open-ended projects that use Code.org tools. These projects can serve as alternatives to other lessons or ways to augment the existing course material.</p>
+<p><strong>Give students a self paced project to keep their skills fresh:</strong> Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We have created a <a href="https://code.org/athome/project-ideas">step-by-step guide</a> for current CSD teachers interested in assigning students open-ended projects that use Code.org tools. These projects can serve as alternatives to other lessons or ways to augment the existing course material.</p>
 
 </div>
 
@@ -92,6 +92,6 @@ The Code.org Teacher Dashboard allows you to view student progress, review stude
 
 We know many of our students lack access to the internet or a laptop at home. The following resource is available for students lacking internet access, a laptop, or both, while they are continuing to learn computer science from home.
 
-[Learning computer science when schools are closed in response to Covid19](https://code.org/athome)
+[Learning computer science when schools are closed in response to COVID-19](https://code.org/athome)
 
 We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.

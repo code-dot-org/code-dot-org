@@ -100,7 +100,7 @@ export default storybook => {
         stages: [
           {
             id: 123,
-            stage_extras_level_url: showStageExtras && 'fakeurl',
+            lesson_extras_level_url: showStageExtras && 'fakeurl',
             levels
           }
         ]

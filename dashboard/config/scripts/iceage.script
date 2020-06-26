@@ -1,6 +1,6 @@
 hidden 'false'
 
-stage 'Ice Age Play Lab'
+lesson 'Ice Age Play Lab'
 skin 'iceage'
 video_key_for_next_level 'iceage_intro'
 level 'iceage_hello1'

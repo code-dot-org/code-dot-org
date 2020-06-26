@@ -20,9 +20,6 @@ namespace :build do
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
-      RakeUtils.npm_rebuild 'phantomjs-prebuilt'
-
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"

@@ -223,8 +223,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    return false unless assessment
-    !!level.properties["pages"]
+    assessment && level.is_a?(LevelGroup)
   end
 
   def anonymous?
@@ -304,6 +303,10 @@ class ScriptLevel < ActiveRecord::Base
       summary[:name] = level.display_name || level.name
     end
 
+    if bubble_choice?
+      summary[:sublevels] = level.summarize_sublevels(script_level: self)
+    end
+
     if Rails.application.config.levelbuilder_mode
       summary[:key] = level.key
       summary[:skin] = level.try(:skin)
@@ -349,7 +352,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels = []
     level_id = last_level_summary[:ids].first
     level = Script.cache_find_level(level_id)
-    extra_level_count = level.properties["pages"].length - 1
+    extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
@@ -361,19 +364,23 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
-      level_id: level.id,
-      name: level.display_name || level.name,
       type: level.type,
-      map: JSON.parse(level.try(:maze) || '[]'),
-      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
-      skin: level.try(:skin),
-      thumbnail_url: level.try(:thumbnail_url),
-      solution_image_url: level.try(:solution_image_url),
-      level: level.summarize_as_bonus.camelize_keys,
-    }.camelize_keys
+      description: level.try(:bubble_choice_description),
+      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
+      url: build_script_level_url(self),
+      perfect: perfect,
+      maze_summary: {
+        map: JSON.parse(level.try(:maze) || '[]'),
+        serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
+        skin: level.try(:skin),
+        level: level.summarize_as_bonus.camelize_keys
+      }.camelize_keys
+    }
   end
 
   def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
@@ -468,7 +475,7 @@ class ScriptLevel < ActiveRecord::Base
   # it is contained in is hidden, or the script it is contained in is hidden.
   def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
+    !SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
       !SectionHiddenScript.find_by(script_id: lesson.script.id, section_id: section_id).nil?
   end
 

@@ -47,9 +47,8 @@
           %li
             sublevels
             %ol
-              - @level.properties['pages'].each do |page|
-                - page['levels'].each do |level_name|
-                  %li= link_to level_name, level_path(Level.find_by_name(level_name))
+              - @level.levels.each do |level|
+                %li= link_to level.name, level_path(level)
         - if contained_level_names = @level.properties['contained_level_names']
           %li
             contained levels

@@ -601,6 +601,15 @@ en:
         codebreak_e03: 'Code Break 3.0: Encryption with Ashton Kutcher and Mia Gil Epner'
         codebreak_e04: Code Break 4.0 Digital Information with Mike Krieger and Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware with Aloe Blacc, Bret Taylor, & Paula Mejia'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -1,0 +1,28 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2020-05-11T20:58:05.000Z",
+  "level_num": "custom",
+  "user_id": 1162,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": true,
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": true,
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": true,
+    "use_modal_function_editor": true,
+    "preload_asset_list": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</GamelabJr>

@@ -17,7 +17,7 @@ if (envConstants.COVERAGE) {
 process.env.BABEL_ENV = 'test';
 
 module.exports = function(config) {
-  var browser = envConstants.BROWSER || 'PhantomJS';
+  var browser = envConstants.BROWSER || 'ChromeHeadless';
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -49,8 +49,7 @@ module.exports = function(config) {
       'test/integration-tests.js': ['webpack', 'sourcemap'],
       'test/unit-tests.js': ['webpack'],
       'test/code-studio-tests.js': ['webpack', 'sourcemap'],
-      'test/storybook-tests.js': ['webpack', 'sourcemap'],
-      'test/scratch-tests.js': ['webpack']
+      'test/storybook-tests.js': ['webpack', 'sourcemap']
     },
 
     webpack: {...webpackConfig, optimization: undefined, mode: 'development'},

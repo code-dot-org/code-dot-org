@@ -19,28 +19,16 @@ theme: responsive
 
 <br>
 
-<div class="breakoutquote" style="padding: 18px">
+## Code Break: Learn from the Code.org team and special guests!
 
-<div class="col-25">
-<a href="https://code.org/break"><img src="/images/athome/code-break-stacked.png" style="max-width: 85%; padding-left:25px"></a></div>
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
 
-<div class="col-70" style="padding-right:25px">
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-<p style="border: 0;">Participa en Code Break con Hadi Partovi y el equipo de Code.org</p>
-<p style="font-size: 14px; border: 0">Con las escuelas cerradas y decenas de millones de estudiantes en casa, Code.org está lanzando Code Break, un aula interactiva semanal en vivo donde nuestro equipo les enseñará a tus hijos en casa mientras la escuela está cerrada, y un desafío semanal para que participen estudiantes de todas las habilidades, incluso aquellos sin computadoras.</p>
-<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Sintoniza</a> el miércoles a las 10 a. m. Hora del Pacífico/1 p. m. Hora del Este, a partir del 25 de marzo. Obtén más información en <a href="https://code.org/break">code.org/break</a></p>
-<a href="/break"><button>Más información</button></a>
-
-</div>
-
-<div class="clearboth">
-
-</div>
-
-</div>
-
-## Hora del Código: prueba estos interesantes tutoriales introductorios
-Prueba un tutorial de una hora diseñado para todas las edades. Hay cientos de actividades y tutoriales en más de 45 idiomas.
+## Hour of Code: Try these engaging, introductory tutorials
+Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
 * [Fiesta de baile](https://code.org/dance)  - Codifica una fiesta de baile con música de Katy Perry, Shawn Mendes y otros.
 * [Minecraft](https://code.org/api/hour/begin/mc): Usa tu creatividad y tu habilidad para resolver problemas para viajar y explorar nuevos mundos.
 * [IA para océanos](https://code.org/oceans): Aprende cómo la inteligencia artificial y el aprendizaje automático se pueden utilizar para abordar problemas mundiales.
@@ -49,38 +37,13 @@ Prueba un tutorial de una hora diseñado para todas las edades. Hay cientos de a
 * Y muchos [más tutoriales](https://code.org/hourofcode/overview)!
 
 <p><a href="#top">[Volver arriba]</a></p>
+
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Mira estos sencillos videos educativos de 3-5 minutos
+## Videos: Watch these easy 3-5 minute educational videos
 
-<div class="col-33" style="padding-right: 20px;">
+{{ athome_videos }}
 
-{{ athome_vid_howcomputers }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">Cómo funcionan las computadoras</a>: Con una introducción de Bill Gates, <a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">esta serie</a> de seis videos cortos es de fácil acceso y está diseñada para que pueda ser comprendida por todos.  La serie explica qué hace que una computadora sea una computadora, cómo se representa la información digital en 1s y 0s, cómo funcionan los circuitos de la computadora para manipular la información digital, y cómo una unidad central de procesamiento (CPU) y el sistema operativo controlan las entradas, salidas, memoria y hardware de una computadora.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-<div class="col-33" style="padding-right: 20px;">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">Cómo funciona Internet</a>: Esta serie de <a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">ocho videos cortos</a> 
-presenta a Vint Cerf, el inventor de TCP/IP; David Karp, el fundador de Tumblr para explicar HTTP y HTML; "Security Princess", de Google, para explicar SSL y ciberseguridad; e ingenieros de Microsoft.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-[Visita nuestra biblioteca de videos.](https://code.org/educate/resources/videos)
 <br>
 
 <p><a href="#top">[Volver arriba]</a></p>
@@ -88,47 +51,34 @@ presenta a Vint Cerf, el inventor de TCP/IP; David Karp, el fundador de Tumblr p
 
 <a id="express"></a>
 
-## Aprende los fundamentos con nuestros cursos rápidos
+## Learn the fundamentals with our self-paced courses
 ### **Curso Express**
-Una gran opción para que los estudiantes comiencen solos. Aprenderás los fundamentos de la ciencia de la computación con bloques de arrastrar & soltar. Crea tus propios dibujos y juegos. <strong>Nota: Los cursos exprés actualmente solo están disponibles en inglés, hindi, italiano y español. Para otros idiomas, recomendamos nuestro <a href="https://studio.code.org/s/20-hour"> Curso Acelerado</a> de 20 horas. Para ver qué hay disponible en tu idioma, visita <a href="https://studio.code.org/courses">catalogo de cursos</a>.</strong>
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Curso Exprés</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Curso rápido para prelectores</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both"></div>
 
 <hr />
 
-### **Programación con tortuga en App Lab**
+{{ athome_olderstudents }}
 
-<div class="col-25" style="padding-right: 20px;">
-
-<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
-
-</div>
-
-<div class="col-75">
-
-<p>Adaptado de nuestro curso Prinicipios de Ciencias de la Computación, este breve módulo autoguidado de JavaScript para estudiantes de 6to a 12vo grados es una buena manera de aprender conceptos que recorren todos los lenguages y herramientas de programación. Desde 13 años.</p>
-<a href="https://studio.code.org/s/csp3-virtual"><button>Pruébalo</button></a>
-
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both; margin-bottom: 30px"></div>
 
 <p><a href="#top">[Volver arriba]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Aprende a diseñar y crear aplicaciones con el laboratorio de aplicaciones
+## Learn to design and build apps with App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -138,8 +88,8 @@ Una gran opción para que los estudiantes comiencen solos. Aprenderás los funda
 
 <div class="col-66">
 
-<p>El laboratorio de aplicaciones es un entorno de programación donde puedes crear aplicaciones simples. Diseña una aplicación, codifica en JavaScript con bloques o texto, y comparte tu creación con familiares y amigos.</p>
-<p>Para mayores de 13 años, todos los navegadores modernos, solo en inglés</p>
+<p>El laboratorio de aplicaciones es programado en un entorno donde tu puedes crear aplicaciones simples. Diseñar un aplicación, en JavaScript ya sea con bloques o texto, y comparta su creación con familiares y amigos.</p>
+<p>Mayores de 13 años, todos los navegadores modernos, solo en Inglés</p>
 <a href="https://code.org/educate/applab"><button>Pruébalo</button></a>
 
 </div>
@@ -149,23 +99,23 @@ Una gran opción para que los estudiantes comiencen solos. Aprenderás los funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## ¿No hay una computadora en casa? Prueba estas aplicaciones para teléfonos inteligentes
+## ¿No hay una computadora en casa? Try these smartphone apps
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Un divertido juego de codificación móvil que lleva a los alumnos a una aventura emocionante, mientras enseña los fundamentos de la codificación, como algoritmos, reconocimiento de patrones, secuencias, bucles y condicionales. <i>(para todas las edades)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Una encantadora aplicación de juegos que lleva a los alumnos a una aventura emocionante, mientras enseña los fundamentos de la codificación, como algoritmos, reconocimiento de patrones, secuencias, bucles y condicionales. <i>(para todas las edades)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Premiada plataforma de aprendizaje de código para niños de 5 a 9 años. Resuelve desafíos y crea juegos con The Foos mientras aprendes a codificar. <strong>Nota: codeSpark ofrece una prueba gratuita de 3 meses. Se requiere la dirección de correo electrónico de los padres y la información de la tarjeta de crédito al momento de la inscripción.</strong> <i>(Para prelectores hasta alumnos de Grado 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Plataforma de aprendizaje de código galardonada para niños de 5 a 9 años. Resuelve el rompecabezas y crea juegos con The Foos mientras aprendes a programar. <strong>Note: codeSpark ofrece una prueba gratuita de 3 meses. Se requiere la dirección de correo electrónico de los padres y la información de la tarjeta de crédito al registrarse.</strong><i>(Para pre-lectoras hasta el grado 5)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper. app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Aprende codificación con lecciones divertidas y rápidas en tu teléfono que te enseñan a escribir JavaScript real. Un código con un programa de Google. <i>(para secundaria y superior)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -174,7 +124,7 @@ Una gran opción para que los estudiantes comiencen solos. Aprenderás los funda
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## ¿Acceso a Internet limitado o nulo? Echa un vistazo a estas actividades fuera de línea
+## Limited or no internet access? Check out these unplugged activities
 * [Hello Ruby](https://www.helloruby.com/play): La forma más caprichosa del mundo de aprender sobre computadoras, tecnología y programación. Actividades sobre una variedad de temas de Ciencias de la Computación, como la capacidad de descomponer un problema, detectar patrones, pensar algorítmicamente, depurar problemas y trabajar juntos. *(para alumnos de 4-10)*
 * [Ciencias de la Computación fuera de línea](https://csunplugged.org/en/): Una colección de material de enseñanza gratuito que enseña Ciencias de la Computación a través de juegos y desafios atractivos que usan tarjetas, cadenas, lápices de colores y mucho correteo. *(para alumnos de 5-14)*
 
@@ -182,27 +132,27 @@ Una gran opción para que los estudiantes comiencen solos. Aprenderás los funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 
-## Apoyo a profesores a mitad de curso
-Estamos trabajando para desarrollar apoyos para los profesores que actualmente dictan nuestros cursos aquí y brindaremos actualizaciones con recursos y recomendaciones a medida que los tengamos. 
+## Support for teachers mid-course
+We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Principios de la Ciencia de la Computación</p></a></div>
-Una guía para profesores con recursos de materiales que los estudiantes pueden usar en casa para continuar aprendiendo y prepararse para el próximo examen de Colocación Avanzada (AP)
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Descubrimientos de Ciencias de la Computación</p></a></div>
-Una guía para profesores con recursos de materiales que los estudiantes pueden usar en casa para continuar aprendiendo Descubrimientos de Ciencias de la Computación
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Fundamentos de Ciencias de la Computación</p></a></div>
-Una guía para profesores con recursos a materiales que los estudiantes pueden usar en casa para continuar aprendiendo Fundamentos de Ciencias de la Computación
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>

@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  form_name    :string(255)      not null
 #  form_version :integer          not null
-#  answers      :text(65535)      not null
+#  answers      :text(16777215)   not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #

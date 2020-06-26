@@ -272,6 +272,9 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :fee,
       :regional_partner_id,
       :organizer_id,
+      :virtual,
+      :suppress_email,
+      :third_party_provider,
       sessions_attributes: [:id, :start, :end, :_destroy],
     ]
 

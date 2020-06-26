@@ -28,7 +28,7 @@ const MOCK_SCRIPT = {
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSectionId: 1,
-  selectedSectionScript: MOCK_SCRIPT,
+  assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {}
 };
 
@@ -40,9 +40,18 @@ describe('TeacherDashboardHeader', () => {
     expect(h1Elements.contains('intro to computer science I')).to.equal(true);
   });
 
-  it('renders selected section script name', () => {
+  it('renders assigned script name if assigned', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
+    expect(wrapper.find('#assignment-name')).to.have.lengthOf(1);
     expect(wrapper.contains('Course D (2019)')).to.equal(true);
+  });
+
+  it('does not render script name if not assigned', () => {
+    const wrapper = shallow(
+      <TeacherDashboardHeader {...DEFAULT_PROPS} assignmentName="" />
+    );
+    expect(wrapper.find('#assignment-name')).to.have.lengthOf(0);
+    expect(wrapper.contains('Course D (2019)')).to.equal(false);
   });
 
   it('renders dropdown button with links to sections, highlighting current section, ignoring hidden section', () => {
