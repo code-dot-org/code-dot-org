@@ -17,14 +17,6 @@ export default function SubjectSelect({
   validation,
   onChange
 }) {
-  const options = Subjects[course].map((subject, i) => {
-    return (
-      <option key={i} value={subject}>
-        {subject}
-      </option>
-    );
-  });
-  const placeHolder = subject ? null : <option />;
   return (
     <FormGroup validationState={validation.style.subject}>
       <ControlLabel>Subject</ControlLabel>
@@ -37,13 +29,18 @@ export default function SubjectSelect({
         style={inputStyle}
         disabled={readOnly}
       >
-        {placeHolder}
-        {options}
+        {subject ? null : <option />}
+        {Subjects[course].map((subject, i) => (
+          <option key={i} value={subject}>
+            {subject}
+          </option>
+        ))}
       </FormControl>
       <HelpBlock>{validation.help.subject}</HelpBlock>
     </FormGroup>
   );
 }
+
 SubjectSelect.propTypes = {
   course: PropTypes.string.isRequired,
   subject: PropTypes.string,
