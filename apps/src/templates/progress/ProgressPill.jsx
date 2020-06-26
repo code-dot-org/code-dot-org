@@ -18,7 +18,7 @@ const styles = {
     borderColor: color.lighter_gray,
     color: color.charcoal,
     display: 'flex',
-    fontSize: 16,
+    fontSize: 12,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
@@ -34,8 +34,12 @@ const styles = {
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    letterSpacing: -0.12
+    fontSize: 12,
+    letterSpacing: -0.12,
+    width: 120,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   iconMargin: {
     marginLeft: 10
@@ -52,7 +56,6 @@ class ProgressPill extends React.Component {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
-    fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
     selectedSectionId: PropTypes.string
@@ -63,7 +66,6 @@ class ProgressPill extends React.Component {
       levels,
       icon,
       text,
-      fontSize,
       tooltip,
       disabled,
       selectedSectionId
@@ -106,7 +108,6 @@ class ProgressPill extends React.Component {
             <div
               style={{
                 ...styles.text,
-                fontSize,
                 ...(icon && styles.iconMargin)
               }}
             >
