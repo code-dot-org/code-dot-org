@@ -756,7 +756,7 @@ module Pd
       assert_no_attendance
     end
 
-    test 'csf post201 survey: show 404 page if enrollment code is invalid' do
+    test 'csf post201 survey: show invalid enrollment code page if enrollment code is invalid' do
       setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
@@ -766,7 +766,7 @@ module Pd
       sign_in teacher
       get "/pd/workshop_survey/csf/post201/#{invalid_enrollment_code}"
 
-      assert_response :not_found
+      assert_template :invalid_enrollment_code
     end
 
     test 'csf post201 survey: show survey if attended teacher has valid enrollment code' do

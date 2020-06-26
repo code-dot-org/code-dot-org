@@ -311,31 +311,14 @@ module Pd
 
     # Display CSF101 (Intro) post-workshop survey.
     # The survey, on submit, will display thanks.
-    # GET workshop_survey/csf/post101(/:enrollment_code)
+    # GET /pd/workshop_survey/csf/post101(/:enrollment_code)
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
       # or search all CSF101 workshops the current user is enrolled in.
-      enrolled_workshops = nil
-      if params[:enrollment_code].present?
-        enrolled_workshops = Workshop.joins(:enrollments).
-          where(pd_enrollments: {code: params[:enrollment_code]})
-
-        return render_404 if enrolled_workshops.blank?
-      else
-        enrolled_workshops = Workshop.
-          where(course: COURSE_CSF, subject: SUBJECT_CSF_101).
-          enrolled_in_by(current_user)
-
-        return render :not_enrolled if enrolled_workshops.blank?
-      end
+      attended_workshop = get_workshop_by_enrollment_and_course(params[:enrollment_code], COURSE_CSF, SUBJECT_CSF_101)
+      return unless attended_workshop
 
       survey_name = POST_SURVEY_CONFIG_PATHS[SUBJECT_CSF_101]
-
-      # Find the workshop attended.
-      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
-
-      # Render a message if no attendance for this workshop.
-      return render :no_attendance unless attended_workshop
 
       render_survey_foorm(survey_name: survey_name, workshop: attended_workshop, session: nil, day: nil)
     end
@@ -347,22 +330,8 @@ module Pd
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user enrolled in.
-      enrolled_workshops = nil
-      if params[:enrollment_code].present?
-        enrolled_workshops = Workshop.joins(:enrollments).
-          where(pd_enrollments: {code: params[:enrollment_code]})
-
-        return render_404 if enrolled_workshops.blank?
-      else
-        enrolled_workshops = Workshop.
-          where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
-          enrolled_in_by(current_user)
-
-        return render :not_enrolled if enrolled_workshops.blank?
-      end
-
-      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
-      return render :no_attendance unless attended_workshop
+      attended_workshop = get_workshop_by_enrollment_and_course(params[:enrollment_code], COURSE_CSF, SUBJECT_CSF_201)
+      return unless attended_workshop
 
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
     end
@@ -372,6 +341,38 @@ module Pd
     end
 
     protected
+
+    def get_workshop_by_enrollment_and_course(enrollment_code, course, subject)
+      attended_workshop = nil
+      if enrollment_code
+        workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
+        unless workshop
+          render :invalid_enrollment_code
+          return false
+        end
+        attended_workshop = workshop if workshop.user_attended?(current_user)
+      else
+        enrolled_workshops = Workshop.
+          where(course: course, subject: subject).
+          enrolled_in_by(current_user)
+
+        if enrolled_workshops.blank?
+          render :not_enrolled
+          return false
+        end
+
+        attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+      end
+
+      # Render a message if no attendance for this workshop.
+      unless attended_workshop
+        render :no_attendance
+        return false
+      end
+
+      # otherwise return the attended workshp
+      attended_workshop
+    end
 
     def response_exists_general?(key_params)
       WorkshopDailySurvey.response_exists?(
