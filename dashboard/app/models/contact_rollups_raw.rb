@@ -39,7 +39,11 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_scripts_taught(limit = nil)
     source_sql = <<~SQL
-      SELECT u.email, sc.name AS script_name, c.name AS course_name, MAX(se.updated_at) AS updated_at
+      SELECT
+        u.email,
+        sc.properties->'$.curriculum_umbrella' AS curriculum_umbrella,
+        c.name AS course_name,
+        MAX(se.updated_at) AS updated_at
       FROM sections AS se
       JOIN users AS u ON se.user_id = u.id
       JOIN scripts AS sc ON sc.id = se.script_id
@@ -50,7 +54,7 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
     source_sql += "LIMIT #{limit}" unless limit.nil?
 
-    query = get_extraction_query('dashboard.sections', source_sql, 'script_name', 'course_name')
+    query = get_extraction_query('dashboard.sections', source_sql, 'curriculum_umbrella', 'course_name')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
