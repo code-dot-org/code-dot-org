@@ -57,7 +57,6 @@ const SILENCED = [
   'netsim',
   'studio',
   'turtle',
-  'scratch',
   'weblab',
   'spritelab',
 
@@ -81,7 +80,6 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'regionalPartnerMiniContact',
-  'amazonFutureEngineerEligibility',
 
   // other entry points
   'blockly',
