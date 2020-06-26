@@ -10,6 +10,10 @@ family_name 'csp1'
 version_year '2020'
 curriculum_umbrella 'CSP'
 
+lesson_group 'cspSurvey', display_name: 'Content'
+lesson 'CS Principles Pre-survey', lockable: true
+level 'csp-pre-survey-levelgroup_2019', assessment: true
+
 lesson_group 'csp_unit1_2020', display_name: 'Unit 1: Digital Information'
 lesson 'Welcome to CSP'
 level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
