@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {showWarning} from '../redux/data';
 import LibraryCategory from './LibraryCategory';
+import SearchBar from '@cdo/apps/templates/SearchBar';
+import {getDatasetInfo} from './dataUtils';
 import color from '../../util/color';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
@@ -35,6 +37,10 @@ class DataLibraryPane extends React.Component {
     onShowWarning: PropTypes.func.isRequired
   };
 
+  state = {
+    allCategories: this.props.libraryManifest.categories
+  };
+
   onError = error => {
     if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
       this.props.onShowWarning(error.msg);
@@ -53,6 +59,45 @@ class DataLibraryPane extends React.Component {
     }
   };
 
+  search = e => {
+    //console.log(e.target.value.toLowerCase());
+    const searchRegExp = new RegExp(
+      '(?:\\s+|_|^|-)' + e.target.value.toLowerCase(),
+      'i'
+    );
+    //console.log(this.props.libraryManifest.categories);
+    let potentialCategories = this.props.libraryManifest.categories.map(
+      category => {
+        category.datasets = category.datasets.filter(dataset => {
+          const datasetInfo = getDatasetInfo(
+            dataset,
+            this.props.libraryManifest.tables
+          );
+          return (
+            searchRegExp.test(dataset) ||
+            searchRegExp.test(datasetInfo.description)
+          );
+        });
+        return category;
+      }
+    );
+    potentialCategories = potentialCategories.filter(
+      category => category.datasets.length > 0
+    );
+    console.log(potentialCategories);
+    // at this level we can filter
+    /*potentialCategories.forEach(category => {
+      let filteredDatasets = category.datasets.filter(dataset => {
+        const datasetInfo = getDatasetInfo(
+          dataset,
+          this.props.libraryManifest.tables
+        );
+        return searchRegExp.test(dataset) || searchRegExp.test(datasetInfo.description);
+      });
+      console.log(filteredDatasets);
+    });*/
+  };
+
   render() {
     const showUnpublishedTables = experiments.isEnabled(
       experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
@@ -63,6 +108,7 @@ class DataLibraryPane extends React.Component {
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
+        <SearchBar placeholderText={'Search'} onChange={this.search} />
         <hr style={styles.divider} />
         {categories.map(category => (
           <LibraryCategory
