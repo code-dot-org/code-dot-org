@@ -67,6 +67,7 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
         processed_contact_data.merge! extract_professional_learning_attended(contact_data)
         processed_contact_data.merge! extract_roles(contact_data)
+        processed_contact_data.merge! extract_state(contact_data)
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
       rescue StandardError
@@ -250,6 +251,32 @@ class ContactRollupsProcessed < ApplicationRecord
     uniq_roles.blank? ? {} : {roles: uniq_roles}
   end
 
+  def self.extract_state(contact_data)
+    # The priority is: school state > user geo state > form geo state
+    # US state in schools table is in abbreviation, must convert it back to state name.
+    school_state = extract_field_latest_value contact_data, 'dashboard.schools', 'state'
+    if school_state
+      state_name = get_us_state_from_abbr(school_state, true) || school_state
+      return {state: state_name}
+    end
+
+    user_geo_state = extract_field_latest_value contact_data, 'dashboard.user_geos', 'state'
+    return {state: user_geo_state} if user_geo_state
+
+    form_geo_state = extract_field_latest_value contact_data, 'pegasus.form_geos', 'state'
+    form_geo_state.nil? ? {} : {state: form_geo_state}
+  end
+
+  # Extract the latest value of a field in a source table from contact data.
+  # @param contact_data [Hash] output of the +parse_contact_data+ method
+  # @param table [String]
+  # @param field [String]
+  # @return the latest value or nil if no value exists
+  def self.extract_field_latest_value(contact_data, table, field)
+    values = contact_data.dig(table, field)
+    values.blank? ? nil : values.max_by {|value| value['data_updated_at']}['value']
+  end
+
   # Extracts values of a field in a source table from contact data.
   #
   # @param contact_data [Hash] compiled data from multiple source tables.
@@ -258,6 +285,7 @@ class ContactRollupsProcessed < ApplicationRecord
   # @param field [String]
   # @return [Array, nil] an array of values, or nil if the field or table
   #   does not exist in the contact_data.
+  # TODO: returns empty array instead of nil. They both communicate the same thing
   def self.extract_field(contact_data, table, field)
     return nil unless contact_data.key?(table) && contact_data[table].key?(field)
     contact_data.dig(table, field).map {|item| item['value']}
