@@ -38,7 +38,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
     db_Forms_Submitted
     db_Has_Teacher_Account
     db_Hour_of_Code_Organizer
-    db_Imported
     db_Opt_In
     db_Postal_Code
     db_Professional_Learning_Attended
