@@ -24,7 +24,7 @@ module Pd
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
 
       # Do nothing if there is no enrollment.
-      return unless validate_enrolled(workshop)
+      return unless validate_enrolled(workshop, params[:enrollmentCode])
 
       # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
       # have saved.
@@ -92,7 +92,7 @@ module Pd
     # If survey has been already completed for the given day will redirect to thanks page.
     def new_daily_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
-      unless validate_enrolled(workshop)
+      unless validate_enrolled(workshop, params[:enrollmentCode])
         return
       end
 
@@ -135,7 +135,7 @@ module Pd
       workshop = day == 0 ?
                    get_workshop_for_pre_survey(enrollment_code, current_user) :
                    get_workshop_for_new_general(enrollment_code, current_user)
-      unless validate_enrolled(workshop)
+      unless validate_enrolled(workshop, enrollment_code)
         return
       end
 
@@ -246,8 +246,8 @@ module Pd
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
     def new_post
-      enrollment = Enrollment.find_by!(code: params[:enrollment_code])
-      workshop = enrollment.workshop
+      workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
+      return render :invalid_enrollment_code unless workshop
 
       # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
       # have saved.
@@ -556,10 +556,6 @@ module Pd
         return false
       end
 
-      unless validate_enrolled(workshop)
-        return false
-      end
-
       # There's no pre-workshop survey for academic year workshops and
       # there's no post workshop survey for summer workshops
       if (day == 0 && !workshop.summer?) || (day == 5 && workshop.summer?)
@@ -574,7 +570,11 @@ module Pd
       return true
     end
 
-    def validate_enrolled(workshop)
+    def validate_enrolled(workshop, enrollment_code = nil)
+      if !workshop && enrollment_code
+        render :invalid_enrollment_code
+        return false
+      end
       unless workshop
         render :not_enrolled
         return false
