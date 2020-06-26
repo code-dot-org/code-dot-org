@@ -61,7 +61,7 @@ namespace :seed do
     'ui-test-script-2019',
     'ui-test-script-as-course-2017',
     'ui-test-script-as-course-2019'
-  ].map {|script| "dashboard/test/ui/config/scripts/#{script}.script"}.freeze
+  ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
     'algebra',
@@ -206,7 +206,7 @@ namespace :seed do
       Course.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2018).each do |course_name|
-      Course.load_from_path("dashboard/test/ui/config/courses/#{course_name}.course")
+      Course.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
 
