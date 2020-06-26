@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import PropTypes from 'prop-types';
