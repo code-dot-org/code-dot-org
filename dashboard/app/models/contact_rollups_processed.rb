@@ -60,19 +60,23 @@ class ContactRollupsProcessed < ApplicationRecord
       begin
         contact.deep_stringify_keys!
         contact_data = parse_contact_data(contact['all_data_and_metadata'])
+
+        processed_contact_data = {}
+        processed_contact_data.merge! extract_opt_in(contact_data)
+        processed_contact_data.merge! extract_user_id(contact_data)
+        processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
+        processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+        processed_contact_data.merge! extract_roles(contact_data)
+        processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
       rescue StandardError
+        # TODO: create a process to report and investigate invalid contacts
         invalid_contacts += 1
         next
       end
 
-      processed_contact_data = {}
-      processed_contact_data.merge!(extract_opt_in(contact_data))
-      processed_contact_data.merge!(extract_user_id(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_attended(contact_data))
-      processed_contact_data.merge! extract_roles(contact_data)
-      processed_contact_data.merge!(extract_updated_at(contact_data))
+      # Contact data is successful processed, add it to a batch.
+      # When the batch is big enough, save it to the database.
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
