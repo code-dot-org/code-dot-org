@@ -21,12 +21,41 @@ class Foorm::MiscSurvey < ActiveRecord::Base
 
   def self.all_form_data
     [
-      # Placeholder survey configuration
       {
-        form_name: 'surveys/pd/summer_workshop_daily_survey',
-        misc_form_path: 'csd_sample',
-        survey_data: {workshop_course: 'CS Discoveries'},
-        allow_multiple_submissions: true
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course',
+        survey_data: {course: 'CS Fundamentals', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course_pd',
+        survey_data: {course: 'CS Fundamentals', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course',
+        survey_data: {course: 'CS Discoveries', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course_pd',
+        survey_data: {course: 'CS Discoveries', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course',
+        survey_data: {course: 'CS Principles', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course_pd',
+        survey_data: {course: 'CS Principles', pd: true},
+        allow_multiple_submissions: false
       }
     ]
   end
@@ -40,5 +69,10 @@ class Foorm::MiscSurvey < ActiveRecord::Base
       create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
       save!
     end
+  end
+
+  def self.form_disabled?(misc_form_path)
+    disabled_forms = DCDO.get('foorm_misc_survey_disabled', [])
+    disabled_forms && disabled_forms.include?(misc_form_path)
   end
 end

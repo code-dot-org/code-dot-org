@@ -56,13 +56,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   // If the school information associated with their account
   // is ineligible, we still allow them to provide their school information
   // in case their account information is out of date.
-  // Redirect to ineligible page ('/afe/benefits') if ineligible.
+  // Redirect to ineligible page ('/afe/start-codeorg') if ineligible.
   // Otherwise, we ask them for their school information.
   checkInitialSchoolEligibility = sessionEligibilityData => {
     if (sessionEligibilityData.schoolEligible || this.props.schoolEligible) {
       return true;
     } else if (sessionEligibilityData.schoolEligible === false) {
-      window.location = pegasus('/afe/benefits');
+      window.location = pegasus('/afe/start-codeorg');
     }
 
     return null;
@@ -170,7 +170,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         event: 'ineligible'
       });
 
-      window.location = pegasus('/afe/benefits');
+      window.location = pegasus('/afe/start-codeorg');
     }
   }
 
@@ -201,7 +201,11 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state.formData)
+      body: JSON.stringify({
+        ...this.state.formData,
+        trafficSource: 'AFE-code.org',
+        newCodeAccount: true
+      })
     });
   };
 
