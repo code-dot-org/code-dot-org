@@ -46,14 +46,14 @@
     "mini_rubric": "false",
     "long_instructions": "# Do This\r\n\r\n**Step 4 - Adding an onEvent:** Time to make your app interactive!\r\n* An an `onEvent` to get the text when letters are typed in the quote input field.\r\n* Set the ID for the onEvent to `\"quote_input\"`\r\n* Consider which variable will be updated when the `onEvent` is triggered. In the `onEvent`...\r\n\t* Update the variable\r\n    * Move the call to the `updateScreen()` function inside the `onEvent`\r\n* What type of action will trigger the `onEvent`? In this case, it might be *\"change\", \"input\",* or *\"click\"*. Try each of these options and select the best one for this event.\r\n* Test your app by entering text in the quote field. Text should appear on the screen. ",
     "project_template_level_name": "U4 L11 Functions Make Template",
-    "map_reference": "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
+    "map_reference": "/docs/concepts/patterns/when-to-make-a-function/",
     "preload_asset_list": null,
     "encrypted": "false",
     "encrypted_examples": [
 
     ],
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+      "/docs/concepts/patterns/update-screen-pattern/"
     ]
   },
   "published": true,

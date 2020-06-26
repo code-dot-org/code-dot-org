@@ -224,11 +224,11 @@ const customInputTypes = {
     generateCode(block, arg) {
       switch (block.type) {
         case 'gamelab_clickedSpritePointer':
-          return '{id: extraArgs.sprite}';
+          return '{id: extraArgs.clickedSprite}';
         case 'gamelab_subjectSpritePointer':
-          return '{id: extraArgs.sprite}';
+          return '{id: extraArgs.subjectSprite}';
         case 'gamelab_objectSpritePointer':
-          return '{id: extraArgs.target}';
+          return '{id: extraArgs.objectSprite}';
         default:
           // unsupported block for spritePointer, returning undefined here
           // will match the behavior of an empty socket.
