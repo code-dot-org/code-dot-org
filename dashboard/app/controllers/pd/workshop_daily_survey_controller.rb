@@ -315,7 +315,11 @@ module Pd
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
       # or search all CSF101 workshops the current user is enrolled in.
-      attended_workshop = get_workshop_by_enrollment_and_course(params[:enrollment_code], COURSE_CSF, SUBJECT_CSF_101)
+      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+        params[:enrollment_code],
+        COURSE_CSF,
+        SUBJECT_CSF_101
+      )
       return unless attended_workshop
 
       survey_name = POST_SURVEY_CONFIG_PATHS[SUBJECT_CSF_101]
@@ -330,7 +334,11 @@ module Pd
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user enrolled in.
-      attended_workshop = get_workshop_by_enrollment_and_course(params[:enrollment_code], COURSE_CSF, SUBJECT_CSF_201)
+      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+        params[:enrollment_code],
+        COURSE_CSF,
+        SUBJECT_CSF_201
+      )
       return unless attended_workshop
 
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
@@ -342,7 +350,7 @@ module Pd
 
     protected
 
-    def get_workshop_by_enrollment_and_course(enrollment_code, course, subject)
+    def get_attended_workshop_by_enrollment_or_course(enrollment_code, course, subject)
       attended_workshop = nil
       if enrollment_code
         workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
