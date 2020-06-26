@@ -4,7 +4,7 @@
     "ui-test-script-2019"
   ],
   "properties": {
-    "family_name": "test-course",
+    "family_name": "ui-test-course",
     "version_year": "2019",
     "is_stable": true,
     "visible": true
