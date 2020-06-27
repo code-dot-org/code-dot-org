@@ -208,7 +208,7 @@ class PardotV2Test < Minitest::Test
           id: 10,
           db_Opt_In: 'Yes',
           db_Has_Teacher_Account: 'true',
-          db_State: 'Washington'
+          db_State: 'Washington',
         }
       },
       {
