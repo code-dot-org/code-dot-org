@@ -269,9 +269,9 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_country(contact_data)
-    # Priority: user geo country > form geo country
-    user_geo_country = extract_field_latest_value contact_data, 'dashboard.user_geos', 'country'
-    return {country: user_geo_country} if user_geo_country
+    # Priority: user country > form geo country
+    user_country = extract_field_latest_value contact_data, 'dashboard.users', 'country'
+    return {country: user_country} if user_country
 
     form_geo_country = extract_field_latest_value contact_data, 'pegasus.form_geos', 'country'
     form_geo_country.nil? ? {} : {country: form_geo_country}
