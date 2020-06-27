@@ -101,7 +101,7 @@ export default class EndWorkshopPanel extends React.Component {
           <ConfirmationDialog
             show={this.state.showEndWorkshopConfirmation}
             onOk={this.handleEndWorkshopConfirmed}
-            okText={isReadyToClose ? 'OK' : 'Yes, end this workshop'}
+            okText={'Yes, end this workshop'}
             onCancel={this.handleEndWorkshopCancel}
             headerText="End workshop and send survey"
             bodyText={isReadyToClose ? normalCloseWarning : earlyCloseWarning}
