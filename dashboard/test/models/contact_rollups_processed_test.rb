@@ -422,8 +422,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         ]
       }
     }
-    user_geos_input = {
-      'dashboard.user_geos' => {
+    users_input = {
+      'dashboard.users' => {
         'country' => [
           {'value' => 'United Kingdom', 'data_updated_at' => base_time - 1.day},
           {'value' => 'Italy', 'data_updated_at' => base_time},
@@ -441,12 +441,12 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         expected_output: {country: 'United States'}
       },
       {
-        input: user_geos_input,
+        input: users_input,
         expected_output: {country: 'Italy'}
       },
-      # user_geos data has higher priority than form_geos data
+      # users data has higher priority than form_geos data
       {
-        input: form_geos_input.merge(user_geos_input),
+        input: form_geos_input.merge(users_input),
         expected_output: {country: 'Italy'}
       }
     ]
