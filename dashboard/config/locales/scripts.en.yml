@@ -9609,7 +9609,7 @@ en:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
           description_short: 2016/2017 Draft of CSD Unit 3
-          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
+          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3-2019 - this original draft will remain available until July 1, 2017.
           stages:
             Drawing in Game Lab:
               name: Drawing in Game Lab
@@ -9689,7 +9689,7 @@ en:
           title: CSD Unit 1 (DEPRECATED)
           description_audience: ''
           description_short: 2016/2017 Draft of CSD Unit 1
-          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.
+          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1-2019 and will only remain available until July 1, 2017.
           stages:
             Intro to Problem Solving:
               name: Intro to Problem Solving
@@ -13030,7 +13030,7 @@ en:
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
+          description: "This is a replica of live levels in /s/csp3-2017 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
           lesson_groups:
             csp3_1:
               display_name: 'Chapter 1: Programming Languages and Algorithms'
@@ -29825,6 +29825,12 @@ en:
               name: Build A Project
               description_student: ''
               description_teacher: ''
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Behaviors with Sprite Lab:
+              name: Behaviors with Sprite Lab
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             csf_warmup:
               display_name: Warm-Up
@@ -29842,6 +29848,8 @@ en:
               display_name: For Loops
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: End of Course Project
           lessons:
             Dance Party:
               name: Dance Party
@@ -29955,6 +29963,12 @@ en:
               name: Build A Project
               description_student: ''
               description_teacher: ''
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Behaviors with Sprite Lab:
+              name: Behaviors with Sprite Lab
+            End of Course Project:
+              name: End of Course Project
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -30097,6 +30111,8 @@ en:
               name: Project - Digital Information Dilemmas Part 2
             'Lesson 14: Assessment Day':
               name: 'Lesson 14: Assessment Day'
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
           title: CSP Unit 1 - Digital Information ('20-'21)
           description_audience: ''
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
@@ -30104,6 +30120,8 @@ en:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
+            cspSurvey:
+              display_name: Survey
           lessons:
             new stage:
               name: new stage
@@ -30135,6 +30153,8 @@ en:
               name: Project - Digital Information Dilemmas Part 2
             'Lesson 14: Assessment Day':
               name: 'Lesson 14: Assessment Day'
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
         csp2-2020:
           stages:
             new stage:
@@ -31919,3 +31939,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        dani-june-2020-test:
+          stages: {}
+          lessons: {}
+          lesson_groups: {}
