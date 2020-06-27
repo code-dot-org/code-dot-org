@@ -156,7 +156,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal expected_summary, summary
 
     # With progress on a BubbleChoice sublevel
-    ul = create :user_level, user: student, level: sublevel1, best_result: 100
+    ul = create :user_level, user: student, level: sublevel1, best_result: 100, script_id: script_level.script.id
     expected_summary[:paired] = false
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.perfect
