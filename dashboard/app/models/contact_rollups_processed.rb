@@ -253,7 +253,7 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_state(contact_data)
-    # The priority is: school state > user geo state > form geo state
+    # The priority is: school state > user state > form geo state
     # US state in schools table is in abbreviation, must convert it back to state name.
     school_state = extract_field_latest_value contact_data, 'dashboard.schools', 'state'
     if school_state
@@ -261,8 +261,8 @@ class ContactRollupsProcessed < ApplicationRecord
       return {state: state_name}
     end
 
-    user_geo_state = extract_field_latest_value contact_data, 'dashboard.user_geos', 'state'
-    return {state: user_geo_state} if user_geo_state
+    user_state = extract_field_latest_value contact_data, 'dashboard.users', 'state'
+    return {state: user_state} if user_state
 
     form_geo_state = extract_field_latest_value contact_data, 'pegasus.form_geos', 'state'
     form_geo_state.nil? ? {} : {state: form_geo_state}
