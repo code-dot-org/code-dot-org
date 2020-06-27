@@ -269,12 +269,12 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_city(contact_data)
-    # Priority: school city > user geo city > form geo city
+    # Priority: school city > user city > form geo city
     school_city = extract_field_latest_value contact_data, 'dashboard.schools', 'city'
     return {city: school_city} if school_city
 
-    user_geo_city = extract_field_latest_value contact_data, 'dashboard.user_geos', 'city'
-    return {city: user_geo_city} if user_geo_city
+    user_city = extract_field_latest_value contact_data, 'dashboard.users', 'city'
+    return {city: user_city} if user_city
 
     form_geo_city = extract_field_latest_value contact_data, 'pegasus.form_geos', 'city'
     form_geo_city.nil? ? {} : {city: form_geo_city}
