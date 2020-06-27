@@ -21,6 +21,10 @@ const styles = {
   },
   consentIndent: {
     marginLeft: '25px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
   }
 };
 
@@ -282,7 +286,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             always have the choice to adjust your interest settings or
             unsubscribe.
           </div>
-          <Button id="continue" onClick={this.onContinue}>
+          <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
           </Button>
         </form>

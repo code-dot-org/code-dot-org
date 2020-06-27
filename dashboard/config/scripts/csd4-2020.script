@@ -5,8 +5,6 @@ student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit4/{LESSON}'
-family_name 'csd4'
-version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
