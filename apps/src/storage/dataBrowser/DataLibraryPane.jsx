@@ -12,6 +12,7 @@ import PreviewModal from './PreviewModal';
 import FirebaseStorage from '../firebaseStorage';
 import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
+import _ from 'lodash';
 
 const styles = {
   container: {
@@ -38,7 +39,7 @@ class DataLibraryPane extends React.Component {
   };
 
   state = {
-    allCategories: this.props.libraryManifest.categories
+    search: ''
   };
 
   onError = error => {
@@ -58,57 +59,52 @@ class DataLibraryPane extends React.Component {
       FirebaseStorage.copyStaticTable(datasetInfo.name, () => {}, this.onError);
     }
   };
-
   search = e => {
-    //console.log(e.target.value.toLowerCase());
-    const searchRegExp = new RegExp(
-      '(?:\\s+|_|^|-)' + e.target.value.toLowerCase(),
-      'i'
-    );
-    //console.log(this.props.libraryManifest.categories);
-    let potentialCategories = this.props.libraryManifest.categories.map(
-      category => {
-        category.datasets = category.datasets.filter(dataset => {
-          const datasetInfo = getDatasetInfo(
-            dataset,
-            this.props.libraryManifest.tables
-          );
-          return (
-            searchRegExp.test(dataset) ||
-            searchRegExp.test(datasetInfo.description)
-          );
-        });
-        return category;
-      }
-    );
-    potentialCategories = potentialCategories.filter(
-      category => category.datasets.length > 0
-    );
-    console.log(potentialCategories);
-    // at this level we can filter
-    /*potentialCategories.forEach(category => {
-      let filteredDatasets = category.datasets.filter(dataset => {
+    let searchValue = '';
+    if (e !== undefined) {
+      searchValue = e.target.value.toLowerCase();
+    }
+    this.setState({
+      search: searchValue
+    });
+  };
+  filterCategories = allCategories => {
+    const searchRegExp = new RegExp('(?:\\s+|_|^|-)' + this.state.search, 'i');
+    let potentialCategories = allCategories.map(category => {
+      category.datasets = category.datasets.filter(dataset => {
         const datasetInfo = getDatasetInfo(
           dataset,
           this.props.libraryManifest.tables
         );
-        return searchRegExp.test(dataset) || searchRegExp.test(datasetInfo.description);
+        return (
+          searchRegExp.test(dataset) ||
+          searchRegExp.test(datasetInfo.description)
+        );
       });
-      console.log(filteredDatasets);
-    });*/
+      return category;
+    });
+    potentialCategories = potentialCategories.filter(
+      category => category.datasets.length > 0
+    );
+    return potentialCategories;
   };
 
   render() {
     const showUnpublishedTables = experiments.isEnabled(
       experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
     );
-    const categories = (this.props.libraryManifest.categories || []).filter(
+    let categories = (this.props.libraryManifest.categories || []).filter(
       category => showUnpublishedTables || category.published
     );
+    categories = this.filterCategories(_.cloneDeep(categories));
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
-        <SearchBar placeholderText={'Search'} onChange={this.search} />
+        <SearchBar
+          placeholderText={'Search'}
+          onChange={this.search}
+          clearButton={this.state.search.length > 0}
+        />
         <hr style={styles.divider} />
         {categories.map(category => (
           <LibraryCategory
