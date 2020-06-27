@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+import color from '@cdo/apps/util/color';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
@@ -12,6 +13,19 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 const styles = {
   intro: {
     paddingBottom: 10
+  },
+  container: {
+    borderColor: color.teal,
+    borderWidth: 'thin',
+    borderStyle: 'solid',
+    padding: '10px 15px 10px 15px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
+  },
+  header: {
+    marginTop: '10px'
   }
 };
 
@@ -30,27 +44,57 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
-    let sessionEligibilityData =
-      JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+    let sessionEligibilityData = this.getSessionEligibilityData();
 
+    // Initial state is set by information that has been stored to the session.
+    // If none exists (ie, a user's first time visiting the page),
+    // set defaults that will ask them to provide school information.
     this.state = {
       formData: {
+        ...sessionEligibilityData,
         signedIn: this.props.signedIn,
-        schoolEligible:
-          sessionEligibilityData.schoolEligible ||
-          this.props.schoolEligible ||
-          null,
+        schoolEligible: this.checkInitialSchoolEligibility(
+          sessionEligibilityData
+        ),
         schoolId:
           sessionEligibilityData.schoolId || this.props.schoolId || null,
-        consentAFE: sessionEligibilityData.consentAFE || false,
-        submitted: sessionEligibilityData.submitted || false
+        consentAFE: sessionEligibilityData.consentAFE || false
       },
       errors: {}
     };
   }
 
-  updateFormData = change => {
-    this.setState({formData: {...this.state.formData, ...change}});
+  // If a user has gone through the eligibility flow (sessionStorage),
+  // or has school information associated with their account (props),
+  // we use that for determining their eligibilty.
+  // If the school information associated with their account
+  // is ineligible, we still allow them to provide their school information
+  // in case their account information is out of date.
+  // Redirect to ineligible page ('/afe/start-codeorg') if ineligible.
+  // Otherwise, we ask them for their school information.
+  checkInitialSchoolEligibility = sessionEligibilityData => {
+    if (sessionEligibilityData.schoolEligible || this.props.schoolEligible) {
+      return true;
+    } else if (sessionEligibilityData.schoolEligible === false) {
+      window.location = pegasus('/afe/start-codeorg');
+    }
+
+    return null;
+  };
+
+  getSessionEligibilityData = () =>
+    JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+
+  updateFormData = (change, callback = () => {}) => {
+    this.setState({formData: {...this.state.formData, ...change}}, callback);
+  };
+
+  // Wrapper to allow saving data to session
+  // as a callback once a user submits the full eligibility form.
+  // Otherwise, component can be reloaded before data is stored to session,
+  // which can result in the incorrect component being rendered.
+  updateAndStoreFormData = formData => {
+    this.updateFormData(formData, this.saveToSessionStorage);
   };
 
   saveToSessionStorage = () => {
@@ -66,7 +110,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       event: 'submit_school_info'
     });
 
-    // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
     }
@@ -96,6 +139,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       this.setState({errors: errors});
       return false;
     }
+
+    this.setState({errors: errors});
     return true;
   };
 
@@ -129,7 +174,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
   handleEligibility(isEligible) {
     this.setState({
-      formData: {...this.state.formData, ...{schoolEligible: isEligible}}
+      formData: {...this.state.formData, schoolEligible: isEligible}
     });
     this.saveToSessionStorage();
 
@@ -139,7 +184,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         event: 'ineligible'
       });
 
-      window.location = pegasus('/privacy');
+      window.location = pegasus('/afe/start-codeorg');
     }
   }
 
@@ -150,12 +195,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     };
 
     this.updateFormData(newData);
-  };
-
-  loadConfirmationPage = () => {
-    this.saveToSessionStorage();
-
-    return <AmazonFutureEngineerAccountConfirmation />;
   };
 
   submitToAFE = () => {
@@ -176,43 +215,37 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state.formData)
+      body: JSON.stringify({
+        ...this.state.formData,
+        trafficSource: 'AFE-code.org',
+        newCodeAccount: true
+      })
     });
   };
 
   loadCompletionPage = () => {
-    // Dedupe with loadConfirmationPage -- probably belongs in onContinue
-    this.saveToSessionStorage();
+    let sessionEligibilityData = this.getSessionEligibilityData();
 
-    // Do API calls here.
-    if (!this.state.formData.submitted) {
-      this.submitToAFE();
+    if (!sessionEligibilityData.submitted) {
+      this.submitToAFE().then(() => {
+        sessionStorage.setItem(
+          sessionStorageKey,
+          JSON.stringify({...sessionEligibilityData, submitted: true})
+        );
+      });
     }
 
-    // Notes on to dos for CSTA API call:
-    // may need to make NCES ID 12 digits.
-    // CSTA wants school district?
-    // school name may be too verbose currently.
-    // what if some of these are missing?
-    // lots of validation specified in spec, none currently being done.
-    // need timestamp in appropriate format.
-
-    return <div>Completion!</div>;
+    window.location = pegasus('/afe/success');
   };
 
   render() {
     let {formData} = this.state;
 
-    if (formData.schoolEligible === false) {
-      window.location = pegasus('/privacy');
-    }
-
-    // TO DO: Disable button until email and school are filled in
     return (
-      <div>
+      <div style={styles.container}>
         {formData.schoolEligible === null && (
           <div>
-            <h2>Am I eligible?</h2>
+            <h2 style={styles.header}>Am I eligible?</h2>
             <FormGroup id="amazon-future-engineer-eligiblity-intro">
               <div style={styles.intro}>
                 Enter your teacher email address and select your school below to
@@ -238,27 +271,31 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 showRequiredIndicator={true}
                 value={formData.schoolId}
                 showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+                style={styles.schoolInput}
               />
-              <Button id="submit" onClick={this.handleClickCheckEligibility}>
+              <Button
+                id="submit"
+                onClick={this.handleClickCheckEligibility}
+                style={styles.button}
+              >
                 Find out if I'm eligible
               </Button>
             </FormGroup>
           </div>
         )}
-        {formData.schoolEligible === true && formData.consentAFE === false && (
+        {formData.schoolEligible && !formData.consentAFE && (
           <AmazonFutureEngineerEligibilityForm
             email={formData.email}
             schoolId={formData.schoolId}
-            onContinue={this.updateFormData}
+            updateFormData={this.updateAndStoreFormData}
           />
         )}
-        {formData.schoolEligible === true &&
-          formData.consentAFE === true &&
-          formData.signedIn === false &&
-          this.loadConfirmationPage()}
-        {formData.schoolEligible === true &&
-          formData.consentAFE === true &&
-          formData.signedIn === true &&
+        {formData.schoolEligible &&
+          formData.consentAFE &&
+          !formData.signedIn && <AmazonFutureEngineerAccountConfirmation />}
+        {formData.schoolEligible &&
+          formData.consentAFE &&
+          formData.signedIn &&
           this.loadCompletionPage()}
       </div>
     );
