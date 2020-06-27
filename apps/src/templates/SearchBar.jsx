@@ -27,6 +27,13 @@ const styles = {
     fontSize: 16,
     color: color.light_gray
   },
+  clearIcon: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    fontSize: 16,
+    color: color.light_gray
+  },
   searchArea: {
     position: 'relative',
     margin: '10px 0'
@@ -36,7 +43,8 @@ const styles = {
 export default class SearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    clearButton: PropTypes.bool
   };
 
   componentDidMount() {
@@ -44,6 +52,7 @@ export default class SearchBar extends React.Component {
   }
 
   render() {
+    console.log(this.searchBox);
     return (
       <div style={styles.searchArea}>
         <span className="fa fa-search" style={styles.icon} />
@@ -55,6 +64,16 @@ export default class SearchBar extends React.Component {
             this.searchBox = input;
           }}
         />
+        {this.props.clearButton && (
+          <span
+            className="fa fa-close"
+            style={styles.clearIcon}
+            onClick={() => {
+              this.searchBox.value = '';
+              this.props.onChange();
+            }}
+          />
+        )}
       </div>
     );
   }
