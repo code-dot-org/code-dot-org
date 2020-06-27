@@ -201,9 +201,6 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    # Ensures that DSLDefined.clone_with_name will generate a new dsl file.
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
     sublevel1 = create :level, name: 'sublevel_1'
     sublevel2 = create :level, name: 'sublevel_2'
     sublevel3 = create :level, name: 'sublevel_3'
@@ -216,6 +213,7 @@ DSL
     # any unintended inconsistencies between DSL text and factory calls.
     input_dsl = <<~DSL
       name 'bubble choice'
+
       sublevels
       level 'sublevel_1'
       level 'sublevel_2'
@@ -224,6 +222,7 @@ DSL
 
     copy_dsl = <<~DSL
       name 'bubble choice_copy'
+
       sublevels
       level 'sublevel_1_copy'
       level 'sublevel_2_copy'
@@ -242,10 +241,6 @@ DSL
     assert_equal copy_dsl, bubble_choice_copy.dsl_text
 
     # clean up
-    File.delete(bubble_choice.filename)
     File.delete(bubble_choice_copy.filename)
-    bubble_choice_copy.sublevels.each do |sublevel|
-      File.delete(Level.level_file_path(sublevel.name))
-    end
   end
 end

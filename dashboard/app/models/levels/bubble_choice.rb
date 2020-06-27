@@ -162,32 +162,17 @@ class BubbleChoice < DSLDefined
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     level = super(new_suffix, editor_experiment: editor_experiment)
 
-    # map from old to new sublevel name
-    sublevel_name_map = {}
-    sublevels.each do |sublevel|
-      new_sublevel = sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      sublevel_name_map[sublevel.name] = new_sublevel.name
+    new_sublevel_names = sublevels.map do |sublevel|
+      sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
     end
 
     update_params = {
       properties: {
-        sublevels: sublevel_name_map.values
+        sublevels: new_sublevel_names
       }
     }
-
     level.update!(update_params)
-
-    new_dsl_text = level.dsl_text
-
-    sublevel_name_map.each_pair do |old_name, new_name|
-      success = new_dsl_text.gsub!(
-        "level '#{old_name}'",
-        "level '#{new_name}'"
-      )
-      raise "level '#{old_name}' not found in input dsl" unless success
-    end
-
-    level.rewrite_dsl_file(new_dsl_text)
+    level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
   end
 end
