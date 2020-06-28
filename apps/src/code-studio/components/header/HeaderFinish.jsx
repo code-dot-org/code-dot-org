@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import $ from 'jquery';
 
 const styles = {
   headerContainer: {

@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import $ from 'jquery';
 
 const styles = {
   headerContainer: {

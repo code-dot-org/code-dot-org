@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
 import ProjectHeader from './ProjectHeader';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import {possibleHeaders} from '../../headerRedux';
+import $ from 'jquery';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
