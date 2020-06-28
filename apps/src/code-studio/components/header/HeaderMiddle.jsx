@@ -8,6 +8,7 @@ import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
+import $ from 'jquery';
 
 const styles = {
   headerMiddleContent: {
