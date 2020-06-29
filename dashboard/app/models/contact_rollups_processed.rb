@@ -27,6 +27,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
+  HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
 
   FORM_KIND_TO_ROLE_MAP = {
     BringToSchool2013: 'Teacher',
@@ -66,6 +67,8 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_user_id(contact_data)
         processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
         processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+        processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
+        processed_contact_data.merge! extract_forms_submitted(contact_data)
         processed_contact_data.merge! extract_roles(contact_data)
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
@@ -248,6 +251,30 @@ class ContactRollupsProcessed < ApplicationRecord
     # Only care about unique and non-nil values. Values are sorted before return.
     uniq_roles = roles.uniq.compact.sort.join(',')
     uniq_roles.blank? ? {} : {roles: uniq_roles}
+  end
+
+  def self.extract_hoc_organizer_years(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    hoc_years = kinds.uniq.map do |kind|
+      if kind == 'CSEdWeekEvent2013'
+        '2013'
+      else
+        # Get year from kind value, such as 'HocSignup2014' and 'HocSignup2019'
+        HOC_YEAR_PATTERN.match(kind)&.[](:year)
+      end
+    end
+
+    # Only care about unique and non-nil value. The result is sorted to keep consistent order.
+    uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
+    return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
+  end
+
+  def self.extract_forms_submitted(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    kinds << 'Census' if contact_data.key?('dashboard.census_submissions')
+
+    uniq_kinds = kinds.uniq.compact.sort.join(',')
+    uniq_kinds.blank? ? {} : {forms_submitted: uniq_kinds}
   end
 
   # Extracts values of a field in a source table from contact data.
