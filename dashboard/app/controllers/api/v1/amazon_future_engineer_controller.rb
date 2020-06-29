@@ -29,10 +29,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     lastName
     email
     schoolId
-    street1
-    city
-    state
-    zip
     inspirationKit
     csta
     awsEducate
@@ -42,8 +38,12 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
 
   PERMITTED_PARAMETERS = [
     *REQUIRED_PARAMETERS,
+    'street1',
     'street2',
-    'street3'
+    'street3',
+    'city',
+    'state',
+    'zip'
   ]
 
   def submit_params
