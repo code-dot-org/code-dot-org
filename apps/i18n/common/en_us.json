@@ -644,6 +644,7 @@
   "edit": "Edit",
   "editAll": "Edit all",
   "editProject": "Edit Project",
+  "editDuringRunMessage": "Your code may have changed. Click \"Reset\" and then \"Run\" to run your code again.",
   "editSectionDetails": "Edit Section Details",
   "editSectionLoginTypeCleverDesc": "Students sign in through Clever.",
   "editSectionLoginTypeEmailDesc": "Students sign in with their personal email login information.",
