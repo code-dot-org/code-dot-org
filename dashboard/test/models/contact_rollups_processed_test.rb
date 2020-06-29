@@ -68,6 +68,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_forms_submitted).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_form_roles).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -251,6 +253,31 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       output = ContactRollupsProcessed.extract_updated_at(test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
+
+  test 'extract_form_roles' do
+    contact_data = {
+      'dashboard.census_submissions' => {
+        'submitter_role' => [
+          {'value' => Census::CensusSubmission::ROLES[:teacher]},
+          {'value' => Census::CensusSubmission::ROLES[:parent]},
+          {'value' => nil}
+        ]
+      },
+      'pegasus.forms' => {
+        'role' => [
+          {'value' => 'Teacher'},
+          {'value' => 'educator'},
+          {'value' => 'not_valid_role'},
+          {'value' => ''},
+          {'value' => nil}
+        ]
+      }
+    }
+    expected_output = {form_roles: 'educator,parent,teacher'}
+
+    output = ContactRollupsProcessed.extract_form_roles contact_data
+    assert_equal expected_output, output
   end
 
   test 'extract_updated_at with invalid input' do
