@@ -2,22 +2,28 @@
  "title": "Teacher end-of-year survey CSF, CSD, CSP",
  "pages": [
   {
-   "name": "page 1",
+   "name": "Welcome",
    "elements": [
     {
      "type": "html",
      "name": "variable_testing",
+     "visible": false,
      "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
     },
     {
      "type": "html",
      "name": "welcome_preamble",
-     "html": "<p><span style='font-size: 18pt;'><strong>[DRAFT 05.29.20]Welcome to the 2019-20 {course} post-course survey</strong></span></p>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
-    },
+     "html": "<p><h2>Welcome to the 2019-20 {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
+    }
+   ]
+  },
+  {
+   "name": "teaching_context_page",
+   "elements": [
     {
      "type": "html",
      "name": "teaching_context_header",
-     "html": "<p style='text-align: left;'><strong><span style='font-size: 18pt;'>Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We recognize the unique nature of teaching this year with the COVID-19 outbreak affecting most, if not all, schools.  In this survey we address the impacts that COVID-19 had on your classroom, as well as what it was like teaching the coures under &quot;normal&quot; circumstances.</p>\n<p> Let's get started!</p>"
+     "html": "<p style='text-align: left;'><strong><span style='font-size: 18pt;'>Teaching Context </span></strong></p>\n<p>This survey is about teaching with Code.org materials and resources during the 2019-20 school year.</p>\n<p>We recognize the unique nature of teaching this year with the COVID-19 outbreak affecting most, if not all, schools.  In this survey we address the impacts that COVID-19 had on your classroom, as well as what it was like teaching the course under &quot;normal&quot; circumstances.</p>\n<p> Let's get started!</p>"
     },
     {
      "type": "checkbox",
@@ -384,342 +390,16 @@
        "text": "5th year (since 2015-16)"
       }
      ]
-    },
-    {
-     "type": "html",
-     "name": "pre_covid_preamble",
-     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n<p>If you can, please take a moment (and a deep breath) to think back.</p>\n<p>We'd like you to reflect on your classroom <strong>prior</strong> to the time your school switched to remote learning.  We'll refer to this as your '<strong>normal</strong>' classroom -- what your classroom was like when you held in-person class sessions.</p>\n<p> We'll ask about your classroom with remote learning in a later section.</p>"
-    },
-    {
-     "type": "radiogroup",
-     "name": "mins_per_week_normal",
-     "title": "For a typical section of {course} that you teach, how many MINUTES PER WEEK (on average does that section meet under normal circumstances?",
-     "choices": [
-      {
-       "value": "50_or_less",
-       "text": "50 or less"
-      },
-      {
-       "value": "51_to_100",
-       "text": "51-100"
-      },
-      {
-       "value": "101_to_150",
-       "text": "101 - 150"
-      },
-      {
-       "value": "151_to_200",
-       "text": "151 - 200"
-      },
-      {
-       "value": "201_to_250",
-       "text": "201 - 250"
-      },
-      {
-       "value": "251_to_300",
-       "text": "251 - 300"
-      },
-      {
-       "value": "301_or_more",
-       "text": "301 or more"
-      }
-     ]
-    },
-    {
-     "type": "radiogroup",
-     "name": "num_weeks_normal",
-     "title": "For a typical section of {course} that you teach, approximately how many WEEKS does the class run under normal circumstances?",
-     "choices": [
-      {
-       "value": "5_or_fewer",
-       "text": "5 or fewer"
-      },
-      {
-       "value": "6_to_10",
-       "text": "6-10"
-      },
-      {
-       "value": "11_to_15",
-       "text": "11 - 15"
-      },
-      {
-       "value": "16_to_20",
-       "text": "16 - 20"
-      },
-      {
-       "value": "21_to_30",
-       "text": "21 - 30"
-      },
-      {
-       "value": "30_or_more",
-       "text": "30 or more"
-      }
-     ]
-    },
-    {
-     "type": "matrix",
-     "name": "curriculum_impressions_normal",
-     "title": "What are your overall impressions teaching with the Code.org {course} curriculum this year under normal conditions?",
-     "columns": [
-      {
-       "value": "1",
-       "text": "Strongly Disagree"
-      },
-      {
-       "value": "2",
-       "text": "Disagree"
-      },
-      {
-       "value": "3",
-       "text": "Slightly Disagree"
-      },
-      {
-       "value": "4",
-       "text": "Neutral"
-      },
-      {
-       "value": "5",
-       "text": "Slightly agree"
-      },
-      {
-       "value": "6",
-       "text": "Agree"
-      },
-      {
-       "value": "7",
-       "text": "Strongly agree"
-      }
-     ],
-     "rows": [
-      {
-       "value": "love_curriculum",
-       "text": "I loved teaching with the curriculum."
-      },
-      {
-       "value": "effective_for_students",
-       "text": "This curriculum was effective for my students."
-      },
-      {
-       "value": "strategies_are_clear",
-       "text": "The teaching strategies recommended in the curriculum and lesson plans were clear to me."
-      },
-      {
-       "value": "tools_sensible_easy",
-       "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
-      }
-     ]
-    },
-    {
-     "type": "matrix",
-     "name": "challenges_normal",
-     "title": "Please characterize the challenges you faced with teaching your students Code.org in your normal classroom.",
-     "columns": [
-      {
-       "value": "1",
-       "text": "Not a challenge"
-      },
-      {
-       "value": "2",
-       "text": "Minor challenge"
-      },
-      {
-       "value": "3",
-       "text": "Major challenge"
-      },
-      {
-       "value": "4",
-       "text": "Extremely challenging"
-      }
-     ],
-     "rows": [
-      {
-       "value": "internet_device_access",
-       "text": "Internet and/or device access for me or my students"
-      },
-      {
-       "value": "assisting_students",
-       "text": "Providing support and assistance while students work"
-      },
-      {
-       "value": "tracking_progress",
-       "text": "Tracking student progress on assigned materials"
-      },
-      {
-       "value": "providing_feedback",
-       "text": "Providing feedback on work students have done"
-      },
-      {
-       "value": "assigning_work",
-       "text": "Assigning new work"
-      },
-      {
-       "value": "materials_for_indpendent_work",
-       "text": "Finding materials that students can work on independently"
-      },
-      {
-       "value": "login_info",
-       "text": "Getting students their login information, or getting students signed in to the site"
-      },
-      {
-       "value": "materials_for_offline",
-       "text": "Finding materials to work on that don't require internet and device access"
-      },
-      {
-       "value": "communicating",
-       "text": "Communicating with my students while they are at home"
-      },
-      {
-       "value": "instruction_new_concepts",
-       "text": "Providing instruction on new concepts to my students"
-      },
-      {
-       "value": "student_collaboration",
-       "text": "Finding ways for students to collaborate"
-      },
-      {
-       "value": "lms_integration",
-       "text": "Lack of integration with my school’s technology or LMS (Learning Management System)"
-      }
-     ]
-    },
-    {
-     "type": "comment",
-     "name": "one_challenge_FR_normal",
-     "title": "For one of the items you identified as a challenge, please describe any ideas you have for how code.org might address it.",
-     "cols": 40,
-     "rows": 6
-    },
-    {
-     "type": "matrix",
-     "name": "cdo_strategies_normal",
-     "title": "When teaching {course} under normal circumstances how often did YOU explicitly do the following?",
-     "columns": [
-      {
-       "value": "1",
-       "text": "Never"
-      },
-      {
-       "value": "2",
-       "text": "Rarely (a few times a year)"
-      },
-      {
-       "value": "3",
-       "text": "Sometimes (once or twice a month)"
-      },
-      {
-       "value": "4",
-       "text": "Often (once or twice a week)"
-      },
-      {
-       "value": "5",
-       "text": "Almost every lesson"
-      }
-     ],
-     "rows": [
-      {
-       "value": "pair_programming",
-       "text": "Ask students to write code with another student?"
-      },
-      {
-       "value": "peer_feedback",
-       "text": "Ask a student to give feedback on a classmate’s work?"
-      },
-      {
-       "value": "think_pair_share",
-       "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
-      },
-      {
-       "value": "normalize_failure",
-       "text": "Remind students that failure is a normal and natural part of the problem solving process."
-      },
-      {
-       "value": "journaling",
-       "text": "Gave students the opportunity to write their thoughts down in a journal or on paper."
-      }
-     ]
-    },
-    {
-     "type": "matrix",
-     "name": "facilitation_of_student_interest_normal",
-     "title": "When teaching {course} under normal circumstances how often did YOU explicitly do the following?",
-     "columns": [
-      {
-       "value": "1",
-       "text": "Never"
-      },
-      {
-       "value": "2",
-       "text": "Rarely (a few times a year)"
-      },
-      {
-       "value": "3",
-       "text": "Sometimes (once or twice a month)"
-      },
-      {
-       "value": "4",
-       "text": "Often (once or twice a week)"
-      },
-      {
-       "value": "5",
-       "text": "Almost every lesson"
-      }
-     ],
-     "rows": [
-      {
-       "value": "connected_to_student_lives",
-       "text": "Connected lessons or activities to students' lives (e.g., by asking about past experiences, or applying content to students' daily lives)."
-      },
-      {
-       "value": "connection_to_real_world",
-       "text": "Asked students to consider relationships between lesson content and real world problems (meaning actual events or situations within or outside of school)."
-      }
-     ]
-    },
-    {
-     "type": "matrix",
-     "name": "facilitation_of_cog_demand_normal",
-     "title": "When teaching {course} under normal circumstances how often did you ASK STUDENTS explicitly to do the following?",
-     "columns": [
-      {
-       "value": "1",
-       "text": "Never"
-      },
-      {
-       "value": "2",
-       "text": "Rarely (a few times a year)"
-      },
-      {
-       "value": "3",
-       "text": "Sometimes (once or twice a month)"
-      },
-      {
-       "value": "4",
-       "text": "Often (once or twice a week)"
-      },
-      {
-       "value": "5",
-       "text": "Almost every lesson"
-      }
-     ],
-     "rows": [
-      {
-       "value": "alternative_approaches",
-       "text": "Consider alternative approaches to their work."
-      },
-      {
-       "value": "explain_reasoning",
-       "text": "Explain the logic and reasoning supporting their solutions."
-      },
-      {
-       "value": "peer_feedback",
-       "text": "Explain why they agree or disagree with the work of other students."
-      }
-     ]
-    },
+    }
+   ]
+  },
+  {
+   "name": "post_covid_page",
+   "elements": [
     {
      "type": "html",
      "name": "post_covid_preamble",
-     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n<p>Now, we’d like you to reflect on the impacts of COVID-19 on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
+     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n\n\n<p>We’d like you to reflect on the impacts of COVID-19 on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
     },
     {
      "type": "radiogroup",
@@ -736,7 +416,7 @@
       },
       {
        "value": "switched_to_different_course",
-       "text": "I continued to used Code.org resources, but NOT those that were part of the {course} course I was teaching originally."
+       "text": "I continued to use Code.org resources, but NOT those that were part of the {course} course I was teaching originally."
       },
       {
        "value": "major_modifications",
@@ -797,7 +477,6 @@
      "type": "radiogroup",
      "name": "days_per_week_video_conf_remote",
      "title": "When teaching remotely approximately how many MINUTES PER WEEK did you teach via a class conference call?",
-     "description": "We'd like to compare this to your normal in-person class meeting time.  For reference, in a previous response you said your class met {mins_per_week} minutes per week. ",
      "choices": [
       {
        "value": "50_or_less",
@@ -1001,18 +680,10 @@
     },
     {
      "type": "comment",
-     "name": "drop_off_FR_remote",
-     "title": "Please say a few words about the impact COVID-19 had on your classroom, especially with regard to teaching {course}.",
-     "description": "(We will use this information to understand your needs and inform our work building more and better supports for teaching the course.)",
-     "cols": 40,
-     "rows": 6
-    },
-    {
-     "type": "comment",
      "name": "one_challenge_FR_remote",
-     "title": "For one of the items you identified as a huge challenge, please describe any ideas you have for how code.org might address it.",
+     "title": "For one of the items you identified as a huge challenge (or for a different challenge not listed), please describe any ideas you have for how code.org might address it.",
      "cols": 40,
-     "rows": 6
+     "rows": 3
     },
     {
      "type": "matrix",
@@ -1142,9 +813,357 @@
      ]
     },
     {
+     "type": "comment",
+     "name": "drop_off_FR_remote",
+     "title": "Last, if is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here.",
+     "cols": 40,
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "name": "pre_covid_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "pre_covid_preamble",
+     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>Now, we'd like you to reflect on your classroom <strong>prior</strong> to the time your school switched to remote learning.  We'll refer to this as your '<strong>normal</strong>' classroom -- what your classroom was like when you held in-person class sessions.</p>\n<p>If you can, please take a moment (and a deep breath) to think back.</p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "mins_per_week_normal",
+     "title": "For a typical section of {course} that you teach, how many MINUTES PER WEEK (on average) does that section meet under normal circumstances?",
+     "choices": [
+      {
+       "value": "50_or_less",
+       "text": "50 or less"
+      },
+      {
+       "value": "51_to_100",
+       "text": "51-100"
+      },
+      {
+       "value": "101_to_150",
+       "text": "101 - 150"
+      },
+      {
+       "value": "151_to_200",
+       "text": "151 - 200"
+      },
+      {
+       "value": "201_to_250",
+       "text": "201 - 250"
+      },
+      {
+       "value": "251_to_300",
+       "text": "251 - 300"
+      },
+      {
+       "value": "301_or_more",
+       "text": "301 or more"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "num_weeks_normal",
+     "title": "For a typical section of {course} that you teach, approximately how many WEEKS does the class run under normal circumstances?",
+     "choices": [
+      {
+       "value": "5_or_fewer",
+       "text": "5 or fewer"
+      },
+      {
+       "value": "6_to_10",
+       "text": "6-10"
+      },
+      {
+       "value": "11_to_15",
+       "text": "11 - 15"
+      },
+      {
+       "value": "16_to_20",
+       "text": "16 - 20"
+      },
+      {
+       "value": "21_to_30",
+       "text": "21 - 30"
+      },
+      {
+       "value": "30_or_more",
+       "text": "30 or more"
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "curriculum_impressions_normal",
+     "title": "What are your overall impressions teaching with the Code.org {course} curriculum this year under normal conditions?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "love_curriculum",
+       "text": "I loved teaching with the curriculum."
+      },
+      {
+       "value": "effective_for_students",
+       "text": "This curriculum was effective for my students."
+      },
+      {
+       "value": "strategies_are_clear",
+       "text": "The teaching strategies recommended in the curriculum and lesson plans were clear to me."
+      },
+      {
+       "value": "tools_sensible_easy",
+       "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "challenges_normal",
+     "title": "Please characterize the challenges you faced with teaching your students {course} in your normal classroom.",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Not a challenge"
+      },
+      {
+       "value": "2",
+       "text": "Minor challenge"
+      },
+      {
+       "value": "3",
+       "text": "Major challenge"
+      },
+      {
+       "value": "4",
+       "text": "Extremely challenging"
+      }
+     ],
+     "rows": [
+      {
+       "value": "internet_device_access",
+       "text": "Internet and/or device access for me or my students"
+      },
+      {
+       "value": "assisting_students",
+       "text": "Providing support and assistance while students work"
+      },
+      {
+       "value": "tracking_progress",
+       "text": "Tracking student progress on assigned materials"
+      },
+      {
+       "value": "providing_feedback",
+       "text": "Providing feedback on work students have done"
+      },
+      {
+       "value": "assigning_work",
+       "text": "Assigning new work"
+      },
+      {
+       "value": "materials_for_indpendent_work",
+       "text": "Finding materials that students can work on independently"
+      },
+      {
+       "value": "login_info",
+       "text": "Getting students their login information, or getting students signed in to the site"
+      },
+      {
+       "value": "materials_for_offline",
+       "text": "Finding materials to work on that don't require internet and device access"
+      },
+      {
+       "value": "communicating",
+       "text": "Communicating with my students while they are at home"
+      },
+      {
+       "value": "instruction_new_concepts",
+       "text": "Providing instruction on new concepts to my students"
+      },
+      {
+       "value": "student_collaboration",
+       "text": "Finding ways for students to collaborate"
+      },
+      {
+       "value": "lms_integration",
+       "text": "Lack of integration with my school’s technology or LMS (Learning Management System)"
+      }
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "one_challenge_FR_normal",
+     "title": "For one of the items you identified as a challenge, please describe any ideas you have for how code.org might address it.",
+     "cols": 40,
+     "rows": 3
+    },
+    {
+     "type": "matrix",
+     "name": "cdo_strategies_normal",
+     "title": "When teaching {course} under normal circumstances how often did YOU explicitly do the following?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Never"
+      },
+      {
+       "value": "2",
+       "text": "Rarely (a few times a year)"
+      },
+      {
+       "value": "3",
+       "text": "Sometimes (once or twice a month)"
+      },
+      {
+       "value": "4",
+       "text": "Often (once or twice a week)"
+      },
+      {
+       "value": "5",
+       "text": "Almost every lesson"
+      }
+     ],
+     "rows": [
+      {
+       "value": "pair_programming",
+       "text": "Ask students to write code with another student?"
+      },
+      {
+       "value": "peer_feedback",
+       "text": "Ask a student to give feedback on a classmate’s work?"
+      },
+      {
+       "value": "think_pair_share",
+       "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
+      },
+      {
+       "value": "normalize_failure",
+       "text": "Remind students that failure is a normal and natural part of the problem solving process."
+      },
+      {
+       "value": "journaling",
+       "text": "Gave students the opportunity to write their thoughts down in a journal or on paper."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "facilitation_of_student_interest_normal",
+     "title": "When teaching {course} under normal circumstances how often did YOU explicitly do the following?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Never"
+      },
+      {
+       "value": "2",
+       "text": "Rarely (a few times a year)"
+      },
+      {
+       "value": "3",
+       "text": "Sometimes (once or twice a month)"
+      },
+      {
+       "value": "4",
+       "text": "Often (once or twice a week)"
+      },
+      {
+       "value": "5",
+       "text": "Almost every lesson"
+      }
+     ],
+     "rows": [
+      {
+       "value": "connected_to_student_lives",
+       "text": "Connected lessons or activities to students' lives (e.g., by asking about past experiences, or applying content to students' daily lives)."
+      },
+      {
+       "value": "connection_to_real_world",
+       "text": "Asked students to consider relationships between lesson content and real world problems (meaning actual events or situations within or outside of school)."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "facilitation_of_cog_demand_normal",
+     "title": "When teaching {course} under normal circumstances how often did you ASK STUDENTS explicitly to do the following?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Never"
+      },
+      {
+       "value": "2",
+       "text": "Rarely (a few times a year)"
+      },
+      {
+       "value": "3",
+       "text": "Sometimes (once or twice a month)"
+      },
+      {
+       "value": "4",
+       "text": "Often (once or twice a week)"
+      },
+      {
+       "value": "5",
+       "text": "Almost every lesson"
+      }
+     ],
+     "rows": [
+      {
+       "value": "alternative_approaches",
+       "text": "Consider alternative approaches to their work."
+      },
+      {
+       "value": "explain_reasoning",
+       "text": "Explain the logic and reasoning supporting their solutions."
+      },
+      {
+       "value": "peer_feedback",
+       "text": "Explain why they agree or disagree with the work of other students."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "teaching_community_future_page",
+   "elements": [
+    {
      "type": "html",
      "name": "community_heading",
-     "html": "<h2>Your Teaching Community</h2>"
+     "html": "<h2>Your Teaching Community & The Future</h2>"
     },
     {
      "type": "matrix",
@@ -1353,7 +1372,12 @@
        "text": "My school administration provides me with high quality feedback and evaluation of my CS instruction."
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "name": "demographics_page",
+   "elements": [
     {
      "type": "html",
      "name": "teaching_background_header",
@@ -1558,8 +1582,7 @@
       }
      ]
     }
-   ],
-   "title": "converted questions"
+   ]
   }
  ]
 }
