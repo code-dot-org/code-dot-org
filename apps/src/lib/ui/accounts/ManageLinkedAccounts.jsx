@@ -238,7 +238,7 @@ class OauthConnection extends React.Component {
       : i18n.manageLinkedAccounts_connect();
     const tooltipId = _.uniqueId();
 
-    const oauthConnectPath = isConnected
+    const oauthToggleConnectionPath = isConnected
       ? `/users/auth/${id}/disconnect`
       : `/users/auth/${credentialType}?action=connect`;
 
@@ -253,7 +253,7 @@ class OauthConnection extends React.Component {
             <form
               style={styles.noMargin}
               method="POST"
-              action={oauthConnectPath}
+              action={oauthToggleConnectionPath}
             >
               {/* This button intentionally uses BootstrapButton to match other
                   account page buttons */}
