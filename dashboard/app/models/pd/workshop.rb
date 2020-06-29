@@ -868,4 +868,8 @@ class Pd::Workshop < ActiveRecord::Base
   def friday_institute?
     third_party_provider == 'friday_institute'
   end
+
+  def user_attended?(user)
+    attending_teachers.include?(user)
+  end
 end
