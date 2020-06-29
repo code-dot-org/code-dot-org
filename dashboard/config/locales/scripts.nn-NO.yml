@@ -6025,6 +6025,8 @@ nn:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(gammel) Eining 1: Digital informasjon"
+            cspSurvey:
+              display_name: Undersøking
           lessons:
             Binary Numbers:
               name: Binære tal
@@ -6120,3 +6122,41 @@ nn:
           lessons:
             While Loops:
               name: Medan-løkker
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Sekvensiering
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendingar
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjonar
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
+          lessons:
+            Sequencing:
+              name: Sekvensiering
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendingar
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjonar
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
+          lesson_groups:
+            k5_basic_concepts_1:
+              display_name: Grunnleggande kodekonsept og lærestrategiar
+            k5_diving_deeper_1:
+              display_name: 'Djupdykk: Kurs E og F'
+            k5_next_steps_1:
+              display_name: Neste steg
