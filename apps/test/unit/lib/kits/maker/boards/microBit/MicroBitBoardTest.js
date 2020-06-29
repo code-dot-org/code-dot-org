@@ -358,6 +358,24 @@ describe('MicroBitBoard', () => {
     });
   });
 
+  describe(`createCapacitiveTouchSensor(pin)`, () => {
+    it('makes a button controller', () => {
+      return board.connect().then(() => {
+        const pin = 1;
+        const newSensor = board.createCapacitiveTouchSensor(pin);
+        expect(newSensor).to.be.an.instanceOf(ExternalButton);
+      });
+    });
+
+    it('sets the pin to touchMode on the board', () => {
+      return board.connect().then(() => {
+        let touchModeSpy = sinon.spy(board.boardClient_, 'setTouchMode');
+        board.createCapacitiveTouchSensor(1);
+        expect(touchModeSpy).to.have.been.calledOnce;
+      });
+    });
+  });
+
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
