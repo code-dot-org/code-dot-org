@@ -229,8 +229,10 @@ DSL
       level 'sublevel_3_copy'
     DSL
 
+    File.stubs(:exist?).returns(true)
+    File.stubs(:read).with {|filepath| filepath.to_s.end_with?('bubble_choice.bubble_choice')}.returns(input_dsl).once
+
     bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
-    bubble_choice.stubs(:dsl_text).returns(input_dsl)
 
     assert_equal [sublevel1, sublevel2, sublevel3], bubble_choice.sublevels
 
