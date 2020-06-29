@@ -13,7 +13,7 @@
     {
      "type": "html",
      "name": "welcome_preamble",
-     "html": "<p><h2>Welcome to the 2019-20 {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered at $10 Amazon gift code for your time (supplies limited)</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
+     "html": "<p><h2>Welcome to the 2019-20 {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited.)</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
     }
    ]
   },
@@ -399,7 +399,7 @@
     {
      "type": "html",
      "name": "post_covid_preamble",
-     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n\n<p>The COVID-19 outbreak changed the way almost all schools in the US operated around mid-March 2020. Most schools switched completely, or in part, to remote/virtual learning.</p>\n\n\n<p>We’d like you to reflect on the impacts of COVID-19 on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
+     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n\n<p>The COVID-19 pandemic changed the way almost all schools in the US operated around mid-March, 2020. Most schools switched completely, or in part, to remote or virtual learning environments.</p>\n\n\n<p>We’d like you to reflect on the impacts of COVID-19 pandemic on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
     },
     {
      "type": "radiogroup",
@@ -435,7 +435,7 @@
     {
      "type": "rating",
      "name": "pct_course_not_taught",
-     "title": "Considering the entire 2019-20 school year, by your estimation, what % of {course} were you NOT able to teach due the impacts of COVID-19 on your classroom?",
+     "title": "Considering the entire 2019-20 school year, by your estimation, what % of {course} were you NOT able to teach due the impacts of the COVID-19 pandemic on your classroom?",
      "rateMin": 0,
      "rateMax": 100,
      "rateStep": 10,
@@ -444,7 +444,7 @@
     {
      "type": "radiogroup",
      "name": "video_conf_tool_remote",
-     "title": "When teaching remotely what was the primary video conferencing technology you used?",
+     "title": "When teaching remotely, what was the primary video conferencing technology you used?",
      "choices": [
       {
        "value": "None",
@@ -476,7 +476,7 @@
     {
      "type": "radiogroup",
      "name": "days_per_week_video_conf_remote",
-     "title": "When teaching remotely approximately how many MINUTES PER WEEK did you teach via a class conference call?",
+     "title": "When teaching remotely, approximately how many MINUTES PER WEEK did you teach via a class conference call?",
      "choices": [
       {
        "value": "50_or_less",
@@ -511,7 +511,7 @@
     {
      "type": "radiogroup",
      "name": "lms_tool_remote",
-     "title": "What is the primary LMS (Learning Management System) you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
+     "title": "What is the primary (Learning Management System) LMS you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
      "choices": [
       {
        "value": "none",
@@ -531,7 +531,7 @@
       },
       {
        "value": "chalkboard",
-       "text": "Chalkboard"
+       "text": "Blackboard"
       },
       {
        "value": "seesaw",
@@ -551,7 +551,7 @@
     {
      "type": "matrix",
      "name": "curriculum_impressions_remote",
-     "title": "What are your overall impressions teaching with the Code.org {course} curriculum once you switched to remote learning? ",
+     "title": "What are your overall impressions teaching with the Code.org {course} curriculum, once you switched to remote learning? ",
      "columns": [
       {
        "value": "-100",
@@ -674,21 +674,21 @@
       },
       {
        "value": "lms_integration",
-       "text": "Lack of integration with my school’s LMS"
+       "text": "Lack of integration with my school’s Learning Management System (LMS) "
       }
      ]
     },
     {
      "type": "comment",
      "name": "one_challenge_FR_remote",
-     "title": "For one of the items you identified as a huge challenge (or for a different challenge not listed), please describe any ideas you have for how code.org might address it.",
+     "title": "For one of the items you identified as a challenge (or for a different challenge not listed), please describe any ideas you have for how Code.org might address it.",
      "cols": 40,
      "rows": 3
     },
     {
      "type": "matrix",
      "name": "cdo_strategies_remote",
-     "title": "When teaching {course} remotely how often did YOU explicitly do the following?",
+     "title": "When teaching {course} remotely, how often did YOU explicitly do the following?",
      "columns": [
       {
        "value": "1",
@@ -714,15 +714,15 @@
      "rows": [
       {
        "value": "pair_programming",
-       "text": "Ask students to write code with another student?"
+       "text": "Ask students to write code with another student."
       },
       {
        "value": "peer_feedback",
-       "text": "Ask a student to give feedback on a classmate’s work?"
+       "text": "Ask a student to give feedback on a classmate’s work."
       },
       {
        "value": "think_pair_share",
-       "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
+       "text": "Ask a student to share their ideas with classmates in small group or large group discussion."
       },
       {
        "value": "normalize_failure",
@@ -737,7 +737,7 @@
     {
      "type": "matrix",
      "name": "facilitation_student_interest_remote",
-     "title": "When teaching {course} remotely how often did YOU explicitly do the following?",
+     "title": "When teaching {course} remotely, how often did YOU explicitly do the following?",
      "columns": [
       {
        "value": "1",
@@ -767,14 +767,14 @@
       },
       {
        "value": "connection_to_real_world",
-       "text": "Asked students to consider relationships between lesson content and real world problems (meaning actual events or situations within or outside of school)."
+       "text": "Asked students to consider relationships between lesson content and real world problems (actual events or situations within or outside of school)."
       }
      ]
     },
     {
      "type": "matrix",
      "name": "facilitation_cog_demand_remote",
-     "title": "When teaching {course} remotely how often did you explicitly ASK STUDENTS to do the following?",
+     "title": "When teaching {course} remotely, how often did you explicitly ASK STUDENTS to do the following?",
      "columns": [
       {
        "value": "1",
@@ -815,7 +815,7 @@
     {
      "type": "comment",
      "name": "drop_off_FR_remote",
-     "title": "Last, if is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here.",
+     "title": "Last, if there is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here.",
      "cols": 40,
      "rows": 3
     }
@@ -827,7 +827,7 @@
     {
      "type": "html",
      "name": "pre_covid_preamble",
-     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>Now, we'd like you to reflect on your classroom <strong>prior</strong> to the time your school switched to remote learning.  We'll refer to this as your '<strong>normal</strong>' classroom -- what your classroom was like when you held in-person class sessions.</p>\n<p>If you can, please take a moment (and a deep breath) to think back.</p>"
+     "html": "<h2>Your classroom BEFORE remote learning</h2>\n<p>If you can, please take a moment (and a deep breath) and  think back to your classroom <strong>prior</strong> to the time your school switched to remote learning.  We'll refer to this as your '<strong>normal</strong>' classroom -- what your classroom environment was like when you held in-person class sessions.</p>\n<p></p><p>PLEASE NOTE: some of the same questions we asked in the previous section are repeated intentionally."
     },
     {
      "type": "radiogroup",
@@ -944,7 +944,7 @@
       },
       {
        "value": "tools_sensible_easy",
-       "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
+       "text": "The tools and technologies that are part of the curriculum made sense and were easy to use."
       }
      ]
     },
@@ -1024,7 +1024,7 @@
     {
      "type": "comment",
      "name": "one_challenge_FR_normal",
-     "title": "For one of the items you identified as a challenge, please describe any ideas you have for how code.org might address it.",
+     "title": "For one of the items you identified as a challenge, please describe any ideas you have for how Code.org might address it.",
      "cols": 40,
      "rows": 3
     },
@@ -1057,15 +1057,15 @@
      "rows": [
       {
        "value": "pair_programming",
-       "text": "Ask students to write code with another student?"
+       "text": "Ask students to write code with another student."
       },
       {
        "value": "peer_feedback",
-       "text": "Ask a student to give feedback on a classmate’s work?"
+       "text": "Ask a student to give feedback on a classmate’s work."
       },
       {
        "value": "think_pair_share",
-       "text": "Ask a student to share their ideas with classmates in small group or large group discussion?"
+       "text": "Ask a student to share their ideas with classmates in small group or large group discussion."
       },
       {
        "value": "normalize_failure",
@@ -1184,7 +1184,7 @@
       },
       {
        "value": "4",
-       "text": "Extremely concern"
+       "text": "Extreme concern"
       }
      ],
      "rows": [
@@ -1222,6 +1222,7 @@
      "type": "radiogroup",
      "name": "next_year_plan_to_open",
      "title": "To the best of your knowledge which best describes your school's plans for opening next school year.",
+     "description": "If you are unsure or it's still unknown, choose the option that seems most reasonable or likely to you.",
      "choices": [
       {
        "value": "full_remote",
@@ -1300,7 +1301,7 @@
       },
       {
        "value": "someone_to_turn_to",
-       "text": "When I need help teaching CS I have someone to turn to."
+       "text": "When I need help teaching CS, I have someone to turn to."
       },
       {
        "value": "know_teacher_leaders",
@@ -1308,7 +1309,7 @@
       },
       {
        "value": "part_of_cs_movement",
-       "text": "I feel like I'm part of a broad CS Education movement."
+       "text": "I feel like I'm part of a broad CS education movement."
       }
      ]
     },
@@ -1521,12 +1522,12 @@
     {
      "type": "html",
      "name": "gift_card_conf_header",
-     "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: right;'><span style='font-size: 8pt;'>*First 250 respondents will receive gift code. Please allow 1-2 weeks to receive code. </span></p>"
+     "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: right;'><span style='font-size: 8pt;'>*First 250 respondents will receive gift card. Please allow 1-2 weeks to receive code. </span></p>"
     },
     {
      "type": "radiogroup",
      "name": "gift_card_yes_no",
-     "title": "Would you like to receive a $10 Amazon gift code for completing this survey?",
+     "title": "Would you like to receive a $10 Amazon gift card for completing this survey?",
      "choices": [
       {
        "value": "yes",
@@ -1545,12 +1546,12 @@
       {
        "type": "text",
        "name": "gift_card_email",
-       "title": "Please enter and verify the email address where you would like your $10 Amazon gift code sent."
+       "title": "Please enter and verify the email address where you would like your $10 Amazon gift card sent."
       },
       {
        "type": "text",
        "name": "gift_card_email_verify",
-       "title": "Please re-enter the email address where you want your Amazon gift code sent."
+       "title": "Please re-enter the email address where you want your Amazon gift card sent."
       },
       {
        "type": "html",
