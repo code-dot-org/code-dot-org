@@ -25,9 +25,12 @@ class ContactRollupsProcessed < ApplicationRecord
   DATA_KEY = 'd'.freeze
   DATA_UPDATED_AT_KEY = 'u'.freeze
 
+  # Constants used to speed up attribute processing:
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
   HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
+  # Allow only certain pegasus form roles since they are user-generated data
+  ALLOWED_FORM_ROLES = %w(administrator educator engineer other parent student teacher volunteer).to_set
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
@@ -55,6 +58,7 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data.merge! extract_professional_learning_attended(contact_data)
       processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
       processed_contact_data.merge! extract_forms_submitted(contact_data)
+      processed_contact_data.merge! extract_form_roles(contact_data)
       processed_contact_data.merge! extract_updated_at(contact_data)
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -208,6 +212,22 @@ class ContactRollupsProcessed < ApplicationRecord
 
     uniq_kinds = kinds.uniq.compact.sort.join(',')
     uniq_kinds.blank? ? {} : {forms_submitted: uniq_kinds}
+  end
+
+  def self.extract_form_roles(contact_data)
+    # @see Census::CensusSubmission::ROLES for submitter_role values
+    census_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+    cleaned_census_roles = census_roles.compact.map(&:downcase)
+
+    # pegasus form roles are user-generated data, use an allowed list to filter them
+    pegasus_roles = extract_field(contact_data, 'pegasus.forms', 'role') || []
+    cleaned_pegasus_roles = pegasus_roles.
+      compact.
+      map(&:downcase).
+      select {|role| ALLOWED_FORM_ROLES.include? role}
+
+    uniq_form_roles = (cleaned_census_roles + cleaned_pegasus_roles).uniq.sort.join(',')
+    return uniq_form_roles.blank? ? {} : {form_roles: uniq_form_roles}
   end
 
   # Extracts values of a field in a source table from contact data.
