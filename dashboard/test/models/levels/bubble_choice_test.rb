@@ -234,13 +234,14 @@ DSL
 
     assert_equal [sublevel1, sublevel2, sublevel3], bubble_choice.sublevels
 
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'bubble_choice_copy.bubble_choice' &&
+        copy_dsl == actual_dsl
+    end.once
+
     bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)
-    assert_equal copy_dsl, bubble_choice_copy.dsl_text
-
-    # clean up
-    File.delete(bubble_choice_copy.filename)
   end
 end
