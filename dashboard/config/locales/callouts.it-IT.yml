@@ -278,6 +278,9 @@ it-IT:
       OPD-K5-projects-4:
         courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
           per passare all'esercizio successivo.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Usa questo blocco per lasciare note a te stesso o al tuo
+          insegnante su come funziona il tuo codice.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere

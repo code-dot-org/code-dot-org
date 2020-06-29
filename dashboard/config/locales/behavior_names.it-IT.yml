@@ -1,1 +1,64 @@
---- {}
+---
+it-IT:
+  data:
+    behavior_names:
+      OPD-K5-spritelab-2:
+        swimming left and right: nuotare a destra e a sinistra
+        shrinking: contrazione
+        patrolling: pattugliamento
+        wandering: girovagare
+        growing: in crescita
+        jittering: nervosismo
+        moving east: spostarsi ad est
+        moving north: spostarsi a nord
+        moving south: spostarsi a sud
+        moving west: spostarsi ad ovest
+        spinning right: ruotare a destra
+      OPD-K5-spritelab-3:
+        swimming left and right: nuotare a destra e a sinistra
+        shrinking: contrazione
+        patrolling: pattugliamento
+        wandering: girovagare
+        growing: in crescita
+        jittering: nervosismo
+        moving east: spostarsi ad est
+        moving north: spostarsi a nord
+        moving south: spostarsi a sud
+        moving west: spostarsi ad ovest
+        spinning right: ruotare a destra
+      OPD-K5-spritelab-4:
+        swimming left and right: nuotare a destra e a sinistra
+        shrinking: contrazione
+        patrolling: pattugliamento
+        wandering: girovagare
+        growing: in crescita
+        jittering: nervosismo
+        moving east: spostarsi ad est
+        moving north: spostarsi a nord
+        moving south: spostarsi a sud
+        moving west: spostarsi ad ovest
+        spinning right: ruotare a destra
+      OPD-K5-spritelab-6:
+        swimming left and right: nuotare a destra e a sinistra
+        shrinking: contrazione
+        patrolling: pattugliamento
+        wandering: girovagare
+        growing: in crescita
+        jittering: nervosismo
+        moving east: spostarsi ad est
+        moving north: spostarsi a nord
+        moving south: spostarsi a sud
+        moving west: spostarsi ad ovest
+        spinning right: ruotare a destra
+      OPD-K5-spritelab-7:
+        swimming left and right: nuotare a destra e a sinistra
+        shrinking: contrazione
+        patrolling: pattugliamento
+        wandering: girovagare
+        growing: in crescita
+        jittering: nervosismo
+        moving east: spostarsi ad est
+        moving north: spostarsi a nord
+        moving south: spostarsi a sud
+        moving west: spostarsi ad ovest
+        spinning right: ruotare a destra
