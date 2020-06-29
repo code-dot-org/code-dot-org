@@ -31940,9 +31940,39 @@ en:
           description_short: ''
           description: ''
         dani-june-2020-test:
-          stages: {}
-          lessons: {}
-          lesson_groups: {}
+          stages:
+            new lesson:
+              name: new lesson
+            lesson 2:
+              name: lesson 2
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+            Buttons and Events:
+              name: Buttons and Events
+          lessons:
+            new lesson:
+              name: new lesson
+            lesson 2:
+              name: lesson 2
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+            Buttons and Events:
+              name: Buttons and Events
+          lesson_groups:
+            lesson group:
+              display_name: display name
+            lg_1:
+              display_name: DISPLAYNAME
+            cspSurvey:
+              display_name: Survey
+            csp5_1:
+              display_name: 'Chapter 1: Event-Driven Programming'
+            cs_lg:
+              display_name: LG GOOD
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
         csd3-virtual:
           title: CSD Unit 3 - Interactive Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
