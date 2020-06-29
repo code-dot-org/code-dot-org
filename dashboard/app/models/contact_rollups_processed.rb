@@ -25,8 +25,12 @@ class ContactRollupsProcessed < ApplicationRecord
   DATA_KEY = 'd'.freeze
   DATA_UPDATED_AT_KEY = 'u'.freeze
 
+  # Constants used to speed up attribute processing:
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
+  HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
+  # Allow only certain pegasus form roles since they are user-generated data
+  ALLOWED_FORM_ROLES = %w(administrator educator engineer other parent student teacher volunteer).to_set
 
   FORM_KIND_TO_ROLE_MAP = {
     BringToSchool2013: 'Teacher',
@@ -66,6 +70,9 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_user_id(contact_data)
         processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
         processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+        processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
+        processed_contact_data.merge! extract_forms_submitted(contact_data)
+        processed_contact_data.merge! extract_form_roles(contact_data)
         processed_contact_data.merge! extract_roles(contact_data)
         processed_contact_data.merge! extract_state(contact_data)
         processed_contact_data.merge! extract_city(contact_data)
@@ -210,46 +217,90 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_roles(contact_data)
-    roles = []
+    roles = Set.new
     # Contact is a teacher if they appears in any of the following tables
-    roles << 'Teacher' if
+    roles.add 'Teacher' if
       contact_data.dig('dashboard.users', 'user_id') ||
       contact_data.key?('dashboard.pd_enrollments') ||
       contact_data.key?('dashboard.pd_attendances') ||
       contact_data.key?('dashboard.followers')
 
-    # Contact is a teacher if they submit a census survey as a teacher
-    submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
-    roles << 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
+    unless roles.include? 'Teacher'
+      # Contact is a teacher if they submit a census survey as a teacher
+      submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+      roles.add 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
+    end
 
-    # Contact is a teacher if they submit a (pegasus) form targeting teachers
+    # Contact is a teacher or a petition signer if they submit certain (pegasus) forms
     form_kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
-    roles += form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]}
+    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]})
 
     # @see Course::FAMILY_NAMES
     # TODO: extract course family_name (in properties column) instead of course name.
     courses = extract_field(contact_data, 'dashboard.sections', 'course_name') || []
-    roles << 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
-    roles << 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
+    roles.add 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
+    roles.add 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
 
     # @see Script model, csf?, csd? and csp? methods
     curricula = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
-    roles << 'CSF Teacher' if curricula.any? {|curriculum| curriculum == 'CSF'}
-    roles << 'CSD Teacher' if curricula.any? {|curriculum| curriculum == 'CSD'}
-    roles << 'CSP Teacher' if curricula.any? {|curriculum| curriculum == 'CSP'}
+    roles.add 'CSF Teacher' if curricula.any? {|curriculum| curriculum == 'CSF'}
+    roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') &&
+      curricula.any? {|curriculum| curriculum == 'CSD'}
+    roles.add 'CSP Teacher' if !roles.include?('CSP Teacher') &&
+      curricula.any? {|curriculum| curriculum == 'CSP'}
 
-    roles << 'Form Submitter' if
+    roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||
       contact_data.key?('dashboard.census_submissions')
 
-    roles << 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
+    roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
     permissions = extract_field(contact_data, 'dashboard.user_permissions', 'permission') || []
-    roles += permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]}
+    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]})
 
     # Only care about unique and non-nil values. Values are sorted before return.
-    uniq_roles = roles.uniq.compact.sort.join(',')
+    uniq_roles = roles.to_a.compact.sort.join(',')
     uniq_roles.blank? ? {} : {roles: uniq_roles}
+  end
+
+  def self.extract_hoc_organizer_years(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    hoc_years = kinds.uniq.map do |kind|
+      if kind == 'CSEdWeekEvent2013'
+        '2013'
+      else
+        # Get year from kind value, such as 'HocSignup2014' and 'HocSignup2019'
+        HOC_YEAR_PATTERN.match(kind)&.[](:year)
+      end
+    end
+
+    # Only care about unique and non-nil value. The result is sorted to keep consistent order.
+    uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
+    return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
+  end
+
+  def self.extract_forms_submitted(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    kinds << 'Census' if contact_data.key?('dashboard.census_submissions')
+
+    uniq_kinds = kinds.uniq.compact.sort.join(',')
+    uniq_kinds.blank? ? {} : {forms_submitted: uniq_kinds}
+  end
+
+  def self.extract_form_roles(contact_data)
+    # @see Census::CensusSubmission::ROLES for submitter_role values
+    census_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+    cleaned_census_roles = census_roles.compact.map(&:downcase)
+
+    # pegasus form roles are user-generated data, use an allowed list to filter them
+    pegasus_roles = extract_field(contact_data, 'pegasus.forms', 'role') || []
+    cleaned_pegasus_roles = pegasus_roles.
+      compact.
+      map(&:downcase).
+      select {|role| ALLOWED_FORM_ROLES.include? role}
+
+    uniq_form_roles = (cleaned_census_roles + cleaned_pegasus_roles).uniq.sort.join(',')
+    return uniq_form_roles.blank? ? {} : {form_roles: uniq_form_roles}
   end
 
   def self.extract_state(contact_data)
