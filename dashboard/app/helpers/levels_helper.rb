@@ -5,6 +5,9 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'net/http'
+require 'uri'
+require 'json'
 
 module LevelsHelper
   include ApplicationHelper
@@ -241,8 +244,6 @@ module LevelsHelper
         question_options
       elsif @level.is_a? Widget
         widget_options
-      elsif @level.is_a? Scratch
-        scratch_options
       elsif @level.unplugged?
         unplugged_options
       else
@@ -332,19 +333,6 @@ module LevelsHelper
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
-    app_options
-  end
-
-  def scratch_options
-    app_options = {
-      baseUrl: Blockly.base_url,
-      skin: {},
-      app: 'scratch',
-    }
-    app_options[:level] = @level.properties.camelize_keys
-    app_options[:level][:scratch] = true
-    app_options[:level][:editCode] = false
-    app_options.merge! view_options.camelize_keys
     app_options
   end
 
@@ -469,6 +457,24 @@ module LevelsHelper
     end
 
     fb_options
+  end
+
+  def azure_speech_service_options
+    speech_service_options = {}
+    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
+      uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      request = Net::HTTP::Post.new(uri.request_uri, header)
+      response = http.request(request)
+      speech_service_options[:azureSpeechServiceToken] = response.body
+      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+    end
+    speech_service_options
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
+    speech_service_options
   end
 
   # Options hash for Blockly

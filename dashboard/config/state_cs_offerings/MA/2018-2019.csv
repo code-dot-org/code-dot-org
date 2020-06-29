@@ -1,0 +1,513 @@
+school_name,state_school_id,nces_id,course_id,course_name
+Abington High,MA-0001-00010505,250165000001,10152,Computer Programming
+Agawam High,MA-0005-00050505,250180000024,10019,AP Computer Science Principles
+Agawam High,MA-0005-00050505,250180000024,10152,Computer Programming
+Agawam High,MA-0005-00050505,250180000024,10154,C++ Programming
+Amesbury High,MA-0007-00070505,250186000034,10152,Computer Programming
+Amesbury High,MA-0007-00070505,250186000034,10205,Computer Gaming and Design
+Andover High,MA-0009-00090505,250195000045,10152,Computer Programming
+Andover High,MA-0009-00090505,250195000045,10158,AP Computer Science A
+Andover High,MA-0009-00090505,250195000045,10205,Computer Gaming and Design
+Arlington High,MA-0010-00100505,250198000053,10012,Exploring Computer Science
+Arlington High,MA-0010-00100505,250198000053,10158,AP Computer Science A
+Ashland High,MA-0014-00140505,250210000070,10158,AP Computer Science A
+Attleboro High,MA-0016-00160505,250219000084,10155,JAVA Programming
+Attleboro High,MA-0016-00160505,250219000084,10158,AP Computer Science A
+Auburn Senior High,MA-0017-00170505,250222000100,10152,Computer Programming
+Auburn Senior High,MA-0017-00170505,250222000100,10154,C++ Programming
+Auburn Senior High,MA-0017-00170505,250222000100,10155,JAVA Programming
+Auburn Senior High,MA-0017-00170505,250222000100,10158,AP Computer Science A
+Avon Middle High School,MA-0018-00180510,250225001295,10152,Computer Programming
+Barnstable High,MA-0020-00200505,250231000116,10013,PLTW Introduction to Computer Science
+Barnstable High,MA-0020-00200505,250231000116,10158,AP Computer Science A
+Bedford High,MA-0023-00230505,250240000128,10152,Computer Programming
+Bedford High,MA-0023-00230505,250240000128,10158,AP Computer Science A
+Belchertown High,MA-0024-00240505,250243000134,10012,Exploring Computer Science
+Belchertown High,MA-0024-00240505,250243000134,10158,AP Computer Science A
+Belmont High,MA-0026-00260505,250249000143,10011,Computer Science Principles
+Belmont High,MA-0026-00260505,250249000143,10152,Computer Programming
+Beverly High,MA-0030-00300505,250264000164,10152,Computer Programming
+Beverly High,MA-0030-00300505,250264000164,10158,AP Computer Science A
+Billerica Memorial High School,MA-0031-00310505,250267000177,10015,PLTW Computer Science and Software Engineering
+Billerica Memorial High School,MA-0031-00310505,250267000177,10158,AP Computer Science A
+Dearborn,MA-0035-00350074,250279000222,10205,Computer Gaming and Design
+Boston International High School,MA-0035-00350507,250279002015,10158,AP Computer Science A
+Excel High School,MA-0035-00350522,250279002016,10158,AP Computer Science A
+Jeremiah E Burke High,MA-0035-00350525,250279000261,10011,Computer Science Principles
+East Boston High,MA-0035-00350530,250279000226,10011,Computer Science Principles
+East Boston High,MA-0035-00350530,250279000226,10158,AP Computer Science A
+The English High,MA-0035-00350535,250279000327,10158,AP Computer Science A
+Madison Park High,MA-0035-00350537,250279000282,10019,AP Computer Science Principles
+Boston Latin Academy,MA-0035-00350545,250279000204,10019,AP Computer Science Principles
+Boston Latin,MA-0035-00350560,250279000203,10019,AP Computer Science Principles
+Boston Latin,MA-0035-00350560,250279000203,10158,AP Computer Science A
+O'Bryant School Math/Science,MA-0035-00350575,250279000205,10011,Computer Science Principles
+O'Bryant School Math/Science,MA-0035-00350575,250279000205,10019,AP Computer Science Principles
+Community Academy of Science and Health,MA-0035-00350581,250279001902,10019,AP Computer Science Principles
+TechBoston Academy,MA-0035-00350657,250279002725,10019,AP Computer Science Principles
+Braintree High,MA-0040-00400505,250294000361,10152,Computer Programming
+Braintree High,MA-0040-00400505,250294000361,10158,AP Computer Science A
+Brockton High,MA-0044-00440505,250309000385,10011,Computer Science Principles
+Brockton High,MA-0044-00440505,250309000385,10156,Computer Programming-Other Language
+Brookline High,MA-0046-00460505,250315000415,10152,Computer Programming
+Brookline High,MA-0046-00460505,250315000415,10158,AP Computer Science A
+Burlington High,MA-0048-00480505,250324000426,10011,Computer Science Principles
+Burlington High,MA-0048-00480505,250324000426,10012,Exploring Computer Science
+Burlington High,MA-0048-00480505,250324000426,10019,AP Computer Science Principles
+Burlington High,MA-0048-00480505,250324000426,10154,C++ Programming
+Burlington High,MA-0048-00480505,250324000426,10158,AP Computer Science A
+Cambridge Rindge and Latin,MA-0049-00490506,250327000436,10019,AP Computer Science Principles
+Cambridge Rindge and Latin,MA-0049-00490506,250327000436,10152,Computer Programming
+Cambridge Rindge and Latin,MA-0049-00490506,250327000436,10158,AP Computer Science A
+Canton High,MA-0050-00500505,250330000451,10011,Computer Science Principles
+Chelmsford High,MA-0056-00560505,250351000475,10015,PLTW Computer Science and Software Engineering
+Chelmsford High,MA-0056-00560505,250351000475,10152,Computer Programming
+Chelmsford High,MA-0056-00560505,250351000475,10158,AP Computer Science A
+Chelsea High,MA-0057-00570505,250354000482,10011,Computer Science Principles
+Chelsea High,MA-0057-00570505,250354000482,10012,Exploring Computer Science
+Chicopee High,MA-0061-00610505,250366000496,10019,AP Computer Science Principles
+Chicopee High,MA-0061-00610505,250366000496,10155,JAVA Programming
+Chicopee Comprehensive High School,MA-0061-00610510,250366000495,10012,Exploring Computer Science
+Chicopee Comprehensive High School,MA-0061-00610510,250366000495,10019,AP Computer Science Principles
+Cohasset Middle/High School,MA-0065-00650505,250378000518,10155,JAVA Programming
+Danvers High,MA-0071-00710505,250399000529,10012,Exploring Computer Science
+Danvers High,MA-0071-00710505,250399000529,10158,AP Computer Science A
+Dartmouth High,MA-0072-00720505,250402000540,10153,VISUAL BASIC Programming
+Dartmouth High,MA-0072-00720505,250402000540,10158,AP Computer Science A
+Dedham High,MA-0073-00730505,250405000548,10012,Exploring Computer Science
+Dedham High,MA-0073-00730505,250405000548,10019,AP Computer Science Principles
+Dedham High,MA-0073-00730505,250405000548,10158,AP Computer Science A
+Dedham High,MA-0073-00730505,250405000548,10205,Computer Gaming and Design
+Douglas High School,MA-0077-00770505,250423000570,10152,Computer Programming
+Douglas High School,MA-0077-00770505,250423000570,10153,VISUAL BASIC Programming
+Douglas High School,MA-0077-00770505,250423000570,10154,C++ Programming
+Dracut Senior High,MA-0079-00790505,250432000579,10152,Computer Programming
+Duxbury High,MA-0082-00820505,250441000594,10154,C++ Programming
+Duxbury High,MA-0082-00820505,250441000594,10158,AP Computer Science A
+Easthampton High,MA-0086-00860505,250459000612,10012,Exploring Computer Science
+East Longmeadow High,MA-0087-00870505,250450000603,10153,VISUAL BASIC Programming
+East Longmeadow High,MA-0087-00870505,250450000603,10158,AP Computer Science A
+Oliver Ames High,MA-0088-00880505,250462000623,10158,AP Computer Science A
+Everett High,MA-0093-00930505,250477000634,10012,Exploring Computer Science
+Everett High,MA-0093-00930505,250477000634,10158,AP Computer Science A
+Fairhaven High,MA-0094-00940505,250480000642,10011,Computer Science Principles
+Fairhaven High,MA-0094-00940505,250480000642,10152,Computer Programming
+B M C Durfee High,MA-0095-00950505,250483000649,10158,AP Computer Science A
+Falmouth High,MA-0096-00960505,250486000686,10012,Exploring Computer Science
+Falmouth High,MA-0096-00960505,250486000686,10152,Computer Programming
+Falmouth High,MA-0096-00960505,250486000686,10155,JAVA Programming
+Fitchburg High,MA-0097-00970505,250489000697,10011,Computer Science Principles
+Foxborough High,MA-0099-00990505,250495000708,10155,JAVA Programming
+Framingham High School,MA-0100-01000515,250498002573,10011,Computer Science Principles
+Framingham High School,MA-0100-01000515,250498002573,10152,Computer Programming
+Framingham High School,MA-0100-01000515,250498002573,10154,C++ Programming
+Framingham High School,MA-0100-01000515,250498002573,10158,AP Computer Science A
+Franklin High,MA-0101-01010505,250501000737,10158,AP Computer Science A
+Georgetown High School,MA-0105-01050505,250522000764,10156,Computer Programming-Other Language
+Gloucester High,MA-0107-01070505,250528000774,10152,Computer Programming
+Gloucester High,MA-0107-01070505,250528000774,10158,AP Computer Science A
+Grafton High School,MA-0110-01100505,250537000786,10152,Computer Programming
+Grafton High School,MA-0110-01100505,250537000786,10158,AP Computer Science A
+Granby Jr Sr High School,MA-0111-01110505,250540000790,10012,Exploring Computer Science
+Granby Jr Sr High School,MA-0111-01110505,250540000790,10019,AP Computer Science Principles
+Greenfield High,MA-0114-01140505,250549000801,10152,Computer Programming
+Hopkins Academy,MA-0117-01170505,250558000813,10019,AP Computer Science Principles
+Hopkins Academy,MA-0117-01170505,250558000813,10155,JAVA Programming
+Hopkins Academy,MA-0117-01170505,250558000813,10158,AP Computer Science A
+Hanover High,MA-0122-01220505,250579000829,10152,Computer Programming
+Bromfield,MA-0125-01250505,250588000838,10155,JAVA Programming
+Bromfield,MA-0125-01250505,250588000838,10156,Computer Programming-Other Language
+Haverhill High,MA-0128-01280505,250597000856,10152,Computer Programming
+Haverhill High,MA-0128-01280505,250597000856,10158,AP Computer Science A
+Hingham High,MA-0131-01310505,250609000872,10152,Computer Programming
+Holbrook Middle High School,MA-0133-01330505,250615000878,10012,Exploring Computer Science
+Holliston High,MA-0136-01360505,250624000894,10152,Computer Programming
+Holliston High,MA-0136-01360505,250624000894,10155,JAVA Programming
+Holliston High,MA-0136-01360505,250624000894,10158,AP Computer Science A
+Hopedale Jr Sr High,MA-0138-01380505,250630000915,10013,PLTW Introduction to Computer Science
+Hopedale Jr Sr High,MA-0138-01380505,250630000915,10155,JAVA Programming
+Hopedale Jr Sr High,MA-0138-01380505,250630000915,10158,AP Computer Science A
+Hopedale Jr Sr High,MA-0138-01380505,250630000915,10205,Computer Gaming and Design
+Hopkinton High,MA-0139-01390505,250633000920,10019,AP Computer Science Principles
+Hopkinton High,MA-0139-01390505,250633000920,10158,AP Computer Science A
+David J. Quinn Middle School,MA-0141-01410410,250639000927,60026,PLTW App Creators
+David J. Quinn Middle School,MA-0141-01410410,250639000927,60027,PLTW Computer Science for Innovators and Makers
+Hudson High,MA-0141-01410505,250639000926,10152,Computer Programming
+Ipswich High,MA-0144-01440505,250648000935,10152,Computer Programming
+Ipswich High,MA-0144-01440505,250648000935,10158,AP Computer Science A
+Lawrence High School,MA-0149-01490515,250666002856,10011,Computer Science Principles
+Lawrence High School,MA-0149-01490515,250666002856,10013,PLTW Introduction to Computer Science
+Lawrence High School,MA-0149-01490515,250666002856,10152,Computer Programming
+Lawrence High School,MA-0149-01490515,250666002856,10154,C++ Programming
+Lawrence High School,MA-0149-01490515,250666002856,10158,AP Computer Science A
+Lee Middle/High School,MA-0150-01500505,250669000970,10152,Computer Programming
+Leicester High,MA-0151-01510505,250672000972,10011,Computer Science Principles
+Leicester High,MA-0151-01510505,250672000972,10155,JAVA Programming
+Leicester High,MA-0151-01510505,250672000972,10158,AP Computer Science A
+Lenox Memorial High,MA-0152-01520505,250675000978,10012,Exploring Computer Science
+Leominster High School,MA-0153-01530505,250678000987,10158,AP Computer Science A
+Lexington High,MA-0155-01550505,250684001001,10152,Computer Programming
+Lexington High,MA-0155-01550505,250684001001,10158,AP Computer Science A
+Littleton High School,MA-0158-01580505,250696001012,10155,JAVA Programming
+Littleton High School,MA-0158-01580505,250696001012,10158,AP Computer Science A
+Longmeadow High,MA-0159-01590505,250699001020,10152,Computer Programming
+Longmeadow High,MA-0159-01590505,250699001020,10158,AP Computer Science A
+Lowell High,MA-0160-01600505,250702001041,10153,VISUAL BASIC Programming
+Lowell High,MA-0160-01600505,250702001041,10155,JAVA Programming
+Lunenburg High,MA-0162-01620505,250708001058,10152,Computer Programming
+Lynnfield High,MA-0164-01640505,250714001090,10011,Computer Science Principles
+Malden High,MA-0165-01650505,250717001106,10152,Computer Programming
+Malden High,MA-0165-01650505,250717001106,10155,JAVA Programming
+Mansfield High,MA-0167-01670505,250723001114,10019,AP Computer Science Principles
+Mansfield High,MA-0167-01670505,250723001114,10153,VISUAL BASIC Programming
+Marlborough High,MA-0170-01700505,250732001133,10155,JAVA Programming
+Marshfield High,MA-0171-01710505,250735001142,10152,Computer Programming
+Marshfield High,MA-0171-01710505,250735001142,10153,VISUAL BASIC Programming
+Marshfield High,MA-0171-01710505,250735001142,10158,AP Computer Science A
+Maynard High,MA-0174-01740505,250750001153,10155,JAVA Programming
+Maynard High,MA-0174-01740505,250750001153,10205,Computer Gaming and Design
+Medfield Senior High,MA-0175-01750505,250753001157,10158,AP Computer Science A
+Medfield Senior High,MA-0175-01750505,250753001157,10205,Computer Gaming and Design
+Medford High,MA-0176-01760505,250756001176,10152,Computer Programming
+Medway High,MA-0177-01770505,250759001184,10019,AP Computer Science Principles
+Medway High,MA-0177-01770505,250759001184,10152,Computer Programming
+Melrose High,MA-0178-01780505,250762001193,10158,AP Computer Science A
+Methuen High,MA-0181-01810505,250774001213,10012,Exploring Computer Science
+Milford High,MA-0185-01850505,250786001239,10013,PLTW Introduction to Computer Science
+Milford High,MA-0185-01850505,250786001239,10152,Computer Programming
+Millbury Junior/Senior High,MA-0186-01860505,250789001249,10019,AP Computer Science Principles
+Millbury Junior/Senior High,MA-0186-01860505,250789001249,10152,Computer Programming
+Millbury Junior/Senior High,MA-0186-01860505,250789001249,10155,JAVA Programming
+Millis High School,MA-0187-01870505,250792001255,10012,Exploring Computer Science
+Millis High School,MA-0187-01870505,250792001255,10019,AP Computer Science Principles
+Milton High,MA-0189-01890505,250798001262,10012,Exploring Computer Science
+Milton High,MA-0189-01890505,250798001262,10019,AP Computer Science Principles
+Milton High,MA-0189-01890505,250798001262,10156,Computer Programming-Other Language
+Milton High,MA-0189-01890505,250798001262,10158,AP Computer Science A
+Granite Valley Middle,MA-0191-01910310,250804001655,60027,PLTW Computer Science for Innovators and Makers
+Monson High School,MA-0191-01910505,250804001269,10054,Data Systems/Processing
+Nantucket High,MA-0197-01970505,250825001282,10011,Computer Science Principles
+Natick High,MA-0198-01980505,250834001303,10155,JAVA Programming
+Natick High,MA-0198-01980505,250834001303,10158,AP Computer Science A
+Needham High,MA-0199-01990505,250837001315,10011,Computer Science Principles
+Needham High,MA-0199-01990505,250837001315,10012,Exploring Computer Science
+Needham High,MA-0199-01990505,250837001315,10205,Computer Gaming and Design
+New Bedford High,MA-0201-02010505,250843001336,10152,Computer Programming
+New Bedford High,MA-0201-02010505,250843001336,10158,AP Computer Science A
+Newburyport High,MA-0204-02040505,250858001354,10152,Computer Programming
+Newburyport High,MA-0204-02040505,250858001354,10158,AP Computer Science A
+Newton North High,MA-0207-02070505,250861001374,10012,Exploring Computer Science
+Newton North High,MA-0207-02070505,250861001374,10152,Computer Programming
+Newton North High,MA-0207-02070505,250861001374,10155,JAVA Programming
+Newton South High,MA-0207-02070510,250861001375,10152,Computer Programming
+Newton South High,MA-0207-02070510,250861001375,10156,Computer Programming-Other Language
+Newton South High,MA-0207-02070510,250861001375,10205,Computer Gaming and Design
+Drury High,MA-0209-02090505,250867001387,10011,Computer Science Principles
+Northampton High,MA-0210-02100505,250885001432,10158,AP Computer Science A
+North Andover High,MA-0211-02110505,250870001397,10011,Computer Science Principles
+North Attleboro High,MA-0212-02120505,250873001405,10019,AP Computer Science Principles
+North Attleboro High,MA-0212-02120505,250873001405,10153,VISUAL BASIC Programming
+Northbridge High,MA-0214-02140505,250894001445,10152,Computer Programming
+Northbridge High,MA-0214-02140505,250894001445,10155,JAVA Programming
+Northbridge High,MA-0214-02140505,250894001445,10158,AP Computer Science A
+North Reading High,MA-0217-02170505,250882001422,10152,Computer Programming
+North Reading High,MA-0217-02170505,250882001422,10158,AP Computer Science A
+Norton High,MA-0218-02180505,250900001451,10152,Computer Programming
+Norton High,MA-0218-02180505,250900001451,10155,JAVA Programming
+Norton High,MA-0218-02180505,250900001451,10156,Computer Programming-Other Language
+Norwell High,MA-0219-02190505,250903001455,10011,Computer Science Principles
+Norwell High,MA-0219-02190505,250903001455,10019,AP Computer Science Principles
+Norwood High,MA-0220-02200505,250906001466,10152,Computer Programming
+Norwood High,MA-0220-02200505,250906001466,10158,AP Computer Science A
+Oxford High,MA-0226-02260505,250927001482,10158,AP Computer Science A
+Peabody Veterans Memorial High,MA-0229-02290510,250936001504,10153,VISUAL BASIC Programming
+Peabody Veterans Memorial High,MA-0229-02290510,250936001504,10155,JAVA Programming
+Peabody Veterans Memorial High,MA-0229-02290510,250936001504,10158,AP Computer Science A
+Pembroke High School,MA-0231-02310505,250942001824,10012,Exploring Computer Science
+Pembroke High School,MA-0231-02310505,250942001824,10019,AP Computer Science Principles
+Pembroke High School,MA-0231-02310505,250942001824,10158,AP Computer Science A
+Pittsfield High,MA-0236-02360505,250963001526,10152,Computer Programming
+Taconic High,MA-0236-02360510,250963001534,10152,Computer Programming
+Taconic High,MA-0236-02360510,250963001534,10158,AP Computer Science A
+Plymouth North High,MA-0239-02390505,250972000320,10152,Computer Programming
+Plymouth North High,MA-0239-02390505,250972000320,10156,Computer Programming-Other Language
+Plymouth North High,MA-0239-02390505,250972000320,10158,AP Computer Science A
+Plymouth South High,MA-0239-02390515,250972000325,10158,AP Computer Science A
+Quincy High,MA-0243-02430505,250987001579,10158,AP Computer Science A
+North Quincy High,MA-0243-02430510,250987001577,10152,Computer Programming
+North Quincy High,MA-0243-02430510,250987001577,10155,JAVA Programming
+North Quincy High,MA-0243-02430510,250987001577,10158,AP Computer Science A
+Reading Memorial High,MA-0246-02460505,250999001611,10019,AP Computer Science Principles
+Reading Memorial High,MA-0246-02460505,250999001611,10158,AP Computer Science A
+Garfield Middle School,MA-0248-02480057,251005001976,60026,PLTW App Creators
+Garfield Middle School,MA-0248-02480057,251005001976,60027,PLTW Computer Science for Innovators and Makers
+Susan B. Anthony Middle School,MA-0248-02480305,251005002113,60026,PLTW App Creators
+Revere High,MA-0248-02480505,251005001630,10011,Computer Science Principles
+Revere High,MA-0248-02480505,251005001630,10012,Exploring Computer Science
+Revere High,MA-0248-02480505,251005001630,10019,AP Computer Science Principles
+Revere High,MA-0248-02480505,251005001630,10152,Computer Programming
+Revere High,MA-0248-02480505,251005001630,10158,AP Computer Science A
+Seacoast School,MA-0248-02480520,251005001659,10012,Exploring Computer Science
+Seacoast School,MA-0248-02480520,251005001659,10152,Computer Programming
+Rockland Senior High,MA-0251-02510505,251017001643,10054,Data Systems/Processing
+Rockland Senior High,MA-0251-02510505,251017001643,10158,AP Computer Science A
+Salem High,MA-0258-02580505,251038001664,10152,Computer Programming
+Sandwich High,MA-0261-02610505,251047001673,10152,Computer Programming
+Sandwich High,MA-0261-02610505,251047001673,10158,AP Computer Science A
+Saugus High,MA-0262-02620505,251050001684,10155,JAVA Programming
+Saugus High,MA-0262-02620505,251050001684,10158,AP Computer Science A
+Scituate High School,MA-0264-02640505,251056001693,10152,Computer Programming
+Scituate High School,MA-0264-02640505,251056001693,10158,AP Computer Science A
+Scituate High School,MA-0264-02640505,251056001693,10205,Computer Gaming and Design
+Seekonk High,MA-0265-02650505,251059001699,10153,VISUAL BASIC Programming
+Sharon High,MA-0266-02660505,251062001705,10012,Exploring Computer Science
+Sharon High,MA-0266-02660505,251062001705,10019,AP Computer Science Principles
+Sharon High,MA-0266-02660505,251062001705,10156,Computer Programming-Other Language
+Sharon High,MA-0266-02660505,251062001705,10158,AP Computer Science A
+Shrewsbury Sr High,MA-0271-02710505,251077001717,10155,JAVA Programming
+Shrewsbury Sr High,MA-0271-02710505,251077001717,10158,AP Computer Science A
+Somerville High,MA-0274-02740505,251089001745,10012,Exploring Computer Science
+Somerville High,MA-0274-02740505,251089001745,10155,JAVA Programming
+Somerville High,MA-0274-02740505,251089001745,10158,AP Computer Science A
+Southbridge High School,MA-0277-02770515,251101002868,10011,Computer Science Principles
+Southbridge High School,MA-0277-02770515,251101002868,10156,Computer Programming-Other Language
+John J Duggan Middle,MA-0281-02810320,251113002599,10012,Exploring Computer Science
+John J Duggan Middle,MA-0281-02810320,251113002599,10019,AP Computer Science Principles
+Springfield Central High,MA-0281-02810500,251113002444,10012,Exploring Computer Science
+Springfield Central High,MA-0281-02810500,251113002444,10019,AP Computer Science Principles
+Springfield Central High,MA-0281-02810500,251113002444,10155,JAVA Programming
+Springfield High School of Science and Technology,MA-0281-02810530,251113000901,10012,Exploring Computer Science
+Springfield High School of Science and Technology,MA-0281-02810530,251113000901,10158,AP Computer Science A
+Roger L. Putnam Vocational Technical Academy,MA-0281-02810620,251113002293,10013,PLTW Introduction to Computer Science
+Roger L. Putnam Vocational Technical Academy,MA-0281-02810620,251113002293,10019,AP Computer Science Principles
+Stoneham High,MA-0284-02840505,251122002295,10019,AP Computer Science Principles
+Stoneham High,MA-0284-02840505,251122002295,10152,Computer Programming
+Stoneham High,MA-0284-02840505,251122002295,10158,AP Computer Science A
+Stoughton High,MA-0285-02850505,251125001864,10152,Computer Programming
+Stoughton High,MA-0285-02850505,251125001864,10158,AP Computer Science A
+Sutton High School,MA-0290-02900510,251140001414,10152,Computer Programming
+Swampscott High,MA-0291-02910505,251143001887,10011,Computer Science Principles
+Swampscott High,MA-0291-02910505,251143001887,10155,JAVA Programming
+Joseph Case High,MA-0292-02920505,251146001893,10152,Computer Programming
+Joseph Case High,MA-0292-02920505,251146001893,10155,JAVA Programming
+Joseph Case High,MA-0292-02920505,251146001893,10158,AP Computer Science A
+Taunton High,MA-0293-02930505,251152001915,10151,Business Programming
+Taunton High,MA-0293-02930505,251152001915,10152,Computer Programming
+Taunton High,MA-0293-02930505,251152001915,10158,AP Computer Science A
+Tewksbury Memorial High,MA-0295-02950505,251158001926,10153,VISUAL BASIC Programming
+Tewksbury Memorial High,MA-0295-02950505,251158001926,10205,Computer Gaming and Design
+Tyngsborough High School,MA-0301-03010505,251176001934,10152,Computer Programming
+Tyngsborough High School,MA-0301-03010505,251176001934,10158,AP Computer Science A
+Wakefield Memorial High,MA-0305-03050505,251191001951,10158,AP Computer Science A
+Walpole High,MA-0307-03070505,251197001964,10153,VISUAL BASIC Programming
+Walpole High,MA-0307-03070505,251197001964,10158,AP Computer Science A
+Waltham Sr High,MA-0308-03080505,251200001979,10012,Exploring Computer Science
+Waltham Sr High,MA-0308-03080505,251200001979,10158,AP Computer Science A
+Ware Junior/Senior High School,MA-0309-03090505,251203001983,10152,Computer Programming
+Wareham Senior High,MA-0310-03100505,251206001991,10011,Computer Science Principles
+Wareham Senior High,MA-0310-03100505,251206001991,10012,Exploring Computer Science
+Wareham Senior High,MA-0310-03100505,251206001991,10158,AP Computer Science A
+Wareham Senior High,MA-0310-03100505,251206001991,10205,Computer Gaming and Design
+Watertown High,MA-0314-03140505,251218002005,10152,Computer Programming
+Watertown High,MA-0314-03140505,251218002005,10158,AP Computer Science A
+Wayland High School,MA-0315-03150505,251221002010,10019,AP Computer Science Principles
+Wayland High School,MA-0315-03150505,251221002010,10152,Computer Programming
+Wayland High School,MA-0315-03150505,251221002010,10158,AP Computer Science A
+Bartlett High School,MA-0316-03160505,251224002012,10152,Computer Programming
+Bartlett High School,MA-0316-03160505,251224002012,10158,AP Computer Science A
+Wellesley Sr High,MA-0317-03170505,251227002030,10011,Computer Science Principles
+Wellesley Sr High,MA-0317-03170505,251227002030,10155,JAVA Programming
+Wellesley Sr High,MA-0317-03170505,251227002030,10158,AP Computer Science A
+Westborough High,MA-0321-03210505,251260002059,10012,Exploring Computer Science
+Westborough High,MA-0321-03210505,251260002059,10155,JAVA Programming
+Westborough High,MA-0321-03210505,251260002059,10158,AP Computer Science A
+West Boylston Junior/Senior High,MA-0322-03220505,251239002035,10012,Exploring Computer Science
+West Bridgewater Junior/Senior,MA-0323-03230505,251242002039,10011,Computer Science Principles
+West Bridgewater Junior/Senior,MA-0323-03230505,251242002039,10012,Exploring Computer Science
+West Bridgewater Junior/Senior,MA-0323-03230505,251242002039,10205,Computer Gaming and Design
+Westfield High,MA-0325-03250505,251263002073,10152,Computer Programming
+Westfield High,MA-0325-03250505,251263002073,10155,JAVA Programming
+Westford Academy,MA-0326-03260505,251266002081,10152,Computer Programming
+Westford Academy,MA-0326-03260505,251266002081,10155,JAVA Programming
+Westford Academy,MA-0326-03260505,251266002081,10158,AP Computer Science A
+Weston High,MA-0330-03300505,251275002087,10152,Computer Programming
+Weston High,MA-0330-03300505,251275002087,10155,JAVA Programming
+Weston High,MA-0330-03300505,251275002087,10158,AP Computer Science A
+Westport Junior/Senior High School,MA-0331-03310515,251278002861,10152,Computer Programming
+West Springfield High,MA-0332-03320505,251251002052,10012,Exploring Computer Science
+West Springfield High,MA-0332-03320505,251251002052,10019,AP Computer Science Principles
+West Springfield High,MA-0332-03320505,251251002052,10152,Computer Programming
+Westwood High,MA-0335-03350505,251281002100,10152,Computer Programming
+Westwood High,MA-0335-03350505,251281002100,10158,AP Computer Science A
+Weymouth High School,MA-0336-03360505,251284002123,10011,Computer Science Principles
+Weymouth High School,MA-0336-03360505,251284002123,10012,Exploring Computer Science
+Weymouth High School,MA-0336-03360505,251284002123,10155,JAVA Programming
+Weymouth High School,MA-0336-03360505,251284002123,10158,AP Computer Science A
+Wilmington High,MA-0342-03420505,251305002158,10158,AP Computer Science A
+Murdock High School,MA-0343-03430515,251308002786,10012,Exploring Computer Science
+Murdock High School,MA-0343-03430515,251308002786,10158,AP Computer Science A
+Winchester High School,MA-0344-03440505,251311002174,10152,Computer Programming
+Winchester High School,MA-0344-03440505,251311002174,10158,AP Computer Science A
+Winthrop High School,MA-0346-03460505,251317002180,10152,Computer Programming
+Winthrop High School,MA-0346-03460505,251317002180,10158,AP Computer Science A
+Doherty Memorial High,MA-0348-03480512,251323002209,10152,Computer Programming
+North High,MA-0348-03480515,251323002239,10158,AP Computer Science A
+Worcester Technical High,MA-0348-03480605,251323002305,10158,AP Computer Science A
+Excel Academy Charter School,MA-0410-04100205,250007502084,10014,PLTW Computer Science Applications
+Excel Academy Charter School,MA-0410-04100205,250007502084,10019,AP Computer Science Principles
+Academy Of the Pacific Rim Charter Public School,MA-0412-04120530,250002100511,10011,Computer Science Principles
+Berkshire Arts and Technology Charter Public School,MA-0414-04140305,250007901842,10012,Exploring Computer Science
+Berkshire Arts and Technology Charter Public School,MA-0414-04140305,250007901842,10205,Computer Gaming and Design
+Brooke Charter School,MA-0428-04280305,250007101747,10019,AP Computer Science Principles
+KIPP Academy Lynn Charter School,MA-0429-04290010,250008201845,10152,Computer Programming
+Advanced Math and Science Academy Charter School,MA-0430-04300305,250008501984,10155,JAVA Programming
+Advanced Math and Science Academy Charter School,MA-0430-04300305,250008501984,10156,Computer Programming-Other Language
+Advanced Math and Science Academy Charter School,MA-0430-04300305,250008501984,10158,AP Computer Science A
+Innovation Academy Charter School,MA-0435-04350305,250002500524,10151,Business Programming
+Innovation Academy Charter School,MA-0435-04350305,250002500524,10152,Computer Programming
+Innovation Academy Charter School,MA-0435-04350305,250002500524,10155,JAVA Programming
+Community Charter School of Cambridge,MA-0436-04360305,250008601996,10011,Computer Science Principles
+Community Charter School of Cambridge,MA-0436-04360305,250008601996,10012,Exploring Computer Science
+Codman Academy Charter Public School,MA-0438-04380505,250007001667,10152,Computer Programming
+Foxborough Regional Charter School,MA-0446-04460550,250005201250,10158,AP Computer Science A
+Boston Collegiate Charter School,MA-0449-04490305,250005301256,10152,Computer Programming
+Edward M. Kennedy Academy for Health Careers (Horace Mann Charter School),MA-0452-04520505,250005401258,10011,Computer Science Principles
+Ma Academy for Math and Science School,MA-0468-04680505,250003600576,10152,Computer Programming
+Pioneer Valley Performing Arts Charter Public School,MA-0479-04790505,250004400816,10012,Exploring Computer Science
+Rising Tide Charter Public School,MA-0483-04830305,250005701271,10011,Computer Science Principles
+Rising Tide Charter Public School,MA-0483-04830305,250005701271,10151,Business Programming
+Prospect Hill Academy Charter School,MA-0487-04870550,250004600819,10012,Exploring Computer Science
+Prospect Hill Academy Charter School,MA-0487-04870550,250004600819,10158,AP Computer Science A
+South Shore Charter Public School,MA-0488-04880550,250004000600,10158,AP Computer Science A
+Pioneer Charter School of Science,MA-0494-04940205,250051802632,10019,AP Computer Science Principles
+Pioneer Charter School of Science,MA-0494-04940205,250051802632,10155,JAVA Programming
+Pioneer Charter School of Science,MA-0494-04940205,250051802632,10158,AP Computer Science A
+Global Learning Charter Public School,MA-0496-04960305,250051902629,10011,Computer Science Principles
+Hampden Charter School of Science East,MA-0499-04990305,250052202680,10155,JAVA Programming
+Acton-Boxborough Regional High,MA-0600-06000505,250171000012,10155,JAVA Programming
+Hoosac Valley High School,MA-0603-06030505,250178000021,10152,Computer Programming
+Hoosac Valley High School,MA-0603-06030505,250178000021,10155,JAVA Programming
+Amherst Regional High,MA-0605-06050505,250192000042,10012,Exploring Computer Science
+Amherst Regional High,MA-0605-06050505,250192000042,10054,Data Systems/Processing
+Amherst Regional High,MA-0605-06050505,250192000042,10152,Computer Programming
+Amherst Regional High,MA-0605-06050505,250192000042,10158,AP Computer Science A
+Oakmont Regional High School,MA-0610-06100505,250204000069,10011,Computer Science Principles
+Oakmont Regional High School,MA-0610-06100505,250204000069,10205,Computer Gaming and Design
+Ayer Shirley Regional High School,MA-0616-06160505,250054202738,10011,Computer Science Principles
+Ayer Shirley Regional High School,MA-0616-06160505,250054202738,10152,Computer Programming
+Monument Mt Regional High,MA-0618-06180505,250253000154,10152,Computer Programming
+Bridgewater-Raynham Regional,MA-0625-06250505,250303000380,10155,JAVA Programming
+Wahconah Regional High,MA-0635-06350505,250339000467,10152,Computer Programming
+Concord Carlisle High,MA-0640-06400505,250387000527,10155,JAVA Programming
+Concord Carlisle High,MA-0640-06400505,250387000527,10156,Computer Programming-Other Language
+Concord Carlisle High,MA-0640-06400505,250387000527,10158,AP Computer Science A
+Dennis-Yarmouth Regional High,MA-0645-06450505,250414000558,10019,AP Computer Science Principles
+Dennis-Yarmouth Regional High,MA-0645-06450505,250414000558,10154,C++ Programming
+Dover-Sherborn Regional High,MA-0655-06550505,250429000574,10155,JAVA Programming
+Shepherd Hill Regional High,MA-0658-06580505,250436000591,10019,AP Computer Science Principles
+Shepherd Hill Regional High,MA-0658-06580505,250436000591,10152,Computer Programming
+Shepherd Hill Regional High,MA-0658-06580505,250436000591,10158,AP Computer Science A
+Nauset Regional High,MA-0660-06600505,250456000610,10015,PLTW Computer Science and Software Engineering
+Nauset Regional High,MA-0660-06600505,250456000610,10019,AP Computer Science Principles
+Nauset Regional High,MA-0660-06600505,250456000610,10151,Business Programming
+Nauset Regional High,MA-0660-06600505,250456000610,10152,Computer Programming
+Nauset Regional High,MA-0660-06600505,250456000610,10158,AP Computer Science A
+Nauset Regional High,MA-0660-06600505,250456000610,10205,Computer Gaming and Design
+Apponequet Regional High,MA-0665-06650505,250507000746,10012,Exploring Computer Science
+Apponequet Regional High,MA-0665-06650505,250507000746,10019,AP Computer Science Principles
+Apponequet Regional High,MA-0665-06650505,250507000746,10151,Business Programming
+Apponequet Regional High,MA-0665-06650505,250507000746,10152,Computer Programming
+Frontier Regional,MA-0670-06700505,250510000749,10012,Exploring Computer Science
+Frontier Regional,MA-0670-06700505,250510000749,10019,AP Computer Science Principles
+Hamilton-Wenham Regional High,MA-0675-06750505,250567000820,10011,Computer Science Principles
+Hampshire Regional High,MA-0683-06830505,250574000825,10011,Computer Science Principles
+Hampshire Regional High,MA-0683-06830505,250574000825,10012,Exploring Computer Science
+Hampshire Regional High,MA-0683-06830505,250574000825,10019,AP Computer Science Principles
+Lincoln-Sudbury Regional High,MA-0695-06950505,250693001011,10019,AP Computer Science Principles
+Lincoln-Sudbury Regional High,MA-0695-06950505,250693001011,10152,Computer Programming
+Lincoln-Sudbury Regional High,MA-0695-06950505,250693001011,10155,JAVA Programming
+Manchester Essex Regional High School,MA-0698-06980510,250006701109,10156,Computer Programming-Other Language
+Martha's Vineyard Regional High,MA-0700-07000505,250738001145,10158,AP Computer Science A
+Masconomet Regional High School,MA-0705-07050505,250741001146,10011,Computer Science Principles
+Masconomet Regional High School,MA-0705-07050505,250741001146,10012,Exploring Computer Science
+Masconomet Regional High School,MA-0705-07050505,250741001146,10152,Computer Programming
+Masconomet Regional High School,MA-0705-07050505,250741001146,10155,JAVA Programming
+Masconomet Regional High School,MA-0705-07050505,250741001146,10158,AP Computer Science A
+Nipmuc Regional High,MA-0710-07100510,250768001202,10158,AP Computer Science A
+Monomoy Regional High School,MA-0712-07120515,250054402836,10011,Computer Science Principles
+Monomoy Regional High School,MA-0712-07120515,250054402836,10013,PLTW Introduction to Computer Science
+Monomoy Regional High School,MA-0712-07120515,250054402836,10155,JAVA Programming
+Mt Greylock Regional High,MA-0715-07150505,250816001273,10012,Exploring Computer Science
+Mt Greylock Regional High,MA-0715-07150505,250816001273,10019,AP Computer Science Principles
+Mt Greylock Regional High,MA-0715-07150505,250816001273,10152,Computer Programming
+Mt Greylock Regional High,MA-0715-07150505,250816001273,10205,Computer Gaming and Design
+Mohawk Trail Regional High,MA-0717-07170505,250799001265,10012,Exploring Computer Science
+Mohawk Trail Regional High,MA-0717-07170505,250799001265,10158,AP Computer Science A
+Nashoba Regional,MA-0725-07250505,250831001289,10012,Exploring Computer Science
+Nashoba Regional,MA-0725-07250505,250831001289,10019,AP Computer Science Principles
+Nashoba Regional,MA-0725-07250505,250831001289,10158,AP Computer Science A
+Algonquin Regional High,MA-0730-07300505,250891001441,10152,Computer Programming
+Algonquin Regional High,MA-0730-07300505,250891001441,10154,C++ Programming
+Algonquin Regional High,MA-0730-07300505,250891001441,10158,AP Computer Science A
+Algonquin Regional High,MA-0730-07300505,250891001441,10205,Computer Gaming and Design
+North Middlesex Regional,MA-0735-07350505,250879001415,10013,PLTW Introduction to Computer Science
+North Middlesex Regional,MA-0735-07350505,250879001415,10019,AP Computer Science Principles
+North Middlesex Regional,MA-0735-07350505,250879001415,10158,AP Computer Science A
+Old Rochester Regional High,MA-0740-07400505,250915001472,10011,Computer Science Principles
+Old Rochester Regional High,MA-0740-07400505,250915001472,10019,AP Computer Science Principles
+Old Rochester Regional High,MA-0740-07400505,250915001472,10152,Computer Programming
+Old Rochester Regional High,MA-0740-07400505,250915001472,10205,Computer Gaming and Design
+Pentucket Regional Sr High,MA-0745-07450505,250945001513,10154,C++ Programming
+Pentucket Regional Sr High,MA-0745-07450505,250945001513,10158,AP Computer Science A
+Pioneer Valley Regional,MA-0750-07500505,250960001515,10012,Exploring Computer Science
+Quabbin Regional High School,MA-0753-07530505,250000101558,10152,Computer Programming
+Quabbin Regional High School,MA-0753-07530505,250000101558,10158,AP Computer Science A
+Silver Lake Regional High,MA-0760-07600505,251083001722,10019,AP Computer Science Principles
+Silver Lake Regional High,MA-0760-07600505,251083001722,10156,Computer Programming-Other Language
+Silver Lake Regional High,MA-0760-07600505,251083001722,10158,AP Computer Science A
+Somerset Berkley Regional High School,MA-0763-07630505,250054102728,10152,Computer Programming
+Mt Everett Regional,MA-0765-07650505,251104001774,10152,Computer Programming
+Southwick Regional School,MA-0766-07660505,250001301782,10012,Exploring Computer Science
+Southwick Regional School,MA-0766-07660505,250001301782,10019,AP Computer Science Principles
+Southwick Regional School,MA-0766-07660505,250001301782,10152,Computer Programming
+David Prouty High,MA-0767-07670505,250000201790,10153,VISUAL BASIC Programming
+Tantasqua Regional Sr High,MA-0770-07700505,251149001900,10152,Computer Programming
+Tantasqua Regional Sr High,MA-0770-07700505,251149001900,10158,AP Computer Science A
+Tantasqua Regional Vocational,MA-0770-07700605,251149001901,10152,Computer Programming
+Tantasqua Regional Vocational,MA-0770-07700605,251149001901,10158,AP Computer Science A
+Triton Regional High School,MA-0773-07730505,251174001932,10152,Computer Programming
+Triton Regional High School,MA-0773-07730505,251174001932,10154,C++ Programming
+Triton Regional High School,MA-0773-07730505,251174001932,10158,AP Computer Science A
+Wachusett Regional High,MA-0775-07750505,251188001940,10012,Exploring Computer Science
+Wachusett Regional High,MA-0775-07750505,251188001940,10154,C++ Programming
+Wachusett Regional High,MA-0775-07750505,251188001940,10155,JAVA Programming
+Whitman Hanson Regional,MA-0780-07800505,251293002135,10152,Computer Programming
+Whitman Hanson Regional,MA-0780-07800505,251293002135,10158,AP Computer Science A
+Assabet Valley Vocational High School,MA-0801-08010605,250211002257,10011,Computer Science Principles
+Blue Hills Regional Vocational Technical,MA-0806-08060605,250274000193,10019,AP Computer Science Principles
+Essex North Shore Agricultural and Technical School,MA-0817-08170505,250055402833,10011,Computer Science Principles
+Franklin County Technical,MA-0818-08180605,250502000744,10158,AP Computer Science A
+Diman Regional Vocational Technical High,MA-0821-08210605,250548502269,10019,AP Computer Science Principles
+Diman Regional Vocational Technical High,MA-0821-08210605,250548502269,10153,VISUAL BASIC Programming
+Diman Regional Vocational Technical High,MA-0821-08210605,250548502269,10154,C++ Programming
+Gr New Bedford Vocational Technical,MA-0825-08250605,250844002266,10158,AP Computer Science A
+Gr Lowell Regional Vocational Technical,MA-0828-08280605,250548002268,10019,AP Computer Science Principles
+Gr Lowell Regional Vocational Technical,MA-0828-08280605,250548002268,10158,AP Computer Science A
+Joseph P Keefe Technical High School,MA-0829-08290605,251106002291,10012,Exploring Computer Science
+Joseph P Keefe Technical High School,MA-0829-08290605,251106002291,10152,Computer Programming
+Joseph P Keefe Technical High School,MA-0829-08290605,251106002291,10158,AP Computer Science A
+Montachusett Regional Vocational Technical,MA-0832-08320605,250805002279,10019,AP Computer Science Principles
+Charles McCann Vocational Technical,MA-0851-08510605,250895002282,10011,Computer Science Principles
+Northeast Metro Regional Vocational,MA-0853-08530605,250896002283,10012,Exploring Computer Science
+Old Colony Regional Vocational Technical,MA-0855-08550605,250914001471,10011,Computer Science Principles
+Old Colony Regional Vocational Technical,MA-0855-08550605,250914001471,10156,Computer Programming-Other Language
+Pathfinder Vocational Technical,MA-0860-08600605,250931002285,10012,Exploring Computer Science
+Southeastern Regional Vocational Technical,MA-0872-08720605,251102002290,10013,PLTW Introduction to Computer Science
+Southeastern Regional Vocational Technical,MA-0872-08720605,251102002290,10019,AP Computer Science Principles
+Southeastern Regional Vocational Technical,MA-0872-08720605,251102002290,10158,AP Computer Science A
+Tri-County Regional Vocational Technical,MA-0878-08780605,251173501931,10019,AP Computer Science Principles
+Pioneer Charter School of Science II (PCSS-II),MA-3506-35060505,250054602780,10155,JAVA Programming
+Pioneer Charter School of Science II (PCSS-II),MA-3506-35060505,250054602780,10158,AP Computer Science A
+Map Academy Charter School,MA-3517-35170505,250058902885,10012,Exploring Computer Science
+Greenfield Commonwealth Virtual School,MA-3901-39010900,250055102808,10011,Computer Science Principles
+Greenfield Commonwealth Virtual School,MA-3901-39010900,250055102808,10012,Exploring Computer Science

@@ -364,6 +364,8 @@ da:
       help_us: Hjælp os
       teach: Undervis
       about: Om
+      legal_privacy: Privatlivspolitik
+      legal_tos: Termer
     user:
       classroom: Lærerens startside
       district_dashboard: Særskilt betjeningspanel

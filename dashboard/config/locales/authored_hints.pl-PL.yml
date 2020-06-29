@@ -1361,6 +1361,11 @@ pl-PL:
           ostrożny, bym obrócił się w dobrą stronę!_
         courseC_maze_programming_challenge2_b: Najkrótszym rozwiązaniem jest użycie
           5 bloków, ale wykorzystuje blok `repeat`!
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam projekt w ostatnim rogu. Możesz też "skoczyć
+          do" innych pozycji albo zmienić wszystko całkowicie w jaki tylko chcesz
+          sposób!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
@@ -1372,6 +1377,9 @@ pl-PL:
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny
           w tym wyzwaniu.
+      course3_farmer_condLoops_challenge2:
+        courseD_farmer_condLoops_challenge2_a: 'Ilość każdego warzywa w różnych polach
+          zmienia się. Użyj do nich pętli "dopóki". '
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_b: Ścieżka Scrata jest w kształcie prostokąta!
           Musi obrócić się tak samo za każdym razem!

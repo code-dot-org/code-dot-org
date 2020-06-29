@@ -58,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -188,7 +187,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -278,7 +277,7 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 0'
+gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
 gem 'bcrypt'
@@ -345,3 +344,5 @@ gem 'hammerspace'
 gem 'require_all', require: false
 
 gem 'dotiw'
+
+gem 'datapackage'

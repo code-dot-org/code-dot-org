@@ -54,10 +54,17 @@ class Pd::Workshop < ActiveRecord::Base
     # Indicates that this workshop will be conducted virtually, which has the
     # following effects in our system:
     #   - Ensures `suppress_email` is set (see below)
-    #   - Makes `location_address` optional, and does not autofill a value
     #     when it is left blank.
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
+
+    # Allows a workshop to be associated with a third party
+    # organization.
+    # Only current allowed values are "friday_institute" and nil.
+    # "friday_institute" represents The Friday Institute,
+    # a regional partner whose model of virtual workshop is being used
+    # by several partners during summer 2020.
+    'third_party_provider',
 
     # If true, our system will not send enrollee-facing
     # emails related to this workshop *except* for a receipt for the teacher
@@ -85,6 +92,8 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validate :all_virtual_workshops_suppress_email
+  validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
+  validate :friday_institute_workshops_must_be_virtual
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -117,6 +126,12 @@ class Pd::Workshop < ActiveRecord::Base
   def all_virtual_workshops_suppress_email
     if virtual? && !suppress_email?
       errors.add :properties, 'All virtual workshops must suppress email.'
+    end
+  end
+
+  def friday_institute_workshops_must_be_virtual
+    if friday_institute? && !virtual?
+      errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
 
@@ -281,6 +296,14 @@ class Pd::Workshop < ActiveRecord::Base
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
+  # Find the workshop with the closest session to today
+  # enrolled in by the given teacher.
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_enrolled_in_by(teacher)
+    current_scope.enrolled_in_by(teacher).nearest
+  end
+
   def course_name
     COURSE_NAME_OVERRIDES[course] || course
   end
@@ -298,11 +321,19 @@ class Pd::Workshop < ActiveRecord::Base
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name += " in #{friendly_location}" if friendly_location.present?
+    name[0...255]
   end
 
   def friendly_subject
-    subject ? "#{subject} Workshop" : nil
+    if subject && (subject.downcase.include?("workshop") || subject == SUBJECT_TEACHER_CON)
+      subject
+    elsif subject
+      "#{subject} Workshop"
+    else
+      nil
+    end
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
@@ -317,17 +348,20 @@ class Pd::Workshop < ActiveRecord::Base
   # 1. known variant of TBA? use TBA
   # 2. processed location? use city, state
   # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use TBA
+  # 4. no location address at all? use blank
   def friendly_location
     return 'Location TBA' if location_address_tba?
     return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || 'Location TBA'
+    location_address.presence || ''
   end
 
+  # Returns date and location (only date if no location specified)
   def date_and_location_name
-    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
-    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
+    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
+    date_and_location_string += ' TeacherCon' if teachercon?
+    date_and_location_string
   end
 
   # Puts workshop in 'In Progress' state
@@ -362,10 +396,12 @@ class Pd::Workshop < ActiveRecord::Base
   # for details.
   def self.process_ends
     end_on_or_after(Time.now - 2.days).each do |workshop|
-      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
-        workshop.send_exit_surveys
-        workshop.update!(processed_at: Time.zone.now)
-      end
+      # only process if the workshop has not already been processed or if workshop was
+      # processed before the workshop ended.
+      next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
+      workshop.send_exit_surveys
+      workshop.send_facilitator_post_surveys
+      workshop.update!(processed_at: Time.zone.now)
     end
   end
 
@@ -508,6 +544,17 @@ class Pd::Workshop < ActiveRecord::Base
       end
 
       enrollment.send_exit_survey
+    end
+  end
+
+  # Send Post-surveys to facilitators of CSD and CSP workshops
+  def send_facilitator_post_surveys
+    if course == COURSE_CSD || course == COURSE_CSP
+      facilitators.each do |facilitator|
+        next unless facilitator.email
+
+        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
+      end
     end
   end
 
@@ -657,6 +704,11 @@ class Pd::Workshop < ActiveRecord::Base
 
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
+  end
+
+  # return true if this is a CSP Workshop for Returning Teachers
+  def csp_wfrt?
+    subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
 
   def teachercon?
@@ -811,5 +863,13 @@ class Pd::Workshop < ActiveRecord::Base
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
     last_day
+  end
+
+  def friday_institute?
+    third_party_provider == 'friday_institute'
+  end
+
+  def user_attended?(user)
+    attending_teachers.include?(user)
   end
 end

@@ -610,54 +610,48 @@ sk-SK:
         - {}
       CSD U3 - conditionals - Matching:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
@@ -754,6 +748,16 @@ sk-SK:
           * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
           * [setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Prehľad
+
+          Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+
+
+          ## Zdroje
+
+          * [Project Guide - Defender Game - Project Guide](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
         markdown: |+
           # Začni svoj prieskum
@@ -770,60 +774,63 @@ sk-SK:
 
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions SFLP:
         markdown: |
           # Prehľad
 
-          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej úrovni, alebo pomocou abstraktných krokov, sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
+          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej, abstraktnejšej úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
 
           ## Slovník
 
@@ -942,6 +949,23 @@ sk-SK:
         teacher_markdown: |
           * [Interactive Card](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
           * [Interactive Card](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+      CSD U3 Lesson Overview 2:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si precvičíme komunikáciu inštrukcií na kreslenie tvarov na želanom mieste. Využijeme pritom interaktívny nástroj Game Labu, ktorý nám umožní vkladanie tvarov do mriežky 400x400. Žiaci sa vystriedajú pri komunikácii inštrukcií na nakreslenie skrytého obrázku a pri jeho kreslení podľa vypočutých inštrukcií. Tým si priblížia vicero z výziev programovania v Game Lab.
+
+          ## Zdroje
+
+          * [Kreslenie tvarov - Sprievodca aktivitou](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+      CSD U3 Project Build a Game SFLP:
+        markdown: "# Prehľad\n\nV tejto lekcii si pomocou Sprievodcu projektom a postupu
+          z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
+          na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru
+          odprezentujeme pred triedou. \n\n## Zdroje\n\n* [Vytvor svoju vlastnú hru
+          - Sprievodca projektom](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)\n*
+          [Vytvor svoju vlastnú hru - Hotnotiace kritéria](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)\n*
+          [Vytvor svoju vlastnú hru - Spätná väzba](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
       CSD U3 SFLP Velocity:
         markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
           používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti, ktoré
@@ -999,6 +1023,16 @@ sk-SK:
         - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # Prehľad
+
+          V tejto viacdennej lekcii budeme aplikovať proces riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme ukážku hry. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+
+
+          ## Zdroje
+
+          * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
       CSD U3 drawSprites placement match:
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -1042,41 +1076,41 @@ sk-SK:
             AM.png">
         title: drawSprites
       CSD U3 game intro:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 game intro_2018:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 game intro_2018_2019:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 platform intro:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
@@ -2099,13 +2133,17 @@ sk-SK:
             *jeden* kvet.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: '"Včela dostane nektár pri každej kvetine a pri každom plástve vytvorí
+            med."'
+          correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
         - text: Neviem.
         questions:
-        - {}
+        - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet."'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
@@ -2346,8 +2384,8 @@ sk-SK:
         answers:
         - correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: '"Zombík sa dostane k slnečnici."'
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
         - text: Neviem.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
@@ -2356,9 +2394,11 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: '"Zombík sa dostane k slnečnici."'
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
           feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
@@ -2370,9 +2410,11 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: '"Zombík sa dostane k slnečnici."'
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
           feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
@@ -2975,7 +3017,7 @@ sk-SK:
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Objavujeme informatiku  - Študentský dotazník na konci kurzu
+        title: 'Objavujeme informatiku: Záverečný dotazník pre žiakov'
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: |+
           # Objavujeme informatiku - Záverečný dotazník
@@ -2985,9 +3027,9 @@ sk-SK:
           * pochopenie tvojej skúsenosti s týmto kurzom
           * vylepšenie kurzu
 
-          Ďakujeme, že si si našiel/našla čas na vylepšenie kurzu Objavujeme informatiku!
+          Ďakujeme za tvoj čas a ochotu pomôcť pri vylepšovaní kurzu Objavujeme informatiku!
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">Klikni sem na otvorenie dotatzníka</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">Klikni sem na otvorenie dotazníka</a>
 
           <br>
 
@@ -2996,7 +3038,7 @@ sk-SK:
 
 
       csd-post-survey-levelgroup-2018:
-        title: Objavujeme informatiku  - Študentský dotazník na konci kurzu
+        title: 'Objavujeme informatiku: Záverečný dotazník pre žiakov'
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:

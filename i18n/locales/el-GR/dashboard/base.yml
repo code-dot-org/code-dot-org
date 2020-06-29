@@ -278,6 +278,8 @@ el:
       learn: "Εκμάθηση"
       teach: "Διδασκαλία"
       about: "Σχετικά"
+      legal_privacy: "Πολιτική Απορρήτου"
+      legal_tos: "Όροι"
     user:
       classroom: 'Αρχική Σελίδα Εκπαιδευτή'
       district_dashboard: 'Περιοχή Ταμπλό'

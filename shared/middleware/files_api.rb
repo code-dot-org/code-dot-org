@@ -323,7 +323,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -381,7 +381,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)

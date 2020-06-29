@@ -25,6 +25,12 @@ sk-SK:
         CSD_U3_L8_S6_C1: Sem pridaj console log prvok
       CSD U3 - conditionals - transition_2019:
         CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 Boolean Predict:
+        '': Tento program vypíše výsledok sem
+      CSD U3 Boolean Predict_2018:
+        '': Tento program vypíše výsledok sem
+      CSD U3 Boolean Predict_2019:
+        '': Tento program vypíše výsledok sem
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where XY:
@@ -297,9 +303,8 @@ sk-SK:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!
       New Play Lab Project:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky
-          vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie
-          do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé
+          bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spustiť" pre uloženie a spustenie
           vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?
