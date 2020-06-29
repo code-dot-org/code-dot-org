@@ -337,7 +337,7 @@ describe('ProgressBubble', () => {
     });
 
     it('links to the level url', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -352,7 +352,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -364,7 +364,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -378,7 +378,7 @@ describe('ProgressBubble', () => {
 
     it('preserves the queryparams of the current location', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
@@ -389,7 +389,7 @@ describe('ProgressBubble', () => {
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -419,7 +419,7 @@ describe('ProgressBubble', () => {
     it('can be explicitly set to an anchor object', () => {
       const fakeLocation = document.createElement('a');
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
