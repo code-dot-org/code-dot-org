@@ -106,6 +106,12 @@ export default class MicroBitBoard extends EventEmitter {
     return newButton;
   }
 
+  createCapacitiveTouchSensor(pin) {
+    const newSensor = new ExternalButton({mb: this.boardClient_, pin}, true);
+    this.dynamicComponents_.push(newSensor);
+    return newSensor;
+  }
+
   /**
    * Disconnect and clean up the board controller and all components.
    */
