@@ -53,8 +53,9 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data.merge! extract_user_id(contact_data)
       processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
       processed_contact_data.merge! extract_professional_learning_attended(contact_data)
-      processed_contact_data.merge! extract_updated_at(contact_data)
       processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
+      processed_contact_data.merge! extract_forms_submitted(contact_data)
+      processed_contact_data.merge! extract_updated_at(contact_data)
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
@@ -199,6 +200,14 @@ class ContactRollupsProcessed < ApplicationRecord
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
     uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
     return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
+  end
+
+  def self.extract_forms_submitted(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    kinds << 'Census' if contact_data.key?('dashboard.census_submissions')
+
+    uniq_kinds = kinds.uniq.compact.sort.join(',')
+    uniq_kinds.blank? ? {} : {forms_submitted: uniq_kinds}
   end
 
   # Extracts values of a field in a source table from contact data.
