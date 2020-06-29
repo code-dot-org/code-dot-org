@@ -1039,6 +1039,9 @@ exports.createJsWrapperBlockCreator = function(
               });
             }
           });
+          // Use window.appOptions, not global appOptions, because the levelbuilder
+          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+          // there
           if (
             !window.appOptions ||
             (window.appOptions.level.miniToolbox &&
