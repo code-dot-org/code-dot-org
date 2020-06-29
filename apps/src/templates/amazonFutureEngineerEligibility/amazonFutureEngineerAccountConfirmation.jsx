@@ -34,10 +34,6 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
 
   render() {
     // TO DO: Add links to account sign up page.
-    // TO DO: Need to put submission data
-    //  (currently kept in state of AmazonFutureEngineerEligibility component)
-    //  somewhere (session cookie?) that will persist while they sign up or sign in,
-    // at which point we'll send an API request to Amazon's Pardot API endpoint.
     return (
       <div>
         <h2 style={styles.header}>Almost done!</h2>
