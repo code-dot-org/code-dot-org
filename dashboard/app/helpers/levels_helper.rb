@@ -486,8 +486,6 @@ module LevelsHelper
 
       all_voices = JSON.parse(voice_response.body)
       language_dictionary = {}
-      p 'hello world'
-      p Languages.get_native_name_by_locale('fake language')
       all_voices.each do |voice|
         native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
         unless native_locale_name.empty?
