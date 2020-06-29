@@ -6,7 +6,7 @@ id:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
-        csf_category_name: CS Fundamentals
+        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_2019_category_name: CS Fundamentals (2019)
         csf_international_category_name: Dasar dasar internasional CS
@@ -493,7 +493,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
           lessons:
             Binary:
               name: Biner
@@ -504,7 +504,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
         algebra:
           title: Ilmu Komputer dalam Aljabar
           description: Belajar pemrograman fungsional melalui aljabar
@@ -601,10 +601,10 @@ id:
             yang dibintangi karakter Disney tak terbatas.
           stages:
             Infinity:
-              name: Tidak terhingga
+              name: "∞"
           lessons:
             Infinity:
-              name: Tidak terhingga
+              name: "∞"
         algebrademo:
           title: Demo Aljabar
           description: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa
@@ -5873,7 +5873,7 @@ id:
                 semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar
                 ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -6270,7 +6270,7 @@ id:
                 semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar
                 ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -6555,7 +6555,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
           lessons:
@@ -6576,7 +6576,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
         algebrapdnext:
@@ -7507,7 +7507,7 @@ id:
                 web pribadi mereka sendiri. Di level terakhir, murid memulai proyek
                 yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -7798,7 +7798,7 @@ id:
                 web pribadi mereka sendiri. Di level terakhir, murid memulai proyek
                 yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -9702,7 +9702,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -9780,7 +9780,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -10152,7 +10152,7 @@ id:
                 elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk
                 input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan
                 berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah
@@ -10765,7 +10765,7 @@ id:
                 elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk
                 input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan
                 berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah
@@ -11313,7 +11313,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -11364,7 +11364,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -12298,7 +12298,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
           lessons:
             Text on the Web:
               name: Teks di web
@@ -12337,7 +12337,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
         csd1-draft:
           stages:
             Intro to Problem Solving:
@@ -12392,7 +12392,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -12443,7 +12443,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17008,7 +17008,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -17045,7 +17045,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -17099,7 +17099,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17162,7 +17162,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17285,7 +17285,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -17637,7 +17637,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -18037,7 +18037,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -18278,7 +18278,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -23755,7 +23755,7 @@ id:
           title: CSP Playground
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -24150,7 +24150,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_internet:
@@ -25653,7 +25653,7 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -27390,7 +27390,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -27633,7 +27633,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -27834,7 +27834,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -28188,7 +28188,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -29867,7 +29867,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -29875,7 +29875,7 @@ id:
           title: CSP Unit 4 Percontohan - Variable, Conditional, dan Function
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -29956,7 +29956,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -30977,7 +30977,7 @@ id:
           title: 'Unit 1: Bit & Byte'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31066,7 +31066,7 @@ id:
           title: 'Unit 2: Internet'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31295,7 +31295,7 @@ id:
           title: 'Unit 4: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31430,7 +31430,7 @@ id:
           title: 'Unit 5: Daftar, Loop, dan Traversal'
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -31567,7 +31567,7 @@ id:
           title: 'Unit 6: Algorithm'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31797,7 +31797,7 @@ id:
           title: 'Unit 8: Create PT'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31886,7 +31886,7 @@ id:
           title: 'Unit 9: Data'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31975,7 +31975,7 @@ id:
           title: 'Unit 10: Dampak Global'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -32182,7 +32182,7 @@ id:
           title: CSP Unit 5 Percontohan - Daftar, Loop, dan Traversal
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -32869,7 +32869,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -33144,7 +33144,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -33377,7 +33377,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -33735,7 +33735,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -34886,7 +34886,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -34968,7 +34968,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -35119,7 +35119,7 @@ id:
           title: 'CSP Preview: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -35590,7 +35590,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
           title: CSP Unit 7 Percontohan - Parameter, Kembali, dan Perpustakaan
           lesson_groups:
             csp_parameters_return_values:
@@ -35655,7 +35655,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
         csp8-pilot:
           stages:
             new stage:
@@ -35711,7 +35711,7 @@ id:
           title: CSP Unit 4 - Variable, Conditional, dan Function ('20-'21)
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -35794,7 +35794,7 @@ id:
           title: CSP Unit 5 - Daftar, Loop, dan Traversal ('20-'21)
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -36209,8 +36209,14 @@ id:
                 halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka
                 bisa memastikan situs web melakukan pekerjaannya sesuai rancangan
                 awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
           lesson_groups:
             csd2_1:
               display_name: 'Bab 1: Konten Web dan HTML'
@@ -36438,8 +36444,14 @@ id:
                 halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka
                 bisa memastikan situs web melakukan pekerjaannya sesuai rancangan
                 awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
         csd1-2020:
           title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
           description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang
@@ -38129,6 +38141,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
           lesson_groups:
             csd5_1:
               display_name: 'Bab 1: Yang Mewakili Informasi'
@@ -38456,6 +38470,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
         csd6-2020:
           title: CSD Unit 6 - Komputasi Fisik ('20-'21)
           description: Unit 6 mengeksplorasi peran platform perangkat keras dalam
@@ -38617,7 +38633,7 @@ id:
                 mampu untuk gambar program seperti yang mereka buat dengan alat gambar
                 pada pelajaran sebelumnya.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -39099,7 +39115,7 @@ id:
                 mampu untuk gambar program seperti yang mereka buat dengan alat gambar
                 pada pelajaran sebelumnya.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -41378,7 +41394,7 @@ id:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -41662,6 +41678,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_warmup:
               display_name: Berlatih
@@ -41674,11 +41694,13 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
           lessons:
             Dance Party:
               name: Pesta Tari
@@ -41736,6 +41758,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
         pre-express-2020:
           title: Kilat Pre-reader (2020)
           description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di
@@ -41835,10 +41861,14 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
           title: CSP Unit 1 - Informasi Digital ('20-'21)
           lesson_groups:
             csp_unit1_2020:
               display_name: "(Lama) Unit 1: Informasi Digital"
+            cspSurvey:
+              display_name: Survei
           lessons:
             new stage:
               name: tahapan baru
@@ -41870,6 +41900,8 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
         csp2-2020:
           stages:
             new stage:
@@ -42337,7 +42369,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -42691,7 +42723,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -43395,7 +43427,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -43456,7 +43488,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -43930,3 +43962,70 @@ id:
               name: Unit 5 penilaian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Penilaian 5 - Pertanyaan AP Pseudocode Practice
+        k5-onlinepd-2020:
+          description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar
+            Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan
+            diri ini!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Dapat Dimulai
+            k5_basic_concepts_1:
+              display_name: Konsep Coding Dasar dan Praktik Pengajaran
+            k5_diving_deeper_1:
+              display_name: 'Pendalaman: Kursus E dan F'
+            k5_next_steps_1:
+              display_name: Langkah berikutnya
