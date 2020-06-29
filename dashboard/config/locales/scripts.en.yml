@@ -30111,7 +30111,7 @@ en:
               name: Project - Digital Information Dilemmas Part 2
             'Lesson 14: Assessment Day':
               name: 'Lesson 14: Assessment Day'
-            CS Principles Pre-survey: &1
+            CS Principles Pre-survey:
               name: CS Principles Pre-survey
           title: CSP Unit 1 - Digital Information ('20-'21)
           description_audience: ''
@@ -30153,7 +30153,8 @@ en:
               name: Project - Digital Information Dilemmas Part 2
             'Lesson 14: Assessment Day':
               name: 'Lesson 14: Assessment Day'
-            CS Principles Pre-survey: *1
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
         csp2-2020:
           stages:
             new stage:
@@ -31927,10 +31928,10 @@ en:
               display_name: Next Steps
         dani-test-2020:
           stages:
-            new lesson: &2
+            new lesson: &1
               name: new lesson
           lessons:
-            new lesson: *2
+            new lesson: *1
           lesson_groups:
             lesson group:
               display_name: display name
