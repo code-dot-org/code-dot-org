@@ -96,6 +96,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     sessionStorage.setItem(sessionStorageKey, JSON.stringify(newFormData));
     this.setState({formData: newFormData});
+    this.root.scrollIntoView();
   };
 
   saveToSessionStorage = () => {
@@ -247,7 +248,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     }
 
     return (
-      <div style={styles.container}>
+      <div style={styles.container} ref={el => (this.root = el)}>
         {formData.schoolEligible === null && (
           <div>
             <h2 style={styles.header}>Am I eligible?</h2>
