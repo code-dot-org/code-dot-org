@@ -6,6 +6,7 @@ import {
   injectExecuteCmd
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('Audio API', function() {
   // Check that every command, has an executor, has a droplet config entry.
@@ -79,23 +80,36 @@ describe('Audio API', function() {
   });
 
   describe('playSpeech', function() {
-    it('has two arguments, "text" and "gender"', function() {
+    beforeEach(() => {
+      replaceOnWindow('appOptions', {
+        level: {
+          projectTemplateLevelName: 'Test Project'
+        }
+      });
+    });
+
+    afterEach(() => {
+      restoreOnWindow('appOptions');
+    });
+    it('has three arguments, "text", "gender", and "language"', function() {
       const funcName = 'playSpeech';
       // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'text',
-        'gender'
+        'gender',
+        'language'
       ]);
-      expect(dropletConfig[funcName].params).to.have.length(2);
+      expect(dropletConfig[funcName].params).to.have.length(3);
 
       // Check that executors map arguments to object correctly
       let spy = sinon.spy();
       injectExecuteCmd(spy);
-      executors[funcName]('this is text', 'female', 'nothing');
+      executors[funcName]('this is text', 'female', 'English', 'nothing');
       expect(spy).to.have.been.calledOnce;
       expect(spy.firstCall.args[2]).to.deep.equal({
         text: 'this is text',
-        gender: 'female'
+        gender: 'female',
+        language: 'English'
       });
     });
   });
