@@ -291,7 +291,7 @@
       {
        "type": "matrix",
        "name": "friday_institute_async_tools",
-       "title": "This workshop also included asynchronous activities (things you did as part of the workshop but not at the same time) made available through a workshop website (Moodle).",
+       "title": "This workshop also included activities you completed away from the larger group made available through your workshop website in the Friday Institute's Professional Learning and Collaboration Environment (PLACE) ",
        "columns": [
         {
          "value": "1",
@@ -325,15 +325,19 @@
        "rows": [
         {
          "value": "moodle_worked_well_for_all",
-         "text": "Overall the Moodle site seemed to work well for all participants."
-        },
-        {
-         "value": "moodle_organized_positive_exp",
-         "text": "The content and organization of the Moodle site made sense to me and made for a positive experience.  "
+         "text": "Overall the PLACE site seemed to work well for all participants."
         },
         {
          "value": "async_activities_engaging",
-         "text": "I found the activities I did on the Moodle site highly engaging."
+         "text": "I found the activities I did on the PLACE site highly engaging."
+        },
+        {
+         "value": "moodle_organized_positive_exp",
+         "text": "The organization of the PLACE site made sense to me and made for a positive experience."
+        },
+        {
+         "value": "moodle_content_activities",
+         "text": "The content and activities on the PLACE site supported my professional learning and preparation to teach {workshop_course}"
         }
        ]
       }
