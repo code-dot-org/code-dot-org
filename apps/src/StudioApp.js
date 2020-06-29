@@ -73,6 +73,7 @@ import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 var copyrightStrings;
 
 /**
@@ -195,6 +196,16 @@ class StudioApp extends EventEmitter {
      * Levelbuilder-defined helper libraries.
      */
     this.libraries = {};
+
+    /*
+     * Stores the alert that appears if the user edits code while its running. It will be unmounted and set to undefined on reset.
+     */
+    this.editDuringRunAlert = undefined;
+
+    /*
+     * Stores the code at run. It's undefined if the code is not running.
+     */
+    this.executingCode = undefined;
   }
 }
 /**
@@ -536,6 +547,24 @@ StudioApp.prototype.init = function(config) {
       />,
       startDialogDiv
     );
+  }
+  if (!config.readOnlyWorkspace) {
+    this.addChangeHandler(() => {
+      // if the code has changed (other than whitespace at the beginning or end) and the code is running,
+      // we want to show an alert to tell the user to reset and run their code again. We trim the whitespace
+      // because droplet sometimes adds an extra newline when switching from block to code mode.
+      if (
+        this.isRunning() &&
+        this.editDuringRunAlert === undefined &&
+        this.getCode().trim() !== this.executingCode.trim()
+      ) {
+        this.editDuringRunAlert = this.displayWorkspaceAlert(
+          'warning',
+          React.createElement('div', {}, msg.editDuringRunMessage()),
+          true
+        );
+      }
+    });
   }
 
   this.emit('afterInit');
@@ -935,6 +964,15 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   getStore().dispatch(setIsRunning(!showRun));
+
+  if (showRun) {
+    if (this.editDuringRunAlert !== undefined) {
+      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.editDuringRunAlert = undefined;
+    }
+  } else {
+    this.executingCode = this.getCode().trim();
+  }
 
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -3032,25 +3070,31 @@ function rectFromElementBoundingBox(element) {
  * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
-  var container = this.displayAlert(
-    '#codeWorkspace',
-    {type: type},
+StudioApp.prototype.displayWorkspaceAlert = function(
+  type,
+  alertContents,
+  bottom = false
+) {
+  var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
+  var container = $('<div/>');
+  parent.append(container);
+  console.log('show me the alert');
+  const workspaceAlert = React.createElement(
+    WorkspaceAlert,
+    {
+      type: type,
+      onClose: () => {
+        ReactDOM.unmountComponentAtNode(container[0]);
+      },
+      isBlockly: this.usingBlockly_,
+      isCraft: this.config.app === 'craft',
+      displayBottom: bottom
+    },
     alertContents
   );
+  ReactDOM.render(workspaceAlert, container[0]);
 
-  var toolbarWidth;
-  if (this.usingBlockly_) {
-    toolbarWidth = $('.blocklyToolboxDiv').width();
-  } else {
-    toolbarWidth =
-      $('.droplet-palette-element').width() + $('.droplet-gutter').width();
-  }
-
-  $(container).css({
-    left: toolbarWidth,
-    top: $('#headers').height()
-  });
+  return container[0];
 };
 
 /**
