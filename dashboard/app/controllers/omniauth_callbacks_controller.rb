@@ -86,13 +86,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
     unless current_user&.migrated?
-      flash.alert = "cannot connect an unmigrated user"
+      flash.alert = I18n.t('auth.migration_required')
       return redirect_to edit_user_registration_path
     end
 
     provider = auth_hash.provider.to_s
     unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
-      flash.alert = "provider #{provider.inspect} not one of the supported authentication option credential types"
+      flash.alert = I18n.t('auth.invalid_provider', provider: provider)
       return redirect_to edit_user_registration_path
     end
 
