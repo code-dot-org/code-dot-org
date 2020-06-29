@@ -27,6 +27,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
   # Reverse lookup from section_type to course
   SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
+  HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
@@ -48,11 +49,12 @@ class ContactRollupsProcessed < ApplicationRecord
       end
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_opt_in(contact_data))
-      processed_contact_data.merge!(extract_user_id(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_enrolled(contact_data))
-      processed_contact_data.merge!(extract_professional_learning_attended(contact_data))
-      processed_contact_data.merge!(extract_updated_at(contact_data))
+      processed_contact_data.merge! extract_opt_in(contact_data)
+      processed_contact_data.merge! extract_user_id(contact_data)
+      processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
+      processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+      processed_contact_data.merge! extract_updated_at(contact_data)
+      processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
@@ -181,6 +183,22 @@ class ContactRollupsProcessed < ApplicationRecord
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
     uniq_courses = (courses + section_courses).uniq.compact.sort.join(',')
     return uniq_courses.blank? ? {} : {professional_learning_attended: uniq_courses}
+  end
+
+  def self.extract_hoc_organizer_years(contact_data)
+    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    hoc_years = kinds.uniq.map do |kind|
+      if kind == 'CSEdWeekEvent2013'
+        '2013'
+      else
+        # Get year from kind value, such as 'HocSignup2014' and 'HocSignup2019'
+        HOC_YEAR_PATTERN.match(kind)&.[](:year)
+      end
+    end
+
+    # Only care about unique and non-nil value. The result is sorted to keep consistent order.
+    uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
+    return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
   end
 
   # Extracts values of a field in a source table from contact data.
