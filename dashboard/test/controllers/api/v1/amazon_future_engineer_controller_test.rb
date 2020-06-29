@@ -59,7 +59,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
             'registration-date-time' => Time.now.iso8601
           }
       end
-      expected_call.returns FakeResponse.new
+      expected_call.returns fake_response
 
       sign_in create :teacher
       post '/dashboardapi/v1/amazon_future_engineer_submit',
@@ -75,7 +75,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       url.to_s == CDO.afe_pardot_form_handler_url &&
         params['new-code-account'] == '0'
     end
-    expected_call.returns FakeResponse.new
+    expected_call.returns fake_response
 
     Timecop.freeze do
       # Create the teacher more than five minutes before we submit
@@ -95,7 +95,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       url.to_s == CDO.afe_pardot_form_handler_url &&
         params['new-code-account'] == '1'
     end
-    expected_call.returns FakeResponse.new
+    expected_call.returns fake_response
 
     Timecop.freeze do
       # Create the teacher less than five minutes before we submit
@@ -131,13 +131,11 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     }
   end
 
-  class FakeResponse
-    def code
-      '200'
-    end
-
-    def body
-      ''
+  def fake_response
+    mock.tap do |fake|
+      fake.stubs(:status).returns(200)
+      fake.stubs(:code).returns('200')
+      fake.stubs(:body).returns('')
     end
   end
 end
