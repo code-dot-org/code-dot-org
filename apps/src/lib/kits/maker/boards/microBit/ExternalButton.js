@@ -2,7 +2,12 @@ import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 import {EventEmitter} from 'events';
 import '../../../../../utils'; // For Function.prototype.inherits
 
-export default function ExternalButton(board) {
+export default function ExternalButton(board, touchSensor = null) {
+  // Create a capacitive touch sensor, if indicated
+  if (touchSensor) {
+    this.board.mb.setTouchMode(this.board.pin, true);
+  }
+
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
   this.buttonEvents = new Array(6).fill(0);
   this.board = board;
