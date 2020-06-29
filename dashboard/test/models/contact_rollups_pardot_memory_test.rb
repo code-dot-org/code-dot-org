@@ -123,6 +123,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         'professional_learning_attended' => COURSE_CSF,
         'hoc_organizer_years' => '2019',
         'forms_submitted' => 'Census,Petition',
+        'form_roles' => 'engineer,teacher',
       }
     refute ContactRollupsPardotMemory.find_by_email(contact.email)
     PardotV2.expects(:submit_batch_request).once.returns([])
@@ -138,6 +139,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       'db_Professional_Learning_Attended_0' => COURSE_CSF,
       'db_Hour_of_Code_Organizer_0' => '2019',
       'db_Forms_Submitted' => 'Census,Petition',
+      'db_Form_Roles' => 'engineer,teacher',
     }
     assert_equal expected_data_synced, record[:data_synced]
   end
