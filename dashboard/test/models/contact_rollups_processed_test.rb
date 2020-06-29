@@ -66,6 +66,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_hoc_organizer_years).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_forms_submitted).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -206,6 +208,25 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     expected_output = {hoc_organizer_years: '2013,2019'}
 
     output = ContactRollupsProcessed.extract_hoc_organizer_years(contact_data)
+    assert_equal expected_output, output
+  end
+
+  test 'extract_forms_submitted' do
+    contact_data = {
+      'pegasus.forms' => {
+        'kind' => [
+          {'value' => 'VolunteerContact2015'},
+          # user can submit 2 forms of the same kind
+          {'value' => 'Petition'},
+          {'value' => 'Petition'},
+          {'value' => nil},
+        ]
+      },
+      'dashboard.census_submissions' => {}
+    }
+    expected_output = {forms_submitted: 'Census,Petition,VolunteerContact2015'}
+
+    output = ContactRollupsProcessed.extract_forms_submitted contact_data
     assert_equal expected_output, output
   end
 

@@ -200,13 +200,15 @@ class PardotV2Test < Minitest::Test
           email: 'test0@domain.com',
           pardot_id: 10,
           opt_in: 1,
-          user_id: 111
+          user_id: 111,
+          forms_submitted: 'Census,Petition',
         },
         expected_output: {
           email: 'test0@domain.com',
           id: 10,
           db_Opt_In: 'Yes',
-          db_Has_Teacher_Account: 'true'
+          db_Has_Teacher_Account: 'true',
+          db_Forms_Submitted: 'Census,Petition'
         }
       },
       {
