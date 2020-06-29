@@ -30627,7 +30627,7 @@ en:
               description_teacher: ''
             Make your own Digital Scene:
               name: Make your own Digital Scene
-        csd3-virtual:
+        csd3-virtual-old:
           title: Self Paced Introduction to Game Lab
           description: You’ll program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
