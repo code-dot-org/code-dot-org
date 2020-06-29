@@ -1,6 +1,8 @@
+/* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
+import {textToSpeech} from './speech';
 import Sounds from '../../Sounds';
 
 /**
@@ -110,6 +112,11 @@ export const commands = {
       Sounds.getSingleton().stopAllAudio();
     }
   },
+  /**
+   * Start playing given text as speech.
+   * @param {string} opts.text The text to play as speech.
+   * @param {string} opts.gender The gender of the voice to play.
+   */
   playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
@@ -121,46 +128,13 @@ export const commands = {
       'string',
       OPTIONAL
     );
-    const speechConfig = SpeechConfig.fromAuthorizationToken(
+    textToSpeech(
+      opts.text,
+      opts.gender,
+      opts.language,
       appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion
-    );
-    speechConfig.speechSynthesisOutputFormat =
-      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
-    let appLanguages = appOptions.azureSpeechServiceLanguages;
-    let voice =
-      (appLanguages[opts.language] &&
-        appLanguages[opts.language][opts.gender]) ||
-      appLanguages['English']['female'];
-    const synthesizer = new SpeechSynthesizer(
-      speechConfig,
-      undefined /* AudioConfig */
-    );
-    let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
-      opts.text
-    }</voice></speak>`;
-    synthesizer.speakSsmlAsync(
-      ssml,
-      result => {
-        // There is no way to make ajax requests from html on the filesystem.  So
-        // the only way to play sounds is using HTML5. This scenario happens when
-        // students export their apps and run them offline. At this point, their
-        // uploaded sound files are exported as well, which means varnish is not
-        // an issue.
-        const forceHTML5 = window.location.protocol === 'file:';
-        Sounds.getSingleton().playBytes(result.audioData, {
-          volume: 1.0,
-          loop: false,
-          forceHTML5: forceHTML5,
-          allowHTML5Mobile: true
-        });
-
-        synthesizer.close();
-      },
-      error => {
-        console.warn(error);
-        synthesizer.close();
-      }
+      appOptions.azureSpeechServiceRegion,
+      appOptions.azureSpeechServiceLanguages
     );
   }
 };

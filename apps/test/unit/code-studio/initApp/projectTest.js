@@ -213,11 +213,6 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('flappy');
     });
 
-    it('for scratch', () => {
-      window.appOptions.app = 'scratch';
-      expect(project.getStandaloneApp()).to.equal('scratch');
-    });
-
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
       expect(project.getStandaloneApp()).to.equal('weblab');
@@ -442,7 +437,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -468,7 +463,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
