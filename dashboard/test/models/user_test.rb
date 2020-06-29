@@ -1600,11 +1600,11 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_password? is true for user with or without a password' do
     student1 = create :student
-    refute_empty student1.encrypted_password
+    refute_nil student1.encrypted_password
     assert student1.can_edit_password?
 
-    student1 = create :student, encrypted_password: ''
-    assert_empty student1.encrypted_password
+    student1 = create :student, :without_encrypted_password
+    assert_nil student1.encrypted_password
     assert student1.can_edit_password?
   end
 
@@ -1619,12 +1619,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for student without a password' do
-    student = create :student, encrypted_password: ''
+    student = create :student, :without_encrypted_password
     assert student.can_edit_password?
   end
 
   test 'can_edit_password? is true for teacher without a password' do
-    teacher = create :teacher, encrypted_password: ''
+    teacher = create :teacher, :without_encrypted_password
     assert teacher.can_edit_password?
   end
 
@@ -1703,11 +1703,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'cannot delete own account if teacher-managed student' do
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    user = create(:student, encrypted_password: '')
-    create(:follower, student_user: user, section: picture_section)
-    user.reload
-
+    user = create :student_in_picture_section
     assert user.teacher_managed_account?
     refute user.can_delete_own_account?
   end
@@ -1771,7 +1767,7 @@ class UserTest < ActiveSupport::TestCase
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     [picture_section, word_section].each do |section|
-      student_without_password = create(:student, encrypted_password: '')
+      student_without_password = create(:student, :without_encrypted_password)
       create(:follower, student_user: student_without_password, section: section)
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
@@ -1801,11 +1797,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
-    student = create :student, encrypted_password: nil
-    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    section.students << student
-    student.reload
-
+    student = create :student, :migrated_imported_from_google_classroom
     assert student.roster_managed_account?
   end
 
@@ -3411,23 +3403,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'password_required? is false if user is not creating their own account' do
-    user = create :user
+    user = create :student, :without_encrypted_password
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
-  test 'password_required? is true for new users with no encrypted password' do
-    user = create :user, encrypted_password: nil
-    user.expects(:managing_own_credentials?).returns(true)
-    assert user.encrypted_password.nil?
-    assert user.password_required?
+  test 'new users require a password if no authentication provided' do
+    assert_raises(ActiveRecord::RecordInvalid) do
+      user = create :user, password: nil
+      assert !user.errors[:password].empty?
+    end
   end
 
   test 'password_required? is true for user changing their password' do
     user = create :user
     user.password = "mypassword"
     user.password_confirmation = "mypassword"
-    user.expects(:managing_own_credentials?).returns(true)
     assert user.password_required?
   end
 

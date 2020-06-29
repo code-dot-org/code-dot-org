@@ -490,7 +490,7 @@ export default class ScriptEditor extends React.Component {
               style={styles.input}
               defaultValue={
                 this.props.lessonLevelData ||
-                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new lesson'\n"
+                "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
               }
               ref={textArea => (this.scriptTextArea = textArea)}
             />

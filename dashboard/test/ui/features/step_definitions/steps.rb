@@ -1033,6 +1033,12 @@ Given(/^I view the temp script edit page$/) do
   }
 end
 
+Given(/^I try to view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+  }
+end
+
 Given(/^I delete the temp script$/) do
   browser_request(
     url: '/api/test/destroy_script',
@@ -1615,6 +1621,15 @@ end
 Then /^"([^"]*)" contains the saved timestamp$/ do |css|
   timestamp = @browser.find_element(css: css)['timestamp']
   expect(@timestamp).to eq(timestamp)
+end
+
+Then /^I save the text from "([^"]*)"$/ do |css|
+  @saved_text = @browser.find_element(css: css).text
+end
+
+Then /^"([^"]*)" contains the saved text$/ do |css|
+  saved_text = @browser.find_element(css: css).text
+  expect(@saved_text).to eq(saved_text)
 end
 
 When /^I switch to text mode$/ do

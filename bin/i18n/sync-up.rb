@@ -8,7 +8,7 @@
 require_relative 'i18n_script_utils'
 
 def sync_up
-  I18nScriptUtils.with_syncronous_stdout do
+  I18nScriptUtils.with_synchronous_stdout do
     puts "Beginning sync up"
 
     CROWDIN_PROJECTS.each do |name, options|

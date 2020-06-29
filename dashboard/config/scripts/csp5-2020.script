@@ -1,11 +1,11 @@
+hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit5/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit5/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
-project_widget_types ["basketball"]
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit5/{LESSON}'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -86,7 +86,6 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', a
 
 lesson 'Traversals Investigate'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
-level 'Full Year Pilot Experiments Dashboard_2020', progression: 'Turn on Data Library'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
 level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
 level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'
@@ -133,3 +132,4 @@ level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment
 lesson 'Lesson 18: Assessment Day', lockable: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
+

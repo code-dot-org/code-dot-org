@@ -208,7 +208,13 @@ class ApplicationController < ActionController::Base
     cookies[:language_] = {value: locale, domain: :all, expires: 10.years.from_now}
   end
 
+  def require_english_in_levelbuilder_mode
+    redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
+  end
+
   def require_levelbuilder_mode
+    require_english_in_levelbuilder_mode
+
     unless Rails.application.config.levelbuilder_mode
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
@@ -223,6 +229,8 @@ class ApplicationController < ActionController::Base
   # in other tests. Developers wishing to run these tests locally should run
   # their local server in levelbuilder_mode.
   def require_levelbuilder_mode_or_test_env
+    require_english_in_levelbuilder_mode
+
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end

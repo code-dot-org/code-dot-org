@@ -55,6 +55,10 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1098,6 +1102,12 @@ var setSvgText = (Studio.setSvgText = function(opts) {
  *  machine for consumption by the student's event-handling code.
  */
 function callHandler(name, allowQueueExtension, extraArgs = []) {
+  if (['when-up', 'when-down', 'when-left', 'when-right'].includes(name)) {
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      store.dispatch(dismissSwipeOverlay('buttonKeyPress'));
+    }
+  }
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -1127,6 +1137,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (
+        handler &&
         handler.name === name &&
         (allowQueueExtension || 0 === handler.cmdQueue.length)
       ) {
@@ -1145,7 +1156,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
       }
     } else {
       // TODO (cpirich): support events with parameters
-      if (handler.name === name) {
+      if (handler && handler.name === name) {
         handler.func.apply(null, extraArgs);
       }
     }
@@ -2638,9 +2649,8 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
@@ -4547,7 +4557,7 @@ Studio.executeQueue = function(name, oneOnly) {
     if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
-    if (handler.name === name && handler.cmdQueue.length) {
+    if (handler && handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
         if (Studio.callCmd(cmd)) {
           // Command executed immediately, remove from queue and continue
@@ -5879,7 +5889,7 @@ Studio.showTitleScreen = function(opts) {
 Studio.isCmdCurrentInQueue = function(cmdName, queueName) {
   var foundCmd = false;
   Studio.eventHandlers.forEach(function(handler) {
-    if (handler.name === queueName) {
+    if (handler && handler.name === queueName) {
       var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.name === cmdName) {
@@ -6373,15 +6383,19 @@ Studio.setSpritesStop = function(opts) {
 };
 
 Studio.setSpritesChase = function(opts) {
-  getSpritesByName(opts.spriteName).forEach(sprite =>
-    sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex)
-  );
+  if (Studio.sprite[opts.targetSpriteIndex]) {
+    getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex)
+    );
+  }
 };
 
 Studio.setSpritesFlee = function(opts) {
-  getSpritesByName(opts.spriteName).forEach(sprite =>
-    sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex)
-  );
+  if (Studio.sprite[opts.targetSpriteIndex]) {
+    getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex)
+    );
+  }
 };
 
 Studio.setSpritesSpeed = function(opts) {
@@ -6633,6 +6647,7 @@ Studio.onEvent = function(opts) {
 Studio.allWhenRunBlocksComplete = function() {
   for (var i = 0; i < Studio.eventHandlers.length; i++) {
     if (
+      Studio.eventHandlers[i] &&
       Studio.eventHandlers[i].name === 'whenGameStarts' &&
       Studio.eventHandlers[i].cmdQueue.length !== 0
     ) {
@@ -6651,6 +6666,7 @@ Studio.timedOut = function() {
     } else if (
       Studio.eventHandlers.length === 0 ||
       (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0] &&
         Studio.eventHandlers[0].name === 'whenGameStarts' &&
         Studio.allWhenRunBlocksComplete())
     ) {

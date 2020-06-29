@@ -758,7 +758,10 @@
     "long_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
     "function_definitions": {
       "draw a triangle with length": {
-        "name": "draw a triangle with length"
+        "name": "draw a triangle with length",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -768,7 +771,10 @@
     "function_definitions": {
       "draw a pentagon": {
         "name": "draw a pentagon",
-        "description": "draw a pentagon that is 100 pixels"
+        "description": "draw a pentagon that is 100 pixels",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -777,19 +783,31 @@
     "long_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \n\nThe square and triangle have 100 pixel sides.\\\nThe hexagon sides are 75 pixels long. ",
     "function_definitions": {
       "draw a triangle": {
-        "name": "draw a triangle"
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a hexagon": {
         "name": "draw a hexagon",
-        "description": "draw a hexagon that is 100 pixels in size"
+        "description": "draw a hexagon that is 100 pixels in size",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a square": {
         "name": "draw a square",
-        "description": "draw a square that is 100 pixels' length in size"
+        "description": "draw a square that is 100 pixels' length in size",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a sqaure": {
         "name": "draw a sqaure",
-        "description": "draw a square that is 100 pixels in size"
+        "description": "draw a square that is 100 pixels in size",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -799,7 +817,10 @@
     "function_definitions": {
       "draw a triangle": {
         "name": "draw a triangle",
-        "description": "draw a triangle with length parameter\n"
+        "description": "draw a triangle with length parameter\n",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -808,7 +829,10 @@
     "long_instructions": "The code for this triangle function is broken. \n\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "function_definitions": {
       "draw a triangle with length": {
-        "name": "draw a triangle with length"
+        "name": "draw a triangle with length",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -821,7 +845,10 @@
     },
     "function_definitions": {
       "draw a square": {
-        "name": "draw a square"
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
       },
       "do something": {
         "name": "do something"
@@ -840,7 +867,10 @@
       },
       "draw a hexagon": {
         "name": "draw a hexagon",
-        "description": "draw a hexagon that is 100 pixels in size with a length parameter"
+        "description": "draw a hexagon that is 100 pixels in size with a length parameter",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -852,10 +882,18 @@
     },
     "function_definitions": {
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       },
       "do something": {
-        "name": "do something"
+        "name": "do something",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       }
     }
   },
@@ -865,7 +903,11 @@
     "function_definitions": {
       "draw a polygon": {
         "name": "draw a polygon",
-        "description": "draw a polygon with sides and length paramater"
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -875,7 +917,11 @@
     "function_definitions": {
       "draw a polygon": {
         "name": "draw a polygon",
-        "description": "draw a polygon with sides and length paramater"
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -887,7 +933,11 @@
     },
     "function_definitions": {
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -899,7 +949,11 @@
     },
     "function_definitions": {
       "draw a spiral edge": {
-        "name": "draw a spiral edge"
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -915,7 +969,11 @@
     },
     "function_definitions": {
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -925,26 +983,52 @@
     "function_definitions": {
       "draw a star": {
         "name": "draw a star",
-        "description": "draw a star with given points and sides of given length"
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
       },
       "draw a circle": {
         "name": "draw a circle",
-        "description": "draw a circle of given radius"
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
       },
       "draw a pinwheel": {
-        "name": "draw a pinwheel"
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
       },
       "draw a triangle": {
-        "name": "draw a triangle"
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a shape": {
-        "name": "draw a shape"
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       },
       "draw a house": {
-        "name": "draw a house"
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a square": {
-        "name": "draw a square"
+        "name": "draw a square",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -953,10 +1037,16 @@
     "long_instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
     "function_definitions": {
       "draw background": {
-        "name": "draw background"
+        "name": "draw background",
+        "parameters": {
+          "color": "color"
+        }
       },
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides"
+        }
       },
       "draw a square 20": {
         "name": "draw a square 20",
@@ -1002,7 +1092,11 @@
     "function_definitions": {
       "jump": {
         "name": "jump",
-        "description": "Makes the given actor jump the given height"
+        "description": "Makes the given actor jump the given height",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
       }
     }
   },
@@ -1025,7 +1119,10 @@
     "function_definitions": {
       "patrol": {
         "name": "patrol",
-        "description": "Move a sprite up an down"
+        "description": "Move a sprite up an down",
+        "parameters": {
+          "actor": "actor"
+        }
       }
     }
   },
@@ -1038,7 +1135,10 @@
     "function_definitions": {
       "patrol": {
         "name": "patrol",
-        "description": "Move a sprite up an down at the given speed"
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor"
+        }
       }
     }
   },
@@ -1048,7 +1148,11 @@
     "function_definitions": {
       "patrol": {
         "name": "patrol",
-        "description": "Move a sprite up an down at the given speed"
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
       }
     }
   },
@@ -1058,7 +1162,11 @@
     "function_definitions": {
       "patrol": {
         "name": "patrol",
-        "description": "Move a sprite up an down at the given speed"
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
       }
     }
   },
@@ -1068,7 +1176,10 @@
     "function_definitions": {
       "score_points": {
         "name": "score_points",
-        "description": "Adds the given number of points to the player_score variable."
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
       }
     }
   },
@@ -1082,7 +1193,10 @@
       },
       "score_points": {
         "name": "score_points",
-        "description": "Adds the given number of points to the player_score variable."
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
       }
     }
   },
@@ -1092,11 +1206,19 @@
     "function_definitions": {
       "jump": {
         "name": "jump",
-        "description": "jump function block with height and actor parameter"
+        "description": "jump function block with height and actor parameter",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
       },
       "patrol": {
         "name": "patrol",
-        "description": "Move a sprite up an down at the given speed"
+        "description": "Move a sprite up an down at the given speed",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
       }
     }
   },
@@ -1126,7 +1248,10 @@
     "long_instructions": "Now there are flowers on both sides!  \n\nWe've added variables called `left` and `right` for you to use, and now there is a parameter called `direction` inside `get 3 nectar`. \n\n**Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function.**",
     "function_definitions": {
       "get 3 nectar": {
-        "name": "get 3 nectar"
+        "name": "get 3 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
       }
     }
   },
@@ -1134,7 +1259,10 @@
     "short_instructions": "Try using your new function to collect nectar from all of the flowers. Remember to use the left and right variables.",
     "function_definitions": {
       "get 3 nectar": {
-        "name": "get 3 nectar"
+        "name": "get 3 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
       }
     }
   },
@@ -1143,7 +1271,10 @@
     "long_instructions": "Let's start from scratch - can you create a new function called `get 5 nectar` with a direction parameter?",
     "function_definitions": {
       "get 5 nectar": {
-        "name": "get 5 nectar"
+        "name": "get 5 nectar",
+        "parameters": {
+          "direction": "direction"
+        }
       }
     }
   },
@@ -1152,7 +1283,11 @@
     "long_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\n\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "function_definitions": {
       "get 5 nectar": {
-        "name": "get 5 nectar"
+        "name": "get 5 nectar",
+        "parameters": {
+          "direction": "direction",
+          "nectar units": "nectar units"
+        }
       }
     }
   },
@@ -1166,7 +1301,11 @@
     "function_definitions": {
       "get many nectar": {
         "name": "get many nectar",
-        "description": "Collect a given number of nectar in either direction"
+        "description": "Collect a given number of nectar in either direction",
+        "parameters": {
+          "direction": "direction",
+          "nectars": "nectars"
+        }
       }
     }
   },
@@ -1179,7 +1318,12 @@
     "function_definitions": {
       "get nectar make honey": {
         "name": "get nectar make honey",
-        "description": "Move in a direction to either collect nectar or make honey."
+        "description": "Move in a direction to either collect nectar or make honey.",
+        "parameters": {
+          "direction": "direction",
+          "nectars": "nectars",
+          "honey": "honey"
+        }
       }
     }
   },
@@ -1195,7 +1339,10 @@
     },
     "function_definitions": {
       "pick row": {
-        "name": "pick row"
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -1213,7 +1360,10 @@
     },
     "function_definitions": {
       "pick row": {
-        "name": "pick row"
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -1228,7 +1378,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -1237,7 +1390,10 @@
     "long_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1248,7 +1404,10 @@
     "short_instructions": "Which of these binary strings could you loop 8 times to draw this image?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1259,7 +1418,10 @@
     "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1270,7 +1432,10 @@
     "short_instructions": "Each binary string represents one row of this picture. Can you rearrange them so it draws a smiley face instead of a frowny face?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1281,7 +1446,10 @@
     "short_instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1292,7 +1460,10 @@
     "short_instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1303,7 +1474,10 @@
     "short_instructions": "Finish this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1314,7 +1488,10 @@
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1332,7 +1509,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1343,7 +1523,10 @@
     "short_instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1355,7 +1538,10 @@
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1370,7 +1556,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1548,7 +1737,11 @@
     },
     "function_definitions": {
       "get nectar": {
-        "name": "get nectar"
+        "name": "get nectar",
+        "parameters": {
+          "dir": "dir",
+          "counter": "counter"
+        }
       }
     }
   },
@@ -1597,7 +1790,10 @@
         "description": "draw a square of size 20 pixels"
       },
       "draw octagons": {
-        "name": "draw octagons"
+        "name": "draw octagons",
+        "parameters": {
+          "numOctagons": "numOctagons"
+        }
       },
       "draw an octagon": {
         "name": "draw an octagon"
@@ -1627,7 +1823,10 @@
         "name": "do something"
       },
       "draw an octagon": {
-        "name": "draw an octagon"
+        "name": "draw an octagon",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },

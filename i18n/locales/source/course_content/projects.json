@@ -9,26 +9,51 @@
     "function_definitions": {
       "draw a star": {
         "name": "draw a star",
-        "description": "draw a star with given points and sides of given length"
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
       },
       "draw a circle": {
         "name": "draw a circle",
-        "description": "draw a circle of given radius"
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
       },
       "draw a pinwheel": {
-        "name": "draw a pinwheel"
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
       },
       "draw a triangle": {
-        "name": "draw a triangle"
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a shape": {
-        "name": "draw a shape"
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       },
       "draw a house": {
-        "name": "draw a house"
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a square": {
-        "name": "draw a square"
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -46,11 +71,19 @@
     "function_definitions": {
       "jump": {
         "name": "jump",
-        "description": "jump function block with height and actor parameter"
+        "description": "jump function block with height and actor parameter",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
       },
       "patrol": {
         "name": "patrol",
-        "description": "a patrol function that has a actor and speed parameter"
+        "description": "a patrol function that has a actor and speed parameter",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
       }
     }
   },

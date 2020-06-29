@@ -571,6 +571,8 @@ id-ID:
   minecraft_tutorials: Tutorial Minecraft Jam Kode
   minecraft_specs: Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+
   minecraft_start_tutorial: Mulai tutorial
+  minecraft_agent_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   minecraft_agent_button: Mulai
   minecraft_designer_description: Program animal dan objek - objek Minecraft lainnya
     dalam versi Minecraft Anda sendiri.
@@ -628,6 +630,7 @@ id-ID:
   sports_video_title: Dorong dirimu. Setiap orang bisa belajar.
   sports_select_theme: Pilih tema tutorial Anda
   sports_basketball_title: Buat sebuah permainan basket
+  sports_all_sports_title: Padu dan padankan lintas olahraga
   sports_featured_athletes: Atlet unggulan
   sports_athletes_title: Atlet unggulan
   sports_athlete_Draymond: Draymoon Green, peraih medali emas olimpiade dan juara
@@ -659,6 +662,7 @@ id-ID:
     Mavericks
   watch_inspirational_videos: Sebelum Anda memulai, lihat salah satu video inspiratif
     ini
+  video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya
   video_title_inspire_girl: Inspirasi seorang gadis
   video_title_cs_intro: Perkenalan Ilmu Komputer
   video_title_schools_dont_teach: Apa yang tidak diajarkan di kebanyakan sekolah
@@ -1306,13 +1310,34 @@ id-ID:
   coursed-2017_name: Kursus D (2017)
   coursee-2017_name: Kursus E (2017)
   coursef-2017_name: Kursus F (2017)
+  coursea-2018_name: Kursus A(2018)
+  courseb-2018_name: Kursus B (2018)
+  coursec-2018_name: Kursus C (2018)
+  coursed-2018_name: Kursus D (2018)
+  coursee-2018_name: Kursus E (2018)
+  coursef-2018_name: Kursus F (2018)
+  coursea-2019_name: Kursus A(2019)
+  courseb-2019_name: Kursus B (2019)
+  coursec-2019_name: Kursus C (2019)
+  coursed-2019_name: Kursus D (2019)
+  coursee-2019_name: Kursus E (2019)
+  coursef-2019_name: Kursus F (2019)
+  coursea-2020_name: Kursus A(2020)
+  courseb-2020_name: Kursus B (2020)
+  coursec-2020_name: Kursus C (2020)
+  coursed-2020_name: Kursus D (2020)
+  coursee-2020_name: Kursus E (2020)
+  coursef-2020_name: Kursus F (2020)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
+  express-2019_name: Kursus Kilat (2019)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
+  express-2020_name: Kursus Kilat (2020)
   pre-express-2020_name: Kursus Kilat Pre-reader(2020)
   csd2_name: 'Unit 2: Pengembangan Web'
   csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: Kursus akselerasi
+  express_name: Kursus Kilat
   pre-express_name: Kursus ekspres Pre-reader
   20-hour_name: Kursus akselerasi
   algebra_name: CS di Kursus penuh Aljabar
@@ -1553,6 +1578,8 @@ id-ID:
   coursea_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni,
+    cerita, dan permainan Anda sendiri.
   coursed_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1562,6 +1589,8 @@ id-ID:
   coursea-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2017_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2017_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2017_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1571,6 +1600,8 @@ id-ID:
   coursea-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2018_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2018_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2018_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1580,6 +1611,8 @@ id-ID:
   coursea-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2019_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2019_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2019_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -2164,6 +2197,7 @@ id-ID:
   header_help_support: 'Bantuan dan dukungan '
   header_report_bug: Laporkan masalah
   header_report_abuse: Laporkan penyalahgunaan
+  header_legal: Privasi & Hukum
   header_legal_privacy: Kebijakan privasi
   header_legal_tos: Ketentuan Layanan
   header_tutorials: Tutorial
@@ -2239,6 +2273,7 @@ id-ID:
     tab:"manage students":'
   google_sign_in_instruct: 'Dari sana, mereka harus memilih opsi:"sign with Google
     Account":'
+  hero_name: 'Minecraft: Perjalanan Pahlawan'
   applab-intro_name: Pembukaan aplikasi lab
   applab_tile_title: Pembukaan untuk aplikasi Lab(usia13+)
   applab_tile_subtitle: Buat aplikasimu sendiri di javascriptmenggunakan blok dasar
@@ -2246,6 +2281,7 @@ id-ID:
     hanya dalam bahasa inggris)
   applab_tile_start_tutorial: Mulai
   applab_tile_teacher_guide: Lihat petunjuk guru
+  aquatic_name: 'Minecraft: Perjalanan Air'
   account_sign_up_email_opt_in: Dapat kami email Anda tentang pembaruan kursus kami,
     peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
   account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
@@ -2295,8 +2331,12 @@ id-ID:
     BARU untuk Hour of Code (Des 3-9). Pastikan untuk mengecek brand aktifitas minekraft
     baru untuk 2018, perjalanan air! Daftarkan kelasmu sekarang.
   hoc2018_mc_aquatic_title: Perjalanan air Minekraft
+  hoc2018_mc_aquatic_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2019_mc_aquatic_description: Jelajahi dan bangun dunia bawah laut dengan kode.
   hoc2018_mc_hero_title: 'Minecraft: Perjalanan Pahlawan'
+  hoc2018_mc_hero_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2018_mc_designer_title: Perancang Minecraft
   hoc2018_mc_designer_description: Program animal dan objek - objek Minecraft lainnya
     dalam versi Minecraft Anda sendiri.
@@ -2336,6 +2376,7 @@ id-ID:
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_steph_curry: Hour of Code bersama Steph Curry
   hoc2018_mc_video_title_sports: Dorong dirimu. Setiap orang bisa belajar.
+  hoc2018_mc_video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya
   hoc2018_mc_video_title_inspire_girl: Inspirasi seorang gadis
   hoc2018_mc_video_title_cs_intro: Perkenalan Ilmu Komputer
   hoc2018_mc_video_title_schools_dont_teach: Apa yang tidak diajarkan di kebanyakan
@@ -2351,6 +2392,10 @@ id-ID:
   hoc2018_mc_homepage_watch_video: Tonton video kami
   hoc2018_mc_homepage_join_us: Bergabunglah dengan kami
   hoc2018_mc_homepage_try_it: Cobalah
+  hoc2018_mc_back: Minecraft hadir kembali dengan aktivitas Hour of Code yang serba
+    baru!
+  hoc2018_mc_back_journey: Minecraft hadir kembali dengan aktivitas baru untuk Hour
+    of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2018_mc_teacher_guide: Lihat petunjuk guru
   hoc2018_mc_minecraft_education: Minecraft Education
   hoc2018_mc_continue_learning: Lanjutkan pembelajaran dengan Minecraft.
