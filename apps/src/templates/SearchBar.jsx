@@ -52,7 +52,6 @@ export default class SearchBar extends React.Component {
   }
 
   render() {
-    console.log(this.searchBox);
     return (
       <div style={styles.searchArea}>
         <span className="fa fa-search" style={styles.icon} />
