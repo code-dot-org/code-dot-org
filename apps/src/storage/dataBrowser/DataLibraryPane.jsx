@@ -69,7 +69,7 @@ class DataLibraryPane extends React.Component {
     });
   };
   filterCategories = allCategories => {
-    const searchRegExp = new RegExp('(?:\\s+|_|^|-)' + this.state.search, 'i');
+    const searchRegExp = new RegExp('\\s+' + this.state.search, 'i');
     let potentialCategories = allCategories.map(category => {
       category.datasets = category.datasets.filter(dataset => {
         const datasetInfo = getDatasetInfo(
