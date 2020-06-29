@@ -754,21 +754,12 @@
     },
     {
      "type": "rating",
-     "name": "question1",
+     "name": "pct_course_not_taught",
      "title": "Considering the entire 2019-20 school year, by your estimation, what % of {course} were you NOT able to teach due the impacts of COVID-19 on your classroom?",
-     "rateValues": [
-      "0%",
-      "10%",
-      "20%",
-      "30%",
-      "40%",
-      "50%",
-      "60%",
-      "70%",
-      "80%",
-      "90%",
-      "100%"
-     ]
+     "rateMin": 0,
+     "rateMax": 100,
+     "rateStep": 10,
+     "maxRateDescription": "%"
     },
     {
      "type": "radiogroup",
@@ -1235,7 +1226,8 @@
      "description": "If no official announcements have been made at your school yet, please choose the option that seems most reasonable or likely to you.",
      "rateMin": 0,
      "rateMax": 100,
-     "rateStep": 10
+     "rateStep": 10,
+     "maxRateDescription": "%"
     },
     {
      "type": "rating",
@@ -1245,7 +1237,8 @@
      "description": "If no official announcements have been made at your school yet, please choose the option that seems most reasonable or likely to you.",
      "rateMin": 0,
      "rateMax": 100,
-     "rateStep": 10
+     "rateStep": 10,
+     "maxRateDescription": "%"
     },
     {
      "type": "matrix",
