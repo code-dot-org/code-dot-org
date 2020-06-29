@@ -97,8 +97,6 @@ class DataLibraryPane extends React.Component {
       category => showUnpublishedTables || category.published
     );
     categories = this.filterCategories(_.cloneDeep(categories));
-    console.log(this.state.search);
-    console.log(this.state.search.length > 0);
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
