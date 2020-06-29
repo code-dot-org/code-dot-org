@@ -6,7 +6,6 @@ import {
   injectExecuteCmd
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('Audio API', function() {
   // Check that every command, has an executor, has a droplet config entry.
@@ -80,17 +79,6 @@ describe('Audio API', function() {
   });
 
   describe('playSpeech', function() {
-    beforeEach(() => {
-      replaceOnWindow('appOptions', {
-        level: {
-          projectTemplateLevelName: 'Test Project'
-        }
-      });
-    });
-
-    afterEach(() => {
-      restoreOnWindow('appOptions');
-    });
     it('has three arguments, "text", "gender", and "language"', function() {
       const funcName = 'playSpeech';
       // Check droplet config for the 2 documented params
