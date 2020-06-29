@@ -20,7 +20,9 @@ const styles = {
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   returnToURL = relativeDashboardPath => {
-    return studio(`${relativeDashboardPath}?user_return_to=${pegasus('/afe')}`);
+    return studio(
+      `${relativeDashboardPath}?user_return_to=${pegasus('/afe/submit')}`
+    );
   };
 
   logSignUpButtonPress = () => {

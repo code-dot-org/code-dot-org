@@ -243,6 +243,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     if (formData.schoolEligible && formData.consentAFE && formData.signedIn) {
       this.loadCompletionPage();
+      return <div>Your request is being processed...</div>;
     }
 
     return (
