@@ -33,7 +33,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     csta
     awsEducate
     consentAFE
-    newCodeAccount
   )
 
   PERMITTED_PARAMETERS = [
@@ -69,7 +68,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       'csta-plus' => filtered_params['csta'],
       'aws-educate' => filtered_params['awsEducate'],
       'amazon-terms' => filtered_params['consentAFE'],
-      'new-code-account' => filtered_params['newCodeAccount'],
+      'new-code-account' => current_user.created_at > 5.minutes.ago ? '1' : '0',
       'registration-date-time' => Time.now.iso8601
     }
   end
