@@ -379,30 +379,7 @@ Sound.prototype.preloadFile = function() {
 
   if (window.Audio) {
     let audioElement = new window.Audio(file);
-    if (!audioElement || !audioElement.play) {
-      return;
-    }
-
-    if (!isIE9()) {
-      // Pre-cache audio
-      audioElement.play();
-      audioElement.pause();
-    }
-    this.audioElement = audioElement;
-
-    // Fire onLoad as soon as enough of the sound is loaded to play it
-    // all the way through.
-    var loadEventName = 'canplaythrough';
-    var eventListener = function() {
-      this.onSoundLoaded();
-      audioElement.removeEventListener(loadEventName, eventListener);
-    }.bind(this);
-    audioElement.addEventListener(loadEventName, eventListener);
-    audioElement.addEventListener('error', () => {
-      // Indicate failure without the http status code since it is not
-      // available in this context.
-      this.handleLoadFailed();
-    });
+    this.preloadAudioElement(audioElement);
   }
 };
 
@@ -431,31 +408,35 @@ Sound.prototype.preloadBytes = function() {
     const blob = new Blob([bytes], {type: 'audio/mpeg3'});
     const url = window.URL.createObjectURL(blob);
     const audioElement = new window.Audio(url);
-    if (!audioElement || !audioElement.play) {
-      return;
-    }
-
-    if (!isIE9()) {
-      // Pre-cache audio
-      audioElement.play();
-      audioElement.pause();
-    }
-    this.audioElement = audioElement;
-
-    // Fire onLoad as soon as enough of the sound is loaded to play it
-    // all the way through.
-    var loadEventName = 'canplaythrough';
-    var eventListener = function() {
-      this.onSoundLoaded();
-      audioElement.removeEventListener(loadEventName, eventListener);
-    }.bind(this);
-    audioElement.addEventListener(loadEventName, eventListener);
-    audioElement.addEventListener('error', () => {
-      // Indicate failure without the http status code since it is not
-      // available in this context.
-      this.handleLoadFailed();
-    });
+    this.preloadAudioElement(audioElement);
   }
+};
+
+Sound.prototype.preloadAudioElement = function(audioElement) {
+  if (!audioElement || !audioElement.play) {
+    return;
+  }
+
+  if (!isIE9()) {
+    // Pre-cache audio
+    audioElement.play();
+    audioElement.pause();
+  }
+  this.audioElement = audioElement;
+
+  // Fire onLoad as soon as enough of the sound is loaded to play it
+  // all the way through.
+  var loadEventName = 'canplaythrough';
+  var eventListener = function() {
+    this.onSoundLoaded();
+    audioElement.removeEventListener(loadEventName, eventListener);
+  }.bind(this);
+  audioElement.addEventListener(loadEventName, eventListener);
+  audioElement.addEventListener('error', () => {
+    // Indicate failure without the http status code since it is not
+    // available in this context.
+    this.handleLoadFailed();
+  });
 };
 
 Sound.prototype.onSoundLoaded = function() {
