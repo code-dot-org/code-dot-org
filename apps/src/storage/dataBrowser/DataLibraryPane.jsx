@@ -97,6 +97,8 @@ class DataLibraryPane extends React.Component {
       category => showUnpublishedTables || category.published
     );
     categories = this.filterCategories(_.cloneDeep(categories));
+    console.log(this.state.search);
+    console.log(this.state.search.length > 0);
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
@@ -113,6 +115,7 @@ class DataLibraryPane extends React.Component {
             datasets={category.datasets}
             description={category.description}
             importTable={this.importTable}
+            forceExpanded={this.state.search.length > 0}
           />
         ))}
         <PreviewModal importTable={this.importTable} />
