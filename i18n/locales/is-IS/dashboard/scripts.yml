@@ -10318,6 +10318,8 @@ is:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Kafli 1 - Stafrænar upplýsingar'
+            cspSurvey:
+              display_name: Könnun
           lessons:
             new stage:
               name: nýr áfangi
@@ -10718,3 +10720,47 @@ is:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
               name: 5. eining - Mat 4
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Skipanaröð
+            Loops:
+              name: Lykkjur
+            Events:
+              name: Atvik
+            Conditionals:
+              name: Skilyrði
+            Functions:
+              name: Föll
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            Sprite Lab:
+              name: Kvikasmiðjan
+          lessons:
+            Sequencing:
+              name: Skipanaröð
+            Loops:
+              name: Lykkjur
+            Events:
+              name: Atvik
+            Conditionals:
+              name: Skilyrði
+            Functions:
+              name: Föll
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            Sprite Lab:
+              name: Kvikasmiðjan
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Fyrstu skrefin
+            k5_basic_concepts_1:
+              display_name: Grunnhugtök forritunar og framkvæmd kennslu
+            k5_diving_deeper_1:
+              display_name: 'Kafað dýpra: Námskeið E og F'
+            k5_next_steps_1:
+              display_name: Næstu skref
