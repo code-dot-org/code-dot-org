@@ -3952,3 +3952,33 @@ lt:
           lessons:
             While Loops:
               name: "„Kol“ kartojimas"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Kartojimas
+            Events:
+              name: Įvykiai
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Functions:
+              name: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+            For Loops:
+              name: Kartojimas
+          lessons:
+            Loops:
+              name: Kartojimas
+            Events:
+              name: Įvykiai
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Functions:
+              name: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+            For Loops:
+              name: Kartojimas
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Kiti žingsniai
