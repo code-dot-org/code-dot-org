@@ -64,6 +64,12 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_professional_learning_attended).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_hoc_organizer_years).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_forms_submitted).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_form_roles).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_roles).
       once.returns({})
     ContactRollupsProcessed.expects(:extract_state).
@@ -412,66 +418,70 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
-  test 'extract_city' do
-    base_time = Time.now.utc
-    form_geos_input = {
-      'pegasus.form_geos' => {
-        'city' => [
-          {'value' => 'London', 'data_updated_at' => base_time - 1.day},
-          {'value' => 'Seattle', 'data_updated_at' => base_time},
+  test 'extract_hoc_organizer_years' do
+    contact_data = {
+      'pegasus.forms' => {
+        'kind' => [
+          # most common value type 'HocSignup<year>'
+          {'value' => 'HocSignup2019'},
+          # duplicate values
+          {'value' => 'CSEdWeekEvent2013'},
+          {'value' => 'CSEdWeekEvent2013'},
+          # invalid values
+          {'value' => nil},
+          {'value' => 'HocSignup'},
+          {'value' => 'HocCensus2017'}
         ]
       }
     }
-    users_input = {
-      'dashboard.users' => {
-        'city' => [
-          {'value' => 'Vancouver', 'data_updated_at' => base_time - 1.day},
-          {'value' => 'Turin', 'data_updated_at' => base_time},
-        ]
-      }
-    }
-    schools_input = {
-      'dashboard.schools' => {
-        'city' => [
-          {'value' => 'Paris', 'data_updated_at' => base_time},
-          {'value' => 'Berlin', 'data_updated_at' => base_time - 1.day},
-        ]
-      }
-    }
+    expected_output = {hoc_organizer_years: '2013,2019'}
 
-    tests = [
-      {
-        input: {}, expected_output: {}
-      },
-      # data come from the same table, the most recent value wins
-      {
-        input: form_geos_input,
-        expected_output: {city: 'Seattle'}
-      },
-      {
-        input: users_input,
-        expected_output: {city: 'Turin'}
-      },
-      {
-        input: schools_input,
-        expected_output: {city: 'Paris'}
-      },
-      # users data has higher priority than form_geos data
-      {
-        input: form_geos_input.merge(users_input),
-        expected_output: {city: 'Turin'}
-      },
-      # schools data has higher priority than users data
-      {
-        input: form_geos_input.merge(users_input).merge(schools_input),
-        expected_output: {city: 'Paris'}
-      }
-    ]
+    output = ContactRollupsProcessed.extract_hoc_organizer_years(contact_data)
+    assert_equal expected_output, output
+  end
 
-    tests.each_with_index do |test, index|
-      output = ContactRollupsProcessed.extract_city test[:input]
-      assert_equal test[:expected_output], output, "Test index #{index} failed"
-    end
+  test 'extract_forms_submitted' do
+    contact_data = {
+      'pegasus.forms' => {
+        'kind' => [
+          {'value' => 'VolunteerContact2015'},
+          # user can submit 2 forms of the same kind
+          {'value' => 'Petition'},
+          {'value' => 'Petition'},
+          {'value' => nil},
+        ]
+      },
+      'dashboard.census_submissions' => {}
+    }
+    expected_output = {forms_submitted: 'Census,Petition,VolunteerContact2015'}
+
+    output = ContactRollupsProcessed.extract_forms_submitted contact_data
+    assert_equal expected_output, output
+  end
+
+  test 'extract_form_roles' do
+    contact_data = {
+      'dashboard.census_submissions' => {
+        'submitter_role' => [
+          {'value' => Census::CensusSubmission::ROLES[:teacher]},
+          {'value' => Census::CensusSubmission::ROLES[:parent]},
+          {'value' => nil}
+        ]
+      },
+      'pegasus.forms' => {
+        'role' => [
+          {'value' => 'Teacher'},
+          {'value' => 'educator'},
+          {'value' => 'not_valid_role'},
+          {'value' => ''},
+          {'value' => nil}
+        ]
+      }
+    }
+    expected_output = {form_roles: 'educator,parent,teacher'}
+
+    output = ContactRollupsProcessed.extract_form_roles contact_data
+    assert_equal expected_output, output
   end
 
   test 'extract_updated_at with valid input' do
