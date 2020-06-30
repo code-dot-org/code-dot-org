@@ -70,7 +70,7 @@ export default class HeaderPopup extends Component {
       <div style={styles.container}>
         {!this.state.open && (
           <div>
-            <div onClick={this.handleClickOpen}>
+            <div className="header_popup_link" onClick={this.handleClickOpen}>
               <i className="fa fa-caret-down" style={styles.caret} />
               <div style={styles.more}>{i18n.moreAllCaps()}</div>
             </div>
