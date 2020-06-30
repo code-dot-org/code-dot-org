@@ -4047,3 +4047,33 @@ sq:
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: cikle 
+            Events:
+              name: Ngjarje
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet
+          lessons:
+            Loops:
+              name: cikle 
+            Events:
+              name: Ngjarje
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Hapat e ardhshme

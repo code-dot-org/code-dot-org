@@ -18895,9 +18895,13 @@ fil:
               name: Binary na mga Numero
             Intellectual Property:
               name: Intelektwal na Pag-aari
+            CS Principles Pre-survey:
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
           lesson_groups:
             csp_unit1_2020:
               display_name: '(luma) Yunit 1: Digital na Impormasyon'
+            cspSurvey:
+              display_name: Pagsisiyasat
           lessons:
             new stage:
               name: bagong yugto
@@ -18907,6 +18911,8 @@ fil:
               name: Binary na mga Numero
             Intellectual Property:
               name: Intelektwal na Pag-aari
+            CS Principles Pre-survey:
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
         csp2-2020:
           stages:
             new stage:
@@ -19495,3 +19501,35 @@ fil:
               name: Yunit 5 Pagtatasa 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Mga loop
+            Events:
+              name: Mga event
+            Conditionals:
+              name: Mga conditional
+            Functions:
+              name: Mga function
+            Variables:
+              name: Mga variable
+            For Loops:
+              name: For Loops
+          lessons:
+            Loops:
+              name: Mga loop
+            Events:
+              name: Mga event
+            Conditionals:
+              name: Mga conditional
+            Functions:
+              name: Mga function
+            Variables:
+              name: Mga variable
+            For Loops:
+              name: For Loops
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pagsisimula
+            k5_next_steps_1:
+              display_name: Mga susunod na Hakbang

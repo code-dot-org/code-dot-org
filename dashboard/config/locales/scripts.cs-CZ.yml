@@ -6041,3 +6041,38 @@ cs:
           lessons:
             While Loops:
               name: While (pokud) cykly
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Sekvence
+            Loops:
+              name: Cykly
+            Events:
+              name: Události
+            Conditionals:
+              name: Podmínky
+            End of Course projects:
+              name: Projekty k ukončení kurzu
+            Functions:
+              name: Funkce
+            Variables:
+              name: Proměnné
+            For Loops:
+              name: Cykly "For"
+          lessons:
+            Sequencing:
+              name: Sekvence
+            Loops:
+              name: Cykly
+            Events:
+              name: Události
+            Conditionals:
+              name: Podmínky
+            End of Course projects:
+              name: Projekty k ukončení kurzu
+            Functions:
+              name: Funkce
+            Variables:
+              name: Proměnné
+            For Loops:
+              name: Cykly "For"

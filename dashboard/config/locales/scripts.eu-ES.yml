@@ -3650,3 +3650,30 @@ eu:
           lessons:
             While Loops:
               name: '"Bitartean" begiztak'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Itzuliak
+            Events:
+              name: Gertaerak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Variables:
+              name: Aldagaiak
+            For Loops:
+              name: For begiztak
+          lessons:
+            Loops:
+              name: Itzuliak
+            Events:
+              name: Gertaerak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Variables:
+              name: Aldagaiak
+            For Loops:
+              name: For begiztak

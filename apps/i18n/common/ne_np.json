@@ -573,6 +573,8 @@
   "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?",
   "update": "Update",
   "version": "संस्करण",
+  "versionHistory_clearProgress_cancel": "रद्द गर्नुहोस्",
+  "versionHistory_header": "Version History",
   "viewCourse": "View course",
   "viewLessonPlan": "View Lesson Plan",
   "viewPageAs": "View page as:",

@@ -19,16 +19,16 @@ theme: responsive
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+## Code Break: Ucz się od zespołu Code.org i gości specjalnych!
 
 <div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<p>Goście specjalni dołączają do CEO Code.org, Hadi Partoviego, w cotygodniowej interaktywnej klasie, aby poznać pojęcia informatyki, takie jak algorytmy, sztuczna inteligencja i szyfrowanie.</p>
+<p>Jeśli nie sprawdziłeś wszystkich odcinków Code Break, to nie jest jeszcze za późno! Odcinki na żywo nie są już emitowane, ale możesz je wyświetlić <a href="https://code.org/break">tutaj</a>.</p>
 
 <div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
+## Godzina Kodowania: Wypróbuj te wciągające samouczki wprowadzające
+Wypróbuj godzinny samouczek przeznaczony dla wszystkich grup wiekowych. Istnieją setki zajęć i samouczków w ponad 45 językach.
 * [ Potańcówka](https://code.org/dance) - Koduj imprezę taneczną z muzyką Katy Perry, Shawna Mendesa i innych.
 * [ Minecraft](https://code.org/api/hour/begin/mc) - Użyj swojej kreatywności i umiejętności rozwiązywania problemów, aby podróżować i odkrywać nowe światy.
 * [ Sztuczna inteligencja dla oceanów](https://code.org/oceans) - Dowiedz się, jak sztuczną inteligencję i uczenie maszynowe można wykorzystać do rozwiązywania problemów na świecie.
@@ -40,7 +40,7 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Filmy: obejrzyj te przystępne 3-5-minutowe filmy edukacyjne
 
 {{ athome_videos }}
 
@@ -51,20 +51,20 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
+## Poznaj podstawy we własnym tempie dzięki naszym kursom
 ### **Szybki Kurs**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+To świetna okazja dla uczniów, rozpoczynających samodzielną naukę. Poznasz podstawy informatyki przeciągając & upuszczając bloki. Twórz własne rysunki i gry. <strong>Uwaga: Kursy przyspieszone są obecnie dostępne tylko w języku angielskim, hindi, włoskim i hiszpańskim; wkrótce będą także po polsku. W przypadku innych języków, zalecamy nasz 20-godzinny <a href="https://studio.code.org/s/20-hour"> Kurs przyspieszony</a>. Aby zobaczyć, co jest dostępne w Twoim języku, odwiedź nasz <a href="https://studio.code.org/courses">katalog kursów</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Kurs przyspieszony</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/express-2019">Przyspieszony kurs dla nieumiejących czytać</a>
 
 </div>
 <div style="clear: both"></div>
@@ -78,7 +78,7 @@ A great option for students getting started on their own. You'll learn the funda
 <p><a href="#top">Powrót na górę</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## Naucz się projektować i budować aplikacje za pomocą App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -99,7 +99,7 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## Jeśli nie masz komputera w domu,  Try these smartphone apps
+## Jeśli nie masz komputera w domu,  Wypróbuj te aplikacje na smartfony
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -115,7 +115,7 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Naucz się kodować dzięki zabawnym, szybkim lekcjom na telefonie, które nauczą Cię pisania prawdziwych programów w JavaScript. Kodowanie z Google Program. <i>(dla starszych uczniów)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -124,7 +124,7 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
+## Ograniczony lub brak dostępu do Internetu? Wypróbuj te aktywności bez komputera
 * [ Hello Ruby](https://www.helloruby.com/play) - Najbardziej dziwaczny sposób uczenia się o komputerach,  technologii i programowaniu. Zajęcia dotyczące wielu tematów informatycznych, takich jak: umiejętność dekompozycji problemu, wykrywanie wzorców, myślenie algorytmiczne, debugowanie problemów i współpraca. *(w wielu 4-10)*
 * [ Informatyka bez komputera](https://csunplugged.org/en/) - zbiór bezpłatnych materiałów dydaktycznych, które uczą informatyki poprzez wciągające gry i łamigłówki wykorzystujące karty, sznurki, kredki i mnóstwo biegania na około. *(w wieku 5-14)*
 
@@ -132,8 +132,8 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Wsparcie dla nauczycieli w trakcie kursu
+Pracujemy nad stworzeniem wsparcia dla nauczycieli prowadzących obecnie nasze kursy tutaj i będziemy aktualizować zasoby i rekomendacje, jak tylko będziemy je mieli.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -151,8 +151,8 @@ Przewodnik dla nauczycieli z materiałami, z których uczniowie mogą korzystać
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Podstawy Informatyki</p></a></div>
+Przewodnik dla nauczycieli z materiałami, z których uczniowie mogą korzystać w domu, aby kontynuować naukę w ramach Podstaw informatyki
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
