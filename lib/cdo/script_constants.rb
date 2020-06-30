@@ -245,13 +245,6 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # An allowlist of all family names for courses.
-  COURSE_FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-    TEST = 'ui-test-course'.freeze
-  ].freeze
-
   # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
     # CSF
