@@ -374,7 +374,9 @@ P5Lab.prototype.init = function(config) {
 
   var showDebugButtons =
     config.level.editCode &&
-    (!config.hideSource && !config.level.debuggerDisabled);
+    (!config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.iframeEmbedAppAndCode);
   var showDebugConsole = config.level.editCode && !config.hideSource;
   this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
@@ -438,7 +440,13 @@ P5Lab.prototype.init = function(config) {
     config.initialAnimationList && !config.embed && !config.hasContainedLevels
       ? config.initialAnimationList
       : this.startAnimations;
-  getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  getStore().dispatch(
+    setInitialAnimationList(
+      initialAnimationList,
+      this.isSpritelab /* shouldRunV3Migration */
+    )
+  );
 
   this.generatedProperties = {
     ...config.initialGeneratedProperties

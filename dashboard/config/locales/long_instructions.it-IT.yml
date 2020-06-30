@@ -2351,7 +2351,7 @@ it-IT:
         > Condividi i tuoi pensieri taggando Programma il Futuro sui social network:
         >
         > -   su <a href="https://www.facebook.com/pg/programmailfuturo" target="blank">Facebook</a>: @programmailfuturo
-        > -   su \<a <https://twitter.com/ProgrammaFuturo>" target="blank">Twitter</a>: @ProgrammaFuturo
+        > -   su <a href="https://twitter.com/ProgrammaFuturo" target="blank">Twitter</a>: @ProgrammaFuturo
 
         Oppure, se sai l'inglese...
 
@@ -2363,17 +2363,24 @@ it-IT:
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
         > Don't have a Twitter account? You can also find us on [Facebook](https://www.facebook.com/Code.org/) or [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: "## Conoscere i Fondamenti di Informatica\n\nCominciamo
+        imparando un po' cosa sono i Fondamenti di Informatica e come hanno funzionato
+        per insegnanti e studenti in tutto il mondo. "
       OPD-K5 Closing: |-
         > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
         >
         > [Sign up now](http://code.org/professional-development-workshops) to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
       OPD-K5 EventsVid: |-
-        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
+        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in cui occorre  programmare con gli eventi.
 
-        > Un "gestore di evento" è un insieme di istruzioni che dicono al computer di "ascoltare" se succede un determinata cosa, e "quando accade" eseguire un certo insieme di azioni. Per esempio, in alcune  pagine web, passando il mouse sopra ad un menù a tendina, questo si apre. In questo caso l'evento è "il passaggio del cursore del mouse in una certa zona dello schermo" e l'"azione" scatenata dall'evento è l'apertura del menù a tendina.
+        > Un "gestore di evento" è un insieme di istruzioni che dicono al computer di "ascoltare" se succede una determinata cosa, e "quando accade" eseguire un certo insieme di azioni. Per esempio, in alcune  pagine web, passando il mouse sopra ad un menù a tendina, questo si apre. In questo caso l'evento è "il passaggio del cursore del mouse in una certa zona dello schermo" e l'"azione" scatenata dall'evento è l'apertura del menù a tendina.
       OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
         che gli alunni scriveranno durante il [Corso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         Nella prossima pagina ti verrà chiesto di scrivere un programma simile!
+      OPD-K5 FirstProgram_copy: Guarda il video qui sotto, che spiega un programma
+        in cui i giovani studenti scriveranno nel <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Corso A</a>. Nella pagina successiva, dovrai scrivere tu stesso
+        un programma simile!
       OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni piani di lavoro
         delle lezioni tradizionali. Tieni presente che sono disponibili i piani di
         lavoro di ogni lezione del corso \"Fondamenti di informatica\" -- sia delle
@@ -2393,7 +2400,7 @@ it-IT:
       OPD-K5 Problem Solving: |-
         # Linee guida > Insegnare a risolvere i problemi
 
-        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili:
+        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili.
 
         [Questa scheda](https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.pdf) illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi".
 
@@ -2430,9 +2437,38 @@ it-IT:
         Guarda il video sottostante per comprendere i benefici dell'uso delle lezioni tradizionali nell'insegnamento dell'informatica.
 
         **Mentre percorrerai le lezioni da 4 a 8**, avrai l'occasione di conoscere alcune delle nostre attività tradizionali per ognuno dei concetti chiave trattati in questo corso.
+      OPD-K5 Unplugged Video_copy: |-
+        Potrebbe sembrare controproducente insegnare informatica lontano dal computer! Tuttavia, abbiamo scoperto che alcune delle lezioni più efficaci sono in realtà "scollegate" o condotte con poca o nessuna tecnologia.
+
+        Tutti i nostri corsi di Fondamenti di Informatica utilizzano attività scollegate per introdurre concetti di informatica con manipolatori fisici prima che gli studenti scrivano programmi per computer utilizzando tali concetti. Utilizziamo anche attività scollegate per insegnare concetti importanti che non riguardano la programmazione, come la cittadinanza digitale. Guarda il video qui sotto per comprendere i vantaggi dell'utilizzo di attività scollegate per insegnare informatica.
       OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
         "Perché alcuni programmi informatici sono scritti con delle parole ed altri
         usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        Vi siete mai chiesti che cos'è l'informatica o quanti tipi di linguaggi di programmazione diversi esistono? Questo video fornisce un'introduzione al campo dell'informatica.
+        </span>
+      OPD-K5 loops free response: |-
+        # Rifletti sui cicli
+
+        In questa lezione, abbiamo esplorato come utilizzare i cicli per rendere il codice più efficiente. Nella prossima lezione vedremo in che modo gli eventi possono aggiungere interattività in un programma.
+
+        Ora prenditi un momento per riflettere. Come puoi collegare il concetto di ciclo alla precedente esperienza dei tuoi studenti fuori della classe d'informatica? Quali sono i vantaggi della programmazione in coppia e come puoi usarla in questa lezione?
+      OPD-K5 sequencing free response: "# Rifletti sul sequenziamento\n\nComplimenti!
+        Hai appena scritto del codice. Sei ufficialmente un programmatore!\n\nHai
+        notato che l'ultimo puzzle è stato un po' più difficile? È stato un puzzle
+        di sfida. I puzzle sfida hanno lo scopo di allargare i confini di ciò che
+        gli studenti faranno. Mettiamo in chiaro che dovrebbero essere tentati, ma
+        non richiediamo che vengano completati affinché gli studenti abbiano successo
+        nella lezione.\n\nOra prenditi un momento per riflettere. Come descriveresti
+        la differenza tra informatica e programmazione? Come spiegheresti il sequenziamento
+        e gli algoritmi ai tuoi studenti? "
+      OPD-K5 whats your plan: |-
+        # Qual è il tuo piano?
+
+        Durante il corso, ti verrà chiesto di scrivere delle riflessioni su ciò che hai imparato. Una volta inviata la risposta, questa verrà salvata e potrai sempre tornarci. La rivedremo alla fine di questo corso online.
+
+        Prenditi un momento per riflettere. Come e quando completerai questo corso online per assicurarti di ottenere il massimo beneficio dall'esperienza?
       OPD-K5-events-2: "Collega il blocco `sbatti le ali per un numero di volte normale`
         all'evento `quando si clicca`, quindi premi \"Esegui\". \n\n* * *\n\nClicca
         o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione."
@@ -3197,10 +3233,7 @@ it-IT:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Fai un tentativo.
       courseA_maze_seq5_2019: Fai un tentativo.
-      courseA_maze_seq5_copy: |-
-        Prova questo da solo dall'inizio.
-
-        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_copy: Provalo da solo dall'inizio.
       courseA_maze_seq5a_2018: |-
         _"Maialino, maialino, aspettami che arrivo!"_
 
@@ -6361,12 +6394,12 @@ it-IT:
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
+        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi** con svolte a **120 gradi**.
       courseE_artist_functions9_2019: |-
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
+        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi** con svolte a **120 gradi**.
       courseE_artist_functionsProj_2018: |-
         **Ispirazione:** Usa ciò che hai imparato per creare quello che vuoi!
 

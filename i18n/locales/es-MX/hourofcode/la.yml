@@ -982,7 +982,8 @@ la:
     de 180 países comenzando con una Hora del Código.
   learn_banner_beyond: "¿Quieres seguir aprendiendo? <a id='learn_banner_beyond'>Ve
     más allá de una hora</a>"
-  learn_banner_beyond_markdown: "¿Quieres seguir aprendiendo? [Go beyond an hour](%{url})"
+  learn_banner_beyond_markdown: "¿Quieres seguir aprendiendo? [Ve más allá de una
+    hora](%{url})"
   learn_banner_teachers: 'Profesores: <a id=''teacher_banner_host''>Organiza una Hora
     del Código</a> o <a id=''teacher_banner_howto''>lee la Guía para hacerlo</a>.'
   learn_banner_teachers_markdown: 'Para profesores: [Organiza una hora](%{host_url})
@@ -7552,7 +7553,7 @@ la:
   tutorial_groklearningpython_string_platforms: Todos los navegadores modernos
   tutorial_htmltimetravel_string_platforms: Todos los navegadores modernos
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Sin conexión
+  tutorial_appytappin_string_platforms: Todos los navegadores modernos
   tutorial_icipher_string_platforms: Sin conexión
   tutorial_iguess_string_platforms: Tablet Android, iPad, iPhone
   tutorial_imake_string_platforms: Sin conexión

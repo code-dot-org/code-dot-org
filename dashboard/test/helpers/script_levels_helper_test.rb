@@ -61,7 +61,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
-    @section.stage_extras = true
+    @section.lesson_extras = true
     @section.save
     response = {}
 
@@ -74,7 +74,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
-    @section.stage_extras = false
+    @section.lesson_extras = false
     @section.save
     response = {}
 
@@ -87,7 +87,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 8, false
     assert_equal false, script_level.end_of_stage?, 'bad script_level selected for test'
-    @section.stage_extras = true
+    @section.lesson_extras = true
     @section.save
     response = {}
 
@@ -99,7 +99,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
     assert script_level.end_of_stage?, 'bad script_level selected for test'
-    @section.stage_extras = true
+    @section.lesson_extras = true
     @section.save
     response = {}
 
@@ -124,7 +124,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     refute response[:redirect].end_with?('extras')
     response = {}
 
-    @section.stage_extras = false
+    @section.lesson_extras = false
     @section.save
     stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)

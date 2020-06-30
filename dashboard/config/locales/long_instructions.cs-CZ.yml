@@ -623,6 +623,26 @@ cs-CZ:
       OPD-K5-events-6: "Teď přidáme počítání bodů, když se Flappy vyhne překážce.
         \ \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl jeden
         bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí trubek."
+      OPD-K5-projects-2: "Je úžasné, co jsem se už naučili! Teď uděláme hru krok po
+        kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která bude ve
+        tvé hře. "
+      OPD-K5-projects-3: |-
+        Použij bloky událostí a akcí, aby se postava dala ovládat šipkami.
+
+        K vyřešení úlohy obejdi s postavou všechny šipky.
+      OPD-K5-projects-4: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      OPD-K5-projects-5: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni pravidla, jak získat 5 bodů nebo hru vyhrát.
+      OPD-K5-projects-6: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám". Až budeš mít
+        hotovo klikni na "Dokončit"!
+      OPD-K5-projects-7: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády a
+        spolužáky. '
       Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
         věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
@@ -872,6 +892,50 @@ cs-CZ:
         _"To zvládneš!"_'
       courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"To zvládneš!"_'
+      courseC19_playLab_EOC1: "Je úžasné, co jsem se už naučili! Teď uděláme hru krok
+        po kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která bude
+        ve tvé hře. "
+      courseC19_playLab_EOC2: |-
+        Použij bloky událostí a akcí, aby se postava dala ovládat šipkami.
+
+        K vyřešení úlohy obejdi s postavou všechny šipky.
+      courseC19_playLab_EOC3: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      courseC19_playLab_EOC4: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni pravidla, jak získat 5 bodů nebo hru vyhrát.
+      courseC19_playLab_EOC5: Dobrá práce. Teď máš základní součásti funkční hry hotové.
+        Teď bude jen chtít doladit, aby odpovídala tvým představám". Až budeš mít
+        hotovo klikni na "Dokončit"!
+      courseC19_playLab_EOC6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
+      courseC_PlayLab_events6_2019: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events7: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        Blok `opakuj do nekonečna` ti umožní spouštět kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do nekonečna chodil nahoru a dolů o 400 pixelů.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events8: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk \"zásah\"
+        a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo, spusť hru
+        a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \n\nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_artist_loops1a_2019: |-
         **Volná hra:** Pojďme vybudovat něco většího hezky krok po kroku!
 
@@ -1018,6 +1082,101 @@ cs-CZ:
         abys dostal umělce do středu herní plochy.\\\nPak nakresli čáru dlouhou 50
         pixelů s blokem <xml><block type=\"draw_move_by_constant\" block-text=\"move
         forward\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_artist_prog1: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2018: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2019: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog2: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2018: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2019: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog3: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2018: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2019: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog4: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2018: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2019: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog5: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2018: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2019: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog6_2018: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog6_2019: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog7: "\\*\\* Výzva: \\*\\* Toto označení je speciální!  \n\nPřijdeš
+        na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů a každá z kratších
+        stran má 75 pixelů.)"
+      courseC_artist_prog7_2018: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog7_2019: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog8: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2018: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2019: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
       courseC_collector_prog1: |-
         **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
 
@@ -1093,6 +1252,8 @@ cs-CZ:
       courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_data wizard: Klikni na "Spustit". Kouzelník vyčaruje zvířata. Spočítej
+        je. Je v tom nějaká logika?
       courseC_flappy_events1: |-
         Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
 
@@ -2158,6 +2319,7 @@ cs-CZ:
         ptákovi pomohl najít prase!"
       courseD_maze_ramp5b_2019: "**Výzva:** Najdi správný směr v tomto bludišti, abys
         ptákovi pomohl najít prase!"
+      courseD_maze_ramp5c_2019: Pomoz Scratovi dostat se k žaludu.
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
@@ -2225,6 +2387,85 @@ cs-CZ:
         být výhonky buď kukuřice, **nebo** salát. Co musíš přidat do tohoto programu,
         abys zkontroloval každý výhonek předtím, než začneš sbírat? \n\n* * *\n\n#####
         Poznámka: Každý výhonek vyroste v buď **jednu** kukuřici, nebo **jeden** salát."
+      courseE_farmer_ramp11a: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11a_2018: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11a_2019: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11b: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp11b_2018: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp11b_2019: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp12_forswap: Posbírej všechen salát.
+      courseE_farmer_ramp12_forswap_2018: Posbírej všechen salát.
+      courseE_farmer_ramp12_forswap_2019: Posbírej všechen salát.
+      courseE_farmer_ramp12b: Teď musí farmářka posbírat všechen salát. Použij `dokud
+        tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12b_2018: Teď musí farmářka posbírat všechen salát. Použij
+        `dokud tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12b_2019: Teď musí farmářka posbírat všechen salát. Použij
+        `dokud tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12c: Nyní je salát pouze na konci cesty. Postupuj po cestě
+        až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12c_2018: Nyní je salát pouze na konci cesty. Postupuj po
+        cestě až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12c_2019: Nyní je salát pouze na konci cesty. Postupuj po
+        cestě až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12d: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12d_2018: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12d_2019: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e_2018: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e_2019: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12g: Posuň se dopředu až k salátu, potom zaboč doleva **když**  je
+        tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_farmer_ramp12g_2018: Posuň se dopředu až k salátu, potom zaboč doleva
+        **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_farmer_ramp12g_2019: Posuň se dopředu až k salátu, potom zaboč doleva
+        **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_playLab_scaffold1: "Je úžasné, co jsem se už naučili! Teď uděláme hru
+        krok po kroku.\n\nPoužitím správných bloků, nastav pozadí, postavu, která
+        bude ve tvé hře. "
+      courseE_playLab_scaffold3: |-
+        Teď přidáme do hry více postav!
+
+        K vyřešení úlohy použij blok `nastav postavu` k přidaní více postav a dojdi se svoji postavou k vlajce.
+      courseE_playLab_scaffold4: |-
+        Více postav je dobrý začátek hry, ale bude to chtít víc, aby to vypadalo jako opravdová hra. Přidáme skóre!
+
+        Použij bloky událostí jako například `když se postava` k získání bodů. K vyřešení úlohy navrhni, jak získat 10 bodů.
+      courseE_playLab_scaffold5: Dobrá práce. Teď máš základní součásti funkční hry
+        hotové. Teď bude jen chtít doladit, aby odpovídala tvým představám. Přidej
+        podmínku jak vyhrát nebo prohrát hru a hraj dokud tu podmínku nesplníš.
+      courseE_playLab_scaffold6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
+        a spolužáky. '
       courseF_bee_conditionals10: |-
         Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
 

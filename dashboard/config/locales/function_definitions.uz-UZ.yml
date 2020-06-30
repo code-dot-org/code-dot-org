@@ -1,7 +1,7 @@
 ---
 uz-UZ:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 3.4:
         draw a circle:
           name: aylana chizish
@@ -11,9 +11,29 @@ uz-UZ:
       4-5 Artist 7:
         draw a circle:
           name: aylana chizish
+      Course 4 Play Lab Params 3:
+        jump:
+          parameters:
+            actor: aktyor
       Course 4 Play Lab Params 4:
         do something:
           name: nimadir qilish
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: aktyor
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: aktyor
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: aktyor
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: aktyor
       Course 4 SCF 3:
         do something:
           name: nimadir qilish
@@ -38,6 +58,9 @@ uz-UZ:
       NEW Course 4 Artist Params 15:
         draw a circle:
           name: aylana chizish
+        draw a pinwheel:
+          parameters:
+            repeat: takrorlash
         draw a house:
           name: uy chizish
       NEW Course 4 Artist Params 2:
@@ -46,11 +69,28 @@ uz-UZ:
       NEW Course 4 Artist Params 9:
         do something:
           name: nimadir qilish
+      NEW Course 4 Play Lab Params 11:
+        jump:
+          parameters:
+            actor: aktyor
+        patrol:
+          parameters:
+            actor: aktyor
       New Artist Project:
         draw a circle:
           name: aylana chizish
+        draw a pinwheel:
+          parameters:
+            repeat: takrorlash
         draw a house:
           name: uy chizish
+      New Play Lab Project:
+        jump:
+          parameters:
+            actor: aktyor
+        patrol:
+          parameters:
+            actor: aktyor
       Standalone_Artist_9:
         my function:
           name: mening funksiyam
@@ -201,6 +241,9 @@ uz-UZ:
       courseF_artist_fwp9:
         draw a circle:
           name: aylana chizish
+        draw a pinwheel:
+          parameters:
+            repeat: takrorlash
         draw a house:
           name: uy chizish
       courseF_artist_fwp_challenge1:

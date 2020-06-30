@@ -656,6 +656,9 @@ fr-FR:
         de côtés elle possède ? Indice : si tu divises ta longueur de départ par le
         nombre de côtés, la longueur de chaque côté se raccourcira lorsque le nombre
         de côtés sera plus élevé.'
+      Course 4 Bee 1: 'L''abeille ne peut pas dire ce qu’il y a sous le nuage ! Utilise
+        le bloc « Si » pour vérifier s''il y a une fleur sous le nuage, puis recueilles-en
+        le nectar uniquement si c''est une fleur. '
       Course 4 Bee 2: Utilise le bloc « Si/Sinon » afin de vérifier chaque objet pour
         voir si c'est une fleur ou un gâteau de miel. Si c'est une fleur, recueille
         le nectar... sinon, fabrique du miel !
@@ -880,6 +883,44 @@ fr-FR:
       CourseE_HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
       Crack Random Substitution: Consignes
       Crack a Caesar Cipher: Consignes
+      Dance Party 1-validated: À ton avis, que va-t-il se produire lorsque tu cliqueras
+        sur l'extraterrestre ?
+      Dance Party 2: Change le comportement à l'intérieur du bloc `___ commence ___`
+        pour que l'extraterrestre commence à tourner.
+      Dance Party 2_2019: Remplace le bloc de comportement dans le bloc `lutin commence`
+        par un autre qui fera tourner l'extraterrestre !
+      Dance Party 3: Crée un nouveau lutin, appelé `extraterrestre2`, puis fais-lui
+        faire un mouvement de danse différent quand on lui clique dessus.
+      Dance Party 3_2019: Crée un nouveau lutin qui ressemble à un extraterrestre
+        rose, puis fais-lui faire un mouvement quelconque quand on clique dessus.
+      Dance Party 4: Crée un troisième lutin, appelé, `extraterrestre3`, et fais en
+        sorte que tous tes extraterrestres se tiennent en ligne.
+      Dance Party 4_2019: Crée un troisième lutin qui ressemble à un extraterrestre
+        jaune, fais-le danser lorsqu'on clique dessus et règle tous tes extraterrestres
+        pour qu'ils se tiennent sur une ligne horizontale.
+      Dance Party 5: Ajoute du code pour changer la couleur de chaque alien quand
+        on lui clique dessus.
+      Dance Party 5_2019: Crée un événement keypress unique, à l'aide du bloc événement
+        keypress. Pour cet événement, fais en sorte que, lorsqu'on appuie sur une
+        touche, chacun de tes extraterrestres change de couleur !
+      Dance Party 6: Utilise le bloc `arrête tout` pour que chaque extraterrestre
+        cesse de bouger lorsqu'on lui clique dessus.
+      Dance Party 6_2019: Ajoute un lutin qui ressemble à une cloche, puis ajoute
+        un événement qui fait s'arrêter de danser chaque extraterrestre lorsqu'on
+        clique dessus.
+      Dance Party 7: Ajoute un nouveau lutin cloche, appelé `maCloche`, et fais en
+        sorte que tous les extraterrestres commencent à effectuer le même mouvement
+        de danse, lorsqu'on lui clique dessus.
+      Dance Party 7_2019: Règle l'extraterrestre bleu pour qu'il commence une nouvelle
+        danse quand l'extraterrestre rose le touche. Utilise l'événement \`quand touche.
+      Dance Party Freeplay: Maintenant, crée ta propre discothèque extraterrestre
+        !
+      Dance Party Freeplay_2019: Maintenant, crée ta propre discothèque extraterrestre
+        !
+      Dance Party Predict: À ton avis, que va-t-il se produire lorsque tu cliqueras
+        sur l'extraterrestre ?
+      Dance Party Predict_2019: À ton avis, que va-t-il se produire lorsque tu cliqueras
+        sur l'extraterrestre ?
       Dance_2019_01: 'Fais glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
         block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
         &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
@@ -950,6 +991,29 @@ fr-FR:
       Dance_Party_extras_visible_2019: Où iraient-ils ? (Clic "Plus" pour les détails)
       Find the Wizard: Construis ce que tu veux. Ceci est un exemple d'un jeu de devinettes
         portant sur les nombres !
+      Fish Tank 2-validated: Change Poussiéreux (le virevoltant) en poisson.
+      Fish Tank 2-validated_2019: Change le virevoltant en n'importe quel type de
+        poisson !
+      Fish Tank 3-validated: Change le comportement du poisson afin qu'il nage autour
+        de l'aquarium.
+      Fish Tank 3-validated_2019: Change le comportement du poisson pour qu'il nage
+        à gauche et à droite.
+      Fish Tank 4-validated: Utilisez le bloc `définir la couleur d'arrière-plan`
+        pour rendre l'arrière-plan bleu.
+      Fish Tank 4-validated_2019: Utilise le bloc `définir la couleur d'arrière-plan`
+        pour donner n'importe quelle couleur à l'arrière-plan.
+      Fish Tank 5-validated: Notre poisson se sent un peu seul. Ajouter un autre lutin
+        à l'aquarium.
+      Fish Tank 5-validated_2019: Le poisson est aventureux et veut rencontrer de
+        nouvelles créatures de la mer. Ajoute un autre lutin à l'aquarium. Ce lutin
+        peut avoir n'importe quel costume autre que celui utilisé pour ton poisson
+        !
+      Fish Tank 6-validated: Ajouter un comportement au nouvel ami du poisson.
+      Fish Tank 6-validated_2019: Ajouter un comportement au nouvel ami du poisson.
+      Fish Tank 7-validated: Utilise de nouveaux blocs de la boîte à outils pour rendre
+        ton aquarium spécial !
+      Fish Tank 7-validated_2019: Utilise de nouveaux blocs de la boîte à outils pour
+        rendre ton aquarium spécial !
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour
         créer un passage vers la torche.
@@ -1371,11 +1435,26 @@ fr-FR:
         2.
       OPD-K5-projects-2: Choisis un arrière plan et un acteur qui sera ton héros dans
         le jeu.
+      OPD-K5-projects-3: Utilise des événements et des actions pour déplacer ton héros.
+        Atteins les objectifs.
       OPD-K5-projects-4: Ajoute au moins 2 acteurs à ton jeu et fais les bouger.
       OPD-K5-projects-5: Trouve des moyens intéressants pour modifier le score. Le
         score doit se modifier pour montrer autre chose que 0 et pouvoir continuer.
+      OPD-K5-projects-6: Excellent travail ! Tu disposes de tous les composants de
+        base d'un jeu. Maintenant, passe un moment à t'assurer que le jeu fonctionne
+        comme tu le souhaites.
       OPD-K5-projects-7: Tu as terminé! Maintenant tu peux jouer à ton jeu où le partager
         avec tes amis et camarades de classe!
+      OPD-K5-spritelab-2: Change le virevoltant en n'importe quel type de poisson
+        !
+      OPD-K5-spritelab-3: Change le comportement du poisson pour qu'il nage à gauche
+        et à droite.
+      OPD-K5-spritelab-4: Utilise le bloc `définir la couleur d'arrière-plan` pour
+        donner n'importe quelle couleur à l'arrière-plan.
+      OPD-K5-spritelab-6: Le poisson est aventureux et veut rencontrer de nouvelles
+        créatures de la mer. Ajoute un autre lutin à l'aquarium. Ce lutin peut avoir
+        n'importe quel costume autre que celui utilisé pour ton poisson !
+      OPD-K5-spritelab-7: Ajouter un comportement au nouvel ami du poisson.
       OPD-K5-variables-2: 'Maintenant, dessine trois de ces triangles, l''un à côté
         de l''autre.  '
       OPD-K5-variables-5: Déplace la longueur de 50 dans une variable afin de pouvoir
@@ -1494,10 +1573,39 @@ fr-FR:
       Underground Mining Coal_2019: Les ressources les plus précieuses sont en sous-sol,
         mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
         2 blocs de charbon.
+      Virtual Pet 1: À ton avis, que se passera-t-il si tu appuies sur « Exécuter
+        », puis cliques sur elle ?
+      Virtual Pet 1 Predict: À ton avis, que va-t-il se produire lorsque tu cliqueras
+        sur l'extraterrestre ?
+      Virtual Pet 2: Crée un **événement** de sorte que, lorsque Géraldine touche
+        la flaque, sa couleur passe au brun.
+      Virtual Pet 3: Ajoute un nouveau lutin savon à l'écran. Peux-tu faire en sorte
+        que, lorsque la girafe et le savon se touchent, la girafe retourne à sa couleur
+        normale ?
+      Virtual Pet 4: Ajoute un comportement à ton savon pour qu'il puisse le déplacer,
+        puis fais-le glisser pour nettoyer la girafe !
+      Virtual Pet 5: Ajoute des actions à chaque événement de sorte que, lorsque la
+        girafe entre en collision avec chaque lutin, elle rétrécit de 5.
+      Virtual Pet 6: Ajoute une pomme qui ramène la girafe à sa taille normale quand
+        elles se touchent.
+      Virtual Pet 8_2019: "**Jeu Libre :** Que peux-tu faire faire d'autre à ton animal
+        de compagnie ? Essaie tout ce que tu veux !"
+      Virtual Pet Freeplay: 'Jeu libre : Que peux-tu faire faire de plus à ta girafe
+        ?'
       'Widget: Text Compression': Cherche des motifs (répétition de mots ou de phrases)
         dans le texte. Rentre les motifs que tu as trouvé dans le dictionnaire à droite.
         En même temps que tu rentres les motifs dans le dictionnaire, le symbole pour
         cette entrée remplace le motif dans le texte.
+      behaviors 1: Faites une prévision !
+      behaviors 2: Lance la fusée vers les étoiles !
+      behaviors 3: Aidez le rover à distancer le robot !
+      behaviors 3a: 'Déboguer : Fais tourner toutes les étoiles de la même manière
+        !'
+      behaviors 4: Faites une prévision !
+      behaviors 5: Déplace l'astronaute en diagonale.
+      behaviors 6: Fais rouler la balle.
+      behaviors 7: Continue en direction de l'horizon !
+      behaviors free play: 'Jeu libre : Crée ta propre scène spatiale !'
       bounce_1: Attache un bloc au bloc « Quand flèche vers la gauche »  et appuie
         sur « Exécuter ». Déplace la raquette à l'aide de la flèche de gauche pour
         atteindre la cible visée.
@@ -1577,6 +1685,8 @@ fr-FR:
         la balle jusqu'à ce qu'elle touche le drapeau.
       bounce_7_sports: Attache des blocs à tous les blocs "Quand". Fais rebondir la
         balle jusqu'à ce qu'elle touche le drapeau.
+      comment_intro_maze_2018: Utilise le nouveau bloc `commentaire` pour te laisser
+        des rappels rapides.
       course1_artist_loops_challenge1: |-
         Tu peux utiliser une boucle pour dessiner plusieurs lignes à la fois.
 
@@ -1652,6 +1762,11 @@ fr-FR:
         assez de points ou lorsque tu n'en as plus assez. Ajoute du code aux fonctions
         `gagner le jeu` et `perdre le jeu` pour faire fonctionner le jeu à ton gout.
         Clic sur les astuces pour des idées!
+      course4_artist_binary_challenge1: Tu ne peux utiliser chaque valeur binaire
+        (0 ou 1) qu'une fois dans cette énigme. Essaie d'utiliser des boucles imbriquées
+        pour compléter ce dessin.
+      course4_artist_binary_challenge2: Es-tu assez persévérant pour restaurer ce
+        logo à la normale ?
       course4_artist_concept_challenge2: Crée 5 rosaces en utilisant le code ci-dessous.
       course4_artist_functions_challenge2: Essaie ce code pour voir comment il fonctionne,
         puis fais en le tien!
@@ -1820,12 +1935,106 @@ fr-FR:
       courseA_collector_preLoops6: Récupérez les deux morceaux du trésor pour résoudre
         ce casse-tête.
       courseA_collector_preLoops7: Recupère les 3 tas pour passer ce niveau.
+      courseA_harvester_loops1: Aide la moissonneuse à ramasser le maïs !
+      courseA_harvester_loops10: Aide la moissonneuse à ramasser les cinq épis de
+        maïs !
+      courseA_harvester_loops10_2019: Aide la moissonneuse à ramasser les cinq épis
+        de maïs !
+      courseA_harvester_loops11: 'Essaies-en un de plus par toi-même ! '
+      courseA_harvester_loops11_2019: 'Essaies-en un de plus par toi-même ! '
+      courseA_harvester_loops1_2019: Aide la moissonneuse à ramasser le maïs !
+      courseA_harvester_loops2: Assure-toi de ramasser tout le maïs !
+      courseA_harvester_loops2_2019: Assure-toi de ramasser tout le maïs !
+      courseA_harvester_loops3: Peux-tu ramasser tout le maïs en utilisant seulement
+        \*\*un \*\* bloc déplacer ?
+      courseA_harvester_loops3_2019: Peux-tu ramasser tout le maïs en utilisant seulement
+        \*\*un \*\* bloc déplacer ?
+      courseA_harvester_loops4: Peux-tu aider la moissonneuse à trouver le bug dans
+        son code ?
+      courseA_harvester_loops4_2019: Peux-tu aider la moissonneuse à trouver le bug
+        dans son code ?
+      courseA_harvester_loops5: Essaie-le toi-même ! Peux-tu ramasser le maïs, à la
+        fin, aussi ?
+      courseA_harvester_loops5_2019: Essaie-le toi-même ! Peux-tu ramasser le maïs,
+        à la fin, aussi ?
+      courseA_harvester_loops5a: Regarde tout ce maïs ! Peux-tu tout ramasser par
+        toi-même ?
+      courseA_harvester_loops5a_2019: Regarde tout ce maïs ! Peux-tu tout ramasser
+        par toi-même ?
+      courseA_harvester_loops5b: Peux-tu changer ton code pour que la moissonneuse
+        ramasse tout le maïs ?
+      courseA_harvester_loops5b_2019: Peux-tu changer ton code pour que la moissonneuse
+        ramasse tout le maïs ?
+      courseA_harvester_loops6: Tu auras besoin d'**un** bloc `Déplacer vers l'Ouest`
+        et d'**un** bloc `Déplacer vers le Nord`.
       courseA_harvester_loops6_2019: Vous aurez besoin de **un** bloc `Bouger au sud`
         et de **un** bloc `Bouger à l'ouest`.
+      courseA_harvester_loops7: 'Essaie-le par toi-même ! '
+      courseA_harvester_loops7_2019: 'Essaie-le par toi-même ! '
+      courseA_harvester_loops9: Vois-tu comment ramasser _tout_ ce maïs ?
+      courseA_harvester_loops9_2019: Vois-tu comment ramasser _tout_ ce maïs ?
+      courseA_harvester_seq1: Joue avec ces blocs pour aider la moissonneuse à ramasser
+        l'épi de maïs.
+      courseA_harvester_seq10: Assure-toi de ramasser tout le maïs !
+      courseA_harvester_seq10_2019: Assure-toi de ramasser tout le maïs !
+      courseA_harvester_seq11: Essaie par toi-même ! Ramasse tout le maïs.
+      courseA_harvester_seq11_2019: Essaie par toi-même ! Ramasse tout le maïs.
+      courseA_harvester_seq12: Ramasse tout le maïs.
+      courseA_harvester_seq12_2019: Ramasse tout le maïs.
+      courseA_harvester_seq13: Joue avec ces blocs pour aider la moissonneuse à ramasser
+        le maïs.
+      courseA_harvester_seq13_2019: Joue avec ces blocs pour aider la moissonneuse
+        à ramasser le maïs.
+      courseA_harvester_seq1_2019: Joue avec ces blocs pour aider la moissonneuse
+        à ramasser l'épi de maïs.
+      courseA_harvester_seq2: Utilise trois blocs `déplacer vers l'Ouest` et un bloc
+        `ramasser le maïs` pour résoudre cette énigme.
+      courseA_harvester_seq2_2019: Utilise trois blocs `déplacer vers l'Ouest` et
+        un bloc `ramasser le maïs` pour résoudre cette énigme.
+      courseA_harvester_seq3: Utilise trois blocs `Déplacer vers le Nord` et un bloc
+        `Ramasser le Maïs`.
+      courseA_harvester_seq3_2019: Utilise trois blocs `Déplacer vers le Nord` et
+        un bloc `Ramasser le Maïs`.
+      courseA_harvester_seq4: Ajoute un bloc pour aider la moissonneuse à ramasser
+        le maïs.
+      courseA_harvester_seq4_2019: Ajoute un bloc pour aider la moissonneuse à ramasser
+        le maïs.
+      courseA_harvester_seq5: Trouve le bug et corrige-le !
+      courseA_harvester_seq5_2019: Trouve le bug et corrige-le !
+      courseA_harvester_seq6: Essaie-le toi-même !
+      courseA_harvester_seq6_2019: Essaie-le toi-même !
+      courseA_harvester_seq7: Essaie-le toi-même !
+      courseA_harvester_seq7_2019: Essaie-le toi-même !
+      courseA_harvester_seq8: Maintenant, la moissonneuse doit ramasser du maïs deux
+        fois !
+      courseA_harvester_seq8_2019: Maintenant, la moissonneuse doit ramasser du maïs
+        deux fois !
+      courseA_harvester_seq9: Ajoute deux blocs pour terminer cette énigme !
+      courseA_harvester_seq9_2019: Ajoute deux blocs pour terminer cette énigme !
+      courseA_maze_ramp2_2018: Enclenche tous les blocs ensemble pour terminer ton
+        code, puis clique sur « Exécuter ».
+      courseA_maze_ramp2_2019: Enclenche tous les blocs ensemble pour terminer ton
+        code, puis clique sur « Exécuter ».
+      courseA_maze_ramp3a_2018: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseA_maze_ramp3a_2019: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseA_maze_ramp3b_2018: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseA_maze_ramp3b_2019: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseA_maze_ramp4a_2018: Vois-tu quel bloc il faut ajouter au bas des autres
+        blocs pour terminer ce code ?
+      courseA_maze_ramp4a_2019: Vois-tu quel bloc il faut ajouter au bas des autres
+        blocs pour terminer ce code ?
       courseA_maze_ramp5a_2018: Amène l’oiseau jusqu'au cochon !
       courseA_maze_ramp5a_2019: Amène l’oiseau jusqu'au cochon !
       courseA_maze_seq1: Amène l'oiseau jusqu'au sale cochon!
       courseA_maze_seq10: 'Défi: Contourne la TNT pour que l''oiseau atteigne le cochon! '
+      courseA_maze_seq10_2018: 'Défi : Évite le TNT pour amener l''oiseau vers le
+        cochon ! '
+      courseA_maze_seq10_2019: 'Défi : Évite le TNT pour amener l''oiseau vers le
+        cochon ! '
       courseA_maze_seq10_copy: 'Défi: Contourne la TNT pour que l''oiseau atteigne
         le cochon! '
       courseA_maze_seq11: Bouge dans une direction, puis dans une autre pour amener
@@ -1846,7 +2055,13 @@ fr-FR:
       courseA_maze_seq3: Modifie le code pour que l'oiseau atteigne le cochon!
       courseA_maze_seq4: ENLEVE un bloc pour que l'oiseau atteigne le cochon!
       courseA_maze_seq5: Essaie celui la depuis le début.
+      courseA_maze_seq5_2018: Essaie celui-ci.
+      courseA_maze_seq5_2019: Essaie celui-ci.
       courseA_maze_seq5_copy: Essaie celui la depuis le début.
+      courseA_maze_seq5a_2018: Que peux-tu ajouter, à la fin de ce code, pour que
+        l'oiseau atteigne le cochon ?
+      courseA_maze_seq5a_2019: Que peux-tu ajouter, à la fin de ce code, pour que
+        l'oiseau atteigne le cochon ?
       courseA_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
       courseA_maze_seq6_2018: Bouge dans une direction, puis dans une autre pour amener
@@ -1892,6 +2107,8 @@ fr-FR:
         `Quand <-` qui est déjà dans l'espace de travail.
       courseA_playLab_events4: Ajoute les blocs pour bouger à droite lorsque le bouton
         `droite` est cliqué.
+      courseA_playLab_events4_2018: Ajoute un autre bloc événement pour que Jorge
+        se déplace à droite lorsque l'on clique sur le bouton `droite`.
       courseA_playLab_events5: Ajoute des évènements pour que Jorge monte et descende
         lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events5_2018: Ajoute des évènements pour que Jorge monte et
@@ -1902,6 +2119,10 @@ fr-FR:
         lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events7: Ajoute ce que tu veux à ce jeu. Peux-tu faire disparaitre
         le dinosaure lorsque Jorge lui coure après?
+      courseA_playLab_events7_2018: _Jeu Libre :_ Ajoute tout ce que tu veux à ce
+        jeu.
+      courseA_playLab_events7_2019: _Jeu Libre :_ Ajoute tout ce que tu veux à ce
+        jeu.
       courseA_playlab_events_challenge1: Peux-tu écrire du code pour montrer le reste
         de mes amis? Les conseils t'aideront à compléter ce projet étape par étape.
       courseA_playlab_events_challenge1_2018: Peux-tu écrire du code pour montrer
@@ -1919,6 +2140,28 @@ fr-FR:
       courseA_video_events: Besoin d'un meilleur combo Labo de jeux/Evènements
       courseA_video_events_2018: Besoin d'un meilleur combo Labo de jeux/Evènements
       courseA_video_events_2019: Besoin d'un meilleur combo Labo de jeux/Evènements
+      courseB_Scrat_ramp1_2018: Pour cette énigme, enclenche les blocs ensemble et
+        clique sur « ▶ Exécuter » !
+      courseB_Scrat_ramp1_2019: Pour cette énigme, enclenche les blocs ensemble et
+        clique sur « ▶ Exécuter » !
+      courseB_Scrat_ramp2_2018: Enclenche tous les blocs ensemble pour terminer ton
+        code, puis clique sur « Exécuter ».
+      courseB_Scrat_ramp2_2019: Enclenche tous les blocs ensemble pour terminer ton
+        code, puis clique sur « Exécuter ».
+      courseB_Scrat_ramp3a_2018: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseB_Scrat_ramp3a_2019: Ajoute un bloc `Nord` au bas des autres blocs pour
+        terminer ce code, puis clique sur « ▶ Exécuter ».
+      courseB_Scrat_ramp3b_2018: Glisse le bloc supplémentaire vers la boîte à outils
+        pour le jeter.
+      courseB_Scrat_ramp3b_2019: Glisse le bloc supplémentaire vers la boîte à outils
+        pour le jeter.
+      courseB_Scrat_ramp4a_2018: Vois-tu quel bloc il faut ajouter au bas des autres
+        blocs pour terminer ce code ?
+      courseB_Scrat_ramp4a_2019: Vois-tu quel bloc il faut ajouter au bas des autres
+        blocs pour terminer ce code ?
+      courseB_Scrat_ramp5a_2018: Essaie celui-ci, par toi-même !
+      courseB_Scrat_ramp5a_2019: Essaie celui-ci, par toi-même !
       courseB_artist_loops1: C'est un nouveau puzzle appelé "Artiste". Joue avec ce
         niveau et dessine quelque chose d'amusant.
       courseB_artist_loops10: Utilise ce que tu as appris pour dessiner une image
@@ -2001,6 +2244,10 @@ fr-FR:
         peux!
       courseB_collector_loops11_2019: Eurêka !  Récupère autant de trésors que tu
         peux!
+      courseB_collector_loops1_2018: Empare-toi d'au moins une pièce de trésor, sans
+        commettre d'erreurs, pour passer !
+      courseB_collector_loops1_2019: Empare-toi d'au moins une pièce de trésor, sans
+        commettre d'erreurs, pour passer !
       courseB_collector_loops2: Récupère les quatre piles pour passer ce niveau.
       courseB_collector_loops2_2018: Récupère les quatre piles pour passer ce niveau.
       courseB_collector_loops2_2019: Récupère les quatre piles pour passer ce niveau.
@@ -2057,24 +2304,88 @@ fr-FR:
         trésors pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2019: Aide Laurel à obtenir au moins **5**
         trésors pour terminer le puzzle.
+      courseB_iceage_loops1: Aide Scrat à traverser la glace pour qu'il accède le
+        gland !
+      courseB_iceage_loops10: Aide Scrat à faire tout le chemin jusqu'au gland !
+      courseB_iceage_loops10_2019: Aide Scrat à faire tout le chemin jusqu'au gland
+        !
+      courseB_iceage_loops11: Aide Scrat à atteindre le gland !
+      courseB_iceage_loops11_2019: Aide Scrat à atteindre le gland !
+      courseB_iceage_loops12: Atteins le gland comme tu peux !
+      courseB_iceage_loops12_2019: Atteins le gland comme tu peux !
+      courseB_iceage_loops1_2019: Aide Scrat à traverser la glace pour qu'il accède
+        le gland !
+      courseB_iceage_loops2: Utilise deux blocs de déplacement différents pour accéder
+        au gland !
+      courseB_iceage_loops2_2019: Utilise deux blocs de déplacement différents pour
+        accéder au gland !
+      courseB_iceage_loops3: Peux-tu accéder au gland avec un seul bloc `W` ?
+      courseB_iceage_loops3_2019: Peux-tu accéder au gland avec un seul bloc `W` ?
+      courseB_iceage_loops4: Ajoute un bloc de plus pour que Scrat fasse tout le chemin
+        jusqu'au gland !
+      courseB_iceage_loops4_2019: Ajoute un bloc de plus pour que Scrat fasse tout
+        le chemin jusqu'au gland !
+      courseB_iceage_loops6: Peux-tu ajouter une boucle pour accéder au gland ?
+      courseB_iceage_loops6_2019: Peux-tu ajouter une boucle pour accéder au gland
+        ?
+      courseB_iceage_loops7: 'Scrat veut vraiment ce gland ! '
+      courseB_iceage_loops7_2019: 'Scrat veut vraiment ce gland ! '
+      courseB_iceage_loops8: 'Peux-tu-vous rectifier ce code? '
+      courseB_iceage_loops8_2019: 'Peux-tu-vous rectifier ce code? '
+      courseB_iceage_loops9: Le gland est si loin ! Peux-tu utiliser des boucles pour
+        aider Scrat à l'atteindre ?
+      courseB_iceage_loops9_2019: Le gland est si loin ! Peux-tu utiliser des boucles
+        pour aider Scrat à l'atteindre ?
       courseB_maze_seq1: |-
         Joue avec ces blocs pour voir ce qu'ils font faire à l'oiseau !
         Amène l'oiseau jusqu'au cochon pour terminer le niveau.
       courseB_maze_seq10: Corrige les bugs pour amener l'oiseau jusqu'au cochon.
+      courseB_maze_seq10_2018: Corrige le code pour amener Scrat au gland.
+      courseB_maze_seq10_2019: Corrige le code pour amener Scrat au gland.
       courseB_maze_seq11: À toi, maintenant ! Amène l'oiseau jusqu'au cochon.
+      courseB_maze_seq11_2018: C'est tout toi ! Amène Scrat au gland.
+      courseB_maze_seq11_2019: C'est tout toi ! Amène Scrat au gland.
       courseB_maze_seq12: Maintenant attrape ce cochon comme tu !
+      courseB_maze_seq12_2018: Maintenant, empare-toi de ce gland comme tu peux !
+      courseB_maze_seq12_2019: Maintenant, empare-toi de ce gland comme tu peux !
+      courseB_maze_seq1_2018: Joue avec ces blocs pour voir ce qu'ils font faire à
+        Scrat ! Amène Scrat au gland pour terminer le niveau.
+      courseB_maze_seq1_2019: Joue avec ces blocs pour voir ce qu'ils font faire à
+        Scrat ! Amène Scrat au gland pour terminer le niveau.
       courseB_maze_seq2: _"Une Erreur! Modifie le code pour me faire arriver au cochon."_
       courseB_maze_seq3: '"Corrige le code pour m''amener jusqu''au cochon !"'
       courseB_maze_seq4: Ajoute 2 blocs pour amener l’oiseau jusqu'au cochon.
+      courseB_maze_seq4_2018: Utilise **2** blocs de mouvement pour amener Scrat au
+        gland.
+      courseB_maze_seq4_2019: Utilise **2** blocs de mouvement pour amener Scrat au
+        gland.
       courseB_maze_seq5: Maintenant, essaie ce casse-tête depuis le début !
+      courseB_maze_seq5_2018: Cette énigme est un peu compliquée !
+      courseB_maze_seq5_2019: Cette énigme est un peu compliquée !
       courseB_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
+      courseB_maze_seq6_2018: Déplace-toi d'une manière, puis d'une autre, pour amener
+        Scrat au gland !
+      courseB_maze_seq6_2019: Déplace-toi d'une manière, puis d'une autre, pour amener
+        Scrat au gland !
       courseB_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau
         jusqu'au cochon!
+      courseB_maze_seq7_2018: Devine ce qui manque, puis ajoute des blocs pour amener
+        Scrat au gland !
+      courseB_maze_seq7_2019: Devine ce qui manque, puis ajoute des blocs pour amener
+        Scrat au gland !
       courseB_maze_seq8: À ton tour ! Que dois-tu faire pour amener l'oiseau jusqu'au
         cochon?
+      courseB_maze_seq8_2018: À ton tour ! Que dois-tu faire pour amener Scrat au
+        gland ?
+      courseB_maze_seq8_2019: À ton tour ! Que dois-tu faire pour amener Scrat au
+        gland ?
       courseB_maze_seq9: 'Défi : Déplace-toi autour de la TNT pour amener l''oiseau
         jusqu''au cochon.'
+      courseB_maze_seq9_2018: 'Défi : Déplace-toi autour de la glace brisée pour amener
+        Scrat au gland.'
+      courseB_maze_seq9_2019: 'Défi : Déplace-toi autour de la glace brisée pour amener
+        Scrat au gland.'
       courseB_maze_seq_challenge1: Peux-tu trouver un chemin avant d'épuiser tous
         tes blocs ?
       courseB_maze_seq_challenge1_2018: Peux-tu trouver un chemin avant d'épuiser
@@ -2105,8 +2416,14 @@ fr-FR:
       courseB_playlab_events4: Le Temps des Chevaliers ! Ajoute un événement pour
         que le chevalier se déplace vers le dragon lorsque l'on clique sur la flèche
         gauche.
+      courseB_playlab_events4_2018: Get all four piles to pass this level.
+      courseB_playlab_events4_2019: Get all four piles to pass this level.
       courseB_playlab_events5: À présent, ajoute un événement qui permet au chevalier
         de fuir le dragon lorsque tu appuies sur la flèche droite.
+      courseB_playlab_events5_2018: Ajoute un événement de sorte que le chevalier
+        s'éloigne en courant du dragon lorsqu'on appuuie sur la flèche droite.
+      courseB_playlab_events5_2019: Ajoute un événement de sorte que le chevalier
+        s'éloigne en courant du dragon lorsqu'on appuuie sur la flèche droite.
       courseB_playlab_events6: |-
         Aide ton chevalier à récupérer tous les drapeaux !
 
@@ -2122,8 +2439,18 @@ fr-FR:
       courseB_playlab_events7: Rends ce jeu amusant en faisant disparaître le chevalier
         quand il se heurte au dragon, en chemin pour récupérer les drapeaux ! Joue
         un son quand ils entrent en collision pour que ça semble plus réel.
+      courseB_playlab_events7_2018: '1.  Programme le chevalier à disparaître quand
+        il percute le dragon.    2. Joue un son quand ils entrent en collision pour
+        que ça semble plus réel.  '
+      courseB_playlab_events7_2019: '1.  Programme le chevalier à disparaître quand
+        il percute le dragon.    2. Joue un son quand ils entrent en collision pour
+        que ça semble plus réel.  '
       courseB_playlab_eventsFP: Sois imaginatif. Que peux-tu faire pour rendre ce
         jeu plus amusant ?
+      courseB_playlab_eventsFP_2018: "**Jeu libre :** Fais appel à ton imagination.
+        Que peux-tu faire pour rendre ce jeu plus amusant ?"
+      courseB_playlab_eventsFP_2019: "**Jeu libre :** Fais appel à ton imagination.
+        Que peux-tu faire pour rendre ce jeu plus amusant ?"
       courseB_playlab_events_challenge1: Fais bouger les animaux vers le bas lorsque
         tu appuies sur ▼.
       courseB_playlab_events_challenge1_2018: Fais bouger les animaux vers le bas
@@ -2173,9 +2500,14 @@ fr-FR:
       courseB_starWars_prog9_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseC19_playLab_EOC1: Choisis un arrière plan et un acteur qui sera ton héros
         dans le jeu.
+      courseC19_playLab_EOC2: Utilise des événements et des actions pour déplacer
+        ton héros. Atteins les objectifs.
       courseC19_playLab_EOC3: Ajoute au moins 2 acteurs à ton jeu et fais les bouger.
       courseC19_playLab_EOC4: Trouve des moyens intéressants pour modifier le score.
         Le score doit se modifier pour montrer autre chose que 0 et pouvoir continuer.
+      courseC19_playLab_EOC5: Excellent travail ! Tu disposes de tous les composants
+        de base d'un jeu. Maintenant, passe un moment à t'assurer que le jeu fonctionne
+        comme tu le souhaites.
       courseC19_playLab_EOC6: Tu as terminé! Maintenant tu peux jouer à ton jeu où
         le partager avec tes amis et camarades de classe!
       courseC_PlayLab_events1: Fais dire à Jorge le Chien (acteur 1) "Salut"
@@ -2256,6 +2588,8 @@ fr-FR:
         Ajoute un bloc à l'evènement `quand l'exécution commence` pour changer l'arrière-plan et la vitesse de Waddles le pingouin.
 
         Joue au jeu et bouge Waddles avec les flèches jusqu'a ce que tu marques 1 point.
+      courseC_PlayLab_eventsA_embed_2019: Jouons à un jeu. Marque 5 points en amenant
+        le Pingouin à la Pieuvre !
       courseC_PlayLab_eventsFP: Crée ta propre histoire. Lorsque tu es prêt, appuie
         sur "Terminer" pour partager avec tes amis. Trouve des idées dans les indices.
       courseC_PlayLab_eventsFP_2018: Crée ta propre histoire. Lorsque tu es prêt,
@@ -2274,10 +2608,14 @@ fr-FR:
         Utilise un nouveau bloc pour faire reculer automatiquement Waddles au départ lorsqu'il court vers le dinosaure et lorsqu'il marque un point.
         Joue au jeu et bouge Waddles avec les flèches jusqu'a ce que tu marques assez de points.
       courseC_artist_loop1: Ajoutons des pizazz!
+      courseC_artist_loop1_2018: Ajoutons du peps avec un bloc `établir le schéma`.
+      courseC_artist_loop1_2019: Ajoutons du peps avec un bloc `établir le schéma`.
       courseC_artist_loops1a: 'Centre l''artiste dans l''aire de jeu, puis dessine
         un oiseau en utilisant un autocollant. '
       courseC_artist_loops1a_2018: 'Centre l''artiste dans l''aire de jeu, puis dessine
         un oiseau en utilisant un autocollant. '
+      courseC_artist_loops1b_2019: Change l'orientation de ton autocollant en ajoutant
+        une commande `tourner` à ton code.
       courseC_artist_loops2a: Maintenant, utilise une boucle pour faire tourner ton
         oiseau 12 fois, avec un tour de 30 degrés.
       courseC_artist_loops2a_2018: Maintenant, utilise une boucle pour faire tourner
@@ -2287,8 +2625,11 @@ fr-FR:
         et répétés les blocs pour faire des schémas différents.
       courseC_artist_loops3a: Maintenant ajoute une chauve-souris !
       courseC_artist_loops3a_2018: Maintenant ajoute une chauve-souris !
+      courseC_artist_loops3a_2019: Maintenant, ajoute un deuxième autocollant !
       courseC_artist_loops4a: Essaie de sauter en avant de 75 pixels.
       courseC_artist_loops4a_2018: Essaie de sauter en avant de 75 pixels.
+      courseC_artist_loops4a_2019: Modifie ton code afin de sauter en avant entre
+        le dessin des deux autocollants.
       courseC_artist_loops5a: Essaie de nouveaux autocollants!
       courseC_artist_loops5a_2018: Essaie de nouveaux autocollants!
       courseC_artist_loops5a_2019: Essaie de nouveaux autocollants!
@@ -2437,6 +2778,8 @@ fr-FR:
         terminer ce défi!
       courseC_collector_prog_challenge2_2019: Ramasse au moins **10** trésors pour
         terminer ce défi!
+      courseC_data wizard: Appuie sur Exécuter.    L'assistant fera apparaître des
+        animaux.   Compte-les.    Que remarques-tu ?
       courseC_flappy_events1: Attache le bloc `faire une quantité normale de battements
         d'ailes` sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique
         ou tape sur l'espace de jeu pour déplacer Flappy vers la cible.
@@ -2593,6 +2936,8 @@ fr-FR:
         ajoutant, et effaçant des blocs."
       courseC_maze_debugging9: Débogue ce niveau pour amener Scrat jusqu'au gland.
       courseC_maze_debugging9_2018: Débogue ce niveau pour amener Scrat jusqu'au gland.
+      courseC_maze_debugging9_2019: Utilise les blocs de la boîte à outils pour créer
+        ton programme. Amène l'oiseau au cochon.
       courseC_maze_debugging_challenge1: Aide Scrat à décider dans quel chemin tourner
         pour aller vers le gland.
       courseC_maze_debugging_challenge1_2018: Aide Scrat à décider dans quel chemin
@@ -2759,8 +3104,28 @@ fr-FR:
         la ferraille !
       courseC_starWars_loops9_2019: Utilse ce que tu as appris pour ramasser toute
         la ferraille !
+      courseD_artist_1_2018: 'Dessine un hexagone avec des côtés de **50** pixel de
+        long.  '
+      courseD_artist_1_2018_2019: 'Dessine un hexagone avec des côtés de **50** pixel
+        de long.  '
+      courseD_artist_2_2018: Maintenant, tourne à droite de **60** degrés, puis trace
+        une ligne droite de **150** pixels de long, et saute en arrière pour revenir
+        au centre de l'aire de jeu.
+      courseD_artist_2_2018_2019: Maintenant, tourne à droite de **60** degrés, puis
+        trace une ligne droite de **150** pixels de long, et saute en arrière pour
+        revenir au centre de l'aire de jeu.
+      courseD_artist_3_2018: Imbrique tout le code à l'intérieur d'une autre boucle
+        `repeat` et exécute-le un total de **6** fois.
+      courseD_artist_3_2018_2019: Imbrique tout le code à l'intérieur d'une autre
+        boucle `repeat` et exécute-le un total de **6** fois.
+      courseD_artist_4_2018: Ajoute une petite forme à la fin de ta ligne !
+      courseD_artist_4_2018_2019: Ajoute une petite forme à la fin de ta ligne !
       courseD_artist_5_2018: Joue avec les flocons de neige!
       courseD_artist_5_2018_2019: Joue avec les flocons de neige!
+      courseD_artist_6_2018: Essaie de changer ta longue ligne de 150 pixels en 6
+        courtes lignes de **25** pixels, avec de petits virages à la fin.
+      courseD_artist_6_2018_2019: Essaie de changer ta longue ligne de 150 pixels
+        en 6 courtes lignes de **25** pixels, avec de petits virages à la fin.
       courseD_artist_binary1: Peux-tu faire que l'artiste dessine « 01010101 » en
         binaire dans la première ligne ?
       courseD_artist_binary1_2018: Peux-tu faire que l'artiste dessine « 01010101 »
@@ -2825,6 +3190,16 @@ fr-FR:
         Voici un tableau avec une plus grande résolution de 16 x 16 pixels !
 
         Regarde ce qu’il se passe lorsque l'on essaie d'être créatif avec les bits !
+      courseD_artist_binary_challenge1_2018: Tu ne peux utiliser chaque valeur binaire
+        (0 ou 1) qu'une fois dans cette énigme. Essaie d'utiliser des boucles imbriquées
+        pour compléter ce dessin.
+      courseD_artist_binary_challenge1_2019: Tu ne peux utiliser chaque valeur binaire
+        (0 ou 1) qu'une fois dans cette énigme. Essaie d'utiliser des boucles imbriquées
+        pour compléter ce dessin.
+      courseD_artist_binary_challenge2_2018: Es-tu assez persévérant pour restaurer
+        ce logo à la normale ?
+      courseD_artist_binary_challenge2_2019: Es-tu assez persévérant pour restaurer
+        ce logo à la normale ?
       courseD_artist_nestedLoops1: |-
         Dessine un triangle pour commencer ce niveau.\
         (Chaque côté fait 100 pixels de long et tu devras tourner de 120 degrés pour chaque angle.)
@@ -3113,6 +3488,46 @@ fr-FR:
       courseD_bee_nestedLoops9_predict2: Fais tout le miel.
       courseD_bee_nestedLoops9_predict2_2018: Fais tout le miel.
       courseD_bee_nestedLoops9_predict2_2019: Fais tout le miel.
+      courseD_bounce_events10s_2018: Attache le bloc `marquer un point` à l'événement
+        `quand le ballon est dans le but`, et le bloc `marquer le point de l'adversaire`
+        à l'événement `quand la balle manque la main` pour créer un jeu.
+      courseD_bounce_events10s_2019: Attache le bloc `marquer un point` à l'événement
+        `quand le ballon est dans le but`, et le bloc `marquer le point de l'adversaire`
+        à l'événement `quand la balle manque la main` pour créer un jeu.
+      courseD_bounce_events11s_2018: Attache le bloc `lancer une nouvelle balle` dans
+        tous les endroits où le jeu a besoin d'une nouvelle balle.
+      courseD_bounce_events11s_2019: Attache le bloc `lancer une nouvelle balle` dans
+        tous les endroits où le jeu a besoin d'une nouvelle balle.
+      courseD_bounce_events12s_2018: Personnalise ce jeu. Tu peux modifier tous les
+        visuels et les règles. Lorsque tu as terminé, clique sur « Terminer » pour
+        que tes amis essayent ton jeu sur leur téléphone.
+      courseD_bounce_events12s_2019: Personnalise ce jeu. Tu peux modifier tous les
+        visuels et les règles. Lorsque tu as terminé, clique sur « Terminer » pour
+        que tes amis essayent ton jeu sur leur téléphone.
+      courseD_bounce_events1s_2018: Attache un bloc au bloc `quand flèche gauche`
+        et appuie sur « Exécuter » pour déplacer le joueur vers le filet.
+      courseD_bounce_events1s_2019: Attache un bloc au bloc `quand flèche gauche`
+        et appuie sur « Exécuter » pour déplacer le joueur vers le filet.
+      courseD_bounce_events2s_2018: Maintenant, attache un bloc à l'événement `quand
+        à droite` afin que la main puisse accéder aux deux paniers.
+      courseD_bounce_events2s_2019: Maintenant, attache un bloc à l'événement `quand
+        à droite` afin que la main puisse accéder aux deux paniers.
+      courseD_bounce_events5s_2018: Attache un bloc à l'événement `quand la balle
+        frappe la main` pour t'assurer que la balle atteigne le panier.
+      courseD_bounce_events5s_2019: Attache un bloc à l'événement `quand la balle
+        frappe la main` pour t'assurer que la balle atteigne le panier.
+      courseD_bounce_events6s_2018: Attache le code pour faire rebondir la balle,
+        quand elle frappe le mur, afin de pouvoir résoudre cette énigme.
+      courseD_bounce_events6s_2019: Attache le code pour faire rebondir la balle,
+        quand elle frappe le mur, afin de pouvoir résoudre cette énigme.
+      courseD_bounce_events7s_2018: Attache des blocs sonores pour faire bruisser
+        le filet, lorsqu'on frappe le panier, et entendre le coup de sifflet, lorsque
+        la balle manque la main. Fais rebondir la balle jusqu'à ce qu'elle frappe
+        l'objectif final.
+      courseD_bounce_events7s_2019: Attache des blocs sonores pour faire bruisser
+        le filet, lorsqu'on frappe le panier, et entendre le coup de sifflet, lorsque
+        la balle manque la main. Fais rebondir la balle jusqu'à ce qu'elle frappe
+        l'objectif final.
       courseD_collector_debugging1: Corrige la ou les erreurs pour ramasser les trésors.
       courseD_collector_debugging1a_2018: Corrige la ou les erreurs pour ramasser
         les trésors.
@@ -3144,6 +3559,10 @@ fr-FR:
         comment résoudre ce puzzle.
       courseD_collector_debugging6: "**Défi:** Utilise tes compétences en débogage
         pour corriger les erreurs et ramasser tous les trésors."
+      courseD_collector_debugging6a_2018: 'Défi : Utilise le code dans la zone de
+        travail pour collecter, au moins, **6** pièces de trésor !'
+      courseD_collector_debugging6a_2019: 'Défi : Utilise le code dans la zone de
+        travail pour collecter, au moins, **6** pièces de trésor !'
       courseD_collector_debugging_challenge2: Es-tu un expert des boucles imbriquées
         ? Sers-toi de ce que tu as appris jusqu'à maintenant pour ramasser tous les
         diamants !
@@ -3316,6 +3735,43 @@ fr-FR:
       courseD_harvester_nested_loops_challenge1_2019: '"J''ai besoin d''aide à la
         ferme ! Aide-moi à récolter ce maïs en utilisant uniquement les blocs présents
         dans ta boîte à outils."'
+      courseD_iceage_loops1: Aide Scrat à traverser la glace pour qu'il accède le
+        gland !
+      courseD_iceage_loops10: Aide Scrat à faire tout le chemin jusqu'au gland !
+      courseD_iceage_loops10_2019: Aide Scrat à faire tout le chemin jusqu'au gland
+        !
+      courseD_iceage_loops11: Aide Scrat à atteindre le gland !
+      courseD_iceage_loops11_2019: Aide Scrat à atteindre le gland !
+      courseD_iceage_loops12: Atteins le gland comme tu peux !
+      courseD_iceage_loops12_2019: Atteins le gland comme tu peux !
+      courseD_iceage_loops1_2019: Aide Scrat à traverser la glace pour qu'il accède
+        le gland !
+      courseD_iceage_loops2: Utilise un bloc `tourner à gauche` pour atteindre le
+        gland !
+      courseD_iceage_loops2_2019: Utilise un bloc `tourner à gauche` pour atteindre
+        le gland !
+      courseD_iceage_loops3: Peux-tu atteindre le gland avec un seul bloc `avancer`
+        ?
+      courseD_iceage_loops3_2019: Peux-tu atteindre le gland avec un seul bloc `avancer`
+        ?
+      courseD_iceage_loops4: Ajoute un bloc de plus pour que Scrat fasse tout le chemin
+        jusqu'au gland !
+      courseD_iceage_loops4_2019: Ajoute un bloc de plus pour que Scrat fasse tout
+        le chemin jusqu'au gland !
+      courseD_iceage_loops6: Peux-tu ajouter une boucle pour accéder au gland ?
+      courseD_iceage_loops6_2019: Peux-tu ajouter une boucle pour accéder au gland
+        ?
+      courseD_iceage_loops7: 'Scrat veut vraiment ce gland ! '
+      courseD_iceage_loops7_2019: 'Scrat veut vraiment ce gland ! '
+      courseD_iceage_loops8: 'Peux-tu-vous rectifier ce code? '
+      courseD_iceage_loops8_2019: 'Peux-tu-vous rectifier ce code? '
+      courseD_iceage_loops9: Le gland est si loin ! Peux-tu utiliser des boucles pour
+        aider Scrat à l'atteindre ?
+      courseD_iceage_loops9_2019: Le gland est si loin ! Peux-tu utiliser des boucles
+        pour aider Scrat à l'atteindre ?
+      courseD_maze_intro4_2019: Aide Rouge à atteindre le cochon.
+      courseD_maze_intro5a_2019: Compte soigneusement les espaces sur la grille !
+      courseD_maze_intro5c_2019: Attention au TNT ! Aide Rouge à atteindre le cochon.
       courseD_maze_nestedLoops3: Amène le zombie jusqu'au tournesol en utilisant le
         moins de blocs possible.
       courseD_maze_nestedLoops3_2018: Amène le zombie jusqu'au tournesol en utilisant
@@ -3356,8 +3812,10 @@ fr-FR:
         Enlève le en le poussant dans la boite à outils.
       courseD_maze_ramp3_2018: Il y a un bloc de trop qui va faire s'écraser l'oiseau.
         Enlève le en le poussant dans la boite à outils.
+      courseD_maze_ramp3_2019: Jette le bloc `avancer` supplémentaire.
       courseD_maze_ramp4: Evite la TNT ou des plumes voleront!
       courseD_maze_ramp4_2018: Evite la TNT ou des plumes voleront!
+      courseD_maze_ramp4_2019: Aide Scrat à atteindre le gland.
       courseD_maze_ramp5: Evite la TNT.
       courseD_maze_ramp5_2018: Evite la TNT.
       courseD_maze_ramp5_2019: Evite la TNT.
@@ -3365,6 +3823,7 @@ fr-FR:
         ce cochon!
       courseD_maze_ramp5a_2018: Regarde bien la séquence et essaie de trouver comment
         atteindre ce cochon!
+      courseD_maze_ramp5a_2019: Compte soigneusement les espaces sur la grille !
       courseD_maze_ramp5b: Navigue dans ce labyrinthe pour aider l'oiseau à trouver
         le cochon!
       courseD_maze_ramp5b_2018: Navigue dans ce labyrinthe pour aider l'oiseau à trouver
@@ -3373,6 +3832,8 @@ fr-FR:
         le cochon!
       courseD_maze_ramp5c: Aide l'oiseau à atteindre le cochon.
       courseD_maze_ramp5c_2018: Aide l'oiseau à atteindre le cochon.
+      courseD_maze_ramp5c_2019: Attention à la glace qui se fissure ! Aide Scrat à
+        atteindre le gland.
       courseD_maze_ramp5d: Amène l'oiseau jusqu'au cochon.
       courseD_maze_ramp5d_2018: Amène l'oiseau jusqu'au cochon.
       courseD_maze_ramp5d_2019: Amène l'oiseau jusqu'au cochon.
@@ -3470,8 +3931,11 @@ fr-FR:
         !
       courseD_scrat_ramp5: Évite la glace craquelée.
       courseD_scrat_ramp6: Aide Scrat à arriver au gland, à l’aide d’une boucle !
+      courseD_scrat_ramp7: Aide Scrat à atteindre le gland !
       courseD_scrat_ramp8: Utilise ce que tu as appris pour emmener Scrat jusqu'au
         gland!
+      courseE_aboutme_6: Continue ! Essaie d'ajouter plus de fonctionnalités à ton
+        affiche pour l'améliorer.
       courseE_artist_concept1: 'Recrée cette image. '
       courseE_artist_concept1_2018: 'Recrée cette image. '
       courseE_artist_concept4: Recrée ce dessin.
@@ -3499,6 +3963,8 @@ fr-FR:
       courseE_artist_functions2_copy: 'Ce coup-ci, utilise la fonction `Dessine un
         carré` pour créer des lunettes. '
       courseE_artist_functions3: Tu peux faire ce dessin en ajoutant un bloc `répéter`.
+      courseE_artist_functions3_2018: Construis une fonction qui créera cette étoile.
+      courseE_artist_functions3_2019: Construis une fonction qui créera cette étoile.
       courseE_artist_functions3_copy: Tu peux faire ce dessin en ajoutant un bloc
         `répéter`.
       courseE_artist_functions4: Maintenant que tu peux dessiner une étoile, essaie
@@ -3523,8 +3989,32 @@ fr-FR:
         `dessine une fenêtre` et en l'appelant 5 fois. Attention à la porte!
       courseE_artist_functions8: 'Défi: Crée autant de fonctions que tu juges nécessaire
         pour dessiner ces carrés de 50 pixels.'
+      courseE_artist_functions8_2018: Utilise tout ce que tu as appris jusqu'à présent
+        pour recréer ce schéma.
+      courseE_artist_functions8_2019: Utilise tout ce que tu as appris jusqu'à présent
+        pour recréer ce schéma.
+      courseE_artist_functions8a_2018: Crée une fonction pour un seul carré.
+      courseE_artist_functions8a_2019: Crée une fonction pour un seul carré.
+      courseE_artist_functions8b_2018: Appelle la fonction `dessiner un carré` de
+        l'intérieur de ta fonction `dessiner une rangée de carrés` pour rendre cela
+        encore plus facile !
+      courseE_artist_functions8b_2019: Appelle la fonction `dessiner un carré` de
+        l'intérieur de ta fonction `dessiner une rangée de carrés` pour rendre cela
+        encore plus facile !
+      courseE_artist_functions8c_2018: Ajoute une autre fonction pour créer cette
+        pile de carrés décalés.
+      courseE_artist_functions8c_2019: Ajoute une autre fonction pour créer cette
+        pile de carrés décalés.
       courseE_artist_functions9: Crée cette image en utilisant uniquement les blocs
         fournis.
+      courseE_artist_functions9_2018: "\\*\\*Défi : \\*\\* Crée cette image uniquement
+        à l'aide des blocs fournis."
+      courseE_artist_functions9_2019: "\\*\\*Défi : \\*\\* Crée cette image uniquement
+        à l'aide des blocs fournis."
+      courseE_artist_functionsProj_2018: "\\*\\*Inspiration : \\*\\* Utilise ce que
+        tu as appris pour créer ce que tu veux !"
+      courseE_artist_functionsProj_2019: "\\*\\*Inspiration : \\*\\* Utilise ce que
+        tu as appris pour créer ce que tu veux !"
       courseE_artist_functions_challenge1: Dès que tu as défini une fonction, tu peux
         l'appeler encore et encore - quand tu veux et n'importe où ! Essaie ce code
         pour voir comment il fonctionne, puis modifie-le pour faire ton propre dessin
@@ -3599,14 +4089,24 @@ fr-FR:
       courseE_farmer_concept3_2018: Remplis le trou à la fin de chacun de ses chemins.
       courseE_farmer_functions1: Aide le cueilleur à aller à la citrouille et à la
         ramasser.
+      courseE_farmer_functions10a1_2018: Utilise tout ce que tu as appris jusqu'à
+        présent pour résoudre cette énigme !
+      courseE_farmer_functions10a1_2019: Utilise tout ce que tu as appris jusqu'à
+        présent pour résoudre cette énigme !
       courseE_farmer_functions10b: Utilise ta nouvelle fonction 2 fois pour résoudre
         ce puzzle.
+      courseE_farmer_functions13_2018: Résouds cette énigme en 23 blocs ou moins.
+      courseE_farmer_functions13_2019: Résouds cette énigme en 23 blocs ou moins.
       courseE_farmer_functions1_2018: Aide le cueilleur à aller à la citrouille et
         à la ramasser.
       courseE_farmer_functions1_2019: Aide le cueilleur à aller à la citrouille et
         à la ramasser.
       courseE_farmer_functions1a: Maintenant aide le cueilleur à ramasser le maïs,
         les salades, **et** la citrouille.
+      courseE_farmer_functions1a_2018: Aide la moissonneuse à ramasser tout le maïs,
+        puis la citrouille.
+      courseE_farmer_functions1a_2019: Aide la moissonneuse à ramasser tout le maïs,
+        puis la citrouille.
       courseE_farmer_functions2b: Aide le cueilleur à ramasser le maïs et la citrouille.
       courseE_farmer_functions2b_2018: Aide le cueilleur à ramasser le maïs et la
         citrouille.
@@ -3614,20 +4114,38 @@ fr-FR:
         citrouille.
       courseE_farmer_functions2ba: Aide le fermier à ramasser le maïs et les citrouilles
         en utilisant la fonction `maïs et citrouille`.
+      courseE_farmer_functions2ba_2018: Utiliser les fonctions ci-dessous pour aider
+        la fermière à ramasser le maïs et les citrouilles.
       courseE_farmer_functions2ba_2019: Aide le fermier à ramasser le maïs et les
         citrouilles en utilisant la fonction `maïs et citrouille`.
       courseE_farmer_functions3c: Maintenant, termine toi même la fonction en y ajoutant
         les blocs dans la **définition de la fonction**.
+      courseE_farmer_functions3c1_2018: Cette fonction appelle d'autres fonctions
+        !
+      courseE_farmer_functions3c1_2019: Cette fonction appelle d'autres fonctions
+        !
+      courseE_farmer_functions3c_2018: Essaie sur un chemin plus long.
+      courseE_farmer_functions3c_2019: Essaie sur un chemin plus long.
       courseE_farmer_functions4b: Utilise ta nouvelle fonction pour résoudre cette
         énigme.
       courseE_farmer_functions5c: Ta fonction sera utile ici.
       courseE_farmer_functions6c: Qu'est-ce que tu as besoin d'ajouter à ce programme
         pour vérifier qu'une pousse est un maïs ou une salade?
+      courseE_farmer_functions7a1_2018: Crée une fonction qui envoie la moissonneuse
+        sur un chemin carré pour ramasser une seule tête de laitue au milieu de chaque
+        rangée.
+      courseE_farmer_functions7a1_2019: Crée une fonction qui envoie la moissonneuse
+        sur un chemin carré pour ramasser une seule tête de laitue au milieu de chaque
+        rangée.
       courseE_farmer_functions7b: Aide la fermière à trouver son chemin en descendant
         le long de ce trajet compliqué jusqu'à la citrouille en tournant à gauche
         au maïs et à droite à la salade.
+      courseE_farmer_functions8a1_2018: Ta fonction est-elle toujours utile ?
+      courseE_farmer_functions8a1_2019: Ta fonction est-elle toujours utile ?
       courseE_farmer_functions8b: "**Défi:** Ramasse toutes les citrouilles en utilisant
         la méthode du puzzle précédent. "
+      courseE_farmer_functions9a1_2018: Ta fonction est-elle toujours utile ?
+      courseE_farmer_functions9a1_2019: Ta fonction est-elle toujours utile ?
       courseE_farmer_functions9b: Peux-tu trouver le motif dont tu as besoin pour
         résoudre ce puzzle?
       courseE_farmer_ramp11a: Tant qu'il y a une pile, enlève la saleté.
@@ -3636,6 +4154,35 @@ fr-FR:
       courseE_farmer_ramp11b: Tant qu'il y a une pile, enlève la saleté.
       courseE_farmer_ramp11b_2018: Tant qu'il y a une pile, enlève la saleté.
       courseE_farmer_ramp11b_2019: Tant qu'il y a une pile, enlève la saleté.
+      courseE_farmer_ramp12_forswap: Maintenant, utilise des boucles imbriquées pour
+        résoudre cette énigme.
+      courseE_farmer_ramp12_forswap_2018: Maintenant, utilise des boucles imbriquées
+        pour résoudre cette énigme.
+      courseE_farmer_ramp12_forswap_2019: Maintenant, utilise des boucles imbriquées
+        pour résoudre cette énigme.
+      courseE_farmer_ramp12b: Tant qu'il y a de la laitue, ramasse la laitue !
+      courseE_farmer_ramp12b_2018: Tant qu'il y a de la laitue, ramasse la laitue
+        !
+      courseE_farmer_ramp12b_2019: Tant qu'il y a de la laitue, ramasse la laitue
+        !
+      courseE_farmer_ramp12c: Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la
+        toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12c_2018: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12c_2019: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12d: Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la
+        toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12d_2018: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12d_2019: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12e: Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la
+        toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12e_2018: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
+      courseE_farmer_ramp12e_2019: Avance jusqu'à ce que tu atteignes la laitue, puis
+        ramasse-la toute, en utilisant une boucle `tant que`.
       courseE_farmer_ramp12f: Avance jusqu'à atteindre la salade, puis tourne à gauche
         **si** il y a un chemin à gauche. Sinon tourne à droite.
       courseE_farmer_ramp12f_2018: Avance jusqu'à atteindre la salade, puis tourne
@@ -3986,6 +4533,36 @@ fr-FR:
         un paramètre de `longueur` pour récolter tout le maïs.
       courseF_bee_fwp_challenge2: Utilise une `boucle for` dans une fonction avec
         un paramètre `longueur` pour ramasser tous les légumes dans chaque rangée.
+      courseF_bee_variables_1_2018: Termine ce code afin que l'abeille puisse collecter
+        tout le miel et le nectar.
+      courseF_bee_variables_1_2019: Termine ce code afin que l'abeille puisse collecter
+        tout le miel et le nectar.
+      courseF_bee_variables_2_2018: Modifie ta solution en un seul endroit afin que
+        l'abeille puisse collecter tout le miel et le nectar.
+      courseF_bee_variables_2_2019: Modifie ta solution en un seul endroit afin que
+        l'abeille puisse collecter tout le miel et le nectar.
+      courseF_bee_variables_3_2018: Soustrais un de la variable, à chaque passage
+        à travers la boucle, si tu souhaites utiliser la même fonction pour résoudre
+        ce niveau.
+      courseF_bee_variables_3_2019: Soustrais un de la variable, à chaque passage
+        à travers la boucle, si tu souhaites utiliser la même fonction pour résoudre
+        ce niveau.
+      courseF_bee_variables_4_2018: Modifie le code afin qu'il fonctionne pour cette
+        énigme.
+      courseF_bee_variables_4_2019: Modifie le code afin qu'il fonctionne pour cette
+        énigme.
+      courseF_bee_variables_5_2018: Crée ton propre code pour résoudre cette énigme
+      courseF_bee_variables_5_2019: Crée ton propre code pour résoudre cette énigme
+      courseF_bee_variables_6_2018: "**Défi** Maintenant teste cette énigme !"
+      courseF_bee_variables_6_2019: "**Défi** Maintenant teste cette énigme !"
+      courseF_bee_variables_7_2018: Cette énigme est un peu différente. Que dois-tu
+        faire pour le résoudre ?
+      courseF_bee_variables_7_2019: Cette énigme est un peu différente. Que dois-tu
+        faire pour le résoudre ?
+      courseF_bee_variables_8_2018: Combien de nectar l'abeille recueillera-t-elle
+        de cette fleur ?
+      courseF_bee_variables_8_2019: Combien de nectar l'abeille recueillera-t-elle
+        de cette fleur ?
       courseF_playlab_variables1a: Les variables peuvent être utilisées pour stocker
         le texte que tu souhaites utiliser ultérieurement. Fais crier "But !", par
         Kiki, le joueur de football, en attribuant ce texte à la variable 'crier'.
@@ -4012,6 +4589,10 @@ fr-FR:
         exactement 10 points et tu gagnes !
       courseF_video_createFunctions: Nous n'avons pas encore de vidéo pour la création
         de fonctions. Ceci est un espace réservé.
+      coursea_maze_ramp1_2018: Pour cette énigme, enclenche les blocs ensemble et
+        clique sur « ▶ Exécuter » !
+      coursea_maze_ramp1_2019: Pour cette énigme, enclenche les blocs ensemble et
+        clique sur « ▶ Exécuter » !
       express_maze_debugging9_2019: Utilises les blocs de la boîte à outils pour construire
         votre programme. Obtiens le Scrat au gland.
       flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
@@ -4150,6 +4731,8 @@ fr-FR:
         droite` à 72 degrés, après tout le reste dans la boucle ?
       ramp_artist_loops4_2018: Que se passe-t-il lorsque tu ajoutes un `tourner sur
         la droite` à 72 degrés, après tout le reste dans la boucle ?
+      ramp_artist_loops4_2019: Crée ce motif d'étoile en bouclant une séquence de
+        blocs `avancer` et `tourner à droite de 144 degrés`.
       ramp_artist_loops5: Utilise des boucles pour créer cet escalier.
       ramp_artist_loops5_2018: Utilise des boucles pour créer cet escalier.
       ramp_artist_loops5_2019: Utilise des boucles pour créer cet escalier.

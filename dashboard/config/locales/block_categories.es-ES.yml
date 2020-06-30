@@ -13,17 +13,20 @@ es:
       Dancers: Bailarines
       Default: Por defecto
       Events: Eventos
-      Functions: funciones
+      Functions: Funciones
       'Functions ': Funciones
       Game/Score: Juego/Puntaje
       Games/Score: Juegos/Puntaje
       Groups: Grupos
+      Input: Entrada
       Locations: Ubicaciones
       Logic: Lógica
-      Loops: vuelta
+      Loops: Bucles
       Math: Matemáticas
       Numbers: Numeros
+      Properties: Propiedades
+      Sprites: Sprites
       Text: Texto
-      Variables: variables
+      Variables: Variables
       'Variables ': Variables
       World: Mundo

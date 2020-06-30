@@ -316,7 +316,7 @@ Sounds.prototype.registerByFilenamesAndID = function(soundPaths, soundID) {
 Sounds.prototype.register = function(config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
-  sound.preload();
+  sound.preloadFile();
   return sound;
 };
 
@@ -451,7 +451,7 @@ Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
   soundConfig['bytes'] = bytes;
   soundConfig.fromCached = playbackOptions.fromCached;
   let sound = new Sound(soundConfig, this.audioContext);
-  sound.preload();
+  sound.preloadBytes();
   sound.play();
 };
 

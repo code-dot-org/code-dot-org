@@ -1072,6 +1072,8 @@ hi:
             '"West"': पश्चिम
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
         text: प्लेसाउंड {SOUND}
       gamelab_pointInDirection:
@@ -1153,6 +1155,8 @@ hi:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} डिग्रियां बदलें"
         options:

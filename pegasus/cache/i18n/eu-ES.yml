@@ -1483,6 +1483,8 @@ eu-ES:
   header_project_gallery: Proiektuak
   header_educate_hoc: Kode Ordua
   header_about: Code.org-i buruz
+  header_legal_privacy: Pribatutasun politika
+  header_legal_tos: Erabilera baldintzak
   user_header_label: Kaixo %{username}
   user_header_settings: Nire kontua
   user_header_logout: Amaitu saioa

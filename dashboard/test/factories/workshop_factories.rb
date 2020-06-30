@@ -287,5 +287,16 @@ FactoryGirl.define do
       num_facilitators 0   # Most have no facilitators
       each_session_hours 6 # The most common session length
     end
+
+    factory :csp_wfrt do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+      capacity 40
+      on_map false
+      funded false
+      num_sessions 1
+      num_facilitators 2
+      each_session_hours 7
+    end
   end
 end

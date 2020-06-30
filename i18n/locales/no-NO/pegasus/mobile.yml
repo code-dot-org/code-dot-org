@@ -1391,6 +1391,8 @@
   header_teacher_community: "Brukergruppe for lærere"
   header_help_support: 'Hjelp og støtte '
   header_report_bug: "Rapporter feil"
+  header_legal_privacy: "Personvern"
+  header_legal_tos: "Vilkår"
   header_tutorials: "Guide"
   app_lab_documentation: "Programmerings lab dokumentasjon"
   app_lab_tutorials: "Programmerings lab veiledning"

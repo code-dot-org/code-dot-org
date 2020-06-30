@@ -1,7 +1,7 @@
 ---
 az-AZ:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -17,9 +17,15 @@ az-AZ:
           name: çevrə çək
         draw a car:
           name: bir avtomobil çək
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: hündürlük
       2-3 Artist Debugging 10:
         draw square:
           name: bir kvadrat çək
+          parameters:
+            height: hündürlük
         draw a circle:
           name: çevrə çək
         draw a button:
@@ -160,15 +166,24 @@ az-AZ:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: nektar al bal hazırla
+          parameters:
+            honey: bal
       Course 4 Play Lab Params 1:
         jump:
           name: atıl
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: xallar
       Course 4 Play Lab Params 2:
         jump:
           name: atıl
       Course 4 Play Lab Params 3:
         jump:
           name: atıl
+          parameters:
+            height: hündürlük
+            actor: personaj
       Course 4 Play Lab Params 4:
         patrol:
           name: patrul
@@ -177,15 +192,29 @@ az-AZ:
       Course 4 Play Lab Params 5:
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
       Course 4 Play Lab Params 6:
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
       Course 4 Play Lab Params 7:
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
+            speed: sürət
       Course 4 Play Lab Params 8:
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
+            speed: sürət
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: xallar
       Course 4 Play Lab Vars 1:
         set score:
           name: skoru təyin et
@@ -198,15 +227,24 @@ az-AZ:
       Course 4 SCF 1a:
         get nectar:
           name: nektarı al
+          parameters:
+            counter: sayğac
       Course 4 SCF 3:
         do something:
           name: bir şey etmək
+        draw an octagon:
+          parameters:
+            length: uzunluq
       'Course E: Play Lab Project':
         do something:
           name: bir şey etmək
       Find the Wizard:
         do something:
           name: bir şey etmək
+      FoodFight:
+        score_points:
+          parameters:
+            points: xallar
       Geometric Sun:
         sun:
           name: günəş
@@ -233,6 +271,23 @@ az-AZ:
           name: üçbucaq
         square:
           name: kvadrat
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: uzunluq
+        draw a loop:
+          parameters:
+            length: uzunluq
+        draw spiral circle:
+          parameters:
+            size: ölçü
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: uzunluq
+        draw spiral circle:
+          parameters:
+            size: ölçü
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: kvadrat çək
@@ -260,22 +315,60 @@ az-AZ:
           name: bir şey etmək
         draw a hexagon:
           name: altıbucaqlı çək
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: uzunluq
         do something:
           name: bir şey etmək
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 15:
         draw a star:
           name: bir ulduz çək
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+        draw a pinwheel:
+          parameters:
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 2:
         do something:
           name: bir şey etmək
@@ -285,44 +378,100 @@ az-AZ:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: üçbucaq çək
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a hexagon:
           name: altıbucaqlı çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        draw a sqaure:
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: uzunluq
       NEW Course 4 Artist Params 9:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
         do something:
           name: bir şey etmək
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: uzunluq
       NEW Course 4 Play Lab Params 11:
         jump:
           name: atıl
+          parameters:
+            height: hündürlük
+            actor: personaj
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
+            speed: sürət
       New Artist Project:
         draw a star:
           name: bir ulduz çək
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+        draw a pinwheel:
+          parameters:
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
       New Play Lab Project:
         jump:
           name: atıl
+          parameters:
+            height: hündürlük
+            actor: personaj
         patrol:
           name: patrul
+          parameters:
+            actor: personaj
+            speed: sürət
       Robot Doodle:
         draw head:
           name: baş çək
@@ -363,6 +512,26 @@ az-AZ:
       course4_artist_fwp_challenge1:
         do something:
           name: bir şey etmək
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: uzunluq
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: uzunluq
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
       courseC_artist_prog4:
         booster:
           name: təkanverici
@@ -713,38 +882,115 @@ az-AZ:
       courseF_artist_fwp1:
         draw a square:
           name: kvadrat çək
+        checker:
+          parameters:
+            size: ölçü
         do something:
           name: bir şey etmək
+        Make gingham:
+          parameters:
+            size: ölçü
+        black outline:
+          parameters:
+            length: uzunluq
       courseF_artist_fwp2:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        checker:
+          parameters:
+            size: ölçü
         do something:
           name: bir şey etmək
+        Make gingham:
+          parameters:
+            size: ölçü
+        black outline:
+          parameters:
+            length: uzunluq
       courseF_artist_fwp2_predict1:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
       courseF_artist_fwp3:
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        draw a square2:
+          parameters:
+            size: ölçü
+        filled square:
+          parameters:
+            size: ölçü
+        black outline:
+          parameters:
+            length: uzunluq
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: uzunluq
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: uzunluq
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: uzunluq
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: uzunluq
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: uzunluq
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: bir ulduz çək
+          parameters:
+            points: xallar
+            length: uzunluq
         draw a circle:
           name: çevrə çək
+        draw a pinwheel:
+          parameters:
+            length: uzunluq
+            repeat: təkrar et
         draw a triangle:
           name: üçbucaq çək
+          parameters:
+            length: uzunluq
         draw a shape:
           name: bir forma çək
+          parameters:
+            length: uzunluq
         draw a house:
           name: ev çək
+          parameters:
+            length: uzunluq
         draw a square:
           name: kvadrat çək
+          parameters:
+            length: uzunluq
+        draw a spiral edge:
+          parameters:
+            length: uzunluq
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: bir şey etmək
       courseF_artist_fwp_challenge2:
         do something:
           name: bir şey etmək
+        draw an octagon:
+          parameters:
+            length: uzunluq
       courseF_bee_functions6:
         get nectar make honey:
           name: nektar al bal hazırla
@@ -759,6 +1005,18 @@ az-AZ:
       courseF_bee_functionsPre7:
         get nectar make honey:
           name: nektar al bal hazırla
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: uzunluq
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: uzunluq
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: uzunluq
       courseF_bee_variables_7_2018:
         collect:
           name: topla

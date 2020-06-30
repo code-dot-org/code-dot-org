@@ -1460,6 +1460,8 @@
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
   header_report_bug: "回報問題"
+  header_legal_privacy: "隱私政策"
+  header_legal_tos: "服務條款"
   header_tutorials: "所有教程"
   app_lab_documentation: "App Lab 說明文件"
   app_lab_tutorials: "App Lab 教程"

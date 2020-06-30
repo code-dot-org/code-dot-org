@@ -276,7 +276,6 @@
   "lockWhenDone": "Bloquegeu quan els estudiants acabin",
   "loginCard_sectionName": "Nom de la secció",
   "loginType": "Tipus d'inici de sessió",
-  "loginTypePictureLongDescription": "Aquest grup utilitza <b>imatges</b> com a contrasenya. Això significa que cadascun dels vostres alumnes utilitza una imatge secreta per entrar, enlloc d'una paraula de pas. Cal que els alumnes utilitzin la pàgina web indicada per iniciar la sessió.",
   "makerNewProjectButton": "Crear un projecte",
   "makeYourOwnFlappy": "Fes el teu propi joc Flappy",
   "manageLinkedAccounts_actions": "Accions",

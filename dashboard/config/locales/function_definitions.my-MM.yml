@@ -1,7 +1,7 @@
 ---
 my-MM:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: "×"
@@ -38,6 +38,10 @@ my-MM:
       NEW Course 4 Artist Params 11:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      NEW Course 4 Artist Params 15:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
       NEW Course 4 Artist Params 2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -47,6 +51,10 @@ my-MM:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: ခုန်ပါ
+      New Artist Project:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
       New Play Lab Project:
         jump:
           name: ခုန်ပါ
@@ -68,6 +76,18 @@ my-MM:
       course4_artist_fwp_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: "×"
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: "×"
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: "×"
       courseC_data wizard:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -188,6 +208,21 @@ my-MM:
       courseF_artist_fwp2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
+      courseF_artist_fwp9:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
       courseF_artist_fwp_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ

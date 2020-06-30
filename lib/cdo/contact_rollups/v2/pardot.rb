@@ -13,26 +13,39 @@ class PardotV2
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
 
+  # Map from contact fields to Pardot prospect fields
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
-    email: {field: :email},
-    pardot_id: {field: :id},
+    email: :email,
+    pardot_id: :id,
     # Note: db_* fields are sorted alphabetically
-    city: {field: :db_City},
-    country: {field: :db_Country},
-    form_roles: {field: :db_Form_Roles},
-    forms_submitted: {field: :db_Forms_Submitted},
-    hoc_organizer_years: {field: :db_Hour_of_Code_Organizer, multi: true},
-    postal_code: {field: :db_Postal_Code},
-    professional_learning_attended: {field: :db_Professional_Learning_Attended, multi: true},
-    professional_learning_enrolled: {field: :db_Professional_Learning_Enrolled, multi: true},
-    roles: {field: :db_Roles, multi: true},
-    state: {field: :db_State},
+    city: :db_City,
+    country: :db_Country,
+    form_roles: :db_Form_Roles,
+    forms_submitted: :db_Forms_Submitted,
+    hoc_organizer_years: :db_Hour_of_Code_Organizer,
+    postal_code: :db_Postal_Code,
+    professional_learning_attended: :db_Professional_Learning_Attended,
+    professional_learning_enrolled: :db_Professional_Learning_Enrolled,
+    roles: :db_Roles,
+    state: :db_State,
   }.freeze
 
-  def initialize
+  # Pardot multi-value or multi-select fields
+  MULTI_VALUE_PROSPECT_FIELDS = [
+    :db_Hour_of_Code_Organizer,
+    :db_Professional_Learning_Attended,
+    :db_Professional_Learning_Enrolled,
+    :db_Roles
+  ].to_set
+
+  def initialize(is_dry_run: false)
     @new_prospects = []
     @updated_prospects = []
     @updated_prospect_deltas = []
+
+    # Relevant only during dry runs
+    @dry_run = is_dry_run
+    @dry_run_api_endpoints_hit = []
   end
 
   # Retrieves new (email, Pardot ID) mappings from Pardot
@@ -58,7 +71,9 @@ class PardotV2
     # Stop when receiving no prospects or reaching the download limit.
     loop do
       url = build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
-      doc = post_with_auth_retry(url)
+      doc = try_with_exponential_backoff(3) do
+        post_with_auth_retry url
+      end
       raise_if_response_error(doc)
 
       prospects = []
@@ -114,6 +129,9 @@ class PardotV2
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
 
+    # Creating new prospects is not a retriable action because it could succeed
+    # on the Pardot side and we just didn't receive a response. If we try again,
+    # it would create duplicate prospects.
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
@@ -141,12 +159,14 @@ class PardotV2
     return [], [] unless delta.present?
 
     email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = new_prospect_data.merge email_pardot_id
+    prospect = email_pardot_id.merge new_prospect_data
     @updated_prospects << prospect
-    prospect_delta = delta.merge email_pardot_id
+    prospect_delta = email_pardot_id.merge delta
     @updated_prospect_deltas << prospect_delta
 
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    end
     return [], [] unless delta_submissions.present?
 
     # As an optimization, we only send the deltas to Pardot. However, as far as
@@ -159,7 +179,9 @@ class PardotV2
   # Immediately batch-update the remaining prospects in Pardot.
   # @return [Array<Array>] @see process_batch method
   def batch_update_remaining_prospects
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    end
     return [], [] unless delta_submissions.present?
 
     full_submissions = @updated_prospects
@@ -185,9 +207,25 @@ class PardotV2
     url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      #   Use an instance variable to remember the number of failures.
-      errors = self.class.submit_batch_request api_endpoint, prospects
+      if @dry_run
+        # During a dry run, we want to display two example batch of prospects.
+        # One for newly created prospects, and one for updated prospects.
+        # If we did not include this limit, the entire batch would be displayed,
+        # which could be overwhelming for debugging purposes.
+        unless @dry_run_api_endpoints_hit.include? api_endpoint
+          self.class.log "Prospects in sample batch to sync to Pardot: #{prospects.length}"
+          self.class.log "Query string for sample batch:\n#{url}"
+          self.class.log 'Prospects to be synced in sample batch:'
+          prospects.each do |prospect|
+            self.class.log prospect
+          end
+
+          @dry_run_api_endpoints_hit << api_endpoint
+        end
+      else
+        errors = self.class.submit_batch_request api_endpoint, prospects
+      end
+
       submissions = prospects.clone
       prospects.clear
     end
@@ -245,22 +283,24 @@ class PardotV2
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
-  # @param [Hash] contact
-  # @return [Hash]
+  # @param contact [Hash] a hash with symbol keys
+  # @return [Hash] a hash with symbol keys
   def self.convert_to_pardot_prospect(contact)
     prospect = {}
 
-    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |key, prospect_info|
-      next unless contact.key?(key)
+    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |contact_field, prospect_field|
+      next unless contact.key? contact_field
 
-      if prospect_info[:multi]
+      if MULTI_VALUE_PROSPECT_FIELDS.include? prospect_field
         # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # Also sort its values to keep consistent order.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-        contact[key].split(',').each_with_index do |value, index|
-          prospect["#{prospect_info[:field]}_#{index}"] = value
+        contact[contact_field].split(',').sort.each_with_index do |value, index|
+          split_key = "#{prospect_field}_#{index}".to_sym
+          prospect[split_key] = value
         end
       else
-        prospect[prospect_info[:field]] = contact[key]
+        prospect[prospect_field] = contact[contact_field]
       end
     end
 
@@ -269,6 +309,8 @@ class PardotV2
     if contact.key?(:opt_in)
       prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
+
+    prospect[:db_Has_Teacher_Account] = 'true' if contact[:user_id]
 
     prospect
   end
@@ -284,16 +326,17 @@ class PardotV2
         # Collect all text values for this field
         field_node = prospect_node.xpath(field)
         values = field_node.children.map(&:text)
+        next if values.empty?
 
-        if values.length == 1
-          prospect.merge!({field => values.first})
-        else
+        if MULTI_VALUE_PROSPECT_FIELDS.include? field.to_sym
           # For a multi-value field, to be consistent with how we update it to Pardot,
-          # set key names as [field]_0, [field]_1, etc.
-          # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-          values.each_with_index do |value, index|
-            prospect.merge!("#{field}_#{index}" => value)
+          # set key names as [field]_0, [field]_1 etc., and sort its values.
+          # @see +convert_to_pardot_prospect+ method and its tests.
+          values.sort.each_with_index do |value, index|
+            prospect["#{field}_#{index}"] = value
           end
+        else
+          prospect[field] = values.first
         end
       end
     end

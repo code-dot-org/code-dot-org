@@ -393,6 +393,8 @@ mn:
       help_us: Бидэнд туслах
       teach: Сургах
       about: Тухай
+      legal_privacy: Нууцлалын бодлого
+      legal_tos: Үйлчилгээний нөхцөл
     user:
       classroom: Багшийн нүүр хуудас
       district_dashboard: Дүүргийн хянах самбар

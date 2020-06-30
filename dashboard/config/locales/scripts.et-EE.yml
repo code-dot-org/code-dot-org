@@ -53,6 +53,43 @@ et:
               name: 'Play Lab: Kirjuta lugu'
             The Big Event:
               name: Suursündmus
+          lessons:
+            'Artist: Loops':
+              name: 'Kunstnik: tsüklid'
+            'Artist: Sequence':
+              name: 'Kunstnik: Jada'
+            'Artist: Shapes':
+              name: 'Kunstnik: Kujundid'
+            'Bee: Loops':
+              name: 'Mesilane: Tsüklid'
+            'Bee: Sequence':
+              name: 'Mesilane: Jada'
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Getting Loopy:
+              name: Muutub tsükliliseks
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+            Happy Maps:
+              name: Happy Maps
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pusle: õpi lohistama ja paika seadma'
+            'Maze: Debugging':
+              name: 'Labürint: vigade silumine'
+            'Maze: Loops':
+              name: 'Labürint: Tsüklid'
+            'Maze: Sequence':
+              name: 'Labürint: Jada'
+            Move it, Move it:
+              name: Liiguta, liiguta
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Spelling Bee:
+              name: Sõnamesilane
+            'Studio: Create a Story':
+              name: 'Play Lab: Kirjuta lugu'
+            The Big Event:
+              name: Suursündmus
         course2:
           title: Kursus 2
           description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust,
@@ -63,6 +100,45 @@ et:
             lugeda.
           description_audience: Vanusele 6+ (lugemisoskus vajalik)
           stages:
+            'Artist: Debugging':
+              name: 'Kunstnik: vigade silumine'
+            'Artist: Loops':
+              name: 'Kunstnik: tsüklid'
+            'Artist: Nested Loops':
+              name: 'Kunstnik: korduvad tsüklid'
+            'Artist: Sequence':
+              name: 'Kunstnik: Jada'
+            'Bee: Conditionals':
+              name: 'Mesilane: Tingimuslaused'
+            'Bee: Debugging':
+              name: 'Mesilane: vigade silumine'
+            'Bee: Loops':
+              name: 'Mesilane: Tsüklid'
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            Conditionals:
+              name: Tingimuslaused
+            Flappy:
+              name: Flappy
+            Getting Loopy:
+              name: Muutub tsükliliseks
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
+            'Maze: Loops':
+              name: 'Labürint: Tsüklid'
+            'Maze: Sequence':
+              name: 'Labürint: Jada'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
+            Relay programming:
+              name: Relee programmeerimine
+            'Studio: Create a Story':
+              name: 'Play Lab: Kirjuta lugu'
+            The Big Event:
+              name: Suursündmus
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+          lessons:
             'Artist: Debugging':
               name: 'Kunstnik: vigade silumine'
             'Artist: Loops':
@@ -154,6 +230,49 @@ et:
               name: 'Play Lab: Loo mäng'
             'Studio: Create a Story':
               name: 'Play Lab: Kirjuta lugu'
+          lessons:
+            Artist:
+              name: Kunstnik
+            'Artist: Functions':
+              name: 'Kunstnik: funktsioonid'
+            'Artist: Nested Loops':
+              name: 'Kunstnik: korduvad tsüklid'
+            'Artist: Patterns':
+              name: 'Kunstnik: mustrid'
+            'Bee: Conditionals':
+              name: 'Mesilane: Tingimuslaused'
+            'Bee: Debugging':
+              name: 'Mesilane: vigade silumine'
+            'Bee: Functions':
+              name: 'Mesilane: funktsioonid'
+            'Bee: Nested Loops':
+              name: 'Mesilane: korduvad tsüklid'
+            Bounce:
+              name: Põrkama
+            Computational Thinking:
+              name: Arvutuslik mõtlemine
+            Crowdsourcing:
+              name: Ühistegevused
+            Dice Race:
+              name: Täringuralli
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Farmer: While Loops':
+              name: 'Talunik: Kui Tsükkel'
+            Functional Suncatchers:
+              name: Funktsionaalsed päikesepüüdjad
+            Internet:
+              name: Internet
+            Maze:
+              name: Labürint
+            'Maze: Conditionals':
+              name: 'Labürint: tingimuslaused'
+            Songwriting:
+              name: Laulude kirjutamine
+            'Studio: Create a Game':
+              name: 'Play Lab: Loo mäng'
+            'Studio: Create a Story':
+              name: 'Play Lab: Kirjuta lugu'
         playlab:
           title: Play Lab
           description: Loo lugu või mäng "Play Lab"iga!
@@ -161,11 +280,17 @@ et:
           stages:
             Play Lab:
               name: Play Lab
+          lessons:
+            Play Lab:
+              name: Play Lab
         artist:
           title: Kunstnik
           description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
           description_short: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
           stages:
+            Artist:
+              name: Kunstnik
+          lessons:
             Artist:
               name: Kunstnik
         hourofcode:
@@ -177,6 +302,9 @@ et:
           stages:
             Maze:
               name: Labürint
+          lessons:
+            Maze:
+              name: Labürint
         frozen:
           title: Kirjuta koodi Anna ja Elsa'ga
           description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
@@ -185,6 +313,9 @@ et:
           description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
             kui nad avastavad jää võlu ja ilu.
           stages:
+            Artist:
+              name: Kunstnik
+          lessons:
             Artist:
               name: Kunstnik
         course4:
@@ -199,6 +330,51 @@ et:
             ja parameetritega funktsioonid. See on järg Kursus 3le.
           description_audience: Vanustele 10-18
           stages:
+            Artist:
+              name: Kunstnik
+            Artist Binary:
+              name: Kunstnik Binaar
+            'Artist: For Loops':
+              name: 'Kunstnik: For tsüklid'
+            'Artist: Functions':
+              name: 'Kunstnik: funktsioonid'
+            'Artist: Functions with Parameters':
+              name: 'Kunstnik: Funktsioonid parameetritega'
+            'Artist: Variables':
+              name: 'Kunstnik: Muutujad'
+            'Bee: For Loops':
+              name: 'Mesilane: For tsüklid'
+            'Bee: Functions with Parameters':
+              name: 'Mesilane: Funktsioonid parameetritega'
+            Extreme Challenge - Comprehensive:
+              name: Ekstreemne väljakutse - kõikehõlmav
+            Maze and Bee:
+              name: Labürint ja Mesilane
+            'Play Lab: For Loops':
+              name: 'Play Lab: For tsükkel'
+            'Play Lab: Functions with Parameters':
+              name: 'Play Lab: Funktsioonid parameetritega'
+            'Play Lab: Variables':
+              name: 'Play Lab: Muutujad'
+            Super Challenge - For Loops:
+              name: Super väljakutse - For tsüklid
+            Super Challenge - Functions and Parameters:
+              name: Super väljakutse - funktsioonid ja parameetrid
+            Super Challenge - Variables:
+              name: Super väljakutse - muutujad
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Kirja muutujad'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: For tsükkel Fun'
+            'Unplugged: Madlibs':
+              name: 'Unplugged: Madlibs'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Laulukirjutamine parameetritega'
+            'Unplugged: Tangrams':
+              name: 'Unplugged: Tangrammid'
+          lessons:
             Artist:
               name: Kunstnik
             Artist Binary:
@@ -268,8 +444,38 @@ et:
               name: 'Talunik: Kui Tsükkel'
             'Maze: Sequence':
               name: 'Labürint: Jada'
+          lessons:
+            'Artist: Functions':
+              name: 'Kunstnik: funktsioonid'
+            'Artist: Loops':
+              name: 'Kunstnik: tsüklid'
+            'Artist: Nested Loops':
+              name: 'Kunstnik: korduvad tsüklid'
+            'Artist: Sequence':
+              name: 'Kunstnik: Jada'
+            'Bee: Conditionals':
+              name: 'Mesilane: Tingimuslaused'
+            'Bee: Debugging':
+              name: 'Mesilane: vigade silumine'
+            'Bee: Nested Loops':
+              name: 'Mesilane: korduvad tsüklid'
+            'Farmer: While Loops':
+              name: 'Talunik: Kui Tsükkel'
+            'Maze: Sequence':
+              name: 'Labürint: Jada'
         usability:
           stages:
+            Binary:
+              name: Binaarne
+            For Loops:
+              name: For tsükkel
+            Functions and Functions with Parameters:
+              name: Funktsioonid ja funktsioonid parameetritega
+            Intro:
+              name: Sissejuhatus
+            Variables:
+              name: Muutujad
+          lessons:
             Binary:
               name: Binaarne
             For Loops:
@@ -293,6 +499,17 @@ et:
               name: 'Unplugged: Disaini retsept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Videomängud ja Koordinaadi Lennukid'
+          lessons:
+            'Eval: Conditionals':
+              name: Tingimuslaused
+            'Eval: Strings and Images':
+              name: Sõned ja kujutised
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Tingimuslaused ja tükipõhised funktsioonid'
+            'Unplugged: The Design Recipe':
+              name: 'Unplugged: Disaini retsept'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Videomängud ja Koordinaadi Lennukid'
         infinity:
           title: Disney Infinity Play Lab
           description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
@@ -302,8 +519,18 @@ et:
           stages:
             Infinity:
               name: Lõpmatus
+          lessons:
+            Infinity:
+              name: Lõpmatus
         algebrademo:
           stages:
+            Defining Variables:
+              name: Muutujate määratlemine
+            Evaluation Blocks:
+              name: Hindamise plokid
+            The Design Recipe:
+              name: Disaini retsept
+          lessons:
             Defining Variables:
               name: Muutujate määratlemine
             Evaluation Blocks:
@@ -322,9 +549,23 @@ et:
               name: Seadmeteta tunnid
             Writing computer programs:
               name: Arvutiprogrammide kirjutamine
+          lessons:
+            Next Steps:
+              name: Järgmised sammud
+            Reflection:
+              name: Peegeldus
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+            Unplugged lessons:
+              name: Seadmeteta tunnid
+            Writing computer programs:
+              name: Arvutiprogrammide kirjutamine
         netsim:
           title: Interneti simulaator
           stages:
+            Manual DNS:
+              name: Manuaalne DNS
+          lessons:
             Manual DNS:
               name: Manuaalne DNS
         20-hour:
@@ -336,6 +577,47 @@ et:
             programmeerimise kontseptsiooni kursustel 2-4.
           description_audience: Vanustele 10-18
           stages:
+            Abstraction:
+              name: Abstraktsus
+            Algorithms:
+              name: Algoritmid
+            Computational Thinking:
+              name: Arvutuslik mõtlemine
+            Conditionals:
+              name: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
+            Introduction to Computer Science:
+              name: Sissejuhatus arvutiõpetusse
+            Relay Programming:
+              name: Relee programmeerimine
+            Song Writing:
+              name: Laulu kirjutamine
+            The Artist:
+              name: Kunstnik
+            The Artist 2:
+              name: Kunstnik tase 2
+            The Artist 3:
+              name: Kunstnik tase 3
+            The Artist 4:
+              name: Kunstnik tase 4
+            The Artist 5:
+              name: Kunstnik tase 5
+            The Farmer:
+              name: Talunik
+            The Farmer 2:
+              name: Talunik tase 2
+            The Farmer 3:
+              name: Talunik tase 3
+            The Internet:
+              name: Internet
+            The Maze:
+              name: Labürint
+            Wrap-up:
+              name: Kokkuvõte
+          lessons:
             Abstraction:
               name: Abstraktsus
             Algorithms:
@@ -391,11 +673,31 @@ et:
               name: Kunstnik
             The Maze:
               name: Labürint
+          lessons:
+            Applab:
+              name: Applab
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
+            Play Lab:
+              name: Play Lab
+            The Artist:
+              name: Kunstnik
+            The Maze:
+              name: Labürint
         events:
           title: Sündmused
           description: Sündmused
           description_short: Sündmused
           stages:
+            Bounce:
+              name: Põrkama
+            Calc:
+              name: Arvuta
+            Eval:
+              name: Hinda
+            Studio:
+              name: Stuudio
+          lessons:
             Bounce:
               name: Põrkama
             Calc:
@@ -412,6 +714,9 @@ et:
           stages:
             Flappy Code:
               name: Flappy kood
+          lessons:
+            Flappy Code:
+              name: Flappy kood
         jigsaw:
           title: Pusle
           description: Proovi meie pusle juhendajat
@@ -419,11 +724,17 @@ et:
           stages:
             Jigsaw:
               name: Pusle
+          lessons:
+            Jigsaw:
+              name: Pusle
         step:
           title: samm
           description: Samm-sammult juhendi
           description_short: Samm-sammult juhendi
           stages:
+            Step:
+              name: samm
+          lessons:
             Step:
               name: samm
         Hour of Code:
@@ -434,12 +745,21 @@ et:
           stages:
             Hour of Code 2013:
               name: KoodiTund 2013
+          lessons:
+            Hour of Code 2013:
+              name: KoodiTund 2013
         CodeStudioPuzzleChallenge:
           stages:
             Puzzles:
               name: Probleem
+          lessons:
+            Puzzles:
+              name: Probleem
         Tutorial Video - Code Studio Puzzle Challenge:
           stages:
+            Puzzles:
+              name: Probleem
+          lessons:
             Puzzles:
               name: Probleem
         cspunit1:
@@ -448,8 +768,20 @@ et:
               name: Binaararvud
             Bytes and File Sizes:
               name: Baidid ja faili suurused
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
+            Bytes and File Sizes:
+              name: Baidid ja faili suurused
         algebraPD:
           stages:
+            Course Overview:
+              name: Kursuse ülevaade
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+          lessons:
             Course Overview:
               name: Kursuse ülevaade
             Evaluation Blocks:
@@ -468,8 +800,26 @@ et:
               name: Sõned ja kujutised
             Your Game - Animation:
               name: Sinu mäng - animatsioon
+          lessons:
+            Booleans:
+              name: Booleans
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Luigi's Pizza:
+              name: Luigi Pizza
+            Strings and Images:
+              name: Sõned ja kujutised
+            Your Game - Animation:
+              name: Sinu mäng - animatsioon
         CSPPD:
           stages:
+            Impact of Computer Science:
+              name: Infotehnoloogia mõju
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+            What is CSP?:
+              name: Mis on CSP?
+          lessons:
             Impact of Computer Science:
               name: Infotehnoloogia mõju
             Teaching Strategies:
@@ -482,8 +832,20 @@ et:
               name: Õppetund 14
             Lesson 15:
               name: Õppetund 15
+          lessons:
+            Lesson 14:
+              name: Õppetund 14
+            Lesson 15:
+              name: Õppetund 15
         ECSPD:
           stages:
+            Impact of Computer Science:
+              name: Infotehnoloogia mõju
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+            What is ECS?:
+              name: Mis on ECS?
+          lessons:
             Impact of Computer Science:
               name: Infotehnoloogia mõju
             Teaching Strategies:
@@ -494,14 +856,35 @@ et:
           stages:
             What to Expect:
               name: Mida oodata
+          lessons:
+            What to Expect:
+              name: Mida oodata
         cspunit3:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
             While Loops:
               name: "„Kui“ tsüklid"
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
+            While Loops:
+              name: "„Kui“ tsüklid"
         algebraPD3:
           stages:
+            Course Overview:
+              name: Kursuse ülevaade
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Next Steps:
+              name: Järgmised sammud
+            Strings and Images:
+              name: Sõned ja kujutised
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+            The Design Recipe:
+              name: Disaini retsept
+          lessons:
             Course Overview:
               name: Kursuse ülevaade
             Evaluation Blocks:
@@ -522,8 +905,22 @@ et:
               name: Õpetamise strateegiad
             What is ECS?:
               name: Mis on ECS?
+          lessons:
+            Impact of Computer Science:
+              name: Infotehnoloogia mõju
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+            What is ECS?:
+              name: Mis on ECS?
         ECSPD-iZone:
           stages:
+            Impact of Computer Science:
+              name: Infotehnoloogia mõju
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+            What is ECS?:
+              name: Mis on ECS?
+          lessons:
             Impact of Computer Science:
               name: Infotehnoloogia mõju
             Teaching Strategies:
@@ -538,8 +935,22 @@ et:
               name: Hindamise plokid
             Teacher Dashboard:
               name: Õpetaja töölaud
+          lessons:
+            Course Overview:
+              name: Kursuse ülevaade
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Teacher Dashboard:
+              name: Õpetaja töölaud
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Kursuse ülevaade
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+          lessons:
             Course Overview:
               name: Kursuse ülevaade
             Evaluation Blocks:
@@ -550,8 +961,14 @@ et:
           stages:
             What to Expect:
               name: Mida oodata
+          lessons:
+            What to Expect:
+              name: Mida oodata
         sciencePD-iZone:
           stages:
+            What to Expect:
+              name: Mida oodata
+          lessons:
             What to Expect:
               name: Mida oodata
         sciencePD2:
@@ -562,12 +979,25 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         sciencePD3:
           stages:
             Welcome Back!:
               name: Tere tulemast tagasi!
+          lessons:
+            Welcome Back!:
+              name: Tere tulemast tagasi!
         cspunit2:
           stages:
+            Encryption Algorithms:
+              name: Võtmed ja paroolid
+            The Internet:
+              name: Internet on kõigi jaoks
+          lessons:
             Encryption Algorithms:
               name: Võtmed ja paroolid
             The Internet:
@@ -590,8 +1020,42 @@ et:
               name: Sõned ja kujutised
             The Design Recipe:
               name: Disaini retsept
+          lessons:
+            Booleans:
+              name: Booleans
+            Defining Variables:
+              name: Muutujate määratlemine
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Free Play:
+              name: Tasuta mäng
+            Luigi's Pizza:
+              name: Luigi Pizza
+            Strings and Images:
+              name: Sõned ja kujutised
+            The Design Recipe:
+              name: Disaini retsept
         allthethings:
           stages:
+            Artist:
+              name: Kunstnik
+            Bee:
+              name: Mesilane
+            Bounce:
+              name: Põrkama
+            Flappy:
+              name: Flappy
+            Jigsaw:
+              name: Pusle
+            Maze:
+              name: Labürint
+            Minecraft:
+              name: Minecraft
+            Multi:
+              name: Multi
+            Studio:
+              name: Stuudio
+          lessons:
             Artist:
               name: Kunstnik
             Bee:
@@ -632,8 +1096,34 @@ et:
               name: Sõned ja kujutised
             Teacher Dashboard:
               name: Õpetaja töölaud
+          lessons:
+            Booleans:
+              name: Booleans
+            Course Overview:
+              name: Kursuse ülevaade
+            Defining Functions:
+              name: Ülesannete määratlemine
+            Defining Variables:
+              name: Muutujate määratlemine
+            'Eval: Conditionals':
+              name: 'Eval: Tingimuslaused'
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Next Steps:
+              name: Järgmised sammud
+            Strings and Images:
+              name: Sõned ja kujutised
+            Teacher Dashboard:
+              name: Õpetaja töölaud
         cspfacilitator:
           stages:
+            App Lab:
+              name: App Lab
+            Internet Simulator:
+              name: Interneti simulaator
+            Welcome!:
+              name: Tere tulemast!
+          lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
@@ -644,10 +1134,24 @@ et:
           stages:
             Next Steps:
               name: Järgmised sammud
+          lessons:
+            Next Steps:
+              name: Järgmised sammud
         ECSPD2:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-up:
+              name: Kokkuvõte
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -668,10 +1172,22 @@ et:
               name: Disaini retsept
             Welcome!:
               name: Tere tulemast!
+          lessons:
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+            The Design Recipe:
+              name: Disaini retsept
+            Welcome!:
+              name: Tere tulemast!
         sciencePD2b:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           stages:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
+          lessons:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
@@ -684,14 +1200,27 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         Equity-OnlinePD:
           stages:
+            Next Steps:
+              name: Järgmised sammud
+          lessons:
             Next Steps:
               name: Järgmised sammud
         sciencePD2b-iZone:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           stages:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
+          lessons:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
@@ -710,10 +1239,32 @@ et:
               name: Tere tulemast!
             Wrap-up:
               name: Kokkuvõte
+          lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-up:
+              name: Kokkuvõte
         ECSPD2-NexTech:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-up:
+              name: Kokkuvõte
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -744,20 +1295,51 @@ et:
               name: Laulude kirjutamine
             The Big Event:
               name: Suursündmus
+          lessons:
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Getting Loopy:
+              name: Muutub tsükliliseks
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
+            Happy Maps:
+              name: Happy Maps
+            Move it, Move it:
+              name: Liiguta, liiguta
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Songwriting:
+              name: Laulude kirjutamine
+            The Big Event:
+              name: Suursündmus
         sciencePD3_pre1:
           stages:
+            Welcome Back!:
+              name: Tere tulemast tagasi!
+          lessons:
             Welcome Back!:
               name: Tere tulemast tagasi!
         ECSPD3-Unit2:
           stages:
             Teaching Strategies:
               name: Õpetamise strateegiad
+          lessons:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
         ECSPD3-Unit3:
           stages:
             Teaching Strategies:
               name: Õpetamise strateegiad
+          lessons:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
         ECSPD3-Unit4:
           stages:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+          lessons:
             Teaching Strategies:
               name: Õpetamise strateegiad
         ScienceP3OLPT2:
@@ -766,8 +1348,24 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         algebraPD3b:
           stages:
+            Teaching Support - Lessons 1-3:
+              name: Õpetamise tugi - Tunnid 1-3
+            Teaching Support - Lessons 13-16:
+              name: Õpetamise tugi - Tunnid 13-16
+            Teaching Support - Lessons 17-20:
+              name: Õpetamise tugi - Tunnid 17-20
+            Teaching Support - Lessons 4-7:
+              name: Õpetamise tugi - Tunnid 4-7
+            Teaching Support - Lessons 8-12:
+              name: Õpetamise tugi - Tunnid 8-12
+          lessons:
             Teaching Support - Lessons 1-3:
               name: Õpetamise tugi - Tunnid 1-3
             Teaching Support - Lessons 13-16:
@@ -789,8 +1387,14 @@ et:
           stages:
             Ice Age Play Lab:
               name: Jääaja Play Lab
+          lessons:
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
         cspunit3temp:
           stages:
+            While Loops:
+              name: "„Kui“ tsüklid"
+          lessons:
             While Loops:
               name: "„Kui“ tsüklid"
         gumball:
@@ -798,6 +1402,9 @@ et:
           description: Loo lugu või mäng Gumballi Play Labiga!
           description_short: Loo lugu või mäng Gumballi Play Labiga!
           stages:
+            Gumball Play Lab:
+              name: Gumballi Play Lab
+          lessons:
             Gumball Play Lab:
               name: Gumballi Play Lab
         starwars:
@@ -809,6 +1416,9 @@ et:
           stages:
             Hour of Code 2015:
               name: Kooditund 2015
+          lessons:
+            Hour of Code 2015:
+              name: Kooditund 2015
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
           description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
@@ -816,6 +1426,9 @@ et:
           description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas.
           stages:
+            Hour of Code 2015:
+              name: Kooditund 2015
+          lessons:
             Hour of Code 2015:
               name: Kooditund 2015
         mc:
@@ -826,14 +1439,35 @@ et:
           stages:
             Hour of Code 2015:
               name: Kooditund 2015
+          lessons:
+            Hour of Code 2015:
+              name: Kooditund 2015
         ScienceP3OLPT3:
           stages:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         AlgebraA:
           stages:
+            'Calc: Defining Variables':
+              name: 'Calc: määratle muutujad'
+            'Calc: Evaluation Blocks':
+              name: 'Calc: Hindamise plokid'
+            'Eval: Strings and Images':
+              name: 'Eval: Strings ja pildid'
+            'Eval: Writing Contracts':
+              name: 'Eval: kirjalikud lepingud'
+            'Unplugged: Contracts':
+              name: 'Unplugged: lepingud'
+            'Unplugged: The Design Recipe':
+              name: 'Unplugged: Disaini retsept'
+          lessons:
             'Calc: Defining Variables':
               name: 'Calc: määratle muutujad'
             'Calc: Evaluation Blocks':
@@ -870,8 +1504,38 @@ et:
               name: 'Unplugged: Tingimuslaused ja tükipõhised funktsioonid'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Videomängud ja Koordinaadi Lennukid'
+          lessons:
+            'Eval: Boolean Operators':
+              name: 'Eval: Boolean Operators'
+            'Eval: Conditionals':
+              name: 'Eval: Tingimuslaused'
+            'Play Lab: Animation (Big Game)':
+              name: 'Play Lab: animatsioon (Big Game)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Play Lab: Boolean (Big Game)'
+            'Play Lab: Booleans':
+              name: 'Play Lab: Booleans'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Play Lab: Collision Detection (Big Game)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Play Lab: defineeri muutujad (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Unplugged: Booleans'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Unplugged: kokkupõrke avastamine ja kauguse valem'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Tingimuslaused ja tükipõhised funktsioonid'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Videomängud ja Koordinaadi Lennukid'
         algebraPD1:
           stages:
+            Course Overview:
+              name: Kursuse ülevaade
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+          lessons:
             Course Overview:
               name: Kursuse ülevaade
             Evaluation Blocks:
@@ -887,6 +1551,11 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
+            The Internet:
+              name: Internet
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -894,6 +1563,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Bytes and File Sizes:
+              name: Baidid ja faili suurused
         csp3-2017:
           stages:
             Creating Functions:
@@ -901,6 +1573,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
         csp4-2017:
           lesson_groups:
             cspSurvey:
@@ -912,14 +1587,25 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            While Loops:
+              name: "„Kui“ tsüklid"
         CSDU3-Draft:
           stages:
             Functions:
               name: Funktsioonid
             Velocity:
               name: Velocity
+          lessons:
+            Functions:
+              name: Funktsioonid
+            Velocity:
+              name: Velocity
         2016_sciencePD_phase1:
           stages:
+            What to Expect:
+              name: Mida oodata
+          lessons:
             What to Expect:
               name: Mida oodata
         CSF_Secret_Sample:
@@ -930,8 +1616,16 @@ et:
               name: Hindamise plokid
             Teacher Dashboard:
               name: Õpetaja töölaud
+          lessons:
+            Evaluation Blocks:
+              name: Hindamise plokid
+            Teacher Dashboard:
+              name: Õpetaja töölaud
         sciencePD1:
           stages:
+            What to Expect:
+              name: Mida oodata
+          lessons:
             What to Expect:
               name: Mida oodata
         cspunit1-support:
@@ -954,12 +1648,21 @@ et:
           stages:
             Game Lab:
               name: Game Lab
+          lessons:
+            Game Lab:
+              name: Game Lab
         CSDU2-Draft:
           stages:
             Peer Review:
               name: Vastastikune hindamine
+          lessons:
+            Peer Review:
+              name: Vastastikune hindamine
         MikeTest:
           stages:
+            Artist Functions:
+              name: Kunstniku funktsioonid
+          lessons:
             Artist Functions:
               name: Kunstniku funktsioonid
         artistExemplar:
@@ -976,8 +1679,20 @@ et:
           stages:
             'Bee: Conditionals':
               name: 'Mesilane: Tingimuslaused'
+          lessons:
+            'Bee: Conditionals':
+              name: 'Mesilane: Tingimuslaused'
         gradeKinder:
           stages:
+            Events:
+              name: Sündmused
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pusle: õpi lohistama ja paika seadma'
+            Loops:
+              name: Tsüklid
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+          lessons:
             Events:
               name: Sündmused
             'Jigsaw: Learn to drag and drop':
@@ -992,6 +1707,11 @@ et:
               name: Digitaalne kodakondsus
             Songwriting:
               name: Laulude kirjutamine
+          lessons:
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Songwriting:
+              name: Laulude kirjutamine
         grade1:
           stages:
             Events:
@@ -1002,8 +1722,38 @@ et:
               name: Tsüklid
             Unspotted Bugs:
               name: Märkamata vead
+          lessons:
+            Events:
+              name: Sündmused
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pusle: õpi lohistama ja paika seadma'
+            Loops:
+              name: Tsüklid
+            Unspotted Bugs:
+              name: Märkamata vead
         grade5:
           stages:
+            'Artist: For Loops':
+              name: 'Kunstnik: For tsüklid'
+            'Artist: Functions with Parameters':
+              name: 'Kunstnik: Funktsioonid parameetritega'
+            'Artist: Variables':
+              name: 'Kunstnik: Muutujad'
+            'Bee: For Loops':
+              name: 'Mesilane: For tsüklid'
+            'Bee: Functions with Parameters':
+              name: 'Mesilane: Funktsioonid parameetritega'
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Play Lab: Variables':
+              name: 'Play Lab: Muutujad'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Kirja muutujad'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: For tsükkel Fun'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Laulukirjutamine parameetritega'
+          lessons:
             'Artist: For Loops':
               name: 'Kunstnik: For tsüklid'
             'Artist: Functions with Parameters':
@@ -1036,20 +1786,49 @@ et:
               name: Tere tulemast!
             Wrap-up:
               name: Kokkuvõte
+          lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-up:
+              name: Kokkuvõte
         ecs-unit2:
           stages:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
+          lessons:
             Teaching Strategies:
               name: Õpetamise strateegiad
         ecs-unit3:
           stages:
             Teaching Strategies:
               name: Õpetamise strateegiad
+          lessons:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
         ecs-unit4:
           stages:
             Teaching Strategies:
               name: Õpetamise strateegiad
+          lessons:
+            Teaching Strategies:
+              name: Õpetamise strateegiad
         grade3:
           stages:
+            'Artist: Nested Loops':
+              name: 'Kunstnik: korduvad tsüklid'
+            Bee Debugging:
+              name: Mesilane vigade silumine
+            Bounce:
+              name: Põrkama
+            'Farmer: While Loops':
+              name: 'Talunik: Kui Tsükkel'
+          lessons:
             'Artist: Nested Loops':
               name: 'Kunstnik: korduvad tsüklid'
             Bee Debugging:
@@ -1083,6 +1862,23 @@ et:
               display_name: Sisu
             practice:
               display_name: Õpetamise tavad
+          lessons:
+            Lesson 1,10:
+              name: Õppetund 1,10
+            Lesson 1,11:
+              name: Õppetund 1,11
+            Lesson 1,4:
+              name: Õppetund 1,4
+            Lesson 1,6:
+              name: Õppetund 1,6
+            Lesson 1,9:
+              name: Õppetund 1,9
+            Lesson 2,10:
+              name: Õppetund 2.10
+            Lesson 2,2:
+              name: Õppetund 2,2
+            Lesson 2,3:
+              name: Õppetund 2,3
         csd3-2017:
           stages:
             Velocity:
@@ -1096,8 +1892,26 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
         grade2:
           stages:
+            Flappy:
+              name: Flappy
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
+            The Big Event:
+              name: Suursündmus
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -1128,8 +1942,36 @@ et:
               name: Muutujad
             While Loops:
               name: "„Kui“ tsüklid"
+          lessons:
+            Binary:
+              name: Binaarne
+            Conditionals:
+              name: Tingimuslaused
+            Events:
+              name: Sündmused
+            For Loops:
+              name: For tsükkel
+            Functions:
+              name: Funktsioonid
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
+            Loops:
+              name: Tsüklid
+            Nested Loops:
+              name: Korduvad tsüklid
+            Variables:
+              name: Muutujad
+            While Loops:
+              name: "„Kui“ tsüklid"
         algebrapdnext:
           stages:
+            Teacher Dashboard:
+              name: Õpetaja töölaud
+            The Design Recipe:
+              name: Disaini retsept
+            Welcome!:
+              name: Tere tulemast!
+          lessons:
             Teacher Dashboard:
               name: Õpetaja töölaud
             The Design Recipe:
@@ -1163,6 +2005,9 @@ et:
           stages:
             Bounce:
               name: Põrkama
+          lessons:
+            Bounce:
+              name: Põrkama
         fesbinary:
           title: Binaarne
           stages:
@@ -1172,8 +2017,20 @@ et:
               name: Binaarsed pildid
             Play Lab:
               name: Play Lab
+          lessons:
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            Binary Images:
+              name: Binaarsed pildid
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
+            Peer Review:
+              name: Vastastikune hindamine
+            Lists:
+              name: Loendid
+          lessons:
             Peer Review:
               name: Vastastikune hindamine
             Lists:
@@ -1195,8 +2052,14 @@ et:
           stages:
             Minecraft Hour of Code Designer:
               name: KoodiTund Minecraft Designer
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: KoodiTund Minecraft Designer
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: Flappy kood
+          lessons:
             Flappy Code:
               name: Flappy kood
         coursea-draft:
@@ -1205,8 +2068,18 @@ et:
               name: 'Päris elu algoritmid: Seemenda'
             Going Places Safely:
               name: Läheb asukohta turvaliselt
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
         courseb-draft:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
             Your Digital Footprint:
@@ -1221,8 +2094,30 @@ et:
               name: Sinu digitaalne jalajälg
             Building a Foundation:
               name: Vundamendi ehitus
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Building a Foundation:
+              name: Vundamendi ehitus
         coursed-draft:
           stages:
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+            Nested Loops:
+              name: Korduvad tsüklid
+            Introduction:
+              name: Sissejuhatus
+          lessons:
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
             Digital Citizenship:
@@ -1250,6 +2145,17 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+            Introduction:
+              name: Sissejuhatus
+            Conditionals:
+              name: Tingimuslaused
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1267,16 +2173,35 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
+            Introduction:
+              name: Sissejuhatus
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
         classic-hoc-impact-study:
           description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
             tegelastega!
           stages:
             Hour of Code 2013:
               name: KoodiTund 2013
+          lessons:
+            Hour of Code 2013:
+              name: KoodiTund 2013
         hoc-impact-study:
           description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
             tegelastega!
           stages:
+            Hour of Code 2013:
+              name: KoodiTund 2013
+          lessons:
             Hour of Code 2013:
               name: KoodiTund 2013
         sports:
@@ -1289,14 +2214,27 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         sciencepd3-2016:
           stages:
+            Welcome Back!:
+              name: Tere tulemast tagasi!
+          lessons:
             Welcome Back!:
               name: Tere tulemast tagasi!
         csp3-support:
@@ -1321,8 +2259,18 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          lessons:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
         science-pd-ol-pt-5:
           stages:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
+          lessons:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
@@ -1334,8 +2282,16 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Binary:
+              name: Binaarne
         sciencepd5:
           stages:
+            Welcome!:
+              name: Tere tulemast!
+            Wrap-Up:
+              name: Kokkuvõte
+          lessons:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
@@ -1362,12 +2318,25 @@ et:
               name: For tsükkel
             Functions with Parameters:
               name: Parameetritega funktsioonid
+          lessons:
+            Lists:
+              name: Loendid
+            For Loops:
+              name: For tsükkel
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
         workshop-gamelab:
           stages:
             Introduction:
               name: Sissejuhatus
+          lessons:
+            Introduction:
+              name: Sissejuhatus
         coursed-ramp:
           stages:
+            Introduction:
+              name: Sissejuhatus
+          lessons:
             Introduction:
               name: Sissejuhatus
         coursee-ramp:
@@ -1378,8 +2347,24 @@ et:
               name: Tingimuslaused
             'Real Life Algorithms: Dice Race':
               name: 'Päris elu algoritmid: täringuralli'
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Conditionals:
+              name: Tingimuslaused
+            'Real Life Algorithms: Dice Race':
+              name: 'Päris elu algoritmid: täringuralli'
         csd6-2017:
           stages:
+            Lists:
+              name: Loendid
+            For Loops:
+              name: For tsükkel
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
+            Functions with Parameters_:
+              name: Parameetritega funktsioonid
+          lessons:
             Lists:
               name: Loendid
             For Loops:
@@ -1398,8 +2383,22 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         csd3-old:
           stages:
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+          lessons:
             Velocity:
               name: Velocity
             Functions:
@@ -1408,8 +2407,22 @@ et:
           stages:
             Lists:
               name: Loendid
+          lessons:
+            Lists:
+              name: Loendid
         csd3-chapters:
           stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+            'null':
+              name: tühi
+          lessons:
             Variables:
               name: Muutujad
             Conditionals:
@@ -1426,6 +2439,11 @@ et:
               name: Sissejuhatus
             Ice Age Play Lab:
               name: Jääaja Play Lab
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -1434,8 +2452,16 @@ et:
           stages:
             Peer Review:
               name: Vastastikune hindamine
+          lessons:
+            Peer Review:
+              name: Vastastikune hindamine
         artist-and-bb8:
           stages:
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
+            Bounce:
+              name: Põrkama
+          lessons:
             Ice Age Play Lab:
               name: Jääaja Play Lab
             Bounce:
@@ -1444,20 +2470,45 @@ et:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
         courseb-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Päris elu algoritmid: paberlennukid'
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
         coursed-2017:
           stages:
             Nested Loops:
               name: Korduvad tsüklid
+          lessons:
+            Nested Loops:
+              name: Korduvad tsüklid
         coursee-2017:
           stages:
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+          lessons:
             Ice Age Play Lab:
               name: Jääaja Play Lab
             Envelope Variables:
@@ -1477,6 +2528,9 @@ et:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
         cspnovice:
           lesson_groups:
             required:
@@ -1572,14 +2626,41 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Internet:
+              name: Internet
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
             Spelling Bee:
               name: Sõnamesilane
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Spelling Bee:
+              name: Sõnamesilane
         subgoal-labels-opt-in:
           stages:
+            Thanks:
+              name: Tänud
+          lessons:
             Thanks:
               name: Tänud
         csp3-research-mxghyt:
@@ -1589,8 +2670,22 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
         e-f-ramp:
           stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+            Conditionals:
+              name: Tingimuslaused
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+          lessons:
             Building a Foundation:
               name: Vundamendi ehitus
             Nested Loops:
@@ -1619,6 +2714,23 @@ et:
               name: Vundamendi ehitus
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Nested Loops:
+              name: Korduvad tsüklid
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         new-express:
           stages:
             Introduction:
@@ -1630,8 +2742,24 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
         new-e:
           stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals:
+              name: Tingimuslaused
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+          lessons:
             Building a Foundation:
               name: Vundamendi ehitus
             Conditionals:
@@ -1655,8 +2783,22 @@ et:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
         csp3-staging:
           stages:
+            Creating Functions:
+              name: Loomisfunktsioonid
+          lessons:
             Creating Functions:
               name: Loomisfunktsioonid
         hero:
@@ -1669,6 +2811,11 @@ et:
           description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
           description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
             läbi Minecrafti koos koodiga.
+          lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Kangelase teekond KoodiTund'
+            Minecraft Hour of Code:
+              name: Minecrafti KoodiTund
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -1679,6 +2826,19 @@ et:
               display_name: Uuring
         course-e-2018:
           stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+            Introduction:
+              name: Sissejuhatus
+            Conditionals:
+              name: Tingimuslaused
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+          lessons:
             Building a Foundation:
               name: Vundamendi ehitus
             Nested Loops:
@@ -1708,8 +2868,26 @@ et:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Introduction:
+              name: Sissejuhatus
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
         csd6-old:
           stages:
+            Lists:
+              name: Loendid
+            For Loops:
+              name: For tsükkel
+          lessons:
             Lists:
               name: Loendid
             For Loops:
@@ -1727,6 +2905,15 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         csd3-2018:
           stages:
             Variables:
@@ -1740,6 +2927,15 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         csd2-2018:
           stages:
             Lists:
@@ -1747,8 +2943,22 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Lists:
+              name: Loendid
         coursea-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: Märkamata vead
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie ja suur projekt
+            'Programming: Happy Maps':
+              name: Happy Maps
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie ja suur projekt
+          lessons:
             'Debugging: Unspotted Bugs':
               name: Märkamata vead
             'Persistence & Frustration: Stevie and the Marbles':
@@ -1795,6 +3005,41 @@ et:
               name: Relee programmeerimine
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Introduction:
+              name: Sissejuhatus
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+            'Events: The Big Event':
+              name: Suursündmus
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            'Unplugged: Binary':
+              name: Binaarsed pildid
+            Artist Binary:
+              name: Kunstnik Binaar
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+            Relay Programming:
+              name: Relee programmeerimine
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1803,8 +3048,36 @@ et:
               name: Sinu digitaalne jalajälg
             Move It, Move It:
               name: Liiguta, liiguta
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Move It, Move It:
+              name: Liiguta, liiguta
         coursed-2018:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Introduction:
+              name: Sissejuhatus
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Unplugged: Binary':
+              name: Binaarsed pildid
+            Artist Binary:
+              name: Kunstnik Binaar
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              name: Relee programmeerimine
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimeetripaberi programmeerimine
             Introduction:
@@ -1835,6 +3108,15 @@ et:
               name: Suursündmus
             Binary Bracelets:
               name: Binaarsed käevõrud
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
+            'Events: The Big Event':
+              name: Suursündmus
+            Binary Bracelets:
+              name: Binaarsed käevõrud
         csd6-2018:
           stages:
             Functions with Parameters:
@@ -1842,8 +3124,28 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
         coursee-2018:
           stages:
+            'Programming: My Robotic Friends':
+              name: Minu robotsõbrad
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Introduction:
+              name: Sissejuhatus
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Minecraft Hour of Code:
+              name: Minecrafti KoodiTund
+          lessons:
             'Programming: My Robotic Friends':
               name: Minu robotsõbrad
             Building a Foundation:
@@ -1881,6 +3183,23 @@ et:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
+          lessons:
+            'Programming: My Robotic Friends':
+              name: Minu robotsõbrad
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Introduction:
+              name: Sissejuhatus
+            Ice Age Play Lab:
+              name: Jääaja Play Lab
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Laulukirjutamine parameetritega
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
         csp1-2018:
           stages:
             Binary Numbers:
@@ -1890,6 +3209,11 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
+            The Internet:
+              name: Internet
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -1906,6 +3230,9 @@ et:
           stages:
             Bytes and File Sizes:
               name: Baidid ja faili suurused
+          lessons:
+            Bytes and File Sizes:
+              name: Baidid ja faili suurused
         csp3-2018:
           stages:
             Creating Functions:
@@ -1913,6 +3240,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
         csp-explore-2018:
           lesson_groups:
             cspSurvey:
@@ -1932,6 +3262,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            While Loops:
+              name: "„Kui“ tsüklid"
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2054,6 +3387,21 @@ et:
               name: Sinu digitaalne jalajälg
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie ja suur projekt
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: Märkamata vead
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie ja suur projekt
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Spelling Bee:
+              name: Sõnamesilane
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie ja suur projekt
         fit-test:
           lesson_groups:
             required:
@@ -2064,8 +3412,14 @@ et:
           stages:
             Artist:
               name: Kunstnik
+          lessons:
+            Artist:
+              name: Kunstnik
         frozen-2018-test:
           stages:
+            Artist:
+              name: Kunstnik
+          lessons:
             Artist:
               name: Kunstnik
         dance:
@@ -2073,8 +3427,14 @@ et:
             Dance Party:
               name: Tantsuõhtu
           title: Tantsuõhtu
+          lessons:
+            Dance Party:
+              name: Tantsuõhtu
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Kunstnik
+          lessons:
             Artist:
               name: Kunstnik
         aquatic:
@@ -2083,8 +3443,14 @@ et:
           stages:
             Dance Party:
               name: Tantsuõhtu
+          lessons:
+            Dance Party:
+              name: Tantsuõhtu
         dance-draft:
           stages:
+            Dance Party:
+              name: Tantsuõhtu
+          lessons:
             Dance Party:
               name: Tantsuõhtu
         cspplayground:
@@ -2122,8 +3488,26 @@ et:
               display_name: Internet
             csf_digcit:
               display_name: Digitaalne kodakondsus
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            The Artist:
+              name: Kunstnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         dance-low:
           stages:
+            Dance Party:
+              name: Tantsuõhtu
+          lessons:
             Dance Party:
               name: Tantsuõhtu
         coursed-2019:
@@ -2155,6 +3539,23 @@ et:
               display_name: Binaarne
             csf_digcit:
               display_name: Digitaalne kodakondsus
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              name: Relee programmeerimine
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Unplugged: Binary':
+              name: Binaarsed pildid
+            Artist Binary:
+              name: Kunstnik Binaar
+            Dance Party:
+              name: Tantsuõhtu
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2178,6 +3579,21 @@ et:
               display_name: Korduvad tsüklid
             csf_functions:
               display_name: Funktsioonid
+          lessons:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+            Songwriting:
+              name: Laulude kirjutamine
         express-2019:
           stages:
             Relay Programming:
@@ -2211,6 +3627,27 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+          lessons:
+            Relay Programming:
+              name: Relee programmeerimine
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+            Dance Party:
+              name: Tantsuõhtu
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2224,6 +3661,9 @@ et:
               display_name: Ülevaade
             content:
               display_name: Sisu
+          lessons:
+            'null':
+              name: tühi
         dance-extras-gallery:
           title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
@@ -2244,6 +3684,13 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
+            'Events: The Big Event':
+              name: Suursündmus
+            Binary Bracelets:
+              name: Binaarsed käevõrud
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2263,6 +3710,11 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            'Programming: Happy Maps':
+              name: Happy Maps
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2280,6 +3732,15 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2293,8 +3754,18 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Spelling Bee:
+              name: Sõnamesilane
         removed19:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
         csd2-2019:
@@ -2304,6 +3775,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Lists:
+              name: Loendid
         csd3-2019:
           stages:
             Variables:
@@ -2317,6 +3791,15 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         csd4-2019:
           lesson_groups:
             cspSurvey:
@@ -2332,6 +3815,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -2351,6 +3837,11 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
+            The Internet:
+              name: Internet
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -2358,6 +3849,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Bytes and File Sizes:
+              name: Baidid ja faili suurused
         csp3-2019:
           stages:
             Creating Functions:
@@ -2365,6 +3859,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
         csp4-2019:
           lesson_groups:
             cspSurvey:
@@ -2376,6 +3873,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            While Loops:
+              name: "„Kui“ tsüklid"
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -2397,8 +3897,18 @@ et:
               display_name: Uuring
             required:
               display_name: Ülevaade
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
         time4csdemo:
           stages:
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Building a Foundation:
+              name: Vundamendi ehitus
+          lessons:
             Crowdsourcing:
               name: Ühistegevused
             Conditionals with Cards:
@@ -2471,6 +3981,9 @@ et:
           stages:
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
+          lessons:
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -2510,6 +4023,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Lists:
+              name: Loendid
         csd3-pilot:
           stages:
             Variables:
@@ -2523,6 +4039,15 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         csp3-pilot:
           lesson_groups:
             content:
@@ -2538,6 +4063,9 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -2610,6 +4138,11 @@ et:
               name: Sissejuhatus
             Nested Loops:
               name: Korduvad tsüklid
+          lessons:
+            Introduction:
+              name: Sissejuhatus
+            Nested Loops:
+              name: Korduvad tsüklid
         csp6-pilot:
           lesson_groups:
             content:
@@ -2618,6 +4151,9 @@ et:
               display_name: Ülevaade
         dance-2019:
           stages:
+            Dance Party:
+              name: Tantsuõhtu
+          lessons:
             Dance Party:
               name: Tantsuõhtu
         k5-onlinepd-2019:
@@ -2639,6 +4175,21 @@ et:
           lesson_groups:
             k5_next_steps:
               display_name: Järgmised sammud
+          lessons:
+            Next Steps:
+              name: Järgmised sammud
+            Loops:
+              name: Tsüklid
+            Conditionals:
+              name: Tingimuslaused
+            Events:
+              name: Sündmused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel
         dance-extras-2019:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         csp4-preview:
@@ -2651,6 +4202,9 @@ et:
               display_name: Funktsioonid
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: Tingimuslaused
+          lessons:
             Conditionals:
               name: Tingimuslaused
         time4cs-control-unit-2:
@@ -2668,6 +4222,11 @@ et:
               display_name: Korduvad tsüklid
             csf_functions:
               display_name: Funktsioonid
+          lessons:
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -2681,6 +4240,9 @@ et:
               display_name: Sündmused
             csf_digcit:
               display_name: Digitaalne kodakondsus
+          lessons:
+            Conditionals:
+              name: Tingimuslaused
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -2694,6 +4256,9 @@ et:
               display_name: Sündmused
             csf_digcit:
               display_name: Digitaalne kodakondsus
+          lessons:
+            Conditionals:
+              name: Tingimuslaused
         csp7-pilot:
           lesson_groups:
             required:
@@ -2735,6 +4300,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
         csd3-2020:
           stages:
             Variables:
@@ -2750,6 +4318,17 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+          lessons:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+            Text:
+              name: Tekst
         coursea-2020:
           stages:
             Going Places Safely:
@@ -2763,6 +4342,11 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+            'Programming: Happy Maps':
+              name: Happy Maps
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -2778,6 +4362,13 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Move It, Move It:
+              name: Liiguta, liiguta
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -2793,6 +4384,11 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            'Events: The Big Event':
+              name: Suursündmus
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2822,6 +4418,23 @@ et:
               display_name: Binaarne
             csf_digcit:
               display_name: Digitaalne kodakondsus
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              name: Relee programmeerimine
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            'Unplugged: Binary':
+              name: Binaarsed pildid
+            Artist Binary:
+              name: Kunstnik Binaar
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Dance Party:
+              name: Tantsuõhtu
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -2833,6 +4446,9 @@ et:
               display_name: Korduvad tsüklid
             csf_functions:
               display_name: Funktsioonid
+          lessons:
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2850,6 +4466,15 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+          lessons:
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         express-2020:
           stages:
             Dance Party:
@@ -2865,6 +4490,9 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+          lessons:
+            Dance Party:
+              name: Tantsuõhtu
         pre-express-2020:
           stages:
             Spelling Bee:
@@ -2876,16 +4504,36 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+          lessons:
+            Spelling Bee:
+              name: Sõnamesilane
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         csp1-2020:
           stages:
+            Binary Numbers:
+              name: Binaararvud
+          lessons:
             Binary Numbers:
               name: Binaararvud
         csp3-virtual:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
+          lessons:
+            Creating Functions:
+              name: Loomisfunktsioonid
         csd3-virtual:
           stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+          lessons:
             Variables:
               name: Muutujad
             Conditionals:
@@ -2900,6 +4548,11 @@ et:
               name: "„Kui“ tsüklid"
             Variables:
               name: Muutujad
+          lessons:
+            While Loops:
+              name: "„Kui“ tsüklid"
+            Variables:
+              name: Muutujad
         virtual-holding-place:
           stages:
             Velocity:
@@ -2909,13 +4562,26 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+          lessons:
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
         code-break:
           stages:
             Algorithms:
               name: Algoritmid
             Events:
               name: Sündmused
+          lessons:
+            Algorithms:
+              name: Algoritmid
+            Events:
+              name: Sündmused
         csp5-virtual-part2:
           stages:
+            While Loops:
+              name: "„Kui“ tsüklid"
+          lessons:
             While Loops:
               name: "„Kui“ tsüklid"

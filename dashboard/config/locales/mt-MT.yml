@@ -165,6 +165,8 @@ mt:
       finished_hoc: Jien lestejt l'Hour of Code tieghi
       sign_in_to_save: Idħol biex tissejvja l-progress
       project_gallery: Il-Proġetti
+      legal_privacy: Poliza dwar il-Privatezza
+      legal_tos: It-Termini tas-Servizz
     user:
       district_dashboard: Pannell tal-Kontroll Distrettwali
       label: Insellmulek %{username}

@@ -1,7 +1,11 @@
 ---
 co-CO:
   data:
-    function_defintions:
+    function_definitions:
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: mele
       Course 4 SCF 1a:
         get nectar:
           name: ottene nettaru

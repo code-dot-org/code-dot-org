@@ -368,6 +368,7 @@ es-MX:
       sections: Secciones
       help_support: Ayuda y soporte
       report_bug: Reportar un error
+      report_abuse: Denunciar abuso
       teacher_community: Comunidad de docentes
       professional_learning: Aprendizaje Profesional
       documentation: Documentación
@@ -403,6 +404,8 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
+      legal_privacy: Política de privacidad
+      legal_tos: Términos de uso
     user:
       classroom: Página de inicio para docentes
       district_dashboard: Panel del distrito
@@ -936,6 +939,8 @@ es-MX:
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
     correct_body: Esa es la respuesta correcta.
+  lesson_extras:
+    bonus_level: Nivel de bonificación
   dialog:
     ok: Aceptar
     startover_title: "¿Seguro que quieres empezar de nuevo?"

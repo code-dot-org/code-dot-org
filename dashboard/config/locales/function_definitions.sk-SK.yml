@@ -1,7 +1,7 @@
 ---
 sk-SK:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -20,9 +20,15 @@ sk-SK:
       2-3 Artist 7:
         draw_rect:
           name: nakresli_obdĺžnik
+          parameters:
+            width: šírka
+            height: výška
       2-3 Artist Debugging 10:
         draw square:
           name: nakresli štvorec
+          parameters:
+            width: šírka
+            height: výška
         jump to controller top left:
           name: prejsť na ovládači doľava hore
         jump to middle:
@@ -260,6 +266,8 @@ sk-SK:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: získaj nektár a vyrob med
+          parameters:
+            honey: med
       Course 4 Play Lab Params 1:
         jump:
           name: skoč
@@ -268,12 +276,17 @@ sk-SK:
           name: level_hore
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Course 4 Play Lab Params 2:
         jump:
           name: skoč
       Course 4 Play Lab Params 3:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
       Course 4 Play Lab Params 4:
         patrol:
           name: hliadkuj
@@ -282,18 +295,30 @@ sk-SK:
       Course 4 Play Lab Params 5:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
       Course 4 Play Lab Params 6:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
       Course 4 Play Lab Params 7:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Course 4 Play Lab Params 8:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Course 4 Play Lab Params 9:
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Course 4 Play Lab Vars 1:
         set score:
           name: nastav skóre
@@ -314,6 +339,8 @@ sk-SK:
       Course 4 SCF 1a:
         get nectar:
           name: získaj nektár
+          parameters:
+            counter: počítadlo
       Course 4 SCF 1b:
         make honey up and over:
           name: vyrob med vpravo hore
@@ -333,6 +360,8 @@ sk-SK:
           name: urob niečo
         draw an octagon:
           name: nakresli osemuholník
+          parameters:
+            length: dĺžka
       'Course E: Play Lab Project':
         do something:
           name: urob niečo
@@ -346,6 +375,8 @@ sk-SK:
           name: level_hore
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Function intro Ryan:
         build bridge:
           name: postav most
@@ -361,6 +392,7 @@ sk-SK:
           name: nakresli okná
         rectangle:
           name: obdĺžnik
+          description: hahaha
         sun:
           name: slnko
         diamond:
@@ -373,6 +405,7 @@ sk-SK:
           name: trojuholník
         square:
           name: štvorec
+          description: hahaha
       Geometric Sun_2018:
         draw a door:
           name: nakresli dvere
@@ -382,6 +415,7 @@ sk-SK:
           name: nakresli okná
         rectangle:
           name: obdĺžnik
+          description: hahaha
         sun:
           name: slnko
         diamond:
@@ -394,23 +428,38 @@ sk-SK:
           name: trojuholník
         square:
           name: štvorec
+          description: hahaha
       Guess The Number:
         check guess:
           name: skontroluj odhad
       InspirationalArtwork:
         n-sided shape:
           name: n-stranný tvar
+          description: Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva
+            parametre, dĺžku a počet strán. Dĺžka
+          parameters:
+            length: dĺžka
         draw a loop:
           name: nakresli cyklus
+          parameters:
+            length: dĺžka
         draw spiral circle:
           name: nakresli špirálu
+          parameters:
+            size: veľkosť
       InspirationalArtwork_2018:
         draw a loop:
           name: nakresli cyklus
+          parameters:
+            length: dĺžka
         n-sided shape:
           name: n-stranný tvar
+          description: Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva
+            parametre, dĺžku a počet strán. Dĺžka
         draw spiral circle:
           name: nakresli špirálu
+          parameters:
+            size: veľkosť
       K-1 Artist2 3:
         draw roof:
           name: nakresli strechu
@@ -509,38 +558,66 @@ sk-SK:
           name: urob niečo
         draw a hexagon:
           name: nakresli šesťuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
         do something:
           name: urob niečo
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 15:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 2:
         do something:
           name: urob niečo
@@ -553,52 +630,92 @@ sk-SK:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: nakresli trojuholník s dĺžkou
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: nakresli päťuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a hexagon:
           name: nakresli šesťuholník
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a sqaure:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: nakresli trojuholník s dĺžkou
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 9:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         do something:
           name: urob niečo
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Play Lab Params 11:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       New Artist Project:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       New Minecraft Hero Project:
         function 1:
           name: funkcia 1
@@ -607,8 +724,14 @@ sk-SK:
       New Play Lab Project:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Robot Doodle:
         25 pixel square:
           name: 25pixelový štvorec
@@ -702,6 +825,8 @@ sk-SK:
       course4_artist_fwp_challenge1:
         draw background:
           name: nakresli pozadie
+          parameters:
+            color: farba
         draw a polygon:
           name: nakresli mnohouholník
         draw a square 20:
@@ -714,9 +839,13 @@ sk-SK:
       course4_bee_fwp_challenge1:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       course4_bee_fwp_challenge2:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"jednoduché" riešenie'
@@ -732,16 +861,22 @@ sk-SK:
       courseC_artist_prog3:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog3_2018:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog3_2019:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog4:
@@ -1502,70 +1637,128 @@ sk-SK:
           name: nakresli štvorec
         checker:
           name: kontrola
+          parameters:
+            size: veľkosť
+            color: farba
         do something:
           name: urob niečo
         Make gingham:
           name: Vyrob farebné štvorce
+          parameters:
+            size: veľkosť
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp2:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         checker:
           name: kontrola
+          parameters:
+            size: veľkosť
+            color: farba
         do something:
           name: urob niečo
         Make gingham:
           name: Vyrob farebné štvorce
+          parameters:
+            size: veľkosť
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp2_predict1:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       courseF_artist_fwp3:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a square2:
           name: nakresli štvorec2
+          parameters:
+            size: veľkosť
         filled square:
           name: vyplnený štvorec
+          parameters:
+            size: veľkosť
+            color: farba
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp4:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       courseF_artist_fwp5:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       courseF_artist_fwp6:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
       courseF_artist_fwp7:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: nakresli pozadie
+          parameters:
+            color: farba
         draw a polygon:
           name: nakresli mnohouholník
         draw a square 20:
@@ -1579,6 +1772,8 @@ sk-SK:
           name: urob niečo
         draw an octagon:
           name: nakresli osemuholník
+          parameters:
+            length: dĺžka
       courseF_bee_conditionals2:
         move and check:
           name: posuň sa a skontroluj
@@ -1649,27 +1844,43 @@ sk-SK:
       courseF_bee_fwp4:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            length: dĺžka
       courseF_bee_fwp5:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            width: šírka
       courseF_bee_fwp6:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            width: šírka
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp_challenge1:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseF_bee_fwp_challenge2:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseF_bee_variables_1_2018:
         collect row:
           name: pozbieraj riadok

@@ -1,15 +1,9 @@
 /* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {
-  apiValidateType,
-  outputWarning,
-  getAsyncOutputWarning,
-  OPTIONAL
-} from './javascriptMode';
+import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
-import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
-import i18n from '@cdo/locale';
+import {textToSpeech} from './speech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -129,169 +123,14 @@ export const commands = {
       'string',
       OPTIONAL
     );
-    if (opts.text.length > 749) {
-      opts.text = opts.text.slice(0, 750);
-      outputWarning(i18n.textToSpeechTruncation());
-    }
-
-    let voice = appOptions.azureSpeechServiceLanguages['English']['female'];
-    let languageCode = 'en-US';
-    if (
-      appOptions.azureSpeechServiceLanguages[opts.language] &&
-      appOptions.azureSpeechServiceLanguages[opts.language][opts.gender]
-    ) {
-      voice =
-        appOptions.azureSpeechServiceLanguages[opts.language][opts.gender];
-      languageCode =
-        appOptions.azureSpeechServiceLanguages[opts.language]['languageCode'];
-    } else {
-      opts.language = 'English';
-      opts.gender = 'female';
-    }
-
-    const cachedBytes = Sounds.getSingleton().getTextBytes(
+    textToSpeech(
+      opts.text,
+      opts.gender,
       opts.language,
-      opts.text
+      appOptions.azureSpeechServiceToken,
+      appOptions.azureSpeechServiceRegion,
+      appOptions.azureSpeechServiceLanguages
     );
-
-    if (cachedBytes !== null && cachedBytes['hasProfanity']) {
-      outputWarning(
-        i18n.textToSpeechProfanity({
-          profanityCount: cachedBytes['profaneWords'].length,
-          profaneWords: cachedBytes['profaneWords'].join(', ')
-        })
-      );
-      return;
-    }
-    const asyncOutputWarning = getAsyncOutputWarning();
-    // There is no way to make ajax requests from html on the filesystem.  So
-    // the only way to play sounds is using HTML5. This scenario happens when
-    // students export their apps and run them offline. At this point, their
-    // uploaded sound files are exported as well, which means varnish is not
-    // an issue.
-    const forceHTML5 = window.location.protocol === 'file:';
-
-    if (cachedBytes !== null && cachedBytes[opts.gender] !== null) {
-      if (cachedBytes[opts.gender].length > 0) {
-        Sounds.getSingleton().addPromiseToSpeechQueue(
-          cachedBytes[opts.gender].slice(0),
-          {
-            volume: 1.0,
-            loop: false,
-            forceHTML5: forceHTML5,
-            allowHTML5Mobile: true,
-            onEnded: () => {
-              Sounds.getSingleton().onSpeechFinished();
-            }
-          }
-        );
-      } else {
-        Sounds.getSingleton().addPromiseToSpeechQueue(
-          null,
-          {
-            volume: 1.0,
-            loop: false,
-            forceHTML5: forceHTML5,
-            allowHTML5Mobile: true,
-            onEnded: () => {
-              Sounds.getSingleton().onSpeechFinished();
-            }
-          },
-          {
-            language: opts.language,
-            text: opts.text,
-            gender: opts.gender,
-            profanityFoundCallback: profaneWords => {
-              asyncOutputWarning(
-                i18n.textToSpeechProfanity({
-                  profanityCount: profaneWords.length,
-                  profaneWords: profaneWords.join(', ')
-                })
-              );
-            }
-          }
-        );
-      }
-    } else {
-      let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
-        opts.text
-      }</voice></speak>`;
-      const url = `https://${
-        appOptions.azureSpeechServiceRegion
-      }.tts.speech.microsoft.com/cognitiveservices/v1`;
-
-      var request = new XMLHttpRequest();
-      const resultPromise = new Promise(async function(resolve, reject) {
-        const profaneWords = await findProfanity(opts.text, languageCode);
-        if (profaneWords && profaneWords.length > 0) {
-          asyncOutputWarning(
-            i18n.textToSpeechProfanity({
-              profanityCount: profaneWords.length,
-              profaneWords: profaneWords.join(', ')
-            })
-          );
-          Sounds.getSingleton().registerTextBytes(
-            opts.language,
-            opts.text,
-            true,
-            profaneWords
-          );
-          resolve('profanity found');
-        }
-        request.onreadystatechange = function() {
-          if (request.readyState === 4) {
-            if (request.status >= 200 && request.status < 300) {
-              resolve(request.response);
-            } else {
-              reject({
-                status: request.status,
-                statusText: request.statusText
-              });
-            }
-          }
-        };
-
-        request.open('POST', url, true);
-        request.responseType = 'arraybuffer';
-        request.setRequestHeader(
-          'Authorization',
-          'Bearer ' + appOptions.azureSpeechServiceToken
-        );
-        request.setRequestHeader('Content-Type', 'application/ssml+xml');
-        request.setRequestHeader(
-          'X-Microsoft-OutputFormat',
-          'audio-16khz-32kbitrate-mono-mp3'
-        );
-        request.send(ssml);
-      });
-      Sounds.getSingleton().addPromiseToSpeechQueue(
-        resultPromise,
-        {
-          volume: 1.0,
-          loop: false,
-          forceHTML5: forceHTML5,
-          allowHTML5Mobile: true,
-          onEnded: () => {
-            Sounds.getSingleton().onSpeechFinished();
-          }
-        },
-        {
-          language: opts.language,
-          text: opts.text,
-          hasProfanity: false,
-          profaneWords: null,
-          gender: opts.gender
-        }
-      );
-      Sounds.getSingleton().registerTextBytes(
-        opts.language,
-        opts.text,
-        false,
-        null,
-        opts.gender,
-        []
-      );
-    }
   }
 };
 

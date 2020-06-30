@@ -1,4 +1,5 @@
 require 'singleton'
+require 'delegate'
 require 'cdo/yaml'
 
 module Cdo
