@@ -32,6 +32,25 @@ class ContactRollupsProcessed < ApplicationRecord
   # Allow only certain pegasus form roles since they are user-generated data
   ALLOWED_FORM_ROLES = %w(administrator educator engineer other parent student teacher volunteer).to_set
 
+  FORM_KIND_TO_ROLE_MAP = {
+    BringToSchool2013: 'Teacher',
+    ClassSubmission: 'Teacher',
+    DistrictPartnerSubmission: 'Teacher',
+    HelpUs2013: 'Teacher',
+    K5OnlineProfessionalDevelopmentPostSurvey: 'Teacher',
+    K5ProfessionalDevelopmentSurvey: 'Teacher',
+    ProfessionalDevelopmentWorkshop: 'Teacher',
+    ProfessionalDevelopmentWorkshopSignup: 'Teacher',
+    Petition: "Petition Signer",
+  }
+
+  # @see UserPermission::VALID_PERMISSIONS. We only care about a few permissions.
+  USER_PERMISSION_TO_ROLE_MAP = {
+    facilitator: 'Facilitator',
+    workshop_organizer: 'Workshop Organizer',
+    district_contact: 'District Contact',
+  }
+
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
@@ -45,21 +64,26 @@ class ContactRollupsProcessed < ApplicationRecord
       begin
         contact.deep_stringify_keys!
         contact_data = parse_contact_data(contact['all_data_and_metadata'])
+
+        processed_contact_data = {}
+        processed_contact_data.merge! extract_opt_in(contact_data)
+        processed_contact_data.merge! extract_user_id(contact_data)
+        processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
+        processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+        processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
+        processed_contact_data.merge! extract_forms_submitted(contact_data)
+        processed_contact_data.merge! extract_form_roles(contact_data)
+        processed_contact_data.merge! extract_roles(contact_data)
+        processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
       rescue StandardError
+        # TODO: create a process to report and investigate invalid contacts
         invalid_contacts += 1
         next
       end
 
-      processed_contact_data = {}
-      processed_contact_data.merge! extract_opt_in(contact_data)
-      processed_contact_data.merge! extract_user_id(contact_data)
-      processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
-      processed_contact_data.merge! extract_professional_learning_attended(contact_data)
-      processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
-      processed_contact_data.merge! extract_forms_submitted(contact_data)
-      processed_contact_data.merge! extract_form_roles(contact_data)
-      processed_contact_data.merge! extract_updated_at(contact_data)
+      # Contact data is successful processed, add it to a batch.
+      # When the batch is big enough, save it to the database.
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
@@ -188,6 +212,53 @@ class ContactRollupsProcessed < ApplicationRecord
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
     uniq_courses = (courses + section_courses).uniq.compact.sort.join(',')
     return uniq_courses.blank? ? {} : {professional_learning_attended: uniq_courses}
+  end
+
+  def self.extract_roles(contact_data)
+    roles = Set.new
+    # Contact is a teacher if they appears in any of the following tables
+    roles.add 'Teacher' if
+      contact_data.dig('dashboard.users', 'user_id') ||
+      contact_data.key?('dashboard.pd_enrollments') ||
+      contact_data.key?('dashboard.pd_attendances') ||
+      contact_data.key?('dashboard.followers')
+
+    unless roles.include? 'Teacher'
+      # Contact is a teacher if they submit a census survey as a teacher
+      submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+      roles.add 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
+    end
+
+    # Contact is a teacher or a petition signer if they submit certain (pegasus) forms
+    form_kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]})
+
+    # @see Course::FAMILY_NAMES
+    # TODO: extract course family_name (in properties column) instead of course name.
+    courses = extract_field(contact_data, 'dashboard.sections', 'course_name') || []
+    roles.add 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
+    roles.add 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
+
+    # @see Script model, csf?, csd? and csp? methods
+    curricula = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
+    roles.add 'CSF Teacher' if curricula.any? {|curriculum| curriculum == 'CSF'}
+    roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') &&
+      curricula.any? {|curriculum| curriculum == 'CSD'}
+    roles.add 'CSP Teacher' if !roles.include?('CSP Teacher') &&
+      curricula.any? {|curriculum| curriculum == 'CSP'}
+
+    roles.add 'Form Submitter' if
+      contact_data.key?('pegasus.forms') ||
+      contact_data.key?('dashboard.census_submissions')
+
+    roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
+
+    permissions = extract_field(contact_data, 'dashboard.user_permissions', 'permission') || []
+    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]})
+
+    # Only care about unique and non-nil values. Values are sorted before return.
+    uniq_roles = roles.to_a.compact.sort.join(',')
+    uniq_roles.blank? ? {} : {roles: uniq_roles}
   end
 
   def self.extract_hoc_organizer_years(contact_data)

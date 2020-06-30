@@ -70,6 +70,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_form_roles).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_roles).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -187,6 +189,118 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     tests.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_professional_learning_attended test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_roles' do
+    users_input = {
+      'dashboard.users' => {
+        'user_id' => [{'value' => 1}],
+        'is_parent' => [{'value' => 1}]
+      }
+    }
+    pd_enrollments_input = {'dashboard.pd_enrollments' => {}}
+    pd_attendances_input = {'dashboard.pd_attendances' => {}}
+    followers_input = {'dashboard.followers' => {}}
+    census_submissions_input = {
+      'dashboard.census_submissions' => {
+        'submitter_role' => [{'value' => Census::CensusSubmission::ROLES[:teacher]}]
+      }
+    }
+    forms_input = {
+      'pegasus.forms' => {
+        'kind' => [
+          {'value' => 'Petition'},
+          {'value' => 'ClassSubmission'}
+        ]
+      }
+    }
+    section_courses_input = {
+      'dashboard.sections' => {
+        'course_name' => [
+          {'value' => 'csp-2020'},
+          {'value' => 'csd-2019'}
+        ]
+      }
+    }
+    section_curricula_input = {
+      'dashboard.sections' => {
+        'curriculum_umbrella' => [
+          {'value' => 'CSF'},
+          {'value' => 'CSD'}
+        ]
+      }
+    }
+    user_permissions_input = {
+      'dashboard.user_permissions' => {
+        'permission' => [
+          {'value' => 'workshop_organizer'},
+          {'value' => 'facilitator'}
+        ]
+      }
+    }
+    all_inputs = {}.
+      merge!(users_input).
+      merge!(pd_enrollments_input).
+      merge!(pd_attendances_input).
+      merge!(followers_input).
+      merge!(census_submissions_input).
+      merge!(forms_input).
+      merge!(section_courses_input).
+      merge!(section_curricula_input).
+      merge!(user_permissions_input)
+
+    tests = [
+      {
+        input: users_input,
+        expected_output: {roles: 'Parent,Teacher'}
+      },
+      {
+        input: pd_enrollments_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: pd_attendances_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: followers_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: census_submissions_input,
+        expected_output: {roles: 'Form Submitter,Teacher'}
+      },
+      {
+        input: forms_input,
+        expected_output: {roles: 'Form Submitter,Petition Signer,Teacher'}
+      },
+      {
+        input: section_courses_input,
+        expected_output: {roles: 'CSD Teacher,CSP Teacher'}
+      },
+      {
+        input: section_curricula_input,
+        expected_output: {roles: 'CSD Teacher,CSF Teacher'}
+      },
+      {
+        input: user_permissions_input,
+        expected_output: {roles: 'Facilitator,Workshop Organizer'}
+      },
+      # input has nothing
+      {
+        input: {}, expected_output: {}
+      },
+      # input has everything
+      {
+        input: all_inputs,
+        expected_output: {roles: 'CSD Teacher,CSF Teacher,Facilitator,Form Submitter,Parent,Petition Signer,Teacher,Workshop Organizer'}
+      },
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_roles test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
