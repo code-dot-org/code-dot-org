@@ -1,5 +1,6 @@
 /* global AudioContext */
 import Sound from './Sound';
+import {PROFANITY_FOUND} from './constants';
 
 /**
  * Interface for a sound registry and playback mechanism
@@ -415,7 +416,7 @@ Sounds.prototype.checkSpeechQueue = async function() {
         ][nextSpeech.cacheParams.gender];
         this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
       }
-    } else if (bytes === 'profanity found') {
+    } else if (bytes === PROFANITY_FOUND) {
       this.onSpeechFinished();
     } else if (nextSpeech.cacheParams !== undefined) {
       const bytes = await nextSpeech.promise;
