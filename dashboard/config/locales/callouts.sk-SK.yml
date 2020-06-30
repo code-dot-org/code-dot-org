@@ -303,9 +303,8 @@ sk-SK:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!
       New Play Lab Project:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky
-          vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie
-          do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé
+          bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spustiť" pre uloženie a spustenie
           vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?

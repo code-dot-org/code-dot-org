@@ -87,6 +87,10 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
+      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
+      end
+
       # avoid a redirect loop if the string substitution failed
       if new_path == request.fullpath
         redirect_to build_script_level_path(new_script.starting_level)
@@ -252,8 +256,12 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
+    # Due to a programming error, we have been inadvertently passing user: nil
+    # to Script.get_script_family_redirect_for_user . Since end users may be
+    # depending on this incorrect behavior, and we are trying to deprecate this
+    # codepath anyway, the current plan is to not fix this bug.
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_script_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
       Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
@@ -455,7 +463,7 @@ class ScriptLevelsController < ApplicationController
     # for level groups, @level and @callback point to the parent level, so we
     # generate a url which can be used to report sublevel progress (after
     # appending the sublevel id).
-    if @level.game.level_group? || @level.try(:contained_levels).present?
+    if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
         script_level_id: @script_level.id,

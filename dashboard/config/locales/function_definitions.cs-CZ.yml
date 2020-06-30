@@ -258,10 +258,10 @@ cs-CZ:
             points: body
       Course 4 Play Lab Vars 1:
         set score:
-          name: nastavit body
+          name: nastav skóre
       Course 4 Play Lab Vars 2:
         set score:
-          name: nastavit body
+          name: nastav skóre
       Course 4 SCF 1:
         draw a hexagon:
           name: nakresli šestiúhelník

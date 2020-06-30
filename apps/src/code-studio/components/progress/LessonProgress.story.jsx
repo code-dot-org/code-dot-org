@@ -29,7 +29,7 @@ const conceptPuzzle = {
   kind: 'puzzle',
   icon: 'fa-file-text',
   title: 2,
-  url: 'http://studio.code.org/s/csp1/stage/2/puzzle/1',
+  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/1',
   freePlay: false,
   progression: 'Lesson Vocabulary & Resources',
   is_concept_level: true
@@ -42,7 +42,7 @@ const assessment1 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 3,
-  url: 'http://studio.code.org/s/csp1/stage/2/puzzle/3',
+  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/3',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
@@ -54,7 +54,7 @@ const assessment2 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 4,
-  url: 'http://studio.code.org/s/csp1/stage/2/puzzle/4',
+  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/4',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
@@ -66,7 +66,7 @@ const assessment3 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 5,
-  url: 'http://studio.code.org/s/csp1/stage/2/puzzle/5',
+  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/5',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
