@@ -43,75 +43,35 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'false becomes "0" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '0'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: false))
+    assert_param_translation({aws_educate: false}, {'aws-educate' => '0'})
   end
 
   test 'the string "false" becomes "0" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '0'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: 'false'))
+    assert_param_translation({aws_educate: 'false'}, {'aws-educate' => '0'})
   end
 
   test 'the number 0 becomes "0" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '0'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: 0))
+    assert_param_translation({aws_educate: 0}, {'aws-educate' => '0'})
   end
 
   test 'the string "0" becomes "0" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '0'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: '0'))
+    assert_param_translation({aws_educate: '0'}, {'aws-educate' => '0'})
   end
 
   test 'true becomes "1" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '1'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: true))
+    assert_param_translation({aws_educate: true}, {'aws-educate' => '1'})
   end
 
   test 'the string "true" becomes "1" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '1'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: 'true'))
+    assert_param_translation({aws_educate: 'true'}, {'aws-educate' => '1'})
   end
 
   test 'the number 1 becomes "1" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '1'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: 1))
+    assert_param_translation({aws_educate: 1}, {'aws-educate' => '1'})
   end
 
   test 'the string "1" becomes "1" for boolean params' do
-    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
-      params['aws-educate'] == '1'
-    end
-    expected_request.returns(fake_success_response)
-
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(aws_educate: '1'))
+    assert_param_translation({aws_educate: '1'}, {'aws-educate' => '1'})
   end
 
   test 'raises without submitting if amazon_terms is not true' do
@@ -136,6 +96,24 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   end
 
   private
+
+  # Check that certain input params turn into expected output params
+  # @param input_params [Hash] partial input params, to be merged over valid input
+  # @param expected_params [Hash] expected params sent to AFE; does not need to be complete
+  def assert_param_translation(input_params, expected_params)
+    captured_params = nil
+    expected_request = Net::HTTP.expects(:post_form).with do |_, params|
+      captured_params = params; true
+    end
+    expected_request.returns(fake_success_response)
+
+    Services::AFEEnrollment.new.submit(valid_test_params.merge(input_params))
+
+    refute_nil captured_params
+    expected_params.each do |key, expected_value|
+      assert_equal expected_value, captured_params[key]
+    end
+  end
 
   def valid_test_params
     {
