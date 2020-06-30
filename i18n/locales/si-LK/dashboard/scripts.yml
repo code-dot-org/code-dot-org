@@ -3829,3 +3829,33 @@ si:
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: ලූපයන්
+            Events:
+              name: වැඩසටහන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+            Variables:
+              name: විචල්‍යන්
+            For Loops:
+              name: ලූපයන් සඳහා
+          lessons:
+            Loops:
+              name: ලූපයන්
+            Events:
+              name: වැඩසටහන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+            Variables:
+              name: විචල්‍යන්
+            For Loops:
+              name: ලූපයන් සඳහා
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: ඉදිරි පියවර

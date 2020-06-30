@@ -3541,3 +3541,30 @@ ne:
           lessons:
             While Loops:
               name: While Loops
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Loops
+            Events:
+              name: कार्य
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+          lessons:
+            Loops:
+              name: Loops
+            Events:
+              name: कार्य
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops

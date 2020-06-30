@@ -3416,3 +3416,34 @@ ca:
           lessons:
             While Loops:
               name: Bucles Mentres
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Bucles
+            Events:
+              name: Esdeveniments
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+            Sprite Lab:
+              name: Laboratori de personatges
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Esdeveniments
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+            Sprite Lab:
+              name: Laboratori de personatges

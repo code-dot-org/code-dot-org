@@ -374,3 +374,14 @@ en-GB:
           lessons:
             Variables:
               name: Variables
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables

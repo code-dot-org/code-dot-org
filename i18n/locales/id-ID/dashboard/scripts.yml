@@ -6,7 +6,7 @@ id:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
-        csf_category_name: CS Fundamentals
+        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_2019_category_name: CS Fundamentals (2019)
         csf_international_category_name: Dasar dasar internasional CS
@@ -464,7 +464,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
           lessons:
             Binary:
               name: Biner
@@ -475,7 +475,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
         algebra:
           title: Ilmu Komputer dalam Aljabar
           description: Belajar pemrograman fungsional melalui aljabar
@@ -568,10 +568,10 @@ id:
           description_short: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
           stages:
             Infinity:
-              name: Tidak terhingga
+              name: '∞'
           lessons:
             Infinity:
-              name: Tidak terhingga
+              name: '∞'
         algebrademo:
           title: Demo Aljabar
           description: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa pemrograman yang digunakan dalam Code.org CS di Aljabar
@@ -5611,7 +5611,7 @@ id:
               description_student: Pelajaran ini memperluas keterampilan menggambar hingga mencakup lebar dan tinggi serta memperkenalkan konsep menghasilkan angka acak. Murid di kelas belajar menggambar beragam versi ellipse() dan rect() yang meliputi parameter lebar dan tinggi serta menggunakan blok background() untuk mengisi layar dengan warna. Pada akhir perkembangan belajar, murid di kelas dikenalkan dengan blok randomNumber() dan menggunakan blok baru untuk menggambar ular pelangi yang diacak.
               description_teacher: Dalam pelajaran ini, murid terus mengembangkan keterampilan menggambarnya. Pada awal pelajaran, satu diskusi yang dipandu guru menghubungkan fungsionalitas blok yang diperluas (misalnya, bentuk dengan berbagai ukuran) dengan perlunya input blok lebih banyak, atau "parameter". Murid belajar menggambar berbagai versi `ellipse()` dan `rect()` yang mencakup parameter lebar dan tinggi. Mereka juga belajar menggunakan blok `background()`. Pada akhir perkembangan belajar, murid diperkenalkan dengan blok `randomNumber()`. Berbekal kombinasi semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -5744,7 +5744,7 @@ id:
               description_student: Pelajaran ini memperluas keterampilan menggambar hingga mencakup lebar dan tinggi serta memperkenalkan konsep menghasilkan angka acak. Murid di kelas belajar menggambar beragam versi ellipse() dan rect() yang meliputi parameter lebar dan tinggi serta menggunakan blok background() untuk mengisi layar dengan warna. Pada akhir perkembangan belajar, murid di kelas dikenalkan dengan blok randomNumber() dan menggunakan blok baru untuk menggambar ular pelangi yang diacak.
               description_teacher: Dalam pelajaran ini, murid terus mengembangkan keterampilan menggambarnya. Pada awal pelajaran, satu diskusi yang dipandu guru menghubungkan fungsionalitas blok yang diperluas (misalnya, bentuk dengan berbagai ukuran) dengan perlunya input blok lebih banyak, atau "parameter". Murid belajar menggambar berbagai versi `ellipse()` dan `rect()` yang mencakup parameter lebar dan tinggi. Mereka juga belajar menggunakan blok `background()`. Pada akhir perkembangan belajar, murid diperkenalkan dengan blok `randomNumber()`. Berbekal kombinasi semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -5917,7 +5917,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
           lessons:
@@ -5938,7 +5938,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
         algebrapdnext:
@@ -6467,7 +6467,7 @@ id:
               description_student: Pelajaran ini melanjutkan pengenalan tag HTML, kali ini disertai header.  Murid di kelas berlatih menggunakan tag header untuk membuat halaman dan judul bagian serta mempelajari cara menampilkan berbagai elemen header secara default.  Berikutnya, murid di kelas berencana mengatur konten mereka di halaman web pribadi yang akan dibuat di seluruh unit pelajaran dan memulai halaman pertama proyek.
               description_teacher: Dalam pelajaran ini, murid melanjutkan penggunaan HTML untuk menyusun teks di halaman web, kali ini disertai header.  Murid mempelajari cara menampilkan berbagai elemen header secara default dan berlatih menggunakannya untuk membuat halaman dan judul bagian.  Murid kemudian mulai memutuskan cara mengatur konten tersebut di halaman web pribadi mereka sendiri. Di level terakhir, murid memulai proyek yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -6571,7 +6571,7 @@ id:
               description_student: Pelajaran ini melanjutkan pengenalan tag HTML, kali ini disertai header.  Murid di kelas berlatih menggunakan tag header untuk membuat halaman dan judul bagian serta mempelajari cara menampilkan berbagai elemen header secara default.  Berikutnya, murid di kelas berencana mengatur konten mereka di halaman web pribadi yang akan dibuat di seluruh unit pelajaran dan memulai halaman pertama proyek.
               description_teacher: Dalam pelajaran ini, murid melanjutkan penggunaan HTML untuk menyusun teks di halaman web, kali ini disertai header.  Murid mempelajari cara menampilkan berbagai elemen header secara default dan berlatih menggunakannya untuk membuat halaman dan judul bagian.  Murid kemudian mulai memutuskan cara mengatur konten tersebut di halaman web pribadi mereka sendiri. Di level terakhir, murid memulai proyek yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -7858,7 +7858,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -7936,7 +7936,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -8245,7 +8245,7 @@ id:
               description_student: Kenali Circuit Playground, papan sirkuit yang akan digunakan di sepanjang sisa unit ini. Dengan menggunakan App Lab, kembangkan program yang menggunakan Circuit Playground untuk output.
               description_teacher: Dalam pelajaran ini, murid memperoleh kesempatan pertama mereka untuk menulis program yang menggunakan Circuit Playground. Setelah terlebih dahulu menyelidiki papan secara visual dan berhipotesis kemungkinan fungsionalitas, murid berpindah ke online untuk belajar menulis aplikasi yang mengontrol LED. Dengan menggabungkan layar App Lab dan Circuit Playgrounds, murid secara bertahap dapat mulai mengintegrasikan elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah sejenis variable yang dapat menyimpan banyak nilai sekaligus. Dalam pelajaran ini, murid belajar membuat daftar yang menyimpan sederetan nilai terkait ke dalam satu variable tunggal. Setelah membuat daftar sendiri, murid akan belajar tentang cara-cara mengekstrak nilai spesifik atau nilai acak dari sebuah daftar menggunakan indeksnya.
             Lights:
@@ -8431,7 +8431,7 @@ id:
               description_student: Kenali Circuit Playground, papan sirkuit yang akan digunakan di sepanjang sisa unit ini. Dengan menggunakan App Lab, kembangkan program yang menggunakan Circuit Playground untuk output.
               description_teacher: Dalam pelajaran ini, murid memperoleh kesempatan pertama mereka untuk menulis program yang menggunakan Circuit Playground. Setelah terlebih dahulu menyelidiki papan secara visual dan berhipotesis kemungkinan fungsionalitas, murid berpindah ke online untuk belajar menulis aplikasi yang mengontrol LED. Dengan menggabungkan layar App Lab dan Circuit Playgrounds, murid secara bertahap dapat mulai mengintegrasikan elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah sejenis variable yang dapat menyimpan banyak nilai sekaligus. Dalam pelajaran ini, murid belajar membuat daftar yang menyimpan sederetan nilai terkait ke dalam satu variable tunggal. Setelah membuat daftar sendiri, murid akan belajar tentang cara-cara mengekstrak nilai spesifik atau nilai acak dari sebuah daftar menggunakan indeksnya.
             Lights:
@@ -8599,7 +8599,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -8650,7 +8650,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -9013,7 +9013,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
           lessons:
             Text on the Web:
               name: Teks di web
@@ -9052,7 +9052,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
         csd1-draft:
           stages:
             Intro to Problem Solving:
@@ -9107,7 +9107,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -9158,7 +9158,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -12772,7 +12772,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -12809,7 +12809,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -12863,7 +12863,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -12920,7 +12920,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -12997,7 +12997,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -13100,7 +13100,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -13206,7 +13206,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -13272,7 +13272,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -16621,7 +16621,7 @@ id:
           title: CSP Playground
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -16839,7 +16839,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_internet:
@@ -17604,7 +17604,7 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -18531,7 +18531,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -18599,7 +18599,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -18658,7 +18658,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -18763,7 +18763,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -19293,7 +19293,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -19301,7 +19301,7 @@ id:
           title: CSP Unit 4 Percontohan - Variable, Conditional, dan Function
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -19382,7 +19382,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -20339,7 +20339,7 @@ id:
           title: 'Unit 1: Bit & Byte'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -20428,7 +20428,7 @@ id:
           title: 'Unit 2: Internet'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -20657,7 +20657,7 @@ id:
           title: 'Unit 4: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -20792,7 +20792,7 @@ id:
           title: 'Unit 5: Daftar, Loop, dan Traversal'
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -20929,7 +20929,7 @@ id:
           title: 'Unit 6: Algorithm'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -21159,7 +21159,7 @@ id:
           title: 'Unit 8: Create PT'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -21248,7 +21248,7 @@ id:
           title: 'Unit 9: Data'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -21337,7 +21337,7 @@ id:
           title: 'Unit 10: Dampak Global'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -21533,7 +21533,7 @@ id:
           title: CSP Unit 5 Percontohan - Daftar, Loop, dan Traversal
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -21856,7 +21856,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -21956,7 +21956,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman web pribadi untuk menambahkan halaman HTML baru yang mencantumkan tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan tidak tersusun dalam HTML dan menempuh beberapa level menggunakan tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru yang sudah mereka pelajari ini.
             Intellectual Property and Images:
@@ -22047,7 +22047,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -22156,7 +22156,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -23095,7 +23095,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -23177,7 +23177,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -23327,7 +23327,7 @@ id:
           title: 'CSP Preview: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -23798,7 +23798,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
           title: CSP Unit 7 Percontohan - Parameter, Kembali, dan Perpustakaan
           lesson_groups:
             csp_parameters_return_values:
@@ -23863,7 +23863,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
         csp8-pilot:
           stages:
             new stage:
@@ -23919,7 +23919,7 @@ id:
           title: CSP Unit 4 - Variable, Conditional, dan Function ('20-'21)
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -24002,7 +24002,7 @@ id:
           title: CSP Unit 5 - Daftar, Loop, dan Traversal ('20-'21)
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -24260,8 +24260,14 @@ id:
               name: Halaman Web Anda - Persiapkan
               description_student: "**Pertanyaan Hari Ini: Apa yang perlu kita lakukan sebagai persiapan untuk membuat halaman web?**\\r\n\\r\nDalam pelajaran ini, murid di kelas menekuni tahap \"persiapan\" dari proses pemecahan masalah, dengan memutuskan elemen dan gaya apa yang akan dimiliki oleh halaman web.  Mereka meninjau berbagai HTML, CSS, dan pedoman kewargaan digital, lalu merancang dan merencanakan halaman dengan mengunduh dan mendokumentasikan gambar yang akan dibutuhkan. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka bisa memastikan situs web melakukan pekerjaannya sesuai rancangan awal."
               description_teacher: "**Pertanyaan Hari Ini: Apa yang perlu kita lakukan sebagai persiapan untuk membuat halaman web?**\\r\n\\r\nDalam pelajaran ini, murid di kelas menekuni tahap \"persiapan\" dari proses pemecahan masalah, dengan memutuskan elemen dan gaya apa yang akan dimiliki oleh halaman web.  Mereka memulainya dengan meninjau berbagai HTML, CSS, dan pedoman kewargaan digital yang akan dibutuhkan dalam membuat halaman web. Mereka kemudian mendeskripsikan dan membuat sketsa halaman, membuat daftar tag dan gaya yang akan digunakan untuk merealisasikan tata letak dan desain yang sudah diputuskan. Lalu mereka masuk secara online untuk mencari dan mengunduh gambar yang akan dibutuhkan untuk halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka bisa memastikan situs web melakukan pekerjaannya sesuai rancangan awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
           lesson_groups:
             csd2_1:
               display_name: 'Bab 1: Konten Web dan HTML'
@@ -24338,8 +24344,14 @@ id:
               name: Halaman Web Anda - Persiapkan
               description_student: "**Pertanyaan Hari Ini: Apa yang perlu kita lakukan sebagai persiapan untuk membuat halaman web?**\\r\n\\r\nDalam pelajaran ini, murid di kelas menekuni tahap \"persiapan\" dari proses pemecahan masalah, dengan memutuskan elemen dan gaya apa yang akan dimiliki oleh halaman web.  Mereka meninjau berbagai HTML, CSS, dan pedoman kewargaan digital, lalu merancang dan merencanakan halaman dengan mengunduh dan mendokumentasikan gambar yang akan dibutuhkan. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka bisa memastikan situs web melakukan pekerjaannya sesuai rancangan awal."
               description_teacher: "**Pertanyaan Hari Ini: Apa yang perlu kita lakukan sebagai persiapan untuk membuat halaman web?**\\r\n\\r\nDalam pelajaran ini, murid di kelas menekuni tahap \"persiapan\" dari proses pemecahan masalah, dengan memutuskan elemen dan gaya apa yang akan dimiliki oleh halaman web.  Mereka memulainya dengan meninjau berbagai HTML, CSS, dan pedoman kewargaan digital yang akan dibutuhkan dalam membuat halaman web. Mereka kemudian mendeskripsikan dan membuat sketsa halaman, membuat daftar tag dan gaya yang akan digunakan untuk merealisasikan tata letak dan desain yang sudah diputuskan. Lalu mereka masuk secara online untuk mencari dan mengunduh gambar yang akan dibutuhkan untuk halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka bisa memastikan situs web melakukan pekerjaannya sesuai rancangan awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
         csd1-2020:
           title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
           description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang ilmu komputer yang sangat interaktif dan kolaboratif, karena dibingkai dalam upaya lebih luas untuk memecahkan masalah. Anda akan berlatih menggunakan proses pemecahan masalah untuk menjawab serangkaian puzzle, tantangan, dan skenario dunia nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input, output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\\r\n"
@@ -24799,6 +24811,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
           lesson_groups:
             csd5_1:
               display_name: 'Bab 1: Yang Mewakili Informasi'
@@ -24871,6 +24885,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
         csd6-2020:
           title: CSD Unit 6 - Komputasi Fisik ('20-'21)
           description: Unit 6 mengeksplorasi peran platform perangkat keras dalam komputasi dan cara berbagai sensor dapat memberikan input dan output yang lebih efektif daripada input keyboard, mouse, dan monitor. Dengan menggunakan App Lab dan Circuit Playground dari Adafruit, Anda akan mengembangkan program yang memanfaatkan input dan output perangkat keras yang sama yang Anda saksikan di perangkat pintar, dengan mencermati betapa prototipe yang sederhana dan kasar dapat menghasilkan produk jadi. Unit diakhiri dengan tantangan desain untuk menggunakan Circuit Playground sebagai landasan bagi desain inovasi Anda sendiri.
@@ -24974,7 +24990,7 @@ id:
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan cara menggambar bentuk di layar ke komputer?**\\r\n\\r\nMurid di kelas diperkenalkan dengan Game Lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk meletakkan bentuk di layar. Pelajaran ini membahas dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Pada akhir pelajaran, murid akan dapat memprogram gambar seperti gambar yang mereka buat dengan tool gambar pada pelajaran sebelumnya."
               description_teacher: "Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya."
             Variables:
-              name: Variables
+              name: variabel
               description_student: "Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali."
               description_teacher: |-
                 Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
@@ -25107,7 +25123,7 @@ id:
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan cara menggambar bentuk di layar ke komputer?**\\r\n\\r\nMurid di kelas diperkenalkan dengan Game Lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk meletakkan bentuk di layar. Pelajaran ini membahas dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Pada akhir pelajaran, murid akan dapat memprogram gambar seperti gambar yang mereka buat dengan tool gambar pada pelajaran sebelumnya."
               description_teacher: "Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya."
             Variables:
-              name: Variables
+              name: variabel
               description_student: "Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali."
               description_teacher: |-
                 Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
@@ -26071,7 +26087,7 @@ id:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -26223,6 +26239,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_warmup:
               display_name: Berlatih
@@ -26235,11 +26255,13 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
           lessons:
             Dance Party:
               name: Pesta Tari
@@ -26297,6 +26319,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
         pre-express-2020:
           title: Kilat Pre-reader (2020)
           description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
@@ -26391,10 +26417,14 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
           title: CSP Unit 1 - Informasi Digital ('20-'21)
           lesson_groups:
             csp_unit1_2020:
               display_name: '(Lama) Unit 1: Informasi Digital'
+            cspSurvey:
+              display_name: Survei
           lessons:
             new stage:
               name: tahapan baru
@@ -26426,6 +26456,8 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
         csp2-2020:
           stages:
             new stage:
@@ -26842,7 +26874,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -26947,7 +26979,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -27252,7 +27284,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -27313,7 +27345,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -27769,3 +27801,68 @@ id:
               name: Unit 5 penilaian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Penilaian 5 - Pertanyaan AP Pseudocode Practice
+        k5-onlinepd-2020:
+          description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Dapat Dimulai
+            k5_basic_concepts_1:
+              display_name: Konsep Coding Dasar dan Praktik Pengajaran
+            k5_diving_deeper_1:
+              display_name: 'Pendalaman: Kursus E dan F'
+            k5_next_steps_1:
+              display_name: Langkah berikutnya
