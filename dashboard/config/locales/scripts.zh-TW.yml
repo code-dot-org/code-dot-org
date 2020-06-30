@@ -28002,6 +28002,10 @@ zh-TW:
               name: 在 Sprite Lab 中製作虛擬寵物
             Build A Project:
               name: 製作專案
+            Swimming Fish with Sprite Lab:
+              name: Sprite Lab 中的游泳小魚
+            End of Course Project:
+              name: 課程結束專案
           lesson_groups:
             csf_warmup:
               display_name: 熱身
@@ -28019,6 +28023,8 @@ zh-TW:
               display_name: 計次迴圈（For Loops）
             csf_sprites:
               display_name: 角色
+            end_of_course_project:
+              display_name: 課程結束專案
           lessons:
             Dance Party:
               name: 舞蹈派對
@@ -28076,6 +28082,10 @@ zh-TW:
               name: 在 Sprite Lab 中製作虛擬寵物
             Build A Project:
               name: 製作專案
+            Swimming Fish with Sprite Lab:
+              name: Sprite Lab 中的游泳小魚
+            End of Course Project:
+              name: 課程結束專案
         pre-express-2020:
           title: 學前兒童的速學課程（2020）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -28170,10 +28180,14 @@ zh-TW:
               name: 專案 - 數位資訊困境 第 2 部分
             'Lesson 14: Assessment Day':
               name: 課堂 14：評估日
+            CS Principles Pre-survey:
+              name: 計算機科學原理課前問卷調查
           title: CSP 單元 1 - 數位資訊 ('20-'21)
           lesson_groups:
             csp_unit1_2020:
               display_name: "（舊）單元 1：數位資訊"
+            cspSurvey:
+              display_name: 問卷
           lessons:
             new stage:
               name: 新舞台
@@ -28205,6 +28219,8 @@ zh-TW:
               name: 專案 - 數位資訊困境 第 2 部分
             'Lesson 14: Assessment Day':
               name: 課堂 14：評估日
+            CS Principles Pre-survey:
+              name: 計算機科學原理課前問卷調查
         csp2-2020:
           stages:
             new stage:
@@ -29192,3 +29208,69 @@ zh-TW:
               name: 單元 5 評量 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: 單元 5 評估 5 - AP 虛擬碼練習問題
+        k5-onlinepd-2020:
+          title: 計算機科學基礎的教授
+          description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: 歡迎來到「教授計算機科學基礎」
+            Understanding the Computer Science Fundamentals Courses:
+              name: 瞭解計算機科學基礎課程
+            Sequencing:
+              name: 序列
+            Loops:
+              name: 迴圈
+            Events:
+              name: 事件
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            End of Course projects:
+              name: 課程結束專案
+            Functions:
+              name: 函式
+            Variables:
+              name: 變數
+            For Loops:
+              name: 計次迴圈（For Loops）
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: 檢閱你的反思
+            Next steps:
+              name: 下一步
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: 歡迎來到「教授計算機科學基礎」
+            Understanding the Computer Science Fundamentals Courses:
+              name: 瞭解計算機科學基礎課程
+            Sequencing:
+              name: 序列
+            Loops:
+              name: 迴圈
+            Events:
+              name: 事件
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            End of Course projects:
+              name: 課程結束專案
+            Functions:
+              name: 函式
+            Variables:
+              name: 變數
+            For Loops:
+              name: 計次迴圈（For Loops）
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: 檢閱你的反思
+            Next steps:
+              name: 下一步
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: 新手上路
+            k5_basic_concepts_1:
+              display_name: 基本編程概念和教學練習
+            k5_diving_deeper_1:
+              display_name: 深造：課程 E 和 F
+            k5_next_steps_1:
+              display_name: 下一步

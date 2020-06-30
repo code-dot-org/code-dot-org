@@ -4571,3 +4571,34 @@ ko:
           lessons:
             While Loops:
               name: '~인 동안 반복'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: 반복
+            Events:
+              name: 이벤트
+            Conditionals:
+              name: 조건
+            Functions:
+              name: 함수
+            Variables:
+              name: 변수
+            For Loops:
+              name: 반복을 위한
+            Sprite Lab:
+              name: 스프라이트 연구소
+          lessons:
+            Loops:
+              name: 반복
+            Events:
+              name: 이벤트
+            Conditionals:
+              name: 조건
+            Functions:
+              name: 함수
+            Variables:
+              name: 변수
+            For Loops:
+              name: 반복을 위한
+            Sprite Lab:
+              name: 스프라이트 연구소

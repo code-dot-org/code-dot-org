@@ -906,3 +906,26 @@ km:
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+          lessons:
+            Loops:
+              name: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ

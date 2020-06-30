@@ -4566,6 +4566,8 @@ ja:
           lesson_groups:
             csp_unit1_2020:
               display_name: '(old) Unit 1: デジタル情報'
+            cspSurvey:
+              display_name: アンケート
         csp3-virtual:
           stages:
             Creating Functions:
@@ -4646,3 +4648,34 @@ ja:
           lessons:
             While Loops:
               name: Whileループ
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: シークエンス
+            Loops:
+              name: くりかえし
+            Events:
+              name: イベント
+            Conditionals:
+              name: 条件
+            Functions:
+              name: 関数(かんすう) 
+            Variables:
+              name: 変数（へんすう）
+            For Loops:
+              name: ループ用
+          lessons:
+            Sequencing:
+              name: シークエンス
+            Loops:
+              name: くりかえし
+            Events:
+              name: イベント
+            Conditionals:
+              name: 条件
+            Functions:
+              name: 関数(かんすう) 
+            Variables:
+              name: 変数（へんすう）
+            For Loops:
+              name: ループ用

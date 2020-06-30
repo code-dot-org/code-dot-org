@@ -2560,3 +2560,26 @@ ky:
               name: Алгоритмдер
             Events:
               name: Окуялар
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+          lessons:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр

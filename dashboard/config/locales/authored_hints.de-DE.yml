@@ -6530,18 +6530,18 @@ de-DE:
       courseA_maze_seq3:
         courseA_maze_seq3_a: Einer der Blöcke bewegt den Vogel in die falsche Richtung.
           Kannst Du herausfinden welcher und ihn mit dem richtigen Block ersetzen?
-        courseA_maze_seq3_b: Versuche auf Schritt zu klicken um herauszufinden, an
-          welcher Stelle das Programm schief läuft. Ist es beim ersten Schritt? Beim
-          zweiten?
+        courseA_maze_seq3_b: Nutze die Schaltfläche "Schritt", um herauszufinden,
+          an welcher Stelle das Programm schief läuft. Ist es beim 1. Schritt? Oder
+          vielleicht beim 2. Schritt?
         courseA_maze_seq3_c: Dieser <xml><block type="maze_moveNorth"/></xml> Block
           scheint den Vogel nicht in die richtige Richtung zu bewegen. Kannst du ihn
           mit einem anderen Block ersetzen?
       courseA_maze_seq4:
         courseA_maze_seq4_a: Wenn du Schwierigkeiten hast, versuche den richtigen
-          Weg herauszufinden und entfernen dann den Block der nicht passt.
-        courseA_maze_seq4_b: Versuche den Code auszuführen so wie er jetzt ist. Funktioniert
-          etwas nicht? Welchen Block kannst du entfernen? Wie kannst du es in Ordnung
-          bringen?
+          Weg herauszufinden und entfernen dann den Block, der nicht passt.
+        courseA_maze_seq4_b: Versuche den Code auszuführen, so wie er jetzt ist. Funktioniert
+          etwas nicht? Welchen Block kannst du entfernen? Wie kannst du es richtig
+          machen?
       courseA_maze_seq5:
         courseA_maze_seq5_a: Versuche einmal, die einzelnen Schritte auf ein Blatt
           Papier zu schreiben um eine Lösung zu finden!

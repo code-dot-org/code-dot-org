@@ -829,3 +829,22 @@ ur:
           lessons:
             Events:
               name: ایونٹس/واقعات
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+          lessons:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
