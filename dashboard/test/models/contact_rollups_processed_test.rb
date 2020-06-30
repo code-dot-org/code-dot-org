@@ -418,6 +418,68 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_city' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'city' => [
+          {'value' => 'London', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Seattle', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'city' => [
+          {'value' => 'Vancouver', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Turin', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'city' => [
+          {'value' => 'Paris', 'data_updated_at' => base_time},
+          {'value' => 'Berlin', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {city: 'Seattle'}
+      },
+      {
+        input: users_input,
+        expected_output: {city: 'Turin'}
+      },
+      {
+        input: schools_input,
+        expected_output: {city: 'Paris'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {city: 'Turin'}
+      },
+      # schools data has higher priority than users data
+      {
+        input: form_geos_input.merge(users_input).merge(schools_input),
+        expected_output: {city: 'Paris'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_city test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_hoc_organizer_years' do
     contact_data = {
       'pegasus.forms' => {
