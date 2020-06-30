@@ -31,7 +31,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     )
   rescue Services::AFEEnrollment::Error => e
     Honeybadger.notify e
-    head :bad_request
+    render json: e.to_s, status: 400
   end
 
   private
