@@ -2,7 +2,7 @@ import Sounds from '../../Sounds';
 import {outputWarning, getAsyncOutputWarning} from './javascriptMode';
 import i18n from '@cdo/locale';
 import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
-
+import {PROFANITY_FOUND} from '../../constants';
 /**
  * Start playing given text as speech.
  * @param {string} text The text to play as speech.
@@ -20,6 +20,7 @@ export function textToSpeech(
   region,
   appLanguages
 ) {
+  console.log(PROFANITY_FOUND);
   if (text.length > 749) {
     text = text.slice(0, 750);
     outputWarning(i18n.textToSpeechTruncation());
@@ -111,7 +112,7 @@ export function textToSpeech(
           true,
           profaneWords
         );
-        resolve('profanity found');
+        resolve(PROFANITY_FOUND);
       }
       request.onreadystatechange = function() {
         // Waiting for readyState to be 4 meaning that the request is done
