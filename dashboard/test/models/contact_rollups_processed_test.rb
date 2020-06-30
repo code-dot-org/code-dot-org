@@ -72,6 +72,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_roles).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_state).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -118,6 +120,53 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     test_cases.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_field(*test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_field_latest_value' do
+    table = 'dashboard.schools'
+    field = 'state'
+    base_time = Time.now.utc
+
+    tests = [
+      # 3 input params are: contact_data, table, field
+      {
+        input: [{}, nil, nil],
+        expected_output: nil
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [{'value' => 'WA', 'data_updated_at' => base_time}]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'WA'
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [
+                {'value' => 'CA', 'data_updated_at' => base_time - 1.day},
+                {'value' => 'IL', 'data_updated_at' => base_time},
+                {'value' => 'NY', 'data_updated_at' => base_time - 2.days}
+              ]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'IL'
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_field_latest_value(*test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
@@ -305,6 +354,68 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_state' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'state' => [
+          {'value' => 'Washington', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'California', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'state' => [
+          {'value' => 'Texas', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Florida', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'state' => [
+          {'value' => 'IL', 'data_updated_at' => base_time},
+          {'value' => 'PA', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {state: 'California'}
+      },
+      {
+        input: users_input,
+        expected_output: {state: 'Florida'}
+      },
+      {
+        input: schools_input,
+        expected_output: {state: 'Illinois'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {state: 'Florida'}
+      },
+      # schools data has higher priority than users data
+      {
+        input: form_geos_input.merge(users_input).merge(schools_input),
+        expected_output: {state: 'Illinois'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_state test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_hoc_organizer_years' do
     contact_data = {
       'pegasus.forms' => {
@@ -346,29 +457,6 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert_equal expected_output, output
   end
 
-  test 'extract_updated_at with valid input' do
-    base_time = Time.now.utc - 7.days
-    tests = [
-      {
-        input: {'table1' => {'last_data_updated_at' => base_time}},
-        expected_output: {updated_at: base_time}
-      },
-      {
-        input: {
-          'table1' => {'last_data_updated_at' => base_time - 1.day},
-          'table2' => {'last_data_updated_at' => base_time + 1.day},
-          'table3' => {'last_data_updated_at' => base_time},
-        },
-        expected_output: {updated_at: base_time + 1.day}
-      }
-    ]
-
-    tests.each_with_index do |test, index|
-      output = ContactRollupsProcessed.extract_updated_at(test[:input])
-      assert_equal test[:expected_output], output, "Test index #{index} failed"
-    end
-  end
-
   test 'extract_form_roles' do
     contact_data = {
       'dashboard.census_submissions' => {
@@ -392,6 +480,29 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     output = ContactRollupsProcessed.extract_form_roles contact_data
     assert_equal expected_output, output
+  end
+
+  test 'extract_updated_at with valid input' do
+    base_time = Time.now.utc - 7.days
+    tests = [
+      {
+        input: {'table1' => {'last_data_updated_at' => base_time}},
+        expected_output: {updated_at: base_time}
+      },
+      {
+        input: {
+          'table1' => {'last_data_updated_at' => base_time - 1.day},
+          'table2' => {'last_data_updated_at' => base_time + 1.day},
+          'table3' => {'last_data_updated_at' => base_time},
+        },
+        expected_output: {updated_at: base_time + 1.day}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_updated_at(test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
   end
 
   test 'extract_updated_at with invalid input' do
