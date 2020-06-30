@@ -287,7 +287,7 @@ describe('EnrollmentsPanel', () => {
         .find('Button')
         .filterWhere(n => n.text().includes('View Survey Results'))
         .exists(),
-      'View Survey Results button was not rendered'
+      'View Survey Results button was rendered'
     );
   });
 
@@ -311,7 +311,7 @@ describe('EnrollmentsPanel', () => {
         .find('Button')
         .filterWhere(n => n.text().includes('View Survey Results'))
         .exists(),
-      'View Survey Results button was rendered'
+      'View Survey Results button was not rendered'
     );
   });
 });
