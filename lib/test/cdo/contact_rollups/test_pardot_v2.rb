@@ -200,13 +200,17 @@ class PardotV2Test < Minitest::Test
           email: 'test0@domain.com',
           pardot_id: 10,
           opt_in: 1,
-          user_id: 111
+          user_id: 111,
+          forms_submitted: 'Census,Petition',
+          form_roles: 'engineer,teacher',
         },
         expected_output: {
           email: 'test0@domain.com',
           id: 10,
           db_Opt_In: 'Yes',
-          db_Has_Teacher_Account: 'true'
+          db_Has_Teacher_Account: 'true',
+          db_Forms_Submitted: 'Census,Petition',
+          db_Form_Roles: 'engineer,teacher',
         }
       },
       {
@@ -228,10 +232,12 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: COURSE_CSF,
           professional_learning_attended: COURSE_CSF,
+          hoc_organizer_years: '2019',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSF,
+          db_Hour_of_Code_Organizer_0: '2019'
         }
       },
       {
@@ -239,12 +245,15 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
           professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
+          hoc_organizer_years: '2018,2019',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
           db_Professional_Learning_Enrolled_1: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSP,
           db_Professional_Learning_Attended_1: COURSE_ECS,
+          db_Hour_of_Code_Organizer_0: '2018',
+          db_Hour_of_Code_Organizer_1: '2019',
         }
       }
     ]
