@@ -112,6 +112,12 @@ export const commands = {
       Sounds.getSingleton().stopAllAudio();
     }
   },
+  /**
+   * Start playing given text as speech.
+   * @param {string} opts.text The text to play as speech.
+   * @param {string} opts.gender The gender of the voice to play.
+   * @param {string} opts.language The language of the text to play.
+   */
   async playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');

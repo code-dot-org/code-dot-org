@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export const findProfanity = (text, language = null) => {
+export const findProfanity = (text, language = undefined) => {
   return $.ajax({
     url: '/profanity/find',
     method: 'POST',
