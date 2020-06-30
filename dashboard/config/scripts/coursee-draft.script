@@ -2,10 +2,10 @@ login_required true
 has_lesson_plan true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Algorithms: Dice Race'
+lesson 'Algorithms: Dice Race'
 level 'DiceRace'
 
-stage 'Introduction'
+lesson 'Introduction'
 level 'courseE_video_ramp1'
 level 'courseE_maze_ramp1'
 level 'courseE_maze_ramp2'
@@ -26,7 +26,7 @@ level 'courseE_farmer_ramp11'
 level 'courseE_maze_ramp13'
 level 'courseE_external_ramp14'
 
-stage 'Conditionals'
+lesson 'Conditionals'
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 level 'courseE_farmer_ramp12'
@@ -41,10 +41,10 @@ level 'courseE_farmer_ramp15'
 level 'courseE_farmer_ramp16'
 level 'courseE_bee_ramp17'
 
-stage 'Private and Personal Information'
+lesson 'Private and Personal Information'
 level 'coursee-privateandpersonalinformation'
 
-stage 'Build a Star Wars Game'
+lesson 'Build a Star Wars Game'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'
@@ -65,10 +65,10 @@ skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-stage 'Functions: Songwriting'
+lesson 'Functions: Songwriting'
 level 'SongwritingParameters'
 
-stage 'Functions in Artist'
+lesson 'Functions in Artist'
 level 'courseE_artist_functions1'
 level 'courseE_video_functionsArtist'
 level 'courseE_artist_functions_predict1'
@@ -83,7 +83,7 @@ level 'courseE_artist_functions9'
 level 'courseE_artist_functions10'
 level 'courseE_artist_functions_predict2', assessment: true
 
-stage 'Functions in Bee'
+lesson 'Functions in Bee'
 level 'courseE_bee_functions1'
 level 'courseE_video_functionsBee'
 level 'courseE_bee_functions2'
@@ -98,7 +98,7 @@ level 'courseE_bee_functions9'
 level 'courseE_bee_functions10'
 level 'courseE_bee_functions11_predict1', assessment: true
 
-stage 'Functions in Farmer'
+lesson 'Functions in Farmer'
 level 'courseE_farmer_functions1'
 level 'courseE_farmer_functions1a'
 level 'courseE_farmer_functions2b'
@@ -113,7 +113,7 @@ level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
 level 'courseE_farmer_functions11_predict', assessment: true
 
-stage 'Determine the Concept'
+lesson 'Determine the Concept'
 level 'courseE_bee_concept1'
 level 'courseE_farmer_concept1'
 level 'courseE_bee_concept2'
@@ -125,7 +125,7 @@ level 'courseE_bee_concept5'
 level 'courseE_farmer_concept3'
 level 'courseE_artist_concept4'
 
-stage 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game'
 level 'courseE_playLab_scaffold1'
 level 'courseE_playLab_scaffold2'
 level 'courseE_playLab_scaffold3'
@@ -134,26 +134,26 @@ level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-stage 'Explore Project Ideas'
+lesson 'Explore Project Ideas'
 level 'courseF_video_csMatters', named: true
 level 'Geometric Sun', named: true
 level 'Robot Doodle', named: true
 level 'Alien Defender', named: true
 level 'Find the Wizard', named: true
 
-stage 'The Design Process'
+lesson 'The Design Process'
 level 'Begin planning your project', named: true
 
-stage 'Build Your Project'
+lesson 'Build Your Project'
 level 'Course E: Play Lab Project', named: true
 level 'Course E: Artist Project', named: true
 
-stage 'Present Your Project'
+lesson 'Present Your Project'
 level 'Prepare for your presentation', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-stage 'Internet'
+lesson 'Internet'
 level 'Internet'
 
-stage 'Crowdsourcing'
+lesson 'Crowdsourcing'
 level 'Crowdsourcing'

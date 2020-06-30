@@ -321,6 +321,7 @@ en:
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report a problem"
+      report_abuse: "Report abuse"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
       documentation: "Documentation"
@@ -356,6 +357,9 @@ en:
       help_us: "Help Us"
       teach: "Teach"
       about: "About"
+      legal: "Privacy & Legal"
+      legal_privacy: "Privacy Policy"
+      legal_tos: "Terms of Service"
 
     user:
       classroom: 'Teacher Home Page'

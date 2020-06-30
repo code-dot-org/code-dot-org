@@ -36,7 +36,8 @@ Code.org works with many organizations around the country to bring computer scie
 | Marquette University | Dennis Brylow | brylow@pd.code.org |
 | Maryland Codes | Heather Lageman and Gretchen LeGrand | heather.lageman@gmail.com, gretchen@codeintheschools.org |
 | McNeese State University | Cate Anderson | canderson@mcneese.edu |
-| mindSpark Learning | Jacki Reid| jacki@mymindsparklearning.org|
+| mindSpark Learning (Colorado) | Jacki Reid| jacki@mymindsparklearning.org|
+| mindSpark Learning (Utah) | Jacki Reid| jacki@mymindsparklearning.org|
 | Mississippi State University | Heather McCormick | heather.mccormick@rcu.msstate.edu |
 | Montana (no partner)| Sabine Thomas | sabine@code.org |
 | Mouse| Carlos Leon | educators@mouse.org |
@@ -68,7 +69,6 @@ Code.org works with many organizations around the country to bring computer scie
 | University of Texas at Austin | Amy Carrel | acarrell@tacc.utexas.edu |
 | University of Wyoming | Andrea Burrows | Andrea.Burrows@uwyo.edu |
 | USC Viterbi VAST | Katie Mills | vast@usc.edu |
-| Utah STEM Action Center | Lynn Purdin |lpurdin@utah.gov |
 | Vermont Computer Science Alliance | Jennifer Fribush and Juniper Lovato | jfribush@neoti.org, Juniper.Lovato@uvm.edu |
 | West Shore ESD | Larry Wynn | wynlar@gvsu.org|
 | West Virginia University | Elizabeth Wiles | codewv@mail.wvu.edu|

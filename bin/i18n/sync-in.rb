@@ -12,12 +12,14 @@ require 'json'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   HocSyncUtils.sync_in
   localize_level_content
   localize_project_content
   localize_block_content
+  localize_animation_library
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -79,9 +81,14 @@ def get_i18n_strings(level)
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         description = function.at_xpath('./mutation/description')
-        i18n_strings['function_definitions'][name.content] = Hash.new
-        i18n_strings['function_definitions'][name.content]["name"] = name.content if name
-        i18n_strings['function_definitions'][name.content]["description"] = description.content if description
+        parameters = function.xpath('./mutation/arg').map do |parameter|
+          [parameter["name"], parameter["name"]]
+        end.to_h
+        function_definition = Hash.new
+        function_definition["name"] = name.content if name
+        function_definition["description"] = description.content if description
+        function_definition["parameters"] = parameters unless parameters.empty?
+        i18n_strings['function_definitions'][name.content] = function_definition
       end
 
       # Spritelab behaviors
@@ -243,6 +250,15 @@ def localize_block_content
 
   File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
     f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
+  end
+end
+
+def localize_animation_library
+  spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
+  FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
+  File.open(spritelab_animation_source_file, "w") do |file|
+    animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
+    file.write(JSON.pretty_generate(animation_strings))
   end
 end
 

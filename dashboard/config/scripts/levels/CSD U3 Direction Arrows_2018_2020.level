@@ -90,7 +90,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "t1L2TbOSHDsBQoX1bjbkUZBJxDBhavv8fXvU6sa5M8K1nlxyvez8jJ5fVn0X\nwq8Uc5K+jDl8ux/twgujMeyr8g==\n",
+    "encrypted_examples": "lPDPAhTdabx7hGn/NpVpPqmEPAcoye1lL/fU57crwsdhvOKFIND6i1d/YLmN\nCo0DCN8Vq03H/q8RkLYPrl0SOg==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -98,12 +98,16 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 18563,
     "reference_links": [
-      "/docs/gamelab/keyDown/index.html",
-      "/docs/csd-1718/if_statements/index.html",
-      "/docs/csd-1718/booleans/index.html",
-      "/docs/csd-1718/counter_pattern/index.html",
-      "/docs/csd-1718/sprite_properties/index.html",
-      "/docs/csd-1718/sprites/index.html"
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/"
     ],
     "show_type_hints": "false",
     "long_instructions": "# Move in All Directions\r\n\r\nYou can make a simple game that moves a sprite around the screen.\r\n\r\n# Do This\r\n\r\n* Add four separate conditional statements that make the wing bot move in every direction.\r\n",
@@ -115,14 +119,14 @@
     "rubric_performance_level_2": "The sprite moves in response to multiple arrow keys, but may have some errors.",
     "rubric_performance_level_3": "The program uses an `if` statement to detect user input.",
     "rubric_performance_level_4": "The program does not detect user input.",
-    "preload_asset_list": null,
     "start_blocks": "var backdrop = createSprite(200,200);\r\nbackdrop.setAnimation(\"rainbow\");\r\nvar flyer = createSprite(200,200);\r\nflyer.setAnimation(\"wing_bot\");\r\n\r\nfunction draw() {\r\n  //move left when the left arrow is pressed\r\n  \r\n  //move right when the right arrow is pressed\r\n  \r\n  //move up when the up arrow is pressed\r\n  \r\n  //move down when the down arrow is pressed\r\n  \r\n  drawSprites();\r\n}",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"c51b5136-6a43-4573-bc98-94251ed7e8cb\",\r\n    \"dc829c1d-baf4-4790-8f7a-12c1ae561044\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"c51b5136-6a43-4573-bc98-94251ed7e8cb\": {\r\n      \"name\": \"rainbow\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\r\n    },\r\n    \"dc829c1d-baf4-4790-8f7a-12c1ae561044\": {\r\n      \"name\": \"wing_bot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/quoa4.I3I2BmotFDbwakNBk9f39n50S_/category_characters/wing_bot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 218,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 8,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"quoa4.I3I2BmotFDbwakNBk9f39n50S_\"\r\n    }\r\n  }\r\n}",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-07 17:03:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-03-15 22:26:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:28:20 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 22:55:05 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:26:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-02 17:21:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 06:29:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 19:10:43 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 17:03:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-03-15 22:26:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:28:20 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 22:55:05 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:26:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-02 17:21:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 06:29:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 19:10:43 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-21 17:40:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:38:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

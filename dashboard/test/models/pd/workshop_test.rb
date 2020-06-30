@@ -298,6 +298,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
 
     workshop.end!
 
@@ -842,6 +843,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
 
+  test 'teachers_attending_all_sessions' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      sessions_from: Date.new(2019, 7, 1)
+
+    2.times do
+      create :pd_workshop_participant, enrolled: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, cdo_scholarship_recipient: true, workshop: workshop
+    end
+
+    assert_equal 4, workshop.teachers_attending_all_sessions.count
+    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
   # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
     facilitator = create :facilitator
@@ -1048,13 +1064,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: nil
 
-    assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
+    assert_equal 'March 30 - April 3, 2017', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with no location nor sessions' do
     workshop = create :workshop, processed_location: nil, num_sessions: 0
 
-    assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
+    assert_equal 'Dates TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name for teachercon' do
@@ -1098,7 +1114,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
-    assert_equal 'Location TBA', workshop.friendly_location
+    assert_equal '', workshop.friendly_location
   end
 
   test 'friendly_location with virtual location' do
@@ -1329,6 +1345,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.valid?
 
     workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'workshops third_party_provider must be nil or from specified list' do
+    workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
+    refute workshop.valid?
+
+    workshop.third_party_provider = nil
     assert workshop.valid?
   end
 
