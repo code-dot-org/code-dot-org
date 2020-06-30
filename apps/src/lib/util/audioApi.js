@@ -120,11 +120,21 @@ export const commands = {
   playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
+    apiValidateType(
+      opts,
+      'playSpeech',
+      'language',
+      opts.language,
+      'string',
+      OPTIONAL
+    );
     textToSpeech(
       opts.text,
       opts.gender,
+      opts.language,
       appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion
+      appOptions.azureSpeechServiceRegion,
+      appOptions.azureSpeechServiceLanguages
     );
   }
 };
@@ -137,6 +147,7 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
+  playSpeech: (text, gender, language = 'en-US') =>
+    executeCmd(null, 'playSpeech', {text, gender, language})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
