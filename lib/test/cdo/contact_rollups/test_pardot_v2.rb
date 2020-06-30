@@ -204,6 +204,7 @@ class PardotV2Test < Minitest::Test
           forms_submitted: 'Census,Petition',
           form_roles: 'engineer,teacher',
           state: 'Washington',
+          city: 'Seattle',
           country: 'United States',
         },
         expected_output: {
@@ -214,6 +215,7 @@ class PardotV2Test < Minitest::Test
           db_Forms_Submitted: 'Census,Petition',
           db_Form_Roles: 'engineer,teacher',
           db_State: 'Washington',
+          db_City: 'Seattle',
           db_Country: 'United States',
         }
       },

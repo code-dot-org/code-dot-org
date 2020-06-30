@@ -51,7 +51,9 @@ export const addScriptData = (scriptId, scriptData) => {
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.lessons
+    stages: scriptData.lessons,
+    family_name: scriptData.family_name,
+    version_year: scriptData.version_year
   };
   return {type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData};
 };
@@ -108,7 +110,9 @@ export const scriptDataPropType = PropTypes.shape({
     PropTypes.shape({
       levels: PropTypes.arrayOf(PropTypes.object).isRequired
     })
-  )
+  ),
+  family_name: PropTypes.string,
+  version_year: PropTypes.string
 });
 
 /**
