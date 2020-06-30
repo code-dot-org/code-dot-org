@@ -223,6 +223,47 @@ MARKDOWN
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
 
+  test 'clone with suffix for simple level group' do
+    level_group_input_dsl = <<~DSL
+      name 'my level group'
+      page
+      level 'level1'
+    DSL
+    expected_copy_dsl = <<~DSL.strip
+      name 'my level group_copy'
+
+      page
+      level 'level1_copy'
+    DSL
+
+    # Create the sublevel.
+    multi_dsl = get_multi_dsl(1)
+    multi = Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
+    multi_filename = multi.filename.split('/').last
+    File.stubs(:exist?).with {|filepath| filepath.basename.to_s == multi_filename}.returns(true)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == multi_filename}.returns(multi_dsl)
+
+    # Create the level_group.
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    File.stubs(:exist?).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(true)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(level_group_input_dsl)
+
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'my_level_group_copy.level_group' &&
+        actual_dsl == expected_copy_dsl
+    end.once
+
+    # Copy the level group and all its sub levels.
+    level_group_copy = level_group.clone_with_suffix('_copy')
+
+    # Verify the result
+    assert_equal 'my level group_copy', level_group_copy.name
+    assert_equal 1, level_group_copy.pages.count
+    page = level_group_copy.pages.first
+    assert_equal 1, page.levels.count
+    assert_equal 'level1_copy', page.levels.first.name
+  end
+
   # Test that clone_with_suffix performs a deep copy of a LevelGroup, and the
   # copy has the correct dsl text.
   test 'clone level group with suffix' do
@@ -245,7 +286,7 @@ MARKDOWN
   level 'level7'
   "
 
-    level_group_copy_dsl = "name 'level_group_test long assessment_copy'
+    expected_copy_dsl = "name 'level_group_test long assessment_copy'
 title 'Long Assessment'
 submittable 'true'
 
@@ -263,37 +304,45 @@ page
 level 'level6_copy'
 level 'level7_copy'"
 
+    # To make the test run faster, just stub File.exist? once. If the code under
+    # test tries to read a nonexistent file, we'll get an error during File.read.
+    File.stubs(:exist?).returns(true)
+
     # Create multis named level1-level7.
-    levels = {}
-    multi_stubs = Multi.any_instance.stubs(:dsl_text)
     (1..7).each do |id|
-      dsl_text = get_multi_dsl(id)
-      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: dsl_text})
-      multi_stubs.returns(dsl_text)
+      multi_dsl = get_multi_dsl(id)
+      multi = Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
+      multi_filename = multi.filename.split('/').last
+      File.stubs(:read).with {|filepath| filepath.basename.to_s == multi_filename}.returns(multi_dsl)
     end
 
     # Create the external level.
     external_dsl = get_external_dsl(1)
     External.create_from_level_builder({}, {dsl_text: external_dsl})
-    External.any_instance.stubs(:dsl_text).returns(external_dsl)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'external1.external'}.returns(external_dsl)
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
-    level_group.stubs(:dsl_text).returns(level_group_input_dsl)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'level_group_test_long_assessment.level_group'}.returns(level_group_input_dsl)
+
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'level_group_test_long_assessment_copy.level_group' &&
+        expected_copy_dsl == actual_dsl
+    end.once
 
     # Copy the level group and all its sub levels.
     level_group_copy = level_group.clone_with_suffix('_copy')
 
-    assert_equal level_group_copy_dsl, level_group_copy.dsl_text
+    # Verify the result
+    assert_equal 'level_group_test long assessment_copy', level_group_copy.name
+    assert_equal 3, level_group_copy.pages.count
+
     (1..7).each do |id|
       refute_nil l = Level.find_by_name("level#{id}_copy")
       assert_equal 'What is the name of this function?', l.properties['questions'].first['text']
     end
     refute_nil l = Level.find_by_name('external1_copy')
     assert_includes l.properties['markdown'], 'Sample external'
-
-    # clean up
-    File.delete(level_group_copy.filename)
   end
 
   test 'clone previously cloned level group' do
