@@ -1054,3 +1054,22 @@ ku:
           lessons:
             Algorithms:
               name: خوارزمیەکان
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: گرێکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+            Variables:
+              name: گۆڕاوەکان
+          lessons:
+            Loops:
+              name: گرێکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+            Variables:
+              name: گۆڕاوەکان

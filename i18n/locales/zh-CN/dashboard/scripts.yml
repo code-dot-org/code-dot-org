@@ -25848,6 +25848,8 @@ zh-CN:
               name: 精灵图实验室中的外星人舞蹈派对
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
+            Swimming Fish with Sprite Lab:
+              name: 在精灵图实验室学习精灵图
           lesson_groups:
             csf_warmup:
               display_name: 热身
@@ -25910,6 +25912,8 @@ zh-CN:
               name: 精灵图实验室中的外星人舞蹈派对
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
+            Swimming Fish with Sprite Lab:
+              name: 在精灵图实验室学习精灵图
         pre-express-2020:
           title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -26000,9 +26004,13 @@ zh-CN:
               name: 项目 - 数字信息困境 第 2 部分
             'Lesson 14: Assessment Day':
               name: '单元 14：评估日'
+            CS Principles Pre-survey:
+              name: 计算机科学原理预调查
           lesson_groups:
             csp_unit1_2020:
               display_name: '单元 1︰ 数字信息'
+            cspSurvey:
+              display_name: 调查
           lessons:
             new stage:
               name: 新的阶段
@@ -26034,6 +26042,8 @@ zh-CN:
               name: 项目 - 数字信息困境 第 2 部分
             'Lesson 14: Assessment Day':
               name: '单元 14：评估日'
+            CS Principles Pre-survey:
+              name: 计算机科学原理预调查
         csp2-2020:
           stages:
             new stage:
@@ -26939,3 +26949,68 @@ zh-CN:
               name: 第5单元评估4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: 第5单元评估 5 - AP 伪代码练习题
+        k5-onlinepd-2020:
+          description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: 欢迎来到 "教师的计算机科学基础"
+            Understanding the Computer Science Fundamentals Courses:
+              name: 理解计算机科学基础课程
+            Sequencing:
+              name: 序列
+            Loops:
+              name: 循环
+            Events:
+              name: 事件
+            Conditionals:
+              name: 条件语句
+            End of Course projects:
+              name: 结课项目
+            Functions:
+              name: 函数
+            Variables:
+              name: 变量
+            For Loops:
+              name: 计数循环
+            Sprite Lab:
+              name: 精灵图实验室
+            Reviewing your reflections:
+              name: 评审反思
+            Next steps:
+              name: 下一步
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: 欢迎来到 "教师的计算机科学基础"
+            Understanding the Computer Science Fundamentals Courses:
+              name: 理解计算机科学基础课程
+            Sequencing:
+              name: 序列
+            Loops:
+              name: 循环
+            Events:
+              name: 事件
+            Conditionals:
+              name: 条件语句
+            End of Course projects:
+              name: 结课项目
+            Functions:
+              name: 函数
+            Variables:
+              name: 变量
+            For Loops:
+              name: 计数循环
+            Sprite Lab:
+              name: 精灵图实验室
+            Reviewing your reflections:
+              name: 评审反思
+            Next steps:
+              name: 下一步
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: 开始
+            k5_basic_concepts_1:
+              display_name: 基本编程概念和教学策略
+            k5_diving_deeper_1:
+              display_name: '深入学习：课程 E 和 F'
+            k5_next_steps_1:
+              display_name: 下一步

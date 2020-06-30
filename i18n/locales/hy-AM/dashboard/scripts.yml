@@ -3787,3 +3787,30 @@ hy:
           lessons:
             While Loops:
               name: Մինչ Loops
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: loops
+            Events:
+              name: Իրադարձություններ
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+            Variables:
+              name: փոփոխականների
+            For Loops:
+              name: For Loops
+          lessons:
+            Loops:
+              name: loops
+            Events:
+              name: Իրադարձություններ
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+            Variables:
+              name: փոփոխականների
+            For Loops:
+              name: For Loops

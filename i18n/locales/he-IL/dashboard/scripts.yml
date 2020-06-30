@@ -4595,6 +4595,10 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
@@ -4678,3 +4682,33 @@ he:
           lessons:
             While Loops:
               name: לולאות "כל עוד"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lessons:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים

@@ -5443,6 +5443,9 @@ nl:
               name: nieuw niveau
             Binary Numbers:
               name: Binaire getallen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
           lessons:
             new stage:
               name: nieuw niveau
@@ -5665,3 +5668,33 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Lussen
+            Events:
+              name: Gebeurtenissen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Functions:
+              name: Functies
+            Variables:
+              name: Variabelen
+            For Loops:
+              name: For-lussen
+          lessons:
+            Loops:
+              name: Lussen
+            Events:
+              name: Gebeurtenissen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Functions:
+              name: Functies
+            Variables:
+              name: Variabelen
+            For Loops:
+              name: For-lussen
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Volgende stappen

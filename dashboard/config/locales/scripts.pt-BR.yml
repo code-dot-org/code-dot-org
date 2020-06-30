@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     script:
       category:
@@ -40004,6 +40004,8 @@ pt-BR:
               name: Pet Virtual com Sprite Lab
             Build A Project:
               name: Desenvolva um projeto
+            Swimming Fish with Sprite Lab:
+              name: Peixe nadando com o Sprite Lab
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -40078,6 +40080,8 @@ pt-BR:
               name: Pet Virtual com Sprite Lab
             Build A Project:
               name: Desenvolva um projeto
+            Swimming Fish with Sprite Lab:
+              name: Peixe nadando com o Sprite Lab
         pre-express-2020:
           title: Pré-leitor Express (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -40175,10 +40179,14 @@ pt-BR:
               name: Projeto - Dilemas da Informação Digital Parte 2
             'Lesson 14: Assessment Day':
               name: 'Lição 14: Dia da Avaliação'
+            CS Principles Pre-survey:
+              name: Princípios CS Pré-pesquisa
           title: CSP Unidade 1 – Informação digital (2020-2021)
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação digital'
+            cspSurvey:
+              display_name: Questionário
           lessons:
             new stage:
               name: nova fase
@@ -40210,6 +40218,8 @@ pt-BR:
               name: Projeto - Dilemas da Informação Digital Parte 2
             'Lesson 14: Assessment Day':
               name: 'Lição 14: Dia da Avaliação'
+            CS Principles Pre-survey:
+              name: Princípios CS Pré-pesquisa
         csp2-2020:
           stages:
             new stage:
@@ -41778,3 +41788,70 @@ pt-BR:
               name: Unidade 5 Avaliação 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP
+        k5-onlinepd-2020:
+          description: Aprenda a ensinar ciência da computação usando os Fundamentos
+            de Ciência da Computação da Code.org com este curso on-line gratuito e
+            individualizado!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bem-vindo ao "Ensinando os Fundamentos da Ciência da Computação"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Compreendendo os cursos de Fundamentos de Ciência da Computação
+            Sequencing:
+              name: Sequenciamento
+            Loops:
+              name: laços
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condições
+            End of Course projects:
+              name: Projetos de fim de curso
+            Functions:
+              name: funções
+            Variables:
+              name: variáveis
+            For Loops:
+              name: Laços para
+            Sprite Lab:
+              name: Laboratório de Sprite
+            Reviewing your reflections:
+              name: Revendo suas reflexões
+            Next steps:
+              name: Próximos passos
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bem-vindo ao "Ensinando os Fundamentos da Ciência da Computação"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Compreendendo os cursos de Fundamentos de Ciência da Computação
+            Sequencing:
+              name: Sequenciamento
+            Loops:
+              name: laços
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condições
+            End of Course projects:
+              name: Projetos de fim de curso
+            Functions:
+              name: funções
+            Variables:
+              name: variáveis
+            For Loops:
+              name: Laços para
+            Sprite Lab:
+              name: Laboratório de Sprite
+            Reviewing your reflections:
+              name: Revendo suas reflexões
+            Next steps:
+              name: Próximos passos
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Iniciando
+            k5_basic_concepts_1:
+              display_name: Conceitos Básicos de Programação e Prática de Ensino
+            k5_diving_deeper_1:
+              display_name: 'Aprofundamento: Cursos E e F'
+            k5_next_steps_1:
+              display_name: Próximas etapas

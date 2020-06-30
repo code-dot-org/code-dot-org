@@ -2266,3 +2266,26 @@ az:
               name: Alqoritmlər
             Events:
               name: Hadisələr
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: dövrlər
+            Events:
+              name: Hadisələr
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər
+          lessons:
+            Loops:
+              name: dövrlər
+            Events:
+              name: Hadisələr
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər

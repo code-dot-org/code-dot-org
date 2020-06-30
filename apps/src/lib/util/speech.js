@@ -9,17 +9,30 @@ import {
  * Start playing given text as speech.
  * @param {string} text The text to play as speech.
  * @param {string} gender The gender of the voice to play.
+ * @param {string} language The language of the text.
  * @param {string} token The authorization token to access the Azure API
  * @param {string} region The region for accessing the Azure API
+ * @param {object} appLanguages The map of languages to genders and voices that can be used.
  */
-export function textToSpeech(text, gender, token, region) {
+export function textToSpeech(
+  text,
+  gender,
+  language,
+  token,
+  region,
+  appLanguages
+) {
   const speechConfig = SpeechConfig.fromAuthorizationToken(token, region);
   speechConfig.speechSynthesisOutputFormat =
     SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
-
-  const voice = gender === 'male' ? 'en-US-BenjaminRUS' : 'en-US-AriaRUS';
-  const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
-  const ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${text}</voice></speak>`;
+  let voice =
+    (appLanguages[language] && appLanguages[language][gender]) ||
+    appLanguages['English']['female'];
+  const synthesizer = new SpeechSynthesizer(
+    speechConfig,
+    undefined /* AudioConfig */
+  );
+  let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${text}</voice></speak>`;
   synthesizer.speakSsmlAsync(
     ssml,
     result => {
