@@ -14,7 +14,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :forbidden
   end
 
-  test 'submit returns BAD REQUEST when params are malformed' do
+  test 'responds BAD REQUEST when params are malformed' do
     Net::HTTP.expects(:post_form).never
 
     # Intentionally missing required field traffic-source
@@ -25,13 +25,23 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
   end
 
-  test 'submit returns BAD REQUEST when params are missing' do
+  test 'responds BAD REQUEST when params are missing' do
     Net::HTTP.stubs(:post_form)
 
     sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit'
 
     assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
+  end
+
+  test 'responds BAD REQUEST when terms are not accepted' do
+    Net::HTTP.expects(:post_form).never
+    Honeybadger.expects(:notify)
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params.merge('consentAFE' => false), as: :json
+    assert_response :bad_request, "Wrong response: #{response.body}"
   end
 
   test 'logged in can submit' do
