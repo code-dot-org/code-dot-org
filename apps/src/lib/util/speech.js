@@ -101,7 +101,6 @@ export function textToSpeech(
     const resultPromise = new Promise(async function(resolve, reject) {
       let profaneWords = await findProfanity(text, languageCode);
       if (profaneWords && profaneWords.length > 0) {
-        console.log(profaneWords);
         if (!Array.isArray(profaneWords)) {
           profaneWords = [profaneWords];
         }
