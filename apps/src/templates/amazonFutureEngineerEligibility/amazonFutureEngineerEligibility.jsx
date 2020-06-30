@@ -44,7 +44,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
-    let sessionEligibilityData = this.getSessionEligibilityData();
+    let sessionEligibilityData = getSessionData();
 
     // Initial state is set by information that has been stored to the session.
     // If none exists (ie, a user's first time visiting the page),
@@ -81,9 +81,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     return null;
   };
-
-  getSessionEligibilityData = () =>
-    JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
 
   updateFormData = change => {
     this.setState({formData: {...this.state.formData, ...change}});
@@ -226,25 +223,53 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   loadCompletionPage = async () => {
-    let sessionEligibilityData = this.getSessionEligibilityData();
+    let {submissionAccepted} = getSessionData();
+    let {submissionSent} = this.state;
 
-    if (!sessionEligibilityData.submitted) {
-      await this.submitToAFE();
-      sessionStorage.setItem(
-        sessionStorageKey,
-        JSON.stringify({...sessionEligibilityData, submitted: true})
-      );
+    if (!submissionAccepted && !submissionSent) {
+      this.setState({submissionSent: true});
+      const response = await this.submitToAFE();
+      submissionAccepted = response.ok;
+      updateSessionData({submissionAccepted});
+
+      if (!submissionAccepted) {
+        const bodyText = await response.text();
+        const submissionError =
+          'Form submission failed with HTTP ' +
+          `${response.status} ${response.statusText}: ${bodyText}`;
+        console.error(submissionError);
+        this.setState({
+          submissionError,
+          submissionErrorTime: new Date().toISOString()
+        });
+      }
     }
 
-    window.location = pegasus('/afe/success');
+    if (submissionAccepted) {
+      window.location = pegasus('/afe/success');
+    }
   };
 
   render() {
-    let {formData} = this.state;
+    let {formData, submissionError} = this.state;
+
+    if (submissionError) {
+      return (
+        <SubmissionError
+          submissionError={this.state.submissionError}
+          submissionErrorTime={this.state.submissionErrorTime}
+        />
+      );
+    }
 
     if (formData.schoolEligible && formData.consentAFE && formData.signedIn) {
       this.loadCompletionPage();
-      return <div>Your request is being processed...</div>;
+      return (
+        <div>
+          <h2>Your request is being processed</h2>
+          <p>Please wait...</p>
+        </div>
+      );
     }
 
     return (
@@ -302,4 +327,37 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       </div>
     );
   }
+}
+
+const SubmissionError = ({submissionError, submissionErrorTime}) => (
+  <div style={styles.container}>
+    <h2>An error occurred while processing your submission.</h2>
+    <p>
+      Please <a href="mailto:support@code.org">contact support@code.org</a> for
+      further assistance, and include the following information for reference:
+    </p>
+    <ul>
+      <li>Your email: {getSessionData().email}</li>
+      <li>Error time: {submissionErrorTime}</li>
+      <li>Error text: {submissionError}</li>
+    </ul>
+  </div>
+);
+SubmissionError.propTypes = {
+  submissionError: PropTypes.text,
+  submissionErrorTime: PropTypes.text
+};
+
+function getSessionData() {
+  return JSON.parse(sessionStorage.getItem(sessionStorageKey)) || {};
+}
+
+function updateSessionData(data) {
+  sessionStorage.setItem(
+    sessionStorageKey,
+    JSON.stringify({
+      ...getSessionData(),
+      ...data
+    })
+  );
 }
