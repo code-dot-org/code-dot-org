@@ -205,7 +205,7 @@ namespace :seed do
     %w(allthethingscourse csp-2017 csp-2018 csp-2019).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2018).each do |course_name|
+    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
       Course.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
