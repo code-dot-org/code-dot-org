@@ -1872,7 +1872,7 @@ id-ID:
           feedback: Salah.
         - text: C
           feedback: Salah.
-        - text: D
+        - text: S
           correct: true
           feedback: Benar!
         questions:
@@ -1886,7 +1886,7 @@ id-ID:
           feedback: Salah.
         - text: C
           feedback: Salah.
-        - text: D
+        - text: S
           correct: true
           feedback: Benar!
         questions:
@@ -1900,7 +1900,7 @@ id-ID:
           feedback: Salah.
         - text: C
           feedback: Salah.
-        - text: D
+        - text: S
           correct: true
           feedback: Benar!
         questions:

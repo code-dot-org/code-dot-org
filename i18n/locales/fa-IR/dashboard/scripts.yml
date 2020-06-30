@@ -3752,3 +3752,30 @@ fa:
           lessons:
             While Loops:
               name: حلقه ها ی While
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+          lessons:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"

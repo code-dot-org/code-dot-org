@@ -4668,6 +4668,8 @@
           lesson_groups:
             csp_unit1_2020:
               display_name: "(gammel) Enhet 1: Digital informasjon"
+            cspSurvey:
+              display_name: Undersøkelse
           lessons:
             Binary Numbers:
               name: Binære Tall
@@ -4760,3 +4762,33 @@
           lessons:
             While Loops:
               name: Gjenta-løkker
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjoner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For-løkker
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjoner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For-løkker
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: De Neste Trinnene

@@ -25947,6 +25947,8 @@ ar:
               name: الحيوانات الأليفة الافتراضية مع مختبر النقوش المتحركة
             Build A Project:
               name: تصميم مشروع
+            Swimming Fish with Sprite Lab:
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
           lesson_groups:
             csf_warmup:
               display_name: تجهيز
@@ -26021,6 +26023,8 @@ ar:
               name: الحيوانات الأليفة الافتراضية مع مختبر النقوش المتحركة
             Build A Project:
               name: تصميم مشروع
+            Swimming Fish with Sprite Lab:
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
         pre-express-2020:
           title: دروس سريعة للأطفال قبل تعلم القراءة (2020)
           description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
@@ -26115,10 +26119,14 @@ ar:
               name: مشروع - معضلات المعلومات الرقمية، الجزء 2
             'Lesson 14: Assessment Day':
               name: 'الدرس 14: يوم التقييم'
+            CS Principles Pre-survey:
+              name: استطلاع رأي مسبق عن مبادئ علوم الكمبيوتر
           title: مبادئ علوم الكمبيوتر (CSP) الوحدة 1 - المعلومات الرقمية (2020 - 2021)
           lesson_groups:
             csp_unit1_2020:
               display_name: '(قديم) الوحدة 1: معلومات رقمية'
+            cspSurvey:
+              display_name: استبيان
           lessons:
             new stage:
               name: مرحلة جديدة
@@ -26150,6 +26158,8 @@ ar:
               name: مشروع - معضلات المعلومات الرقمية، الجزء 2
             'Lesson 14: Assessment Day':
               name: 'الدرس 14: يوم التقييم'
+            CS Principles Pre-survey:
+              name: استطلاع رأي مسبق عن مبادئ علوم الكمبيوتر
         csp2-2020:
           stages:
             new stage:
@@ -27282,3 +27292,68 @@ ar:
               name: التقييم 4 للوحدة 5
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: التقييم 5 للوحدة 5 - التدرب على أسئلة التعليمات البرمجية المزيفة من AP
+        k5-onlinepd-2020:
+          description: تعرف على كيفية تدريس علوم الكمبيوتر باستخدام أساسيات علوم الكمبيوتر في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: مرحبًا بك في "تدريس أساسيات علوم الكمبيوتر"
+            Understanding the Computer Science Fundamentals Courses:
+              name: فهم مقررات أساسيات علوم الكمبيوتر
+            Sequencing:
+              name: التجزيء
+            Loops:
+              name: الحلقات
+            Events:
+              name: الأحداث
+            Conditionals:
+              name: الجمل الشرطية
+            End of Course projects:
+              name: مشاريع نهاية الدورة
+            Functions:
+              name: دوال
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
+            Sprite Lab:
+              name: مختبر النقوش المتحركة
+            Reviewing your reflections:
+              name: مراجعة تأملاتك
+            Next steps:
+              name: الخطوات التالية
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: مرحبًا بك في "تدريس أساسيات علوم الكمبيوتر"
+            Understanding the Computer Science Fundamentals Courses:
+              name: فهم مقررات أساسيات علوم الكمبيوتر
+            Sequencing:
+              name: التجزيء
+            Loops:
+              name: الحلقات
+            Events:
+              name: الأحداث
+            Conditionals:
+              name: الجمل الشرطية
+            End of Course projects:
+              name: مشاريع نهاية الدورة
+            Functions:
+              name: دوال
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
+            Sprite Lab:
+              name: مختبر النقوش المتحركة
+            Reviewing your reflections:
+              name: مراجعة تأملاتك
+            Next steps:
+              name: الخطوات التالية
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: البدء
+            k5_basic_concepts_1:
+              display_name: مفاهيم الترميز الأساسية وممارسات التدريس
+            k5_diving_deeper_1:
+              display_name: 'الدخول في التفاصيل: الدورات التدريبية هـ - و'
+            k5_next_steps_1:
+              display_name: الخطوات التالية

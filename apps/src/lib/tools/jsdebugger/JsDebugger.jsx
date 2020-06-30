@@ -110,6 +110,7 @@ class JsDebugger extends React.Component {
     isDebuggerPaused: PropTypes.bool.isRequired,
     isDebuggingSprites: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    isEditWhileRun: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
@@ -461,7 +462,7 @@ class JsDebugger extends React.Component {
 
   render() {
     const {appType, isAttached, canRunNext, isRunning} = this.props;
-    const hasFocus = this.props.isDebuggerPaused;
+    const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
 
@@ -657,6 +658,7 @@ export default connect(
     debugSlider: !!state.pageConstants.showDebugSlider,
     appType: state.pageConstants.appType,
     isRunning: state.runState.isRunning,
+    isEditWhileRun: state.runState.isEditWhileRun,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     isDebuggingSprites: state.runState.isDebuggingSprites,
     stepSpeed: state.runState.stepSpeed,

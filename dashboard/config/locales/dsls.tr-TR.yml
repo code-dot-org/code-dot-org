@@ -1595,7 +1595,7 @@ tr-TR:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
+        - text: Kuş, domuzdan bir adım arkada olacaktır.
         - correct: true
         - {}
         - {}
@@ -1603,7 +1603,7 @@ tr-TR:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
+        - text: Kuş, domuzdan bir adım arkada olacaktır.
         - correct: true
         - {}
         - {}
@@ -1611,7 +1611,7 @@ tr-TR:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
+        - text: Kuş, domuzdan bir adım arkada olacaktır.
         - correct: true
         - {}
         - {}

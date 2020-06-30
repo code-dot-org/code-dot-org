@@ -6,8 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit1/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit1/{LESSON}'
-family_name 'csp1'
-version_year '2020'
+is_stable true
 curriculum_umbrella 'CSP'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
