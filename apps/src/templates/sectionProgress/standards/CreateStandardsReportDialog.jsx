@@ -24,7 +24,6 @@ const styles = {
 export class CreateStandardsReportDialog extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
-    linkToStandardsOverview: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleNext: PropTypes.func.isRequired,
@@ -73,7 +72,6 @@ export class CreateStandardsReportDialog extends Component {
             handleConfirm={this.handleConfirm}
             onCommentChange={this.props.onCommentChange}
             sectionId={this.props.sectionId}
-            linkToStandardsOverview={this.props.linkToStandardsOverview}
           />
         )}
       </BaseDialog>

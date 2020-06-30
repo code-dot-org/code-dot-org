@@ -45,17 +45,6 @@ class ProgressViewHeader extends Component {
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
-  getLinkToStandardsOverview() {
-    const {scriptData} = this.props;
-    return scriptData &&
-      scriptData.hasStandards &&
-      scriptData.version_year >= 2020
-      ? `http://curriculum.code.org/csf-${scriptData.version_year.slice(-2)}/${
-          scriptData.family_name
-        }/standards`
-      : null;
-  }
-
   navigateToScript = () => {
     firehoseClient.putRecord(
       {
@@ -74,7 +63,6 @@ class ProgressViewHeader extends Component {
   render() {
     const {currentView, scriptFriendlyName} = this.props;
     const linkToOverview = this.getLinkToOverview();
-    const linkToStandardsOverview = this.getLinkToStandardsOverview();
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
       [ViewType.DETAIL]: i18n.levelsAttempted() + ' ',
@@ -93,10 +81,7 @@ class ProgressViewHeader extends Component {
           </a>
         </span>
         {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons
-            sectionId={this.props.section.id}
-            linkToStandardsOverview={linkToStandardsOverview}
-          />
+          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
         )}
       </div>
     );
