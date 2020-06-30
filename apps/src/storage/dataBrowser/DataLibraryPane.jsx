@@ -59,6 +59,7 @@ class DataLibraryPane extends React.Component {
       FirebaseStorage.copyStaticTable(datasetInfo.name, () => {}, this.onError);
     }
   };
+
   search = e => {
     let searchValue = '';
     if (e !== undefined) {
@@ -68,23 +69,27 @@ class DataLibraryPane extends React.Component {
       search: searchValue
     });
   };
+
   filterCategories = allCategories => {
     const searchRegExp = new RegExp('(?:\\s+|^)' + this.state.search, 'i');
-    let potentialCategories = allCategories.map(category => {
-      category.datasets = category.datasets.filter(dataset => {
-        const datasetInfo = getDatasetInfo(
-          dataset,
-          this.props.libraryManifest.tables
-        );
-        return (
-          searchRegExp.test(dataset) ||
-          searchRegExp.test(datasetInfo.description)
-        );
-      });
-      return category;
-    });
-    potentialCategories = potentialCategories.filter(
-      category => category.datasets.length > 0
+    let potentialCategories = allCategories.reduce(
+      (filteredCategories, category) => {
+        category.datasets = category.datasets.filter(dataset => {
+          const datasetInfo = getDatasetInfo(
+            dataset,
+            this.props.libraryManifest.tables
+          );
+          return (
+            searchRegExp.test(dataset) ||
+            searchRegExp.test(datasetInfo.description)
+          );
+        });
+        if (category.datasets.length > 0) {
+          filteredCategories.push(category);
+        }
+        return filteredCategories;
+      },
+      []
     );
     return potentialCategories;
   };
@@ -101,7 +106,7 @@ class DataLibraryPane extends React.Component {
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
         <SearchBar
-          placeholderText={'Search'}
+          placeholderText={msg.dataLibrarySearchPlacholder()}
           onChange={this.search}
           clearButton={this.state.search.length > 0}
         />
