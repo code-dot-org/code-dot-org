@@ -76,6 +76,7 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_roles(contact_data)
         processed_contact_data.merge! extract_state(contact_data)
         processed_contact_data.merge! extract_city(contact_data)
+        processed_contact_data.merge! extract_country(contact_data)
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
       rescue StandardError
@@ -329,6 +330,15 @@ class ContactRollupsProcessed < ApplicationRecord
 
     form_geo_city = extract_field_latest_value contact_data, 'pegasus.form_geos', 'city'
     form_geo_city.nil? ? {} : {city: form_geo_city}
+  end
+
+  def self.extract_country(contact_data)
+    # Priority: user country > form geo country
+    user_country = extract_field_latest_value contact_data, 'dashboard.users', 'country'
+    return {country: user_country} if user_country
+
+    form_geo_country = extract_field_latest_value contact_data, 'pegasus.form_geos', 'country'
+    form_geo_country.nil? ? {} : {country: form_geo_country}
   end
 
   # Extract the latest value of a field in a source table from contact data.
