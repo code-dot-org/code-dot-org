@@ -36,7 +36,7 @@ export function textToSpeech(
 
   const cachedBytes = Sounds.getSingleton().getTextBytes(language, text);
 
-  if (cachedBytes !== null && cachedBytes['hasProfanity']) {
+  if (cachedBytes !== undefined && cachedBytes['hasProfanity']) {
     outputWarning(
       i18n.textToSpeechProfanity({
         profanityCount: cachedBytes['profaneWords'].length,
@@ -46,13 +46,8 @@ export function textToSpeech(
     return;
   }
   const asyncOutputWarning = getAsyncOutputWarning();
-  // There is no way to make ajax requests from html on the filesystem.  So
-  // the only way to play sounds is using HTML5. This scenario happens when
-  // students export their apps and run them offline. At this point, their
-  // uploaded sound files are exported as well, which means varnish is not
-  // an issue.
-  const forceHTML5 = window.location.protocol === 'file:';
-  if (cachedBytes !== null && cachedBytes[gender] !== undefined) {
+  const forceHTML5 = false;
+  if (cachedBytes !== undefined && cachedBytes[gender] !== undefined) {
     if (cachedBytes[gender].length > 0) {
       Sounds.getSingleton().addPromiseToSpeechQueue(
         cachedBytes[gender].slice(0),
@@ -68,7 +63,7 @@ export function textToSpeech(
       );
     } else {
       Sounds.getSingleton().addPromiseToSpeechQueue(
-        null,
+        undefined,
         {
           volume: 1.0,
           loop: false,
@@ -119,6 +114,7 @@ export function textToSpeech(
         resolve('profanity found');
       }
       request.onreadystatechange = function() {
+        // Waiting for readyState to be 4 meaning that the request is done
         if (request.readyState === 4) {
           if (request.status >= 200 && request.status < 300) {
             resolve(request.response);
@@ -156,7 +152,7 @@ export function textToSpeech(
         language: language,
         text: text,
         hasProfanity: false,
-        profaneWords: null,
+        profaneWords: undefined,
         gender: gender
       }
     );
@@ -164,7 +160,7 @@ export function textToSpeech(
       language,
       text,
       false,
-      null,
+      undefined,
       gender,
       []
     );

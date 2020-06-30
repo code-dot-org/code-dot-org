@@ -252,9 +252,9 @@ Sounds.prototype.registerTextBytes = function(
   language,
   text,
   hasProfanity,
-  profaneWords = null,
-  gender = null,
-  bytes = null
+  profaneWords = undefined,
+  gender = undefined,
+  bytes = undefined
 ) {
   if (!this.textBytesByLanguage[language]) {
     this.textBytesByLanguage[language] = {};
@@ -262,9 +262,9 @@ Sounds.prototype.registerTextBytes = function(
   if (!this.textBytesByLanguage[language][text]) {
     this.textBytesByLanguage[language][text] = {};
   }
-  this.textBytesByLanguage[language][text]['hasProfanity'] = hasProfanity;
-  this.textBytesByLanguage[language][text]['profaneWords'] = profaneWords;
-  if (gender !== null) {
+  this.textBytesByLanguage[language][text].hasProfanity = hasProfanity;
+  this.textBytesByLanguage[language][text].profaneWords = profaneWords;
+  if (gender) {
     this.textBytesByLanguage[language][text][gender] = bytes;
   }
 };
@@ -276,13 +276,9 @@ Sounds.prototype.registerTextBytes = function(
  * @returns {Object} if text bytes found, null otherwise.
  */
 Sounds.prototype.getTextBytes = function(language, text) {
-  if (
-    !this.textBytesByLanguage[language] ||
-    !this.textBytesByLanguage[language][text]
-  ) {
-    return null;
-  }
-  return this.textBytesByLanguage[language][text];
+  return (
+    this.textBytesByLanguage.language && this.textBytesByLanguage.language.text
+  );
 };
 
 /**
@@ -386,7 +382,7 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 Sounds.prototype.addPromiseToSpeechQueue = function(
   promise,
   playbackOptions,
-  cacheParams = null
+  cacheParams = undefined
 ) {
   this.speechQueue.push({
     promise: promise,
@@ -400,40 +396,40 @@ Sounds.prototype.checkSpeechQueue = async function() {
   if (!this.speechPlaying && this.speechQueue.length > 0) {
     this.speechPlaying = true;
     let nextSpeech = this.speechQueue.shift();
-    let bytes = await nextSpeech['promise'];
-    if (bytes === null) {
+    let bytes = await nextSpeech.promise;
+    if (bytes === undefined) {
       if (
-        this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
-          nextSpeech['cacheParams']['text']
-        ]['hasProfanity']
+        this.textBytesByLanguage[nextSpeech.cacheParams.language][
+          nextSpeech.cacheParams.text
+        ].hasProfanity
       ) {
-        nextSpeech['cacheParams']['profanityFoundCallback'](
-          this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
-            nextSpeech['cacheParams']['text']
-          ]['profaneWords']
+        nextSpeech.cacheParams.profanityFoundCallback(
+          this.textBytesByLanguage[nextSpeech.cacheParams.language][
+            nextSpeech.cacheParams.text
+          ].profaneWords
         );
         this.onSpeechFinished();
       } else {
-        bytes = this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
-          nextSpeech['cacheParams']['text']
-        ][nextSpeech['cacheParams']['gender']];
-        this.playSpeechBytes(bytes.slice(0), nextSpeech['playbackOptions']);
+        bytes = this.textBytesByLanguage[nextSpeech.cacheParams.language][
+          nextSpeech.cacheParams.text
+        ][nextSpeech.cacheParams.gender];
+        this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
       }
     } else if (bytes === 'profanity found') {
       this.onSpeechFinished();
-    } else if (nextSpeech['cacheParams'] !== null) {
-      const bytes = await nextSpeech['promise'];
+    } else if (nextSpeech.cacheParams !== undefined) {
+      const bytes = await nextSpeech.promise;
       this.registerTextBytes(
-        nextSpeech['cacheParams']['language'],
-        nextSpeech['cacheParams']['text'],
-        nextSpeech['cacheParams']['hasProfanity'],
-        nextSpeech['cacheParams']['profaneWords'],
-        nextSpeech['cacheParams']['gender'],
+        nextSpeech.cacheParams.language,
+        nextSpeech.cacheParams.text,
+        nextSpeech.cacheParams.hasProfanity,
+        nextSpeech.cacheParams.profaneWords,
+        nextSpeech.cacheParams.gender,
         bytes.slice(0)
       );
-      this.playSpeechBytes(bytes, nextSpeech['playbackOptions']);
+      this.playBytes(bytes, nextSpeech.playbackOptions);
     } else {
-      this.playSpeechBytes(bytes.slice(0), nextSpeech['playbackOptions']);
+      this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
     }
   }
 };
@@ -447,7 +443,7 @@ Sounds.prototype.onSpeechFinished = function() {
  * @param {ArrayBuffer} bytes of the sound to play.
  * @param {object} playbackOptions config for the playing of the sound.
  */
-Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
+Sounds.prototype.playBytes = function(bytes, playbackOptions) {
   if (this.isMuted) {
     return;
   }
@@ -457,7 +453,7 @@ Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
     playbackOptions && playbackOptions.allowHTML5Mobile;
   soundConfig.playAfterLoad = true;
   soundConfig.playAfterLoadOptions = playbackOptions;
-  soundConfig['bytes'] = bytes;
+  soundConfig.bytes = bytes;
   let sound = new Sound(soundConfig, this.audioContext);
   sound.preloadBytes();
   sound.play();
