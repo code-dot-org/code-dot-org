@@ -418,6 +418,51 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_country' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'country' => [
+          {'value' => 'Canada', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'United States', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'country' => [
+          {'value' => 'United Kingdom', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Italy', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {country: 'United States'}
+      },
+      {
+        input: users_input,
+        expected_output: {country: 'Italy'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {country: 'Italy'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_country test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
   test 'extract_hoc_organizer_years' do
     contact_data = {
       'pegasus.forms' => {
