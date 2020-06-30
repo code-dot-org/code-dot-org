@@ -378,6 +378,11 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
   }
 };
 
+/**
+ * @param {Promise} promise the promise that will resolve to the ArrayBuffer bytes to be played
+ * @param {object} playbackOptions config for the playing of the sound.
+ * @param {object} cacheParams optional parameters for caching the result of promise
+ */
 Sounds.prototype.addPromiseToSpeechQueue = function(
   promise,
   playbackOptions,
@@ -438,6 +443,10 @@ Sounds.prototype.onSpeechFinished = function() {
   this.checkSpeechQueue();
 };
 
+/**
+ * @param {ArrayBuffer} bytes of the sound to play.
+ * @param {object} playbackOptions config for the playing of the sound.
+ */
 Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
   if (this.isMuted) {
     return;
@@ -449,7 +458,6 @@ Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
   soundConfig.playAfterLoad = true;
   soundConfig.playAfterLoadOptions = playbackOptions;
   soundConfig['bytes'] = bytes;
-  soundConfig.fromCached = playbackOptions.fromCached;
   let sound = new Sound(soundConfig, this.audioContext);
   sound.preloadBytes();
   sound.play();
