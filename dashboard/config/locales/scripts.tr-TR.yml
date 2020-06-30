@@ -30484,9 +30484,13 @@ tr:
               name: İkili Sayılar
             Intellectual Property:
               name: Fikri Mülkiyet
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Ünite 1: Sayısal bilgi'
+            cspSurvey:
+              display_name: Anket
           lessons:
             new stage:
               name: yeni kademe
@@ -30496,6 +30500,8 @@ tr:
               name: İkili Sayılar
             Intellectual Property:
               name: Fikri Mülkiyet
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
         csp2-2020:
           stages:
             new stage:
@@ -31766,3 +31772,39 @@ tr:
               name: 5. Ünite 4. Değerlendirme
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Döngüler
+            Events:
+              name: Olaylar
+            Conditionals:
+              name: Koşullar
+            Functions:
+              name: Fonksiyonlar
+            Variables:
+              name: Değişkenler
+            For Loops:
+              name: For Döngüleri
+            Sprite Lab:
+              name: Kukla Laboratuvarı
+          lessons:
+            Loops:
+              name: Döngüler
+            Events:
+              name: Olaylar
+            Conditionals:
+              name: Koşullar
+            Functions:
+              name: Fonksiyonlar
+            Variables:
+              name: Değişkenler
+            For Loops:
+              name: For Döngüleri
+            Sprite Lab:
+              name: Kukla Laboratuvarı
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: İlk adım
+            k5_next_steps_1:
+              display_name: Sonraki Adımlar

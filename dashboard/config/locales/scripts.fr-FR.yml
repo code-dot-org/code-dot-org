@@ -41770,6 +41770,8 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
             Virtual Pet with Sprite Lab:
               name: Animal de compagnie virtuel avec le Labo des Lutins
+            Swimming Fish with Sprite Lab:
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
           lesson_groups:
             csf_warmup:
               display_name: Échauffement
@@ -41832,6 +41834,8 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
             Virtual Pet with Sprite Lab:
               name: Animal de compagnie virtuel avec le Labo des Lutins
+            Swimming Fish with Sprite Lab:
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
         pre-express-2020:
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
@@ -41924,9 +41928,13 @@ fr:
               name: Projet - Les Dilemmes de l'Information Numérique, Partie 2
             'Lesson 14: Assessment Day':
               name: 'Leçon 14 : Journée d''Évaluation'
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Unité 1: L’Information numérique'
+            cspSurvey:
+              display_name: Enquête
           lessons:
             new stage:
               name: nouvelle phase
@@ -41958,6 +41966,8 @@ fr:
               name: Projet - Les Dilemmes de l'Information Numérique, Partie 2
             'Lesson 14: Assessment Day':
               name: 'Leçon 14 : Journée d''Évaluation'
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
         csp2-2020:
           stages:
             new stage:
@@ -43560,3 +43570,72 @@ fr:
               name: Unité 5  Évaluation 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unité 5 Évaluation 5 - AP Pratique Pseudocode - Questions
+        k5-onlinepd-2020:
+          description: Apprenez à enseigner l'informatique en utilisant les Principes
+            Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit
+            et auto-rythmé !
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique
+                »
+            Understanding the Computer Science Fundamentals Courses:
+              name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Events:
+              name: Événements
+            Conditionals:
+              name: Instructions conditionnelles
+            End of Course projects:
+              name: Projets de Fin de Cours
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
+            Sprite Lab:
+              name: Le Labo des Lutins
+            Reviewing your reflections:
+              name: Examiner vos réflexions
+            Next steps:
+              name: Prochaines étapes
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique
+                »
+            Understanding the Computer Science Fundamentals Courses:
+              name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Events:
+              name: Événements
+            Conditionals:
+              name: Instructions conditionnelles
+            End of Course projects:
+              name: Projets de Fin de Cours
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
+            Sprite Lab:
+              name: Le Labo des Lutins
+            Reviewing your reflections:
+              name: Examiner vos réflexions
+            Next steps:
+              name: Prochaines étapes
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: La Mise en Route
+            k5_basic_concepts_1:
+              display_name: Concepts de Codage de Base et Pratiques D'enseignement
+            k5_diving_deeper_1:
+              display_name: 'Immersion Totale : Cours E et F'
+            k5_next_steps_1:
+              display_name: Prochaines étapes

@@ -417,6 +417,8 @@
   "unsubmitYourProject": "Unsubmit ձեր ծրագրի",
   "unsubmitYourProjectConfirm": "Unsubmitting ձեր ծրագիրը կլինի վերականգնել է ներկայացվել ամսաթիվը, իսկապես unsubmit.",
   "update": "Թարմացնել",
+  "versionHistory_clearProgress_cancel": "վերացնել",
+  "versionHistory_header": "Տարբերակ պատմություն",
   "viewCode": "Ցուցադրել կոդը",
   "viewCourse": "View course",
   "viewLessonPlan": "Դիտել դասի պլանը",

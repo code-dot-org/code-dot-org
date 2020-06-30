@@ -4670,3 +4670,33 @@ sv:
           lessons:
             While Loops:
               name: '''Medan'' loopar(slingor)'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: loopar
+            Events:
+              name: Händelser
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+            Variables:
+              name: variabler
+            For Loops:
+              name: '''För'' loopar'
+          lessons:
+            Loops:
+              name: loopar
+            Events:
+              name: Händelser
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+            Variables:
+              name: variabler
+            For Loops:
+              name: '''För'' loopar'
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Nästa steg
