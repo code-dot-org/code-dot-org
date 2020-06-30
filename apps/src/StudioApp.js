@@ -3080,7 +3080,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
-  console.log('show me the alert');
   const workspaceAlert = React.createElement(
     WorkspaceAlert,
     {
