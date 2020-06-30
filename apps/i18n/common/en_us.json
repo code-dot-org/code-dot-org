@@ -405,6 +405,7 @@
   "createStandardsReportSuggestion": "**Suggestions:**",
   "createStandardsReportSuggestion1": "Describe what your class is working on",
   "createStandardsReportSuggestion2": "Explain how your computer science lessons relate to other subjects or standards",
+  "createStandardsReportSuggestion2Link": "Explain how your computer science lessons relate to [other subjects or standards]({standardsOverviewLink})",
   "createStandardsReportSuggestion4": "[Add a link to a student project]({projectsLink})",
   "createTableHeader": "Create data tables to store rows of data with multiple columns for different fields.",
   "crossTab": "Cross Tab",
