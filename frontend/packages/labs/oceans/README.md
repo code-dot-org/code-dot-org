@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/code-dot-org/ml-activities.svg?branch=master)](https://travis-ci.org/code-dot-org/ml-activities)
+[![Build Status](https://travis-ci.org/code-dot-org/ml-activities.svg?branch=main)](https://travis-ci.org/code-dot-org/ml-activities)
 
 Steps to get up and running:
 
