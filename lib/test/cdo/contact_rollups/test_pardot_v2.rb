@@ -233,11 +233,13 @@ class PardotV2Test < Minitest::Test
           professional_learning_enrolled: COURSE_CSF,
           professional_learning_attended: COURSE_CSF,
           hoc_organizer_years: '2019',
+          roles: 'Form Submitter',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSF,
-          db_Hour_of_Code_Organizer_0: '2019'
+          db_Hour_of_Code_Organizer_0: '2019',
+          db_Roles_0: 'Form Submitter',
         }
       },
       {
@@ -246,6 +248,7 @@ class PardotV2Test < Minitest::Test
           professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
           professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
           hoc_organizer_years: '2018,2019',
+          roles: 'Form Submitter,Petition Signer',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
@@ -254,6 +257,8 @@ class PardotV2Test < Minitest::Test
           db_Professional_Learning_Attended_1: COURSE_ECS,
           db_Hour_of_Code_Organizer_0: '2018',
           db_Hour_of_Code_Organizer_1: '2019',
+          db_Roles_0: 'Form Submitter',
+          db_Roles_1: 'Petition Signer',
         }
       }
     ]
