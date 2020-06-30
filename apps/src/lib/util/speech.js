@@ -52,8 +52,7 @@ export function textToSpeech(
   // uploaded sound files are exported as well, which means varnish is not
   // an issue.
   const forceHTML5 = window.location.protocol === 'file:';
-
-  if (cachedBytes !== null && cachedBytes[gender] !== null) {
+  if (cachedBytes !== null && cachedBytes[gender] !== undefined) {
     if (cachedBytes[gender].length > 0) {
       Sounds.getSingleton().addPromiseToSpeechQueue(
         cachedBytes[gender].slice(0),
@@ -100,8 +99,12 @@ export function textToSpeech(
 
     var request = new XMLHttpRequest();
     const resultPromise = new Promise(async function(resolve, reject) {
-      const profaneWords = await findProfanity(text, languageCode);
+      let profaneWords = await findProfanity(text, languageCode);
       if (profaneWords && profaneWords.length > 0) {
+        console.log(profaneWords);
+        if (!Array.isArray(profaneWords)) {
+          profaneWords = [profaneWords];
+        }
         asyncOutputWarning(
           i18n.textToSpeechProfanity({
             profanityCount: profaneWords.length,
