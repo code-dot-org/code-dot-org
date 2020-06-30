@@ -210,8 +210,11 @@ class ContactRollupsV2
   # unless in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
-    upload_metrics unless @is_dry_run
-    # TODO: Report to slack channel
+    unless @is_dry_run
+      upload_metrics
+      report_to_slack
+    end
+
     print_logs
   end
 
@@ -226,6 +229,26 @@ class ContactRollupsV2
       }
     end
     Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
+  end
+
+  def report_to_slack
+    duration = @log_collector.metrics.values_at(
+      :CollectContactsDuration,
+      :ProcessContactsDuration,
+      :SyncNewContactsDuration,
+      :SyncUpdatedContactsDuration
+    ).compact.sum
+    formatted_duration = Time.at(duration).utc.strftime("%Hh:%Mm:%Ss")
+
+    summary = [
+      "*ContactRollupsV2* (#{CDO.rack_env}#{', dry-run' if @is_dry_run})",
+      "Number of Pardot prospects created: #{@log_collector.metrics[:ProspectsCreated]}",
+      "Number of Pardot prospects updated: #{@log_collector.metrics[:ProspectsUpdated]}",
+      "Number of contacts in ContactRollupsFinal: #{@log_collector.metrics[:FinalRows]}",
+      "🕐 #{formatted_duration}"
+    ].join("\n")
+
+    ChatClient.message 'cron-daily', summary
   end
 
   # Using truncate allows us to re-use row IDs,
