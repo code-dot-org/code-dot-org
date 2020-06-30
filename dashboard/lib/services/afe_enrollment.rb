@@ -11,6 +11,8 @@
 # successful.  This services wraps that whole process.
 #
 class Services::AFEEnrollment
+  class Error < StandardError; end
+
   # Submit a teacher's information to the AFE Pardot form handler.
   #
   # @param traffic_source [String] Should always be AFE-code.org, for now
@@ -35,7 +37,7 @@ class Services::AFEEnrollment
     aws_educate:, amazon_terms:, new_code_account:)
     return unless CDO.afe_pardot_form_handler_url
 
-    raise 'AFE submission skipped: Terms and conditions were not accepted' unless amazon_terms
+    raise Error.new('AFE submission skipped: Terms and conditions were not accepted') unless amazon_terms
 
     response = Net::HTTP.post_form(
       URI(CDO.afe_pardot_form_handler_url),
@@ -59,8 +61,8 @@ class Services::AFEEnrollment
       }
     )
 
-    raise "AFE submission failed with HTTP #{response.status}" unless response.status == 200
-    raise "AFE submission failed with a validation error" if response.body =~ /Cannot find error page/
+    raise Error.new("AFE submission failed with HTTP #{response.status}") unless response.status == 200
+    raise Error.new("AFE submission failed with a validation error") if response.body =~ /Cannot find error page/
     nil
   end
 
