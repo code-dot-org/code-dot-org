@@ -12,7 +12,7 @@ import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import firehoseClient from '../../../lib/util/firehose';
-import project from '../../initApp/project';
+var project = require('../../initApp/project');
 import commonStyles from './styles';
 import IntroPage from './IntroPage';
 import PlatformPage from './PlatformPage';
@@ -29,7 +29,7 @@ function recordExport(type) {
       study: 'finish-dialog-export',
       study_group: 'v1',
       event: 'project-export',
-      project_id: project.getCurrentId ? project.getCurrentId() : undefined,
+      project_id: project.getCurrentId(),
       data_string: type
     },
     {includeUserId: true}
