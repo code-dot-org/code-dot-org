@@ -205,6 +205,8 @@ class PardotV2Test < Minitest::Test
           form_roles: 'engineer,teacher',
           state: 'Washington',
           city: 'Seattle',
+          postal_code: '98101',
+          country: 'United States',
         },
         expected_output: {
           email: 'test0@domain.com',
@@ -215,6 +217,8 @@ class PardotV2Test < Minitest::Test
           db_Form_Roles: 'engineer,teacher',
           db_State: 'Washington',
           db_City: 'Seattle',
+          db_Postal_Code: '98101',
+          db_Country: 'United States',
         }
       },
       {

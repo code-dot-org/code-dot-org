@@ -6,7 +6,6 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], 
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
-script_announcements [{"notice"=>"Check out the new CS Discoveries resources for 2019-2020!", "details"=>"Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!", "link"=>"https://forum.code.org/t/new-resources-for-2019-2020/30676", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd1'
 version_year '2019'
 is_stable true
@@ -48,3 +47,4 @@ level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019', progression: 'Refle
 
 lesson 'Post-Project Test', lockable: true
 level 'CSD U1 Test', assessment: true
+
