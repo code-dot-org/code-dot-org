@@ -714,6 +714,8 @@
   "unsubmitYourProjectConfirm": "Projekti esituse tagasivõtmisel lähtestatakse esitamiskuupäev. Kas soovid kindlasti esituse tagasi võtta?",
   "update": "Uuenda",
   "version": "Versioon",
+  "versionHistory_clearProgress_cancel": "Tühista",
+  "versionHistory_header": "Versiooni ajalugu",
   "video": "Video",
   "videos": "Videod",
   "viewAllAnnouncements": "Vaata kõiki teateid",

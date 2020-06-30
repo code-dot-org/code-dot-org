@@ -2370,6 +2370,10 @@ it-IT:
         > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
         >
         > [Sign up now](http://code.org/professional-development-workshops) to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+      OPD-K5 Closing_copy: |-
+        > **Se ti è piaciuto questo corso, iscriviti a un seminario in presenza:**
+        >
+        > <a href="http://code.org/professional-development-workshops" target="blank">Iscriviti subito</a> per continuare a studiare l'informatica e la sua pedagogia. I seminari in presenza gratuiti sono un luogo prezioso per collaborare e impegnarsi con altri educatori appassionati nella tua zona.
       OPD-K5 EventsVid: |-
         Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in cui occorre  programmare con gli eventi.
 
@@ -2448,12 +2452,38 @@ it-IT:
         <span style="font-size: 1.1em">
         Vi siete mai chiesti che cos'è l'informatica o quanti tipi di linguaggi di programmazione diversi esistono? Questo video fornisce un'introduzione al campo dell'informatica.
         </span>
+      OPD-K5 conditionals free response: |-
+        # Rifletti sulle Istruzioni Condizionali
+
+        In questa lezione, abbiamo esplorato come i condizionali aiutano i programmatori ad aggiungere logica al loro codice.
+
+        Ora prenditi un momento per riflettere. Come spiegheresti il concetto di Istruzioni Condizionali ai tuoi studenti? Qual è il vantaggio del journaling come pratica di insegnamento per l'informatica?
+      OPD-K5 events free response: |-
+        # Rifletti sugli eventi
+
+        In questa lezione, hai rafforzato le tue capacità di programmazione usando eventi per innescare determinate azioni nel tuo programma.
+
+        Ora prenditi un momento per riflettere. Come spiegheresti il concetto di eventi ai tuoi studenti? Quali sono i passaggi che potresti adottare per eseguire il debug di un programma?
+      OPD-K5 for loops free response: |-
+        # Rifletti su per cicli
+
+        Prenditi un momento per riflettere. Come spiegheresti il concetto Per ciclo ai tuoi studenti? Qual è una pratica di insegnamento che potresti usare per insegnare questo concetto?
+      OPD-K5 functions free response: |-
+        # Rifletti sulle funzioni
+
+        In questa lezione, abbiamo esplorato come le funzioni possono renderti un programmatore migliore e più veloce, permettendoti di riutilizzare segmenti del tuo codice. Nella prossima lezione vedremo il concetto di variabili.
+
+        Ora prenditi un momento per riflettere. Come spiegheresti il concetto di funzione ai tuoi studenti? Qual è una pratica di insegnamento che potresti usare per insegnare questo concetto?
       OPD-K5 loops free response: |-
         # Rifletti sui cicli
 
         In questa lezione, abbiamo esplorato come utilizzare i cicli per rendere il codice più efficiente. Nella prossima lezione vedremo in che modo gli eventi possono aggiungere interattività in un programma.
 
         Ora prenditi un momento per riflettere. Come puoi collegare il concetto di ciclo alla precedente esperienza dei tuoi studenti fuori della classe d'informatica? Quali sono i vantaggi della programmazione in coppia e come puoi usarla in questa lezione?
+      OPD-K5 projects free response: |-
+        # Rifletti sui progetti di fine corso
+
+        Prenditi un momento per riflettere. Come useresti i progetti di fine corso nella tua classe? Qual è il vantaggio nel far completare un progetto agli studenti?
       OPD-K5 sequencing free response: "# Rifletti sul sequenziamento\n\nComplimenti!
         Hai appena scritto del codice. Sei ufficialmente un programmatore!\n\nHai
         notato che l'ultimo puzzle è stato un po' più difficile? È stato un puzzle
@@ -2463,6 +2493,11 @@ it-IT:
         nella lezione.\n\nOra prenditi un momento per riflettere. Come descriveresti
         la differenza tra informatica e programmazione? Come spiegheresti il sequenziamento
         e gli algoritmi ai tuoi studenti? "
+      OPD-K5 sprite lab free response: "# Rifletti sul Laboratorio Sprite"
+      OPD-K5 variables free response: |-
+        # Rifletti sulle variabili
+
+        Prenditi un momento per riflettere. Come spiegheresti il concetto di variabile ai tuoi studenti? Qual è una pratica di insegnamento che potresti usare per insegnare questo concetto?
       OPD-K5 whats your plan: |-
         # Qual è il tuo piano?
 
@@ -2533,8 +2568,9 @@ it-IT:
               </block>
             </value>
           </block></xml> per impostare lo sfondo blu.
-      OPD-K5-spritelab-6: Il nostro pesce si sente un po' solo. Aggiungi un altro
-        personaggio nell'acquario.
+      OPD-K5-spritelab-6: Il pesce è avventuroso e vuole incontrare nuove creature
+        nel mare. Aggiungi un altro sprite all'acquario dei pesci. Questo sprite può
+        avere qualsiasi comportamento diverso da quello che usi per il tuo pesce!
       OPD-K5-spritelab-7: "Cosa vuoi che faccia il nuovo amico del pesce?  \n\nAggiungi
         un comportamento al nuovo amico del pesce!"
       OPD-K5-variables-1: |-
@@ -3168,10 +3204,6 @@ it-IT:
         C'è un blocco di troppo alla fine di questo codice!
 
         Per eliminarlo, trascinalo nella cassetta degli attrezzi.
-      courseA_maze_ramp3b_2019: |-
-        C'è un blocco di troppo alla fine di questo codice!
-
-        Per eliminarlo, trascinalo nella cassetta degli attrezzi.
       courseA_maze_ramp4a_2018: Riesci a capire quale blocco devi aggiungere alla
         fine di questo programma per completare l'esercizio?
       courseA_maze_ramp4a_2019: Riesci a capire quale blocco devi aggiungere alla
@@ -3233,7 +3265,10 @@ it-IT:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Fai un tentativo.
       courseA_maze_seq5_2019: Fai un tentativo.
-      courseA_maze_seq5_copy: Provalo da solo dall'inizio.
+      courseA_maze_seq5_copy: |-
+        Provalo da solo dall'inizio.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"Maialino, maialino, aspettami che arrivo!"_
 
@@ -5329,6 +5364,10 @@ it-IT:
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
         Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Questa nuvola mi sta bloccando la visuale!"_
+
+        Controlla se c'è un fiore sotto la nuvola. Se c'è un fiore, prendi il nettare.
       courseD_bee_conditionals2: |-
         Ancora più nuvole!
 

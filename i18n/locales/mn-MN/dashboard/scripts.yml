@@ -25237,6 +25237,8 @@ mn:
               name: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
             Virtual Pet with Sprite Lab:
               name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+            Swimming Fish with Sprite Lab:
+              name: Шидтэний лабтай хамтарсан сэлж буй загас
           lesson_groups:
             csf_warmup:
               display_name: Бие халаалт
@@ -25299,6 +25301,8 @@ mn:
               name: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
             Virtual Pet with Sprite Lab:
               name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+            Swimming Fish with Sprite Lab:
+              name: Шидтэний лабтай хамтарсан сэлж буй загас
         pre-express-2020:
           title: Урьдчилан унших Шуурхай (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
@@ -25385,9 +25389,13 @@ mn:
               name: Оюуны өмч
             'Lesson 14: Assessment Day':
               name: 'Хичээл 14: Үнэлгээний өдөр'
+            CS Principles Pre-survey:
+              name: КШУ-ны зарчмууд Судалгааны өмнөх
           lesson_groups:
             csp_unit1_2020:
               display_name: '2-р нэгж: Дижитал мэдээлэл'
+            cspSurvey:
+              display_name: Судалгаа
           lessons:
             new stage:
               name: шинэ шат
@@ -25415,6 +25423,8 @@ mn:
               name: Оюуны өмч
             'Lesson 14: Assessment Day':
               name: 'Хичээл 14: Үнэлгээний өдөр'
+            CS Principles Pre-survey:
+              name: КШУ-ны зарчмууд Судалгааны өмнөх
         csp2-2020:
           stages:
             new stage:
@@ -26195,3 +26205,68 @@ mn:
               name: Нэгж 5 Үнэлгээ 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Нэгж 5 Үнэлгээ 5 - AP хуурамч кодын практик асуултууд
+        k5-onlinepd-2020:
+          description: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар сурч аваарай!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: '"Компьютерийн шинжлэх ухааны суурийг заах арга зүй" -д тавтай морилно уу'
+            Understanding the Computer Science Fundamentals Courses:
+              name: Компьютерийн шинжлэх ухааны хичээлийн талаарх ойлголт
+            Sequencing:
+              name: Дараалуулах
+            Loops:
+              name: Гогцоонууд
+            Events:
+              name: Үйл явдлууд
+            Conditionals:
+              name: Нөхцлүүд
+            End of Course projects:
+              name: Хичээлийн төслийн төгсгөл
+            Functions:
+              name: Функцүүд
+            Variables:
+              name: Хувьсагчууд
+            For Loops:
+              name: Гогцоонд зориулав
+            Sprite Lab:
+              name: Шидтэний лаборатори
+            Reviewing your reflections:
+              name: Таны ойлголтыг шалгах
+            Next steps:
+              name: Дараагийн алхамууд
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: '"Компьютерийн шинжлэх ухааны суурийг заах арга зүй" -д тавтай морилно уу'
+            Understanding the Computer Science Fundamentals Courses:
+              name: Компьютерийн шинжлэх ухааны хичээлийн талаарх ойлголт
+            Sequencing:
+              name: Дараалуулах
+            Loops:
+              name: Гогцоонууд
+            Events:
+              name: Үйл явдлууд
+            Conditionals:
+              name: Нөхцлүүд
+            End of Course projects:
+              name: Хичээлийн төслийн төгсгөл
+            Functions:
+              name: Функцүүд
+            Variables:
+              name: Хувьсагчууд
+            For Loops:
+              name: Гогцоонд зориулав
+            Sprite Lab:
+              name: Шидтэний лаборатори
+            Reviewing your reflections:
+              name: Таны ойлголтыг шалгах
+            Next steps:
+              name: Дараагийн алхамууд
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Эхлүүлэх
+            k5_basic_concepts_1:
+              display_name: 'Кодлох үндсэн ойлголтууд ба заах практикууд: А-D хичээлүүд'
+            k5_diving_deeper_1:
+              display_name: 'Илүү гүн шумбах: Е ба F хичээлүүд'
+            k5_next_steps_1:
+              display_name: Дараагийн Алхамууд

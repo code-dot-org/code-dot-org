@@ -4513,6 +4513,9 @@ et:
           stages:
             Binary Numbers:
               name: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
           lessons:
             Binary Numbers:
               name: Binaararvud
@@ -4585,3 +4588,33 @@ et:
           lessons:
             While Loops:
               name: "„Kui“ tsüklid"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Tsüklid
+            Events:
+              name: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel
+          lessons:
+            Loops:
+              name: Tsüklid
+            Events:
+              name: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Järgmised sammud

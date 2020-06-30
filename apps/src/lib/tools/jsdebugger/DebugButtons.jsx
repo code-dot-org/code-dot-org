@@ -13,6 +13,7 @@ export default connect(
   state => ({
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
+    isEditWhileRun: selectors.isEditWhileRun(state),
     canRunNext: selectors.canRunNext(state)
   }),
   {
@@ -33,6 +34,7 @@ export default connect(
       stepOver: PropTypes.func.isRequired,
       togglePause: PropTypes.func.isRequired,
       isPaused: PropTypes.bool.isRequired,
+      isEditWhileRun: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
       canRunNext: PropTypes.bool.isRequired
     };
@@ -76,7 +78,7 @@ export default connect(
     };
 
     render() {
-      const {isAttached, isPaused, canRunNext} = this.props;
+      const {isAttached, isPaused, canRunNext, isEditWhileRun} = this.props;
       return (
         <div
           id="debug-commands"
@@ -122,7 +124,8 @@ export default connect(
               id="stepOverButton"
               className="debugger_button"
               onClick={this.stepOver}
-              disabled={!isPaused || !isAttached}
+              disabled={!isPaused || !isAttached || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"
@@ -136,7 +139,8 @@ export default connect(
               id="stepOutButton"
               className="debugger_button"
               onClick={this.stepOut}
-              disabled={!isPaused || !isAttached}
+              disabled={!isPaused || !isAttached || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"
@@ -152,7 +156,8 @@ export default connect(
               id="stepInButton"
               className="debugger_button"
               onClick={this.stepIn}
-              disabled={!isPaused && isAttached}
+              disabled={(!isPaused && isAttached) || isEditWhileRun}
+              title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
               <img
                 src="/blockly/media/1x1.gif"

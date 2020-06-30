@@ -3791,3 +3791,30 @@ kk:
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Ілмек
+            Events:
+              name: Шаралар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
+          lessons:
+            Loops:
+              name: Ілмек
+            Events:
+              name: Шаралар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
