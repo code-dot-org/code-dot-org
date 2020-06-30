@@ -1,6 +1,8 @@
+/* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
+import {textToSpeech} from './speech';
 import Sounds from '../../Sounds';
 
 /**
@@ -109,6 +111,21 @@ export const commands = {
     } else {
       Sounds.getSingleton().stopAllAudio();
     }
+  },
+  /**
+   * Start playing given text as speech.
+   * @param {string} opts.text The text to play as speech.
+   * @param {string} opts.gender The gender of the voice to play.
+   */
+  playSpeech(opts) {
+    apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
+    apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
+    textToSpeech(
+      opts.text,
+      opts.gender,
+      appOptions.azureSpeechServiceToken,
+      appOptions.azureSpeechServiceRegion
+    );
   }
 };
 
@@ -119,6 +136,7 @@ export const commands = {
 export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
-  stopSound: url => executeCmd(null, 'stopSound', {url})
+  stopSound: url => executeCmd(null, 'stopSound', {url}),
+  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
