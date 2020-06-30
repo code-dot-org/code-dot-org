@@ -1383,11 +1383,19 @@ function onDataViewChange(view, oldTableName, newTableName) {
     case DataView.PROPERTIES:
       getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
         if (snapshot) {
-          getStore().dispatch(
-            updateKeyValueData(
-              _.mapKeys(snapshot.val(), (_, key) => unescapeFirebaseKey(key))
-            )
+          let keyValueData = snapshot.val();
+          // "if all of the keys are integers, and more than half of the keys between 0 and
+          // the maximum key in the object have non-empty values, then Firebase will render
+          // it as an array."
+          // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+          // Coerce it to an object here, if needed, so we can unescape the keys
+          if (Array.isArray(keyValueData)) {
+            keyValueData = Object.assign({}, keyValueData);
+          }
+          keyValueData = _.mapKeys(keyValueData, (_, key) =>
+            unescapeFirebaseKey(key)
           );
+          getStore().dispatch(updateKeyValueData(keyValueData));
         }
       });
       return;
