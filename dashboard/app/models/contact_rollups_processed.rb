@@ -76,6 +76,7 @@ class ContactRollupsProcessed < ApplicationRecord
         processed_contact_data.merge! extract_roles(contact_data)
         processed_contact_data.merge! extract_state(contact_data)
         processed_contact_data.merge! extract_city(contact_data)
+        processed_contact_data.merge! extract_postal_code(contact_data)
         processed_contact_data.merge! extract_country(contact_data)
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
@@ -339,6 +340,18 @@ class ContactRollupsProcessed < ApplicationRecord
 
     form_geo_country = extract_field_latest_value contact_data, 'pegasus.form_geos', 'country'
     form_geo_country.nil? ? {} : {country: form_geo_country}
+  end
+
+  def self.extract_postal_code(contact_data)
+    # Priority: school zip > user postal code > form geo postal code
+    school_zip = extract_field_latest_value contact_data, 'dashboard.schools', 'zip'
+    return {postal_code: school_zip} if school_zip
+
+    user_postal_code = extract_field_latest_value contact_data, 'dashboard.users', 'postal_code'
+    return {postal_code: user_postal_code} if user_postal_code
+
+    form_geo_postal_code = extract_field_latest_value contact_data, 'pegasus.form_geos', 'postal_code'
+    form_geo_postal_code.nil? ? {} : {postal_code: form_geo_postal_code}
   end
 
   # Extract the latest value of a field in a source table from contact data.
