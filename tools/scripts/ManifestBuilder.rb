@@ -201,6 +201,9 @@ The animation has been skipped.
     return strings
   end
 
+  # Takes in a locale (for the file suffix) and a map of string translations
+  # and replaces the aliases of the aliases of the animations with their translation.
+  # Then, the localized manifest is uploaded to S3 with the suffix .{locale}.json
   def upload_localized_manifest(locale, strings)
     return unless @options[:spritelab] && @options[:upload_to_s3]
 
