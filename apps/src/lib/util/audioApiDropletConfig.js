@@ -1,8 +1,7 @@
+/* globals dashboard, appOptions */
 import {getStore} from '../../redux';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {executors} from './audioApi';
-
-/* global dashboard */
 
 /**
  * Droplet palette configuration entries, ready to drop in to their respective
@@ -36,11 +35,12 @@ const dropletConfig = {
   playSpeech: {
     func: 'playSpeech',
     parent: executors,
-    paramButtons: {minArgs: 2, maxArgs: 2},
-    paletteParams: ['text', 'gender'],
-    params: ['"Hello World!"', '"female"'],
+    paramButtons: {minArgs: 2, maxArgs: 3},
+    paletteParams: ['text', 'gender', 'language'],
+    params: ['"Hello World!"', '"female"', '"en-US"'],
     dropdown: {
-      1: ['"female"', '"male"']
+      1: ['"female"', '"male"'],
+      2: getLanguages.bind(null)
     },
     nativeCallsBackInterpreter: true,
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
@@ -52,6 +52,12 @@ function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
     showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
+}
+
+function getLanguages() {
+  return Object.keys(appOptions.azureSpeechServiceLanguages).map(
+    language => `"${language}"`
+  );
 }
 
 export default dropletConfig;
