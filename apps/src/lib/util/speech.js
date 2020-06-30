@@ -20,7 +20,6 @@ export function textToSpeech(
   region,
   appLanguages
 ) {
-  console.log(PROFANITY_FOUND);
   if (text.length > 749) {
     text = text.slice(0, 750);
     outputWarning(i18n.textToSpeechTruncation());
