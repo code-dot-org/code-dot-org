@@ -203,6 +203,7 @@ class PardotV2Test < Minitest::Test
           user_id: 111,
           forms_submitted: 'Census,Petition',
           form_roles: 'engineer,teacher',
+          state: 'Washington',
         },
         expected_output: {
           email: 'test0@domain.com',
@@ -211,6 +212,7 @@ class PardotV2Test < Minitest::Test
           db_Has_Teacher_Account: 'true',
           db_Forms_Submitted: 'Census,Petition',
           db_Form_Roles: 'engineer,teacher',
+          db_State: 'Washington',
         }
       },
       {
