@@ -18766,7 +18766,7 @@ en:
             The Power of Words:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
-              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
+              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. \r\n\r\nFor more information, please visit: [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Envelope Variables
               description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
@@ -18950,7 +18950,7 @@ en:
             The Power of Words:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
-              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
+              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. \r\n\r\nFor more information, please visit: [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Envelope Variables
               description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
@@ -20308,7 +20308,7 @@ en:
             Powerful Passwords:
               name: Powerful Passwords
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
-              description_teacher: "Students explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\r\n\r\nStudents learn password tips, test their existing passwords with an interactive game, and create new passwords using guidelines for powerful passwords.\r\n"
+              description_teacher: "In collaboration with **Common Sense Education**, this lesson has students explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\r\n\r\nStudents learn password tips, test their existing passwords with an interactive game, and create new passwords using guidelines for powerful passwords.\r\n"
             Sticker Art with Loops:
               name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
@@ -20412,7 +20412,7 @@ en:
             Powerful Passwords:
               name: Powerful Passwords
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
-              description_teacher: "Students explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\r\n\r\nStudents learn password tips, test their existing passwords with an interactive game, and create new passwords using guidelines for powerful passwords.\r\n"
+              description_teacher: "In collaboration with **Common Sense Education**, this lesson has students explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\r\n\r\nStudents learn password tips, test their existing passwords with an interactive game, and create new passwords using guidelines for powerful passwords.\r\n"
             Sticker Art with Loops:
               name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
@@ -20520,7 +20520,7 @@ en:
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20594,7 +20594,7 @@ en:
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
         courseb-2019:
           title: Course B (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -20612,7 +20612,7 @@ en:
             Your Digital Footprint:
               name: Your Digital Footprint
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
-              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
+              description_teacher: In collaboration with **Common Sense Education**, this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
               description_student: ''
@@ -20668,7 +20668,7 @@ en:
             Programming in Maze:
               name: Programming with Angry Birds
               description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Harvester:
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
@@ -20676,7 +20676,7 @@ en:
             Sequencing in Maze:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20700,7 +20700,7 @@ en:
             Your Digital Footprint:
               name: Your Digital Footprint
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
-              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
+              description_teacher: In collaboration with **Common Sense Education**, this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
               description_student: ''
@@ -20756,7 +20756,7 @@ en:
             Programming in Maze:
               name: Programming with Angry Birds
               description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Harvester:
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
@@ -20764,7 +20764,7 @@ en:
             Sequencing in Maze:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
         pre-express-2019:
           title: Pre-reader Express (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -27504,7 +27504,7 @@ en:
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
         csd2-2020:
-          title: CSD Unit 2 - Web Development
+          title: CSD Unit 2 - Web Development ('20-'21)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
@@ -27730,7 +27730,7 @@ en:
             Using Images:
               name: Using Images
         csd1-2020:
-          title: CSD Unit 1 - Problem Solving and Computing
+          title: CSD Unit 1 - Problem Solving and Computing ('20-'21)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
@@ -27978,7 +27978,7 @@ en:
             Storage:
               name: Storage
         csd4-2020:
-          title: CSD Unit 4 - The Design Process
+          title: CSD Unit 4 - The Design Process ('20-'21)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
@@ -28450,7 +28450,7 @@ en:
               description_student: ''
               description_teacher: ''
         csd3-2020:
-          title: CSD Unit 3 - Interactive Animations and Games
+          title: CSD Unit 3 - Interactive Animations and Games ('20-'21)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -28782,7 +28782,7 @@ en:
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Ice Age:
               name: Programming with Scrat
               description_student: Write programs to help Scrat reach the acorn.
@@ -28817,6 +28817,13 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Safety in My Online Neighborhood:
               name: Safety in My Online Neighborhood
+              description_student: Learn how to go places safely online.
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -28842,7 +28849,7 @@ en:
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Ice Age:
               name: Programming with Scrat
               description_student: Write programs to help Scrat reach the acorn.
@@ -28877,6 +28884,13 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Safety in My Online Neighborhood:
               name: Safety in My Online Neighborhood
+              description_student: Learn how to go places safely online.
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
         courseb-2020:
           title: Course B (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -28894,11 +28908,11 @@ en:
             Sequencing in Maze:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming with Angry Birds
               description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Harvester:
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
@@ -28933,6 +28947,13 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             Digital Trails:
               name: Digital Trails
+              description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -28956,11 +28977,11 @@ en:
             Sequencing in Maze:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming with Angry Birds
               description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Harvester:
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
@@ -28995,6 +29016,13 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             Digital Trails:
               name: Digital Trails
+              description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
         coursec-2020:
           title: Course C (2020)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -29075,8 +29103,22 @@ en:
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
             Putting a STOP to Online Meanness:
               name: Putting a STOP to Online Meanness
+              description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
+              description_teacher: |-
+                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
             Password Power-Up:
               name: Password Power-Up
+              description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
+              description_teacher: |-
+                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -29167,8 +29209,22 @@ en:
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
             Putting a STOP to Online Meanness:
               name: Putting a STOP to Online Meanness
+              description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
+              description_teacher: |-
+                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
             Password Power-Up:
               name: Password Power-Up
+              description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
+              description_teacher: |-
+                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
         coursed-2020:
           title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
@@ -29251,8 +29307,17 @@ en:
               name: Dance Part
             End of Course Project:
               name: End of Course Project
+              description_student: Get those hands ready for plenty of coding! It's time to start building your project.
+              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
             Be A Super Digital Citizen:
               name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -29345,8 +29410,17 @@ en:
               name: Dance Part
             End of Course Project:
               name: End of Course Project
+              description_student: Get those hands ready for plenty of coding! It's time to start building your project.
+              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
             Be A Super Digital Citizen:
               name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
         coursee-2020:
           title: Course E (2020)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -29384,7 +29458,12 @@ en:
             Private and Personal Information:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
-              description_teacher: "Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.\r\n\r\nAs students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online."
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
             About Me:
               name: About Me with Sprite Lab
               description_student: By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.
@@ -29427,8 +29506,12 @@ en:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             Digital Sharing:
               name: Digital Sharing
+              description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
+              description_teacher: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
             Designing for Accessibility:
               name: Designing for Accessibility
+              description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -29476,7 +29559,12 @@ en:
             Private and Personal Information:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
-              description_teacher: "Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.\r\n\r\nAs students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online."
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
             About Me:
               name: About Me with Sprite Lab
               description_student: By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.
@@ -29519,8 +29607,12 @@ en:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             Digital Sharing:
               name: Digital Sharing
+              description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
+              description_teacher: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
             Designing for Accessibility:
               name: Designing for Accessibility
+              description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
         coursef-2020:
           title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -29594,7 +29686,12 @@ en:
             The Power of Words:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
-              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
@@ -29609,6 +29706,8 @@ en:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
             AI for Oceans:
               name: AI for Oceans
+              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
+              description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -29692,7 +29791,12 @@ en:
             The Power of Words:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
-              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\r\n\r\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
@@ -29707,6 +29811,8 @@ en:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
             AI for Oceans:
               name: AI for Oceans
+              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
+              description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
         express-2020:
           title: Express Course (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
