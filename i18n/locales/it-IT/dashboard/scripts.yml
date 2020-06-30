@@ -1438,8 +1438,8 @@ it:
               name: Benvenuto!
         K5-OnlinePD:
           title: Fondamenti di Informatica - Corso per insegnanti
-          description: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
-          description_short: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
+          description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           stages:
             Best Practices for Teaching Computer Science:
               name: Linee guida per l'insegnamento dell'informatica
@@ -9396,7 +9396,7 @@ it:
         k5-onlinepd-2019:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
-          description_short: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
+          description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           stages:
             Getting Started:
               name: Per cominciare
@@ -9427,7 +9427,7 @@ it:
             Welcome to this online course:
               name: Benvenuto in questo corso online
             Understanding the Computer Science Fundamentals courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Comprendere i corsi di Fondamenti di informatica (CSF)
             Best practices for teaching computer science:
               name: Linee guida per l'insegnamento dell'informatica
             Sequencing:
@@ -9465,16 +9465,16 @@ it:
             Who is this section for?:
               name: Per chi è questa sezione?
             Reviewing reflections:
-              name: Esamina le riflessioni
+              name: Analizza le riflessioni
             Reviewing your reflections:
-              name: Esamina le tue riflessioni
+              name: Analizza le tue riflessioni
             End of Course projects:
               name: Progetti di fine corso
           lesson_groups:
             k5_getting_started:
               display_name: Per cominciare
             k5_basic_concepts:
-              display_name: Concetti base di programmazione e relative tecniche di insegnamento
+              display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper:
               display_name: 'Andando più a fondo (per i corsi E ed F)'
             k5_next_steps:
@@ -9509,7 +9509,7 @@ it:
             Welcome to this online course:
               name: Benvenuto in questo corso online
             Understanding the Computer Science Fundamentals courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Comprendere i corsi di Fondamenti di informatica (CSF)
             Best practices for teaching computer science:
               name: Linee guida per l'insegnamento dell'informatica
             Sequencing:
@@ -9547,9 +9547,9 @@ it:
             Who is this section for?:
               name: Per chi è questa sezione?
             Reviewing reflections:
-              name: Esamina le riflessioni
+              name: Analizza le riflessioni
             Reviewing your reflections:
-              name: Esamina le tue riflessioni
+              name: Analizza le tue riflessioni
             End of Course projects:
               name: Progetti di fine corso
         dance-extras-2019:
@@ -10514,6 +10514,8 @@ it:
               name: Cicli con contatore con l'artista
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
+            End of Course Project:
+              name: Progetto di fine corso
           lesson_groups:
             csf_warmup:
               display_name: Riscaldamento
@@ -10531,6 +10533,8 @@ it:
               display_name: Cicli con contatore
             csf_sprites:
               display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
           lessons:
             Dance Party:
               name: Ballando col codice
@@ -10572,6 +10576,8 @@ it:
               name: Cicli con contatore con l'artista
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
+            End of Course Project:
+              name: Progetto di fine corso
         pre-express-2020:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -10636,6 +10642,8 @@ it:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Princìpi dell''Informatica - Unità 1'
+            cspSurvey:
+              display_name: Sondaggio
           lessons:
             Binary Numbers:
               name: Numeri Binari
@@ -10775,3 +10783,70 @@ it:
               name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+        k5-onlinepd-2020:
+          title: Fondamenti di Informatica - Corso per insegnanti
+          description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Per capire i corsi di Fondamenti di informatica (CSF)
+            Sequencing:
+              name: Sequenze di istruzioni
+            Loops:
+              name: Ripetizioni
+            Events:
+              name: Eventi
+            Conditionals:
+              name: Istruzioni condizionali
+            End of Course projects:
+              name: Progetti di fine corso
+            Functions:
+              name: Funzioni
+            Variables:
+              name: Variabili
+            For Loops:
+              name: Cicli con contatore
+            Sprite Lab:
+              name: Laboratorio dei Personaggi
+            Reviewing your reflections:
+              name: Analizza le tue riflessioni
+            Next steps:
+              name: I prossimi passi
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Per capire i corsi di Fondamenti di informatica (CSF)
+            Sequencing:
+              name: Sequenze di istruzioni
+            Loops:
+              name: Ripetizioni
+            Events:
+              name: Eventi
+            Conditionals:
+              name: Istruzioni condizionali
+            End of Course projects:
+              name: Progetti di fine corso
+            Functions:
+              name: Funzioni
+            Variables:
+              name: Variabili
+            For Loops:
+              name: Cicli con contatore
+            Sprite Lab:
+              name: Laboratorio dei Personaggi
+            Reviewing your reflections:
+              name: Analizza le tue riflessioni
+            Next steps:
+              name: I prossimi passi
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Per cominciare
+            k5_basic_concepts_1:
+              display_name: Concetti base di informatica e relative tecniche di insegnamento
+            k5_diving_deeper_1:
+              display_name: 'Andando più a fondo (per i corsi E ed F)'
+            k5_next_steps_1:
+              display_name: I prossimi passi

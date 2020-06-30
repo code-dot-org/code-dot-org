@@ -3343,3 +3343,30 @@ lv:
           lessons:
             While Loops:
               name: Nosacījuma cikli
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Cikli
+            Events:
+              name: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+          lessons:
+            Loops:
+              name: Cikli
+            Events:
+              name: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'

@@ -1072,3 +1072,22 @@ uz:
           lessons:
             Algorithms:
               name: Algoritmlar
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
+          lessons:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
