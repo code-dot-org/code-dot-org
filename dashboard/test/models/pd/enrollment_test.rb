@@ -106,7 +106,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal "/pd/pre_workshop_survey/#{csp_academic_year_workshop_enrollment.code}",
       URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path
-    assert_equal 'https://studio.code.org/pd/workshop_survey/csf/pre201', csf_201_workshop_enrollment.pre_workshop_survey_url
+    assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
     assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
 
