@@ -3522,3 +3522,30 @@ gl:
           lessons:
             While Loops:
               name: Bucles mentres
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
