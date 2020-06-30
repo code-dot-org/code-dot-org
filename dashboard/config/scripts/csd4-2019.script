@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -7,12 +6,12 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit4/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit4/{LESSON}'
-script_announcements [{"notice"=>"Check out the new CS Discoveries resources for 2019-2020!", "details"=>"Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!", "link"=>"https://forum.code.org/t/new-resources-for-2019-2020/30676", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd4'
 version_year '2019'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 lesson 'Analysis of Design'
@@ -105,3 +104,4 @@ lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CS Discoveries Post Course survey', lockable: true
 level 'csd-post-survey-intro-2019'
 level 'csd-post-survey-levelgroup_2019', assessment: true
+
