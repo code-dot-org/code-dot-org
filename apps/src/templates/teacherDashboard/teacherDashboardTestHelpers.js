@@ -53,7 +53,7 @@ export const validAssignments = {
     courseId: null,
     scriptId: 168,
     assignId: 'null_168',
-    path: '//localhost-studio.code.org:3000/s/csd1',
+    path: '//localhost-studio.code.org:3000/s/csd1-2019',
     assignment_family_name: 'csd1',
     assignment_family_title: 'Unit 1: Problem Solving',
     version_year: '2017',

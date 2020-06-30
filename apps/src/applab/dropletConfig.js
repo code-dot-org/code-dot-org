@@ -18,6 +18,7 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
+import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -1129,6 +1130,10 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
+  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
+}
 
 export const categories = {
   'UI controls': {
