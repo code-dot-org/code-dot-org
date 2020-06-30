@@ -3461,3 +3461,30 @@ hr:
           lessons:
             While Loops:
               name: Petlje s uvjetom
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača
