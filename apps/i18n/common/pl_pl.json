@@ -1536,7 +1536,7 @@
   "unpublish": "Cofnij publikację",
   "unpublishPending": "Usuwanie publikacji...",
   "unpublishFailureTitle": "Cofnięcie publikacji nie powiodło się",
-  "unpublishFailureBody": "Nie udało się cofnąć publikacji Twojej biblioteki „{nazwa_biblioteki]”. Sprawdź połączenie internetowe i spróbuj ponownie.",
+  "unpublishFailureBody": "Nie udało się cofnąć publikacji Twojej biblioteki „{libraryName}”. Sprawdź połączenie internetowe i spróbuj ponownie.",
   "updateFirmware": "Uaktualnij oprogramowanie",
   "updateFirmwareExplanation": "Ta płyta nie używa najnowszej wersji oprogramowania. ",
   "updateFirmwareExplanationClassic": "Aby uzyskać najlepsze wyniki, zaktualizuj oprogramowanie, klikając przycisk poniżej.",
