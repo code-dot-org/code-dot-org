@@ -10443,6 +10443,8 @@ ro:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(vechi) Unitatea 1: Informaţii digitale"
+            cspSurvey:
+              display_name: Sondaj
           lessons:
             Binary Numbers:
               name: Numerele binare
@@ -10960,3 +10962,107 @@ ro:
               name: Introducere în matrice
             Processing Arrays:
               name: Matrice de prelucrare
+        k5-onlinepd-2020:
+          description_audience: "[șir gol]"
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sequencing:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops:
+              name: Bucle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Events:
+              name: Evenimente
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals:
+              name: Condiţionale
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            End of Course projects:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions:
+              name: Funcţii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops:
+              name: Bucle Pentru
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Lab:
+              name: Laborator Sprite
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Reviewing your reflections:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Next steps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sequencing:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops:
+              name: Bucle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Events:
+              name: Evenimente
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals:
+              name: Condiţionale
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            End of Course projects:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions:
+              name: Funcţii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops:
+              name: Bucle Pentru
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Lab:
+              name: Laborator Sprite
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Reviewing your reflections:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Next steps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Pașii următori
+        dani-test-2020:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"

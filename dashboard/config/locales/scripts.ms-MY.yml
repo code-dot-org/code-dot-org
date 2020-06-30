@@ -1308,3 +1308,26 @@ ms:
               name: Algoritma
             Events:
               name: Acara-acara
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah
+          lessons:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah

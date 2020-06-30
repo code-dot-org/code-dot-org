@@ -373,6 +373,8 @@
   "unsubmitYourProject": "Ukloni prijavu svog projekta",
   "unsubmitYourProjectConfirm": "Uklanjanje projekta poništit će datum prijave, želite li ga zaista ukloniti?",
   "update": "Osvježi",
+  "versionHistory_clearProgress_cancel": "Odustani",
+  "versionHistory_header": "Povijest inačica",
   "viewLessonPlan": "Prikaz nastavnog plana",
   "wantToLearn": "Želiš li naučiti programirati?",
   "watchVideo": "Pogledaj filmić",

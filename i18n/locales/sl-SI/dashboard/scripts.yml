@@ -3071,3 +3071,26 @@ sl:
           lessons:
             While Loops:
               name: 'Zanka: dokler velja'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Zanke
+            Events:
+              name: Dogodki
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Spremenljivke
+          lessons:
+            Loops:
+              name: Zanke
+            Events:
+              name: Dogodki
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Spremenljivke

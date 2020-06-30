@@ -5832,6 +5832,18 @@ tr-TR:
         \\[] (<https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif>)"
       courseA_artist_loops2_2019: "Bu çizgiyi iki kez ileri. \\\r \\\r Sanatçı yardım!
         \\[] (<https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif>)"
+      courseA_artist_loops3: |-
+        Sanatçımız beş kez çizgi çizmeye çalışıyor, ancak doğru yapamıyor. Yardım edebilir misiniz?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        Sanatçımız beş kez çizgi çizmeye çalışıyor, ancak doğru yapamıyor. Yardım edebilir misiniz?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        Sanatçımız beş kez çizgi çizmeye çalışıyor, ancak doğru yapamıyor. Yardım edebilir misiniz?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: "Şimdi, beş kez bu çizgiyi çizmek için bir tane <xml><block
         type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\" config=\"2-6\">5</title></block></xml>
         döngüsünü kullan!\\\r\n\\\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
@@ -5878,6 +5890,18 @@ tr-TR:
         bir döngü kullanabilirsin .\\\r\n\\\r\nBir ev çizebilir misin? İstediğin şekilde
         görünmesini sağla!  Tekrar eden desenleri bulmaya çalış!\\\r\n\\\r\nİşte bazı
         fikirler:\\\r\n\\\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
+      courseA_artist_loops_challenge2a: |-
+        _"Kamp alanını hazırlamama yardım edin!"_
+
+        Bu üç çadırı çizmek için araç kutusundaki blokları kullanın.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Kamp alanını hazırlamama yardım edin!"_
+
+        Bu üç çadırı çizmek için araç kutusundaki blokları kullanın.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Kamp alanını hazırlamama yardım edin!"_
+
+        Bu üç çadırı çizmek için araç kutusundaki blokları kullanın.
       courseA_collector_loops1: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
         ettir ve alabildiğin kadar hazine aldır.\\\r\n\\\r\nÇalışma alanına blokları
         sürükle ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için
@@ -5944,6 +5968,10 @@ tr-TR:
       courseA_maze_seq13_2019: Domuza ulaşın!
       courseA_maze_seq1_2018: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
       courseA_maze_seq1_2019: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
+      courseA_maze_seq2: |-
+        _"Bir hata! Beni domuza ulaştırmak için kodu düzeltin."_
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: "_\"Kodu düzelt ve domuza ulaştır!\"_\\\r \\\r <img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
       courseA_maze_seq4: "_\"Bir şeyler doğru değil.\"_ \\\r \\\r Blok kaldır ve kuşu
         domuza ulaştır!\\\r \\\r <img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\"\nwidth=\"200px\"/>"
@@ -6035,6 +6063,8 @@ tr-TR:
         Big City</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Birthday Cake</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n "
+      courseB_artist_loops1_2019: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye
+        ile oynayın ve eğlenceli bir şeyler çizin.
       courseB_artist_loops2_2019: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama
         doğru yapamıyor. Yardım edebilir misin?
       courseB_artist_loops3_2019: Bahçe duvarı yapmak için 7 kere bir çizgi çizin.
@@ -6104,6 +6134,18 @@ tr-TR:
         et." \*'
       courseB_collector_loops_challenge1_2019: 'Bu sefer sadece ok bloklrından birini
         kullanabilirsiniz. Tüm hazineyi al! '
+      courseB_collector_loops_challenge2a: |-
+        _"Hadi, hazineyi alalım!"_
+
+        Bu bulmacayı bitirmek için Laurel'in en az **5** hazine parçası almasına yardım edin.
+      courseB_collector_loops_challenge2a_2018: |-
+        _"Hadi, hazineyi alalım!"_
+
+        Bu bulmacayı bitirmek için Laurel'in en az **5** hazine parçası almasına yardım edin.
+      courseB_collector_loops_challenge2a_2019: |-
+        _"Hadi, hazineyi alalım!"_
+
+        Bu bulmacayı bitirmek için Laurel'in en az **5** hazine parçası almasına yardım edin.
       courseB_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_maze_seq12_2019: Domuza ulaşın!
@@ -6524,6 +6566,28 @@ tr-TR:
         ve izlemek için "Çalıştır" ı tıklatın!
       courseC_maze_programming1_2019: Bu bulmaca için tüm blokların birlikte sürükleyin
         ve izlemek için "Çalıştır" ı tıklatın!
+      courseC_maze_programming2: Kodunuzu bitirmek için araç kutusundan fazladan bir
+        <xml><block type="maze_moveForward"/></xml> bloğu sürükleyin.
+      courseC_maze_programming2_2018: Kodunuzu bitirmek için araç kutusundan fazladan
+        bir <xml><block type="maze_moveForward"/></xml> bloğu sürükleyin.
+      courseC_maze_programming2_2019: Kodunuzu bitirmek için araç kutusundan fazladan
+        bir <xml><block type="maze_moveForward" block-text="move forward"/></xml>
+        bloğu sürükleyin.
+      courseC_maze_programming3: |-
+        _"Bu domuz beni rahatsız ediyor."_
+
+        Kuşun çarpmasına neden olacak ekstra bir blok var.\
+        Bu bloğu gri bloklardan çıkarıp araç kutusuna geri sürükleyerek atın.
+      courseC_maze_programming3_2018: |-
+        _"Bu domuz beni rahatsız ediyor."_
+
+        Kuşun çarpmasına neden olacak ekstra bir blok var.\
+        Bu bloğu gri bloklardan çıkarıp araç kutusuna geri sürükleyerek atın.
+      courseC_maze_programming3_2019: |-
+        _"Bu domuz beni rahatsız ediyor."_
+
+        Kuşun çarpmasına neden olacak ekstra bir blok var.\
+        Bu bloğu gri bloklardan çıkarıp araç kutusuna geri sürükleyerek atın.
       courseC_maze_programming4: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
         edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
       courseC_maze_programming4_2018: Yolu izleyin ve aptal domuza ulaşmamda bana
@@ -6536,6 +6600,30 @@ tr-TR:
         \\* \\\r \\\r TNT den kaçının."
       courseC_maze_programming5_2019: "-   Domuza ulaşmak için yolu takip edin!\"
         \\* \\\r \\\r TNT den kaçının."
+      courseC_maze_programming6: |-
+        _"Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!"_
+
+        Kuşu domuza götürün ve TNT'den kaçının.
+      courseC_maze_programming6_2018: |-
+        _"Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!"_
+
+        Kuşu domuza götürün ve TNT'den kaçının.
+      courseC_maze_programming6_2019: |-
+        _"Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!"_
+
+        Kuşu domuza götürün ve TNT'den kaçının.
+      courseC_maze_programming7: |-
+        _"Sinirlenme vakti geldi!"_
+
+        **Görev:** Bu kodda çok fazla hata var. Bazı blokları kaldırmanız ve başkalarını eklemeniz gerekecek.
+      courseC_maze_programming7_2018: |-
+        _"Sinirlenme vakti geldi!"_
+
+        **Görev:** Bu kodda çok fazla hata var. Bazı blokları kaldırmanız ve başkalarını eklemeniz gerekecek.
+      courseC_maze_programming7_2019: |-
+        _"Sinirlenme vakti geldi!"_
+
+        **Görev:** Bu kodda çok fazla hata var. Bazı blokları kaldırmanız ve başkalarını eklemeniz gerekecek.
       courseC_maze_programming8: '-   "Sakin ol ve kötü domuzu bulmama yardım et."
         \*'
       courseC_maze_programming8_2018: '-   "Sakin ol ve kötü domuzu bulmama yardım

@@ -11388,6 +11388,8 @@ vi:
               name: Số nhị phân
             Intellectual Property:
               name: Sở hữu trí tuệ
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
           lessons:
             new stage:
               name: giai đoạn mới
@@ -11397,6 +11399,8 @@ vi:
               name: Số nhị phân
             Intellectual Property:
               name: Sở hữu trí tuệ
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
         csp2-2020:
           stages:
             new stage:
@@ -11818,3 +11822,39 @@ vi:
               name: Phần 5 Đánh giá 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+            Events:
+              name: Các sự kiện
+            Conditionals:
+              name: Điều kiện
+            Functions:
+              name: Các hàm
+            Variables:
+              name: Các biến
+            For Loops:
+              name: Cho vòng lặp
+          lessons:
+            Sequencing:
+              name: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+            Events:
+              name: Các sự kiện
+            Conditionals:
+              name: Điều kiện
+            Functions:
+              name: Các hàm
+            Variables:
+              name: Các biến
+            For Loops:
+              name: Cho vòng lặp
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Bắt đầu
+            k5_next_steps_1:
+              display_name: Bước tiếp theo
