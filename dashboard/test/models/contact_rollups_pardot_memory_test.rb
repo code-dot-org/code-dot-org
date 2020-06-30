@@ -127,6 +127,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         'roles' => 'Form Submitter',
         'state' => 'Washington',
         'city' => 'Seattle',
+        'postal_code' => '98101',
         'country' => 'United States',
       }
     refute ContactRollupsPardotMemory.find_by_email(contact.email)
@@ -147,6 +148,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       'db_Roles_0' => 'Form Submitter',
       'db_State' => 'Washington',
       'db_City' => 'Seattle',
+      'db_Postal_Code' => '98101',
       'db_Country' => 'United States',
     }
     assert_equal expected_data_synced, record[:data_synced]
