@@ -3361,3 +3361,30 @@ mi:
           lessons:
             While Loops:
               name: Ngā Koromeke I Te
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Ngā Koromeke
+            Events:
+              name: Ngā Takunetanga
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+            Variables:
+              name: Ngā Taurangi
+            For Loops:
+              name: Mō Ngā Koromeke
+          lessons:
+            Loops:
+              name: Ngā Koromeke
+            Events:
+              name: Ngā Takunetanga
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+            Variables:
+              name: Ngā Taurangi
+            For Loops:
+              name: Mō Ngā Koromeke

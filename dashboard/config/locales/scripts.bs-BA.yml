@@ -4911,3 +4911,33 @@ bs:
           lessons:
             While Loops:
               name: Dok petlje
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Slijedeći Koraci

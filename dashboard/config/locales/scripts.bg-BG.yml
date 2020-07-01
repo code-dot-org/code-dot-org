@@ -5470,6 +5470,8 @@ bg:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Урок 1: Цифрова информация'
+            cspSurvey:
+              display_name: Проучване
           lessons:
             Binary Numbers:
               name: Бинарни числа
@@ -5572,3 +5574,33 @@ bg:
           lessons:
             While Loops:
               name: Докато цикли
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Повторения
+            Events:
+              name: Събития
+            Conditionals:
+              name: Условия
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+          lessons:
+            Loops:
+              name: Повторения
+            Events:
+              name: Събития
+            Conditionals:
+              name: Условия
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Следващи стъпки

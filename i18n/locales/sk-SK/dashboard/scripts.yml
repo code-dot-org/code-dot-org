@@ -8969,10 +8969,12 @@ sk:
           stages:
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé, až kým nedosiahnu cieľ.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo škodlivá v závislosti od toho, ako ju vedia ovládať.
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
@@ -8996,10 +8998,12 @@ sk:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy, tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             The Right App:
               name: Správna aplikácia
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie zbieranie kukurice.
             Programming in Maze:
               name: Programovanie s Angry Birds
               description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť doľava alebo otočiť doprava.
@@ -9023,10 +9027,12 @@ sk:
           lessons:
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé, až kým nedosiahnu cieľ.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo škodlivá v závislosti od toho, ako ju vedia ovládať.
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
@@ -9050,10 +9056,12 @@ sk:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy, tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             The Right App:
               name: Správna aplikácia
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie zbieranie kukurice.
             Programming in Maze:
               name: Programovanie s Angry Birds
               description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť doľava alebo otočiť doprava.
@@ -10843,8 +10851,10 @@ sk:
           stages:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo škodlivá v závislosti od toho, ako ju vedia ovládať.
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé, až kým nedosiahnu cieľ.
             Sequencing in Maze:
               name: Postupnosť krokov s Angry Birds
               description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
@@ -10856,8 +10866,10 @@ sk:
               description_teacher: 'Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces.'
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy, tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie zbieranie kukurice.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -10883,8 +10895,10 @@ sk:
           lessons:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo škodlivá v závislosti od toho, ako ju vedia ovládať.
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé, až kým nedosiahnu cieľ.
             Sequencing in Maze:
               name: Postupnosť krokov s Angry Birds
               description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
@@ -10896,8 +10910,10 @@ sk:
               description_teacher: 'Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces.'
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy, tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie zbieranie kukurice.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -11415,6 +11431,10 @@ sk:
               name: Cykly "for" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            End of Course Project:
+              name: Záverečný projekt
           lesson_groups:
             csf_warmup:
               display_name: Úvodná aktivita
@@ -11432,6 +11452,8 @@ sk:
               display_name: Cykly "For"
             csf_sprites:
               display_name: Objekt "sprite"
+            end_of_course_project:
+              display_name: Záverečný projekt
           lessons:
             Dance Party:
               name: Tanečná Párty
@@ -11471,6 +11493,10 @@ sk:
               name: Cykly "for" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            End of Course Project:
+              name: Záverečný projekt
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -11516,6 +11542,8 @@ sk:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Lekcia 1: Digitálne informácie'
+            cspSurvey:
+              display_name: Dotazník
           lessons:
             Binary Numbers:
               name: Binárne čísla
@@ -11795,3 +11823,47 @@ sk:
           lessons:
             While Loops:
               name: Cykly "pokiaľ"
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Postupnosť
+            Loops:
+              name: Cykly
+            Events:
+              name: Udalosti
+            Conditionals:
+              name: Podmienky
+            Functions:
+              name: Funkcie
+            Variables:
+              name: Premenné
+            For Loops:
+              name: Cykly "For"
+            Sprite Lab:
+              name: Sprite Lab
+          lessons:
+            Sequencing:
+              name: Postupnosť
+            Loops:
+              name: Cykly
+            Events:
+              name: Udalosti
+            Conditionals:
+              name: Podmienky
+            Functions:
+              name: Funkcie
+            Variables:
+              name: Premenné
+            For Loops:
+              name: Cykly "For"
+            Sprite Lab:
+              name: Sprite Lab
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Začíname
+            k5_basic_concepts_1:
+              display_name: Základné programovacie koncepty a učiteľské taktiky
+            k5_diving_deeper_1:
+              display_name: 'Ponárame sa hlbšie: Kurzy E a F'
+            k5_next_steps_1:
+              display_name: Ďalšie kroky
