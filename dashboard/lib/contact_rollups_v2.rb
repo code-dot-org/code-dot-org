@@ -251,18 +251,18 @@ class ContactRollupsV2
     ).compact.sum
     formatted_duration = Time.at(duration).utc.strftime("%Hh:%Mm:%Ss")
 
-    log_link = "<a href='#{log_url}'>☁ Log on S3</a>"
+    log_link = "<a href='#{log_url}'>:cloud: Log on S3</a>"
 
     cloud_watch_link =
       "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>"\
-      "📈 CloudWatch dashboard</a>"
+      ":chart_with_upwards_trend: CloudWatch dashboard</a>"
 
     summary = [
       "*ContactRollupsV2* (#{CDO.rack_env}#{', dry-run' if @is_dry_run})",
       "Number of Pardot prospects created: #{@log_collector.metrics[:ProspectsCreated]}",
       "Number of Pardot prospects updated: #{@log_collector.metrics[:ProspectsUpdated]}",
       "Number of contacts in ContactRollupsFinal: #{@log_collector.metrics[:FinalRows]}",
-      "🕐 #{formatted_duration} #{log_link} #{cloud_watch_link}"
+      ":clock10: #{formatted_duration} #{log_link} #{cloud_watch_link}"
     ].join("\n")
 
     ChatClient.message 'cron-daily', summary
