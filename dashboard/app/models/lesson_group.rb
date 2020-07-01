@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  position    :integer
+#  properties  :text(65535)
 #
 # Indexes
 #
