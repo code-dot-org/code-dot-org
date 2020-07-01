@@ -27,7 +27,9 @@ const STANDARD_FONT_SIZE_THEME_VALUES = {
   millennial: 13,
   robot: 13,
   classic: 14,
-  coralReef: 15
+  coralReef: 13,
+  mintChip: 13,
+  lavender: 13
 };
 
 const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
@@ -46,7 +48,9 @@ const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
   millennial: '#FFFFFF',
   robot: '#353C42',
   classic: 'rgb(153, 153, 153)',
-  coralReef: '#D75D52'
+  coralReef: '#D75D52',
+  mintChip: '#3D95A1',
+  lavender: '#8875B1'
 };
 
 const themeValues = {
@@ -67,7 +71,9 @@ const themeValues = {
       millennial: '#FEDBD0',
       robot: '#D8E0E3',
       classic: '#FFFFFF',
-      coralReef: '#5BA0ED'
+      coralReef: '#5BA0ED',
+      mintChip: '#5CC8D7',
+      lavender: '#A189BA'
     }
   },
   label: {
@@ -87,7 +93,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#F5F5F6',
       classic: '#333333',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#E9FCFF',
+      lavender: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -105,7 +113,9 @@ const themeValues = {
       millennial: '#FEEAE6',
       robot: '#80A7B9',
       classic: 'rgba(0, 0, 0, 0)',
-      coralReef: '#FC766A'
+      coralReef: '#FC766A',
+      mintChip: '#A77D72',
+      lavender: '#8875B1'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -123,7 +133,9 @@ const themeValues = {
       millennial: 4,
       robot: 0,
       classic: 0,
-      coralReef: 4
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 0,
@@ -140,7 +152,9 @@ const themeValues = {
       millennial: 0,
       robot: 0,
       classic: 0,
-      coralReef: 2
+      coralReef: 2,
+      mintChip: 2,
+      lavender: 1
     },
     fontFamily: {
       default: 'Arial Black',
@@ -157,7 +171,9 @@ const themeValues = {
       millennial: 'Arial',
       robot: 'Tahoma',
       classic: 'Arial',
-      coralReef: 'Arial'
+      coralReef: 'Arial',
+      mintChip: 'Verdana',
+      lavender: 'Georgia'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -175,7 +191,9 @@ const themeValues = {
       millennial: NEW_THEME_LABEL_PADDING,
       robot: NEW_THEME_LABEL_PADDING,
       classic: CLASSIC_LABEL_PADDING,
-      coralReef: NEW_THEME_LABEL_PADDING
+      coralReef: NEW_THEME_LABEL_PADDING,
+      mintChip: NEW_THEME_LABEL_PADDING,
+      lavender: NEW_THEME_LABEL_PADDING
     }
   },
   textInput: {
@@ -195,7 +213,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#353C42',
       classic: '#000000',
-      coralReef: '#5BA0ED'
+      coralReef: '#5BA0ED',
+      mintChip: '#E5F4F6',
+      lavender: '#5E4D83'
     },
     backgroundColor: {
       type: 'color',
@@ -213,7 +233,9 @@ const themeValues = {
       millennial: '#FEDBD0',
       robot: '#FFFFFF',
       classic: '#FFFFFF',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#4EB4C2',
+      lavender: '#CCB9E1'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -231,7 +253,9 @@ const themeValues = {
       millennial: 4,
       robot: 0,
       classic: 0,
-      coralReef: 4
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 1,
@@ -248,7 +272,9 @@ const themeValues = {
       millennial: 2,
       robot: 1,
       classic: 1,
-      coralReef: 2
+      coralReef: 2,
+      mintChip: 2,
+      lavender: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -265,7 +291,9 @@ const themeValues = {
       millennial: 'Arial',
       robot: 'Tahoma',
       classic: 'Arial',
-      coralReef: 'Arial'
+      coralReef: 'Arial',
+      mintChip: 'Verdana',
+      lavender: 'Georgia'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -283,7 +311,9 @@ const themeValues = {
       millennial: NEW_THEME_TEXT_INPUT_PADDING,
       robot: NEW_THEME_TEXT_INPUT_PADDING,
       classic: CLASSIC_TEXT_INPUT_PADDING,
-      coralReef: NEW_THEME_TEXT_INPUT_PADDING
+      coralReef: NEW_THEME_TEXT_INPUT_PADDING,
+      mintChip: NEW_THEME_TEXT_INPUT_PADDING,
+      lavender: NEW_THEME_TEXT_INPUT_PADDING
     }
   },
   dropdown: {
@@ -303,7 +333,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#B2D9EB',
       classic: '#1ABC9C',
-      coralReef: '#FC766A'
+      coralReef: '#FC766A',
+      mintChip: '#A77D72',
+      lavender: '#8875B1'
     },
     textColor: {
       type: 'color',
@@ -321,7 +353,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#353C42',
       classic: '#FFFFFF',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#E9FCFF',
+      lavender: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -339,7 +373,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#80A7B9',
       classic: '#000000',
-      coralReef: '#D75D52'
+      coralReef: '#D75D52',
+      mintChip: '#B1624E',
+      lavender: '#CCB9E1'
     },
     borderRadius: {
       default: 4,
@@ -356,7 +392,9 @@ const themeValues = {
       millennial: 20,
       robot: 0,
       classic: 0,
-      coralReef: 2
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 1,
@@ -373,7 +411,9 @@ const themeValues = {
       millennial: 0,
       robot: 2,
       classic: 0,
-      coralReef: 0
+      coralReef: 0,
+      mintChip: 0,
+      lavender: 0
     },
     fontFamily: {
       default: 'Arial',
@@ -390,7 +430,9 @@ const themeValues = {
       millennial: 'Verdana',
       robot: 'Arial Black',
       classic: 'Arial',
-      coralReef: 'Arial'
+      coralReef: 'Arial',
+      mintChip: 'Verdana',
+      lavender: 'Georgia'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -408,7 +450,9 @@ const themeValues = {
       millennial: NEW_THEME_DROPDOWN_PADDING,
       robot: NEW_THEME_DROPDOWN_PADDING,
       classic: CLASSIC_DROPDOWN_PADDING,
-      coralReef: NEW_THEME_DROPDOWN_PADDING
+      coralReef: NEW_THEME_DROPDOWN_PADDING,
+      mintChip: NEW_THEME_DROPDOWN_PADDING,
+      lavender: NEW_THEME_DROPDOWN_PADDING
     }
   },
   photoSelect: {
@@ -428,7 +472,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#B2D9EB',
       classic: '#1ABC9C',
-      coralReef: '#FC766A'
+      coralReef: '#FC766A',
+      mintChip: '#A77D72',
+      lavender: '#8875B1'
     },
     textColor: {
       type: 'color',
@@ -446,7 +492,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#353C42',
       classic: '#FFFFFF',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#E9FCFF',
+      lavender: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -464,7 +512,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#80A7B9',
       classic: '#000000',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#D75D52',
+      lavender: '#CCB9E1'
     },
     borderRadius: {
       default: 4,
@@ -481,7 +531,9 @@ const themeValues = {
       millennial: 20,
       robot: 0,
       classic: 0,
-      coralReef: 2
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 1,
@@ -498,7 +550,9 @@ const themeValues = {
       millennial: 0,
       robot: 2,
       classic: 0,
-      coralReef: 2
+      coralReef: 2,
+      mintChip: 0,
+      lavender: 0
     }
   },
   button: {
@@ -518,7 +572,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#B2D9EB',
       classic: '#1ABC9C',
-      coralReef: '#FC766A'
+      coralReef: '#FC766A',
+      mintChip: '#A77D72',
+      lavender: '#8875B1'
     },
     textColor: {
       type: 'color',
@@ -536,7 +592,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#353C42',
       classic: '#FFFFFF',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#E9FCFF',
+      lavender: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -554,7 +612,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#80A7B9',
       classic: '#000000',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#D75D52',
+      lavender: '#CCB9E1'
     },
     borderRadius: {
       default: 4,
@@ -571,7 +631,9 @@ const themeValues = {
       millennial: 20,
       robot: 0,
       classic: 0,
-      coralReef: 2
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 1,
@@ -588,7 +650,9 @@ const themeValues = {
       millennial: 0,
       robot: 2,
       classic: 0,
-      coralReef: 2
+      coralReef: 2,
+      mintChip: 0,
+      lavender: 0
     },
     fontFamily: {
       default: 'Arial Black',
@@ -605,7 +669,9 @@ const themeValues = {
       millennial: 'Verdana',
       robot: 'Arial Black',
       classic: 'Arial',
-      coralReef: 'Arial'
+      coralReef: 'Arial Black',
+      mintChip: 'Verdana',
+      lavender: 'Georgia'
     },
     fontSize: {
       default: 15,
@@ -622,7 +688,9 @@ const themeValues = {
       millennial: 15,
       robot: 15,
       classic: 14,
-      coralReef: 18
+      coralReef: 18,
+      mintChip: 18,
+      lavender: 18
     }
   },
   textArea: {
@@ -642,7 +710,9 @@ const themeValues = {
       millennial: '#FEEAE6',
       robot: '#F5F5F6',
       classic: '#FFFFFF',
-      coralReef: '#FDF995'
+      coralReef: '#FDF995',
+      mintChip: '#4EB4C2',
+      lavender: '#CCB9E1'
     },
     textColor: {
       type: 'color',
@@ -660,7 +730,9 @@ const themeValues = {
       millennial: '#442C2E',
       robot: '#353C42',
       classic: '#000000',
-      coralReef: '#5BA0ED'
+      coralReef: '#5BA0ED',
+      mintChip: '#E5F4F6',
+      lavender: '#5E4D83'
     },
     borderColor: {
       type: 'color',
@@ -678,7 +750,9 @@ const themeValues = {
       millennial: '#FFFFFF',
       robot: '#80A7B9',
       classic: 'rgb(153, 153, 153)',
-      coralReef: '#D75D52'
+      coralReef: '#D75D52',
+      mintChip: '#D75D52',
+      lavender: '#CECECC'
     },
     borderRadius: {
       default: 2,
@@ -695,7 +769,9 @@ const themeValues = {
       millennial: 8,
       robot: 0,
       classic: 0,
-      coralReef: 2
+      coralReef: 10,
+      mintChip: 10,
+      lavender: 10
     },
     borderWidth: {
       default: 1,
@@ -712,7 +788,9 @@ const themeValues = {
       millennial: 0,
       robot: 1,
       classic: 1,
-      coralReef: 0
+      coralReef: 0,
+      mintChip: 0,
+      lavender: 0
     },
     fontFamily: {
       default: 'Arial',
@@ -729,7 +807,9 @@ const themeValues = {
       millennial: 'Arial',
       robot: 'Tahoma',
       classic: 'Arial',
-      coralReef: 'Arial'
+      coralReef: 'Arial',
+      mintChip: 'Verdana',
+      lavender: 'Georgia'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -747,7 +827,9 @@ const themeValues = {
       millennial: NEW_THEME_TEXT_AREA_PADDING,
       robot: NEW_THEME_TEXT_AREA_PADDING,
       classic: CLASSIC_TEXT_AREA_PADDING,
-      coralReef: NEW_THEME_TEXT_AREA_PADDING
+      coralReef: NEW_THEME_TEXT_AREA_PADDING,
+      mintChip: NEW_THEME_TEXT_AREA_PADDING,
+      lavender: NEW_THEME_TEXT_AREA_PADDING
     }
   }
 };
