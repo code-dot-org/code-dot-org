@@ -57,10 +57,10 @@ namespace :seed do
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = [
-    'ui-test-script-2017',
-    'ui-test-script-2019',
-    'ui-test-script-as-course-2017',
-    'ui-test-script-as-course-2019'
+    'ui-test-script-in-course-2017',
+    'ui-test-script-in-course-2019',
+    'ui-test-versioned-script-2017',
+    'ui-test-versioned-script-2019'
   ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
