@@ -20,7 +20,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     # Intentionally missing required field traffic-source
     sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',
-      params: valid_params.delete('traffic-source'), as: :json
+      params: valid_params.delete('email'), as: :json
 
     assert_response :bad_request, "Expected BAD REQUEST, got: #{response.status}\n#{response.body}"
   end
@@ -123,7 +123,6 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
   def valid_params
     {
-      'trafficSource' => 'AFE-code.org',
       'firstName' => 'test',
       'lastName' => 'test',
       'email' => 'test@code.org',
@@ -143,7 +142,6 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
   def fake_response
     mock.tap do |fake|
-      fake.stubs(:status).returns(200)
       fake.stubs(:code).returns('200')
       fake.stubs(:body).returns('')
     end

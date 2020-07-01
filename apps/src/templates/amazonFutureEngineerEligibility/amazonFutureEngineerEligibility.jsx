@@ -216,7 +216,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       },
       body: JSON.stringify({
         ...this.state.formData,
-        trafficSource: 'AFE-code.org',
         newCodeAccount: true
       })
     });
