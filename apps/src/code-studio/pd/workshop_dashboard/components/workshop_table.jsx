@@ -13,9 +13,7 @@ import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
-import {CSF, CSD, CSP} from '../../application/ApplicationConstants';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {useFoormSurvey} from '../workshop_summary_utils';
+import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
 const styles = {
   container: {
@@ -282,18 +280,6 @@ export default class WorkshopTable extends React.Component {
     );
   };
 
-  showSurveyUrl = (state, course, subject, date) => {
-    const pegasusBasedCsfIntro =
-      subject === SubjectNames.SUBJECT_CSF_101 &&
-      !useFoormSurvey(subject, date);
-
-    return (
-      (state === 'Ended' && !pegasusBasedCsfIntro) ||
-      ([CSD, CSP].includes(course) && subject !== SubjectNames.SUBJECT_FIT) ||
-      (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
-    );
-  };
-
   formatManagement = manageData => {
     const {id, course, subject, state, date, canDelete, endDate} = manageData;
 
@@ -306,7 +292,12 @@ export default class WorkshopTable extends React.Component {
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={canDelete ? this.props.onDelete : null}
-        showSurveyUrl={this.showSurveyUrl(state, course, subject, date)}
+        showSurveyUrl={shouldShowSurveyResults(
+          state,
+          course,
+          subject,
+          new Date(date)
+        )}
         endDate={endDate}
       />
     );

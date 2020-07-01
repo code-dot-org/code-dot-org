@@ -56,7 +56,13 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
-  UI_TEST_SCRIPTS = [
+  SPECIAL_UI_TEST_SCRIPTS = [
+    'ui-test-script-in-course-2017',
+    'ui-test-script-in-course-2019',
+    'ui-test-versioned-script-2017',
+    'ui-test-versioned-script-2019'
+  ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
+  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
     'algebra',
     'allthehiddenthings',
@@ -209,6 +215,9 @@ namespace :seed do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
+    end
+    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
+      Course.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
 
