@@ -159,7 +159,7 @@ export function textToSpeech(
     Sounds.getSingleton().registerTextBytes(
       language,
       text,
-      false,
+      false /* hasProfanity */,
       undefined,
       gender,
       []

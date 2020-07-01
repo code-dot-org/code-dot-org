@@ -253,16 +253,13 @@ Sounds.prototype.registerTextBytes = function(
   language,
   text,
   hasProfanity,
-  profaneWords = undefined,
-  gender = undefined,
-  bytes = undefined
+  profaneWords,
+  gender,
+  bytes
 ) {
-  if (!this.textBytesByLanguage[language]) {
-    this.textBytesByLanguage[language] = {};
-  }
-  if (!this.textBytesByLanguage[language][text]) {
-    this.textBytesByLanguage[language][text] = {};
-  }
+  this.textBytesByLanguage[language] = this.textBytesByLanguage[language] || {};
+  this.textBytesByLanguage[language][text] =
+    this.textBytesByLanguage[language][text] || {};
   this.textBytesByLanguage[language][text].hasProfanity = hasProfanity;
   this.textBytesByLanguage[language][text].profaneWords = profaneWords;
   if (gender) {
@@ -385,11 +382,7 @@ Sounds.prototype.addPromiseToSpeechQueue = function(
   playbackOptions,
   cacheParams = undefined
 ) {
-  this.speechQueue.push({
-    promise: promise,
-    playbackOptions: playbackOptions,
-    cacheParams: cacheParams
-  });
+  this.speechQueue.push({promise, playbackOptions, cacheParams});
   this.checkSpeechQueue();
 };
 
