@@ -275,18 +275,28 @@ export default {
           maxWidth: maxWidth + 'px'
         })
         .appendTo($(document.body));
-
       const {
         horizontalPadding,
         verticalPadding
       } = elementUtils.calculatePadding(element.style.padding);
+      console.log(parseInt(element.style.borderWidth));
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
-        size.width = Math.min(clone.width() + 1 + horizontalPadding, maxWidth);
+        size.width = Math.min(
+          clone.width() +
+            1 +
+            horizontalPadding +
+            parseInt(element.style.borderWidth) * 2,
+          maxWidth
+        );
       }
       if (!heightLocked) {
-        size.height = clone.height() + 1 + verticalPadding;
+        size.height =
+          clone.height() +
+          1 +
+          verticalPadding +
+          parseInt(element.style.borderWidth) * 2;
       }
 
       clone.remove();
