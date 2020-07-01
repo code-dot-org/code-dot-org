@@ -214,10 +214,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        ...this.state.formData,
-        newCodeAccount: true
-      })
+      body: JSON.stringify(this.state.formData)
     });
   };
 
