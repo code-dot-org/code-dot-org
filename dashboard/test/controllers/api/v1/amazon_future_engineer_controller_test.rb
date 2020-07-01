@@ -51,7 +51,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       expected_call = Net::HTTP.expects(:post_form).with do |url, params|
         url.to_s == CDO.afe_pardot_form_handler_url &&
           params.to_h == {
-            'traffic-source' => 'AFE-code.org',
+            'traffic-source' => 'AFE-code.org-2020',
             'first-name' => 'test',
             'last-name' => 'test',
             'email' => 'test@code.org',

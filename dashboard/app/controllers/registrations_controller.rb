@@ -14,11 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/sign_up
   #
   def new
-    # Used by old signup form
     session[:user_return_to] ||= params[:user_return_to]
-    # Used by new signup form
-    store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
-
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || {}
       @user = User.new_with_session(user_params, session)

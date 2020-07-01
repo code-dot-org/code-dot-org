@@ -439,6 +439,7 @@
   "dataTableNamePlaceholder": "Table name",
   "dataLibraryHeader": "Data Library",
   "dataLibraryDescription": "Find and import tables of real data from the Code.org library.",
+  "dataLibrarySearchPlacholder": "Search",
   "dataSource": "Data Source",
   "dataVisualizerPlaceholderText": "Select values to generate a visualization",
   "dataVisualizerBucketSize": "Bucket Size",
