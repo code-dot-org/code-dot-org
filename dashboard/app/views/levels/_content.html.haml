@@ -9,10 +9,10 @@
   / content levels.
   %script{src: webpack_asset_path('js/blockly.js')}
   %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
-  / TODO [FND-972] Only the associated level type's blocks.
-  %script{src: webpack_asset_path("js/#{js_locale}/turtle_locale.js")}
+  - if level.associated_blocks
+    %script{src: webpack_asset_path("js/#{js_locale}/#{level.associated_blocks}_locale.js")}
 
-  %script{src: webpack_asset_path('js/levels/_content.js')}
+  %script{src: webpack_asset_path('js/levels/_content.js'), data: {associatedblocks: level.associated_blocks.to_json}}
 
 - unless data['title'].blank? || hide_header
   %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'

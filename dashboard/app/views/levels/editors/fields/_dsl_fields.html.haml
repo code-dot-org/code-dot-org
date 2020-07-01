@@ -27,6 +27,10 @@
   DSL Editor
 
 #dsl_editor.in.collapse
+  - if @level.is_a?(External)
+    = f.label "Associated Blocks"
+    = f.select :associated_blocks, options_for_select(@level.possible_associated_blocks, @level.associated_blocks), include_blank: true
+
   .script_text
     = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
