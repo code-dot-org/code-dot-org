@@ -18,7 +18,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     Timecop.freeze do
       expected_request = Net::HTTP.expects(:post_form).with do |uri, params|
         uri.to_s == FAKE_FORM_URL && params.to_h == {
-          'traffic-source' => 'AFE-code.org-test',
+          'traffic-source' => 'AFE-code.org-2020',
           'first-name' => 'test-first-name',
           'last-name' => 'test-last-name',
           'email' => 'test-email',
