@@ -40,7 +40,8 @@ export const themeOptions = [
   'glowInTheDark',
   'bubblegum',
   'millennial',
-  'robot'
+  'robot',
+  'coralReef'
 ];
 
 const THEME_ICON_BASE_URL = '/blockly/media/applab/theme_dropdown/';
@@ -115,6 +116,11 @@ export const themeOptionsForSelect = [
     option: 'robot',
     displayName: 'Robot',
     icon: THEME_ICON_BASE_URL + 'robot.png'
+  },
+  {
+    option: 'coralReef',
+    displayName: 'Coral Reef',
+    icon: THEME_ICON_BASE_URL + 'coral_reef.png'
   }
 ];
 
