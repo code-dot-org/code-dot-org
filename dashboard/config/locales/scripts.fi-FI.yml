@@ -4277,6 +4277,10 @@ fi:
           lessons:
             Spelling Bee:
               name: Kirjurimehiläinen
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
         csp3-virtual:
           stages:
             Creating Functions:
@@ -4355,3 +4359,30 @@ fi:
           lessons:
             While Loops:
               name: Niin kauan kuin -silmukat
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Silmukat
+            Events:
+              name: Tapahtumat
+            Conditionals:
+              name: Ehtolausekkeet
+            Functions:
+              name: Funktiot
+            Variables:
+              name: Muuttujat
+            For Loops:
+              name: Silmukat
+          lessons:
+            Loops:
+              name: Silmukat
+            Events:
+              name: Tapahtumat
+            Conditionals:
+              name: Ehtolausekkeet
+            Functions:
+              name: Funktiot
+            Variables:
+              name: Muuttujat
+            For Loops:
+              name: Silmukat

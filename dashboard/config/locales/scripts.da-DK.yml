@@ -3767,3 +3767,34 @@ da:
           lessons:
             While Loops:
               name: Mens løkker
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab

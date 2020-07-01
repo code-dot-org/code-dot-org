@@ -51,7 +51,7 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
-import {setIsRunning, setStepSpeed} from './redux/runState';
+import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
@@ -558,11 +558,13 @@ StudioApp.prototype.init = function(config) {
         this.editDuringRunAlert === undefined &&
         this.getCode().trim() !== this.executingCode.trim()
       ) {
+        getStore().dispatch(setIsEditWhileRun(true));
         this.editDuringRunAlert = this.displayWorkspaceAlert(
           'warning',
           React.createElement('div', {}, msg.editDuringRunMessage()),
           true
         );
+        this.clearHighlighting();
       }
     });
   }
@@ -969,6 +971,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
     if (this.editDuringRunAlert !== undefined) {
       ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
+      getStore().dispatch(setIsEditWhileRun(false));
     }
   } else {
     this.executingCode = this.getCode().trim();
@@ -1555,7 +1558,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.isUsingBlockly()) {
+  if (this.isUsingBlockly() && this.editDuringRunAlert === undefined) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -3078,7 +3081,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
-  console.log('show me the alert');
   const workspaceAlert = React.createElement(
     WorkspaceAlert,
     {

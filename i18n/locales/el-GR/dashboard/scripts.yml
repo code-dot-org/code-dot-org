@@ -4128,6 +4128,10 @@ el:
               name: Η μέλισσα της ορθογραφίας
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
         csp3-virtual:
           description_short: Προγραμματισμός
           stages:
@@ -4204,3 +4208,34 @@ el:
           lessons:
             While Loops:
               name: Βρόχοι με «Όσο»
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Βρόχοι
+            Events:
+              name: Συμβάντα
+            Conditionals:
+              name: Συνθήκες
+            Functions:
+              name: Συναρτήσεις
+            Variables:
+              name: Μεταβλητές
+            For Loops:
+              name: Βρόχοι Για
+            Sprite Lab:
+              name: Sprite Lab
+          lessons:
+            Loops:
+              name: Βρόχοι
+            Events:
+              name: Συμβάντα
+            Conditionals:
+              name: Συνθήκες
+            Functions:
+              name: Συναρτήσεις
+            Variables:
+              name: Μεταβλητές
+            For Loops:
+              name: Βρόχοι Για
+            Sprite Lab:
+              name: Sprite Lab

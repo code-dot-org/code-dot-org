@@ -36258,12 +36258,27 @@ es:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            'Mini-Project: HTML Web Page':
+              description_student: "**¿Pregunta del Día: Cómo puedo usar HTML para
+                expresar un valor personal?**\r\n\r\nEn esta lección, la clase crea
+                una página de Internet personal sobre un tema de su elección. La lección
+                empieza con un revista de etiquetas de HTML. Luego, la clase diseña
+                las páginas de Internet, identificando las etiquetas que necesita
+                que implementar, y crea las páginas en Web Lab."
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Proyecto: Tu Estilo Personal'
             'Your Web Page - Define ':
               name: Tu página web - Definir
             Your Web Page - Prepare:
               name: Tu página web - Preparar
+            Project - Personal Web Page:
+              name: Proyecto - Página Personal de Internet
+            Websites for a Purpose:
+              name: Sitios Web por un Propósito
             Linking Pages:
               name: Enlaces entre páginas
+            Using Images:
+              name: Usando Imágenes
           lesson_groups:
             csd2_1:
               display_name: 'Capítulo 1: Contenido web y HTML'
@@ -36416,12 +36431,27 @@ es:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            'Mini-Project: HTML Web Page':
+              description_student: "**¿Pregunta del Día: Cómo puedo usar HTML para
+                expresar un valor personal?**\r\n\r\nEn esta lección, la clase crea
+                una página de Internet personal sobre un tema de su elección. La lección
+                empieza con un revista de etiquetas de HTML. Luego, la clase diseña
+                las páginas de Internet, identificando las etiquetas que necesita
+                que implementar, y crea las páginas en Web Lab."
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Proyecto: Tu Estilo Personal'
             'Your Web Page - Define ':
               name: Tu página web - Definir
             Your Web Page - Prepare:
               name: Tu página web - Preparar
+            Project - Personal Web Page:
+              name: Proyecto - Página Personal de Internet
+            Websites for a Purpose:
+              name: Sitios Web por un Propósito
             Linking Pages:
               name: Enlaces entre páginas
+            Using Images:
+              name: Usando Imágenes
         csd1-2020:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación
@@ -36611,6 +36641,17 @@ es:
                 en parejas, aunque se puede hacer individualmente.
             Post-Project Test:
               name: Prueba posterior al proyecto
+            'Alternate Versions of Lesson 1: Intro to Problem Solving':
+              name: 'Versiones Alternativas de Lección 1: Introducción a la Resolución
+                de Problemas'
+            'Alternate Versions of Lesson 3: Exploring Problem Solving':
+              name: 'Versiones Alternativas de Lección 3: Explorar la Resolución de
+                Problemas'
+            'Lesson 1: Intro to Problem Solving - Newspaper Table':
+              name: 'Lección 1: Introducción a Resolución de Problemas - Mesa de Periódicos'
+            'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Lección 1: Introducción a Resolución de Problemas - Puente de
+                Espaguetis'
             'Lesson 1: Intro to Problem Solving - Paper Tower':
               name: 'Lección 1: Introducción a Resolución de Problemas - Torre de
                 Papel'
@@ -36618,6 +36659,9 @@ es:
               name: 'Lección 3: Explorar Resolución de Problemas - Tema de Juegos'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Lección 3: Explorar Resolución de Problemas - Tema de Animales'
+            0:
+              name: \"Alt Lección 1:\" Introducción a Resolución de Problemas - Mesa
+                de Periódicos
             'Paper Tower (Lesson 1: Intro to Problem Solving)':
               name: 'El Torre de Papel (Lección 1: Introducción a la Resolución de
                 Problemas)'
@@ -36661,6 +36705,45 @@ es:
             Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
               name: Introducción a la Resolución de Problemas - El Torre de Papel
                 (Lección 1 Alterna)
+              description_teacher: "**Pregunta del Día: ¿Qué puede ayudarnos a trabajar
+                juntos y resolver problemas como un equipo?**\r\n\r\n\r\nEn esta lección,
+                los estudiantes trabajan en grupos para diseñar Torres de papal que
+                puede extender tan altos como sea posible. Los grupos tienen dos series
+                para trabajar en sus torres, con la meta de tratar de ir más alto
+                que lo que hicieron en Serie 1. La estructura de la actividad presagi
+                las etapas diferentes del proceso de la resolución de problemas a
+                que los estudiantes estará introducidos en más detalles en la siguiente
+                lección. En el fin de la lección los estudiantes reflejan en sus experiencias
+                con la actividad y hacen conexiones con los tipos de la resolución
+                de problemas que harán en el resto del recurso.\r\n\r\n**Esta es una
+                actividad alternativa por [Introducción a la Resolución de Problemas
+                - Barcos de Aluminios](../1/)**"
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Explorar la Resolución de Problemas - Tema de Juegos (Lección
+                3 Alterna)
+              description_student: "**¿La Pregunta del Día: Cómo podemos aplicar el
+                proceso de la solución de problemas a muchos tipos diferentes de problemas?**\r\n\r\nEn
+                esta lección la clase aplica el proceso de solución de problemas a
+                tres problemas diferentes: un desafío de tangram, elegir una mascota
+                según el criterio, y planear un evento de la adopción de mascotas.\nLos
+                problemas se ponen complicados cada vez más y están mal definidos
+                con el objetivo de destacar cómo el proceso de resolución de problemas
+                es particularmente útil cuando se abordan estos tipos de problemas."
+              description_teacher: "**¿La Pregunta del Día: Cómo podemos aplicar el
+                proceso de la solución de problemas a muchos tipos diferentes de problemas?**\r\n\r\nEn
+                esta lección la clase aplica el proceso de solución de problemas a
+                tres problemas diferentes: un desafío de tangram, elegir una mascota
+                según el criterio, y planear un evento de la adopción de mascotas.\nLos
+                problemas se ponen complicados cada vez más y están mal definidos
+                con el objetivo de destacar cómo el proceso de resolución de problemas
+                es particularmente útil cuando se abordan estos tipos de problemas.
+                La lección concluye con los estudiantes reflejando en su experiencia
+                con el proceso de resolución de problemas. Ellos justificarán la inclusión
+                de cada etapa y aportarán ideas de preguntas y estrategias que puede
+                ayudarlos definir mejor problemas de mentalidad abiertas, porque es
+                a menudo la etapa más critical.\r\n\r\nEsta lección costará posiblemente
+                dos periodos o más para completar. Los primeros dos problemas quedan
+                en una sola clase pero el tercero tiene que moverse al segundo día."
             Storage:
               name: Almacenamiento
           lesson_groups:
@@ -36848,6 +36931,17 @@ es:
                 en parejas, aunque se puede hacer individualmente.
             Post-Project Test:
               name: Prueba posterior al proyecto
+            'Alternate Versions of Lesson 1: Intro to Problem Solving':
+              name: 'Versiones Alternativas de Lección 1: Introducción a la Resolución
+                de Problemas'
+            'Alternate Versions of Lesson 3: Exploring Problem Solving':
+              name: 'Versiones Alternativas de Lección 3: Explorar la Resolución de
+                Problemas'
+            'Lesson 1: Intro to Problem Solving - Newspaper Table':
+              name: 'Lección 1: Introducción a Resolución de Problemas - Mesa de Periódicos'
+            'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Lección 1: Introducción a Resolución de Problemas - Puente de
+                Espaguetis'
             'Lesson 1: Intro to Problem Solving - Paper Tower':
               name: 'Lección 1: Introducción a Resolución de Problemas - Torre de
                 Papel'
@@ -36855,6 +36949,9 @@ es:
               name: 'Lección 3: Explorar Resolución de Problemas - Tema de Juegos'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Lección 3: Explorar Resolución de Problemas - Tema de Animales'
+            0:
+              name: \"Alt Lección 1:\" Introducción a Resolución de Problemas - Mesa
+                de Periódicos
             'Paper Tower (Lesson 1: Intro to Problem Solving)':
               name: 'El Torre de Papel (Lección 1: Introducción a la Resolución de
                 Problemas)'
@@ -36898,6 +36995,45 @@ es:
             Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
               name: Introducción a la Resolución de Problemas - El Torre de Papel
                 (Lección 1 Alterna)
+              description_teacher: "**Pregunta del Día: ¿Qué puede ayudarnos a trabajar
+                juntos y resolver problemas como un equipo?**\r\n\r\n\r\nEn esta lección,
+                los estudiantes trabajan en grupos para diseñar Torres de papal que
+                puede extender tan altos como sea posible. Los grupos tienen dos series
+                para trabajar en sus torres, con la meta de tratar de ir más alto
+                que lo que hicieron en Serie 1. La estructura de la actividad presagi
+                las etapas diferentes del proceso de la resolución de problemas a
+                que los estudiantes estará introducidos en más detalles en la siguiente
+                lección. En el fin de la lección los estudiantes reflejan en sus experiencias
+                con la actividad y hacen conexiones con los tipos de la resolución
+                de problemas que harán en el resto del recurso.\r\n\r\n**Esta es una
+                actividad alternativa por [Introducción a la Resolución de Problemas
+                - Barcos de Aluminios](../1/)**"
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Explorar la Resolución de Problemas - Tema de Juegos (Lección
+                3 Alterna)
+              description_student: "**¿La Pregunta del Día: Cómo podemos aplicar el
+                proceso de la solución de problemas a muchos tipos diferentes de problemas?**\r\n\r\nEn
+                esta lección la clase aplica el proceso de solución de problemas a
+                tres problemas diferentes: un desafío de tangram, elegir una mascota
+                según el criterio, y planear un evento de la adopción de mascotas.\nLos
+                problemas se ponen complicados cada vez más y están mal definidos
+                con el objetivo de destacar cómo el proceso de resolución de problemas
+                es particularmente útil cuando se abordan estos tipos de problemas."
+              description_teacher: "**¿La Pregunta del Día: Cómo podemos aplicar el
+                proceso de la solución de problemas a muchos tipos diferentes de problemas?**\r\n\r\nEn
+                esta lección la clase aplica el proceso de solución de problemas a
+                tres problemas diferentes: un desafío de tangram, elegir una mascota
+                según el criterio, y planear un evento de la adopción de mascotas.\nLos
+                problemas se ponen complicados cada vez más y están mal definidos
+                con el objetivo de destacar cómo el proceso de resolución de problemas
+                es particularmente útil cuando se abordan estos tipos de problemas.
+                La lección concluye con los estudiantes reflejando en su experiencia
+                con el proceso de resolución de problemas. Ellos justificarán la inclusión
+                de cada etapa y aportarán ideas de preguntas y estrategias que puede
+                ayudarlos definir mejor problemas de mentalidad abiertas, porque es
+                a menudo la etapa más critical.\r\n\r\nEsta lección costará posiblemente
+                dos periodos o más para completar. Los primeros dos problemas quedan
+                en una sola clase pero el tercero tiene que moverse al segundo día."
             Storage:
               name: Almacenamiento
         csd4-2020:
@@ -38564,6 +38700,10 @@ es:
                 Computación
             Text:
               name: Texto
+            'Mini-Project: Animation':
+              name: 'Mini-Proyecto: Animación'
+            Mouse Input:
+              name: Entrada del Ratón
             Sprites:
               name: Sprites
           lesson_groups:
@@ -38923,6 +39063,10 @@ es:
                 Computación
             Text:
               name: Texto
+            'Mini-Project: Animation':
+              name: 'Mini-Proyecto: Animación'
+            Mouse Input:
+              name: Entrada del Ratón
             Sprites:
               name: Sprites
         coursea-2020:
@@ -41013,6 +41157,10 @@ es:
               name: Fiesta de baile extraterrestre con Laboratorio de Sprite
             Virtual Pet with Sprite Lab:
               name: Mascota virtual
+            Swimming Fish with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            End of Course Project:
+              name: Proyecto de fin de curso
           lesson_groups:
             csf_warmup:
               display_name: Actividad previa
@@ -41030,6 +41178,8 @@ es:
               display_name: Bucles Para
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
           lessons:
             Dance Party:
               name: Fiesta de baile
@@ -41075,6 +41225,10 @@ es:
               name: Fiesta de baile extraterrestre con Laboratorio de Sprite
             Virtual Pet with Sprite Lab:
               name: Mascota virtual
+            Swimming Fish with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            End of Course Project:
+              name: Proyecto de fin de curso
         pre-express-2020:
           title: Curso Express para prelectores (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -41169,9 +41323,13 @@ es:
               name: 'Proyecto: dilemas de la información digital, parte 2'
             'Lesson 14: Assessment Day':
               name: 'Lección 14: día de evaluación'
+            CS Principles Pre-survey:
+              name: Encuesta previa de Principios de Ciencias de la Computación
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Tema 1: Información digital'
+            cspSurvey:
+              display_name: Encuesta
           lessons:
             new stage:
               name: nueva etapa
@@ -41203,6 +41361,8 @@ es:
               name: 'Proyecto: dilemas de la información digital, parte 2'
             'Lesson 14: Assessment Day':
               name: 'Lección 14: día de evaluación'
+            CS Principles Pre-survey:
+              name: Encuesta previa de Principios de Ciencias de la Computación
         csp2-2020:
           stages:
             new stage:
@@ -42890,3 +43050,69 @@ es:
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Evaluación 5 de la Unidad 5 - Preguntas prácticas sobre pseudocódigo
                 en AP
+        k5-onlinepd-2020:
+          description: "¡Aprende a enseñar ciencias de la computación con este curso
+            en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Sequencing:
+              name: Secuencias
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionales
+            End of Course projects:
+              name: Proyectos de fin de curso
+            Functions:
+              name: Funciones
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles Para
+            Sprite Lab:
+              name: Laboratorio de sprites
+            Reviewing your reflections:
+              name: Revisión de tus reflexiones
+            Next steps:
+              name: Próximos pasos
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Sequencing:
+              name: Secuencias
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionales
+            End of Course projects:
+              name: Proyectos de fin de curso
+            Functions:
+              name: Funciones
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles Para
+            Sprite Lab:
+              name: Laboratorio de sprites
+            Reviewing your reflections:
+              name: Revisión de tus reflexiones
+            Next steps:
+              name: Próximos pasos
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Primeros pasos
+            k5_basic_concepts_1:
+              display_name: Conceptos básicos de programación y prácticas de enseñanza
+            k5_diving_deeper_1:
+              display_name: 'Profundizar: cursos E y F'
+            k5_next_steps_1:
+              display_name: Próximos pasos
