@@ -42,7 +42,7 @@ class Services::AFEEnrollment
     response = Net::HTTP.post_form(
       URI(CDO.afe_pardot_form_handler_url),
       {
-        'traffic-source' => traffic_source,
+        'traffic-source' => 'AFE-code.org-2020',
         'first-name' => first_name,
         'last-name' => last_name,
         'email' => email,
