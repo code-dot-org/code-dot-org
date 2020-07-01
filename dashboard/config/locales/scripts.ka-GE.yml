@@ -13791,9 +13791,13 @@ ka:
               name: ორობითი რიცხვები
             Intellectual Property:
               name: ინტელექტუალური ქონება
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
           lesson_groups:
             csp_unit1_2020:
               display_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
+            cspSurvey:
+              display_name: გამოკითხვა
           lessons:
             new stage:
               name: ახალი დონე
@@ -13803,6 +13807,8 @@ ka:
               name: ორობითი რიცხვები
             Intellectual Property:
               name: ინტელექტუალური ქონება
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
         csp2-2020:
           stages:
             new stage:
@@ -14255,3 +14261,35 @@ ka:
               name: მასივების დამუშავება
             Unit 5 Assessment 4:
               name: სექცია 5 დავალება 4
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: ციკლები
+            Events:
+              name: მოვლენები
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Functions:
+              name: ფუნქციები
+            Variables:
+              name: ცვლადები
+            For Loops:
+              name: '"მიზნისთვის" ციკლები'
+          lessons:
+            Loops:
+              name: ციკლები
+            Events:
+              name: მოვლენები
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Functions:
+              name: ფუნქციები
+            Variables:
+              name: ცვლადები
+            For Loops:
+              name: '"მიზნისთვის" ციკლები'
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: დაწყება
+            k5_next_steps_1:
+              display_name: მომდევნო ნაბიჯები
