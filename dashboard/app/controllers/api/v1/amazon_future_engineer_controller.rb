@@ -12,8 +12,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     return head :forbidden unless current_user
 
     afe_params = submit_params
-    Services::AFEEnrollment.new.submit(
-      traffic_source: 'AFE-code.org',
+    Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
       email: afe_params['email'],
@@ -37,7 +36,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
   private
 
   REQUIRED_PARAMETERS = %w(
-    trafficSource
     firstName
     lastName
     email
