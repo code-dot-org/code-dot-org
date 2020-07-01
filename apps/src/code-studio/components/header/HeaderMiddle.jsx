@@ -43,8 +43,13 @@ class HeaderMiddle extends React.Component {
       projectInfoDesiredWidth: 0,
       scriptNameDesiredWidth: 0,
       lessonProgressDesiredWidth: 0,
-      finishDesiredWidth: 0
+      finishDesiredWidth: 0,
+      initialDelay: true
     };
+
+    setTimeout(() => {
+      this.setState({initialDelay: false});
+    }, 750);
   }
 
   componentDidMount() {
@@ -169,11 +174,16 @@ class HeaderMiddle extends React.Component {
         }
       : null;
 
-    // Hold off rendering if we have started but not finished the app load.
-    // appLoadStarted should begin before our first render, by virtue of
-    // this rendering not happening until document ready, but our app loads apparently
-    // do not do the same wait.
-    if (!this.props.appLoadStarted || this.props.appLoaded) {
+    // Hold off rendering for 3/4 second unless we both start and finish loading
+    // an app within that time.  Once the delay has passed, if we started loading
+    // then wait for it to finish, otherwise, show immediately.
+    // In other words, we'd like to avoid rendering until we finish an app load,
+    // but we only wait 3/4 second for the app load to begin.
+
+    if (
+      (!this.state.initialDelay && !this.props.appLoadStarted) ||
+      (this.props.appLoadStarted && this.props.appLoaded)
+    ) {
       console.log('HeaderMiddle render', this.getWidth());
 
       return (
@@ -213,7 +223,7 @@ class HeaderMiddle extends React.Component {
                 marginRight: 5,
                 boxSizing: 'border-box',
                 width: widths.scriptName - 10,
-                visibility: widths.scriptName === 0 ? 'hidden' : undefined
+                visibility: widths.scriptName === 10 ? 'hidden' : undefined
               }}
             >
               <ScriptName {...extraScriptNameData} />
@@ -226,7 +236,7 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 width: widths.progress,
-                visibility: widths.progress === 0 ? 'hidden' : undefined
+                visibility: widths.progress === 10 ? 'hidden' : undefined
               }}
             >
               <LessonProgress
