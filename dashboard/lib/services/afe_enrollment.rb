@@ -31,7 +31,7 @@ class Services::AFEEnrollment
   #        of service.  Should always be true; we don't submit without this.
   # @param new_code_account [Boolean] Whether the teacher signed up for code.org as part of the
   #        AFE process.
-  def submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
+  def self.submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
     city:, state:, zip:, marketing_kit:, csta_plus:, aws_educate:,
     amazon_terms:, new_code_account:)
     return unless CDO.afe_pardot_form_handler_url
@@ -65,9 +65,7 @@ class Services::AFEEnrollment
     nil
   end
 
-  private
-
-  def booleanize(val)
+  private_class_method def self.booleanize(val)
     ActiveModel::Type::Boolean.new.cast(val) ? '1' : '0'
   end
 end
