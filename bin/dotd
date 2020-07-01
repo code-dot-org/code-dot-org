@@ -499,6 +499,7 @@ def main
   Slack.join_room('infra-staging')
   Slack.join_room('infra-test')
   Slack.join_room('infra-production')
+  Slack.join_room('infra-honeybadger')
   Slack.join_room('levelbuilder')
 
   puts_script_intro
