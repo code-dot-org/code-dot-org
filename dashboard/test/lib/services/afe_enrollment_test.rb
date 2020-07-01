@@ -117,7 +117,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def valid_test_params
     {
-      traffic_source: 'AFE-code.org-test',
       first_name: 'test-first-name',
       last_name: 'test-last-name',
       email: 'test-email',
