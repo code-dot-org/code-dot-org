@@ -61,7 +61,7 @@ class Services::AFEEnrollment
       }
     )
 
-    raise Error.new("AFE submission failed with HTTP #{response.status}") unless response.status == 200
+    raise Error.new("AFE submission failed with HTTP #{response.code}") unless response.code == '200'
     raise Error.new("AFE submission failed with a validation error") if response.body =~ /Cannot find error page/
     nil
   end
