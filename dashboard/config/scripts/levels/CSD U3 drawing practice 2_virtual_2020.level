@@ -1,0 +1,89 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-06-30T19:15:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
+      "fill": null,
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "start_blocks": "fill(\"purple\");\r\nellipse(200,165);\r\nellipse(160, 195);\r\nellipse(180, 235);\r\nellipse(240, 300);\r\nellipse(300, 200);\r\nfill(\"yellow\");\r\nellipse(200,200);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "<img src=\"https://images.code.org/14f4099599200795902b0623d013b41c-image-1560890438689.JPG\" style=\"float:right;width:150px;\">\r\n\r\n# Debugging: Attach the petals\r\n\r\nUh oh, the flower is missing some petals. Bring them together with the center of the flower to recreate the picture on the right. \r\n\r\n# Do This\r\n\r\n* Look at the code that makes the flower.\r\n* Change the code so that all the petals are attached to the center of the flower.\r\n* *Hint: use the grid to figure out where the petals should be*",
+    "encrypted_examples": "fPbJfItzOSrn2pExfbhlK1nfvWCYaXs7q4zjr97NdRHK30wFMPtl1S9PzJgG\n6RGVmgHle8sI5oYgV56xPkAA6A==\n",
+    "parent_level_id": 18773,
+    "name_suffix": "_virtual_2020",
+    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "video_key": "csd_gamelab_draw_2",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "This debugging task helps students understand how to place elements on a screen using a coordinate plane.",
+    "display_name": "Debug a Flower",
+    "thumbnail_url": "https://images.code.org/868facd0647ce544265715283e01d9a4-image-1561054878093.20.53 AM.png",
+    "bubble_choice_description": "Move the fallen petals back to the flower.",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 22:51:40 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 23:33:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:57 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-22 16:40:23 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:41:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:43:56 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-18 20:12:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-18 20:29:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-18 20:42:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-18 20:45:48 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-18 20:48:52 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-18 21:02:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-20 18:18:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-20 18:20:47 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-20 18:21:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-20 18:22:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-29 18:54:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-09 05:50:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-28 17:06:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

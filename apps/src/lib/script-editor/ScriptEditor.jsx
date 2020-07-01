@@ -74,7 +74,8 @@ export default class ScriptEditor extends React.Component {
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
-    tts: PropTypes.bool
+    tts: PropTypes.bool,
+    hasCourse: PropTypes.bool
   };
 
   constructor(props) {
@@ -307,6 +308,7 @@ export default class ScriptEditor extends React.Component {
                 name="family_name"
                 defaultValue={this.props.familyName}
                 style={styles.dropdown}
+                disabled={this.props.hasCourse}
               >
                 <option value="">(None)</option>
                 {this.props.scriptFamilies.map(familyOption => (
@@ -315,6 +317,16 @@ export default class ScriptEditor extends React.Component {
                   </option>
                 ))}
               </select>
+              {this.props.hasCourse && (
+                <HelpTip>
+                  <p>
+                    This field cannot be edited because this script belongs to a
+                    course, and redirecting to the latest version of a specific
+                    unit within a course is deprecated. Please go to the course
+                    page to edit this field.
+                  </p>
+                </HelpTip>
+              )}
             </label>
             <label>
               Version Year
@@ -322,6 +334,7 @@ export default class ScriptEditor extends React.Component {
                 name="version_year"
                 defaultValue={this.props.versionYear}
                 style={styles.dropdown}
+                disabled={this.props.hasCourse}
               >
                 <option value="">(None)</option>
                 {this.props.versionYearOptions.map(year => (
@@ -330,6 +343,16 @@ export default class ScriptEditor extends React.Component {
                   </option>
                 ))}
               </select>
+              {this.props.hasCourse && (
+                <HelpTip>
+                  <p>
+                    This field cannot be edited because this script belongs to a
+                    course, and redirecting to the latest version of a specific
+                    unit within a course is deprecated. Please go to the course
+                    page to edit this field.
+                  </p>
+                </HelpTip>
+              )}
             </label>
             <label>
               Can be recommended (aka stable)
