@@ -137,7 +137,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def fake_success_response
     mock.tap do |response|
-      response.stubs(:status).returns(200)
+      response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
         Cannot find success page to redirect to. Please use your browser back button.
       BODY
@@ -148,7 +148,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     mock.tap do |response|
       # This reflects the actual behavior of the Pardot form handler: It returns a
       # 200 when a validation failure occurs.
-      response.stubs(:status).returns(200)
+      response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
         Cannot find error page to redirect to. Please use your browser back button.
         Please correct the following errors:~~~ - This field is required~~~
@@ -158,7 +158,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def fake_unavailable_response
     mock.tap do |response|
-      response.stubs(:status).returns(503)
+      response.stubs(:code).returns('503')
     end
   end
 end
