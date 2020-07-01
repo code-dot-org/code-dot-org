@@ -564,6 +564,7 @@ StudioApp.prototype.init = function(config) {
           React.createElement('div', {}, msg.editDuringRunMessage()),
           true
         );
+        this.clearHighlighting();
       }
     });
   }
@@ -1557,7 +1558,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.isUsingBlockly()) {
+  if (this.isUsingBlockly() && this.editDuringRunAlert === undefined) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {

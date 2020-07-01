@@ -484,7 +484,7 @@ module LevelsHelper
       voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
       voice_response = voice_http_request.request(voice_request)
 
-      all_voices = JSON.parse(voice_response.body)
+      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
       language_dictionary = {}
       all_voices.each do |voice|
         native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])

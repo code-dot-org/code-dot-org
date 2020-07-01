@@ -18,7 +18,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     Timecop.freeze do
       expected_request = Net::HTTP.expects(:post_form).with do |uri, params|
         uri.to_s == FAKE_FORM_URL && params.to_h == {
-          'traffic-source' => 'AFE-code.org-test',
+          'traffic-source' => 'AFE-code.org-2020',
           'first-name' => 'test-first-name',
           'last-name' => 'test-last-name',
           'email' => 'test-email',
@@ -137,7 +137,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def fake_success_response
     mock.tap do |response|
-      response.stubs(:status).returns(200)
+      response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
         Cannot find success page to redirect to. Please use your browser back button.
       BODY
@@ -148,7 +148,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     mock.tap do |response|
       # This reflects the actual behavior of the Pardot form handler: It returns a
       # 200 when a validation failure occurs.
-      response.stubs(:status).returns(200)
+      response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
         Cannot find error page to redirect to. Please use your browser back button.
         Please correct the following errors:~~~ - This field is required~~~
@@ -158,7 +158,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def fake_unavailable_response
     mock.tap do |response|
-      response.stubs(:status).returns(503)
+      response.stubs(:code).returns('503')
     end
   end
 end

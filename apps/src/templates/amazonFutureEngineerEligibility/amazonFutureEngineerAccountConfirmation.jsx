@@ -33,7 +33,6 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
   };
 
   render() {
-    // TO DO: Add links to account sign up page.
     return (
       <div>
         <h2 style={styles.header}>Almost done!</h2>
@@ -49,7 +48,7 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         </div>
         <Button
           id="sign_up"
-          href={this.returnToURL('/users/sign_in')}
+          href={this.returnToURL('/users/sign_up')}
           style={styles.button}
           onClick={this.logSignUpButtonPress}
         >
