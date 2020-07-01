@@ -27,7 +27,8 @@ class Course < ApplicationRecord
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze
+    CSP = 'csp'.freeze,
+    TEST = 'ui-test-course'.freeze
   ].freeze
 
   def skip_name_format_validation

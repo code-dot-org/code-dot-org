@@ -2,6 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit6/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit6/code/"]]
 lesson_extras_available true
 has_verified_resources true
 has_lesson_plan true
@@ -10,10 +11,10 @@ project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
 version_year '2020'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit6/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit6/code/"]]
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 lesson 'Innovations in Computing'

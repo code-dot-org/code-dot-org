@@ -35,7 +35,8 @@ module ViewOptionsHelper
     :answerdash,
     :signed_replay_log_url,
     :azure_speech_service_token,
-    :azure_speech_service_region
+    :azure_speech_service_region,
+    :azure_speech_service_languages
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
