@@ -15,7 +15,6 @@ class Services::AFEEnrollment
 
   # Submit a teacher's information to the AFE Pardot form handler.
   #
-  # @param traffic_source [String] Should always be AFE-code.org, for now
   # @param first_name [String] max 127 characters
   # @param last_name [String] max 127 characters
   # @param email [String] max 127 characters
@@ -32,9 +31,9 @@ class Services::AFEEnrollment
   #        of service.  Should always be true; we don't submit without this.
   # @param new_code_account [Boolean] Whether the teacher signed up for code.org as part of the
   #        AFE process.
-  def submit(traffic_source:, first_name:, last_name:, email:, nces_id:,
-    street_1:, street_2:, city:, state:, zip:, marketing_kit:, csta_plus:,
-    aws_educate:, amazon_terms:, new_code_account:)
+  def self.submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
+    city:, state:, zip:, marketing_kit:, csta_plus:, aws_educate:,
+    amazon_terms:, new_code_account:)
     return unless CDO.afe_pardot_form_handler_url
 
     raise Error.new('AFE submission skipped: Terms and conditions were not accepted') unless amazon_terms
@@ -47,11 +46,11 @@ class Services::AFEEnrollment
         'last-name' => last_name,
         'email' => email,
         'nces-id' => nces_id,
-        'street-1' => street_1,
-        'street-2' => street_2,
-        'city' => city,
-        'state' => state,
-        'zip' => zip,
+        'school-address-1' => street_1,
+        'school-address-2' => street_2,
+        'school-city' => city,
+        'school-state' => state,
+        'school-zip' => zip,
         'inspirational-marketing-kit' => booleanize(marketing_kit),
         'csta-plus' => booleanize(csta_plus),
         'aws-educate' => booleanize(aws_educate),
@@ -66,9 +65,7 @@ class Services::AFEEnrollment
     nil
   end
 
-  private
-
-  def booleanize(val)
+  private_class_method def self.booleanize(val)
     ActiveModel::Type::Boolean.new.cast(val) ? '1' : '0'
   end
 end
