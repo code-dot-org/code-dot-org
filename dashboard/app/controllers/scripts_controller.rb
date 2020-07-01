@@ -108,6 +108,7 @@ class ScriptsController < ApplicationController
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
+      has_course: @script&.courses&.any?,
       i18n: @script ? @script.summarize_i18n : {},
       beta: beta,
       betaWarning: beta_warning,
