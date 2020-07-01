@@ -34,8 +34,8 @@ module Cdo
     end
 
     # Asynchronously adds an event to the buffer.
-    # @param [Object] event
-    # @param [Integer] size
+    # @param [Object] event processed when the buffer is flushed.
+    # @param [Integer] size of the given event. size must be <= :batch_size
     def buffer(event, size = nil)
       size ||= event.is_a?(String) ? event.bytesize : 1
       raise 'Event exceeds batch size' if @batch_size&.<(size)
@@ -44,26 +44,34 @@ module Cdo
     end
 
     # Implement in subclass.
-    # @param [Array<Object>] events
+    # @param [Array<Object>] events to be processed
     def flush(events)
     end
 
     # Synchronously flushes all events in batches until the buffer is empty.
     def flush!
-      sleep @min_interval.to_f while await.try_flush(true).value
+      until @events.empty?
+        try_flush(true)
+        # Skip the sleep if there are no more events to process.
+        sleep @min_interval.to_f unless @events.empty?
+      end
     end
 
     # Try to flush a batch of events from the buffer.
-    # Should be called through the thread pool (`async.try_flush` / `await.try_flush`).
+    # Must be called through the thread pool (`async.try_flush` / `await.try_flush`).
     # @param [Boolean] force flush a batch of events even if the buffer isn't ready.
+    #   force cannot override the min_interval rule.
     # @return [Float] number of seconds until next batch can be flushed, or `nil` if the buffer is empty.
     def try_flush(force = false)
       return nil if @events.empty?
 
-      if force || (wait = batch_ready)&.zero?
+      now = Concurrent.monotonic_time
+      is_min_interval_elapsed = @min_interval.nil? || @last_flush.nil? || @min_interval < (now - @last_flush)
+      # The min_interval must pass before another flush is done.
+      wait = batch_ready
+      if is_min_interval_elapsed && (force || wait&.zero?)
         @last_flush = Concurrent.monotonic_time
         flush(get_batch)
-        # Try to flush another batch if one is ready.
         try_flush
       else
         flush_in(wait)
@@ -80,12 +88,12 @@ module Cdo
     # @return [Float] Number of seconds until a batch can be flushed, zero if the batch is ready now,
     #                 or nil if the batch can't be flushed.
     def batch_ready
+      return nil if @events.empty?
       now = Concurrent.monotonic_time
 
       # Wait if batch isn't full or old enough.
       batch_age = now - @events.earliest
-      unless @batch_size&.<=(@events.size) ||
-        @batch_events&.<=(@events.length) ||
+      unless @batch_events&.<=(@events.length) ||
         @batch_interval&.<=(batch_age)
 
         return @batch_interval && (@batch_interval - batch_age)
@@ -111,11 +119,16 @@ module Cdo
     end
 
     # Schedule a future call to #try_flush.
-    # @param [Float] seconds number of seconds to wait.
+    # @param [Float] seconds number of seconds to wait. This will be ignored if a flush is already
+    #   scheduled for a sooner time.
     def flush_in(seconds)
       return unless seconds
       if @scheduled_task&.state == :pending
-        @scheduled_task.reschedule(seconds)
+        # only reschedule to a sooner time.
+        now = Concurrent.monotonic_time
+        if (now + seconds) < @scheduled_task.schedule_time
+          @scheduled_task.reschedule(seconds)
+        end
       else
         @scheduled_task = Concurrent::ScheduledTask.execute(seconds, &method(:try_flush))
       end
