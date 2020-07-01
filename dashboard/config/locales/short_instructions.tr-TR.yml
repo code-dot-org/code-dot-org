@@ -1472,6 +1472,8 @@ tr-TR:
         et."'
       course4_playlab_variables_challenge1: Bu bloklaı kullanın bir tak tak şakası
         paylaşmak için kullanın. Düzeni ve hikayeyi değiştir kendi fıkranı anlat!
+      courseA_artist_loops1: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye ile
+        oynayın ve eğlenceli bir şeyler çizin.
       courseA_artist_loops10: Taşları yerleştireme yardımcı olun böylece içine düşmem!
       courseA_artist_loops10_2018: Taşları yerleştireme yardımcı olun böylece içine
         düşmem!
@@ -1489,15 +1491,49 @@ tr-TR:
         sandığı şeyi çizin.
       courseA_artist_loops12_2019: Sanatçı uzaktan komik bir şey gördü.  Gördüğünü
         sandığı şeyi çizin.
+      courseA_artist_loops1_2018: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye
+        ile oynayın ve eğlenceli bir şeyler çizin.
+      courseA_artist_loops1_2019: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye
+        ile oynayın ve eğlenceli bir şeyler çizin.
+      courseA_artist_loops2: Sanatçının iki ileriye bu çizgiyi çizmesine yardımcı
+        olun.
+      courseA_artist_loops2_2018: Sanatçının iki ileriye bu çizgiyi çizmesine yardımcı
+        olun.
+      courseA_artist_loops2_2019: Sanatçının iki ileriye bu çizgiyi çizmesine yardımcı
+        olun.
       courseA_artist_loops3: Ileriye doğru 5 kez çizgi çizin.
       courseA_artist_loops3_2018: Ileriye doğru 5 kez çizgi çizin.
       courseA_artist_loops3_2019: Ileriye doğru 5 kez çizgi çizin.
+      courseA_artist_loops4: Şimdi, bu çizgiyi beş kez çizmek için bir "tekrarla''
+        döngüsü kullanın!
+      courseA_artist_loops4_2018: Şimdi, bu çizgiyi beş kez çizmek için bir "tekrarla''
+        döngüsü kullanın!
+      courseA_artist_loops4_2019: Şimdi, bu çizgiyi beş kez çizmek için bir "tekrarla''
+        döngüsü kullanın!
+      courseA_artist_loops5: Yedi adım uzunluğunda bir çizgi çizin. Bu bizim ufkumuz
+        olacak.
+      courseA_artist_loops5_2018: Yedi adım uzunluğunda bir çizgi çizin. Bu bizim
+        ufkumuz olacak.
+      courseA_artist_loops5_2019: Yedi adım uzunluğunda bir çizgi çizin. Bu bizim
+        ufkumuz olacak.
+      courseA_artist_loops6: Arkaya güzel bir tepe koyalım.
+      courseA_artist_loops6_2018: Arkaya güzel bir tepe koyalım.
+      courseA_artist_loops6_2019: Arkaya güzel bir tepe koyalım.
       courseA_artist_loops7: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       courseA_artist_loops7_2018: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       courseA_artist_loops7_2019: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
+      courseA_artist_loops8: Tekneye çıkacak bir merdivene ihtiyacımız var.
+      courseA_artist_loops8_2018: Tekneye çıkacak bir merdivene ihtiyacımız var.
+      courseA_artist_loops8_2019: Tekneye çıkacak bir merdivene ihtiyacımız var.
       courseA_artist_loops9: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops9_2018: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops9_2019: 'Meydan okuma: Merdivenleri düzelt.'
+      courseA_artist_loops_challenge1: Bir ev çizebilir misiniz? İstediğiniz gibi
+        bir ev olsun!
+      courseA_artist_loops_challenge1_2018: Bir ev çizebilir misiniz? İstediğiniz
+        gibi bir ev olsun!
+      courseA_artist_loops_challenge1_2019: Bir ev çizebilir misiniz? İstediğiniz
+        gibi bir ev olsun!
       courseA_artist_loops_challenge2a: _Bu üç çadırı kurmak için bana yardım et!_
       courseA_artist_loops_challenge2a_2018: _Bu üç çadırı kurmak için bana yardım
         et!_
@@ -1593,6 +1629,8 @@ tr-TR:
       courseA_maze_seq2: Beni domuza götürmek için kodu değiştir!
       courseA_maze_seq3: Kuşu domuza ulaştırmak için kodu düzeltin!
       courseA_maze_seq4: Kuşu domuza ulaştırmak için bir blok çıkartın!
+      courseA_maze_seq5: Bunu en baştan kendiniz deneyin.
+      courseA_maze_seq5_copy: Bunu en baştan kendiniz deneyin.
       courseA_maze_seq6: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
@@ -1618,9 +1656,29 @@ tr-TR:
         Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       courseA_maze_seq_challenge2_2019: Yolu takip et ve beni sersem domuza götür.
         Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
+      courseA_playLab_events1: Bu bir Play Lab seviyesidir. Blokları çalışma alanına
+        taşıyın ve ne olduğunu görün!
+      courseA_playLab_events1_2018: Bu bir Play Lab seviyesidir. Blokları çalışma
+        alanına taşıyın ve ne olduğunu görün!
+      courseA_playLab_events2: Köpek Jorge "Merhaba" demek istiyor. Ona yardım edebilir
+        misiniz?
+      courseA_playLab_events2_2018: Köpek Jorge "Merhaba" demek istiyor. Ona yardım
+        edebilir misiniz?
       courseA_playLab_events3: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu bağla."
       courseA_playLab_events3_2018: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu
         bağla."
+      courseA_playLab_events4: '"Sağ" tuşa tıklandığında sağa hareket edecek bloklar
+        ekleyin.'
+      courseA_playLab_events5: '"Yukarı" ve "aşağı" düğmelerine basıldığında Jorge''nin
+        yukarı ve aşağı hareket etmesini sağlamak için olaylar ekleyin.'
+      courseA_playLab_events5_2018: '"Yukarı" ve "aşağı" düğmelerine basıldığında
+        Jorge''nin yukarı ve aşağı hareket etmesini sağlamak için olaylar ekleyin.'
+      courseA_playLab_events6: Jorge üzerine tıklandığında arka planı değiştirip rastgele
+        bir ses çalarak bunu daha ilginç hale getirin.
+      courseA_playLab_events6_2018: Jorge üzerine tıklandığında arka planı değiştirip
+        rastgele bir ses çalarak bunu daha ilginç hale getirin.
+      courseA_playLab_events7: Bu oyuna istediğiniz her şeyi ekleyin. Jorge onunla
+        karşılaştığında dinozorun ortadan kaybolmasını sağlayabilir misiniz?
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge1_2018: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
@@ -1633,6 +1691,17 @@ tr-TR:
         yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
       courseA_playlab_events_challenge2_2019: Bir parti verelim! Her arkadaş tıkladığında
         yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
+      courseA_video_events: Daha iyi bir playlab/olay kombinasyonuna ihtiyacınız var
+      courseA_video_events_2018: Daha iyi bir playlab/olay kombinasyonuna ihtiyacınız
+        var
+      courseA_video_events_2019: Daha iyi bir playlab/olay kombinasyonuna ihtiyacınız
+        var
+      courseB_artist_loops1: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye ile
+        oynayın ve eğlenceli bir şeyler çizin.
+      courseB_artist_loops1_2018: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye
+        ile oynayın ve eğlenceli bir şeyler çizin.
+      courseB_artist_loops1_2019: Bu "Sanatçı" adlı yeni bir bulmaca türüdür. Seviye
+        ile oynayın ve eğlenceli bir şeyler çizin.
       courseB_artist_loops2: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama doğru
         yapamıyor. Yardım edebilir misin?
       courseB_artist_loops2_2018: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama
@@ -2129,6 +2198,12 @@ tr-TR:
         sinirlenebilirim
       courseC_maze_programming6_2019: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
         sinirlenebilirim
+      courseC_maze_programming7: "**Görev:** Bu kodda çok fazla hata var. Bazı blokları
+        kaldırmanız ve başkalarını eklemeniz gerekecek."
+      courseC_maze_programming7_2018: "**Görev:** Bu kodda çok fazla hata var. Bazı
+        blokları kaldırmanız ve başkalarını eklemeniz gerekecek."
+      courseC_maze_programming7_2019: "**Görev:** Bu kodda çok fazla hata var. Bazı
+        blokları kaldırmanız ve başkalarını eklemeniz gerekecek."
       courseC_maze_programming8: '-   "Sakin ol ve kötü domuzu bulmama yardım et."
         \*'
       courseC_maze_programming8_2018: '-   "Sakin ol ve kötü domuzu bulmama yardım

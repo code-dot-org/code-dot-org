@@ -200,25 +200,30 @@ class PardotV2Test < Minitest::Test
           email: 'test0@domain.com',
           pardot_id: 10,
           opt_in: 1,
-          user_id: 111
+          user_id: 111,
+          forms_submitted: 'Census,Petition',
+          form_roles: 'engineer,teacher',
+          state: 'Washington',
+          city: 'Seattle',
+          postal_code: '98101',
+          country: 'United States',
         },
         expected_output: {
           email: 'test0@domain.com',
           id: 10,
           db_Opt_In: 'Yes',
-          db_Has_Teacher_Account: 'true'
+          db_Has_Teacher_Account: 'true',
+          db_Forms_Submitted: 'Census,Petition',
+          db_Form_Roles: 'engineer,teacher',
+          db_State: 'Washington',
+          db_City: 'Seattle',
+          db_Postal_Code: '98101',
+          db_Country: 'United States',
         }
       },
       {
-        input: {
-          email: 'test1@domain.com',
-          pardot_id: nil,
-          bad_key: true
-        },
-        expected_output: {
-          email: 'test1@domain.com',
-          id: nil
-        }
+        input: {bad_key: true},
+        expected_output: {}
       }
     ]
 
@@ -233,20 +238,35 @@ class PardotV2Test < Minitest::Test
       {
         # multi-value attribute has 1 value
         input: {
-          professional_learning_enrolled: COURSE_CSF
+          professional_learning_enrolled: COURSE_CSF,
+          professional_learning_attended: COURSE_CSF,
+          hoc_organizer_years: '2019',
+          roles: 'Form Submitter',
         },
         expected_output: {
-          db_Professional_Learning_Enrolled_0: COURSE_CSF
+          db_Professional_Learning_Enrolled_0: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSF,
+          db_Hour_of_Code_Organizer_0: '2019',
+          db_Roles_0: 'Form Submitter',
         }
       },
       {
         # multi-value attribute has more than 1 value
         input: {
-          professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}"
+          professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
+          professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
+          hoc_organizer_years: '2018,2019',
+          roles: 'Form Submitter,Petition Signer',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
-          db_Professional_Learning_Enrolled_1: COURSE_CSF
+          db_Professional_Learning_Enrolled_1: COURSE_CSF,
+          db_Professional_Learning_Attended_0: COURSE_CSP,
+          db_Professional_Learning_Attended_1: COURSE_ECS,
+          db_Hour_of_Code_Organizer_0: '2018',
+          db_Hour_of_Code_Organizer_1: '2019',
+          db_Roles_0: 'Form Submitter',
+          db_Roles_1: 'Petition Signer',
         }
       }
     ]
@@ -258,7 +278,7 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_extract_prospect_from_response
-    fields = %w(email id db_Opt_In db_Roles)
+    fields = %w(email id db_Opt_In db_Roles db_Hour_of_Code_Organizer db_State)
     doc = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
@@ -270,23 +290,69 @@ class PardotV2Test < Minitest::Test
                 <value>Teacher</value>
                 <value>CSF Teacher</value>
             </db_Roles>
+            <db_Hour_of_Code_Organizer>2013</db_Hour_of_Code_Organizer>
+            <db_Name>TestName</db_Name>
           </prospect>
         </result>
       </rsp>
     XML
 
+    # In the sample response above, db_Roles and db_Hour_of_Code_Organizer are both
+    # multi-value fields, one has 2 values while one has only 1.
+    # db_State exists only in the list of fields, and db_Name exists only in the sample
+    # response, both should not be in the expected result.
     expected_prospect = {
       'id' => '1',
       'email' => 'test@domain.com',
       'db_Opt_In' => 'Yes',
-      'db_Roles_0' => 'Teacher',
-      'db_Roles_1' => 'CSF Teacher'
+      'db_Roles_0' => 'CSF Teacher',
+      'db_Roles_1' => 'Teacher',
+      'db_Hour_of_Code_Organizer_0' => '2013',
     }
 
     prospect_node = doc.xpath('/rsp/result/prospect').first
     prospect = PardotV2.extract_prospect_from_response(prospect_node, fields)
 
     assert_equal expected_prospect, prospect
+  end
+
+  def test_extract_prospect_from_response_is_consistent_with_other_method
+    # Convert contact data to prospect data for uploading to Pardot
+    contact_data = {
+      pardot_id: '10',
+      email: 'test@domain.com',
+      opt_in: 1,
+      user_id: 111,
+      roles: 'Teacher,CSF Teacher',
+      hoc_organizer_years: '2013'
+    }
+    prospect_to_upload = PardotV2.convert_to_pardot_prospect contact_data
+
+    # Assume the prospect is already uploaded to Pardot, download it to the database,
+    # and parse the response back to prospect data.
+    pardot_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok">
+        <result>
+          <prospect>
+            <id>10</id>
+            <email>test@domain.com</email>
+            <db_Opt_In>Yes</db_Opt_In>
+            <db_Has_Teacher_Account>true</db_Has_Teacher_Account>
+            <db_Roles>
+                <value>Teacher</value>
+                <value>CSF Teacher</value>
+            </db_Roles>
+            <db_Hour_of_Code_Organizer>2013</db_Hour_of_Code_Organizer>
+          </prospect>
+        </result>
+      </rsp>
+    XML
+    prospect_node = pardot_response.xpath('/rsp/result/prospect').first
+    prospect_fields = %w(id email db_Opt_In db_Has_Teacher_Account db_Roles db_Hour_of_Code_Organizer)
+    prospect_downloaded = PardotV2.extract_prospect_from_response(prospect_node, prospect_fields)
+
+    # The two prospect data must match.
+    assert_equal prospect_to_upload, prospect_downloaded.deep_symbolize_keys
   end
 
   def test_build_batch_url

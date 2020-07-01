@@ -40,10 +40,14 @@ export const commands = {
   getThisSprite(which, extraArgs) {
     if (extraArgs) {
       if (which === 'this') {
-        return {id: extraArgs.sprite};
+        if (extraArgs.clickedSprite !== undefined) {
+          return {id: extraArgs.clickedSprite};
+        } else if (extraArgs.subjectSprite !== undefined) {
+          return {id: extraArgs.subjectSprite};
+        }
       }
       if (which === 'other') {
-        return {id: extraArgs.target};
+        return {id: extraArgs.objectSprite};
       }
     }
   },

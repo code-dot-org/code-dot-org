@@ -4779,12 +4779,16 @@ sk-SK:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2:
-        courseA_harvester_loops2_a: "Tvoj kód bude mať **štyri** bloky `posuň sa na
-          západ` <xml><block type=\"maze_moveWest\"/></xml> \n\na **štyri** bloky
-          `zober kukuricu` <xml><block type=\"harvester_corn\"/></xml>."
+        courseA_harvester_loops2_a: |-
+          Tvoj kód bude mať **štyri** bloky `pohni sa na západ` <xml><block type="maze_moveWest"/></xml>
+
+          a **štyri** bloky `zbieraj kukuricu` <xml><block type="harvester_corn"/></xml>.
         courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
           povedať krok po kroku. '
       courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "Tvoj kód bude mať **štyri** bloky `pohni sa na
+          západ`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\na **štyri** bloky
+          `zbieraj kukuricu`. "
         courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
           povedať krok po kroku. '
       courseA_harvester_loops3:
@@ -4913,14 +4917,14 @@ sk-SK:
       courseA_harvester_seq10:
         courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
           na papier.
-        courseA_harvester_seq10_b: Najprv použi `V`, potom \`S. Zopakuj to 2-krát.
+        courseA_harvester_seq10_b: Najprv použi `V`, potom `S`. Zopakuj to 2-krát.
           Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.
       courseA_harvester_seq10_2019:
         courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
           na papier.
-        courseA_harvester_seq10_b: Najprv použi `V`, potom \`S. Zopakuj to 2-krát.
+        courseA_harvester_seq10_b: Najprv použi `V`, potom `S`. Zopakuj to 2-krát.
           Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.

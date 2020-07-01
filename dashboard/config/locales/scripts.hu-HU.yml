@@ -5246,6 +5246,8 @@ hu:
           lesson_groups:
             csp_unit1_2020:
               display_name: '2. fejezet: Digitális információ'
+            cspSurvey:
+              display_name: Kérdőív
           lessons:
             Representing Information:
               name: Az információ ábrázolása
@@ -5352,3 +5354,37 @@ hu:
           lessons:
             While Loops:
               name: Elől tesztelős ciklusok
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: hurkok
+            Events:
+              name: Események
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Variables:
+              name: változók
+            For Loops:
+              name: Számláló ciklusok
+            Sprite Lab:
+              name: Sprite labor
+          lessons:
+            Loops:
+              name: hurkok
+            Events:
+              name: Események
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Variables:
+              name: változók
+            For Loops:
+              name: Számláló ciklusok
+            Sprite Lab:
+              name: Sprite labor
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Első lépések

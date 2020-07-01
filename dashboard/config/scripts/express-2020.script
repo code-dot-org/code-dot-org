@@ -1,3 +1,4 @@
+hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/express/standards/"]]
 lesson_extras_available true
@@ -7,6 +8,7 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2020'
+is_stable true
 curriculum_umbrella 'CSF'
 tts true
 
@@ -358,7 +360,7 @@ bonus 'courseF_artist_for_challenge1_2020'
 bonus 'courseF_artist_for_challenge2_2020'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Learning Sprites with Sprite Lab'
+lesson 'Swimming Fish with Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab_2020'
 level 'Fish Tank 1-validated_2020'
 level 'Fish Tank 2-validated_2020'
@@ -381,7 +383,7 @@ level 'Dance Party 6_2020'
 level 'Dance Party 7_2020'
 level 'Dance Party Freeplay_2020'
 
-lesson 'Editing Behaviors'
+lesson 'Behaviors with Sprite Lab'
 level 'behaviors 1_2020'
 level 'behaviors 2_2020'
 level 'behaviors 3_2020'
@@ -402,7 +404,8 @@ level 'Virtual Pet 6_2020'
 level 'Virtual Pet 7_2020'
 level 'Virtual Pet 8_2020'
 
-lesson 'Build A Project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'End of Course Project'
 level 'courseExpress_project_exemplars_2019_2020', progression: 'Example Projects'
 level 'courseExpress_EOC_2020', progression: 'Create your project'
 

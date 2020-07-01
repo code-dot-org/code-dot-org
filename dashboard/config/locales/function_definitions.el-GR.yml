@@ -343,11 +343,13 @@ el-GR:
         n-sided shape:
           name: σχήμα n όψεων
           parameters:
+            sides: πλευρές
             length: μήκος
         draw a loop:
           name: σχεδίασε μια επανάληψη
           parameters:
             length: μήκος
+            sides: πλευρές
         draw spiral circle:
           name: σχεδίασε έναν σπιράλ κύκλο
           parameters:
@@ -357,6 +359,7 @@ el-GR:
           name: σχεδίασε μια επανάληψη
           parameters:
             length: μήκος
+            sides: πλευρές
         n-sided shape:
           name: σχήμα n όψεων
         draw spiral circle:
@@ -442,42 +445,54 @@ el-GR:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
           parameters:
+            sides: πλευρές
             length: μήκος
         do something:
           name: κάνε κάτι
           parameters:
+            sides: πλευρές
             length: μήκος
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 15:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
           parameters:
             points: πόντοι
             length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
-        draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
           parameters:
+            radius: ακτίνα
+        draw a pinwheel:
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
             length: μήκος
             repeat: επανάλαβε
         draw a triangle:
@@ -485,8 +500,9 @@ el-GR:
           parameters:
             length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
           parameters:
+            sides: πλευρές
             length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
@@ -496,6 +512,7 @@ el-GR:
           name: σχεδίασε ένα τετράγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 2:
         do something:
           name: κάνε κάτι
@@ -551,6 +568,7 @@ el-GR:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       NEW Course 4 Play Lab Params 11:
         jump:
           name: πήδα
@@ -564,14 +582,20 @@ el-GR:
       New Artist Project:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
           parameters:
             points: πόντοι
             length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
-        draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
           parameters:
+            radius: ακτίνα
+        draw a pinwheel:
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
             length: μήκος
             repeat: επανάλαβε
         draw a triangle:
@@ -579,8 +603,9 @@ el-GR:
           parameters:
             length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
           parameters:
+            sides: πλευρές
             length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
@@ -616,7 +641,7 @@ el-GR:
           name: σχεδίασε ένα λουλούδι
       Standalone_Artist_8:
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
       Standalone_Artist_9:
         my function:
           name: η συνάρτηση μου
@@ -653,6 +678,8 @@ el-GR:
             color: χρώμα
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            sides: πλευρές
         do something:
           name: κάνε κάτι
       course4_bee_fwp_challenge1:
@@ -1094,39 +1121,50 @@ el-GR:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       courseF_artist_fwp5:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
           parameters:
             length: μήκος
+            sides: πλευρές
       courseF_artist_fwp6:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
           parameters:
             length: μήκος
+            sides: πλευρές
       courseF_artist_fwp7:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
           parameters:
             length: μήκος
+            sides: πλευρές
             min: ελάχιστο
       courseF_artist_fwp8:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
           parameters:
             length: μήκος
+            sides: πλευρές
             min: ελάχιστο
       courseF_artist_fwp9:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
           parameters:
             points: πόντοι
             length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
-        draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
           parameters:
+            radius: ακτίνα
+        draw a pinwheel:
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
             length: μήκος
             repeat: επανάλαβε
         draw a triangle:
@@ -1134,8 +1172,9 @@ el-GR:
           parameters:
             length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
           parameters:
+            sides: πλευρές
             length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
@@ -1149,6 +1188,7 @@ el-GR:
           name: σχεδίασε μια άκρη του σπιράλ
           parameters:
             length: μήκος
+            sides: πλευρές
             min: ελάχιστο
       courseF_artist_fwp_challenge1:
         draw background:
@@ -1156,6 +1196,8 @@ el-GR:
             color: χρώμα
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            sides: πλευρές
         do something:
           name: κάνε κάτι
       courseF_artist_fwp_challenge2:

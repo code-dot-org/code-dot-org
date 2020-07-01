@@ -558,6 +558,8 @@
   "unsubmitYourProjectConfirm": "Atšaukus projekto pateikimą pasikeis ir pateikimo data, ar tikrai atšaukti?",
   "update": "Atnaujinti",
   "version": "Versija",
+  "versionHistory_clearProgress_cancel": "Atšaukti",
+  "versionHistory_header": "Versijos istorija",
   "viewCourse": "Peržiūrėti kursą",
   "viewLessonPlan": "Peržiūrėti pamokos planą",
   "viewPageAs": "Peržiūrėti puslapį kaip:",

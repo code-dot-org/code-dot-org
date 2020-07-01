@@ -3225,3 +3225,30 @@ sr:
           lessons:
             While Loops:
               name: Понављања са условима
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Петље
+            Events:
+              name: Догађаји
+            Conditionals:
+              name: Кондиционали
+            Functions:
+              name: Функције
+            Variables:
+              name: Променљиве
+            For Loops:
+              name: Бројачке петље
+          lessons:
+            Loops:
+              name: Петље
+            Events:
+              name: Догађаји
+            Conditionals:
+              name: Кондиционали
+            Functions:
+              name: Функције
+            Variables:
+              name: Променљиве
+            For Loops:
+              name: Бројачке петље

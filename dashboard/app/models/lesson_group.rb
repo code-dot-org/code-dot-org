@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  position    :integer
+#  properties  :text(65535)
 #
 # Indexes
 #
@@ -16,6 +17,8 @@
 #
 
 class LessonGroup < ApplicationRecord
+  include SerializedProperties
+
   belongs_to :script
   has_many :lessons, -> {order('absolute_position ASC')}
 
@@ -28,6 +31,10 @@ class LessonGroup < ApplicationRecord
       message: 'Expect all levelbuilder created lesson groups to have key.'
     },
     if: proc {|a| a.user_facing}
+
+  serialized_attrs %w(
+    display_name
+  )
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
@@ -69,7 +76,7 @@ class LessonGroup < ApplicationRecord
           new_lesson_group = true
         end
 
-        lesson_group.assign_attributes(position: index + 1)
+        lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
 
         LessonGroup.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)

@@ -506,7 +506,7 @@ pl-PL:
         courseC_harvester_loops1_callout1: Liczba cztery na dyni mówi, że cztery dynie
           są dostępne do zebrania.
       courseC_maze_debugging5:
-        courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
+        courseC_maze_debugging5_1: Szarych bloków nie można usunąć!
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
       courseC_maze_debugging5_2019:

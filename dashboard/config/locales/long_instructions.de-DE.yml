@@ -4358,8 +4358,6 @@ de-DE:
         Bausteine ein, um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
       courseA_maze_ramp3b_2018: "Es gibt einen zusätzlichen Baustein am Ende dieses
         Codes!  \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
-      courseA_maze_ramp3b_2019: "Es gibt einen zusätzlichen Baustein am Ende dieses
-        Codes!  \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
       courseA_maze_ramp4a_2018: Kannst du herausfinden, welchen Block du am Ende der
         anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
       courseA_maze_ramp4a_2019: Kannst du herausfinden, welchen Block du am Ende der
@@ -4400,7 +4398,7 @@ de-DE:
       courseA_maze_seq1_2019: _"Nimm diese Bausteine zu Hilfe und versuche, mich zum
         Schwein zu führen!"_
       courseA_maze_seq2: |-
-        _"Ein Fehler! Bring den Code in Ordnung um mich zum Schwein zu bringen."_
+        _"Ein Fehler! Korrigiere den Code, um mich zum Schwein zu bringen."_
 
         ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: |-

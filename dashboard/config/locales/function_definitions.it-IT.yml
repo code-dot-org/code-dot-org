@@ -60,6 +60,9 @@ it-IT:
           name: disegna una D
         draw E:
           name: disegna una E
+      2-3 Artist Functions 1:
+        draw ear stems:
+          name: disegna le astine
       2-3 Artist Functions 10:
         big gear:
           name: ingranaggio grande
@@ -77,9 +80,13 @@ it-IT:
       2-3 Artist Functions 2:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       2-3 Artist Functions 3:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       2-3 Artist Functions 4:
         draw a square:
           name: disegna un quadrato
@@ -814,6 +821,9 @@ it-IT:
       courseE_artist_concept_challenge2_2018:
         draw pinwheel:
           name: disegna una girandola
+      courseE_artist_functions1:
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions10:
         do something:
           name: fai qualcosa
@@ -835,18 +845,29 @@ it-IT:
           name: disegna un esagono
         draw line of hexagons:
           name: disegna una fila di esagoni
+      courseE_artist_functions1_copy:
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions2:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions2_2018:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions2_2019:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions2_copy:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions3_2018:
         draw a star:
           name: disegna una stella
@@ -1027,15 +1048,23 @@ it-IT:
       courseE_artist_functions_predict1:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions_predict1_2018:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions_predict1_2019:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions_predict1_copy:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions_predict2:
         draw line of polygons:
           name: disegna una fila di poligoni

@@ -9,7 +9,10 @@ import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {useFoormSurvey} from './workshop_summary_utils';
+import {
+  useFoormSurvey,
+  shouldShowSurveyResults
+} from './workshop_summary_utils';
 
 export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
 export const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
@@ -305,11 +308,17 @@ export default class EnrollmentsPanel extends React.Component {
             selectedEnrollments={this.state.selectedEnrollments}
           />
 
-          {['In Progress', 'Ended'].includes(workshop.state) && viewSurveyUrl && (
-            <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
-              View Survey Results
-            </Button>
-          )}
+          {viewSurveyUrl &&
+            shouldShowSurveyResults(
+              workshop.state,
+              workshop.course,
+              workshop.subject,
+              lastSessionDate
+            ) && (
+              <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
+                View Survey Results
+              </Button>
+            )}
         </div>
       );
     }

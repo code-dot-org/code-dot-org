@@ -21,6 +21,10 @@ const styles = {
   },
   consentIndent: {
     marginLeft: '25px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
   }
 };
 
@@ -28,7 +32,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    onContinue: PropTypes.func
+    updateFormData: PropTypes.func
   };
 
   constructor(props) {
@@ -49,8 +53,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
+  resetSchool = () =>
+    this.props.updateFormData({schoolEligible: null, schoolId: null});
+
   submit = () => {
     const requiredFormData = _.pick(this.state, [
+      'email',
       'firstName',
       'lastName',
       'inspirationKit',
@@ -87,7 +95,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       data_json: JSON.stringify(submitData)
     });
 
-    this.props.onContinue(submitData);
+    this.props.updateFormData(submitData);
   };
 
   onContinue = () => {
@@ -129,7 +137,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   getMissingRequiredFields() {
-    const requiredFields = ['firstName', 'lastName', 'consentAFE'];
+    const requiredFields = ['email', 'firstName', 'lastName', 'consentAFE'];
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
@@ -147,9 +155,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 
   render() {
-    // TO DO: gray out school dropdown and disable editing
-    // TO DO: Add "Not your school? go back" link below school dropdown
-    // TO DO: Enforce that these required fields are actually required
     return (
       <div>
         <div>
@@ -168,6 +173,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
+            validationState={
+              this.state.errors.hasOwnProperty('email')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
+            errorMessage={this.state.errors.email}
           />
           <SchoolAutocompleteDropdownWithLabel
             value={this.props.schoolId}
@@ -175,7 +186,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             includeSchoolNotFoundCheckbox={false}
           />
           <div style={styles.wrong_school}>
-            Wrong school? Go back
+            Wrong school? <a onClick={this.resetSchool}>Go back</a>
             <br />
           </div>
           <FieldGroup
@@ -282,7 +293,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             always have the choice to adjust your interest settings or
             unsubscribe.
           </div>
-          <Button id="continue" onClick={this.onContinue}>
+          <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
           </Button>
         </form>
