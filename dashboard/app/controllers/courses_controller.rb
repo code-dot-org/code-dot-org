@@ -29,7 +29,7 @@ class CoursesController < ApplicationController
     # When the url of a course family is requested, redirect to a specific course version.
     #
     # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
-    if ScriptConstants::COURSE_FAMILY_NAMES.include?(params[:course_name])
+    if Course::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = Course.all_courses.
           select {|c| c.family_name == params[:course_name] && c.is_stable?}.
