@@ -12,21 +12,21 @@ Scenario: Version warning announcement on course and script overview pages
 
   # students must be assigned or have progress to view older script versions
 
-  Given I am assigned to script "ui-test-script-2017"
+  Given I am assigned to script "ui-test-script-in-course-2017"
   When I am on "http://studio.code.org/courses/ui-test-course-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
-  When I am on "http://studio.code.org/s/ui-test-script-2019"
+  When I am on "http://studio.code.org/s/ui-test-script-in-course-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
   # generate some progress in csp-2017
 
-  Given I am on "http://studio.code.org/s/ui-test-script-2017/next"
-  And I wait until current URL contains "/s/ui-test-script-2017/stage/1/puzzle/1"
+  Given I am on "http://studio.code.org/s/ui-test-script-in-course-2017/next"
+  And I wait until current URL contains "/s/ui-test-script-in-course-2017/stage/1/puzzle/1"
 
   # course and unit pages now show version warning
 
@@ -37,7 +37,7 @@ Scenario: Version warning announcement on course and script overview pages
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
-  When I am on "http://studio.code.org/s/ui-test-script-2019"
+  When I am on "http://studio.code.org/s/ui-test-script-in-course-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
