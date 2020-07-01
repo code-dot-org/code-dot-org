@@ -921,7 +921,20 @@ class Script < ActiveRecord::Base
     script.update!(hidden: true) if new_suffix
     script.lesson_groups = LessonGroup.add_lesson_groups(script, raw_lesson_groups, new_suffix, editor_experiment)
 
-    # DANI COME BACK HERE: need to find a way for script.lessons and script.script_levels to work
+    # Until the through relationships are set up we have to do this so that script.lessons and script.script_levels
+    # will continue to work
+    script_lessons = []
+    script_script_levels = []
+    script.lesson_groups.each do |lesson_group|
+      lesson_group.lessons.each do |lesson|
+        script_lessons << lesson
+        lesson.script_levels.each do |script_level|
+          script_script_levels << script_level
+        end
+      end
+    end
+    script.lessons = script_lessons
+    script.script_levels = script_script_levels
 
     script.generate_plc_objects
     script
