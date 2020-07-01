@@ -42,7 +42,7 @@ class Services::AFEEnrollment
     response = Net::HTTP.post_form(
       URI(CDO.afe_pardot_form_handler_url),
       {
-        'traffic-source' => traffic_source,
+        'traffic-source' => 'AFE-code.org-2020',
         'first-name' => first_name,
         'last-name' => last_name,
         'email' => email,
@@ -61,7 +61,7 @@ class Services::AFEEnrollment
       }
     )
 
-    raise Error.new("AFE submission failed with HTTP #{response.status}") unless response.status == 200
+    raise Error.new("AFE submission failed with HTTP #{response.code}") unless response.code == '200'
     raise Error.new("AFE submission failed with a validation error") if response.body =~ /Cannot find error page/
     nil
   end
