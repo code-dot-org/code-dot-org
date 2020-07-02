@@ -1526,6 +1526,8 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
+  # This test case doesn't cover hidden (not a property) or version year (only
+  # updated under certain conditions). These are covered in other test cases.
   test 'clone with suffix clears certain properties' do
     script_file = File.join(self.class.fixture_path, "test-all-properties.script")
     scripts, _ = Script.setup([script_file])
