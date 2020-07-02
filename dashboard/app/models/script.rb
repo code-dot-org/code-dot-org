@@ -1194,6 +1194,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
