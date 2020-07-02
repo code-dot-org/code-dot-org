@@ -5,21 +5,31 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const MOCK_SECTIONS = {
-  1: {
-    id: 1,
-    name: 'intro to computer science I'
-  },
-  2: {
-    id: 2,
-    name: 'intro to computer science II'
-  },
-  3: {
+// The array only needs to conform to sectionForDropdownShape,
+// but for convenience we're using the first entry as the selectedSection,
+// which needs to conform to the whole sectionShape
+const MOCK_SECTIONS = [
+  {
     id: 3,
-    name: 'hidden section',
-    hidden: true
+    name: 'intro to computer science III',
+    isAssigned: false,
+    stageExtras: true,
+    pairingAllowed: true,
+    studentCount: 5,
+    code: 'VQGSJR',
+    providerManaged: false
+  },
+  {
+    id: 2,
+    name: 'intro to computer science II',
+    isAssigned: false
+  },
+  {
+    id: 1,
+    name: 'intro to computer science I',
+    isAssigned: false
   }
-};
+];
 
 const MOCK_SCRIPT = {
   name: 'Course D (2019)'
@@ -27,7 +37,7 @@ const MOCK_SCRIPT = {
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
-  selectedSectionId: 1,
+  selectedSection: MOCK_SECTIONS[0],
   assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {}
 };
@@ -37,7 +47,7 @@ describe('TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let h1Elements = wrapper.find('h1');
     expect(h1Elements).to.have.lengthOf(1);
-    expect(h1Elements.contains('intro to computer science I')).to.equal(true);
+    expect(h1Elements.contains('intro to computer science III')).to.equal(true);
   });
 
   it('renders assigned script name if assigned', () => {
@@ -60,11 +70,11 @@ describe('TeacherDashboardHeader', () => {
     expect(dropdownButton).to.have.lengthOf(1);
 
     let dropdownLinks = dropdownButton.find('a');
-    expect(dropdownLinks).to.have.lengthOf(2);
+    expect(dropdownLinks).to.have.lengthOf(3);
 
     let checkmarkIcon = <FontAwesome icon="check" />;
     expect(
-      dropdownLinks.at(0).contains('intro to computer science I')
+      dropdownLinks.at(0).contains('intro to computer science III')
     ).to.equal(true);
     expect(dropdownLinks.at(0).contains(checkmarkIcon)).to.equal(true);
 
