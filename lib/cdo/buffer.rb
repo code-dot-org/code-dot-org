@@ -1,4 +1,3 @@
-require 'concurrent/async'
 require 'concurrent/scheduled_task'
 require 'honeybadger/ruby'
 
@@ -9,8 +8,6 @@ module Cdo
   #
   # Because events are stored in memory, the buffer will be synchronously flushed when the Ruby process exits.
   class Buffer
-    include Concurrent::Async
-
     # @param [Integer] batch_events   Maximum number of events in a buffered batch.
     # @param [Integer] batch_size     Maximum total payload 'size', based on the size parameter passed to #buffer,
     #                                 in a buffered batch.
@@ -40,7 +37,7 @@ module Cdo
       size ||= event.is_a?(String) ? event.bytesize : 1
       raise 'Event exceeds batch size' if @batch_size&.<(size)
       @events << [event, size]
-      async.try_flush
+      flush_in(batch_ready)
     end
 
     # Implement in subclass.
@@ -58,7 +55,6 @@ module Cdo
     end
 
     # Try to flush a batch of events from the buffer.
-    # Must be called through the thread pool (`async.try_flush` / `await.try_flush`).
     # @param [Boolean] force flush a batch of events even if the buffer isn't ready.
     #   force cannot override the min_interval rule.
     # @return [Float] number of seconds until next batch can be flushed, or `nil` if the buffer is empty.
