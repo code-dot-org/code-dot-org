@@ -117,7 +117,7 @@ class LessonGroup < ApplicationRecord
 
   # All lesson groups should have lessons in them
   def self.prevent_lesson_group_with_no_lessons(lesson_group)
-    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if lesson_group.lessons.count < 0
+    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if lesson_group.lessons.count < 1
   end
 
   def localized_display_name

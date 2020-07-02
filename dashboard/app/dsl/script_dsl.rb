@@ -86,15 +86,15 @@ class ScriptDSL < BaseDSL
 
   def lesson(name, properties = {})
     # For scripts that don't use lesson groups create a blank non-user facing lesson group
-    if @lesson_groups.empty?
-      @lesson_groups << {
-        key: nil,
-        display_name: nil,
-        lessons: []
-      }.compact
-    end
-
     if name
+      if @lesson_groups.empty?
+        @lesson_groups << {
+          key: nil,
+          display_name: nil,
+          lessons: []
+        }.compact
+      end
+
       @lesson_groups[@lesson_groups.length - 1][:lessons] << {
         name: name,
         lockable: properties[:lockable],

@@ -320,22 +320,38 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
   end
 
