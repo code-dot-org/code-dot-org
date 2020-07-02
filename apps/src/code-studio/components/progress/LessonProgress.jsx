@@ -191,10 +191,12 @@ class LessonProgress extends Component {
             </div>
           ))}
           {lessonExtrasUrl && !lessonTrophyEnabled && (
-            <LessonExtrasProgressBubble
-              lessonExtrasUrl={lessonExtrasUrl}
-              perfect={onLessonExtras}
-            />
+            <div ref={onLessonExtras ? 'currentLevel' : null}>
+              <LessonExtrasProgressBubble
+                lessonExtrasUrl={lessonExtrasUrl}
+                perfect={onLessonExtras}
+              />
+            </div>
           )}
           {lessonTrophyEnabled && (
             <LessonTrophyProgressBubble
