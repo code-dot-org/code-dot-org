@@ -244,9 +244,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'lessons are in order' do
     script = create(:script, name: 's1')
-    create(:lesson, script: script)
-    last = create(:lesson, script: script)
-    create(:lesson, script: script)
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    create(:lesson, script: script, lesson_group: lesson_group)
+    last = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:lesson, script: script, lesson_group: lesson_group)
 
     last.move_to_bottom
 
@@ -257,10 +258,11 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'calling next_level on last script_level points to next lesson' do
     script = create(:script, name: 'test2')
-    first_lesson = create(:lesson, script: script, absolute_position: 1)
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    first_lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
 
     first_lesson_last_level = create(:script_level, script: script, lesson: first_lesson, position: 1)
-    second_lesson = create(:lesson, script: script, absolute_position: 2)
+    second_lesson = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
     second_lesson_first_level = create(:script_level, script: script, lesson: second_lesson, position: 1)
     create(:script_level, script: script, lesson: second_lesson, position: 2)
 
@@ -747,7 +749,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should summarize script' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
     script.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
@@ -761,9 +764,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should summarize script with peer reviews' do
     script = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
-    lesson = create(:lesson, script: script, name: 'lesson 2')
+    lesson = create(:lesson, script: script, name: 'lesson 2', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     summary = script.summarize
@@ -797,11 +801,12 @@ class ScriptTest < ActiveSupport::TestCase
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
       @script = create(:script, name: 'script-with-visible-after')
-      stage_no_visible_after = create(:lesson, script: @script, name: 'Stage 1')
+      @lesson_group = create(:lesson_group, key: 'key1', script: @script)
+      stage_no_visible_after = create(:lesson, script: @script, name: 'Stage 1', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_no_visible_after)
-      stage_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700')
+      stage_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_future_visible_after)
-      stage_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700')
+      stage_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_past_visible_after)
     end
 
@@ -832,7 +837,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     expected = {
@@ -847,7 +853,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should exclude lessons if include_lessons is false' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     assert_nil script.summarize(false)[:lessons]

@@ -34,10 +34,10 @@ class Script < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   include Seeded
+  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
+  has_many :lessons, through: :lesson_groups, class_name: 'Lesson'
+  has_many :script_levels, -> {order(:chapter)}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
-  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
-  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -924,21 +924,6 @@ class Script < ActiveRecord::Base
     Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
     script.lesson_groups = LessonGroup.add_lesson_groups(script, raw_lesson_groups, new_suffix, editor_experiment)
-
-    # Until the through relationships are set up we have to do this so that script.lessons and script.script_levels
-    # will continue to work
-    script_lessons = []
-    script_script_levels = []
-    script.lesson_groups.each do |lesson_group|
-      lesson_group.lessons.each do |lesson|
-        script_lessons << lesson
-        lesson.script_levels.each do |script_level|
-          script_script_levels << script_level
-        end
-      end
-    end
-    script.lessons = script_lessons # this is not getting in the right order
-    script.script_levels = script_script_levels
 
     script.generate_plc_objects
     script
