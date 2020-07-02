@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    # Stub these services to ensure we won't make network requests
+    # during this test.  We sometimes set expectations on these later.
+    Services::AFEEnrollment.stubs(:submit)
+    Services::CSTAEnrollment.stubs(:submit)
+  end
+
   test 'logged out cannot submit' do
     Services::AFEEnrollment.expects(:submit).never
 
@@ -106,7 +113,173 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     end
   end
 
+  test 'submits to CSTA if csta is provided' do
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge(
+        'csta' => [true, 'true', 1, '1'].sample,
+        'consentCSTA' => [true, 'true', 1, '1'].sample,
+      )
+    )
+
+    assert_equal(
+      {
+        first_name: 'test',
+        last_name: 'test',
+        email: 'test@code.org',
+        school_district_name: '',
+        school_name: '',
+        street_1: 'test street',
+        street_2: 'test street 2',
+        city: 'seattle',
+        state: 'wa',
+        zip: '98105',
+        privacy_permission: true
+      },
+      actual_args
+    )
+  end
+
+  test 'sends school name and district name as found by NCES id' do
+    school = create :school
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge(
+        'csta' => true,
+        'schoolId' => school.id.to_s
+      )
+    )
+
+    assert_equal school.name, actual_args[:school_name]
+    assert_equal school.school_district.name, actual_args[:school_district_name]
+  end
+
+  test 'sends blank school and district name if school is not found by id' do
+    School.expects(:find_by).with(id: '000000000000').returns(nil)
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge(
+        'csta' => true,
+        'schoolId' => '000000000000'
+      )
+    )
+
+    assert_equal '', actual_args[:school_name]
+    assert_equal '', actual_args[:school_district_name]
+  end
+
+  test 'sends address info from request if preset' do
+    # This scenario reflects what happens when a teacher signs up for CSTA Plus
+    # and also for the AFE Inspirational Marketing Kit, so we asked the teacher
+    # for a school address as part of the form.
+    school = create :school
+    refute_equal 'example-street-1', school.address_line1
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge(
+        'csta' => true,
+        'schoolId' => school.id,
+        'street1' => 'example-street-1',
+        'street2' => 'example-street-2',
+        'city' => 'example-city',
+        'state' => 'example-state',
+        'zip' => 'example-zip'
+      )
+    )
+
+    assert_equal 'example-street-1', actual_args[:street_1]
+    assert_equal 'example-street-2', actual_args[:street_2]
+    assert_equal 'example-city', actual_args[:city]
+    assert_equal 'example-state', actual_args[:state]
+    assert_equal 'example-zip', actual_args[:zip]
+  end
+
+  test 'sends address info from our records if request does not include address' do
+    # This scenario reflects what happens when a teacher signs up for CSTA Plus
+    # but does not opt-in to the AFE Inspirational Marketing Kit, so we don't
+    # ask them for a school address on the client.
+    school = create :school
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.
+        merge(
+          'csta' => true,
+          'schoolId' => school.id,
+        ).
+        except('street1', 'street2', 'city', 'state', 'zip')
+    )
+
+    assert_equal school.address_line1, actual_args[:street_1]
+    assert_equal school.address_line2, actual_args[:street_2]
+    assert_equal school.city, actual_args[:city]
+    assert_equal school.state, actual_args[:state]
+    assert_equal school.zip, actual_args[:zip]
+  end
+
+  test 'sends empty address info if neither request nor school can provide it' do
+    # This probably won't happen, but we'd like to detect and handle a graceful fallback
+    School.expects(:find_by).returns(nil)
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.
+        merge('csta' => true).
+        except('street1', 'street2', 'city', 'state', 'zip')
+    )
+
+    assert_equal '', actual_args[:street_1]
+    assert_equal '', actual_args[:street_2]
+    assert_equal '', actual_args[:city]
+    assert_equal '', actual_args[:state]
+    assert_equal '', actual_args[:zip]
+  end
+
+  test 'does not submit to CSTA if csta is false' do
+    Services::AFEEnrollment.expects(:submit)
+    Services::CSTAEnrollment.expects(:submit).never
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params.merge(
+        'csta' => [false, 'false', 0, '0'].sample,
+      ),
+      as: :json
+
+    assert_response :success, "Failed response: #{response.body}"
+  end
+
+  test 'responds BAD REQUEST when a CSTAEnrollment error occurs' do
+    # For example, that class encodes some business rules like
+    # "don't submit if privacy terms are not agreed to" and raises its own
+    # error type when one of these rules is violated.  For details, see that
+    # class and its tests.
+    Services::CSTAEnrollment.expects(:submit).raises(Services::CSTAEnrollment::Error)
+
+    # We want failures of this type to be logged to HB
+    Honeybadger.expects(:notify)
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params.merge('csta' => true),
+      as: :json
+    assert_response :bad_request, "Wrong response: #{response.body}"
+  end
+
   private
+
+  def capture_csta_args_for_request(request_params)
+    captured_args = nil
+    Services::CSTAEnrollment.expects(:submit).with do |args|
+      captured_args = args; true
+    end
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: request_params,
+      as: :json
+
+    assert_response :success, "Failed response: #{response.body}"
+    refute_nil captured_args
+    captured_args
+  end
 
   def valid_params
     {
