@@ -57,34 +57,24 @@ class ContactRollupsProcessed < ApplicationRecord
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
     valid_contacts = 0
     invalid_contacts = 0
+    process_results = []
 
     # Process the aggregated data row by row and save the results to DB in batches.
     batch = []
     ContactRollupsV2.retrieve_query_results(get_data_aggregation_query).each do |contact|
       begin
         contact.deep_stringify_keys!
-        contact_data = parse_contact_data(contact['all_data_and_metadata'])
-
-        processed_contact_data = {}
-        processed_contact_data.merge! extract_opt_in(contact_data)
-        processed_contact_data.merge! extract_user_id(contact_data)
-        processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
-        processed_contact_data.merge! extract_professional_learning_attended(contact_data)
-        processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
-        processed_contact_data.merge! extract_forms_submitted(contact_data)
-        processed_contact_data.merge! extract_form_roles(contact_data)
-        processed_contact_data.merge! extract_roles(contact_data)
-        processed_contact_data.merge! extract_state(contact_data)
-        processed_contact_data.merge! extract_city(contact_data)
-        processed_contact_data.merge! extract_postal_code(contact_data)
-        processed_contact_data.merge! extract_country(contact_data)
-        processed_contact_data.merge! extract_updated_at(contact_data)
+        processed_contact_data = process_contact_data contact['all_data_and_metadata']
+        process_results << {email: contact['email'], succeeded: 1}
         valid_contacts += 1
       rescue StandardError
-        # TODO: create a process to report and investigate invalid contacts
+        process_results << {email: contact['email'], succeeded: 0}
         invalid_contacts += 1
-        next
       end
+
+      # TODO: update process_results to db and reset it
+      next if process_results.size < batch_size
+      next unless process_results.last[:succeed]
 
       # Contact data is successful processed, add it to a batch.
       # When the batch is big enough, save it to the database.
@@ -116,7 +106,8 @@ class ContactRollupsProcessed < ApplicationRecord
           '#{SOURCES_KEY}', sources,
           '#{DATA_KEY}', data,
           '#{DATA_UPDATED_AT_KEY}', data_updated_at
-        ) AS data_and_metadata
+        ) AS combined_data,
+        , data_updated_at
       FROM contact_rollups_raw
     SQL
 
@@ -127,10 +118,30 @@ class ContactRollupsProcessed < ApplicationRecord
     <<-SQL.squish
       SELECT
         email,
-        CONCAT('[', GROUP_CONCAT(data_and_metadata), ']') AS all_data_and_metadata
+        CONCAT('[', GROUP_CONCAT(combined_data), ']') AS data,
+        MAX(data_updated_at) AS data_updated_at
       FROM (#{data_transformation_query}) AS subquery
       GROUP BY email
     SQL
+  end
+
+  def self.process_contact_data(contact_data_str)
+    contact_data = parse_contact_data contact_data_str
+    {}.tap do |result|
+      result.merge! extract_opt_in(contact_data)
+      result.merge! extract_user_id(contact_data)
+      result.merge! extract_professional_learning_enrolled(contact_data)
+      result.merge! extract_professional_learning_attended(contact_data)
+      result.merge! extract_hoc_organizer_years(contact_data)
+      result.merge! extract_forms_submitted(contact_data)
+      result.merge! extract_form_roles(contact_data)
+      result.merge! extract_roles(contact_data)
+      result.merge! extract_state(contact_data)
+      result.merge! extract_city(contact_data)
+      result.merge! extract_postal_code(contact_data)
+      result.merge! extract_country(contact_data)
+      result.merge! extract_updated_at(contact_data)
+    end
   end
 
   # Parses a JSON string containing contact data and metadata.
