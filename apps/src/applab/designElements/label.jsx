@@ -279,7 +279,6 @@ export default {
         horizontalPadding,
         verticalPadding
       } = elementUtils.calculatePadding(element.style.padding);
-      console.log(parseInt(element.style.borderWidth));
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen

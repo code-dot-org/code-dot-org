@@ -29,7 +29,11 @@ const STANDARD_FONT_SIZE_THEME_VALUES = {
   classic: 14,
   coralReef: 13,
   mintChip: 13,
-  lavender: 13
+  lavender: 13,
+  cherryVanilla: 13,
+  berryPatch: 13,
+  cucumber: 13,
+  crushedVelvet: 13
 };
 
 const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
@@ -50,7 +54,11 @@ const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
   classic: 'rgb(153, 153, 153)',
   coralReef: '#D75D52',
   mintChip: '#3D95A1',
-  lavender: '#8875B1'
+  lavender: '#8875B1',
+  cherryVanilla: '#A51928',
+  berryPatch: '#DF6589',
+  cucumber: '#209864',
+  crushedVelvet: '#69396D'
 };
 
 const themeValues = {
@@ -73,7 +81,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#5BA0ED',
       mintChip: '#5CC8D7',
-      lavender: '#A189BA'
+      lavender: '#A189BA',
+      cherryVanilla: '#FFF5F5',
+      berryPatch: '#64337D',
+      cucumber: '#AAEBDF',
+      crushedVelvet: '#46154A'
     }
   },
   label: {
@@ -95,7 +107,11 @@ const themeValues = {
       classic: '#333333',
       coralReef: '#FDF995',
       mintChip: '#E9FCFF',
-      lavender: '#FFFFFF'
+      lavender: '#FFFFFF',
+      cherryVanilla: '#FFF5F5',
+      berryPatch: '#FFFFFF',
+      cucumber: '#FFFFFF',
+      crushedVelvet: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -115,7 +131,11 @@ const themeValues = {
       classic: 'rgba(0, 0, 0, 0)',
       coralReef: '#FC766A',
       mintChip: '#A77D72',
-      lavender: '#8875B1'
+      lavender: '#8875B1',
+      cherryVanilla: '#A51928',
+      berryPatch: '#DF6589',
+      cucumber: '#52C794',
+      crushedVelvet: '#69396D'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -135,7 +155,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 25,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 5
     },
     borderWidth: {
       default: 0,
@@ -154,7 +178,11 @@ const themeValues = {
       classic: 0,
       coralReef: 2,
       mintChip: 2,
-      lavender: 1
+      lavender: 1,
+      cherryVanilla: 0,
+      berryPatch: 2,
+      cucumber: 1,
+      crushedVelvet: 1
     },
     fontFamily: {
       default: 'Arial Black',
@@ -173,7 +201,11 @@ const themeValues = {
       classic: 'Arial',
       coralReef: 'Arial',
       mintChip: 'Verdana',
-      lavender: 'Georgia'
+      lavender: 'Georgia',
+      cherryVanilla: 'Trebuchet',
+      berryPatch: 'Trebuchet',
+      cucumber: 'Verdana',
+      crushedVelvet: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -193,7 +225,11 @@ const themeValues = {
       classic: CLASSIC_LABEL_PADDING,
       coralReef: NEW_THEME_LABEL_PADDING,
       mintChip: NEW_THEME_LABEL_PADDING,
-      lavender: NEW_THEME_LABEL_PADDING
+      lavender: NEW_THEME_LABEL_PADDING,
+      cherryVanilla: NEW_THEME_LABEL_PADDING,
+      berryPatch: NEW_THEME_LABEL_PADDING,
+      cucumber: NEW_THEME_LABEL_PADDING,
+      crushedVelvet: NEW_THEME_LABEL_PADDING
     }
   },
   textInput: {
@@ -215,7 +251,11 @@ const themeValues = {
       classic: '#000000',
       coralReef: '#5BA0ED',
       mintChip: '#E5F4F6',
-      lavender: '#5E4D83'
+      lavender: '#5E4D83',
+      cherryVanilla: '#A51928',
+      berryPatch: '#3C1053',
+      cucumber: '#209864',
+      crushedVelvet: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -235,7 +275,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#FDF995',
       mintChip: '#4EB4C2',
-      lavender: '#CCB9E1'
+      lavender: '#CCB9E1',
+      cherryVanilla: '#F1E2D4',
+      berryPatch: '#FFDBE6',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#2D0A30'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -255,7 +299,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 5,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 5
     },
     borderWidth: {
       default: 1,
@@ -274,7 +322,11 @@ const themeValues = {
       classic: 1,
       coralReef: 2,
       mintChip: 2,
-      lavender: 1
+      lavender: 1,
+      cherryVanilla: 1,
+      berryPatch: 2,
+      cucumber: 1,
+      crushedVelvet: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -293,7 +345,11 @@ const themeValues = {
       classic: 'Arial',
       coralReef: 'Arial',
       mintChip: 'Verdana',
-      lavender: 'Georgia'
+      lavender: 'Georgia',
+      cherryVanilla: 'Trebuchet',
+      berryPatch: 'Trebuchet',
+      cucumber: 'Verdana',
+      crushedVelvet: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -313,7 +369,11 @@ const themeValues = {
       classic: CLASSIC_TEXT_INPUT_PADDING,
       coralReef: NEW_THEME_TEXT_INPUT_PADDING,
       mintChip: NEW_THEME_TEXT_INPUT_PADDING,
-      lavender: NEW_THEME_TEXT_INPUT_PADDING
+      lavender: NEW_THEME_TEXT_INPUT_PADDING,
+      cherryVanilla: NEW_THEME_TEXT_INPUT_PADDING,
+      berryPatch: NEW_THEME_TEXT_INPUT_PADDING,
+      cucumber: NEW_THEME_TEXT_INPUT_PADDING,
+      crushedVelvet: NEW_THEME_TEXT_INPUT_PADDING
     }
   },
   dropdown: {
@@ -335,7 +395,11 @@ const themeValues = {
       classic: '#1ABC9C',
       coralReef: '#FC766A',
       mintChip: '#A77D72',
-      lavender: '#8875B1'
+      lavender: '#8875B1',
+      cherryVanilla: '#A51928',
+      berryPatch: '#DF6589',
+      cucumber: '#52C794',
+      crushedVelvet: '#69396D'
     },
     textColor: {
       type: 'color',
@@ -355,7 +419,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#FDF995',
       mintChip: '#E9FCFF',
-      lavender: '#FFFFFF'
+      lavender: '#FFFFFF',
+      cherryVanilla: '#FFF5F5',
+      berryPatch: '#FFFFFF',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -375,7 +443,11 @@ const themeValues = {
       classic: '#000000',
       coralReef: '#D75D52',
       mintChip: '#B1624E',
-      lavender: '#CCB9E1'
+      lavender: '#CCB9E1',
+      cherryVanilla: '#CCB9E1',
+      berryPatch: '#CCB9E1',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#2D0A30'
     },
     borderRadius: {
       default: 4,
@@ -394,7 +466,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 25,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 30
     },
     borderWidth: {
       default: 1,
@@ -413,7 +489,11 @@ const themeValues = {
       classic: 0,
       coralReef: 0,
       mintChip: 0,
-      lavender: 0
+      lavender: 0,
+      cherryVanilla: 0,
+      berryPatch: 0,
+      cucumber: 1,
+      crushedVelvet: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -432,7 +512,11 @@ const themeValues = {
       classic: 'Arial',
       coralReef: 'Arial',
       mintChip: 'Verdana',
-      lavender: 'Georgia'
+      lavender: 'Georgia',
+      cherryVanilla: 'Trebuchet',
+      berryPatch: 'Trebuchet',
+      cucumber: 'Verdana',
+      crushedVelvet: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -452,7 +536,11 @@ const themeValues = {
       classic: CLASSIC_DROPDOWN_PADDING,
       coralReef: NEW_THEME_DROPDOWN_PADDING,
       mintChip: NEW_THEME_DROPDOWN_PADDING,
-      lavender: NEW_THEME_DROPDOWN_PADDING
+      lavender: NEW_THEME_DROPDOWN_PADDING,
+      cherryVanilla: NEW_THEME_DROPDOWN_PADDING,
+      berryPatch: NEW_THEME_DROPDOWN_PADDING,
+      cucumber: NEW_THEME_DROPDOWN_PADDING,
+      crushedVelvet: NEW_THEME_DROPDOWN_PADDING
     }
   },
   photoSelect: {
@@ -474,7 +562,11 @@ const themeValues = {
       classic: '#1ABC9C',
       coralReef: '#FC766A',
       mintChip: '#A77D72',
-      lavender: '#8875B1'
+      lavender: '#8875B1',
+      cherryVanilla: '#A51928',
+      berryPatch: '#DF6589',
+      cucumber: '#52C794',
+      crushedVelvet: '#69396D'
     },
     textColor: {
       type: 'color',
@@ -494,7 +586,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#FDF995',
       mintChip: '#E9FCFF',
-      lavender: '#FFFFFF'
+      lavender: '#FFFFFF',
+      cherryVanilla: '#FFF5F5',
+      berryPatch: '#FFFFFF',
+      cucumber: '#FFFFFF',
+      crushedVelvet: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -514,7 +610,11 @@ const themeValues = {
       classic: '#000000',
       coralReef: '#FDF995',
       mintChip: '#D75D52',
-      lavender: '#CCB9E1'
+      lavender: '#CCB9E1',
+      cherryVanilla: '#CCB9E1',
+      berryPatch: '#CCB9E1',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#2D0A30'
     },
     borderRadius: {
       default: 4,
@@ -533,7 +633,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 25,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 30
     },
     borderWidth: {
       default: 1,
@@ -552,7 +656,11 @@ const themeValues = {
       classic: 0,
       coralReef: 2,
       mintChip: 0,
-      lavender: 0
+      lavender: 0,
+      cherryVanilla: 0,
+      berryPatch: 0,
+      cucumber: 1,
+      crushedVelvet: 2
     }
   },
   button: {
@@ -574,7 +682,11 @@ const themeValues = {
       classic: '#1ABC9C',
       coralReef: '#FC766A',
       mintChip: '#A77D72',
-      lavender: '#8875B1'
+      lavender: '#8875B1',
+      cherryVanilla: '#A51928',
+      berryPatch: '#DF6589',
+      cucumber: '#52C794',
+      crushedVelvet: '#69396D'
     },
     textColor: {
       type: 'color',
@@ -594,7 +706,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#FDF995',
       mintChip: '#E9FCFF',
-      lavender: '#FFFFFF'
+      lavender: '#FFFFFF',
+      cherryVanilla: '#FFF5F5',
+      berryPatch: '#FFFFFF',
+      cucumber: '#FFFFFF',
+      crushedVelvet: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -614,7 +730,11 @@ const themeValues = {
       classic: '#000000',
       coralReef: '#FDF995',
       mintChip: '#D75D52',
-      lavender: '#CCB9E1'
+      lavender: '#CCB9E1',
+      cherryVanilla: '#CCB9E1',
+      berryPatch: '#CCB9E1',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#2D0A30'
     },
     borderRadius: {
       default: 4,
@@ -633,7 +753,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 25,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 30
     },
     borderWidth: {
       default: 1,
@@ -652,7 +776,11 @@ const themeValues = {
       classic: 0,
       coralReef: 2,
       mintChip: 0,
-      lavender: 0
+      lavender: 0,
+      cherryVanilla: 0,
+      berryPatch: 0,
+      cucumber: 1,
+      crushedVelvet: 2
     },
     fontFamily: {
       default: 'Arial Black',
@@ -671,7 +799,11 @@ const themeValues = {
       classic: 'Arial',
       coralReef: 'Arial Black',
       mintChip: 'Verdana',
-      lavender: 'Georgia'
+      lavender: 'Georgia',
+      cherryVanilla: 'Trebuchet',
+      berryPatch: 'Trebuchet',
+      cucumber: 'Verdana',
+      crushedVelvet: 'Verdana'
     },
     fontSize: {
       default: 15,
@@ -688,9 +820,13 @@ const themeValues = {
       millennial: 15,
       robot: 15,
       classic: 14,
-      coralReef: 18,
-      mintChip: 18,
-      lavender: 18
+      coralReef: 15,
+      mintChip: 15,
+      lavender: 15,
+      cherryVanilla: 15,
+      berryPatch: 15,
+      cucumber: 15,
+      crushedVelvet: 15
     }
   },
   textArea: {
@@ -712,7 +848,11 @@ const themeValues = {
       classic: '#FFFFFF',
       coralReef: '#FDF995',
       mintChip: '#4EB4C2',
-      lavender: '#CCB9E1'
+      lavender: '#CCB9E1',
+      cherryVanilla: '#F1E2D4',
+      berryPatch: '#FFDBE6',
+      cucumber: '#EFFFF9',
+      crushedVelvet: '#2D0A30'
     },
     textColor: {
       type: 'color',
@@ -732,7 +872,11 @@ const themeValues = {
       classic: '#000000',
       coralReef: '#5BA0ED',
       mintChip: '#E5F4F6',
-      lavender: '#5E4D83'
+      lavender: '#5E4D83',
+      cherryVanilla: '#A51928',
+      berryPatch: '#3C1053',
+      cucumber: '#209864',
+      crushedVelvet: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -752,7 +896,11 @@ const themeValues = {
       classic: 'rgb(153, 153, 153)',
       coralReef: '#D75D52',
       mintChip: '#D75D52',
-      lavender: '#CECECC'
+      lavender: '#CECECC',
+      cherryVanilla: '#CECECC',
+      berryPatch: '#CECECC',
+      cucumber: '#209864',
+      crushedVelvet: '#69396D'
     },
     borderRadius: {
       default: 2,
@@ -771,7 +919,11 @@ const themeValues = {
       classic: 0,
       coralReef: 10,
       mintChip: 10,
-      lavender: 10
+      lavender: 10,
+      cherryVanilla: 5,
+      berryPatch: 30,
+      cucumber: 30,
+      crushedVelvet: 5
     },
     borderWidth: {
       default: 1,
@@ -790,7 +942,11 @@ const themeValues = {
       classic: 1,
       coralReef: 0,
       mintChip: 0,
-      lavender: 0
+      lavender: 0,
+      cherryVanilla: 0,
+      berryPatch: 0,
+      cucumber: 0,
+      crushedVelvet: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -809,7 +965,11 @@ const themeValues = {
       classic: 'Arial',
       coralReef: 'Arial',
       mintChip: 'Verdana',
-      lavender: 'Georgia'
+      lavender: 'Georgia',
+      cherryVanilla: 'Trebuchet',
+      berryPatch: 'Trebuchet',
+      cucumber: 'Verdana',
+      crushedVelvet: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -829,7 +989,11 @@ const themeValues = {
       classic: CLASSIC_TEXT_AREA_PADDING,
       coralReef: NEW_THEME_TEXT_AREA_PADDING,
       mintChip: NEW_THEME_TEXT_AREA_PADDING,
-      lavender: NEW_THEME_TEXT_AREA_PADDING
+      lavender: NEW_THEME_TEXT_AREA_PADDING,
+      cherryVanilla: NEW_THEME_TEXT_AREA_PADDING,
+      berryPatch: NEW_THEME_TEXT_AREA_PADDING,
+      cucumber: NEW_THEME_TEXT_AREA_PADDING,
+      crushedVelvet: NEW_THEME_TEXT_AREA_PADDING
     }
   }
 };
