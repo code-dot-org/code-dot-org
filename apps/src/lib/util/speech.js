@@ -20,7 +20,7 @@ export function textToSpeech(
   region,
   appLanguages
 ) {
-  if (text.length > 749) {
+  if (text.length > 750) {
     text = text.slice(0, 750);
     outputWarning(i18n.textToSpeechTruncation());
   }
@@ -36,7 +36,7 @@ export function textToSpeech(
 
   const cachedBytes = Sounds.getSingleton().getTextBytes(language, text);
 
-  if (cachedBytes !== undefined && cachedBytes['hasProfanity']) {
+  if (cachedBytes !== undefined && cachedBytes['profaneWords'].length > 0) {
     outputWarning(
       i18n.textToSpeechProfanity({
         profanityCount: cachedBytes['profaneWords'].length,
@@ -105,12 +105,7 @@ export function textToSpeech(
             profaneWords: profaneWords.join(', ')
           })
         );
-        Sounds.getSingleton().registerTextBytes(
-          language,
-          text,
-          true,
-          profaneWords
-        );
+        Sounds.getSingleton().registerTextBytes(language, text, profaneWords);
         resolve(PROFANITY_FOUND);
       }
       request.onreadystatechange = function() {
@@ -151,7 +146,6 @@ export function textToSpeech(
       {
         language: language,
         text: text,
-        hasProfanity: false,
         profaneWords: undefined,
         gender: gender
       }
@@ -159,7 +153,6 @@ export function textToSpeech(
     Sounds.getSingleton().registerTextBytes(
       language,
       text,
-      false /* hasProfanity */,
       undefined,
       gender,
       []

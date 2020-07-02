@@ -184,4 +184,4 @@ export const BASE_DIALOG_WIDTH = 700;
 
 export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
 
-export const PROFANITY_FOUND = 'profanity found';
+export const PROFANITY_FOUND = 'profanity_found';
