@@ -7,7 +7,6 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 project_sharing true
 curriculum_umbrella 'CSD'
-tts true
 
 lesson 'Drawing in Game Lab'
 level 'CSD U3 samples_virtual_2020', progression: 'Sample Programs'
