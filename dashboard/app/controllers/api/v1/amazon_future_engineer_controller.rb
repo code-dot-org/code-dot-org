@@ -12,8 +12,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     return head :forbidden unless current_user
 
     afe_params = submit_params
-    Services::AFEEnrollment.new.submit(
-      traffic_source: 'AFE-code.org',
+    Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
       email: afe_params['email'],
@@ -29,7 +28,27 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       amazon_terms: afe_params['consentAFE'],
       new_code_account: current_user.created_at > 5.minutes.ago
     )
-  rescue Services::AFEEnrollment::Error => e
+
+    # If the teacher requested it, submit to CSTA as well
+    if to_bool(afe_params['csta'])
+      school = School.find_by(id: afe_params['schoolId'])
+      school_district = school&.school_district
+
+      Services::CSTAEnrollment.submit(
+        first_name: afe_params['firstName'],
+        last_name: afe_params['lastName'],
+        email: afe_params['email'],
+        school_district_name: school_district&.name || '',
+        school_name: school&.name || '',
+        street_1: afe_params['street1'] || school&.address_line1 || '',
+        street_2: afe_params['street2'] || school&.address_line2 || '',
+        city: afe_params['city'] || school&.city || '',
+        state: afe_params['state'] || school&.state || '',
+        zip: afe_params['zip'] || school&.zip || '',
+        privacy_permission: to_bool(afe_params['consentCSTA'])
+      )
+    end
+  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => e
     Honeybadger.notify e
     render json: e.to_s, status: 400
   end
@@ -37,7 +56,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
   private
 
   REQUIRED_PARAMETERS = %w(
-    trafficSource
     firstName
     lastName
     email
@@ -55,12 +73,17 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     'street3',
     'city',
     'state',
-    'zip'
+    'zip',
+    'consentCSTA'
   ]
 
   def submit_params
     params.require(:amazon_future_engineer).
            permit(*PERMITTED_PARAMETERS).
            tap {|p| p.require(REQUIRED_PARAMETERS)}
+  end
+
+  def to_bool(val)
+    ActiveModel::Type::Boolean.new.cast val
   end
 end
