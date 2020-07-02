@@ -6,7 +6,7 @@ require 'test_helper'
 #
 # Please locate new tests for RegistrationsController in files for individual
 # routes under
-#   test/controllers/registrations_controller/*_test.rb
+#   test/integration/registration/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
