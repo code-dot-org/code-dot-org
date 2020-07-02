@@ -970,7 +970,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
@@ -1194,6 +1194,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
