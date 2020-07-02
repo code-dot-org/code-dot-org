@@ -244,7 +244,6 @@ Sounds.prototype.checkDidSourcePlay_ = function(source, context, onComplete) {
  * Registers the bytes of text to speech.
  * @param {string} language the language the text is spoken in.
  * @param {string} text the text that is being spoken.
- * @param {boolean} hasProfanity
  * @param {Array.<string>} profaneWords an array of profane words in the text if there are any. Otherwise null.
  * @param {string} gender the gender of the voice used to speak the text. Optional
  * @param {Array.<bytes>} bytes the bytes of the speech.
@@ -252,7 +251,6 @@ Sounds.prototype.checkDidSourcePlay_ = function(source, context, onComplete) {
 Sounds.prototype.registerTextBytes = function(
   language,
   text,
-  hasProfanity,
   profaneWords,
   gender,
   bytes
@@ -260,7 +258,6 @@ Sounds.prototype.registerTextBytes = function(
   this.textBytesByLanguage[language] = this.textBytesByLanguage[language] || {};
   this.textBytesByLanguage[language][text] =
     this.textBytesByLanguage[language][text] || {};
-  this.textBytesByLanguage[language][text].hasProfanity = hasProfanity;
   this.textBytesByLanguage[language][text].profaneWords = profaneWords;
   if (gender) {
     this.textBytesByLanguage[language][text][gender] = bytes;
@@ -387,26 +384,21 @@ Sounds.prototype.addPromiseToSpeechQueue = function(
 };
 
 Sounds.prototype.checkSpeechQueue = async function() {
-  if (!this.speechPlaying && this.speechQueue.length > 0) {
+  if (this.speechQueue.length > 0 && !this.speechPlaying) {
     this.speechPlaying = true;
     let nextSpeech = this.speechQueue.shift();
     let bytes = await nextSpeech.promise;
     if (bytes === undefined) {
-      if (
-        this.textBytesByLanguage[nextSpeech.cacheParams.language][
-          nextSpeech.cacheParams.text
-        ].hasProfanity
-      ) {
+      const cachedTextRecord = this.textBytesByLanguage[
+        nextSpeech.cacheParams.language
+      ][nextSpeech.cacheParams.text];
+      if (cachedTextRecord.profaneWords.length > 0) {
         nextSpeech.cacheParams.profanityFoundCallback(
-          this.textBytesByLanguage[nextSpeech.cacheParams.language][
-            nextSpeech.cacheParams.text
-          ].profaneWords
+          cachedTextRecord.profaneWords
         );
         this.onSpeechFinished();
       } else {
-        bytes = this.textBytesByLanguage[nextSpeech.cacheParams.language][
-          nextSpeech.cacheParams.text
-        ][nextSpeech.cacheParams.gender];
+        bytes = cachedTextRecord[nextSpeech.cacheParams.gender];
         this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
       }
     } else if (bytes === PROFANITY_FOUND) {
@@ -416,7 +408,6 @@ Sounds.prototype.checkSpeechQueue = async function() {
       this.registerTextBytes(
         nextSpeech.cacheParams.language,
         nextSpeech.cacheParams.text,
-        nextSpeech.cacheParams.hasProfanity,
         nextSpeech.cacheParams.profaneWords,
         nextSpeech.cacheParams.gender,
         bytes.slice(0)
