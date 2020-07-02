@@ -36,7 +36,11 @@ export function textToSpeech(
 
   const cachedBytes = Sounds.getSingleton().getTextBytes(language, text);
 
-  if (cachedBytes !== undefined && cachedBytes['profaneWords'].length > 0) {
+  if (
+    cachedBytes !== undefined &&
+    cachedBytes.profaneWords !== undefined &&
+    cachedBytes.profaneWords.length > 0
+  ) {
     outputWarning(
       i18n.textToSpeechProfanity({
         profanityCount: cachedBytes['profaneWords'].length,

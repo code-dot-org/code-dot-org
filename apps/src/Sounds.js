@@ -272,7 +272,8 @@ Sounds.prototype.registerTextBytes = function(
  */
 Sounds.prototype.getTextBytes = function(language, text) {
   return (
-    this.textBytesByLanguage.language && this.textBytesByLanguage.language.text
+    this.textBytesByLanguage[language] &&
+    this.textBytesByLanguage[language][text]
   );
 };
 
@@ -392,7 +393,10 @@ Sounds.prototype.checkSpeechQueue = async function() {
       const cachedTextRecord = this.textBytesByLanguage[
         nextSpeech.cacheParams.language
       ][nextSpeech.cacheParams.text];
-      if (cachedTextRecord.profaneWords.length > 0) {
+      if (
+        cachedTextRecord.profaneWords !== undefined &&
+        cachedTextRecord.profaneWords.length > 0
+      ) {
         nextSpeech.cacheParams.profanityFoundCallback(
           cachedTextRecord.profaneWords
         );
