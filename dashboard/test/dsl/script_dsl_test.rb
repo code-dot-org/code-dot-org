@@ -595,7 +595,7 @@ level 'Level 3'
   test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key: 'content', script: script
+    lesson_group = create :lesson_group, key: 'content', script: script, properties: {display_name: "Content"}
     lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -632,8 +632,8 @@ level 'Level 3'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
     # intentionally made in the opposite order of how we want them to show to test
-    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2
-    lesson_group1 = create :lesson_group, key: 'content', script: script, position: 1
+    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2, properties: {display_name: "Content2"}
+    lesson_group1 = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content1"}
 
     lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group1
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group2
@@ -642,11 +642,11 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content1', display_name: 'Content1'
       lesson 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'content2', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content2'
       lesson 'lesson 2'
       level 'maze 2'
 
@@ -891,7 +891,7 @@ level 'Level 3'
     level1 = create :maze, name: 'maze 1', level_num: 'custom'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
-    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content"}
 
     # intentionally made in the opposite order of how we want them to show to test
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2

@@ -348,7 +348,7 @@ class ScriptDSL < BaseDSL
     script.lesson_groups.each do |lesson_group|
       if lesson_group&.user_facing && !lesson_group.lessons.empty?
         t = "lesson_group '#{escape(lesson_group.key)}'"
-        t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
+        t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
       end
       lesson_group.lessons.each do |lesson|
