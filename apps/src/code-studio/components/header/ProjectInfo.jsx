@@ -41,7 +41,7 @@ class ProjectInfo extends React.Component {
     setDesiredWidth: PropTypes.func
   };
 
-  componentDidMount() {
+  setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.project_info').width();
     if (this.props.setDesiredWidth) {
@@ -49,10 +49,12 @@ class ProjectInfo extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.setDesiredWidth();
+  }
+
   componentDidUpdate() {
-    // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.project_info').width();
-    this.props.setDesiredWidth(fullWidth);
+    this.setDesiredWidth();
   }
 
   render() {

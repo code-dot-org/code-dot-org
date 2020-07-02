@@ -41,7 +41,7 @@ export default class HeaderFinish extends React.Component {
     setDesiredWidth: PropTypes.func
   };
 
-  componentDidMount() {
+  setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.header_finished').width();
     if (this.props.setDesiredWidth) {
@@ -49,10 +49,12 @@ export default class HeaderFinish extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.setDesiredWidth();
+  }
+
   componentDidUpdate() {
-    // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.header_finished').width();
-    this.props.setDesiredWidth(fullWidth);
+    this.setDesiredWidth();
   }
 
   shouldComponentUpdate(nextProps, nextState) {

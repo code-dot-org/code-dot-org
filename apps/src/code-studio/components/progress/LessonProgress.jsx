@@ -85,17 +85,19 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func
   };
 
-  componentDidMount() {
+  setDesiredWidth() {
     const fullWidth = $('.full_progress').width();
     if (this.props.setDesiredWidth) {
       this.props.setDesiredWidth(fullWidth);
     }
   }
 
+  componentDidMount() {
+    this.setDesiredWidth();
+  }
+
   componentDidUpdate() {
-    // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.full_progress').width();
-    this.props.setDesiredWidth(fullWidth);
+    this.setDesiredWidth();
   }
 
   shouldComponentUpdate(nextProps, nextState) {

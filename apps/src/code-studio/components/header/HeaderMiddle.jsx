@@ -73,6 +73,14 @@ class HeaderMiddle extends React.Component {
     });
   };
 
+  setDesiredWidth(componentName, width) {
+    const stateComponentName = componentName + 'DesiredWidth';
+
+    if (Math.ceil(width) !== this.state[stateComponentName]) {
+      this.setState({[stateComponentName]: Math.ceil(width)});
+    }
+  }
+
   // Return the desired widths for the items that are showing.
   // Also return whether we are only showing the HeaderPopup because we are
   // cropping the progress, and otherwise wouldn't show it.
@@ -167,9 +175,7 @@ class HeaderMiddle extends React.Component {
           ...scriptNameData,
           width: widths.scriptName - 10,
           setDesiredWidth: width => {
-            if (Math.ceil(width) !== this.state.scriptNameDesiredWidth) {
-              this.setState({scriptNameDesiredWidth: Math.ceil(width)});
-            }
+            this.setDesiredWidth('scriptName', width);
           }
         }
       : null;
@@ -199,9 +205,7 @@ class HeaderMiddle extends React.Component {
             <ProjectInfo
               width={widths.projectInfo}
               setDesiredWidth={width => {
-                if (Math.ceil(width) !== this.state.projectInfoDesiredWidth) {
-                  this.setState({projectInfoDesiredWidth: Math.ceil(width)});
-                }
+                this.setDesiredWidth('projectInfo', width);
               }}
             />
           </div>
@@ -242,13 +246,7 @@ class HeaderMiddle extends React.Component {
               <LessonProgress
                 width={widths.progress}
                 setDesiredWidth={width => {
-                  if (
-                    Math.ceil(width) !== this.state.lessonProgressDesiredWidth
-                  ) {
-                    this.setState({
-                      lessonProgressDesiredWidth: Math.ceil(width)
-                    });
-                  }
+                  this.setDesiredWidth('lessonProgress', width);
                 }}
               />
             </div>
@@ -285,9 +283,7 @@ class HeaderMiddle extends React.Component {
                 lessonData={lessonData}
                 width={widths.finish}
                 setDesiredWidth={width => {
-                  if (Math.ceil(width) !== this.state.finishDesiredWidth) {
-                    this.setState({finishDesiredWidth: Math.ceil(width)});
-                  }
+                  this.setDesiredWidth('finish', width);
                 }}
                 style={{
                   visibility: widths.projectInfo === 0 ? 'hidden' : undefined
