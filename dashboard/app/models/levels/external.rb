@@ -68,7 +68,7 @@ class External < DSLDefined
     properties['associated_blocks']
   end
 
-  def possible_associated_blocks
+  def self.possible_associated_blocks
     %w(bounce flappy jigsaw maze studio turtle)
   end
 end
