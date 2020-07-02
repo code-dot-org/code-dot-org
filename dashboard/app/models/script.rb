@@ -970,7 +970,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
