@@ -919,6 +919,10 @@ class Script < ActiveRecord::Base
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
+
+    script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+    Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+
     script.lesson_groups = LessonGroup.add_lesson_groups(script, raw_lesson_groups, new_suffix, editor_experiment)
 
     # Until the through relationships are set up we have to do this so that script.lessons and script.script_levels
@@ -933,11 +937,36 @@ class Script < ActiveRecord::Base
         end
       end
     end
-    script.lessons = script_lessons
+    script.lessons = script_lessons # this is not getting in the right order
     script.script_levels = script_script_levels
 
     script.generate_plc_objects
     script
+  end
+
+  # If there is more than 1 lesson group then the key should never
+  # be nil because this means some lessons are in a lesson group
+  # and some are not
+  def self.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+    return if raw_lesson_groups.length < 2
+
+    raw_lesson_groups.each do |lesson_group|
+      if lesson_group[:key].nil?
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups."
+      end
+    end
+  end
+
+  # Lesson groups can only show up once in a script
+  def prevent_duplicate_lesson_groups(raw_lesson_groups)
+    previous_lesson_groups = []
+
+    raw_lesson_groups.each do |lesson_group|
+      if previous_lesson_groups.include?(lesson_group[:key])
+        raise "Duplicate Lesson Group. Lesson Group: #{lesson_group[:key]} is used twice in Script: #{name}."
+      end
+      previous_lesson_groups.append(lesson_group[:key])
+    end
   end
 
   # Clone this script, appending a dash and the suffix to the name of this
