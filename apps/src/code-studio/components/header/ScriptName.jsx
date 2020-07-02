@@ -43,7 +43,7 @@ class ScriptName extends React.Component {
     setDesiredWidth: PropTypes.func
   };
 
-  componentDidMount() {
+  setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
     const fullWidth = $('.script_name').width();
     if (this.props.setDesiredWidth) {
@@ -51,10 +51,12 @@ class ScriptName extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.setDesiredWidth();
+  }
+
   componentDidUpdate() {
-    // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.script_name').width();
-    this.props.setDesiredWidth(fullWidth);
+    this.setDesiredWidth();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
