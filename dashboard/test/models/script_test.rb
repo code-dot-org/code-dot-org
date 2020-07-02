@@ -1526,6 +1526,36 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
+  # This test case doesn't cover hidden (not a property) or version year (only
+  # updated under certain conditions). These are covered in other test cases.
+  test 'clone with suffix clears certain properties' do
+    script_file = File.join(self.class.fixture_path, "test-all-properties.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts.first
+
+    # all properties that should change
+    assert script.tts
+    assert script.is_stable
+    assert script.script_announcements
+
+    # some properties that should not change
+    assert script.curriculum_path
+    assert script.has_lesson_plan
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-all-properties-copy', script_copy.name
+
+    # all properties that should change
+    refute script_copy.tts
+    refute script_copy.is_stable
+    refute script_copy.script_announcements
+
+    # some properties that should not change
+    assert script_copy.curriculum_path
+    assert script_copy.has_lesson_plan
+  end
+
   test 'clone versioned script with suffix' do
     script_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
     scripts, _ = Script.setup([script_file])
