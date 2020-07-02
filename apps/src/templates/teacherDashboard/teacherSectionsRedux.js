@@ -1188,19 +1188,20 @@ export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
-  onCourseOverview
+  onCourseOverview,
+  includeHidden = true
 ) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name,
-    scriptId: state.sections[id].scriptId,
-    courseId: state.sections[id].courseId,
-    isAssigned:
-      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null &&
-        state.sections[id].courseId === courseId &&
-        onCourseOverview)
-  }));
+  return state.sectionIds
+    .map(id => ({
+      ...state.sections[id],
+      isAssigned:
+        (scriptId !== null && state.sections[id].scriptId === scriptId) ||
+        (courseId !== null &&
+          state.sections[id].courseId === courseId &&
+          onCourseOverview)
+    }))
+    .filter(section => includeHidden || !section.hidden)
+    .sort((a, b) => b.id - a.id);
 }
 
 /**
