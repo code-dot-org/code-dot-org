@@ -95,17 +95,17 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       {
         # all empty
         input: [{}, nil, nil],
-        expected_output: nil
+        expected_output: []
       },
       {
         # table exists in contact data but field doesn't
         input: [{table => {}}, table, field],
-        expected_output: nil
+        expected_output: []
       },
       {
         # field exists in contact data but table doesn't
         input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
-        expected_output: nil
+        expected_output: []
       },
       {
         # table and field exists in contact data, field value is nil
