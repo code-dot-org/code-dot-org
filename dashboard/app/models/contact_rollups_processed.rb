@@ -64,26 +64,26 @@ class ContactRollupsProcessed < ApplicationRecord
       begin
         contact.deep_stringify_keys!
         contact_data = parse_contact_data(contact['all_data_and_metadata'])
-
-        processed_contact_data = {}
-        processed_contact_data.merge! extract_opt_in(contact_data)
-        processed_contact_data.merge! extract_user_id(contact_data)
-        processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
-        processed_contact_data.merge! extract_professional_learning_attended(contact_data)
-        processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
-        processed_contact_data.merge! extract_forms_submitted(contact_data)
-        processed_contact_data.merge! extract_form_roles(contact_data)
-        processed_contact_data.merge! extract_roles(contact_data)
-        processed_contact_data.merge! extract_state(contact_data)
-        processed_contact_data.merge! extract_city(contact_data)
-        processed_contact_data.merge! extract_postal_code(contact_data)
-        processed_contact_data.merge! extract_country(contact_data)
-        processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
-      rescue StandardError
+      rescue JSON::ParserError, ArgumentError
         invalid_contacts += 1
         next
       end
+
+      processed_contact_data = {}
+      processed_contact_data.merge! extract_opt_in(contact_data)
+      processed_contact_data.merge! extract_user_id(contact_data)
+      processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
+      processed_contact_data.merge! extract_professional_learning_attended(contact_data)
+      processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
+      processed_contact_data.merge! extract_forms_submitted(contact_data)
+      processed_contact_data.merge! extract_form_roles(contact_data)
+      processed_contact_data.merge! extract_roles(contact_data)
+      processed_contact_data.merge! extract_state(contact_data)
+      processed_contact_data.merge! extract_city(contact_data)
+      processed_contact_data.merge! extract_postal_code(contact_data)
+      processed_contact_data.merge! extract_country(contact_data)
+      processed_contact_data.merge! extract_updated_at(contact_data)
 
       # Contact data is successful processed, add it to a batch.
       # When the batch is big enough, save it to the database.
