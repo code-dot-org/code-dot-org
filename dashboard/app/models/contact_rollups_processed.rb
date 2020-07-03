@@ -234,13 +234,13 @@ class ContactRollupsProcessed < ApplicationRecord
 
     # Contact is a teacher or a petition signer if they submit certain (pegasus) forms
     form_kinds = extract_field contact_data, 'pegasus.forms', 'kind'
-    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]})
+    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind&.to_sym]})
 
     # @see Course::FAMILY_NAMES
     # TODO: extract course family_name (in properties column) instead of course name.
     courses = extract_field contact_data, 'dashboard.sections', 'course_name'
-    roles.add 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
-    roles.add 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
+    roles.add 'CSD Teacher' if courses.any? {|course| course&.start_with? 'csd'}
+    roles.add 'CSP Teacher' if courses.any? {|course| course&.start_with? 'csp'}
 
     # @see Script model, csf?, csd? and csp? methods
     curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
@@ -257,7 +257,7 @@ class ContactRollupsProcessed < ApplicationRecord
     roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
     permissions = extract_field contact_data, 'dashboard.user_permissions', 'permission'
-    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]})
+    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission&.to_sym]})
 
     # Only care about unique and non-nil values. Values are sorted before return.
     uniq_roles = roles.to_a.compact.sort.join(',')
