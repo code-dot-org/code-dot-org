@@ -84,9 +84,7 @@ class ScriptDslTest < ActiveSupport::TestCase
           'Lesson1' => {'name' => 'Lesson1'},
           'Lesson2' => {'name' => 'Lesson2'}
         },
-        "lesson_groups" => {
-          nil => {"display_name" => nil}
-        }
+        "lesson_groups" => {}
       }
     }
     assert_equal expected, output
@@ -662,7 +660,7 @@ level 'Level 3'
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
       {
-        lesson_groups: [{lessons: []}],
+        lesson_groups: [],
         project_sharing: true
       }
     )
@@ -687,7 +685,7 @@ level 'Level 3'
     input_dsl = "curriculum_umbrella 'CSF'"
     expected = DEFAULT_PROPS.merge(
       {
-        lesson_groups: [{lessons: []}],
+        lesson_groups: [],
         curriculum_umbrella: 'CSF'
       }
     )
