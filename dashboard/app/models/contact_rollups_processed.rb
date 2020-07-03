@@ -183,38 +183,38 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_opt_in(contact_data)
-    values = extract_field(contact_data, 'dashboard.email_preferences', 'opt_in')
+    values = extract_field contact_data, 'dashboard.email_preferences', 'opt_in'
     # Since there should be no more than one opt_in value per contact,
     # we can just take the first value in the returned array.
-    return values.nil? ? {} : {opt_in: values.first}
+    return values.empty? ? {} : {opt_in: values.first}
   end
 
   def self.extract_user_id(contact_data)
-    values = extract_field(contact_data, 'dashboard.users', 'user_id')
+    values = extract_field contact_data, 'dashboard.users', 'user_id'
     # Since there should be no more than one user_id per contact,
     # we can just take the first value in the returned array.
-    return values.nil? ? {} : {user_id: values.first}
+    return values.empty? ? {} : {user_id: values.first}
   end
 
   def self.extract_professional_learning_enrolled(contact_data)
-    values = extract_field(contact_data, 'dashboard.pd_enrollments', 'course')
+    values = extract_field contact_data, 'dashboard.pd_enrollments', 'course'
     # We only care about unique and non-nil values. The result is sorted to keep consistent order.
     # Assuming that all course values are valid, so we don't have to do string cleaning.
     # @see Pd::SharedWorkshopConstants::COURSES for the list of courses.
-    uniq_values = values&.uniq&.compact&.sort
-    return uniq_values.blank? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
+    uniq_values = values.uniq.compact.sort
+    return uniq_values.empty? ? {} : {professional_learning_enrolled: uniq_values.join(',')}
   end
 
   def self.extract_professional_learning_attended(contact_data)
     # @see Pd::WorkshopConstants::SECTION_TYPES for section_type values
     # and Pd::SharedWorkshopConstants::COURSES for course values.
-    section_types = extract_field(contact_data, 'dashboard.followers', 'section_type')
-    section_courses = section_types&.map {|section| SECTION_TYPE_INVERTED_MAP[section]} || []
-    courses = extract_field(contact_data, 'dashboard.pd_attendances', 'course') || []
+    section_types = extract_field contact_data, 'dashboard.followers', 'section_type'
+    section_courses = section_types.map {|section| SECTION_TYPE_INVERTED_MAP[section]}
+    courses = extract_field contact_data, 'dashboard.pd_attendances', 'course'
 
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
     uniq_courses = (courses + section_courses).uniq.compact.sort.join(',')
-    return uniq_courses.blank? ? {} : {professional_learning_attended: uniq_courses}
+    return uniq_courses.empty? ? {} : {professional_learning_attended: uniq_courses}
   end
 
   def self.extract_roles(contact_data)
@@ -228,22 +228,22 @@ class ContactRollupsProcessed < ApplicationRecord
 
     unless roles.include? 'Teacher'
       # Contact is a teacher if they submit a census survey as a teacher
-      submitter_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+      submitter_roles = extract_field contact_data, 'dashboard.census_submissions', 'submitter_role'
       roles.add 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
     end
 
     # Contact is a teacher or a petition signer if they submit certain (pegasus) forms
-    form_kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
-    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind.to_sym]})
+    form_kinds = extract_field contact_data, 'pegasus.forms', 'kind'
+    roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind&.to_sym]})
 
     # @see Course::FAMILY_NAMES
     # TODO: extract course family_name (in properties column) instead of course name.
-    courses = extract_field(contact_data, 'dashboard.sections', 'course_name') || []
-    roles.add 'CSD Teacher' if courses.any? {|course| course.start_with? 'csd'}
-    roles.add 'CSP Teacher' if courses.any? {|course| course.start_with? 'csp'}
+    courses = extract_field contact_data, 'dashboard.sections', 'course_name'
+    roles.add 'CSD Teacher' if courses.any? {|course| course&.start_with? 'csd'}
+    roles.add 'CSP Teacher' if courses.any? {|course| course&.start_with? 'csp'}
 
     # @see Script model, csf?, csd? and csp? methods
-    curricula = extract_field(contact_data, 'dashboard.sections', 'curriculum_umbrella') || []
+    curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
     roles.add 'CSF Teacher' if curricula.any? {|curriculum| curriculum == 'CSF'}
     roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') &&
       curricula.any? {|curriculum| curriculum == 'CSD'}
@@ -256,8 +256,8 @@ class ContactRollupsProcessed < ApplicationRecord
 
     roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
-    permissions = extract_field(contact_data, 'dashboard.user_permissions', 'permission') || []
-    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission.to_sym]})
+    permissions = extract_field contact_data, 'dashboard.user_permissions', 'permission'
+    roles.merge(permissions.map {|permission| USER_PERMISSION_TO_ROLE_MAP[permission&.to_sym]})
 
     # Only care about unique and non-nil values. Values are sorted before return.
     uniq_roles = roles.to_a.compact.sort.join(',')
@@ -265,7 +265,7 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_hoc_organizer_years(contact_data)
-    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    kinds = extract_field contact_data, 'pegasus.forms', 'kind'
     hoc_years = kinds.uniq.map do |kind|
       if kind == 'CSEdWeekEvent2013'
         '2013'
@@ -277,31 +277,31 @@ class ContactRollupsProcessed < ApplicationRecord
 
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
     uniq_hoc_years = hoc_years.uniq.compact.sort.join(',')
-    return uniq_hoc_years.blank? ? {} : {hoc_organizer_years: uniq_hoc_years}
+    return uniq_hoc_years.empty? ? {} : {hoc_organizer_years: uniq_hoc_years}
   end
 
   def self.extract_forms_submitted(contact_data)
-    kinds = extract_field(contact_data, 'pegasus.forms', 'kind') || []
+    kinds = extract_field contact_data, 'pegasus.forms', 'kind'
     kinds << 'Census' if contact_data.key?('dashboard.census_submissions')
 
     uniq_kinds = kinds.uniq.compact.sort.join(',')
-    uniq_kinds.blank? ? {} : {forms_submitted: uniq_kinds}
+    uniq_kinds.empty? ? {} : {forms_submitted: uniq_kinds}
   end
 
   def self.extract_form_roles(contact_data)
     # @see Census::CensusSubmission::ROLES for submitter_role values
-    census_roles = extract_field(contact_data, 'dashboard.census_submissions', 'submitter_role') || []
+    census_roles = extract_field contact_data, 'dashboard.census_submissions', 'submitter_role'
     cleaned_census_roles = census_roles.compact.map(&:downcase)
 
     # pegasus form roles are user-generated data, use an allowed list to filter them
-    pegasus_roles = extract_field(contact_data, 'pegasus.forms', 'role') || []
+    pegasus_roles = extract_field contact_data, 'pegasus.forms', 'role'
     cleaned_pegasus_roles = pegasus_roles.
       compact.
       map(&:downcase).
       select {|role| ALLOWED_FORM_ROLES.include? role}
 
     uniq_form_roles = (cleaned_census_roles + cleaned_pegasus_roles).uniq.sort.join(',')
-    return uniq_form_roles.blank? ? {} : {form_roles: uniq_form_roles}
+    return uniq_form_roles.empty? ? {} : {form_roles: uniq_form_roles}
   end
 
   def self.extract_state(contact_data)
@@ -369,11 +369,11 @@ class ContactRollupsProcessed < ApplicationRecord
   #   @see output of +parse_contact_data+ method.
   # @param table [String]
   # @param field [String]
-  # @return [Array, nil] an array of values, or nil if the field or table
+  # @return [Array] an array of values, or an empty array if the field or table
   #   does not exist in the contact_data.
   # TODO: returns empty array instead of nil. They both communicate the same thing
   def self.extract_field(contact_data, table, field)
-    return nil unless contact_data.key?(table) && contact_data[table].key?(field)
+    return [] unless contact_data.key?(table) && contact_data[table].key?(field)
     contact_data.dig(table, field).map {|item| item['value']}
   end
 
