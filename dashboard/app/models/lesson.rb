@@ -28,10 +28,11 @@ class Lesson < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  has_many :script_levels, -> {order('position ASC')}, inverse_of: :lesson, foreign_key: 'stage_id'
-  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
+  has_many :script_levels, -> {order(:position)}, foreign_key: 'stage_id', dependent: :destroy
+  has_many :levels, through: :script_levels
+  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
 
   self.table_name = 'stages'
@@ -83,6 +84,8 @@ class Lesson < ActiveRecord::Base
       lesson.save! if lesson.changed?
 
       lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      lesson.save!
+
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
       lesson_group_lessons << lesson
 

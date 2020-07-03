@@ -30,9 +30,10 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
+  belongs_to :script
+  belongs_to :lesson_group
+  belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
-  belongs_to :script, inverse_of: :script_levels
-  belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
   has_many :callouts, inverse_of: :script_level
 
   validate :anonymous_must_be_assessment
@@ -71,12 +72,12 @@ class ScriptLevel < ActiveRecord::Base
         chapter: (chapter += 1),
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
-        assessment: raw_script_level[:assessment]
+        assessment: raw_script_level[:assessment],
+        properties: properties.with_indifferent_access
       }
 
       levels = Level.add_levels(script, raw_script_level[:levels], new_suffix, editor_experiment)
 
-      script_level_attributes[:properties] = properties.with_indifferent_access
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
             sl.levels == levels
@@ -84,10 +85,7 @@ class ScriptLevel < ActiveRecord::Base
         sl.levels = levels
       end
 
-      script_level_attributes[:stage_id] = lesson.id
-      script_level_attributes[:position] = index + 1
-      script_level.reload
-      script_level.assign_attributes(script_level_attributes)
+      script_level.assign_attributes(stage_id: lesson.id, position: index + 1)
       script_level.save! if script_level.changed?
 
       lesson_script_levels << script_level

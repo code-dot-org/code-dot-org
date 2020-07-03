@@ -20,7 +20,9 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
-  has_many :lessons, -> {order('absolute_position ASC')}
+  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
+  has_many :script_levels, through: :lessons
+  has_many :levels, through: :script_levels
 
   validates :position, numericality: {greater_than: 0}
 
@@ -81,7 +83,10 @@ class LessonGroup < ApplicationRecord
 
         LessonGroup.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
       end
+
       lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lesson_position, chapter, lockable_count, non_lockable_count, new_suffix, editor_experiment)
+      lesson_group.save!
+
       LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)
       script_lesson_groups << lesson_group
 

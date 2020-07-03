@@ -36,7 +36,7 @@ class Script < ActiveRecord::Base
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
   has_many :lessons, through: :lesson_groups, class_name: 'Lesson'
-  has_many :script_levels, -> {order(:chapter)}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
+  has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
   has_many :users, through: :user_scripts
   has_many :user_scripts
@@ -924,6 +924,7 @@ class Script < ActiveRecord::Base
     Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
     script.lesson_groups = LessonGroup.add_lesson_groups(script, raw_lesson_groups, new_suffix, editor_experiment)
+    script.save!
 
     script.generate_plc_objects
     script

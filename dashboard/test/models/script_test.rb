@@ -1012,7 +1012,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :level
     create :script_level, lesson: lesson, levels: [level], bonus: true
 
@@ -1231,7 +1232,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'FreeResponse level is listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :free_response
     create :script_level, script: script, lesson: lesson, levels: [level]
 
@@ -1240,7 +1242,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'Multi level is not listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :multi
     create :script_level, script: script, lesson: lesson, levels: [level]
 
@@ -1249,7 +1252,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'contained FreeResponse level is listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     contained_level = create :free_response, name: 'Contained Free Response'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
     create :script_level, script: script, lesson: lesson, levels: [level]
@@ -1259,7 +1263,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'contained Multi level is not listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     contained_level = create :multi, name: 'Contained Multi'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
     create :script_level, script: script, lesson: lesson, levels: [level]
@@ -1302,8 +1307,9 @@ class ScriptTest < ActiveSupport::TestCase
 
   test "logged_out_age_13_required?" do
     script = create :script, login_required: false
+    lesson_group = create :lesson_group, script: script
     level = create :applab
-    lesson = create :lesson, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson, levels: [level]
 
     # return true when we have an applab level
@@ -1315,8 +1321,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     # returns false if we don't have any applab/gamelab/weblab levels
     script = create :script, login_required: false
+    lesson_group = create :lesson_group, script: script
     level = create :maze
-    lesson = create :lesson, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson, levels: [level]
     assert_equal false, script.logged_out_age_13_required?
   end
@@ -1324,9 +1331,10 @@ class ScriptTest < ActiveSupport::TestCase
   test "get_bonus_script_levels" do
     student = create :student
     script = create :script
-    lesson1 = create :lesson, script: script
-    create :lesson, script: script
-    lesson3 = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, script: script, lesson_group: lesson_group
+    create :lesson, script: script, lesson_group: lesson_group
+    lesson3 = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson1, bonus: true
     create :script_level, script: script, lesson: lesson1, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
@@ -1484,10 +1492,12 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     script.curriculum_path = '//example.com/foo/{LESSON}'
+    script.save!
     assert_equal '//example.com/foo/1', script.lessons.first.lesson_plan_html_url
     assert_equal '//example.com/foo/2', script.lessons.last.lesson_plan_html_url
 
     script.curriculum_path = nil
+    script.save!
     assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.lessons.first.lesson_plan_html_url
   end
 
@@ -1710,8 +1720,10 @@ endvariants
 
   test "get_assessment_script_levels returns a list of script levels" do
     script = create(:script, name: 'test-level-group')
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     level_group = create(:level_group, name: 'assessment 1')
-    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+    script_level = create(:script_level, lesson: lesson, levels: [level_group], assessment: true, script: script)
 
     assessment_script_levels = script.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
