@@ -260,14 +260,18 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     followers_input = {'dashboard.followers' => {}}
     census_submissions_input = {
       'dashboard.census_submissions' => {
-        'submitter_role' => [{'value' => Census::CensusSubmission::ROLES[:teacher]}]
+        'submitter_role' => [
+          {'value' => Census::CensusSubmission::ROLES[:teacher]},
+          {'value' => nil},
+        ]
       }
     }
     forms_input = {
       'pegasus.forms' => {
         'kind' => [
           {'value' => 'Petition'},
-          {'value' => 'ClassSubmission'}
+          {'value' => 'ClassSubmission'},
+          {'value' => nil},
         ]
       }
     }
@@ -275,7 +279,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       'dashboard.sections' => {
         'course_name' => [
           {'value' => 'csp-2020'},
-          {'value' => 'csd-2019'}
+          {'value' => 'csd-2019'},
+          {'value' => nil},
         ]
       }
     }
@@ -283,7 +288,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       'dashboard.sections' => {
         'curriculum_umbrella' => [
           {'value' => 'CSF'},
-          {'value' => 'CSD'}
+          {'value' => 'CSD'},
+          {'value' => nil},
         ]
       }
     }
@@ -291,7 +297,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       'dashboard.user_permissions' => {
         'permission' => [
           {'value' => 'workshop_organizer'},
-          {'value' => 'facilitator'}
+          {'value' => 'facilitator'},
+          {'value' => nil},
         ]
       }
     }
