@@ -57,50 +57,30 @@ class ContactRollupsProcessed < ApplicationRecord
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
     valid_contacts = 0
     invalid_contacts = 0
-    logger = Logger.new(deploy_dir('log', 'crv2_process.log'))
 
     # Process the aggregated data row by row and save the results to DB in batches.
     batch = []
     ContactRollupsV2.retrieve_query_results(get_data_aggregation_query).each do |contact|
       begin
-        step = 1
         contact.deep_stringify_keys!
-        step += 1
         contact_data = parse_contact_data(contact['all_data_and_metadata'])
-        step += 1
 
         processed_contact_data = {}
         processed_contact_data.merge! extract_opt_in(contact_data)
-        step += 1
         processed_contact_data.merge! extract_user_id(contact_data)
-        step += 1 #5
         processed_contact_data.merge! extract_professional_learning_enrolled(contact_data)
-        step += 1
         processed_contact_data.merge! extract_professional_learning_attended(contact_data)
-        step += 1
         processed_contact_data.merge! extract_hoc_organizer_years(contact_data)
-        step += 1
         processed_contact_data.merge! extract_forms_submitted(contact_data)
-        step += 1
         processed_contact_data.merge! extract_form_roles(contact_data)
-        step += 1 #10
         processed_contact_data.merge! extract_roles(contact_data)
-        step += 1
         processed_contact_data.merge! extract_state(contact_data)
-        step += 1
         processed_contact_data.merge! extract_city(contact_data)
-        step += 1
         processed_contact_data.merge! extract_postal_code(contact_data)
-        step += 1
         processed_contact_data.merge! extract_country(contact_data)
-        step += 1 #15
         processed_contact_data.merge! extract_updated_at(contact_data)
         valid_contacts += 1
-      rescue StandardError => e
-        # TODO: create a process to report and investigate invalid contacts
-        logger.error("failed at step #{step}")
-        logger.info("contact = #{contact.inspect}")
-        logger.info(e.message)
+      rescue StandardError
         invalid_contacts += 1
         next
       end
