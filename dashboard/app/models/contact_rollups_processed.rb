@@ -371,7 +371,6 @@ class ContactRollupsProcessed < ApplicationRecord
   # @param field [String]
   # @return [Array] an array of values, or an empty array if the field or table
   #   does not exist in the contact_data.
-  # TODO: returns empty array instead of nil. They both communicate the same thing
   def self.extract_field(contact_data, table, field)
     return [] unless contact_data.key?(table) && contact_data[table].key?(field)
     contact_data.dig(table, field).map {|item| item['value']}
