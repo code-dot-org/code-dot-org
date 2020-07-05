@@ -48,7 +48,7 @@ class MiniView extends React.Component {
       // Ideally we would specify inline CSS instead of using a classname here,
       // but the image used here gets digested by rails, and we don't know the
       // digested path
-      body = <div className="loading" />;
+      body = <div className="loading" style={{height: minimal ? 100 : 400}} />;
     } else {
       body = (
         <div

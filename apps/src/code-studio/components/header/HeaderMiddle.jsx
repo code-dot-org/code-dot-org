@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ProjectInfo from './ProjectInfo';
 import ScriptName from './ScriptName';
-import LessonProgress from '../progress/LessonProgress.jsx';
+import LessonProgress from '../progress/LessonProgress';
 import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
 import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
