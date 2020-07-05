@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../../util/color';
 import progress from '../../progress';
-import MiniView from '../progress/MiniView.jsx';
+import MiniView from '../progress/MiniView';
 import i18n from '@cdo/locale';
 
 const styles = {
