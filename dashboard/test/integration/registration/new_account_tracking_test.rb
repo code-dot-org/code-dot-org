@@ -150,7 +150,7 @@ module RegistrationsControllerTests
 
       @request.env["devise.mapping"] = Devise.mappings[:user]
       assert_does_not_create(User) do
-        get '/users/auth/google_oauth2'
+        post '/users/auth/google_oauth2'
         follow_redirect!
       end
     end
