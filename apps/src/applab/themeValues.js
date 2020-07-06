@@ -33,7 +33,12 @@ const STANDARD_FONT_SIZE_THEME_VALUES = {
   cherryVanilla: 13,
   berryPatch: 13,
   cucumber: 13,
-  crushedVelvet: 13
+  crushedVelvet: 13,
+  playtime: 13,
+  underTheSea: 13,
+  blueAndGold: 13,
+  blueSteel: 13,
+  darkscheme: 13
 };
 
 const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
@@ -58,7 +63,12 @@ const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
   cherryVanilla: '#A51928',
   berryPatch: '#DF6589',
   cucumber: '#209864',
-  crushedVelvet: '#69396D'
+  crushedVelvet: '#69396D',
+  playtime: '#18BC3C',
+  underTheSea: '#096A6A',
+  blueAndGold: '#FFD662',
+  blueSteel: '#353B51',
+  darkscheme: '#B22D2D'
 };
 
 const themeValues = {
@@ -85,7 +95,12 @@ const themeValues = {
       cherryVanilla: '#FFF5F5',
       berryPatch: '#64337D',
       cucumber: '#AAEBDF',
-      crushedVelvet: '#46154A'
+      crushedVelvet: '#46154A',
+      playtime: '#FCFF5E',
+      underTheSea: '#078282',
+      blueAndGold: '#00539C',
+      blueSteel: '#4B526B',
+      darkscheme: '#000000'
     }
   },
   label: {
@@ -111,7 +126,12 @@ const themeValues = {
       cherryVanilla: '#FFF5F5',
       berryPatch: '#FFFFFF',
       cucumber: '#FFFFFF',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#D1F3DF',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -135,7 +155,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#DF6589',
       cucumber: '#52C794',
-      crushedVelvet: '#69396D'
+      crushedVelvet: '#69396D',
+      playtime: '#6AA4FC',
+      underTheSea: '#096A6A',
+      blueAndGold: '#FFD662',
+      blueSteel: '#353B51',
+      darkscheme: '#B22D2D'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -159,7 +184,12 @@ const themeValues = {
       cherryVanilla: 25,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 5
+      crushedVelvet: 5,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 0,
@@ -182,7 +212,12 @@ const themeValues = {
       cherryVanilla: 0,
       berryPatch: 2,
       cucumber: 1,
-      crushedVelvet: 1
+      crushedVelvet: 1,
+      playtime: 2,
+      underTheSea: 2,
+      blueAndGold: 2,
+      blueSteel: 0,
+      darkscheme: 0
     },
     fontFamily: {
       default: 'Arial Black',
@@ -205,7 +240,12 @@ const themeValues = {
       cherryVanilla: 'Trebuchet',
       berryPatch: 'Trebuchet',
       cucumber: 'Verdana',
-      crushedVelvet: 'Verdana'
+      crushedVelvet: 'Verdana',
+      playtime: 'Verdana',
+      underTheSea: 'Trebuchet',
+      blueAndGold: 'Trebuchet',
+      blueSteel: 'Trebuchet',
+      darkscheme: 'Trebuchet'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -229,7 +269,12 @@ const themeValues = {
       cherryVanilla: NEW_THEME_LABEL_PADDING,
       berryPatch: NEW_THEME_LABEL_PADDING,
       cucumber: NEW_THEME_LABEL_PADDING,
-      crushedVelvet: NEW_THEME_LABEL_PADDING
+      crushedVelvet: NEW_THEME_LABEL_PADDING,
+      playtime: NEW_THEME_LABEL_PADDING,
+      underTheSea: NEW_THEME_LABEL_PADDING,
+      blueAndGold: NEW_THEME_LABEL_PADDING,
+      blueSteel: NEW_THEME_LABEL_PADDING,
+      darkscheme: NEW_THEME_LABEL_PADDING
     }
   },
   textInput: {
@@ -255,7 +300,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#3C1053',
       cucumber: '#209864',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#096A6A',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -279,7 +329,12 @@ const themeValues = {
       cherryVanilla: '#F1E2D4',
       berryPatch: '#FFDBE6',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#2D0A30'
+      crushedVelvet: '#2D0A30',
+      playtime: '#3EE061',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#707070'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -303,7 +358,12 @@ const themeValues = {
       cherryVanilla: 5,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 5
+      crushedVelvet: 5,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 1,
@@ -326,7 +386,12 @@ const themeValues = {
       cherryVanilla: 1,
       berryPatch: 2,
       cucumber: 1,
-      crushedVelvet: 1
+      crushedVelvet: 1,
+      playtime: 2,
+      underTheSea: 2,
+      blueAndGold: 2,
+      blueSteel: 2,
+      darkscheme: 2
     },
     fontFamily: {
       default: 'Arial',
@@ -349,7 +414,12 @@ const themeValues = {
       cherryVanilla: 'Trebuchet',
       berryPatch: 'Trebuchet',
       cucumber: 'Verdana',
-      crushedVelvet: 'Verdana'
+      crushedVelvet: 'Verdana',
+      playtime: 'Verdana',
+      underTheSea: 'Trebuchet',
+      blueAndGold: 'Trebuchet',
+      blueSteel: 'Trebuchet',
+      darkscheme: 'Trebuchet'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -373,7 +443,12 @@ const themeValues = {
       cherryVanilla: NEW_THEME_TEXT_INPUT_PADDING,
       berryPatch: NEW_THEME_TEXT_INPUT_PADDING,
       cucumber: NEW_THEME_TEXT_INPUT_PADDING,
-      crushedVelvet: NEW_THEME_TEXT_INPUT_PADDING
+      crushedVelvet: NEW_THEME_TEXT_INPUT_PADDING,
+      playtime: NEW_THEME_TEXT_INPUT_PADDING,
+      underTheSea: NEW_THEME_TEXT_INPUT_PADDING,
+      blueAndGold: NEW_THEME_TEXT_INPUT_PADDING,
+      blueSteel: NEW_THEME_TEXT_INPUT_PADDING,
+      darkscheme: NEW_THEME_TEXT_INPUT_PADDING
     }
   },
   dropdown: {
@@ -399,7 +474,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#DF6589',
       cucumber: '#52C794',
-      crushedVelvet: '#69396D'
+      crushedVelvet: '#69396D',
+      playtime: '#6AA4FC',
+      underTheSea: '#096A6A',
+      blueAndGold: '#FFD662',
+      blueSteel: '#353B51',
+      darkscheme: '#B22D2D'
     },
     textColor: {
       type: 'color',
@@ -423,7 +503,12 @@ const themeValues = {
       cherryVanilla: '#FFF5F5',
       berryPatch: '#FFFFFF',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#FFFFFF',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -447,7 +532,12 @@ const themeValues = {
       cherryVanilla: '#CCB9E1',
       berryPatch: '#CCB9E1',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#2D0A30'
+      crushedVelvet: '#2D0A30',
+      playtime: '#4B85DD',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#000000'
     },
     borderRadius: {
       default: 4,
@@ -470,7 +560,12 @@ const themeValues = {
       cherryVanilla: 25,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 30
+      crushedVelvet: 30,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 1,
@@ -493,7 +588,12 @@ const themeValues = {
       cherryVanilla: 0,
       berryPatch: 0,
       cucumber: 1,
-      crushedVelvet: 1
+      crushedVelvet: 1,
+      playtime: 2,
+      underTheSea: 0,
+      blueAndGold: 0,
+      blueSteel: 0,
+      darkscheme: 0
     },
     fontFamily: {
       default: 'Arial',
@@ -516,7 +616,12 @@ const themeValues = {
       cherryVanilla: 'Trebuchet',
       berryPatch: 'Trebuchet',
       cucumber: 'Verdana',
-      crushedVelvet: 'Verdana'
+      crushedVelvet: 'Verdana',
+      playtime: 'Verdana',
+      underTheSea: 'Trebuchet',
+      blueAndGold: 'Trebuchet',
+      blueSteel: 'Trebuchet',
+      darkscheme: 'Trebuchet'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -540,7 +645,12 @@ const themeValues = {
       cherryVanilla: NEW_THEME_DROPDOWN_PADDING,
       berryPatch: NEW_THEME_DROPDOWN_PADDING,
       cucumber: NEW_THEME_DROPDOWN_PADDING,
-      crushedVelvet: NEW_THEME_DROPDOWN_PADDING
+      crushedVelvet: NEW_THEME_DROPDOWN_PADDING,
+      playtime: NEW_THEME_DROPDOWN_PADDING,
+      underTheSea: NEW_THEME_DROPDOWN_PADDING,
+      blueAndGold: NEW_THEME_DROPDOWN_PADDING,
+      blueSteel: NEW_THEME_DROPDOWN_PADDING,
+      darkscheme: NEW_THEME_DROPDOWN_PADDING
     }
   },
   photoSelect: {
@@ -566,7 +676,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#DF6589',
       cucumber: '#52C794',
-      crushedVelvet: '#69396D'
+      crushedVelvet: '#69396D',
+      playtime: '#FF7B70',
+      underTheSea: '#096A6A',
+      blueAndGold: '#FFD662',
+      blueSteel: '#353B51',
+      darkscheme: '#B22D2D'
     },
     textColor: {
       type: 'color',
@@ -590,7 +705,12 @@ const themeValues = {
       cherryVanilla: '#FFF5F5',
       berryPatch: '#FFFFFF',
       cucumber: '#FFFFFF',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#FFFFFF',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -614,7 +734,12 @@ const themeValues = {
       cherryVanilla: '#CCB9E1',
       berryPatch: '#CCB9E1',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#2D0A30'
+      crushedVelvet: '#2D0A30',
+      playtime: '#DA5145',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#000000'
     },
     borderRadius: {
       default: 4,
@@ -637,7 +762,12 @@ const themeValues = {
       cherryVanilla: 25,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 30
+      crushedVelvet: 30,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 1,
@@ -660,7 +790,12 @@ const themeValues = {
       cherryVanilla: 0,
       berryPatch: 0,
       cucumber: 1,
-      crushedVelvet: 2
+      crushedVelvet: 2,
+      playtime: 2,
+      underTheSea: 0,
+      blueAndGold: 2,
+      blueSteel: 2,
+      darkscheme: 0
     }
   },
   button: {
@@ -686,7 +821,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#DF6589',
       cucumber: '#52C794',
-      crushedVelvet: '#69396D'
+      crushedVelvet: '#69396D',
+      playtime: '#FF7B70',
+      underTheSea: '#096A6A',
+      blueAndGold: '#FFD662',
+      blueSteel: '#353B51',
+      darkscheme: '#B22D2D'
     },
     textColor: {
       type: 'color',
@@ -710,7 +850,12 @@ const themeValues = {
       cherryVanilla: '#FFF5F5',
       berryPatch: '#FFFFFF',
       cucumber: '#FFFFFF',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#FFFFFF',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -734,7 +879,12 @@ const themeValues = {
       cherryVanilla: '#CCB9E1',
       berryPatch: '#CCB9E1',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#2D0A30'
+      crushedVelvet: '#2D0A30',
+      playtime: '#DA5145',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#000000'
     },
     borderRadius: {
       default: 4,
@@ -757,7 +907,12 @@ const themeValues = {
       cherryVanilla: 25,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 30
+      crushedVelvet: 30,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 1,
@@ -780,7 +935,12 @@ const themeValues = {
       cherryVanilla: 0,
       berryPatch: 0,
       cucumber: 1,
-      crushedVelvet: 2
+      crushedVelvet: 2,
+      playtime: 2,
+      underTheSea: 0,
+      blueAndGold: 2,
+      blueSteel: 2,
+      darkscheme: 0
     },
     fontFamily: {
       default: 'Arial Black',
@@ -803,7 +963,12 @@ const themeValues = {
       cherryVanilla: 'Trebuchet',
       berryPatch: 'Trebuchet',
       cucumber: 'Verdana',
-      crushedVelvet: 'Verdana'
+      crushedVelvet: 'Verdana',
+      playtime: 'Verdana',
+      underTheSea: 'Trebuchet',
+      blueAndGold: 'Trebuchet',
+      blueSteel: 'Trebuchet',
+      darkscheme: 'Trebuchet'
     },
     fontSize: {
       default: 15,
@@ -826,7 +991,12 @@ const themeValues = {
       cherryVanilla: 15,
       berryPatch: 15,
       cucumber: 15,
-      crushedVelvet: 15
+      crushedVelvet: 15,
+      playtime: 15,
+      underTheSea: 15,
+      blueAndGold: 15,
+      blueSteel: 15,
+      darkscheme: 15
     }
   },
   textArea: {
@@ -852,7 +1022,12 @@ const themeValues = {
       cherryVanilla: '#F1E2D4',
       berryPatch: '#FFDBE6',
       cucumber: '#EFFFF9',
-      crushedVelvet: '#2D0A30'
+      crushedVelvet: '#2D0A30',
+      playtime: '#3EE061',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#707070'
     },
     textColor: {
       type: 'color',
@@ -876,7 +1051,12 @@ const themeValues = {
       cherryVanilla: '#A51928',
       berryPatch: '#3C1053',
       cucumber: '#209864',
-      crushedVelvet: '#FFFFFF'
+      crushedVelvet: '#FFFFFF',
+      playtime: '#FFFFFF',
+      underTheSea: '#096A6A',
+      blueAndGold: '#00539C',
+      blueSteel: '#FFFFFF',
+      darkscheme: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -900,7 +1080,12 @@ const themeValues = {
       cherryVanilla: '#CECECC',
       berryPatch: '#CECECC',
       cucumber: '#209864',
-      crushedVelvet: '#69396D'
+      crushedVelvet: '#69396D',
+      playtime: '#18BC3C',
+      underTheSea: '#096A6A',
+      blueAndGold: '#FFD662',
+      blueSteel: '#4B526B',
+      darkscheme: '#000000'
     },
     borderRadius: {
       default: 2,
@@ -923,7 +1108,12 @@ const themeValues = {
       cherryVanilla: 5,
       berryPatch: 30,
       cucumber: 30,
-      crushedVelvet: 5
+      crushedVelvet: 5,
+      playtime: 10,
+      underTheSea: 30,
+      blueAndGold: 30,
+      blueSteel: 30,
+      darkscheme: 30
     },
     borderWidth: {
       default: 1,
@@ -946,7 +1136,12 @@ const themeValues = {
       cherryVanilla: 0,
       berryPatch: 0,
       cucumber: 0,
-      crushedVelvet: 1
+      crushedVelvet: 1,
+      playtime: 0,
+      underTheSea: 0,
+      blueAndGold: 0,
+      blueSteel: 0,
+      darkscheme: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -969,7 +1164,12 @@ const themeValues = {
       cherryVanilla: 'Trebuchet',
       berryPatch: 'Trebuchet',
       cucumber: 'Verdana',
-      crushedVelvet: 'Verdana'
+      crushedVelvet: 'Verdana',
+      playtime: 'Verdana',
+      underTheSea: 'Trebuchet',
+      blueAndGold: 'Trebuchet',
+      blueSteel: 'Trebuchet',
+      darkscheme: 'Trebuchet'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -993,7 +1193,12 @@ const themeValues = {
       cherryVanilla: NEW_THEME_TEXT_AREA_PADDING,
       berryPatch: NEW_THEME_TEXT_AREA_PADDING,
       cucumber: NEW_THEME_TEXT_AREA_PADDING,
-      crushedVelvet: NEW_THEME_TEXT_AREA_PADDING
+      crushedVelvet: NEW_THEME_TEXT_AREA_PADDING,
+      playtime: NEW_THEME_TEXT_AREA_PADDING,
+      underTheSea: NEW_THEME_TEXT_AREA_PADDING,
+      blueAndGold: NEW_THEME_TEXT_AREA_PADDING,
+      blueSteel: NEW_THEME_TEXT_AREA_PADDING,
+      darkscheme: NEW_THEME_TEXT_AREA_PADDING
     }
   }
 };
