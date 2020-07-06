@@ -339,7 +339,13 @@ export default class SetupChecklist extends Component {
             <br />
             You should make sure your board has the right firmware sketch
             installed. You can{' '}
-            <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">
+            <a
+              href={
+                this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                  ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
+                  : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+              }
+            >
               install the Circuit Playground Firmata sketch with these
               instructions
             </a>

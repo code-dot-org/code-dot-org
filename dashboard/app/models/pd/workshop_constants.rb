@@ -97,8 +97,8 @@ module Pd
     #  - course_name : the name of the Course object associated with that workshop.
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
-      COURSE_CSD => {course_name: 'csd-2019'},
-      COURSE_CSP => {course_name: 'csp-2019'}
+      COURSE_CSD => {course_name: 'csd-2020'},
+      COURSE_CSP => {course_name: 'csp-2020'}
     }.freeze
   end
 end

@@ -343,19 +343,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     refute_equal 'ABCDEF', returned_section.code
   end
 
-  test 'can set stage_extras to TRUE or FALSE during creation' do
-    sign_in @teacher
-    [true, false].each do |desired_value|
-      post :create, params: {
-        login_type: Section::LOGIN_TYPE_EMAIL,
-        stage_extras: desired_value,
-      }
-
-      assert_equal desired_value, returned_json['stage_extras']
-      assert_equal desired_value, returned_section.lesson_extras
-    end
-  end
-
   test 'can set lesson_extras to TRUE or FALSE during creation' do
     sign_in @teacher
     [true, false].each do |desired_value|
@@ -365,30 +352,30 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal desired_value, returned_json['lesson_extras']
-      assert_equal desired_value, returned_section.stage_extras
+      assert_equal desired_value, returned_section.lesson_extras
     end
   end
 
-  test 'default stage_extras value is FALSE' do
+  test 'default lesson_extras value is FALSE' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
     }
 
-    assert_equal false, returned_json['stage_extras']
+    assert_equal false, returned_json['lesson_extras']
     assert_equal false, returned_section.lesson_extras
   end
 
-  test 'cannot set stage_extras to an invalid value' do
+  test 'cannot set lesson_extras to an invalid value' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      stage_extras: 'KREBF',
+      lesson_extras: 'KREBF',
     }
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_equal true, returned_json['stage_extras']
+    assert_equal true, returned_json['lesson_extras']
     assert_equal true, returned_section.lesson_extras
   end
 
@@ -569,7 +556,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script_id: Script.flappy_script.id,
       login_type: Section::LOGIN_TYPE_WORD,
       grade: "1",
-      stage_extras: true,
+      lesson_extras: true,
       pairing_allowed: false,
       hidden: true
     )
@@ -580,7 +567,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       name: "My Section",
       login_type: Section::LOGIN_TYPE_PICTURE,
       grade: "K",
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       hidden: false
     }
@@ -603,7 +590,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       lesson_extras: true,
     }
     section_with_script = Section.find(section_with_script.id)
-    assert_equal(true, section_with_script.stage_extras)
+    assert_equal(true, section_with_script.lesson_extras)
   end
 
   test "update: name is ignored if empty or all whitespace" do

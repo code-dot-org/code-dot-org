@@ -1,3 +1,4 @@
+hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursef/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
@@ -5,8 +6,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course F!", "link"=>"https://curriculum.code.org/csf-20/coursef", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursef'
 version_year '2020'
+is_stable true
 curriculum_umbrella 'CSF'
 tts true
 
@@ -35,6 +38,7 @@ level 'CourseEF_video_MakeSprite_2020', progression: 'How to Make a Sprite'
 level 'Fish Tank 5-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 6-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 7-validated_2020', progression: 'Free Play'
+bonus 'spritelab_extras_repeat'
 
 lesson 'Events with Sprite Lab'
 level 'Dance Party 1-validated_2020', progression: 'Prediction'
@@ -118,6 +122,7 @@ lesson_group 'csf_data', display_name: 'Data'
 lesson 'Simulating Experiments'
 level 'simstarter_2020', progression: 'Run a simulation'
 level 'simconfig_2020', progression: 'Modify simulation variables'
+bonus 'courseF_extras_sim'
 
 lesson 'AI for Oceans'
 level 'CourseF_Oceans_Video_Machine_Learning'
@@ -194,3 +199,4 @@ lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project'
 level 'courseF_project_exemplars_2019_2020', progression: 'Example projects'
 level 'courseF_EOC_2020', progression: 'Create your project'
+

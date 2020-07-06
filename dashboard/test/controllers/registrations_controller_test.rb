@@ -185,6 +185,28 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal EmailPreference::PARENT_EMAIL_CHANGE, email_preference[:source]
   end
 
+  test "sign up page saves return to url in session" do
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign in page saves return to url in session" test in
+    # sessions_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
+
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
+  end
+
   test "teachers go to specified return to url after signing up" do
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
 

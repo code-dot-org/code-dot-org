@@ -599,7 +599,16 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
 
     assert latest_in_english.can_view_version?(student, locale: 'it-it')
+    assert latest_in_english.can_view_version?(nil)
     assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+    assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
+  end
+
+  test 'can_view_version? is false if script is unstable and has no progress and is not assigned' do
+    unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
+    student = create :student
+
+    refute unstable.can_view_version?(student, locale: 'it-it')
   end
 
   test 'can_view_version? is true if student is assigned to script' do
@@ -737,7 +746,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     summary = script.summarize
 
-    assert_equal 1, summary[:stages].count
+    assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
@@ -767,7 +776,7 @@ class ScriptTest < ActiveSupport::TestCase
       lockable: false
     }
 
-    assert_equal 2, summary[:stages].count
+    assert_equal 2, summary[:lessons].count
     assert_equal expected_peer_review_lesson, summary[:peerReviewLessonInfo]
     assert_equal 1, summary[:peerReviewsRequired]
   end
@@ -795,22 +804,22 @@ class ScriptTest < ActiveSupport::TestCase
 
     test 'should summarize script with visible after dates for unsigned in user' do
       summary = @script.summarize(true, nil, false)
-      assert_equal 2, summary[:stages].count
+      assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for teacher' do
       summary = @script.summarize(true, @teacher, false)
-      assert_equal 2, summary[:stages].count
+      assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for student' do
       summary = @script.summarize(true, @student, false)
-      assert_equal 2, summary[:stages].count
+      assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for levelbuilder' do
       summary = @script.summarize(true, @levelbuilder, false)
-      assert_equal 3, summary[:stages].count
+      assert_equal 3, summary[:lessons].count
     end
   end
 
@@ -834,7 +843,7 @@ class ScriptTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: script, name: 'lesson 1')
     create(:script_level, script: script, lesson: lesson)
 
-    assert_nil script.summarize(false)[:stages]
+    assert_nil script.summarize(false)[:lessons]
   end
 
   test 'summarize includes has_verified_resources' do
@@ -994,9 +1003,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, lesson: lesson, levels: [level], bonus: true
 
     response = script.summarize(true, nil, true)
-    assert_equal 1, response[:stages].length
-    assert_equal 1, response[:stages].first[:levels].length
-    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
+    assert_equal 1, response[:lessons].length
+    assert_equal 1, response[:lessons].first[:levels].length
+    assert_equal [level.id], response[:lessons].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
@@ -1517,6 +1526,36 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
+  # This test case doesn't cover hidden (not a property) or version year (only
+  # updated under certain conditions). These are covered in other test cases.
+  test 'clone with suffix clears certain properties' do
+    script_file = File.join(self.class.fixture_path, "test-all-properties.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts.first
+
+    # all properties that should change
+    assert script.tts
+    assert script.is_stable
+    assert script.script_announcements
+
+    # some properties that should not change
+    assert script.curriculum_path
+    assert script.has_lesson_plan
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-all-properties-copy', script_copy.name
+
+    # all properties that should change
+    refute script_copy.tts
+    refute script_copy.is_stable
+    refute script_copy.script_announcements
+
+    # some properties that should not change
+    assert script_copy.curriculum_path
+    assert script_copy.has_lesson_plan
+  end
+
   test 'clone versioned script with suffix' do
     script_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
     scripts, _ = Script.setup([script_file])
@@ -1590,7 +1629,6 @@ endvariants
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
     assert_equal("other", assignable_info[:category])
-    assert(assignable_info[:stage_extras_available])
     assert(assignable_info[:lesson_extras_available])
   end
 

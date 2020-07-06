@@ -6,8 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
-family_name 'csd3'
-version_year '2020'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
@@ -36,7 +35,7 @@ level 'CSD U3 sequence_2020', progression: 'Skill Building'
 level 'CSD U3 ellipse_2020', progression: 'Skill Building'
 level 'CSD U3 drawing practice choice_2020', progression: 'Practice'
 level 'CSD U3 debug_2020', progression: 'Assessment', assessment: true
-level 'CSD U3 drawing challenges_2020', progression: 'Drawing Challenges'
+level 'CSD U3 drawing challenges_2020', progression: 'Challenges'
 
 lesson 'Shapes and Parameters'
 level 'CSD U3L04 TFMD_2020', progression: 'Lesson Overview'
@@ -70,7 +69,7 @@ level 'CSD games random practice_2020', progression: 'Practice'
 level 'CSD U3 Random rainbow snake_2018_2020', progression: 'Assessment', assessment: true
 level 'CSD games random challenge_2020', progression: 'Challenges'
 
-lesson 'Sprites and Animations'
+lesson 'Sprites'
 level 'CSD U3L07 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U3 Sprites Exploration_2020', progression: 'Exploration'
 level 'CSD: Sprites in Game Lab_2020', progression: 'Video: Introduction to Sprites'
@@ -129,8 +128,9 @@ level 'CSD: Animating Sprite Movement_2020', progression: 'Video: Sprite Movemen
 level 'CSD U3 Sprite Movement Right_2020', progression: 'Skill Building'
 level 'CSD U3 Sprite Movement Left_2020', progression: 'Skill Building'
 level 'CSD U3 Diagonal Movement_2020', progression: 'Skill Building'
+level 'CSD U3 Sprite Movement Predict_2020', progression: 'Skill Building'
 level 'CSD web movement practice choice', progression: 'Practice'
-level 'CSD U3 Sprite Movement Predict_2020', progression: 'Assessment', assessment: true
+level 'CSD U3 Movement Fish_2020', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice', progression: 'Challenges'
 
 lesson 'Mini-Project: Animation'

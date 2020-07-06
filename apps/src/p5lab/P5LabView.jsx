@@ -18,7 +18,6 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
-import animationLibrary from './gamelab/animationLibrary.json';
 import {AnimationCategories} from './gamelab/constants';
 import {CostumeCategories} from './spritelab/constants';
 
@@ -63,15 +62,12 @@ class P5LabView extends React.Component {
   componentDidMount() {
     this.props.onMount();
     const locale = window.appOptions.locale;
-    if (this.props.spriteLab) {
-      fetch(`/api/v0/animation-library/manifest/spritelab/${locale}`)
-        .then(response => response.json())
-        .then(libraryManifest => {
-          this.setState({libraryManifest});
-        });
-    } else {
-      this.setState({libraryManifest: animationLibrary});
-    }
+    const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
+    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
+      .then(response => response.json())
+      .then(libraryManifest => {
+        this.setState({libraryManifest});
+      });
   }
 
   renderCodeMode() {
