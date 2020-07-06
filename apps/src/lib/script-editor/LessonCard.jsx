@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import {borderRadius, levelTokenMargin, ControlTypes} from './constants';
+import {borderRadius, levelTokenMargin} from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
 import {
@@ -10,7 +10,9 @@ import {
   moveLevelToLesson,
   addLevel,
   setLessonLockable,
-  setLessonGroup
+  setLessonGroup,
+  moveLesson,
+  removeLesson
 } from './editorRedux';
 import LessonGroupSelector from './LessonGroupSelector';
 import color from '../../util/color';
@@ -69,7 +71,10 @@ export class UnconnectedLessonCard extends Component {
     lessonMetrics: PropTypes.object.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     setTargetLesson: PropTypes.func.isRequired,
-    targetLessonPos: PropTypes.number
+    targetLessonPos: PropTypes.number,
+    moveLesson: PropTypes.func.isRequired,
+    removeLesson: PropTypes.func.isRequired,
+    lessonGroupsCount: PropTypes.number.isRequired
   };
 
   /**
@@ -232,6 +237,27 @@ export class UnconnectedLessonCard extends Component {
     e.preventDefault();
   }
 
+  handleMoveLesson = direction => {
+    if (
+      (this.props.lesson.position !== 1 && direction === 'up') ||
+      (this.props.lesson.position !== this.props.lessonsCount &&
+        direction === 'down')
+    ) {
+      this.props.moveLesson(
+        this.props.lessonGroupPosition,
+        this.props.lesson.position,
+        direction
+      );
+    }
+  };
+
+  handleRemoveLesson = () => {
+    this.props.removeLesson(
+      this.props.lessonGroupPosition,
+      this.props.lesson.position
+    );
+  };
+
   render() {
     const {lesson, targetLessonPos, lessonGroupPosition} = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
@@ -244,11 +270,9 @@ export class UnconnectedLessonCard extends Component {
           )}
           {lesson.name}
           <OrderControls
-            type={ControlTypes.Lesson}
-            position={lesson.position}
-            parentPosition={lessonGroupPosition}
-            total={this.props.lessonsCount}
             name={this.props.lesson.name}
+            move={this.handleMoveLesson}
+            remove={this.handleRemoveLesson}
           />
           <label style={styles.lessonLockable}>
             Require teachers to unlock this lesson before students in their
@@ -294,15 +318,17 @@ export class UnconnectedLessonCard extends Component {
                 <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                 Add Level
               </button>
-              <button
-                onMouseDown={this.handleEditLessonGroup}
-                className="btn"
-                style={styles.addLevel}
-                type="button"
-              >
-                <i style={{marginRight: 7}} className="fa fa-pencil" />
-                Edit Lesson Group
-              </button>
+              {this.props.lessonGroupsCount > 1 && (
+                <button
+                  onMouseDown={this.handleEditLessonGroup}
+                  className="btn"
+                  style={styles.addLevel}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-pencil" />
+                  Edit Lesson Group
+                </button>
+              )}
             </span>
           )}
           {this.state.editingLessonGroup && (
@@ -334,6 +360,8 @@ export default connect(
     moveLevelToLesson,
     addLevel,
     setLessonLockable,
-    setLessonGroup
+    setLessonGroup,
+    moveLesson,
+    removeLesson
   }
 )(UnconnectedLessonCard);

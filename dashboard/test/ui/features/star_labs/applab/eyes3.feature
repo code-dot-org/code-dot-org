@@ -11,8 +11,8 @@ Scenario: Data Browser
   When I switch to data mode
   Then I see no difference for "data overview"
 
-  When I press keys "foo" for element "#dataOverview input"
-  And I click selector "#dataOverview button:contains(Add)"
+  When I press keys "foo" for element "#data-browser input"
+  And I click selector "#data-browser button:contains(Add)"
   And I wait until element "#dataTable" is visible
   Then I see no difference for "data table"
 
@@ -20,8 +20,8 @@ Scenario: Data Browser
   And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
   And I press "addColumnButton"
   And I press enter key
-  And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"
-  And I press keys "bar" for element "#addDataTableRow :nth-child(3) input"
+  And I press keys "1" for element "#addDataTableRow :nth-child(2) input"
+  And I press keys "2" for element "#addDataTableRow :nth-child(3) input"
   And element "#addDataTableRow button:contains(Add Row)" is visible
   And I click selector "#addDataTableRow button:contains(Add Row)"
   And I wait until element "button:contains(Edit)" is visible
@@ -36,22 +36,17 @@ Scenario: Data Browser
   And I press "uitest-tableDebugLink"
   Then I see no difference for "data table debug view"
 
-  And I press "tableBackToOverview"
-  And I wait until element "#dataOverview" is visible
-  And element "#dataOverview a:contains(Key/value pairs)" is visible
-  And I click selector "#dataOverview a:contains(Key/value pairs)"
-  And I wait until element "#dataProperties" is visible
-  And element "tr:contains(Add pair)" is visible
+  And I click selector "#data-library-container span:contains(DATA TABLES)"
+  And I wait until element "#data-library-container" is visible
+  And element "#data-library-container span:contains(KEY/VALUE PAIRS)" is visible
+  And I click selector "#data-library-container span:contains(KEY/VALUE PAIRS)"
+  And I wait until element "tr:contains(Add pair)" is visible
   Then I see no difference for "empty data properties"
 
-  When I press keys "foo" for element "#uitest-addKeyValuePairRow :nth-child(1) input"
-  And I press keys "bar" for element "#uitest-addKeyValuePairRow :nth-child(2) input"
+  When I press keys "1" for element "#uitest-addKeyValuePairRow :nth-child(1) input"
+  And I press keys "2" for element "#uitest-addKeyValuePairRow :nth-child(2) input"
   And I click selector "button:contains(Add pair)"
   And I wait until element "button:contains(Edit)" is visible
   Then I see no difference for "data properties with one row"
-
-  When element "#uitest-propertiesDebugLink" is visible
-  And I press "uitest-propertiesDebugLink"
-  Then I see no difference for "data properties debug view"
 
   And I close my eyes

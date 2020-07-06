@@ -14,6 +14,7 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative 'hoc_sync_utils'
+require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_out
   rename_from_crowdin_name_to_locale
@@ -24,7 +25,7 @@ def sync_out
   restore_markdown_headers
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  I18nScriptUtils.with_syncronous_stdout do
+  I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
 end
@@ -238,6 +239,13 @@ def distribute_translations
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Animation library
+    @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+    spritelab_animation_translation_file = "i18n/locales/#{locale}/animations/spritelab_animation_library.json"
+    translations = JSON.load(File.open(spritelab_animation_translation_file))
+    # Use js_locale here as the animation library is used by apps
+    @manifest_builder.upload_localized_manifest(js_locale, translations)
+
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
@@ -255,6 +263,15 @@ def distribute_translations
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
       sanitize_data_and_write(translations_with_fallback, destination)
+    end
+
+    ### Pegasus markdown
+    Dir.glob("i18n/locales/#{locale}/codeorg-markdown/**/*.*") do |loc_file|
+      destination_dir = "pegasus/sites.v3/code.org/i18n/public"
+      relative_dir = File.dirname(loc_file.delete_prefix("i18n/locales/#{locale}/codeorg-markdown"))
+      name = File.basename(loc_file, ".*")
+      destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      FileUtils.mv(loc_file, destination)
     end
 
     ### Pegasus

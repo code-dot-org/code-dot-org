@@ -20,7 +20,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-19/"
+      replace_key_prefix_with: "csp-20/"
     }
   },
   {
@@ -38,7 +38,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-19/"
+      replace_key_prefix_with: "csd-20/"
     }
   },
   {
@@ -56,7 +56,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-19/"
+      replace_key_prefix_with: "csf-20/"
     }
   },
   {
@@ -65,7 +65,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-19/"
+      replace_key_prefix_with: "plcsf-20/"
     }
   },
   {
@@ -74,7 +74,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsd-19/"
+      replace_key_prefix_with: "plcsd-20/"
     }
   },
   {
@@ -83,7 +83,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsp-19/"
+      replace_key_prefix_with: "plcsp-20/"
     }
   },
   {

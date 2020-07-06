@@ -146,8 +146,7 @@ Dashboard::Application.routes.draw do
     patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
-    get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
-    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
@@ -239,7 +238,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
+  resources :datasets, param: 'dataset_name', constraints: {dataset_name: /[^\/]+/}, only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -450,7 +449,6 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
-      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
@@ -500,6 +498,9 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
+  post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
+
+  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -687,6 +688,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
@@ -713,7 +715,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
-  get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
+  get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
+  get 'foorm/preview', to: 'foorm_preview#index'
 
   get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
@@ -724,4 +727,6 @@ Dashboard::Application.routes.draw do
   post '/profanity/find', to: 'profanity#find'
 
   get '/help', to: redirect("https://support.code.org")
+
+  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 end

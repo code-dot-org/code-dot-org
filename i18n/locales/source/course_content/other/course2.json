@@ -285,7 +285,11 @@
     },
     "function_definitions": {
       "draw_rect": {
-        "name": "draw_rect"
+        "name": "draw_rect",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
       }
     }
   },
@@ -978,7 +982,11 @@
         "name": "draw right leg"
       },
       "draw body and arms": {
-        "name": "draw body and arms"
+        "name": "draw body and arms",
+        "parameters": {
+          "armlength": "armlength",
+          "bodylength": "bodylength"
+        }
       },
       "draw a head": {
         "name": "draw a head"
@@ -1051,7 +1059,11 @@
     },
     "function_definitions": {
       "draw square": {
-        "name": "draw square"
+        "name": "draw square",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
       },
       "jump to controller top left": {
         "name": "jump to controller top left"

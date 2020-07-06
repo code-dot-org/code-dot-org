@@ -61,7 +61,7 @@ Recent research also demonstrates positive links between learning computer scien
 
 Each course includes comprehensive lesson plans, plugged and unplugged activities, and support resources for teachers. You don't even need a user account to [try it out](https://curriculum.code.org/csf). Once you get a feel for the courses and lesson plans, [sign up as a teacher](https://studio.code.org/users/sign_up) to join the teacher community forums and engage with all the resources at your fingertips. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view student progress and manage accounts. Then celebrate your students' learning by printing certificates they can bring home.
 
-CS Fundamentals is aligned to the 2017 [Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards). [Lesson plans](https://curriculum.code.org/csf-19/) identify connections to CSTA standards and provide opportunities to support learning in other subjects. [Click here](https://curriculum.code.org/csf-19/standards/) for the comprehensive list of CS Fundamentals standards alignments.
+CS Fundamentals is aligned to the 2017 [Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards). [Lesson plans](https://curriculum.code.org/csf/) identify connections to CSTA standards and provide opportunities to support learning in other subjects. [Click here](https://curriculum.code.org/csf/standards/) for the comprehensive list of CS Fundamentals standards alignments.
 
 ## And, did we mention that it's fun!?
 
@@ -114,27 +114,13 @@ The progression of [Courses A-F](https://curriculum.code.org/csf) build upon eac
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursea'), img: '/images/458x70/orange.png', title: 'Course A', ages: 'Kindergarten (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, and events.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursea'), img: '/images/458x70/orange.png', title: 'Course A', ages: 'Kindergarten (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, and events.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/courseb'), img: CDO.code_org_url('/images/458x70/light-orange.png'), title: 'Course B', ages: '1st grade (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, impacts of computing, and events.'%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursec'), img: CDO.code_org_url('/images/458x70/green.png'), title: 'Course C', ages: '2nd grade', description: '18 lessons, ~18 hours to complete. Concepts include digital citizenship, sequencing, binary, loops, events, and data.'%>
-
-[/col-50]
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursed'), img: CDO.code_org_url('/images/458x70/teal.png'), title: 'Course D', ages: '3rd grade', description: '18 lessons, ~18 hours to complete. Concepts include sequencing, events, loops, conditionals, binary, and digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb'), cta_text: 'View course', lesson_plans: curriculum_url('csf/courseb'), img: CDO.code_org_url('/images/458x70/light-orange.png'), title: 'Course B', ages: '1st grade (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, impacts of computing, and events.'%>
 
 [/col-50]
 
@@ -142,13 +128,27 @@ The progression of [Courses A-F](https://curriculum.code.org/csf) build upon eac
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursee'), img: CDO.code_org_url('/images/458x70/blue.png'), title: 'Course E', ages: '4th grade', description: '18 lessons, ~18-20 hours to complete. Concepts include sprites, digital citizenship, impacts of computing, nested loops, and functions.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursec'), img: CDO.code_org_url('/images/458x70/green.png'), title: 'Course C', ages: '2nd grade', description: '18 lessons, ~18 hours to complete. Concepts include digital citizenship, sequencing, binary, loops, events, and data.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursef'), img: CDO.code_org_url('/images/458x70/purple.png'), title: 'Course F', ages: '5th grade', description: '20 lessons, ~20-22 hours to complete. Concepts include variables, data, for loops, the Internet, sprites, and digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursed'), img: CDO.code_org_url('/images/458x70/teal.png'), title: 'Course D', ages: '3rd grade', description: '18 lessons, ~18 hours to complete. Concepts include sequencing, events, loops, conditionals, binary, and digital citizenship.' %>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursee'), img: CDO.code_org_url('/images/458x70/blue.png'), title: 'Course E', ages: '4th grade', description: '18 lessons, ~18-20 hours to complete. Concepts include sprites, digital citizenship, impacts of computing, nested loops, and functions.' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/images/458x70/purple.png'), title: 'Course F', ages: '5th grade', description: '20 lessons, ~20-22 hours to complete. Concepts include variables, data, for loops, the Internet, sprites, and digital citizenship.' %>
 
 [/col-50]
 
@@ -168,10 +168,10 @@ Go ahead, cut the cord (for awhile)! CS education does not always need to be in 
 ## No time? No problem!
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express') %>" target=_"blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%" target=_"blank"></a>
+  <a href="<%= CDO.studio_url('/s/express') %>" target=_"blank"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%" target=_"blank"></a>
 </div>
 
 [col-50]

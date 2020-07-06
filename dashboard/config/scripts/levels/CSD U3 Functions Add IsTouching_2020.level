@@ -48,18 +48,32 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
+      "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
       "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/javascript/if-statements/"
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
     "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-01 18:44:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:59:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:16:32 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-01 18:44:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:59:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:16:32 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-28 18:08:19 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -410,7 +410,10 @@
     },
     "function_definitions": {
       "draw flame": {
-        "name": "draw flame"
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
       },
       "draw fire": {
         "name": "draw fire"

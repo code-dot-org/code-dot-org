@@ -121,9 +121,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # TODO: remove hideable_stages once change to add hideable_lessons is deployed
   serialized_attrs %w(
-    hideable_stages
     hideable_lessons
     peer_reviews_to_complete
     professional_learning_course
@@ -502,6 +500,22 @@ class Script < ActiveRecord::Base
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
+  def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
+    FirehoseClient.instance.put_record(
+      study: 'script-family-redirect',
+      event: event_name,
+      data_string: request.path,
+      data_json: {
+        old_script_name: old_script_name,
+        new_script_name: new_script_name,
+        method: request.method,
+        url: request.url,
+        referer: request.referer,
+        user_type: user_type
+      }.to_json
+    )
+  end
+
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
@@ -875,7 +889,12 @@ class Script < ActiveRecord::Base
         name = File.basename(script, '.script')
         base_name = Script.base_name(name)
         name = "#{base_name}-#{new_suffix}" if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script, name)
+        script_data, i18n =
+          begin
+            ScriptDSL.parse_file(script, name)
+          rescue => e
+            raise e, "Error parsing script file #{script}: #{e}"
+          end
 
         lesson_groups = script_data[:lesson_groups]
         lessons = script_data[:lessons]
@@ -896,6 +915,8 @@ class Script < ActiveRecord::Base
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
         add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      rescue => e
+        raise e, "Error adding script named '#{options[:name]}': #{e}"
       end
       [added_scripts, custom_i18n]
     end
@@ -956,7 +977,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
@@ -1180,6 +1201,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1408,19 +1430,16 @@ class Script < ActiveRecord::Base
       is_stable: is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
-      hideable_stages: hideable_lessons?, # TODO: remove after corresponding js code is changed and not cached anymore
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_lesson_info, #TODO(dmcavoy) REMOVE AFTER A COUPLE DAYS April 2020
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      stage_extras_available: lesson_extras_available, # TODO: remove after corresponding js code is changed and not cached anymore
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
@@ -1446,10 +1465,7 @@ class Script < ActiveRecord::Base
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    if include_lessons
-      summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)}
-      summary[:stages] = summary[:lessons] # TODO: remove after corresponding js code change is deployed and not cached anymore
-    end
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1581,13 +1597,11 @@ class Script < ActiveRecord::Base
     # try to put it in the appropriate place.
     nonboolean_keys = [
       :hideable_lessons,
-      :hideable_stages, # TODO: remove after corresponding dependencies are updated to use hideable_lessons
       :professional_learning_course,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :stage_extras_available, # TODO: remove after corresponding dependencies are updated to use lesson_extras_available
       :lesson_extras_available,
       :curriculum_path,
       :script_announcements,
@@ -1672,8 +1686,7 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
-    # TODO: remove stage_extras_available after correesponding js change is deployed and not cached
-    info[:stage_extras_available] = info[:lesson_extras_available] = lesson_extras_available
+    info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
     end

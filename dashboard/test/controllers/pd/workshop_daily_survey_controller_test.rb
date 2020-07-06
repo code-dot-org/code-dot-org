@@ -525,11 +525,41 @@ module Pd
       assert_equal @facilitators[1], new_record.facilitator
     end
 
-    test 'post workshop survey without a valid enrollment code renders 404' do
+    test 'post workshop survey without a valid enrollment code renders invalid enrollment code' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/post/invalid_enrollment_code'
-      assert_response :not_found
+      assert_template :invalid_enrollment_code
+    end
+
+    test 'pre workshop survey without a valid enrollment code renders invalid enrollment code' do
+      setup_summer_workshop
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/day/0?enrollmentCode=invalid_enrollment_code'
+      assert_template :invalid_enrollment_code
+    end
+
+    test 'pre workshop survey with a valid enrollment code but wrong user renders invalid enrollment code' do
+      setup_summer_workshop
+      summer_enrollment2 = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      sign_in @enrolled_summer_teacher
+      get "/pd/workshop_survey/day/0?enrollmentCode=#{summer_enrollment2.code}"
+      assert_template :invalid_enrollment_code
+    end
+
+    test 'foorm pre workshop survey without a valid enrollment code renders invalid enrollment code' do
+      setup_summer_workshop
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_pre_survey?enrollmentCode=invalid_enrollment_code'
+      assert_template :invalid_enrollment_code
+    end
+
+    test 'foorm post workshop survey with a valid enrollment code but wrong user renders invalid enrollment code' do
+      setup_summer_workshop
+      summer_enrollment2 = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      sign_in @enrolled_summer_teacher
+      get "/pd/workshop_post_survey?enrollmentCode=#{summer_enrollment2.code}"
+      assert_template :invalid_enrollment_code
     end
 
     test 'post workshop for summer submit redirect creates a placeholder and redirects to thanks' do
@@ -726,7 +756,7 @@ module Pd
       assert_no_attendance
     end
 
-    test 'csf post201 survey: show 404 page if enrollment code is invalid' do
+    test 'csf post201 survey: show invalid enrollment code page if enrollment code is invalid' do
       setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
@@ -736,7 +766,7 @@ module Pd
       sign_in teacher
       get "/pd/workshop_survey/csf/post201/#{invalid_enrollment_code}"
 
-      assert_response :not_found
+      assert_template :invalid_enrollment_code
     end
 
     test 'csf post201 survey: show survey if attended teacher has valid enrollment code' do

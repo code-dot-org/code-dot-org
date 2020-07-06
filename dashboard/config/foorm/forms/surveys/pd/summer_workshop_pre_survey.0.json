@@ -491,8 +491,7 @@
       }
      ],
      "visibleIf": "{workshop_course} = 'CS Discoveries'",
-     "questionTitleLocation": "hidden",
-     "title": ">>CS Discoveries Panel<<"
+     "questionTitleLocation": "hidden"
     },
     {
      "type": "panel",
@@ -580,8 +579,7 @@
       }
      ],
      "visibleIf": "{workshop_course} = 'CS Principles'",
-     "questionTitleLocation": "hidden",
-     "title": ">>CS Principles Panel<<"
+     "questionTitleLocation": "hidden"
     }
    ]
   },
@@ -784,7 +782,7 @@
        "text": "White"
       },
       {
-       "value": "other",
+       "value": "other_race",
        "text": "Other"
       },
       {
