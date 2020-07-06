@@ -370,6 +370,22 @@ pt-BR:
         Course_4_SCV_6: Este bloco permite que você personalize sua cor para quase
           qualquer coisa que você quiser ver!  Brinque com os números para ver o que
           acontece!
+      CourseD_Dance_2020_01:
+        dance_callout_01: Escolha o tipo de dançarino aqui.
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Adicione este bloco ao seu programa.
+        arrow_buttons: Pressione os botões de seta para controlar seu dançarino.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Adicione este bloco ao seu programa!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Adicione um novo evento ao seu programa.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Novo bloco!
+      CourseD_Dance_2020_07:
+        setprop_hint: Novo bloco!
+      CourseD_Dance_2020_09:
+        new_block_3: Novo bloco!
+        new_block_4: Novo bloco!
       CourseD_Dance_Party_01:
         dance_callout_01: Adicione este bloco ao seu programa!
       CourseD_Dance_Party_02:
@@ -415,10 +431,16 @@ pt-BR:
       Fish Tank 3-validated_2019:
         spritelab_comment: Use este bloco para deixar anotações, para você mesmo ou
           para seu professor, de como seu código funciona.
+      Fish Tank 3-validated_2020:
+        spritelab_comment: Use este bloco para deixar anotações, para você mesmo ou
+          para seu professor, de como seu código funciona.
       Function intro Ryan:
         Function_intro_Ryan_1: Esta breve instrução diz ao computador para executar
           um GRANDE pedaço de código com o mesmo nome no espaço de trabalho.
       Function intro Ryan_2019:
+        Function_intro_Ryan_1: Esta breve instrução diz ao computador para executar
+          um GRANDE pedaço de código com o mesmo nome no espaço de trabalho.
+      Function intro Ryan_2020:
         Function_intro_Ryan_1: Esta breve instrução diz ao computador para executar
           um GRANDE pedaço de código com o mesmo nome no espaço de trabalho.
       Geometric Sun:
@@ -454,10 +476,16 @@ pt-BR:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: Este é um laço `repita`! Clique nele no espaço de trabalho
           e adicione o código que você quer executar repetidamente.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Este é um laço `repita`! Clique nele no espaço de trabalho
+          e adicione o código que você quer executar repetidamente.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: O Agente pode passar sobre a água, mas o jogador não
           pode!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: O Agente pode passar sobre a água, mas o jogador não
+          pode!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: O Agente pode passar sobre a água, mas o jogador não
           pode!
       MC_HOC_2017_06_Cole:
@@ -466,10 +494,16 @@ pt-BR:
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Você não pode jogar estes blocos fora, mas você pode
           editá-los!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Você não pode jogar estes blocos fora, mas você pode
+          editá-los!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'O Agente pode passar sobre a lava, mas Steve e o Alex
           não podem!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'O Agente pode passar sobre a lava, mas Steve e o Alex
+          não podem!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'O Agente pode passar sobre a lava, mas Steve e o Alex
           não podem!  '
       NEW Course 4 Artist Functions 3:
@@ -532,10 +566,15 @@ pt-BR:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Este código começará a construção da sua casa.
           Você consegue terminá-la?
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: Este código começará a construção da sua casa.
+          Você consegue terminá-la?
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: Este código começará a construção da sua casa.
           Você consegue terminá-la?
       Overworld Move to Sheep:
@@ -546,9 +585,15 @@ pt-BR:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
         craft_drag_block_callout: Arraste um bloco de "avançar" e encaixe-o embaixo
           do outro bloco
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "avançar" e encaixe-o embaixo
+          do outro bloco
       Overworld Place Wall:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Overworld Place Wall_2019:
+        craft_inside_repeat: Repita as ações colocando blocos aqui
+      Overworld Place Wall_2020:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Robot Doodle:
         4-5_Artist_Patterns_Free_Play_2: Tente usar o novo bloco de `comentário` sob
@@ -562,13 +607,22 @@ pt-BR:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Este código verifica se há lava. Você consegue
           adicionar um comando para avançar?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Este código verifica se há lava. Você consegue
+          adicionar um comando para avançar?
       Underground Iron:
         craft_what_is_iron: Minere este ferro!
       Underground Iron_2019:
         craft_what_is_iron: Minere este ferro!
+      Underground Iron_2020:
+        craft_what_is_iron: Minere este ferro!
       Virtual Pet 2_2019:
         '': Clique aqui!
+      Virtual Pet 2_2020:
+        '': Clique aqui!
       behaviors 1:
+        behaviors_edit: Clique aqui para ver como funciona esse comportamento.
+      behaviors 1_2020:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 3a:
         behavior_callout: Por que este comportamento não está funcionando para a estrela
@@ -576,11 +630,23 @@ pt-BR:
         star2_callout: Remova este bloco de fantasia e use o bloco "esta figura" em
           seu lugar.
         this_sprite_callout: Substitua o item com a fantasia abaixo com isto.
+      behaviors 3a_2020:
+        behavior_callout: Por que este comportamento não está funcionando para a estrela
+          do meio?
+        star2_callout: Remova este bloco de fantasia e use o bloco "esta figura" em
+          seu lugar.
+        this_sprite_callout: Substitua o item com a fantasia abaixo com isto.
       behaviors 4:
+        behaviors_edit: Clique aqui para ver como funciona esse comportamento.
+      behaviors 4_2020:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 5:
         behaviors_edit: Adicione código para esse comportamento.
+      behaviors 5_2020:
+        behaviors_edit: Adicione código para esse comportamento.
       behaviors free play:
+        behaviors_edit: Adicione código para esse comportamento.
+      behaviors free play_2020:
         behaviors_edit: Adicione código para esse comportamento.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar
@@ -622,6 +688,9 @@ pt-BR:
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: Este número te diz quantos destes blocos você pode
           usar neste quebra-cabeças.
+      courseA_artist_loops4_2020:
+        courseA_artist_loops4_1: Este número te diz quantos destes blocos você pode
+          usar neste quebra-cabeças.
       courseA_artist_loops7:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
@@ -629,6 +698,9 @@ pt-BR:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
       courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
+          bloco pode ser usado na resposta final.
+      courseA_artist_loops7_2020:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
       courseA_artist_loops8:
@@ -640,10 +712,16 @@ pt-BR:
       courseA_artist_loops8_2019:
         courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma
           linha sempre que precisar?
+      courseA_artist_loops8_2020:
+        courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma
+          linha sempre que precisar?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops1_2019:
+        courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
+          se preocupe, mostraremos como usá-los mais tarde no palco.
+      courseA_collector_loops1_2020:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops3:
@@ -653,6 +731,9 @@ pt-BR:
         gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
           pode usar neste quebra-cabeças.
       courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
+          pode usar neste quebra-cabeças.
+      courseA_collector_loops3_2020:
         gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
           pode usar neste quebra-cabeças.
       courseA_collector_preLoops1:
@@ -675,6 +756,9 @@ pt-BR:
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
+      courseA_maze_ramp2_2020:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
+          blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
@@ -683,6 +767,8 @@ pt-BR:
       courseA_maze_seq1_2018:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
+      courseA_maze_seq1_2020:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Use o botão de passo para ir passo-a-passo através
@@ -696,11 +782,15 @@ pt-BR:
         courseA_playlab_events4_callout1: Este é um texto explicativo
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Este é um texto explicativo
+      courseA_playLab_events4_2020:
+        courseA_playlab_events4_callout1: Este é um texto explicativo
       courseA_playLab_events5:
         courseA_playLab_events5_1: Clique aqui para alterar a direção da seta evento.
       courseA_playLab_events5_2018:
         courseA_playLab_events5_1: Clique aqui para alterar a direção da seta evento.
       courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Clique aqui para alterar a direção da seta evento.
+      courseA_playLab_events5_2020:
         courseA_playLab_events5_1: Clique aqui para alterar a direção da seta evento.
       courseA_playLab_events6:
         courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
@@ -711,13 +801,22 @@ pt-BR:
       courseA_playLab_events6_2019:
         courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
           que significa que você não sabe o que você vai obter até que você o ouça!
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
+          que significa que você não sabe o que você vai obter até que você o ouça!
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para rodar o programa.
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
+          blocos extras para completar seus quebra-cabeças.
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
       courseB_artist_loops3:
@@ -727,6 +826,9 @@ pt-BR:
         courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
           você vai usá-lo?
       courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
+          você vai usá-lo?
+      courseB_artist_loops3_2020:
         courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
           você vai usá-lo?
       courseB_artist_loops5:
@@ -741,11 +843,16 @@ pt-BR:
       courseB_collector_loops1_2019:
         courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
+      courseB_collector_loops1_2020:
+        courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
+          se preocupe, mostraremos como usá-los mais tarde no palco.
       courseB_maze_seq1:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq1_2018:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq1_2019:
+        courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
+      courseB_maze_seq1_2020:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Use o botão de passo para ir passo-a-passo através
@@ -762,7 +869,13 @@ pt-BR:
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
           a direção.
+      courseB_playlab_events6_2020:
+        courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
+          a direção.
       courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: Leve o ator para esta bandeira para ir para o
+          próximo nível.
+      courseC19_playLab_EOC3_2020:
         courseE_playLab_scaffold3_1: Leve o ator para esta bandeira para ir para o
           próximo nível.
       courseC_PlayLab_events8:
@@ -774,6 +887,9 @@ pt-BR:
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: Use este bloco para quando Waddles e Chomp
           se tocarem!
+      courseC_PlayLab_events8_2020:
+        courseC_PlayLab_events8_callout1: Use este bloco para quando Waddles e Chomp
+          se tocarem!
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Este bloco permite mover atores para
           diferentes partes do espaço do jogo.
@@ -783,10 +899,18 @@ pt-BR:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Este bloco permite mover atores para
           diferentes partes do espaço do jogo.
+      courseC_PlayLab_events_challenge1_2020:
+        courseC_PlayLab_events_challenge1_1: Este bloco permite mover atores para
+          diferentes partes do espaço do jogo.
       courseC_artist_loops1a_2019:
         jumpto_callout: Este bloco é muito importante para este projeto. Certifique-se
           de usá-lo!
+      courseC_artist_loops1a_2020:
+        jumpto_callout: Este bloco é muito importante para este projeto. Certifique-se
+          de usá-lo!
       courseC_artist_loops1b_2019:
+        sticker2: Adicione isto no meio do seu programa.
+      courseC_artist_loops1b_2020:
         sticker2: Adicione isto no meio do seu programa.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o
@@ -795,6 +919,9 @@ pt-BR:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o
           artista ao centro da tela.
       courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o
+          artista ao centro da tela.
+      courseC_artist_loopsPrePre1a_2020:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o
           artista ao centro da tela.
       courseC_collector_prog1:
@@ -806,6 +933,9 @@ pt-BR:
       courseC_collector_prog1_2019:
         courseC_collector_prog1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no nível.
+      courseC_collector_prog1_2020:
+        courseC_collector_prog1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não
+          se preocupe, mostraremos como usá-los mais tarde no nível.
       courseC_collector_prog7:
         courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas
           se você precisar!
@@ -813,6 +943,9 @@ pt-BR:
         courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas
           se você precisar!
       courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas
+          se você precisar!
+      courseC_collector_prog7_2020:
         courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas
           se você precisar!
       courseC_harvester_loops1:
@@ -824,13 +957,24 @@ pt-BR:
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há
           quatro abóboras para serem pegas.
+      courseC_harvester_loops1_2020:
+        courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há
+          quatro abóboras para serem pegas.
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: Estes blocos cinzas não podem ser apagados!
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
+      courseC_maze_debugging5_2020:
+        courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
       courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
+          em seu espaço de trabalho.
+      courseC_maze_debugging9_2020:
+        courseC_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
+          em seu espaço de trabalho.
+      courseC_maze_debugging9_copy_2020:
         courseC_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
           em seu espaço de trabalho.
       courseC_maze_programming1:
@@ -842,6 +986,9 @@ pt-BR:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para rodar o programa.
       courseC_maze_programming2:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
@@ -849,6 +996,9 @@ pt-BR:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
+          blocos extras para completar seus quebra-cabeças.
+      courseC_maze_programming2_2020:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
       courseC_maze_programming3:
@@ -866,6 +1016,11 @@ pt-BR:
           de ferramentas para jogá-los fora.
         courseC_maze_programming3_3: Esses blocos são de pedra e não podem ser jogados
           fora.
+      courseC_maze_programming3_2020:
+        courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa
+          de ferramentas para jogá-los fora.
+        courseC_maze_programming3_3: Esses blocos são de pedra e não podem ser jogados
+          fora.
       courseC_maze_programming4:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
@@ -875,11 +1030,16 @@ pt-BR:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseC_maze_programming4_2020:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
+          você ainda pode usar.
       courseC_maze_programming5:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseC_maze_programming5_2018:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseC_maze_programming5_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseC_maze_programming5_2020:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Este é o seu primeiro desafio! Estes são feitos
@@ -896,11 +1056,18 @@ pt-BR:
           para serem difíceis e podem levar várias tentativas.
         courseC_maze_programming7_2: Esses blocos são feitos de pedra e não podem
           ser jogados fora.
+      courseC_maze_programming7_2020:
+        courseC_maze_programming7_1: Este é o seu primeiro desafio! Estes são feitos
+          para serem difíceis e podem levar várias tentativas.
+        courseC_maze_programming7_2: Esses blocos são feitos de pedra e não podem
+          ser jogados fora.
       courseC_starWars_loops2:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_2018:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
+      courseC_starWars_loops2_2020:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_copy:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
@@ -911,6 +1078,9 @@ pt-BR:
         courseD_artist_nestedLoops1a_1: Você não precisa usar cores para acertar este
           desafio. Se quiser, use este bloco `cor aleatória` para facilitar!
       courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: Você não precisa usar cores para acertar este
+          desafio. Se quiser, use este bloco `cor aleatória` para facilitar!
+      courseD_artist_nestedLoops1a_2020:
         courseD_artist_nestedLoops1a_1: Você não precisa usar cores para acertar este
           desafio. Se quiser, use este bloco `cor aleatória` para facilitar!
       courseD_artist_ramp11:
@@ -927,6 +1097,9 @@ pt-BR:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
           não precisa se preocupar com os favos de mel.
+      courseD_bee_conditionals2_2020:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
           não precisa se preocupar com os favos de mel.
@@ -938,6 +1111,9 @@ pt-BR:
         courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar
           (ou mel) de uma flor (ou favo de mel).
       courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar
+          (ou mel) de uma flor (ou favo de mel).
+      courseD_bee_conditionals_challenge2_2020:
         courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar
           (ou mel) de uma flor (ou favo de mel).
       courseD_bee_debugging_challenge1:
@@ -955,10 +1131,18 @@ pt-BR:
       courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: Você precisará usar o bloco `enquanto
           caminho pela frente` para resolver esse quebra-cabeça.
+      courseD_farmer_while7_2020:
+        courseD_farmer_while7_2018_PathAhead: Você precisará usar o bloco `enquanto
+          caminho pela frente` para resolver esse quebra-cabeça.
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseD_maze_intro4_2020:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
+          você ainda pode usar.
       courseD_maze_intro5a_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_intro5a_2020:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
@@ -969,6 +1153,9 @@ pt-BR:
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
+      courseD_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para rodar o programa.
       courseD_maze_ramp2:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
@@ -976,6 +1163,9 @@ pt-BR:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
+          blocos extras para completar seus quebra-cabeças.
+      courseD_maze_ramp2_2020:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
       courseD_maze_ramp3:
@@ -990,6 +1180,10 @@ pt-BR:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa
           de ferramentas para jogá-los fora.
         stone_block_2: Blocos cinza não podem ser jogados fora.
+      courseD_maze_ramp3_2020:
+        courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa
+          de ferramentas para jogá-los fora.
+        stone_block_2: Blocos cinza não podem ser jogados fora.
       courseD_maze_ramp4:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
@@ -999,17 +1193,24 @@ pt-BR:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseD_maze_ramp4_2020:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
+          você ainda pode usar.
       courseD_maze_ramp5:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp5_2018:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp5_2019:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5_2020:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp5a:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp5a_2018:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp5a_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5a_2020:
         '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: O código que você colocou aqui será repetido quantas
@@ -1045,6 +1246,8 @@ pt-BR:
           serem difíceis e podem levar várias tentativas.
       courseE_aboutme_2:
         '': Clique aqui!
+      courseE_aboutme_2_2020:
+        '': Clique aqui!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Vamos começar usando esse bloco para ajudar a
           criar o primeiro quadrado.
@@ -1063,6 +1266,10 @@ pt-BR:
         courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
           na função será executado. O que o artista deve fazer depois de desenhar
           o primeiro quadrado?
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
+          na função será executado. O que o artista deve fazer depois de desenhar
+          o primeiro quadrado?
       courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
           na função será executado. O que o artista deve fazer depois de desenhar
@@ -1074,6 +1281,9 @@ pt-BR:
         courseD_artist_functions8_1: Seus blocos para criar funções foram movidos
           sob este rótulo na caixa de ferramentas.
       courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Seus blocos para criar funções foram movidos
+          sob este rótulo na caixa de ferramentas.
+      courseE_artist_functions8a_2020:
         courseD_artist_functions8_1: Seus blocos para criar funções foram movidos
           sob este rótulo na caixa de ferramentas.
       courseE_artist_functions_challenge1:
@@ -1091,6 +1301,11 @@ pt-BR:
           mais código no final.
         courseE_artist_functions_challenge1_callout2: Se você não gosta deste visual,
           mude para o que você quiser!
+      courseE_artist_functions_challenge1_2020:
+        courseE_artist_functions_challenge1_callout1: Mantenha este programa adicionando
+          mais código no final.
+        courseE_artist_functions_challenge1_callout2: Se você não gosta deste visual,
+          mude para o que você quiser!
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Mantenha este programa adicionando
           mais código no final.
@@ -1102,6 +1317,11 @@ pt-BR:
         courseE_artist_functions_challenge2_callout2: Se você não gosta deste visual,
           mude para o que você quiser!
       courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Mantenha este programa adicionando
+          mais código no final.
+        courseE_artist_functions_challenge2_callout2: Se você não gosta deste visual,
+          mude para o que você quiser!
+      courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge2_callout1: Mantenha este programa adicionando
           mais código no final.
         courseE_artist_functions_challenge2_callout2: Se você não gosta deste visual,
@@ -1124,11 +1344,18 @@ pt-BR:
       courseE_farmer_functions13_2019:
         courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
           que você executa o programa.
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
+          que você executa o programa.
       courseE_farmer_functions1_2018:
         courseE_farmer_functions1_2: A caixa de ferramentas está organizada um pouco
           diferente desta vez! Clique nas diferentes categorias para ver quais blocos
           você tem.
       courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: A caixa de ferramentas está organizada um pouco
+          diferente desta vez! Clique nas diferentes categorias para ver quais blocos
+          você tem.
+      courseE_farmer_functions1_2020:
         courseE_farmer_functions1_2: A caixa de ferramentas está organizada um pouco
           diferente desta vez! Clique nas diferentes categorias para ver quais blocos
           você tem.
@@ -1141,6 +1368,9 @@ pt-BR:
       courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
           que você executa o programa.
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
+          que você executa o programa.
       courseE_farmer_functions2b:
         courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
           que você executa o programa.
@@ -1148,6 +1378,9 @@ pt-BR:
         courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
           que você executa o programa.
       courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
+          que você executa o programa.
+      courseE_farmer_functions2b_2020:
         courseE_farmer_functions1a_1: Este vegetal é desconhecido. Ele muda cada vez
           que você executa o programa.
       courseE_playLab_challenge1:
@@ -1165,6 +1398,9 @@ pt-BR:
       courseF_artist_for1_2019:
         courseF_artist_for1_1: A caixa de ferramentas está no modo "categoria" para
           dar mais espaço ao seu código. Os laços "for" ficam aqui.
+      courseF_artist_for1_2020:
+        courseF_artist_for1_1: A caixa de ferramentas está no modo "categoria" para
+          dar mais espaço ao seu código. Os laços "for" ficam aqui.
       courseF_artist_fwp1:
         courseF_artist_fwp1_1: Clique no botão "editar" para alterar o código dentro
           da função.
@@ -1179,6 +1415,8 @@ pt-BR:
         courseF_artist_variables3_a: Use isso para definir o valor da variável `tamanho`
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: Use isso para definir o valor da variável `tamanho`
+      courseF_artist_variables3_2020:
+        courseF_artist_variables3_a: Use isso para definir o valor da variável `tamanho`
       courseF_artist_variables6:
         courseF_artist_variables6_1: As variáveis podem ser úteis quando você precisa
           alterar muitas cópias do mesmo número.
@@ -1188,6 +1426,9 @@ pt-BR:
       courseF_artist_variables6_2019:
         courseF_artist_variables6_1: As variáveis podem ser úteis quando você precisa
           alterar muitas cópias do mesmo número.
+      courseF_artist_variables6_2020:
+        courseF_artist_variables6_1: As variáveis podem ser úteis quando você precisa
+          alterar muitas cópias do mesmo número.
       courseF_artist_variables6a:
         courseF_artist_variables6a_1: As variáveis podem ser úteis quando você precisa
           alterar muitas cópias do mesmo número.
@@ -1195,6 +1436,9 @@ pt-BR:
         courseF_artist_variables6a_1: As variáveis podem ser úteis quando você precisa
           alterar muitas cópias do mesmo número.
       courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: As variáveis podem ser úteis quando você precisa
+          alterar muitas cópias do mesmo número.
+      courseF_artist_variables6a_2020:
         courseF_artist_variables6a_1: As variáveis podem ser úteis quando você precisa
           alterar muitas cópias do mesmo número.
       courseF_bee_conditionals2:
@@ -1209,11 +1453,15 @@ pt-BR:
         courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
       courseF_bee_for4_2019:
         courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
+      courseF_bee_for4_2020:
+        courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
       courseF_bee_for9:
         courseF_bee_for9_1: Você encontrará o bloco `matemática` aqui.
       courseF_bee_for9_2018:
         courseF_bee_for9_1: Você encontrará o bloco `matemática` aqui.
       courseF_bee_for9_2019:
+        courseF_bee_for9_1: Você encontrará o bloco `matemática` aqui.
+      courseF_bee_for9_2020:
         courseF_bee_for9_1: Você encontrará o bloco `matemática` aqui.
       courseF_bee_functions2:
         courseF_bee_functions2_1: Este bloco chama uma função. Clique neste botão
@@ -1242,6 +1490,8 @@ pt-BR:
         courseF_bee_functions_1_2018_1: Você pode encontrar suas variáveis aqui!
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: Você pode encontrar suas variáveis aqui!
+      courseF_bee_variables_1_2020:
+        courseF_bee_functions_1_2018_1: Você pode encontrar suas variáveis aqui!
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: A caixa de ferramentas foi organizada em categorias
           para tornar mais fácil encontrar os blocos que você precisa.
@@ -1257,7 +1507,13 @@ pt-BR:
       coursea_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para iniciar o programa.
+      coursea_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para iniciar o programa.
       express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
+          em seu espaço de trabalho.
+      express_maze_debugging9_2020:
         express_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
           em seu espaço de trabalho.
       frozen circle function with parameter:
@@ -1304,6 +1560,10 @@ pt-BR:
           nova maneira de inserir números. Estes blocos `matemática` podem ser retirados
           e movidos!
       grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: Observe que os blocos agora têm uma
+          nova maneira de inserir números. Estes blocos `matemática` podem ser retirados
+          e movidos!
+      grade5_artist_variables_triangles1_2020:
         grade5_artist_variables_triangles1_1: Observe que os blocos agora têm uma
           nova maneira de inserir números. Estes blocos `matemática` podem ser retirados
           e movidos!
