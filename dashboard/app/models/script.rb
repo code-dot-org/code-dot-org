@@ -1524,8 +1524,8 @@ class Script < ActiveRecord::Base
     lessons.each do |stage|
       stage_data = {
         'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
       }
       data['stages'][stage.name] = stage_data
       data['lessons'][stage.name] = stage_data
@@ -1543,8 +1543,8 @@ class Script < ActiveRecord::Base
       data['stageDescriptions'] = lessons.map do |stage|
         {
           name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
         }
       end
     end
