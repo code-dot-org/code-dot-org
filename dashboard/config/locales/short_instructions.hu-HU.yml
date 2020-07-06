@@ -452,6 +452,30 @@ hu-HU:
       Course 4 SCV 4: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 5: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 6: Kattints ide az utasítások újbóli megtekintéséhez.
+      CourseD_Dance_2020_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
+        az „összeállítás“ blokkba.
+      CourseD_Dance_2020_02: A `fel megnyomásakor` blokk segítségével a felfelé mutató
+        nyíl megnyomásakor futtathatsz kódot. Érd el, hogy a táncos tapsoljon a felfelé
+        gomb megnyomásakor, vagy próbálj ki egy másik mozdulatot!
+      CourseD_Dance_2020_03: Eljött a táncverseny ideje! Programozz be minden táncost,
+        hogy mozogjon egyes gombok megnyomásakor. Válaszd ki a kedvenc mozdulatodat
+        minden egyes táncoshoz, vagy használd a "(Véletlenszerű)" beállítást, ha valami
+        teljesen kiszámíthatatlant szeretnél!
+      CourseD_Dance_2020_04: Érd el, hogy a táncosod új mozdulatba kezdjen a negyedik
+        ütem után.
+      CourseD_Dance_2020_05: Most állítsd be, hogy a táncos 6 ütem után kezdjen új
+        mozdulatot!
+      CourseD_Dance_2020_06: Állíts össze egy csoport háttértáncost a középen elhelyezkedő
+        vezető táncos körül.
+      CourseD_Dance_2020_07: Változtasd meg a háttértáncosok csoportjának méretét.
+      CourseD_Dance_2020_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész
+        csoport) színárnyalatát!
+      CourseD_Dance_2020_09: Légy kreatív ezekkel az új blokkokkal!
+      CourseD_Dance_2020_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      CourseD_Dance_2020_bonus1: Előre és hátra! (Kattints a "Több" gombra a részletekért)
+      CourseD_Dance_2020_bonus3: Befelé az alakzatba! (A részletekért kattintson a
+        „Tovább” gombra)
       CourseD_Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és
         csatlakoztasd az „összeállítás“ blokkba.
       CourseD_Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot
@@ -481,16 +505,28 @@ hu-HU:
         és oszd meg az ismerőseiddel.
       CourseE_HOC 2018 Level_1: Vegyél ki egy csónakot a ládából.
       CourseE_HOC 2018 Level_10: Menj a Víz alatti templom bejáratához.
+      CourseE_HOC 2018 Level_10_2020: Menj a Víz alatti templom bejáratához.
       CourseE_HOC 2018 Level_11: Prizmarinnal építs csatornát a Víz alatti templom
         belsejében.
+      CourseE_HOC 2018 Level_11_2020: Prizmarinnal építs csatornát a Víz alatti templom
+        belsejében.
+      CourseE_HOC 2018 Level_1_2020: Vegyél ki egy csónakot a ládából.
       CourseE_HOC 2018 Level_2: Menj a móló végére.
+      CourseE_HOC 2018 Level_2_2020: Menj a móló végére.
       CourseE_HOC 2018 Level_3: Hajózz ki a nyílt vízre a tőkehalhoz.
+      CourseE_HOC 2018 Level_3_2020: Hajózz ki a nyílt vízre a tőkehalhoz.
       CourseE_HOC 2018 Level_4: Hurokkal kapd el a delfint.
+      CourseE_HOC 2018 Level_4_2020: Hurokkal kapd el a delfint.
       CourseE_HOC 2018 Level_5: Kutasd át az elsüllyedt hajót, és juss el a ládához.
+      CourseE_HOC 2018 Level_5_2020: Kutasd át az elsüllyedt hajót, és juss el a ládához.
       CourseE_HOC 2018 Level_6: Navigálj át a jégmezőn, és találd meg a lazacot.
+      CourseE_HOC 2018 Level_6_2020: Navigálj át a jégmezőn, és találd meg a lazacot.
       CourseE_HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd
         meg a ládát.
+      CourseE_HOC 2018 Level_7a_2020: Kutasd át ezeket a víz alatti romokat, és keresd
+        meg a ládát.
       CourseE_HOC 2018 Level_9b: Kincskeresés közben használd a korallokat útjelzőként.
+      CourseE_HOC 2018 Level_9b_2020: Kincskeresés közben használd a korallokat útjelzőként.
       Crack Random Substitution: Utasítások
       Crack a Caesar Cipher: Utasítások
       Dance_2019_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
@@ -570,6 +606,8 @@ hu-HU:
       Function intro Ryan: Hogy szabaddá váljon az út a fáklyához, használd kétszer
         az "építs hidat" függvényt.
       Function intro Ryan_2019: Hogy szabaddá váljon az út a fáklyához, használd kétszer
+        az "építs hidat" függvényt.
+      Function intro Ryan_2020: Hogy szabaddá váljon az út a fáklyához, használd kétszer
         az "építs hidat" függvényt.
       Guess The Number: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
         példa!
@@ -730,33 +768,49 @@ hu-HU:
         gombot, és a nyílgombokkal vidd ki a játékost a házból a láda felvevéséhez. '
       MC_HOC_2017_01_RETRY_2019: 'Vidd az Agentet a nyomólapra, majd nyomd meg a "Futtatás"
         gombot, és a nyílgombokkal vidd ki a játékost a házból a láda felvevéséhez. '
+      MC_HOC_2017_01_RETRY_2020: 'Vidd az Agentet a nyomólapra, majd nyomd meg a "Futtatás"
+        gombot, és a nyílgombokkal vidd ki a játékost a házból a láda felvevéséhez. '
       MC_HOC_2017_02_Cole: 'Vidd az Agentet a nyomólapra, hogy {currentPlayerName}
         le tudjon menni a térképről. '
       MC_HOC_2017_02_Cole_2019: 'Vidd az Agentet a nyomólapra, hogy {currentPlayerName}
         le tudjon menni a térképről. '
+      MC_HOC_2017_02_Cole_2020: 'Vidd az Agentet a nyomólapra, hogy {currentPlayerName}
+        le tudjon menni a térképről. '
       MC_HOC_2017_03_Cole: 'Programozd úgy az Agentet, hogy kinyissa a kaput. '
       MC_HOC_2017_03_Cole_2019: 'Programozd úgy az Agentet, hogy kinyissa a kaput. '
+      MC_HOC_2017_03_Cole_2020: 'Programozd úgy az Agentet, hogy kinyissa a kaput. '
       MC_HOC_2017_04POINT5_RYAN: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04POINT5_RYAN_2019: Vidd az Agentet a nyomólapra.
+      MC_HOC_2017_04POINT5_RYAN_2020: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Cole: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Cole_2019: Vidd az Agentet a nyomólapra.
+      MC_HOC_2017_04_Cole_2020: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_05_Cole: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_05_Cole_2019: Juttasd a játékost az ásóhoz.
+      MC_HOC_2017_05_Cole_2020: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_06_Cole: Javítsd ki ezt a kódot, hogy az Agent hidat építsen a folyóra.
       MC_HOC_2017_06_Cole_2019: Javítsd ki ezt a kódot, hogy az Agent hidat építsen
+        a folyóra.
+      MC_HOC_2017_06_Cole_2020: Javítsd ki ezt a kódot, hogy az Agent hidat építsen
         a folyóra.
       MC_HOC_2017_07_Cole: Törd fel a jeget, és juttasd {currentPlayerName} játékost
         a csilléhez.
       MC_HOC_2017_07_Cole_2019: Törd fel a jeget, és juttasd {currentPlayerName} játékost
         a csilléhez.
+      MC_HOC_2017_07_Cole_2020: Törd fel a jeget, és juttasd {currentPlayerName} játékost
+        a csilléhez.
       MC_HOC_2017_10_RETRY: Hozz létre egy függvényt, amellyel befejezheted ezt a
         csillét.
       MC_HOC_2017_10_RETRY_2019: Hozz létre egy függvényt, amellyel befejezheted ezt
         a csillét.
+      MC_HOC_2017_10_RETRY_2020: Hozz létre egy függvényt, amellyel befejezheted ezt
+        a csillét.
       MC_HOC_2017_Ali: Használd a függvényeket a láván átvezető út megtalálásához.
       MC_HOC_2017_Ali_2019: Használd a függvényeket a láván átvezető út megtalálásához.
+      MC_HOC_2017_Ali_2020: Használd a függvényeket a láván átvezető út megtalálásához.
       MC_HOC_2017_FP20x20: "**Szabad játék:**  Most szabadon barangolhatsz!"
       MC_HOC_2017_FP20x20_2019: "**Szabad játék:**  Most szabadon barangolhatsz!"
+      MC_HOC_2017_FP20x20_2020: "**Szabad játék:**  Most szabadon barangolhatsz!"
       NEW Course 4 Artist Functions 14: 'Szabad játék! '
       NEW Course 4 Artist Functions 3: Itt van egy új blokktípus. Ezt úgy hívják,
         hogy `függvény` blokk. Kattints a "szerkeszt" gombra, és töltsd ki olyan kóddal,
@@ -817,37 +871,56 @@ hu-HU:
         el a Creeperek között, hogy épségben hazaérj.
       Overworld Avoid Monsters_2019: Nem jó ötlet nekimenni a Creepereknek. Óvatosan
         haladj el a Creeperek között, hogy épségben hazaérj.
+      Overworld Avoid Monsters_2020: Nem jó ötlet nekimenni a Creepereknek. Óvatosan
+        haladj el a Creeperek között, hogy épségben hazaérj.
       Overworld Chop Tree: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk
         belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd
         a fát.
       Overworld Chop Tree_2019: A fa nagyon értékes erőforrás. Nagyon sok mindent
         készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy
         kivágd a fát.
+      Overworld Chop Tree_2020: A fa nagyon értékes erőforrás. Nagyon sok mindent
+        készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy
+        kivágd a fát.
       Overworld Chop Trees: Házat kell építenünk, mielőtt lemegy a nap. Ehhez sok
         fára van szükségünk. Vágd ki mind a három fát.
       Overworld Chop Trees_2019: Házat kell építenünk, mielőtt lemegy a nap. Ehhez
+        sok fára van szükségünk. Vágd ki mind a három fát.
+      Overworld Chop Trees_2020: Házat kell építenünk, mielőtt lemegy a nap. Ehhez
         sok fára van szükségünk. Vágd ki mind a három fát.
       Overworld Free Play 20x20: Gratulálunk, minden feladványt megoldottál! Most
         bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig tanultál.
       Overworld Free Play 20x20_2019: Gratulálunk, minden feladványt megoldottál!
         Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig
         tanultál.
+      Overworld Free Play 20x20_2020: Gratulálunk, minden feladványt megoldottál!
+        Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig
+        tanultál.
       Overworld House Frame Chosen: Építsd meg a ház többi részét olyan anyagból,
         amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
       Overworld House Frame Chosen_2019: Építsd meg a ház többi részét olyan anyagból,
         amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
+      Overworld House Frame Chosen_2020: Építsd meg a ház többi részét olyan anyagból,
+        amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
+        elérd a bárányt.
+      Overworld Move to Sheep_2020: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
       Overworld Place Wall: Minden ház egy fallal kezdődik. Építsd meg az első részt
         úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot teszel.
       Overworld Place Wall_2019: Minden ház egy fallal kezdődik. Építsd meg az első
         részt úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot
         teszel.
+      Overworld Place Wall_2020: Minden ház egy fallal kezdődik. Építsd meg az első
+        részt úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot
+        teszel.
       Overworld Plant Crops: Jó gondolat előre tervezni. Ültess növényeket a tó mindkét
         partján, hogy később ne legyél éhes.
       Overworld Plant Crops_2019: Jó gondolat előre tervezni. Ültess növényeket a
+        tó mindkét partján, hogy később ne legyél éhes.
+      Overworld Plant Crops_2020: Jó gondolat előre tervezni. Ültess növényeket a
         tó mindkét partján, hogy később ne legyél éhes.
       Overworld Powered Minecart: Szép munka! Nagyon sok nyersanyagot gyűjtöttél,
         és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől
@@ -855,9 +928,14 @@ hu-HU:
       Overworld Powered Minecart_2019: Szép munka! Nagyon sok nyersanyagot gyűjtöttél,
         és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől
         a házad bejáratáig.
+      Overworld Powered Minecart_2020: Szép munka! Nagyon sok nyersanyagot gyűjtöttél,
+        és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől
+        a házad bejáratáig.
       Overworld Shear Sheep: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy
         gyapjút gyűjts a két báránytól.
       Overworld Shear Sheep_2019: Itt a birkanyírás ideje! Használd a nyír parancsot,
+        hogy gyapjút gyűjts a két báránytól.
+      Overworld Shear Sheep_2020: Itt a birkanyírás ideje! Használd a nyír parancsot,
         hogy gyapjút gyűjts a két báránytól.
       Standalone_Artist_1: Üdvözöljük a művészeket! Először is próbálj meg készíteni
         egy egyszerű négyzetet a Fordulj jobbra és az Előrelépni blokkok használatával.Legyen
@@ -894,10 +972,16 @@ hu-HU:
       Underground Avoiding Lava_2019: Láva rejlik bizonyos blokkok alatt, amelyet
         le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd
         az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
+      Underground Avoiding Lava_2020: Láva rejlik bizonyos blokkok alatt, amelyet
+        le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd
+        az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
       Underground If Statements: A dolgok kezdenek trükkösek lenni. Három vöröskő
         ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot,
         hogy macskakővel takard le a lávát, ha lávával találkozol.
       Underground If Statements_2019: A dolgok kezdenek trükkösek lenni. Három vöröskő
+        ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot,
+        hogy macskakővel takard le a lávát, ha lávával találkozol.
+      Underground If Statements_2020: A dolgok kezdenek trükkösek lenni. Három vöröskő
         ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot,
         hogy macskakővel takard le a lávát, ha lávával találkozol.
       Underground Iron: Nem jó ötlet belesétálni a folyékony lávába. Takard le macskakővel,
@@ -905,9 +989,15 @@ hu-HU:
       Underground Iron_2019: Nem jó ötlet belesétálni a folyékony lávába. Takard le
         macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz
         ki.
+      Underground Iron_2020: Nem jó ötlet belesétálni a folyékony lávába. Takard le
+        macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz
+        ki.
       Underground Mining Coal: A legértékesebb nyersanyagok a föld alatt vannak, de
         sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
       Underground Mining Coal_2019: A legértékesebb nyersanyagok a föld alatt vannak,
+        de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két
+        szenet.
+      Underground Mining Coal_2020: A legértékesebb nyersanyagok a föld alatt vannak,
         de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két
         szenet.
       bounce_1: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd meg
@@ -1011,11 +1101,15 @@ hu-HU:
         a vízbe!
       courseA_artist_loops10_2019: Segíts nekem köveket letenni, hogy ne essek bele
         a vízbe!
+      courseA_artist_loops10_2020: Segíts nekem köveket letenni, hogy ne essek bele
+        a vízbe!
       courseA_artist_loops11: Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy
         a hajó elmegy.
       courseA_artist_loops11_2018: Segíts nekem megépíteni a lépcsőt, így láthatom,
         ahogy a hajó elmegy.
       courseA_artist_loops11_2019: Segíts nekem megépíteni a lépcsőt, így láthatom,
+        ahogy a hajó elmegy.
+      courseA_artist_loops11_2020: Segíts nekem megépíteni a lépcsőt, így láthatom,
         ahogy a hajó elmegy.
       courseA_artist_loops12: A művész látott valami mókás dolgot a távolban. Rajzold
         le, hogy szerinted mit látott.
@@ -1023,9 +1117,13 @@ hu-HU:
         Rajzold le, hogy szerinted mit látott.
       courseA_artist_loops12_2019: A művész látott valami mókás dolgot a távolban.
         Rajzold le, hogy szerinted mit látott.
+      courseA_artist_loops12_2020: A művész látott valami mókás dolgot a távolban.
+        Rajzold le, hogy szerinted mit látott.
       courseA_artist_loops1_2018: Ez egy új típusú feladvány, főhősünk a "Művész".
         Játssz egy kicsit, és rajzolj valami vidám dolgot.
       courseA_artist_loops1_2019: Ez egy új típusú feladvány, főhősünk a "Művész".
+        Játssz egy kicsit, és rajzolj valami vidám dolgot.
+      courseA_artist_loops1_2020: Ez egy új típusú feladvány, főhősünk a "Művész".
         Játssz egy kicsit, és rajzolj valami vidám dolgot.
       courseA_artist_loops2: Segíts a művésznek megrajzolni ezt a vonalat kétszer
         egymás után.
@@ -1033,45 +1131,61 @@ hu-HU:
         egymás után.
       courseA_artist_loops2_2019: Segíts a művésznek megrajzolni ezt a vonalat kétszer
         egymás után.
+      courseA_artist_loops2_2020: Segíts a művésznek megrajzolni ezt a vonalat kétszer
+        egymás után.
       courseA_artist_loops3: Húzd meg a vonalat ötször egymás után.
       courseA_artist_loops3_2018: Húzd meg a vonalat ötször egymás után.
       courseA_artist_loops3_2019: Húzd meg a vonalat ötször egymás után.
+      courseA_artist_loops3_2020: Húzd meg a vonalat ötször egymás után.
       courseA_artist_loops4: Most egy ismétlés ciklust használj, hogy ötször rajzold
         meg ezt a vonalat!
       courseA_artist_loops4_2018: Most egy ismétlés ciklust használj, hogy ötször
         rajzold meg ezt a vonalat!
       courseA_artist_loops4_2019: Most egy ismétlés ciklust használj, hogy ötször
         rajzold meg ezt a vonalat!
+      courseA_artist_loops4_2020: Most egy ismétlés ciklust használj, hogy ötször
+        rajzold meg ezt a vonalat!
       courseA_artist_loops5: Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
       courseA_artist_loops5_2018: Rajzolj egy hét lépés hosszú vonalat. Ez lesz a
         horizontunk.
       courseA_artist_loops5_2019: Rajzolj egy hét lépés hosszú vonalat. Ez lesz a
         horizontunk.
+      courseA_artist_loops5_2020: Rajzolj egy hét lépés hosszú vonalat. Ez lesz a
+        horizontunk.
       courseA_artist_loops6: Tegyünk a háttérbe egy szép hegyet.
       courseA_artist_loops6_2018: Tegyünk a háttérbe egy szép hegyet.
       courseA_artist_loops6_2019: Tegyünk a háttérbe egy szép hegyet.
+      courseA_artist_loops6_2020: Tegyünk a háttérbe egy szép hegyet.
       courseA_artist_loops7: Használd az "ismételd" ciklust, hogy hullámokat adj a
         vízhez.
       courseA_artist_loops7_2018: Használd az "ismételd" ciklust, hogy hullámokat
         adj a vízhez.
       courseA_artist_loops7_2019: Használd az "ismételd" ciklust, hogy hullámokat
         adj a vízhez.
+      courseA_artist_loops7_2020: Használd az "ismételd" ciklust, hogy hullámokat
+        adj a vízhez.
       courseA_artist_loops8: Szükségünk van egy hajóra vezető létrára.
       courseA_artist_loops8_2018: Szükségünk van egy hajóra vezető létrára.
       courseA_artist_loops8_2019: Szükségünk van egy hajóra vezető létrára.
+      courseA_artist_loops8_2020: Szükségünk van egy hajóra vezető létrára.
       courseA_artist_loops9: 'Kihívás: javítsd meg a lépcsőt.'
       courseA_artist_loops9_2018: 'Kihívás: javítsd meg a lépcsőt.'
       courseA_artist_loops9_2019: 'Kihívás: javítsd meg a lépcsőt.'
+      courseA_artist_loops9_2020: 'Kihívás: javítsd meg a lépcsőt.'
       courseA_artist_loops_challenge1: Tudsz házat rajzolni? Rajzold úgy, ahogy csak
         szeretnéd!
       courseA_artist_loops_challenge1_2018: Tudsz házat rajzolni? Rajzold úgy, ahogy
         csak szeretnéd!
       courseA_artist_loops_challenge1_2019: Tudsz házat rajzolni? Rajzold úgy, ahogy
         csak szeretnéd!
+      courseA_artist_loops_challenge1_2020: Tudsz házat rajzolni? Rajzold úgy, ahogy
+        csak szeretnéd!
       courseA_artist_loops_challenge2a: _"Segíts nekem felállítani ezt a három sátrat!"_
       courseA_artist_loops_challenge2a_2018: _"Segíts nekem felállítani ezt a három
         sátrat!"_
       courseA_artist_loops_challenge2a_2019: _"Segíts nekem felállítani ezt a három
+        sátrat!"_
+      courseA_artist_loops_challenge2a_2020: _"Segíts nekem felállítani ezt a három
         sátrat!"_
       courseA_collector_loops1: Mozgasd Laurelt, és próbálj megszerezni annyi kincset,
         ammennyit csak tudsz!
@@ -1081,10 +1195,14 @@ hu-HU:
         kincset útja során.
       courseA_collector_loops10_2019: Segít Laurelnek, hogy megszerezze az összes
         kincset útja során.
+      courseA_collector_loops10_2020: Segít Laurelnek, hogy megszerezze az összes
+        kincset útja során.
       courseA_collector_loops11: Segíts Laurelnek, hogy a barlang összes kincsét megszerezze.
       courseA_collector_loops11_2018: Segíts Laurelnek, hogy a barlang összes kincsét
         megszerezze.
       courseA_collector_loops11_2019: Segíts Laurelnek, hogy a barlang összes kincsét
+        megszerezze.
+      courseA_collector_loops11_2020: Segíts Laurelnek, hogy a barlang összes kincsét
         megszerezze.
       courseA_collector_loops12: _"Heuréka! Gyűjts össze annyi kincset, amennyit csak
         tudsz!"_
@@ -1092,9 +1210,13 @@ hu-HU:
         csak tudsz!"_
       courseA_collector_loops12_2019: _"Heuréka! Gyűjts össze annyi kincset, amennyit
         csak tudsz!"_
+      courseA_collector_loops12_2020: _"Heuréka! Gyűjts össze annyi kincset, amennyit
+        csak tudsz!"_
       courseA_collector_loops1_2018: Mozgasd Laurelt, és próbálj megszerezni annyi
         kincset, ammennyit csak tudsz!
       courseA_collector_loops1_2019: Mozgasd Laurelt, és próbálj megszerezni annyi
+        kincset, ammennyit csak tudsz!
+      courseA_collector_loops1_2020: Mozgasd Laurelt, és próbálj megszerezni annyi
         kincset, ammennyit csak tudsz!
       courseA_collector_loops2: Mindhárom kincset szedd fel, hogy teljesítsd ezt a
         pályát.
@@ -1102,10 +1224,14 @@ hu-HU:
         ezt a pályát.
       courseA_collector_loops2_2019: Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a gyűjtőblokkot.
+      courseA_collector_loops2_2020: Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
+        minden egyes kincses darabhoz, majd használd a gyűjtőblokkot.
       courseA_collector_loops4: Javítsd ki Laurel útját, hogy minden kincshez eljusson.
       courseA_collector_loops4_2018: Javítsd ki Laurel útját, hogy minden kincshez
         eljusson.
       courseA_collector_loops4_2019: Javítsd ki Laurel útját, hogy minden kincshez
+        eljusson.
+      courseA_collector_loops4_2020: Javítsd ki Laurel útját, hogy minden kincshez
         eljusson.
       courseA_collector_loops5: Használd, amit eddig tanultál, hogy megszerezd az
         összes kincset.
@@ -1113,11 +1239,15 @@ hu-HU:
         az összes kincset.
       courseA_collector_loops5_2019: Használd, amit eddig tanultál, hogy megszerezd
         az összes kincset.
+      courseA_collector_loops5_2020: Használd, amit eddig tanultál, hogy megszerezd
+        az összes kincset.
       courseA_collector_loops6: Adj blokkokat ehhez a kódhoz, hogy megszerezd az összes
         kincset.
       courseA_collector_loops6_2018: Adj blokkokat ehhez a kódhoz, hogy megszerezd
         az összes kincset.
       courseA_collector_loops6_2019: Adj blokkokat ehhez a kódhoz, hogy megszerezd
+        az összes kincset.
+      courseA_collector_loops6_2020: Adj blokkokat ehhez a kódhoz, hogy megszerezd
         az összes kincset.
       courseA_collector_loops7: Mit kellene hozzáadni ehhez a kódhoz, hogy megszerezd
         az összes kincset?
@@ -1125,14 +1255,19 @@ hu-HU:
         az összes kincset?
       courseA_collector_loops7_2019: Mit kellene hozzáadni ehhez a kódhoz, hogy megszerezd
         az összes kincset?
+      courseA_collector_loops7_2020: Mit kellene hozzáadni ehhez a kódhoz, hogy megszerezd
+        az összes kincset?
       courseA_collector_loops8: Írj kódot, hogy megszerezd az összes kincset.
       courseA_collector_loops8_2018: Írj kódot, hogy megszerezd az összes kincset.
       courseA_collector_loops8_2019: Írj kódot, hogy megszerezd az összes kincset.
+      courseA_collector_loops8_2020: Írj kódot, hogy megszerezd az összes kincset.
       courseA_collector_loops9: "**Kihívás:** A kincsek úgy helyezkednek el, mint
         a lépcső fokai! Írj kódot, amivel segítesz Laurelnek, hogy mindet megszerezze."
       courseA_collector_loops9_2018: "**Kihívás:** A kincsek úgy helyezkednek el,
         mint a lépcső fokai! Írj kódot, amivel segítesz Laurelnek, hogy mindet megszerezze."
       courseA_collector_loops9_2019: "**Kihívás:** A kincsek úgy helyezkednek el,
+        mint a lépcső fokai! Írj kódot, amivel segítesz Laurelnek, hogy mindet megszerezze."
+      courseA_collector_loops9_2020: "**Kihívás:** A kincsek úgy helyezkednek el,
         mint a lépcső fokai! Írj kódot, amivel segítesz Laurelnek, hogy mindet megszerezze."
       courseA_collector_loops_challenge1: _"Tudsz segíteni azzal, hogy rámutatsz a
         hibákra?"_
@@ -1140,11 +1275,15 @@ hu-HU:
         a hibákra?"_
       courseA_collector_loops_challenge1_2019: _"Tudsz segíteni azzal, hogy rámutatsz
         a hibákra?"_
+      courseA_collector_loops_challenge1_2020: _"Tudsz segíteni azzal, hogy rámutatsz
+        a hibákra?"_
       courseA_collector_loops_challenge2kp: Gyűjts össze legalább **3** kincset, hogy
         teljesítsd a pályát.
       courseA_collector_loops_challenge2kp_2018: Gyűjts össze legalább **3** kincset,
         hogy teljesítsd a pályát.
       courseA_collector_loops_challenge2kp_2019: Gyűjts össze legalább **3** kincset,
+        hogy teljesítsd a pályát.
+      courseA_collector_loops_challenge2kp_2020: Gyűjts össze legalább **3** kincset,
         hogy teljesítsd a pályát.
       courseA_collector_preLoops7: Mindhárom kincset szedd fel, hogy teljesítsd ezt
         a pályát.
@@ -1159,14 +1298,19 @@ hu-HU:
         madár elérjen a malacig.
       courseA_maze_seq11_2019: Mozogj az egyik irányba, aztán egy másikba, hogy a
         madár elérjen a malacig.
+      courseA_maze_seq11_2020: Mozogj az egyik irányba, aztán egy másikba, hogy a
+        madár elérjen a malacig.
       courseA_maze_seq12: 'Kapd el azt a malacot! '
       courseA_maze_seq12_2018: 'Kapd el azt a malacot! '
       courseA_maze_seq12_2019: 'Kapd el azt a malacot! '
+      courseA_maze_seq12_2020: 'Kapd el azt a malacot! '
       courseA_maze_seq13: Kapd el a malacot, bármilyen módon!
       courseA_maze_seq13_2018: Kapd el a malacot, bármilyen módon!
       courseA_maze_seq13_2019: Kapd el a malacot, bármilyen módon!
+      courseA_maze_seq13_2020: Kapd el a malacot, bármilyen módon!
       courseA_maze_seq1_2018: Vidd a madarat a rossz malachoz!
       courseA_maze_seq1_2019: Vidd a madarat a rossz malachoz!
+      courseA_maze_seq1_2020: Vidd a madarat a rossz malachoz!
       courseA_maze_seq2: Változtasd meg a kódot, hogy a madár elkapja a malacot.
       courseA_maze_seq3: Javítsd ki a kódot, hogy a madár elkapja a malacot!
       courseA_maze_seq4: Távolítsd el a blokkot, hogy a madár eljusson a malacig!
@@ -1178,6 +1322,8 @@ hu-HU:
         elérjen a malacig!
       courseA_maze_seq6_2019: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
+      courseA_maze_seq6_2020: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
+        elérjen a malacig!
       courseA_maze_seq6_copy: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
       courseA_maze_seq7: Találd ki, mi hiányzik, aztán adj hozzá blokkokat, hogy a
@@ -1187,6 +1333,7 @@ hu-HU:
       courseA_maze_seq8: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_2018: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_2019: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
+      courseA_maze_seq8_2020: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_copy: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq9: Javítsd ki ezt a kódot azzal, hogy blokkokat adsz hozzá.
         A cél, hogy a madár eljusson a malacig!
@@ -1196,11 +1343,15 @@ hu-HU:
         hogy a madár eljusson a malacig!
       courseA_maze_seq_challenge1_2019: Valami nem jó itt. Segíts kijavítani a kódot,
         hogy a madár eljusson a malacig!
+      courseA_maze_seq_challenge1_2020: Valami nem jó itt. Segíts kijavítani a kódot,
+        hogy a madár eljusson a malacig!
       courseA_maze_seq_challenge2: Tervezd meg az utat, hogy a madarat a malahoz vezesd.
         Óvakodj a TNT-től, különben a tollak fognak elszállni!
       courseA_maze_seq_challenge2_2018: Tervezd meg az utat, hogy a madarat a malahoz
         vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
       courseA_maze_seq_challenge2_2019: Tervezd meg az utat, hogy a madarat a malahoz
+        vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
+      courseA_maze_seq_challenge2_2020: Tervezd meg az utat, hogy a madarat a malahoz
         vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
       courseA_playLab_events1: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
         és nézd meg, mi történik!
@@ -1208,15 +1359,21 @@ hu-HU:
         és nézd meg, mi történik!
       courseA_playLab_events1_2019: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
         és nézd meg, mi történik!
+      courseA_playLab_events1_2020: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
+        és nézd meg, mi történik!
       courseA_playLab_events2: Jorge, a kutya azt szeretné mondani, hogy "Hi there".
         Tudsz segíteni neki?
       courseA_playLab_events2_2018: Jorge, a kutya azt szeretné mondani, hogy "Hi
         there". Tudsz segíteni neki?
       courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
         there". Tudsz segíteni neki?
+      courseA_playLab_events2_2020: Jorge, a kutya azt szeretné mondani, hogy "Hi
+        there". Tudsz segíteni neki?
       courseA_playLab_events3: Csatolj egy "menj balra" blokkot az "amikor balra"
         esemény blokkjához, ami már eleve ott van a munkaterületen.
       courseA_playLab_events3_2018: Csatolj egy "menj balra" blokkot az "amikor balra"
+        esemény blokkjához, ami már eleve ott van a munkaterületen.
+      courseA_playLab_events3_2020: Csatolj egy "menj balra" blokkot az "amikor balra"
         esemény blokkjához, ami már eleve ott van a munkaterületen.
       courseA_playLab_events4: Adj blokkokat a jobbra mozgáshoz.
       courseA_playLab_events5: Adj eseményeket, hogy Jorge a "fel" és a "le" gombok
@@ -1235,28 +1392,38 @@ hu-HU:
         barátomat? A tippek segítenek ebben a projektben lépésről lépésre.
       courseA_playlab_events_challenge1_2019: Tudsz kódot írni, ami megmutassa a többi
         barátomat? A tippek segítenek ebben a projektben lépésről lépésre.
+      courseA_playlab_events_challenge1_2020: Tudsz kódot írni, ami megmutassa a többi
+        barátomat? A tippek segítenek ebben a projektben lépésről lépésre.
       courseA_playlab_events_challenge2: Mindenki csináljon valamit, amikor rákattintasz.
       courseA_playlab_events_challenge2_2018: Mindenki csináljon valamit, amikor rákattintasz.
       courseA_playlab_events_challenge2_2019: Mindenki csináljon valamit, amikor rákattintasz.
+      courseA_playlab_events_challenge2_2020: Mindenki csináljon valamit, amikor rákattintasz.
       courseA_video_events: Kell egy jobb játéklabor/esemény kombináció
       courseA_video_events_2018: Kell egy jobb játéklabor/esemény kombináció
       courseA_video_events_2019: Kell egy jobb játéklabor/esemény kombináció
+      courseA_video_events_2020: Kell egy jobb játéklabor/esemény kombináció
       courseB_artist_loops1: Ez egy új típusú feladvány, főhősünk a "Művész". Játssz
         egy kicsit, és rajzolj valami vidám dolgot.
       courseB_artist_loops1_2018: Ez egy új típusú feladvány, főhősünk a "Művész".
         Játssz egy kicsit, és rajzolj valami vidám dolgot.
       courseB_artist_loops1_2019: Ez egy új típusú feladvány, főhősünk a "Művész".
         Játssz egy kicsit, és rajzolj valami vidám dolgot.
+      courseB_artist_loops1_2020: Ez egy új típusú feladvány, főhősünk a "Művész".
+        Játssz egy kicsit, és rajzolj valami vidám dolgot.
       courseB_collector_loops10: Segíts Laurelnek, hogy a barlang összes kincsét megszerezze.
       courseB_collector_loops10_2018: Segíts Laurelnek, hogy a barlang összes kincsét
         megszerezze.
       courseB_collector_loops10_2019: Segíts Laurelnek, hogy a barlang összes kincsét
+        megszerezze.
+      courseB_collector_loops10_2020: Segíts Laurelnek, hogy a barlang összes kincsét
         megszerezze.
       courseB_collector_loops_challenge2a: Segítsd Laurelnek, hogy legalább **5**
         kincset összegyűjtsön.
       courseB_collector_loops_challenge2a_2018: Segítsd Laurelnek, hogy legalább **5**
         kincset összegyűjtsön.
       courseB_collector_loops_challenge2a_2019: Segítsd Laurelnek, hogy legalább **5**
+        kincset összegyűjtsön.
+      courseB_collector_loops_challenge2a_2020: Segítsd Laurelnek, hogy legalább **5**
         kincset összegyűjtsön.
       courseB_maze_seq6: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
@@ -1266,24 +1433,32 @@ hu-HU:
       courseB_starWars_prog10: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog10_2018: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog10_2019: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
+      courseB_starWars_prog10_2020: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog11: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog11_2018: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog11_2019: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
+      courseB_starWars_prog11_2020: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog1_2018: '"Gyűjtsd be a fémdarabokat, BB-8!"'
       courseB_starWars_prog1_2019: '"Gyűjtsd be a fémdarabokat, BB-8!"'
+      courseB_starWars_prog1_2020: '"Gyűjtsd be a fémdarabokat, BB-8!"'
       courseB_starWars_prog8: "**Kihívás:** Segíts BB-8-nek összeszedni a fénylő fémdarabokat"
       courseB_starWars_prog8_2018: "**Kihívás:** Segíts BB-8-nek összeszedni a fénylő
         fémdarabokat"
       courseB_starWars_prog8_2019: "**Kihívás:** Segíts BB-8-nek összeszedni a fénylő
         fémdarabokat"
+      courseB_starWars_prog8_2020: "**Kihívás:** Segíts BB-8-nek összeszedni a fénylő
+        fémdarabokat"
       courseB_starWars_prog9: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog9_2018: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseB_starWars_prog9_2019: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
+      courseB_starWars_prog9_2020: Segíts BB-8-nek összeszedni a fénylő fémdarabokat
       courseC_artist_loops1a: 'Vidd a művészt a játéktér közepére, aztán rajzolj egy
         madarat egy matrica segítségével. '
       courseC_artist_loops1a_2018: 'Vidd a művészt a játéktér közepére, aztán rajzolj
         egy madarat egy matrica segítségével. '
       courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
+        egy matricát. '
+      courseC_artist_loops1a_2020: 'Hozd a művészet a játéktér közepére, majd rajzolj
         egy matricát. '
       courseC_artist_loops2a: És most használj ismétlést, hogy teljesen körbe forduljon
         a madár. 12-szer kell 30 fokot fordulni.
@@ -1297,7 +1472,11 @@ hu-HU:
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2019: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
+      courseC_artist_prog5_2020: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
+        Tipp: Mind a három oldal egyforma hosszú.'
       courseC_maze_debugging9_2019: A program létrehozásához használja az eszköztár
+        blokkjait. Vidd a madarat a disznóhoz.
+      courseC_maze_debugging9_copy_2020: A program létrehozásához használja az eszköztár
         blokkjait. Vidd a madarat a disznóhoz.
       courseC_maze_debugging_challenge1: Segíts a motkánynak kiválasztani, hogy melyik
         úton induljon el, hogy elérjen a makkhoz.
@@ -1305,11 +1484,15 @@ hu-HU:
         melyik úton induljon el, hogy elérjen a makkhoz.
       courseC_maze_debugging_challenge1_2019: Segíts a motkánynak kiválasztani, hogy
         melyik úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge1_2020: Segíts a motkánynak kiválasztani, hogy
+        melyik úton induljon el, hogy elérjen a makkhoz.
       courseC_maze_debugging_challenge2: Segíts a motkánynak, hogy elérjen a makkig.
         Csak a "fordulj" parancsokat használhatod.
       courseC_maze_debugging_challenge2_2018: Segíts a motkánynak, hogy elérjen a
         makkig. Csak a "fordulj" parancsokat használhatod.
       courseC_maze_debugging_challenge2_2019: Segíts a motkánynak, hogy elérjen a
+        makkig. Csak a "fordulj" parancsokat használhatod.
+      courseC_maze_debugging_challenge2_2020: Segíts a motkánynak, hogy elérjen a
         makkig. Csak a "fordulj" parancsokat használhatod.
       courseC_starWars_loops1: BB-8 fel fog venni valamennyi fémdarabot az útja során.
         Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az összes fémdarabot
@@ -1318,6 +1501,9 @@ hu-HU:
         során. Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az összes fémdarabot
         a játéktéren.
       courseC_starWars_loops1_2019: BB-8 fel fog venni valamennyi fémdarabot az útja
+        során. Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az összes fémdarabot
+        a játéktéren.
+      courseC_starWars_loops1_2020: BB-8 fel fog venni valamennyi fémdarabot az útja
         során. Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az összes fémdarabot
         a játéktéren.
       courseC_starWars_loops1_predict1: BB-8 fel fog venni valamennyi fémdarabot az
@@ -1329,6 +1515,9 @@ hu-HU:
       courseC_starWars_loops1_predict1_2019: BB-8 fel fog venni valamennyi fémdarabot
         az útja során. Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az
         összes fémdarabot a játéktéren.
+      courseC_starWars_loops1_predict1_2020: BB-8 fel fog venni valamennyi fémdarabot
+        az útja során. Használj ötöt ugyanabból a blokkból, hogy BB-8 felvegye az
+        összes fémdarabot a játéktéren.
       courseC_starWars_loops4: Ebben a feladványban két 'ismételd' ciklus segíteni
         fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
         blokkot használod fel!
@@ -1338,6 +1527,9 @@ hu-HU:
       courseC_starWars_loops4_2019: Ebben a feladványban két 'ismételd' ciklus segíteni
         fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
         blokkot használod fel!
+      courseC_starWars_loops4_2020: Ebben a feladványban két 'ismételd' ciklus segíteni
+        fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
+        blokkot használod fel!
       courseC_starWars_loops4_copy: Ebben a feladványban két 'ismételd' ciklus segíteni
         fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
         blokkot használod fel!
@@ -1345,6 +1537,8 @@ hu-HU:
       courseC_starWars_loops5_2018: BB-8 szedje fel az összes fémdarabot a lehető
         leggyorsabban!
       courseC_starWars_loops5_2019: BB-8 szedje fel az összes fémdarabot a lehető
+        leggyorsabban!
+      courseC_starWars_loops5_2020: BB-8 szedje fel az összes fémdarabot a lehető
         leggyorsabban!
       courseC_starWars_loops5_copy: BB-8 szedje fel az összes fémdarabot a lehető
         leggyorsabban!
@@ -1366,11 +1560,19 @@ hu-HU:
         álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
         mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
         művésszel a \"01010101\" bináris sorozatot az első sorban?"
+      courseD_artist_binary1_2020: "A bináris az információ ábrázolása mindössze 2
+        állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\"
+        (ezt az 1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
+        álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
+        mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
+        művésszel a \"01010101\" bináris sorozatot az első sorban?"
       courseD_artist_binary4: Meg tudod rajzolni ezt a mintát mindössze három bináris
         számjegy (0 és 1) ismétlésével?
       courseD_artist_binary4_2018: Meg tudod rajzolni ezt a mintát mindössze három
         bináris számjegy (0 és 1) ismétlésével?
       courseD_artist_binary4_2019: Meg tudod rajzolni ezt a mintát mindössze három
+        bináris számjegy (0 és 1) ismétlésével?
+      courseD_artist_binary4_2020: Meg tudod rajzolni ezt a mintát mindössze három
         bináris számjegy (0 és 1) ismétlésével?
       courseD_artist_binary6: Melyik 6 jegyből álló bináris számsorozatot kell 11
         alkalommal ismételned ennek a képnek a megrajzolásához?
@@ -1378,11 +1580,15 @@ hu-HU:
         11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_artist_binary6_2019: Melyik 6 jegyből álló bináris számsorozatot kell
         11 alkalommal ismételned ennek a képnek a megrajzolásához?
+      courseD_artist_binary6_2020: Melyik 6 jegyből álló bináris számsorozatot kell
+        11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_artist_binary7: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed,
         kirajzolja ezt a képet?
       courseD_artist_binary7_2018: Mi az a legrövidebb bináris karakterlánc, ami ha
         megismételed, kirajzolja ezt a képet?
       courseD_artist_binary7_2019: Mi az a legrövidebb bináris karakterlánc, ami ha
+        megismételed, kirajzolja ezt a képet?
+      courseD_artist_binary7_2020: Mi az a legrövidebb bináris karakterlánc, ami ha
         megismételed, kirajzolja ezt a képet?
       courseD_autorun_binary4_2019: Meg tudod rajzolni ezt a mintát mindössze három
         bináris számjegy (0 és 1) ismétlésével?
@@ -1399,12 +1605,16 @@ hu-HU:
         és készíts mézet minden méhsejtbe. '
       courseD_bee_nestedLoops8_2019: 'Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden méhsejtbe. '
+      courseD_bee_nestedLoops8_2020: 'Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden méhsejtbe. '
       courseD_bee_nestedLoops9: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_2018: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_2019: Készítsd el az összes mézet.
+      courseD_bee_nestedLoops9_2020: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2_2018: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2_2019: Készítsd el az összes mézet.
+      courseD_bee_nestedLoops9_predict2_2020: Készítsd el az összes mézet.
       courseD_collector_debugging_challenge2: Profi vagy az egymásba ágyazott ciklusokban?
         Használd azt, amit megtanultál eddig, hogy összegyűjtsd az összes kincset!
       courseD_maze_nestedLoops4: 'Juttass el a napraforgóhoz a lehető legkevesebb
@@ -1413,17 +1623,23 @@ hu-HU:
         blokk használatával!  '
       courseD_maze_nestedLoops4_2019: 'Juttass el a napraforgóhoz a lehető legkevesebb
         blokk használatával!  '
+      courseD_maze_nestedLoops4_2020: 'Juttass el a napraforgóhoz a lehető legkevesebb
+        blokk használatával!  '
       courseD_maze_nestedLoops6: Juttass el a napraforgóhoz csak az elérhető blokkok
         használatával.
       courseD_maze_nestedLoops6_2018: Juttass el a napraforgóhoz csak az elérhető
         blokkok használatával.
       courseD_maze_nestedLoops6_2019: Juttass el a napraforgóhoz csak az elérhető
         blokkok használatával.
+      courseD_maze_nestedLoops6_2020: Juttass el a napraforgóhoz csak az elérhető
+        blokkok használatával.
       courseD_maze_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és csatold
         a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_maze_ramp2_2018: Húzz egy további "menj előre" blokkot a programhoz,
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_maze_ramp2_2019: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2020: Húzz egy további "menj előre" blokkot a programhoz,
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
         csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
@@ -1457,10 +1673,14 @@ hu-HU:
         ezt kapd!
       courseF_artist_for7_2019: Végezz el három kis módosítást az előző kódon, hogy
         ezt kapd!
+      courseF_artist_for7_2020: Végezz el három kis módosítást az előző kódon, hogy
+        ezt kapd!
       courseF_artist_for_challenge1: Ki tudod találni hogyan lehet elkészíteni a rajzot?
       courseF_artist_for_challenge1_2018: Ki tudod találni hogyan lehet elkészíteni
         a rajzot?
       courseF_artist_for_challenge1_2019: Ki tudod találni hogyan lehet elkészíteni
+        a rajzot?
+      courseF_artist_for_challenge1_2020: Ki tudod találni hogyan lehet elkészíteni
         a rajzot?
       courseF_artist_for_challenge2: Ki tudod találni hogyan lehet elkészíteni a rajzot
         egy ciklussal?
@@ -1468,11 +1688,15 @@ hu-HU:
         a rajzot egy ciklussal?
       courseF_artist_for_challenge2_2019: Ki tudod találni hogyan lehet elkészíteni
         a rajzot egy ciklussal?
+      courseF_artist_for_challenge2_2020: Ki tudod találni hogyan lehet elkészíteni
+        a rajzot egy ciklussal?
       courseF_bee_for8: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
         a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for8_2018: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
         a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for8_2019: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
+      courseF_bee_for8_2020: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
         a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for_challenge2: Oldd meg ezt a feladványt a lehető legkevesebb blokk
         felhasználásával.
@@ -1480,10 +1704,14 @@ hu-HU:
         blokk felhasználásával.
       courseF_bee_for_challenge2_2019: Oldd meg ezt a feladványt a lehető legkevesebb
         blokk felhasználásával.
+      courseF_bee_for_challenge2_2020: Oldd meg ezt a feladványt a lehető legkevesebb
+        blokk felhasználásával.
       courseF_bee_functions4: A "menj és gyűjts nektárt" függvény hatására a méh elfordul,
         nektárt gyűjt, majd visszatér a kiindulási pontra. Használd a függvényt, hogy
         az összes nektárt összegyűjtsd.
       express_maze_debugging9_2019: Használd az eszköztár blokkjait a programhoz.
+        Vidd a madarat a malachoz.
+      express_maze_debugging9_2020: Használd az eszköztár blokkjait a programhoz.
         Vidd a madarat a malachoz.
       flappy_1: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg a "Futtatás"-t.
         Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba segítsd.
@@ -1574,14 +1802,18 @@ hu-HU:
       ramp_artist_loops1: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2018: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2019: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops1_2020: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops2: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
       ramp_artist_loops2_2018: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
       ramp_artist_loops2_2019: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops2_2020: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
       ramp_artist_loops3: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
         rajzolj.
       ramp_artist_loops3_2018: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
         rajzolj.
       ramp_artist_loops3_2019: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops3_2020: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
         rajzolj.
       ramp_artist_loops4: Mi történik, ha 72 fokot jobbra fordulsz mindezek után a
         cikluson belül?
@@ -1590,14 +1822,18 @@ hu-HU:
       ramp_artist_loops5: Használj ciklusokat, hogy megrajzold a lépcsőt.
       ramp_artist_loops5_2018: Használj ciklusokat, hogy megrajzold a lépcsőt.
       ramp_artist_loops5_2019: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops5_2020: Használj ciklusokat, hogy megrajzold a lépcsőt.
       ramp_artist_loops6: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
       ramp_artist_loops6_2018: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
       ramp_artist_loops6_2019: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
+      ramp_artist_loops6_2020: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
       ramp_artist_loops7: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops7_2018: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops7_2019: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával!
+      ramp_artist_loops7_2020: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops8: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával.
@@ -1605,6 +1841,9 @@ hu-HU:
         használatával.
       ramp_artist_loops8_2019: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával.
+      ramp_artist_loops8_2020: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával.
       ramp_artist_loops9: Oldd meg ezt a feladványt egy négyzet megrajzolásával.
       ramp_artist_loops9_2018: Oldd meg ezt a feladványt egy négyzet megrajzolásával.
       ramp_artist_loops9_2019: Oldd meg ezt a feladványt egy négyzet megrajzolásával.
+      ramp_artist_loops9_2020: Oldd meg ezt a feladványt egy négyzet megrajzolásával.
