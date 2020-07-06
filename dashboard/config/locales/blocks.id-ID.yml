@@ -1020,6 +1020,7 @@ id:
         options:
           CHOICE:
             '"this"': ini
+            '"other"': lainnya
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
       gamelab_isTouchingEdges:
@@ -1096,6 +1097,8 @@ id:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} menuju {TARGET}
+      gamelab_objectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1175,6 +1178,8 @@ id:
           CONDITION:
             '"when"': ketika
             '"while"': Selagi
+      gamelab_subjectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_turn:
         text: belok {SPRITE} {DIRECTION} {N} derajat
         options:
@@ -1484,7 +1489,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1495,7 +1500,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': S
       Mikelab_whenMouseClicked:
         text: ketika mouse diklik
       Mikelab_whenYesNoClicked:

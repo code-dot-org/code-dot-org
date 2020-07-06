@@ -60,26 +60,35 @@ class ContactRollupsV2
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
   end
 
-  def initialize(is_dry_run: false)
+  attr_accessor :limit
+
+  # @param is_dry_run [Boolean] If true, do not send requests to Pardot and do not
+  #   update ContactRollupsPardotMemory table.
+  # @param limit_extraction [Integer] The maximum number of rows to get from each
+  #   extraction method. The default value is nil, which means getting all rows.
+  def initialize(is_dry_run: false, limit_extraction: nil)
     @is_dry_run = is_dry_run
+    @limit = limit_extraction
     @log_collector = LogCollector.new('ContactRollupsV2')
+    @log_collector.info("Initialization params: "\
+      "is_dry_run: #{is_dry_run}, "\
+      "limit_extraction = #{limit_extraction || 'nil'}"
+    )
     self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
   def build_and_sync
-    collect_and_process_contacts
-
+    collect_contacts
+    process_contacts
     # These sync steps are independent, one could fail without affecting another.
-    # However, if the build step above fails, none of them should run.
+    # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
-  # Then, process them and save the results into ContactRollupsProcessed.
-  # The results are copied over to ContactRollupsFinal to be used for further analysis.
-  def collect_and_process_contacts
+  def collect_contacts
     start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
@@ -88,28 +97,37 @@ class ContactRollupsV2
 
     # Extract pegasus data
     unless Rails.env.test?
-      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms}
-      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos}
-      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts}
+      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(@limit)}
+      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(@limit)}
+      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts(@limit)}
     end
 
     # Extract dashboard data
-    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences}
-    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails}
-    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught}
-    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught}
-    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions}
-    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos}
-    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments}
-    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions}
-    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos}
+    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
+    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
+    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught(@limit)}
+    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught(@limit)}
+    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions(@limit)}
+    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos(@limit)}
+    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
+    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
+    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
     @log_collector.time!('extract_professional_learning_attendance_old') do
-      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model
+      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model(@limit)
     end
     @log_collector.time!('extract_professional_learning_attendance_new') do
-      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model
+      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model(@limit)
     end
+  ensure
+    @log_collector.record_metrics(
+      {CollectContactsDuration: Time.now - start_time}
+    )
+  end
 
+  # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
+  # The results are then copied over to ContactRollupsFinal for further analysis.
+  def process_contacts
+    start_time = Time.now
     @log_collector.time!('Processes all extracted data') do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
@@ -121,7 +139,7 @@ class ContactRollupsV2
     end
   ensure
     @log_collector.record_metrics(
-      {CollectAndProcessContactsDuration: Time.now - start_time}
+      {ProcessContactsDuration: Time.now - start_time}
     )
   end
 
@@ -192,8 +210,12 @@ class ContactRollupsV2
   # unless in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
-    upload_metrics unless @is_dry_run
-    # TODO: Report to slack channel
+    unless @is_dry_run
+      upload_metrics
+      url = upload_to_s3
+      report_to_slack log_url: url
+    end
+
     print_logs
   end
 
@@ -210,7 +232,41 @@ class ContactRollupsV2
     Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
   end
 
-  private
+  # @return [String] url of the uploaded S3 object
+  def upload_to_s3
+    log_name = "crv2-#{Time.now.utc.strftime('%Y%m%dT%H%M%SZ')}.log"
+    AWS::S3::LogUploader.
+      new('cdo-audit-logs', "contact-rollups-v2/#{CDO.rack_env}").
+      upload_log(log_name, @log_collector.to_s)
+  end
+
+  # @return [Boolean, nil] true/false if a summary message is sent to Slack or not,
+  #   nil if CDO.hip_chat_logging is not enabled.
+  def report_to_slack(log_url: nil)
+    duration = @log_collector.metrics.values_at(
+      :CollectContactsDuration,
+      :ProcessContactsDuration,
+      :SyncNewContactsDuration,
+      :SyncUpdatedContactsDuration
+    ).compact.sum
+    formatted_duration = Time.at(duration).utc.strftime("%Hh:%Mm:%Ss")
+
+    log_link = "<a href='#{log_url}'>:cloud: Log on S3</a>"
+
+    cloud_watch_link =
+      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>"\
+      ":chart_with_upwards_trend: CloudWatch dashboard</a>"
+
+    summary = [
+      "*ContactRollupsV2* (#{CDO.rack_env}#{', dry-run' if @is_dry_run})",
+      "Number of Pardot prospects created: #{@log_collector.metrics[:ProspectsCreated]}",
+      "Number of Pardot prospects updated: #{@log_collector.metrics[:ProspectsUpdated]}",
+      "Number of contacts in ContactRollupsFinal: #{@log_collector.metrics[:FinalRows]}",
+      ":clock10: #{formatted_duration} #{log_link} #{cloud_watch_link}"
+    ].join("\n")
+
+    ChatClient.message 'cron-daily', summary
+  end
 
   # Using truncate allows us to re-use row IDs,
   # which is important in production so we don't overflow the table.

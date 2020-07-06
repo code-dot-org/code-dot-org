@@ -70,10 +70,6 @@ class ProjectsController < ApplicationController
       # public gallery, and to be published from the share dialog.
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
-    scratch: {
-      name: 'New Scratch Project',
-      levelbuilder_required: true,
-    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
@@ -324,7 +320,8 @@ class ProjectsController < ApplicationController
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
       azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion]
+      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
+      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
     )
 
     if params[:key] == 'artist'

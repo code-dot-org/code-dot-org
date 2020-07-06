@@ -108,6 +108,7 @@ class ScriptsController < ApplicationController
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
+      has_course: @script&.courses&.any?,
       i18n: @script ? @script.summarize_i18n : {},
       beta: beta,
       betaWarning: beta_warning,
@@ -160,6 +161,10 @@ class ScriptsController < ApplicationController
       Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script
+
+    if ScriptConstants::FAMILY_NAMES.include?(script_id)
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+    end
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access

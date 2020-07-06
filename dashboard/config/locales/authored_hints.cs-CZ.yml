@@ -1176,7 +1176,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events2_2018:
         courseC_PlayLab_events2_a: |-
           Připoj k události `při spuštění` dva bloky:
@@ -1188,7 +1188,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events2_2019:
         courseC_PlayLab_events2_a: |-
           Připoj k události `při spuštění` dva bloky:
@@ -1200,7 +1200,7 @@ cs-CZ:
             </block>
           </xml>
         courseC_PlayLab_events2_b: Kdo mluví, můžeš nastavit použitím rozbalovacího
-          menu s čísly u bloku `aktér __ říká`.
+          menu s čísly u bloku `postava  __ řekni`.
       courseC_PlayLab_events3:
         courseC_PlayLab_events3_a: K vyřešení úlohy stačí jenom pohnout Jorgem o 25
           pixelů v pravo.
@@ -1315,17 +1315,17 @@ cs-CZ:
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
           k události `když se postava`.
-        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `aktér říká` a `přehrát
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
           zvuk`.
       courseC_PlayLab_events8_2018:
         courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
           k události `když se postava`.
-        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `aktér říká` a `přehrát
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
           zvuk`.
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_a: Aby to správně fungovalo, bude třeba připojit bloky
           k události `když se postava`.
-        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `aktér říká` a `přehrát
+        courseC_PlayLab_events8_b: Dál budeš potřebovat bloky `postava řekni` a `přehraj
           zvuk`.
       courseC_PlayLab_events9:
         courseC_PlayLab_events9_a: K vyřešení úlohy budeš potřebovat blok `bod`.

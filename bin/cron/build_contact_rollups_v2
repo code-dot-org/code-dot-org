@@ -15,9 +15,7 @@ def main
   end
 
   contact_rollups = ContactRollupsV2.new(is_dry_run: force_dry_run)
-  contact_rollups.collect_and_process_contacts
-  contact_rollups.sync_new_contacts_with_pardot
-  contact_rollups.sync_updated_contacts_with_pardot
+  contact_rollups.build_and_sync
 ensure
   contact_rollups.report_results
 end

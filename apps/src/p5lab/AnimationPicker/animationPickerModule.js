@@ -13,6 +13,7 @@ import {animations as animationsApi} from '@cdo/apps/clientApi';
 var msg = require('@cdo/locale');
 import {changeInterfaceMode} from '../actions';
 import {P5LabInterfaceMode} from '../constants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -199,6 +200,12 @@ export function pickNewAnimation() {
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
+  firehoseClient.putRecord({
+    study: 'sprite-use',
+    study_group: 'before-update',
+    event: 'select-sprite',
+    data_string: animation.name
+  });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {

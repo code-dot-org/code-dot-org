@@ -1087,6 +1087,8 @@ ko:
             '"West"': 서쪽
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
+      gamelab_objectSpritePointer:
+        text: 클릭 {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1165,6 +1167,8 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
+      gamelab_subjectSpritePointer:
+        text: 클릭 {SPRITE}
       gamelab_turn:
         text: 설정 {SPRITE} {DIRECTION} {N} 도
         options:

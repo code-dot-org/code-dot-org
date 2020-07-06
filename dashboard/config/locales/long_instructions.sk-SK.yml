@@ -5878,10 +5878,16 @@ sk-SK:
       courseA_harvester_seq1_2019: Pomôž záhradníčke pozbierať kukuricu!
       courseA_harvester_seq2: 'Použi **tri** krát <xml><block type="maze_moveWest"/></xml>
         aby si dostal záhradníčku ku kukurici! '
+      courseA_harvester_seq2_2019: Použi **tri** bloky <xml><block type="maze_moveWest"
+        block-text="move west"/></xml>, aby sa záhradnička dostala ku kukurici!
       courseA_harvester_seq3: Použi **tri** krát <xml><block type="maze_moveNorth"/></xml>
         aby si dostal záhradníčku ku kukurici! Nezabudni na záver kukuricu zobrať.
-      courseA_harvester_seq4: Pridaj_jeden_blok, aby záhradníčka pozbierala kukuricu.
-      courseA_harvester_seq4_2019: Pridaj_jeden_blok, aby záhradníčka pozbierala kukuricu.
+      courseA_harvester_seq3_2019: Použi **tri** bloky <xml><block type="maze_moveNorth"
+        block-text="move north"/></xml>, aby sa záhradnička dostala ku kukurici! Nezabudni
+        pozbierať kukuricu na konci.
+      courseA_harvester_seq4: Pridaj _jeden_ blok, aby záhradníčka pozbierala kukuricu.
+      courseA_harvester_seq4_2019: Pridaj _jeden_ blok, aby záhradníčka pozbierala
+        kukuricu.
       courseA_harvester_seq5: Dokážeš zistiť, prečo je tento kód nesprávny? Pomôž
         záhradníčke pozbierať kukuricu!
       courseA_harvester_seq5_2019: Dokážeš zistiť, prečo je tento kód nesprávny? Pomôž
@@ -5909,8 +5915,6 @@ sk-SK:
         panelu nástrojov a pridaj ich na spodok ostatných blokov, aby si dokončíl
         tento kód, potom klikni "▶ Spustiť".
       courseA_maze_ramp3b_2018: "Na konci tohto kódu je jeden blok navyše! \n\nPotiahni
-        ho naspäť do panelu nástrojov, aby si ho zahodil preč."
-      courseA_maze_ramp3b_2019: "Na konci tohto kódu je jeden blok navyše! \n\nPotiahni
         ho naspäť do panelu nástrojov, aby si ho zahodil preč."
       courseA_maze_ramp4a_2018: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?

@@ -500,6 +500,22 @@ class Script < ActiveRecord::Base
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
+  def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
+    FirehoseClient.instance.put_record(
+      study: 'script-family-redirect',
+      event: event_name,
+      data_string: request.path,
+      data_json: {
+        old_script_name: old_script_name,
+        new_script_name: new_script_name,
+        method: request.method,
+        url: request.url,
+        referer: request.referer,
+        user_type: user_type
+      }.to_json
+    )
+  end
+
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
@@ -954,7 +970,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
@@ -1178,6 +1194,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)

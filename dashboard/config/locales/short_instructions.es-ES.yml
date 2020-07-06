@@ -35,6 +35,14 @@ es-ES:
       2-3 Artist Debugging 2: 'El código para los tres bigotes que ves es incorrecto.
         Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para
         dibujar los bigotes.'
+      2-3 Artist Debugging 6: |-
+        ¡Parece que estoy en una silla a la que le falta una pata!
+
+        Edita el código y consigue dibujarla.
+      2-3 Artist Debugging 7: |-
+        ¡Parece que la C de "CODE" está al revés!
+
+        ¿Puedes hacer que parezca una C normal de nuevo?
       2-3 Artist Debugging 8: Mi molinillo de viento no está terminado. ¿Cuántas veces
         necesito repetir para terminarlo?
       2-3 Artist Debugging 9: 'El código de este tallo es incorrecto. Sugerencia:
@@ -2185,8 +2193,6 @@ es-ES:
       courseA_maze_ramp3a_2019: Agrega un bloque `Norte` en la parte inferior de los
         otros bloques para terminar este código; luego, haz clic en "▶ Ejecutar".
       courseA_maze_ramp3b_2018: Agrega un bloque `Norte` en la parte inferior de los
-        otros bloques para finalizar este código; luego, haz clic en "Ejecutar".
-      courseA_maze_ramp3b_2019: Agrega un bloque `Norte` en la parte inferior de los
         otros bloques para finalizar este código; luego, haz clic en "Ejecutar".
       courseA_maze_ramp4a_2018: "¿Puedes descubrir qué bloque necesitas agregar al
         final de los otros bloques para terminar este código?"

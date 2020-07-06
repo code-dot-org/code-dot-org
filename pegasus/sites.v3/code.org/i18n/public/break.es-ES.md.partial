@@ -15,49 +15,36 @@ social:
 ---
 
 <div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
-<h1>¡Tómate un recreo con código!</h1>
+<h1>Tómate un recreo con código</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
-Con las escuelas cerradas y decenas de millones de estudiantes en casa, únete a Code.org cada semana para formar parte de "Code Break" y ayúdanos a construir el aula interactiva en vivo más grande del mundo, con desafíos semanales para que participen estudiantes de todas las habilidades, incluso aquellos sin computadoras.
+<p>Keep computer science fun by taking a Code Break! With a dozen <a href="#activities">episodes and activities</a> to choose from, you can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf.</p>
 
-<h2>Déjanos apoyarte</h2>
-Cuando te <a href="#signup">registres</a> recibirás: 
-<ul>
-<li>Una <a href="http://code.org/codebreaknow">clase interactiva semanal</a> con nuestro fundador <a href="/about/leadership/hadi_partovi">Hadi Partovi</a> e invitados especiales. Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/xF4803081">add to calendar</a>.</li>
-<li>Una <a href="#activities">actividad</a> o un desafío nuevos cada semana.</li>
-<li>Opciones para principiantes, estudiantes experimentados e incluso estudiantes sin computadoras.</li>
-</ul>
-<h2>Cada miércoles a las 11am CA / 12pm MEX y COL / 1pm CHI / 2pm ARG</h2>
+<p>Each episode is lead by Code.org Founder, <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, and includes inspiring guests, mini-lessons on computer science concepts, and a weekly challenge to engage students of all ages and abilities, even those without computers.</p>
+
+<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">View  episodes</button></a>
+
+<p><br>While our live episodes have ended for now, you can still watch past episodes and complete the activities. To keep the fun going, you can also try some of our recommended projects and activities for <a href="https://code.org/athome">learning at home</a>.</p>
+<br>
+
 <div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
-<p>Síguenos en <a href="http://facebook.com/code.org">Facebook</a> o en <a href="http://twitter.com/codeorg">Twitter</a>.</p>
-<h2>Divertido y fundacional</h2>
-<p>La computación es <i>muy divertida</i> porque es creativa y lúdica. Ya sea resolviendo un desafío, programando arte o diseñando una aplicación, los estudiantes prefieren aprender mediante la exploración en lugar de la memorización. Los estudiantes incluso clasifican a la ciencia de la computación como su <a href="https://code.org/promote">materia favorita</a>después de arte, música y danza.</p>
-<p>La ciencia de la computación es <a href="/promote">fundamental</a> para todos los campos de estudio, pero dado que muchas escuelas aún no lo ofrecen, esta podría ser una oportunidad única para apoyar a tu hijo en una nueva y divertida oportunidad de aprendizaje. Además, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes demuestran que</a>: los niños que estudian ciencias de la computación tienen un mejor desempeño en otras materias, son mejores con resolución de problemas, y es <font color="00adbc"><b>es más probable que vayan a la universidad</font></b>.</p>
+<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
 </div>
 
 <div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
-<img src="/images/marketing/code-break-callout-episode-11.jpg" style="max-width:100%">
-<p style="margin: 10px 18px 0 8px;">Join us in welcoming YouTube CEO, Susan Wojcicki, alongside actress China Anne McClain.</p>
+<img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
 <a id="signup"></a>
 <div style="padding:8px 18px 0 8px;">
-<a href="https://code.org/codebreaknow"><button style="background-color: #ffa400;border-color: #e7e8ea;color: #FFFFFF;font-size: 16px;">Conéctate</button></a>
-<p style="margin: 10px 0 0 0;">Regístrate para recibir las actividades de cada semana, actualizaciones, y oportunidades únicas para interactuar con nuestros invitados especiales.</p>
+<p style="margin: 10px 0 0 0;">Stay in the know! Join our mailing list to receive Code.org updates and be the first to learn of new resources for at home learning.</p>
 <iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
 
 </div></div>
 
-<div style="clear: both;margin-bottom:30px;"></div>
-<div class="col-33" style="padding:0 25px 25px 0;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" max-width="100%"></a></div>
-<div class="col-66">
-<p><a href="http://code.org/codebreaknow">Conéctate</a> con estudiantes para participar con nuestro fundador <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, invitados especiales y los mejores docentes de Code.org para aprender diferentes conceptos de ciencias de la computación en una clase interactiva en vivo. To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/xF4803081">add Code Break to your calendar.</a></p>
-
-<a title="Añade al calendario" class="addeventatc" data-id="xF4803081" href="https://www.addevent.com/event/xF4803081" target="_blank" rel="nofollow">Añade al calendario</a>
-
-<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script> 
-<p style="margin-top: 15px;">Para todas las edades, por teléfono o computadora. Para participar en el episodio, asegúrate de <a href="https://zoom.us/download">descargar Zoom</a> de antemano. O simplemente puedes conectarte via YouTube para <a href="https://www.youtube.com/user/CodeOrg/live">ver el episodio en vivo</a>. También puedes encontrar más recursos para aprender en casa <a href="https://code.org/athome">aquí</a>.</p>
-<a href="https://code.org/codebreaknow"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;font-size: 16px;">Conéctate</button></a>
-
-</div>
+<div style="clear: both;"></div>
+<div style="max-width:100%;">
+<h2>Fun and foundational</h2>
+<p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing. Students even rank CS their <a href="https://code.org/promote">favorite subject</a> after art, music, and dance.</p>
+<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p></div>
 
 <div style="clear: both;"></div>
 <a id="activities"></a>
@@ -276,6 +263,48 @@ Cuando te <a href="#signup">registres</a> recibirás:
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
 <a href="https://studio.code.org/s/code-break/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+</div>
+
+</div>
+
+<a id="episode11"></a>
+<div style="clear: both;"></div>
+<h2>Episode 11 - Abstraction with Susan Wojcicki & China Anne McClain</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 6/3 episode</h4>
+<a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Abstraction</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
+<a href="https://studio.code.org/s/code-break/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+</div>
+
+</div>
+
+<a id="episode12"></a>
+<div style="clear: both;"></div>
+<h2>Episode 12 - Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Minaya</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 6/10 episode</h4>
+<a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Hardware</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
+<a href="https://studio.code.org/s/code-break/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
