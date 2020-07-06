@@ -128,6 +128,10 @@ ca-ES:
       Course 4 Maze 3: 'Programa l''"angry bird" per arribar al porc. '
       Course 4 Maze 5: Pots resoldre aquest trencaclosques usant el menor nombre de
         blocs possible?
+      CourseD_Dance_2020_05: Ara fés que el dansaire comenci un nou moviment després
+        de 6 mesures!
+      CourseD_Dance_2020_10: Anima't i segueix el ritme! Crea una dansa pròpia per
+        compartir amb els teus amics.
       CourseD_Dance_Party_01: Arrossega el bloc `fés-ne un de nou` al teu espai de
         treball, i connecta'l dins del bloc de `configuració`.
       CourseD_Dance_Party_02: Fés que l'ant comenci un nou moviment després de 4 mesures!
@@ -156,16 +160,29 @@ ca-ES:
         compartir amb els teus amics.
       CourseE_HOC 2018 Level_1: Recull una barca del cofre.
       CourseE_HOC 2018 Level_10: Arriba fins a l'entrada d'aquest Monument de l'Oceà.
+      CourseE_HOC 2018 Level_10_2020: Arriba fins a l'entrada d'aquest Monument de
+        l'Oceà.
       CourseE_HOC 2018 Level_11: Construeix un conducte amb la Prismarina dins del
         Monument de l'Oceà.
+      CourseE_HOC 2018 Level_11_2020: Construeix un conducte amb la Prismarina dins
+        del Monument de l'Oceà.
+      CourseE_HOC 2018 Level_1_2020: Recull una barca del cofre.
       CourseE_HOC 2018 Level_2: Vés fins al final del moll.
+      CourseE_HOC 2018 Level_2_2020: Vés fins al final del moll.
       CourseE_HOC 2018 Level_3: Enfila mar endins fins al bacallà.
+      CourseE_HOC 2018 Level_3_2020: Enfila mar endins fins al bacallà.
       CourseE_HOC 2018 Level_4: Utilitza una circumferència per arribar al dofí.
+      CourseE_HOC 2018 Level_4_2020: Utilitza una circumferència per arribar al dofí.
       CourseE_HOC 2018 Level_5: Explora el naufragi per arribar al cofre.
+      CourseE_HOC 2018 Level_5_2020: Explora el naufragi per arribar al cofre.
       CourseE_HOC 2018 Level_6: Passa a través del gel per arribar al salmó.
+      CourseE_HOC 2018 Level_6_2020: Passa a través del gel per arribar al salmó.
       CourseE_HOC 2018 Level_7a: Cerca les runes submarines per trobar un cofre.
+      CourseE_HOC 2018 Level_7a_2020: Cerca les runes submarines per trobar un cofre.
       CourseE_HOC 2018 Level_9b: Utilitza el corall com a punt de referència per trobar
         el tresor.
+      CourseE_HOC 2018 Level_9b_2020: Utilitza el corall com a punt de referència
+        per trobar el tresor.
       Crack Random Substitution: Instruccions
       Crack a Caesar Cipher: Instruccions
       Dance_2019_05: Ara fés que el dansaire comenci un nou moviment després de 6
@@ -237,14 +254,21 @@ ca-ES:
         cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
       Overworld Avoid Monsters_2019: Córrer en una enfiladissa és una mala idea. Mou-te
         cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
+      Overworld Avoid Monsters_2020: Córrer en una enfiladissa és una mala idea. Mou-te
+        cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
       Overworld Chop Tree: La fusta és un recurs molt important. Amb ella es fan moltes
         coses. Camina fins l'arbre i utilitza la comanda "destruir bloc" per tallar-lo.
       Overworld Chop Tree_2019: La fusta és un recurs molt important. Amb ella es
         fan moltes coses. Camina fins l'arbre i utilitza la comanda "destruir bloc"
         per tallar-lo.
+      Overworld Chop Tree_2020: La fusta és un recurs molt important. Amb ella es
+        fan moltes coses. Camina fins l'arbre i utilitza la comanda "destruir bloc"
+        per tallar-lo.
       Overworld Chop Trees: Hem de construir una casa abans que el sol es pongui.
         Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
       Overworld Chop Trees_2019: Hem de construir una casa abans que el sol es pongui.
+        Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
+      Overworld Chop Trees_2020: Hem de construir una casa abans que el sol es pongui.
         Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
       Overworld Free Play 20x20: Felicitats! Has completat tots els nostres puzles!
         Ara excava, construeix i crea una cosa única utilitzant tot el que has après
@@ -252,13 +276,20 @@ ca-ES:
       Overworld Free Play 20x20_2019: Felicitats! Has completat tots els nostres puzles!
         Ara excava, construeix i crea una cosa única utilitzant tot el que has après
         fins ara.
+      Overworld Free Play 20x20_2020: Felicitats! Has completat tots els nostres puzles!
+        Ara excava, construeix i crea una cosa única utilitzant tot el que has après
+        fins ara.
       Overworld House Frame Chosen: Construeix la resta de la teva casa amb el material
         que vulguis. La comanda "repeteix" et serà útil.
       Overworld House Frame Chosen_2019: Construeix la resta de la teva casa amb el
         material que vulguis. La comanda "repeteix" et serà útil.
+      Overworld House Frame Chosen_2020: Construeix la resta de la teva casa amb el
+        material que vulguis. La comanda "repeteix" et serà útil.
       Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      Overworld Move to Sheep_2020: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       Overworld Place Wall: Cada casa es comença amb una paret. Construeix la primera
         part de la teva casa usant les ordres "posa" i "avança" dins del bucle de
@@ -266,9 +297,14 @@ ca-ES:
       Overworld Place Wall_2019: Cada casa es comença amb una paret. Construeix la
         primera part de la teva casa usant les ordres "posa" i "avança" dins del bucle
         de repetició.
+      Overworld Place Wall_2020: Cada casa es comença amb una paret. Construeix la
+        primera part de la teva casa usant les ordres "posa" i "avança" dins del bucle
+        de repetició.
       Overworld Plant Crops: És bo planificar el futur. Planta cultius en ambdós costats
         de l'aigua per tal que no passis gana més endavant.
       Overworld Plant Crops_2019: És bo planificar el futur. Planta cultius en ambdós
+        costats de l'aigua per tal que no passis gana més endavant.
+      Overworld Plant Crops_2020: És bo planificar el futur. Planta cultius en ambdós
         costats de l'aigua per tal que no passis gana més endavant.
       Overworld Powered Minecart: Bona feina! Has recollit una pila de recursos i
         construït una modesta llar. Ara posa via des de la vora del mapa fins a la
@@ -276,14 +312,22 @@ ca-ES:
       Overworld Powered Minecart_2019: Bona feina! Has recollit una pila de recursos
         i construït una modesta llar. Ara posa via des de la vora del mapa fins a
         la teva porta.
+      Overworld Powered Minecart_2020: Bona feina! Has recollit una pila de recursos
+        i construït una modesta llar. Ara posa via des de la vora del mapa fins a
+        la teva porta.
       Overworld Shear Sheep: És hora d'esquilar les ovelles! Utilitza la comanda "tallar"
         per esquilar la llana de les ovelles.
       Overworld Shear Sheep_2019: És hora d'esquilar les ovelles! Utilitza la comanda
+        "tallar" per esquilar la llana de les ovelles.
+      Overworld Shear Sheep_2020: És hora d'esquilar les ovelles! Utilitza la comanda
         "tallar" per esquilar la llana de les ovelles.
       Underground Avoiding Lava: Darrere d'alguns d'aquests blocs hi ha lava que hauràs
         de cobrir per poder avançar. Una comanda "Si" serà útil aquí. Afegeix una
         comanda "avança" al lloc correcte per excavar aquests blocs.
       Underground Avoiding Lava_2019: Darrere d'alguns d'aquests blocs hi ha lava
+        que hauràs de cobrir per poder avançar. Una comanda "Si" serà útil aquí. Afegeix
+        una comanda "avança" al lloc correcte per excavar aquests blocs.
+      Underground Avoiding Lava_2020: Darrere d'alguns d'aquests blocs hi ha lava
         que hauràs de cobrir per poder avançar. Una comanda "Si" serà útil aquí. Afegeix
         una comanda "avança" al lloc correcte per excavar aquests blocs.
       Underground If Statements: La cosa s'està tornant delicada. Excava tres pedres
@@ -292,14 +336,22 @@ ca-ES:
       Underground If Statements_2019: La cosa s'està tornant delicada. Excava tres
         pedres vermelles, però no caiguis a la lava. Usa una comanda "Si" per posar
         empedrat allà on destapis lava.
+      Underground If Statements_2020: La cosa s'està tornant delicada. Excava tres
+        pedres vermelles, però no caiguis a la lava. Usa una comanda "Si" per posar
+        empedrat allà on destapis lava.
       Underground Iron: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
         per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
       Underground Iron_2019: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
+        per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
+      Underground Iron_2020: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
         per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
       Underground Mining Coal: Trobaràs els recursos més valuosos sota terra, però
         pot estar fosc. Col·loca com a mínim un parell de torxes i excava com a mínim
         dos carbons.
       Underground Mining Coal_2019: Trobaràs els recursos més valuosos sota terra,
+        però pot estar fosc. Col·loca com a mínim un parell de torxes i excava com
+        a mínim dos carbons.
+      Underground Mining Coal_2020: Trobaràs els recursos més valuosos sota terra,
         però pot estar fosc. Col·loca com a mínim un parell de torxes i excava com
         a mínim dos carbons.
       bounce_1: Uneix un altre bloc al de "quan tecla a l'esquerra"  i prem "Executar".
@@ -336,12 +388,16 @@ ca-ES:
         Pista: Els tres costat tenen la mateixa longitud.'
       courseC_artist_prog5_2019: 'Aquesta casa necessita una teulada! Dibuixa el triangle.
         Pista: Els tres costat tenen la mateixa longitud.'
+      courseC_artist_prog5_2020: 'Aquesta casa necessita una teulada! Dibuixa el triangle.
+        Pista: Els tres costat tenen la mateixa longitud.'
       courseD_maze_nestedLoops4: Porta'm fins al girasol!
       courseD_maze_nestedLoops4_2018: Porta'm fins al girasol!
       courseD_maze_nestedLoops4_2019: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2020: Porta'm fins al girasol!
       courseD_maze_nestedLoops6: Porta'm fins al girasol!
       courseD_maze_nestedLoops6_2018: Porta'm fins al girasol!
       courseD_maze_nestedLoops6_2019: Porta'm fins al girasol!
+      courseD_maze_nestedLoops6_2020: Porta'm fins al girasol!
       courseE_artist_functions1: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m
         a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels
         més curts que la llargada del quadrat.'
