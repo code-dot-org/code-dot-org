@@ -19,6 +19,10 @@ et-EE:
       4-5 Nested Loops 9: Joonista alligaatori suhu hambad!
       Course 4 Artist For Loops 6a: Selleks tee kolm väikest muudatust eelmise taseme
         koodis!
+      CourseD_Dance_2020_05: "-   Nüüd gruuvime! \\* \n\nLisa <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">plokk \"ühikud\"<div class=\"notranslate\">6</div></block></xml>
+        oma töölauale. Las tantsija alustab uue liigutusega peale 6 ühikut."
+      CourseD_Dance_2020_10: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       CourseD_Dance_Party_01: |-
         -   Korraldame tantsuõhtu! \*
 
@@ -84,28 +88,57 @@ et-EE:
         **kirstust** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: "**Kalmaar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         peidab end kuskil Ookeani monumendi juures, kas sa leiad ta ülesse?"
+      CourseE_HOC 2018 Level_10_2020: "**Kalmaar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        peidab end kuskil Ookeani monumendi juures, kas sa leiad ta ülesse?"
       CourseE_HOC 2018 Level_11: Ehita **merekristallidest** sein ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         musta betooni ümber. See aktiviseeribe **kanali** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         ja lõpeta väljakutse!
+      CourseE_HOC 2018 Level_11_2020: Ehita **merekristallidest** sein ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        musta betooni ümber. See aktiviseeribe **kanali** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        ja lõpeta väljakutse!
+      CourseE_HOC 2018 Level_1_2020: Vajate eesoleva retke jaoks varustust. Võta **paat**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        **kirstust** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: Paadiga sõita on palju lihtsam kui avatud vees ujuda!
         Suundu kai lõppu, et peale hüpata.
+      CourseE_HOC 2018 Level_2_2020: Paadiga sõita on palju lihtsam kui avatud vees
+        ujuda! Suundu kai lõppu, et peale hüpata.
       CourseE_HOC 2018 Level_3: Haara aerud ja juhi oma paat üle avamere, et \*\*
         tursk \*\* kinni püüda! \[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>).
+      CourseE_HOC 2018 Level_3_2020: Haara aerud ja juhi oma paat üle avamere, et
+        \*\* tursk \*\* kinni püüda! \[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>).
       CourseE_HOC 2018 Level_4: Söödame tursa \*\* delfiinile \*\*! \[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>).
+        Kasutage korrata kuni plokki, et kiiremini üle ookeani jõuda.
+      CourseE_HOC 2018 Level_4_2020: Söödame tursa \*\* delfiinile \*\*! \[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>).
         Kasutage korrata kuni plokki, et kiiremini üle ookeani jõuda.
       CourseE_HOC 2018 Level_5: Kuhugi on peidetud \*\* teokarp \*\*! \[] (<https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png>)!
         Uuri laevavrakki, et jõuda \*\* kirstuni \*\*! \[] (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+      CourseE_HOC 2018 Level_5_2020: Kuhugi on peidetud \*\* teokarp \*\*! \[] (<https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png>)!
+        Uuri laevavrakki, et jõuda \*\* kirstuni \*\*! \[] (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       CourseE_HOC 2018 Level_6: Seal tundub olevat jääkülm! Püüa **lõhe** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        oma teel veealuste varemete juurde.
+      CourseE_HOC 2018 Level_6_2020: Seal tundub olevat jääkülm! Püüa **lõhe** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         oma teel veealuste varemete juurde.
       CourseE_HOC 2018 Level_7a: Sa leidsid veealused varemed. Otsi liivakivi hulgast
         **kirstu** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
         mille sees on **merekristallidest** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
         aarded.
+      CourseE_HOC 2018 Level_7a_2020: Sa leidsid veealused varemed. Otsi liivakivi
+        hulgast **kirstu** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        mille sees on **merekristallidest** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        aarded.
       CourseE_HOC 2018 Level_8: Esmalt jäämäed, nüüd laava? Mine sellelt troopiliselt
+        saarelt läbi ja leia **troopilised kalad** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        korallrahult.
+      CourseE_HOC 2018 Level_8_2020: Esmalt jäämäed, nüüd laava? Mine sellelt troopiliselt
         saarelt läbi ja leia **troopilised kalad** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         korallrahult.
       CourseE_HOC 2018 Level_9b: Sa jõudsid korallrahuni, nüüd otsida sealt \*\* Mere
         Süda \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
+        Kasuta siniseid ja punaseid koralle, et jõuda aarde \*\* kirstuni \*\*! \[]
+        (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
+      CourseE_HOC 2018 Level_9b_2020: Sa jõudsid korallrahuni, nüüd otsida sealt \*\*
+        Mere Süda \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
         Kasuta siniseid ja punaseid koralle, et jõuda aarde \*\* kirstuni \*\*! \[]
         (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
       Dance_2019_05: "-   Nüüd gruuvime! \\* \n\nLisa <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -204,6 +237,10 @@ et-EE:
         töölaual. Kõik kood, mida vajad üle jõe minemiseks, on ehitatud sinna sissel!
         \\\r \\\r Klõpsa väikest rohelist plokki kaks korda oma tööruumi, et parandada
         rada ja saada {currentPlayerName} Redstone tõrvik juurde [redstone_torch]."
+      Function intro Ryan_2020: "\\*\\* Funktsioon \\* nimega \"ehita sild\" on sinu
+        töölaual. Kõik kood, mida vajad üle jõe minemiseks, on ehitatud sinna sissel!
+        \\\r \\\r Klõpsa väikest rohelist plokki kaks korda oma tööruumi, et parandada
+        rada ja saada {currentPlayerName} Redstone tõrvik juurde [redstone_torch]."
       HOC 2018 Level_1: Vajate eesoleva retke jaoks varustust. Võta **paat** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         **kirstust** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       HOC 2018 Level_10: "**Kalmaar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
@@ -247,11 +284,20 @@ et-EE:
         et Agent jõuaks surveplaadini [PressurePlate_Up], \nsiis vajutage \"Käivita\"
         ja kasutage nooleklahve, et liikuda majast välja, et koguda tööruumis koguda
         \\*\\* kirstu\\*\\* [chest]."
+      MC_HOC_2017_01_RETRY_2020: "Uks on lukus, kuid Agent on siin, et aidata! \\\r
+        \\\r Klikka töölaual \"liigu edasi\" plokk \"pärast käivitamist\" ploki alla,
+        et Agent jõuaks surveplaadini [PressurePlate_Up], \nsiis vajutage \"Käivita\"
+        ja kasutage nooleklahve, et liikuda majast välja, et koguda tööruumis koguda
+        \\*\\* kirstu\\*\\* [chest]."
       MC_HOC_2017_02_Cole: "{currentPlayerName} läheb seiklema! Et aidata, võta \\*\\*
         kaart\\*\\* [map_empty] paremalt lukustatud ukse taga. \\\r \\\r Klõpsa kood
         töölauale, et liigutada Agent surveplaadini [PressurePlate_Up], et {currentPlayerName}
         saaks sealt läbi. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} läheb seiklema! Et aidata, võta
+        \\*\\* kaart\\*\\* [map_empty] paremalt lukustatud ukse taga. \\\r \\\r Klõpsa
+        kood töölauale, et liigutada Agent surveplaadini [PressurePlate_Up], et {currentPlayerName}
+        saaks sealt läbi. "
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} läheb seiklema! Et aidata, võta
         \\*\\* kaart\\*\\* [map_empty] paremalt lukustatud ukse taga. \\\r \\\r Klõpsa
         kood töölauale, et liigutada Agent surveplaadini [PressurePlate_Up], et {currentPlayerName}
         saaks sealt läbi. "
@@ -261,14 +307,22 @@ et-EE:
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} jätkab oma seiklust ja vajab
         reisiks ettevalmistamiseks **kompassi** [compass].  \\\r \\\r Programmeeri
         Agent väravat avama. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} jätkab oma seiklust ja vajab
+        reisiks ettevalmistamiseks **kompassi** [compass].  \\\r \\\r Programmeeri
+        Agent väravat avama. "
       MC_HOC_2017_04POINT5_RYAN: "Sa said üle! \\\r \\\r Nüüd vii {currentPlayerName}
         ohutult läbi labürindi, et koguda \\*\\* kirves \\*\\* [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "Sa said üle! \\\r \\\r Nüüd vii {currentPlayerName}
+        ohutult läbi labürindi, et koguda \\*\\* kirves \\*\\* [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Sa said üle! \\\r \\\r Nüüd vii {currentPlayerName}
         ohutult läbi labürindi, et koguda \\*\\* kirves \\*\\* [diamond_axe]"
       MC_HOC_2017_04_Cole: "Agent võib liikuda üle vee!  \\\r \\\r Kasutada mõistatuse
         lahendamiseks \"korda\" tsüklit ja aita {currentPlayerName} saada \\*\\*ämber
         \\*\\* [bucket_empty] ukse tagant. "
       MC_HOC_2017_04_Cole_2019: "Agent võib liikuda üle vee!  \\\r \\\r Kasutada mõistatuse
+        lahendamiseks \"korda\" tsüklit ja aita {currentPlayerName} saada \\*\\*ämber
+        \\*\\* [bucket_empty] ukse tagant. "
+      MC_HOC_2017_04_Cole_2020: "Agent võib liikuda üle vee!  \\\r \\\r Kasutada mõistatuse
         lahendamiseks \"korda\" tsüklit ja aita {currentPlayerName} saada \\*\\*ämber
         \\*\\* [bucket_empty] ukse tagant. "
       MC_HOC_2017_05_Cole: "Oh ei, silda ei ole! \\\r \\\r Programmeri Agent silda
@@ -277,10 +331,16 @@ et-EE:
       MC_HOC_2017_05_Cole_2019: "Oh ei, silda ei ole! \\\r \\\r Programmeri Agent
         silda ehitama kasutades plokki \"aseta\", et {currentPlayerName} saaks minna
         **labidani** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2020: "Oh ei, silda ei ole! \\\r \\\r Programmeri Agent
+        silda ehitama kasutades plokki \"aseta\", et {currentPlayerName} saaks minna
+        **labidani** [diamond_shovel]."
       MC_HOC_2017_06_Cole: "Teine jõgi, kuid see on palju laiem! \\\r \\\r Paranda
         koodi, et aidata Agendil silda ehitada, et {currentPlayerName} jõuks **kirkani**
         [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Teine jõgi, kuid see on palju laiem! \\\r \\\r Paranda
+        koodi, et aidata Agendil silda ehitada, et {currentPlayerName} jõuks **kirkani**
+        [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2020: "Teine jõgi, kuid see on palju laiem! \\\r \\\r Paranda
         koodi, et aidata Agendil silda ehitada, et {currentPlayerName} jõuks **kirkani**
         [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "Jää on tee peal!  \\\r \\\r Puhasta rada funktsioon aitab
@@ -289,10 +349,16 @@ et-EE:
       MC_HOC_2017_07_Cole_2019: "Jää on tee peal!  \\\r \\\r Puhasta rada funktsioon
         aitab teil hävitada jää ja saada {currentPlayerName} Minecarti [minecart_normal]
         juurde! "
+      MC_HOC_2017_07_Cole_2020: "Jää on tee peal!  \\\r \\\r Puhasta rada funktsioon
+        aitab teil hävitada jää ja saada {currentPlayerName} Minecarti [minecart_normal]
+        juurde! "
       MC_HOC_2017_10_RETRY: "Kas märkad kahe tegevuse erinevusi oma töölaual? \\\r
         \\\r Kasuta neid tegevusi koos teise koodiga tööriista kastist, et puhastada
         rada Minecartile ja siis kogu **ränikivi ja teras** [flint_and_steel]. \\\r "
       MC_HOC_2017_10_RETRY_2019: "Kas märkad kahe tegevuse erinevusi oma töölaual?
+        \\\r \\\r Kasuta neid tegevusi koos teise koodiga tööriista kastist, et puhastada
+        rada Minecartile ja siis kogu **ränikivi ja teras** [flint_and_steel]. \\\r "
+      MC_HOC_2017_10_RETRY_2020: "Kas märkad kahe tegevuse erinevusi oma töölaual?
         \\\r \\\r Kasuta neid tegevusi koos teise koodiga tööriista kastist, et puhastada
         rada Minecartile ja siis kogu **ränikivi ja teras** [flint_and_steel]. \\\r "
       MC_HOC_2017_Ali: 'Vaata funktsioone allpool.  Kuidas saad neid kasutada, et
@@ -301,25 +367,36 @@ et-EE:
       MC_HOC_2017_Ali_2019: 'Vaata funktsioone allpool.  Kuidas saad neid kasutada,
         et vältida ning Ghasts''e ja aidata {currentPlayerName} ohutult **nõiutud
         raamatuni** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2020: 'Vaata funktsioone allpool.  Kuidas saad neid kasutada,
+        et vältida ning Ghasts''e ja aidata {currentPlayerName} ohutult **nõiutud
+        raamatuni** [book_enchanted]?  '
       MC_HOC_2017_FP20x20: "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu kätes!
         Kasuta Agendi koodi maailma avastamiseks."
       MC_HOC_2017_FP20x20_2019: "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu kätes!
+        Kasuta Agendi koodi maailma avastamiseks."
+      MC_HOC_2017_FP20x20_2020: "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu kätes!
         Kasuta Agendi koodi maailma avastamiseks."
       New Minecraft Hero Project: "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu
         kätes! Kasuta Agendi koodi maailma avastamiseks."
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Overworld Move to Sheep_2020: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       course4_artist_fwp_challenge1: Proovi see programm käivitada, tee muudatused
         ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ja
         lisa selle asemel hoopis midagi muud)
       courseB_collector_loops7_2019: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops7_2020: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops8_2019: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest
+        alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2020: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest
         alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseD_bee_nestedLoops8: "Kogu kõikidest lilledest kogu nektar kokku ja tee
         meekärje juures mett.\\\r\\\r Kasuta pesaga tsüklit. "
       courseD_bee_nestedLoops8_2018: "Kogu kõikidest lilledest kogu nektar kokku ja
         tee meekärje juures mett.\\\r\\\r Kasuta pesaga tsüklit. "
       courseD_bee_nestedLoops8_2019: "Kogu kõikidest lilledest kogu nektar kokku ja
+        tee meekärje juures mett.\\\r\\\r Kasuta pesaga tsüklit. "
+      courseD_bee_nestedLoops8_2020: "Kogu kõikidest lilledest kogu nektar kokku ja
         tee meekärje juures mett.\\\r\\\r Kasuta pesaga tsüklit. "
       courseD_maze_nestedLoops4: "Aita mind päevalilleni, kasutades nii vähe plokke
         kui võimalik!\\\r\\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees,
@@ -330,10 +407,14 @@ et-EE:
       courseD_maze_nestedLoops4_2019: "Aita mind päevalilleni, kasutades nii vähe
         plokke kui võimalik!\\\r\\\rProovi kasutada 'korda' tsüklit mõne teise tsükli
         sees, et kasutada vähem koodi."
+      courseD_maze_nestedLoops4_2020: "Aita mind päevalilleni, kasutades nii vähe
+        plokke kui võimalik!\\\r\\\rProovi kasutada 'korda' tsüklit mõne teise tsükli
+        sees, et kasutada vähem koodi."
       courseE_bee_functions3: Ehita 'võta 5' funktsiooni, mida selles ülesandes kasutada.
       courseF_bee_for_challenge2: Lahenda see mõistatus võimalikult väheste plokkidega.
       courseF_bee_for_challenge2_2018: Lahenda see mõistatus võimalikult väheste plokkidega.
       courseF_bee_for_challenge2_2019: Lahenda see mõistatus võimalikult väheste plokkidega.
+      courseF_bee_for_challenge2_2020: Lahenda see mõistatus võimalikult väheste plokkidega.
       frozen circle: Ring on erilise kujuga. Kas sa oskad arvata mis number tuleks
         küsimärgi asemele panna, et joonistada ring?
       frozen circle function: Kasuta uut "Loo ring" blokk, et luua 10 kattuvat ringi.
