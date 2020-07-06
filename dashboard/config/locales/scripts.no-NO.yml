@@ -4680,32 +4680,6 @@
           lessons:
             Creating Functions:
               name: Lage Funksjoner
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Hastighet
-            Functions:
-              name: Funksjoner
-            Sprite Properties:
-              name: Figuregenskaper
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapittel 1: Bilder og animasjoner'
-          lessons:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Hastighet
-            Functions:
-              name: Funksjoner
-            Sprite Properties:
-              name: Figuregenskaper
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4792,3 +4766,43 @@
           lesson_groups:
             k5_next_steps_1:
               display_name: De Neste Trinnene
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csp5_1:
+              display_name: 'Kapittel 1: Hendelsesdrevet programmering'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Text:
+              name: tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+          lessons:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Text:
+              name: tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+          lesson_groups:
+            csd3_1:
+              display_name: Innhold
+            csd3_2:
+              display_name: Innhold
+            cspSurvey:
+              display_name: Innhold
