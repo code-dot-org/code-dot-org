@@ -22,6 +22,7 @@ module Pd
         TYPE_HEAD = 'head'.freeze,
         TYPE_WIDGET = 'widget'.freeze,
         TYPE_IMAGE = 'image'.freeze,
+        TYPE_RATING = 'rating'.freeze,
       ].freeze
 
       ANSWER_TYPES = [
