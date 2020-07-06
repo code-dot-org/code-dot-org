@@ -48,6 +48,9 @@ sq-AL:
       Overworld Move to Sheep_2019: |-
         Shto një komandë të dytë "ec përpara" për të
         arritur delet.
+      Overworld Move to Sheep_2020: |-
+        Shto një komandë të dytë "ec përpara" për të
+        arritur delet.
       course4_artist_fwp_challenge1: Provo ta ekzekutosh këtë program dhe bëj ndryshime
         për të parë se çfarë ndodh. A mund ta kuptosh se si punon? (Ose fshije atë
         dhe zëvëndësoje me diçka komplet ndryshe)
@@ -57,9 +60,12 @@ sq-AL:
         bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe
         bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2020: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_maze_nestedLoops4: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2018: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2019: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2020: Më ço tek luledielli!
       courseE_bee_functions3: |-
         Funksionet janë blloqe kodi që performojnë
         një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
@@ -71,6 +77,9 @@ sq-AL:
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge2_2019: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2020: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       frozen circle: "Një rreth është një formë e veçantë. A mund të gjesh \nse me
