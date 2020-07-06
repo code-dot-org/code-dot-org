@@ -490,11 +490,10 @@ module LevelsHelper
       speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
       all_voices.each do |voice|
         native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-        unless native_locale_name.empty?
-          language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
-          language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
-          language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
-        end
+        next if native_locale_name.empty?
+        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
+        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
       end
 
       language_dictionary.delete_if {|_, voices| voices.length < 3}
