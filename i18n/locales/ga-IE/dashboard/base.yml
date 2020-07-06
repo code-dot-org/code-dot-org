@@ -345,6 +345,8 @@ ga:
       help_us: "Cabhraigh Linn"
       teach: "Múineadh"
       about: "Maidir Linn"
+      legal_privacy: "Polasaí Príobháideachais"
+      legal_tos: "Téarmaí Seirbhíse"
     user:
       classroom: 'Leathanach Baile do Mhúinteoirí'
       district_dashboard: 'Painéal an Scoilcheantair'

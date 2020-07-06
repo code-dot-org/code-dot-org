@@ -345,6 +345,8 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
+      legal_privacy: "Politique de confidentialité"
+      legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
       district_dashboard: 'Tableau de bord du district'

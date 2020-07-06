@@ -2,9 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-
-import {UnconnectedOrderControls as OrderControls} from '@cdo/apps/lib/script-editor/OrderControls';
-import {ControlTypes} from '../../../../src/lib/script-editor/constants';
+import OrderControls from '@cdo/apps/lib/script-editor/OrderControls';
 
 describe('OrderControls', () => {
   let move, remove, defaultProps;
@@ -14,10 +12,6 @@ describe('OrderControls', () => {
     defaultProps = {
       move,
       remove,
-      type: ControlTypes.Lesson,
-      position: 1,
-      parentPosition: 1,
-      total: 2,
       name: 'My Lesson'
     };
   });

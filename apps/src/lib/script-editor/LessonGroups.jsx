@@ -1,45 +1,27 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import color from '../../util/color';
-import {borderRadius, ControlTypes} from './constants';
-import OrderControls from './OrderControls';
-import LessonCard from './LessonCard';
-import {NEW_LEVEL_ID, addLesson, addGroup} from './editorRedux';
+import {NEW_LEVEL_ID, addGroup} from './editorRedux';
 import NewLessonGroupInput from './NewLessonGroupInput';
+import LessonGroupCard from './LessonGroupCard';
 
 const styles = {
-  groupHeader: {
-    fontSize: 18,
-    color: 'white',
-    background: color.cyan,
-    borderTopLeftRadius: borderRadius,
-    borderTopRightRadius: borderRadius,
-    padding: 10
-  },
-  groupBody: {
-    background: color.lightest_cyan,
-    borderBottomLeftRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    padding: 10,
-    marginBottom: 20
+  addGroupWithWarning: {
+    margin: '0 0 30px 0',
+    display: 'flex',
+    alignItems: 'center'
   },
   addGroup: {
     fontSize: 14,
     color: 'white',
     background: color.cyan,
     border: `1px solid ${color.cyan}`,
-    boxShadow: 'none',
-    margin: '0 0 30px 0'
+    boxShadow: 'none'
   },
-  addLesson: {
-    fontSize: 14,
-    color: '#5b6770',
-    background: 'white',
-    border: '1px solid #ccc',
-    boxShadow: 'none',
-    margin: '0 10px 10px 10px'
+  displayNameWarning: {
+    marginLeft: 5,
+    marginTop: 5
   }
 };
 
@@ -49,7 +31,6 @@ const escape = str => str.replace(/'/, "\\'");
 class LessonGroups extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
-    addLesson: PropTypes.func.isRequired,
     lessonGroups: PropTypes.array.isRequired,
     levelKeyList: PropTypes.object.isRequired
   };
@@ -77,13 +58,6 @@ class LessonGroups extends Component {
 
   hideLessonGroupCreate = () => {
     this.setState({addingLessonGroup: false});
-  };
-
-  handleAddLesson = lessonGroupPosition => {
-    const newLessonName = prompt('Enter new lesson name');
-    if (newLessonName) {
-      this.props.addLesson(lessonGroupPosition, newLessonName);
-    }
   };
 
   setTargetLesson = targetLessonPos => {
@@ -180,67 +154,45 @@ class LessonGroups extends Component {
   // To be populated with the bounding client rect of each LessonCard element.
   lessonMetrics = {};
 
+  setLessonMetrics = (metrics, lessonPosition) => {
+    this.lessonMetrics[lessonPosition] = metrics;
+  };
+
   render() {
     const {lessonGroups} = this.props;
 
     return (
       <div>
-        {lessonGroups.map((lessonGroup, index) => (
-          <div key={lessonGroup.key}>
-            <div style={styles.groupHeader}>
-              Lesson Group: {lessonGroup.key || '(none)'}: "
-              {lessonGroup.display_name || 'Content'}"
-              <OrderControls
-                type={ControlTypes.Group}
-                position={index + 1}
-                total={lessonGroups.length}
-                name={lessonGroup.key || '(none)'}
-              />
-            </div>
-            <div style={styles.groupBody}>
-              {lessonGroup.lessons.map((lesson, index) => {
-                return (
-                  <LessonCard
-                    key={`lesson-${index}`}
-                    lessonsCount={lessonGroup.lessons.length}
-                    lesson={lesson}
-                    lessonGroupPosition={lessonGroup.position}
-                    ref={lessonCard => {
-                      if (lessonCard) {
-                        const metrics = ReactDOM.findDOMNode(
-                          lessonCard
-                        ).getBoundingClientRect();
-                        this.lessonMetrics[lesson.position] = metrics;
-                      }
-                    }}
-                    lessonMetrics={this.lessonMetrics}
-                    setTargetLesson={this.setTargetLesson}
-                    targetLessonPos={this.state.targetLessonPos}
-                  />
-                );
-              })}
-              <button
-                onMouseDown={this.handleAddLesson.bind(null, index + 1)}
-                className="btn"
-                style={styles.addLesson}
-                type="button"
-              >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                Add Lesson
-              </button>
-            </div>
-          </div>
+        {lessonGroups.map(lessonGroup => (
+          <LessonGroupCard
+            key={lessonGroup.key}
+            lessonGroup={lessonGroup}
+            lessonGroupsCount={lessonGroups.length}
+            setLessonMetrics={this.setLessonMetrics}
+            setTargetLesson={this.setTargetLesson}
+            targetLessonPos={this.state.targetLessonPos}
+            lessonMetrics={this.lessonMetrics}
+          />
         ))}
         {!this.state.addingLessonGroup && (
-          <button
-            onMouseDown={this.handleAddLessonGroup}
-            className="btn"
-            style={styles.addGroup}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Lesson Group
-          </button>
+          <div style={styles.addGroupWithWarning}>
+            <button
+              onMouseDown={this.handleAddLessonGroup}
+              className="btn"
+              style={styles.addGroup}
+              type="button"
+              disabled={!this.props.lessonGroups[0].user_facing}
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Lesson Group
+            </button>
+            {!this.props.lessonGroups[0].user_facing && (
+              <span style={styles.displayNameWarning}>
+                You must set the display name of the existing lesson group
+                before adding more.
+              </span>
+            )}
+          </div>
         )}
         {this.state.addingLessonGroup && (
           <NewLessonGroupInput
@@ -258,6 +210,8 @@ class LessonGroups extends Component {
   }
 }
 
+export const UnconnectedLessonGroups = LessonGroups;
+
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
@@ -266,9 +220,6 @@ export default connect(
   dispatch => ({
     addGroup(position, groupKey, groupName) {
       dispatch(addGroup(position, groupKey, groupName));
-    },
-    addLesson(position, lessonName) {
-      dispatch(addLesson(position, lessonName));
     }
   })
 )(LessonGroups);

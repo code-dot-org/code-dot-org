@@ -55,13 +55,13 @@ class StageTest < ActiveSupport::TestCase
     assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
   end
 
-  test "summary for stage with extras" do
+  test "summary for lesson with extras" do
     script = create :script, lesson_extras_available: true
     level = create :level
     stage = create :lesson, script: script
     create :script_level, script: script, lesson: stage, levels: [level]
 
-    assert_match /extras$/, stage.summarize[:stage_extras_level_url]
+    assert_match /extras$/, stage.summarize[:lesson_extras_level_url]
   end
 
   test "summary for stage with extras where include_bonus_levels is true" do

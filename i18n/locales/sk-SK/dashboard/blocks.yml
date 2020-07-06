@@ -979,7 +979,7 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} sa dotýka {SPRITE2}"
+        text: "{CONDITION} sa {SPRITE1} dotýka {SPRITE2}"
         options:
           CONDITION:
             '"when"': keď
@@ -989,7 +989,7 @@ sk:
       gamelab_clickedSpritePointer:
         text: klikla {SPRITE}
       gamelab_comment:
-        text: 'komentuj: {COMMENT}'
+        text: 'poznámka: {COMMENT}'
       gamelab_createNewSprite:
         text: |-
           vytvor novú postavu
@@ -1070,7 +1070,7 @@ sk:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: vytvor novú {ANIMATION_NAME} postavu na {LOCATION}
+        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} smeruje {DIRECTION}"
         options:
@@ -1084,7 +1084,7 @@ sk:
       gamelab_moveForward:
         text: pohni {SPRITE} o {DISTANCE} pixelov dopredu
       gamelab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelov {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelov na {DIRECTION}
         options:
           DIRECTION:
             '"North"': Sever
@@ -1093,10 +1093,12 @@ sk:
             '"West"': Západ
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
+      gamelab_objectSpritePointer:
+        text: klikla {SPRITE}
       gamelab_patrollingUpDown:
         text: hliadkovať hore-dole
       gamelab_playSound:
-        text: prehrať zvuk {SOUND}
+        text: playSound {SOUND}
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1167,6 +1169,8 @@ sk:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
+      gamelab_subjectSpritePointer:
+        text: klikla {SPRITE}
       gamelab_turn:
         text: otočiť {SPRITE} {DIRECTION} {N} stupňov
         options:
@@ -1549,7 +1553,7 @@ sk:
             '2': '2'
             '3': '3'
       aalab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelov {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelov na {DIRECTION}
         options:
           DIRECTION:
             '"North"': Sever
@@ -1568,9 +1572,16 @@ sk:
       aalab_setupStory:
         text: nastav príbeh
       aalab_starwars_playSound:
+        text: prehraj zvuk {OPTION}
         options:
           OPTION:
             '"random"': náhodný
+            '"R2-D2 random"': R2-D2 náhodný
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:

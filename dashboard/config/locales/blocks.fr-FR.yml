@@ -994,7 +994,7 @@ fr:
       gamelab_clickedOn:
         text: quand {SPRITE} cliqué
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} cliqué"
+        text: cliqué {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
       gamelab_createNewSprite:
@@ -1096,6 +1096,8 @@ fr:
             '"West"': L’Ouest
       gamelab_moveToward:
         text: déplacer {SPRITE} de {DISTANCE} pixels vers {TARGET}
+      gamelab_objectSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_playSound:
         text: jouer le son {SOUND}
       gamelab_pointInDirection:
@@ -1169,6 +1171,8 @@ fr:
           CONDITION:
             '"when"': quand
             '"while"': tant que
+      gamelab_subjectSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_turn:
         text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:
@@ -1574,6 +1578,12 @@ fr:
         options:
           OPTION:
             '"random"': aléatoire
+            '"R2-D2 random"': R2-D2 aléatoire
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:

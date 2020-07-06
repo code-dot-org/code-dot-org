@@ -11,8 +11,14 @@ te:
           stages:
             Events:
               name: ఈవెంట్లు
+          lessons:
+            Events:
+              name: ఈవెంట్లు
         grade1:
           stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
             Events:
               name: ఈవెంట్లు
         k5concepts:
@@ -34,12 +40,21 @@ te:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         dance-draft:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
         dance-low:
           stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         coursed-2019:
@@ -136,5 +151,15 @@ te:
               display_name: ఈవెంట్లు
         code-break:
           stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        k5-onlinepd-2020:
+          stages:
+            Events:
+              name: ఈవెంట్లు
+          lessons:
             Events:
               name: ఈవెంట్లు

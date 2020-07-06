@@ -58,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -173,6 +172,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 
+# Resolve CVE 2015 9284
+# see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
 # Ref: https://github.com/haml/haml/issues/940
@@ -188,7 +191,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -278,7 +281,7 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 0'
+gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
 gem 'bcrypt'
@@ -345,3 +348,5 @@ gem 'hammerspace'
 gem 'require_all', require: false
 
 gem 'dotiw'
+
+gem 'datapackage'

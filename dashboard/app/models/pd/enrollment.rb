@@ -168,10 +168,10 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.teachercon?
     end
 
-    # Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion
+    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion
     foorm_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
+        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)
     end
 
     # Filter out legacy (pre-Foorm) local summer and CSF Intro surveys so that we aren't
@@ -212,7 +212,7 @@ class Pd::Enrollment < ActiveRecord::Base
     if workshop.local_summer?
       url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      'https://studio.code.org/pd/workshop_survey/csf/pre201'
+      CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
     # academic year workshops for CSP and CSD
     elsif workshop.pre_survey?
       pd_new_pre_workshop_survey_url(enrollment_code: code)
@@ -225,10 +225,7 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
-      # TODO: This is a temporary, fake URL. Wire up a real one!
-      CDO.studio_url '/pd/workshop_survey/post'
-    elsif workshop.local_summer?
+    elsif workshop.csp_wfrt? || workshop.local_summer?
       CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.teachercon?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
@@ -417,7 +414,13 @@ class Pd::Enrollment < ActiveRecord::Base
   private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
     completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      begin
+        Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      # if we can't find the expected form id we will get a key error. Consider this to be a completed survey as there
+      # is no survey.
+      rescue KeyError
+        true
+      end
     end
 
     select_completed ? completed_surveys : uncompleted_surveys

@@ -17132,8 +17132,7 @@ zh-CN:
       CourseE_HOC 2018 Level_6: 外边好冷啊！前往水底废墟的路上抓一条**鲑鱼**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
       CourseE_HOC 2018 Level_7a: 找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子**
         ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
-      CourseE_HOC 2018 Level_8: 先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        in the coral reef。
+      CourseE_HOC 2018 Level_8: 先是冰山，现在是熔岩？穿过这座火山岛，在珊瑚礁里找到**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。
       CourseE_HOC 2018 Level_9b: 成功抵达珊瑚礁，赶快搜寻**海洋之心**吧![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)！使用蓝色和红色珊瑚找到**宝箱**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
       Crack Random Substitution: |-
@@ -17665,8 +17664,7 @@ zh-CN:
       HOC 2018 Level_6: 外边好冷啊！前往水底废墟的路上抓一条**鲑鱼**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
       HOC 2018 Level_7a: 找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子**
         ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
-      HOC 2018 Level_8: 先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        in the coral reef。
+      HOC 2018 Level_8: 先是冰山，现在是熔岩？穿过这座火山岛，在珊瑚礁里找到**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。
       HOC 2018 Level_9b: 成功抵达珊瑚礁，赶快搜寻**海洋之心**吧![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)！使用蓝色和红色珊瑚找到**宝箱**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
       InspirationalArtwork: |-
@@ -18012,10 +18010,9 @@ zh-CN:
         用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。
       OPD-K5-projects-6: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
       OPD-K5-projects-7: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
-      OPD-K5-spritelab-2: |-
-        我们来做个鱼缸！
-
-        把灰蒙蒙的风滚草变成一条鱼。
+      OPD-K5-spritelab-2: "\"让我们做一个鱼缸吧！  \n\n点击<xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>将风滚草精灵变成任意一种鱼。\n\n一定要在<xml><block
+        type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>中更新此精灵的装扮。\""
       OPD-K5-spritelab-3: |-
         这些旋转会让鱼变得头晕！
 
@@ -18999,7 +18996,8 @@ zh-CN:
         \  宠物碰到蛋卷冰淇淋时，会发生什么？碰到胡椒呢？\n-   `energy` （能量）变量是怎样被使用的？如何检查宠物当前 `energy` 的值？\n\n运行代码，并和宠物玩耍！完成后，点击
         **完成**。"
       Virtual Pet 2: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
-      Virtual Pet 2_2019: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
+      Virtual Pet 2_2019: "\"现在轮到您创建自己的虚拟宠物了！先为它选择一个您喜欢的外观。\n\n1.  点击屏幕左上角的**Costumes**标签（位于**Code**旁边)。
+        \n2.  编辑初始装扮，或添加一个您喜欢的新装扮。 \n3.  在下面的代码中将精灵的装扮更换为您自定义的。\n4.  点击**Run**查看您宠物的新外观！\""
       Virtual Pet 3: "我们不能让脏兮兮的长颈鹿到处走来走去!  \n\n1.  在屏幕上添加一个新的肥皂精灵图。  \n2.  你能否使长颈鹿和肥皂接触的时候变回正常的颜色？
         \n\n* * *\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n<value
         name=\"THIS\">\n<block type=\"sprite_variables_get\">\n\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>"
@@ -19007,7 +19005,8 @@ zh-CN:
         \n\n* * *\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n<value
         name=\"THIS\">\n<block type=\"sprite_variables_get\">\n\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>"
       Virtual Pet 4: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。"
-      Virtual Pet 4_2019: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。"
+      Virtual Pet 4_2019: "\"让我们做些流浪食物吧！\n\n1.  向您的世界添加**两个**精灵。  \n2.  让一个精灵看上去像您的宠物**喜欢**吃的样子，另一个看上去像它**不**喜欢吃的样子。
+        \n3.  让每个食物精灵在出现后立即开始**流浪**行为。\""
       Virtual Pet 5: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵图碰撞时，她的尺寸减小5."
       Virtual Pet 5_2019: |-
         将 <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> 和 <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> 放到一起，来在虚拟世界中**模拟**"吃东西"！
@@ -19474,10 +19473,6 @@ zh-CN:
       courseA_maze_ramp3a_2019: 从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击"▶
         运行"。
       courseA_maze_ramp3b_2018: |-
-        在这个代码的末尾有一个多余的代码块!
-
-        把它拖回工具箱来删除它。
-      courseA_maze_ramp3b_2019: |-
         在这个代码的末尾有一个多余的代码块!
 
         把它拖回工具箱来删除它。
@@ -20148,12 +20143,17 @@ zh-CN:
       courseC_artist_loops1b_2019: "在代码中用“旋转/turn”命令，修改你的贴纸的朝向。 \n\n* * *\n\n当你对你的作品满意是，点击\"完成/Finish\"\n\n![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)\n![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)\n![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)"
       courseC_artist_loops2a: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops2a_2018: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
-      courseC_artist_loops2a_2019: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
+      courseC_artist_loops2a_2019: "现在，使用一个循环来复制更多贴纸。请在“turn”（旋转）和“repeat”（重复）模块中更改数字来生成不同的图案。\n\n*
+        * *\n\n当您对自己的操作结果满意时，请按下“Finish”（完成）键。\n\n ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n
+        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
+        \n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
       courseC_artist_loops3a: "太有趣了！ \n\n现在，在鸟的右后方加一个蝙蝠贴纸，来做一张像底下一样的图片。\n\n* * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "太有趣了！ \n\n现在，在鸟的右后方加一个蝙蝠贴纸，来做一张像底下一样的图片。\n\n*
         * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
-      courseC_artist_loops3a_2019: "太有趣了！ \n\n现在，在鸟的右后方加一个蝙蝠贴纸，来做一张像底下一样的图片。\n\n*
-        * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
+      courseC_artist_loops3a_2019: "非常有趣！   现在，在第一张贴纸上方再加第二张贴纸，制作出和下面类似的图像。\n\n* *
+        *\n\n 当您对自己的操作结果满意时，请按下“Finish”（完成）键。\n\n ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
+        \n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)
+        \n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
       courseC_artist_loops4a: |-
         添加一个魔窟开到代码中，以便你在标记鸟和蝙蝠之间向前跳跃75个像素。在这个关卡中，确保在你的循环内有个`跳到200超过200下来`, 这样你可以留在中心！
 
@@ -20166,15 +20166,12 @@ zh-CN:
         * * *
 
         [expandable]
-      courseC_artist_loops4a_2019: |-
-        编辑代码，以便你在标记鸟和蝙蝠之间向前跳跃75个像素。在这个关卡中，确保在你的循环内有个`跳到200超过200下来`, 这样你可以留在中心。
-
-        * * *
-
-        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
-        ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
-        ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
-        ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
+      courseC_artist_loops4a_2019: "编辑您的代码，这样您就可以在第一张贴纸绘制完成、开始绘制第二张之前向前跳转。在这个智力游戏中，确保您在您的循环内包括“jump
+        to the middle center position”（跳到中间的位置），所以您要待在中央！\n\n* * *\n\n当您对自己的操作结果满意时，请按下“Finish”（完成）键。
+        \n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        \n![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
+        \n![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
+        \n![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)"
       courseC_artist_loops5a: |-
         当你用不同的生物替换一个或两个标签时会发生什么？
 
@@ -20263,10 +20260,11 @@ zh-CN:
         name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> 模块把艺术家带到游戏区的中心。\n然后用
         \\<<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title
         name=\"VALUE\">50</title></block></xml> \n模块来画一条50 像素的线。"
-      courseC_artist_loopsPrePre1a_2018: "### 艺术家在错误的点上！\n\n使用\\<<xml><block type=\"jump_to_xy\"
-        id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>模块把艺术家带到游戏区的中心。
-        \n然后用 <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title
-        name=\"VALUE\">50</title></block></xml>\n模块来画一条50 像素的线。"
+      courseC_artist_loopsPrePre1a_2018: |-
+        ### 艺术家位置有误！
+
+        使用<xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>模块将艺术家带到游戏区域的中心。\
+         然后用<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>模块绘制一条50像素长的线。
       courseC_artist_loopsPrePre1a_2019: "### 艺术家在错误的点上！\n\n使用 <xml><block type=\"jump_to_xy\"
         id=\"callMe\" block-text=\"jump to 200 over 200 down\"><title name=\"XPOS\">200</title><title
         name=\"YPOS\">200</title></block></xml> 模块把艺术家带到游戏区的中心。 \n然后用  <xml><block
@@ -20915,12 +20913,12 @@ zh-CN:
         \-试着改变雪花顶端的图案！
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"试着改变形状或线条长度来画出自己的！\"_\n\n<br/>
         \ \n\n**灵感：**\n你可以用任何方法来画自己的形状，这里是一个主意:\n\n\\-\n试着改变雪花顶端的图案！"
-      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"让我们试试一些新东西。这次沿着之字形滑冰。\"_\n\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
-        style=\"float: left; margin: 0 15px 15px 0;\" />\n用75到105度间的转向来画出楼梯图案 -- 但要确保左右转都有同样的角度。
-        \n（过会儿你会明白为什么。）"
-      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"让我们试试一些新东西。这次沿着之字形滑冰。\"_\n\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
-        style=\"float: left; margin: 0 15px 15px 0;\" />\n用75到105度间的转向来画出楼梯图案 -- 但要确保左右转都有同样的角度。
-        \n（过会儿你会明白为什么。）"
+      courseD_artist_6_2018: "\"![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“让我们尝试点新花样吧。这次，我们滑一个之字”_\n\n<br/>  \n\n**灵感：**试着将您150像素的长线改成6条**25**像素的短线\n\n-
+        \  在每条短线形成之字后，在交替方向旋转**45**度\n-   您需要在哪里放置一个新的“repeat”（重复）模块来实现这一点？\n-   您需要将2条短线的图案重复多少次来获得一共6条短线？\""
+      courseD_artist_6_2018_2019: "\"![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“让我们尝试点新花样吧。这次，我们滑一个之字”_\n\n<br/>  \n\n**灵感：**试着将您150像素的长线改成6条**25**像素的短线\n\n-
+        \  在每条短线形成之字后，在交替方向旋转**45**度\n-   您需要在哪里放置一个新的“repeat”（重复）模块来实现这一点？\n-   您需要将2条短线的图案重复多少次来获得一共6条短线？\""
       courseD_artist_binary1: |-
         我们提供了一个"像素"网格，你可以穿过它，并通过打开某些特定的方块来做些图案。
 
@@ -22072,14 +22070,10 @@ zh-CN:
         我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
 
         可以通过增加一个重复循环来画这幅图。
-      courseE_artist_functions3_2018: |-
-        我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
-
-        可以通过增加一个重复循环来画这幅图。
-      courseE_artist_functions3_2019: |-
-        我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
-
-        可以通过增加一个重复循环来画这幅图。
+      courseE_artist_functions3_2018: "\"创建可以形成这颗星的函数。 \n\n* * *\n\n-   这颗星的每条边长度为25像素\n-
+        \  您必须旋转45度来获得8条边\n-   在同一条边上来回走动是可以的\""
+      courseE_artist_functions3_2019: "\"创建可以形成这颗星的函数。 \n\n* * *\n\n-   这颗星的每条边长度为25像素\n-
+        \  您必须旋转45度来获得8条边\n-   在同一条边上来回走动是可以的\""
       courseE_artist_functions3_copy: |-
         我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
 
@@ -22326,8 +22320,8 @@ zh-CN:
         你注意到上一关有很多重复的代码了吗？我们可以调用`pick along path`（沿路采摘）函数来减少代码，并用一个新函数来调用其它函数！
 
         用`pick along path`（沿路采摘）来使用更少的模块解决这个难题。
-      courseE_farmer_functions3c_2018: "现在，通过从代码中拖拽并放到**函数定义**中来自己填满函数。  \n\n别忘了完成后，在程序里需要的地方加一个小的**函数调用**模块来使用这个函数。"
-      courseE_farmer_functions3c_2019: "现在，通过从代码中拖拽并放到**函数定义**中来自己填满函数。  \n\n别忘了完成后，在程序里需要的地方加一个小的**函数调用**模块来使用这个函数。"
+      courseE_farmer_functions3c_2018: 很好！在更长的路径上尝试您的函数。
+      courseE_farmer_functions3c_2019: 很好！在更长的路径上尝试您的函数。
       courseE_farmer_functions4b: 使用你的新函数来通关。
       courseE_farmer_functions5c: 你的函数能在这里派上用场。
       courseE_farmer_functions6c: "_\"莴苣捡起所有作物！\"_\n\n现在菜苗是玉米**或**莴苣。在采摘之前，你需要在程序里加什么来检查每个菜苗？\n\n*

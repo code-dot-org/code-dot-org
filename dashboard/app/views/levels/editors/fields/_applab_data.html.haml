@@ -1,0 +1,26 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#data"}}
+  Data
+#data.in.collapse
+  .field
+    = f.label 'Table Data'
+    Step 1: Create a project at studio.code.org/p/applab and edit the data for a table in the data browser. Step 2: Copy the data via the debug area at the bottom of the table. Step 3: Paste the data below in the format { "tablename": <paste> }
+    %pre
+      = preserve do
+        :escaped
+          Example:
+          {
+            "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+            "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+          }
+    = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
+    :javascript
+      levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
+
+  = render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
+
+  .field
+    = f.label :data_library_tables,'Dataset Libraries'
+    = f.text_area :data_library_tables, value: @level.data_library_tables, readonly: true
+
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}

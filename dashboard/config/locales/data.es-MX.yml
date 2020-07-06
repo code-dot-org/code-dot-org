@@ -574,7 +574,7 @@ es-MX:
         C2_maze_intro: Introducción al laberinto
         C2_artist_intro: Introducción al Artista
         C2_zuck_repeat_loop: Bucles del laberinto
-        C2_artist_loops: Ciclos del artista
+        C2_artist_loops: Bucles del artista
         C2_artist_debugging: Depuración del artista
         C2_bee_loops: Bucles de abeja
         C2_bee_debugging: Depuración abeja
@@ -624,7 +624,7 @@ es-MX:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Loops en Artista
+        CSF_a_b_artist_loops: Bucles en el artista
         CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
           Recolector'
@@ -861,6 +861,8 @@ es-MX:
           Keeler
         codebreak_e05: 'Code Break 5.0: Simulaciones y datos con Bill Gates'
         csd_how_teamwork_works: Cómo funciona el trabajo en equipo
+        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar la falta
+          de consenso'
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '

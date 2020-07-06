@@ -346,6 +346,8 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+      legal_privacy: "隱私政策"
+      legal_tos: "服務條款"
     user:
       classroom: '教師主頁'
       district_dashboard: '分區控制台'

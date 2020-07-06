@@ -1,5 +1,3 @@
-require 'cdo/honeybadger'
-
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
@@ -30,16 +28,14 @@ class CoursesController < ApplicationController
     # csp and csd are each "course families", each containing multiple "course versions".
     # When the url of a course family is requested, redirect to a specific course version.
     #
-    # For now, Hard-code the redirection logic because there are only two course
-    # families to worry about. In the future we will want to make this redirect
-    # happen based on the data in the DB so it can be configured via levelbuilder.
-    redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-    case params[:course_name]
-    when 'csd'
-      redirect_to "/courses/csd-2019#{redirect_query_string}"
-      return
-    when 'csp'
-      redirect_to "/courses/csp-2019#{redirect_query_string}"
+    # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
+    if Course::FAMILY_NAMES.include?(params[:course_name])
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to_course = Course.all_courses.
+          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          sort_by(&:version_year).
+          last
+      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
       return
     end
 
@@ -49,15 +45,7 @@ class CoursesController < ApplicationController
     end
 
     course = Course.get_from_cache(params[:course_name])
-    unless course
-      # PLC courses have different ways of getting to name. ideally this goes
-      # away eventually
-      course_name = params[:course_name].tr('-', '_').titleize
-      course = Course.get_from_cache(course_name)
-      # only support this alternative course name for plc courses
-      raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
-      Honeybadger.notify "Deprecated PLC course name logic used for course #{course_name}"
-    end
+    raise ActiveRecord::RecordNotFound unless course
 
     if course.plc_course
       authorize! :show, Plc::UserCourseEnrollment

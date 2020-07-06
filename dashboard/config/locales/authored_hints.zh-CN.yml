@@ -7053,7 +7053,41 @@ zh-CN:
         courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops3a_2019:
         courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
-        courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
+        courseC_artist_loops3a_b: |-
+          您的程序应该如下所示！
+
+           <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+           您可以使用任何您喜欢的贴纸！
       courseC_artist_loops4a:
         courseC_artist_loops4a_a: |-
           使用此模块向前跳转：
@@ -8825,13 +8859,13 @@ zh-CN:
         courseD_artist_binary8_b: 请先尝试运行代码, 看看您需要处理的内容。
         courseD_artist_binary8_c: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_bee_conditionals1_predict1:
-        courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
+        courseD_bee_conditionals1_a: 在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。
       courseD_bee_conditionals1_predict1_2018:
-        courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
+        courseD_bee_conditionals1_a: 在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。
       courseD_bee_conditionals1_predict1_2019:
-        courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
+        courseD_bee_conditionals1_a: 在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。
       courseD_bee_conditionals1_predict1_copy:
-        courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
+        courseD_bee_conditionals1_a: 在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals2_a: 有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。
@@ -9785,7 +9819,6 @@ zh-CN:
         courseD_farmer_condLoops5_a: '有一个新的循环: '' 重复直到在南瓜上 ''。你能看到它如何在这个关卡使用？'
         courseD_farmer_condLoops5_b: 每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: '有一个新的循环: '' 重复直到在南瓜上 ''。你能看到它如何在这个关卡使用？'
         courseD_farmer_condLoops5_b: 每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!
       courseD_farmer_condLoops6:
         courseD_farmer_condLoops6_a: 使用`当有玉米时`循环让农民能够采摘沿路所有的玉米。如果这个模块没有玉米，则不会做任何事情。

@@ -1,22 +1,22 @@
 ---
-title: Guide for CS Fundamentals teachers during school closures
+title: CS ফান্ডামেন্টালস(মৌলিক)ৰ শিক্ষক সকলৰ বাবে গাইড (বিদ্যালয় বন্ধ সময় চোৱাত)
 video_player: true
 theme: responsive
 ---
 
-# Guide for CS Fundamentals teachers during school closures
+# CS ফান্ডামেন্টালস(মৌলিক)ৰ শিক্ষক সকলৰ বাবে গাইড (বিদ্যালয় বন্ধ সময় চোৱাত)
 
-As more schools close in response to the COVID-19 pandemic, many Code.org classrooms are moving to using our CS Fundamentals courses in a virtual setting or giving their students activities to keep learning at home.
+যিহেতু সর্বাধিক স্কুল এতিয়া বন্ধ পৃথিবীব্যাপী মহামাৰী COVID-১৯ৰ প্রতিক্রিয়া স্বৰূপে, বহুতো Code.org শ্রেণীকক্ষই এতিয়া আমাৰ সিস ফান্ডামেন্টালসৰ( CS Fundamentals) পাথ্যক্রম ব্যবহাৰ কৰিবলৈ আৰম্ভ কৰিছে ভার্চুয়াল(virtual) শ্রেণীকক্ষৰ ৰূপত বা গৃহকার্য্য স্বৰূপে কাম দিছে ঘৰত কৰিবলৈ আৰু শিকিবলৈ ৷
 
-## Resources to keep learning
+## শিক্ষাৰ বাবে সম্পদসমূহ(Resources)
 
-Computer science is a great way to add some fun to extended time at home. However, the learning will take a different form when some kids are engaged regularly, some have only a little time, some have computers, and some don’t.
+কম্পিউটাৰ সাইন্সৰ মাধ্যমেৰে ঘৰতে আমি এই বিস্তাৰিত সময়চোৱাত আমাৰ জ্ঞানৰ বৃদ্ধি কৰিব পাৰো । এই শিক্ষা পদ্ধতিটো অলপ বেলেগ ধৰণৰ, কিছুমানে ইয়াত নিয়মিতভাবে জড়িত হয় আছে, কিছুমানে কম সময়ৰ বাবে জড়িত হয় আছে, কিছুমানৰ কম্পিউটাৰ(computer) আছে আৰু কিছুমানৰ কম্পিউটাৰ(computer) নাই ৷.
 
-Rather than trying to teach a synchronous class remotely, many teachers will be giving elementary school students activities they can do to maintain their interest as well as providing structure during their time at home.
+দূৰবর্তী অৱস্থানৰ পৰা সকলোকে একে সময়ত সমান্তৰাল ভাৱে শিক্ষা প্রদান কৰাতকৈ, বহুতু শিক্ষকে এলিমেন্টাৰি(নিম্ন) শ্রেণীৰ কার্য্য প্রদান কৰিছে যাতে শিক্ষার্থী সকলে অংশ গ্রহণ কৰি ভাল পায় আৰু লগতে সৃষ্টিশীল ভাৱে সিহঁতে ঘৰত সময়খিনি পাৰ কৰে ৷
 
-<strong>We are compiling a list of activities on [code.org/athome](https://code.org/athome)</strong> that are ideal to share with students or families interested in doing some computer science on their own. This list includes activities for students with no computers or internet access.
+আমি এতিয়া কিছুমান এনেকুৱা কার্য্য আৰম্ভ কৰিম ইয়াত \[code.org/athome\](https://code.org/athome) যিবোৰ তেনেকুবা শিক্ষার্থী আৰু অভিভাৱকৰ বাবে শ্রেষ্ঠ হব যিসকলে নিজে ঘৰতে কম্পিউটাৰ সাইন্স(computer science) শিকাৰ বাবে আগ্রহী হয়। এইখন তালিকাত অন্তর্ভক্ত কৰা কার্য্যবোৰ তেনেকুৱা শিক্ষার্থীৰ বাবে, যাৰ কম্পিউটাৰ বা ইন্টাৰনেট এক্সেস নাই ।
 
-## Teaching CS Fundamentals Remotely
+## সিস ফান্ডামেন্টালস(CS Fundamentals) ৰ বিষয়ে দূৰবর্তী অৱস্থানৰ পৰা শিক্ষা প্রদান
 
 If your school is asking you to continue to teach virtually and you’re part way through CS Fundamentals, we recommend you have students continue their existing courses at home, but skip the unplugged lessons.
 

@@ -3,6 +3,7 @@ ru-RU:
   data:
     display_name:
       AB_Debug_Artist1: 'Художник: Отладка #1 (AB)'
+      Alien Defender: Война с чужими
       App Lab Intro 8 - Video Design Mode: Режим дизайна
       App Lab Intro 8 - Video Getting Started: 'Видео: начало работы'
       App Lab Intro 8 - Video Images and Sounds: 'Видео: Изображения и звуки'
@@ -18,6 +19,8 @@ ru-RU:
       AppLab Intro 7 - thisOrThatAddScreen: То или это
       AppLab Intro 7 - thisOrThatPersonalize: То или это
       AppLab Intro 7 - thisOrThatSetScreen: То или это
+      CDEF_video_SpritesInAction: Как создать спрайт?
+      CDEF_video_SpritesInAction_2019: Как создать спрайт?
       CSD If Else Map: Операторы "если-иначе"
       CSD If Else Map_2018: Операторы "если-иначе"
       CSD If Else Map_2019: Операторы "если-иначе"
@@ -381,8 +384,13 @@ ru-RU:
       CSS U2 Body Map: Элемент body
       CSS U2 Body Map_2018: Элемент body
       CSS U2 Body Map_2019: Элемент body
+      'Course E: Artist Project': Курс E. Проект "Художник"
+      'Course E: Artist Project_2018': Курс E. Проект "Художник"
+      'Course E: Artist Project_2019': Курс E. Проект "Художник"
       CourseEF_video_IntroSpriteLab: Это лаборатория спрайтов
       CourseEF_video_IntroSpriteLab_2019: Это лаборатория спрайтов
+      CourseEF_video_MakeSprite: Как создать спрайт?
+      CourseEF_video_MakeSprite_2019: Как создать спрайт?
       Dance_Party_extras_alternate_2019: Туда-сюда
       Dance_Party_extras_battle: Танцевальные коллективы
       Dance_Party_extras_battle_2019: Танцевальные коллективы
@@ -456,6 +464,9 @@ ru-RU:
       New Minecraft Hero Project: 'Свободная практика
 
 '
+      OPD-K5 WhatIsCS: Что такое информатика?
+      OPD-K5 WhatIsCS_copy: Что такое информатика?
+      OPD-K5-spritelab-5-video: Как создать спрайт?
       Oceans_Video_Machine_Learning: 'Видео: Машинное Обучение'
       Oceans_Video_Societal_Implications: 'Видео: Общественная Значимость'
       Oceans_Video_Training_Data: 'Видео: Обучающие Данные'

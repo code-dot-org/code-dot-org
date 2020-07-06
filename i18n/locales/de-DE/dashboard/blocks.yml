@@ -1101,6 +1101,8 @@ de:
             '"West"': West
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} geklicked"
       gamelab_patrollingUpDown:
         text: patrouilliert auf und ab
       gamelab_playSound:
@@ -1186,6 +1188,8 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} geklicked"
       gamelab_tumbling:
         text: hingefallen
       gamelab_turn:

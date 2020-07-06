@@ -349,6 +349,8 @@
   "unsubmitYourProject": "Unsubmit your project",
   "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?",
   "version": "Version",
+  "versionHistory_clearProgress_cancel": "Cancel",
+  "versionHistory_header": "Version History",
   "viewCode": "View code",
   "viewPageAs": "View page as:",
   "viewSection": "View section",

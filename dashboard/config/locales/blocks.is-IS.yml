@@ -1090,6 +1090,8 @@ is:
             '"West"': vestur
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
+      gamelab_objectSpritePointer:
+        text: ásmellt vera
       gamelab_patrollingUpDown:
         text: rásar upp og niður
       gamelab_playSound:
@@ -1169,6 +1171,8 @@ is:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
+      gamelab_subjectSpritePointer:
+        text: ásmellt vera
       gamelab_tumbling:
         text: veltist
       gamelab_turn:

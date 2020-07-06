@@ -328,6 +328,8 @@ cs:
       help_us: "Pomozte nám"
       teach: "Učit"
       about: "O nás"
+      legal_privacy: "Zásady ochrany osobních údajů"
+      legal_tos: "Podmínky"
     user:
       classroom: 'Učitelská domovská stránka'
       district_dashboard: 'Okresní řídicí panel'

@@ -13596,10 +13596,6 @@ it-IT:
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che sei
-          su una zucca`, che ripete tutti i blocchi che contiene per tutto il tempo
-          in cui NON sei su una zucca e si interrompe quando finalmente arrivi ad
-          una zucca. Riesci a intuire come usarlo in questo esercizio?'
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
       courseD_farmer_condLoops6:
@@ -14824,7 +14820,7 @@ it-IT:
           richiamare la funzione nel tuo programma principale. Non dimenticare di
           saltare avanti tra una stella e l'altra!
       courseE_artist_functions4_copy:
-        courseD_artist_functions4_a: Prova ad usare una funzione!
+        courseD_artist_functions4_a: Prova a usare una funzione!
         courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco
           aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso
           codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo
