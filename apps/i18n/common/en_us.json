@@ -640,7 +640,6 @@
   "dropletBlock_subtractOperator_signatureOverride": "Subtract operator",
   "dropletBlock_whileBlock_description": "Creates a loop consisting of a conditional expression and a block of statements executed for each iteration of the loop. The loop continues to execute as long as the condition evaluates to true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
-  "droplet_parsing_error": "Error parsing your code. Check for a curly bracket that isn't attached to a function, loop, or conditional.",
   "edit": "Edit",
   "editAll": "Edit all",
   "editProject": "Edit Project",
