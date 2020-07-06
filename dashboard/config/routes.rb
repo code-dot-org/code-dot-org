@@ -146,8 +146,7 @@ Dashboard::Application.routes.draw do
     patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
-    get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
-    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
@@ -239,7 +238,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
+  resources :datasets, param: 'dataset_name', constraints: {dataset_name: /[^\/]+/}, only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -501,6 +500,8 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
+  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
+
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
   namespace :pd do
@@ -726,4 +727,6 @@ Dashboard::Application.routes.draw do
   post '/profanity/find', to: 'profanity#find'
 
   get '/help', to: redirect("https://support.code.org")
+
+  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 end

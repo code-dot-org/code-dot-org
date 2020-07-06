@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  position    :integer
+#  properties  :text(65535)
 #
 # Indexes
 #
@@ -16,6 +17,8 @@
 #
 
 class LessonGroup < ApplicationRecord
+  include SerializedProperties
+
   belongs_to :script
   has_many :lessons, -> {order('absolute_position ASC')}
 
@@ -28,6 +31,10 @@ class LessonGroup < ApplicationRecord
       message: 'Expect all levelbuilder created lesson groups to have key.'
     },
     if: proc {|a| a.user_facing}
+
+  serialized_attrs %w(
+    display_name
+  )
 
   def localized_display_name
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')

@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import xml from './xml';
-import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -1000,31 +999,54 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        if (
-          miniToolboxBlocks &&
-          experiments.isEnabled(experiments.MINI_TOOLBOX)
-        ) {
+        if (miniToolboxBlocks) {
           var toggle = new Blockly.FieldIcon('+');
           var miniToolboxXml = '<xml>';
           miniToolboxBlocks.forEach(block => {
             miniToolboxXml += `\n <block type="${block}"></block>`;
           });
           miniToolboxXml += '\n</xml>';
-          // Block.tray is used in the blockly repo to track whether or not the horizontal flyout is open.
-          this.tray = false;
+          // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
+          this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
-            if (this.tray) {
+            if (this.isMiniFlyoutOpen) {
               toggle.setText('+');
             } else {
               toggle.setText('-');
             }
-            this.tray = !this.tray;
+            this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
             this.render();
+            // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
+            // This has to happen after render() because some browsers don't render properly if the elements are not
+            // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
+            // the thumbnail image overlaps the label in Firefox, Edge, and IE.
+            if (this.isMiniFlyoutOpen) {
+              let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
+              let rootInputBlocks = this.getConnections_(true /* all */)
+                .filter(function(connection) {
+                  return connection.type === Blockly.INPUT_VALUE;
+                })
+                .map(function(connection) {
+                  return connection.targetBlock();
+                });
+              miniToolboxBlocks.forEach(function(block, index) {
+                block.shadowBlockValue_(rootInputBlocks[index]);
+              });
+            }
           });
-          this.appendDummyInput()
-            .appendTitle(toggle)
-            .appendTitle(' ');
+          // Use window.appOptions, not global appOptions, because the levelbuilder
+          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+          // there
+          if (
+            !window.appOptions ||
+            (window.appOptions.level.miniToolbox &&
+              !window.appOptions.readonlyWorkspace)
+          ) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
           this.initMiniFlyout(miniToolboxXml);
         }
 

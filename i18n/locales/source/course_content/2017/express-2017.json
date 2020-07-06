@@ -1483,7 +1483,7 @@
     "long_instructions": "Now, Pirate Pegleg has some questions for Brian.\n\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \n\nPut the variables in the correct places to create this conversation.",
     "authored_hints": {
       "courseF_playlab_variables4b_a": "You don’t need any more blocks from the toolbox here.",
-      "courseF_playlab_variables4b_b": "Put the two `age` variables and one `name` variable where they make the most sense in the conversation."
+      "courseF_playlab_variables4b_b": "Put the two `age` variables and the two `name` variables where they make the most sense in the conversation."
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/6": {
