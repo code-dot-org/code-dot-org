@@ -7,11 +7,6 @@ export default function ExternalButton(board, touchSensor = null) {
   this.buttonEvents = new Array(6).fill(0);
   this.board = board;
 
-  // Create a capacitive touch sensor, if indicated
-  if (touchSensor) {
-    this.board.mb.setTouchMode(this.board.pin, true);
-  }
-
   this.pullup = MB_EXTERNAL_PINS.includes(this.board.pin);
   if (this.pullup) {
     this.board.mb.trackDigitalPin(this.board.pin, 1);
@@ -22,6 +17,12 @@ export default function ExternalButton(board, touchSensor = null) {
   // Default from Johnny-Five Button implementation.
   this.holdThreshold = 500;
   this.holdTimer = null;
+
+  // Create a capacitive touch sensor, if indicated
+  if (touchSensor) {
+    this.board.mb.setTouchMode(this.board.pin, true);
+    this.board.mb.setPinMode(this.board.pin, 0);
+  }
 
   this.board.mb.trackDigitalComponent(this.board.pin, (sourceID, eventID) => {
     if (this.board.pin === sourceID) {
