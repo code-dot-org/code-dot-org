@@ -1093,6 +1093,8 @@ ja:
             '"West"': 西だ
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+      gamelab_objectSpritePointer:
+        text: クリック {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1170,6 +1172,8 @@ ja:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      gamelab_subjectSpritePointer:
+        text: クリック {SPRITE}
       gamelab_turn:
         text: ターン {SPRITE} {DIRECTION} {N} 度
         options:

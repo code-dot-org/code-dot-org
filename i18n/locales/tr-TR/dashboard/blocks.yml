@@ -1086,6 +1086,8 @@ tr:
             '"West"': Batı
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
+      gamelab_objectSpritePointer:
+        text: tıklandığında {SPRITE}
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1163,6 +1165,8 @@ tr:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
+      gamelab_subjectSpritePointer:
+        text: tıklandığında {SPRITE}
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} derece dönüş"
         options:

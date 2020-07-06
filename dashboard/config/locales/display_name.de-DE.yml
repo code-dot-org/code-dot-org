@@ -30,6 +30,9 @@ de-DE:
       CSD LEDs Map: 'Schaltungs-Spielplatz: LEDs'
       CSD LEDs Map_2018: 'Schaltungs-Spielplatz: LEDs'
       CSD LEDs Map_2019: 'Circuit Playground: Einführung'
+      CSD Polling Events Map: Polling-Ereignisse
+      CSD Polling Events Map_2018: Polling-Ereignisse
+      CSD Polling Events Map_2019: Polling-Ereignisse
       CSD Problem Solving Process Video: 'Video: Problemlösungs-Prozess'
       CSD U1L02 TFMD_2018: Unterrichtsübersicht
       CSD U1L02 TFMD_2019: Unterrichtsübersicht
@@ -195,9 +198,15 @@ de-DE:
       CSD U3 Sprite Properties Map: Sprite Eigenschaften
       CSD U3 Sprite Properties Map_2018: Sprite Eigenschaften
       CSD U3 Sprite Properties Map_2019: Sprite Eigenschaften
+      CSD U3 The Draw Loop Map: Die Zieh-Schleife
+      CSD U3 The Draw Loop Map_2018: Die Zieh-Schleife
+      CSD U3 The Draw Loop Map_2019: Die Zieh-Schleife
       CSD U3 Variables Map: Variablen
       CSD U3 Variables Map_2018: Variablen
       CSD U3 Variables Map_2019: Variablen
+      CSD U3 collisions build isTouching: Kollisions-Entdeckung
+      CSD U3 collisions build isTouching_2018: Kollisions-Entdeckung
+      CSD U3 collisions build isTouching_2019: Kollisions-Entdeckung
       CSD U3 finishing touches: Projekt - Feinschliff
       CSD U3 finishing touches_2018: Projekt - Feinschliff
       CSD U3 finishing touches_2019: Projekt - Feinschliff
@@ -358,8 +367,12 @@ de-DE:
       CSD U5L14 autoSFLP_2019: Unterrichtsübersicht
       CSD U5L15 autoSFLP_2018: Unterrichtsübersicht
       CSD U5L15 autoSFLP_2019: Unterrichtsübersicht
+      CSD U6 Event Types: Arten von Ereignissen
+      CSD U6 Event Types_2018: Arten von Ereignissen
+      CSD U6 Event Types_2019: Arten von Ereignissen
       CSD U6 arrays intro: Einführung in Arrays
       CSD U6 arrays intro_2018: Einführung in Arrays
+      CSD U6 arrays intro_2019: Arrays
       CSD U6 arrays video: 'Video: Einführung in Arrays'
       CSD U6 circuit LED map: Schaltungen und LEDs
       CSD U6 circuit LED map_2018: Schaltungen und LEDs
@@ -381,6 +394,9 @@ de-DE:
       CSD U6 sensor experiment embedded: Sensor-Experiment
       CSD U6 sensor experiment embedded_2018: Sensor-Experiment
       CSD U6 sensor experiment embedded_2019: Sensor-Experiment
+      CSD U6 setProperty Map: Bildschirme mit Code gestalten
+      CSD U6 setProperty Map_2018: Bildschirme mit Code gestalten
+      CSD U6 setProperty Map_2019: Bildschirme mit Code gestalten
       CSD U6L01 TFMD: Unterrichtsübersicht
       CSD U6L01 TFMD_2018: Unterrichtsübersicht
       CSD U6L01 TFMD_2019: Unterrichtsübersicht
@@ -548,7 +564,7 @@ de-DE:
       'Video: Intro to CSS_2019': 'Video: Einführung in CSS'
       courseA_video_Stevie: Stevie und das große Projekt
       courseA_video_Stevie_2018: Stevie und das große Projekt
-      courseB_video_Unspotted: Unentdeckte Bugs
+      courseB_video_Unspotted: Unentdeckte Fehler
       courseB_video_Unspotted_2018: Unentdeckte Bugs
       courseE_Dogger_2: Dogger Beispiel
       courseF_artist_for1: Freie Gestaltung Für-Schleifen (Beginn)

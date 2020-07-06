@@ -1013,7 +1013,7 @@ en:
       gamelab_clickedOn:
         text: when {SPRITE} clicked
       gamelab_clickedSpritePointer:
-        text: clicked {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
       gamelab_createNewSprite:
@@ -1119,7 +1119,7 @@ en:
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
       gamelab_objectSpritePointer:
-        text: object {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
@@ -1218,7 +1218,7 @@ en:
             '"when"': when
             '"while"': while
       gamelab_subjectSpritePointer:
-        text: subject {SPRITE}
+        text: "{SPRITE}"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:

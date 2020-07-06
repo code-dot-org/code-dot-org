@@ -34,12 +34,22 @@ class LibraryCategory extends React.Component {
     name: PropTypes.string.isRequired,
     datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string,
-    importTable: PropTypes.func.isRequired
+    importTable: PropTypes.func.isRequired,
+    forceExpanded: PropTypes.bool
   };
 
   state = {
     collapsed: true
   };
+
+  componentWillReceiveProps(newProps) {
+    if (
+      (newProps.forceExpanded && this.state.collapsed) ||
+      (!newProps.forceExpanded && !this.state.collapsed)
+    ) {
+      this.toggleCollapsed();
+    }
+  }
 
   toggleCollapsed = () =>
     this.setState({

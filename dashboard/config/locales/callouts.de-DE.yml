@@ -577,8 +577,8 @@ de-DE:
         courseA_maze_seqA_callout1: Klicke auf die Schritt Schaltfläche um Schritt-für-Schritt
           durch das Programm zu gehen. Das wird dir helfen, den Fehler zu finden!
       courseA_maze_seq4:
-        made_of_stone: Diese Blöcke sind aus Stein. Du kannst sie entfernen, aber
-          du kannst sie nicht löschen!
+        made_of_stone: Diese Blöcke sind aus Stein. Du kannst sie bewegen, aber du
+          kannst sie nicht löschen!
       courseA_playLab_events4:
         courseA_playlab_events4_callout1: Dies ist ein Hinweis
       courseA_playLab_events4_2018:

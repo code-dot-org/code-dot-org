@@ -1080,6 +1080,8 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).next).to_s}
+    address_line1 "123 Sample St"
+    address_line2 "attn: Main Office"
     city "Seattle"
     state "WA"
     zip "98122"

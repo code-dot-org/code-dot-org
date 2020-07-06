@@ -1089,6 +1089,8 @@ hu:
             '"West"': Nyugat
       gamelab_moveToward:
         text: "{SPRITE} menj {DISTANCE} távolságot {TARGET} felé"
+      gamelab_objectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_playSound:
         text: adjHangot {SOUND}
       gamelab_pointInDirection:
@@ -1166,6 +1168,8 @@ hu:
           CONDITION:
             '"when"': amikor
             '"while"': amíg
+      gamelab_subjectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_turn:
         text: "{SPRITE} fordul {DIRECTION} {N} fokot"
         options:

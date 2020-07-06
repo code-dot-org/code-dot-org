@@ -2,7 +2,6 @@
 id-ID:
   data:
     display_name:
-      AB_Debug_Artist1: 'Artist Debugging #1 (AB)'
       Alien Defender: Pembela Alien
       App Lab Intro 8 - Video Design Mode: 'Video: desain mode'
       App Lab Intro 8 - Video Getting Started: 'Video: mulai'
@@ -21,51 +20,10 @@ id-ID:
       AppLab Intro 7 - thisOrThatSetScreen: Ini atau itu
       CDEF_video_SpritesInAction: Bagaimana cara Membuat sebuah Sprite
       CDEF_video_SpritesInAction_2019: Bagaimana cara Membuat sebuah Sprite
-      CSD Board Buttons Map: Buttons and Switch
-      CSD Board Buttons Map_2018: Buttons and Switch
-      CSD Board Buttons Map_2019: Buttons and Switch
-      CSD Board Sensors Map: Analog Sensors
-      CSD Board Sensors Map_2018: Analog Sensors
-      CSD Board Sensors Map_2019: Analog Sensors
-      CSD Booleans Map: Booleans and Comparison Operators
-      CSD Booleans Map_2018: Booleans and Comparison Operators
-      CSD Booleans Map_2019: Booleans and Comparison Operators
-      CSD Buzzer Map: 'Circuit Playground: Buzzer'
-      CSD Buzzer Map_2018: 'Circuit Playground: Buzzer'
-      CSD Buzzer Map_2019: 'Circuit Playground: Buzzer'
-      CSD Counter Pattern Map: The Counter Pattern
-      CSD Counter Pattern Map_2018: The Counter Pattern
-      CSD Counter Pattern Map_2019: The Counter Pattern
-      CSD If Else Map: If-Else Statements
-      CSD If Else Map_2018: If-Else Statements
-      CSD If Else Map_2019: If-Else Statements
-      CSD If Statements Map: If Statements
-      CSD If Statements Map_2018: If Statements
-      CSD If Statements Map_2019: If Statements
-      CSD LEDs Map: 'Circuit Playground: LEDs'
-      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
-      CSD LEDs Map_2019: 'Circuit Playground: Introduction'
       CSD Polling Events Map: Event Angket
       CSD Polling Events Map_2018: Event Angket
       CSD Polling Events Map_2019: Event Angket
       CSD Problem Solving Process Video: 'Video: proses pemecahan masalah'
-      CSD Set Scale Map: Changing Sensor Scale
-      CSD Set Scale Map_2018: Changing Sensor Scale
-      CSD Set Scale Map_2019: Changing Sensor Scale
-      CSD U1L02 TFMD_2018: Lesson Overview
-      CSD U1L02 TFMD_2019: Lesson Overview
-      CSD U1L03 TFMD_2018: Lesson Overview
-      CSD U1L03 TFMD_2019: Lesson Overview
-      CSD U1L04 TFMD_2018: Lesson Overview
-      CSD U1L04 TFMD_2019: Lesson Overview
-      CSD U1L05 TFMD_2018: Lesson Overview
-      CSD U1L05 TFMD_2019: Lesson Overview
-      CSD U1L06 TFMD_2018: Lesson Overview
-      CSD U1L06 TFMD_2019: Lesson Overview
-      CSD U1L07 TFMD_2018: Lesson Overview
-      CSD U1L07 TFMD_2019: Lesson Overview
-      CSD U1L09 TFMD_2018: Lesson Overview
-      CSD U1L09 TFMD_2019: Lesson Overview
       CSD U2 CC Search Map: Karya kreatif
       CSD U2 CC Search Map_2018: Karya kreatif
       CSD U2 CC Search Map_2019: Karya kreatif
@@ -124,78 +82,9 @@ id-ID:
       CSD U2 lists map_2018: List dalam HTML
       CSD U2 lists map_2019: List dalam HTML
       CSD U2 publish video: Penerbitan Website Anda
-      CSD U2L01 TFMD_2018: Lesson Overview
-      CSD U2L01 TFMD_2019: Lesson Overview
-      CSD U2L02 TFMD_2018: Lesson Overview
-      CSD U2L02 TFMD_2019: Lesson Overview
-      CSD U2L03 TFMD_2018: Lesson Overview
-      CSD U2L03 TFMD_2019: Lesson Overview
-      CSD U2L04 TFMD_2018: Lesson Overview
-      CSD U2L04 TFMD_2019: Lesson Overview
-      CSD U2L05 TFMD_2018: Lesson Overview
-      CSD U2L05 TFMD_2019: Lesson Overview
-      CSD U2L06 TFMD_2018: Lesson Overview
-      CSD U2L06 TFMD_2019: Lesson Overview
-      CSD U2L07 TFMD_2018: Lesson Overview
-      CSD U2L07 TFMD_2019: Lesson Overview
-      CSD U2L08 TFMD_2018: Lesson Overview
-      CSD U2L08 TFMD_2019: Lesson Overview
-      CSD U2L09 TFMD_2018: Lesson Overview
-      CSD U2L09 TFMD_2019: Lesson Overview
-      CSD U2L10 TFMD_2018: Lesson Overview
-      CSD U2L10 TFMD_2019: Lesson Overview
-      CSD U2L11 TFMD_2018: Lesson Overview
-      CSD U2L11 TFMD_2019: Lesson Overview
-      CSD U2L12 TFMD_2018: Lesson Overview
-      CSD U2L12 TFMD_2019: Lesson Overview
-      CSD U2L13 TFMD_2018: Lesson Overview
-      CSD U2L13 TFMD_2019: Lesson Overview
-      CSD U2L14 TFMD_2018: Lesson Overview
-      CSD U2L14 TFMD_2019: Lesson Overview
-      CSD U3 - Booleans Video: 'Video: Booleans'
-      CSD U3 - Booleans Video_2018: 'Video: Booleans'
-      CSD U3 - Booleans Video_2019: 'Video: Booleans'
-      CSD U3 - Conditionals Video: 'Video: Conditionals'
-      CSD U3 - Conditionals Video_2018: 'Video: Conditionals'
-      CSD U3 - Conditionals Video_2019: 'Video: If/Else Statements'
-      CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
-      CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
-      CSD U3 Animation Edit Map: Editing Images
-      CSD U3 Animation Edit Map_2018: Editing Images
-      CSD U3 Animation Edit Map_2019: Editing Images
       CSD U3 Animation Tab Map: Tab Animasi
       CSD U3 Animation Tab Map_2018: Tab Animasi
       CSD U3 Animation Tab Map_2019: Tab Animasi
-      CSD U3 AnimationsMulti Play Defender: Sample Game
-      CSD U3 AnimationsMulti Play Defender_2018: Sample Game
-      CSD U3 AnimationsMulti Play Defender_2019: Sample Game
-      CSD U3 Complex Movement counter prediction gamelab: Velocity and the Counter
-        Pattern
-      CSD U3 Complex Movement counter prediction gamelab_2018: Velocity and the Counter
-        Pattern
-      CSD U3 Complex Movement counter prediction gamelab_2019: Velocity and the Counter
-        Pattern
-      CSD U3 Compound Nested Challenge: 'Challenge: Checking for Multiple Conditions'
-      CSD U3 Compound Nested Challenge_2018: 'Challenge: Checking for Multiple Conditions'
-      CSD U3 Compound Nested Challenge_2019: 'Challenge: Checking for Multiple Conditions'
-      CSD U3 Draw Loop Plugged update your scene: 'Challenge: Extend Your Scene'
-      CSD U3 Draw Loop Plugged update your scene_2018: 'Challenge: Extend Your Scene'
-      CSD U3 Draw Loop Plugged update your scene_2019: 'Challenge: Extend Your Scene'
-      CSD U3 Drawing Squares to Corners: Using the Grid
-      CSD U3 Drawing Squares to Corners_2018: Using the Grid
-      CSD U3 Drawing Squares to Corners_2019: Using the Grid
-      CSD U3 Entertainment Sample 3: Sprite Scenes
-      CSD U3 Entertainment Sample 3_2018: Sprite Scenes
-      CSD U3 Entertainment Sample 3_2019: Sprite Scenes
-      CSD U3 Entertainment Sample 4: Sprite Scenes
-      CSD U3 Entertainment Sample 4_2018: Sprite Scenes
-      CSD U3 Entertainment Sample 4_2019: Sprite Scenes
-      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
-      CSD U3 Interactive Card Exemplar_2018: Interactive Card
-      CSD U3 Interactive Card Exemplar_2019: Interactive Card
-      CSD U3 Keyboard Input Challenge: 'Challenge: Add More Inputs'
-      CSD U3 Keyboard Input Challenge_2018: 'Challenge: Add More Inputs'
-      CSD U3 Keyboard Input Challenge_2018_2019: 'Challenge: Add More Inputs'
       CSD U3 L11 Freeplay: Permainan Gratis
       CSD U3 L11 Freeplay_2018: Permainan Gratis
       CSD U3 L11 Freeplay_2019: Permainan Gratis
@@ -238,204 +127,20 @@ id-ID:
       CSD U3 L9 Freeplay: Permainan Gratis
       CSD U3 L9 Freeplay_2018: Permainan Gratis
       CSD U3 L9 Freeplay_2019: Permainan Gratis
-      CSD U3 Plotting Shapes Shape Lab: Drawing Shapes
-      CSD U3 Plotting Shapes Shape Lab_2018: Drawing Shapes
-      CSD U3 Plotting Shapes Shape Lab_2019: Drawing Shapes
-      CSD U3 Random Number Map Level: Random Numbers
-      CSD U3 Random Number Map Level_2018: Random Numbers
-      CSD U3 Random Number Map Level_2019: Random Numbers
-      CSD U3 Scene Example: Sprite Scenes
-      CSD U3 Scene Example_2018: Sprite Scenes
-      CSD U3 Scene Example_2018_2019: Sprite Scenes
-      CSD U3 Sprite Properties Map: Sprite Properties
-      CSD U3 Sprite Properties Map_2018: Sprite Properties
-      CSD U3 Sprite Properties Map_2019: Sprite Properties
-      CSD U3 Sprites Map: Creating Sprites
-      CSD U3 Sprites Map_2018: Creating Sprites
-      CSD U3 Sprites Map_2019: Creating Sprites
-      CSD U3 Sprites scene challenge: 'Challenge: Extend Your Scene'
-      CSD U3 Sprites scene challenge_2018: 'Challenge: Extend Your Scene'
-      CSD U3 Sprites scene challenge_2019: 'Challenge: Extend Your Scene'
       CSD U3 The Draw Loop Map: Draw Loop
       CSD U3 The Draw Loop Map_2018: Draw Loop
       CSD U3 The Draw Loop Map_2019: Draw Loop
-      CSD U3 Variables Challenge: 'Challenge: Updating Variables'
-      CSD U3 Variables Challenge_2018: 'Challenge: Updating Variables'
-      CSD U3 Variables Challenge_2019: 'Challenge: Updating Variables'
-      CSD U3 Variables Draw Challenge: 'Challenge: Draw an Image'
-      CSD U3 Variables Draw Challenge_2018: 'Challenge: Draw an Image'
-      CSD U3 Variables Draw Challenge_2019: 'Challenge: Draw an Image'
-      CSD U3 Variables Map: Variables
-      CSD U3 Variables Map_2018: Variables
-      CSD U3 Variables Map_2019: Variables
-      CSD U3 Watchers Map: Debugging with Watchers
-      CSD U3 Watchers Map_2018: Debugging with Watchers
-      CSD U3 Watchers Map_2019: Debugging with Watchers
-      CSD U3 acceleration map: Velocity and the Counter Pattern Review
-      CSD U3 acceleration map_2018: Velocity and the Counter Pattern Review
-      CSD U3 acceleration map_2019: Velocity and the Counter Pattern Review
-      CSD U3 challenge face: 'Challenge: Face'
-      CSD U3 challenge face_2018: 'Challenge: Face'
-      CSD U3 challenge face_2019: 'Challenge: Face'
-      CSD U3 challenge new shape: 'Challenge: Shape of Shapes'
-      CSD U3 challenge new shape_2018: 'Challenge: Shape of Shapes'
-      CSD U3 challenge new shape_2019: 'Challenge: Shape of Shapes'
+      CSD U3 Variables Map: variabel
+      CSD U3 Variables Map_2018: variabel
+      CSD U3 Variables Map_2019: variabel
       CSD U3 collisions build isTouching: Deteksi tumbukan
       CSD U3 collisions build isTouching_2018: Deteksi tumbukan
       CSD U3 collisions build isTouching_2019: Deteksi tumbukan
-      CSD U3 collisions car intro: Sample Game
-      CSD U3 collisions car intro_2018: Sample Game
-      CSD U3 collisions car intro_2019: Sample Game
-      CSD U3 collisions predict set velocity code: Sprite Interactions
-      CSD U3 collisions predict set velocity code_2018: Sprite Interactions
-      CSD U3 collisions predict set velocity code_2019: Sprite Interactions
-      CSD U3 finishing touches: Project - Finishing Touches
-      CSD U3 finishing touches_2018: Project - Finishing Touches
-      CSD U3 finishing touches_2019: Project - Finishing Touches
-      CSD U3 function video: 'Video: Functions'
-      CSD U3 functions review: Functions Review
-      CSD U3 functions review_2018: Functions Review
-      CSD U3 functions review_2019: Functions Review
-      CSD U3 if else predict: Predict
-      CSD U3 interactions map: Sprite Interactions Review
-      CSD U3 interactions map_2018: Sprite Interactions Review
-      CSD U3 interactions map_2019: Sprite Interactions Review
-      CSD U3 istouching map: Collision Detection Review
-      CSD U3 istouching map_2018: Collision Detection Review
-      CSD U3 istouching map_2019: Collision Detection Review
-      CSD U3 naming map: Naming Variables
-      CSD U3 naming map_2018: Naming Variables
-      CSD U3 naming map_2019: Naming Variables
-      CSD U3 picture: 'Challenge: Draw an Image'
-      CSD U3 picture_2018: 'Challenge: Draw an Image'
-      CSD U3 picture_2019: 'Challenge: Draw an Image'
-      CSD U3 platform challenge: Improve Your Game
-      CSD U3 platform challenge_2018: Improve Your Game
-      CSD U3 platform challenge_2019: Improve Your Game
-      CSD U3 platform sample1: Sample Platform Jumper Game
-      CSD U3 platform sample1_2018: Sample Platform Jumper Game
-      CSD U3 platform sample1_2019: Sample Platform Jumper Game
-      CSD U3 platform sample2: Plane Jumper
-      CSD U3 platform sample2_2018: Plane Jumper
-      CSD U3 platform sample2_2019: Plane Jumper
-      CSD U3 platform sample3: Bunny Jumper
-      CSD U3 platform sample3_2018: Bunny Jumper
-      CSD U3 platform sample3_2019: Bunny Jumper
-      CSD U3 plotting shapes map: Plotting Shapes in Game Lab
-      CSD U3 plotting shapes map_2018: Plotting Shapes in Game Lab
-      CSD U3 plotting shapes map_2019: Plotting Shapes in Game Lab
-      CSD U3 rect: Introduction to Game Lab
-      CSD U3 rect_2018: Introduction to Game Lab
-      CSD U3 rect_2019: Introduction to Game Lab
-      CSD U3 shape size map: Shapes and Parameters
-      CSD U3 shape size map_2018: Shapes and Parameters
-      CSD U3 shape size map_2019: Shapes and Parameters
-      CSD U3 velocity map: Sprite Velocity
-      CSD U3 velocity map_2018: Sprite Velocity
-      CSD U3 velocity map_2019: Sprite Velocity
-      CSD U3L01 TFMD_2018: Lesson Overview
-      CSD U3L01 TFMD_2019: Lesson Overview
-      CSD U3L02 TFMD_2018: Lesson Overview
-      CSD U3L02 TFMD_2019: Lesson Overview
-      CSD U3L03 TFMD_2018: Lesson Overview
-      CSD U3L03 TFMD_2019: Lesson Overview
-      CSD U3L04 TFMD_2018: Lesson Overview
-      CSD U3L04 TFMD_2019: Lesson Overview
-      CSD U3L05 TFMD_2018: Lesson Overview
-      CSD U3L05 TFMD_2019: Lesson Overview
-      CSD U3L06 TFMD_2018: Lesson Overview
-      CSD U3L06 TFMD_2019: Lesson Overview
-      CSD U3L07 TFMD_2018: Lesson Overview
-      CSD U3L07 TFMD_2019: Lesson Overview
-      CSD U3L08 TFMD_2018: Lesson Overview
-      CSD U3L08 TFMD_2019: Lesson Overview
-      CSD U3L09 TFMD_2018: Lesson Overview
-      CSD U3L09 TFMD_2019: Lesson Overview
-      CSD U3L10 TFMD_2018: Lesson Overview
-      CSD U3L10 TFMD_2019: Lesson Overview
-      CSD U3L11 TFMD_2018: Lesson Overview
-      CSD U3L11 TFMD_2019: Lesson Overview
-      CSD U3L12 TFMD_2018: Lesson Overview
-      CSD U3L12 TFMD_2019: Lesson Overview
-      CSD U3L13 TFMD_2018: Lesson Overview
-      CSD U3L13 TFMD_2019: Lesson Overview
-      CSD U3L14 TFMD_2018: Lesson Overview
-      CSD U3L14 TFMD_2019: Lesson Overview
-      CSD U3L15 TFMD_2018: Lesson Overview
-      CSD U3L15 TFMD_2019: Lesson Overview
-      CSD U3L16 TFMD_2018: Lesson Overview
-      CSD U3L16 TFMD_2019: Lesson Overview
-      CSD U3L17 TFMD_2018: Lesson Overview
-      CSD U3L17 TFMD_2019: Lesson Overview
-      CSD U3L18 TFMD_2018: Lesson Overview
-      CSD U3L18 TFMD_2019: Lesson Overview
-      CSD U3L19 TFMD_2018: Lesson Overview
-      CSD U3L19 TFMD_2019: Lesson Overview
-      CSD U3L20 TFMD_2018: Lesson Overview
-      CSD U3L20 TFMD_2019: Lesson Overview
-      CSD U3L21 TFMD_2018: Lesson Overview
-      CSD U3L21 TFMD_2019: Lesson Overview
-      CSD U3L22 TFMD_2018: Lesson Overview
-      CSD U3L22 TFMD_2019: Lesson Overview
-      CSD U4 - Design Mode Project: 'App Project: Screen Design'
-      CSD U4 - Design Mode Project_2018: 'App Project: Screen Design'
-      CSD U4 - Design Mode Project_2019: 'App Project: Screen Design'
-      CSD U4 Change Screen Map: Changing Screens
-      CSD U4 Change Screen Map_2018: Changing Screens
-      CSD U4 Change Screen Map_2019: Changing Screens
-      CSD U4 Design Elements Map: Design Mode Elements
-      CSD U4 Design Elements Map_2018: Design Mode Elements
-      CSD U4 Design Elements Map_2019: Design Mode Elements
-      CSD U4 Design Mode Map: Tour of Design Mode
-      CSD U4 Design Mode Map_2018: Tour of Design Mode
-      CSD U4 Design Mode Map_2019: Tour of Design Mode
-      CSD U4 Importing Screens Map: Importing Screens
-      CSD U4 Importing Screens Map_2018: Importing Screens
-      CSD U4 Importing Screens Map_2019: Importing Screens
       CSD U4 Mult Screen Map: Aplikasi Multilayar
       CSD U4 Mult Screen Map_2018: Aplikasi Multilayar
       CSD U4 Mult Screen Map_2019: Aplikasi Multilayar
-      CSD U4 User Input Map: Responding to User Input
-      CSD U4 User Input Map_2018: Responding to User Input
-      CSD U4 User Input Map_2019: Responding to User Input
-      CSD U4L01 autoSFLP_2018: Lesson Overview
-      CSD U4L01 autoSFLP_2019: Lesson Overview
-      CSD U4L02 autoSFLP_2018: Lesson Overview
-      CSD U4L02 autoSFLP_2019: Lesson Overview
-      CSD U4L03 autoSFLP_2018: Lesson Overview
-      CSD U4L03 autoSFLP_2019: Lesson Overview
-      CSD U4L04 autoSFLP_2018: Lesson Overview
-      CSD U4L04 autoSFLP_2019: Lesson Overview
-      CSD U4L05 autoSFLP_2018: Lesson Overview
-      CSD U4L05 autoSFLP_2019: Lesson Overview
-      CSD U4L06 autoSFLP_2018: Lesson Overview
-      CSD U4L06 autoSFLP_2019: Lesson Overview
-      CSD U4L07 autoSFLP_2018: Lesson Overview
-      CSD U4L07 autoSFLP_2019: Lesson Overview
-      CSD U4L08 autoSFLP_2018: Lesson Overview
-      CSD U4L08 autoSFLP_2019: Lesson Overview
-      CSD U4L09 autoSFLP_2018: Lesson Overview
-      CSD U4L09 autoSFLP_2019: Lesson Overview
-      CSD U4L10 autoSFLP_2018: Lesson Overview
-      CSD U4L10 autoSFLP_2019: Lesson Overview
-      CSD U4L11 autoSFLP_2018: Lesson Overview
-      CSD U4L11 autoSFLP_2019: Lesson Overview
-      CSD U4L12 autoSFLP_2018: Lesson Overview
-      CSD U4L12 autoSFLP_2019: Lesson Overview
-      CSD U4L13 autoSFLP_2018: Lesson Overview
-      CSD U4L13 autoSFLP_2019: Lesson Overview
-      CSD U4L14 autoSFLP_2018: Lesson Overview
-      CSD U4L14 autoSFLP_2019: Lesson Overview
-      CSD U4L15 autoSFLP_2018: Lesson Overview
-      CSD U4L15 autoSFLP_2019: Lesson Overview
-      CSD U4L16 autoSFLP_2018: Lesson Overview
-      CSD U4L16 autoSFLP_2019: Lesson Overview
-      CSD U5 Amazon Data Video: Collecting Information About Users
-      CSD U5 Amazon Data Video_2018: Collecting Information About Users
       CSD U5 Amazon Data Video_2019: Bagaimana Amazon Menggunakan Data
       CSD U5 Netflix Data Video_2019: Bagaimana Netflix Menggunakan Data
-      CSD U5 Waze Data Video: Collecting Information About Users
-      CSD U5 Waze Data Video_2018: Collecting Information About Users
       CSD U5 Waze Data Video_2019: Bagaimana Waze Menggunakan Data
       CSD U5 binary video: Binary dan Data
       CSD U5 binary video_2018: Binary dan Data
@@ -455,203 +160,28 @@ id-ID:
       CSD U5 black white images pixelation 5_2019: Hitam dan putih Pixelation Widget
       CSD U5 black white images pixelation_2018: Hitam dan putih Pixelation Widget
       CSD U5 black white images pixelation_2019: Hitam dan putih Pixelation Widget
-      CSD U5L01 autoSFLP_2018: Lesson Overview
-      CSD U5L01 autoSFLP_2019: Lesson Overview
-      CSD U5L02 autoSFLP_2018: Lesson Overview
-      CSD U5L02 autoSFLP_2019: Lesson Overview
-      CSD U5L03 autoSFLP_2018: Lesson Overview
-      CSD U5L03 autoSFLP_2019: Lesson Overview
-      CSD U5L04 autoSFLP_2018: Lesson Overview
-      CSD U5L04 autoSFLP_2019: Lesson Overview
-      CSD U5L05 autoSFLP_2018: Lesson Overview
-      CSD U5L05 autoSFLP_2019: Lesson Overview
-      CSD U5L06 autoSFLP_2018: Lesson Overview
-      CSD U5L06 autoSFLP_2019: Lesson Overview
-      CSD U5L07 autoSFLP_2018: Lesson Overview
-      CSD U5L07 autoSFLP_2019: Lesson Overview
-      CSD U5L08 autoSFLP_2018: Lesson Overview
-      CSD U5L08 autoSFLP_2019: Lesson Overview
-      CSD U5L09 autoSFLP_2018: Lesson Overview
-      CSD U5L09 autoSFLP_2019: Lesson Overview
-      CSD U5L10 autoSFLP_2018: Lesson Overview
-      CSD U5L10 autoSFLP_2019: Lesson Overview
-      CSD U5L11 autoSFLP_2018: Lesson Overview
-      CSD U5L11 autoSFLP_2019: Lesson Overview
-      CSD U5L12 autoSFLP_2018: Lesson Overview
-      CSD U5L12 autoSFLP_2019: Lesson Overview
-      CSD U5L13 autoSFLP_2018: Lesson Overview
-      CSD U5L13 autoSFLP_2019: Lesson Overview
-      CSD U5L14 autoSFLP_2018: Lesson Overview
-      CSD U5L14 autoSFLP_2019: Lesson Overview
-      CSD U5L15 autoSFLP_2018: Lesson Overview
-      CSD U5L15 autoSFLP_2019: Lesson Overview
       CSD U6 Event Types: Jenis Event
       CSD U6 Event Types_2018: Jenis Event
       CSD U6 Event Types_2019: Jenis Event
-      CSD U6 analog challenge: 'Challenge: Making Sense of Sensors'
-      CSD U6 analog challenge_2018: 'Challenge: Making Sense of Sensors'
-      CSD U6 analog challenge_2019: 'Challenge: Making Sense of Sensors'
       CSD U6 arrays intro: Pengenalan untuk array
       CSD U6 arrays intro_2018: Pengenalan untuk array
       CSD U6 arrays intro_2019: Array
-      CSD U6 arrays video: 'Video: Introduction to Arrays'
-      CSD U6 challenge motorcycle_2018: 'Challenge: Motorcycle'
-      CSD U6 challenge motorcycle_2019: 'Challenge: Motorcycle'
-      CSD U6 circuit LED map: Circuits and LEDs
-      CSD U6 circuit LED map_2018: Circuits and LEDs
-      CSD U6 circuit LED map_2019: Circuits and LEDs
-      CSD U6 circuit button map: Button Circuits
-      CSD U6 circuit button map_2018: Button Circuits
-      CSD U6 circuit button map_2019: Button Circuits
-      CSD U6 circuit logic video: Circuits and Logic
-      CSD U6 circuit logic video_2018: Circuits and Logic
-      CSD U6 circuit logic video_2019: Circuits and Logic
-      CSD U6 emoji race demo: Sample Program
-      CSD U6 emoji race demo_2018: Sample Program
-      CSD U6 emoji race demo_2019: Sample Program
-      CSD U6 emotion machine example: Emotion Machine Example
-      CSD U6 emotion machine example_2018: Emotion Machine Example
-      CSD U6 emotion machine example_2019: Emotion Machine Example
-      CSD U6 for loop led bonus 1_2018: 'Challenge: Add More Buttons'
-      CSD U6 for loop led bonus 2_2018: 'Challenge: Color Patterns'
-      CSD U6 for loop led bonus 3_2018: 'Challenge: Music'
       CSD U6 for loop map: Untuk Pengulangan
       CSD U6 for loop map_2018: Untuk Pengulangan
       CSD U6 for loop map_2019: Untuk Pengulangan
       CSD U6 functions paramters video: Fungsi dengan parameter
       CSD U6 functions paramters video_2018: Fungsi dengan parameter
       CSD U6 functions paramters video_2019: Fungsi dengan parameter
-      CSD U6 getProperty Map: getProperty
-      CSD U6 getProperty Map_2018: getProperty
-      CSD U6 getProperty Map_2019: getProperty
-      CSD U6 hardware software video: Hardware and Software
-      CSD U6 hardware software video_2018: Hardware and Software
-      CSD U6 hardware software video_2019: Hardware and Software
-      CSD U6 light pattern challenge_2018: Improved Light Show
-      CSD U6 light pattern challenge_2019: Improved Light Show
-      CSD U6 params starchaser challenge 1_2018: Starchaser - Add Lives
-      CSD U6 params starchaser challenge 1_2019: Starchaser - Add Lives
-      CSD U6 params starchaser challenge 2_2018: Starchaser - Reset Player
-      CSD U6 params starchaser challenge 2_2019: Starchaser - Reset Player
-      CSD U6 sensor experiment embedded: Sensor Experiment
-      CSD U6 sensor experiment embedded_2018: Sensor Experiment
-      CSD U6 sensor experiment embedded_2019: Sensor Experiment
       CSD U6 setProperty Map: Perancangan Layar dengan Kode
       CSD U6 setProperty Map_2018: Perancangan Layar dengan Kode
       CSD U6 setProperty Map_2019: Perancangan Layar dengan Kode
-      CSD U6 tugowar demo: Demo - Bug Grab
-      CSD U6 tugowar demo_2018: Demo - Bug Grab
-      CSD U6 tugowar demo_2019: Demo - Bug Grab
-      CSD U6 tugowar final: Make it Your Own
-      CSD U6 tugowar final_2018: Make it Your Own
-      CSD U6 tugowar final_2019: Make it Your Own
-      CSD U6L01 TFMD: Lesson Overview
-      CSD U6L01 TFMD_2018: Lesson Overview
-      CSD U6L01 TFMD_2019: Lesson Overview
-      CSD U6L02 TFMD: Lesson Overview
-      CSD U6L02 TFMD_2018: Lesson Overview
-      CSD U6L02 TFMD_2019: Lesson Overview
-      CSD U6L03 TFMD: Lesson Overview
-      CSD U6L03 TFMD_2018: Lesson Overview
-      CSD U6L03 TFMD_2019: Lesson Overview
-      CSD U6L04 TFMD: Lesson Overview
-      CSD U6L04 TFMD_2018: Lesson Overview
-      CSD U6L04 TFMD_2019: Lesson Overview
-      CSD U6L05 TFMD: Lesson Overview
-      CSD U6L05 TFMD_2018: Lesson Overview
-      CSD U6L05 TFMD_2019: Lesson Overview
-      CSD U6L06 TFMD: Lesson Overview
-      CSD U6L06 TFMD_2018: Lesson Overview
-      CSD U6L06 TFMD_2019: Lesson Overview
-      CSD U6L07 TFMD: Lesson Overview
-      CSD U6L07 TFMD_2018: Lesson Overview
-      CSD U6L07 TFMD_2019: Lesson Overview
-      CSD U6L08 TFMD: Lesson Overview
-      CSD U6L08 TFMD_2018: Lesson Overview
-      CSD U6L08 TFMD_2019: Lesson Overview
-      CSD U6L09 TFMD: Lesson Overview
-      CSD U6L09 TFMD_2018: Lesson Overview
-      CSD U6L09 TFMD_2019: Lesson Overview
-      CSD U6L10 TFMD: Lesson Overview
-      CSD U6L10 TFMD_2018: Lesson Overview
-      CSD U6L10 TFMD_2019: Lesson Overview
-      CSD U6L11 TFMD: Lesson Overview
-      CSD U6L11 TFMD_2018: Lesson Overview
-      CSD U6L11 TFMD_2019: Lesson Overview
-      CSD U6L12 TFMD: Lesson Overview
-      CSD U6L12 TFMD_2018: Lesson Overview
-      CSD U6L12 TFMD_2019: Lesson Overview
-      CSD U6L13 TFMD: Lesson Overview
-      CSD U6L13 TFMD_2018: Lesson Overview
-      CSD U6L13 TFMD_2019: Lesson Overview
-      CSD U6L14 TFMD: Lesson Overview
-      CSD U6L14 TFMD_2018: Lesson Overview
-      CSD U6L14 TFMD_2019: Lesson Overview
-      CSD U6L15 TFMD: Lesson Overview
-      CSD U6L15 TFMD_2018: Lesson Overview
-      CSD U6L15 TFMD_2019: Lesson Overview
-      CSD U6L16 TFMD: Lesson Overview
-      CSD U6L16 TFMD_2018: Lesson Overview
-      CSD U6L16 TFMD_2019: Lesson Overview
       CSD What Makes a Computer a Computer Video: Apa yang menbuat sebuah komputer,
         sebuah komputer?
       CSD What Makes a Computer a Computer Video_2018: Apa yang menbuat sebuah komputer,
         sebuah komputer?
       CSD What Makes a Computer a Computer Video_2019: Apa yang menbuat sebuah komputer,
         sebuah komputer?
-      CSD colorLed Map: 'Circuit Playground: Color LEDs'
-      CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
-      CSD colorLed Map_2019: 'Circuit Playground: Color LEDs'
-      CSD onBoardEvent Map: Responding to Board Events
-      CSD onBoardEvent Map_2018: Responding to Board Events
-      CSD onBoardEvent Map_2019: Responding to Board Events
-      CSD-Arrays: Modifying and Creating Arrays
-      CSD-Arrays_2018: Modifying Arrays
-      CSD-Arrays_2019: Modifying Arrays
-      'CSD: Animating Sprite Movement': 'Video: Sprite Movement'
-      'CSD: Animating Sprite Movement_2018': 'Video: Sprite Movement'
-      'CSD: Animating Sprite Movement_2019': 'Video: Sprite Movement'
-      'CSD: Animation Tab': 'Video: The Animation Tab'
-      'CSD: Animation Tab_2018': 'Video: The Animation Tab'
-      'CSD: Animation Tab_2019': 'Video: The Animation Tab'
-      'CSD: Drawing in Game Lab 1': 'Video: Drawing in Game Lab - Part 1'
-      'CSD: Drawing in Game Lab 1_2018': 'Video: Drawing in Game Lab - Part 1'
-      'CSD: Drawing in Game Lab 1_2019': 'Video: Drawing in Game Lab - Part 1'
-      'CSD: Drawing in Game Lab 2': 'Video: Drawing in Game Lab - Part 2'
-      'CSD: Drawing in Game Lab 2_2018': 'Video: Drawing in Game Lab - Part 2'
-      'CSD: Drawing in Game Lab 2_2019': 'Video: Drawing in Game Lab - Part 2'
       'CSD: For Loop_2018': Untuk Pengulangan
-      'CSD: For Loop_2019': 'Video: For Loops'
-      'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
-      'CSD: Introduction to the Draw Loop_2018': 'Video: Introduction to the Draw
-        Loop'
-      'CSD: Introduction to the Draw Loop_2019': 'Video: Introduction to the Draw
-        Loop'
-      'CSD: Sprite Velocity': 'Video: Velocity'
-      'CSD: Sprite Velocity_2018': 'Video: Velocity'
-      'CSD: Sprite Velocity_2019': 'Video: Velocity'
-      'CSD: Sprites in Game Lab': 'Video: Introduction to Sprites'
-      'CSD: Sprites in Game Lab_2018': 'Video: Introduction to Sprites'
-      'CSD: Sprites in Game Lab_2019': 'Video: Introduction to Sprites'
-      CSDU4 Design Mode Video: Intro to Design Mode
-      CSDU4 Design Mode Video_2018: Intro to Design Mode
-      CSDU4 Design Mode Video_2019: Intro to Design Mode
-      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
-      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
-      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
-      CSDU4 Project Events: 'App Project: Linking Screens'
-      CSDU4 Project Events_2018: 'App Project: Linking Screens'
-      CSDU4 Project Events_2019: 'App Project: Linking Screens'
-      CSDU4 Project Import: 'App Project: Screen Import'
-      CSDU4 Project Import_2018: 'App Project: Screen Import'
-      CSDU4 Project Import_2019: 'App Project: Screen Import'
-      CSDU6 - UI and Inputs - getNumber: getNumber
-      CSDU6 - board event challenge_2018: Sound Board
-      CSDU6 - board event challenge_2019: Sound Board
-      CSDU6 buzzer 2d arrays_2018: 2D Arrays
-      CSDU6 buzzer 2d arrays_2019: 2D Arrays
-      CSDU6 buzzer.stop_2018: Stopping the Music
-      CSDU6 buzzer.stop_2019: Stopping the Music
       CSS U2 Body Map: Badan Elemen
       CSS U2 Body Map_2018: Badan Elemen
       CSS U2 Body Map_2019: Badan Elemen
@@ -696,8 +226,6 @@ id-ID:
       Intro to Web Lab - Part 2: Pendahuluan Web Lab - Bagian 2
       Intro to Web Lab - Part 2_2018: Pendahuluan Web Lab - Bagian 2
       Intro to Web Lab - Part 2_2019: Pendahuluan Web Lab - Bagian 2
-      Introduction to Variables - Part 1_2018: Introduction to Variables
-      Introduction to Variables - Part 1_2019: Introduction to Variables
       MC_HOC_2017_01_RETRY: Rumah dan pekarangannya
       MC_HOC_2017_01_RETRY_2019: Rumah dan pekarangannya
       MC_HOC_2017_02_Cole: Ladang
@@ -722,7 +250,6 @@ id-ID:
       MC_HOC_2017_FP20x20_2019: Main Bebas
       Making Music_2018: Membuat musik
       Making Music_2019: Membuat musik
-      New Dance Lab Project: New Dance Party Project
       New Minecraft Hero Project: Main Bebas
       OPD-K5 WhatIsCS: Apakah ilmu komputer?
       OPD-K5 WhatIsCS_copy: Apakah ilmu komputer?
@@ -730,13 +257,7 @@ id-ID:
       Oceans_Video_Machine_Learning: 'Video: Pembelajaran Mesin'
       Oceans_Video_Societal_Implications: 'Video: Implikasi Sosial'
       Oceans_Video_Training_Data: 'Video: Data Pelatihan'
-      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
-      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
       Robot Doodle_2018: Gambar Robot
-      The Accelerometer_2018: The Accelerometer
-      The Accelerometer_2019: The Accelerometer
-      Using Accelerometer Events_2018: Using Accelerometer Events
-      Using Accelerometer Events_2019: Using Accelerometer Events
       'Video: Intro to CSS Part 2_2018': 'Video: Pendahuluan untuk CSS Bagian 2'
       'Video: Intro to CSS Part 2_2019': 'Video: Pendahuluan untuk CSS Bagian 2'
       'Video: Intro to CSS_2018': 'Video: Pendahuluan untuk CSS'
@@ -752,11 +273,5 @@ id-ID:
       courseF_project_1: Proyek Contoh Sprite Lab
       courseF_video_csMatters: Akhir dari Proyek Kursus
       courseF_video_csMatters_2018: 'Video: Masalah CS'
-      csd U3 conditional statements video: 'Video: "If/Else" Statements'
-      csd U3 conditional statements video_2019: 'Video: Conditional Statements'
-      csd u5 recommender sample: Sample App
-      csd u5 recommender sample_2019: Sample App
-      csd-pre-survey-2017-levelgroup_2018: Lesson Overview
-      csd-pre-survey-levelgroup_2019: Lesson Overview
       scrat_loops_C-F_video: Lingkaran dalam Video Zaman Es
       scrat_loops_C-F_video_2019: Lingkaran dalam Video Zaman Es
