@@ -1,0 +1,8 @@
+name 'CSD U3 drawing practice choice_2020_virtual_2020'
+display_name 'Practice'
+description 'Do lots of practice!'
+
+sublevels
+level 'CSD U3 drawing practice 1_virtual_2020'
+level 'CSD U3 drawing practice 2_virtual_2020'
+level 'CSD U3 drawing practice 3_virtual_2020'

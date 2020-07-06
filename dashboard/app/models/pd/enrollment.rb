@@ -212,7 +212,7 @@ class Pd::Enrollment < ActiveRecord::Base
     if workshop.local_summer?
       url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      'https://studio.code.org/pd/workshop_survey/csf/pre201'
+      CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
     # academic year workshops for CSP and CSD
     elsif workshop.pre_survey?
       pd_new_pre_workshop_survey_url(enrollment_code: code)

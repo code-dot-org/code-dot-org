@@ -77,4 +77,28 @@ describe('Audio API', function() {
       expect(spy.firstCall.args[2]).to.deep.equal({url: 'one'});
     });
   });
+
+  describe('playSpeech', function() {
+    it('has three arguments, "text", "gender", and "language"', function() {
+      const funcName = 'playSpeech';
+      // Check droplet config for the 2 documented params
+      expect(dropletConfig[funcName].paletteParams).to.deep.equal([
+        'text',
+        'gender',
+        'language'
+      ]);
+      expect(dropletConfig[funcName].params).to.have.length(3);
+
+      // Check that executors map arguments to object correctly
+      let spy = sinon.spy();
+      injectExecuteCmd(spy);
+      executors[funcName]('this is text', 'female', 'English', 'nothing');
+      expect(spy).to.have.been.calledOnce;
+      expect(spy.firstCall.args[2]).to.deep.equal({
+        text: 'this is text',
+        gender: 'female',
+        language: 'English'
+      });
+    });
+  });
 });

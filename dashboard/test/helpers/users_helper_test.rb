@@ -142,6 +142,14 @@ class UsersHelperTest < ActionView::TestCase
         level.id => {
           status: LEVEL_STATUS.perfect,
           result: ActivityConstants::BEST_PASS_RESULT
+        },
+        sublevel1.id => {
+          status: LEVEL_STATUS.perfect,
+          result: ActivityConstants::BEST_PASS_RESULT
+        },
+        sublevel2.id => {
+          status: LEVEL_STATUS.passed,
+          result: 20
         }
       },
       current_stage: script_level.lesson.id,

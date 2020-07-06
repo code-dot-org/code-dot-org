@@ -1,3 +1,4 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap';
@@ -20,6 +21,10 @@ const styles = {
   },
   consentIndent: {
     marginLeft: '25px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
   }
 };
 
@@ -27,7 +32,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    onContinue: PropTypes.func
+    updateFormData: PropTypes.func
   };
 
   constructor(props) {
@@ -48,8 +53,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
+  resetSchool = () =>
+    this.props.updateFormData({schoolEligible: null, schoolId: null});
+
   submit = () => {
     const requiredFormData = _.pick(this.state, [
+      'email',
       'firstName',
       'lastName',
       'inspirationKit',
@@ -74,11 +83,19 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
-    this.props.onContinue({
+    let submitData = {
       ...requiredFormData,
       ...shippingAddress,
       ...consentCSTA
+    };
+
+    firehoseClient.putRecord({
+      study: 'amazon-future-engineer-eligibility',
+      event: 'continue',
+      data_json: JSON.stringify(submitData)
     });
+
+    this.props.updateFormData(submitData);
   };
 
   onContinue = () => {
@@ -120,7 +137,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   getMissingRequiredFields() {
-    const requiredFields = ['firstName', 'lastName', 'consentAFE'];
+    const requiredFields = ['email', 'firstName', 'lastName', 'consentAFE'];
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
@@ -138,9 +155,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 
   render() {
-    // TO DO: gray out school dropdown and disable editing
-    // TO DO: Add "Not your school? go back" link below school dropdown
-    // TO DO: Enforce that these required fields are actually required
     return (
       <div>
         <div>
@@ -159,6 +173,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
+            validationState={
+              this.state.errors.hasOwnProperty('email')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
+            errorMessage={this.state.errors.email}
           />
           <SchoolAutocompleteDropdownWithLabel
             value={this.props.schoolId}
@@ -166,7 +186,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             includeSchoolNotFoundCheckbox={false}
           />
           <div style={styles.wrong_school}>
-            Wrong school? Go back
+            Wrong school? <a onClick={this.resetSchool}>Go back</a>
             <br />
           </div>
           <FieldGroup
@@ -206,10 +226,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.inspirationKit}
           />
           {this.state.inspirationKit && (
-            <ShippingAddressFormGroup
-              handleChange={this.handleChange}
-              checkValidationState={this.checkValidationState}
-            />
+            <div>
+              <ShippingAddressFormGroup
+                handleChange={this.handleChange}
+                checkValidationState={this.checkValidationState}
+              />
+              <div>
+                For the purposes of shipping you your Inspiration Kit, your
+                email and school address may be shared with a certified third
+                party.
+              </div>
+            </div>
           )}
           <SingleCheckbox
             name="csta"
@@ -273,7 +300,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             always have the choice to adjust your interest settings or
             unsubscribe.
           </div>
-          <Button id="continue" onClick={this.onContinue}>
+          <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
           </Button>
         </form>
