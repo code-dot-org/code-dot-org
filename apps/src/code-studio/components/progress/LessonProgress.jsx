@@ -32,7 +32,8 @@ const styles = {
   inner: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: '100%'
   },
   headerVignette: {
     width: '100%',
