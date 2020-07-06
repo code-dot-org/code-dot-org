@@ -2,6 +2,31 @@
 ms-MY:
   data:
     short_instructions:
+      CourseD_Dance_2020_01: Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya
+        dalam blok `persediaan`.
+      CourseD_Dance_2020_02: Blok `apabila anak panah atas ditekan` membolehkan anda
+        menjalankan kod apabila anak panah atas ditekan. Buatkan penari menepuk tangan
+        apabila anda menekan ke atas, atau cuba gerakan lain!
+      CourseD_Dance_2020_03: Tiba masanya untuk pertandingan menari! Atur cara setiap
+        penari untuk bergerak apabila anda menekan kekunci berbeza. Pilih gerakan
+        kegemaran anda untuk setiap penari atau tetapkannya kepada "(Rawak)" untuk
+        sesuatu yang tidak dapat diramalkan!
+      CourseD_Dance_2020_04: Buatkan penari anda memulakan gerakan baharu selepas
+        corak berirama keempat.
+      CourseD_Dance_2020_05: Buatkan penari anda memulakan gerakan baharu selepas
+        6 corak berirama sekarang!
+      CourseD_Dance_2020_06: Tubuh kumpulan penari sandaran di sekeliling penari utama
+        di tengah-tengah.
+      CourseD_Dance_2020_07: Tukar saiz kumpulan penari sandaran.
+      CourseD_Dance_2020_08: Cuba tukar warna seorang daripada penari anda (atau seluruh
+        kumpulan)!
+      CourseD_Dance_2020_09: Jadi kreatif dengan blok baharu ini!
+      CourseD_Dance_2020_10: Rasakan kegirangannya! Cipta tarian anda sendiri untuk
+        berkongsi dengan rakan anda.
+      CourseD_Dance_2020_bonus1: Pergi ke Depan dan ke Belakang! (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      CourseD_Dance_2020_bonus3: Mari Kita Berada dalam Formasi!(Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
       CourseD_Dance_Party_01: "\\_Seret blok `buat baharu` ke dalam ruang kerja dan
         sambungkannya dalam blok `persediaan` untuk cipta penari pertama."
       CourseD_Dance_Party_02: Buatkan rusa anda memulakan gerakan baharu selepas 4
