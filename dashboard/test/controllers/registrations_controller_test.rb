@@ -5,8 +5,9 @@ require 'test_helper'
 # DEPRECATION NOTICE
 #
 # Please locate new tests for RegistrationsController in files for individual
-# routes under
+# routes under one of:
 #   test/integration/registration/*_test.rb
+#   test/integration/omniauth/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
