@@ -38,7 +38,10 @@ const STANDARD_FONT_SIZE_THEME_VALUES = {
   underTheSea: 13,
   blueAndGold: 13,
   blueSteel: 13,
-  darkscheme: 13
+  darkscheme: 13,
+  twoTone: 13,
+  pastel: 13,
+  peachy: 13
 };
 
 const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
@@ -68,7 +71,10 @@ const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
   underTheSea: '#096A6A',
   blueAndGold: '#FFD662',
   blueSteel: '#353B51',
-  darkscheme: '#B22D2D'
+  darkscheme: '#B22D2D',
+  twoTone: '#000000',
+  pastel: '#C87FDB',
+  peachy: '#DF6C06'
 };
 
 const themeValues = {
@@ -100,7 +106,10 @@ const themeValues = {
       underTheSea: '#078282',
       blueAndGold: '#00539C',
       blueSteel: '#4B526B',
-      darkscheme: '#000000'
+      darkscheme: '#000000',
+      twoTone: '#FFFFFF',
+      pastel: '#89BFEC',
+      peachy: '#FFBE7B'
     }
   },
   label: {
@@ -131,7 +140,10 @@ const themeValues = {
       underTheSea: '#D1F3DF',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#FFFFFF',
+      pastel: '#D1F3DF',
+      peachy: '#FFFFFF'
     },
     backgroundColor: {
       type: 'color',
@@ -160,9 +172,43 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#FFD662',
       blueSteel: '#353B51',
-      darkscheme: '#B22D2D'
+      darkscheme: '#B22D2D',
+      twoTone: '#000000',
+      pastel: '#C87FDB',
+      peachy: '#FFA351'
     },
-    borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
+    borderColor: {
+      type: 'color',
+      default: '#4D575F',
+      orange: '#FFFFFF',
+      citrus: '#69883D',
+      ketchupAndMustard: '#FFFFFF',
+      lemonade: '#193A55',
+      forest: '#000000',
+      watermelon: '#578B2E',
+      area51: '#D8FFA7',
+      polar: '#FFFFFF',
+      glowInTheDark: '#FFFFFF',
+      bubblegum: '#000000',
+      millennial: '#FFFFFF',
+      robot: '#353C42',
+      classic: 'rgb(153, 153, 153)',
+      coralReef: '#D75D52',
+      mintChip: '#3D95A1',
+      lavender: '#8875B1',
+      cherryVanilla: '#CECECC',
+      berryPatch: '#FFDBE5',
+      cucumber: '#FFFFFF',
+      crushedVelvet: '#2D0A30',
+      playtime: '#4B85DD',
+      underTheSea: '#95DBE5',
+      blueAndGold: '#D1D1D1',
+      blueSteel: '#71788E',
+      darkscheme: '#000000',
+      twoTone: '#000000',
+      pastel: '#D1F3DF',
+      peachy: '#DF6C06'
+    },
     borderRadius: {
       default: 0,
       orange: 0,
@@ -189,7 +235,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 0,
@@ -217,7 +266,10 @@ const themeValues = {
       underTheSea: 2,
       blueAndGold: 2,
       blueSteel: 0,
-      darkscheme: 0
+      darkscheme: 0,
+      twoTone: 0,
+      pastel: 2,
+      peachy: 1
     },
     fontFamily: {
       default: 'Arial Black',
@@ -245,7 +297,10 @@ const themeValues = {
       underTheSea: 'Trebuchet',
       blueAndGold: 'Trebuchet',
       blueSteel: 'Trebuchet',
-      darkscheme: 'Trebuchet'
+      darkscheme: 'Trebuchet',
+      twoTone: 'Trebuchet',
+      pastel: 'Trebuchet',
+      peachy: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -274,7 +329,10 @@ const themeValues = {
       underTheSea: NEW_THEME_LABEL_PADDING,
       blueAndGold: NEW_THEME_LABEL_PADDING,
       blueSteel: NEW_THEME_LABEL_PADDING,
-      darkscheme: NEW_THEME_LABEL_PADDING
+      darkscheme: NEW_THEME_LABEL_PADDING,
+      twoTone: NEW_THEME_LABEL_PADDING,
+      pastel: NEW_THEME_LABEL_PADDING,
+      peachy: NEW_THEME_LABEL_PADDING
     }
   },
   textInput: {
@@ -305,7 +363,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#000000',
+      pastel: '#A065AF',
+      peachy: '#DF6C06'
     },
     backgroundColor: {
       type: 'color',
@@ -334,7 +395,10 @@ const themeValues = {
       underTheSea: '#95DBE5',
       blueAndGold: '#D1D1D1',
       blueSteel: '#71788E',
-      darkscheme: '#707070'
+      darkscheme: '#707070',
+      twoTone: '#FFFFFF',
+      pastel: '#D1F3DF',
+      peachy: '#FBEFB4'
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -363,7 +427,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 1,
@@ -391,7 +458,10 @@ const themeValues = {
       underTheSea: 2,
       blueAndGold: 2,
       blueSteel: 2,
-      darkscheme: 2
+      darkscheme: 2,
+      twoTone: 1,
+      pastel: 2,
+      peachy: 1
     },
     fontFamily: {
       default: 'Arial',
@@ -419,7 +489,10 @@ const themeValues = {
       underTheSea: 'Trebuchet',
       blueAndGold: 'Trebuchet',
       blueSteel: 'Trebuchet',
-      darkscheme: 'Trebuchet'
+      darkscheme: 'Trebuchet',
+      twoTone: 'Trebuchet',
+      pastel: 'Trebuchet',
+      peachy: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -448,7 +521,10 @@ const themeValues = {
       underTheSea: NEW_THEME_TEXT_INPUT_PADDING,
       blueAndGold: NEW_THEME_TEXT_INPUT_PADDING,
       blueSteel: NEW_THEME_TEXT_INPUT_PADDING,
-      darkscheme: NEW_THEME_TEXT_INPUT_PADDING
+      darkscheme: NEW_THEME_TEXT_INPUT_PADDING,
+      twoTone: NEW_THEME_TEXT_INPUT_PADDING,
+      pastel: NEW_THEME_TEXT_INPUT_PADDING,
+      peachy: NEW_THEME_TEXT_INPUT_PADDING
     }
   },
   dropdown: {
@@ -479,7 +555,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#FFD662',
       blueSteel: '#353B51',
-      darkscheme: '#B22D2D'
+      darkscheme: '#B22D2D',
+      twoTone: '#000000',
+      pastel: '#C87FDB',
+      peachy: '#FFA351'
     },
     textColor: {
       type: 'color',
@@ -508,7 +587,10 @@ const themeValues = {
       underTheSea: '#FFFFFF',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#FFFFFF',
+      pastel: '#FFFFFF',
+      peachy: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -529,15 +611,18 @@ const themeValues = {
       coralReef: '#D75D52',
       mintChip: '#B1624E',
       lavender: '#CCB9E1',
-      cherryVanilla: '#CCB9E1',
-      berryPatch: '#CCB9E1',
+      cherryVanilla: '#CECECC',
+      berryPatch: '#FFDBE5',
       cucumber: '#EFFFF9',
       crushedVelvet: '#2D0A30',
       playtime: '#4B85DD',
       underTheSea: '#95DBE5',
       blueAndGold: '#D1D1D1',
       blueSteel: '#71788E',
-      darkscheme: '#000000'
+      darkscheme: '#000000',
+      twoTone: '#000000',
+      pastel: '#D1F3DF',
+      peachy: '#DF6C06'
     },
     borderRadius: {
       default: 4,
@@ -565,7 +650,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 1,
@@ -593,7 +681,10 @@ const themeValues = {
       underTheSea: 0,
       blueAndGold: 0,
       blueSteel: 0,
-      darkscheme: 0
+      darkscheme: 0,
+      twoTone: 0,
+      pastel: 0,
+      peachy: 0
     },
     fontFamily: {
       default: 'Arial',
@@ -621,7 +712,10 @@ const themeValues = {
       underTheSea: 'Trebuchet',
       blueAndGold: 'Trebuchet',
       blueSteel: 'Trebuchet',
-      darkscheme: 'Trebuchet'
+      darkscheme: 'Trebuchet',
+      twoTone: 'Trebuchet',
+      pastel: 'Trebuchet',
+      peachy: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -650,7 +744,10 @@ const themeValues = {
       underTheSea: NEW_THEME_DROPDOWN_PADDING,
       blueAndGold: NEW_THEME_DROPDOWN_PADDING,
       blueSteel: NEW_THEME_DROPDOWN_PADDING,
-      darkscheme: NEW_THEME_DROPDOWN_PADDING
+      darkscheme: NEW_THEME_DROPDOWN_PADDING,
+      twoTone: NEW_THEME_DROPDOWN_PADDING,
+      pastel: NEW_THEME_DROPDOWN_PADDING,
+      peachy: NEW_THEME_DROPDOWN_PADDING
     }
   },
   photoSelect: {
@@ -681,7 +778,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#FFD662',
       blueSteel: '#353B51',
-      darkscheme: '#B22D2D'
+      darkscheme: '#B22D2D',
+      twoTone: '#000000',
+      pastel: '#C87FDB',
+      peachy: '#FFA351'
     },
     textColor: {
       type: 'color',
@@ -710,7 +810,10 @@ const themeValues = {
       underTheSea: '#FFFFFF',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#FFFFFF',
+      pastel: '#FFFFFF',
+      peachy: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -731,15 +834,18 @@ const themeValues = {
       coralReef: '#FDF995',
       mintChip: '#D75D52',
       lavender: '#CCB9E1',
-      cherryVanilla: '#CCB9E1',
-      berryPatch: '#CCB9E1',
+      cherryVanilla: '#CECECC',
+      berryPatch: '#FFDBE5',
       cucumber: '#EFFFF9',
       crushedVelvet: '#2D0A30',
       playtime: '#DA5145',
       underTheSea: '#95DBE5',
       blueAndGold: '#D1D1D1',
       blueSteel: '#71788E',
-      darkscheme: '#000000'
+      darkscheme: '#000000',
+      twoTone: '#000000',
+      pastel: '#D1F3DF',
+      peachy: '#DF6C06'
     },
     borderRadius: {
       default: 4,
@@ -767,7 +873,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 1,
@@ -795,7 +904,10 @@ const themeValues = {
       underTheSea: 0,
       blueAndGold: 2,
       blueSteel: 2,
-      darkscheme: 0
+      darkscheme: 0,
+      twoTone: 0,
+      pastel: 0,
+      peachy: 0
     }
   },
   button: {
@@ -826,7 +938,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#FFD662',
       blueSteel: '#353B51',
-      darkscheme: '#B22D2D'
+      darkscheme: '#B22D2D',
+      twoTone: '#000000',
+      pastel: '#C87FDB',
+      peachy: '#FFA351'
     },
     textColor: {
       type: 'color',
@@ -855,7 +970,10 @@ const themeValues = {
       underTheSea: '#FFFFFF',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#FFFFFF',
+      pastel: '#FFFFFF',
+      peachy: '#FFFFFF'
     },
     borderColor: {
       type: 'color',
@@ -876,15 +994,18 @@ const themeValues = {
       coralReef: '#FDF995',
       mintChip: '#D75D52',
       lavender: '#CCB9E1',
-      cherryVanilla: '#CCB9E1',
-      berryPatch: '#CCB9E1',
+      cherryVanilla: '#CECECC',
+      berryPatch: '#FFDBE5',
       cucumber: '#EFFFF9',
       crushedVelvet: '#2D0A30',
       playtime: '#DA5145',
       underTheSea: '#95DBE5',
       blueAndGold: '#D1D1D1',
       blueSteel: '#71788E',
-      darkscheme: '#000000'
+      darkscheme: '#000000',
+      twoTone: '#000000',
+      pastel: '#D1F3DF',
+      peachy: '#DF6C06'
     },
     borderRadius: {
       default: 4,
@@ -912,7 +1033,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 1,
@@ -940,7 +1064,10 @@ const themeValues = {
       underTheSea: 0,
       blueAndGold: 2,
       blueSteel: 2,
-      darkscheme: 0
+      darkscheme: 0,
+      twoTone: 0,
+      pastel: 0,
+      peachy: 0
     },
     fontFamily: {
       default: 'Arial Black',
@@ -968,7 +1095,10 @@ const themeValues = {
       underTheSea: 'Trebuchet',
       blueAndGold: 'Trebuchet',
       blueSteel: 'Trebuchet',
-      darkscheme: 'Trebuchet'
+      darkscheme: 'Trebuchet',
+      twoTone: 'Trebuchet',
+      pastel: 'Trebuchet',
+      peachy: 'Verdana'
     },
     fontSize: {
       default: 15,
@@ -996,7 +1126,10 @@ const themeValues = {
       underTheSea: 15,
       blueAndGold: 15,
       blueSteel: 15,
-      darkscheme: 15
+      darkscheme: 15,
+      twoTone: 15,
+      pastel: 15,
+      peachy: 15
     }
   },
   textArea: {
@@ -1027,7 +1160,10 @@ const themeValues = {
       underTheSea: '#95DBE5',
       blueAndGold: '#D1D1D1',
       blueSteel: '#71788E',
-      darkscheme: '#707070'
+      darkscheme: '#707070',
+      twoTone: '#FFFFFF',
+      pastel: '#D1F3DF',
+      peachy: '#FBEFB4'
     },
     textColor: {
       type: 'color',
@@ -1056,7 +1192,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#00539C',
       blueSteel: '#FFFFFF',
-      darkscheme: '#FFFFFF'
+      darkscheme: '#FFFFFF',
+      twoTone: '#000000',
+      pastel: '#A065AF',
+      peachy: '#DF6C06'
     },
     borderColor: {
       type: 'color',
@@ -1085,7 +1224,10 @@ const themeValues = {
       underTheSea: '#096A6A',
       blueAndGold: '#FFD662',
       blueSteel: '#4B526B',
-      darkscheme: '#000000'
+      darkscheme: '#000000',
+      twoTone: '#000000',
+      pastel: '#C87FDB',
+      peachy: '#CECECC'
     },
     borderRadius: {
       default: 2,
@@ -1113,7 +1255,10 @@ const themeValues = {
       underTheSea: 30,
       blueAndGold: 30,
       blueSteel: 30,
-      darkscheme: 30
+      darkscheme: 30,
+      twoTone: 30,
+      pastel: 30,
+      peachy: 30
     },
     borderWidth: {
       default: 1,
@@ -1141,7 +1286,10 @@ const themeValues = {
       underTheSea: 0,
       blueAndGold: 0,
       blueSteel: 0,
-      darkscheme: 1
+      darkscheme: 1,
+      twoTone: 1,
+      pastel: 0,
+      peachy: 0
     },
     fontFamily: {
       default: 'Arial',
@@ -1169,7 +1317,10 @@ const themeValues = {
       underTheSea: 'Trebuchet',
       blueAndGold: 'Trebuchet',
       blueSteel: 'Trebuchet',
-      darkscheme: 'Trebuchet'
+      darkscheme: 'Trebuchet',
+      twoTone: 'Trebuchet',
+      pastel: 'Trebuchet',
+      peachy: 'Verdana'
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -1198,7 +1349,10 @@ const themeValues = {
       underTheSea: NEW_THEME_TEXT_AREA_PADDING,
       blueAndGold: NEW_THEME_TEXT_AREA_PADDING,
       blueSteel: NEW_THEME_TEXT_AREA_PADDING,
-      darkscheme: NEW_THEME_TEXT_AREA_PADDING
+      darkscheme: NEW_THEME_TEXT_AREA_PADDING,
+      twoTone: NEW_THEME_TEXT_AREA_PADDING,
+      pastel: NEW_THEME_TEXT_AREA_PADDING,
+      peachy: NEW_THEME_TEXT_AREA_PADDING
     }
   }
 };
