@@ -190,6 +190,21 @@ export const themeOptionsForSelect = [
     option: 'darkscheme',
     displayName: 'Darkscheme',
     icon: THEME_ICON_BASE_URL + 'darkscheme.png'
+  },
+  {
+    option: 'twoTone',
+    displayName: 'Two Tone',
+    icon: THEME_ICON_BASE_URL + 'two_tone.png'
+  },
+  {
+    option: 'pastel',
+    displayName: 'Pastel',
+    icon: THEME_ICON_BASE_URL + 'pastel.png'
+  },
+  {
+    option: 'peachy',
+    displayName: 'Peachy',
+    icon: THEME_ICON_BASE_URL + 'peachy.png'
   }
 ];
 
