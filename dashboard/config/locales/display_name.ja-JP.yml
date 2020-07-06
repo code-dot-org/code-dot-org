@@ -37,11 +37,17 @@ ja-JP:
       'Course F: Artist Project - Revise_2018': アーティストの復習
       'Course F: Artist Project_2018': コースF アーティスト
       'Course F: Artist Project_2019': コースF アーティスト
+      CourseD_Dance_2020_bonus1: バック&フォース（行ったり来たり）
+      CourseD_Dance_2020_bonus3: フォーメーションにつきます
       CourseEF_video_IntroSpriteLab: スプライトラボ
       CourseEF_video_IntroSpriteLab_2019: スプライトラボ
+      CourseEF_video_IntroSpriteLab_2020: スプライトラボ
       CourseE_Project_SpriteLab: Course E Sprite Lab Project
       CourseE_Project_SpriteLab_2019: Course E Sprite Lab Project
       CourseE_hoops: 'Bunny '
+      CourseF_Oceans_Video_Machine_Learning: 'ビデオ: 機械学習'
+      CourseF_Oceans_Video_Societal_Implications: ビデオ：社会的意味
+      CourseF_Oceans_Video_Training_Data: 'ビデオ: トレーニングデータ'
       CourseF_Project_Revise_SpriteLab: スプライト ラボの復習
       CourseF_Project_SpriteLab: コースF スプライト ラボ
       CourseF_Project_SpriteLab_2019: コースF スプライト ラボ
@@ -63,26 +69,37 @@ ja-JP:
       InspirationalArtwork_2018: インスピレーション！
       MC_HOC_2017_01_RETRY: 農家
       MC_HOC_2017_01_RETRY_2019: 農家
+      MC_HOC_2017_01_RETRY_2020: 農家
       MC_HOC_2017_02_Cole: 農場
       MC_HOC_2017_02_Cole_2019: 農場
+      MC_HOC_2017_02_Cole_2020: 農場
       MC_HOC_2017_03_Cole: 森
       MC_HOC_2017_03_Cole_2019: 森
+      MC_HOC_2017_03_Cole_2020: 森
       MC_HOC_2017_04POINT5_RYAN: 砂漠
       MC_HOC_2017_04POINT5_RYAN_2019: 砂漠
+      MC_HOC_2017_04POINT5_RYAN_2020: 砂漠
       MC_HOC_2017_04_Cole: 沼地
       MC_HOC_2017_04_Cole_2019: 沼地
+      MC_HOC_2017_04_Cole_2020: 沼地
       MC_HOC_2017_05_Cole: 川
       MC_HOC_2017_05_Cole_2019: 川
+      MC_HOC_2017_05_Cole_2020: 川
       MC_HOC_2017_06_Cole: 深い水
       MC_HOC_2017_06_Cole_2019: 深い水
+      MC_HOC_2017_06_Cole_2020: 深い水
       MC_HOC_2017_07_Cole: 雪道
       MC_HOC_2017_07_Cole_2019: 雪道
+      MC_HOC_2017_07_Cole_2020: 雪道
       MC_HOC_2017_10_RETRY: どうくつ
       MC_HOC_2017_10_RETRY_2019: どうくつ
+      MC_HOC_2017_10_RETRY_2020: どうくつ
       MC_HOC_2017_Ali: ネザーフォレスト
       MC_HOC_2017_Ali_2019: ネザーフォレスト
+      MC_HOC_2017_Ali_2020: ネザーフォレスト
       MC_HOC_2017_FP20x20: フリープレイ
       MC_HOC_2017_FP20x20_2019: フリープレイ
+      MC_HOC_2017_FP20x20_2020: フリープレイ
       New Minecraft Hero Project: フリープレイ
       Oceans_Video_Machine_Learning: 'ビデオ: 機械学習'
       Oceans_Video_Societal_Implications: ビデオ：社会的意味
@@ -96,8 +113,10 @@ ja-JP:
       courseF_artist_for1: くり返しを使って自由にかいてみよう（初歩）
       courseF_artist_for1_2018: くり返しを使って自由にかいてみよう（初歩）
       courseF_artist_for1_2019: くり返しを使って自由にかいてみよう（初歩）
+      courseF_artist_for1_2020: くり返しを使って自由にかいてみよう（初歩）
       courseF_project_1: スプライト ラボのサンプル
       courseF_video_csMatters: 付録
       courseF_video_csMatters_2018: 'Video: コンピュータ科学の問題'
       scrat_loops_C-F_video: ループ～アイスエイジ～
       scrat_loops_C-F_video_2019: ループ～アイスエイジ～
+      scrat_loops_C-F_video_2020: ループ～アイスエイジ～
