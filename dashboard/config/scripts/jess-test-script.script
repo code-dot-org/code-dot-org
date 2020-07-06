@@ -1,11 +1,10 @@
-peer_reviews_to_complete 2
 hideable_lessons true
 
-lesson 'Welcome to CSD Virtual Professional Learning'
+lesson 'Virtual Professional Learning Overview'
 level 'CSD-U3-fill_2019-Jess'
 level 'VirtualPLOverview'
 
-lesson 'Introduction to CSD'
+lesson 'Module 1'
 level 'Jess - CSD U2 HTML Adding Paragraphs_2019'
 
 lesson 'Course Resources'
@@ -20,3 +19,4 @@ level 'OPL - CSD U3 drawing practice 3'
 level 'OPL - CSD U3 Variable names debug'
 level 'OPL - CSD U3 Sprites debug'
 level 'OPL - CSD - Debugging'
+
