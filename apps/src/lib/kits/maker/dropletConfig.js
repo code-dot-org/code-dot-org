@@ -77,6 +77,12 @@ const createButtonProps = {
   paletteParams: ['pin'],
   params: ['0']
 };
+const createCapacitiveTouchSensorProps = {
+  parent: api,
+  category: MAKER_CATEGORY,
+  paletteParams: ['pin'],
+  params: ['0']
+};
 
 /**
  * Generic Johnny-Five / Firmata blocks
@@ -145,6 +151,18 @@ export const makerBlocks = [
     ...createButtonProps,
     noAutocomplete: true,
     docFunc: 'createButton'
+  },
+
+  {
+    func: 'createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    type: 'either'
+  },
+  {
+    func: 'var mySensor = createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    noAutocomplete: true,
+    docFunc: 'createCapacitiveTouchSensorProps'
   }
 ];
 
