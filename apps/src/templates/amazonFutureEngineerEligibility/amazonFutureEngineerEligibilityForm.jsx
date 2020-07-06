@@ -226,10 +226,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.inspirationKit}
           />
           {this.state.inspirationKit && (
-            <ShippingAddressFormGroup
-              handleChange={this.handleChange}
-              checkValidationState={this.checkValidationState}
-            />
+            <div>
+              <ShippingAddressFormGroup
+                handleChange={this.handleChange}
+                checkValidationState={this.checkValidationState}
+              />
+              <div>
+                For the purposes of shipping you your Inspiration Kit, your
+                email and school address may be shared with a certified third
+                party.
+              </div>
+            </div>
           )}
           <SingleCheckbox
             name="csta"

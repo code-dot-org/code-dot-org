@@ -393,13 +393,7 @@ Sound.prototype.preloadBytes = function() {
     var self = this;
     self.audioContext.decodeAudioData(bytes, buffer => {
       self.reusableBuffer = buffer;
-      // This is for Firefox since MP3 playback is being blocked in the SDK.
-      // This causes normal audio playback to fail here:
-      // https://github.com/microsoft/cognitive-services-speech-sdk-js/blob/1bc42c801f62b770327086d688a77b95e05628f7/src/sdk/Audio/SpeakerAudioDestination.ts#L66
-      // so our own Sound play needs to be used.
-      if (!MediaSource.isTypeSupported('audio/mpeg')) {
-        self.onSoundLoaded();
-      }
+      self.onSoundLoaded();
     });
     return;
   }
