@@ -77,7 +77,9 @@ function validateReport(report) {
         // always use that.}
         break;
       case 'callback':
-        validateType('callback', value, 'string');
+        if (value !== null) {
+          validateType('callback', value, 'string');
+        }
         break;
       case 'app':
         validateType('app', value, 'string');
