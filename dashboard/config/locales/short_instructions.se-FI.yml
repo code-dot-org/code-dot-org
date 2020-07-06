@@ -1,1 +1,68 @@
---- {}
+---
+se-FI:
+  data:
+    short_instructions:
+      New Sports Project: 'Ráhkat iežat spealu! Don mearridat: Don sáhtát rievdadit
+        buot njuolggadusaid, seaguhit ja oktiibidjat iešguđet lágan falástallamiid,
+        leage kreatiiva! Go leat geargan, deaddil Válbmet vai du olbmát besset geahččalit
+        spealu iežaset telefuvnnaiguin.'
+      Standalone_Artist_1: Bures boahtin Dáiddárii! Álggus, de geahččalit ráhkadit
+        eaŋkilis njealječiegaga masa geavahit veahkkin blohkaid jorggihit olgeš guvlui
+        ja sirdit ovddasguvlui. Juohke siidu berre leat 100 piksela guhku.
+      Standalone_Artist_2: Tevdne dán diamántta mas čiegat galget leat 120 ja 60 gráda
+        ja mas siidu lea 150 piksela guhku.
+      Standalone_Artist_3: Sáhtát go tevdnet dán guđačiegaga mas leat 100 piksela
+        guhku siiddut ja 60 gráda čiegat?
+      Standalone_Artist_4: 'Dál leat ožžon ođđa blohka maid sáhtát geavahit, mii lea
+        geardduhanmohkki. Dát geardduha kommándogihpuid. Mii dáhpáhuvvá jus geardduhat
+        dáid kommándoid 6 gearddi? '
+      Standalone_Artist_5: Man galle gearddi fertet geardduhit dán diamántta go galggat
+        tevdnet dán lieđi.
+      Standalone_Artist_5.5: 'Fuomáš movt mii leat álkidahttán diamántta koda geavahettiin
+        mohki. Don sáhtát ovttain mohkiin seammá sekveanssa dahkat 12 gearddi go tevdnet
+        lieđi. Ráva: Maŋŋil go diamántii leat geavahan ovtta mohki, de fertet jorahit
+        30 grádain nu ahte it tevdne badjebadjálaga seamma diamántta nala. '
+      Standalone_Artist_6: 'Geavat dán guđačiegat koda seammá mohkkái 6 gearddi  ráhkadan
+        dihte designa. Galliin grádain fertet juohke háve jorahit? Ráva: Juoge jorbbá
+        grádaid dan mielde galle háve áiggut geardduhit mohkiid.'
+      Standalone_Artist_7: 'Funkšuvdna lea eará prográmmerenreaiddu mii veahkeha du
+        bargat nu ahte it gearddut iežat. Dát funkšuvdna tevdne ovtta lieđi, maid
+        sáhtát geavahit juohke háve go lieđi áiggut tevdnet. Geavat dán funkšuvnna
+        ja dan ođđa njuiken-blohka tevdnet dáid liđiid. Ráva: Liđiin galgá leat 150
+        piksela gaska'
+      Standalone_Artist_8: Dá lea okta funkšuvdna man namma lea “Tevdne hámi” maid
+        mii leat prográmmeren nu ahte sáhttá tevdnet guđačiegagiid. Geahččal koda
+        vai oainnát mii dáhpáhuvvá ja de geahččalatta funkšuvnnain vai oainnát mii
+        dáhpáhuvvá. Oaččut go dan tevdnet njealje-, golmma- ja gávccečiegat minstariid?
+      Standalone_Artist_9: Joatkke ja ráhkat dakkár gova maid háliidat! Don leat maid
+        ožžon guoros funkšuvnna maid sáhtát geavahit masa háliidat!
+      bounce_10_sports: Dál lea moalla bajemusas. Čana dáid blohkaid "lasit čuoggá"-
+        ja "lasit vuostálastái čuoggá" blohkaide “go spábba lea moalas" ja "go spábba
+        ii mannan mollii". Geahččal galle čuoggá don nagodat oažžut ovdal go du vuostálasti
+        skore guovtte geardde!
+      bounce_11_basketball: Dál sáhtát čatnat blohkaid "go bijat mannat" blohkkii.
+        Don fertet čatnat ođđa "bálkes ođđa spáppa"-blohka máŋgga sadjái. Don sáhtát
+        maiddái rievdadit gieđa ja gieđa ja spáppa leavttu geahččalan dihte galle
+        čuoggá don nagodat oažžut ovdal go du vuostálasti skore guovtte geardde!
+      bounce_11_sports: Dál sáhtát čatnat blohkaid "go bijat mannat" blohkkii. Don
+        fertet čatnat ođđa "bálkes ođđa spáppa"-blohka máŋgga sadjái. Don sáhtát maiddái
+        rievdadit gieđa ja gieđa ja spáppa leavttu geahččalan dihte galle čuoggá don
+        nagodat oažžut ovdal go du vuostálasti skore guovtte geardde!
+      bounce_12_sports: 'Ráhkat iežat spealu! Don mearridat: Don sáhtát rievdadit
+        buot njuolggadusaid, seaguhit ja oktiibidjat iešguđet lágan falástallamiid,
+        leage kreatiiva! Go leat geargan, deaddil Válbmet vai du olbmát besset geahččalit
+        spealu iežaset telefuvnnaiguin.'
+      bounce_1_sports: Mana leavgga lusa! Čana ovtta blohka “go gurut njuolla”-blohkkii
+        ja deaddil “Bija mannat“ vai sirddát spealli leavgga lusa.
+      bounce_2_sports: Dál leat guokte leavgga! Čana ovtta blohka “go gurut njuolla”-
+        ja "go olgeš njuolla"- blohkaide vai sáhtát sirdit spealli guovtti guvlui.
+      bounce_5_sports: Hockey-spábba girdigoahtá spealli vuostá! Čana ovtta blohka
+        “go spábba deaivá spealli”-blohkkii ja deaivan dihte leavgga.
+      bounce_6_basketball: Dál lea leavga bajemusas. Don fertet čatnat blohkaid goappašat
+        “go spábba deaivá spealli”-blohkaide čoavdin dihte dán bargobihtá.
+      bounce_6_sports: Dál lea leavga bajemusas. Don fertet čatnat blohkaid goappašat
+        “go spábba deaivá spealli”-blohkaide čoavdin dihte dán bargobihtá.
+      bounce_7_basketball: Čana blohkaid juohke “go”-blohkaide. Njuikkut spáppa dassážii
+        go deaivá leavgga.
+      bounce_7_sports: Čana blohkaid juohke “go”-blohkaide. Njuikkut spáppa dassážii
+        go deaivá leavgga.
