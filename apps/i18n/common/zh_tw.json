@@ -434,6 +434,7 @@
   "dataTableNamePlaceholder": "資料表名稱",
   "dataLibraryHeader": "資料函式庫",
   "dataLibraryDescription": "從Code.org 函式庫找到並且匯入真實的資料表",
+  "dataLibrarySearchPlacholder": "搜尋",
   "dataSource": "數據來源",
   "dataVisualizerPlaceholderText": "選擇相應的值，以產生視覺化資料",
   "dataVisualizerBucketSize": "Bucket 大小",

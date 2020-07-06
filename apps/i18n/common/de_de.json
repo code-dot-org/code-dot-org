@@ -433,6 +433,7 @@
   "dataTableNamePlaceholder": "Tabellenname",
   "dataLibraryHeader": "Datenbibliothek",
   "dataLibraryDescription": "Lokalisiere und importiere Tabellen mit echten Daten aus der Code.org Bibliothek.",
+  "dataLibrarySearchPlacholder": "Suche",
   "dataSource": "Datenquelle",
   "dataVisualizerPlaceholderText": "Wählen Sie Werte aus, um eine Visualisierung zu generieren",
   "dataVisualizerBucketSize": "Grösse des Eimers",

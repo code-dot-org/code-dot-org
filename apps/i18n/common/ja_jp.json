@@ -382,6 +382,7 @@
   "dataTableNamePlaceholder": "テーブル名",
   "dataLibraryHeader": "データ・ライブラリー",
   "dataLibraryDescription": "Code.orgの図書館からリアルデータのテーブルを探して、インポートする。",
+  "dataLibrarySearchPlacholder": "検索",
   "dataSource": "データソース",
   "dataVisualizerPlaceholderText": "グラフにする値を選択",
   "dataVisualizerCreateChart": "画面上でグラフを描く",

@@ -422,6 +422,7 @@
   "dataTableNamePlaceholder": "Nome da tabela",
   "dataLibraryHeader": "Biblioteca de dados",
   "dataLibraryDescription": "Encontre e importe tabelas com dados reais da biblioteca do Code.org.",
+  "dataLibrarySearchPlacholder": "Pesquisar",
   "dataSource": "Código-fonte da página",
   "dataVisualizerPlaceholderText": "Selecione valores para gerar uma visualização",
   "dataVisualizerBucketSize": "Tamanho do Balde",
