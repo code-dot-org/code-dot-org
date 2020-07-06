@@ -470,6 +470,16 @@ class Pd::Workshop < ActiveRecord::Base
       rescue => e
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
+
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP)
+      workshop.facilitators.each do |facilitator|
+        next unless facilitator.email
+        begin
+          Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        end
+      end
     end
 
     raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
