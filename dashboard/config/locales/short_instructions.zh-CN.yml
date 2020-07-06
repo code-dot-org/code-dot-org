@@ -1312,7 +1312,6 @@ zh-CN:
       courseA_maze_ramp3a_2018: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseA_maze_ramp3a_2019: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseA_maze_ramp3b_2018: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
-      courseA_maze_ramp3b_2019: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
       courseA_maze_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5a_2018: 帮小鸟到达那只猪！
@@ -2676,15 +2675,9 @@ zh-CN:
       courseF_artist_for8: 将角度改小为72度来得到一个螺旋状的五边形。
       courseF_artist_for8_2018: 将角度改小为72度来得到一个螺旋状的五边形。
       courseF_artist_for8_2019: 将角度改小为72度来得到一个螺旋状的五边形。
-      courseF_artist_for9: |-
-        **灵感：** 用 Use the counter inside
-        the `set alpha` block to get this faded center.`set alpha`（设置透明度）模块中的计数器来获得淡出的中心。
-      courseF_artist_for9_2018: |-
-        **灵感：** 用 Use the counter inside
-        the `set alpha` block to get this faded center.`set alpha`（设置透明度）模块中的计数器来获得淡出的中心。
-      courseF_artist_for9_2019: |-
-        **灵感：** 用 Use the counter inside
-        the `set alpha` block to get this faded center.`set alpha`（设置透明度）模块中的计数器来获得淡出的中心。
+      courseF_artist_for9: "**灵感：**  在“set alpha”（设置透明度）模块里使用小圆板来获得此褪色的中心。"
+      courseF_artist_for9_2018: "**灵感：**  在“set alpha”（设置透明度）模块里使用小圆板来获得此褪色的中心。"
+      courseF_artist_for9_2019: "**灵感：**  在“set alpha”（设置透明度）模块里使用小圆板来获得此褪色的中心。"
       courseF_artist_for_challenge1: 你能想出如何重新创建这幅画吗？
       courseF_artist_for_challenge1_2018: 你能想出如何重新创建这幅画吗？
       courseF_artist_for_challenge1_2019: 你能想出如何重新创建这幅画吗？

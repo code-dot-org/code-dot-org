@@ -158,22 +158,6 @@ class HomeController < ApplicationController
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
       elsif donor_banner_name
-        teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
-
-        donor_teacher_banner_options = {}
-        donor_teacher_banner_options[:teacherFirstName] = current_user.short_name
-        donor_teacher_banner_options[:teacherSecondName] = current_user.second_name
-        donor_teacher_banner_options[:teacherEmail] = current_user.email
-        donor_teacher_banner_options[:ncesSchoolId] = teachers_school.id
-        donor_teacher_banner_options[:schoolAddress1] = teachers_school.address_line1
-        donor_teacher_banner_options[:schoolAddress2] = teachers_school.address_line2
-        donor_teacher_banner_options[:schoolAddress3] = teachers_school.address_line3
-        donor_teacher_banner_options[:schoolCity] = teachers_school.city
-        donor_teacher_banner_options[:schoolState] = teachers_school.state
-        donor_teacher_banner_options[:schoolZip] = teachers_school.zip
-
-        @homepage_data[:donorTeacherBannerOptions] = donor_teacher_banner_options
-
         @homepage_data[:teacherId] = current_user.id
       end
     else

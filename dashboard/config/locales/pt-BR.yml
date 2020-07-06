@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -933,6 +933,8 @@ pt-BR:
     open_response_body: Obrigado pela sua resposta!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  lesson_extras:
+    bonus_level: Level Bonus
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?

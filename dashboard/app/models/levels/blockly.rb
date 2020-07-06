@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -518,7 +518,9 @@ class Blockly < Level
         default: nil,
         smart: true
       )
-      function_description.content = localized_description if localized_description
+      # Some levels add a description to the function in the solution
+      # but not in the starter/toolbox blocks. These functions have the same key if they have the same name
+      function_description.content = localized_description if function_description && localized_description
       # Translate the "declared" parameter names
       function_mutation.xpath("./arg").each do |parameter|
         localized_parameter = I18n.t(

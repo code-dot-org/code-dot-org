@@ -1098,9 +1098,9 @@ sk-SK:
       courseA_harvester_seq11_2019: Vyskúšaj to sám/a! Pozbieraj všetku kukuricu.
       courseA_harvester_seq12: Pozbieraj všetku kukuricu.
       courseA_harvester_seq12_2019: Pozbieraj všetku kukuricu.
-      courseA_harvester_seq13: Pohraj sa s týmito blokmi, a pomôž záhradníčke pozbierať
+      courseA_harvester_seq13: Pohraj sa s týmito blokmi a pomôž záhradníčke pozbierať
         kukuricu.
-      courseA_harvester_seq13_2019: Pohraj sa s týmito blokmi, a pomôž záhradníčke
+      courseA_harvester_seq13_2019: Pohraj sa s týmito blokmi a pomôž záhradníčke
         pozbierať kukuricu.
       courseA_harvester_seq1_2019: Zahraj sa s týmito blokmi, aby si pomohol záhradníčke
         pozbierať kukuricu.
@@ -1136,12 +1136,13 @@ sk-SK:
         si dokončil tento kód, potom klikni "▶ Spustiť".
       courseA_maze_ramp3b_2018: Pridaj blok `Sever` na spodok ostatných blokov, aby
         si dokončil tento kód, potom klikni "Spustiť".
-      courseA_maze_ramp3b_2019: Pridaj blok `Sever` na spodok ostatných blokov, aby
-        si dokončil tento kód, potom klikni "Spustiť".
       courseA_maze_ramp4a_2018: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
+      courseA_maze_ramp5a_2018: Dostaň vtáčika ku prasaťu!
+      courseA_maze_ramp5a_2019: Dostaň vtáčika ku prasaťu!
+      courseA_maze_seq1: Dostaň vtáčika k zlému prasaťu!
       courseA_maze_seq10_2018: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
         TNT! '
       courseA_maze_seq10_2019: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
@@ -1158,6 +1159,8 @@ sk-SK:
       courseA_maze_seq13: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq13_2018: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq1_2018: Dostaň vtáčika k zlému prasaťu!
+      courseA_maze_seq1_2019: Dostaň vtáčika k zlému prasaťu!
       courseA_maze_seq5_2018: Vyskúšaj si to ešte raz.
       courseA_maze_seq5_2019: Vyskúšaj si to ešte raz.
       courseA_maze_seq5a_2018: Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a
@@ -1176,6 +1179,12 @@ sk-SK:
       courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_copy: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq_challenge1: Niečo je tu zlé. Pomôž opraviť kód, aby si dostal
+        vtáčika ku prasiatku!
+      courseA_maze_seq_challenge1_2018: Niečo je tu zlé. Pomôž opraviť kód, aby si
+        dostal vtáčika ku prasiatku!
+      courseA_maze_seq_challenge1_2019: Niečo je tu zlé. Pomôž opraviť kód, aby si
+        dostal vtáčika ku prasiatku!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -2585,6 +2594,12 @@ sk-SK:
         počtu blokov. '
       courseD_farmer_while9_2019: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho
         počtu blokov. '
+      courseD_farmer_while_challenge1: '"Vyplň všetky otvory a odstráň všetky kopy."'
+      courseD_farmer_while_challenge1_2018: '"Vyplň všetky otvory a odstráň všetky
+        kopy."'
+      courseD_farmer_while_challenge1_2019: '"Vyplň všetky otvory a odstráň všetky
+        kopy."'
+      courseD_farmer_while_challenge2: '"Vyplň všetky otvory a odstráň všetky kopy."'
       courseD_harvester_nested_loops_challenge1: '"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."'
@@ -2622,6 +2637,8 @@ sk-SK:
         sa poň dostať?
       courseD_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť
         Scratovi sa poň dostať?
+      courseD_maze_intro5a_2019: '"Spočítaj opatrne medzery na mriežke!"'
+      courseD_maze_intro5c_2019: '"Daj si pozor na TNT! Pomôž Redovi dostať sa k prasiatku."'
       courseD_maze_nestedLoops3: Dostaň zombíka k slnečnici použitím čo najmenšieho
         počtu blokov.
       courseD_maze_nestedLoops3_2018: Dostaň zombíka k slnečnici použitím čo najmenšieho
@@ -2675,6 +2692,7 @@ sk-SK:
         prasiatku!
       courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu
         k tomu prasiatku!
+      courseD_maze_ramp5a_2019: '"Spočítaj opatrne medzery na mriežke!"'
       courseD_maze_ramp5b: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasiatku!
       courseD_maze_ramp5b_2018: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k
         prasiatku!
@@ -2689,6 +2707,7 @@ sk-SK:
       courseD_maze_ramp5d_2019: Dostaň vtáka k prasiatku.
       courseD_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak
         sa môžem rozhnevať!"'
+      courseD_maze_ramp7: Dostaň vtáčika ku prasaťu!
       courseD_maze_until1: Dostaň nahnevaného vtáka k prasiatku.
       courseD_maze_until10: Pomôž zombiemu dostať sa k slnečnici.
       courseD_maze_until10_2018: Pomôž zombiemu dostať sa k slnečnici.

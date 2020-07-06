@@ -23,8 +23,8 @@ id-ID:
         latihan ini.
       2-3 Artist Nested Loops Free Play: Permainan bebas, gambarlah sesuatu yang menarik
         dengan perulangan bertingkat.
-      2-3 Bee Conditionals 9: Kumpulkan semua madu bunga dari setiap bunga.
-      2-3 Bee Functions 3: Kumpulkan semua madu bunga dari setiap bunga.
+      2-3 Bee Conditionals 9: Kumpulkan semua nektar dari setiap bunga.
+      2-3 Bee Functions 3: Kumpulkan semua nektar dari setiap bunga.
       2-3 Bee Functions 6: Sekarang gunakan fungsi yang sama untuk mengumpulkan nektar
         dari ketiga bunga.
       2-3 Bee Loops 2A: Dapatkah kamu lakukan tugas yang sama lebih mudah dengan perulangan?
@@ -266,8 +266,8 @@ id-ID:
         ini?
       Course 4 SCFL 4: Dapatkah Anda mencari tahu cara untuk membuat ulang gambar
         ini?
-      Course 4 SCFL 6: Dapatkah Anda mencari tahu cara membuat ulang gambar ini dengan
-        satu putaran?
+      Course 4 SCFL 6: 'Bisakah Anda mencari tahu bagaimana cara untuk membuat ulang
+        gambaran ini dengan sebuah loop? '
       Course 4 SCV 1: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 2: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 4: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
@@ -303,14 +303,14 @@ id-ID:
       CourseE_HOC 2018 Level_11: Bangun pipa dengan Prismarine di dalam Monumen Laut.
       CourseE_HOC 2018 Level_2: Menuju ke ujung galangan kapal.
       CourseE_HOC 2018 Level_3: Menyeberangi lautan terbuka untuk ikan kod.
-      CourseE_HOC 2018 Level_4: Gunakan lingkaran untuk menuju ke lumba-lumba.
+      CourseE_HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
       CourseE_HOC 2018 Level_5: Jelajahi kapal karam untuk mencapai peti.
       CourseE_HOC 2018 Level_6: Navigasi melalui es untuk mencapai salmon.
       CourseE_HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk peti.
       CourseE_HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai
         harta karun.
-      Crack Random Substitution: Instruksi
-      Crack a Caesar Cipher: Instruksi
+      Crack Random Substitution: instruksi
+      Crack a Caesar Cipher: instruksi
       Dance Party 1-validated: Menurut Anda, apa yang akan terjadi ketika Anda mengeklik
         alien?
       Dance Party 2: Ubah perilaku di dalam blok `___ mulai ___` untuk membuat alien
@@ -408,6 +408,8 @@ id-ID:
         melihat detail)
       Dance_Party_extras_visible_2019: Kemana mereka pergi? (Klik "Selengkapnya" untuk
         melihat detail)
+      Find the Wizard: Bangun apa pun yang Anda mau. Ini Adalah contoh dari permainan
+        menebak angka!
       Fish Tank 2-validated: Ubah Dusty (tumbleweed) menjadi ikan.
       Fish Tank 2-validated_2019: Ubah tumbleweed menjadi berbagai macam ikan!
       Fish Tank 3-validated: Ubah perilaku ikan sehingga berenang di sekitar tangki.
@@ -437,13 +439,15 @@ id-ID:
         bentuk. Ini membutuhkan kegigihan dan perencanaan!'
       Geometric Sun_2018: 'Ide Proyek: Buat pola menggunakan ide-ide geometris seperti
         bentuk. Ini membutuhkan kegigihan dan perencanaan!'
+      Guess The Number: Bangun apa pun yang Anda mau. Ini Adalah contoh dari permainan
+        menebak angka!
       HOC 2018 Level_1: Kumpulkan perahu dari peti.
       HOC 2018 Level_10: Menuju jalan masuk Monumen Laut ini.
       HOC 2018 Level_11: Bangun pipa dengan Prismarine di dalam Monumen Laut.
       HOC 2018 Level_12: Rancang lingkungan bawah airmu, terserah padamu!
       HOC 2018 Level_2: Menuju ke ujung galangan kapal.
       HOC 2018 Level_3: Menyeberangi lautan terbuka untuk ikan kod.
-      HOC 2018 Level_4: Gunakan lingkaran untuk menuju ke lumba-lumba.
+      HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
       HOC 2018 Level_5: Jelajahi kapal karam untuk mencapai peti.
       HOC 2018 Level_6: Navigasi melalui es untuk mencapai salmon.
       HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk peti.
@@ -468,6 +472,10 @@ id-ID:
       Infinity_touch_score: Buatlah skor Anna sebuah poin saat dia menyentuh kepingan
         salju. Kemudian klik'Lari'dan bawa dia menyentuh kepingan salju satu persatu
         sekali.
+      InspirationalArtwork: Jika gambar ini memberi Anda inspirasi, coba untuk membuat
+        sesuatu yang mirip. Jika tidak, ciptakan sesuatu dengan sendiri.
+      InspirationalArtwork_2018: Jika gambar ini memberi Anda inspirasi, coba untuk
+        membuat sesuatu yang mirip. Jika tidak, ciptakan sesuatu dengan sendiri.
       K-1 Artist Loops 1: Gambar garis ini dengan menggerakkan ke timur 4 kali.
       K-1 Artist Loops 2: Sekarang, gambar garis yang sama dengan menggunakan putaran.
       K-1 Artist Loops 3: Dapatkah anda putar blok ini untuk menggambar 6 garis?
@@ -580,6 +588,8 @@ id-ID:
       MC_HOC_2017_FP20x20: "**Main Bebas:**  Waktunya menjelajah sendiri!"
       MC_HOC_2017_FP20x20_2019: "**Main Bebas:**  Waktunya menjelajah sendiri!"
       NEW Course 4 Artist Functions 14: 'Waktunya permainan bebas! '
+      NEW Course 4 Bee For Loops 8: Anda bisa melakukannya! Apa peningkatan Anda untuk
+        mengumpulkan 3, 6, 9, 12, 15 nektar?
       New Gumball Project: Buat apapun yang Anda suka dan bagikanlah!
       New Ice Age Project: Buat apapun yang Anda suka dan bagikanlah!
       New Infinity Project: Buat apapun yang Anda suka dan bagikanlah!
@@ -600,6 +610,15 @@ id-ID:
       OPD-K5-events-6: Tambahkan blok ke event `when pass an obstacle`, lalu tekan
         "Run" untuk mencetak poin dengan menerbangkan Flappy melewati kelompok pipa
         pertama.
+      OPD-K5-forloops-1: Kumpulkan nektar dari tiap bunga menggunakan blok sesedikit
+        mungkin.
+      OPD-K5-forloops-2: Tulis kodenya untuk membantu si lebah mengumpulkan semua
+        nektar.
+      OPD-K5-forloops-5: Bantu si lebah mengumpulkan semua nektar.
+      OPD-K5-forloops-6: Coba mengumpulkan nektar ini dengan menghitung mundur dari
+        5 ke 1 dengan 1.
+      OPD-K5-forloops-7: Coba untuk mengumpulkan bunga ini menggunakan peningkatan
+        2.
       OPD-K5-projects-2: Pilih latar belakang dan peta, lalu pilih aktor sebagai pahlawan
         permainan Anda.
       OPD-K5-projects-3: Gunakan acara dan tindakan untuk membuat pahlawan Anda bergerak.
@@ -621,6 +640,14 @@ id-ID:
         di laut. Tambahkan peri lain ke kolam ikan. Peri ini bisa memiliki berbagai
         macam kostum lain selain yang anda gunakan untuk ikan!
       OPD-K5-spritelab-7: Tambahkan perilaku ke teman baru ikan.
+      OPD-K5-variables-2: 'Sekarang gambar tiga segitiga itu di samping satu sama
+        lain.   '
+      OPD-K5-variables-5: Pindahkan kepanjangan dari 50 ke dalam sebuah variabel agar
+        kita dapat menggunakannya di teka-teki berikutnya.
+      OPD-K5-variables-6: Sekarang, gunakan variabel `length` untuk membuat artis
+        meloncat ke depan dan bawah demgam piksel `length` diantara segitiga.
+      OPD-K5-variables-7: Tambah rangkaian loop lain pada akhir kode anda untuk menambah
+        lebih banyak segitiga. Kali ini, maju ke depan dan atas!
       Overworld Avoid Monsters: Berlari memasuki Creeper bukan ide yang bagus. Bergerak
         perlahan melewati Creeper dan capai keselamatan rumah kamu.
       Overworld Avoid Monsters_2019: Berlari memasuki Creeper bukan ide yang bagus.
@@ -862,9 +889,21 @@ id-ID:
         berkali-kali - kapan pun dan di mana pun Anda inginkan! Coba kode ini untuk
         mengetahui cara kerjanya, lalu ubahlah untuk membuat desain sendiri yang memukau!
       course3_artist_functions_challenge2: Coba kode ini untuk mengetahui cara kerjanya,
-        lalu buat sendiri programnya!
+        lalu buat sendiri program Anda!
       course3_bee_functions_challenge1: Anda sendirian dalam tantangan ini. Ini bisa
         "jadi" lebih sulit daripada yang terlihat mata!
+      course3_bee_functions_challenge3: Buatlah fungsi baru untuk mengumpulkan semua
+        nektar dan madu selagi ada jalan di depan. Gunakan itu untuk menyelesaikan
+        teka-tekinya!
+      course3_bee_functions_challenge4: Gunakan semua yang Anda pelajari untuk menyelesaikan
+        teka-teki ini!
+      course3_farmer_condLoops_challenge2: Kumpulkan semuanya untuk menyelesaikan
+        tingkat ini.
+      course3_farmer_until_challenge2: Gunakan blok If/Else untuk mengikuti jalan
+        melengkung. Pada tiap pojok, gunakan perintah `remove 1` di dalam loop untuk
+        membersihkan tumpukan.
+      course3_maze_until_challenge1: Tidak ada petunjuk, hanya tantangan. Gerakkan
+        zombie menuju bunga matahari.
       course3_playLab_challenge1: "Harus terjadi sesuatu ketika Anda mendapat cukup
         poin atau ketika Anda kehabisan poin. Tambahkan kode tertentu ke fungsi `win
         game` dan `lose game` untuk membuat permainannya berjalan semestinya. \nKlik
@@ -874,13 +913,22 @@ id-ID:
         lingkaran bersarang untuk menyelesaikan gambar ini.
       course4_artist_binary_challenge2: Apakah Anda cukup gigih mengembalikan logo
         ini ke kondisi normal?
-      course4_artist_concept_challenge2: Buat lima desain kincir menggunakan kode
+      course4_artist_concept_challenge2: Buat lima desain kincir menggunakan code
         di bawah ini.
       course4_artist_functions_challenge2: Coba kode ini untuk mengetahui cara kerjanya,
-        lalu buat sendiri programnya!
+        lalu buat sendiri program Anda!
       course4_artist_fwp_challenge1: Cobalah jalankan program ini, dan buatlah perubahan
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
+      course4_bee_fwp_challenge1: Gunakan satu `for loop` dalam sebuah fungsi untuk
+        mengumpulkan semua jagung. `for loop` yang sama dapat menghitung sampai nilai
+        maksimum berbeda dengan menggunakan parameter `length`.
+      course4_collector_nested_loops_challenge2: Bantu si pengumpul mencapai setidaknya
+        dua tumpuk harta karun hanya menggunakan blok yang ada di toolbox Anda. Memungkinkan
+        sekali untuk mendapatkan 4 harta karunnya.
+      course4_harvester_nested_loops_challenge1: '"Aku butuh bantuan di pertanian!
+        Bantu aku memanen jagung ini dengan hanya menggunakan blok yang ada di dalam
+        toolbox Anda."'
       courseA_artist_loops1: Ini adalah jenis puzzle baru bernama "Artist". Coba mainkan
         level tersebut dan gambarlah sesuatu yang menyenangkan.
       courseA_artist_loops10: Bantu saya menaruh batu agar saya tidak jatuh!
@@ -1099,8 +1147,6 @@ id-ID:
       courseA_maze_ramp3a_2019: Tambahkan blok `Utara` ke bagian bawah blok lain untuk
         menyelesaikan kode ini, lalu klik "▶ Jalankan".
       courseA_maze_ramp3b_2018: Tambahkan blok `Utara` ke bagian bawah blok lain untuk
-        menyelesaikan kode ini, lalu klik "Jalankan".
-      courseA_maze_ramp3b_2019: Tambahkan blok `Utara` ke bagian bawah blok lain untuk
         menyelesaikan kode ini, lalu klik "Jalankan".
       courseA_maze_ramp4a_2018: Dapatkah Anda mengetahui blok mana yang perlu Anda
         tambahkan ke bagian bawah blok lain untuk menyelesaikan kode ini?
@@ -1711,25 +1757,43 @@ id-ID:
       courseC_artist_loop1: Ayo tambahkan beberapa piza!
       courseC_artist_loop1_2018: Ayo, tambahkan pizazz dengan blok `atur pola`.
       courseC_artist_loop1_2019: Ayo, tambahkan pizazz dengan blok `atur pola`.
+      courseC_artist_loops1a: Pindahkan si artis ke tengah-tengah area bermain, lalu
+        gambarlah seekor burung menggunakan sebuah stiker.
+      courseC_artist_loops1a_2018: Pindahkan si artis ke tengah-tengah area bermain,
+        lalu gambarlah seekor burung menggunakan sebuah stiker.
       courseC_artist_loops1a_2019: Bawa seniman ke tengah area bermain, lalu buat
         gambar stiker.
       courseC_artist_loops1b_2019: Ubah arah yang dihadapi stiker Anda dengan menambahkan
         perintah `berbalik` ke kode Anda.
+      courseC_artist_loops2a: Sekarang gunakan loop untuk memutar burung Anda sekitar
+        12 kali dengan putaran 30 derajat.
+      courseC_artist_loops2a_2018: Sekarang gunakan loop untuk memutar burung Anda
+        sekitar 12 kali dengan putaran 30 derajat.
       courseC_artist_loops2a_2019: Sekarang, gunakan lingkaran untuk membuat lebih
         banyak salinan stiker Anda. Coba ubah angka secara bergiliran dan ulangi blok
         untuk membuat pola yang berbeda.
+      courseC_artist_loops3a: Sekarang tambahkan seekor kelelawar!
+      courseC_artist_loops3a_2018: Sekarang tambahkan seekor kelelawar!
       courseC_artist_loops3a_2019: Sekarang tambahkan stiker kedua!
+      courseC_artist_loops4a: Coba meloncat ke depan 75 piksel.
+      courseC_artist_loops4a_2018: Coba meloncat ke depan 75 piksel.
       courseC_artist_loops4a_2019: Sunting kode Anda sehingga Anda melompat ke depan
         di antara menggambar dua stiker.
       courseC_artist_loops5a: Coba stiker baru!
       courseC_artist_loops5a_2018: Coba stiker baru!
       courseC_artist_loops5a_2019: Coba stiker baru!
+      courseC_artist_loops5b: Cobalah untuk menambah garis!
+      courseC_artist_loops5b_2018: Cobalah untuk menambah garis!
+      courseC_artist_loops5b_2019: Cobalah untuk menambah garis!
       courseC_artist_loops6a: Tambahkan stiker lain!
       courseC_artist_loops6a_2018: Tambahkan stiker lain!
       courseC_artist_loops6a_2019: Tambahkan stiker lain!
       courseC_artist_loops7a: Bermain dengan loop dan sudut.
       courseC_artist_loops7a_2018: Bermain dengan loop dan sudut.
       courseC_artist_loops7a_2019: Bermain dengan loop dan sudut.
+      courseC_artist_loops8a: Sekarang coba sesuatu sendiri!
+      courseC_artist_loops8a_2018: Sekarang coba sesuatu sendiri!
+      courseC_artist_loops8a_2019: Sekarang coba sesuatu sendiri!
       courseC_artist_loopsPre1a: Saatnya memutar garis itu!
       courseC_artist_loopsPre1a_2018: Saatnya memutar garis itu!
       courseC_artist_loopsPre1a_2019: Saatnya memutar garis itu!
@@ -1744,11 +1808,11 @@ id-ID:
         dilakukannya!
       courseC_artist_prog1_2019: Main-mainkan blok di toolbox untuk melihat apa yang
         dilakukannya!
-      courseC_artist_prog2: Seret blok ke layar untuk memerintahkan artis menggambar
+      courseC_artist_prog2: Geser blok ke layar untuk memerintahkan artis menggambar
         di atas garis abu-abu di dalam gambar. (Panjang setiap garis adalah 100 piksel)
-      courseC_artist_prog2_2018: Seret blok ke layar untuk memerintahkan artis menggambar
+      courseC_artist_prog2_2018: Geser blok ke layar untuk memerintahkan artis menggambar
         di atas garis abu-abu di dalam gambar. (Panjang setiap garis adalah 100 piksel)
-      courseC_artist_prog2_2019: Seret blok ke layar untuk memerintahkan artis menggambar
+      courseC_artist_prog2_2019: Geser blok ke layar untuk memerintahkan artis menggambar
         di atas garis abu-abu di dalam gambar. (Panjang setiap garis adalah 100 piksel)
       courseC_artist_prog3: Setiap sisi persegi empat-dalam adalah 100 piksel dan
         semua sudut adalah 90 derajat.
@@ -1771,9 +1835,9 @@ id-ID:
       courseC_artist_prog5_2019: |-
         Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:
         semua tiga sisi panjangnya sama.
-      courseC_artist_prog6: Seret berlian dengan sisi 200 piksel ini.
-      courseC_artist_prog6_2018: Seret berlian dengan sisi 200 piksel ini.
-      courseC_artist_prog6_2019: Seret berlian dengan sisi 200 piksel ini.
+      courseC_artist_prog6: Gambar berlian ini dengan sisi 200 piksel.
+      courseC_artist_prog6_2018: Gambar berlian ini dengan sisi 200 piksel.
+      courseC_artist_prog6_2019: Gambar berlian ini dengan sisi 200 piksel.
       courseC_artist_prog7: "**Tantangan:** Tanda ini memang spesial!  Bisakah Anda
         mengira-ngira cara menggambar garis luar?"
       courseC_artist_prog7_2018: "**Tantangan:** Tanda ini memang spesial!  Bisakah
@@ -2019,6 +2083,18 @@ id-ID:
       courseC_maze_debugging9_2018: Debug level ini untuk menggiring Scrat ke akorn.
       courseC_maze_debugging9_2019: Gunakan blok di kotak peralatan untuk membangun
         program Anda. Bawa burung ke babi.
+      courseC_maze_debugging_challenge1: Bantu Scrat memutuskan arah mana untuk berbelok
+        agar mencapai biji ek.
+      courseC_maze_debugging_challenge1_2018: Bantu Scrat memutuskan arah mana untuk
+        berbelok agar mencapai biji ek.
+      courseC_maze_debugging_challenge1_2019: Bantu Scrat memutuskan arah mana untuk
+        berbelok agar mencapai biji ek.
+      courseC_maze_debugging_challenge2: Bantu Scrat mencapai biji ek dengan hanya
+        empat perintah `turn`.
+      courseC_maze_debugging_challenge2_2018: Bantu Scrat mencapai biji ek dengan
+        hanya empat perintah `turn`.
+      courseC_maze_debugging_challenge2_2019: Bantu Scrat mencapai biji ek dengan
+        hanya empat perintah `turn`.
       courseC_maze_loops_challenge1a: 'Sekarang Scrat ingin mencoba menggunakan loop
         untuk menemukan bijinya! '
       courseC_maze_loops_challenge1a_2018: 'Sekarang Scrat ingin mencoba menggunakan
@@ -2188,6 +2264,8 @@ id-ID:
         lainnya dan jalankan sebanyak **6** kali.
       courseD_artist_4_2018: Tambahkan bentuk kecil ke ujung garis Anda!
       courseD_artist_4_2018_2019: Tambahkan bentuk kecil ke ujung garis Anda!
+      courseD_artist_5_2018: Bermain dengan keping salju!
+      courseD_artist_5_2018_2019: Bermain dengan keping salju!
       courseD_artist_6_2018: Coba ubah garis panjang Anda sebesar 150 piksel menjadi
         6 garis pendek sebesar **25** piksel, dengan sedikit putaran di akhir.
       courseD_artist_6_2018_2019: Coba ubah garis panjang Anda sebesar 150 piksel
@@ -2202,16 +2280,16 @@ id-ID:
         Gunakan blok di bawah ini agar
         seniman menggambar "01010101" dalam biner pada baris pertama.
       courseD_artist_binary2: Jalankan kode ini untuk melihat cara artis menggunakan
-        biner dalam menggambar pola ini.
+        binary dalam menggambar pola ini.
       courseD_artist_binary2_2018: Jalankan kode ini untuk melihat cara artis menggunakan
-        biner dalam menggambar pola ini.
+        binary dalam menggambar pola ini.
       courseD_artist_binary2_2019: Jalankan kode ini untuk melihat cara artis menggunakan
-        biner dalam menggambar pola ini.
-      courseD_artist_binary3: Manakah dari string biner berikut yang bisa Anda ulang
+        binary dalam menggambar pola ini.
+      courseD_artist_binary3: Manakah dari string binary berikut yang bisa Anda ulang
         8 kali untuk membuat gambar ini?
-      courseD_artist_binary3_2018: Manakah dari string biner berikut yang bisa Anda
+      courseD_artist_binary3_2018: Manakah dari string binary berikut yang bisa Anda
         ulang 8 kali untuk membuat gambar ini?
-      courseD_artist_binary3_2019: Manakah dari string biner berikut yang bisa Anda
+      courseD_artist_binary3_2019: Manakah dari string binary berikut yang bisa Anda
         ulang 8 kali untuk membuat gambar ini?
       courseD_artist_binary4: |-
         Bisakah Anda menggambar pola ini dengan putaran
@@ -2222,15 +2300,15 @@ id-ID:
       courseD_artist_binary4_2019: |-
         Bisakah Anda menggambar pola ini dengan putaran
          hanya tiga angka biner (0s dan 1s)?
-      courseD_artist_binary5: "Setiap string biner berikut mewakili satu baris\ngambar
-        ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar wajah tersenyum
-        dan bukan wajah cemberut?"
-      courseD_artist_binary5_2018: "Setiap string biner berikut mewakili satu baris\ngambar
-        ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar wajah tersenyum
-        dan bukan wajah cemberut?"
-      courseD_artist_binary5_2019: "Setiap string biner berikut mewakili satu baris\ngambar
-        ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar wajah tersenyum
-        dan bukan wajah cemberut?"
+      courseD_artist_binary5: "Setiap string binary berikut ini mewakili satu baris
+        dari gambar ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar wajah
+        tersenyum dan bukan wajah cemberut?"
+      courseD_artist_binary5_2018: "Setiap string binary berikut ini mewakili satu
+        baris dari gambar ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar
+        wajah tersenyum dan bukan wajah cemberut?"
+      courseD_artist_binary5_2019: "Setiap string binary berikut ini mewakili satu
+        baris dari gambar ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar
+        wajah tersenyum dan bukan wajah cemberut?"
       courseD_artist_binary6: String biner 6 digit yang manakah, yang diulangi 11
         kali yang akan menghasilkan gambar ini?
       courseD_artist_binary6_2018: String biner 6 digit yang manakah, yang diulangi
@@ -2362,19 +2440,75 @@ id-ID:
         ini!
       courseD_artist_nestedLoops_challenge2_2019: Perbaiki kode untuk membuat gambar
         ini!
+      courseD_artist_project1: 'Gambar sebuah bentuk kecil, antara **20 and 50** piksel
+        lebar. Bisa bentuk apa saja yang Anda mau.  '
+      courseD_artist_project1_2018: 'Gambar sebuah bentuk kecil, antara **20 and 50**
+        piksel lebar. Bisa bentuk apa saja yang Anda mau.  '
+      courseD_artist_project1_2019: 'Gambar sebuah bentuk kecil, antara **20 and 50**
+        piksel lebar. Bisa bentuk apa saja yang Anda mau.  '
+      courseD_artist_project1a: Gambar pola kaki tangga yang berputar antara 75 dan
+        105 derajat.
+      courseD_artist_project1a_2018: Gambar pola kaki tangga yang berputar antara
+        75 dan 105 derajat.
+      courseD_artist_project1a_2019: Gambar pola kaki tangga yang berputar antara
+        75 dan 105 derajat.
+      courseD_artist_project2: Sekarang ambil bentuk Anda dan gambar dua atau tiga
+        berturut-turut!
+      courseD_artist_project2_2018: Sekarang ambil bentuk Anda dan gambar dua atau
+        tiga berturut-turut!
+      courseD_artist_project2_2019: Sekarang ambil bentuk Anda dan gambar dua atau
+        tiga berturut-turut!
+      courseD_artist_project2a: Sekarang, berputar 180 derajat dan gambar pola tangga
+        itu lagi!
+      courseD_artist_project2a_2018: Sekarang, berputar 180 derajat dan gambar pola
+        tangga itu lagi!
+      courseD_artist_project2a_2019: Sekarang, berputar 180 derajat dan gambar pola
+        tangga itu lagi!
+      courseD_artist_project3: Mari putar barisan bentuk itu!
+      courseD_artist_project3_2018: Mari putar barisan bentuk itu!
+      courseD_artist_project3_2019: Mari putar barisan bentuk itu!
+      courseD_artist_project3a: Putar bentuk itu sekitar 5 atau 6 kali dalam lingkaran.
+      courseD_artist_project3a_2018: Putar bentuk itu sekitar 5 atau 6 kali dalam
+        lingkaran.
+      courseD_artist_project3a_2019: Putar bentuk itu sekitar 5 atau 6 kali dalam
+        lingkaran.
+      courseD_artist_project4: Saatnya untuk lapisi bentuk itu!
+      courseD_artist_project4_2018: Saatnya untuk lapisi bentuk itu!
+      courseD_artist_project4_2019: Saatnya untuk lapisi bentuk itu!
+      courseD_artist_project4a: |-
+        Coba bermain dengan apa yang Anda buat. Gambar apa pun yang Anda mau!
+
+        -   Apa yang terjadi jika Anda menggunakan dua sudut berbeda di pola kaki tangga Anda?
+        -   Apa yang terjadi jika Anda membuat pola berlian Anda lebih panjang atau pendek?
+        -   Terlihat seperti apa untuk menggambar dua keping salju di atas satu sama lain?
+      courseD_artist_project4a_2018: |-
+        Coba bermain dengan apa yang Anda buat. Gambar apa pun yang Anda mau!
+
+        -   Apa yang terjadi jika Anda menggunakan dua sudut berbeda di pola kaki tangga Anda?
+        -   Apa yang terjadi jika Anda membuat pola berlian Anda lebih panjang atau pendek?
+        -   Terlihat seperti apa untuk menggambar dua keping salju di atas satu sama lain?
+      courseD_artist_project4a_2019: |-
+        Coba bermain dengan apa yang Anda buat. Gambar apa pun yang Anda mau!
+
+        -   Apa yang terjadi jika Anda menggunakan dua sudut berbeda di pola kaki tangga Anda?
+        -   Apa yang terjadi jika Anda membuat pola berlian Anda lebih panjang atau pendek?
+        -   Terlihat seperti apa untuk menggambar dua keping salju di atas satu sama lain?
+      courseD_artist_project5: Bermain dengan keping salju!
+      courseD_artist_project5_2018: Bermain dengan keping salju!
+      courseD_artist_project5_2019: Bermain dengan keping salju!
       courseD_artist_ramp11: Sekarang buat persegi empat menggunakan Artis!
       courseD_artist_ramp12: Gunakan materi yang sudah dipelajari untuk menggambar
         segitiga ini di dalam persegi empat.
       courseD_autorun_binary2_2019: Jalankan kode ini untuk melihat cara artis menggunakan
-        biner dalam menggambar pola ini.
-      courseD_autorun_binary3_2019: Manakah dari string biner berikut yang bisa Anda
+        binary dalam menggambar pola ini.
+      courseD_autorun_binary3_2019: Manakah dari string binary berikut yang bisa Anda
         ulang 8 kali untuk membuat gambar ini?
       courseD_autorun_binary4_2019: |-
         Bisakah Anda menggambar pola ini dengan putaran
          hanya tiga angka biner (0s dan 1s)?
-      courseD_autorun_binary5_2019: "Setiap string biner berikut mewakili satu baris\ngambar
-        ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar wajah tersenyum
-        dan bukan wajah cemberut?"
+      courseD_autorun_binary5_2019: "Setiap string binary berikut ini mewakili satu
+        baris dari gambar ini. \n\nBisakah Anda mengatur ulang agar bisa menggambar
+        wajah tersenyum dan bukan wajah cemberut?"
       courseD_autorun_binary6_2019: String biner 6 digit yang manakah, yang diulangi
         11 kali yang akan menghasilkan gambar ini?
       courseD_autorun_binary7_2019: String biner terpendek apakah yang dapat Anda
@@ -2382,6 +2516,17 @@ id-ID:
       courseD_autorun_binary8_2019: Selesaikan code untuk membuat gambar ini.
       courseD_autorun_binary8_predict1_2019: Selesaikan code untuk membuat gambar
         ini.
+      courseD_bee_conditionals10: Kumpulkan semua nektar dan buat semua madunya.
+      courseD_bee_conditionals10_2018: Kumpulkan semua nektar dan buat semua madunya.
+      courseD_bee_conditionals10_2019: Kumpulkan semua nektar dan buat semua madunya.
+      courseD_bee_conditionals1_predict1: Lihat apakah ada bunga di bawah awan. Jika
+        ada bunga, dapatkan nektar.
+      courseD_bee_conditionals1_predict1_2018: Lihat apakah ada bunga di bawah awan.
+        Jika ada bunga, dapatkan nektar.
+      courseD_bee_conditionals1_predict1_2019: Lihat apakah ada bunga di bawah awan.
+        Jika ada bunga, dapatkan nektar.
+      courseD_bee_conditionals1_predict1_copy: Lihat apakah ada bunga di bawah awan.
+        Jika ada bunga, dapatkan nektar.
       courseD_bee_conditionals2: 'Periksa di bawah tiap-tiap awan untuk melihat apakah
         tersembunyi bunga sebelum Anda mengambil nektar.  '
       courseD_bee_conditionals2_2018: 'Periksa di bawah tiap-tiap awan untuk melihat
@@ -2402,15 +2547,52 @@ id-ID:
       courseD_bee_conditionals3_copy: "Bantu lebah mengumpulkan semua nektar. \n\nAnda
         hanya dapat mengumpulkan nektar dari bunga, tetapi Anda dapat memeriksa setiap
         tempat untuk melihat apakah ada bunga."
+      courseD_bee_conditionals4: Kumpulkan semua nektar dengan menggunakan blok sesedikit
+        mungkin.
+      courseD_bee_conditionals4_2018: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_bee_conditionals4_2019: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_bee_conditionals4_copy: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_bee_conditionals5: Kumpulkan semua nektar dengan menggunakan blok sesedikit
+        mungkin
+      courseD_bee_conditionals5_2018: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin
+      courseD_bee_conditionals5_2019: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin
+      courseD_bee_conditionals5_copy: Kumpulkan semua nektar dengan menggunakan blok
+        sesedikit mungkin
       courseD_bee_conditionals6: Mungkin ada sarang lebah di bawah sebagian awan ini.
-        Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
+        Pastikan diperiksa, siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
         awan!
       courseD_bee_conditionals6_2018: Mungkin ada sarang lebah di bawah sebagian awan
-        ini. Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
+        ini. Pastikan diperiksa, siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
         awan!
       courseD_bee_conditionals6_2019: Mungkin ada sarang lebah di bawah sebagian awan
-        ini. Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
+        ini. Pastikan diperiksa, siapa tahu tersembunyi sarang lebah di bawah tiap-tiap
         awan!
+      courseD_bee_conditionals7: Gunakan blok `if/else` untuk mengumpulkan nektar
+        pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals7_2018: Gunakan blok `if/else` untuk mengumpulkan nektar
+        pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals7_2019: Gunakan blok `if/else` untuk mengumpulkan nektar
+        pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals7_predict2: Gunakan blok `if/else` untuk mengumpulkan
+        nektar pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals7_predict2_2018: Gunakan blok `if/else` untuk mengumpulkan
+        nektar pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals7_predict2_2019: Gunakan blok `if/else` untuk mengumpulkan
+        nektar pada bunga dan membuat madu pada sarang madu.
+      courseD_bee_conditionals8: |-
+        Kumpulkan nektar jika ada bunga.
+        Jika tidak, buat madu (karena ada sarang madu).
+      courseD_bee_conditionals8_2018: |-
+        Kumpulkan nektar jika ada bunga.
+        Jika tidak, buat madu (karena ada sarang madu).
+      courseD_bee_conditionals8_2019: |-
+        Kumpulkan nektar jika ada bunga.
+        Jika tidak, buat madu (karena ada sarang madu).
       courseD_bee_conditionals9: Kumpulkan semua nektar atau buat semua madu.
       courseD_bee_conditionals9_2018: Kumpulkan semua nektar atau buat semua madu.
       courseD_bee_conditionals9_2019: Kumpulkan semua nektar atau buat semua madu.
@@ -2424,14 +2606,47 @@ id-ID:
         madu.
       courseD_bee_conditionals_challenge2_2019: Kumpulkan semua nektar dan buat semua
         madu.
+      courseD_bee_debugging_challenge1: Lihat bagaimana para lebah mendapatkan nektar.
+        Bisakah Anda menggunakan semacam pola untuk membantu si lebah menghasilkan
+        madu?
       courseD_bee_debugging_challenge1a: Perhatikan cara lebah mengisap nektar. Gunakan
         pola yang sama untuk membantu lebah membuat semua madu.
+      courseD_bee_nestedLoops1: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops1_2018: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops1_2019: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops1a: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops1a_2018: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops1a_2019: Bantu si lebah mengumpulkan semua nektar.
+      courseD_bee_nestedLoops2: Kali ini, bantulah si lebah mengumpulkan semua nektar
+        menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops2_2018: Kali ini, bantulah si lebah mengumpulkan semua
+        nektar menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops2_2019: Kali ini, bantulah si lebah mengumpulkan semua
+        nektar menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops2_predict1: Kali ini, bantulah si lebah mengumpulkan
+        semua nektar menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops2_predict1_2018: Kali ini, bantulah si lebah mengumpulkan
+        semua nektar menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops2_predict1_2019: Kali ini, bantulah si lebah mengumpulkan
+        semua nektar menggunakan blok sesedikit mungkin.
+      courseD_bee_nestedLoops7: 'Tantangan: Cari tahu bagaimana cara mendapatkan semua
+        nektar hanya menggunakan blok yang tersedia.'
+      courseD_bee_nestedLoops7_2018: 'Tantangan: Cari tahu bagaimana cara mendapatkan
+        semua nektar hanya menggunakan blok yang tersedia.'
+      courseD_bee_nestedLoops7_2019: 'Tantangan: Cari tahu bagaimana cara mendapatkan
+        semua nektar hanya menggunakan blok yang tersedia.'
       courseD_bee_nestedLoops8: 'Kumpulkan semua nektar dari setiap bunga dan buatlah
         madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_2018: 'Kumpulkan semua nektar dari setiap bunga dan
         buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_2019: 'Kumpulkan semua nektar dari setiap bunga dan
         buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
+      courseD_bee_nestedLoops9: Hasilkan semua madunya
+      courseD_bee_nestedLoops9_2018: Hasilkan semua madunya
+      courseD_bee_nestedLoops9_2019: Hasilkan semua madunya
+      courseD_bee_nestedLoops9_predict2: Hasilkan semua madunya
+      courseD_bee_nestedLoops9_predict2_2018: Hasilkan semua madunya
+      courseD_bee_nestedLoops9_predict2_2019: Hasilkan semua madunya
       courseD_bounce_events10s_2018: Lekatkan blok `poin skor` ke peristiwa `ketika
         bola di gawang` dan blok `poin skor lawan` ke peristiwa `ketika bola meleset`
         untuk membuat permainan.
@@ -2495,25 +2710,189 @@ id-ID:
       courseD_collector_debugging4a_2019: Perbaiki kesalahan agar dapat mengumpulkan
         semua harta karun.
       courseD_collector_debugging5: Semua perintah yang Anda butuhkan sudah ada di
-        sini...nah, gunakan keterampilan debugging untuk menebak cara memecahkan masalah
-        ini.
+        sini...nah, gunakan keterampilan debugging Anda untuk mencaritahu cara memecahkan
+        masalah ini.
       courseD_collector_debugging5a_2018: Semua perintah yang Anda butuhkan sudah
-        ada di sini...nah, gunakan keterampilan debugging untuk menebak cara memecahkan
-        masalah ini.
+        ada di sini...nah, gunakan keterampilan debugging Anda untuk mencaritahu cara
+        memecahkan masalah ini.
       courseD_collector_debugging5a_2019: Semua perintah yang Anda butuhkan sudah
-        ada di sini...nah, gunakan keterampilan debugging untuk menebak cara memecahkan
-        masalah ini.
+        ada di sini...nah, gunakan keterampilan debugging Anda untuk mencaritahu cara
+        memecahkan masalah ini.
       courseD_collector_debugging6: 'Tantangan: Gunakan keterampilan debugging Anda
         untuk memperbaiki kesalahan dan mengumpulkan semua harta karun.'
       courseD_collector_debugging6a_2018: 'Tantangan: Gunakan kode di area kerja untuk
         mendapatkan paling sedikit **6** harta karun!'
       courseD_collector_debugging6a_2019: 'Tantangan: Gunakan kode di area kerja untuk
         mendapatkan paling sedikit **6** harta karun!'
+      courseD_collector_debugging_challenge2: Apakah anda seorang ahli dalam nested
+        loops? Gunakan apa yang telah anda pelajari untuk mengumpulkan semua harta
+        karun!
+      courseD_collector_nested_loops_challenge2: Bantu si pengumpul mencapai setidaknya
+        dua tumpuk harta karun hanya menggunakan blok yang ada di toolbox Anda. Memungkinkan
+        sekali untuk mendapatkan 4 harta karunnya.
+      courseD_collector_nested_loops_challenge2_2018: Bantu si pengumpul mencapai
+        setidaknya dua tumpuk harta karun hanya menggunakan blok yang ada di toolbox
+        Anda. Memungkinkan sekali untuk mendapatkan 4 harta karunnya.
+      courseD_collector_nested_loops_challenge2_2019: Bantu si pengumpul mencapai
+        setidaknya dua tumpuk harta karun hanya menggunakan blok yang ada di toolbox
+        Anda. Memungkinkan sekali untuk mendapatkan 4 harta karunnya.
       courseD_collector_nested_loops_challenge2a: Bantu Laurel mengumpulkan sedikitnya
         dua tumpuk harta karun.
       courseD_collector_ramp10: Bantu Laurel mengumpulkan semua harta karun.
       courseD_collector_ramp8: Bantu Laurel mengumpulkan semua harta karun.
       courseD_collector_ramp9: Bantu Laurel mengumpulkan semua harta karun.
+      courseD_farmer_condLoops1: Gunakan kondisional untuk memastikan Anda memilih
+        hanya saat itu di sana.
+      courseD_farmer_condLoops1_2018: Gunakan kondisional untuk memastikan Anda memilih
+        hanya saat itu di sana.
+      courseD_farmer_condLoops1_2019: Gunakan kondisional untuk memastikan Anda memilih
+        hanya saat itu di sana.
+      courseD_farmer_condLoops2: Bantu si pemanen mengumpulkan jagung dan selada dari
+        ladang.
+      courseD_farmer_condLoops2_2018: Bantu si pemanen mengumpulkan jagung dan selada
+        dari ladang.
+      courseD_farmer_condLoops2_2019: Bantu si pemanen mengumpulkan jagung dan selada
+        dari ladang.
+      courseD_farmer_condLoops3: _"Jagung, selada, DAN labu! Bantu aku memanen mereka
+        semua."_
+      courseD_farmer_condLoops3_2018: _"Jagung, selada, DAN labu! Bantu aku memanen
+        mereka semua."_
+      courseD_farmer_condLoops3_2019: _"Jagung, selada, DAN labu! Bantu aku memanen
+        mereka semua."_
+      courseD_farmer_condLoops4: Bantu si pemanen memetik semua selada di gugus itu
+        sebelum berpindah menuju kumpulan selanjutnya.
+      courseD_farmer_condLoops4_2018: Bantu si pemanen memetik semua selada di gugus
+        itu sebelum berpindah menuju kumpulan selanjutnya.
+      courseD_farmer_condLoops4_2019: Bantu si pemanen memetik semua selada di gugus
+        itu sebelum berpindah menuju kumpulan selanjutnya.
+      courseD_farmer_condLoops5: Kumpukan semua jagung dan selada, lalu ambil labunya
+        di akhir.
+      courseD_farmer_condLoops5_2018: Kumpukan semua jagung dan selada, lalu ambil
+        labunya di akhir.
+      courseD_farmer_condLoops5_2019: Kumpukan semua jagung dan selada, lalu ambil
+        labunya di akhir.
+      courseD_farmer_condLoops6: Bisakah Anda cari tahu bagaimana cara memetik labu?
+        Pastikan untuk mengumpulkan semua jagung di sepanjang jalan!
+      courseD_farmer_condLoops6_2018: Bisakah Anda cari tahu bagaimana cara memetik
+        labu? Pastikan untuk mengumpulkan semua jagung di sepanjang jalan!
+      courseD_farmer_condLoops6_2019: Bisakah Anda cari tahu bagaimana cara memetik
+        labu? Pastikan untuk mengumpulkan semua jagung di sepanjang jalan!
+      courseD_farmer_condLoops7: 'Tantangan: Kumpukan semua jagung dan selada, lalu
+        petik labunya.'
+      courseD_farmer_condLoops7_2018: 'Tantangan: Kumpukan semua jagung dan selada,
+        lalu petik labunya.'
+      courseD_farmer_condLoops7_2019: 'Tantangan: Kumpukan semua jagung dan selada,
+        lalu petik labunya.'
+      courseD_farmer_condLoops8: Kumpukan semua jagung dan selada, lalu petik labunya.
+      courseD_farmer_condLoops8_2018: Kumpukan semua jagung dan selada, lalu petik
+        labunya.
+      courseD_farmer_condLoops8_2019: Kumpukan semua jagung dan selada, lalu petik
+        labunya.
+      courseD_farmer_condLoops9: Kumpukan semua jagung dan selada, lalu petik labunya.
+      courseD_farmer_condLoops9_2018: Kumpukan semua jagung dan selada, lalu petik
+        labunya.
+      courseD_farmer_condLoops9_2019: Kumpukan semua jagung dan selada, lalu petik
+        labunya.
+      courseD_farmer_condLoops9_predict1: Kumpukan semua jagung dan selada, lalu petik
+        labunya.
+      courseD_farmer_condLoops9_predict1_2018: Kumpukan semua jagung dan selada, lalu
+        petik labunya.
+      courseD_farmer_condLoops9_predict1_2019: Kumpukan semua jagung dan selada, lalu
+        petik labunya.
+      courseD_farmer_condLoops_challenge1: Kumpulkan segalanya untuk menyelesaikan
+        tingkat ini! Tiap tanaman tersembunyi memiliki satu jagung atau selada.
+      courseD_farmer_condLoops_challenge1_2018: Kumpulkan segalanya untuk menyelesaikan
+        tingkat ini! Tiap tanaman tersembunyi memiliki satu jagung atau selada.
+      courseD_farmer_condLoops_challenge1_2019: Kumpulkan segalanya untuk menyelesaikan
+        tingkat ini! Tiap tanaman tersembunyi memiliki satu jagung atau selada.
+      courseD_farmer_condLoops_challenge2: Kumpulkan semuanya untuk menyelesaikan
+        tingkat ini.
+      courseD_farmer_condLoops_challenge2_2018: Kumpulkan semuanya untuk menyelesaikan
+        tingkat ini.
+      courseD_farmer_condLoops_challenge2_2019: Kumpulkan semuanya untuk menyelesaikan
+        tingkat ini.
+      courseD_farmer_until_challenge2: Gunakan blok If/Else untuk mengikuti jalan
+        melengkung. Pada tiap pojok, gunakan perintah `remove 1` di dalam loop untuk
+        membersihkan tumpukan.
+      courseD_farmer_while1: Bergerak menuju tumpukan tanah dan gunakan blok `remove`
+        untuk menghilangkannya.
+      courseD_farmer_while10: Ratakan semua tumpukan ini dengan menggunakan blok sesedikit
+        mungkin.
+      courseD_farmer_while10_2018: Ratakan semua tumpukan ini dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_farmer_while10_2019: Ratakan semua tumpukan ini dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_farmer_while10_predict2: Ratakan semua tumpukan ini dengan menggunakan
+        blok sesedikit mungkin.
+      courseD_farmer_while10_predict2_2018: Ratakan semua tumpukan ini dengan menggunakan
+        blok sesedikit mungkin.
+      courseD_farmer_while10_predict2_2019: Ratakan semua tumpukan ini dengan menggunakan
+        blok sesedikit mungkin.
+      courseD_farmer_while1_2018: Bergerak menuju tumpukan tanah dan gunakan blok
+        `remove` untuk menghilangkannya.
+      courseD_farmer_while1_2019: Bergerak menuju tumpukan tanah dan gunakan blok
+        `remove` untuk menghilangkannya.
+      courseD_farmer_while2: Bergerak menuju lubang dan isi lubang itu dengan enam
+        sekop tanah, menggunakan blok `fill`.
+      courseD_farmer_while2_2018: Bergerak menuju lubang dan isi lubang itu dengan
+        enam sekop tanah, menggunakan blok `fill`.
+      courseD_farmer_while2_2019: Bergerak menuju lubang dan isi lubang itu dengan
+        enam sekop tanah, menggunakan blok `fill`.
+      courseD_farmer_while3: Gunakan blok sesedikit mungkin untuk menyelesaikan teka-teki
+        ini.
+      courseD_farmer_while3_2018: Gunakan blok sesedikit mungkin untuk menyelesaikan
+        teka-teki ini.
+      courseD_farmer_while3_2019: Gunakan blok sesedikit mungkin untuk menyelesaikan
+        teka-teki ini.
+      courseD_farmer_while4: Bantu si petani menghilangkan seluruh tumpukan ini menggunakan
+        loop `while`.
+      courseD_farmer_while4_2018: Bantu si petani menghilangkan seluruh tumpukan ini
+        menggunakan loop `while`.
+      courseD_farmer_while4_2019: Bantu si petani menghilangkan seluruh tumpukan ini
+        menggunakan loop `while`.
+      courseD_farmer_while4_predict1: Bantu si petani menghilangkan seluruh tumpukan
+        ini menggunakan loop `while`.
+      courseD_farmer_while4_predict1_2018: Bantu si petani menghilangkan seluruh tumpukan
+        ini menggunakan loop `while`.
+      courseD_farmer_while4_predict1_2019: Bantu si petani menghilangkan seluruh tumpukan
+        ini menggunakan loop `while`.
+      courseD_farmer_while5: 'Bantu aku menghilangkan semua tanah ini. '
+      courseD_farmer_while5_2018: 'Bantu aku menghilangkan semua tanah ini. '
+      courseD_farmer_while5_2019: 'Bantu aku menghilangkan semua tanah ini. '
+      courseD_farmer_while6: Gunakan loop `while` untuk mengisi semua lubang dengan
+        mudah.
+      courseD_farmer_while6_2018: Gunakan loop `while` untuk mengisi semua lubang
+        dengan mudah.
+      courseD_farmer_while6_2019: Gunakan loop `while` untuk mengisi semua lubang
+        dengan mudah.
+      courseD_farmer_while7: Isi lubang di akhir setiap jalur ini.
+      courseD_farmer_while7_2018: Isi lubang di akhir setiap jalur ini.
+      courseD_farmer_while7_2019: Isi lubang di akhir setiap jalur ini.
+      courseD_farmer_while8: 'Tantangan: Isi semua lubang ini dengan menggunakan blok
+        sesedikit mungkin. '
+      courseD_farmer_while8_2018: 'Tantangan: Isi semua lubang ini dengan menggunakan
+        blok sesedikit mungkin. '
+      courseD_farmer_while8_2019: 'Tantangan: Isi semua lubang ini dengan menggunakan
+        blok sesedikit mungkin. '
+      courseD_farmer_while9: Ratakan semua tumpukan ini dengan menggunakan blok sesedikit
+        mungkin.
+      courseD_farmer_while9_2018: Ratakan semua tumpukan ini dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_farmer_while9_2019: Ratakan semua tumpukan ini dengan menggunakan blok
+        sesedikit mungkin.
+      courseD_farmer_while_challenge1: Isi semua lubang dan hilangkan semua tumpukan.
+      courseD_farmer_while_challenge1_2018: Isi semua lubang dan hilangkan semua tumpukan.
+      courseD_farmer_while_challenge1_2019: Isi semua lubang dan hilangkan semua tumpukan.
+      courseD_farmer_while_challenge2: Isi semua lubang dan hilangkan semua tumpukan.
+      courseD_harvester_nested_loops_challenge1: '"Aku butuh bantuan di pertanian!
+        Bantu aku memanen jagung ini dengan hanya menggunakan blok yang ada di dalam
+        toolbox Anda."'
+      courseD_harvester_nested_loops_challenge1_2018: '"Aku butuh bantuan di pertanian!
+        Bantu aku memanen jagung ini dengan hanya menggunakan blok yang ada di dalam
+        toolbox Anda."'
+      courseD_harvester_nested_loops_challenge1_2019: '"Aku butuh bantuan di pertanian!
+        Bantu aku memanen jagung ini dengan hanya menggunakan blok yang ada di dalam
+        toolbox Anda."'
       courseD_iceage_loops1: Bantu Scrat melintasi es untuk menuju ke biji!
       courseD_iceage_loops10: Bantu Scrat sepenuhnya menuju ke biji!
       courseD_iceage_loops10_2019: Bantu Scrat sepenuhnya menuju ke biji!
@@ -2549,18 +2928,36 @@ id-ID:
       courseD_maze_intro4_2019: Bantu Red menggapai babi.
       courseD_maze_intro5a_2019: Hitung spasi di kisi-kisi dengan hati-hati!
       courseD_maze_intro5c_2019: Hati-hati dengan TNT! Bantu Red menuju ke babi.
+      courseD_maze_nestedLoops3: 'Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin. '
+      courseD_maze_nestedLoops3_2018: 'Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin. '
+      courseD_maze_nestedLoops3_2019: 'Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin. '
       courseD_maze_nestedLoops4: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2018: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2019: Bawa aku ke bunga matahari!
+      courseD_maze_nestedLoops5: Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin!
+      courseD_maze_nestedLoops5_2018: Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin!
+      courseD_maze_nestedLoops5_2019: Gerakkan zombie menuju bunga matahari menggunakan
+        jumlah blok sesedikit mungkin!
       courseD_maze_nestedLoops6: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6_2018: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6_2019: Bawa aku ke bunga matahari!
-      courseD_maze_ramp1: Untuk teka-teki ini, pasang semua blok sekaligus dan klik
-        "Run" untuk melihat aksinya!
-      courseD_maze_ramp1_2018: Untuk teka-teki ini, pasang semua blok sekaligus dan
-        klik "Run" untuk melihat aksinya!
-      courseD_maze_ramp1_2019: Untuk teka-teki ini, pasang semua blok sekaligus dan
-        klik "Run" untuk melihat aksinya!
+      courseD_maze_ramp1: Untuk puzzle ini, pasang semua blok sekaligus dan klik "Run"
+        untuk memulainya!
+      courseD_maze_ramp1_2018: Untuk puzzle ini, pasang semua blok sekaligus dan klik
+        "Run" untuk memulainya!
+      courseD_maze_ramp1_2019: Untuk puzzle ini, pasang semua blok sekaligus dan klik
+        "Run" untuk memulainya!
+      courseD_maze_ramp2: Pindahkan blok `pindah ke depan` tambahan keluar dari toolbox,
+        lalu pasang semua blok ke `saat jalan` untuk menyelesaikan kode Anda.
+      courseD_maze_ramp2_2018: Pindahkan blok `pindah ke depan` tambahan keluar dari
+        toolbox, lalu pasang semua blok ke `saat jalan` untuk menyelesaikan kode Anda.
+      courseD_maze_ramp2_2019: Pindahkan blok `pindah ke depan` tambahan keluar dari
+        toolbox, lalu pasang semua blok ke `saat jalan` untuk menyelesaikan kode Anda.
       courseD_maze_ramp3: Ada satu blok ekstra yang akan menyebabkan burung tertabrak.
         Buanglah dengan memindahkannya kembali ke toolbox.
       courseD_maze_ramp3_2018: Ada satu blok ekstra yang akan menyebabkan burung tertabrak.
@@ -2586,11 +2983,54 @@ id-ID:
       courseD_maze_ramp5c_2018: Bantu burungnya sampai ke babi.
       courseD_maze_ramp5c_2019: Awas pecahan es! Bantu Scrat menuju ke biji pohon
         ek.
+      courseD_maze_ramp5d: Gerakan burung menuju babi.
+      courseD_maze_ramp5d_2018: Gerakan burung menuju babi.
+      courseD_maze_ramp5d_2019: Gerakan burung menuju babi.
       courseD_maze_ramp6: '"Tenang saja dan bantu saya menemukan babi jahat itu. Kalau
         tidak saya akan marah!"'
       courseD_maze_ramp7: Giring burungnya ke babi!
-      courseD_playLab_cond1: Giring Pegleg ke bendera untuk memecahkan teka-teki.
-      courseD_playLab_cond1_2018: Giring Pegleg ke bendera untuk memecahkan teka-teki.
+      courseD_maze_until1: Gerakan burung yang marah menuju babi.
+      courseD_maze_until10: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until10_2018: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until10_2019: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until10_predict2: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until10_predict2_2018: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until10_predict2_2019: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until1_2018: Gerakan burung yang marah menuju babi.
+      courseD_maze_until1_2019: Gerakan burung yang marah menuju babi.
+      courseD_maze_until3: Gerakan burung menuju babi.
+      courseD_maze_until3_2018: Gerakan burung menuju babi.
+      courseD_maze_until3_2019: Gerakan burung menuju babi.
+      courseD_maze_until4: Bisakah Anda menggerakkan zombie menuju bunga matahari
+        dengan hanya menggunakan blok yang tersedia?
+      courseD_maze_until4_2018: Bisakah Anda menggerakkan zombie menuju bunga matahari
+        dengan hanya menggunakan blok yang tersedia?
+      courseD_maze_until4_2019: Bisakah Anda menggerakkan zombie menuju bunga matahari
+        dengan hanya menggunakan blok yang tersedia?
+      courseD_maze_until5: Gunakan blok `if` untuk membantu zombie memutuskan kapan
+        untuk belok, lalu gerakan zombie menuju bunga matahari.
+      courseD_maze_until5_2018: Gunakan blok `if` untuk membantu zombie memutuskan
+        kapan untuk belok, lalu gerakan zombie menuju bunga matahari.
+      courseD_maze_until5_2019: Gunakan blok `if` untuk membantu zombie memutuskan
+        kapan untuk belok, lalu gerakan zombie menuju bunga matahari.
+      courseD_maze_until6: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until6_2018: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until6_2019: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until7: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until7_2018: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until7_2019: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until8: Bantu zombie mencapai bunga matahari.
+      courseD_maze_until9: "**Tantangan:** Hindari penggigit dan bantu zombie mencapai
+        bunga matahari."
+      courseD_maze_until9_2018: "**Tantangan:** Hindari penggigit dan bantu zombie
+        mencapai bunga matahari."
+      courseD_maze_until9_2019: "**Tantangan:** Hindari penggigit dan bantu zombie
+        mencapai bunga matahari."
+      courseD_maze_until_challenge1: Tidak ada petunjuk, hanya tantangan. Gerakkan
+        zombie menuju bunga matahari.
+      courseD_playLab_cond1: Giring Pegleg ke bendera untuk memecahkan puzzle ini.
+      courseD_playLab_cond1_2018: Giring Pegleg ke bendera untuk memecahkan puzzle
+        ini.
       courseD_playLab_cond2: 'Beri Pegleg poin setiap kali dia berhasil sampai ke
         naga. '
       courseD_playLab_cond2_2018: 'Beri Pegleg poin setiap kali dia berhasil sampai
@@ -2599,13 +3039,13 @@ id-ID:
       courseD_playLab_cond3_2018: 'Buat si naga berubah emosinya secara acak setiap
         detik.  '
       courseD_playLab_cond3a: Buatlah aturan ketika Pegleg sampai ke naga, dia mendapat
-        2 poin jika naganya senang dan 1 jika naganya sedih.
+        2 poin jika naganya senang dan 1 jika tidak.
       courseD_playLab_cond3a_2018: Buatlah aturan ketika Pegleg sampai ke naga, dia
-        mendapat 2 poin jika naganya senang dan 1 jika naganya sedih.
-      courseD_playLab_cond4: Tambahkan kode tertentu agar ninja (aktor 3) mulai mengejar
+        mendapat 2 poin jika naganya senang dan 1 jika tidak.
+      courseD_playLab_cond4: Tambahkan beberapa kode agar ninja (aktor 3) mulai mengejar
         Pegleg tidak lama setelah permainan dimulai.  Akhiri permainan sebagai kalah
         jika ninja menangkapnya.
-      courseD_playLab_cond4_2018: Tambahkan kode tertentu agar ninja (aktor 3) mulai
+      courseD_playLab_cond4_2018: Tambahkan beberapa kode agar ninja (aktor 3) mulai
         mengejar Pegleg tidak lama setelah permainan dimulai.  Akhiri permainan sebagai
         kalah jika ninja menangkapnya.
       courseD_playLab_cond5: Tambahkan loop `repeat forever` yang terus-menerus memeriksa
@@ -2621,15 +3061,22 @@ id-ID:
         turun, setel ninjanya untuk **kabur** dari perompak.  Sebaliknya, setel ninjanya
         untuk **mengejar** perompak.  "
       courseD_playLab_cond6a: Jika perompak (aktor 1) berada di zona aman, tunggu
-        sebentar, lalu kurangi poin sepanjang dia bertahan di bawah garis gurita.
+        sebentar, lalu kurangi poin selama dia berada di bawah garis gurita.
       courseD_playLab_cond6a_2018: Jika perompak (aktor 1) berada di zona aman, tunggu
-        sebentar, lalu kurangi poin sepanjang dia bertahan di bawah garis gurita.
+        sebentar, lalu kurangi poin selama dia berada di bawah garis gurita.
       courseD_playLab_condFP: Sekarang, buat permainan Anda sendiri untuk dipamerkan
         ke teman-teman!
       courseD_playLab_condFP_2018: Sekarang, buat permainan Anda sendiri untuk dipamerkan
         ke teman-teman!
-      courseD_scrat_ramp1: Untuk teka-teki ini, pasang semua blok sekaligus dan klik
-        "Run" untuk melihat aksinya!
+      courseD_scrat_ramp1: Untuk puzzle ini, pasang semua blok sekaligus dan klik
+        "Run" untuk memulainya!
+      courseD_scrat_ramp2: Pindahkan blok `pindah ke depan` tambahan keluar dari toolbox,
+        lalu pasang semua blok ke `saat jalan` untuk menyelesaikan kode Anda.
+      courseD_scrat_ramp3: Ada satu blok ekstra yang akan membuat Scrat crash. Buanglah
+        dengan membawa blok itu kembali ke toolbox.
+      courseD_scrat_ramp4: Hindari es yang retak untuk menjaga Scrat aman!
+      courseD_scrat_ramp5: Hindari es yang retak.
+      courseD_scrat_ramp6: Tolong Scrat mencapai biji ek dengan loop!
       courseD_scrat_ramp7: Bantu Scrat menuju ke biji!
       courseD_scrat_ramp8: Gunakan materi yang sudah dipelajari untuk menggiring Scrat
         ke akorn!
@@ -2643,10 +3090,10 @@ id-ID:
         ini. '
       courseE_artist_concept_challenge1_2018: 'Bantu si artis menggambar bentuk yang
         unik ini. '
-      courseE_artist_concept_challenge2: Buat lima desain kincir menggunakan kode
+      courseE_artist_concept_challenge2: Buat lima desain kincir menggunakan code
         di bawah ini.
       courseE_artist_concept_challenge2_2018: Buat lima desain kincir menggunakan
-        kode di bawah ini.
+        code di bawah ini.
       courseE_artist_functions1: |-
         Hello. Saya artis zombie. Saya suka menggambar!
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
@@ -2661,14 +3108,14 @@ id-ID:
         Hello. Saya artis zombie. Saya suka menggambar!
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
         25 piksel lebih pendek dari panjang persegi.
-      courseE_artist_functions2: 'Kali ini, gunakan fungsi `draw a square` untuk membuat
-        kacamata. '
+      courseE_artist_functions2: 'Kali ini, gunakan function `menggambar persegi empat`
+        untuk membuat kacamata. '
       courseE_artist_functions2_2018: Gunakan fungsi `menggambar kotak` untuk membuat
         kacamata.
       courseE_artist_functions2_2019: Gunakan fungsi `menggambar kotak` untuk membuat
         kacamata.
-      courseE_artist_functions2_copy: 'Kali ini, gunakan fungsi `draw a square` untuk
-        membuat kacamata. '
+      courseE_artist_functions2_copy: 'Kali ini, gunakan function `menggambar persegi
+        empat` untuk membuat kacamata. '
       courseE_artist_functions3: Anda dapat membuat gambar ini dengan menambahkan
         blok ulangi.
       courseE_artist_functions3_2018: Buat fungsi yang akan membuat bintang ini.
@@ -2679,21 +3126,21 @@ id-ID:
         empat bintang!
       courseE_artist_functions4_copy: Sekarang Anda dapat menggambar bintang, coba
         gambar empat bintang!
-      courseE_artist_functions5: Cukup gambar tiga bintang untuk menyelesaikan teka-teki
+      courseE_artist_functions5: Cukup gambar tiga bintang untuk menyelesaikan puzzle
         ini.
       courseE_artist_functions5_2018: Cukup gambar tiga bintang untuk menyelesaikan
-        teka-teki ini.
+        puzzle ini.
       courseE_artist_functions5_2019: Cukup gambar tiga bintang untuk menyelesaikan
-        teka-teki ini.
+        puzzle ini.
       courseE_artist_functions5_copy: Cukup gambar tiga bintang untuk menyelesaikan
-        teka-teki ini.
+        puzzle ini.
       courseE_artist_functions6: Buat jendela ini dengan menggambar persegi empat,
         lalu membelok 90 derajat sebelum menggambar yang lain, dan seterusnya.
-      courseE_artist_functions7: Coba pecahkan teka-teki ini dengan membuat `draw
+      courseE_artist_functions7: Coba pecahkan puzzle ini dengan membuat `draw a window`
+        dan memanggilnya lima kali. Awasi pintu!
+      courseE_artist_functions7_2018: Coba pecahkan puzzle ini dengan membuat `draw
         a window` dan memanggilnya lima kali. Awasi pintu!
-      courseE_artist_functions7_2018: Coba pecahkan teka-teki ini dengan membuat `draw
-        a window` dan memanggilnya lima kali. Awasi pintu!
-      courseE_artist_functions7_2019: Coba pecahkan teka-teki ini dengan membuat `draw
+      courseE_artist_functions7_2019: Coba pecahkan puzzle ini dengan membuat `draw
         a window` dan memanggilnya lima kali. Awasi pintu!
       courseE_artist_functions8: 'Tantangan: Buat fungsi sebanyak-banyaknya yang Anda
         rasa diperlukan untuk membuat gambar persegi empat 50 piksel ini.'
@@ -2733,21 +3180,19 @@ id-ID:
         kode ini untuk mengetahui cara kerjanya, lalu ubahlah untuk membuat desain
         sendiri yang memukau!
       courseE_artist_functions_challenge2: Coba kode ini untuk mengetahui cara kerjanya,
-        lalu buat sendiri programnya!
+        lalu buat sendiri program Anda!
       courseE_artist_functions_challenge2_2018: Coba kode ini untuk mengetahui cara
-        kerjanya, lalu buat sendiri programnya!
+        kerjanya, lalu buat sendiri program Anda!
       courseE_artist_functions_challenge2_2019: Coba kode ini untuk mengetahui cara
-        kerjanya, lalu buat sendiri programnya!
+        kerjanya, lalu buat sendiri program Anda!
       courseE_artist_ramp8: Sekarang buat persegi empat menggunakan Artis!
       courseE_artist_ramp8_2: Sekarang buat persegi empat menggunakan Artis!
       courseE_artist_ramp9: Gunakan materi yang sudah dipelajari untuk menggambar
         segitiga ini.
       courseE_artist_ramp9_2: Gunakan materi yang sudah dipelajari untuk menggambar
         segitiga ini.
-      courseE_bee_concept1: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan
-        loop bersarang. "
-      courseE_bee_concept1_2018: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan
-        loop bersarang. "
+      courseE_bee_concept1: Kumpulkan semua nektar dari setiap bunga.
+      courseE_bee_concept1_2018: Kumpulkan semua nektar dari setiap bunga.
       courseE_bee_concept2: 'Bantu si lebah membuat semua madu. '
       courseE_bee_concept2_2018: 'Bantu si lebah membuat semua madu. '
       courseE_bee_concept3: Kumpulkan semua nektar menggunakan blok sedikit mungkin.
@@ -2758,18 +3203,14 @@ id-ID:
         nektar atau membuat madu. Bisakah Anda membantunya?
       courseE_bee_concept5: Bantu lebah mengumpulkan nektar dari bunga?
       courseE_bee_concept5_2018: Bantu lebah mengumpulkan nektar dari bunga?
-      courseE_bee_functions1: Kumpulkan semua madu bunga dari setiap bunga.
-      courseE_bee_functions10: Pecahkan teka-teki ini dengan membuat sebuah fungsi
-        yang membantu lebah pergi mengambil semua madu sebelum kembali lagi ke jalur
-        utama.
+      courseE_bee_functions1: Kumpulkan semua nektar dari setiap bunga.
+      courseE_bee_functions10: Pecahkan puzzle ini dengan membuat sebuah fungsi yang
+        membantu lebah pergi mengambil semua madu sebelum kembali lagi ke jalur utama.
       courseE_bee_functions2: Gunakan fungsi `get 2 nectar` untuk mengumpulkan nektar
         dari masing-masing bunga.
-      courseE_bee_functions3: Fungsi adalah blok kode yang melakukan suatu tugas.
-        Gunakan fungsi "dapatkan 5" untuk mendapatkan 5 madu pada satu waktu. Pastikan
-        juga untuk menggunakan pengulangan untuk mendapatkan jumlah blok yang ideal.
-      courseE_bee_functions4: Fungsi "bergerak dan mendapatkan nektar" membelokkan
-        lebah, mengumpulkan nektar, dan kemudian mengembalikan lebah ke tempat ia
-        memulai. Gunakan fungsi tersebut untuk mengumpulkan semua nektar.
+      courseE_bee_functions3: Buat fungsi `get 5` untuk digunakan di puzzle ini.
+      courseE_bee_functions4: Gunakan fungsi `move and get nectar` untuk mengumpulkan
+        semua nektar.
       courseE_bee_functions5: Sekarang tulis fungsinya untuk mengumpulkan nektar dari
         bunga.
       courseE_bee_functions6: Buat fungsi dan panggillah untuk mengumpulkan nektar
@@ -2783,20 +3224,22 @@ id-ID:
         bunga.
       courseE_bee_functions_challenge1: Anda sendirian dalam tantangan ini. Ini bisa
         "jadi" lebih sulit daripada yang terlihat mata!
-      courseE_bee_functions_challenge2: Anda sendirian dalam tantangan ini. Sayang!
+      courseE_bee_functions_challenge2: Anda sendirian dalam tantangan ini. Bagus!
       courseE_farmer_concept1: Bisakah Anda menulis program yang mengisi lubang-lubang
         ini hingga tanahnya rata?
       courseE_farmer_concept1_2018: Bisakah Anda menulis program yang mengisi lubang-lubang
         ini hingga tanahnya rata?
       courseE_farmer_concept2: Kumpulkan semua labu.
       courseE_farmer_concept2_2018: Kumpulkan semua labu.
+      courseE_farmer_concept3: Isi lubang di akhir setiap jalur ini.
+      courseE_farmer_concept3_2018: Isi lubang di akhir setiap jalur ini.
       courseE_farmer_functions1: Bantu pemanen tiba di labu dan mengambilnya.
       courseE_farmer_functions10a1_2018: Gunakan semua yang telah Anda pelajari sejauh
         ini untuk menyelesaikan teka-teki ini!
       courseE_farmer_functions10a1_2019: Gunakan semua yang telah Anda pelajari sejauh
         ini untuk menyelesaikan teka-teki ini!
       courseE_farmer_functions10b: Gunakan fungsi yang baru dua kali untuk memecahkan
-        teka-teki ini.
+        puzzle ini.
       courseE_farmer_functions13_2018: Pecahkan teka-teki ini dalam 23 blok atau kurang.
       courseE_farmer_functions13_2019: Pecahkan teka-teki ini dalam 23 blok atau kurang.
       courseE_farmer_functions1_2018: Bantu pemanen tiba di labu dan mengambilnya.
@@ -2822,6 +3265,8 @@ id-ID:
       courseE_farmer_functions3c1_2019: Fungsi ini menyebut fungsi lain!
       courseE_farmer_functions3c_2018: Coba di jalan yang lebih panjang.
       courseE_farmer_functions3c_2019: Coba di jalan yang lebih panjang.
+      courseE_farmer_functions4b: Gunakan fungsi baru Anda untuk memecahkan teka-teki
+        ini.
       courseE_farmer_functions5c: Fungsi Anda akan bermanfaat di sini.
       courseE_farmer_functions6c: Apakah yang Anda perlukan untuk menambahkan program
         ini agar bisa memastikan tunasnya jagung atau selada?
@@ -2834,11 +3279,11 @@ id-ID:
       courseE_farmer_functions8a1_2018: Apakah fungsi Anda masih bermanfaat?
       courseE_farmer_functions8a1_2019: Apakah fungsi Anda masih bermanfaat?
       courseE_farmer_functions8b: "**Tantangan:** Kumpulkan semua labu menggunakan
-        metode dari teka-teki terakhir. "
+        metode dari puzzle terakhir. "
       courseE_farmer_functions9a1_2018: Apakah fungsi Anda masih bermanfaat?
       courseE_farmer_functions9a1_2019: Apakah fungsi Anda masih bermanfaat?
       courseE_farmer_functions9b: Bisakah Anda menebak pola yang diperlukan untuk
-        memecahkan teka-teki ini?
+        memecahkan puzzle ini?
       courseE_farmer_ramp11a: Selagi ada tumpukan, hilangkan kotoran.
       courseE_farmer_ramp11a_2018: Selagi ada tumpukan, hilangkan kotoran.
       courseE_farmer_ramp11a_2019: Selagi ada tumpukan, hilangkan kotoran.
@@ -2902,6 +3347,58 @@ id-ID:
         lalu mainkan sampai Anda mengalami salah satu kondisi tersebut.
       courseE_playLab_scaffold6: Anda sudah selesai! Sekarang Anda dapat memainkan
         permainan atau membagikannya kepada teman dan rekan kelas!
+      courseE_video_createFunctions: Kami belum memiliki video untuk membuat fungsi.
+        Ini adalah penampung.
+      courseE_video_createFunctions2: Kami belum memiliki video untuk membuat fungsi.
+        Ini adalah penampung.
+      courseE_video_createFunctions2_2018: Kami belum memiliki video untuk membuat
+        fungsi. Ini adalah penampung.
+      courseE_video_createFunctions2_2019: Kami belum memiliki video untuk membuat
+        fungsi. Ini adalah penampung.
+      courseF_artist_for1: Eksperimen dengan loop `for` dan bermain dengan variabel
+        `counter`.
+      courseF_artist_for10: 'Free Play: Coba gunakan variabel `counter` dengan elemen
+        gambar lain untuk membuat gambar ajaib seperti ini.'
+      courseF_artist_for10_2018: 'Free Play: Coba gunakan variabel `counter` dengan
+        elemen gambar lain untuk membuat gambar ajaib seperti ini.'
+      courseF_artist_for10_2019: 'Free Play: Coba gunakan variabel `counter` dengan
+        elemen gambar lain untuk membuat gambar ajaib seperti ini.'
+      courseF_artist_for1_2018: Eksperimen dengan loop `for` dan bermain dengan variabel
+        `counter`.
+      courseF_artist_for1_2019: Eksperimen dengan loop `for` dan bermain dengan variabel
+        `counter`.
+      courseF_artist_for2: Buatlah tumpukan segitiga ini yang bermula dari sisi 50
+        piksel menjadi 100 piksel.
+      courseF_artist_for2_2018: Buatlah tumpukan segitiga ini yang bermula dari sisi
+        50 piksel menjadi 100 piksel.
+      courseF_artist_for2_2019: Buatlah tumpukan segitiga ini yang bermula dari sisi
+        50 piksel menjadi 100 piksel.
+      courseF_artist_for3: 'Segitiga ini bermula dari sisi 20 piksel ke sisi 200 piksel,
+        dan tiap segitiga 20 piksel lebih besar dari yang terakhir. '
+      courseF_artist_for3_2018: 'Segitiga ini bermula dari sisi 20 piksel ke sisi
+        200 piksel, dan tiap segitiga 20 piksel lebih besar dari yang terakhir. '
+      courseF_artist_for3_2019: 'Segitiga ini bermula dari sisi 20 piksel ke sisi
+        200 piksel, dan tiap segitiga 20 piksel lebih besar dari yang terakhir. '
+      courseF_artist_for4: Persegi ini bermula dari sisi sepanjang 15 piksel ke sisi
+        sepanjang 300 piksel, dan tiap segitiga 15 piksel lebih besar dari sebelumnya.
+      courseF_artist_for4_2018: Persegi ini bermula dari sisi sepanjang 15 piksel
+        ke sisi sepanjang 300 piksel, dan tiap segitiga 15 piksel lebih besar dari
+        sebelumnya.
+      courseF_artist_for4_2019: Persegi ini bermula dari sisi sepanjang 15 piksel
+        ke sisi sepanjang 300 piksel, dan tiap segitiga 15 piksel lebih besar dari
+        sebelumnya.
+      courseF_artist_for5: Hanya perubahan kecil pada kodenya dari gambar terakhir
+        bisa membuat gambar ini. Bisakah Anda mencari tahu apakah perubahan itu?
+      courseF_artist_for5_2018: Hanya perubahan kecil pada kodenya dari gambar terakhir
+        bisa membuat gambar ini. Bisakah Anda mencari tahu apakah perubahan itu?
+      courseF_artist_for5_2019: Hanya perubahan kecil pada kodenya dari gambar terakhir
+        bisa membuat gambar ini. Bisakah Anda mencari tahu apakah perubahan itu?
+      courseF_artist_for6: Buat ulang ini dari tingkat sebelumnya, yang berbelok 89
+        derajat untuk menciptakan spiral persegi mengerikan ini.
+      courseF_artist_for6_2018: Buat ulang ini dari tingkat sebelumnya, yang berbelok
+        89 derajat untuk menciptakan spiral persegi mengerikan ini.
+      courseF_artist_for6_2019: Buat ulang ini dari tingkat sebelumnya, yang berbelok
+        89 derajat untuk menciptakan spiral persegi mengerikan ini.
       courseF_artist_for7: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
@@ -2911,27 +3408,256 @@ id-ID:
       courseF_artist_for7_2019: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
+      courseF_artist_for8: Turunkan sudutnya menjadi 72 derajat untuk mendapatkan
+        segi lima berspiral.
+      courseF_artist_for8_2018: Turunkan sudutnya menjadi 72 derajat untuk mendapatkan
+        segi lima berspiral.
+      courseF_artist_for8_2019: Turunkan sudutnya menjadi 72 derajat untuk mendapatkan
+        segi lima berspiral.
+      courseF_artist_for9: "**Inspirasi:**  Gunakan counter ini di dalam blok `set
+        alpha` untuk mencapai pusat semu ini."
+      courseF_artist_for9_2018: "**Inspirasi:**  Gunakan counter ini di dalam blok
+        `set alpha` untuk mencapai pusat semu ini."
+      courseF_artist_for9_2019: "**Inspirasi:**  Gunakan counter ini di dalam blok
+        `set alpha` untuk mencapai pusat semu ini."
       courseF_artist_for_challenge1: Dapatkah Anda mencari tahu cara untuk membuat
         ulang gambar ini?
       courseF_artist_for_challenge1_2018: Dapatkah Anda mencari tahu cara untuk membuat
         ulang gambar ini?
       courseF_artist_for_challenge1_2019: Dapatkah Anda mencari tahu cara untuk membuat
         ulang gambar ini?
-      courseF_artist_for_challenge2: Dapatkah Anda mencari tahu cara membuat ulang
-        gambar ini dengan satu putaran?
-      courseF_artist_for_challenge2_2018: Dapatkah Anda mencari tahu cara membuat
-        ulang gambar ini dengan satu putaran?
-      courseF_artist_for_challenge2_2019: Dapatkah Anda mencari tahu cara membuat
-        ulang gambar ini dengan satu putaran?
+      courseF_artist_for_challenge2: 'Bisakah Anda mencari tahu bagaimana cara untuk
+        membuat ulang gambaran ini dengan sebuah loop? '
+      courseF_artist_for_challenge2_2018: 'Bisakah Anda mencari tahu bagaimana cara
+        untuk membuat ulang gambaran ini dengan sebuah loop? '
+      courseF_artist_for_challenge2_2019: 'Bisakah Anda mencari tahu bagaimana cara
+        untuk membuat ulang gambaran ini dengan sebuah loop? '
+      courseF_artist_fwp1: Edit fungsi 'draw a square' untuk mencari gangguan.
+      courseF_artist_fwp2: Edit fungsi untuk menerima parameter disebut `length`.
+      courseF_artist_fwp2_predict1: Edit fungsi untuk menerima parameter disebut `length`.
+      courseF_artist_fwp3: Buatlah sebuah fungsi bernama `draw a square` dan gunakan
+        itu untuk membatasi keempat persegi menggunakan parameter
+      courseF_artist_fwp4: Edit fungsi ini untuk menambah sebuah parameter untuk angka
+        sisi di poligon Anda.
+      courseF_artist_fwp5: 'Gunakan fungsi dari teka-teki terakhir untuk menggambar
+        rangkaian bentuk ini.  '
+      courseF_artist_fwp6: 'Tantangan: Edit `draw a spiral edge` untuk menggunakan
+        paramete `length` dan `sides`, lalu buat ulang bentuk ini.'
+      courseF_artist_fwp7: Selesaikan fungsi `draw a spiral edge` untuk meminta kepanjangan
+        minimum untuk pusat spiral.
+      courseF_artist_fwp8: Bisakah Anda mencari tahu bagaimana cara membuat gambar
+        ini menggunakan fungsi yang baru saja Anda buat?
+      courseF_artist_fwp9: 'Freeplay: Gambarlah sesuatu yang luar biasa! Bermain dengan
+        kelebaran pena untuk melihat betapa beda gambar Anda terlihat!'
+      courseF_artist_fwp_challenge1: Bisakah Anda mencari tahu untuk membuat program
+        ini bekerja?
+      courseF_artist_fwp_challenge2: Gunakan apa yang telah Anda pelajari di tingkat
+        sebelumnya untuk menggambar seperti ini.
+      courseF_artist_variables10: 'Ini adalah kode dari teka-teki sebelumnya.  Coba
+        mengedit variabel dalam berbagai cara.  '
+      courseF_artist_variables10_2018: 'Ini adalah kode dari teka-teki sebelumnya.  Coba
+        mengedit variabel dalam berbagai cara.  '
+      courseF_artist_variables10_2019: 'Ini adalah kode dari teka-teki sebelumnya.  Coba
+        mengedit variabel dalam berbagai cara.  '
+      courseF_artist_variables2: 'Sekarang gambar tiga segitiga itu di samping satu
+        sama lain.   '
+      courseF_artist_variables2_2018: 'Sekarang gambar tiga segitiga itu di samping
+        satu sama lain.   '
+      courseF_artist_variables2_2019: 'Sekarang gambar tiga segitiga itu di samping
+        satu sama lain.   '
+      courseF_artist_variables3: Pindahkan kepanjangan dari 50 ke dalam sebuah variabel
+        agar kita dapat menggunakannya di teka-teki berikutnya.
+      courseF_artist_variables3_2018: Pindahkan kepanjangan dari 50 ke dalam sebuah
+        variabel agar kita dapat menggunakannya di teka-teki berikutnya.
+      courseF_artist_variables3_2019: Pindahkan kepanjangan dari 50 ke dalam sebuah
+        variabel agar kita dapat menggunakannya di teka-teki berikutnya.
+      courseF_artist_variables4: Sekarang, gunakan variabel `length` untuk membuat
+        artis meloncat ke depan dan bawah demgam piksel `length` diantara segitiga.
+      courseF_artist_variables4_2018: Sekarang, gunakan variabel `length` untuk membuat
+        artis meloncat ke depan dan bawah demgam piksel `length` diantara segitiga.
+      courseF_artist_variables4_2019: Sekarang, gunakan variabel `length` untuk membuat
+        artis meloncat ke depan dan bawah demgam piksel `length` diantara segitiga.
+      courseF_artist_variables5: Tambah rangkaian loop lain pada akhir kode anda untuk
+        menambah lebih banyak segitiga. Kali ini, maju ke depan dan atas!
+      courseF_artist_variables5_2018: Tambah rangkaian loop lain pada akhir kode anda
+        untuk menambah lebih banyak segitiga. Kali ini, maju ke depan dan atas!
+      courseF_artist_variables5_2019: Tambah rangkaian loop lain pada akhir kode anda
+        untuk menambah lebih banyak segitiga. Kali ini, maju ke depan dan atas!
+      courseF_artist_variables6: 'Sekarang buatlah segitiga menjadi lebar 60 piksel,
+        dengan lompatan 60 piksel.  '
+      courseF_artist_variables6_2018: 'Sekarang buatlah segitiga menjadi lebar 60
+        piksel, dengan lompatan 60 piksel.  '
+      courseF_artist_variables6_2019: 'Sekarang buatlah segitiga menjadi lebar 60
+        piksel, dengan lompatan 60 piksel.  '
+      courseF_artist_variables6a: Bangun desain ini di mana persegi memiliki sisi
+        80 piksel dan artis meloncat 80 piksel melewati atas dan bawah persegi.
+      courseF_artist_variables6a_2018: Bangun desain ini di mana persegi memiliki
+        sisi 80 piksel dan artis meloncat 80 piksel melewati atas dan bawah persegi.
+      courseF_artist_variables6a_2019: Bangun desain ini di mana persegi memiliki
+        sisi 80 piksel dan artis meloncat 80 piksel melewati atas dan bawah persegi.
+      courseF_artist_variables7: 'Gambar sebuah segitiga dengan sisi 150 piksel. '
+      courseF_artist_variables7_2018: 'Gambar sebuah segitiga dengan sisi 150 piksel. '
+      courseF_artist_variables7_2019: 'Gambar sebuah segitiga dengan sisi 150 piksel. '
+      courseF_artist_variables8: Bangun ulang kode segitiga dari teka-teki berikutnya,
+        tapi kali ini gunakan blok `set length to` untuk mengatur ulang variabel `length`
+        menjadi `length`+10 pada tiap akhir pengulangan loop.
+      courseF_artist_variables8_2018: Bangun ulang kode segitiga dari teka-teki berikutnya,
+        tapi kali ini gunakan blok `set length to` untuk mengatur ulang variabel `length`
+        menjadi `length`+10 pada tiap akhir pengulangan loop.
+      courseF_artist_variables8_2019: Bangun ulang kode segitiga dari teka-teki berikutnya,
+        tapi kali ini gunakan blok `set length to` untuk mengatur ulang variabel `length`
+        menjadi `length`+10 pada tiap akhir pengulangan loop.
+      courseF_artist_variables9: Lihat apa yang terjadi saat Anda mengulangi kode
+        dari teka-teki terakhir 30 kali daripada hanua 3!  Silakan membuat garis Anda
+        dengan warna apa pun untuk hiasan ekstra.
+      courseF_artist_variables9_2018: Lihat apa yang terjadi saat Anda mengulangi
+        kode dari teka-teki terakhir 30 kali daripada hanua 3!  Silakan membuat garis
+        Anda dengan warna apa pun untuk hiasan ekstra.
+      courseF_artist_variables9_2019: Lihat apa yang terjadi saat Anda mengulangi
+        kode dari teka-teki terakhir 30 kali daripada hanua 3!  Silakan membuat garis
+        Anda dengan warna apa pun untuk hiasan ekstra.
+      courseF_artist_variablesFP: "**Freeplay:** Ambil apa yang Anda pelajari dan
+        buatlah gambarmu sendiri. "
+      courseF_artist_variablesFP_2018: "**Freeplay:** Ambil apa yang Anda pelajari
+        dan buatlah gambarmu sendiri. "
+      courseF_artist_variablesFP_2019: "**Freeplay:** Ambil apa yang Anda pelajari
+        dan buatlah gambarmu sendiri. "
+      courseF_artist_variables_challenge1: Bisakah Anda membuat sebuah bvariabel `length`
+        dan gunakan itu untuk membuat pola ini?
+      courseF_artist_variables_challenge1_2018: Bisakah Anda membuat sebuah bvariabel
+        `length` dan gunakan itu untuk membuat pola ini?
+      courseF_artist_variables_challenge1_2019: Bisakah Anda membuat sebuah bvariabel
+        `length` dan gunakan itu untuk membuat pola ini?
+      courseF_artist_variables_challenge2: Anda sekarang mempelajari semua yang Anda
+        tahu untuk membuat sebuah pola seperti ini!
+      courseF_artist_variables_challenge2_2018: Anda sekarang mempelajari semua yang
+        Anda tahu untuk membuat sebuah pola seperti ini!
+      courseF_artist_variables_challenge2_2019: Anda sekarang mempelajari semua yang
+        Anda tahu untuk membuat sebuah pola seperti ini!
+      courseF_bee_conditionals10: Kumpulkan semua nektar dan buat semua madunya.
+      courseF_bee_conditionals1_predict1: Lihat apakah ada bunga di bawah awan. Jika
+        ada bunga, dapatkan nektar.
+      courseF_bee_conditionals2: 'Lihat di bawah tiap awan untuk melihat jika awan
+        itu menyembunyikan bunga sebelum Anda mendapatkan nektar.  '
+      courseF_bee_conditionals3: Bantu si lebah mengumpulkan semua nektar.
+      courseF_bee_conditionals4: Kumpulkan semua nektar dengan menggunakan blok sesedikit
+        mungkin.
+      courseF_bee_conditionals5: Kumpulkan semua nektar dengan menggunakan blok sesedikit
+        mungkin
+      courseF_bee_conditionals7_predict2: Gunakan blok `if/else` untuk mengumpulkan
+        nektar pada bunga dan membuat madu pada sarang madu.
+      courseF_bee_conditionals8: |-
+        Kumpulkan nektar jika ada bunga.
+        Jika tidak, buat madu (karena ada sarang madu).
+      courseF_bee_for1: Kumpulkan nektar dari tiap bunga menggunakan blok sesedikit
+        mungkin.
+      courseF_bee_for10: "**Tantangan:** Ambil dari apa yang Anda pelajari tentang
+        loop `for` dan coba untuk memecahkan masalah ini. "
+      courseF_bee_for10_2018: "**Tantangan:** Ambil dari apa yang Anda pelajari tentang
+        loop `for` dan coba untuk memecahkan masalah ini. "
+      courseF_bee_for10_2019: "**Tantangan:** Ambil dari apa yang Anda pelajari tentang
+        loop `for` dan coba untuk memecahkan masalah ini. "
+      courseF_bee_for11: Apa peningkatan Anda untuk mengumpulkan 15, lalu 12, lalu
+        9, 6, 3 nektar?
+      courseF_bee_for11_2018: Apa peningkatan Anda untuk mengumpulkan 15, lalu 12,
+        lalu 9, 6, 3 nektar?
+      courseF_bee_for11_2019: Apa peningkatan Anda untuk mengumpulkan 15, lalu 12,
+        lalu 9, 6, 3 nektar?
+      courseF_bee_for1_2018: Kumpulkan nektar dari tiap bunga menggunakan blok sesedikit
+        mungkin.
+      courseF_bee_for1_2019: Kumpulkan nektar dari tiap bunga menggunakan blok sesedikit
+        mungkin.
+      courseF_bee_for2: Tulis kodenya untuk membantu si lebah mengumpulkan semua nektar.
+      courseF_bee_for2_2018: Tulis kodenya untuk membantu si lebah mengumpulkan semua
+        nektar.
+      courseF_bee_for2_2019: Tulis kodenya untuk membantu si lebah mengumpulkan semua
+        nektar.
+      courseF_bee_for4: Bantu si lebah mengumpulkan semua nektar.
+      courseF_bee_for4_2018: Bantu si lebah mengumpulkan semua nektar.
+      courseF_bee_for4_2019: Bantu si lebah mengumpulkan semua nektar.
+      courseF_bee_for5: Gunakan variabel `counter` dua kali untuk memecahkan teka-teki
+        ini.
+      courseF_bee_for5_2018: Gunakan variabel `counter` dua kali untuk memecahkan
+        teka-teki ini.
+      courseF_bee_for5_2019: Gunakan variabel `counter` dua kali untuk memecahkan
+        teka-teki ini.
+      courseF_bee_for6: Coba mengumpulkan nektar ini dengan menghitung mundur dari
+        5 ke 1 dengan 1.
+      courseF_bee_for6_2018: Coba mengumpulkan nektar ini dengan menghitung mundur
+        dari 5 ke 1 dengan 1.
+      courseF_bee_for6_2019: Coba mengumpulkan nektar ini dengan menghitung mundur
+        dari 5 ke 1 dengan 1.
+      courseF_bee_for7: Coba untuk mengumpulkan bunga ini menggunakan peningkatan
+        2.
+      courseF_bee_for7_2018: Coba untuk mengumpulkan bunga ini menggunakan peningkatan
+        2.
+      courseF_bee_for7_2019: Coba untuk mengumpulkan bunga ini menggunakan peningkatan
+        2.
+      courseF_bee_for8: Anda bisa melakukannya! Apa peningkatan Anda untuk mengumpulkan
+        3, 6, 9, 12, 15 nektar?
+      courseF_bee_for8_2018: Anda bisa melakukannya! Apa peningkatan Anda untuk mengumpulkan
+        3, 6, 9, 12, 15 nektar?
+      courseF_bee_for8_2019: Anda bisa melakukannya! Apa peningkatan Anda untuk mengumpulkan
+        3, 6, 9, 12, 15 nektar?
+      courseF_bee_for9: Gunakan variabel `counter` untuk menavigasi kebun ini dengan
+        blok angka sesedikit mungkin.
+      courseF_bee_for9_2018: Gunakan variabel `counter` untuk menavigasi kebun ini
+        dengan blok angka sesedikit mungkin.
+      courseF_bee_for9_2019: Gunakan variabel `counter` untuk menavigasi kebun ini
+        dengan blok angka sesedikit mungkin.
+      courseF_bee_for_challenge1: Gunakan fungsi `for loop` ini untuk mengumpulkan
+        semua nektar.
+      courseF_bee_for_challenge1_2018: Gunakan fungsi `for loop` ini untuk mengumpulkan
+        semua nektar.
+      courseF_bee_for_challenge1_2019: Gunakan fungsi `for loop` ini untuk mengumpulkan
+        semua nektar.
       courseF_bee_for_challenge2: Selesaikan teka-teki ini dengan menggunakan jumlah
         blok paling sedikit.
       courseF_bee_for_challenge2_2018: Selesaikan teka-teki ini dengan menggunakan
         jumlah blok paling sedikit.
       courseF_bee_for_challenge2_2019: Selesaikan teka-teki ini dengan menggunakan
         jumlah blok paling sedikit.
+      courseF_bee_functions2: Gunakan fungsi `get only nectar` untuk mengumpulkan
+        nektar dari tiap bunga.
+      courseF_bee_functions3: klik "edit" untuk menaruh koede di dalam fungsi `only
+        make honey`, lalu gunakan itu untuk memecahkan teka-teki ini.
+      courseF_bee_functions3a: Tulis sebuah fungsi yang mengumpulkan nektar jika lebah
+        berada di bunga, jika tidak lebah mendapatkan madu.  Gunakan fungsi Anda untuk
+        memecahkan teka-teki ini!
       courseF_bee_functions4: Fungsi "bergerak dan mendapatkan nektar" membelokkan
         lebah, mengumpulkan nektar, dan kemudian mengembalikan lebah ke tempat ia
         memulai. Gunakan fungsi tersebut untuk mengumpulkan semua nektar.
+      courseF_bee_functions5a: Gunakan fungsi `move and check` untuk mengumpulkan
+        semua nektar.
+      courseF_bee_functions6: Bantu lebah melalui labirin dengan berbelok kiri pada
+        bunga dan kanan pada sarang madu.
+      courseF_bee_functions7: Bangun ulang fungsi anda dari teka-teki terakhir untuk
+        memecahkan labirin ini.
+      courseF_bee_functions8a: Kumpulkan semua nektar dan buat semua madunya!
+      courseF_bee_functionsPre7: Sekarang coba membangun sebuah fungsi dalam labirin
+        ini.  Bagaimana ini berbeda dari terakhir kali?
+      courseF_bee_functions_challenge1: Buatlah fungsi baru untuk mengumpulkan semua
+        nektar dan madu selagi ada jalan di depan.
+      courseF_bee_functions_challenge2: Gunakan semua yang Anda pelajari untuk menyelesaikan
+        teka-teki ini!
+      courseF_bee_fwp2: Tarik kode ini menjadi sebuah fungsi, lalu panggil fungsinya
+        untuk mengecek barisan ini untuk nektar.
+      courseF_bee_fwp3: Mari lihat jika fungsinya membuat mengumpulkan tiga baris
+        nektar ini lebih mudah.
+      courseF_bee_fwp4: Tambah sebuah parameter `length` kepada fungsi agar akan tetap
+        bekerja saat panjang barisan berbeda.
+      courseF_bee_fwp5: Gunakan fungsi ini untuk mengumpulkan nektar.
+      courseF_bee_fwp6: Buat sebuah solusi yang pendek dan manis kepada teka-teki
+        ini.
+      courseF_bee_fwp7: "**Challenge:** Modifikasi fungsi Anda untuk membuat madu
+        juga."
+      courseF_bee_fwp8: Gunakan fungsi baru Anda untuk memecahkan spiral ini.
+      courseF_bee_fwp9_predict1: Gunakan fungsi baru Anda untuk memecahkan teka-teki
+        ini.
+      courseF_bee_fwp_challenge1: Gunakan satu `for loop` dalam fungsi dengan sebuah
+        parameter `length` untuk mengumpulkan semua jagung.
+      courseF_bee_fwp_challenge2: Gunakan satu `for loop` dalam fungsi dengan sebuah
+        parameter `length` untuk mengumpulkan semua sayur dalam satu baris.
       courseF_bee_variables_1_2018: Selesaikan kode ini sehingga lebah dapat mengumpulkan
         semua madu dan madu bunga.
       courseF_bee_variables_1_2019: Selesaikan kode ini sehingga lebah dapat mengumpulkan
@@ -2960,6 +3686,34 @@ id-ID:
         bunga ini?
       courseF_bee_variables_8_2019: Berapa nektar yang akan dikumpulkan lebah dari
         bunga ini?
+      courseF_playlab_variables1a: Variabel dapat digunakan untuk menyimpan teks yang
+        ingin Anda gunakan nanti.  Buatlah Kiki, si pemain bola,  berteriak “Gol!”
+        dengan menempatkan teks itu kepada variabel `shout`.
+      courseF_playlab_variables2b: Masukkan variabel `color` di tengah-tengah sebuah
+        kalimat dengan menaruhnya ke dalam tempat kosong di dalam blok `join`.
+      courseF_playlab_variables3b_josh: 'Bantu Kiki membuat percakapan dengan Brian
+        dengan menggunakan variabel `age` di dalam semua tempat di mana `12` seharusnya
+        digunakan. '
+      courseF_playlab_variables4b: Taruh variabel dalam tempat yang benar untuk membuat
+        percakapan ini.
+      courseF_playlab_variables5c: Mari gabungkan blok `ask` dengan sebuah pernyataan
+        `if/else` untuk bersenang-senang!
+      courseF_playlab_variables6c: Dalam sisa tahap ini, kita akan membangun permainan
+        yang akan Anda kendalikan!
+      courseF_playlab_variables7b: Buatlah beberapa pertanyaan dan gabungkan pertanyaan
+        bersama menjadi ceritamu sendiri.
+      courseF_playlab_variables7c: Buatlah permainan melakukan sesuatu dengan menanyakan
+        pengguna untuk menebak sebuah warna.
+      courseF_playlab_variables8c: Gunakan variabel untuk membuat permainan lebih
+        personal.
+      courseF_playlab_variables_challenge1: 'Gunakan blok ini untuk membuat aktor
+        membagikan sebuah lelucon ketukan. '
+      courseF_playlab_variables_challenge2: Permainan ini akan menggunakan variabel
+        untuk mengikuti poin. Tandai Kucing untuk mendapatkan 2 poin. Tandai Penguin
+        untuk mendapatkan 3 poin.  Saat Kucing dan Penguin bersentuh, poin diambil.  Dapatkan
+        10 poin untuk menang!
+      courseF_video_createFunctions: Kami belum memiliki video untuk membuat fungsi.
+        Ini adalah penampung.
       coursea_maze_ramp1_2018: Untuk teka-teki ini, gabungkan blok dan klik "▶ Jalankan"!
       coursea_maze_ramp1_2019: Untuk teka-teki ini, gabungkan blok dan klik "▶ Jalankan"!
       flappy_1: Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan
@@ -3086,5 +3840,44 @@ id-ID:
       iceage_warn_ice_age: Ubah pemandangan ke latar belakang salju dan setel kecepatan
         Sid (aktor 1) ke cepat.
       k-1 maze 1: Dapatkah Anda membuat saya pindah ke Barat untuk mendapatkan babi?
+      ramp_artist_loops1: Maju ke depan 60 piksel untuk menyelesaikan teka-teki ini.
+      ramp_artist_loops1_2018: Maju ke depan 60 piksel untuk menyelesaikan teka-teki
+        ini.
+      ramp_artist_loops1_2019: Maju ke depan 60 piksel untuk menyelesaikan teka-teki
+        ini.
+      ramp_artist_loops2: Maju ke depan lima kali dan buat garis berwarna ini.
+      ramp_artist_loops2_2018: Maju ke depan lima kali dan buat garis berwarna ini.
+      ramp_artist_loops2_2019: Maju ke depan lima kali dan buat garis berwarna ini.
+      ramp_artist_loops3: Gunakan loop `repeat` untuk menggambar lima tanda garis
+        berwarna.
+      ramp_artist_loops3_2018: Gunakan loop `repeat` untuk menggambar lima tanda garis
+        berwarna.
+      ramp_artist_loops3_2019: Gunakan loop `repeat` untuk menggambar lima tanda garis
+        berwarna.
+      ramp_artist_loops4: Apa yang terjadi saat Anda menambah belokan ke kanan 72
+        derajat setelah semuanya yang lain di dalam loop Anda?
+      ramp_artist_loops4_2018: Apa yang terjadi saat Anda menambah belokan ke kanan
+        72 derajat setelah semuanya yang lain di dalam loop Anda?
       ramp_artist_loops4_2019: Buat pola bintang ini dengan mengulang urutan blok
         "bergerak maju" dan "belok kanan sebesar 144 derajat".
+      ramp_artist_loops5: Gunakan loops untuk menggambar tangga ini.
+      ramp_artist_loops5_2018: Gunakan loops untuk menggambar tangga ini.
+      ramp_artist_loops5_2019: Gunakan loops untuk menggambar tangga ini.
+      ramp_artist_loops6: Ubah loop Anda untuk menggambar tangga ini.
+      ramp_artist_loops6_2018: Ubah loop Anda untuk menggambar tangga ini.
+      ramp_artist_loops6_2019: Ubah loop Anda untuk menggambar tangga ini.
+      ramp_artist_loops7: Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan
+        loops!
+      ramp_artist_loops7_2018: Carilah sebuah pola dan buatlah kode ini lebih pendek
+        menggunakan loops!
+      ramp_artist_loops7_2019: Carilah sebuah pola dan buatlah kode ini lebih pendek
+        menggunakan loops!
+      ramp_artist_loops8: Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan
+        loops.
+      ramp_artist_loops8_2018: Carilah sebuah pola dan buatlah kode ini lebih pendek
+        menggunakan loops.
+      ramp_artist_loops8_2019: Carilah sebuah pola dan buatlah kode ini lebih pendek
+        menggunakan loops.
+      ramp_artist_loops9: Pecahkan teka-teki ini dengan menggambar sebuah persegi.
+      ramp_artist_loops9_2018: Pecahkan teka-teki ini dengan menggambar sebuah persegi.
+      ramp_artist_loops9_2019: Pecahkan teka-teki ini dengan menggambar sebuah persegi.

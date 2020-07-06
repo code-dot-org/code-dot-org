@@ -1089,6 +1089,10 @@ ru:
             '"West"': Запад
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
+      gamelab_objectSpritePointer:
+        text: Нажал {SPRITE}
+      gamelab_patrollingUpDown:
+        text: патрулирование вверх и вниз
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1166,12 +1170,18 @@ ru:
           CONDITION:
             '"when"': когда
             '"while"': пока
+      gamelab_subjectSpritePointer:
+        text: Нажал {SPRITE}
+      gamelab_tumbling:
+        text: акробатика
       gamelab_turn:
         text: Свою очередь {SPRITE} {DIRECTION} {N} Градусов
         options:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
+      gamelab_updateTitleWithColor:
+        text: показать заголовок страницы {BREAK} заголовок {TITLE} цвет {COLOR}
       gamelab_whenDownArrow:
         text: когда стрелка вниз нажата
       gamelab_whenKey:
@@ -1567,6 +1577,7 @@ ru:
       aalab_setupStory:
         text: История установки
       aalab_starwars_playSound:
+        text: Воспроизвести{OPTION}звук
         options:
           OPTION:
             '"random"': случайный

@@ -17,19 +17,19 @@ Boolean expressions can be used to evaluate many different statements depending 
 - Is greater than or equal to? `>=` <br>
 - Is equal to? `==` <br>
 
-In addition to the mathematical symbols, there are a few **Boolean operators** that are particularly helpful. The simple words `AND`, `OR`, and `NOT`, which are represented with the symbols &&, ||, and ! in JavaScript, respectively, can be used to create more complex boolean expressions that evaluate to `TRUE` or `FALSE` depending on the rules of these operators. In the example below, the AND boolean operator, which is represented with the symbol `&&` is used to check in one single expression if the variable x is greater than 5 AND is less than 15. Only if both sides of the expression are true does the code inside the conditional statement run. 
+In addition to the mathematical symbols, there are a few **Boolean operators** that are particularly helpful. The simple words `AND`, `OR`, and `NOT`, which are represented with the symbols &&, ||, and ! in JavaScript, respectively, can be used to create more complex boolean expressions that evaluate to `TRUE` or `FALSE` depending on the rules of these operators. In the example below, the AND boolean operator, which is represented with the symbol `&&` is used to check in one single expression if the variable x is greater than 5 AND is less than 15. Only if both sides of the expression are true does the code inside the conditional statement run.
 <img src="https://images.code.org/31c05927767cf9ec175c3fab5c658404-image-1446430205650.09.17.png">
 
 The following links provide additional links and information about booleans.  These links are also found in the curriculum, but are consolidated here for convenience.
 
 **Stage 8**
 
-- <a href = "https://studio.code.org/s/csp5/stage/8/puzzle/3" target=_blank> Comparison Operators reference guide <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5-2019/stage/8/puzzle/3" target=_blank> Comparison Operators reference guide <i class="fa fa-external-link-square"></i></a>
 
 **Stage 9**
 
-- <a href = "https://studio.code.org/s/csp5/stage/9/puzzle/9" target=_blank> Boolean Operators && and || and !<i class="fa fa-external-link-square"></i></a>
-- <a href = "https://studio.code.org/s/csp5/stage/9/puzzle/12" target=_blank> How Compound Boolean Expressions Work<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5-2019/stage/9/puzzle/9" target=_blank> Boolean Operators && and || and !<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5-2019/stage/9/puzzle/12" target=_blank> How Compound Boolean Expressions Work<i class="fa fa-external-link-square"></i></a>
 
 **External**
 

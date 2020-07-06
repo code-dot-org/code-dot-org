@@ -8,7 +8,11 @@ import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
-import {useFoormSurvey} from './workshop_summary_utils';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  useFoormSurvey,
+  shouldShowSurveyResults
+} from './workshop_summary_utils';
 
 export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
 export const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
@@ -187,8 +191,11 @@ export default class EnrollmentsPanel extends React.Component {
       return null;
     }
 
-    if (useFoormSurvey(lastSessionDate, course)) {
+    if (useFoormSurvey(subject, lastSessionDate)) {
       return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
+    } else if (subject === SubjectNames.SUBJECT_CSF_101) {
+      // Pegasus-based results are no longer offered.
+      return null;
     } else {
       return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
     }
@@ -301,11 +308,17 @@ export default class EnrollmentsPanel extends React.Component {
             selectedEnrollments={this.state.selectedEnrollments}
           />
 
-          {['In Progress', 'Ended'].includes(workshop.state) && viewSurveyUrl && (
-            <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
-              View Survey Results
-            </Button>
-          )}
+          {viewSurveyUrl &&
+            shouldShowSurveyResults(
+              workshop.state,
+              workshop.course,
+              workshop.subject,
+              lastSessionDate
+            ) && (
+              <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
+                View Survey Results
+              </Button>
+            )}
         </div>
       );
     }

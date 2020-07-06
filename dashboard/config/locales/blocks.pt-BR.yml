@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     blocks:
       Dancelab_alternateMoves:
@@ -1096,6 +1096,8 @@ pt-BR:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} distância {DISTANCE} em direção a {TARGET}
+      gamelab_objectSpritePointer:
+        text: clique {SPRITE}
       gamelab_playSound:
         text: reproduzir som {SOUND}
       gamelab_pointInDirection:
@@ -1175,6 +1177,8 @@ pt-BR:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      gamelab_subjectSpritePointer:
+        text: clique {SPRITE}
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} graus"
         options:

@@ -2505,6 +2505,19 @@ de-DE:
         Schau, wie lange Du benötigst, um die Verschlüsselung zu knacken! Ist dies eine gute Methode, um geheime Daten zu verschlüsseln?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance Party 1-validated: "**Mache eine Vorhersage:** Hier ist ein Fee die wir
+        `Alien1` getauft haben! \n\nWas denkst du wird passieren, wenn du darauf klickst?
+        \ "
+      Dance Party 2: |-
+        Auf Mars war der Alien auf seine Tanzfertigkeiten stolz, aber hier kann er sich nur von Seite zu Seite bewegen.
+
+        Kannst du das Verhalten im <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml>-Block verändern, sodass er anfängt sich im Kreis zu drehen?
       Dance Party 2_2019: |-
         Der Außerirdische war stolz auf seine Tanzkunst auf dem Mars, aber jetzt kann er sich nur noch von einer Seite zur anderen bewegen.
 
@@ -2516,14 +2529,24 @@ de-DE:
                   </block>
                 </value>
               </block></xml> durch einen anderen, der den Außerirdischen zum Drehen bringt!
+      Dance Party 3: |-
+        Erstelle eine neue Fee namens 'Alien2'.
+
+        Lasse sie eine andere Tanzbewegung ausführen, wenn du darauf klickst.
       Dance Party 3_2019: |-
         Erstelle ein neues Sprite, das wie ein rosa Alien aussieht. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%"></img>
 
         Lasse es jede beliebige Bewegung ausführen, wenn es angeklickt wird. Versuche es diesmal mit einer neuen Bewegung!
+      Dance Party 4: "Erstelle jetzt eine dritte Fee namens 'Alien3'.  \n\nKannst
+        du all deine Aliens so einstellen, dass sie in einer geraden Linie stehen?
+        Dies ist eine Alien Tanzgemeinschaft!"
       Dance Party 4_2019: "Bildet eine außerirdische Tanzcrew! \n\n-   Erstelle ein
         drittes Sprite, das wie ein gelber Außerirdischer aussieht, und lass es eine
         Tanzbewegung beginnen, wenn es angeklickt wird.\n-   Stelle alle deine Aliens
         so ein, dass sie in einer horizontalen Linie stehen, so wie hier:\n\n![](https://images.code.org/09380fc01069e79d9d33a979379a666b-image-1555960752137.png)"
+      Dance Party 5: "Wir können die verschiedensten Dinge in diesem Programm verändern,
+        wenn du auf eine Fee klickst. Lass uns deren Farbe verändern! \n\n**Füge Code
+        hinzu, sodass die Farbe eines jeden Aliens verändert, wenn man darauf klickt.**"
       Dance Party 5_2019: "<!-- Wir können alle möglichen Dinge in diesem Programm
         ändern, wenn du auf die Sprites klickst. Füge Code hinzu, um die Farbe jedes
         Aliens zu ändern, wenn er angeklickt wird. -->\n\nLasse uns mit einer anderen
@@ -2533,12 +2556,20 @@ de-DE:
         dass beim Drücken einer Taste jeder deiner Außerirdischen seine Farbe wechselt!
         Wähle eine beliebige Taste. Wenn du einen Touchscreen verwendest, empfehlen
         wir _up_, _down_, _left_ oder _right_."
+      Dance Party 6: "Diese Aliens fangen an sich wie wild zu benehmen!  \n\nBenutze
+        den <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value
+        name=\"SPRITE\"/>\n    </block></xml>-Block, sodass jeder Alien aufhört sich
+        zu bewegen, wenn man darauf klickt."
       Dance Party 6_2019: |-
         Diese Außerirdischen werden verrückt! Beruhigen wir sie, indem wir eine Glocke läuten.
 
         Füge zuerst ein neues Sprite hinzu, das wie eine Glocke aussieht.
 
         Dann füge ein Ereignis hinzu, das jeden Außerirdischen zum Tanzen bringt, wenn die Glocke angeklickt wird, und zwar mit <xml><block type="gamelab_removeAllBehaviors" block-text="the stops everything block"><value name="SPRITE"><block type="gamelab_allSpritesWithAnimation"><title name="ANIMATION">"blue alien"</title></block></value></block></xml>!
+      Dance Party 7: |-
+        Und schlussendlich, füge eine neue Glockenfee namens 'myBell' hinzu.
+
+        Wenn du darauf klickst, werden alle Aliens anfangen dieselbe Tanzbewegung auszuführen!
       Dance Party 7_2019: "Für den rosa Außerirdischen ist der Spaß ansteckend! Wer
         ihn berührt will tanzen! \n\nBenutze <xml><block type=\"gamelab_checkTouching\"
         block-text=\"the when touching event block\"><title name=\"CONDITION\">\"when\"</title><value
@@ -2547,11 +2578,18 @@ de-DE:
         name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml>, damit
         der blaue Außerirdische eine neue Tanzbewegung beginnt, wenn der rosa Außerirdische
         ihn berührt."
+      Dance Party Freeplay: |-
+        Erstelle jetzt deine eigene Alien-Disco! Suchst du nach Inspiration? Dann versuche diese Ideen:
+
+        -   Stelle zwei Glockenfeen her, und lasse jede davon die Aliens eine andere Tanzbewegung ausführen
+        -   Lasse die Aliens eine neue Tanzbewegung ausführen, jedes Mal wenn sie miteinander in Kontakt kommen
       Dance Party Freeplay_2019: |-
         Erstelle jetzt deine eigene Alien-Disco! Auf der Suche nach Inspiration? Probiere diese Ideen aus:
 
         -   Erstelle einen anderen Außerirdischen, der eine weitere Bewegung ausführt, wenn er angeklickt wird.
         -   Lasse Außerirdische mehr Tanzbewegungen machen, wenn sie sich berühren.
+      Dance Party Predict: "**Mache eine Vorhersage:** Hier ist eine Fee die wir `Alien1`
+        getauft haben! \n\nWas denkst du wird passieren, wenn du darauf klickst?"
       Dance Party Predict_2019: "**Mache eine Vorhersage:** Hier ist ein Sprite, das
         wie ein blauer Außerirdischer aussieht!   \n\nWas wird deiner Meinung nach
         passieren, wenn du darauf klickst?  "
@@ -2613,7 +2651,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -2644,7 +2682,7 @@ de-DE:
         Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -2828,14 +2866,23 @@ de-DE:
         zu machen.\n-   füge weiterer Räume hinzu"
       Fish Tank 1-validated: "**Mach eine Prognose**: Was wird deiner Meinung nach
         passieren, wenn du diesen Code ausführst?"
+      Fish Tank 2-validated: "Lass uns einen Fischtank bauen! \n\n Verändere Dusty
+        (das Tumbleweed) in einen Fisch."
       Fish Tank 2-validated_2019: "Lasst uns ein Aquarium bauen!  \n\nVerwandle das
         Ambrosia-Sprite in jede Art von Fisch, indem du auf <xml><block type=\"gamelab_allSpritesWithAnimation\"
         block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>
         klickst.\n\nAchte darauf, dass du auch das Kostüm dieses Sprites in <xml><block
         type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>
         aktualisierst."
+      Fish Tank 3-validated: "Der Fisch wird schwindelig!  \n\nÄndere das Verhalten
+        des Fischs, sodass dieser in einem Tank herumschwimmt."
       Fish Tank 3-validated_2019: "Dem Fisch wird schwindelig! \n\nÄndere das Verhalten
         der Fische so, dass sie nach links und rechts schwimmen."
+      Fish Tank 4-validated: "Unser Fischtank benötigt etwas Wasser! \n\nBenutze <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n
+        \     <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n
+        \     </block>\n    </value>\n  </block></xml>, um den Hintergrund blau zu
+        machen."
       Fish Tank 4-validated_2019: "Unser Aquarium braucht etwas Wasser! \n\nVerwende
         <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the
         set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
@@ -2847,6 +2894,8 @@ de-DE:
       Fish Tank 5-validated_2019: Der Fisch ist abenteuerlustig und will neue Kreaturen
         im Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
         kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
+      Fish Tank 6-validated: "Was möchtest du, dass der neue Freund des Fischs tut?
+        \n\nFüge ein Verhalten hinzu und siehe wie sie sich amüsieren!"
       Fish Tank 6-validated_2019: |-
         Was soll der neue Freund deines Fisches tun?
 
@@ -3676,6 +3725,12 @@ de-DE:
         der Originaltext entsteht.\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\nWie
         schwer wäre es, eine mit dieser Verschlüsslungsmethode verschlüsselten Nachricht
         zu knacken? Macht die Länge der Passfeder einen Unterschied?"
+      Virtual Pet 1: "Dies ist Geraldine, eine Giraffe und dein neues Haustier.  \n\nWas
+        denkst du wird passieren, wenn du auf \"▶ Ausführen\" drückst und danach auf
+        die Giraffe?"
+      Virtual Pet 1 Predict: "**Mache eine Vorhersage:** Dies ist Geraldine, eine
+        Giraffe und dein neues Haustier.  \n\nWas denkst du wird passieren, wenn du
+        auf \"▶ Ausführen\" drückst und danach auf die Giraffe?"
       Virtual Pet 1_2019: "**Freispiel**: Uiuiui! Schau dir dieses coole Haustier
         an! \n\nWährend du den untenstehenden Code lesen, fragen dich selbst:\n\n-
         \  Wie befiehlt man dem Haustier, sich zu bewegen? \n-   Was passiert, wenn
@@ -3683,28 +3738,48 @@ de-DE:
         die Variable `energy` verwendet? Wie kannst du den aktuellen `energy`-Wert
         des Haustieres überprüfen?\n\nFühre den Code aus und spiele mit dem Haustier!
         Wenn du fertig bist, klicke auf **Beenden**."
+      Virtual Pet 2: "Dort ist eine Schlammpfütze in der Ecke.  \n\nErstelle einen
+        **Event**, sodass sich ihre Farbe in Braun verändert, wenn Geraldine die Pfütze
+        berührt."
       Virtual Pet 2_2019: "Jetzt bist du an der Reihe, dein eigenes virtuelles Haustier
         zu erstellen! Beginne, indem du ihm einen Look gibst, der Dir gefällt.\n\n1.
         \ Klicke auf die Registerkarte **Kostüme** oben links auf dem Bildschirm (neben
         **Code**). \n2.  Bearbeite das Startkostüm oder füge ein neues hinzu, das
         Dir gefällt. \n3.  Ändere das Kostüm des Sprites in deinem eigenen im untenstehenden
         Code.\n4.  Klicke auf **Laufen**, um den neuen Look Ihres Haustieres zu sehen!"
+      Virtual Pet 3: "Es geht ja nicht, dass hier eine dreckige Giraffe herumwandert!
+        \ \n\n1.  Füge eine neue Seifenfee zum Bildschirm hinzu.\n2.  Kannst du es
+        so programmieren, dass die Giraffe ihre normale Farbe zurückerhält, wenn sie
+        die Seife berührt?\n\n* * *\n\nBenutze diesen Block, um die Farbe zurückzusetzen:\n<xml><block
+        type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n
+        \       <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n
+        \       </block>\n      </value>\n    </block></xml>"
       Virtual Pet 3_2019: |-
         Erstelle Events, damit sich Dein Haustier auf Befehl bewegt!
 
         Beginne, indem du <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> zusammen mit <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> verwendest, um Dein Haustier dazu zu bringen, sich nach Norden zu bewegen \*\*während der Pfeil nach oben gedrückt wird.
 
         Wiederhole die obigen Schritte für die anderen drei Richtungen (Süd, West, Ost) und die Pfeiltasten (unten, links, rechts)!
+      Virtual Pet 4: "Wir müssen ja nicht jedes Mal warten, bis dass die Giraffe sich
+        selbst wäscht.  \n\nFüge ein Verhalten an die Seife hinzu, sodass dieser bewegt
+        werden kann, und schleife sie dann hinüber um die Giraffe zu waschen!"
       Virtual Pet 4_2019: "Lasst uns wanderndes Essen machen!\n\n1.  Füge **zwei\\*\\***
         Sprites zu deiner Welt hinzu. \n2.  Lasse ein Sprite so aussehen, wie es dein
         Haustier essen **möchte**, und das andere so, wie es **nicht** essen möchte.\n3.
         \ Lasse jeden Nahrungs-Sprite mit dem **wandern** Verhalten beginnen, unmittelbar
         nachdem es erscheint."
+      Virtual Pet 5: "All dies Spielen verbraucht viel Energie!  \n\nFüge Aktionen
+        an jeden Event hinzu, sodass die Giraffe ein bisschen kleiner wird (5 Pixel
+        schrumpft), jedes Mal wenn sie mit einer Fee zusammenprallt.  "
       Virtual Pet 5_2019: |-
         Verwende <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> mit <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> zum **simulierten** "Essen" in der virtuellen Welt!
 
         1.  Erstelle ein Ereignis, bei dem eines der Nahrungs-Sprites an einen beliebigen Ort springt, wenn Dein Haustier es berührt.
         2.  Wiederhole das oben Gesagte für das andere Nahrungsprite.
+      Virtual Pet 6: "Eine ausgewogene Ernährung ist wichtig! Wir müssen die Giraffe
+        füttern, damit sie wieder zu Kräften kommt.  \n\nFüge einen Apfel hinzu und
+        lasse ihn die Giraffe wieder zu ihrer normalen Größe zurückbringen, wenn sich
+        die beiden Sprites berühren.  "
       Virtual Pet 6_2019: "Benutze  <xml><block type=\"variables_set\" block-text=\"the
         set variable block\"><title name=\"VAR\">energy</title></block></xml> zusammen
         mit  <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
@@ -3732,6 +3807,9 @@ de-DE:
         Verhaltensweisen! Versuche das **Wandern**-Verhalten zu bearbeiten um die
         Nahrungs-Sprites zu verlangsamen oder zu beschleunigen (Hinweis: Ihre \"Geschwindigkeit\"
         ist derzeit 5...)."
+      Virtual Pet Freeplay: "Freispiel: was alles noch kannst du deine Giraffe tun
+        lassen? \n\n-   Kannst du noch ein paar speziale Dinge für dein virtuelles
+        Haustier hinzufügen?  \n-   Kannst du ihr ein paar Freunde besorgen?  "
       'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
@@ -3774,6 +3852,13 @@ de-DE:
 
         ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
       behaviors free play: "**Freiespiel:** Erstelle deine eigene Weltraumszene!"
+      comment_intro_maze_2018: "\\_\"Ich bin verwirrt. Bitte helfe mir, sodass  ich
+        mich erinnere, an wie ich dieses Rätsel lösen kann.“  \n\n* * *\n\nUm dieses
+        Rätsel zu bestehen, löse das Labyrinth und benutze den neuen <xml><block type=\"comment\">\n
+        \   <title name=\"TEXT\"> </title>\n  </block></xml>-Block, um schnelle Gedächtnisstützen
+        für dich zu hinterlassen. Die können dir helfen dich daran zu erinnern, was
+        du am Tun warst und warum!Kommentare werden nur für **dich** benutzt - sie
+        haben keinen Einfluss auf den Spielbereich."
       course1_artist_loops_challenge2: Lasst uns ein Spiel spielen! Zeichne so viele
         X's wie möglich! Kannst du drei hintereinander bekommen?
       course1_artist_loops_challenge3: |-
@@ -4273,8 +4358,6 @@ de-DE:
         Bausteine ein, um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
       courseA_maze_ramp3b_2018: "Es gibt einen zusätzlichen Baustein am Ende dieses
         Codes!  \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
-      courseA_maze_ramp3b_2019: "Es gibt einen zusätzlichen Baustein am Ende dieses
-        Codes!  \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
       courseA_maze_ramp4a_2018: Kannst du herausfinden, welchen Block du am Ende der
         anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
       courseA_maze_ramp4a_2019: Kannst du herausfinden, welchen Block du am Ende der
@@ -4315,7 +4398,7 @@ de-DE:
       courseA_maze_seq1_2019: _"Nimm diese Bausteine zu Hilfe und versuche, mich zum
         Schwein zu führen!"_
       courseA_maze_seq2: |-
-        _"Ein Fehler! Bring den Code in Ordnung um mich zum Schwein zu bringen."_
+        _"Ein Fehler! Korrigiere den Code, um mich zum Schwein zu bringen."_
 
         ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: |-
@@ -4413,15 +4496,32 @@ de-DE:
           </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
 
         Bring Jorge zur Fahne um dieses Level zu beenden!
+      courseA_playLab_events3_2019: |-
+        Helfe Jorge der Hund sich in Bewegung zu setzen, indem du den <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml>-Block mit dem <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml>-Event-Block verbindest, der sich bereits im Arbeitsraum befindet.. Benutze die Pfeiltasten, um Jorge nach der Flagge zu bewegen und die Ebene abzuschließen!
       courseA_playLab_events4: Füge jetzt mehr Blöcke hinzu, um Jorge nach rechts
         zu bewegen wenn die Pfeiltaste nach 'rechts' gedrückt wird.
       courseA_playLab_events4_2018: Füge nun einen weiteren Ereignisbaustein hinzu,
         damit sich Jorge nach rechts bewegt, wenn die rechte Pfeiltaste angeklickt
         wird.
+      courseA_playLab_events4_2019: Füge nun einen weiteren Event-Block hinzu, damit
+        sich Jorge nach rechts bewegt, wenn die rechte Pfeiltaste angeklickt wird.Benutze
+        die Pfeiltasten, um Jorge nach der Flagge zu bewegen und die Ebene abzuschließen!
       courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
       courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
+      courseA_playLab_events5_2019: Füge weitere Events hinzu, um Jorge aufwärts und
+        abwärts zu bewegen, wenn die `Aufwärts`- und `Abwärts`-Schalter gedrückt werden.
+        Lasse Jorge die Flaggen holen, um diese Ebene abzuschließen!
+      courseA_playLab_events6_2019: 'Gestalte es interessanter: Sorge dafür, dass
+        der Hintergrund sich ändert und ein zufälliger Sound erklingt, wenn Jorge
+        angeklickt wird. Klicke auf Jorge und teste es, wenn dein Programm fertig
+        ist. '
       courseA_playLab_events7_2018: _Freispiel:_ Füge diesem Spiel alles hinzu, was
         du willst. Kannst du den Dinosaurier verschwinden lassen, wenn Jorge ihn trifft?
       courseA_playLab_events7_2019: _Freispiel:_ Füge diesem Spiel alles hinzu, was
@@ -4469,6 +4569,12 @@ de-DE:
         type="maze_moveEast" block-text="move East"/></xml> Baustein an das Ende des
         <xml><block type="when_run" block-text="when run"/></xml> Baustein ein, dann
         drücke "▶ Ausführen"!
+      courseB_Scrat_ramp2_2018: Füge die beiden <xml><block type="maze_moveEast"/></xml>
+        Blöcke an den <xml><block type="when_run"/></xml> Block an, um deinen Code
+        zu vervollständigen. Klicke dann auf "▶ Ausführen".
+      courseB_Scrat_ramp2_2019: Füge die beiden <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> Blöcke an den <xml><block type="when_run" block-text="when run"/></xml>
+        Block an, um deinen Code zu vervollständigen. Klicke dann auf "▶ Ausführen".
       courseB_Scrat_ramp3a_2018: Nimm einen <xml><block type="maze_moveNorth"/></xml>
         Baustein aus der Toolbox und füge ihn unten in die anderen Bausteine ein,
         um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
@@ -4619,6 +4725,11 @@ de-DE:
       courseB_iceage_loops2_2019: Verwende sowohl den <xml><block type="maze_moveWest"
         block_text="move west"/></xml> als auch den <xml><block type="maze_moveSouth"
         block_text="move south"/></xml>, um an die Eichel zu gelangen!
+      courseB_iceage_loops3: Kannst du zur Eichel gelangen, mit nur einem <xml><block
+        type="maze_moveWest"/></xml>-Block? Versuche eine Schleife zu benutzen!
+      courseB_iceage_loops3_2019: Kannst du zur Eichel gelangen, mit nur einem <xml><block
+        type="maze_moveWest" block-text="move west"/></xml>-Block? Versuche eine Schleife
+        zu benutzen!
       courseB_iceage_loops4: Füge einen weiteren Block hinzu, um Scrat bis zur Eichel
         zu bekommen!
       courseB_iceage_loops4_2019: Füge einen weiteren Block hinzu, um Scrat bis zur
@@ -4684,6 +4795,20 @@ de-DE:
       courseB_playlab_events4: "Ritterzeit! \n\nFüge ein Ereignis hinzu, das bewirkt,
         dass sich der Ritter auf den Drachen zubewegt, wenn der linke Pfeil angeklickt
         wird."
+      courseB_playlab_events4_2018: |-
+        Zeit für den Ritter!  Töte den Drachen um diese Ebene abzuschließen.
+
+        Füge einen Event hinzu, sodass der Ritter sich in Richtung des Drachen bewegt, wenn der Linkspfeil angeklickt wird.
+      courseB_playlab_events4_2019: |-
+        Zeit für den Ritter!  Töte den Drachen um diese Ebene abzuschließen.
+
+        Füge einen Event hinzu, sodass der Ritter sich in Richtung des Drachen bewegt, wenn der Linkspfeil angeklickt wird.
+      courseB_playlab_events5_2018: "Füge jetzt einen Event hinzu, so dass der Ritter
+        vom Drachen wegläuft, wenn du den Rechtspfeil drückst.  \n\nBewege den Ritter
+        nach rechts, um diese Ebene zu bestehen."
+      courseB_playlab_events5_2019: "Füge jetzt einen Event hinzu, so dass der Ritter
+        vom Drachen wegläuft, wenn du den Rechtspfeil drückst.  \n\nBewege den Ritter
+        nach rechts, um diese Ebene zu bestehen."
       courseB_playlab_events6: "Hilf deinem Ritter dabei, alle Fahnen zu holen! \n\nDafür
         musst du Ereignisse hinzufügen, die dem Ritter helfen, sich nach oben, unten,
         links und rechts zu bewegen."
@@ -4708,6 +4833,8 @@ de-DE:
         er auf den Drachen trifft.   \n2.  Spiele ein Geräusch ab, wenn beide zusammenstoßen,
         damit es sich realer anfühlt.   \n\n* * *\n\nBesuche alle Ziele und laufe
         dann in den Drachen, um das Level zu bestehen."
+      courseB_playlab_eventsFP_2019: "**Freispiel:** Benutze deine Fantasie. Was könnte
+        dieses Spiel zu noch mehr Spaß machen?"
       courseB_playlab_events_challenge1: |-
         Programmiere so, dass sich die Tiere nach unten bewegen, wenn du ▼ drückst.
 
@@ -6811,6 +6938,11 @@ de-DE:
         Benutze einen <xml><block type="maze_turn" block-text="turn left">
             <title name="DIR">turnLeft</title>
           </block></xml> Baustein, um an die Eichel zu gelangen!
+      courseD_iceage_loops3: Kannst du zur Eichel gelangen, mit nur einem <xml><block
+        type="maze_moveForward"/></xml>-Block? Versuche eine Schleife zu benutzen!
+      courseD_iceage_loops3_2019: Kannst du zur Eichel gelangen, mit nur einem <xml><block
+        type="maze_moveForward" block-text="move forward"/></xml>-Block? Versuche
+        eine Schleife zu benutzen!
       courseD_iceage_loops4: Füge einen weiteren Block hinzu, um Scrat bis zur Eichel
         zu bekommen!
       courseD_iceage_loops4_2019: Füge einen weiteren Block hinzu, um Scrat bis zur
@@ -7027,6 +7159,15 @@ de-DE:
         \"sicheren Zone\" unterhalb der Linie der Kraken (mehr als 225 Pixel nach
         unten) befindet. Falls ja, stelle den Ninja so ein, dass er den Piraten **flüchtet**.
         Andernfalls setze den Ninja auf **jagen** den Piraten."
+      courseD_playLab_cond6_2018: "Mensch! \n\nEs ist wirklich schwer dieses Spiel
+        zu gewinnen.Lass uns dieses Spiel ein bisschen anpassen, damit es mehr Spaß
+        ist. Diese Herausforderung besteht aus zwei Teilen:\n\n* * *\n\n1.  Lass den
+        Ninja etwas langsamer laufen (Darsteller 3), bevor du ihn auf die Jagd nach
+        dem Piraten (Darsteller 1) setzt.\n\n2.  Benutze eine 'für immer wiederholen'-Schleife,
+        um zu überprüfen ob der Pirat in einer \"sicheren Zone“, unterhalb der Linie
+        von Tintenfischen ist (mehr als 225 Pixel nach unten). Wenn dies wahr ist,
+        dann stelle den Ninja auf **flüchten** vor dem Pirat ein. Anderenfalls, stelle
+        den Ninja auf **jagen** nach dem Piraten ein. "
       courseD_playLab_cond6a: "Wir wollen nicht, dass der Pirat zu lange in der \"sicheren
         Zone\" bleibt! \n\nFüge Code zu der nachfolgenden `wenn`-Bedingung hinzu,
         damit das Programm, wenn sich der Pirat (Figur 1) in der \"sicheren Zone\"
@@ -7037,6 +7178,17 @@ de-DE:
         hinzu, damit das Programm, wenn sich der Pirat (Figur 1) in der \"sicheren
         Zone\" befindet, eine Sekunde wartet und dann einen Punkt abzieht, solange
         er unterhalb der Krakenlinie bleibt."
+      courseD_playLab_condFP_2018: |-
+        Baue jetzt dein eigenes Spiel, dass du an deine Freunde zeigen kannst!
+
+        * * *
+
+        Du könntest:
+
+        -   den Pirat und den Ninja zusammenarbeiten lassen, um Punkte vom Tintenfisch zu holen;
+        -   beide Tintenfische den Pirat verfolgen lassen, wodurch der Ninja doppelten Schaden erfährt wenn sie aufeinanderprallen;
+        -   Figuren verschwinden lassen, wenn diese durch den Ninja berührt werden;
+        -   dein eigenes Spiel erfinden!
       courseD_scrat_ramp1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseD_scrat_ramp2: Ziehe einen zusätzlichen Block `Vorwärts bewegen` aus der
@@ -7551,6 +7703,18 @@ de-DE:
       courseE_farmer_ramp12e_2019: |-
         Der Salat ist über den ganzen Garten verstreut.\
         Folge dem Weg, **bis** du einen Salatkopf erreichst, dann sammele ihn ein, **während** noch Salatköpfe vorhanden sind.
+      courseE_farmer_ramp12f: "**Herausforderung**: der einzige Weg, um die gesamte
+        Ernte einzusammeln, ist sich vorwärts bewegen, bis du den Salat erreichst.
+        Dann musst du links abdrehen **falls** es einem Pfad nach links gibt. Ansonsten
+        musst du rechts drehen. "
+      courseE_farmer_ramp12f_2018: "**Herausforderung**: der einzige Weg, um die gesamte
+        Ernte einzusammeln, ist sich vorwärts bewegen, bis du den Salat erreichst.
+        Dann musst du links abdrehen **falls** es einem Pfad nach links gibt. Ansonsten
+        musst du rechts drehen. "
+      courseE_farmer_ramp12f_2019: "**Herausforderung**: der einzige Weg, um die gesamte
+        Ernte einzusammeln, ist sich vorwärts bewegen, bis du den Salat erreichst.
+        Dann musst du links abdrehen **falls** es einem Pfad nach links gibt. Ansonsten
+        musst du rechts drehen. "
       courseE_farmer_ramp12g: Bewege dich vorwärts, bis du den Salat erreichst, dann
         drehe dich nach links, **wenn** es einen Weg nach links gibt. Sonst drehe
         dich nach rechts.

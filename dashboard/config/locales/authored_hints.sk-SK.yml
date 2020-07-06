@@ -4097,6 +4097,9 @@ sk-SK:
       course1_maze_debugging_challenge2:
         courseB_maze_seq_challenge2_a: Na vyriešenie tejto úlohy nepotrebuješ pridávať
           ani odstraňovať žiadne bloky.
+      course1_maze_seq_challenge1:
+        courseA_maze_seq_challenge2_a: Skús spočítať políčka so svojim prstom. Nezabudni,
+          nepočítaj políčko, kde začínaš!
       course1_maze_seq_challenge2:
         courseB_maze_seq_challenge1_a: Tentokrát nemusí fungovať najkratšia cesta.
       course2_artist_nestedLoops_challenge2:
@@ -4776,12 +4779,16 @@ sk-SK:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2:
-        courseA_harvester_loops2_a: "Tvoj kód bude mať **štyri** bloky `posuň sa na
-          západ` <xml><block type=\"maze_moveWest\"/></xml> \n\na **štyri** bloky
-          `zober kukuricu` <xml><block type=\"harvester_corn\"/></xml>."
+        courseA_harvester_loops2_a: |-
+          Tvoj kód bude mať **štyri** bloky `pohni sa na západ` <xml><block type="maze_moveWest"/></xml>
+
+          a **štyri** bloky `zbieraj kukuricu` <xml><block type="harvester_corn"/></xml>.
         courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
           povedať krok po kroku. '
       courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "Tvoj kód bude mať **štyri** bloky `pohni sa na
+          západ`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\na **štyri** bloky
+          `zbieraj kukuricu`. "
         courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
           povedať krok po kroku. '
       courseA_harvester_loops3:
@@ -4910,14 +4917,14 @@ sk-SK:
       courseA_harvester_seq10:
         courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
           na papier.
-        courseA_harvester_seq10_b: Najprv použi `V`, potom \`S. Zopakuj to 2-krát.
+        courseA_harvester_seq10_b: Najprv použi `V`, potom `S`. Zopakuj to 2-krát.
           Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.
       courseA_harvester_seq10_2019:
         courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
           na papier.
-        courseA_harvester_seq10_b: Najprv použi `V`, potom \`S. Zopakuj to 2-krát.
+        courseA_harvester_seq10_b: Najprv použi `V`, potom `S`. Zopakuj to 2-krát.
           Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.
@@ -4952,25 +4959,25 @@ sk-SK:
         courseA_harvester_seq2_a: Nezabudni použiť <xml><block type="harvester_corn"/></xml>
           na zobratie kukurice!
         courseA_harvester_seq2_b: Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla
-          rešenie!
+          riešenie!
       courseA_harvester_seq2_2019:
         courseA_harvester_seq2_a: Nezabudni použiť <xml><block type="harvester_corn"/></xml>
           na zobratie kukurice!
         courseA_harvester_seq2_b: Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla
-          rešenie!
+          riešenie!
       courseA_harvester_seq3:
         courseA_harvester_seq3_a: |-
           Nezabudol/la si použiť tento blok?
 
           <xml><block type="harvester_corn"/></xml>
-        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
+        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš, či ti to pomôže
           prísť na odpoveď.
       courseA_harvester_seq3_2019:
         courseA_harvester_seq3_a: |-
           Nezabudol/la si použiť tento blok?
 
           <xml><block type="harvester_corn"/></xml>
-        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
+        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš, či ti to pomôže
           prísť na odpoveď.
       courseA_harvester_seq4:
         courseA_harvester_seq4_a: Koľko krokov delí záhradníčku a kukuricu? Koľko
@@ -5121,24 +5128,24 @@ sk-SK:
         courseA_maze_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať na
           papier.
       courseA_maze_seq13:
-        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst aby si vystopoval
+        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst, aby si vystopoval
           kadiaľ sa dostať od vtáčika k prasaťu.
         courseA_maze_seq13_b: Neboj sa spraviť chybu! Vyskúšaj pridať bloky a spustiť
-          kód aby si uvidel/a čo sa stane.
+          kód, aby si uvidel/a čo sa stane.
         courseA_maze_seq13_c: Tieto bloky <xml><block type="maze_moveNorth"/></xml><xml><block
           type="maze_moveEast"/></xml> ti pomôžu dostať sa bližšie k prasaťu.
       courseA_maze_seq13_2018:
-        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst aby si vystopoval
+        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst, aby si vystopoval
           kadiaľ sa dostať od vtáčika k prasaťu.
         courseA_maze_seq13_b: Neboj sa spraviť chybu! Vyskúšaj pridať bloky a spustiť
-          kód aby si uvidel/a čo sa stane.
+          kód, aby si uvidel/a čo sa stane.
         courseA_maze_seq13_c: Tieto bloky <xml><block type="maze_moveNorth"/></xml><xml><block
           type="maze_moveEast"/></xml> ti pomôžu dostať sa bližšie k prasaťu.
       courseA_maze_seq13_2019:
-        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst aby si vystopoval
+        courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst, aby si vystopoval
           kadiaľ sa dostať od vtáčika k prasaťu.
         courseA_maze_seq13_b: Neboj sa spraviť chybu! Vyskúšaj pridať bloky a spustiť
-          kód aby si uvidel/a čo sa stane.
+          kód, aby si uvidel/a čo sa stane.
         courseA_maze_seq13_c: "Tieto bloky <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block
           type=\"maze_moveEast\"/></xml> \n\nti pomôžu dostať sa bližšie k prasaťu."
       courseA_maze_seq1_2018:
@@ -5161,26 +5168,26 @@ sk-SK:
           <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq5:
         courseA_maze_seq5_a: Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla
-          rešenie!
+          riešenie!
       courseA_maze_seq5_2018:
-        '1': Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla rešenie!
+        '1': Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla riešenie!
         '2': |-
           Budeš musieť použiť tento blok:
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5_2019:
-        '1': Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla rešenie!
+        '1': Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla riešenie!
         '2': |-
           Budeš musieť použiť tento blok:
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5_copy:
         courseA_maze_seq5_a: Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla
-          rešenie!
+          riešenie!
       courseA_maze_seq5a_2018:
-        '1': Prečítaj si kroky nahlas a uvidíš či ti to pomôže prísť na odpoveď.
+        '1': Prečítaj si kroky nahlas a uvidíš, či ti to pomôže prísť na odpoveď.
       courseA_maze_seq5a_2019:
-        '1': Prečítaj si kroky nahlas a uvidíš či ti to pomôže prísť na odpoveď.
+        '1': Prečítaj si kroky nahlas a uvidíš, či ti to pomôže prísť na odpoveď.
       courseA_maze_seq6:
         courseA_maze_seq6_a: Tvoj výsledný kód by mal mať tri pohybové bloky.
         courseA_maze_seq6_b: Ak sa zasekneš, vyskúšaj úlohu vyriešiť v dvoch častiach,
@@ -5198,17 +5205,32 @@ sk-SK:
         courseA_maze_seq6_b: Ak sa zasekneš, vyskúšaj úlohu vyriešiť v dvoch častiach,
           prvá pred zabočením a druhá po zabočení.
       courseA_maze_seq8:
-        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
-          a uvidíš kam by sa vtáčik mal pohnúť.
+        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier
+          a uvidíš, kam by sa vtáčik mal pohnúť.
       courseA_maze_seq8_2018:
-        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
-          a uvidíš kam by sa vtáčik mal pohnúť.
+        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier
+          a uvidíš, kam by sa vtáčik mal pohnúť.
       courseA_maze_seq8_2019:
-        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
-          a uvidíš kam by sa vtáčik mal pohnúť.
+        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier
+          a uvidíš, kam by sa vtáčik mal pohnúť.
       courseA_maze_seq8_copy:
-        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
-          a uvidíš kam by sa vtáčik mal pohnúť.
+        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier
+          a uvidíš, kam by sa vtáčik mal pohnúť.
+      courseA_maze_seq_challenge1:
+        courseA_maze_seq_challenge1_a: Táto úloha má dve riešenia.
+      courseA_maze_seq_challenge1_2018:
+        courseA_maze_seq_challenge1_a: Táto úloha má dve riešenia.
+      courseA_maze_seq_challenge1_2019:
+        courseA_maze_seq_challenge1_a: Táto úloha má dve riešenia.
+      courseA_maze_seq_challenge2:
+        courseA_maze_seq_challenge2_a: Skús spočítať políčka so svojim prstom. Nezabudni,
+          nepočítaj políčko, kde začínaš!
+      courseA_maze_seq_challenge2_2018:
+        courseA_maze_seq_challenge2_a: Skús spočítať políčka so svojim prstom. Nezabudni,
+          nepočítaj políčko, kde začínaš!
+      courseA_maze_seq_challenge2_2019:
+        courseA_maze_seq_challenge2_a: Skús spočítať políčka so svojim prstom. Nezabudni,
+          nepočítaj políčko, kde začínaš!
       courseA_playLab_events2:
         courseA_playLab_events2_a: Pohľadaj blok, vďaka ktorému pes začne rozprávať.
         courseA_playLab_events2_b: |-
@@ -9990,21 +10012,21 @@ sk-SK:
 
           Budeš musieť použiť podmienkový blok (`ak/inak`), aby si túto výzvu vyriešil.
         courseD_bee_conditionals7_b: Ak pod oblakom nie je kvet, musí tam byť plást,
-          takže nemusíš rozmýšlať o situácii s prázdnym poľom.
+          takže nemusíš rozmýšľať o situácii s prázdnym poľom.
       courseD_bee_conditionals7_2018:
         courseD_bee_conditionals7_a: |-
           **Pamätaj:** Táto úloha sa mení vždy po spustení.
 
           Budeš musieť použiť podmienkový blok (`ak/inak`), aby si túto výzvu vyriešil.
         courseD_bee_conditionals7_b: Ak pod oblakom nie je kvet, musí tam byť plást,
-          takže nemusíš rozmýšlať o situácii s prázdnym poľom.
+          takže nemusíš rozmýšľať o situácii s prázdnym poľom.
       courseD_bee_conditionals7_2019:
         courseD_bee_conditionals7_a: |-
           **Pamätaj:** Táto úloha sa mení vždy po spustení.
 
           Budeš musieť použiť podmienkový blok (`ak/inak`), aby si túto výzvu vyriešil.
         courseD_bee_conditionals7_b: Ak pod oblakom nie je kvet, musí tam byť plást,
-          takže nemusíš rozmýšlať o situácii s prázdnym poľom.
+          takže nemusíš rozmýšľať o situácii s prázdnym poľom.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: |-
           **Pamätaj:** Táto úloha sa mení vždy po spustení.
@@ -10713,8 +10735,6 @@ sk-SK:
         courseD_farmer_condLoops5_b: Na jednom miesto môže byť viac ako jedna kukurica,
           alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: Je tu nový cyklus `pokiaľ tam sú tekvice`. Dokážeš
-          ho použiť v tejto úlohe?
         courseD_farmer_condLoops5_b: Na jednom miesto môže byť viac ako jedna kukurica,
           alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!
       courseD_farmer_condLoops6_2018:

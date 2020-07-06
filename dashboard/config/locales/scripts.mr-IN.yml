@@ -11,8 +11,14 @@ mr:
           stages:
             Events:
               name: ईव्हेंट्स
+          lessons:
+            Events:
+              name: ईव्हेंट्स
         grade1:
           stages:
+            Events:
+              name: ईव्हेंट्स
+          lessons:
             Events:
               name: ईव्हेंट्स
         k5concepts:
@@ -34,12 +40,21 @@ mr:
           stages:
             Dance Party:
               name: डांस पार्टी
+          lessons:
+            Dance Party:
+              name: डांस पार्टी
         dance-draft:
           stages:
             Dance Party:
               name: डांस पार्टी
+          lessons:
+            Dance Party:
+              name: डांस पार्टी
         dance-low:
           stages:
+            Dance Party:
+              name: डांस पार्टी
+          lessons:
             Dance Party:
               name: डांस पार्टी
         coursed-2019:
@@ -136,5 +151,15 @@ mr:
               display_name: ईव्हेंट्स
         code-break:
           stages:
+            Events:
+              name: ईव्हेंट्स
+          lessons:
+            Events:
+              name: ईव्हेंट्स
+        k5-onlinepd-2020:
+          stages:
+            Events:
+              name: ईव्हेंट्स
+          lessons:
             Events:
               name: ईव्हेंट्स
