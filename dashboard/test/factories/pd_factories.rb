@@ -452,11 +452,16 @@ FactoryGirl.define do
           create :pd_attendance, session: session, teacher: teacher
         end
       end
-      if evaluator.cdo_scholarship_recipient
+
+      scholarship_params = {
+        user: teacher,
+        course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+        application_year: evaluator.workshop.school_year
+      }
+
+      if evaluator.cdo_scholarship_recipient && Pd::ScholarshipInfo.find_by(scholarship_params).nil?
         create :pd_scholarship_info,
-          user: teacher,
-          course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
-          application_year: evaluator.workshop.school_year
+          scholarship_params
       end
     end
   end
