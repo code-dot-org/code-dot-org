@@ -1,5 +1,4 @@
 /*globals dashboard*/
-import i18n from '@cdo/locale';
 import trackEvent from '@cdo/apps/util/trackEvent';
 
 /**
@@ -24,9 +23,18 @@ const findDropletParseErrors = (dropletEditor, errorCallback) => {
     let matchedLineNumber = error.message.match(/Line (\d+)./);
     if (matchedLineNumber) {
       // We were able to find the line number. Report it to the user.
+
       let errorMessage = error.message.match(/Line \d+. (.*)/)[1];
       if (error.message.includes('indent must be inside block')) {
-        errorMessage = i18n.droplet_parsing_error();
+        // June 2020: We believe this specific error is only triggered when a
+        // curly bracket isn't attached to a function, loop, or conditional. If
+        // in the future we verify this is true, create a user-friendly error
+        // message to report to the user.
+        trackEvent(
+          'Research',
+          'DropletIndentNotInsideBlock',
+          `ShareURL:${dashboard.project.getShareUrl()}`
+        );
       } else {
         // It's unknown what javascript text causes certain droplet errors. If
         // we discover an unknown error, log it to Google Analytics so we can

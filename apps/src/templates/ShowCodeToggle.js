@@ -139,6 +139,7 @@ class DropletCodeToggle extends Component {
       // With the addition of the `findDropletParseErrors` above, this try/
       // catch/log/displayError sequence shouldn't be needed. Remove this if
       // instances of this being logged go to zero after this change is merged.
+      // Should go to zero immediately after merging. Check back by Aug 2020.
       logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
         dropletError: !result.nonDropletError,
         fromBlocks
