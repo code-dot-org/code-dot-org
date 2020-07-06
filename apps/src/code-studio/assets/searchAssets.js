@@ -34,7 +34,7 @@ export function searchAssets(
 
   if (categoryQuery !== '' && categoryQuery !== 'all') {
     let categoryResultSet = Immutable.Set(
-      assetLibrary.categories[categoryQuery].animations
+      assetLibrary.categories[categoryQuery].assets
     );
     if (searchQuery !== '') {
       resultSet = resultSet.intersect(categoryResultSet);
