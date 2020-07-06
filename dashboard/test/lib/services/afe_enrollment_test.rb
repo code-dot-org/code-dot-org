@@ -11,7 +11,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     CDO.unstub(:afe_pardot_form_handler_url)
     CDO.stubs(:afe_pardot_form_handler_url).returns(nil)
     Net::HTTP.expects(:post_form).never
-    Services::AFEEnrollment.new.submit(valid_test_params)
+    Services::AFEEnrollment.submit(valid_test_params)
   end
 
   test 'submit posts to Pardot with the expected format' do
@@ -23,11 +23,11 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'last-name' => 'test-last-name',
           'email' => 'test-email',
           'nces-id' => '012345678901',
-          'street-1' => 'test-street-1',
-          'street-2' => 'test-street-2',
-          'city' => 'test-city',
-          'state' => 'test-state',
-          'zip' => 'test-zip',
+          'school-address-1' => 'test-street-1',
+          'school-address-2' => 'test-street-2',
+          'school-city' => 'test-city',
+          'school-state' => 'test-state',
+          'school-zip' => 'test-zip',
           'inspirational-marketing-kit' => '1',
           'csta-plus' => '1',
           'aws-educate' => '1',
@@ -38,7 +38,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       end
       expected_request.returns(fake_success_response)
 
-      Services::AFEEnrollment.new.submit(valid_test_params)
+      Services::AFEEnrollment.submit(valid_test_params)
     end
   end
 
@@ -77,21 +77,21 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   test 'raises without submitting if amazon_terms is not true' do
     Net::HTTP.expects(:post_form).never
     assert_raises_matching /AFE submission skipped: Terms and conditions were not accepted/ do
-      Services::AFEEnrollment.new.submit(valid_test_params.merge(amazon_terms: false))
+      Services::AFEEnrollment.submit(valid_test_params.merge(amazon_terms: false))
     end
   end
 
   test 'submit raises when Pardot response is a failure status' do
     Net::HTTP.stubs(:post_form).returns(fake_unavailable_response)
     assert_raises_matching /AFE submission failed with HTTP 503/ do
-      Services::AFEEnrollment.new.submit(valid_test_params)
+      Services::AFEEnrollment.submit(valid_test_params)
     end
   end
 
   test 'submit raises when Pardot response is a validation failure' do
     Net::HTTP.stubs(:post_form).returns(fake_validation_failure_response)
     assert_raises_matching /AFE submission failed with a validation error/ do
-      Services::AFEEnrollment.new.submit(valid_test_params)
+      Services::AFEEnrollment.submit(valid_test_params)
     end
   end
 
@@ -107,7 +107,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
     expected_request.returns(fake_success_response)
 
-    Services::AFEEnrollment.new.submit(valid_test_params.merge(input_params))
+    Services::AFEEnrollment.submit(valid_test_params.merge(input_params))
 
     refute_nil captured_params
     expected_params.each do |key, expected_value|
@@ -117,7 +117,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
 
   def valid_test_params
     {
-      traffic_source: 'AFE-code.org-test',
       first_name: 'test-first-name',
       last_name: 'test-last-name',
       email: 'test-email',
