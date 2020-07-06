@@ -47,7 +47,15 @@ export const themeOptions = [
   'cherryVanilla',
   'berryPatch',
   'cucumber',
-  'crushedVelvet'
+  'crushedVelvet',
+  'playtime',
+  'underTheSea',
+  'blueAndGold',
+  'blueSteel',
+  'darkscheme',
+  'twoTone',
+  'pastel',
+  'peachy'
 ];
 
 const THEME_ICON_BASE_URL = '/blockly/media/applab/theme_dropdown/';
@@ -157,6 +165,31 @@ export const themeOptionsForSelect = [
     option: 'crushedVelvet',
     displayName: 'Crushed Velvet',
     icon: THEME_ICON_BASE_URL + 'crushed_velvet.png'
+  },
+  {
+    option: 'playtime',
+    displayName: 'Playtime',
+    icon: THEME_ICON_BASE_URL + 'playtime.png'
+  },
+  {
+    option: 'underTheSea',
+    displayName: 'Under the Sea',
+    icon: THEME_ICON_BASE_URL + 'under_the_sea.png'
+  },
+  {
+    option: 'blueAndGold',
+    displayName: 'Blue and Gold',
+    icon: THEME_ICON_BASE_URL + 'blue_and_gold.png'
+  },
+  {
+    option: 'blueSteel',
+    displayName: 'Blue Steel',
+    icon: THEME_ICON_BASE_URL + 'blue_steel.png'
+  },
+  {
+    option: 'darkscheme',
+    displayName: 'Darkscheme',
+    icon: THEME_ICON_BASE_URL + 'darkscheme.png'
   }
 ];
 
