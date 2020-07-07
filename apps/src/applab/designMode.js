@@ -869,7 +869,7 @@ function duplicateScreen(element) {
       Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert('notification', alert);
 
   return newScreenId;
 }
@@ -923,7 +923,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
       <b>{elementUtils.getId(duplicateElement)}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert('notification', alert);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {

@@ -3105,56 +3105,11 @@ StudioApp.prototype.displayWorkspaceAlert = function(
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: type,
-      sideMargin: 20
-    },
-    alertContents
-  );
-};
-
-/**
- * Displays a small notification box inside the playspace that goes away after 5 seconds
- * @param {React.Component} notificationContents
- */
-StudioApp.prototype.displayPlayspaceNotification = function(
-  notificationContents
-) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: 'notification',
-      closeDelayMillis: 5000,
-      childPadding: '8px 14px'
-    },
-    notificationContents
-  );
-};
-
-/**
- * Displays a small alert box inside DOM element at parentSelector. Parent is
- * assumed to have at most a single alert (we'll either create a new one or
- * replace the existing one).
- * @param {object} props
- * @param {string} object.type - Alert type (error or warning)
- * @param {number} [object.sideMaring] - Optional param specifying margin on
- *   either side of element
- * @param {React.Component} alertContents
- * @param {?string} position
- */
-StudioApp.prototype.displayAlert = function(
-  selector,
-  props,
-  alertContents,
-  position = 'absolute'
-) {
-  var parent = $(selector);
+  var parent = $('#visualization');
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
-      position: position,
+      position: 'absolute',
       left: 0,
       right: 0,
       top: 0,
@@ -3165,23 +3120,20 @@ StudioApp.prototype.displayAlert = function(
   }
   var renderElement = container[0];
 
-  var handleAlertClose = function() {
-    ReactDOM.unmountComponentAtNode(renderElement);
-  };
-  ReactDOM.render(
-    <Alert
-      onClose={handleAlertClose}
-      type={props.type}
-      sideMargin={props.sideMargin}
-      closeDelayMillis={props.closeDelayMillis}
-      childPadding={props.childPadding}
-    >
-      {alertContents}
-    </Alert>,
-    renderElement
+  const playspaceAlert = React.createElement(
+    Alert,
+    {
+      onClose: () => {
+        ReactDOM.unmountComponentAtNode(renderElement);
+      },
+      type: type,
+      sideMargin: type === 'notification' ? undefined : 20,
+      closeDelayMillis: type === 'notification' ? 5000 : undefined,
+      childPadding: type === 'notification' ? '8px 14px' : undefined
+    },
+    alertContents
   );
-
-  return renderElement;
+  ReactDOM.render(playspaceAlert, renderElement);
 };
 
 /**
