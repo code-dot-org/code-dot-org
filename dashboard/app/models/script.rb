@@ -917,8 +917,40 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil)
-    raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
+  def self.add_script(options, raw_lesson_groups, rl, new_suffix: nil, editor_experiment: nil)
+    raw_lessons = []
+
+    #recreate raw_lessons from raw_lesson_groups
+    raw_lesson_groups.each do |lesson_group|
+      lesson_group[:lessons].each do |lesson|
+        temp_lesson = lesson.merge(
+          {
+            lesson: lesson[:name],
+            script_levels: lesson[:script_levels].map do |sl|
+              sl.merge(
+                {
+                  lesson: lesson[:name],
+                  levels: sl[:levels].map do |level|
+                    level.merge(
+                      {
+                        lesson_lockable: lesson[:lockable],
+                        assessment: sl[:assessment],
+                        named_level: sl[:named_level],
+                        lesson_group: lesson_group[:key],
+                        bonus: sl[:bonus]
+                      }
+                    )
+                  end
+                }
+              )
+            end
+          }
+        )
+        raw_lessons << temp_lesson
+      end
+    end
+
+    raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     chapter = 0
@@ -931,7 +963,13 @@ class Script < ActiveRecord::Base
     non_lockable_count = 0
 
     unless raw_script_levels.empty?
-      if raw_lesson_groups.empty?
+      # We want a script to either have all of its lessons have lesson groups
+      # or none of the lessons have lesson groups. We know we have hit this case if
+      # there are more than one lesson group for a script but the lesson group key
+      # for the first lesson is blank
+      if raw_lesson_groups[0][:key].nil? && raw_lesson_groups.length > 1
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
+      elsif raw_lesson_groups.length == 1 && raw_lesson_groups[0][:key].nil?
         lesson_group = LessonGroup.find_or_create_by(
           key: '',
           script: script,
@@ -1071,13 +1109,6 @@ class Script < ActiveRecord::Base
 
       # Set/create Lesson containing custom ScriptLevel
       if lesson_name
-        # We want a script to either have all of its lessons have lesson groups
-        # or none of the lessons have lesson groups. We know we have hit this case if
-        # there are lesson groups for a script but the lesson group key
-        # for this specific lesson is blank
-        if !lesson_group_key.present? && !raw_lesson_groups.empty?
-          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
-        end
         # find the lesson group for this lesson
         lesson_group = LessonGroup.find_by!(
           key: lesson_group_key.presence || "",
