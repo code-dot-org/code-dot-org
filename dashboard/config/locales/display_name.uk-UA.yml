@@ -19,6 +19,7 @@ uk-UA:
       AppLab Intro 7 - thisOrThatSetScreen: Це або те
       CDEF_video_SpritesInAction: Як зробити спрайт
       CDEF_video_SpritesInAction_2019: Як зробити спрайт
+      CDEF_video_SpritesInAction_2020: Як зробити спрайт
       CSD Board Buttons Map: Кнопки та перемикач
       CSD Board Buttons Map_2018: Кнопки та перемикач
       CSD Board Buttons Map_2019: Кнопки та перемикач
@@ -424,10 +425,17 @@ uk-UA:
       'Course E: Artist Project_2019': Курс E Виконавець проекту
       'Course F: Artist Project_2018': Курс F Виконавчий проект
       'Course F: Artist Project_2019': Курс F Виконавчий проект
+      CourseD_Dance_2020_bonus1: Назад і вперед
+      CourseD_Dance_2020_bonus3: Шикуймося
       CourseEF_video_IntroSpriteLab: Це Спрайт Лаб
       CourseEF_video_IntroSpriteLab_2019: Це Спрайт Лаб
+      CourseEF_video_IntroSpriteLab_2020: Це Спрайт Лаб
       CourseEF_video_MakeSprite: Як зробити спрайт
       CourseEF_video_MakeSprite_2019: Як зробити спрайт
+      CourseEF_video_MakeSprite_2020: Як зробити спрайт
+      CourseF_Oceans_Video_Machine_Learning: 'Відео: Машинне навчання'
+      CourseF_Oceans_Video_Societal_Implications: 'Відео: Соціальні наслідки'
+      CourseF_Oceans_Video_Training_Data: 'Відео: Тренування баз даних'
       CourseF_Project_Revise_SpriteLab: Переглянути проект Sprite Lab
       Dance_Party_extras_alternate_2019: Назад і вперед
       Dance_Party_extras_battle: Танцювальні команди
@@ -446,26 +454,37 @@ uk-UA:
       InspirationalArtwork_2018: Натхнення!
       MC_HOC_2017_01_RETRY: Садиба
       MC_HOC_2017_01_RETRY_2019: Садиба
+      MC_HOC_2017_01_RETRY_2020: Садиба
       MC_HOC_2017_02_Cole: Ферма
       MC_HOC_2017_02_Cole_2019: Ферма
+      MC_HOC_2017_02_Cole_2020: Ферма
       MC_HOC_2017_03_Cole: Ліси
       MC_HOC_2017_03_Cole_2019: Ліси
+      MC_HOC_2017_03_Cole_2020: Ліси
       MC_HOC_2017_04POINT5_RYAN: Пустеля
       MC_HOC_2017_04POINT5_RYAN_2019: Пустеля
+      MC_HOC_2017_04POINT5_RYAN_2020: Пустеля
       MC_HOC_2017_04_Cole: Болото
       MC_HOC_2017_04_Cole_2019: Болото
+      MC_HOC_2017_04_Cole_2020: Болото
       MC_HOC_2017_05_Cole: Річка
       MC_HOC_2017_05_Cole_2019: Річка
+      MC_HOC_2017_05_Cole_2020: Річка
       MC_HOC_2017_06_Cole: Прилив
       MC_HOC_2017_06_Cole_2019: Прилив
+      MC_HOC_2017_06_Cole_2020: Прилив
       MC_HOC_2017_07_Cole: Сніговий пас
       MC_HOC_2017_07_Cole_2019: Сніговий пас
+      MC_HOC_2017_07_Cole_2020: Сніговий пас
       MC_HOC_2017_10_RETRY: Печера
       MC_HOC_2017_10_RETRY_2019: Печера
+      MC_HOC_2017_10_RETRY_2020: Печера
       MC_HOC_2017_Ali: Фортеця Острів
       MC_HOC_2017_Ali_2019: Фортеця Острів
+      MC_HOC_2017_Ali_2020: Фортеця Острів
       MC_HOC_2017_FP20x20: Безкоштовна гра
       MC_HOC_2017_FP20x20_2019: Безкоштовна гра
+      MC_HOC_2017_FP20x20_2020: Безкоштовна гра
       New Minecraft Hero Project: Безкоштовна гра
       OPD-K5-spritelab-5-video: Як зробити спрайт
       Oceans_Video_Machine_Learning: 'Відео: Машинне навчання'

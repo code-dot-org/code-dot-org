@@ -409,6 +409,7 @@
   "dataTableNamePlaceholder": "Tábla neve",
   "dataLibraryHeader": "Adatkönyvtár",
   "dataLibraryDescription": "Találj és importálj valós adatokat tartalmazó táblákat a Code.org-ról.",
+  "dataLibrarySearchPlacholder": "Keresés",
   "dataSource": "Adatforrás",
   "dataVisualizerPlaceholderText": "Válaszd ki az értékeket a megjelenítéshez",
   "dataVisualizerBucketSize": "Tároló mérete",

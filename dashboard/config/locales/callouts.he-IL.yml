@@ -98,6 +98,22 @@ he-IL:
       Course 4 Bee Params 2:
         edit_get_nectar: השתמש בכפתור הזה לערוך את הפונקציה ולשנות את הכיוון שהדבורה
           תסתובב אליה כדי לאסוף את הצוף.
+      CourseD_Dance_2020_01:
+        dance_callout_01: בחרו כאן את סוג הרקדן.
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: הוסיפו את הבלוק הזה לתוכנה שלכם.
+        arrow_buttons: לחצו על מקשי החצים כדי לשלוט ברקדן שלכם.
+      CourseD_Dance_2020_04:
+        dance_callout_02: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      CourseD_Dance_2020_05:
+        dance_callout_05: הוסיפו אירוע חדש לתוכנה שלכם.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: בלוק חדש!
+      CourseD_Dance_2020_07:
+        setprop_hint: בלוק חדש!
+      CourseD_Dance_2020_09:
+        new_block_3: בלוק חדש!
+        new_block_4: בלוק חדש!
       CourseD_Dance_Party_01:
         dance_callout_01: הוסיפו את הבלוק הזה לתוכנה שלכם!
       CourseD_Dance_Party_02:
@@ -150,19 +166,28 @@ he-IL:
         craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
       Overworld Chop Trees_2019:
         craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
           לסיים אותו?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
           לסיים אותו?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
+          לסיים אותו?
       Overworld Move to Sheep:
         craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
       Overworld Move to Sheep_2019:
         craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
       Overworld Place Wall:
         craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
       Overworld Place Wall_2019:
+        craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
+      Overworld Place Wall_2020:
         craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
       Underground Avoiding Lava:
         craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
@@ -170,15 +195,22 @@ he-IL:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
           על מנת לנוע קדימה?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
+          על מנת לנוע קדימה?
       Underground Iron:
         craft_what_is_iron: כרו את הברזל הזה!
       Underground Iron_2019:
+        craft_what_is_iron: כרו את הברזל הזה!
+      Underground Iron_2020:
         craft_what_is_iron: כרו את הברזל הזה!
       courseA_maze_seq1:
         courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
       courseA_maze_seq1_2018:
         courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
       courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2020:
         courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
@@ -188,6 +220,8 @@ he-IL:
       courseB_maze_seq1_2018:
         courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
       courseB_maze_seq1_2019:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2020:
         courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
@@ -201,6 +235,9 @@ he-IL:
       courseC_maze_programming3_2019:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
+      courseC_maze_programming3_2020:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
@@ -208,6 +245,9 @@ he-IL:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_2020:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_bee_conditionals2_copy:
@@ -219,6 +259,9 @@ he-IL:
       courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
           כדי לפתור את החידה.
+      courseD_farmer_while7_2020:
+        courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
+          כדי לפתור את החידה.
       courseD_maze_ramp3:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
@@ -226,6 +269,9 @@ he-IL:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
       courseD_maze_ramp3_2019:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_maze_ramp3_2020:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
       courseD_scrat_ramp3:

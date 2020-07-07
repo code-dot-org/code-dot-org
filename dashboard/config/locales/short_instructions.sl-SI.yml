@@ -537,11 +537,19 @@ sl-SI:
         blokov?
       CourseE_HOC 2018 Level_1: Vzemi čoln iz zaboja.
       CourseE_HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
+      CourseE_HOC 2018 Level_10_2020: Pridi do vhoda v ta morski spomenik.
       CourseE_HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega
         spomenika.
+      CourseE_HOC 2018 Level_11_2020: Izgradi strugo s pomočjo prismarina v sredini
+        morskega spomenika.
+      CourseE_HOC 2018 Level_1_2020: Vzemi čoln iz zaboja.
       CourseE_HOC 2018 Level_3: Odveslaj na odprto morje proti ribi.
+      CourseE_HOC 2018 Level_3_2020: Odveslaj na odprto morje proti ribi.
       CourseE_HOC 2018 Level_6: Pojdi po ledu do lososa.
+      CourseE_HOC 2018 Level_6_2020: Pojdi po ledu do lososa.
       CourseE_HOC 2018 Level_9b: Korale uporabi kot navigacijski točki, da prideš
+        do zaklada.
+      CourseE_HOC 2018 Level_9b_2020: Korale uporabi kot navigacijski točki, da prideš
         do zaklada.
       Crack Random Substitution: Navodila
       Crack a Caesar Cipher: Navodila
@@ -705,33 +713,50 @@ sl-SI:
         premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Avoid Monsters_2019: Tekmovanje v teku v a Creeper je slaba ideja.
         Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
+      Overworld Avoid Monsters_2020: Tekmovanje v teku v a Creeper je slaba ideja.
+        Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Chop Tree: Les je zelo pomembna surovina. Veliko se da narediti iz
         njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Tree_2019: Les je zelo pomembna surovina. Veliko se da narediti
         iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
+      Overworld Chop Tree_2020: Les je zelo pomembna surovina. Veliko se da narediti
+        iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Trees: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
         veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Chop Trees_2019: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
+        veliko lesa. Posekaj vsa 3 drevesa.
+      Overworld Chop Trees_2020: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
         veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Free Play 20x20: Čestitamo! Zaključili ste vse uganke! Sedaj pa razbijajte,
         gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega do sedaj.
       Overworld Free Play 20x20_2019: Čestitamo! Zaključili ste vse uganke! Sedaj
         pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega
         do sedaj.
+      Overworld Free Play 20x20_2020: Čestitamo! Zaključili ste vse uganke! Sedaj
+        pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega
+        do sedaj.
       Overworld House Frame Chosen: Zgradite preostalo hišo iz poljubnih materialov.
         Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld House Frame Chosen_2019: Zgradite preostalo hišo iz poljubnih materialov.
         Ukaz +ponovi' vam bo tukaj prišel prav.
+      Overworld House Frame Chosen_2020: Zgradite preostalo hišo iz poljubnih materialov.
+        Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld Move to Sheep: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete
+        ovco.
+      Overworld Move to Sheep_2020: Dodajte še en ukaz 'premakni naprej', da dosežete
         ovco.
       Overworld Place Wall: Vsaka hiša se začne z zidom. Zgradite prvi del hiše z
         uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Place Wall_2019: Vsaka hiša se začne z zidom. Zgradite prvi del hiše
         z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
+      Overworld Place Wall_2020: Vsaka hiša se začne z zidom. Zgradite prvi del hiše
+        z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Plant Crops: Dobro je načrtovati vnaprej. Posadite pridelke na obeh
         straneh vode, da ne boste lačni kasneje.
       Overworld Plant Crops_2019: Dobro je načrtovati vnaprej. Posadite pridelke na
+        obeh straneh vode, da ne boste lačni kasneje.
+      Overworld Plant Crops_2020: Dobro je načrtovati vnaprej. Posadite pridelke na
         obeh straneh vode, da ne boste lačni kasneje.
       Overworld Powered Minecart: Dobro opravljeno! Zbrali ste veliko virov in si
         zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat vaše
@@ -739,9 +764,14 @@ sl-SI:
       Overworld Powered Minecart_2019: Dobro opravljeno! Zbrali ste veliko virov in
         si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat
         vaše hiše.
+      Overworld Powered Minecart_2020: Dobro opravljeno! Zbrali ste veliko virov in
+        si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat
+        vaše hiše.
       Overworld Shear Sheep: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in
         zberite volno od obeh ovc.
       Overworld Shear Sheep_2019: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
+        in zberite volno od obeh ovc.
+      Overworld Shear Sheep_2020: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
         in zberite volno od obeh ovc.
       Standalone_Artist_1: Dobrodošel pri Umetniku! Najprej poskusi narediti enostaven
         kvadrat z uporabo zavi desno in premakni se naprej blokov. Vsaka stran naj
@@ -761,6 +791,8 @@ sl-SI:
       Underground Mining Coal: Najbolj dragocene vire boš našel/a pod zemljo, vendar
         je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2019: Najbolj dragocene vire boš našel/a pod zemljo,
+        vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
+      Underground Mining Coal_2020: Najbolj dragocene vire boš našel/a pod zemljo,
         vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       'Widget: Text Compression': Išči vzorce (ponovljene besede ali fraze) v besedilu.
         Vnesi vzorce, ki jih vidiš, v slovar na desni. Med tipkanjem vnosa v slovar,
@@ -818,17 +850,22 @@ sl-SI:
       courseC_PlayLab_events3: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2018: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2019: Lahko narediš program, da bo pes šel do mačke?
+      courseC_PlayLab_events3_2020: Lahko narediš program, da bo pes šel do mačke?
       courseC_artist_prog5: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse
         3 strani so enako dolge.'
       courseC_artist_prog5_2018: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig:
         vse 3 strani so enako dolge.'
       courseC_artist_prog5_2019: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig:
         vse 3 strani so enako dolge.'
+      courseC_artist_prog5_2020: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig:
+        vse 3 strani so enako dolge.'
       courseD_bee_nestedLoops8: 'Dobi ves nektar iz vsakega cveta in naredi med v
         satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2018: 'Dobi ves nektar iz vsakega cveta in naredi med
         v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2019: 'Dobi ves nektar iz vsakega cveta in naredi med
+        v satovju. Uporabi ugnezdeno zanko. '
+      courseD_bee_nestedLoops8_2020: 'Dobi ves nektar iz vsakega cveta in naredi med
         v satovju. Uporabi ugnezdeno zanko. '
       courseE_artist_functions1: "Živio! Jaz Zombi umetnik. Jaz rad risati!\nPomagaj
         mi narisati kvadratna očala. Namig: Prehod med očali je \n25 pixlov krajši
@@ -850,11 +887,15 @@ sl-SI:
         da narišeš tole!
       courseF_artist_for7_2019: Naredi tri majhne sprememb v kodi iz prejšnje naloge,
         da narišeš tole!
+      courseF_artist_for7_2020: Naredi tri majhne sprememb v kodi iz prejšnje naloge,
+        da narišeš tole!
       courseF_bee_for8: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica
         dobila 3, 6, 9, 12, 15 nektarjev?
       courseF_bee_for8_2018: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi
         čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       courseF_bee_for8_2019: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi
+        čebelica dobila 3, 6, 9, 12, 15 nektarjev?
+      courseF_bee_for8_2020: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi
         čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       flappy_1: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi". Klikni ali
         tapni na zaslon, da premakneš Flappya do cilja.

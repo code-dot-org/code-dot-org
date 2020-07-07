@@ -171,6 +171,9 @@ pt-PT:
       Function intro Ryan_2019:
         build bridge:
           name: construir ponte
+      Function intro Ryan_2020:
+        build bridge:
+          name: construir ponte
       Geometric Sun:
         diamond:
           name: diamante
@@ -213,12 +216,20 @@ pt-PT:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: caminho livre
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: caminho livre
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: arranjar caminho longo
         fix short path:
           name: arranjar caminho curto
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: arranjar caminho longo
+        fix short path:
+          name: arranjar caminho curto
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: arranjar caminho longo
         fix short path:
@@ -233,12 +244,22 @@ pt-PT:
           name: construir ponte curta
         build long bridge:
           name: construir ponte longa
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: construir ponte curta
+        build long bridge:
+          name: construir ponte longa
       MC_HOC_2017_FP20x20:
         function 1:
           name: função 1
         function 2:
           name: função 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: função 1
+        function 2:
+          name: função 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: função 1
         function 2:
@@ -473,6 +494,9 @@ pt-PT:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: possível solução
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: possível solução
       courseC_artist_prog3:
         draw flame:
           parameters:
@@ -485,7 +509,14 @@ pt-PT:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: faz algo
+      courseC_data wizard_2020:
         do something:
           name: faz algo
       courseE_artist_concept1:
@@ -517,6 +548,9 @@ pt-PT:
       courseE_artist_functions10_2019:
         do something:
           name: faz algo
+      courseE_artist_functions10_2020:
+        do something:
+          name: faz algo
       courseE_artist_functions2:
         draw a square:
           name: desenhar um quadrado
@@ -526,6 +560,9 @@ pt-PT:
       courseE_artist_functions2_2019:
         draw a square:
           name: desenhar um quadrado
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: desenhar um quadrado
       courseE_artist_functions2_copy:
         draw a square:
           name: desenhar um quadrado
@@ -533,6 +570,9 @@ pt-PT:
         draw a star:
           name: desenhar uma estrela
       courseE_artist_functions3_2019:
+        draw a star:
+          name: desenhar uma estrela
+      courseE_artist_functions3_2020:
         draw a star:
           name: desenhar uma estrela
       courseE_artist_functions4:
@@ -550,6 +590,9 @@ pt-PT:
       courseE_artist_functions5_2019:
         draw a star:
           name: desenhar uma estrela
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: desenhar uma estrela
       courseE_artist_functions5_copy:
         draw a star:
           name: desenhar uma estrela
@@ -559,6 +602,9 @@ pt-PT:
       courseE_artist_functions7_2018:
         draw a house:
           name: desenhar uma casa
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: desenhar uma casa
       courseE_artist_functions8:
         do something:
           name: faz algo
@@ -566,6 +612,9 @@ pt-PT:
         do something:
           name: faz algo
       courseE_artist_functions8_2019:
+        do something:
+          name: faz algo
+      courseE_artist_functions8_2020:
         do something:
           name: faz algo
       courseE_artist_functions8a_2018:
@@ -578,16 +627,27 @@ pt-PT:
           name: desenhar um quadrado
         do something:
           name: faz algo
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: desenhar um quadrado
+        do something:
+          name: faz algo
       courseE_artist_functions8b_2018:
         do something:
           name: faz algo
       courseE_artist_functions8b_2019:
         do something:
           name: faz algo
+      courseE_artist_functions8b_2020:
+        do something:
+          name: faz algo
       courseE_artist_functions8c_2018:
         do something:
           name: faz algo
       courseE_artist_functions8c_2019:
+        do something:
+          name: faz algo
+      courseE_artist_functions8c_2020:
         do something:
           name: faz algo
       courseE_artist_functions9:
@@ -599,6 +659,9 @@ pt-PT:
       courseE_artist_functions9_2019:
         do something:
           name: faz algo
+      courseE_artist_functions9_2020:
+        do something:
+          name: faz algo
       courseE_artist_functions_challenge1:
         do something:
           name: faz algo
@@ -606,6 +669,9 @@ pt-PT:
         do something:
           name: faz algo
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: faz algo
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: faz algo
       courseE_artist_functions_challenge2:
@@ -617,6 +683,9 @@ pt-PT:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: faz algo
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: faz algo
       courseE_artist_functions_predict1:
         draw a square:
           name: desenhar um quadrado
@@ -624,6 +693,9 @@ pt-PT:
         draw a square:
           name: desenhar um quadrado
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: desenhar um quadrado
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: desenhar um quadrado
       courseE_artist_functions_predict1_copy:
@@ -636,6 +708,9 @@ pt-PT:
         do something:
           name: faz algo
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: faz algo
+      courseE_artist_functions_predict2_2020:
         do something:
           name: faz algo
       courseE_bee_functions1:
@@ -662,10 +737,16 @@ pt-PT:
       courseE_farmer_functions10a1_2019:
         check square for corn:
           name: verificar se o quadrado tem milho
+      courseE_farmer_functions10a1_2020:
+        check square for corn:
+          name: verificar se o quadrado tem milho
       courseE_farmer_functions11_predict_2018:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions11_predict_2019:
+        check square for corn:
+          name: verificar se o quadrado tem milho
+      courseE_farmer_functions11_predict_2020:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions1a_2018:
@@ -674,10 +755,16 @@ pt-PT:
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: verificar se o quadrado tem milho
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: verificar se o quadrado tem milho
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: verificar se o quadrado tem milho
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions2ba_2018:
@@ -686,16 +773,25 @@ pt-PT:
       courseE_farmer_functions2ba_2019:
         check square for corn:
           name: verificar se o quadrado tem milho
+      courseE_farmer_functions2ba_2020:
+        check square for corn:
+          name: verificar se o quadrado tem milho
       courseE_farmer_functions3c1_2018:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions3c1_2019:
         check square for corn:
           name: verificar se o quadrado tem milho
+      courseE_farmer_functions3c1_2020:
+        check square for corn:
+          name: verificar se o quadrado tem milho
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: verificar se o quadrado tem milho
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: verificar se o quadrado tem milho
       courseE_playLab_scaffold1:
@@ -868,9 +964,15 @@ pt-PT:
       courseF_bee_variables_7_2019:
         collect:
           name: coletar
+      courseF_bee_variables_7_2020:
+        collect:
+          name: coletar
       courseF_bee_variables_8_2018:
         collect:
           name: coletar
       courseF_bee_variables_8_2019:
+        collect:
+          name: coletar
+      courseF_bee_variables_8_2020:
         collect:
           name: coletar

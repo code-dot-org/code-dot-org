@@ -360,6 +360,7 @@
   "dataTabExplanation": "Vaše aplikace může ukládat data (jako například nejlepší skóre nebo výsledky průzkumů), která budou uchována i po restartu aplikace. Před spuštěním aplikace použijte tuto záložku pro naplánování dvojic klíč/hodnota nebo datových tabulek. Data můžete vkládat, editovat a mazat přímo na této záložce nebo pomocí datových bloků uvnitř Vaší aplikace.",
   "dataTableCaption": "Vytvořte datové tabulky pro ukládání řádků dat o více sloupcích - každý pro sloupec pro jiné pole.",
   "dataTableNamePlaceholder": "Název tabulky",
+  "dataLibrarySearchPlacholder": "Hledat",
   "dataWorkspaceHeader": "Prohlížeč dat",
   "dateWithColon": "Datum:",
   "dateUpdatedByTeacher": "Datum aktualizováno učitelem",

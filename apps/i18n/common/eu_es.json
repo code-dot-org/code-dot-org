@@ -181,6 +181,7 @@
   "dataLimitAlert": "Aplikazioa datu-basean irakurtzen edo idazten aritu da maiztasun gehiegirekin, eta horrek ezusteko hutsak eragin ditzake. Mesedez informa ezazu aplikazioko jabeari arazoak izaten jarraitzen baduzu.",
   "dataMode": "Datu",
   "dataTableNamePlaceholder": "Taularen izena",
+  "dataLibrarySearchPlacholder": "Bilatu",
   "dataWorkspaceHeader": "Datu Bilatzailea",
   "debugConsoleHeader": "Zuzentzeko Pantaila",
   "debugCommandsHeaderWhenOpen": "Zuzentzeko Komandoak",

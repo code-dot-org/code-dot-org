@@ -431,6 +431,7 @@
   "dataTableNamePlaceholder": "Nama tabel",
   "dataLibraryHeader": "Kumpulan Data",
   "dataLibraryDescription": "Temukan dan masukkan tabel dari data sungguhan dari Code.org.",
+  "dataLibrarySearchPlacholder": "Telusuri",
   "dataSource": "Sumber Data",
   "dataVisualizerPlaceholderText": "Pilih nilai untuk membuat visualisasi",
   "dataVisualizerBucketSize": "Ukuran Ember",

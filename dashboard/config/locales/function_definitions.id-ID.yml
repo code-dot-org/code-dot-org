@@ -511,6 +511,9 @@ id-ID:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: Kemungkinan solusi
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: Kemungkinan solusi
       courseC_artist_prog3:
         draw flame:
           parameters:
@@ -523,7 +526,14 @@ id-ID:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: buat sesuatu
+      courseC_data wizard_2020:
         do something:
           name: buat sesuatu
       courseE_artist_concept1:
@@ -555,6 +565,9 @@ id-ID:
       courseE_artist_functions10_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions10_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions2:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -564,6 +577,9 @@ id-ID:
       courseE_artist_functions2_2019:
         draw a square:
           name: menggambar sebuah persegi empat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: menggambar sebuah persegi empat
       courseE_artist_functions2_copy:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -571,6 +587,9 @@ id-ID:
         draw a star:
           name: menggambar bintang
       courseE_artist_functions3_2019:
+        draw a star:
+          name: menggambar bintang
+      courseE_artist_functions3_2020:
         draw a star:
           name: menggambar bintang
       courseE_artist_functions4:
@@ -588,6 +607,9 @@ id-ID:
       courseE_artist_functions5_2019:
         draw a star:
           name: menggambar bintang
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: menggambar bintang
       courseE_artist_functions5_copy:
         draw a star:
           name: menggambar bintang
@@ -595,6 +617,9 @@ id-ID:
         draw a house:
           name: gambar sebuah rumah
       courseE_artist_functions7_2018:
+        draw a house:
+          name: gambar sebuah rumah
+      courseE_artist_functions7_2020:
         draw a house:
           name: gambar sebuah rumah
       courseE_artist_functions8:
@@ -612,12 +637,22 @@ id-ID:
           name: buat sesuatu
         draw square:
           name: gambar kotak
+      courseE_artist_functions8_2020:
+        do something:
+          name: buat sesuatu
+        draw square:
+          name: gambar kotak
       courseE_artist_functions8a_2018:
         draw a square:
           name: menggambar sebuah persegi empat
         do something:
           name: buat sesuatu
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: menggambar sebuah persegi empat
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions8a_2020:
         draw a square:
           name: menggambar sebuah persegi empat
         do something:
@@ -632,12 +667,22 @@ id-ID:
           name: gambar kotak
         do something:
           name: buat sesuatu
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: gambar kotak
+        do something:
+          name: buat sesuatu
       courseE_artist_functions8c_2018:
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
       courseE_artist_functions8c_2019:
+        draw square:
+          name: gambar kotak
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions8c_2020:
         draw square:
           name: gambar kotak
         do something:
@@ -657,10 +702,18 @@ id-ID:
           name: buat sesuatu
         draw triangle:
           name: gambar segitiga
+      courseE_artist_functions9_2020:
+        do something:
+          name: buat sesuatu
+        draw triangle:
+          name: gambar segitiga
       courseE_artist_functionsProj_2018:
         draw square:
           name: gambar kotak
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: gambar kotak
+      courseE_artist_functionsProj_2020:
         draw square:
           name: gambar kotak
       courseE_artist_functions_challenge1:
@@ -672,6 +725,9 @@ id-ID:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions_challenge2:
         do something:
           name: buat sesuatu
@@ -681,6 +737,9 @@ id-ID:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -688,6 +747,9 @@ id-ID:
         draw a square:
           name: menggambar sebuah persegi empat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: menggambar sebuah persegi empat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: menggambar sebuah persegi empat
       courseE_artist_functions_predict1_copy:
@@ -700,6 +762,9 @@ id-ID:
         do something:
           name: buat sesuatu
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions_predict2_2020:
         do something:
           name: buat sesuatu
       courseE_bee_concept4:
@@ -974,9 +1039,15 @@ id-ID:
       courseF_bee_variables_7_2019:
         collect:
           name: kumpulkan
+      courseF_bee_variables_7_2020:
+        collect:
+          name: kumpulkan
       courseF_bee_variables_8_2018:
         collect:
           name: kumpulkan
       courseF_bee_variables_8_2019:
+        collect:
+          name: kumpulkan
+      courseF_bee_variables_8_2020:
         collect:
           name: kumpulkan

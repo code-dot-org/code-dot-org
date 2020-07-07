@@ -310,6 +310,28 @@ cs-CZ:
       Course 4 SCV 4: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       Course 4 SCV 5: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       Course 4 SCV 6: Klepnutím sem se znova zobrazí pokyny.
+      CourseD_Dance_2020_01: Do pracovního prostoru přetáhni blok `vytvořit nový`
+        a připoj ho dovnitř bloku `nastavení`.
+      CourseD_Dance_2020_02: Blok `při stisknutí nahoru` ti umožňuje spustit kód,
+        když dojde ke stisknutí šipky nahoru. Zajisti, aby tanečník tlesknul, nebo
+        vyzkoušej jiný pohyb!
+      CourseD_Dance_2020_03: 'Je čas na souboj tanečníků! Naprogramuj každého tanečníka,
+        aby předváděl pohyby, když mačkáš různé klávesy. Vyber pro každého tanečníka
+        svůj oblíbený pohyb, nebo je nastav na „(Náhodný)“, aby předvedli něco zcela
+        nečekaného! '
+      CourseD_Dance_2020_04: Zajisti, aby tanečník začal po čtvrtém taktu s novým
+        pohybem.
+      CourseD_Dance_2020_05: Nyní přiměj tanečníka začít po 6 taktech nový pohyb!
+      CourseD_Dance_2020_06: Vytvoř skupinu doprovodných tanečníků kolem hlavního
+        tanečníka uprostřed.
+      CourseD_Dance_2020_07: Změň velikost skupiny doprovodných tanečníků.
+      CourseD_Dance_2020_08: Zkus změnit odstín jednoho z tanečníků (nebo celé skupiny)!
+      CourseD_Dance_2020_09: Buď s těmito novými bloky kreativní!
+      CourseD_Dance_2020_10: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s
+        kamarády.
+      CourseD_Dance_2020_bonus1: Sem a tam! (Pro podrobnosti klikni na „Více“)
+      CourseD_Dance_2020_bonus3: Pojďme se dostat do formace! (Podrobnosti klikněte
+        na „Více“)
       CourseD_Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový`
         a připoj ho dovnitř bloku `nastavení`.
       CourseD_Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!
@@ -334,14 +356,24 @@ cs-CZ:
         s kamarády.
       CourseE_HOC 2018 Level_1: Seber loď z truhly.
       CourseE_HOC 2018 Level_10: Dostaň se do vchodu tohoto Mořského monumentu.
+      CourseE_HOC 2018 Level_10_2020: Dostaň se do vchodu tohoto Mořského monumentu.
       CourseE_HOC 2018 Level_11: Uvnitř Mořského monumentu vybuduj potrubí.
+      CourseE_HOC 2018 Level_11_2020: Uvnitř Mořského monumentu vybuduj potrubí.
+      CourseE_HOC 2018 Level_1_2020: Seber loď z truhly.
       CourseE_HOC 2018 Level_2: Vydej se na konec doku.
+      CourseE_HOC 2018 Level_2_2020: Vydej se na konec doku.
       CourseE_HOC 2018 Level_3: Vydej se na otevřené moře k tresce.
+      CourseE_HOC 2018 Level_3_2020: Vydej se na otevřené moře k tresce.
       CourseE_HOC 2018 Level_4: Pomocí cyklu se dostaň k delfínovi.
+      CourseE_HOC 2018 Level_4_2020: Pomocí cyklu se dostaň k delfínovi.
       CourseE_HOC 2018 Level_5: Prozkoumej vrak a dostaň se k truhle.
+      CourseE_HOC 2018 Level_5_2020: Prozkoumej vrak a dostaň se k truhle.
       CourseE_HOC 2018 Level_6: Procházej přes led a dostaň se lososovi.
+      CourseE_HOC 2018 Level_6_2020: Procházej přes led a dostaň se lososovi.
       CourseE_HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
+      CourseE_HOC 2018 Level_7a_2020: V podmořských ruinách hledej truhlu.
       CourseE_HOC 2018 Level_9b: Použij korál jako souřadnice k dosažení pokladu.
+      CourseE_HOC 2018 Level_9b_2020: Použij korál jako souřadnice k dosažení pokladu.
       Crack Random Substitution: Pokyny
       Crack a Caesar Cipher: Pokyny
       Dance Party 1-validated: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
@@ -349,12 +381,17 @@ cs-CZ:
         roztočil.
       Dance Party 2_2019: Změňte chování uvnitř bloku "**\_ begins \_**" tak, aby
         se mimozemšťan roztočil.
+      Dance Party 2_2020: Změňte chování uvnitř bloku "**\_ begins \_**" tak, aby
+        se mimozemšťan roztočil.
       Dance Party 3: 'Vytvořit nový sprite pojmenovaný "alien2", který bude po kliknutí
         dělat různé taneční pohyby.  '
       Dance Party 3_2019: 'Vytvořit nový sprite pojmenovaný "alien2", který bude po
         kliknutí dělat různé taneční pohyby.  '
+      Dance Party 3_2020: 'Vytvořit nový sprite pojmenovaný "alien2", který bude po
+        kliknutí dělat různé taneční pohyby.  '
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance Party Predict_2020: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance_2019_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
         ho dovnitř bloku `nastavení`.
       Dance_2019_02: Blok `při stisknutí nahoru` ti umožňuje spustit kód, když dojde
@@ -420,6 +457,8 @@ cs-CZ:
       Function intro Ryan: Použijte dvakrát funkci „postavit most“ a udělejte cestu
         k pochodni.
       Function intro Ryan_2019: Použijte dvakrát funkci „postavit most“ a udělejte
+        cestu k pochodni.
+      Function intro Ryan_2020: Použijte dvakrát funkci „postavit most“ a udělejte
         cestu k pochodni.
       Guess The Number: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       HOC 2018 Level_1: Seber loď z truhly.
@@ -604,30 +643,46 @@ cs-CZ:
         „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby sebral truhlu.
       MC_HOC_2017_01_RETRY_2019: Přesuňte agenta na nášlapnou desku, stiskněte tlačítko
         „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby sebral truhlu.
+      MC_HOC_2017_01_RETRY_2020: Přesuňte agenta na nášlapnou desku, stiskněte tlačítko
+        „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby sebral truhlu.
       MC_HOC_2017_02_Cole: Přesuňte agenta na nášlapnou desku, aby se hráč {currentPlayerName}
         mohl dostat k mapě.
       MC_HOC_2017_02_Cole_2019: Přesuňte agenta na nášlapnou desku, aby se hráč {currentPlayerName}
         mohl dostat k mapě.
+      MC_HOC_2017_02_Cole_2020: Přesuňte agenta na nášlapnou desku, aby se hráč {currentPlayerName}
+        mohl dostat k mapě.
       MC_HOC_2017_03_Cole: Napište kód, aby agent otevřel bránu.
       MC_HOC_2017_03_Cole_2019: Napište kód, aby agent otevřel bránu.
+      MC_HOC_2017_03_Cole_2020: Napište kód, aby agent otevřel bránu.
       MC_HOC_2017_04POINT5_RYAN: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04POINT5_RYAN_2019: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04POINT5_RYAN_2020: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04_Cole: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04_Cole_2019: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04_Cole_2020: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_05_Cole: Přesuňte hráče k lopatě.
       MC_HOC_2017_05_Cole_2019: Přesuňte hráče k lopatě.
+      MC_HOC_2017_05_Cole_2020: Přesuňte hráče k lopatě.
       MC_HOC_2017_06_Cole: Opravte tento kód, aby agent postavil most přes tuto řeku.
       MC_HOC_2017_06_Cole_2019: Opravte tento kód, aby agent postavil most přes tuto
+        řeku.
+      MC_HOC_2017_06_Cole_2020: Opravte tento kód, aby agent postavil most přes tuto
         řeku.
       MC_HOC_2017_07_Cole: Zničte led a dostaňte hráče {currentPlayerName} k vozíku.
       MC_HOC_2017_07_Cole_2019: Zničte led a dostaňte hráče {currentPlayerName} k
         vozíku.
+      MC_HOC_2017_07_Cole_2020: Zničte led a dostaňte hráče {currentPlayerName} k
+        vozíku.
       MC_HOC_2017_10_RETRY: Použijte funkce pro dokončení kolejí pro vozík.
       MC_HOC_2017_10_RETRY_2019: Použijte funkce pro dokončení kolejí pro vozík.
+      MC_HOC_2017_10_RETRY_2020: Použijte funkce pro dokončení kolejí pro vozík.
       MC_HOC_2017_Ali: Najděte pomocí funkcí cestu přes lávu.
       MC_HOC_2017_Ali_2019: Najděte pomocí funkcí cestu přes lávu.
+      MC_HOC_2017_Ali_2020: Najděte pomocí funkcí cestu přes lávu.
       MC_HOC_2017_FP20x20: "**Volná hra:** A teď můžete objevovat na vlastní pěst!"
       MC_HOC_2017_FP20x20_2019: "**Volná hra:** A teď můžete objevovat na vlastní
+        pěst!"
+      MC_HOC_2017_FP20x20_2020: "**Volná hra:** A teď můžete objevovat na vlastní
         pěst!"
       NEW Course 4 Artist Functions 14: 'Volný čas na hraní! '
       NEW Course 4 Artist Params 9: 'Klepni na tlačítko "upravit" definice funkce
@@ -657,41 +712,62 @@ cs-CZ:
         a dostaň se do bezpečí svého přístřešku. '
       Overworld Avoid Monsters_2019: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
         a dostaň se do bezpečí svého přístřešku. '
+      Overworld Avoid Monsters_2020: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
+        a dostaň se do bezpečí svého přístřešku. '
       Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
         věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
+        mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
+      Overworld Chop Tree_2020: Dřevo je velmi důležitá surovina. Vyrábí se z něj
         mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Trees: Potřebujeme postavit dům před západem slunce. Na dům je
         potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Chop Trees_2019: Potřebujeme postavit dům před západem slunce. Na
         dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
+      Overworld Chop Trees_2020: Potřebujeme postavit dům před západem slunce. Na
+        dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Free Play 20x20: Blahopřejeme! Všechny úlohy splněny! Teď těž, buduj
         a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
       Overworld Free Play 20x20_2019: Blahopřejeme! Všechny úlohy splněny! Teď těž,
+        buduj a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
+      Overworld Free Play 20x20_2020: Blahopřejeme! Všechny úlohy splněny! Teď těž,
         buduj a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
       Overworld House Frame Chosen: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld House Frame Chosen_2019: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
+      Overworld House Frame Chosen_2020: Postav zbytek tvého domu z jakéhokoliv materiálu,
+        který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
+        vpřed".
+      Overworld Move to Sheep_2020: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
       Overworld Place Wall: Každý dům začíná stavbou zdí. Vytvoř první část domu tím,
         že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
       Overworld Place Wall_2019: Každý dům začíná stavbou zdí. Vytvoř první část domu
         tím, že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
+      Overworld Place Wall_2020: Každý dům začíná stavbou zdí. Vytvoř první část domu
+        tím, že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
       Overworld Plant Crops: Je dobré dopředu plánovat. Zasaď plodiny po obou stranách
         vody, abys neměl později hlad.
       Overworld Plant Crops_2019: Je dobré dopředu plánovat. Zasaď plodiny po obou
+        stranách vody, abys neměl později hlad.
+      Overworld Plant Crops_2020: Je dobré dopředu plánovat. Zasaď plodiny po obou
         stranách vody, abys neměl později hlad.
       Overworld Powered Minecart: Skvělá práce! Shromáždil jsi spoustu zdrojů a postavil
         skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého domu.
       Overworld Powered Minecart_2019: Skvělá práce! Shromáždil jsi spoustu zdrojů
         a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého
         domu.
+      Overworld Powered Minecart_2020: Skvělá práce! Shromáždil jsi spoustu zdrojů
+        a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého
+        domu.
       Overworld Shear Sheep: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
       Overworld Shear Sheep_2019: Čas stříhání ovcí! Použij povel "ostříhej" k získání
+        vlny z obou ovcí.
+      Overworld Shear Sheep_2020: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
       Pixelation - Lesson 15 - Color Shades: Začneme s řadou odstínů červené, které
         Maddie vytvořila ve videu. Experimentuj s 6-bitovými barvami tak, že vyplníš
@@ -748,19 +824,29 @@ cs-CZ:
       Underground Avoiding Lava_2019: Pod některými z těchto bloků je ukrytá láva,
         kterou musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej
         jeden příkaz "posunout vpřed" na správné místo a vytěž bloky.
+      Underground Avoiding Lava_2020: Pod některými z těchto bloků je ukrytá láva,
+        kterou musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej
+        jeden příkaz "posunout vpřed" na správné místo a vytěž bloky.
       Underground If Statements: Teď to začíná být obtížnější. Vytěž 3 rudity, ale
         nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního kamene
         na každou lávu, kterou odkryješ.
       Underground If Statements_2019: Teď to začíná být obtížnější. Vytěž 3 rudity,
         ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního
         kamene na každou lávu, kterou odkryješ.
+      Underground If Statements_2020: Teď to začíná být obtížnější. Vytěž 3 rudity,
+        ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního
+        kamene na každou lávu, kterou odkryješ.
       Underground Iron: Vejít do žhavé lávy není dobrý nápad. Postav most položením
         kamení, a pak vytěž nejméně dva bloky železa.
       Underground Iron_2019: Vejít do žhavé lávy není dobrý nápad. Postav most položením
         kamení, a pak vytěž nejméně dva bloky železa.
+      Underground Iron_2020: Vejít do žhavé lávy není dobrý nápad. Postav most položením
+        kamení, a pak vytěž nejméně dva bloky železa.
       Underground Mining Coal: Nejcennější suroviny najdeš v podzemí, ale je tam tma.
         Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Underground Mining Coal_2019: Nejcennější suroviny najdeš v podzemí, ale je
+        tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
+      Underground Mining Coal_2020: Nejcennější suroviny najdeš v podzemí, ale je
         tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Virtual Pet 1 Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       'Widget: Text Compression': Hledej v textu vzory (opakující se slova nebo sousloví).
@@ -883,7 +969,10 @@ cs-CZ:
       courseA_artist_loops7: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_2018: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_2019: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_artist_loops7_2020: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_collector_loops2_2019: Získej všechny tři hromádky! Posuň Laurel ke
+        každému pokladu, pak použij blok "získat".
+      courseA_collector_loops2_2020: Získej všechny tři hromádky! Posuň Laurel ke
         každému pokladu, pak použij blok "získat".
       courseA_collector_loops_challenge2: 'Získej všechny poklady! '
       courseA_collector_preLoops1: "Toto je Laurel, která má ráda dobrodružství! \n\nZmáčkni
@@ -898,17 +987,22 @@ cs-CZ:
       courseA_collector_preLoops6: Získej oba poklady, abys vyřešil tuto úlohu.
       courseA_harvester_seq12: Posbírej všechnu kukuřici.
       courseA_harvester_seq12_2019: Posbírej všechnu kukuřici.
+      courseA_harvester_seq12_2020: Posbírej všechnu kukuřici.
       courseA_maze_ramp5a_2018: Dostaň mne k prasátku!
       courseA_maze_ramp5a_2019: Dostaň mne k prasátku!
+      courseA_maze_ramp5a_2020: Dostaň mne k prasátku!
       courseA_maze_seq1: Dostaň mne k prasátku!
       courseA_maze_seq12: 'Dostaň to prase! '
       courseA_maze_seq12_2018: 'Dostaň to prase! '
       courseA_maze_seq12_2019: 'Dostaň to prase! '
+      courseA_maze_seq12_2020: 'Dostaň to prase! '
       courseA_maze_seq13: Dostaň to prase jakýmkoliv způsobem!
       courseA_maze_seq13_2018: Dostaň to prase jakýmkoliv způsobem!
       courseA_maze_seq13_2019: Dostaň to prase jakýmkoliv způsobem!
+      courseA_maze_seq13_2020: Dostaň to prase jakýmkoliv způsobem!
       courseA_maze_seq1_2018: Dostaň mne k prasátku!
       courseA_maze_seq1_2019: Dostaň mne k prasátku!
+      courseA_maze_seq1_2020: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq5: Zkus toto sám ze začátku.
       courseA_maze_seq5_copy: Zkus toto sám ze začátku.
@@ -918,46 +1012,70 @@ cs-CZ:
         prasátku. Vyhni se TNT, nebo bude létat peří!
       courseA_maze_seq_challenge2_2019: Najdi cestu a přiveď mě k tomu pošetilému
         prasátku. Vyhni se TNT, nebo bude létat peří!
+      courseA_maze_seq_challenge2_2020: Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku. Vyhni se TNT, nebo bude létat peří!
       courseA_playLab_events1_2019: Tady si můžeš hrát podle libosti. Posunuj bloky
         na pracovní plochu a uvidíš, co se stane!
+      courseA_playLab_events1_2020: Tady si můžeš hrát podle libosti. Posunuj bloky
+        na pracovní plochu a uvidíš, co se stane!
       courseA_playLab_events2_2019: Pes Jorge chce říct "Ahoj všichni". Můžeš mu pomoci?
+      courseA_playLab_events2_2020: Pes Jorge chce říct "Ahoj všichni". Můžeš mu pomoci?
       courseB_iceage_loops1: Pomoz Scratovi přes led k žaludu!
       courseB_iceage_loops10: Pomoz Scratovi projít celou cestu k žaludu!
       courseB_iceage_loops10_2019: Pomoz Scratovi projít celou cestu k žaludu!
+      courseB_iceage_loops10_2020: Pomoz Scratovi projít celou cestu k žaludu!
       courseB_iceage_loops11: Pomoz Scratovi k žaludu!
       courseB_iceage_loops11_2019: Pomoz Scratovi k žaludu!
+      courseB_iceage_loops11_2020: Pomoz Scratovi k žaludu!
       courseB_iceage_loops12: Dostaň se k žaludu jakoukoliv cestou!
       courseB_iceage_loops12_2019: Dostaň se k žaludu jakoukoliv cestou!
+      courseB_iceage_loops12_2020: Dostaň se k žaludu jakoukoliv cestou!
       courseB_iceage_loops1_2019: Pomoz Scratovi přes led k žaludu!
+      courseB_iceage_loops1_2020: Pomoz Scratovi přes led k žaludu!
       courseB_iceage_loops4: Přidej další blok, aby se Scrat prošel celou cestu k
         žaludu!
       courseB_iceage_loops4_2019: Přidej další blok, aby se Scrat prošel celou cestu
         k žaludu!
+      courseB_iceage_loops4_2020: Přidej další blok, aby se Scrat prošel celou cestu
+        k žaludu!
       courseB_iceage_loops6: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
       courseB_iceage_loops6_2019: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
+      courseB_iceage_loops6_2020: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
       courseB_iceage_loops7: Scrat by opravdu rád i tento žalud!
       courseB_iceage_loops7_2019: Scrat by opravdu rád i tento žalud!
+      courseB_iceage_loops7_2020: Scrat by opravdu rád i tento žalud!
       courseB_iceage_loops8: Dokážeš opravit tento kód?
       courseB_iceage_loops8_2019: Dokážeš opravit tento kód?
+      courseB_iceage_loops8_2020: Dokážeš opravit tento kód?
       courseB_iceage_loops9: Žalud je pěkně daleko! Můžeš použít nějaké cykly, aby
         se tam Scrat mohl dostat?
       courseB_iceage_loops9_2019: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
         aby se tam Scrat mohl dostat?
+      courseB_iceage_loops9_2020: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
+        aby se tam Scrat mohl dostat?
       courseB_starWars_prog1: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2018: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2019: '[][0] _"Přines ten šrot, BB-8!"_ '
+      courseB_starWars_prog1_2020: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseC19_playLab_EOC5: Dobrá práce. Teď máš základní součásti funkční hry hotové.
         Teď bude jen chtít doladit, aby odpovídala tvým představám.
+      courseC19_playLab_EOC5_2020: Dobrá práce. Teď máš základní součásti funkční
+        hry hotové. Teď bude jen chtít doladit, aby odpovídala tvým představám.
       courseC19_playLab_EOC6: 'A je to hotovo! Teď můžeš sdílet hru se svými kamarády
         a spolužáky. '
+      courseC19_playLab_EOC6_2020: 'A je to hotovo! Teď můžeš sdílet hru se svými
+        kamarády a spolužáky. '
       courseC_PlayLab_events1: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
       courseC_PlayLab_events1_2018: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
       courseC_PlayLab_events1_2019: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
+      courseC_PlayLab_events1_2020: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
       courseC_PlayLab_events2: Teď zkus, aby prvně něco řekl pes Jorge (aktér 1) a
         potom mu kočka Oliva (aktér 2) odpověděla?
       courseC_PlayLab_events2_2018: Teď zkus, aby prvně něco řekl pes Jorge (aktér
         1) a potom mu kočka Oliva (aktér 2) odpověděla?
       courseC_PlayLab_events2_2019: Teď zkus, aby prvně něco řekl pes Jorge (aktér
+        1) a potom mu kočka Oliva (aktér 2) odpověděla?
+      courseC_PlayLab_events2_2020: Teď zkus, aby prvně něco řekl pes Jorge (aktér
         1) a potom mu kočka Oliva (aktér 2) odpověděla?
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
@@ -965,17 +1083,23 @@ cs-CZ:
         směrem k Olivii (kočka)?
       courseC_PlayLab_events3_2019: Můžete napsat program, aby se Jorge (pes) posunul
         směrem k Olivii (kočka)?
+      courseC_PlayLab_events3_2020: Můžete napsat program, aby se Jorge (pes) posunul
+        směrem k Olivii (kočka)?
       courseC_PlayLab_events4: Umíš napsat program tak, aby Jorge (aktér 1) šel doprava
         k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
       courseC_PlayLab_events4_2018: Umíš napsat program tak, aby Jorge (aktér 1) šel
         doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
       courseC_PlayLab_events4_2019: Umíš napsat program tak, aby Jorge (aktér 1) šel
         doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
+      courseC_PlayLab_events4_2020: Umíš napsat program tak, aby Jorge (aktér 1) šel
+        doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
       courseC_PlayLab_events5: Dokážeš napsat program, který zařídí, aby chobotnička
         Oktávie řekla "Co je nového?", když na ní klikneš?
       courseC_PlayLab_events5_2018: Dokážeš napsat program, který zařídí, aby chobotnička
         Oktávie řekla "Co je nového?", když na ní klikneš?
       courseC_PlayLab_events5_2019: Dokážeš napsat program, který zařídí, aby chobotnička
+        Oktávie řekla "Co je nového?", když na ní klikneš?
+      courseC_PlayLab_events5_2020: Dokážeš napsat program, který zařídí, aby chobotnička
         Oktávie řekla "Co je nového?", když na ní klikneš?
       courseC_PlayLab_events6: Dokážeš napsat program, který zařídí, aby se tučňák
         Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
@@ -984,6 +1108,9 @@ cs-CZ:
         Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
         všechny vlajky?
       courseC_PlayLab_events6_2019: Dokážeš napsat program, který zařídí, aby se tučňák
+        Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
+        všechny vlajky?
+      courseC_PlayLab_events6_2020: Dokážeš napsat program, který zařídí, aby se tučňák
         Valda ovládal pomocí šipek nahoru / dolu / vlevo / vpravo a mohl tak posbírat
         všechny vlajky?
       courseC_PlayLab_events7: Blok `opakuj do nekonečna` ti umožní spouštět kód znovu
@@ -995,6 +1122,9 @@ cs-CZ:
       courseC_PlayLab_events7_2019: Blok `opakuj do nekonečna` ti umožní spouštět
         kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do
         nekonečna chodil nahoru a dolů o 400 pixelů.
+      courseC_PlayLab_events7_2020: Blok `opakuj do nekonečna` ti umožní spouštět
+        kód znovu a znovu. Použij ho a naprogramuj dinosaura (actér 2) tak aby do
+        nekonečna chodil nahoru a dolů o 400 pixelů.
       courseC_PlayLab_events8: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk \"zásah\"
         a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo, spusť hru
         a podívej, co se stane."
@@ -1004,6 +1134,9 @@ cs-CZ:
       courseC_PlayLab_events8_2019: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
         \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo,
         spusť hru a podívej, co se stane."
+      courseC_PlayLab_events8_2020: "Můžeš zařídit aby Valda (aktér 1) vydal zvuk
+        \"zásah\" a řekl \"Ou!\" když narazí na dinosaura? \nAž budeš mít hotovo,
+        spusť hru a podívej, co se stane."
       courseC_PlayLab_events9: |-
         Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
         Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
@@ -1011,6 +1144,9 @@ cs-CZ:
         Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
         Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
       courseC_PlayLab_events9_2019: |-
+        Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
+        Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
+      courseC_PlayLab_events9_2020: |-
         Víš jak přidat blok, aby se připsal bod, když tučňák Valda (aktér 1) narazí do chobotničky Oktávie (aktér 3)?
         Spusť hru a pohybuj Valdou pomocí šipek dokud nepřipíšeš bod.
       courseC_PlayLab_eventsA: |-
@@ -1025,7 +1161,13 @@ cs-CZ:
         Přidej bloky k události `při spuštění` a změň pozadí a rychlost, se kterou se tučňák Valda pohybuje po obrazovce.
 
         Spusť hru a ovládej Valdu šipkami dokud nepřipíšeš bod.
+      courseC_PlayLab_eventsA_2020: |-
+        Přidej bloky k události `při spuštění` a změň pozadí a rychlost, se kterou se tučňák Valda pohybuje po obrazovce.
+
+        Spusť hru a ovládej Valdu šipkami dokud nepřipíšeš bod.
       courseC_PlayLab_eventsA_embed_2019: Zahrajme si hru. Získej 5 bodů posunutím
+        tučňáka směrem k chobotničce.
+      courseC_PlayLab_eventsA_embed_2020: Zahrajme si hru. Získej 5 bodů posunutím
         tučňáka směrem k chobotničce.
       courseC_PlayLab_eventsFP: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
         klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
@@ -1036,15 +1178,24 @@ cs-CZ:
       courseC_PlayLab_eventsFP_2019: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
         klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
         inspiraci, podívej se do nápovědy.
+      courseC_PlayLab_eventsFP_2020: Teď můžeš vytvořit vlastní příběh. Až budeš hotov,
+        klepni na tlačítko "Spustit" a můžeš svůj výtvor sdílet. Jestli potřebuješ
+        inspiraci, podívej se do nápovědy.
       courseC_artist_loops1b_2019: 'Teď změň směr, kterým se nálepka nakreslí, přidáním
         příkazu `otoč se` do tvého kódu. '
+      courseC_artist_loops1b_2020: 'Teď změň směr, kterým se nálepka nakreslí, přidáním
+        příkazu `otoč se` do tvého kódu. '
       courseC_artist_loops2a_2019: Teď zkus použít cyklus k nakreslení několika kopií
+        nálepky. Změnou čísel in blocích otočit a opakuj můžeš vyrobit různé obrazce.
+      courseC_artist_loops2a_2020: Teď zkus použít cyklus k nakreslení několika kopií
         nálepky. Změnou čísel in blocích otočit a opakuj můžeš vyrobit různé obrazce.
       courseC_artist_prog5: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2018: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2019: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
+        Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_artist_prog5_2020: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog8: |-
         Ještě jedna značka. Toto je trojúhelník pro Pi.
@@ -1055,36 +1206,51 @@ cs-CZ:
       courseC_artist_prog8_2019: |-
         Ještě jedna značka. Toto je trojúhelník pro Pi.
         (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2020: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.
+        (Každá strana má 150 pixelů)
       courseC_collector_prog2: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
         `sbírej`.
       courseC_collector_prog2_2018: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
         `sbírej`.
       courseC_collector_prog2_2019: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
         `sbírej`.
+      courseC_collector_prog2_2020: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
+        `sbírej`.
       courseC_collector_prog8: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
       courseC_collector_prog8_2018: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
       courseC_collector_prog8_2019: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2020: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
       courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2020: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech
         **10** kousků pokladu?
       courseC_collector_prog_challenge1_2018: Podívejte se pozorně! Můžete získat
         všech **10** kousků pokladu?
       courseC_collector_prog_challenge1_2019: Podívejte se pozorně! Můžete získat
         všech **10** kousků pokladu?
+      courseC_collector_prog_challenge1_2020: Podívejte se pozorně! Můžete získat
+        všech **10** kousků pokladu?
       courseC_data wizard: "Klikni na \"Spustit\". \nKouzelník vyčaruje zvířata. \n\nSpočítej
         je. \nJe v tom nějaká logika?"
+      courseC_data wizard_2020: "Klikni na \"Spustit\". \nKouzelník vyčaruje zvířata.
+        \n\nSpočítej je. \nJe v tom nějaká logika?"
       courseC_flappy_events1: Připoj blok`mávni normálně` k události `když klikneš`,
         potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
         K dokončení úlohy se musíš dostat do cíle nahoře.
       courseC_flappy_events10: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2018: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2019: 'Vytvoř svou vlastní hru Flappy Bird! '
+      courseC_flappy_events10_2020: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events1_2018: Připoj blok`mávni normálně` k události `když klikneš`,
         potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
         K dokončení úlohy se musíš dostat do cíle nahoře.
       courseC_flappy_events1_2019: Připoj blok`mávni normálně` k události `když klikneš`,
+        potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
+        K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events1_2020: Připoj blok`mávni normálně` k události `když klikneš`,
         potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
         K dokončení úlohy se musíš dostat do cíle nahoře.
       courseC_flappy_events7: Dále zkus změnit pozadí připojením dalšího bloku k události
@@ -1093,79 +1259,108 @@ cs-CZ:
         k události `při spuštění`.
       courseC_flappy_events7_2019: Dále zkus změnit pozadí připojením dalšího bloku
         k události `při spuštění`.
+      courseC_flappy_events7_2020: Dále zkus změnit pozadí připojením dalšího bloku
+        k události `při spuštění`.
       courseC_flappy_events9: Teď pro změnu, můžeš nastavit body na nulu místo toho,
         aby hra skončila, když Flappy narazí do překážky.
       courseC_flappy_events9_2018: Teď pro změnu, můžeš nastavit body na nulu místo
         toho, aby hra skončila, když Flappy narazí do překážky.
       courseC_flappy_events9_2019: Teď pro změnu, můžeš nastavit body na nulu místo
         toho, aby hra skončila, když Flappy narazí do překážky.
+      courseC_flappy_events9_2020: Teď pro změnu, můžeš nastavit body na nulu místo
+        toho, aby hra skončila, když Flappy narazí do překážky.
       courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops11: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops11_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops11_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops2: Zkus použít dva odlišné cykly, jeden na pohyb dopředu
         a jeden na sklízení.
       courseC_harvester_loops2_2018: Zkus použít dva odlišné cykly, jeden na pohyb
         dopředu a jeden na sklízení.
       courseC_harvester_loops2_2019: Zkus použít dva odlišné cykly, jeden na pohyb
         dopředu a jeden na sklízení.
+      courseC_harvester_loops2_2020: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
       courseC_harvester_loops3: Posbírej všechny dýně.
       courseC_harvester_loops3_2018: Posbírej všechny dýně.
       courseC_harvester_loops3_2019: Posbírej všechny dýně.
+      courseC_harvester_loops3_2020: Posbírej všechny dýně.
       courseC_harvester_loops4: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops4_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops4_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops4_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops5: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops5_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops5_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops6: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops6_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops6_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops7: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops7_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops7_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops8: "**Výzva**Posbírej všechny kukuřice a dýně."
       courseC_harvester_loops8_2018: "**Výzva**Posbírej všechny kukuřice a dýně."
       courseC_harvester_loops8_2019: "**Výzva**Posbírej všechny kukuřice a dýně."
+      courseC_harvester_loops8_2020: "**Výzva**Posbírej všechny kukuřice a dýně."
       courseC_harvester_loops9: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops9_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops9_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2020: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops_challenge1a: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2018: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2019: Sesbírej všechnu kukuřici.
+      courseC_harvester_loops_challenge1a_2020: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani
         pole!
       courseC_harvester_loops_challenge2_2019: Sesbírej všechen salát. Ne stromy ani
+        pole!
+      courseC_harvester_loops_challenge2_2020: Sesbírej všechen salát. Ne stromy ani
         pole!
       courseC_maze_debugging2: Použij své schopnosti ladění a dostaň veverku k žaludu.
       courseC_maze_debugging2_2018: Použij své schopnosti ladění a dostaň veverku
         k žaludu.
       courseC_maze_debugging2_2019: Použij své schopnosti ladění a dostaň veverku
         k žaludu.
+      courseC_maze_debugging2_2020: Použij své schopnosti ladění a dostaň veverku
+        k žaludu.
       courseC_maze_debugging4: Někdo má pomíchané směry! Pomůžeš?
       courseC_maze_debugging4_2018: Někdo má pomíchané směry! Pomůžeš?
       courseC_maze_debugging4_2019: Někdo má pomíchané směry! Pomůžeš?
+      courseC_maze_debugging4_2020: Někdo má pomíchané směry! Pomůžeš?
       courseC_maze_debugging5: Vylaď toto úroveň přeskupením a změnou bloků.
       courseC_maze_debugging5_2018: Vylaď toto úroveň přeskupením a změnou bloků.
       courseC_maze_debugging5_2019: Vylaď toto úroveň přeskupením a změnou bloků.
+      courseC_maze_debugging5_2020: Vylaď toto úroveň přeskupením a změnou bloků.
       courseC_maze_debugging6: Zjisti, co je špatně, a dostaň veverku k žaludu.
       courseC_maze_debugging6_2018: Zjisti, co je špatně, a dostaň veverku k žaludu.
       courseC_maze_debugging6_2019: Zjisti, co je špatně, a dostaň veverku k žaludu.
+      courseC_maze_debugging6_2020: Zjisti, co je špatně, a dostaň veverku k žaludu.
       courseC_maze_debugging7: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
         přidáním a odstraněním bloků."
       courseC_maze_debugging7_2018: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
         přidáním a odstraněním bloků."
       courseC_maze_debugging7_2019: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
         přidáním a odstraněním bloků."
+      courseC_maze_debugging7_2020: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
+        přidáním a odstraněním bloků."
       courseC_maze_debugging9_2019: Program vytvoř pomocí bloků v panelu. Dostaň ptáčka
         k prasátku.
+      courseC_maze_debugging9_copy_2020: Program vytvoř pomocí bloků v panelu. Dostaň
+        ptáčka k prasátku.
       courseC_maze_loops_challenge1a: 'Scrat chce teď použít cykly k nalezení žaludu! '
       courseC_maze_loops_challenge1a_2018: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
       courseC_maze_loops_challenge1a_2019: 'Scrat chce teď použít cykly k nalezení
+        žaludu! '
+      courseC_maze_loops_challenge1a_2020: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
       courseC_maze_programming1: V této úloze spoj všechny bloky, klikni "Spustit"
         a dívej se, co se stane!
@@ -1173,50 +1368,70 @@ cs-CZ:
         a dívej se, co se stane!
       courseC_maze_programming1_2019: V této úloze spoj všechny bloky, klikni "Spustit"
         a dívej se, co se stane!
+      courseC_maze_programming1_2020: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
       courseC_maze_programming2: Přetáhni další blok `posuň se vpřed` z panelu bloků
         a dokonči svůj kód.
       courseC_maze_programming2_2018: Přetáhni další blok `posuň se vpřed` z panelu
         bloků a dokonči svůj kód.
       courseC_maze_programming2_2019: Přetáhni další blok `posuň se vpřed` z panelu
         bloků a dokonči svůj kód.
+      courseC_maze_programming2_2020: Přetáhni další blok `posuň se vpřed` z panelu
+        bloků a dokonči svůj kód.
       courseC_maze_programming4: Vyhni se TNT, nebo bude létat peří!
       courseC_maze_programming4_2018: Vyhni se TNT, nebo bude létat peří!
       courseC_maze_programming4_2019: Vyhni se TNT, nebo bude létat peří!
+      courseC_maze_programming4_2020: Vyhni se TNT, nebo bude létat peří!
       courseC_maze_programming5: Vyhni se TNT!
       courseC_maze_programming5_2018: Vyhni se TNT!
       courseC_maze_programming5_2019: Vyhni se TNT!
+      courseC_maze_programming5_2020: Vyhni se TNT!
       courseC_maze_programming6: '"Zachovej klid a pomoz mi najít to zlé prasátko.
         Jinak bych se mohl rozzlobit!"'
       courseC_maze_programming6_2018: '"Zachovej klid a pomoz mi najít to zlé prasátko.
         Jinak bych se mohl rozzlobit!"'
       courseC_maze_programming6_2019: '"Zachovej klid a pomoz mi najít to zlé prasátko.
         Jinak bych se mohl rozzlobit!"'
+      courseC_maze_programming6_2020: '"Zachovej klid a pomoz mi najít to zlé prasátko.
+        Jinak bych se mohl rozzlobit!"'
       courseC_maze_programming8: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
       courseC_maze_programming8_2018: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
       courseC_maze_programming8_2019: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_2020: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
       courseC_maze_programming8_predict1: _"Zachovej klid a pomoz mi najít to zlé
         prasátko."_
       courseC_maze_programming8_predict1_2018: _"Zachovej klid a pomoz mi najít to
         zlé prasátko."_
       courseC_maze_programming8_predict1_2019: _"Zachovej klid a pomoz mi najít to
         zlé prasátko."_
+      courseC_maze_programming8_predict1_2020: _"Zachovej klid a pomoz mi najít to
+        zlé prasátko."_
       courseC_maze_programming9: _"Teď mi pomoz dostat se k prasátku jakýmkoliv způsobem!"_
       courseC_maze_programming9_2018: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
         způsobem!"_
       courseC_maze_programming9_2019: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
         způsobem!"_
+      courseC_maze_programming9_2020: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
+        způsobem!"_
       courseD_artist_1_2018: 'Nakresli šestiúhelník se stranami dlouhými **50** pixelů. '
       courseD_artist_1_2018_2019: 'Nakresli šestiúhelník se stranami dlouhými **50**
+        pixelů. '
+      courseD_artist_1_2018_2020: 'Nakresli šestiúhelník se stranami dlouhými **50**
         pixelů. '
       courseD_artist_2_2018: Teď zatoč doprava o **60** stupňů, pak nakresli rovnou
         čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
       courseD_artist_2_2018_2019: Teď zatoč doprava o **60** stupňů, pak nakresli
         rovnou čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
+      courseD_artist_2_2018_2020: Teď zatoč doprava o **60** stupňů, pak nakresli
+        rovnou čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
       courseD_artist_4_2018: Přidej malý tvar na konec čáry!
       courseD_artist_4_2018_2019: Přidej malý tvar na konec čáry!
+      courseD_artist_4_2018_2020: Přidej malý tvar na konec čáry!
       courseD_artist_6_2018: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých čar
         dlouhých **25** pixelů s malými otočkami na konci.
       courseD_artist_6_2018_2019: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých
+        čar dlouhých **25** pixelů s malými otočkami na konci.
+      courseD_artist_6_2018_2020: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých
         čar dlouhých **25** pixelů s malými otočkami na konci.
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
@@ -1235,11 +1450,19 @@ cs-CZ:
         \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých
         políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním
         řádku?"
+      courseD_artist_binary1_2020: "Binární soubor je způsob, jak zobrazit informace
+        pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem
+        0) a \"zapnuto\" (představované číslem 1).  \\\r \\\r Poskytli jsme mřížku
+        \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých
+        políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním
+        řádku?"
       courseD_artist_binary2: Spusť tento kód, abys viděl(a), jak umělec používá binární
         kód pro namalování tohoto vzoru.
       courseD_artist_binary2_2018: Spusť tento kód, abys viděl(a), jak umělec používá
         binární kód pro namalování tohoto vzoru.
       courseD_artist_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2020: Spusť tento kód, abys viděl(a), jak umělec používá
         binární kód pro namalování tohoto vzoru.
       courseD_artist_binary3: Který z těchto binárních řetězců se má provést osmkrát
         v cyklu, aby se nakreslil následující obrazec?
@@ -1247,11 +1470,15 @@ cs-CZ:
         osmkrát v cyklu, aby se nakreslil následující obrazec?
       courseD_artist_binary3_2019: Který z těchto binárních řetězců se má provést
         osmkrát v cyklu, aby se nakreslil následující obrazec?
+      courseD_artist_binary3_2020: Který z těchto binárních řetězců se má provést
+        osmkrát v cyklu, aby se nakreslil následující obrazec?
       courseD_artist_binary4: Můžeš nakreslit tento vzor opakováním binárního řetězce
         složeného ze 3 číslic (nul a jedniček)?
       courseD_artist_binary4_2018: Můžeš nakreslit tento vzor opakováním binárního
         řetězce složeného ze 3 číslic (nul a jedniček)?
       courseD_artist_binary4_2019: Můžeš nakreslit tento vzor opakováním binárního
+        řetězce složeného ze 3 číslic (nul a jedniček)?
+      courseD_artist_binary4_2020: Můžeš nakreslit tento vzor opakováním binárního
         řetězce složeného ze 3 číslic (nul a jedniček)?
       courseD_artist_binary5: |-
         Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
@@ -1265,11 +1492,17 @@ cs-CZ:
         Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
 
         Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
+      courseD_artist_binary5_2020: |-
+        Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
+
+        Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
       courseD_artist_binary6: Jaký binární řetězec složený ze 6 číslic opakovaný 11
         krát nakreslí tento obrázek?
       courseD_artist_binary6_2018: Jaký binární řetězec složený ze 6 číslic opakovaný
         11 krát nakreslí tento obrázek?
       courseD_artist_binary6_2019: Jaký binární řetězec složený ze 6 číslic opakovaný
+        11 krát nakreslí tento obrázek?
+      courseD_artist_binary6_2020: Jaký binární řetězec složený ze 6 číslic opakovaný
         11 krát nakreslí tento obrázek?
       courseD_artist_binary7: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
@@ -1277,12 +1510,16 @@ cs-CZ:
         k nakreslení tohoto obrázku?
       courseD_artist_binary7_2019: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
+      courseD_artist_binary7_2020: Jaký je nejkratší binární řetězec, který lze opakovat
+        k nakreslení tohoto obrázku?
       courseD_artist_binary8: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binary8_2018: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binary8_2019: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_2020: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binary8_predict1: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binary8_predict1_2018: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binary8_predict1_2019: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_predict1_2020: Dokonči kód, abys vytvořil tento obrázek.
       courseD_artist_binaryFP: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
@@ -1293,17 +1530,25 @@ cs-CZ:
       courseD_artist_binaryFP_2019: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binaryFP_2020: |-
+        Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
+        Uvidíš, co se stane, když začneme být kreativní s bity!
       courseD_artist_binary_challenge2_2018: Dokážeš vytrvat dostatečně dlouho, abys
         obnovil logo zpátky do normálu?
       courseD_artist_binary_challenge2_2019: Dokážeš vytrvat dostatečně dlouho, abys
         obnovil logo zpátky do normálu?
+      courseD_artist_binary_challenge2_2020: Dokážeš vytrvat dostatečně dlouho, abys
+        obnovil logo zpátky do normálu?
       courseD_artist_nestedLoops4: Výborně! Udělej to samé se všemi těmito kruhy.
       courseD_artist_nestedLoops4_2018: Výborně! Udělej to samé se všemi těmito kruhy.
       courseD_artist_nestedLoops4_2019: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2020: Výborně! Udělej to samé se všemi těmito kruhy.
       courseD_artist_nestedLoops7: Použij, co ses naučil, abys vytvořil tento obrázek.
       courseD_artist_nestedLoops7_2018: Použij, co ses naučil, abys vytvořil tento
         obrázek.
       courseD_artist_nestedLoops7_2019: Použij, co ses naučil, abys vytvořil tento
+        obrázek.
+      courseD_artist_nestedLoops7_2020: Použij, co ses naučil, abys vytvořil tento
         obrázek.
       courseD_artist_nestedLoops_challenge1: Dokážeš vymyslet, jak udělat takovýto
         obrázek?
@@ -1311,9 +1556,12 @@ cs-CZ:
         obrázek?
       courseD_artist_nestedLoops_challenge1_2019: Dokážeš vymyslet, jak udělat takovýto
         obrázek?
+      courseD_artist_nestedLoops_challenge1_2020: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
       courseD_artist_nestedLoops_challenge2: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2018: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2019: Oprav kód, abys udělal tento obrázek!
+      courseD_artist_nestedLoops_challenge2_2020: Oprav kód, abys udělal tento obrázek!
       courseD_autorun_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
         binární kód pro namalování tohoto vzoru.
       courseD_autorun_binary3_2019: Který z těchto binárních řetězců se má provést
@@ -1333,22 +1581,28 @@ cs-CZ:
       courseD_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals10_2019: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals10_2020: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals5: Posbírej všechen nektar a pokus se použít co nejméně
         bloků.
       courseD_bee_conditionals5_2018: Posbírej všechen nektar a pokus se použít co
         nejméně bloků.
       courseD_bee_conditionals5_2019: Posbírej všechen nektar a pokus se použít co
         nejméně bloků.
+      courseD_bee_conditionals5_2020: Posbírej všechen nektar a pokus se použít co
+        nejméně bloků.
       courseD_bee_conditionals5_copy: Posbírej všechen nektar a pokus se použít co
         nejméně bloků.
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2019: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals9_2020: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge1_2018: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge1_2019: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge1_2020: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
         med.
@@ -1356,17 +1610,23 @@ cs-CZ:
         med.
       courseD_bee_conditionals_challenge2_2019: Sesbírej všechen nektar a vyrob všechen
         med.
+      courseD_bee_conditionals_challenge2_2020: Sesbírej všechen nektar a vyrob všechen
+        med.
       courseD_bee_nestedLoops1: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops1_2018: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops1_2019: Pomoz včele sebrat nektar ze všech květů.
+      courseD_bee_nestedLoops1_2020: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops1a: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops1a_2018: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops1a_2019: Pomoz včele sebrat nektar ze všech květů.
+      courseD_bee_nestedLoops1a_2020: Pomoz včele sebrat nektar ze všech květů.
       courseD_bee_nestedLoops2: Tentokrát pomoz včele posbírat všechen nektar a použij
         při tom co nejméně bloků.
       courseD_bee_nestedLoops2_2018: Tentokrát pomoz včele posbírat všechen nektar
         a použij při tom co nejméně bloků.
       courseD_bee_nestedLoops2_2019: Tentokrát pomoz včele posbírat všechen nektar
+        a použij při tom co nejméně bloků.
+      courseD_bee_nestedLoops2_2020: Tentokrát pomoz včele posbírat všechen nektar
         a použij při tom co nejméně bloků.
       courseD_bee_nestedLoops2_predict1: Tentokrát pomoz včele posbírat všechen nektar
         a použij při tom co nejméně bloků.
@@ -1374,11 +1634,15 @@ cs-CZ:
         nektar a použij při tom co nejméně bloků.
       courseD_bee_nestedLoops2_predict1_2019: Tentokrát pomoz včele posbírat všechen
         nektar a použij při tom co nejméně bloků.
+      courseD_bee_nestedLoops2_predict1_2020: Tentokrát pomoz včele posbírat všechen
+        nektar a použij při tom co nejméně bloků.
       courseD_bee_nestedLoops7: 'Výzva: Zkus přijít na to, jak získat všechen nektar
         a přitom použít jen tolik bloků, kolik jich je k dispozici.'
       courseD_bee_nestedLoops7_2018: 'Výzva: Zkus přijít na to, jak získat všechen
         nektar a přitom použít jen tolik bloků, kolik jich je k dispozici.'
       courseD_bee_nestedLoops7_2019: 'Výzva: Zkus přijít na to, jak získat všechen
+        nektar a přitom použít jen tolik bloků, kolik jich je k dispozici.'
+      courseD_bee_nestedLoops7_2020: 'Výzva: Zkus přijít na to, jak získat všechen
         nektar a přitom použít jen tolik bloků, kolik jich je k dispozici.'
       courseD_bee_nestedLoops8: Sesbírej všechen nektar z každého květu a udělej med
         na plástvi. Použij vnořené cykly.
@@ -1386,15 +1650,21 @@ cs-CZ:
         med na plástvi. Použij vnořené cykly.
       courseD_bee_nestedLoops8_2019: Sesbírej všechen nektar z každého květu a udělej
         med na plástvi. Použij vnořené cykly.
+      courseD_bee_nestedLoops8_2020: Sesbírej všechen nektar z každého květu a udělej
+        med na plástvi. Použij vnořené cykly.
       courseD_bee_nestedLoops9: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_2018: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_2019: Vyrob med na každé plástvi.
+      courseD_bee_nestedLoops9_2020: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob med na každé plástvi.
+      courseD_bee_nestedLoops9_predict2_2020: Vyrob med na každé plástvi.
       courseD_bounce_events11s_2018: 'Připoj blok `hoď nový míč` na všechna místa,
         kde hra vyžaduje nový míč. '
       courseD_bounce_events11s_2019: 'Připoj blok `hoď nový míč` na všechna místa,
+        kde hra vyžaduje nový míč. '
+      courseD_bounce_events11s_2020: 'Připoj blok `hoď nový míč` na všechna místa,
         kde hra vyžaduje nový míč. '
       courseD_bounce_events12s_2018: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
@@ -1402,21 +1672,32 @@ cs-CZ:
       courseD_bounce_events12s_2019: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
         si zahrát i se sluchátky.
+      courseD_bounce_events12s_2020: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
+        i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
+        si zahrát i se sluchátky.
       courseD_bounce_events1s_2018: Připoj blok k bloku "když šipka vlevo" a zmáčkni
         "Spustit", abys posunul hráče k síti.
       courseD_bounce_events1s_2019: Připoj blok k bloku "když šipka vlevo" a zmáčkni
+        "Spustit", abys posunul hráče k síti.
+      courseD_bounce_events1s_2020: Připoj blok k bloku "když šipka vlevo" a zmáčkni
         "Spustit", abys posunul hráče k síti.
       courseD_bounce_events2s_2018: Nyní připoj blok k události `když šipka vpravo`,
         aby se ruka dostala k oběma košům.
       courseD_bounce_events2s_2019: Nyní připoj blok k události `když šipka vpravo`,
         aby se ruka dostala k oběma košům.
+      courseD_bounce_events2s_2020: Nyní připoj blok k události `když šipka vpravo`,
+        aby se ruka dostala k oběma košům.
       courseD_bounce_events5s_2018: Připoj blok k události `když míč udeří do ruky`,
         abys zajistil(a), že se míč dostane do koše.
       courseD_bounce_events5s_2019: Připoj blok k události `když míč udeří do ruky`,
         abys zajistil(a), že se míč dostane do koše.
+      courseD_bounce_events5s_2020: Připoj blok k události `když míč udeří do ruky`,
+        abys zajistil(a), že se míč dostane do koše.
       courseD_bounce_events6s_2018: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
         se míč odrazil, když zasáhne zeď.
       courseD_bounce_events6s_2019: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
+        se míč odrazil, když zasáhne zeď.
+      courseD_bounce_events6s_2020: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
         se míč odrazil, když zasáhne zeď.
       courseD_bounce_events7s_2018: Přidej zvukový blok, aby zaznělo švihnutí sítí,
         když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
@@ -1424,21 +1705,30 @@ cs-CZ:
       courseD_bounce_events7s_2019: Přidej zvukový blok, aby zaznělo švihnutí sítí,
         když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
         ruku. Zařiď, ať se míč odráží, dokud nebude v konečném cíli.
+      courseD_bounce_events7s_2020: Přidej zvukový blok, aby zaznělo švihnutí sítí,
+        když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
+        ruku. Zařiď, ať se míč odráží, dokud nebude v konečném cíli.
       courseD_collector_debugging1: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging1a_2018: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging1a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging1a_2020: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging2: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging2a_2018: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging2a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging2a_2020: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging3: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging3a_2018: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging3a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging3a_2020: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging4: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging4a_2018: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging4a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging4a_2020: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging6a_2018: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
+        tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_debugging6a_2020: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_nested_loops_challenge2a: Pomoz Laurel sesbírat aspoň dvě
         hromádky s pokladem.
@@ -1451,15 +1741,21 @@ cs-CZ:
         vezmi dýni.'
       courseD_farmer_condLoops7_2019: 'Výzva: Sesbírej všechnu kukuřici a salát, pak
         vezmi dýni.'
+      courseD_farmer_condLoops7_2020: 'Výzva: Sesbírej všechnu kukuřici a salát, pak
+        vezmi dýni.'
       courseD_farmer_condLoops8: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
       courseD_farmer_condLoops8_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.
       courseD_farmer_condLoops8_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.
+      courseD_farmer_condLoops8_2020: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
       courseD_farmer_condLoops9: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
       courseD_farmer_condLoops9_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.
       courseD_farmer_condLoops9_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_2020: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.
       courseD_farmer_condLoops9_predict1: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.
@@ -1467,20 +1763,27 @@ cs-CZ:
         pak vezmi dýni.
       courseD_farmer_condLoops9_predict1_2019: Sesbírej všechnu kukuřici a salát,
         pak vezmi dýni.
+      courseD_farmer_condLoops9_predict1_2020: Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni.
       courseD_farmer_while1: Posuň se k hromádce hlíny a využij blok `odstraň`, abys
         ji odstranil.
       courseD_farmer_while10: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_farmer_while10_2018: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_farmer_while10_2019: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while10_2020: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_farmer_while10_predict2: 'Srovnej všechny díry za použití co nejméně
         bloků. '
       courseD_farmer_while10_predict2_2018: 'Srovnej všechny díry za použití co nejméně
         bloků. '
       courseD_farmer_while10_predict2_2019: 'Srovnej všechny díry za použití co nejméně
         bloků. '
+      courseD_farmer_while10_predict2_2020: 'Srovnej všechny díry za použití co nejméně
+        bloků. '
       courseD_farmer_while1_2018: Posuň se k hromádce hlíny a využij blok `odstraň`,
         abys ji odstranil.
       courseD_farmer_while1_2019: Posuň se k hromádce hlíny a využij blok `odstraň`,
+        abys ji odstranil.
+      courseD_farmer_while1_2020: Posuň se k hromádce hlíny a využij blok `odstraň`,
         abys ji odstranil.
       courseD_farmer_while2: Přesuň mě k díře a naplň ji s šesti lopatami hlíny za
         pomoci bloku `vyplň`.
@@ -1488,54 +1791,79 @@ cs-CZ:
         za pomoci bloku `vyplň`.
       courseD_farmer_while2_2019: Přesuň mě k díře a naplň ji s šesti lopatami hlíny
         za pomoci bloku `vyplň`.
+      courseD_farmer_while2_2020: Přesuň mě k díře a naplň ji s šesti lopatami hlíny
+        za pomoci bloku `vyplň`.
       courseD_farmer_while5: 'Pomož mi odstranit všechnu hlínu. '
       courseD_farmer_while5_2018: 'Pomož mi odstranit všechnu hlínu. '
       courseD_farmer_while5_2019: 'Pomož mi odstranit všechnu hlínu. '
+      courseD_farmer_while5_2020: 'Pomož mi odstranit všechnu hlínu. '
       courseD_farmer_while7: 'Zasyp díry na konci každé z cest. '
       courseD_farmer_while7_2018: 'Zasyp díry na konci každé z cest. '
       courseD_farmer_while7_2019: 'Zasyp díry na konci každé z cest. '
+      courseD_farmer_while7_2020: 'Zasyp díry na konci každé z cest. '
       courseD_farmer_while8: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
       courseD_farmer_while8_2018: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
       courseD_farmer_while8_2019: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
+      courseD_farmer_while8_2020: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
       courseD_farmer_while9: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_farmer_while9_2018: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_farmer_while9_2019: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while9_2020: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_iceage_loops1: Pomoz Scratovi přes led k žaludu!
       courseD_iceage_loops10: Pomoz Scratovi projít celou cestu k žaludu!
       courseD_iceage_loops10_2019: Pomoz Scratovi projít celou cestu k žaludu!
+      courseD_iceage_loops10_2020: Pomoz Scratovi projít celou cestu k žaludu!
       courseD_iceage_loops11: Pomoz Scratovi k žaludu!
       courseD_iceage_loops11_2019: Pomoz Scratovi k žaludu!
+      courseD_iceage_loops11_2020: Pomoz Scratovi k žaludu!
       courseD_iceage_loops12: Dostaň se k žaludu jakoukoliv cestou!
       courseD_iceage_loops12_2019: Dostaň se k žaludu jakoukoliv cestou!
+      courseD_iceage_loops12_2020: Dostaň se k žaludu jakoukoliv cestou!
       courseD_iceage_loops1_2019: Pomoz Scratovi přes led k žaludu!
+      courseD_iceage_loops1_2020: Pomoz Scratovi přes led k žaludu!
       courseD_iceage_loops2: Použij blok `otoč se vlevo` k získání žaludu.
       courseD_iceage_loops2_2019: Použij blok `otoč se vlevo` k získání žaludu.
+      courseD_iceage_loops2_2020: Použij blok `otoč se vlevo` k získání žaludu.
       courseD_iceage_loops3: Dokážeš získat žalud použitím jen jednoho bloku `posuň
         se vpřed`?
       courseD_iceage_loops3_2019: Dokážeš získat žalud použitím jen jednoho bloku
+        `posuň se vpřed`?
+      courseD_iceage_loops3_2020: Dokážeš získat žalud použitím jen jednoho bloku
         `posuň se vpřed`?
       courseD_iceage_loops4: Přidej další blok, aby se Scrat prošel celou cestu k
         žaludu!
       courseD_iceage_loops4_2019: Přidej další blok, aby se Scrat prošel celou cestu
         k žaludu!
+      courseD_iceage_loops4_2020: Přidej další blok, aby se Scrat prošel celou cestu
+        k žaludu!
       courseD_iceage_loops6: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
       courseD_iceage_loops6_2019: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
+      courseD_iceage_loops6_2020: Víš, jak přidat ještě jeden cyklus na cestu k žaludu?
       courseD_iceage_loops7: Scrat by opravdu rád i tento žalud!
       courseD_iceage_loops7_2019: Scrat by opravdu rád i tento žalud!
+      courseD_iceage_loops7_2020: Scrat by opravdu rád i tento žalud!
       courseD_iceage_loops8: Dokážeš opravit tento kód?
       courseD_iceage_loops8_2019: Dokážeš opravit tento kód?
+      courseD_iceage_loops8_2020: Dokážeš opravit tento kód?
       courseD_iceage_loops9: Žalud je pěkně daleko! Můžeš použít nějaké cykly, aby
         se tam Scrat mohl dostat?
       courseD_iceage_loops9_2019: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
         aby se tam Scrat mohl dostat?
+      courseD_iceage_loops9_2020: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
+        aby se tam Scrat mohl dostat?
       courseD_maze_intro4_2019: Pomoz Ruďákovi dostat se k praseti.
+      courseD_maze_intro4_2020: Pomoz Ruďákovi dostat se k praseti.
       courseD_maze_intro5a_2019: Spočítej pečlivě počet míst v mřížce!
+      courseD_maze_intro5a_2020: Spočítej pečlivě počet míst v mřížce!
       courseD_maze_intro5c_2019: Pozor na TNT! Pomoz Ruďákovi dostat se k praseti.
+      courseD_maze_intro5c_2020: Pozor na TNT! Pomoz Ruďákovi dostat se k praseti.
       courseD_maze_nestedLoops4: Zařiď, aby se zombie dostala ke slunečnici a použij
         k tomu co nejméně bloků!
       courseD_maze_nestedLoops4_2018: Zařiď, aby se zombie dostala ke slunečnici a
         použij k tomu co nejméně bloků!
       courseD_maze_nestedLoops4_2019: Zařiď, aby se zombie dostala ke slunečnici a
+        použij k tomu co nejméně bloků!
+      courseD_maze_nestedLoops4_2020: Zařiď, aby se zombie dostala ke slunečnici a
         použij k tomu co nejméně bloků!
       courseD_maze_nestedLoops5: Zařiď, aby se zombie dostala ke slunečnici a použij
         k tomu co nejmenší počet bloků!
@@ -1543,14 +1871,19 @@ cs-CZ:
         použij k tomu co nejmenší počet bloků!
       courseD_maze_nestedLoops5_2019: Zařiď, aby se zombie dostala ke slunečnici a
         použij k tomu co nejmenší počet bloků!
+      courseD_maze_nestedLoops5_2020: Zařiď, aby se zombie dostala ke slunečnici a
+        použij k tomu co nejmenší počet bloků!
       courseD_maze_nestedLoops6: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6_2018: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6_2019: Dostaň mě ke slunečnici!
+      courseD_maze_nestedLoops6_2020: Dostaň mě ke slunečnici!
       courseD_maze_ramp1: V této úloze připoj všechny bloky dohromady a klikni "Spustit",
         abys viděl, jak to funguje!
       courseD_maze_ramp1_2018: V této úloze připoj všechny bloky dohromady a klikni
         "Spustit", abys viděl, jak to funguje!
       courseD_maze_ramp1_2019: V této úloze připoj všechny bloky dohromady a klikni
+        "Spustit", abys viděl, jak to funguje!
+      courseD_maze_ramp1_2020: V této úloze připoj všechny bloky dohromady a klikni
         "Spustit", abys viděl, jak to funguje!
       courseD_maze_ramp2: Přetáhni další blok `posuň se vpřed` z panelu bloků a připoj
         všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
@@ -1558,16 +1891,22 @@ cs-CZ:
         a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
       courseD_maze_ramp2_2019: Přetáhni další blok `posuň se vpřed` z panelu bloků
         a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
+      courseD_maze_ramp2_2020: Přetáhni další blok `posuň se vpřed` z panelu bloků
+        a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
       courseD_maze_ramp3_2019: Odstraň nadbytečný blok "posuň se vpřed".
+      courseD_maze_ramp3_2020: Odstraň nadbytečný blok "posuň se vpřed".
       courseD_maze_ramp4: Vyhni se TNT, nebo bude létat peří!
       courseD_maze_ramp4_2018: Vyhni se TNT, nebo bude létat peří!
       courseD_maze_ramp5: Vyhni se TNT!
       courseD_maze_ramp5_2018: Vyhni se TNT!
       courseD_maze_ramp5_2019: Vyhni se TNT!
+      courseD_maze_ramp5_2020: Vyhni se TNT!
       courseD_maze_ramp5a_2019: Spočítej pečlivě počet míst v mřížce!
+      courseD_maze_ramp5a_2020: Spočítej pečlivě počet míst v mřížce!
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
+      courseD_maze_ramp5d_2020: Dostaň ptáka k praseti.
       courseD_maze_ramp6: '"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak
         bych se mohl rozzlobit!"'
       courseD_maze_ramp7: Dostaň mne k prasátku!
@@ -1575,32 +1914,42 @@ cs-CZ:
       courseD_maze_until10: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_2018: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_2020: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_predict2: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_predict2_2018: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_predict2_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2_2020: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until1_2018: Dostaň rozhněvaného ptáka k praseti.
       courseD_maze_until1_2019: Dostaň rozhněvaného ptáka k praseti.
+      courseD_maze_until1_2020: Dostaň rozhněvaného ptáka k praseti.
       courseD_maze_until3: Dostaň ptáka k praseti.
       courseD_maze_until3_2018: Dostaň ptáka k praseti.
       courseD_maze_until3_2019: Dostaň ptáka k praseti.
+      courseD_maze_until3_2020: Dostaň ptáka k praseti.
       courseD_maze_until5: 'Použij blok `když`, abys pomohl zombie rozhodnout se,
         kdy zatočit. Pak dostaň zombie ke slunečnici. '
       courseD_maze_until5_2018: 'Použij blok `když`, abys pomohl zombie rozhodnout
         se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
       courseD_maze_until5_2019: 'Použij blok `když`, abys pomohl zombie rozhodnout
         se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until5_2020: 'Použij blok `když`, abys pomohl zombie rozhodnout
+        se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
       courseD_maze_until6: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until6_2018: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until6_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until6_2020: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until7: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until7_2018: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until7_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7_2020: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until8: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until9: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
         se ke slunečnici."
       courseD_maze_until9_2018: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
         se ke slunečnici."
       courseD_maze_until9_2019: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_maze_until9_2020: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
         se ke slunečnici."
       courseD_scrat_ramp1: V této úloze připoj všechny bloky dohromady a klikni "Spustit",
         abys viděl, jak to funguje!
@@ -1639,16 +1988,22 @@ cs-CZ:
         to dosáhl!
       courseF_artist_for7_2019: Udělej tři malé změny do kódu z poslední úrovni, abys
         to dosáhl!
+      courseF_artist_for7_2020: Udělej tři malé změny do kódu z poslední úrovni, abys
+        to dosáhl!
       courseF_artist_for_challenge1: Umíš zjistit, jak znovu se vytvoří tato kresba?
       courseF_artist_for_challenge1_2018: Umíš zjistit, jak znovu se vytvoří tato
         kresba?
       courseF_artist_for_challenge1_2019: Umíš zjistit, jak znovu se vytvoří tato
+        kresba?
+      courseF_artist_for_challenge1_2020: Umíš zjistit, jak znovu se vytvoří tato
         kresba?
       courseF_artist_for_challenge2: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
       courseF_artist_for_challenge2_2018: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
       courseF_artist_for_challenge2_2019: Umíš zjistit, jak znovu vytvořit tuto kresbu
+        pomocí jediného cyklu?
+      courseF_artist_for_challenge2_2020: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
       courseF_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseF_bee_conditionals3: Pomoz včele sebrat nektar ze všech květů.
@@ -1657,11 +2012,14 @@ cs-CZ:
       courseF_bee_for4: Pomoz včele sebrat nektar ze všech květů.
       courseF_bee_for4_2018: Pomoz včele sebrat nektar ze všech květů.
       courseF_bee_for4_2019: Pomoz včele sebrat nektar ze všech květů.
+      courseF_bee_for4_2020: Pomoz včele sebrat nektar ze všech květů.
       courseF_bee_for8: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6,
         9, 12, 15? \\\r"
       courseF_bee_for8_2018: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
         6, 9, 12, 15? \\\r"
       courseF_bee_for8_2019: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
+        6, 9, 12, 15? \\\r"
+      courseF_bee_for8_2020: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
         6, 9, 12, 15? \\\r"
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
@@ -1669,9 +2027,13 @@ cs-CZ:
         bloků.
       courseF_bee_for_challenge2_2019: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
+      courseF_bee_for_challenge2_2020: Vyřeš tento puzzle s co nejmenším možným počtem
+        bloků.
       courseF_bee_functions4: Funkce "posunout a dostat nektar" otočí včelu, sbírá
         nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
       express_maze_debugging9_2019: Využij nabízené bloky, abys vytvořil svůj program.
+        Dostaň veverku Scrata k žaludu.
+      express_maze_debugging9_2020: Využij nabízené bloky, abys vytvořil svůj program.
         Dostaň veverku Scrata k žaludu.
       flappy_1: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit". Klikej
         nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
@@ -1756,9 +2118,12 @@ cs-CZ:
         a dokonči tuto fázi!
       grade2_collector_10_2019: Máš skoro hotovo! Posbírej co nejvíce kousků pokladu
         a dokonči tuto fázi!
+      grade2_collector_10_2020: Máš skoro hotovo! Posbírej co nejvíce kousků pokladu
+        a dokonči tuto fázi!
       grade2_collector_A: Pomoz Laurel posbírat všechen poklad.
       grade2_collector_A_2018: Pomoz Laurel posbírat všechen poklad.
       grade2_collector_A_2019: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2020: Pomoz Laurel posbírat všechen poklad.
       grade5_artist_binary11: 'Pohraj si: Zde je prázdné plátno pro tebe, na které
         můžeš  čerpat.  Pobav se!'
       grade5_artist_binary4: Můžeš nakreslit tento vzor opakováním binárního řetězce
@@ -1773,15 +2138,21 @@ cs-CZ:
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
       ramp_artist_loops4_2019: Vytvoř obrázek této hvězdy tak, že zacyklíš řadu bloků
         "posuň se vpřed" a "otoč se vpravo o 144 stupňů".
+      ramp_artist_loops4_2020: Vytvoř obrázek této hvězdy tak, že zacyklíš řadu bloků
+        "posuň se vpřed" a "otoč se vpravo o 144 stupňů".
       ramp_artist_loops7: Najdi v kódu opakující se vzor a zkrať kód tím, že v něm
         použiješ cyklus!
       ramp_artist_loops7_2018: Najdi v kódu opakující se vzor a zkrať kód tím, že
         v něm použiješ cyklus!
       ramp_artist_loops7_2019: Najdi v kódu opakující se vzor a zkrať kód tím, že
         v něm použiješ cyklus!
+      ramp_artist_loops7_2020: Najdi v kódu opakující se vzor a zkrať kód tím, že
+        v něm použiješ cyklus!
       ramp_artist_loops8: Najdi v kódu opakující se vzor a zkrať kód tím, že v něm
         použiješ cyklus.
       ramp_artist_loops8_2018: Najdi v kódu opakující se vzor a zkrať kód tím, že
         v něm použiješ cyklus.
       ramp_artist_loops8_2019: Najdi v kódu opakující se vzor a zkrať kód tím, že
+        v něm použiješ cyklus.
+      ramp_artist_loops8_2020: Najdi v kódu opakující se vzor a zkrať kód tím, že
         v něm použiješ cyklus.

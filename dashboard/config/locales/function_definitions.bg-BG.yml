@@ -437,7 +437,14 @@ bg-BG:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: изпълнява нещо
+      courseC_data wizard_2020:
         do something:
           name: изпълнява нещо
       courseE_artist_concept1:
@@ -469,6 +476,9 @@ bg-BG:
       courseE_artist_functions10_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions10_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions2:
         draw a square:
           name: чертае квадрат
@@ -478,6 +488,9 @@ bg-BG:
       courseE_artist_functions2_2019:
         draw a square:
           name: чертае квадрат
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: чертае квадрат
       courseE_artist_functions2_copy:
         draw a square:
           name: чертае квадрат
@@ -485,6 +498,9 @@ bg-BG:
         draw a star:
           name: рисува звезда
       courseE_artist_functions3_2019:
+        draw a star:
+          name: рисува звезда
+      courseE_artist_functions3_2020:
         draw a star:
           name: рисува звезда
       courseE_artist_functions4:
@@ -502,6 +518,9 @@ bg-BG:
       courseE_artist_functions5_2019:
         draw a star:
           name: рисува звезда
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: рисува звезда
       courseE_artist_functions5_copy:
         draw a star:
           name: рисува звезда
@@ -509,6 +528,9 @@ bg-BG:
         draw a house:
           name: рисува къща
       courseE_artist_functions7_2018:
+        draw a house:
+          name: рисува къща
+      courseE_artist_functions7_2020:
         draw a house:
           name: рисува къща
       courseE_artist_functions8:
@@ -526,12 +548,22 @@ bg-BG:
           name: изпълнява нещо
         draw square:
           name: начертайте квадрат
+      courseE_artist_functions8_2020:
+        do something:
+          name: изпълнява нещо
+        draw square:
+          name: начертайте квадрат
       courseE_artist_functions8a_2018:
         draw a square:
           name: чертае квадрат
         do something:
           name: изпълнява нещо
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: чертае квадрат
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions8a_2020:
         draw a square:
           name: чертае квадрат
         do something:
@@ -546,12 +578,22 @@ bg-BG:
           name: начертайте квадрат
         do something:
           name: изпълнява нещо
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: начертайте квадрат
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions8c_2018:
         draw square:
           name: начертайте квадрат
         do something:
           name: изпълнява нещо
       courseE_artist_functions8c_2019:
+        draw square:
+          name: начертайте квадрат
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions8c_2020:
         draw square:
           name: начертайте квадрат
         do something:
@@ -571,10 +613,18 @@ bg-BG:
           name: изпълнява нещо
         draw triangle:
           name: начертайте триъгълник
+      courseE_artist_functions9_2020:
+        do something:
+          name: изпълнява нещо
+        draw triangle:
+          name: начертайте триъгълник
       courseE_artist_functionsProj_2018:
         draw square:
           name: начертайте квадрат
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: начертайте квадрат
+      courseE_artist_functionsProj_2020:
         draw square:
           name: начертайте квадрат
       courseE_artist_functions_challenge1:
@@ -586,6 +636,9 @@ bg-BG:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions_challenge2:
         do something:
           name: изпълнява нещо
@@ -595,6 +648,9 @@ bg-BG:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions_predict1:
         draw a square:
           name: чертае квадрат
@@ -602,6 +658,9 @@ bg-BG:
         draw a square:
           name: чертае квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: чертае квадрат
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: чертае квадрат
       courseE_artist_functions_predict1_copy:
@@ -614,6 +673,9 @@ bg-BG:
         do something:
           name: изпълнява нещо
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions_predict2_2020:
         do something:
           name: изпълнява нещо
       courseE_bee_functions1:
@@ -796,9 +858,15 @@ bg-BG:
       courseF_bee_variables_7_2019:
         collect:
           name: събери
+      courseF_bee_variables_7_2020:
+        collect:
+          name: събери
       courseF_bee_variables_8_2018:
         collect:
           name: събери
       courseF_bee_variables_8_2019:
+        collect:
+          name: събери
+      courseF_bee_variables_8_2020:
         collect:
           name: събери

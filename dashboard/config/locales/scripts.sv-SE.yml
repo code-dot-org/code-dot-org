@@ -4660,24 +4660,6 @@ sv:
           lessons:
             Creating Functions:
               name: Skapa funktioner
-        csd3-virtual:
-          stages:
-            Variables:
-              name: variabler
-            Conditionals:
-              name: Villkor
-            Functions:
-              name: funktioner
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-          lessons:
-            Variables:
-              name: variabler
-            Conditionals:
-              name: Villkor
-            Functions:
-              name: funktioner
         csd2-virtual:
           stages:
             Images:
@@ -4756,3 +4738,29 @@ sv:
           lesson_groups:
             k5_next_steps_1:
               display_name: Nästa steg
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabler
+            Text:
+              name: text
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+          lessons:
+            Variables:
+              name: variabler
+            Text:
+              name: text
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+          lesson_groups:
+            csd3_1:
+              display_name: Innehåll
+            csd3_2:
+              display_name: Innehåll
+            cspSurvey:
+              display_name: Innehåll
