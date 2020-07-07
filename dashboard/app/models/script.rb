@@ -929,17 +929,8 @@ class Script < ActiveRecord::Base
               sl.merge(
                 {
                   lesson: lesson[:name],
-                  levels: sl[:levels].map do |level|
-                    level.merge(
-                      {
-                        lesson_lockable: lesson[:lockable],
-                        assessment: sl[:assessment],
-                        named_level: sl[:named_level],
-                        lesson_group: lesson_group[:key],
-                        bonus: sl[:bonus]
-                      }
-                    )
-                  end
+                  lesson_lockable: lesson[:lockable],
+                  lesson_group: lesson_group[:key]
                 }
               )
             end
@@ -966,11 +957,13 @@ class Script < ActiveRecord::Base
     script.script_levels = raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
-      assessment = nil
-      named_level = nil
-      bonus = nil
-      lesson_group_key = nil
-      lockable = nil
+      assessment = raw_script_level.delete(:assessment)
+      named_level = raw_script_level.delete(:named_level)
+      bonus = raw_script_level.delete(:bonus)
+      lesson_group_key = raw_script_level.delete(:lesson_group)
+      lockable = !!raw_script_level.delete(:lesson_lockable)
+      lesson_name = raw_script_level.delete(:lesson)
+      properties = raw_script_level.delete(:properties) || {}
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -981,11 +974,6 @@ class Script < ActiveRecord::Base
         end
 
         raw_level_data = raw_level.dup
-        assessment = raw_level.delete(:assessment)
-        named_level = raw_level.delete(:named_level)
-        bonus = raw_level.delete(:bonus)
-        lesson_group_key = raw_level.delete(:lesson_group)
-        lockable = !!raw_level.delete(:lesson_lockable)
 
         key = raw_level.delete(:name)
 
@@ -1022,9 +1010,6 @@ class Script < ActiveRecord::Base
 
         level
       end
-
-      lesson_name = raw_script_level.delete(:lesson)
-      properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]
         properties[:variants] = properties[:variants].map do |old_level_name, value|
