@@ -917,14 +917,15 @@ class Script < ActiveRecord::Base
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
-    raw_lessons = []
+    script = fetch_script(options)
+    script.update!(hidden: true) if new_suffix
 
+    raw_lessons = []
     #recreate raw_lessons from raw_lesson_groups
     raw_lesson_groups.each do |lesson_group|
       lesson_group[:lessons].each do |lesson|
         temp_lesson = lesson.merge(
           {
-            lesson: lesson[:name],
             script_levels: lesson[:script_levels].map do |sl|
               sl.merge(
                 {
@@ -937,52 +938,15 @@ class Script < ActiveRecord::Base
         raw_lessons << temp_lesson
       end
     end
-
     raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
-    script = fetch_script(options)
-    script.update!(hidden: true) if new_suffix
-    chapter = 0
-    lesson_position = 0; script_level_position = Hash.new(0)
-    script_lessons = []
+
+    script.lesson_groups = raw_script_levels.empty? ? [] : LessonGroup.add_lesson_groups(raw_lesson_groups, script)
+
+    script_lessons = Lesson.add_lessons(raw_lesson_groups, script)
+
     script_levels_by_lesson = {}
-    lockable_count = 0
-    non_lockable_count = 0
-
-    script.lesson_groups = LessonGroup.add_lesson_groups(raw_script_levels, raw_lesson_groups, script)
-
-    # Set/create Lesson containing custom ScriptLevel
-    raw_lesson_groups.each do |raw_lesson_group|
-      raw_lesson_group[:lessons].each do |raw_lesson|
-        # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: raw_lesson_group[:key].presence || "",
-          script: script,
-          user_facing: raw_lesson_group[:key].present?
-        )
-
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
-          Lesson.find_or_create_by(
-            name: raw_lesson[:name],
-            script: script
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
-
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
-        lesson.save! if lesson.changed?
-
-        next if script_lessons.include?(lesson)
-        if !!raw_lesson[:lockable]
-          lesson.assign_attributes(relative_position: (lockable_count += 1))
-        else
-          lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-        end
-        lesson.assign_attributes(absolute_position: (lesson_position += 1))
-        lesson.save! if lesson.changed?
-        script_lessons << lesson
-      end
-    end
+    script_level_position = Hash.new(0)
+    chapter = 0
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
