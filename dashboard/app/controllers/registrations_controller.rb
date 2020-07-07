@@ -17,11 +17,25 @@ class RegistrationsController < Devise::RegistrationsController
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || {}
+      user_params[:user_type] ||= session[:default_sign_up_user_type]
       @user = User.new_with_session(user_params, session)
     else
+      save_default_sign_up_user_type
       @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
+    end
+  end
+
+  # If the user[user_type] queryparam is provided and valid, save its value
+  # into the session so we can use it as a default on the finish_sign_up page.
+  # If not, clear it from the session so we don't use a misleading default.
+  def save_default_sign_up_user_type
+    requested_user_type = params.dig(:user, :user_type)
+    if User::USER_TYPE_OPTIONS.include? requested_user_type
+      session[:default_sign_up_user_type] = requested_user_type
+    else
+      session.delete(:default_sign_up_user_type)
     end
   end
 

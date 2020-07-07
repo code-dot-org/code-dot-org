@@ -889,7 +889,12 @@ class Script < ActiveRecord::Base
         name = File.basename(script, '.script')
         base_name = Script.base_name(name)
         name = "#{base_name}-#{new_suffix}" if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script, name)
+        script_data, i18n =
+          begin
+            ScriptDSL.parse_file(script, name)
+          rescue => e
+            raise e, "Error parsing script file #{script}: #{e}"
+          end
 
         lesson_groups = script_data[:lesson_groups]
         custom_i18n.deep_merge!(i18n)
@@ -909,6 +914,8 @@ class Script < ActiveRecord::Base
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
         add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      rescue => e
+        raise e, "Error adding script named '#{options[:name]}': #{e}"
       end
       [added_scripts, custom_i18n]
     end
@@ -1546,8 +1553,8 @@ class Script < ActiveRecord::Base
     lessons.each do |stage|
       stage_data = {
         'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
       }
       data['stages'][stage.name] = stage_data
       data['lessons'][stage.name] = stage_data
@@ -1565,8 +1572,8 @@ class Script < ActiveRecord::Base
       data['stageDescriptions'] = lessons.map do |stage|
         {
           name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
         }
       end
     end
