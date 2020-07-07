@@ -872,18 +872,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       cdo_scholarship_recipient: true,
       workshop: workshop
 
-    # Should return 1 before we've done anything
+    # Should return 1 before we've done anything.
     assert_equal 1, workshop.teachers_attending_all_sessions(true).count
 
-    # Delete the user
+    # Delete the user.
     workshop_participant.destroy!
+    workshop.reload
 
-    # Should still return 1, since we haven't run the account purger step yet
-    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+    # With no user account, the user doesn't show up in array of attending teachers.
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
 
+    # Fully purge the user account's PD records,
+    # which removes their user ID from attendances.
     DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    workshop.reload
 
-    # Should return 0 once we've fully purged the teacher user ID from the attendance
+    # Should still return 0 once we've fully purged the teacher user ID from the attendance
     assert_equal 0, workshop.teachers_attending_all_sessions(true).count
   end
 
