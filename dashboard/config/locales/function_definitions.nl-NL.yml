@@ -137,6 +137,9 @@ nl-NL:
       Function intro Ryan_2019:
         build bridge:
           name: bouw brug
+      Function intro Ryan_2020:
+        build bridge:
+          name: bouw brug
       Geometric Sun:
         diamond:
           name: diamant
@@ -170,12 +173,20 @@ nl-NL:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: pad leegmaken
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: pad leegmaken
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: repareer lang pad
         fix short path:
           name: repareer kort pad
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: repareer lang pad
+        fix short path:
+          name: repareer kort pad
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: repareer lang pad
         fix short path:
@@ -190,12 +201,22 @@ nl-NL:
           name: bouw korte brug
         build long bridge:
           name: bouw lange brug
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: bouw korte brug
+        build long bridge:
+          name: bouw lange brug
       MC_HOC_2017_FP20x20:
         function 1:
           name: functie 1
         function 2:
           name: functie 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: functie 1
+        function 2:
+          name: functie 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: functie 1
         function 2:
@@ -445,7 +466,14 @@ nl-NL:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: do iets
+      courseC_data wizard_2020:
         do something:
           name: do iets
       courseE_artist_concept1:
@@ -477,6 +505,9 @@ nl-NL:
       courseE_artist_functions10_2019:
         do something:
           name: do iets
+      courseE_artist_functions10_2020:
+        do something:
+          name: do iets
       courseE_artist_functions2:
         draw a square:
           name: teken een vierkant
@@ -486,6 +517,9 @@ nl-NL:
       courseE_artist_functions2_2019:
         draw a square:
           name: teken een vierkant
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: teken een vierkant
       courseE_artist_functions2_copy:
         draw a square:
           name: teken een vierkant
@@ -493,6 +527,9 @@ nl-NL:
         draw a star:
           name: teken een ster
       courseE_artist_functions3_2019:
+        draw a star:
+          name: teken een ster
+      courseE_artist_functions3_2020:
         draw a star:
           name: teken een ster
       courseE_artist_functions4:
@@ -510,6 +547,9 @@ nl-NL:
       courseE_artist_functions5_2019:
         draw a star:
           name: teken een ster
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: teken een ster
       courseE_artist_functions5_copy:
         draw a star:
           name: teken een ster
@@ -519,6 +559,9 @@ nl-NL:
       courseE_artist_functions7_2018:
         draw a house:
           name: teken een huis
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: teken een huis
       courseE_artist_functions8:
         do something:
           name: do iets
@@ -526,6 +569,9 @@ nl-NL:
         do something:
           name: do iets
       courseE_artist_functions8_2019:
+        do something:
+          name: do iets
+      courseE_artist_functions8_2020:
         do something:
           name: do iets
       courseE_artist_functions8a_2018:
@@ -538,16 +584,27 @@ nl-NL:
           name: teken een vierkant
         do something:
           name: do iets
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: teken een vierkant
+        do something:
+          name: do iets
       courseE_artist_functions8b_2018:
         do something:
           name: do iets
       courseE_artist_functions8b_2019:
         do something:
           name: do iets
+      courseE_artist_functions8b_2020:
+        do something:
+          name: do iets
       courseE_artist_functions8c_2018:
         do something:
           name: do iets
       courseE_artist_functions8c_2019:
+        do something:
+          name: do iets
+      courseE_artist_functions8c_2020:
         do something:
           name: do iets
       courseE_artist_functions9:
@@ -559,6 +616,9 @@ nl-NL:
       courseE_artist_functions9_2019:
         do something:
           name: do iets
+      courseE_artist_functions9_2020:
+        do something:
+          name: do iets
       courseE_artist_functions_challenge1:
         do something:
           name: do iets
@@ -566,6 +626,9 @@ nl-NL:
         do something:
           name: do iets
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: do iets
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: do iets
       courseE_artist_functions_challenge2:
@@ -577,6 +640,9 @@ nl-NL:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: do iets
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: do iets
       courseE_artist_functions_predict1:
         draw a square:
           name: teken een vierkant
@@ -584,6 +650,9 @@ nl-NL:
         draw a square:
           name: teken een vierkant
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: teken een vierkant
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: teken een vierkant
       courseE_artist_functions_predict1_copy:
@@ -596,6 +665,9 @@ nl-NL:
         do something:
           name: do iets
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: do iets
+      courseE_artist_functions_predict2_2020:
         do something:
           name: do iets
       courseE_bee_functions1:
@@ -790,9 +862,15 @@ nl-NL:
       courseF_bee_variables_7_2019:
         collect:
           name: verzamel
+      courseF_bee_variables_7_2020:
+        collect:
+          name: verzamel
       courseF_bee_variables_8_2018:
         collect:
           name: verzamel
       courseF_bee_variables_8_2019:
+        collect:
+          name: verzamel
+      courseF_bee_variables_8_2020:
         collect:
           name: verzamel

@@ -532,6 +532,10 @@ az-AZ:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_artist_prog4:
         booster:
           name: təkanverici
@@ -541,7 +545,13 @@ az-AZ:
       courseC_artist_prog4_2019:
         booster:
           name: təkanverici
+      courseC_artist_prog4_2020:
+        booster:
+          name: təkanverici
       courseC_data wizard:
+        do something:
+          name: bir şey etmək
+      courseC_data wizard_2020:
         do something:
           name: bir şey etmək
       courseD_artist_binary1:
@@ -553,6 +563,9 @@ az-AZ:
       courseD_artist_binary1_2019:
         draw:
           name: çək
+      courseD_artist_binary1_2020:
+        draw:
+          name: çək
       courseD_artist_binary2:
         draw:
           name: çək
@@ -560,6 +573,9 @@ az-AZ:
         draw:
           name: çək
       courseD_artist_binary2_2019:
+        draw:
+          name: çək
+      courseD_artist_binary2_2020:
         draw:
           name: çək
       courseD_artist_binary3:
@@ -571,6 +587,9 @@ az-AZ:
       courseD_artist_binary3_2019:
         draw:
           name: çək
+      courseD_artist_binary3_2020:
+        draw:
+          name: çək
       courseD_artist_binary4:
         draw:
           name: çək
@@ -578,6 +597,9 @@ az-AZ:
         draw:
           name: çək
       courseD_artist_binary4_2019:
+        draw:
+          name: çək
+      courseD_artist_binary4_2020:
         draw:
           name: çək
       courseD_artist_binary5:
@@ -589,6 +611,9 @@ az-AZ:
       courseD_artist_binary5_2019:
         draw:
           name: çək
+      courseD_artist_binary5_2020:
+        draw:
+          name: çək
       courseD_artist_binary6:
         draw:
           name: çək
@@ -596,6 +621,9 @@ az-AZ:
         draw:
           name: çək
       courseD_artist_binary6_2019:
+        draw:
+          name: çək
+      courseD_artist_binary6_2020:
         draw:
           name: çək
       courseD_artist_binary7:
@@ -607,6 +635,9 @@ az-AZ:
       courseD_artist_binary7_2019:
         draw:
           name: çək
+      courseD_artist_binary7_2020:
+        draw:
+          name: çək
       courseD_artist_binary8:
         draw:
           name: çək
@@ -614,6 +645,9 @@ az-AZ:
         draw:
           name: çək
       courseD_artist_binary8_2019:
+        draw:
+          name: çək
+      courseD_artist_binary8_2020:
         draw:
           name: çək
       courseD_artist_binary8_predict1:
@@ -625,10 +659,16 @@ az-AZ:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: çək
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: çək
       courseD_artist_binaryFP_2018:
         draw:
           name: çək
       courseD_artist_binaryFP_2019:
+        draw:
+          name: çək
+      courseD_artist_binaryFP_2020:
         draw:
           name: çək
       courseD_artist_binary_challenge1_2018:
@@ -637,10 +677,16 @@ az-AZ:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: çək
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: çək
       courseD_artist_binary_challenge2_2018:
         draw:
           name: çək
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: çək
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: çək
       courseD_autorun_binary2_2019:
@@ -696,6 +742,9 @@ az-AZ:
       courseE_artist_functions10_2019:
         do something:
           name: bir şey etmək
+      courseE_artist_functions10_2020:
+        do something:
+          name: bir şey etmək
       courseE_artist_functions2:
         draw a square:
           name: kvadrat çək
@@ -705,6 +754,9 @@ az-AZ:
       courseE_artist_functions2_2019:
         draw a square:
           name: kvadrat çək
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: kvadrat çək
       courseE_artist_functions2_copy:
         draw a square:
           name: kvadrat çək
@@ -712,6 +764,9 @@ az-AZ:
         draw a star:
           name: bir ulduz çək
       courseE_artist_functions3_2019:
+        draw a star:
+          name: bir ulduz çək
+      courseE_artist_functions3_2020:
         draw a star:
           name: bir ulduz çək
       courseE_artist_functions4:
@@ -729,6 +784,9 @@ az-AZ:
       courseE_artist_functions5_2019:
         draw a star:
           name: bir ulduz çək
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: bir ulduz çək
       courseE_artist_functions5_copy:
         draw a star:
           name: bir ulduz çək
@@ -736,6 +794,9 @@ az-AZ:
         draw a house:
           name: ev çək
       courseE_artist_functions7_2018:
+        draw a house:
+          name: ev çək
+      courseE_artist_functions7_2020:
         draw a house:
           name: ev çək
       courseE_artist_functions8:
@@ -753,12 +814,22 @@ az-AZ:
           name: bir şey etmək
         draw square:
           name: bir kvadrat çək
+      courseE_artist_functions8_2020:
+        do something:
+          name: bir şey etmək
+        draw square:
+          name: bir kvadrat çək
       courseE_artist_functions8a_2018:
         draw a square:
           name: kvadrat çək
         do something:
           name: bir şey etmək
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: kvadrat çək
+        do something:
+          name: bir şey etmək
+      courseE_artist_functions8a_2020:
         draw a square:
           name: kvadrat çək
         do something:
@@ -773,12 +844,22 @@ az-AZ:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: bir kvadrat çək
+        do something:
+          name: bir şey etmək
       courseE_artist_functions8c_2018:
         draw square:
           name: bir kvadrat çək
         do something:
           name: bir şey etmək
       courseE_artist_functions8c_2019:
+        draw square:
+          name: bir kvadrat çək
+        do something:
+          name: bir şey etmək
+      courseE_artist_functions8c_2020:
         draw square:
           name: bir kvadrat çək
         do something:
@@ -798,10 +879,18 @@ az-AZ:
           name: bir şey etmək
         draw triangle:
           name: üçbucaq çək
+      courseE_artist_functions9_2020:
+        do something:
+          name: bir şey etmək
+        draw triangle:
+          name: üçbucaq çək
       courseE_artist_functionsProj_2018:
         draw square:
           name: bir kvadrat çək
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: bir kvadrat çək
+      courseE_artist_functionsProj_2020:
         draw square:
           name: bir kvadrat çək
       courseE_artist_functions_challenge1:
@@ -813,6 +902,9 @@ az-AZ:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: bir şey etmək
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: bir şey etmək
       courseE_artist_functions_challenge2:
         do something:
           name: bir şey etmək
@@ -822,6 +914,9 @@ az-AZ:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: bir şey etmək
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: bir şey etmək
       courseE_artist_functions_predict1:
         draw a square:
           name: kvadrat çək
@@ -829,6 +924,9 @@ az-AZ:
         draw a square:
           name: kvadrat çək
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: kvadrat çək
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: kvadrat çək
       courseE_artist_functions_predict1_copy:
@@ -841,6 +939,9 @@ az-AZ:
         do something:
           name: bir şey etmək
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: bir şey etmək
+      courseE_artist_functions_predict2_2020:
         do something:
           name: bir şey etmək
       courseE_bee_functions1:
@@ -1023,10 +1124,16 @@ az-AZ:
       courseF_bee_variables_7_2019:
         collect:
           name: topla
+      courseF_bee_variables_7_2020:
+        collect:
+          name: topla
       courseF_bee_variables_8_2018:
         collect:
           name: topla
       courseF_bee_variables_8_2019:
+        collect:
+          name: topla
+      courseF_bee_variables_8_2020:
         collect:
           name: topla
       grade5_artist_binary11:

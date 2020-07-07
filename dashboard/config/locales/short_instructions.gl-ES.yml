@@ -268,18 +268,27 @@ gl-ES:
         polos Creepers e chega a túa casa con seguranza.
       Overworld Avoid Monsters_2019: Non é unha boa idea topar cun Creeper. Pasa con
         coidado polos Creepers e chega a túa casa con seguranza.
+      Overworld Avoid Monsters_2020: Non é unha boa idea topar cun Creeper. Pasa con
+        coidado polos Creepers e chega a túa casa con seguranza.
       Overworld Chop Tree: A madeira é un recurso moi importante. Moitas cousas son
         feitas con ela. Anda até a árbore e usa o comando "destruír bloque" para derrubala.
       Overworld Chop Tree_2019: A madeira é un recurso moi importante. Moitas cousas
+        son feitas con ela. Anda até a árbore e usa o comando "destruír bloque" para
+        derrubala.
+      Overworld Chop Tree_2020: A madeira é un recurso moi importante. Moitas cousas
         son feitas con ela. Anda até a árbore e usa o comando "destruír bloque" para
         derrubala.
       Overworld Chop Trees: Precisamos construír unha casa antes que o sol se poña.
         As casas utilizan moita madeira. Corta as 3 árbores.
       Overworld Chop Trees_2019: Precisamos construír unha casa antes que o sol se
         poña. As casas utilizan moita madeira. Corta as 3 árbores.
+      Overworld Chop Trees_2020: Precisamos construír unha casa antes que o sol se
+        poña. As casas utilizan moita madeira. Corta as 3 árbores.
       Overworld Free Play 20x20: Parabéns! Concluíches todas as nosas tarefas! Agora
         constrúe e crea algo único, usando todo que xa aprendiches.
       Overworld Free Play 20x20_2019: Parabéns! Concluíches todas as nosas tarefas!
+        Agora constrúe e crea algo único, usando todo que xa aprendiches.
+      Overworld Free Play 20x20_2020: Parabéns! Concluíches todas as nosas tarefas!
         Agora constrúe e crea algo único, usando todo que xa aprendiches.
       Overworld House Frame Chosen: |-
         Constrúe o resto da túa casa co
@@ -287,9 +296,14 @@ gl-ES:
       Overworld House Frame Chosen_2019: |-
         Constrúe o resto da túa casa co
         material que queiras. O comando "repita" vai ser ben útil.
+      Overworld House Frame Chosen_2020: |-
+        Constrúe o resto da túa casa co
+        material que queiras. O comando "repita" vai ser ben útil.
       Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar
         á ovella.
       Overworld Move to Sheep_2019: Agrega un segundo comando "andar adiante" para
+        chegar á ovella.
+      Overworld Move to Sheep_2020: Agrega un segundo comando "andar adiante" para
         chegar á ovella.
       Overworld Place Wall: Toda casa comeza cunha parede. Constrúe a primeira parte
         da túa casa colocando os comandos "colocar" e "andar adiante" dentro do bucle
@@ -297,9 +311,14 @@ gl-ES:
       Overworld Place Wall_2019: Toda casa comeza cunha parede. Constrúe a primeira
         parte da túa casa colocando os comandos "colocar" e "andar adiante" dentro
         do bucle de repetición.
+      Overworld Place Wall_2020: Toda casa comeza cunha parede. Constrúe a primeira
+        parte da túa casa colocando os comandos "colocar" e "andar adiante" dentro
+        do bucle de repetición.
       Overworld Plant Crops: É sempre bon pensar no futuro. Cultiva nos dous lados
         da auga para non pasar fame despois.
       Overworld Plant Crops_2019: É sempre bon pensar no futuro. Cultiva nos dous
+        lados da auga para non pasar fame despois.
+      Overworld Plant Crops_2020: É sempre bon pensar no futuro. Cultiva nos dous
         lados da auga para non pasar fame despois.
       Overworld Powered Minecart: Óptimo traballo! Colleitaches varios recursos e
         construíches unha casiña modesta. Agora constrúe o paso desde o bordo do mapa
@@ -307,9 +326,14 @@ gl-ES:
       Overworld Powered Minecart_2019: Óptimo traballo! Colleitaches varios recursos
         e construíches unha casiña modesta. Agora constrúe o paso desde o bordo do
         mapa até a porta da túa casa.
+      Overworld Powered Minecart_2020: Óptimo traballo! Colleitaches varios recursos
+        e construíches unha casiña modesta. Agora constrúe o paso desde o bordo do
+        mapa até a porta da túa casa.
       Overworld Shear Sheep: Hora de rapar ovellas! Usa o comando "tosquiar" para
         obter lá das dúas ovellas.
       Overworld Shear Sheep_2019: Hora de rapar ovellas! Usa o comando "tosquiar"
+        para obter lá das dúas ovellas.
+      Overworld Shear Sheep_2020: Hora de rapar ovellas! Usa o comando "tosquiar"
         para obter lá das dúas ovellas.
       Standalone_Artist_1: |-
         Benvido Artista! Primeiro, imos tentar
@@ -326,10 +350,16 @@ gl-ES:
       Underground Avoiding Lava_2019: Hai lava escondida baixo algúns destes bloques,
         que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega
         un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
+      Underground Avoiding Lava_2020: Hai lava escondida baixo algúns destes bloques,
+        que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega
+        un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
       Underground If Statements: Agora a situación complicouse un pouco. Extrae 3
         pedras de lava, pero non caias na lava. Usa un comando "se" para colocar paralelepípedos
         sobre calquera lava que descubras.
       Underground If Statements_2019: Agora a situación complicouse un pouco. Extrae
+        3 pedras de lava, pero non caias na lava. Usa un comando "se" para colocar
+        paralelepípedos sobre calquera lava que descubras.
+      Underground If Statements_2020: Agora a situación complicouse un pouco. Extrae
         3 pedras de lava, pero non caias na lava. Usa un comando "se" para colocar
         paralelepípedos sobre calquera lava que descubras.
       Underground Iron: Non é unha boa idea tentar andar sobre lava incandescente.
@@ -338,10 +368,16 @@ gl-ES:
       Underground Iron_2019: Non é unha boa idea tentar andar sobre lava incandescente.
         Coloca os paralelepípedos para crear unha ponte, despois extrae polo menos
         dous dos bloques de ferro.
+      Underground Iron_2020: Non é unha boa idea tentar andar sobre lava incandescente.
+        Coloca os paralelepípedos para crear unha ponte, despois extrae polo menos
+        dous dos bloques de ferro.
       Underground Mining Coal: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
       Underground Mining Coal_2019: Atoparás os recursos máis valiosos no subterráneo,
+        pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
+        menos 2 carbóns.
+      Underground Mining Coal_2020: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
       'Widget: Text Compression': Busca patróns (frases ou palabras repetidas) no
@@ -385,11 +421,15 @@ gl-ES:
         **5** pezas do tesouro para rematar este quebracabezas.
       courseB_collector_loops_challenge2a_2019: Axuda a Laurel a conseguir alomenos
         **5** pezas do tesouro para rematar este quebracabezas.
+      courseB_collector_loops_challenge2a_2020: Axuda a Laurel a conseguir alomenos
+        **5** pezas do tesouro para rematar este quebracabezas.
       courseC_artist_prog5: 'Esta casa precisa dun tellado! Debuxa o triángulo. Pista:
         todos os 3 lados teñen a mesma lonxitude.'
       courseC_artist_prog5_2018: 'Esta casa precisa dun tellado! Debuxa o triángulo.
         Pista: todos os 3 lados teñen a mesma lonxitude.'
       courseC_artist_prog5_2019: 'Esta casa precisa dun tellado! Debuxa o triángulo.
+        Pista: todos os 3 lados teñen a mesma lonxitude.'
+      courseC_artist_prog5_2020: 'Esta casa precisa dun tellado! Debuxa o triángulo.
         Pista: todos os 3 lados teñen a mesma lonxitude.'
       courseD_artist_binary1: "O Binario é unha forma de representar informacións\nusando
         só dúas opcións. Aquí imos usar as opcións \"desligado\" (representada\npolo
@@ -409,6 +449,12 @@ gl-ES:
         grade de \"pixels\" pola cal podes andar e crear\ndebuxos virando en certos
         cadrados. Podes facer que o artista debuxe\n\"01010101\" en binario na primeira
         fileira?"
+      courseD_artist_binary1_2020: "O Binario é unha forma de representar informacións\nusando
+        só dúas opcións. Aquí imos usar as opcións \"desligado\" (representada\npolo
+        número 0) e \"ligado\" (representada polo número 1).  \\\r\n\\\r\nDamos unha
+        grade de \"pixels\" pola cal podes andar e crear\ndebuxos virando en certos
+        cadrados. Podes facer que o artista debuxe\n\"01010101\" en binario na primeira
+        fileira?"
       courseD_artist_binary4: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
@@ -416,6 +462,9 @@ gl-ES:
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
       courseD_artist_binary4_2019: |-
+        Podes debuxar este padrón usando
+        a repetición dunha tira binaria de 3 díxitos?
+      courseD_artist_binary4_2020: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
       courseD_artist_binary6: |-
@@ -427,6 +476,9 @@ gl-ES:
       courseD_artist_binary6_2019: |-
         Que tira binaria de 6 díxitos, repetida
         11 veces, vai debuxar esta imaxe?
+      courseD_artist_binary6_2020: |-
+        Que tira binaria de 6 díxitos, repetida
+        11 veces, vai debuxar esta imaxe?
       courseD_artist_binary7: |-
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
@@ -434,6 +486,9 @@ gl-ES:
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_artist_binary7_2019: |-
+        Cal é a menor tira binaria que
+        podes repetir para debuxar esta imaxe?
+      courseD_artist_binary7_2020: |-
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_autorun_binary4_2019: |-
@@ -451,12 +506,16 @@ gl-ES:
         mel en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2019: "Recolle todo o néctar de cada flor\ne produce
         mel en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2020: "Recolle todo o néctar de cada flor\ne produce
+        mel en cada colmea. Usa un bucle aniñado. "
       courseD_maze_nestedLoops4: Lévame até o xirasol!
       courseD_maze_nestedLoops4_2018: Lévame até o xirasol!
       courseD_maze_nestedLoops4_2019: Lévame até o xirasol!
+      courseD_maze_nestedLoops4_2020: Lévame até o xirasol!
       courseD_maze_nestedLoops6: Lévame até o xirasol!
       courseD_maze_nestedLoops6_2018: Lévame até o xirasol!
       courseD_maze_nestedLoops6_2019: Lévame até o xirasol!
+      courseD_maze_nestedLoops6_2020: Lévame até o xirasol!
       courseE_artist_functions1: |-
         Olá. Min artista zumbi. Min ama debuxar!
         Axúdame a debuxar os lentes cadrados. Pista: a tira entre as lentes é
@@ -485,9 +544,13 @@ gl-ES:
       courseF_artist_for7_2019: |-
         Fai tres pequenas alteracións no
         código do último nivel para conseguilo!
+      courseF_artist_for7_2020: |-
+        Fai tres pequenas alteracións no
+        código do último nivel para conseguilo!
       courseF_artist_for_challenge1: Consegues descobrir como recrear este debuxo?
       courseF_artist_for_challenge1_2018: Consegues descobrir como recrear este debuxo?
       courseF_artist_for_challenge1_2019: Consegues descobrir como recrear este debuxo?
+      courseF_artist_for_challenge1_2020: Consegues descobrir como recrear este debuxo?
       courseF_artist_for_challenge2: |-
         Consegues descobrir como recrear este debuxo
         cun único bucle?
@@ -495,6 +558,9 @@ gl-ES:
         Consegues descobrir como recrear este debuxo
         cun único bucle?
       courseF_artist_for_challenge2_2019: |-
+        Consegues descobrir como recrear este debuxo
+        cun único bucle?
+      courseF_artist_for_challenge2_2020: |-
         Consegues descobrir como recrear este debuxo
         cun único bucle?
       courseF_bee_for8: "Conseguido! Cal debe ser o teu incremento\npara recoller
@@ -506,6 +572,9 @@ gl-ES:
       courseF_bee_for8_2019: "Conseguido! Cal debe ser o teu incremento\npara recoller
         3, 6, 9, 12, 15 néctares?\\\r\nPista: canto precisas\nagregar a cada número
         para obter o número seguinte?"
+      courseF_bee_for8_2020: "Conseguido! Cal debe ser o teu incremento\npara recoller
+        3, 6, 9, 12, 15 néctares?\\\r\nPista: canto precisas\nagregar a cada número
+        para obter o número seguinte?"
       courseF_bee_for_challenge2: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
@@ -513,6 +582,9 @@ gl-ES:
         Resolve este desafío usando o menor número
         de bloques posíbel.
       courseF_bee_for_challenge2_2019: |-
+        Resolve este desafío usando o menor número
+        de bloques posíbel.
+      courseF_bee_for_challenge2_2020: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
       courseF_bee_functions4: |-

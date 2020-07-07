@@ -425,6 +425,7 @@
   "dataTableNamePlaceholder": "Tabelnaam",
   "dataLibraryHeader": "gegevensbibliotheek",
   "dataLibraryDescription": "Vind en importeer tabellen met echte gegevens van de Code.org bibliotheek.",
+  "dataLibrarySearchPlacholder": "Zoeken",
   "dataSource": "Gegevensbron",
   "dataVisualizerPlaceholderText": "Kies waardes voor het maken van een visualisatie",
   "dataVisualizerCreateChart": "Maak grafiek op scherm",

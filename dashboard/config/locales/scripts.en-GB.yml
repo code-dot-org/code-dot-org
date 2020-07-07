@@ -360,13 +360,6 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-          lessons:
-            Variables:
-              name: Variables
         csp5-virtual:
           stages:
             Variables:
@@ -385,3 +378,14 @@ en-GB:
               name: Loops
             Variables:
               name: Variables
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: Text
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Text

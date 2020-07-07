@@ -3165,26 +3165,6 @@ sr:
               name: Пчелица словарица
         csp3-virtual:
           description_short: Programming
-        csd3-virtual:
-          description_short: Programming
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
-          lessons:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
         csp5-virtual:
           stages:
             While Loops:
@@ -3252,3 +3232,27 @@ sr:
               name: Променљиве
             For Loops:
               name: Бројачке петље
+        csd3-virtual:
+          description_short: Programming
+          stages:
+            Variables:
+              name: Променљиве
+            Text:
+              name: текст
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+          lessons:
+            Variables:
+              name: Променљиве
+            Text:
+              name: текст
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције

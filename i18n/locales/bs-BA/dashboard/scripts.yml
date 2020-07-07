@@ -4688,25 +4688,6 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Velocity:
-              name: Brzina
-            Functions:
-              name: Funkcije
-          lessons:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Velocity:
-              name: Brzina
-            Functions:
-              name: Funkcije
         csd2-virtual:
           stages:
             Images:
@@ -4784,3 +4765,26 @@ bs:
           lesson_groups:
             k5_next_steps_1:
               display_name: Slijedeći Koraci
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije

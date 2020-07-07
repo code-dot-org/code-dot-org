@@ -370,6 +370,7 @@
   "dataTabExplanation": "Ứng dụng của bạn có thể lưu trữ dữ liệu (như điểm cao và kết quả khảo sát) ngay cả sau khi bạn cài lại ứng dụng. Trước khi bạn chạy ứng dụng, sử dụng tab này để lên kế hoạch cho  những giá trị chính hoặc bảng dữ liệu của bạn. Bạn có thể nhập vào, chỉnh sửa và xóa dữ liệu trực tiếp từ tab này hoặc bằng cách sử dụng các khối dữ liệu trong ứng dụng của bạn.",
   "dataTableCaption": "Tạo bảng dữ liệu để lưu trữ các hàng dữ liệu với nhiều cột cho các lĩnh vực khác nhau.",
   "dataTableNamePlaceholder": "Bảng tên",
+  "dataLibrarySearchPlacholder": "Tìm kiếm",
   "dataWorkspaceHeader": "Dữ liệu trình duyệt",
   "debugWatchHeader": "Xem",
   "debugWatchNotAvailable": "<không khả dụng>",

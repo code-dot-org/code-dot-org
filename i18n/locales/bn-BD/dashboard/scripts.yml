@@ -2416,22 +2416,6 @@ bn:
               display_name: '(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য'
         csp3-virtual:
           description_short: প্রোগ্রামিং
-        csd3-virtual:
-          description_short: "প্রোগ্রামিং"
-          stages:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
         csp5-virtual:
           stages:
             While Loops:
@@ -2495,3 +2479,23 @@ bn:
               name: চলকগুলো
             For Loops:
               name: ফর লুপ
+        csd3-virtual:
+          description_short: "প্রোগ্রামিং"
+          stages:
+            Variables:
+              name: চলকগুলো
+            Text:
+              name: পাঠ
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+          lessons:
+            Variables:
+              name: চলকগুলো
+            Text:
+              name: পাঠ
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি

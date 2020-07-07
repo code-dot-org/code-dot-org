@@ -290,6 +290,7 @@
   "dataTabExplanation": "Appið þitt getur geymt gögn (svo sem hæstu skor og niðurstöður kannana) sem varðveitast meira að segja þó appið sé núllstillt. Áður en þú keyrir appið, skaltu nota þetta form til að skipuleggja pörun lykla og gilda eða gagnatöflur þínar. Þú getur fært inn, breytt og eytt gögnum í þessu formi eða með því að nota gagnakubbana í appinu.",
   "dataTableCaption": "Búðu til gagnatöflur til að geyma gögn í röðum og dálkum fyrir mismunandi gagnasvið.",
   "dataTableNamePlaceholder": "Heiti töflu",
+  "dataLibrarySearchPlacholder": "Leit",
   "dataWorkspaceHeader": "Gagnavafri",
   "debugConsoleHeader": "Villuleitarskjár",
   "debugCommandsHeaderWhenOpen": "Villuleitarskipanir",

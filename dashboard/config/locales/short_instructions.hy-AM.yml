@@ -251,6 +251,9 @@ hy-AM:
       Overworld Avoid Monsters_2019: |-
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
+      Overworld Avoid Monsters_2020: |-
+        Running into a Creeper is a bad idea.
+        Carefully move past the Creepers and reach the safety of your home.
       Overworld Chop Tree: |-
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
@@ -259,10 +262,17 @@ hy-AM:
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
         chop it down.
+      Overworld Chop Tree_2020: |-
+        Wood is a very important resource. Many things
+        are made from it. Walk to the tree and use the “destroy block” command to
+        chop it down.
       Overworld Chop Trees: |-
         We need to build a house before the sun
         goes down. Houses require a lot of wood. Cut down all 3 trees.
       Overworld Chop Trees_2019: |-
+        We need to build a house before the sun
+        goes down. Houses require a lot of wood. Cut down all 3 trees.
+      Overworld Chop Trees_2020: |-
         We need to build a house before the sun
         goes down. Houses require a lot of wood. Cut down all 3 trees.
       Overworld Free Play 20x20: |-
@@ -273,16 +283,26 @@ hy-AM:
         Congratulations! You've completed
         all our puzzles! Now mine, build, and create something unique by using everything
         you've learned so far.
+      Overworld Free Play 20x20_2020: |-
+        Congratulations! You've completed
+        all our puzzles! Now mine, build, and create something unique by using everything
+        you've learned so far.
       Overworld House Frame Chosen: |-
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
       Overworld House Frame Chosen_2019: |-
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame Chosen_2020: |-
+        Build the rest of your house from
+        any material you'd like. The "repeat" command will come in handy.
       Overworld Move to Sheep: |-
         Add a second “move forward” command to
         reach the sheep.
       Overworld Move to Sheep_2019: |-
+        Add a second “move forward” command to
+        reach the sheep.
+      Overworld Move to Sheep_2020: |-
         Add a second “move forward” command to
         reach the sheep.
       Overworld Place Wall: |-
@@ -293,10 +313,17 @@ hy-AM:
         Every house starts with a wall. Build the
         first part of your house by putting the "place" and "move forward" commands
         inside the repeat loop.
+      Overworld Place Wall_2020: |-
+        Every house starts with a wall. Build the
+        first part of your house by putting the "place" and "move forward" commands
+        inside the repeat loop.
       Overworld Plant Crops: |-
         It’s good to plan ahead. Plant crops on
         both sides of the water so you don’t get hungry later on.
       Overworld Plant Crops_2019: |-
+        It’s good to plan ahead. Plant crops on
+        both sides of the water so you don’t get hungry later on.
+      Overworld Plant Crops_2020: |-
         It’s good to plan ahead. Plant crops on
         both sides of the water so you don’t get hungry later on.
       Overworld Powered Minecart: |-
@@ -307,10 +334,17 @@ hy-AM:
         Great job! You’ve gathered lots of
         resources and built a modest home. Now lay rail from the edge of the map to
         the door of your house.
+      Overworld Powered Minecart_2020: |-
+        Great job! You’ve gathered lots of
+        resources and built a modest home. Now lay rail from the edge of the map to
+        the door of your house.
       Overworld Shear Sheep: |-
         Sheep-shearing time! Use the “shear” command
         to gather wool from both sheep.
       Overworld Shear Sheep_2019: |-
+        Sheep-shearing time! Use the “shear” command
+        to gather wool from both sheep.
+      Overworld Shear Sheep_2020: |-
         Sheep-shearing time! Use the “shear” command
         to gather wool from both sheep.
       Standalone_Artist_1: |-
@@ -332,11 +366,20 @@ hy-AM:
         blocks, which you'll need to cover up before moving forward. An "if" command
         will come in handy here. Add a "move forward" command in the correct place
         to mine these blocks.
+      Underground Avoiding Lava_2020: |-
+        Lava is hiding beneath some of these
+        blocks, which you'll need to cover up before moving forward. An "if" command
+        will come in handy here. Add a "move forward" command in the correct place
+        to mine these blocks.
       Underground If Statements: |-
         Now things are getting tricky. Mine
         3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
         over any lava you uncover.
       Underground If Statements_2019: |-
+        Now things are getting tricky. Mine
+        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
+        over any lava you uncover.
+      Underground If Statements_2020: |-
         Now things are getting tricky. Mine
         3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
         over any lava you uncover.
@@ -346,11 +389,18 @@ hy-AM:
       Underground Iron_2019: |-
         Walking into molten lava is a bad idea. Place
         cobblestone to create a bridge, then mine at least two of the iron blocks.
+      Underground Iron_2020: |-
+        Walking into molten lava is a bad idea. Place
+        cobblestone to create a bridge, then mine at least two of the iron blocks.
       Underground Mining Coal: |-
         You’ll find the most valuable resources
         underground, but it can get dark. Place at least 2 torches and mine at least
         2 coal.
       Underground Mining Coal_2019: |-
+        You’ll find the most valuable resources
+        underground, but it can get dark. Place at least 2 torches and mine at least
+        2 coal.
+      Underground Mining Coal_2020: |-
         You’ll find the most valuable resources
         underground, but it can get dark. Place at least 2 torches and mine at least
         2 coal.
@@ -391,6 +441,8 @@ hy-AM:
         1) մետենա դեպի կատվին:'
       courseC_PlayLab_events3_2019: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող
         1) մետենա դեպի կատվին:'
+      courseC_PlayLab_events3_2020: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող
+        1) մետենա դեպի կատվին:'
       courseC_artist_prog5: |-
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
@@ -398,6 +450,9 @@ hy-AM:
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
       courseC_artist_prog5_2019: |-
+        This house needs a roof! Draw the triangle.  Hint:
+        all three sides are the same length.
+      courseC_artist_prog5_2020: |-
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
       courseD_artist_binary1: "Binary is a way of representing information\nusing
@@ -418,6 +473,12 @@ hy-AM:
         you with a grid of \"pixels\" that you can walk through and make\ndesigns
         by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
         in binary in the first row?"
+      courseD_artist_binary1_2020: "Binary is a way of representing information\nusing
+        only two options.  Here, we're going to use the options \"off\" (represented\nby
+        the number 0) and \"on\" (represented by the number 1).  \\\r\n\\\r\nWe've\nprovided
+        you with a grid of \"pixels\" that you can walk through and make\ndesigns
+        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
+        in binary in the first row?"
       courseD_artist_binary4: |-
         Can you draw this pattern by looping
         just three binary digits (0s and 1s)?
@@ -425,6 +486,9 @@ hy-AM:
         Can you draw this pattern by looping
         just three binary digits (0s and 1s)?
       courseD_artist_binary4_2019: |-
+        Can you draw this pattern by looping
+        just three binary digits (0s and 1s)?
+      courseD_artist_binary4_2020: |-
         Can you draw this pattern by looping
         just three binary digits (0s and 1s)?
       courseD_artist_binary6: |-
@@ -436,6 +500,9 @@ hy-AM:
       courseD_artist_binary6_2019: |-
         Which 6 digit binary string, repeated
         11 times, will draw this image?
+      courseD_artist_binary6_2020: |-
+        Which 6 digit binary string, repeated
+        11 times, will draw this image?
       courseD_artist_binary7: |-
         What is the shortest binary string that
         you can repeat to draw this image?
@@ -443,6 +510,9 @@ hy-AM:
         What is the shortest binary string that
         you can repeat to draw this image?
       courseD_artist_binary7_2019: |-
+        What is the shortest binary string that
+        you can repeat to draw this image?
+      courseD_artist_binary7_2020: |-
         What is the shortest binary string that
         you can repeat to draw this image?
       courseD_autorun_binary4_2019: |-
@@ -460,6 +530,8 @@ hy-AM:
         make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
       courseD_bee_nestedLoops8_2019: "Collect all of the nectar from each flower\nand
         make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
+      courseD_bee_nestedLoops8_2020: "Collect all of the nectar from each flower\nand
+        make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
       courseD_maze_nestedLoops4: "Get me to the sunflower using the fewest blocks\npossible!
         \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
         the amount of code you need."
@@ -469,11 +541,16 @@ hy-AM:
       courseD_maze_nestedLoops4_2019: "Get me to the sunflower using the fewest blocks\npossible!
         \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
         the amount of code you need."
+      courseD_maze_nestedLoops4_2020: "Get me to the sunflower using the fewest blocks\npossible!
+        \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
+        the amount of code you need."
       courseD_maze_nestedLoops6: "Let's take this to another level! \\\r\nUse\nloops
         to get me to the sunflower with the fewest loops possible."
       courseD_maze_nestedLoops6_2018: "Let's take this to another level! \\\r\nUse\nloops
         to get me to the sunflower with the fewest loops possible."
       courseD_maze_nestedLoops6_2019: "Let's take this to another level! \\\r\nUse\nloops
+        to get me to the sunflower with the fewest loops possible."
+      courseD_maze_nestedLoops6_2020: "Let's take this to another level! \\\r\nUse\nloops
         to get me to the sunflower with the fewest loops possible."
       courseE_artist_functions1: "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe
         zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25
@@ -502,10 +579,15 @@ hy-AM:
       courseF_artist_for7_2019: |-
         Make three small changes to the
         code from the last level to get this!
+      courseF_artist_for7_2020: |-
+        Make three small changes to the
+        code from the last level to get this!
       courseF_artist_for_challenge1: Can you figure out how to re-create this drawing?
       courseF_artist_for_challenge1_2018: Can you figure out how to re-create this
         drawing?
       courseF_artist_for_challenge1_2019: Can you figure out how to re-create this
+        drawing?
+      courseF_artist_for_challenge1_2020: Can you figure out how to re-create this
         drawing?
       courseF_artist_for_challenge2: |-
         Can you figure out how to re-create this drawing
@@ -514,6 +596,9 @@ hy-AM:
         Can you figure out how to re-create this drawing
         with a single loop?
       courseF_artist_for_challenge2_2019: |-
+        Can you figure out how to re-create this drawing
+        with a single loop?
+      courseF_artist_for_challenge2_2020: |-
         Can you figure out how to re-create this drawing
         with a single loop?
       courseF_bee_for8: |-
@@ -525,6 +610,9 @@ hy-AM:
       courseF_bee_for8_2019: |-
         You've got this! What should your
         increment be to collect 3, 6, 9, 12, 15 nectar?
+      courseF_bee_for8_2020: |-
+        You've got this! What should your
+        increment be to collect 3, 6, 9, 12, 15 nectar?
       courseF_bee_for_challenge2: |-
         Solve this puzzle using the fewest number of
         blocks possible.
@@ -532,6 +620,9 @@ hy-AM:
         Solve this puzzle using the fewest number of
         blocks possible.
       courseF_bee_for_challenge2_2019: |-
+        Solve this puzzle using the fewest number of
+        blocks possible.
+      courseF_bee_for_challenge2_2020: |-
         Solve this puzzle using the fewest number of
         blocks possible.
       courseF_bee_functions4: "The `move and get nectar` function turns\nthe bee,

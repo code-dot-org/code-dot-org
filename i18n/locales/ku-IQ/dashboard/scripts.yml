@@ -1018,21 +1018,6 @@ ku:
           lesson_groups:
             csf_loops:
               display_name: گرێکان
-        csd3-virtual:
-          stages:
-            Variables:
-              name: گۆڕاوەکان
-            Conditionals:
-              name: مەرجیەکان
-            Functions:
-              name: فرمانەکان
-          lessons:
-            Variables:
-              name: گۆڕاوەکان
-            Conditionals:
-              name: مەرجیەکان
-            Functions:
-              name: فرمانەکان
         csp5-virtual:
           stages:
             Variables:
@@ -1073,3 +1058,22 @@ ku:
               name: فرمانەکان
             Variables:
               name: گۆڕاوەکان
+        csd3-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Text:
+              name: دەق
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+          lessons:
+            Variables:
+              name: گۆڕاوەکان
+            Text:
+              name: دەق
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
