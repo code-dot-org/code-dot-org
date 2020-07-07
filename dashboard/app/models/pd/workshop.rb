@@ -471,6 +471,7 @@ class Pd::Workshop < ActiveRecord::Base
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
 
+      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
       next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
