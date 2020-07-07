@@ -3364,7 +3364,7 @@ en:
             Gumball Play Lab:
               name: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Star Wars: Building a Galaxy With Code (Javascript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_audience: ''
@@ -3376,7 +3376,7 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Star Wars: Building a Galaxy With Code (Blockly)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_audience: ''
