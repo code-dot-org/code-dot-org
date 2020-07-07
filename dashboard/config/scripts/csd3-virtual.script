@@ -81,7 +81,6 @@ level 'CSD web text challenge choice_2020_virtual_2020', progression: 'Challenge
 
 lesson 'The Draw Loop'
 level 'CSD: Introduction to the Draw Loop_virtual_2020', progression: 'Video: Introduction to the Draw Loop'
-level 'CSD U3 Draw Loop Plugged predict 1_virtual_2020', progression: 'Exploration'
 level 'CSD U3 Draw Loop Plugged orange and green_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Draw Loop Plugged predict 2_virtual_2020', progression: 'Prediction'
 level 'CSD U3 dancing alien_virtual_2020', progression: 'Skill Building'
@@ -100,15 +99,6 @@ level 'CSD U3 Sprite Movement Predict_virtual_2020', progression: 'Skill Buildin
 level 'CSD web movement practice choice_virtual_2020', progression: 'Practice'
 level 'CSD U3 Movement Fish_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice_virtual_2020', progression: 'Challenges'
-
-lesson 'Mini-Project: Animation'
-level 'CSD web project animated example_virtual_2020', progression: 'Example Animated Scene'
-level 'CSD web project animated plan_virtual_2020', progression: 'Plan Your Scene'
-level 'CSD web project animated background_virtual_2020', progression: 'Draw a Background'
-level 'CSD web project animated sprites_virtual_2020', progression: 'Add Sprites'
-level 'CSD web project animated text_virtual_2020', progression: 'Add Text'
-level 'CSD web project animated movement_virtual_2020', progression: 'Add Movement'
-level 'CSD web project animated review_virtual_2020', progression: 'Review Your Animated Scene'
 
 lesson 'Conditionals'
 level 'CSD U3 Boolean Predict_virtual_2020', progression: 'Prediction'
