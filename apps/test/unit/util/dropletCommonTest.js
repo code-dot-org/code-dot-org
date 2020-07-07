@@ -1,6 +1,5 @@
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import i18n from '@cdo/locale';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import DropletCommon from '@cdo/apps/util/dropletCommon';
 
@@ -16,18 +15,24 @@ describe('dropletCommon.findDropletParseErrors', () => {
 
   it('returns true when the parser finds codeBlock errors', () => {
     const lineNumber = 5;
-    const errorMessage = `Line ${lineNumber}. indent must be inside block`;
+    const message = 'indent must be inside block';
+    const errorMessage = `Line ${lineNumber}. ${message}`;
     const callback = sinon.spy();
-    const dropletError = 'droplet error';
-    sinon.stub(i18n, 'droplet_parsing_error').returns(dropletError);
+    replaceOnWindow('dashboard', {
+      project: {
+        getShareUrl: () => {}
+      }
+    });
+    sinon.stub(window.dashboard.project, 'getShareUrl');
     const editor = {
       parse: () => {
         throw new Error(errorMessage);
       }
     };
     expect(DropletCommon.findDropletParseErrors(editor, callback)).to.be.true;
-    expect(callback).to.have.been.calledWith(lineNumber + 1, dropletError);
-    i18n.droplet_parsing_error.restore();
+    expect(callback).to.have.been.calledWith(lineNumber + 1, message);
+    window.dashboard.project.getShareUrl.restore();
+    restoreOnWindow('dashboard');
   });
 
   it('returns true when the parser finds errors with line numbers', () => {
