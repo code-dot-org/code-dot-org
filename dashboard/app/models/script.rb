@@ -1124,13 +1124,11 @@ class Script < ActiveRecord::Base
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
+        raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
+        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable, visible_after: raw_lesson[:visible_after])
         lesson.save! if lesson.changed?
 
-        script_level_attributes[:stage_id] = lesson.id
-        script_level_attributes[:position] = (script_level_position[lesson.id] += 1)
-        script_level.reload
-        script_level.assign_attributes(script_level_attributes)
+        script_level.assign_attributes(stage_id: lesson.id, position: (script_level_position[lesson.id] += 1))
         script_level.save! if script_level.changed?
         (script_levels_by_lesson[lesson.id] ||= []) << script_level
         unless script_lessons.include?(lesson)
@@ -1153,6 +1151,7 @@ class Script < ActiveRecord::Base
       # make sure we have an up to date view
       lesson.reload
       lesson.script_levels = script_levels_by_lesson[lesson.id]
+      lesson.save! if lesson.changed?
 
       # Go through all the script levels for this lesson, except the last one,
       # and raise an exception if any of them are a multi-page assessment.
@@ -1169,10 +1168,6 @@ class Script < ActiveRecord::Base
       if lesson.lockable && !lesson.script_levels.last.assessment?
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
-
-      raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
-      lesson.visible_after = raw_lesson[:visible_after]
-      lesson.save! if lesson.changed?
     end
 
     Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
