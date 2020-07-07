@@ -928,9 +928,7 @@ class Script < ActiveRecord::Base
             script_levels: lesson[:script_levels].map do |sl|
               sl.merge(
                 {
-                  lesson: lesson[:name],
-                  lesson_lockable: lesson[:lockable],
-                  lesson_group: lesson_group[:key]
+                  lesson: lesson[:name]
                 }
               )
             end
@@ -947,11 +945,44 @@ class Script < ActiveRecord::Base
     lesson_position = 0; script_level_position = Hash.new(0)
     script_lessons = []
     script_levels_by_lesson = {}
-    levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
     non_lockable_count = 0
 
     script.lesson_groups = LessonGroup.add_lesson_groups(raw_script_levels, raw_lesson_groups, script)
+
+    # Set/create Lesson containing custom ScriptLevel
+    raw_lesson_groups.each do |raw_lesson_group|
+      raw_lesson_group[:lessons].each do |raw_lesson|
+        # find the lesson group for this lesson
+        lesson_group = LessonGroup.find_by!(
+          key: raw_lesson_group[:key].presence || "",
+          script: script,
+          user_facing: raw_lesson_group[:key].present?
+        )
+
+        # check if that lesson exists for the script otherwise create a new lesson
+        lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+          Lesson.find_or_create_by(
+            name: raw_lesson[:name],
+            script: script
+          ) do |s|
+            s.relative_position = 0 # will be updated below, but cant be null
+          end
+
+        lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
+        lesson.save! if lesson.changed?
+
+        next if script_lessons.include?(lesson)
+        if !!raw_lesson[:lockable]
+          lesson.assign_attributes(relative_position: (lockable_count += 1))
+        else
+          lesson.assign_attributes(relative_position: (non_lockable_count += 1))
+        end
+        lesson.assign_attributes(absolute_position: (lesson_position += 1))
+        lesson.save! if lesson.changed?
+        script_lessons << lesson
+      end
+    end
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
@@ -960,56 +991,10 @@ class Script < ActiveRecord::Base
       assessment = raw_script_level.delete(:assessment)
       named_level = raw_script_level.delete(:named_level)
       bonus = raw_script_level.delete(:bonus)
-      lesson_group_key = raw_script_level.delete(:lesson_group)
-      lockable = !!raw_script_level.delete(:lesson_lockable)
       lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
-      levels = raw_script_level[:levels].map do |raw_level|
-        raw_level.symbolize_keys!
-
-        # Concepts are comma-separated, indexed by name
-        raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-        end
-
-        raw_level_data = raw_level.dup
-
-        key = raw_level.delete(:name)
-
-        if raw_level[:level_num] && !key.starts_with?('blockly')
-          # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-          key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-        end
-
-        level =
-          if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-          else
-            levels_by_key[key] || Level.find_by_key(key)
-          end
-
-        if key.starts_with?('blockly')
-          # this level is defined in levels.js. find/create the reference to this level
-          level = Level.
-            create_with(name: 'blockly').
-            find_or_create_by!(Level.key_to_params(key))
-          level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-          if level.video_key && !raw_level[:video_key]
-            raw_level[:video_key] = nil
-          end
-
-          level.update(raw_level)
-        elsif raw_level[:video_key]
-          level.update(video_key: raw_level[:video_key])
-        end
-
-        unless level
-          raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-        end
-
-        level
-      end
+      levels = Level.add_levels(raw_script_level, script, new_suffix, editor_experiment)
 
       if new_suffix && properties[:variants]
         properties[:variants] = properties[:variants].map do |old_level_name, value|
@@ -1032,41 +1017,17 @@ class Script < ActiveRecord::Base
         sl.levels = levels
       end
 
-      # Set/create Lesson containing custom ScriptLevel
       if lesson_name
-        # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: lesson_group_key.presence || "",
-          script: script,
-          user_facing: lesson_group_key.present?
-        )
-
         # check if that lesson exists for the script otherwise create a new lesson
         lesson = script.lessons.detect {|s| s.name == lesson_name} ||
-          Lesson.find_or_create_by(
+          Lesson.find_by(
             name: lesson_name,
             script: script
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
-
-        raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable, visible_after: raw_lesson[:visible_after])
-        lesson.save! if lesson.changed?
+          )
 
         script_level.assign_attributes(stage_id: lesson.id, position: (script_level_position[lesson.id] += 1))
         script_level.save! if script_level.changed?
         (script_levels_by_lesson[lesson.id] ||= []) << script_level
-        unless script_lessons.include?(lesson)
-          if lockable
-            lesson.assign_attributes(relative_position: (lockable_count += 1))
-          else
-            lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-          end
-          lesson.assign_attributes(absolute_position: (lesson_position += 1))
-          lesson.save! if lesson.changed?
-          script_lessons << lesson
-        end
       end
       script_level.assign_attributes(script_level_attributes)
       script_level.save! if script_level.changed?
