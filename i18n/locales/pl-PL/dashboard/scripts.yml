@@ -11191,85 +11191,6 @@ pl:
               name: Zapętlanie i losowe liczby
             Unit 3 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 3 rozdziału 1
-        csd3-virtual:
-          description_short: "Programowanie"
-          stages:
-            Plotting Shapes:
-              name: Rysowanie kształtów
-            Drawing in Game Lab:
-              name: Rysowanie w laboratorium gier
-            Shapes and Randomization:
-              name: Kształty oraz losowość
-            Variables:
-              name: Zmienne
-            Booleans Unplugged:
-              name: Wyrażenia boolowskie bez komputera
-            Conditionals:
-              name: Zdania z warunkami
-            Keyboard Input:
-              name: Wejście klawiatury
-            Other Forms of Input:
-              name: Inne formy wejścia
-            Project - Interactive Card:
-              name: Projekt - Interaktywna karta
-            Velocity:
-              name: Prędkość
-            Collision Detection:
-              name: Wykrywanie kolizji
-            Collisions:
-              name: Kolizje
-            Functions:
-              name: Funkcje
-            The Game Design Process:
-              name: Proces projektowania gier
-            Using the Game Design Process:
-              name: Używanie procesu projektowania gier
-            Project - Design a Game:
-              name: Projekt - Zaprojektuj grę
-            Random Numbers:
-              name: Losowe liczby
-            Sprite Properties:
-              name: Właściwości duszka
-          lesson_groups:
-            csd3_1:
-              display_name: 'Rozdział 1: Obrazy i Animacje'
-          lessons:
-            Plotting Shapes:
-              name: Rysowanie kształtów
-            Drawing in Game Lab:
-              name: Rysowanie w laboratorium gier
-            Shapes and Randomization:
-              name: Kształty oraz losowość
-            Variables:
-              name: Zmienne
-            Booleans Unplugged:
-              name: Wyrażenia boolowskie bez komputera
-            Conditionals:
-              name: Zdania z warunkami
-            Keyboard Input:
-              name: Wejście klawiatury
-            Other Forms of Input:
-              name: Inne formy wejścia
-            Project - Interactive Card:
-              name: Projekt - Interaktywna karta
-            Velocity:
-              name: Prędkość
-            Collision Detection:
-              name: Wykrywanie kolizji
-            Collisions:
-              name: Kolizje
-            Functions:
-              name: Funkcje
-            The Game Design Process:
-              name: Proces projektowania gier
-            Using the Game Design Process:
-              name: Używanie procesu projektowania gier
-            Project - Design a Game:
-              name: Projekt - Zaprojektuj grę
-            Random Numbers:
-              name: Losowe liczby
-            Sprite Properties:
-              name: Właściwości duszka
         jess-test-script:
           stages:
             new stage:
@@ -11714,3 +11635,118 @@ pl:
               display_name: Pierwsze kroki
             k5_next_steps_1:
               display_name: Następne Kroki
+        dani-test-2020:
+          stages:
+            new lesson:
+              name: nowa lekcja
+          lessons:
+            new lesson:
+              name: nowa lekcja
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko
+        dani-june-2020-test:
+          stages:
+            new lesson:
+              name: nowa lekcja
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+          lessons:
+            new lesson:
+              name: nowa lekcja
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko
+            cspSurvey:
+              display_name: Ankieta
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+        csd3-virtual:
+          description_short: "Programowanie"
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+            Text:
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Mouse Input:
+              name: Użycie myszy
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+          lessons:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+            Text:
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Mouse Input:
+              name: Użycie myszy
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+          lesson_groups:
+            csd3_1:
+              display_name: Treści
+            csd3_2:
+              display_name: Treści
+            cspSurvey:
+              display_name: Treści

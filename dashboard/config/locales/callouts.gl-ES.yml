@@ -64,19 +64,28 @@ gl-ES:
         craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
           Consegues terminala?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
           Consegues terminala?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
+          Consegues terminala?
       Overworld Move to Sheep:
         craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Preme en "Correr" para probares o teu programa
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Place Wall:
         craft_inside_repeat: Repite accións colocando bloques aquí
       Overworld Place Wall_2019:
+        craft_inside_repeat: Repite accións colocando bloques aquí
+      Overworld Place Wall_2020:
         craft_inside_repeat: Repite accións colocando bloques aquí
       Underground Avoiding Lava:
         craft_callout_moveforward: Este código vai verificar se hai lava, consegues
@@ -84,9 +93,14 @@ gl-ES:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Este código vai verificar se hai lava, consegues
           agregarlle un comando para mover cara adiante?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Este código vai verificar se hai lava, consegues
+          agregarlle un comando para mover cara adiante?
       Underground Iron:
         craft_what_is_iron: Escava este ferro!
       Underground Iron_2019:
+        craft_what_is_iron: Escava este ferro!
+      Underground Iron_2020:
         craft_what_is_iron: Escava este ferro!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Use o bloque "cree un círculo"

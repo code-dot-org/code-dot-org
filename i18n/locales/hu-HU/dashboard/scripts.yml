@@ -4988,34 +4988,6 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
-        csd3-virtual:
-          description_short: "Programozás"
-          stages:
-            Variables:
-              name: változók
-            Sprites:
-              name: Sprite-ok
-            Conditionals:
-              name: Feltételek
-            Functions:
-              name: funkciók
-            Random Numbers:
-              name: Véletlen számok
-            Sprite Properties:
-              name: Sprite tulajdonságok
-          lessons:
-            Variables:
-              name: változók
-            Sprites:
-              name: Sprite-ok
-            Conditionals:
-              name: Feltételek
-            Functions:
-              name: funkciók
-            Random Numbers:
-              name: Véletlen számok
-            Sprite Properties:
-              name: Sprite tulajdonságok
         csd2-virtual:
           stages:
             CSS Classes:
@@ -5101,3 +5073,48 @@ hu:
           lesson_groups:
             k5_getting_started_1:
               display_name: Első lépések
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+        csd3-virtual:
+          description_short: "Programozás"
+          stages:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprites:
+              name: Sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Text:
+              name: szöveg
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+          lessons:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprites:
+              name: Sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Text:
+              name: szöveg
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+          lesson_groups:
+            csd3_1:
+              display_name: Tartalom
+            csd3_2:
+              display_name: Tartalom
+            cspSurvey:
+              display_name: Tartalom

@@ -433,6 +433,7 @@
   "dataTableNamePlaceholder": "表名",
   "dataLibraryHeader": "数据库",
   "dataLibraryDescription": "搜索并导入实际数据表至 Code.org 库\n",
+  "dataLibrarySearchPlacholder": "搜索",
   "dataSource": "数据源",
   "dataVisualizerPlaceholderText": "选择用于生成可视图形的值",
   "dataVisualizerBucketSize": "桶的大小",

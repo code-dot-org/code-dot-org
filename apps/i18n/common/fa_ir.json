@@ -262,6 +262,7 @@
   "dancePartyTitle": "جشن و رقص",
   "dataLimitAlert": "این نرم افزار بیش از حد اطلاعات به پایگاه دادهها ارسال می کند که ممکن است منجر به از کار افتادن غیر منتظره شود. در صورت مواجه شدن با این مشکل لطفا به صاحب نرم افزار اطلاع دهید.",
   "dataTableNamePlaceholder": "نام جدول",
+  "dataLibrarySearchPlacholder": "جستجو کن",
   "dataWorkspaceHeader": "مرورگر داده",
   "debugWatchHeader": "تماشا کردن",
   "debugWatchNotAvailable": "<موجود نیست>",

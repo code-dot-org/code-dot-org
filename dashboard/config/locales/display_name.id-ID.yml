@@ -20,6 +20,7 @@ id-ID:
       AppLab Intro 7 - thisOrThatSetScreen: Ini atau itu
       CDEF_video_SpritesInAction: Bagaimana cara Membuat sebuah Sprite
       CDEF_video_SpritesInAction_2019: Bagaimana cara Membuat sebuah Sprite
+      CDEF_video_SpritesInAction_2020: Bagaimana cara Membuat sebuah Sprite
       CSD Polling Events Map: Event Angket
       CSD Polling Events Map_2018: Event Angket
       CSD Polling Events Map_2019: Event Angket
@@ -191,13 +192,20 @@ id-ID:
       'Course F: Artist Project - Revise_2018': Merevisi Proyek Seniman
       'Course F: Artist Project_2018': Proyek Seniman Kursus F
       'Course F: Artist Project_2019': Proyek Seniman Kursus F
+      CourseD_Dance_2020_bonus1: Maju mundur
+      CourseD_Dance_2020_bonus3: Masuk formasi
       CourseEF_video_IntroSpriteLab: Ini adalah Lab Sprite
       CourseEF_video_IntroSpriteLab_2019: Ini adalah Lab Sprite
+      CourseEF_video_IntroSpriteLab_2020: Ini adalah Lab Sprite
       CourseEF_video_MakeSprite: Bagaimana cara Membuat sebuah Sprite
       CourseEF_video_MakeSprite_2019: Bagaimana cara Membuat sebuah Sprite
+      CourseEF_video_MakeSprite_2020: Bagaimana cara Membuat sebuah Sprite
       CourseE_Project_SpriteLab: Kursus E Proyek Sprite Lab
       CourseE_Project_SpriteLab_2019: Kursus E Proyek Sprite Lab
       CourseE_hoops: Kelinci
+      CourseF_Oceans_Video_Machine_Learning: 'Video: Pembelajaran Mesin'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: Implikasi Sosial'
+      CourseF_Oceans_Video_Training_Data: 'Video: Data Pelatihan'
       CourseF_Project_Revise_SpriteLab: Merevisi Proyek Sprite Lab
       CourseF_Project_SpriteLab: Proyek Sprite Lab Kursus F
       CourseF_Project_SpriteLab_2019: Proyek Sprite Lab Kursus F
@@ -228,26 +236,37 @@ id-ID:
       Intro to Web Lab - Part 2_2019: Pendahuluan Web Lab - Bagian 2
       MC_HOC_2017_01_RETRY: Rumah dan pekarangannya
       MC_HOC_2017_01_RETRY_2019: Rumah dan pekarangannya
+      MC_HOC_2017_01_RETRY_2020: Rumah dan pekarangannya
       MC_HOC_2017_02_Cole: Ladang
       MC_HOC_2017_02_Cole_2019: Ladang
+      MC_HOC_2017_02_Cole_2020: Ladang
       MC_HOC_2017_03_Cole: Hutan
       MC_HOC_2017_03_Cole_2019: Hutan
+      MC_HOC_2017_03_Cole_2020: Hutan
       MC_HOC_2017_04POINT5_RYAN: Gurun Pasir
       MC_HOC_2017_04POINT5_RYAN_2019: Gurun Pasir
+      MC_HOC_2017_04POINT5_RYAN_2020: Gurun Pasir
       MC_HOC_2017_04_Cole: Rawa
       MC_HOC_2017_04_Cole_2019: Rawa
+      MC_HOC_2017_04_Cole_2020: Rawa
       MC_HOC_2017_05_Cole: Sungai
       MC_HOC_2017_05_Cole_2019: Sungai
+      MC_HOC_2017_05_Cole_2020: Sungai
       MC_HOC_2017_06_Cole: Air Pasang
       MC_HOC_2017_06_Cole_2019: Air Pasang
+      MC_HOC_2017_06_Cole_2020: Air Pasang
       MC_HOC_2017_07_Cole: Jalan Bersalju
       MC_HOC_2017_07_Cole_2019: Jalan Bersalju
+      MC_HOC_2017_07_Cole_2020: Jalan Bersalju
       MC_HOC_2017_10_RETRY: Gua
       MC_HOC_2017_10_RETRY_2019: Gua
+      MC_HOC_2017_10_RETRY_2020: Gua
       MC_HOC_2017_Ali: Di Bawah Benteng
       MC_HOC_2017_Ali_2019: Di Bawah Benteng
+      MC_HOC_2017_Ali_2020: Di Bawah Benteng
       MC_HOC_2017_FP20x20: Main Bebas
       MC_HOC_2017_FP20x20_2019: Main Bebas
+      MC_HOC_2017_FP20x20_2020: Main Bebas
       Making Music_2018: Membuat musik
       Making Music_2019: Membuat musik
       New Minecraft Hero Project: Main Bebas
@@ -270,8 +289,10 @@ id-ID:
       courseF_artist_for1: For Loops Freeplay (Permulaan)
       courseF_artist_for1_2018: For Loops Freeplay (Permulaan)
       courseF_artist_for1_2019: For Loops Freeplay (Permulaan)
+      courseF_artist_for1_2020: For Loops Freeplay (Permulaan)
       courseF_project_1: Proyek Contoh Sprite Lab
       courseF_video_csMatters: Akhir dari Proyek Kursus
       courseF_video_csMatters_2018: 'Video: Masalah CS'
       scrat_loops_C-F_video: Lingkaran dalam Video Zaman Es
       scrat_loops_C-F_video_2019: Lingkaran dalam Video Zaman Es
+      scrat_loops_C-F_video_2020: Lingkaran dalam Video Zaman Es

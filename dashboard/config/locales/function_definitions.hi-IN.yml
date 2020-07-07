@@ -643,6 +643,9 @@ hi-IN:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: संभावी समाधान
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: संभावी समाधान
       courseC_artist_prog3:
         draw flame:
           name: लौ चित्रित करें
@@ -664,6 +667,13 @@ hi-IN:
             x: x
         draw fire:
           name: आग चित्रित करें
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: लौ चित्रित करें
+          parameters:
+            x: x
+        draw fire:
+          name: आग चित्रित करें
       courseC_artist_prog4:
         booster:
           name: बूस्टर
@@ -673,7 +683,13 @@ hi-IN:
       courseC_artist_prog4_2019:
         booster:
           name: बूस्टर
+      courseC_artist_prog4_2020:
+        booster:
+          name: बूस्टर
       courseC_data wizard:
+        do something:
+          name: कुछ कीजिए
+      courseC_data wizard_2020:
         do something:
           name: कुछ कीजिए
       courseD_artist_binary1:
@@ -687,6 +703,11 @@ hi-IN:
         draw:
           name: खींचें (चित्रित करें)
       courseD_artist_binary1_2019:
+        draw bit:
+          name: बिट चित्रित करें
+        draw:
+          name: खींचें (चित्रित करें)
+      courseD_artist_binary1_2020:
         draw bit:
           name: बिट चित्रित करें
         draw:
@@ -706,6 +727,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary2_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary3:
         draw:
           name: खींचें (चित्रित करें)
@@ -717,6 +743,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary3_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary3_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -736,6 +767,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary4_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary5:
         draw:
           name: खींचें (चित्रित करें)
@@ -747,6 +783,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary5_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary5_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -766,6 +807,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary6_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary7:
         draw:
           name: खींचें (चित्रित करें)
@@ -777,6 +823,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary7_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary7_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -796,6 +847,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary8_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary8_predict1:
         draw:
           name: खींचें (चित्रित करें)
@@ -811,12 +867,22 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binaryFP_2018:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binaryFP_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binaryFP_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -831,12 +897,22 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary_challenge2_2018:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -939,6 +1015,13 @@ hi-IN:
           name: षट्कोण खींचें
         draw line of hexagons:
           name: षट्भुजों की लाइन खींचें
+      courseE_artist_functions10_2020:
+        do something:
+          name: कुछ कीजिए
+        draw hexagon:
+          name: षट्कोण खींचें
+        draw line of hexagons:
+          name: षट्भुजों की लाइन खींचें
       courseE_artist_functions1_copy:
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
@@ -957,6 +1040,11 @@ hi-IN:
           name: एक वर्ग खींचें
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: एक वर्ग खींचें
+        draw ear stems:
+          name: ईयर स्टेम चित्रित करें
       courseE_artist_functions2_copy:
         draw a square:
           name: एक वर्ग खींचें
@@ -966,6 +1054,9 @@ hi-IN:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions3_2019:
+        draw a star:
+          name: एक सितारा खींचे
+      courseE_artist_functions3_2020:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions4:
@@ -981,6 +1072,9 @@ hi-IN:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions5_2019:
+        draw a star:
+          name: एक सितारा खींचे
+      courseE_artist_functions5_2020:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions5_copy:
@@ -999,6 +1093,11 @@ hi-IN:
       courseE_artist_functions7_2019:
         draw a window:
           name: खिड़की चित्रित करें
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: खिड़की चित्रित करें
+        draw a house:
+          name: एक घर खींचे
       courseE_artist_functions8:
         do something:
           name: कुछ कीजिए
@@ -1020,12 +1119,24 @@ hi-IN:
           name: वर्गों की लाइन खींचें
         draw square:
           name: वर्ग खींचें
+      courseE_artist_functions8_2020:
+        do something:
+          name: कुछ कीजिए
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
       courseE_artist_functions8a_2018:
         draw a square:
           name: एक वर्ग खींचें
         do something:
           name: कुछ कीजिए
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: एक वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions8a_2020:
         draw a square:
           name: एक वर्ग खींचें
         do something:
@@ -1044,6 +1155,13 @@ hi-IN:
           name: वर्ग खींचें
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: वर्गों की लाइन खींचें
@@ -1052,6 +1170,13 @@ hi-IN:
         do something:
           name: कुछ कीजिए
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: वर्गों की लाइन खींचें
         draw square:
@@ -1079,6 +1204,13 @@ hi-IN:
           name: त्रिकोण चित्रित करें
         draw line of triangles:
           name: त्रिकोणों की लाइन खींचें
+      courseE_artist_functions9_2020:
+        do something:
+          name: कुछ कीजिए
+        draw triangle:
+          name: त्रिकोण चित्रित करें
+        draw line of triangles:
+          name: त्रिकोणों की लाइन खींचें
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: षट्कोण खींचें
@@ -1089,6 +1221,15 @@ hi-IN:
         draw square:
           name: वर्ग खींचें
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: षट्कोण खींचें
+        draw line of hexagons:
+          name: षट्भुजों की लाइन खींचें
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: षट्कोण खींचें
         draw line of hexagons:
@@ -1112,6 +1253,11 @@ hi-IN:
           name: मेरा डिज़ाइन
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: मेरा डिज़ाइन
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions_challenge2:
         my design:
           name: मेरा डिज़ाइन
@@ -1127,6 +1273,11 @@ hi-IN:
           name: मेरा डिज़ाइन
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: मेरा डिज़ाइन
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions_predict1:
         draw a square:
           name: एक वर्ग खींचें
@@ -1138,6 +1289,11 @@ hi-IN:
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: एक वर्ग खींचें
+        draw ear stems:
+          name: ईयर स्टेम चित्रित करें
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: एक वर्ग खींचें
         draw ear stems:
@@ -1162,6 +1318,13 @@ hi-IN:
         do something:
           name: कुछ कीजिए
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: बहुभुजों की लाइन खींचें
+        draw polygon:
+          name: बहुभुज चित्रित करें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: बहुभुजों की लाइन खींचें
         draw polygon:
@@ -1434,6 +1597,9 @@ hi-IN:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: मूव करके काउंटर के साथ मधुरस प्राप्त करें
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: मूव करके काउंटर के साथ मधुरस प्राप्त करें
       courseF_bee_functions2:
         get only nectar:
           name: केवल मधुरस प्राप्त करें
@@ -1517,10 +1683,16 @@ hi-IN:
       courseF_bee_variables_7_2019:
         collect:
           name: एकत्र करें
+      courseF_bee_variables_7_2020:
+        collect:
+          name: एकत्र करें
       courseF_bee_variables_8_2018:
         collect:
           name: एकत्र करें
       courseF_bee_variables_8_2019:
+        collect:
+          name: एकत्र करें
+      courseF_bee_variables_8_2020:
         collect:
           name: एकत्र करें
       grade5_artist_binary11:

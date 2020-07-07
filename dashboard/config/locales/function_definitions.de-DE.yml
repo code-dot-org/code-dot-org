@@ -377,6 +377,9 @@ de-DE:
       Function intro Ryan_2019:
         build bridge:
           name: baue Brücke
+      Function intro Ryan_2020:
+        build bridge:
+          name: baue Brücke
       Geometric Sun:
         draw a door:
           name: zeichne eine Tür
@@ -465,6 +468,9 @@ de-DE:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: Weg freimachen
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: Weg freimachen
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: 'langen Pfad in Ordnung bringen
@@ -483,6 +489,15 @@ de-DE:
           name: 'kurzen Pfad in Ordnung bringen
 
 '
+      MC_HOC_2017_10_RETRY_2020:
+        fix long path:
+          name: 'langen Pfad in Ordnung bringen
+
+'
+        fix short path:
+          name: 'kurzen Pfad in Ordnung bringen
+
+'
       MC_HOC_2017_Ali:
         build short bridge:
           name: kleine Brücke bauen
@@ -493,12 +508,22 @@ de-DE:
           name: kleine Brücke bauen
         build long bridge:
           name: lange Brücke bauen
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: kleine Brücke bauen
+        build long bridge:
+          name: lange Brücke bauen
       MC_HOC_2017_FP20x20:
         function 1:
           name: Funktion 1
         function 2:
           name: Funktion 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: Funktion 1
+        function 2:
+          name: Funktion 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: Funktion 1
         function 2:
@@ -850,6 +875,9 @@ de-DE:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: mögliche Lösung
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: mögliche Lösung
       courseC_artist_prog3:
         draw flame:
           name: zeichne Flamme
@@ -871,6 +899,13 @@ de-DE:
             x: x
         draw fire:
           name: zeichne Feuer
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: zeichne Flamme
+          parameters:
+            x: x
+        draw fire:
+          name: zeichne Feuer
       courseC_artist_prog4:
         booster:
           name: Booster
@@ -880,7 +915,13 @@ de-DE:
       courseC_artist_prog4_2019:
         booster:
           name: Booster
+      courseC_artist_prog4_2020:
+        booster:
+          name: Booster
       courseC_data wizard:
+        do something:
+          name: Funktionsblock
+      courseC_data wizard_2020:
         do something:
           name: Funktionsblock
       courseD_artist_binary1:
@@ -894,6 +935,11 @@ de-DE:
         draw:
           name: zeichne
       courseD_artist_binary1_2019:
+        draw bit:
+          name: zeichne ein bisschen
+        draw:
+          name: zeichne
+      courseD_artist_binary1_2020:
         draw bit:
           name: zeichne ein bisschen
         draw:
@@ -913,6 +959,11 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary2_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binary3:
         draw:
           name: zeichne
@@ -924,6 +975,11 @@ de-DE:
         draw bit:
           name: zeichne ein bisschen
       courseD_artist_binary3_2019:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
+      courseD_artist_binary3_2020:
         draw:
           name: zeichne
         draw bit:
@@ -943,6 +999,11 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary4_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binary5:
         draw:
           name: zeichne
@@ -954,6 +1015,11 @@ de-DE:
         draw bit:
           name: zeichne ein bisschen
       courseD_artist_binary5_2019:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
+      courseD_artist_binary5_2020:
         draw:
           name: zeichne
         draw bit:
@@ -973,6 +1039,11 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary6_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binary7:
         draw:
           name: zeichne
@@ -984,6 +1055,11 @@ de-DE:
         draw bit:
           name: zeichne ein bisschen
       courseD_artist_binary7_2019:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
+      courseD_artist_binary7_2020:
         draw:
           name: zeichne
         draw bit:
@@ -1003,6 +1079,11 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary8_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binary8_predict1:
         draw:
           name: zeichne
@@ -1018,12 +1099,22 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binaryFP_2018:
         draw:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
       courseD_artist_binaryFP_2019:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
+      courseD_artist_binaryFP_2020:
         draw:
           name: zeichne
         draw bit:
@@ -1038,12 +1129,22 @@ de-DE:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
       courseD_artist_binary_challenge2_2018:
         draw:
           name: zeichne
         draw bit:
           name: zeichne ein bisschen
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: zeichne
+        draw bit:
+          name: zeichne ein bisschen
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: zeichne
         draw bit:
@@ -1147,6 +1248,13 @@ de-DE:
           name: zeichne Sechseck
         draw line of hexagons:
           name: zeichne Linie aus Sechsecken
+      courseE_artist_functions10_2020:
+        do something:
+          name: Funktionsblock
+        draw hexagon:
+          name: zeichne Sechseck
+        draw line of hexagons:
+          name: zeichne Linie aus Sechsecken
       courseE_artist_functions1_copy:
         draw ear stems:
           name: zeichne Ohrstäbchen
@@ -1165,6 +1273,11 @@ de-DE:
           name: zeichne ein Quadrat
         draw ear stems:
           name: zeichne Ohrstäbchen
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: zeichne ein Quadrat
+        draw ear stems:
+          name: zeichne Ohrstäbchen
       courseE_artist_functions2_copy:
         draw a square:
           name: zeichne ein Quadrat
@@ -1174,6 +1287,9 @@ de-DE:
         draw a star:
           name: zeichne einen Stern
       courseE_artist_functions3_2019:
+        draw a star:
+          name: zeichne einen Stern
+      courseE_artist_functions3_2020:
         draw a star:
           name: zeichne einen Stern
       courseE_artist_functions4:
@@ -1189,6 +1305,9 @@ de-DE:
         draw a star:
           name: zeichne einen Stern
       courseE_artist_functions5_2019:
+        draw a star:
+          name: zeichne einen Stern
+      courseE_artist_functions5_2020:
         draw a star:
           name: zeichne einen Stern
       courseE_artist_functions5_copy:
@@ -1207,6 +1326,11 @@ de-DE:
       courseE_artist_functions7_2019:
         draw a window:
           name: zeichne ein Fenster
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: zeichne ein Fenster
+        draw a house:
+          name: Zeichne ein Haus
       courseE_artist_functions8:
         do something:
           name: Funktionsblock
@@ -1236,12 +1360,28 @@ de-DE:
           name: zeichne eine Linie aus Quadraten
         draw square:
           name: zeichne Quadrat
+      courseE_artist_functions8_2020:
+        do something:
+          name: Funktionsblock
+        staggered squares:
+          name: 'versetzte Quadrate
+
+'
+        draw a line of squares:
+          name: zeichne eine Linie aus Quadraten
+        draw square:
+          name: zeichne Quadrat
       courseE_artist_functions8a_2018:
         draw a square:
           name: zeichne ein Quadrat
         do something:
           name: Funktionsblock
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: zeichne ein Quadrat
+        do something:
+          name: Funktionsblock
+      courseE_artist_functions8a_2020:
         draw a square:
           name: zeichne ein Quadrat
         do something:
@@ -1254,6 +1394,13 @@ de-DE:
         do something:
           name: Funktionsblock
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: zeichne eine Linie aus Quadraten
+        draw square:
+          name: zeichne Quadrat
+        do something:
+          name: Funktionsblock
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: zeichne eine Linie aus Quadraten
         draw square:
@@ -1282,6 +1429,17 @@ de-DE:
           name: 'versetzte Quadrate
 
 '
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: zeichne eine Linie aus Quadraten
+        draw square:
+          name: zeichne Quadrat
+        do something:
+          name: Funktionsblock
+        staggered squares:
+          name: 'versetzte Quadrate
+
+'
       courseE_artist_functions9:
         do something:
           name: Funktionsblock
@@ -1297,6 +1455,13 @@ de-DE:
         draw line of triangles:
           name: zeichne eine Reihe aus Dreiecken
       courseE_artist_functions9_2019:
+        do something:
+          name: Funktionsblock
+        draw triangle:
+          name: zeichne Dreieck
+        draw line of triangles:
+          name: zeichne eine Reihe aus Dreiecken
+      courseE_artist_functions9_2020:
         do something:
           name: Funktionsblock
         draw triangle:
@@ -1329,6 +1494,19 @@ de-DE:
           name: zeichne eine Linie aus Quadraten
         draw square:
           name: zeichne Quadrat
+      courseE_artist_functionsProj_2020:
+        draw hexagon:
+          name: zeichne Sechseck
+        draw line of hexagons:
+          name: zeichne Linie aus Sechsecken
+        staggered squares:
+          name: 'versetzte Quadrate
+
+'
+        draw a line of squares:
+          name: zeichne eine Linie aus Quadraten
+        draw square:
+          name: zeichne Quadrat
       courseE_artist_functions_challenge1:
         my design:
           name: mein Design
@@ -1340,6 +1518,11 @@ de-DE:
         do something:
           name: Funktionsblock
       courseE_artist_functions_challenge1_2019:
+        my design:
+          name: mein Design
+        do something:
+          name: Funktionsblock
+      courseE_artist_functions_challenge1_2020:
         my design:
           name: mein Design
         do something:
@@ -1359,6 +1542,11 @@ de-DE:
           name: mein Design
         do something:
           name: Funktionsblock
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: mein Design
+        do something:
+          name: Funktionsblock
       courseE_artist_functions_predict1:
         draw a square:
           name: zeichne ein Quadrat
@@ -1370,6 +1558,11 @@ de-DE:
         draw ear stems:
           name: zeichne Ohrstäbchen
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: zeichne ein Quadrat
+        draw ear stems:
+          name: zeichne Ohrstäbchen
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: zeichne ein Quadrat
         draw ear stems:
@@ -1394,6 +1587,13 @@ de-DE:
         do something:
           name: Funktionsblock
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: zeichne Reihe aus Vielecken
+        draw polygon:
+          name: zeichne Vieleck
+        do something:
+          name: Funktionsblock
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: zeichne Reihe aus Vielecken
         draw polygon:
@@ -1482,6 +1682,17 @@ de-DE:
           name: hole alle Kürbisse
         pumpkin square:
           name: Kürbis-Quadrat
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: 'am Weg sammeln
+
+'
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+        get all pumpkins:
+          name: hole alle Kürbisse
+        pumpkin square:
+          name: Kürbis-Quadrat
       courseE_farmer_functions10b:
         navigate:
           name: navigieren
@@ -1526,6 +1737,21 @@ de-DE:
 '
         get all pumpkins:
           name: hole alle Kürbisse
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: 'am Weg sammeln
+
+'
+        pumpkin square:
+          name: Kürbis-Quadrat
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+        get produce:
+          name: 'Landwirtschaftliche Erzeugnisse holen
+
+'
+        get all pumpkins:
+          name: hole alle Kürbisse
       courseE_farmer_functions13_2018:
         pick along path:
           name: 'am Weg sammeln
@@ -1552,16 +1778,35 @@ de-DE:
           name: Mais-Rechteck
         lettuce stairs:
           name: Salat-Treppe
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: 'am Weg sammeln
+
+'
+        check for corn:
+          name: 'Mais suchen
+
+'
+        corn rectangle:
+          name: Mais-Rechteck
+        lettuce stairs:
+          name: Salat-Treppe
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: untersuche Quadrat nach Mais
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: untersuche Quadrat nach Mais
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: untersuche Quadrat nach Mais
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: untersuche Quadrat nach Mais
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: untersuche Quadrat nach Mais
       courseE_farmer_functions2ba:
@@ -1573,6 +1818,11 @@ de-DE:
         get all pumpkins:
           name: hole alle Kürbisse
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+        get all pumpkins:
+          name: hole alle Kürbisse
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: untersuche Quadrat nach Mais
         get all pumpkins:
@@ -1598,12 +1848,26 @@ de-DE:
           name: untersuche Quadrat nach Mais
         get all pumpkins:
           name: hole alle Kürbisse
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: 'am Weg sammeln
+
+'
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+        get all pumpkins:
+          name: hole alle Kürbisse
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: untersuche Quadrat nach Mais
         get all pumpkins:
           name: hole alle Kürbisse
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: untersuche Quadrat nach Mais
+        get all pumpkins:
+          name: hole alle Kürbisse
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: untersuche Quadrat nach Mais
         get all pumpkins:
@@ -1623,10 +1887,16 @@ de-DE:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: Gartenplatz
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: Gartenplatz
       courseE_farmer_functions8a1_2018:
         garden square:
           name: Gartenplatz
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: Gartenplatz
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: Gartenplatz
       courseE_farmer_functions8b:
@@ -1636,6 +1906,9 @@ de-DE:
         garden square:
           name: Gartenplatz
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: Gartenplatz
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: Gartenplatz
       courseE_farmer_functions9b:
@@ -1816,6 +2089,9 @@ de-DE:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: Bewege dich und hole den Nektar mit einem Zähler
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: Bewege dich und hole den Nektar mit einem Zähler
       courseF_bee_functions2:
         get only nectar:
           name: nur Nektar holen
@@ -1915,10 +2191,16 @@ de-DE:
       courseF_bee_variables_1_2019:
         collect row:
           name: Reihe sammeln
+      courseF_bee_variables_1_2020:
+        collect row:
+          name: Reihe sammeln
       courseF_bee_variables_2_2018:
         collect row:
           name: Reihe sammeln
       courseF_bee_variables_2_2019:
+        collect row:
+          name: Reihe sammeln
+      courseF_bee_variables_2_2020:
         collect row:
           name: Reihe sammeln
       courseF_bee_variables_3_2018:
@@ -1927,10 +2209,16 @@ de-DE:
       courseF_bee_variables_3_2019:
         collect row:
           name: Reihe sammeln
+      courseF_bee_variables_3_2020:
+        collect row:
+          name: Reihe sammeln
       courseF_bee_variables_4_2018:
         collect row:
           name: Reihe sammeln
       courseF_bee_variables_4_2019:
+        collect row:
+          name: Reihe sammeln
+      courseF_bee_variables_4_2020:
         collect row:
           name: Reihe sammeln
       courseF_bee_variables_5_2018:
@@ -1939,10 +2227,16 @@ de-DE:
       courseF_bee_variables_5_2019:
         collect row:
           name: Reihe sammeln
+      courseF_bee_variables_5_2020:
+        collect row:
+          name: Reihe sammeln
       courseF_bee_variables_6_2018:
         collect stairs:
           name: Sterne einsammeln
       courseF_bee_variables_6_2019:
+        collect stairs:
+          name: Sterne einsammeln
+      courseF_bee_variables_6_2020:
         collect stairs:
           name: Sterne einsammeln
       courseF_bee_variables_7_2018:
@@ -1951,12 +2245,20 @@ de-DE:
       courseF_bee_variables_7_2019:
         collect:
           name: sammle
+      courseF_bee_variables_7_2020:
+        collect:
+          name: sammle
       courseF_bee_variables_8_2018:
         move and increment:
           name: bewegen und inkrementieren
         collect:
           name: sammle
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: bewegen und inkrementieren
+        collect:
+          name: sammle
+      courseF_bee_variables_8_2020:
         move and increment:
           name: bewegen und inkrementieren
         collect:
