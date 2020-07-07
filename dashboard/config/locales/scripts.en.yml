@@ -30753,6 +30753,10 @@ en:
               name: Course Resources
             Debugging:
               name: Debugging
+            Virtual Professional Learning Overview:
+              name: Virtual Professional Learning Overview
+            Module 1:
+              name: Module 1
           title: Jess's Script
           description_audience: ''
           description_short: ''
@@ -30777,6 +30781,10 @@ en:
               name: Course Resources
             Debugging:
               name: Debugging
+            Virtual Professional Learning Overview:
+              name: Virtual Professional Learning Overview
+            Module 1:
+              name: Module 1
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
           description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
