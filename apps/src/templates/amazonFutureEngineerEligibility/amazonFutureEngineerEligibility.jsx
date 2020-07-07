@@ -332,14 +332,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
 const StudentAccountNotification = (
   <div style={styles.container}>
-    <h2 style={styles.header}>Am I eligible?</h2>
+    <h2 style={styles.header}>You need a Code.org teacher account</h2>
     <div>
       <p>You're currently signed in to Code.org with a student account.</p>
       <p>
         You'll need to sign in with a teacher account to apply to receive Amazon
         Future Engineer benefits. You can use the button below to sign out, then
-        return to this page (<a href={pegasus('/afe')}>code.org/afe</a>) to
-        check your eligibility.
+        return to <a href={pegasus('/afe')}>code.org/afe</a> to continue.
       </p>
       <Button
         id="sign_out"
