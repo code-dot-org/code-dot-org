@@ -92,7 +92,8 @@ class LessonGroup < ApplicationRecord
       end
       script_lesson_groups << lesson_group
     end
-    script_lesson_groups
+    script_lessons = Lesson.add_lessons(raw_lesson_groups, script)
+    [script_lesson_groups, script_lessons]
   end
 
   def localized_display_name
