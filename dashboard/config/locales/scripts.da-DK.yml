@@ -3715,22 +3715,6 @@ da:
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
-        csd3-virtual:
-          description_short: Programmering
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
-          lessons:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
         csp5-virtual:
           stages:
             While Loops:
@@ -3798,3 +3782,23 @@ da:
               name: For Loops
             Sprite Lab:
               name: SpriteLab
+        csd3-virtual:
+          description_short: Programmering
+          stages:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+          lessons:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner

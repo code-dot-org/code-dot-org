@@ -2,6 +2,12 @@
 te-IN:
   data:
     short_instructions:
+      CourseD_Dance_2020_05: ఇప్పుడు 6 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్ ప్రారంభించేలా
+        చేయండి!
+      CourseD_Dance_2020_10: మీ గ్రూవ్ ఆన్‌లో ఉంచండి! మీ స్నేహితులతో పంచుకోవడానికి
+        మీ సొంత డాన్స్ సృష్టించండి.
+      CourseD_Dance_2020_bonus3: లెటజ్ గెట్ ఇన్ ఫార్మేషన్ (వివరాల కోసం "మరింత" క్లిక్
+        చేయండి)
       CourseD_Dance_Party_01: వర్క్‌ప్లేస్‌లోకి ’మేక్ ఎ న్యూ’ బ్లాక్‌ను డ్రాగ్ చేయండి,
         దాన్ని లోపలి ’సెటప్’ బ్లాక్‌తో కనెక్ట్ చేయండి.
       CourseD_Dance_Party_02: 4 మెజర్స్ తరువాత మూస్ ఒక కొత్త మువ్ ప్రారంభించేలా చేయండి!
@@ -81,7 +87,13 @@ te-IN:
       Dance_Party_extras_visible_2019: Where'd they go? (Click "More" for details)
       courseA_collector_loops2_2019: Get all three piles! Move Laurel to each piece
         of treasure, then use the collect block.
+      courseA_collector_loops2_2020: Get all three piles! Move Laurel to each piece
+        of treasure, then use the collect block.
       courseA_playLab_events1_2019: This is a Play Lab level. Move blocks to the workspace
         and see what happens!
+      courseA_playLab_events1_2020: This is a Play Lab level. Move blocks to the workspace
+        and see what happens!
       courseA_playLab_events2_2019: Jorge the Dog wants to say "Hi there." Can you
+        help him?
+      courseA_playLab_events2_2020: Jorge the Dog wants to say "Hi there." Can you
         help him?

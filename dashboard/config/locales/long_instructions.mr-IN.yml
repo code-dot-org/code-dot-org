@@ -2,6 +2,12 @@
 mr-IN:
   data:
     long_instructions:
+      CourseD_Dance_2020_05: |-
+        "_आता जरा मजा येत आहे!_
+
+        तुमच्या वर्कस्पेसमध्ये एक <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक जोडा. 6 मापांनंतर डांसरला नवीन मूव्ह सुरू करायला लावा.".
+      CourseD_Dance_2020_10: स्वतःचा डांस बनवा! एक स्वतःचा डांस तयार करून मित्रांसोबत
+        शेअर करा.
       CourseD_Dance_Party_01: |-
         _चला डांस पार्टी करूया!_
 

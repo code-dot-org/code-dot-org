@@ -21,6 +21,7 @@ pt-BR:
       AppLab Intro 7 - thisOrThatSetScreen: Isso ou Aquilo
       CDEF_video_SpritesInAction: Como fazer um Sprite
       CDEF_video_SpritesInAction_2019: Como fazer um Sprite
+      CDEF_video_SpritesInAction_2020: Como fazer um Sprite
       CSD Board Buttons Map: Botões e Interruptor
       CSD Board Buttons Map_2018: Botões e Interruptor
       CSD Board Buttons Map_2019: Botões e Interruptor
@@ -674,13 +675,20 @@ pt-BR:
       'Course F: Artist Project - Revise_2018': Revisar Projeto Artista
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista
+      CourseD_Dance_2020_bonus1: Vai e volta
+      CourseD_Dance_2020_bonus3: Entrar em formação
       CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprites
       CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprites
+      CourseEF_video_IntroSpriteLab_2020: Este é o Laboratório de Sprites
       CourseEF_video_MakeSprite: Como fazer um Sprite
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
+      CourseEF_video_MakeSprite_2020: Como fazer um Sprite
       CourseE_Project_SpriteLab: 'Curso e Projeto de Laboratório de Sprite '
       CourseE_Project_SpriteLab_2019: 'Curso e Projeto de Laboratório de Sprite '
       CourseE_hoops: 'Coelho '
+      CourseF_Oceans_Video_Machine_Learning: 'Vídeo: Aprendizagem de Máquina'
+      CourseF_Oceans_Video_Societal_Implications: 'Vídeo: Impactos na Sociedade'
+      CourseF_Oceans_Video_Training_Data: 'Vídeo: Dados de treinamento'
       CourseF_Project_Revise_SpriteLab: Revisar o Projeto de Laboratório de Sprite
       CourseF_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso F
       CourseF_Project_SpriteLab_2019: Projeto de Laboratório de Sprite do Curso F
@@ -713,26 +721,37 @@ pt-BR:
       Introduction to Variables - Part 1_2019: Introdução a Variáveis
       MC_HOC_2017_01_RETRY: Propriedade
       MC_HOC_2017_01_RETRY_2019: Propriedade
+      MC_HOC_2017_01_RETRY_2020: Propriedade
       MC_HOC_2017_02_Cole: A Fazenda
       MC_HOC_2017_02_Cole_2019: A Fazenda
+      MC_HOC_2017_02_Cole_2020: A Fazenda
       MC_HOC_2017_03_Cole: As florestas
       MC_HOC_2017_03_Cole_2019: As florestas
+      MC_HOC_2017_03_Cole_2020: As florestas
       MC_HOC_2017_04POINT5_RYAN: O Deserto
       MC_HOC_2017_04POINT5_RYAN_2019: O Deserto
+      MC_HOC_2017_04POINT5_RYAN_2020: O Deserto
       MC_HOC_2017_04_Cole: O Pântano
       MC_HOC_2017_04_Cole_2019: O Pântano
+      MC_HOC_2017_04_Cole_2020: O Pântano
       MC_HOC_2017_05_Cole: O Rio
       MC_HOC_2017_05_Cole_2019: O Rio
+      MC_HOC_2017_05_Cole_2020: O Rio
       MC_HOC_2017_06_Cole: Maré alta
       MC_HOC_2017_06_Cole_2019: Maré alta
+      MC_HOC_2017_06_Cole_2020: Maré alta
       MC_HOC_2017_07_Cole: Passagem nevada
       MC_HOC_2017_07_Cole_2019: Passagem nevada
+      MC_HOC_2017_07_Cole_2020: Passagem nevada
       MC_HOC_2017_10_RETRY: A Caverna
       MC_HOC_2017_10_RETRY_2019: A Caverna
+      MC_HOC_2017_10_RETRY_2020: A Caverna
       MC_HOC_2017_Ali: A fortaleza Nether
       MC_HOC_2017_Ali_2019: A fortaleza Nether
+      MC_HOC_2017_Ali_2020: A fortaleza Nether
       MC_HOC_2017_FP20x20: Jogo livre
       MC_HOC_2017_FP20x20_2019: Jogo livre
+      MC_HOC_2017_FP20x20_2020: Jogo livre
       Making Music_2018: Fazendo Música
       Making Music_2019: Fazendo Música
       New Dance Lab Project: Novo Projeto da Festa Dançante
@@ -762,6 +781,7 @@ pt-BR:
       courseF_artist_for1: Atividade livre de laços para (Iniciando)
       courseF_artist_for1_2018: Atividade livre de laços para (Iniciando)
       courseF_artist_for1_2019: Atividade livre de laços para (Iniciando)
+      courseF_artist_for1_2020: Atividade livre de laços para (Iniciando)
       courseF_project_1: Projeto de Exemplo do Laboratório de Sprite
       courseF_video_csMatters: Projetos de conclusão de curso
       courseF_video_csMatters_2018: 'Vídeo: Importância da Ciência da Computação'
@@ -773,3 +793,4 @@ pt-BR:
       csd-pre-survey-levelgroup_2019: Visão geral da aula
       scrat_loops_C-F_video: Repetições no vídeo da Era do Gelo
       scrat_loops_C-F_video_2019: Repetições no vídeo da Era do Gelo
+      scrat_loops_C-F_video_2020: Repetições no vídeo da Era do Gelo
