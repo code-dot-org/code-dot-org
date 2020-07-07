@@ -38,6 +38,10 @@ class LessonGroup < ApplicationRecord
 
   def self.add_lesson_groups(raw_lesson_groups, script)
     script_lesson_groups = []
+    script_lessons = []
+    lockable_count = 0
+    non_lockable_count = 0
+    lesson_position = 0
 
     # Finds or creates Lesson Groups with the correct position.
     # In addition it check for 3 things:
@@ -90,9 +94,16 @@ class LessonGroup < ApplicationRecord
         lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
       end
+
+      new_lessons = Lesson.add_lessons(raw_lesson_group, script, lockable_count, non_lockable_count, lesson_position)
+      lesson_position += lesson_group.lessons.length
+      new_lessons.each do |lesson|
+        lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
+        script_lessons << lesson
+      end
+
       script_lesson_groups << lesson_group
     end
-    script_lessons = Lesson.add_lessons(raw_lesson_groups, script)
     [script_lesson_groups, script_lessons]
   end
 
