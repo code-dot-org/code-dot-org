@@ -22,6 +22,7 @@ fr-FR:
       AppLab Intro 7 - thisOrThatSetScreen: Ceci ou cela
       CDEF_video_SpritesInAction: Comment Créer un Lutin
       CDEF_video_SpritesInAction_2019: Comment Créer un Lutin
+      CDEF_video_SpritesInAction_2020: Comment Créer un Lutin
       CSD Board Buttons Map: Boutons et interrupteur
       CSD Board Buttons Map_2018: Boutons et interrupteur
       CSD Board Buttons Map_2019: Boutons et interrupteur
@@ -641,10 +642,14 @@ fr-FR:
 '
       'Course F: Artist Project_2018': Cours E Projet Artistique
       'Course F: Artist Project_2019': Cours E Projet Artistique
+      CourseD_Dance_2020_bonus1: Va et viens
+      CourseD_Dance_2020_bonus3: Restons en formation
       CourseEF_video_IntroSpriteLab: Voici le Labo du Lutin
       CourseEF_video_IntroSpriteLab_2019: Voici le Labo du Lutin
+      CourseEF_video_IntroSpriteLab_2020: Voici le Labo du Lutin
       CourseEF_video_MakeSprite: Comment Créer un Lutin
       CourseEF_video_MakeSprite_2019: Comment Créer un Lutin
+      CourseEF_video_MakeSprite_2020: Comment Créer un Lutin
       CourseE_Project_SpriteLab: 'Cours E Projet du Labo des Lutins
 
 '
@@ -654,6 +659,9 @@ fr-FR:
       CourseE_hoops: 'Lapin
 
 '
+      CourseF_Oceans_Video_Machine_Learning: 'Vidéo : Apprentissage automatique'
+      CourseF_Oceans_Video_Societal_Implications: 'Vidéo : Conséquences sur la société'
+      CourseF_Oceans_Video_Training_Data: 'Vidéo : Données de formation'
       CourseF_Project_Revise_SpriteLab: 'Réviser le Projet du Labo des Lutins
 
 '
@@ -691,26 +699,37 @@ fr-FR:
         2'
       MC_HOC_2017_01_RETRY: Maison
       MC_HOC_2017_01_RETRY_2019: Maison
+      MC_HOC_2017_01_RETRY_2020: Maison
       MC_HOC_2017_02_Cole: La ferme
       MC_HOC_2017_02_Cole_2019: La ferme
+      MC_HOC_2017_02_Cole_2020: La ferme
       MC_HOC_2017_03_Cole: Les bois
       MC_HOC_2017_03_Cole_2019: Les bois
+      MC_HOC_2017_03_Cole_2020: Les bois
       MC_HOC_2017_04POINT5_RYAN: Le désert
       MC_HOC_2017_04POINT5_RYAN_2019: Le désert
+      MC_HOC_2017_04POINT5_RYAN_2020: Le désert
       MC_HOC_2017_04_Cole: Le marais
       MC_HOC_2017_04_Cole_2019: Le marais
+      MC_HOC_2017_04_Cole_2020: Le marais
       MC_HOC_2017_05_Cole: La rivière
       MC_HOC_2017_05_Cole_2019: La rivière
+      MC_HOC_2017_05_Cole_2020: La rivière
       MC_HOC_2017_06_Cole: Marée haute
       MC_HOC_2017_06_Cole_2019: Marée haute
+      MC_HOC_2017_06_Cole_2020: Marée haute
       MC_HOC_2017_07_Cole: Passage enneigé
       MC_HOC_2017_07_Cole_2019: Passage enneigé
+      MC_HOC_2017_07_Cole_2020: Passage enneigé
       MC_HOC_2017_10_RETRY: La grotte
       MC_HOC_2017_10_RETRY_2019: La grotte
+      MC_HOC_2017_10_RETRY_2020: La grotte
       MC_HOC_2017_Ali: La forteresse du Nether
       MC_HOC_2017_Ali_2019: La forteresse du Nether
+      MC_HOC_2017_Ali_2020: La forteresse du Nether
       MC_HOC_2017_FP20x20: Jeu libre
       MC_HOC_2017_FP20x20_2019: Jeu libre
+      MC_HOC_2017_FP20x20_2020: Jeu libre
       Making Music_2018: Créer de la Musique
       Making Music_2019: Créer de la Musique
       New Dance Lab Project: Nouveau Projet de Soirée Dansante
@@ -736,6 +755,7 @@ fr-FR:
       courseF_artist_for1: Jeu Libre avec des Boucles For (Début)
       courseF_artist_for1_2018: Jeu Libre avec des Boucles For (Début)
       courseF_artist_for1_2019: Jeu Libre avec des Boucles For (Début)
+      courseF_artist_for1_2020: Jeu Libre avec des Boucles For (Début)
       courseF_project_1: 'Exemple de Projet du Labo des Lutins
 
 '
@@ -749,3 +769,4 @@ fr-FR:
       csd-pre-survey-levelgroup_2019: Aperçu de la leçon
       scrat_loops_C-F_video: Vidéo des boucles dans l’Âge de Glace
       scrat_loops_C-F_video_2019: Vidéo des boucles dans l’Âge de Glace
+      scrat_loops_C-F_video_2020: Vidéo des boucles dans l’Âge de Glace

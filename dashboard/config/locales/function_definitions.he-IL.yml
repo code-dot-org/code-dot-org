@@ -352,6 +352,9 @@ he-IL:
       Function intro Ryan_2019:
         build bridge:
           name: בנה גשר
+      Function intro Ryan_2020:
+        build bridge:
+          name: בנה גשר
       Geometric Sun:
         draw a door:
           name: צייר דלת
@@ -436,12 +439,20 @@ he-IL:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: פנה דרך
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: פנה דרך
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: תקן דרך ארוכה
         fix short path:
           name: תקן דרך קצרה
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: תקן דרך ארוכה
+        fix short path:
+          name: תקן דרך קצרה
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: תקן דרך ארוכה
         fix short path:
@@ -456,12 +467,22 @@ he-IL:
           name: בנה גשר קצר
         build long bridge:
           name: בנה גשר ארוך
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: בנה גשר קצר
+        build long bridge:
+          name: בנה גשר ארוך
       MC_HOC_2017_FP20x20:
         function 1:
           name: פונקציה 1
         function 2:
           name: פונקציה 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: פונקציה 1
+        function 2:
+          name: פונקציה 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: פונקציה 1
         function 2:
@@ -815,6 +836,9 @@ he-IL:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: פוטנציאל לפתרון
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: פוטנציאל לפתרון
       courseC_artist_prog3:
         draw flame:
           name: צייר להבה
@@ -836,6 +860,13 @@ he-IL:
             x: x
         draw fire:
           name: צייר אש
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: צייר להבה
+          parameters:
+            x: x
+        draw fire:
+          name: צייר אש
       courseC_artist_prog4:
         booster:
           name: מאיץ
@@ -845,7 +876,13 @@ he-IL:
       courseC_artist_prog4_2019:
         booster:
           name: מאיץ
+      courseC_artist_prog4_2020:
+        booster:
+          name: מאיץ
       courseC_data wizard:
+        do something:
+          name: עשה משהו
+      courseC_data wizard_2020:
         do something:
           name: עשה משהו
       courseD_artist_binary1:
@@ -857,6 +894,9 @@ he-IL:
       courseD_artist_binary1_2019:
         draw:
           name: צייר
+      courseD_artist_binary1_2020:
+        draw:
+          name: צייר
       courseD_artist_binary2:
         draw:
           name: צייר
@@ -864,6 +904,9 @@ he-IL:
         draw:
           name: צייר
       courseD_artist_binary2_2019:
+        draw:
+          name: צייר
+      courseD_artist_binary2_2020:
         draw:
           name: צייר
       courseD_artist_binary3:
@@ -875,6 +918,9 @@ he-IL:
       courseD_artist_binary3_2019:
         draw:
           name: צייר
+      courseD_artist_binary3_2020:
+        draw:
+          name: צייר
       courseD_artist_binary4:
         draw:
           name: צייר
@@ -882,6 +928,9 @@ he-IL:
         draw:
           name: צייר
       courseD_artist_binary4_2019:
+        draw:
+          name: צייר
+      courseD_artist_binary4_2020:
         draw:
           name: צייר
       courseD_artist_binary5:
@@ -893,6 +942,9 @@ he-IL:
       courseD_artist_binary5_2019:
         draw:
           name: צייר
+      courseD_artist_binary5_2020:
+        draw:
+          name: צייר
       courseD_artist_binary6:
         draw:
           name: צייר
@@ -900,6 +952,9 @@ he-IL:
         draw:
           name: צייר
       courseD_artist_binary6_2019:
+        draw:
+          name: צייר
+      courseD_artist_binary6_2020:
         draw:
           name: צייר
       courseD_artist_binary7:
@@ -911,6 +966,9 @@ he-IL:
       courseD_artist_binary7_2019:
         draw:
           name: צייר
+      courseD_artist_binary7_2020:
+        draw:
+          name: צייר
       courseD_artist_binary8:
         draw:
           name: צייר
@@ -918,6 +976,9 @@ he-IL:
         draw:
           name: צייר
       courseD_artist_binary8_2019:
+        draw:
+          name: צייר
+      courseD_artist_binary8_2020:
         draw:
           name: צייר
       courseD_artist_binary8_predict1:
@@ -929,10 +990,16 @@ he-IL:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: צייר
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: צייר
       courseD_artist_binaryFP_2018:
         draw:
           name: צייר
       courseD_artist_binaryFP_2019:
+        draw:
+          name: צייר
+      courseD_artist_binaryFP_2020:
         draw:
           name: צייר
       courseD_artist_binary_challenge1_2018:
@@ -941,10 +1008,16 @@ he-IL:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: צייר
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: צייר
       courseD_artist_binary_challenge2_2018:
         draw:
           name: צייר
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: צייר
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: צייר
       courseD_autorun_binary2_2019:
@@ -1029,6 +1102,13 @@ he-IL:
           name: צייר משושה
         draw line of hexagons:
           name: צייר קו של משושים
+      courseE_artist_functions10_2020:
+        do something:
+          name: עשה משהו
+        draw hexagon:
+          name: צייר משושה
+        draw line of hexagons:
+          name: צייר קו של משושים
       courseE_artist_functions2:
         draw a square:
           name: צייר ריבוע
@@ -1038,6 +1118,9 @@ he-IL:
       courseE_artist_functions2_2019:
         draw a square:
           name: צייר ריבוע
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: צייר ריבוע
       courseE_artist_functions2_copy:
         draw a square:
           name: צייר ריבוע
@@ -1045,6 +1128,9 @@ he-IL:
         draw a star:
           name: צייר כוכב
       courseE_artist_functions3_2019:
+        draw a star:
+          name: צייר כוכב
+      courseE_artist_functions3_2020:
         draw a star:
           name: צייר כוכב
       courseE_artist_functions4:
@@ -1060,6 +1146,9 @@ he-IL:
         draw a star:
           name: צייר כוכב
       courseE_artist_functions5_2019:
+        draw a star:
+          name: צייר כוכב
+      courseE_artist_functions5_2020:
         draw a star:
           name: צייר כוכב
       courseE_artist_functions5_copy:
@@ -1078,6 +1167,11 @@ he-IL:
       courseE_artist_functions7_2019:
         draw a window:
           name: צייר חלון
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: צייר חלון
+        draw a house:
+          name: צייר בית
       courseE_artist_functions8:
         do something:
           name: עשה משהו
@@ -1103,12 +1197,26 @@ he-IL:
           name: צייר קו של מרובעים
         draw square:
           name: צייר ריבוע
+      courseE_artist_functions8_2020:
+        do something:
+          name: עשה משהו
+        staggered squares:
+          name: נענע מרובעים
+        draw a line of squares:
+          name: צייר קו של מרובעים
+        draw square:
+          name: צייר ריבוע
       courseE_artist_functions8a_2018:
         draw a square:
           name: צייר ריבוע
         do something:
           name: עשה משהו
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: צייר ריבוע
+        do something:
+          name: עשה משהו
+      courseE_artist_functions8a_2020:
         draw a square:
           name: צייר ריבוע
         do something:
@@ -1127,6 +1235,13 @@ he-IL:
           name: צייר ריבוע
         do something:
           name: עשה משהו
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: צייר קו של מרובעים
+        draw square:
+          name: צייר ריבוע
+        do something:
+          name: עשה משהו
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: צייר קו של מרובעים
@@ -1137,6 +1252,15 @@ he-IL:
         staggered squares:
           name: נענע מרובעים
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: צייר קו של מרובעים
+        draw square:
+          name: צייר ריבוע
+        do something:
+          name: עשה משהו
+        staggered squares:
+          name: נענע מרובעים
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: צייר קו של מרובעים
         draw square:
@@ -1166,6 +1290,13 @@ he-IL:
           name: צייר משולש
         draw line of triangles:
           name: צייר קו של משולשים
+      courseE_artist_functions9_2020:
+        do something:
+          name: עשה משהו
+        draw triangle:
+          name: צייר משולש
+        draw line of triangles:
+          name: צייר קו של משולשים
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: צייר משושה
@@ -1178,6 +1309,17 @@ he-IL:
         draw square:
           name: צייר ריבוע
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: צייר משושה
+        draw line of hexagons:
+          name: צייר קו של משושים
+        staggered squares:
+          name: נענע מרובעים
+        draw a line of squares:
+          name: צייר קו של מרובעים
+        draw square:
+          name: צייר ריבוע
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: צייר משושה
         draw line of hexagons:
@@ -1203,6 +1345,11 @@ he-IL:
           name: העיצוב שלי
         do something:
           name: עשה משהו
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: העיצוב שלי
+        do something:
+          name: עשה משהו
       courseE_artist_functions_challenge2:
         my design:
           name: העיצוב שלי
@@ -1218,6 +1365,11 @@ he-IL:
           name: העיצוב שלי
         do something:
           name: עשה משהו
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: העיצוב שלי
+        do something:
+          name: עשה משהו
       courseE_artist_functions_predict1:
         draw a square:
           name: צייר ריבוע
@@ -1225,6 +1377,9 @@ he-IL:
         draw a square:
           name: צייר ריבוע
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: צייר ריבוע
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: צייר ריבוע
       courseE_artist_functions_predict1_copy:
@@ -1245,6 +1400,13 @@ he-IL:
         do something:
           name: עשה משהו
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: צייר קו של מצולע
+        draw polygon:
+          name: צייר מצולע
+        do something:
+          name: עשה משהו
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: צייר קו של מצולע
         draw polygon:
@@ -1329,6 +1491,15 @@ he-IL:
           name: הבא את כל הדלועים
         pumpkin square:
           name: מרובע דלעת
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: אסוף לאורך הדרך
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+        get all pumpkins:
+          name: הבא את כל הדלועים
+        pumpkin square:
+          name: מרובע דלעת
       courseE_farmer_functions10b:
         navigate:
           name: נווט
@@ -1361,6 +1532,17 @@ he-IL:
           name: התחל לייצר
         get all pumpkins:
           name: הבא את כל הדלועים
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: אסוף לאורך הדרך
+        pumpkin square:
+          name: מרובע דלעת
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+        get produce:
+          name: התחל לייצר
+        get all pumpkins:
+          name: הבא את כל הדלועים
       courseE_farmer_functions13_2018:
         pick along path:
           name: אסוף לאורך הדרך
@@ -1379,16 +1561,31 @@ he-IL:
           name: ריבוע תירס
         lettuce stairs:
           name: מדרגות חסה
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: אסוף לאורך הדרך
+        check for corn:
+          name: בדוק עבור תירס
+        corn rectangle:
+          name: ריבוע תירס
+        lettuce stairs:
+          name: מדרגות חסה
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: בדוק ריבוע עבור תירס
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: בדוק ריבוע עבור תירס
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: בדוק ריבוע עבור תירס
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: בדוק ריבוע עבור תירס
       courseE_farmer_functions2ba:
@@ -1400,6 +1597,11 @@ he-IL:
         get all pumpkins:
           name: הבא את כל הדלועים
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+        get all pumpkins:
+          name: הבא את כל הדלועים
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: בדוק ריבוע עבור תירס
         get all pumpkins:
@@ -1421,12 +1623,24 @@ he-IL:
           name: בדוק ריבוע עבור תירס
         get all pumpkins:
           name: הבא את כל הדלועים
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: אסוף לאורך הדרך
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+        get all pumpkins:
+          name: הבא את כל הדלועים
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: בדוק ריבוע עבור תירס
         get all pumpkins:
           name: הבא את כל הדלועים
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: בדוק ריבוע עבור תירס
+        get all pumpkins:
+          name: הבא את כל הדלועים
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: בדוק ריבוע עבור תירס
         get all pumpkins:
@@ -1446,10 +1660,16 @@ he-IL:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: מרובע גינה
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: מרובע גינה
       courseE_farmer_functions8a1_2018:
         garden square:
           name: מרובע גינה
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: מרובע גינה
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: מרובע גינה
       courseE_farmer_functions8b:
@@ -1459,6 +1679,9 @@ he-IL:
         garden square:
           name: מרובע גינה
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: מרובע גינה
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: מרובע גינה
       courseE_farmer_functions9b:
@@ -1635,6 +1858,9 @@ he-IL:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: זוז ואסוף צוף עם מונה
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: זוז ואסוף צוף עם מונה
       courseF_bee_functions2:
         get only nectar:
           name: אסוף רק צוף
@@ -1734,10 +1960,16 @@ he-IL:
       courseF_bee_variables_1_2019:
         collect row:
           name: אסוף שורה
+      courseF_bee_variables_1_2020:
+        collect row:
+          name: אסוף שורה
       courseF_bee_variables_2_2018:
         collect row:
           name: אסוף שורה
       courseF_bee_variables_2_2019:
+        collect row:
+          name: אסוף שורה
+      courseF_bee_variables_2_2020:
         collect row:
           name: אסוף שורה
       courseF_bee_variables_3_2018:
@@ -1746,10 +1978,16 @@ he-IL:
       courseF_bee_variables_3_2019:
         collect row:
           name: אסוף שורה
+      courseF_bee_variables_3_2020:
+        collect row:
+          name: אסוף שורה
       courseF_bee_variables_4_2018:
         collect row:
           name: אסוף שורה
       courseF_bee_variables_4_2019:
+        collect row:
+          name: אסוף שורה
+      courseF_bee_variables_4_2020:
         collect row:
           name: אסוף שורה
       courseF_bee_variables_5_2018:
@@ -1758,10 +1996,16 @@ he-IL:
       courseF_bee_variables_5_2019:
         collect row:
           name: אסוף שורה
+      courseF_bee_variables_5_2020:
+        collect row:
+          name: אסוף שורה
       courseF_bee_variables_6_2018:
         collect stairs:
           name: אסוף מדרגות
       courseF_bee_variables_6_2019:
+        collect stairs:
+          name: אסוף מדרגות
+      courseF_bee_variables_6_2020:
         collect stairs:
           name: אסוף מדרגות
       courseF_bee_variables_7_2018:
@@ -1770,12 +2014,20 @@ he-IL:
       courseF_bee_variables_7_2019:
         collect:
           name: אסוף
+      courseF_bee_variables_7_2020:
+        collect:
+          name: אסוף
       courseF_bee_variables_8_2018:
         move and increment:
           name: זוז והוסף
         collect:
           name: אסוף
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: זוז והוסף
+        collect:
+          name: אסוף
+      courseF_bee_variables_8_2020:
         move and increment:
           name: זוז והוסף
         collect:

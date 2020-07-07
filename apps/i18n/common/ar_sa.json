@@ -415,6 +415,7 @@
   "dataTableNamePlaceholder": "اسم الجدول",
   "dataLibraryHeader": "مكتبة البيانات",
   "dataLibraryDescription": "ابحث عن جداول البيانات الفعلية واستوردها من مكتبة Code.org.",
+  "dataLibrarySearchPlacholder": "إبحث",
   "dataSource": "مصدر البيانات",
   "dataVisualizerPlaceholderText": "حدد القيم لخلق تصوّر",
   "dataVisualizerBucketSize": "حجم الدلو",

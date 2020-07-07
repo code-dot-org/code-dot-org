@@ -5400,6 +5400,13 @@ ga:
               name: Maidir Liomsa i Saotharlann na Sprideanna
             'Functions: Songwriting':
               name: Ceapadh Ceoil
+            Digital Sharing:
+              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
+                ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
+                ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
+                háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
+                bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
@@ -5420,6 +5427,13 @@ ga:
               name: Maidir Liomsa i Saotharlann na Sprideanna
             'Functions: Songwriting':
               name: Ceapadh Ceoil
+            Digital Sharing:
+              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
+                ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
+                ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
+                háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
+                bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
         coursef-2020:
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
             agus cruthaigh ealaín, scéal, nó cluiche.
@@ -5589,36 +5603,6 @@ ga:
               name: Feidhmeanna a chruthú
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Athróga
-            Sprites:
-              name: Sprideanna
-            Conditionals:
-              name: Coinníollacha
-            Velocity:
-              name: Treoluas
-            Functions:
-              name: Feidhmeanna
-            Sprite Properties:
-              name: Airíonna na Spride
-          lesson_groups:
-            csd3_1:
-              display_name: 'Caibidil 1: Íomhánna agus Beochan'
-          lessons:
-            Variables:
-              name: Athróga
-            Sprites:
-              name: Sprideanna
-            Conditionals:
-              name: Coinníollacha
-            Velocity:
-              name: Treoluas
-            Functions:
-              name: Feidhmeanna
-            Sprite Properties:
-              name: Airíonna na Spride
         csd2-virtual:
           stages:
             Peer Review and Final Touches:
@@ -5729,3 +5713,53 @@ ga:
               display_name: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
             k5_diving_deeper_1:
               display_name: 'Níos Doimhne: Cúrsaí E agus F'
+        dani-june-2020-test:
+          stages:
+            CS Principles Pre-survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+          lessons:
+            CS Principles Pre-survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csp5_1:
+              display_name: 'Caibidil 1: Ríomhchlárú Bunaithe ar Theagmhais'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Athróga
+            Sprites:
+              name: Sprideanna
+            Sprite Properties:
+              name: Airíonna na Spride
+            Text:
+              name: Téacs
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+          lessons:
+            Variables:
+              name: Athróga
+            Sprites:
+              name: Sprideanna
+            Sprite Properties:
+              name: Airíonna na Spride
+            Text:
+              name: Téacs
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+          lesson_groups:
+            csd3_1:
+              display_name: Ábhar
+            csd3_2:
+              display_name: Ábhar
+            cspSurvey:
+              display_name: Ábhar
