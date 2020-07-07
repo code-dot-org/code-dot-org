@@ -955,71 +955,12 @@ class Script < ActiveRecord::Base
     chapter = 0
     lesson_position = 0; script_level_position = Hash.new(0)
     script_lessons = []
-    script_lesson_groups = []
     script_levels_by_lesson = {}
     levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
     non_lockable_count = 0
 
-    unless raw_script_levels.empty?
-      # We want a script to either have all of its lessons have lesson groups
-      # or none of the lessons have lesson groups. We know we have hit this case if
-      # there are more than one lesson group for a script but the lesson group key
-      # for the first lesson is blank
-      if raw_lesson_groups[0][:key].nil? && raw_lesson_groups.length > 1
-        raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-      elsif raw_lesson_groups.length == 1 && raw_lesson_groups[0][:key].nil?
-        lesson_group = LessonGroup.find_or_create_by(
-          key: '',
-          script: script,
-          user_facing: false,
-          position: 1
-        )
-
-        script_lesson_groups << lesson_group
-      else
-        # Finds or creates Lesson Groups with the correct position.
-        # In addition it check for 3 things:
-        # 1. That all the lesson groups specified by the editor have a key and
-        # display name.
-        # 2. If the lesson group key is an existing key that the given display name
-        # for that key matches the already saved display name
-        # 3. PLC courses use certain lesson group keys for module types. We reserve those
-        # keys so they can only map to the display_name for their PLC purpose
-        raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-          Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
-            if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
-              raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
-            end
-          end
-          if raw_lesson_group[:display_name].blank?
-            raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-          end
-
-          new_lesson_group = false
-
-          lesson_group = LessonGroup.find_or_create_by(
-            key: raw_lesson_group[:key],
-            script: script,
-            user_facing: true
-          ) do
-            # if you got in here, this is a new lesson_group
-            new_lesson_group = true
-          end
-
-          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
-          lesson_group.save! if lesson_group.changed?
-
-          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-            raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-          end
-
-          script_lesson_groups << lesson_group
-        end
-      end
-    end
-
-    script.lesson_groups = script_lesson_groups
+    script.lesson_groups = LessonGroup.add_lesson_groups(raw_script_levels, raw_lesson_groups, script)
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
