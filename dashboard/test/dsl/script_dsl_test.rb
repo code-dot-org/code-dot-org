@@ -481,7 +481,7 @@ level 'Level 3'
                     variants: {"Level 5.1" => {active: false}},
                     challenge: true,
                   },
-                },
+                }
               ]
             }
           ]
@@ -531,16 +531,18 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lesson_groups: [lessons: [
-          {
-            name: "Lesson1",
-            visible_after: '2020-04-01 10:00:00 -0700',
-            script_levels: [
-              {levels: [{name: "Level 1"}]},
-              {levels: [{name: "Level 2"}]},
-            ]
-          }
-        ]]
+        lesson_groups: [
+          lessons: [
+            {
+              name: "Lesson1",
+              visible_after: '2020-04-01 10:00:00 -0700',
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ],
+        ]
       }
     )
 
@@ -573,19 +575,17 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
-          {
-            key: "required",
-            display_name: "Overview",
-            lessons: [
-              {
-                name: "Lesson1",
-                script_levels: [
-                  {levels: [{name: "Level 1"}]},
-                  {levels: [{name: "Level 2"}]},
-                ]
-              }
-            ]
-          }
+          key: "required",
+          display_name: "Overview",
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
         ]
       }
     )

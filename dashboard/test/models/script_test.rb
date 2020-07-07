@@ -89,14 +89,14 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lessons]
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lesson_groups]
 
     # Set different level name in tested script
-    parsed_script.map {|lesson| lesson[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
+    parsed_script[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
-    script = Script.add_script(options, [], parsed_script)
+    script = Script.add_script(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
   end
@@ -325,15 +325,15 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
       }] # From level.yml fixture
     )
   end
@@ -344,15 +344,15 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
       }] # From level.yml fixture
     )
   end

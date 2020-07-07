@@ -190,6 +190,7 @@ class ScriptDSL < BaseDSL
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
     assessment = properties.delete(:assessment)
+
     named = properties.delete(:named)
     bonus = properties.delete(:bonus)
 
@@ -245,6 +246,16 @@ class ScriptDSL < BaseDSL
         script_level[:named_level] = named
       end
 
+      if assessment
+        script_level[:assessment] = assessment
+      end
+      if bonus
+        script_level[:bonus] = bonus
+      end
+      if named
+        script_level[:named_level] = named
+      end
+
       if progression || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
@@ -271,6 +282,7 @@ class ScriptDSL < BaseDSL
   # @override
   def i18n_hash
     i18n_stage_strings = {}
+
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       unless lesson_group[:key].nil?
