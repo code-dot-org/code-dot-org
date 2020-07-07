@@ -43,7 +43,10 @@ class DataLibraryPane extends React.Component {
   };
 
   onError = error => {
-    if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
+    if (
+      error.type === WarningType.DUPLICATE_TABLE_NAME ||
+      error.type === WarningType.MAX_TABLES_EXCEEDED
+    ) {
       this.props.onShowWarning(error.msg);
     }
   };

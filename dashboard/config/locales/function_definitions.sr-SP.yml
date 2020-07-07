@@ -355,7 +355,14 @@ sr-SP:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: урадити нешто
+      courseC_data wizard_2020:
         do something:
           name: урадити нешто
       courseE_artist_concept1:
@@ -387,6 +394,9 @@ sr-SP:
       courseE_artist_functions10_2019:
         do something:
           name: урадити нешто
+      courseE_artist_functions10_2020:
+        do something:
+          name: урадити нешто
       courseE_artist_functions2:
         draw a square:
           name: нацртај квадрат
@@ -396,6 +406,9 @@ sr-SP:
       courseE_artist_functions2_2019:
         draw a square:
           name: нацртај квадрат
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: нацртај квадрат
       courseE_artist_functions2_copy:
         draw a square:
           name: нацртај квадрат
@@ -403,6 +416,9 @@ sr-SP:
         draw a star:
           name: нацртајте звезду
       courseE_artist_functions3_2019:
+        draw a star:
+          name: нацртајте звезду
+      courseE_artist_functions3_2020:
         draw a star:
           name: нацртајте звезду
       courseE_artist_functions4:
@@ -420,6 +436,9 @@ sr-SP:
       courseE_artist_functions5_2019:
         draw a star:
           name: нацртајте звезду
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: нацртајте звезду
       courseE_artist_functions5_copy:
         draw a star:
           name: нацртајте звезду
@@ -429,6 +448,9 @@ sr-SP:
       courseE_artist_functions7_2018:
         draw a house:
           name: нацртај кућу
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: нацртај кућу
       courseE_artist_functions8:
         do something:
           name: урадити нешто
@@ -436,6 +458,9 @@ sr-SP:
         do something:
           name: урадити нешто
       courseE_artist_functions8_2019:
+        do something:
+          name: урадити нешто
+      courseE_artist_functions8_2020:
         do something:
           name: урадити нешто
       courseE_artist_functions8a_2018:
@@ -448,16 +473,27 @@ sr-SP:
           name: нацртај квадрат
         do something:
           name: урадити нешто
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: нацртај квадрат
+        do something:
+          name: урадити нешто
       courseE_artist_functions8b_2018:
         do something:
           name: урадити нешто
       courseE_artist_functions8b_2019:
         do something:
           name: урадити нешто
+      courseE_artist_functions8b_2020:
+        do something:
+          name: урадити нешто
       courseE_artist_functions8c_2018:
         do something:
           name: урадити нешто
       courseE_artist_functions8c_2019:
+        do something:
+          name: урадити нешто
+      courseE_artist_functions8c_2020:
         do something:
           name: урадити нешто
       courseE_artist_functions9:
@@ -469,6 +505,9 @@ sr-SP:
       courseE_artist_functions9_2019:
         do something:
           name: урадити нешто
+      courseE_artist_functions9_2020:
+        do something:
+          name: урадити нешто
       courseE_artist_functions_challenge1:
         do something:
           name: урадити нешто
@@ -476,6 +515,9 @@ sr-SP:
         do something:
           name: урадити нешто
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: урадити нешто
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: урадити нешто
       courseE_artist_functions_challenge2:
@@ -487,6 +529,9 @@ sr-SP:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: урадити нешто
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: урадити нешто
       courseE_artist_functions_predict1:
         draw a square:
           name: нацртај квадрат
@@ -494,6 +539,9 @@ sr-SP:
         draw a square:
           name: нацртај квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: нацртај квадрат
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: нацртај квадрат
       courseE_artist_functions_predict1_copy:
@@ -506,6 +554,9 @@ sr-SP:
         do something:
           name: урадити нешто
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: урадити нешто
+      courseE_artist_functions_predict2_2020:
         do something:
           name: урадити нешто
       courseE_bee_functions1:
@@ -669,9 +720,15 @@ sr-SP:
       courseF_bee_variables_7_2019:
         collect:
           name: сакупи
+      courseF_bee_variables_7_2020:
+        collect:
+          name: сакупи
       courseF_bee_variables_8_2018:
         collect:
           name: сакупи
       courseF_bee_variables_8_2019:
+        collect:
+          name: сакупи
+      courseF_bee_variables_8_2020:
         collect:
           name: сакупи

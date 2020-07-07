@@ -4205,34 +4205,6 @@ el:
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
-        csd3-virtual:
-          description_short: Προγραμματισμός
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
         csp5-virtual:
           stages:
             While Loops:
@@ -4304,3 +4276,39 @@ el:
               name: Βρόχοι Για
             Sprite Lab:
               name: Sprite Lab
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd3-virtual:
+          description_short: Προγραμματισμός
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+            Text:
+              name: κείμενο
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+          lessons:
+            Variables:
+              name: Μεταβλητές
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+            Text:
+              name: κείμενο
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις

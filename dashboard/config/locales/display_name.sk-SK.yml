@@ -20,6 +20,7 @@ sk-SK:
       AppLab Intro 7 - thisOrThatSetScreen: Toto alebo tamto
       CDEF_video_SpritesInAction: Ako vytvoriť postavu
       CDEF_video_SpritesInAction_2019: Ako vytvoriť postavu
+      CDEF_video_SpritesInAction_2020: Ako vytvoriť postavu
       CSD Booleans Map: Logické výrazy a porovnávacie znamienka
       CSD Booleans Map_2018: Logické výrazy a porovnávacie znamienka
       CSD Booleans Map_2019: Logické výrazy a porovnávacie znamienka
@@ -336,13 +337,20 @@ sk-SK:
       'Course F: Artist Project - Revise_2018': Zreviduj projekt Umelec
       'Course F: Artist Project_2018': Projekt Umelec Kurz F
       'Course F: Artist Project_2019': Projekt Umelec Kurz F
+      CourseD_Dance_2020_bonus1: Dozadu a dopredu
+      CourseD_Dance_2020_bonus3: Všetci do formácie
       CourseEF_video_IntroSpriteLab: Toto je Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: Toto je Sprite Lab
+      CourseEF_video_IntroSpriteLab_2020: Toto je Sprite Lab
       CourseEF_video_MakeSprite: Ako vytvoriť postavu
       CourseEF_video_MakeSprite_2019: Ako vytvoriť postavu
+      CourseEF_video_MakeSprite_2020: Ako vytvoriť postavu
       CourseE_Project_SpriteLab: Kurz E Lab projekt s postavičkou
       CourseE_Project_SpriteLab_2019: Kurz E Lab projekt s postavičkou
       CourseE_hoops: 'Zajac '
+      CourseF_Oceans_Video_Machine_Learning: 'Video: Strojové učenie'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: Spoločenské následky'
+      CourseF_Oceans_Video_Training_Data: 'Video: Dáta zo školení'
       CourseF_Project_Revise_SpriteLab: Reviduj Sprite Lab projekt
       CourseF_Project_SpriteLab: Sprite Lab projekt Kurz F
       CourseF_Project_SpriteLab_2019: Sprite Lab projekt Kurz F
@@ -366,26 +374,37 @@ sk-SK:
       Introduction to Variables - Part 1_2019: Predstavenie premenných
       MC_HOC_2017_01_RETRY: Usadlosť
       MC_HOC_2017_01_RETRY_2019: Usadlosť
+      MC_HOC_2017_01_RETRY_2020: Usadlosť
       MC_HOC_2017_02_Cole: Farma
       MC_HOC_2017_02_Cole_2019: Farma
+      MC_HOC_2017_02_Cole_2020: Farma
       MC_HOC_2017_03_Cole: Lesy
       MC_HOC_2017_03_Cole_2019: Lesy
+      MC_HOC_2017_03_Cole_2020: Lesy
       MC_HOC_2017_04POINT5_RYAN: Púšť
       MC_HOC_2017_04POINT5_RYAN_2019: Púšť
+      MC_HOC_2017_04POINT5_RYAN_2020: Púšť
       MC_HOC_2017_04_Cole: Bažina
       MC_HOC_2017_04_Cole_2019: Bažina
+      MC_HOC_2017_04_Cole_2020: Bažina
       MC_HOC_2017_05_Cole: Rieka
       MC_HOC_2017_05_Cole_2019: Rieka
+      MC_HOC_2017_05_Cole_2020: Rieka
       MC_HOC_2017_06_Cole: Príliv
       MC_HOC_2017_06_Cole_2019: Príliv
+      MC_HOC_2017_06_Cole_2020: Príliv
       MC_HOC_2017_07_Cole: Snežný priesmyk
       MC_HOC_2017_07_Cole_2019: Snežný priesmyk
+      MC_HOC_2017_07_Cole_2020: Snežný priesmyk
       MC_HOC_2017_10_RETRY: Jaskyňa
       MC_HOC_2017_10_RETRY_2019: Jaskyňa
+      MC_HOC_2017_10_RETRY_2020: Jaskyňa
       MC_HOC_2017_Ali: Holandská pevnosť
       MC_HOC_2017_Ali_2019: Holandská pevnosť
+      MC_HOC_2017_Ali_2020: Holandská pevnosť
       MC_HOC_2017_FP20x20: Voľná hra
       MC_HOC_2017_FP20x20_2019: Voľná hra
+      MC_HOC_2017_FP20x20_2020: Voľná hra
       New Dance Lab Project: Nový projekt Tanečná Párty
       New Minecraft Hero Project: Voľná hra
       OPD-K5 WhatIsCS: Čo je informatika?
@@ -409,3 +428,4 @@ sk-SK:
       csd-pre-survey-levelgroup_2019: Prehľad lekcie
       scrat_loops_C-F_video: Cykly v Dobe ľadovej - Video
       scrat_loops_C-F_video_2019: Cykly v Dobe ľadovej - Video
+      scrat_loops_C-F_video_2020: Cykly v Dobe ľadovej - Video

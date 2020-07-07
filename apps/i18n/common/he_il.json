@@ -417,6 +417,7 @@
   "dataTableNamePlaceholder": "שם הטבלה",
   "dataLibraryHeader": "ספריית נתונים",
   "dataLibraryDescription": "מצאו וייבאו טבלאות של נתונים אמיתיים מספריית Code.org.",
+  "dataLibrarySearchPlacholder": "חפש",
   "dataSource": "מקור נתונים",
   "dataVisualizerPlaceholderText": "בחרו ערכים כדי ליצור תצוגה",
   "dataVisualizerBucketSize": "גודל דלי",

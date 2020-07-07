@@ -403,6 +403,7 @@
   "dataTableHeader": "Tabelas de dados",
   "dataTableNamePlaceholder": "Nome da tabela",
   "dataLibraryHeader": "Biblioteca de dados",
+  "dataLibrarySearchPlacholder": "Pesquisa",
   "dataSource": "Fonte dos Dados",
   "dataVisualizerPlaceholderText": "Seleccione valores para gerar uma visualização",
   "dataVisualizerCreateChart": "Criar gráfico no ecrã",

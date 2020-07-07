@@ -193,6 +193,7 @@
   "dancePartyTitle": "Dansparty",
   "dataLimitAlert": "Appen har läst eller skrivit till databasen alltför ofta, vilket kan resultera i oväntade fel. Vänligen meddela appägaren om du upplever fortsatta problem.",
   "dataTableNamePlaceholder": "Tabellnamn",
+  "dataLibrarySearchPlacholder": "Sök",
   "dataWorkspaceHeader": "Data Webbläsare",
   "debugWatchHeader": "Titta",
   "debugWatchNotAvailable": "<inte tillgänglig>",

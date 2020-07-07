@@ -326,6 +326,9 @@ tr-TR:
       Function intro Ryan_2019:
         build bridge:
           name: köprü kur
+      Function intro Ryan_2020:
+        build bridge:
+          name: köprü kur
       Geometric Sun:
         diamond:
           name: elmas
@@ -619,6 +622,9 @@ tr-TR:
         pick row:
           parameters:
             length: uzunluk
+      courseA_artist_loops_challenge1:
+        '"simple" solution':
+          name: '"basit" çözüm'
       courseC_artist_prog3:
         draw flame:
           parameters:
@@ -637,7 +643,16 @@ tr-TR:
             x: x
         draw fire:
           name: ateş çiz
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
+        draw fire:
+          name: ateş çiz
       courseC_data wizard:
+        do something:
+          name: bir şeyler yap
+      courseC_data wizard_2020:
         do something:
           name: bir şeyler yap
       courseD_artist_binary1:
@@ -651,6 +666,11 @@ tr-TR:
         draw:
           name: çiz
       courseD_artist_binary1_2019:
+        draw bit:
+          name: parça çiz
+        draw:
+          name: çiz
+      courseD_artist_binary1_2020:
         draw bit:
           name: parça çiz
         draw:
@@ -670,6 +690,11 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary2_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binary3:
         draw:
           name: çiz
@@ -681,6 +706,11 @@ tr-TR:
         draw bit:
           name: parça çiz
       courseD_artist_binary3_2019:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
+      courseD_artist_binary3_2020:
         draw:
           name: çiz
         draw bit:
@@ -700,6 +730,11 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary4_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binary5:
         draw:
           name: çiz
@@ -711,6 +746,11 @@ tr-TR:
         draw bit:
           name: parça çiz
       courseD_artist_binary5_2019:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
+      courseD_artist_binary5_2020:
         draw:
           name: çiz
         draw bit:
@@ -730,6 +770,11 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary6_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binary7:
         draw:
           name: çiz
@@ -741,6 +786,11 @@ tr-TR:
         draw bit:
           name: parça çiz
       courseD_artist_binary7_2019:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
+      courseD_artist_binary7_2020:
         draw:
           name: çiz
         draw bit:
@@ -760,6 +810,11 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary8_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binary8_predict1:
         draw:
           name: çiz
@@ -775,12 +830,22 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binaryFP_2018:
         draw:
           name: çiz
         draw bit:
           name: parça çiz
       courseD_artist_binaryFP_2019:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
+      courseD_artist_binaryFP_2020:
         draw:
           name: çiz
         draw bit:
@@ -795,12 +860,22 @@ tr-TR:
           name: çiz
         draw bit:
           name: parça çiz
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
       courseD_artist_binary_challenge2_2018:
         draw:
           name: çiz
         draw bit:
           name: parça çiz
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: çiz
+        draw bit:
+          name: parça çiz
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: çiz
         draw bit:
@@ -893,6 +968,13 @@ tr-TR:
           name: altıgen çiz
         draw line of hexagons:
           name: bir satır altıgenler çiz
+      courseE_artist_functions10_2020:
+        do something:
+          name: bir şeyler yap
+        draw hexagon:
+          name: altıgen çiz
+        draw line of hexagons:
+          name: bir satır altıgenler çiz
       courseE_artist_functions2:
         draw a square:
           name: bir kare çiz
@@ -902,6 +984,9 @@ tr-TR:
       courseE_artist_functions2_2019:
         draw a square:
           name: bir kare çiz
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: bir kare çiz
       courseE_artist_functions2_copy:
         draw a square:
           name: bir kare çiz
@@ -909,6 +994,9 @@ tr-TR:
         draw a star:
           name: bir yıldız çiz
       courseE_artist_functions3_2019:
+        draw a star:
+          name: bir yıldız çiz
+      courseE_artist_functions3_2020:
         draw a star:
           name: bir yıldız çiz
       courseE_artist_functions4:
@@ -924,6 +1012,9 @@ tr-TR:
         draw a star:
           name: bir yıldız çiz
       courseE_artist_functions5_2019:
+        draw a star:
+          name: bir yıldız çiz
+      courseE_artist_functions5_2020:
         draw a star:
           name: bir yıldız çiz
       courseE_artist_functions5_copy:
@@ -942,6 +1033,11 @@ tr-TR:
       courseE_artist_functions7_2019:
         draw a window:
           name: pencere çiz
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: pencere çiz
+        draw a house:
+          name: bir ev çiz
       courseE_artist_functions8:
         do something:
           name: bir şeyler yap
@@ -963,12 +1059,24 @@ tr-TR:
           name: bir satır kareler çiz
         draw square:
           name: kare çiz
+      courseE_artist_functions8_2020:
+        do something:
+          name: bir şeyler yap
+        draw a line of squares:
+          name: bir satır kareler çiz
+        draw square:
+          name: kare çiz
       courseE_artist_functions8a_2018:
         draw a square:
           name: bir kare çiz
         do something:
           name: bir şeyler yap
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: bir kare çiz
+        do something:
+          name: bir şeyler yap
+      courseE_artist_functions8a_2020:
         draw a square:
           name: bir kare çiz
         do something:
@@ -987,6 +1095,13 @@ tr-TR:
           name: kare çiz
         do something:
           name: bir şeyler yap
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: bir satır kareler çiz
+        draw square:
+          name: kare çiz
+        do something:
+          name: bir şeyler yap
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: bir satır kareler çiz
@@ -995,6 +1110,13 @@ tr-TR:
         do something:
           name: bir şeyler yap
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: bir satır kareler çiz
+        draw square:
+          name: kare çiz
+        do something:
+          name: bir şeyler yap
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: bir satır kareler çiz
         draw square:
@@ -1022,6 +1144,13 @@ tr-TR:
           name: üçgen çiz
         draw line of triangles:
           name: bir satır üçgenler çiz
+      courseE_artist_functions9_2020:
+        do something:
+          name: bir şeyler yap
+        draw triangle:
+          name: üçgen çiz
+        draw line of triangles:
+          name: bir satır üçgenler çiz
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: altıgen çiz
@@ -1040,6 +1169,15 @@ tr-TR:
           name: bir satır kareler çiz
         draw square:
           name: kare çiz
+      courseE_artist_functionsProj_2020:
+        draw hexagon:
+          name: altıgen çiz
+        draw line of hexagons:
+          name: bir satır altıgenler çiz
+        draw a line of squares:
+          name: bir satır kareler çiz
+        draw square:
+          name: kare çiz
       courseE_artist_functions_challenge1:
         do something:
           name: bir şeyler yap
@@ -1047,6 +1185,9 @@ tr-TR:
         do something:
           name: bir şeyler yap
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: bir şeyler yap
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: bir şeyler yap
       courseE_artist_functions_challenge2:
@@ -1058,6 +1199,9 @@ tr-TR:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: bir şeyler yap
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: bir şeyler yap
       courseE_artist_functions_predict1:
         draw a square:
           name: bir kare çiz
@@ -1065,6 +1209,9 @@ tr-TR:
         draw a square:
           name: bir kare çiz
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: bir kare çiz
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: bir kare çiz
       courseE_artist_functions_predict1_copy:
@@ -1081,6 +1228,11 @@ tr-TR:
         do something:
           name: bir şeyler yap
       courseE_artist_functions_predict2_2019:
+        draw polygon:
+          name: çokgen çiz
+        do something:
+          name: bir şeyler yap
+      courseE_artist_functions_predict2_2020:
         draw polygon:
           name: çokgen çiz
         do something:
@@ -1155,6 +1307,13 @@ tr-TR:
           name: tüm bal kabaklarını al
         pumpkin square:
           name: bal kabağı karesi
+      courseE_farmer_functions10a1_2020:
+        check square for corn:
+          name: mısır için kareye bak
+        get all pumpkins:
+          name: tüm bal kabaklarını al
+        pumpkin square:
+          name: bal kabağı karesi
       courseE_farmer_functions10b:
         navigate:
           name: gezin
@@ -1181,6 +1340,15 @@ tr-TR:
           name: ürün al
         get all pumpkins:
           name: tüm bal kabaklarını al
+      courseE_farmer_functions11_predict_2020:
+        pumpkin square:
+          name: bal kabağı karesi
+        check square for corn:
+          name: mısır için kareye bak
+        get produce:
+          name: ürün al
+        get all pumpkins:
+          name: tüm bal kabaklarını al
       courseE_farmer_functions13_2018:
         check for corn:
           name: mısır var mı bak
@@ -1195,16 +1363,29 @@ tr-TR:
           name: mısır dikdörtgeni
         lettuce stairs:
           name: marul merdiveni
+      courseE_farmer_functions13_2020:
+        check for corn:
+          name: mısır var mı bak
+        corn rectangle:
+          name: mısır dikdörtgeni
+        lettuce stairs:
+          name: marul merdiveni
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: mısır için kareye bak
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: mısır için kareye bak
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: mısır için kareye bak
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: mısır için kareye bak
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: mısır için kareye bak
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: mısır için kareye bak
       courseE_farmer_functions2ba:
@@ -1216,6 +1397,11 @@ tr-TR:
         get all pumpkins:
           name: tüm bal kabaklarını al
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: mısır için kareye bak
+        get all pumpkins:
+          name: tüm bal kabaklarını al
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: mısır için kareye bak
         get all pumpkins:
@@ -1233,12 +1419,22 @@ tr-TR:
           name: mısır için kareye bak
         get all pumpkins:
           name: tüm bal kabaklarını al
+      courseE_farmer_functions3c1_2020:
+        check square for corn:
+          name: mısır için kareye bak
+        get all pumpkins:
+          name: tüm bal kabaklarını al
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: mısır için kareye bak
         get all pumpkins:
           name: tüm bal kabaklarını al
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: mısır için kareye bak
+        get all pumpkins:
+          name: tüm bal kabaklarını al
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: mısır için kareye bak
         get all pumpkins:
@@ -1258,10 +1454,16 @@ tr-TR:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: bahçe karesi
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: bahçe karesi
       courseE_farmer_functions8a1_2018:
         garden square:
           name: bahçe karesi
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: bahçe karesi
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: bahçe karesi
       courseE_farmer_functions8b:
@@ -1271,6 +1473,9 @@ tr-TR:
         garden square:
           name: bahçe karesi
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: bahçe karesi
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: bahçe karesi
       courseE_farmer_functions9b:
@@ -1467,10 +1672,16 @@ tr-TR:
       courseF_bee_variables_7_2019:
         collect:
           name: topla
+      courseF_bee_variables_7_2020:
+        collect:
+          name: topla
       courseF_bee_variables_8_2018:
         collect:
           name: topla
       courseF_bee_variables_8_2019:
+        collect:
+          name: topla
+      courseF_bee_variables_8_2020:
         collect:
           name: topla
       grade5_artist_binary11:

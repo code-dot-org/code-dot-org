@@ -21,6 +21,7 @@ ru-RU:
       AppLab Intro 7 - thisOrThatSetScreen: То или это
       CDEF_video_SpritesInAction: Как создать спрайт?
       CDEF_video_SpritesInAction_2019: Как создать спрайт?
+      CDEF_video_SpritesInAction_2020: Как создать спрайт?
       CSD If Else Map: Операторы "если-иначе"
       CSD If Else Map_2018: Операторы "если-иначе"
       CSD If Else Map_2019: Операторы "если-иначе"
@@ -387,10 +388,17 @@ ru-RU:
       'Course E: Artist Project': Курс E. Проект "Художник"
       'Course E: Artist Project_2018': Курс E. Проект "Художник"
       'Course E: Artist Project_2019': Курс E. Проект "Художник"
+      CourseD_Dance_2020_bonus1: Туда-сюда
+      CourseD_Dance_2020_bonus3: Давайте установим порядок
       CourseEF_video_IntroSpriteLab: Это лаборатория спрайтов
       CourseEF_video_IntroSpriteLab_2019: Это лаборатория спрайтов
+      CourseEF_video_IntroSpriteLab_2020: Это лаборатория спрайтов
       CourseEF_video_MakeSprite: Как создать спрайт?
       CourseEF_video_MakeSprite_2019: Как создать спрайт?
+      CourseEF_video_MakeSprite_2020: Как создать спрайт?
+      CourseF_Oceans_Video_Machine_Learning: 'Видео: Машинное Обучение'
+      CourseF_Oceans_Video_Societal_Implications: 'Видео: Общественная Значимость'
+      CourseF_Oceans_Video_Training_Data: 'Видео: Обучающие Данные'
       Dance_Party_extras_alternate_2019: Туда-сюда
       Dance_Party_extras_battle: Танцевальные коллективы
       Dance_Party_extras_battle_2019: Танцевальные коллективы
@@ -421,12 +429,19 @@ ru-RU:
       MC_HOC_2017_01_RETRY_2019: 'Ферма
 
 '
+      MC_HOC_2017_01_RETRY_2020: 'Ферма
+
+'
       MC_HOC_2017_02_Cole: Ферма
       MC_HOC_2017_02_Cole_2019: Ферма
+      MC_HOC_2017_02_Cole_2020: Ферма
       MC_HOC_2017_03_Cole: 'Леса
 
 '
       MC_HOC_2017_03_Cole_2019: 'Леса
+
+'
+      MC_HOC_2017_03_Cole_2020: 'Леса
 
 '
       MC_HOC_2017_04POINT5_RYAN: 'Пустыня
@@ -435,30 +450,46 @@ ru-RU:
       MC_HOC_2017_04POINT5_RYAN_2019: 'Пустыня
 
 '
+      MC_HOC_2017_04POINT5_RYAN_2020: 'Пустыня
+
+'
       MC_HOC_2017_04_Cole: Болото
       MC_HOC_2017_04_Cole_2019: Болото
+      MC_HOC_2017_04_Cole_2020: Болото
       MC_HOC_2017_05_Cole: Река
       MC_HOC_2017_05_Cole_2019: Река
+      MC_HOC_2017_05_Cole_2020: Река
       MC_HOC_2017_06_Cole: 'Прилив
 
 '
       MC_HOC_2017_06_Cole_2019: 'Прилив
 
 '
+      MC_HOC_2017_06_Cole_2020: 'Прилив
+
+'
       MC_HOC_2017_07_Cole: Снежный перевал
       MC_HOC_2017_07_Cole_2019: Снежный перевал
+      MC_HOC_2017_07_Cole_2020: Снежный перевал
       MC_HOC_2017_10_RETRY: Пещера
       MC_HOC_2017_10_RETRY_2019: Пещера
+      MC_HOC_2017_10_RETRY_2020: Пещера
       MC_HOC_2017_Ali: 'Нижняя крепость
 
 '
       MC_HOC_2017_Ali_2019: 'Нижняя крепость
 
 '
+      MC_HOC_2017_Ali_2020: 'Нижняя крепость
+
+'
       MC_HOC_2017_FP20x20: 'Свободная практика
 
 '
       MC_HOC_2017_FP20x20_2019: 'Свободная практика
+
+'
+      MC_HOC_2017_FP20x20_2020: 'Свободная практика
 
 '
       New Minecraft Hero Project: 'Свободная практика
@@ -477,6 +508,7 @@ ru-RU:
       courseF_artist_for1: Свободная практика с циклами for (начало)
       courseF_artist_for1_2018: Свободная практика с циклами for (начало)
       courseF_artist_for1_2019: Свободная практика с циклами for (начало)
+      courseF_artist_for1_2020: Свободная практика с циклами for (начало)
       courseF_video_csMatters: Конец проектов курса
       csd-pre-survey-2017-levelgroup_2018: Обзор урока
       csd-pre-survey-levelgroup_2019: Обзор урока

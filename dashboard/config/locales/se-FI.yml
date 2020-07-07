@@ -1,1 +1,20 @@
---- {}
+---
+se:
+  nav:
+    user:
+      artist: Dáiddár
+      calc: Rehkenastte
+      eval: Evaluere
+      flappy: Flappy
+      playlab: Speallan-lab
+      spritelab: Sprite-lab
+  upsell:
+    20-hour:
+      body: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid
+        kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat
+        oažžut ollislaš vásáhusa!
+    infinity:
+      body: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija
+        figurat leat mielde.
+    text-compression:
+      title: TeakstaKomprimeren

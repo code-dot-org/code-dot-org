@@ -337,7 +337,14 @@ bn-BD:
         draw flame:
           parameters:
             x: এক্স
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: এক্স
       courseC_data wizard:
+        do something:
+          name: কিছু কর
+      courseC_data wizard_2020:
         do something:
           name: কিছু কর
       courseE_artist_concept1:
@@ -364,6 +371,9 @@ bn-BD:
       courseE_artist_functions10_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions10_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions2:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -373,6 +383,9 @@ bn-BD:
       courseE_artist_functions2_2019:
         draw a square:
           name: একটি বর্গ আঁকুন।
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
       courseE_artist_functions2_copy:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -380,6 +393,9 @@ bn-BD:
         draw a star:
           name: একটি বর্গ আঁকুন
       courseE_artist_functions3_2019:
+        draw a star:
+          name: একটি বর্গ আঁকুন
+      courseE_artist_functions3_2020:
         draw a star:
           name: একটি বর্গ আঁকুন
       courseE_artist_functions4:
@@ -397,6 +413,9 @@ bn-BD:
       courseE_artist_functions5_2019:
         draw a star:
           name: একটি বর্গ আঁকুন
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: একটি বর্গ আঁকুন
       courseE_artist_functions5_copy:
         draw a star:
           name: একটি বর্গ আঁকুন
@@ -406,6 +425,9 @@ bn-BD:
       courseE_artist_functions7_2018:
         draw a house:
           name: একটি ঘর আঁকুন।
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: একটি ঘর আঁকুন।
       courseE_artist_functions8:
         do something:
           name: কিছু কর
@@ -413,6 +435,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions8_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions8_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions8a_2018:
@@ -425,16 +450,27 @@ bn-BD:
           name: একটি বর্গ আঁকুন।
         do something:
           name: কিছু কর
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
+        do something:
+          name: কিছু কর
       courseE_artist_functions8b_2018:
         do something:
           name: কিছু কর
       courseE_artist_functions8b_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions8b_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions8c_2018:
         do something:
           name: কিছু কর
       courseE_artist_functions8c_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions8c_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions9:
@@ -446,6 +482,9 @@ bn-BD:
       courseE_artist_functions9_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions9_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions_challenge1:
         do something:
           name: কিছু কর
@@ -453,6 +492,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions_challenge2:
@@ -464,6 +506,9 @@ bn-BD:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions_predict1:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -471,6 +516,9 @@ bn-BD:
         draw a square:
           name: একটি বর্গ আঁকুন।
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: একটি বর্গ আঁকুন।
       courseE_artist_functions_predict1_copy:
@@ -483,6 +531,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions_predict2_2020:
         do something:
           name: কিছু কর
       courseE_bee_functions1:

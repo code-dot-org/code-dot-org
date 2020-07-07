@@ -137,6 +137,22 @@ it-IT:
       Course 4 SCV 6:
         Course_4_SCV_6: Questo blocco ti permette di personalizzare il colore come
           preferisci! Osserva cosa accade modificando i numeri...
+      CourseD_Dance_2020_01:
+        dance_callout_01: Qui scegli il tipo di ballerino.
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Aggiungi questo blocco al tuo programma.
+        arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Aggiungi un nuovo evento al tuo programma.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Nuovo blocco!
+      CourseD_Dance_2020_07:
+        setprop_hint: Nuovo blocco!
+      CourseD_Dance_2020_09:
+        new_block_3: Nuovo blocco!
+        new_block_4: Nuovo blocco!
       CourseD_Dance_Party_01:
         dance_callout_01: Aggiungi questo blocco al tuo programma!
       CourseD_Dance_Party_02:
@@ -185,6 +201,9 @@ it-IT:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
           la GRANDE porzione di codice con lo stesso nome nell'area di lavoro.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
+          la GRANDE porzione di codice con lo stesso nome nell'area di lavoro.
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
@@ -224,18 +243,29 @@ it-IT:
         MC_HOC_2017_03_Cole_1: Questo è un ciclo di "ripetizione"!  Prendilo dall'area
           di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse
           volte.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Questo è un ciclo di "ripetizione"!  Prendilo dall'area
+          di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse
+          volte.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
           non possono!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
+          non possono!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
           non possono!  '
       NEW Course 4 Artist Functions 3:
@@ -292,10 +322,15 @@ it-IT:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
           casa. Riesci a finirla tu?
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
+          casa. Riesci a finirla tu?
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
           casa. Riesci a finirla tu?
       Overworld Move to Sheep:
@@ -306,9 +341,15 @@ it-IT:
         craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
         craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto
           gli altri blocchi nell'area di lavoro.
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
+        craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto
+          gli altri blocchi nell'area di lavoro.
       Overworld Place Wall:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       Overworld Place Wall_2019:
+        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
+      Overworld Place Wall_2020:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       Robot Doodle:
         4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `commento`
@@ -322,13 +363,24 @@ it-IT:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
           un comando per andare avanti?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
+          un comando per andare avanti?
       Underground Iron:
         craft_what_is_iron: Estrai il ferro!
       Underground Iron_2019:
         craft_what_is_iron: Estrai il ferro!
+      Underground Iron_2020:
+        craft_what_is_iron: Estrai il ferro!
       Virtual Pet 2_2019:
         '': Clicca qui!
+      Virtual Pet 2_2020:
+        '': Clicca qui!
       behaviors 3a:
+        behavior_callout: Perché questo comportamento non funziona per la stella centrale?
+        star2_callout: Rimuovi questo blocco costume e usa al suo posto il blocco
+          "questo personaggio".
+      behaviors 3a_2020:
         behavior_callout: Perché questo comportamento non funziona per la stella centrale?
         star2_callout: Rimuovi questo blocco costume e usa al suo posto il blocco
           "questo personaggio".
@@ -373,6 +425,9 @@ it-IT:
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
           usare in questo esercizio.
+      courseA_artist_loops4_2020:
+        courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
+          usare in questo esercizio.
       courseA_artist_loops7:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
           di blocchi può essere usato nella risposta finale.
@@ -382,17 +437,26 @@ it-IT:
       courseA_artist_loops7_2019:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
           di blocchi può essere usato nella risposta finale.
+      courseA_artist_loops7_2020:
+        courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
+          di blocchi può essere usato nella risposta finale.
       courseA_artist_loops8:
         courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
+      courseA_artist_loops8_2020:
+        courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
       courseA_collector_loops1_2019:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
+      courseA_collector_loops1_2020:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
@@ -403,6 +467,9 @@ it-IT:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
       courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
+          puoi usare in questo esercizio.
+      courseA_collector_loops3_2020:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
       courseA_collector_preLoops1:
@@ -430,6 +497,9 @@ it-IT:
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseA_maze_ramp2_2020:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
@@ -438,6 +508,8 @@ it-IT:
       courseA_maze_seq1_2018:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
+      courseA_maze_seq1_2020:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo
@@ -451,6 +523,8 @@ it-IT:
         courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Questa è una nota
+      courseA_playLab_events4_2020:
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events5:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
@@ -458,6 +532,9 @@ it-IT:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
+          freccia.
+      courseA_playLab_events5_2020:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events6:
@@ -469,13 +546,22 @@ it-IT:
       courseA_playLab_events6_2019:
         courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
           quindi non saprai quale suono verrà riprodotto ogni volta!
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
+          quindi non saprai quale suono verrà riprodotto ogni volta!
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseB_artist_loops3:
@@ -485,6 +571,9 @@ it-IT:
         courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
           attrezzi. Come lo userai?
       courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
+          attrezzi. Come lo userai?
+      courseB_artist_loops3_2020:
         courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
           attrezzi. Come lo userai?
       courseB_artist_loops5:
@@ -502,11 +591,17 @@ it-IT:
         courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseB_collector_loops1_2020:
+        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseB_maze_seq1:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq1_2018:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq1_2019:
+        courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
+      courseB_maze_seq1_2020:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
@@ -520,7 +615,12 @@ it-IT:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
+      courseB_playlab_events6_2020:
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
+      courseC19_playLab_EOC3_2020:
         courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
           per passare all'esercizio successivo.
       courseC_PlayLab_events8:
@@ -532,6 +632,9 @@ it-IT:
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: Usa questo blocco per indicare cosa fare
           quando il pinguino e il dinosauro si toccano!
+      courseC_PlayLab_events8_2020:
+        courseC_PlayLab_events8_callout1: Usa questo blocco per indicare cosa fare
+          quando il pinguino e il dinosauro si toccano!
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
@@ -541,6 +644,9 @@ it-IT:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
+      courseC_PlayLab_events_challenge1_2020:
+        courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
+          gli attori in diverse parti dello spazio di gioco.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
           al centro dello schermo.
@@ -548,6 +654,9 @@ it-IT:
         courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
           al centro dello schermo.
       courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
+          al centro dello schermo.
+      courseC_artist_loopsPrePre1a_2020:
         courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
           al centro dello schermo.
       courseC_collector_prog1:
@@ -562,6 +671,10 @@ it-IT:
         courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseC_collector_prog1_2020:
+        courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseC_collector_prog7:
         courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
           cassetta degli attrezzi!
@@ -569,6 +682,9 @@ it-IT:
         courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
           cassetta degli attrezzi!
       courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
+          cassetta degli attrezzi!
+      courseC_collector_prog7_2020:
         courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
           cassetta degli attrezzi!
       courseC_harvester_loops1:
@@ -580,12 +696,18 @@ it-IT:
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: Il numero quattro sulla zucca indica che
           ci sono quattro zucche disponibili da raccogliere.
+      courseC_harvester_loops1_2020:
+        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca indica che
+          ci sono quattro zucche disponibili da raccogliere.
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: Non puoi cancellare i blocchi grigi!
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono
           essere cancellati!
       courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono
+          essere cancellati!
+      courseC_maze_debugging5_2020:
         courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono
           essere cancellati!
       courseC_maze_programming1:
@@ -597,6 +719,9 @@ it-IT:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
       courseC_maze_programming2:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
@@ -604,6 +729,9 @@ it-IT:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseC_maze_programming2_2020:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming3:
@@ -621,6 +749,11 @@ it-IT:
           nella cassetta degli attrezzi.
         courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
           essere gettati via.
+      courseC_maze_programming3_2020:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
+          nella cassetta degli attrezzi.
+        courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
+          essere gettati via.
       courseC_maze_programming4:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
@@ -628,6 +761,9 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseC_maze_programming4_2019:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseC_maze_programming4_2020:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseC_maze_programming7:
@@ -645,6 +781,11 @@ it-IT:
           sono appositamente pensati per essere difficili e potrebbero richiederti
           diversi tentativi.
         courseC_maze_programming7_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
+      courseC_maze_programming7_2020:
+        courseC_maze_programming7_1: Questa è la tua prima sfida! Questi esercizi
+          sono appositamente pensati per essere difficili e potrebbero richiederti
+          diversi tentativi.
+        courseC_maze_programming7_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseC_starWars_loops2:
         courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
           blocchi.
@@ -652,6 +793,9 @@ it-IT:
         courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
           blocchi.
       courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
+          blocchi.
+      courseC_starWars_loops2_2020:
         courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
           blocchi.
       courseC_starWars_loops2_copy:
@@ -669,6 +813,10 @@ it-IT:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
           a caso` ti permette di ottenere facilmente tanti colori diversi!'
+      courseD_artist_nestedLoops1a_2020:
+        courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
+          correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
+          a caso` ti permette di ottenere facilmente tanti colori diversi!'
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Puoi cambiare questo numero.
         courseD_artist_ramp11_2: Clicca qui per inserire il numero di volte da ripetere
@@ -683,6 +831,9 @@ it-IT:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      courseD_bee_conditionals2_2020:
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
@@ -694,6 +845,9 @@ it-IT:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
+          il nettare da un fiore o fare tutto il miele in un favo.
+      courseD_bee_conditionals_challenge2_2020:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_debugging_challenge1:
@@ -710,7 +864,13 @@ it-IT:
       courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
           in avanti` per risolvere questo esercizio.
+      courseD_farmer_while7_2020:
+        courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
+          in avanti` per risolvere questo esercizio.
       courseD_maze_intro4_2019:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseD_maze_intro4_2020:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseD_maze_ramp1:
@@ -722,6 +882,9 @@ it-IT:
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
+      courseD_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
       courseD_maze_ramp2:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
@@ -729,6 +892,9 @@ it-IT:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseD_maze_ramp2_2020:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp3:
@@ -742,6 +908,9 @@ it-IT:
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+      courseD_maze_ramp3_2020:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
+          nella cassetta degli attrezzi.
       courseD_maze_ramp4:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
@@ -749,6 +918,9 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseD_maze_ramp4_2020:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseD_maze_ramp6:
@@ -783,6 +955,8 @@ it-IT:
           pensati per essere difficili e potrebbero richiederti diversi tentativi.
       courseE_aboutme_2:
         '': Clicca qui!
+      courseE_aboutme_2_2020:
+        '': Clicca qui!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
@@ -801,6 +975,10 @@ it-IT:
         courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
@@ -812,6 +990,9 @@ it-IT:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
           in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
+          in questa categoria della cassetta degli attrezzi.
+      courseE_artist_functions8a_2020:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
           in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions_challenge1:
@@ -829,6 +1010,11 @@ it-IT:
           altri blocchi qui sotto.
         courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
+      courseE_artist_functions_challenge1_2020:
+        courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
+        courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
+          cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
@@ -840,6 +1026,11 @@ it-IT:
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
+        courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
+          cambialo con qualunque cosa vuoi!
+      courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
@@ -862,11 +1053,18 @@ it-IT:
       courseE_farmer_functions13_2019:
         courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
           cambia ad ogni esecuzione del programma.
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
+          cambia ad ogni esecuzione del programma.
       courseE_farmer_functions1_2018:
         courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
       courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
+          in modo leggermente diverso. Clicca sulle varie categorie per vedere che
+          blocchi contengono.
+      courseE_farmer_functions1_2020:
         courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
@@ -879,6 +1077,9 @@ it-IT:
       courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
           cambia ad ogni esecuzione del programma.
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
+          cambia ad ogni esecuzione del programma.
       courseE_farmer_functions2b:
         courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
           cambia ad ogni esecuzione del programma.
@@ -886,6 +1087,9 @@ it-IT:
         courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
           cambia ad ogni esecuzione del programma.
       courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
+          cambia ad ogni esecuzione del programma.
+      courseE_farmer_functions2b_2020:
         courseE_farmer_functions1a_1: Qui non conosciamo il numero di ortaggi da raccogliere,
           cambia ad ogni esecuzione del programma.
       courseE_playLab_challenge1:
@@ -901,6 +1105,9 @@ it-IT:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
       courseF_artist_for1_2019:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
+          in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_for1_2020:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
       courseF_artist_fwp1:
@@ -920,6 +1127,9 @@ it-IT:
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
           variabile `length` (lunghezza)
+      courseF_artist_variables3_2020:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (lunghezza)
       courseF_bee_conditionals2:
         courseF_bee_conditionals2_2: La sezione degli strumenti è ora in modalità
           categorie. Tutti i blocchi di cui hai bisogno sono al di sotto di queste
@@ -933,11 +1143,15 @@ it-IT:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_for4_2019:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
+      courseF_bee_for4_2020:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_for9:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_for9_2018:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_for9_2019:
+        courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
+      courseF_bee_for9_2020:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
         courseF_bee_functions2_1: Questo blocco richiama una funzione. Clicca il pulsante
@@ -968,6 +1182,8 @@ it-IT:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
+      courseF_bee_variables_1_2020:
+        courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: La cassetta degli attrezzi è stata organizzata
           in categorie per farti trovare più facilmente i blocchi che ti servono.
@@ -981,6 +1197,9 @@ it-IT:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
           "Esegui" per far partire il tuo programma.
       coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
+          "Esegui" per far partire il tuo programma.
+      coursea_maze_ramp1_2020:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
           "Esegui" per far partire il tuo programma.
       frozen circle function with parameter:
@@ -1030,6 +1249,10 @@ it-IT:
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
           presi e spostati da un blocco all''altro!'
       grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      grade5_artist_variables_triangles1_2020:
         grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
           presi e spostati da un blocco all''altro!'

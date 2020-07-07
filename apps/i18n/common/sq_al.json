@@ -161,6 +161,7 @@
   "dataLimitAlert": "Aplikacioni ka qenë duke lexuar ose shkruar në bazën e të dhënave shumë shpesh, e cila mund të rezultojë në dështimet papritura . Ju lutem bëjini të ditur krijuesit të aplikacionit nëse vazhdon të ketë probleme.",
   "dataMode": "të dhëna",
   "dataTableNamePlaceholder": "Emri i tabelës",
+  "dataLibrarySearchPlacholder": "Kërko",
   "dataWorkspaceHeader": "Shfletuesi i të dhënave",
   "debugConsoleHeader": "panel për rregullimin e gabimeve",
   "debugCommandsHeaderWhenOpen": "komanda për rregullimin e gabimeve",

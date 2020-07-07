@@ -98,7 +98,7 @@ it:
         title: Algoritmi per il Tangram
         desc: Questa lezione ti mostra qualcosa di importante sugli algoritmi. Se un algoritmo è semplice ci sono molti modi per usarlo. Se vuoi essere sicuro che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno di essere maggiormente dettagliato.
       EnvelopeVariables:
-        title: Variabili e Buste
+        title: Variabili e buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili.
       MadGlibs:
         title: Mad G-Libs
@@ -209,7 +209,7 @@ it:
         title: Algoritmi per il Tangram
         desc: Questa lezione ti mostra qualcosa di importante sugli algoritmi. Se un algoritmo è semplice ci sono molti modi per usarlo. Se vuoi essere sicuro che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno di essere maggiormente dettagliato.
       courseF_unplugged_envelopeVariables:
-        title: Variabili e Buste
+        title: Variabili e buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
         title: Divertiti usando i cicli con contatore
