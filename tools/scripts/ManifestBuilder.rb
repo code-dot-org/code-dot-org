@@ -72,11 +72,9 @@ class ManifestBuilder
 
     if @options[:spritelab] && @options[:upload_to_s3]
       info "Uploading file to S3"
-      # Rebuilding the manifest is done in English, so we should use
-      # the English (US) language prefix.
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.en_us.json",
+        "manifests/spritelabCostumeLibrary.json",
         generate_json(animation_metadata, alias_map),
         acl: 'public-read',
         no_random: true,
