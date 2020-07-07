@@ -55,14 +55,13 @@ class LessonGroup < ApplicationRecord
       if raw_lesson_groups[0][:key].nil?
         if raw_lesson_groups.length > 1
           raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-        elsif raw_lesson_groups.length == 1
-          lesson_group = LessonGroup.find_or_create_by(
-            key: '',
-            script: script,
-            user_facing: false,
-            position: 1
-          )
         end
+        lesson_group = LessonGroup.find_or_create_by(
+          key: '',
+          script: script,
+          user_facing: false,
+          position: 1
+        )
       else
         Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
           if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
