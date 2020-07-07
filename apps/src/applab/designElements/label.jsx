@@ -275,6 +275,7 @@ export default {
           maxWidth: maxWidth + 'px'
         })
         .appendTo($(document.body));
+
       const {
         horizontalPadding,
         verticalPadding
