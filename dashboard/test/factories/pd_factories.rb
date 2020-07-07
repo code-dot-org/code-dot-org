@@ -459,6 +459,10 @@ FactoryGirl.define do
         application_year: evaluator.workshop.school_year
       }
 
+      # We have an after_create hook on the enrollment model (see :set_default_scholarship_info)
+      # that creates a ScholarshipInfo entry in certain cases (namely, if the enrollment is in a CSF workshop).
+      # Skip creating a new ScholarshipInfo entry if one has already been created
+      # when the enrollment is created above.
       if evaluator.cdo_scholarship_recipient && Pd::ScholarshipInfo.find_by(scholarship_params).nil?
         create :pd_scholarship_info,
           scholarship_params
