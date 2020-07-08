@@ -84,14 +84,19 @@ class HeaderMiddle extends React.Component {
   // Return the desired widths for the items that are showing.
   // Also return whether we are only showing the HeaderPopup because we are
   // cropping the progress, and otherwise wouldn't show it.
-  getWidths() {
-    const width = this.state.width;
-
-    if (this.props.projectInfoOnly) {
+  static getWidths(
+    width,
+    projectInfoOnly,
+    projectInfoDesiredWidth,
+    scriptNameDesiredWidth,
+    lessonProgressDesiredWidth,
+    numScriptLessons,
+    finishDesiredWidth,
+    showFinish
+  ) {
+    if (projectInfoOnly) {
       return {
-        projectInfo: Math.floor(
-          Math.min(this.state.projectInfoDesiredWidth, width)
-        ),
+        projectInfo: Math.floor(Math.min(projectInfoDesiredWidth, width)),
         scriptName: 0,
         progress: 0,
         popup: 0,
@@ -99,32 +104,27 @@ class HeaderMiddle extends React.Component {
       };
     }
 
-    const lessonProgresssDesiredWidth =
-      this.state.lessonProgressDesiredWidth + 10;
-
-    const showFinish = !!(
-      this.props.lessonData && this.props.lessonData.finishLink
-    );
+    const lessonProgresssDesiredWidthAdjusted = lessonProgressDesiredWidth + 10;
 
     // projectInfo gets no more than 30% of the entire width
     const projectInfoWidth = Math.floor(
-      Math.min(this.state.projectInfoDesiredWidth, width * 0.3)
+      Math.min(projectInfoDesiredWidth, width * 0.3)
     );
 
     let remainingWidth = width - projectInfoWidth;
 
     // progress gets no more than 60% of the remaining width
     const progressWidth = Math.floor(
-      Math.min(lessonProgresssDesiredWidth, remainingWidth * 0.6)
+      Math.min(lessonProgresssDesiredWidthAdjusted, remainingWidth * 0.6)
     );
 
     remainingWidth = remainingWidth - progressWidth;
 
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (this.props.lessonData && this.props.lessonData.num_script_lessons > 1) {
+    if (numScriptLessons) {
       showPopup = true;
-    } else if (progressWidth < lessonProgresssDesiredWidth) {
+    } else if (progressWidth < lessonProgresssDesiredWidthAdjusted) {
       showPopup = true;
       showPopupBecauseProgressCropped = true;
     }
@@ -134,14 +134,14 @@ class HeaderMiddle extends React.Component {
     remainingWidth = remainingWidth - popupWidth;
 
     const finishWidth = showFinish
-      ? Math.min(remainingWidth / 2, this.state.finishDesiredWidth)
+      ? Math.min(remainingWidth / 2, finishDesiredWidth)
       : 0;
 
     remainingWidth = remainingWidth - finishWidth;
 
     const scriptNameWidth = Math.min(
       remainingWidth,
-      this.state.scriptNameDesiredWidth + 10
+      scriptNameDesiredWidth + 10
     );
 
     remainingWidth = remainingWidth - scriptNameWidth;
@@ -168,7 +168,20 @@ class HeaderMiddle extends React.Component {
       linesOfCodeText
     } = this.props;
 
-    const widths = this.getWidths();
+    const showFinish = !!(
+      this.props.lessonData && this.props.lessonData.finishLink
+    );
+
+    const widths = HeaderMiddle.getWidths(
+      this.state.width,
+      this.props.projectInfoOnly,
+      this.state.projectInfoDesiredWidth,
+      this.state.scriptNameDesiredWidth,
+      this.state.lessonProgressDesiredWidth,
+      this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
+      this.state.finishDesiredWidth,
+      showFinish
+    );
 
     const extraScriptNameData = scriptNameData
       ? {
