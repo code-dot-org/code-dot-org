@@ -17,6 +17,17 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :forbidden
   end
 
+  test 'logged in student cannot submit' do
+    Services::AFEEnrollment.expects(:submit).never
+
+    sign_in create :student
+
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params, as: :json
+
+    assert_response :forbidden
+  end
+
   test 'responds BAD REQUEST when params are malformed' do
     Services::AFEEnrollment.expects(:submit).never
 
