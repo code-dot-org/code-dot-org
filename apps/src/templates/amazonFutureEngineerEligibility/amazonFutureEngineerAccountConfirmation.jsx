@@ -25,11 +25,19 @@ const SIGN_UP_URL = studio(
 const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
-  logSignUpButtonPress = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'sign_up_button_press'
-    });
+  loggingCallback = () => {
+    console.log('in here!');
+    window.location = SIGN_UP_URL;
+  };
+
+  signUpButtonPress = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'amazon-future-engineer-eligibility',
+        event: 'sign_up_button_press'
+      },
+      {callback: this.loggingCallback}
+    );
   };
 
   render() {
@@ -47,9 +55,8 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         </div>
         <Button
           id="sign_up"
-          href={SIGN_UP_URL}
           style={styles.button}
-          onClick={this.logSignUpButtonPress}
+          onClick={this.signUpButtonPress}
         >
           Sign up
         </Button>

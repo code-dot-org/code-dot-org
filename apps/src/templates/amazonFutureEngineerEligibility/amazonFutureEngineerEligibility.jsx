@@ -179,12 +179,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      firehoseClient.putRecord({
-        study: 'amazon-future-engineer-eligibility',
-        event: 'ineligible'
-      });
-
-      window.location = pegasus('/afe/start-codeorg');
+      firehoseClient.putRecord(
+        {
+          study: 'amazon-future-engineer-eligibility',
+          event: 'ineligible'
+        },
+        {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
+      );
     }
   }
 
