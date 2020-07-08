@@ -58,9 +58,6 @@ class ScriptLevel < ActiveRecord::Base
     raw_script_levels.each_with_index do |raw_script_level, index|
       raw_script_level.symbolize_keys!
 
-      assessment = raw_script_level.delete(:assessment)
-      named_level = raw_script_level.delete(:named_level)
-      bonus = raw_script_level.delete(:bonus)
       properties = raw_script_level.delete(:properties) || {}
 
       levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
@@ -75,9 +72,10 @@ class ScriptLevel < ActiveRecord::Base
         script_id: script.id,
         stage_id: lesson.id,
         chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment,
+        position: index + 1,
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment],
         properties: properties.with_indifferent_access
       }
       script_level = script.script_levels.detect do |sl|
@@ -86,10 +84,6 @@ class ScriptLevel < ActiveRecord::Base
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
-
-      script_level_attributes[:position] = index + 1
-      script_level.assign_attributes(script_level_attributes)
-      script_level.save! if script_level.changed?
 
       lesson_script_levels << script_level
     end
