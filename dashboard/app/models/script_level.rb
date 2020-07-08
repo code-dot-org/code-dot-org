@@ -30,9 +30,9 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script, inverse_of: :script_levels
+  belongs_to :script
   belongs_to :lesson_group
-  belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
+  belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
 
@@ -53,10 +53,11 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   def self.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
+    lesson_script_levels = []
     script_level_position = Hash.new(0)
     chapter = 0
 
-    raw_script_levels.map do |raw_script_level|
+    raw_script_levels.each do |raw_script_level|
       raw_script_level.symbolize_keys!
 
       assessment = raw_script_level.delete(:assessment)
@@ -102,8 +103,9 @@ class ScriptLevel < ActiveRecord::Base
       end
       script_level.assign_attributes(script_level_attributes)
       script_level.save! if script_level.changed?
-      script_level
+      lesson_script_levels << script_level
     end
+    lesson_script_levels
   end
 
   def script
