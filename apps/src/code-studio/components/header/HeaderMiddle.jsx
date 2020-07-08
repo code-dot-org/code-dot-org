@@ -94,6 +94,7 @@ class HeaderMiddle extends React.Component {
     finishDesiredWidth,
     showFinish
   ) {
+    // For levels that show only project info, do an early return.
     if (projectInfoOnly) {
       return {
         projectInfo: Math.floor(Math.min(projectInfoDesiredWidth, width)),
@@ -104,41 +105,50 @@ class HeaderMiddle extends React.Component {
       };
     }
 
-    const lessonProgresssDesiredWidthAdjusted = lessonProgressDesiredWidth + 10;
+    // We will take care of padding the lesson progress with an extra 5 pixels
+    // on each side.
+    const lessonProgressDesiredWidthAdjusted = lessonProgressDesiredWidth + 10;
 
-    // projectInfo gets no more than 30% of the entire width
+    // Project info gets no more than 30% of the entire width.
     const projectInfoWidth = Math.floor(
       Math.min(projectInfoDesiredWidth, width * 0.3)
     );
 
     let remainingWidth = width - projectInfoWidth;
 
-    // progress gets no more than 60% of the remaining width
+    // Progress gets no more than 60% of the remaining width.
     const progressWidth = Math.floor(
-      Math.min(lessonProgresssDesiredWidthAdjusted, remainingWidth * 0.6)
+      Math.min(lessonProgressDesiredWidthAdjusted, remainingWidth * 0.6)
     );
 
     remainingWidth = remainingWidth - progressWidth;
 
+    // We might show the popup (which reveals the MiniView when clicked) for
+    // one of two reasons: because there are multiple lessons in this script,
+    // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
     if (numScriptLessons) {
       showPopup = true;
-    } else if (progressWidth < lessonProgresssDesiredWidthAdjusted) {
+    } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
       showPopupBecauseProgressCropped = true;
     }
 
+    // The popup is always 40 pixels wide.
     const popupWidth = showPopup ? 40 : 0;
 
     remainingWidth = remainingWidth - popupWidth;
 
+    // If we show the finish link, it gets no more than 50% of the remaining width.
     const finishWidth = showFinish
       ? Math.min(remainingWidth / 2, finishDesiredWidth)
       : 0;
 
     remainingWidth = remainingWidth - finishWidth;
 
+    // We will also take care of padding the script name with an extra 5 pixels
+    // on each side.
     const scriptNameWidth = Math.min(
       remainingWidth,
       scriptNameDesiredWidth + 10
@@ -146,6 +156,7 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - scriptNameWidth;
 
+    // Center the contents in HeaderMiddle.
     const leftWidth = remainingWidth / 2;
 
     return {
