@@ -70,7 +70,9 @@ export default class HeaderFinish extends React.Component {
   render() {
     const {lessonData} = this.props;
 
-    const fullWidth = $('.header_finished').width();
+    const headerFinishedComponent = $('.header_finished');
+    const fullWidth =
+      headerFinishedComponent.length > 0 ? headerFinishedComponent.width() : 0;
     const actualWidth = this.props.width;
 
     const vignetteStyle =
