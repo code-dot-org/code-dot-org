@@ -42,7 +42,12 @@ import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
+import {
+  KeyCodes,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
+  NOTIFICATION_ALERT_TYPE
+} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
@@ -3120,19 +3125,21 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   }
   var renderElement = container[0];
 
-  const playspaceAlert = React.createElement(
-    Alert,
-    {
-      onClose: () => {
-        ReactDOM.unmountComponentAtNode(renderElement);
-      },
-      type: type,
-      sideMargin: type === 'notification' ? undefined : 20,
-      closeDelayMillis: type === 'notification' ? 5000 : undefined,
-      childPadding: type === 'notification' ? '8px 14px' : undefined
+  let alertProps = {
+    onClose: () => {
+      ReactDOM.unmountComponentAtNode(renderElement);
     },
-    alertContents
-  );
+    type: type
+  };
+
+  if (type === NOTIFICATION_ALERT_TYPE) {
+    alertProps.closeDelayMillis = 5000;
+    alertProps.childPadding = '8px 14px';
+  } else {
+    alertProps.sideMargin = 20;
+  }
+
+  const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
 };
 
