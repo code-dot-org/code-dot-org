@@ -41,6 +41,29 @@ vi-VN:
       4-5 Maze 3: Phải... đạt được... hoa hướng dương.
       Course 4 Bee Params 5: Hãy bắt đầu từ đầu - bạn có thể tạo ra một chức năng
         mới được gọi là "lấy 5 mật hoa " với một tham số hướng?
+      CourseD_Dance_2020_01: 'Khéo khối <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        vào không gian làm việc và kết nối nó vào bên trong khối <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      CourseD_Dance_2020_02: Khiến họ thực hiện một động tác nhảy khi bạn nhấn phím.
+      CourseD_Dance_2020_03: Đã đến lúc so tài khiêu vũ! Lập trình để từng vũ công
+        di chuyển khi bạn nhấn các phím khác nhau. Chọn động tác yêu thích của bạn
+        cho mỗi vũ công hoặc thiết lập chế độ "(Random)" để cho ra một màn trình diễn
+        không thể đoán trước!
+      CourseD_Dance_2020_04: Làm cho vũ công của bạn bắt đầu một động tác mới sau
+        nhịp thứ tư.
+      CourseD_Dance_2020_05: Bây giờ, hãy làm vũ công bắt đầu động tác mới sau 6 nhịp!
+      CourseD_Dance_2020_06: Thiết lập một nhóm các vũ công phụ họa đứng xung quanh
+        vũ công chính ở giữa.
+      CourseD_Dance_2020_07: Thay đổi kích thước của nhóm vũ công phụ họa.
+      CourseD_Dance_2020_08: Hãy thử thay đổi màu sắc của một trong các vũ công của
+        bạn (hoặc của toàn bộ nhóm nhảy)!
+      CourseD_Dance_2020_09: Hãy sáng tạo với những khối mới này!
+      CourseD_Dance_2020_10: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để
+        chia sẻ với bạn bè.
+      CourseD_Dance_2020_bonus1: Lặp đi lặp lại! (Nhấp vào "Thêm" để biết chi tiết)
+      CourseD_Dance_2020_bonus3: Hãy vào đội hình! (Nhấp vào “Thêm” để biết chi tiết)
       CourseD_Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc
         và kết nối nó với bên trong khối `setup`.
       CourseD_Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
@@ -69,17 +92,30 @@ vi-VN:
         chia sẻ với bạn bè.
       CourseE_HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
       CourseE_HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
+      CourseE_HOC 2018 Level_10_2020: Đến lối vào của Tòa nhà Đại dương này.
       CourseE_HOC 2018 Level_11: Xây dựng một đường dẫn bằng Prismarine bên trong
         Tượng đài Đại Dương.
+      CourseE_HOC 2018 Level_11_2020: Xây dựng một đường dẫn bằng Prismarine bên trong
+        Tượng đài Đại Dương.
+      CourseE_HOC 2018 Level_1_2020: Lấy chiếc thuyền ở trong chiếc rương.
       CourseE_HOC 2018 Level_2: Đi đến cuối bến thuyền.
+      CourseE_HOC 2018 Level_2_2020: Đi đến cuối bến thuyền.
       CourseE_HOC 2018 Level_3: Đi băng qua biển khơi đến chỗ cá tuyết.
+      CourseE_HOC 2018 Level_3_2020: Đi băng qua biển khơi đến chỗ cá tuyết.
       CourseE_HOC 2018 Level_4: Sử dụng vòng lặp để đến chỗ cá heo.
+      CourseE_HOC 2018 Level_4_2020: Sử dụng vòng lặp để đến chỗ cá heo.
       CourseE_HOC 2018 Level_5: Khám phá con tàu đắm để đến chỗ chiếc rương.
+      CourseE_HOC 2018 Level_5_2020: Khám phá con tàu đắm để đến chỗ chiếc rương.
       CourseE_HOC 2018 Level_6: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
+      CourseE_HOC 2018 Level_6_2020: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
       CourseE_HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc
         rương.
+      CourseE_HOC 2018 Level_7a_2020: Tìm kiếm những tàn tích dưới nước để thấy một
+        chiếc rương.
       CourseE_HOC 2018 Level_9b: Sử dụng san hô làm các điểm trung gian đường đi để
         đến được kho báu.
+      CourseE_HOC 2018 Level_9b_2020: Sử dụng san hô làm các điểm trung gian đường
+        đi để đến được kho báu.
       Crack Random Substitution: Hướng dẫn
       Crack a Caesar Cipher: Hướng dẫn
       Dance_2019_01: 'Khéo khối <xml><block type="Dancelab_makeAnonymousDanceSprite"
@@ -150,6 +186,8 @@ vi-VN:
       Function intro Ryan: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra
         con đường đi tới với ngọn đuốc.
       Function intro Ryan_2019: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo
+        ra con đường đi tới với ngọn đuốc.
+      Function intro Ryan_2020: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo
         ra con đường đi tới với ngọn đuốc.
       HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
       HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
@@ -265,35 +303,54 @@ vi-VN:
       MC_HOC_2017_01_RETRY_2019: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực,
         sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra
         khỏi ngôi nhà. '
+      MC_HOC_2017_01_RETRY_2020: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực,
+        sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra
+        khỏi ngôi nhà. '
       MC_HOC_2017_02_Cole: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
         có thể di chuyển vào và lấy được tấm bản đồ. '
       MC_HOC_2017_02_Cole_2019: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
         có thể di chuyển vào và lấy được tấm bản đồ. '
+      MC_HOC_2017_02_Cole_2020: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
+        có thể di chuyển vào và lấy được tấm bản đồ. '
       MC_HOC_2017_03_Cole: 'Lập trình để Đặc vụ mở cánh cửa. '
       MC_HOC_2017_03_Cole_2019: 'Lập trình để Đặc vụ mở cánh cửa. '
+      MC_HOC_2017_03_Cole_2020: 'Lập trình để Đặc vụ mở cánh cửa. '
       MC_HOC_2017_04POINT5_RYAN: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04POINT5_RYAN_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04POINT5_RYAN_2020: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Cole: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Cole_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_Cole_2020: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_05_Cole: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_05_Cole_2019: Người chơi cần di chuyển tới chỗ cái xẻng.
+      MC_HOC_2017_05_Cole_2020: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_06_Cole: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc ngang
         qua con sông.
       MC_HOC_2017_06_Cole_2019: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc
+        ngang qua con sông.
+      MC_HOC_2017_06_Cole_2020: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc
         ngang qua con sông.
       MC_HOC_2017_07_Cole: Phá băng và để cho {currentPlayerName} di chuyển tới xe
         chở quặng (Minecart).
       MC_HOC_2017_07_Cole_2019: Phá băng và để cho {currentPlayerName} di chuyển tới
         xe chở quặng (Minecart).
+      MC_HOC_2017_07_Cole_2020: Phá băng và để cho {currentPlayerName} di chuyển tới
+        xe chở quặng (Minecart).
       MC_HOC_2017_10_RETRY: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn thành
         nhiệm vụ tới xe chở quặng.
       MC_HOC_2017_10_RETRY_2019: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn
         thành nhiệm vụ tới xe chở quặng.
+      MC_HOC_2017_10_RETRY_2020: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn
+        thành nhiệm vụ tới xe chở quặng.
       MC_HOC_2017_Ali: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung nham.
       MC_HOC_2017_Ali_2019: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung
         nham.
+      MC_HOC_2017_Ali_2020: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung
+        nham.
       MC_HOC_2017_FP20x20: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
       MC_HOC_2017_FP20x20_2019: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
+        tạo!'
+      MC_HOC_2017_FP20x20_2020: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
         tạo!'
       NEW Course 4 Artist Functions 14: 'Thời gian chơi tự do! '
       New Gumball Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
@@ -305,18 +362,27 @@ vi-VN:
         Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2019: Đi thẳng về phía một Creeper là một ý kiến không
         hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
+      Overworld Avoid Monsters_2020: Đi thẳng về phía một Creeper là một ý kiến không
+        hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Chop Tree: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm
         từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Tree_2019: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được
+        làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
+      Overworld Chop Tree_2020: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được
         làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Trees: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời
         lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Chop Trees_2019: Chúng ta cần phải xây một ngôi nhà trước khi mặt
         trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
+      Overworld Chop Trees_2020: Chúng ta cần phải xây một ngôi nhà trước khi mặt
+        trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Free Play 20x20: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố
         của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng
         tất cả những gì bạn đã học được.
       Overworld Free Play 20x20_2019: Xin chúc mừng! Bạn đã hoàn thành tất cả các
+        câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách
+        sử dụng tất cả những gì bạn đã học được.
+      Overworld Free Play 20x20_2020: Xin chúc mừng! Bạn đã hoàn thành tất cả các
         câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách
         sử dụng tất cả những gì bạn đã học được.
       Overworld House Frame Chosen: Xây nốt các phần còn lại của ngôi nhà với bất
@@ -325,9 +391,14 @@ vi-VN:
       Overworld House Frame Chosen_2019: Xây nốt các phần còn lại của ngôi nhà với
         bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực
         hiện nhanh hơn.
+      Overworld House Frame Chosen_2020: Xây nốt các phần còn lại của ngôi nhà với
+        bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực
+        hiện nhanh hơn.
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến
         con cừu.
       Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
+        đến con cừu.
+      Overworld Move to Sheep_2020: Hãy thêm một lệnh "move forward" thứ hai để đi
         đến con cừu.
       Overworld Place Wall: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy xây phần
         đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward" trong
@@ -335,9 +406,14 @@ vi-VN:
       Overworld Place Wall_2019: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy
         xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward"
         trong vòng lặp.
+      Overworld Place Wall_2020: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy
+        xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward"
+        trong vòng lặp.
       Overworld Plant Crops: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây ở cả
         hai bên bờ sông để bạn không bị đói sau này.
       Overworld Plant Crops_2019: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây
+        ở cả hai bên bờ sông để bạn không bị đói sau này.
+      Overworld Plant Crops_2020: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây
         ở cả hai bên bờ sông để bạn không bị đói sau này.
       Overworld Powered Minecart: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài nguyên
         và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên mép bản
@@ -345,9 +421,14 @@ vi-VN:
       Overworld Powered Minecart_2019: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài
         nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên
         mép bản đồ đến cửa nhà của bạn.
+      Overworld Powered Minecart_2020: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài
+        nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên
+        mép bản đồ đến cửa nhà của bạn.
       Overworld Shear Sheep: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
         để thu thập lông của cả hai con cừu.
       Overworld Shear Sheep_2019: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
+        để thu thập lông của cả hai con cừu.
+      Overworld Shear Sheep_2020: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
         để thu thập lông của cả hai con cừu.
       Standalone_Artist_8: Đây là chức năng được gọi là "Vẽ tạo hình" mà chúng tôi
         đã lập trình để vẽ hình lục giác. Sau đó được chạy mã để xem nó hoạt động
@@ -360,20 +441,32 @@ vi-VN:
         bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh
         "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá
         này.
+      Underground Avoiding Lava_2020: Dung nham đang ẩn bên dưới một số khối đá này,
+        bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh
+        "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá
+        này.
       Underground If Statements: Mọi việc hiện đang trở nên rắc rối. Hãy đào 3 viên
         đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt đá cuội
         bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground If Statements_2019: Mọi việc hiện đang trở nên rắc rối. Hãy đào
         3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt
         đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
+      Underground If Statements_2020: Mọi việc hiện đang trở nên rắc rối. Hãy đào
+        3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt
+        đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground Iron: Đi vào dung nham nóng chảy không phải là ý kiến hay. Hãy đặt
         đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Iron_2019: Đi vào dung nham nóng chảy không phải là ý kiến hay.
+        Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
+      Underground Iron_2020: Đi vào dung nham nóng chảy không phải là ý kiến hay.
         Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Mining Coal: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất dưới
         mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất 2 khối
         than.
       Underground Mining Coal_2019: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
+        dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
+        2 khối than.
+      Underground Mining Coal_2020: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
         dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
         2 khối than.
       bounce_1: Đính kèm một khối với khối "mũi tên trái" và bấm "chạy". Di chuyển
@@ -411,47 +504,64 @@ vi-VN:
         tàu ra khơi.
       courseA_artist_loops11_2019: Hãy giúp tôi xây bậc cầu thang để tôi ngắm con
         tàu ra khơi.
+      courseA_artist_loops11_2020: Hãy giúp tôi xây bậc cầu thang để tôi ngắm con
+        tàu ra khơi.
       courseA_artist_loops12: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy thử
         vẽ những gì bạn nghĩ anh ấy nhìn thấy.
       courseA_artist_loops12_2018: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy
         thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
       courseA_artist_loops12_2019: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy
         thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
+      courseA_artist_loops12_2020: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy
+        thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
       courseA_artist_loops2: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
       courseA_artist_loops2_2018: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
       courseA_artist_loops2_2019: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
+      courseA_artist_loops2_2020: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
       courseA_artist_loops4: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
       courseA_artist_loops4_2018: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
       courseA_artist_loops4_2019: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
+      courseA_artist_loops4_2020: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
       courseA_artist_loops5: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân
         trời của chúng ta.
       courseA_artist_loops5_2018: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường
         chân trời của chúng ta.
       courseA_artist_loops5_2019: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường
         chân trời của chúng ta.
+      courseA_artist_loops5_2020: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường
+        chân trời của chúng ta.
       courseA_artist_loops6: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
       courseA_artist_loops6_2018: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
       courseA_artist_loops6_2019: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
+      courseA_artist_loops6_2020: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
       courseA_artist_loops7: Hãy dùng khối `lặp lại` để tạo sóng.
       courseA_artist_loops7_2018: Hãy dùng khối `lặp lại` để tạo sóng.
       courseA_artist_loops7_2019: Hãy dùng khối `lặp lại` để tạo sóng.
+      courseA_artist_loops7_2020: Hãy dùng khối `lặp lại` để tạo sóng.
       courseA_artist_loops8: Chúng ta cần một cái thang lên tàu.
       courseA_artist_loops8_2018: Chúng ta cần một cái thang lên tàu.
       courseA_artist_loops8_2019: Chúng ta cần một cái thang lên tàu.
+      courseA_artist_loops8_2020: Chúng ta cần một cái thang lên tàu.
       courseA_maze_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
         của các khối khác để hoàn thành chương trình này không?
       courseA_maze_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
         của các khối khác để hoàn thành chương trình này không?
+      courseA_maze_ramp4a_2020: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
+        của các khối khác để hoàn thành chương trình này không?
       courseA_maze_seq13: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
       courseA_maze_seq13_2018: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
       courseA_maze_seq13_2019: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
+      courseA_maze_seq13_2020: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
       courseA_maze_seq5_2018: Hãy thử giải câu đố này.
       courseA_maze_seq5_2019: Hãy thử giải câu đố này.
+      courseA_maze_seq5_2020: Hãy thử giải câu đố này.
       courseA_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
         được chỗ chú lợn!
       courseA_maze_seq6_2018: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq6_2020: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
       courseA_maze_seq6_copy: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
@@ -460,9 +570,13 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_maze_seq8_2020: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
       courseA_maze_seq8_copy: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
+        các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
+      courseA_playLab_events1_2020: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events2: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể giúp
         chú không?
@@ -472,6 +586,8 @@ vi-VN:
         trái`.
       courseA_playLab_events3_2018: Ghép khối `di chuyển trái` vào dưới khối `khi
         nào bên trái`.
+      courseA_playLab_events3_2020: Ghép khối `di chuyển trái` vào dưới khối `khi
+        nào bên trái`.
       courseA_playLab_events6: Hãy làm cho trò chơi thú vị hơn bằng cách thay đổi
         hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseA_playLab_events6_2018: Hãy làm cho trò chơi thú vị hơn bằng cách thay
@@ -480,34 +596,51 @@ vi-VN:
         cùng của các khối khác để hoàn thành chương trình này không?
       courseB_Scrat_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
         cùng của các khối khác để hoàn thành chương trình này không?
+      courseB_Scrat_ramp4a_2020: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
+        cùng của các khối khác để hoàn thành chương trình này không?
       courseB_Scrat_ramp5a_2018: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
       courseB_Scrat_ramp5a_2019: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
+      courseB_Scrat_ramp5a_2020: Hãy thử tạo một chương trình hoàn toàn theo ý của
+        bạn!
       courseB_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
       courseB_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
         nhé!
+      courseB_iceage_loops10_2020: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
       courseB_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseB_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseB_iceage_loops11_2020: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseB_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
         thể!
       courseB_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
+      courseB_iceage_loops12_2020: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
         bạn có thể!
       courseB_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
         hạt Sồi!
       courseB_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
         chỗ hạt Sồi!
+      courseB_iceage_loops4_2020: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
       courseB_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
         không?
       courseB_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
         Sồi không?
+      courseB_iceage_loops6_2020: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
       courseB_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseB_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseB_iceage_loops7_2020: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseB_iceage_loops8: 'Bạn có thể sửa phần code này không? '
       courseB_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseB_iceage_loops8_2020: 'Bạn có thể sửa phần code này không? '
       courseB_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseB_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseB_iceage_loops9_2020: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
       courseB_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
         được chỗ chú lợn!
@@ -522,46 +655,68 @@ vi-VN:
       courseB_playlab_events6_2019: |-
         Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
         Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2020: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
       courseB_playlab_eventsFP_2018: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
         Bạn có thể làm gì để trò chơi này thú vị hơn?"
       courseB_playlab_eventsFP_2019: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
         Bạn có thể làm gì để trò chơi này thú vị hơn?"
+      courseB_playlab_eventsFP_2020: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
+        Bạn có thể làm gì để trò chơi này thú vị hơn?"
       courseB_starWars_prog1: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
       courseB_starWars_prog1_2018: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
       courseB_starWars_prog1_2019: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog1_2020: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
       courseB_starWars_prog2: Hãy lấy hết các mảnh kim loại.
       courseB_starWars_prog2_2018: Hãy lấy hết các mảnh kim loại.
       courseB_starWars_prog2_2019: Hãy lấy hết các mảnh kim loại.
+      courseB_starWars_prog2_2020: Hãy lấy hết các mảnh kim loại.
       courseC_artist_prog5: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý:
         Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2018: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2019: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
+      courseC_artist_prog5_2020: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
+        ý: Cả 3 cạnh đều dài như nhau.'
       courseD_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
       courseD_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
         nhé!
+      courseD_iceage_loops10_2020: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
       courseD_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseD_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseD_iceage_loops11_2020: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseD_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
         thể!
       courseD_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
+      courseD_iceage_loops12_2020: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
         bạn có thể!
       courseD_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
         hạt Sồi!
       courseD_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
         chỗ hạt Sồi!
+      courseD_iceage_loops4_2020: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
       courseD_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
         không?
       courseD_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
         Sồi không?
+      courseD_iceage_loops6_2020: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
       courseD_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseD_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseD_iceage_loops7_2020: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseD_iceage_loops8: 'Bạn có thể sửa phần code này không? '
       courseD_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseD_iceage_loops8_2020: 'Bạn có thể sửa phần code này không? '
       courseD_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseD_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseD_iceage_loops9_2020: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
       courseD_scrat_ramp7: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseE_artist_functions1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp

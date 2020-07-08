@@ -10264,6 +10264,8 @@ ro:
           lesson_groups:
             csp_unit1_2020:
               display_name: '(vechi) Unitatea 1: Informaţii digitale'
+            cspSurvey:
+              display_name: Sondaj
           lessons:
             Binary Numbers:
               name: Numerele binare
@@ -10374,80 +10376,6 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             CS Principles Post Course survey:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-        csd3-virtual:
-          description_short: "Programare"
-          description_audience: '[șir gol]'
-          stages:
-            Shapes and Randomization:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            CS Discoveries Post Course survey:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Shapes and Parameters:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Random Numbers:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sprites and Animations:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Text and Captioned Scenes:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capitolul 1: Imagini şi animaţii'
-          lessons:
-            Shapes and Randomization:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            CS Discoveries Post Course survey:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Shapes and Parameters:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Random Numbers:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sprites and Animations:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Text and Captioned Scenes:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         jess-test-script:
@@ -10780,3 +10708,169 @@ ro:
               name: Introducere în matrice
             Processing Arrays:
               name: Matrice de prelucrare
+        k5-onlinepd-2020:
+          description_audience: '[șir gol]'
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sequencing:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops:
+              name: Bucle
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events:
+              name: Evenimente
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            End of Course projects:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions:
+              name: Funcţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            For Loops:
+              name: Bucle Pentru
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprite Lab:
+              name: Laborator Sprite
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Reviewing your reflections:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Next steps:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sequencing:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops:
+              name: Bucle
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events:
+              name: Evenimente
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            End of Course projects:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions:
+              name: Funcţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            For Loops:
+              name: Bucle Pentru
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprite Lab:
+              name: Laborator Sprite
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Reviewing your reflections:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Next steps:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Pașii următori
+        dani-test-2020:
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd3-virtual:
+          description_short: "Programare"
+          description_audience: '[șir gol]'
+          stages:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+          lessons:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+          lesson_groups:
+            csd3_1:
+              display_name: Conţinut
+            csd3_2:
+              display_name: Conţinut
+            cspSurvey:
+              display_name: Conţinut

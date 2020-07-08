@@ -632,7 +632,14 @@ ro-RO:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: facă ceva
+      courseC_data wizard_2020:
         do something:
           name: facă ceva
       courseD_artist_binary1:
@@ -644,6 +651,9 @@ ro-RO:
       courseD_artist_binary1_2019:
         draw:
           name: desenează
+      courseD_artist_binary1_2020:
+        draw:
+          name: desenează
       courseD_artist_binary2:
         draw:
           name: desenează
@@ -651,6 +661,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary2_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary2_2020:
         draw:
           name: desenează
       courseD_artist_binary3:
@@ -662,6 +675,9 @@ ro-RO:
       courseD_artist_binary3_2019:
         draw:
           name: desenează
+      courseD_artist_binary3_2020:
+        draw:
+          name: desenează
       courseD_artist_binary4:
         draw:
           name: desenează
@@ -669,6 +685,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary4_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary4_2020:
         draw:
           name: desenează
       courseD_artist_binary5:
@@ -680,6 +699,9 @@ ro-RO:
       courseD_artist_binary5_2019:
         draw:
           name: desenează
+      courseD_artist_binary5_2020:
+        draw:
+          name: desenează
       courseD_artist_binary6:
         draw:
           name: desenează
@@ -687,6 +709,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary6_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary6_2020:
         draw:
           name: desenează
       courseD_artist_binary7:
@@ -698,6 +723,9 @@ ro-RO:
       courseD_artist_binary7_2019:
         draw:
           name: desenează
+      courseD_artist_binary7_2020:
+        draw:
+          name: desenează
       courseD_artist_binary8:
         draw:
           name: desenează
@@ -705,6 +733,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary8_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary8_2020:
         draw:
           name: desenează
       courseD_artist_binary8_predict1:
@@ -716,10 +747,16 @@ ro-RO:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: desenează
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: desenează
       courseD_artist_binaryFP_2018:
         draw:
           name: desenează
       courseD_artist_binaryFP_2019:
+        draw:
+          name: desenează
+      courseD_artist_binaryFP_2020:
         draw:
           name: desenează
       courseD_artist_binary_challenge1_2018:
@@ -728,10 +765,16 @@ ro-RO:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: desenează
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: desenează
       courseD_artist_binary_challenge2_2018:
         draw:
           name: desenează
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: desenează
       courseD_autorun_binary2_2019:
@@ -787,6 +830,9 @@ ro-RO:
       courseE_artist_functions10_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions10_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions2:
         draw a square:
           name: desenează un pătrat
@@ -796,6 +842,9 @@ ro-RO:
       courseE_artist_functions2_2019:
         draw a square:
           name: desenează un pătrat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: desenează un pătrat
       courseE_artist_functions2_copy:
         draw a square:
           name: desenează un pătrat
@@ -803,6 +852,9 @@ ro-RO:
         draw a star:
           name: desenează o stea
       courseE_artist_functions3_2019:
+        draw a star:
+          name: desenează o stea
+      courseE_artist_functions3_2020:
         draw a star:
           name: desenează o stea
       courseE_artist_functions4:
@@ -820,6 +872,9 @@ ro-RO:
       courseE_artist_functions5_2019:
         draw a star:
           name: desenează o stea
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: desenează o stea
       courseE_artist_functions5_copy:
         draw a star:
           name: desenează o stea
@@ -827,6 +882,9 @@ ro-RO:
         draw a house:
           name: desenează o casă
       courseE_artist_functions7_2018:
+        draw a house:
+          name: desenează o casă
+      courseE_artist_functions7_2020:
         draw a house:
           name: desenează o casă
       courseE_artist_functions8:
@@ -844,12 +902,22 @@ ro-RO:
           name: facă ceva
         draw square:
           name: desenează pătrat
+      courseE_artist_functions8_2020:
+        do something:
+          name: facă ceva
+        draw square:
+          name: desenează pătrat
       courseE_artist_functions8a_2018:
         draw a square:
           name: desenează un pătrat
         do something:
           name: facă ceva
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: desenează un pătrat
+        do something:
+          name: facă ceva
+      courseE_artist_functions8a_2020:
         draw a square:
           name: desenează un pătrat
         do something:
@@ -864,12 +932,22 @@ ro-RO:
           name: desenează pătrat
         do something:
           name: facă ceva
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: desenează pătrat
+        do something:
+          name: facă ceva
       courseE_artist_functions8c_2018:
         draw square:
           name: desenează pătrat
         do something:
           name: facă ceva
       courseE_artist_functions8c_2019:
+        draw square:
+          name: desenează pătrat
+        do something:
+          name: facă ceva
+      courseE_artist_functions8c_2020:
         draw square:
           name: desenează pătrat
         do something:
@@ -889,10 +967,18 @@ ro-RO:
           name: facă ceva
         draw triangle:
           name: desenează triunghi
+      courseE_artist_functions9_2020:
+        do something:
+          name: facă ceva
+        draw triangle:
+          name: desenează triunghi
       courseE_artist_functionsProj_2018:
         draw square:
           name: desenează pătrat
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: desenează pătrat
+      courseE_artist_functionsProj_2020:
         draw square:
           name: desenează pătrat
       courseE_artist_functions_challenge1:
@@ -904,6 +990,9 @@ ro-RO:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions_challenge2:
         do something:
           name: facă ceva
@@ -913,6 +1002,9 @@ ro-RO:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions_predict1:
         draw a square:
           name: desenează un pătrat
@@ -920,6 +1012,9 @@ ro-RO:
         draw a square:
           name: desenează un pătrat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: desenează un pătrat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: desenează un pătrat
       courseE_artist_functions_predict1_copy:
@@ -932,6 +1027,9 @@ ro-RO:
         do something:
           name: facă ceva
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: facă ceva
+      courseE_artist_functions_predict2_2020:
         do something:
           name: facă ceva
       courseE_bee_functions1:
@@ -1156,10 +1254,16 @@ ro-RO:
       courseF_bee_variables_7_2019:
         collect:
           name: colectează
+      courseF_bee_variables_7_2020:
+        collect:
+          name: colectează
       courseF_bee_variables_8_2018:
         collect:
           name: colectează
       courseF_bee_variables_8_2019:
+        collect:
+          name: colectează
+      courseF_bee_variables_8_2020:
         collect:
           name: colectează
       grade5_artist_binary11:

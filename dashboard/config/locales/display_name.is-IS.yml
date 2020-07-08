@@ -21,6 +21,7 @@ is-IS:
       AppLab Intro 7 - thisOrThatSetScreen: Þetta eða hitt
       CDEF_video_SpritesInAction: Hvernig á að búa til kvika
       CDEF_video_SpritesInAction_2019: Hvernig á að búa til kvika
+      CDEF_video_SpritesInAction_2020: Hvernig á að búa til kvika
       CSD LEDs Map_2019: Kynning á Circuit Playground
       CSD Problem Solving Process Video: 'Myndband: Þrautalausnarferlið'
       CSD U2 Pair Programming Video: Félagaforritun
@@ -124,13 +125,20 @@ is-IS:
       'Course F: Artist Project - Revise_2018': Yfirferð Listamannsverkefnis
       'Course F: Artist Project_2018': Námskeið F Listamannsverkefni
       'Course F: Artist Project_2019': Námskeið F Listamannsverkefni
+      CourseD_Dance_2020_bonus1: Fram og aftur
+      CourseD_Dance_2020_bonus3: Stilla upp
       CourseEF_video_IntroSpriteLab: Þetta er Kvikasmiðjan
       CourseEF_video_IntroSpriteLab_2019: Þetta er Kvikasmiðjan
+      CourseEF_video_IntroSpriteLab_2020: Þetta er Kvikasmiðjan
       CourseEF_video_MakeSprite: Hvernig á að búa til kvika
       CourseEF_video_MakeSprite_2019: Hvernig á að búa til kvika
+      CourseEF_video_MakeSprite_2020: Hvernig á að búa til kvika
       CourseE_Project_SpriteLab: 'Námskeið E: Verkefni í Kvikasmiðju'
       CourseE_Project_SpriteLab_2019: 'Námskeið E: Verkefni í Kvikasmiðju'
       CourseE_hoops: 'Kanína '
+      CourseF_Oceans_Video_Machine_Learning: 'Myndband: Vélarnám'
+      CourseF_Oceans_Video_Societal_Implications: 'Myndband: Samfélagsleg áhrif'
+      CourseF_Oceans_Video_Training_Data: 'Myndband: Æfingargögn'
       CourseF_Project_Revise_SpriteLab: Yfirferð Kvikasmiðjuverkefnis
       CourseF_Project_SpriteLab: 'Námskeið F: Verkefni í Kvikasmiðju'
       CourseF_Project_SpriteLab_2019: 'Námskeið F: Verkefni í Kvikasmiðju'
@@ -152,26 +160,37 @@ is-IS:
       InspirationalArtwork_2018: Innblástur!
       MC_HOC_2017_01_RETRY: Heima
       MC_HOC_2017_01_RETRY_2019: Heima
+      MC_HOC_2017_01_RETRY_2020: Heima
       MC_HOC_2017_02_Cole: Bóndabýlið
       MC_HOC_2017_02_Cole_2019: Bóndabýlið
+      MC_HOC_2017_02_Cole_2020: Bóndabýlið
       MC_HOC_2017_03_Cole: Skógurinn
       MC_HOC_2017_03_Cole_2019: Skógurinn
+      MC_HOC_2017_03_Cole_2020: Skógurinn
       MC_HOC_2017_04POINT5_RYAN: Eyðimörkin
       MC_HOC_2017_04POINT5_RYAN_2019: Eyðimörkin
+      MC_HOC_2017_04POINT5_RYAN_2020: Eyðimörkin
       MC_HOC_2017_04_Cole: Fenjasvæðið
       MC_HOC_2017_04_Cole_2019: Fenjasvæðið
+      MC_HOC_2017_04_Cole_2020: Fenjasvæðið
       MC_HOC_2017_05_Cole: Fljótið
       MC_HOC_2017_05_Cole_2019: Fljótið
+      MC_HOC_2017_05_Cole_2020: Fljótið
       MC_HOC_2017_06_Cole: Háflóð
       MC_HOC_2017_06_Cole_2019: Háflóð
+      MC_HOC_2017_06_Cole_2020: Háflóð
       MC_HOC_2017_07_Cole: Fjallaskarðið
       MC_HOC_2017_07_Cole_2019: Fjallaskarðið
+      MC_HOC_2017_07_Cole_2020: Fjallaskarðið
       MC_HOC_2017_10_RETRY: Hellirinn
       MC_HOC_2017_10_RETRY_2019: Hellirinn
+      MC_HOC_2017_10_RETRY_2020: Hellirinn
       MC_HOC_2017_Ali: Undirheimavirki
       MC_HOC_2017_Ali_2019: Undirheimavirki
+      MC_HOC_2017_Ali_2020: Undirheimavirki
       MC_HOC_2017_FP20x20: Frjáls æfing
       MC_HOC_2017_FP20x20_2019: Frjáls æfing
+      MC_HOC_2017_FP20x20_2020: Frjáls æfing
       Making Music_2018: Lagasmíð
       Making Music_2019: Lagasmíð
       New Dance Lab Project: Nýtt verkefni í Danspartý
@@ -191,9 +210,11 @@ is-IS:
       courseF_artist_for1: Frjáls æfing með "frá" lykkjur (Byrjun)
       courseF_artist_for1_2018: Frjáls æfing með "frá" lykkjur (Byrjun)
       courseF_artist_for1_2019: Frjáls æfing með "frá" lykkjur (Byrjun)
+      courseF_artist_for1_2020: Frjáls æfing með "frá" lykkjur (Byrjun)
       courseF_project_1: Verkefnadæmi Kvikasmiðju
       courseF_video_csMatters: Lokaverkefni námskeiðs
       courseF_video_csMatters_2018: 'Myndband: Tölvunarfræði skiptir máli'
       csd U3 conditional statements video_2019: 'Myndband: Skilyrtar yrðingar'
       scrat_loops_C-F_video: Myndband fyrir Lykkjur með Ísöld
       scrat_loops_C-F_video_2019: Myndband fyrir Lykkjur með Ísöld
+      scrat_loops_C-F_video_2020: Myndband fyrir Lykkjur með Ísöld

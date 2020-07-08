@@ -18,11 +18,13 @@ const styles = {
   }
 };
 
-export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
-  returnToURL = relativeDashboardPath => {
-    return studio(`${relativeDashboardPath}?user_return_to=${pegasus('/afe')}`);
-  };
+const RETURN_TO = `user_return_to=${pegasus('/afe/submit')}`;
+const SIGN_UP_URL = studio(
+  `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
+);
+const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
+export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   logSignUpButtonPress = () => {
     firehoseClient.putRecord({
       study: 'amazon-future-engineer-eligibility',
@@ -31,27 +33,21 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
   };
 
   render() {
-    // TO DO: Add links to account sign up page.
-    // TO DO: Need to put submission data
-    //  (currently kept in state of AmazonFutureEngineerEligibility component)
-    //  somewhere (session cookie?) that will persist while they sign up or sign in,
-    // at which point we'll send an API request to Amazon's Pardot API endpoint.
     return (
       <div>
         <h2 style={styles.header}>Almost done!</h2>
         <div style={styles.body}>
           Thank you for completing your application information for the Amazon
           Future Engineer program. To finalize your participation and start
-          receiving benefits, sign up for a Code.org account, or sign in if you
-          already have one.
+          receiving benefits, sign up for a Code.org teacher account, or sign in
+          if you already have one.
         </div>
         <div style={styles.body}>
-          Already have a Code.org account?{' '}
-          <a href={this.returnToURL('/users/sign_in')}>Sign in.</a>
+          Already have a Code.org account? <a href={SIGN_IN_URL}>Sign in.</a>
         </div>
         <Button
           id="sign_up"
-          href={this.returnToURL('/users/sign_in')}
+          href={SIGN_UP_URL}
           style={styles.button}
           onClick={this.logSignUpButtonPress}
         >

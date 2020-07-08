@@ -416,7 +416,7 @@ class ScriptLevel < ActiveRecord::Base
                [level]
              end
 
-    user_level = student.last_attempt_for_any(levels)
+    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 

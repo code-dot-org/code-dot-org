@@ -3365,21 +3365,6 @@ ca:
           lessons:
             Creating Functions:
               name: Creant Funcions
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionals
-            Functions:
-              name: Funcions
-          lessons:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionals
-            Functions:
-              name: Funcions
         csp5-virtual:
           stages:
             While Loops:
@@ -3416,3 +3401,53 @@ ca:
           lessons:
             While Loops:
               name: Bucles Mentres
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Bucles
+            Events:
+              name: Esdeveniments
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+            Sprite Lab:
+              name: Laboratori de personatges
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Esdeveniments
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+            Sprite Lab:
+              name: Laboratori de personatges
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: text
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: text
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions

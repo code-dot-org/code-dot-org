@@ -4044,21 +4044,6 @@ sq:
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
-        csd3-virtual:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
-          lessons:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
         csp5-virtual:
           stages:
             While Loops:
@@ -4098,3 +4083,59 @@ sq:
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: cikle
+            Events:
+              name: Ngjarje
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet
+          lessons:
+            Loops:
+              name: cikle
+            Events:
+              name: Ngjarje
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Hapat e ardhshme
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabla
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+          lessons:
+            Variables:
+              name: variabla
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+          lesson_groups:
+            csd3_1:
+              display_name: Përmbajtja
+            csd3_2:
+              display_name: Përmbajtja
+            cspSurvey:
+              display_name: Përmbajtja

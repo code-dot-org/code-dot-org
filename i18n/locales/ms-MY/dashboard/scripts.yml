@@ -1264,21 +1264,6 @@ ms:
           lessons:
             Spelling Bee:
               name: Lebah Ejaan
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Pembolehubah
-            Conditionals:
-              name: Bersyarat
-            Functions:
-              name: Fungsi
-          lessons:
-            Variables:
-              name: Pembolehubah
-            Conditionals:
-              name: Bersyarat
-            Functions:
-              name: Fungsi
         csp5-virtual:
           stages:
             Variables:
@@ -1304,3 +1289,45 @@ ms:
               name: Algoritma
             Events:
               name: Acara-acara
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah
+          lessons:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Text:
+              name: teks
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+          lessons:
+            Variables:
+              name: Pembolehubah
+            Text:
+              name: teks
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi

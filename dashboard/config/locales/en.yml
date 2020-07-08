@@ -131,13 +131,16 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    invalid_provider: "Sorry, %{provider} accounts cannot be linked to Code.org accounts."
+    migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
-      sign_in: "Please sign in and we'll link your %{provider} profile."
-      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
+      sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
+      sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'

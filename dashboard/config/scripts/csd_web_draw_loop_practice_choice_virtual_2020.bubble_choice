@@ -1,0 +1,9 @@
+name 'CSD web draw loop practice choice_virtual_2020'
+display_name 'Practice'
+description 'Try out using the draw loop with these activities.'
+
+sublevels
+level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_virtual_2020'
+level 'CSD games draw debug blurry_virtual_2020'
+level 'CSD games draw debug afterimage_virtual_2020'
+level 'CSD games draw debug not moving_virtual_2020'

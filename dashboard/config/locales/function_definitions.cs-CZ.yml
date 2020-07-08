@@ -313,6 +313,9 @@ cs-CZ:
       Function intro Ryan_2019:
         build bridge:
           name: postav most
+      Function intro Ryan_2020:
+        build bridge:
+          name: postav most
       Geometric Sun:
         draw a door:
           name: nakresli dveře
@@ -387,12 +390,20 @@ cs-CZ:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: vymaž cestu
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: vymaž cestu
       MC_HOC_2017_FP20x20:
         function 1:
           name: funkce 1
         function 2:
           name: funkce 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: funkce 1
+        function 2:
+          name: funkce 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: funkce 1
         function 2:
@@ -682,7 +693,14 @@ cs-CZ:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: proveď něco
+      courseC_data wizard_2020:
         do something:
           name: proveď něco
       courseD_artist_binary1:
@@ -694,6 +712,9 @@ cs-CZ:
       courseD_artist_binary1_2019:
         draw:
           name: kresli
+      courseD_artist_binary1_2020:
+        draw:
+          name: kresli
       courseD_artist_binary2:
         draw:
           name: kresli
@@ -701,6 +722,9 @@ cs-CZ:
         draw:
           name: kresli
       courseD_artist_binary2_2019:
+        draw:
+          name: kresli
+      courseD_artist_binary2_2020:
         draw:
           name: kresli
       courseD_artist_binary3:
@@ -712,6 +736,9 @@ cs-CZ:
       courseD_artist_binary3_2019:
         draw:
           name: kresli
+      courseD_artist_binary3_2020:
+        draw:
+          name: kresli
       courseD_artist_binary4:
         draw:
           name: kresli
@@ -719,6 +746,9 @@ cs-CZ:
         draw:
           name: kresli
       courseD_artist_binary4_2019:
+        draw:
+          name: kresli
+      courseD_artist_binary4_2020:
         draw:
           name: kresli
       courseD_artist_binary5:
@@ -730,6 +760,9 @@ cs-CZ:
       courseD_artist_binary5_2019:
         draw:
           name: kresli
+      courseD_artist_binary5_2020:
+        draw:
+          name: kresli
       courseD_artist_binary6:
         draw:
           name: kresli
@@ -737,6 +770,9 @@ cs-CZ:
         draw:
           name: kresli
       courseD_artist_binary6_2019:
+        draw:
+          name: kresli
+      courseD_artist_binary6_2020:
         draw:
           name: kresli
       courseD_artist_binary7:
@@ -748,6 +784,9 @@ cs-CZ:
       courseD_artist_binary7_2019:
         draw:
           name: kresli
+      courseD_artist_binary7_2020:
+        draw:
+          name: kresli
       courseD_artist_binary8:
         draw:
           name: kresli
@@ -755,6 +794,9 @@ cs-CZ:
         draw:
           name: kresli
       courseD_artist_binary8_2019:
+        draw:
+          name: kresli
+      courseD_artist_binary8_2020:
         draw:
           name: kresli
       courseD_artist_binary8_predict1:
@@ -766,10 +808,16 @@ cs-CZ:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: kresli
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: kresli
       courseD_artist_binaryFP_2018:
         draw:
           name: kresli
       courseD_artist_binaryFP_2019:
+        draw:
+          name: kresli
+      courseD_artist_binaryFP_2020:
         draw:
           name: kresli
       courseD_artist_binary_challenge1_2018:
@@ -778,10 +826,16 @@ cs-CZ:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: kresli
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: kresli
       courseD_artist_binary_challenge2_2018:
         draw:
           name: kresli
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: kresli
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: kresli
       courseD_autorun_binary2_2019:
@@ -837,6 +891,9 @@ cs-CZ:
       courseE_artist_functions10_2019:
         do something:
           name: proveď něco
+      courseE_artist_functions10_2020:
+        do something:
+          name: proveď něco
       courseE_artist_functions2:
         draw a square:
           name: nakresli čtverec
@@ -846,6 +903,9 @@ cs-CZ:
       courseE_artist_functions2_2019:
         draw a square:
           name: nakresli čtverec
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: nakresli čtverec
       courseE_artist_functions2_copy:
         draw a square:
           name: nakresli čtverec
@@ -853,6 +913,9 @@ cs-CZ:
         draw a star:
           name: nakresli hvězdu
       courseE_artist_functions3_2019:
+        draw a star:
+          name: nakresli hvězdu
+      courseE_artist_functions3_2020:
         draw a star:
           name: nakresli hvězdu
       courseE_artist_functions4:
@@ -870,6 +933,9 @@ cs-CZ:
       courseE_artist_functions5_2019:
         draw a star:
           name: nakresli hvězdu
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: nakresli hvězdu
       courseE_artist_functions5_copy:
         draw a star:
           name: nakresli hvězdu
@@ -877,6 +943,9 @@ cs-CZ:
         draw a house:
           name: nakresli dům
       courseE_artist_functions7_2018:
+        draw a house:
+          name: nakresli dům
+      courseE_artist_functions7_2020:
         draw a house:
           name: nakresli dům
       courseE_artist_functions8:
@@ -894,12 +963,22 @@ cs-CZ:
           name: proveď něco
         draw square:
           name: nakreslit čtverec
+      courseE_artist_functions8_2020:
+        do something:
+          name: proveď něco
+        draw square:
+          name: nakreslit čtverec
       courseE_artist_functions8a_2018:
         draw a square:
           name: nakresli čtverec
         do something:
           name: proveď něco
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: nakresli čtverec
+        do something:
+          name: proveď něco
+      courseE_artist_functions8a_2020:
         draw a square:
           name: nakresli čtverec
         do something:
@@ -914,12 +993,22 @@ cs-CZ:
           name: nakreslit čtverec
         do something:
           name: proveď něco
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: nakreslit čtverec
+        do something:
+          name: proveď něco
       courseE_artist_functions8c_2018:
         draw square:
           name: nakreslit čtverec
         do something:
           name: proveď něco
       courseE_artist_functions8c_2019:
+        draw square:
+          name: nakreslit čtverec
+        do something:
+          name: proveď něco
+      courseE_artist_functions8c_2020:
         draw square:
           name: nakreslit čtverec
         do something:
@@ -939,10 +1028,18 @@ cs-CZ:
           name: proveď něco
         draw triangle:
           name: nakresli trojúhelník
+      courseE_artist_functions9_2020:
+        do something:
+          name: proveď něco
+        draw triangle:
+          name: nakresli trojúhelník
       courseE_artist_functionsProj_2018:
         draw square:
           name: nakreslit čtverec
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: nakreslit čtverec
+      courseE_artist_functionsProj_2020:
         draw square:
           name: nakreslit čtverec
       courseE_artist_functions_challenge1:
@@ -954,6 +1051,9 @@ cs-CZ:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: proveď něco
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: proveď něco
       courseE_artist_functions_challenge2:
         do something:
           name: proveď něco
@@ -963,6 +1063,9 @@ cs-CZ:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: proveď něco
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: proveď něco
       courseE_artist_functions_predict1:
         draw a square:
           name: nakresli čtverec
@@ -970,6 +1073,9 @@ cs-CZ:
         draw a square:
           name: nakresli čtverec
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: nakresli čtverec
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: nakresli čtverec
       courseE_artist_functions_predict1_copy:
@@ -982,6 +1088,9 @@ cs-CZ:
         do something:
           name: proveď něco
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: proveď něco
+      courseE_artist_functions_predict2_2020:
         do something:
           name: proveď něco
       courseE_bee_functions1:
@@ -1237,10 +1346,16 @@ cs-CZ:
       courseF_bee_variables_1_2019:
         collect row:
           name: seber řadu
+      courseF_bee_variables_1_2020:
+        collect row:
+          name: seber řadu
       courseF_bee_variables_2_2018:
         collect row:
           name: seber řadu
       courseF_bee_variables_2_2019:
+        collect row:
+          name: seber řadu
+      courseF_bee_variables_2_2020:
         collect row:
           name: seber řadu
       courseF_bee_variables_3_2018:
@@ -1249,10 +1364,16 @@ cs-CZ:
       courseF_bee_variables_3_2019:
         collect row:
           name: seber řadu
+      courseF_bee_variables_3_2020:
+        collect row:
+          name: seber řadu
       courseF_bee_variables_4_2018:
         collect row:
           name: seber řadu
       courseF_bee_variables_4_2019:
+        collect row:
+          name: seber řadu
+      courseF_bee_variables_4_2020:
         collect row:
           name: seber řadu
       courseF_bee_variables_5_2018:
@@ -1261,10 +1382,16 @@ cs-CZ:
       courseF_bee_variables_5_2019:
         collect row:
           name: seber řadu
+      courseF_bee_variables_5_2020:
+        collect row:
+          name: seber řadu
       courseF_bee_variables_6_2018:
         collect stairs:
           name: sbírej schody
       courseF_bee_variables_6_2019:
+        collect stairs:
+          name: sbírej schody
+      courseF_bee_variables_6_2020:
         collect stairs:
           name: sbírej schody
       courseF_bee_variables_7_2018:
@@ -1273,10 +1400,16 @@ cs-CZ:
       courseF_bee_variables_7_2019:
         collect:
           name: sbírej
+      courseF_bee_variables_7_2020:
+        collect:
+          name: sbírej
       courseF_bee_variables_8_2018:
         collect:
           name: sbírej
       courseF_bee_variables_8_2019:
+        collect:
+          name: sbírej
+      courseF_bee_variables_8_2020:
         collect:
           name: sbírej
       grade5_artist_binary11:

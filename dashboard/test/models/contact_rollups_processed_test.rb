@@ -64,6 +64,22 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       once.returns({})
     ContactRollupsProcessed.expects(:extract_professional_learning_attended).
       once.returns({})
+    ContactRollupsProcessed.expects(:extract_hoc_organizer_years).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_forms_submitted).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_form_roles).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_roles).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_state).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_city).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_postal_code).
+      once.returns({})
+    ContactRollupsProcessed.expects(:extract_country).
+      once.returns({})
     ContactRollupsProcessed.expects(:extract_updated_at).
       once.returns({})
 
@@ -79,17 +95,17 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       {
         # all empty
         input: [{}, nil, nil],
-        expected_output: nil
+        expected_output: []
       },
       {
         # table exists in contact data but field doesn't
         input: [{table => {}}, table, field],
-        expected_output: nil
+        expected_output: []
       },
       {
         # field exists in contact data but table doesn't
         input: [{'pegasus.another_table' => {field => [{'value' => 'WA'}]}}, table, field],
-        expected_output: nil
+        expected_output: []
       },
       {
         # table and field exists in contact data, field value is nil
@@ -110,6 +126,53 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
     test_cases.each_with_index do |test, index|
       output = ContactRollupsProcessed.extract_field(*test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_field_latest_value' do
+    table = 'dashboard.schools'
+    field = 'state'
+    base_time = Time.now.utc
+
+    tests = [
+      # 3 input params are: contact_data, table, field
+      {
+        input: [{}, nil, nil],
+        expected_output: nil
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [{'value' => 'WA', 'data_updated_at' => base_time}]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'WA'
+      },
+      {
+        input: [
+          {
+            table => {
+              field => [
+                {'value' => 'CA', 'data_updated_at' => base_time - 1.day},
+                {'value' => 'IL', 'data_updated_at' => base_time},
+                {'value' => 'NY', 'data_updated_at' => base_time - 2.days}
+              ]
+            }
+          },
+          table,
+          field
+        ],
+        expected_output: 'IL'
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_field_latest_value(*test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end
@@ -183,6 +246,422 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       output = ContactRollupsProcessed.extract_professional_learning_attended test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
+
+  test 'extract_roles' do
+    users_input = {
+      'dashboard.users' => {
+        'user_id' => [{'value' => 1}],
+        'is_parent' => [{'value' => 1}]
+      }
+    }
+    pd_enrollments_input = {'dashboard.pd_enrollments' => {}}
+    pd_attendances_input = {'dashboard.pd_attendances' => {}}
+    followers_input = {'dashboard.followers' => {}}
+    census_submissions_input = {
+      'dashboard.census_submissions' => {
+        'submitter_role' => [
+          {'value' => Census::CensusSubmission::ROLES[:teacher]},
+          {'value' => nil},
+        ]
+      }
+    }
+    forms_input = {
+      'pegasus.forms' => {
+        'kind' => [
+          {'value' => 'Petition'},
+          {'value' => 'ClassSubmission'},
+          {'value' => nil},
+        ]
+      }
+    }
+    section_courses_input = {
+      'dashboard.sections' => {
+        'course_name' => [
+          {'value' => 'csp-2020'},
+          {'value' => 'csd-2019'},
+          {'value' => nil},
+        ]
+      }
+    }
+    section_curricula_input = {
+      'dashboard.sections' => {
+        'curriculum_umbrella' => [
+          {'value' => 'CSF'},
+          {'value' => 'CSD'},
+          {'value' => nil},
+        ]
+      }
+    }
+    user_permissions_input = {
+      'dashboard.user_permissions' => {
+        'permission' => [
+          {'value' => 'workshop_organizer'},
+          {'value' => 'facilitator'},
+          {'value' => nil},
+        ]
+      }
+    }
+    all_inputs = {}.
+      merge!(users_input).
+      merge!(pd_enrollments_input).
+      merge!(pd_attendances_input).
+      merge!(followers_input).
+      merge!(census_submissions_input).
+      merge!(forms_input).
+      merge!(section_courses_input).
+      merge!(section_curricula_input).
+      merge!(user_permissions_input)
+
+    tests = [
+      {
+        input: users_input,
+        expected_output: {roles: 'Parent,Teacher'}
+      },
+      {
+        input: pd_enrollments_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: pd_attendances_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: followers_input,
+        expected_output: {roles: 'Teacher'}
+      },
+      {
+        input: census_submissions_input,
+        expected_output: {roles: 'Form Submitter,Teacher'}
+      },
+      {
+        input: forms_input,
+        expected_output: {roles: 'Form Submitter,Petition Signer,Teacher'}
+      },
+      {
+        input: section_courses_input,
+        expected_output: {roles: 'CSD Teacher,CSP Teacher'}
+      },
+      {
+        input: section_curricula_input,
+        expected_output: {roles: 'CSD Teacher,CSF Teacher'}
+      },
+      {
+        input: user_permissions_input,
+        expected_output: {roles: 'Facilitator,Workshop Organizer'}
+      },
+      # input has nothing
+      {
+        input: {}, expected_output: {}
+      },
+      # input has everything
+      {
+        input: all_inputs,
+        expected_output: {roles: 'CSD Teacher,CSF Teacher,Facilitator,Form Submitter,Parent,Petition Signer,Teacher,Workshop Organizer'}
+      },
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_roles test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_state' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'state' => [
+          {'value' => 'Washington', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'California', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'state' => [
+          {'value' => 'Texas', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Florida', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'state' => [
+          {'value' => 'IL', 'data_updated_at' => base_time},
+          {'value' => 'PA', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {state: 'California'}
+      },
+      {
+        input: users_input,
+        expected_output: {state: 'Florida'}
+      },
+      {
+        input: schools_input,
+        expected_output: {state: 'Illinois'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {state: 'Florida'}
+      },
+      # schools data has higher priority than users data
+      {
+        input: form_geos_input.merge(users_input).merge(schools_input),
+        expected_output: {state: 'Illinois'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_state test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_postal_code' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'postal_code' => [
+          {'value' => '62702', 'data_updated_at' => base_time - 1.day},
+          {'value' => '90249', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'postal_code' => [
+          {'value' => '10118', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'EC4N', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'zip' => [
+          {'value' => '00-493', 'data_updated_at' => base_time},
+          {'value' => 'EC2P', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {postal_code: '90249'}
+      },
+      {
+        input: users_input,
+        expected_output: {postal_code: 'EC4N'}
+      },
+      {
+        input: schools_input,
+        expected_output: {postal_code: '00-493'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {postal_code: 'EC4N'}
+      },
+      # schools data has higher priority than users data
+      {
+        input: form_geos_input.merge(users_input).merge(schools_input),
+        expected_output: {postal_code: '00-493'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_postal_code test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_city' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'city' => [
+          {'value' => 'London', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Seattle', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'city' => [
+          {'value' => 'Vancouver', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Turin', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    schools_input = {
+      'dashboard.schools' => {
+        'city' => [
+          {'value' => 'Paris', 'data_updated_at' => base_time},
+          {'value' => 'Berlin', 'data_updated_at' => base_time - 1.day},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {city: 'Seattle'}
+      },
+      {
+        input: users_input,
+        expected_output: {city: 'Turin'}
+      },
+      {
+        input: schools_input,
+        expected_output: {city: 'Paris'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {city: 'Turin'}
+      },
+      # schools data has higher priority than users data
+      {
+        input: form_geos_input.merge(users_input).merge(schools_input),
+        expected_output: {city: 'Paris'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_city test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_country' do
+    base_time = Time.now.utc
+    form_geos_input = {
+      'pegasus.form_geos' => {
+        'country' => [
+          {'value' => 'Canada', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'United States', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+    users_input = {
+      'dashboard.users' => {
+        'country' => [
+          {'value' => 'United Kingdom', 'data_updated_at' => base_time - 1.day},
+          {'value' => 'Italy', 'data_updated_at' => base_time},
+        ]
+      }
+    }
+
+    tests = [
+      {
+        input: {}, expected_output: {}
+      },
+      # data come from the same table, the most recent value wins
+      {
+        input: form_geos_input,
+        expected_output: {country: 'United States'}
+      },
+      {
+        input: users_input,
+        expected_output: {country: 'Italy'}
+      },
+      # users data has higher priority than form_geos data
+      {
+        input: form_geos_input.merge(users_input),
+        expected_output: {country: 'Italy'}
+      }
+    ]
+
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_country test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'extract_hoc_organizer_years' do
+    contact_data = {
+      'pegasus.forms' => {
+        'kind' => [
+          # most common value type 'HocSignup<year>'
+          {'value' => 'HocSignup2019'},
+          # duplicate values
+          {'value' => 'CSEdWeekEvent2013'},
+          {'value' => 'CSEdWeekEvent2013'},
+          # invalid values
+          {'value' => nil},
+          {'value' => 'HocSignup'},
+          {'value' => 'HocCensus2017'}
+        ]
+      }
+    }
+    expected_output = {hoc_organizer_years: '2013,2019'}
+
+    output = ContactRollupsProcessed.extract_hoc_organizer_years(contact_data)
+    assert_equal expected_output, output
+  end
+
+  test 'extract_forms_submitted' do
+    contact_data = {
+      'pegasus.forms' => {
+        'kind' => [
+          {'value' => 'VolunteerContact2015'},
+          # user can submit 2 forms of the same kind
+          {'value' => 'Petition'},
+          {'value' => 'Petition'},
+          {'value' => nil},
+        ]
+      },
+      'dashboard.census_submissions' => {}
+    }
+    expected_output = {forms_submitted: 'Census,Petition,VolunteerContact2015'}
+
+    output = ContactRollupsProcessed.extract_forms_submitted contact_data
+    assert_equal expected_output, output
+  end
+
+  test 'extract_form_roles' do
+    contact_data = {
+      'dashboard.census_submissions' => {
+        'submitter_role' => [
+          {'value' => Census::CensusSubmission::ROLES[:teacher]},
+          {'value' => Census::CensusSubmission::ROLES[:parent]},
+          {'value' => nil}
+        ]
+      },
+      'pegasus.forms' => {
+        'role' => [
+          {'value' => 'Teacher'},
+          {'value' => 'educator'},
+          {'value' => 'not_valid_role'},
+          {'value' => ''},
+          {'value' => nil}
+        ]
+      }
+    }
+    expected_output = {form_roles: 'educator,parent,teacher'}
+
+    output = ContactRollupsProcessed.extract_form_roles contact_data
+    assert_equal expected_output, output
   end
 
   test 'extract_updated_at with valid input' do

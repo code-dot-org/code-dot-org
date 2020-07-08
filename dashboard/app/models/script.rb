@@ -889,7 +889,12 @@ class Script < ActiveRecord::Base
         name = File.basename(script, '.script')
         base_name = Script.base_name(name)
         name = "#{base_name}-#{new_suffix}" if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script, name)
+        script_data, i18n =
+          begin
+            ScriptDSL.parse_file(script, name)
+          rescue => e
+            raise e, "Error parsing script file #{script}: #{e}"
+          end
 
         lesson_groups = script_data[:lesson_groups]
         lessons = script_data[:lessons]
@@ -910,6 +915,8 @@ class Script < ActiveRecord::Base
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
         add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      rescue => e
+        raise e, "Error adding script named '#{options[:name]}': #{e}"
       end
       [added_scripts, custom_i18n]
     end
@@ -970,7 +977,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
@@ -1194,6 +1201,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1516,8 +1524,8 @@ class Script < ActiveRecord::Base
     lessons.each do |stage|
       stage_data = {
         'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
       }
       data['stages'][stage.name] = stage_data
       data['lessons'][stage.name] = stage_data
@@ -1535,8 +1543,8 @@ class Script < ActiveRecord::Base
       data['stageDescriptions'] = lessons.map do |stage|
         {
           name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
         }
       end
     end

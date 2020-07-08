@@ -3471,21 +3471,6 @@ gl:
           lessons:
             Creating Functions:
               name: Creando funcións
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionais
-            Functions:
-              name: Funcións
-          lessons:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionais
-            Functions:
-              name: Funcións
         csp5-virtual:
           stages:
             While Loops:
@@ -3522,3 +3507,49 @@ gl:
           lessons:
             While Loops:
               name: Bucles mentres
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións

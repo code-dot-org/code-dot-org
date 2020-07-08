@@ -866,17 +866,6 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
-        csd3-virtual:
-          stages:
-            Variables:
-              name: மாறிலிகள்
-            Functions:
-              name: செயல்பாடுகள்
-          lessons:
-            Variables:
-              name: மாறிலிகள்
-            Functions:
-              name: செயல்பாடுகள்
         csp5-virtual:
           stages:
             Variables:
@@ -902,3 +891,37 @@ ta:
               name: வழிமுறைகள்
             Events:
               name: நிகழ்வுகள்
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்
+          lessons:
+            Loops:
+              name: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்
+        csd3-virtual:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Text:
+              name: உரை
+            Functions:
+              name: செயல்பாடுகள்
+          lessons:
+            Variables:
+              name: மாறிலிகள்
+            Text:
+              name: உரை
+            Functions:
+              name: செயல்பாடுகள்

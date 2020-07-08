@@ -6,7 +6,7 @@ id:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
-        csf_category_name: CS Fundamentals
+        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_2019_category_name: CS Fundamentals (2019)
         csf_international_category_name: Dasar dasar internasional CS
@@ -493,7 +493,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
           lessons:
             Binary:
               name: Biner
@@ -504,7 +504,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variabel
         algebra:
           title: Ilmu Komputer dalam Aljabar
           description: Belajar pemrograman fungsional melalui aljabar
@@ -601,10 +601,10 @@ id:
             yang dibintangi karakter Disney tak terbatas.
           stages:
             Infinity:
-              name: Tidak terhingga
+              name: "∞"
           lessons:
             Infinity:
-              name: Tidak terhingga
+              name: "∞"
         algebrademo:
           title: Demo Aljabar
           description: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa
@@ -5873,7 +5873,7 @@ id:
                 semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar
                 ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -6270,7 +6270,7 @@ id:
                 semua keterampilan ini, pada akhir pelajaran murid akan mampu menggambar
                 ular pelangi yang diacak.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -6555,7 +6555,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
           lessons:
@@ -6576,7 +6576,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: Variables
+              name: variabel
             While Loops:
               name: Perulangan Selagi
         algebrapdnext:
@@ -7507,7 +7507,7 @@ id:
                 web pribadi mereka sendiri. Di level terakhir, murid memulai proyek
                 yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -7798,7 +7798,7 @@ id:
                 web pribadi mereka sendiri. Di level terakhir, murid memulai proyek
                 yang akan terus mereka kerjakan sepanjang unit ini.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -9702,7 +9702,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -9780,7 +9780,7 @@ id:
             Foo:
               name: Foo
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             Event Types:
@@ -10152,7 +10152,7 @@ id:
                 elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk
                 input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan
                 berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah
@@ -10765,7 +10765,7 @@ id:
                 elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk
                 input pengguna.
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajari cara menggunakan daftar untuk menyimpan
                 berbagai nilai dalam satu nama variable.
               description_teacher: Daftar, juga umum dikenal sebagai array, adalah
@@ -11313,7 +11313,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -11364,7 +11364,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variables
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
@@ -12298,7 +12298,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
           lessons:
             Text on the Web:
               name: Teks di web
@@ -12337,7 +12337,7 @@ id:
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
             Lists:
-              name: Daftar
+              name: List
         csd1-draft:
           stages:
             Intro to Problem Solving:
@@ -12392,7 +12392,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -12443,7 +12443,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17008,7 +17008,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -17045,7 +17045,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: Daftar
+              name: List
             Lights:
               name: Lampu
             For Loops:
@@ -17099,7 +17099,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17162,7 +17162,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
             Sprites:
               name: Sprite
             The Draw Loop:
@@ -17285,7 +17285,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -17637,7 +17637,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -18037,7 +18037,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -18278,7 +18278,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -23755,7 +23755,7 @@ id:
           title: CSP Playground
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -24150,7 +24150,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_internet:
@@ -25653,7 +25653,7 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -27390,7 +27390,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -27633,7 +27633,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -27834,7 +27834,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -28188,7 +28188,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -29867,7 +29867,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -29875,7 +29875,7 @@ id:
           title: CSP Unit 4 Percontohan - Variable, Conditional, dan Function
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -29956,7 +29956,7 @@ id:
             Project - Decision Maker App Part 3:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             "[OLD] Variables Make":
-              name: "[LAMA] Variable Membuat"
+              name: "[OLD] Variable Membuat"
             "[OLD] Conditionals Make":
               name: "[OLD] Conditional Membuat"
             "[OLD] Functions Make":
@@ -30977,7 +30977,7 @@ id:
           title: 'Unit 1: Bit & Byte'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31066,7 +31066,7 @@ id:
           title: 'Unit 2: Internet'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31295,7 +31295,7 @@ id:
           title: 'Unit 4: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31430,7 +31430,7 @@ id:
           title: 'Unit 5: Daftar, Loop, dan Traversal'
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -31567,7 +31567,7 @@ id:
           title: 'Unit 6: Algorithm'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31797,7 +31797,7 @@ id:
           title: 'Unit 8: Create PT'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31886,7 +31886,7 @@ id:
           title: 'Unit 9: Data'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -31975,7 +31975,7 @@ id:
           title: 'Unit 10: Dampak Global'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -32182,7 +32182,7 @@ id:
           title: CSP Unit 5 Percontohan - Daftar, Loop, dan Traversal
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -32869,7 +32869,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -33144,7 +33144,7 @@ id:
                 secara akurat level kontrol yang tidak mereka miliki saat menyebarkan
                 informasi ke dalam web."
             Lists:
-              name: Daftar
+              name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
                 tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
                 kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
@@ -33377,7 +33377,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -33735,7 +33735,7 @@ id:
             Shapes and Randomization:
               name: Bentuk dan Pengacakan
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -34886,7 +34886,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -34968,7 +34968,7 @@ id:
             Sprite Lab:
               name: Sprite Lab
             Variables:
-              name: Variables
+              name: variabel
             For Loops:
               name: Untuk Pengulangan
             End-of-course projects:
@@ -35119,7 +35119,7 @@ id:
           title: 'CSP Preview: Variable, Conditional, dan Function'
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -35590,7 +35590,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
           title: CSP Unit 7 Percontohan - Parameter, Kembali, dan Perpustakaan
           lesson_groups:
             csp_parameters_return_values:
@@ -35655,7 +35655,7 @@ id:
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 11: Hari Penilaian'
             "[OLD] Parameters and Return Make":
-              name: "[LAMA] Parameter dan Return Make"
+              name: "[OLD] Parameter dan Return Make"
         csp8-pilot:
           stages:
             new stage:
@@ -35711,7 +35711,7 @@ id:
           title: CSP Unit 4 - Variable, Conditional, dan Function ('20-'21)
           lesson_groups:
             csp_variables:
-              display_name: Variables
+              display_name: variabel
             csp_conditionals:
               display_name: Kondisi
             csp_functions:
@@ -35794,7 +35794,7 @@ id:
           title: CSP Unit 5 - Daftar, Loop, dan Traversal ('20-'21)
           lesson_groups:
             csp_lists:
-              display_name: Daftar
+              display_name: List
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -36209,8 +36209,14 @@ id:
                 halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka
                 bisa memastikan situs web melakukan pekerjaannya sesuai rancangan
                 awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
           lesson_groups:
             csd2_1:
               display_name: 'Bab 1: Konten Web dan HTML'
@@ -36438,8 +36444,14 @@ id:
                 halaman. Setelah itu, mereka mempertimbangkan bagaimana rencana mereka
                 bisa memastikan situs web melakukan pekerjaannya sesuai rancangan
                 awal."
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
             Linking Pages:
               name: Menautkan Halaman
+            Using Images:
+              name: Menggunakan Gambar
         csd1-2020:
           title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
           description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang
@@ -38129,6 +38141,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
           lesson_groups:
             csd5_1:
               display_name: 'Bab 1: Yang Mewakili Informasi'
@@ -38456,6 +38470,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               name: Survei Pascakursus CS Discoveries
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
         csd6-2020:
           title: CSD Unit 6 - Komputasi Fisik ('20-'21)
           description: Unit 6 mengeksplorasi peran platform perangkat keras dalam
@@ -38617,7 +38633,7 @@ id:
                 mampu untuk gambar program seperti yang mereka buat dengan alat gambar
                 pada pelajaran sebelumnya.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -39099,7 +39115,7 @@ id:
                 mampu untuk gambar program seperti yang mereka buat dengan alat gambar
                 pada pelajaran sebelumnya.
             Variables:
-              name: Variables
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -39848,6 +39864,8 @@ id:
                 animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
             Digital Trails:
               name: Jejak Digital
+              description_student: 'Pelajari tentang jejak digital Anda dan cara menjaga
+                keselamatan diri saat mengunjungi situs web. '
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -39967,6 +39985,8 @@ id:
                 animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
             Digital Trails:
               name: Jejak Digital
+              description_student: 'Pelajari tentang jejak digital Anda dan cara menjaga
+                keselamatan diri saat mengunjungi situs web. '
         coursec-2020:
           title: Kursus C (2020)
           description: Buat program dengan pengurutan, loop, dan event. Terjemahkan
@@ -40151,6 +40171,9 @@ id:
               name: MENGHENTIKAN Kejahatan Online
             Password Power-Up:
               name: Penguatan Kata Sandi
+              description_student: Dalam pelajaran ini, Anda akan mempelajari cara
+                kata sandi melindungi informasi Anda, dan cara membuat kata sandi
+                yang bagus.
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -40339,6 +40362,9 @@ id:
               name: MENGHENTIKAN Kejahatan Online
             Password Power-Up:
               name: Penguatan Kata Sandi
+              description_student: Dalam pelajaran ini, Anda akan mempelajari cara
+                kata sandi melindungi informasi Anda, dan cara membuat kata sandi
+                yang bagus.
         coursed-2020:
           title: Kursus D (2020)
           description: Murid mengembangkan pemahaman tentang loop, conditional, dan
@@ -40531,6 +40557,8 @@ id:
               name: Pesta Dansa
             End of Course Project:
               name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean!
+                Saatnya untuk mulai membangun proyek anda.
             Be A Super Digital Citizen:
               name: Menjadi Warga Digital Super
           lesson_groups:
@@ -40733,6 +40761,8 @@ id:
               name: Pesta Dansa
             End of Course Project:
               name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean!
+                Saatnya untuk mulai membangun proyek anda.
             Be A Super Digital Citizen:
               name: Menjadi Warga Digital Super
         coursee-2020:
@@ -40938,8 +40968,22 @@ id:
                 mereka yang sudah jadi kepada rekan sejawat."
             Digital Sharing:
               name: Berbagi Secara Digital
+              description_student: 'Dalam pelajaran ini, Anda akan belajar tentang
+                tantangan dan manfaat kepemilikan dan hak cipta. '
+              description_teacher: Meminjam Dasar-Dasar Ilmu Komputer dari tim di
+                bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu
+                siswa memahami tantangan dan manfaat menghargai hak milik dan hak
+                cipta, terutama di lingkungan digital. Para siswa perlu didorong untuk
+                menghargai hak-hak artis sebagai unsur penting menjadi seorang warga
+                digital yang beretika.
             Designing for Accessibility:
               name: Mendesain untuk Aksesibilitas
+              description_student: 'Dalam pelajaran ini, murid akan belajar tentang
+                aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
+                dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang
+                aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
+                dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
@@ -41150,8 +41194,22 @@ id:
                 mereka yang sudah jadi kepada rekan sejawat."
             Digital Sharing:
               name: Berbagi Secara Digital
+              description_student: 'Dalam pelajaran ini, Anda akan belajar tentang
+                tantangan dan manfaat kepemilikan dan hak cipta. '
+              description_teacher: Meminjam Dasar-Dasar Ilmu Komputer dari tim di
+                bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu
+                siswa memahami tantangan dan manfaat menghargai hak milik dan hak
+                cipta, terutama di lingkungan digital. Para siswa perlu didorong untuk
+                menghargai hak-hak artis sebagai unsur penting menjadi seorang warga
+                digital yang beretika.
             Designing for Accessibility:
               name: Mendesain untuk Aksesibilitas
+              description_student: 'Dalam pelajaran ini, murid akan belajar tentang
+                aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
+                dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang
+                aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
+                dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
         coursef-2020:
           title: Kursus F (2020)
           description: Pelajari cara menggunakan berbagai jenis loop, event, function,
@@ -41378,7 +41436,7 @@ id:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
@@ -41662,6 +41720,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_warmup:
               display_name: Berlatih
@@ -41674,11 +41736,13 @@ id:
             csf_functions:
               display_name: fungsi
             csf_variables:
-              display_name: Variables
+              display_name: variabel
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
           lessons:
             Dance Party:
               name: Pesta Tari
@@ -41736,6 +41800,10 @@ id:
               name: Piaraan Virtual dengan Sprite Lab
             Build A Project:
               name: Membuat Proyek
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            End of Course Project:
+              name: Proyek Akhir Kursus
         pre-express-2020:
           title: Kilat Pre-reader (2020)
           description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di
@@ -41835,10 +41903,14 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
           title: CSP Unit 1 - Informasi Digital ('20-'21)
           lesson_groups:
             csp_unit1_2020:
               display_name: "(Lama) Unit 1: Informasi Digital"
+            cspSurvey:
+              display_name: Survei
           lessons:
             new stage:
               name: tahapan baru
@@ -41870,6 +41942,8 @@ id:
               name: Proyek - Dilema Informasi Digital Bagian 2
             'Lesson 14: Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian'
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
         csp2-2020:
           stages:
             new stage:
@@ -42272,720 +42346,6 @@ id:
               name: Survei Pascakursus CS Principles
             Make your own Digital Scene:
               name: Membuat Adegan Digital Anda sendiri
-        csd3-virtual:
-          title: Pengenalan Game Lab sesuai Kecepatan Belajar Sendiri
-          description: Anda akan memprogram animasi, seni interaktif, dan permainan
-            di Game Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang
-            hingga ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep
-            pemrograman dan proses desain yang sama yang digunakan sehari-hari oleh
-            ilmuwan komputer. Dalam proyek terakhir, Anda akan mengembangkan program
-            interaktif yang sudah mendapat sentuhan pribadi.
-          description_short: Pemrograman
-          stages:
-            Programming for Entertainment:
-              name: Pemrograman untuk Hiburan
-              description_student: Murid di kelas diminta untuk mempertimbangkan "masalah"
-                kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati
-                dua masalah tersebut dalam kehidupan masing-masing.  Dari situ mereka
-                akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman
-                secara khusus, memainkan peran entah dalam bentuk hiburan spesifik
-                ataukah sebagai wahana ekspresi diri.
-              description_teacher: Murid diminta untuk mempertimbangkan "masalah"
-                kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati
-                dua masalah tersebut dalam kehidupan masing-masing.  Dari situ murid
-                akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman
-                secara khusus, memainkan peran entah dalam bentuk hiburan spesifik
-                ataukah sebagai wahana ekspresi diri.
-            Plotting Shapes:
-              name: Merancang Bentuk
-              description_student: "Murid mengeksplorasi tantangan mengomunikasikan
-                cara menggambar dengan bentuk dan menggunakan tool yang memperkenalkan
-                cara mendekati masalah ini di Game Lab. Aktivitas pemanasan bisa dengan
-                cepat memperlihatkan tantangan mengomunikasikan posisi tanpa titik
-                acuan bersama. Di dalam aktivitas utama, murid mengeksplorasi tool
-                Game Lab yang mempersilakan murid untuk meletakkan bentuk secara interaktif
-                di kisi-kisi 400 x 400 Game Lab. Mereka lalu secara bergantian memberi
-                instruksi partner tentang cara membuat gambar tersembunyi menggunakan
-                tool ini, dengan mempertimbangkan berbagai tantangan yang akan ditemui
-                oleh murid saat memprogram di Game Lab. Murid secara opsional \nmembuat
-                gambar mereka sendiri untuk dikomunikasikan sebelum diskusi debriefing."
-              description_teacher: "Murid mengeksplorasi tantangan mengomunikasikan
-                cara menggambar dengan bentuk dan menggunakan tool yang memperkenalkan
-                cara mendekati masalah ini di Game Lab. Aktivitas pemanasan bisa dengan
-                cepat memperlihatkan tantangan mengomunikasikan posisi tanpa titik
-                acuan bersama. Di dalam aktivitas utama, murid mengeksplorasi tool
-                Game Lab yang mempersilakan murid untuk meletakkan bentuk secara interaktif
-                di kisi-kisi 400 x 400 Game Lab. Mereka lalu secara bergantian memberi
-                instruksi partner tentang cara membuat gambar tersembunyi menggunakan
-                tool ini, dengan mempertimbangkan berbagai tantangan yang akan ditemui
-                oleh murid saat memprogram di Game Lab. Murid secara opsional \nmembuat
-                gambar mereka sendiri untuk dikomunikasikan sebelum diskusi debriefing."
-            Drawing in Game Lab:
-              name: Menggambar dalam lab permaianan
-              description_student: Murid di kelas diperkenalkan dengan Game Lab, lingkungan
-                pemrograman untuk unit ini, dan mulai menggunakannya untuk meletakkan
-                bentuk di layar. Pelajaran ini membahas dasar-dasar pengurutan dan
-                debugging serta beberapa perintah sederhana. Pada akhir pelajaran,
-                murid di kelas membuat gambar versi online yang sudah dirancang dalam
-                pelajaran sebelumnya.
-              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
-                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
-                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
-                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
-                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
-                pada pelajaran sebelumnya.
-            Shapes and Randomization:
-              name: Bentuk dan Pengacakan
-            Variables:
-              name: Variables
-              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
-                untuk label nomor pada sebuah program atau menyimpan nilai secara
-                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
-                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
-                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
-                menggunakan nomor acak beberapa kali.
-              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
-                variabel untuk label nomor dalam program mereka atau menyimpan nilai
-                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
-                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
-                yang memperkuat model variabel sebagai cara untuk label atau nama
-                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
-                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
-                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
-                nomor acak beberapa kali dalam program-program mereka.
-            Sprites:
-              name: Sprite
-              description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
-                gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
-                gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
-                tentang diri mereka sendiri, yang akan berguna di jalan, ketika membuat
-                animasi. Di akhir pelajaran, semua orang membuat adegan menggunakan
-                sprite.
-              description_teacher: Agar dapat membuat gambar yang lebih menarik dan
-                terperinci, murid diperkenalkan dengan objek sprite. Setiap sprite
-                dapat diberi gambar untuk ditampilkan, dan sprite juga melacak beberapa
-                nilai-nilai tentang diri mereka sendiri, yang pasti akan selalu bermanfaat
-                saat membuat animasi.
-            The Draw Loop:
-              name: Draw Loop
-              description_student: Pelajaran ini memperkenalkan draw loop, salah satu
-                paradigma pemrograman inti di Game Lab.  Murid di kelas menggabungkan
-                draw loop dengan angka acak untuk memanipulasi beberapa animasi sederhana
-                dengan titik dan kemudian dengan sprite. Setelah itu, semua murid
-                menggunakan materi yang sudah dipelajari untuk memperbarui adegan
-                sprite dari pelajaran sebelumnya.
-              description_teacher: Dalam pelajaran ini, murid diperkenalkan dengan
-                draw loop, salah satu paradigma pemrograman inti di Game Lab. Untuk
-                memulai pelajaran, murid mencermati beberapa buku flip fisik untuk
-                melihat bahwa frame yang banyak dengan gambar yang berlainan memunculkan
-                kesan bergerak. Murid kemudian menonton video yang menjelaskan cara
-                draw loop di Game Lab membantu memunculkan kesan yang sama ini dalam
-                program mereka. Murid menggabungkan draw loop dengan angka acak untuk
-                memanipulasi beberapa animasi sederhana dengan titik dan kemudian
-                dengan sprite. Pada akhir pelajaran, murid menggunakan materi yang
-                sudah dipelajari untuk memperbarui adegan sprite mereka dari pelajaran
-                sebelumnya.
-            The Counter Pattern Unplugged:
-              name: The Counter Pattern Unplugged
-              description_student: Pelajaran tanpa komputer ini mengeksplorasi perilaku
-                dasar variable. Dengan menggunakan notecard dan string untuk membuat
-                simulasi variable di dalam program, murid di kelas menerapkan beberapa
-                program pendek. Setelah nyaman dengan syntax ini, murid di kelas menggunakan
-                proses yang sama dengan properti sprite, dengan melacak kemajuan sprite
-                di sekitar layar.
-              description_teacher: Murid mengeksplorasi perilaku dasar variable melalui
-                aktivitas tanpa komputer. Dengan menggunakan notecard dan string untuk
-                membuat simulasi variable di dalam program, murid menerapkan beberapa
-                program pendek. Setelah nyaman dengan syntax ini, murid menggunakan
-                proses yang sama dengan properti sprite, dengan melacak kemajuan sprite
-                di sekitar layar.
-            Sprite Movement:
-              name: Gerakan Sprite
-              description_student: Dengan menggabungkan Draw Loop dan Counter Pattern,
-                murid di kelas menulis program yang menggerakkan sprite di seputar
-                layar serta menghidupkan properti sprite lainnya.
-              description_teacher: Dengan menggabungkan Draw Loop dan Counter Pattern,
-                murid menulis program yang menggerakkan sprite di seputar layar serta
-                menghidupkan properti sprite lainnya.
-            Booleans Unplugged:
-              name: Booleans dicabut
-              description_student: Pelajaran ini memperkenalkan nilai-nilai boolean
-                dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain
-                game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan
-                yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis
-                pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin
-                kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat
-                mempengaruhi aliran program.
-              description_teacher: |-
-                Dalam pelajaran ini, murid diperkenalkan dengan nilai boolean dan logika serta pernyataan conditional. Murid di kelas memulai pelajaran dengan memainkan permainan sederhana Stand Up, Sit Down yang pernyataan boolean (benar/salah) mendeskripsikan ciri pribadi (warna rambut atau mata, jenis baju, usia, dll.). Pelajaran ini memancing murid berpikir tentang cara mereka membingkai ciri khas dengan berbagai nilai potensial (misalnya usia) dengan pertanyaan binary.
-
-                Dari sini murid menghadapi sekelompok objek dengan ciri fisik yang sama, tetapi bervariasi. Bersama seorang rekan, mereka mengelompokkan objek-objek tersebut berdasarkan pernyataan boolean yang semakin kompleks, termasuk boolean majemuk dengan DAN dan ATAU.
-
-                Terakhir, kami membeberkan Conditional sebagai alat untuk mengambil keputusan atau memengaruhi alur program menggunakan pernyataan boolean sebagai input.
-            Conditionals:
-              name: Kondisi
-              description_student: Murid di kelas memulai dengan menggunakan boolean
-                untuk membandingkan nilai properti sprite saat ini dengan nilai target,
-                dan menggunakan perbandingan tersebut untuk menentukan kapan sebuah
-                sprite telah mencapai suatu titik di layar, tumbuh ke ukuran tertentu,
-                atau sebaliknya mencapai suatu nilai menggunakan counter pattern.
-                Setelah menggunakan boolean secara langsung untuk menyelidiki nilai
-                atau properti sprite, murid  di kelas menambahkan pernyataan if conditional
-                untuk menulis code yang menanggapi perbandingan boolean tersebut.
-              description_teacher: Murid memulai dengan menggunakan boolean untuk
-                membandingkan nilai properti sprite saat ini dengan nilai target,
-                dan menggunakan perbandingan tersebut untuk menentukan kapan sebuah
-                sprite telah mencapai suatu titik di layar, tumbuh ke ukuran tertentu,
-                atau sebaliknya mencapai suatu nilai menggunakan counter pattern.
-                Setelah menggunakan boolean secara langsung untuk menyelidiki nilai
-                atau properti sprite, murid menambahkan pernyataan _if_ conditional
-                untuk menulis code yang menanggapi perbandingan boolean tersebut.
-            Keyboard Input:
-              name: Input Keyboard
-              description_student: Menyusul pengenalan boolean dan pernyataan jika
-                dalam pelajaran sebelumnya, murid diperkenalkan dengan blok baru yang
-                disebut keyDown() yang mengembalikan hasil boolean dan dapat digunakan
-                dalam pernyataan kondisional untuk menggerakkan sprite di seputar
-                layar. Pada akhir pelajaran ini, murid akan memiliki program tertulis
-                yang mengambil input keyboard dari pengguna untuk mengontrol sprite
-                di layar.
-              description_teacher: Menyusul pengenalan boolean dan pernyataan _jika_
-                dalam pelajaran sebelumnya, murid diperkenalkan dengan blok baru yang
-                disebut `keyDown()` yang mengembalikan hasil boolean dan dapat digunakan
-                dalam pernyataan kondisional untuk menggerakkan sprite di seputar
-                layar. Pada akhir pelajaran ini, murid akan memiliki program tertulis
-                yang mengambil input keyboard dari pengguna untuk mengontrol sprite
-                di layar.
-            Other Forms of Input:
-              name: Bentuk-Bentuk Input yang Lain
-              description_student: Murid di kelas melanjutkan eksplorasi cara-cara
-                menggunakan pernyataan kondisional untuk mengambil input pengguna.
-                Selain perintah keyDown() sederhana yang dipelajari kemarin, murid
-                di kelas akan belajar tentang beberapa perintah input keyboard lain
-                serta cara-cara mengambil input mouse.
-              description_teacher: Dalam pelajaran ini, murid melanjutkan eksplorasi
-                cara-cara menggunakan pernyataan kondisional untuk mengambil input
-                pengguna. Selain perintah `keyDown()` sederhana yang dipelajari kemarin,
-                murid akan belajar tentang beberapa perintah input keyboard lain serta
-                cara-cara mengambil input mouse.
-            Project - Interactive Card:
-              name: Proyek - kartu interaktif
-              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
-                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
-                semua teknik pemrograman yang telah mereka pelajari saat ini.
-              description_teacher: Dalam proyek kumulatif untuk Bab 1 ini, murid merencanakan
-                dan mengembangkan sebuah kartu ucapan interaktif menggunakan semua
-                teknik pemrograman yang telah mereka pelajari hingga titik ini.
-            Velocity:
-              name: Percepatan
-              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
-                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
-                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
-                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
-                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
-                scroller.
-              description_teacher: Setelah melihat singkat tentang bagaimana mereka
-                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
-                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
-                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
-                baru dengan cara yang berbeda, mereka membangun keterampilan yang
-                mereka butuhkan untuk membuat dasar sisi permainan scroller.
-            Collision Detection:
-              name: Deteksi tumbukan
-              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
-                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
-                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
-                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
-                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
-                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
-                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
-                yang lalu.
-              description_teacher: Murid belajar tentang deteksi benturan di komputer.
-                Secara berpasangan, mereka mengeksplorasi cara komputer menggunakan
-                lokasi sprite, properti ukuran, dan matematika untuk mendeteksi apakah
-                dua sprite bersentuhan atau tidak. Mereka kemudian menggunakan blok
-                `isTouching()` untuk menciptakan efek yang berbeda ketika sprite berbenturan,
-                termasuk suara-suara bermain. Terakhir, mereka menggunakan keterampilan
-                baru untuk meningkatkan permainan sidescroller yang sudah dimulai
-                dalam pelajaran yang terakhir.
-            Complex Sprite Movement:
-              name: Gerakan Sprite Kompleks
-              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
-                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
-                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
-                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
-                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
-                satu sprite dan membangun sebuah permainan sederhana di mana karakter
-                terbang di sekitar dan mengumpulkan koin. '
-              description_teacher: Murid belajar menggabungkan properti kecepatan
-                sprite dengan counter pattern untuk membuat gerakan sprite yang lebih
-                kompleks. Secara khusus, murid akan mempelajari cara membuat simulasi
-                gravitasi, membuat sprite melompat, dan memungkinkan sprite mengapung
-                ke kiri atau ke kanan. Di level akhir kemajuan Code Studio, murid
-                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
-                satu sprite serta membuat sebuah permainan sederhana yang karakternya
-                beterbangan dan mengumpulkan koin. Murid didorong untuk memberikan
-                tambahan sendiri ke permainan di level akhir.
-            Collisions:
-              name: Tumbukan
-              description_student: Murid di kelas memprogram sprite mereka agar berinteraksi
-                dengan cara-cara baru.  Setelah meninjau singkat cara mereka menggunakan
-                blok isTouching, murid di kelas menggodok cara-cara lain kedua sprite
-                bisa berinteraksi.  Mereka kemudian menggunakan isTouching untuk membuat
-                satu sprite mendorong sprite satunya lagi di seputar layar sebelum
-                berlatih dengan empat blok benturan (collide, displace, bounce, dan
-                bounceOff).
-              description_teacher: Murid memprogram sprite mereka agar berinteraksi
-                dengan cara-cara baru.  Setelah meninjau singkat cara mereka menggunakan
-                blok `isTouching`, murid menggodok cara-cara lain kedua sprite bisa
-                berinteraksi.  Mereka kemudian menggunakan `isTouching` untuk membuat
-                satu sprite mendorong sprite satunya lagi di seputar layar sebelum
-                berlatih dengan empat blok benturan (`collide`, `displace`, `bounce`,
-                dan `bounceOff`).
-            Functions:
-              name: fungsi
-              description_student: Pelajaran ini membahas function sebagai cara untuk
-                mengatur code, membuatnya lebih mudah dibaca, dan menghapus blok code
-                yang diulang-ulang. Murid di kelas belajar bahwa level lebih tinggi
-                atau langkah lebih abstrak memudahkan memahami dan bernalar tentang
-                langkah, lalu mulai membuat function di Game Lab. Pada akhir pelajaran,
-                murid di kelas menggunakan keterampilan tersebut untuk mengatur dan
-                menambahkan fungsionalitas ke versi terakhir permainan side scroller.
-              description_teacher: Murid mempelajari cara membuat function untuk mengatur
-                code, membuatnya lebih mudah dibaca, dan menghapus blok-blok code
-                yang berulang. Sebuah pemanasan tanpa komputer mengeksplorasi betapa
-                bermanfaatnya arah di berbagai level berdasarkan konteksnya. Murid
-                belajar bahwa langkah yang berlevel lebih tinggi atau lebih abstrak
-                memudahkannya dipahami dan dinalar. Setelah itu, murid belajar membuat
-                function di Game Lab. Mereka akan menggunakan function untuk menghapus
-                blok-blok code yang panjang dari draw loop dan mengganti potongan-potongan
-                code berulang dengan function tunggal. Pada akhir pelajaran, murid
-                menggunakan keterampilan di atas untuk mengatur dan menambahkan fungsionalitas
-                ke versi terakhir permainan side scroller.
-            The Game Design Process:
-              name: Proses perancangan permainan
-              description_student: Pelajaran ini memperkenalkan proses kelas yang
-                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
-                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
-                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
-                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
-                untuk membuat perbaikan permainan sendiri.
-              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
-                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
-                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
-                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
-                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
-                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
-                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
-                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
-                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
-                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
-                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
-                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
-                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
-            Using the Game Design Process:
-              name: Proses menggunakan desain permainan
-              description_student: Dalam pelajaran beberapa hari ini, murid di kelas
-                menggunakan proses pemecahan masalah dari Unit 1 untuk membuat permainan
-                pelompat platform. Setelah mencermati sebuah contoh permainan, murid
-                di kelas menentukan tampilan permainan mereka dan menggunakan proses
-                terstruktur untuk membuat permainan tersebut. Terakhir, murid di kelas
-                menimbang-nimbang cara untuk dapat meningkatkan permainan, dan menerapkan
-                perubahan tersebut.
-              description_teacher: Dalam pelajaran beberapa hari ini, murid menggunakan
-                proses pemecahan masalah dari Unit 1 untuk membuat permainan pelompat
-                platform. Mereka memulainya dengan mencermati sebuah contoh pelompat
-                platform, lalu menentukan tampilan permainan mereka. Selanjutnya,
-                mereka menggunakan proses terstruktur untuk merencanakan latar belakang,
-                variable, sprite, dan function yang akan mereka butuhkan untuk menerapkan
-                permainan tersebut. Setelah menulis code untuk permainan, murid akan
-                menimbang-nimbang cara untuk dapat meningkatkan permainan, dan menerapkan
-                perubahan tersebut.
-            Project - Design a Game:
-              name: Proyek - merancang sebuah permainan
-              description_student: Kelas rencana dan membangun permainan asli menggunakan
-                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
-                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
-                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
-                kelas saham selesai.
-              description_teacher: Murid akan merencanakan dan membuat permainan sendiri
-                menggunakan panduan proyek dari dua pelajaran sebelumnya untuk memandu
-                proyek mereka. Dengan bekerja sendiri-sendiri atau berpasangan, murid
-                mula-mula memutuskan jenis permainan yang ingin dibuat, dengan mengambil
-                inspirasi dari contoh sekumpulan permainan. Mereka kemudian akan mengisi
-                panduan proyek kosong untuk mendeskripsikan perilaku permainan dan
-                menjelajahi variable, sprite, dan function yang perlu dibuat. Di Code
-                Studio, sederet level mencetuskan inspirasi sebuah urutan umum yang
-                dapat mereka gunakan untuk menerapkan rencana ini. Di pertengahan
-                proses, murid akan berbagi proyek untuk mendapatkan ulasan sejawat
-                dan menerapkan masukan sambil menyelesaikan permainan mereka. Pada
-                akhir pelajaran, murid akan berbagi permainan yang sudah selesai ke
-                teman-teman sekelas. Proyek ini akan mencakup beberapa perkuliahan
-                dan dapat membutuhkan kira-kira 3-5 periode perkuliahan.
-            Post-Project Test:
-              name: Pengujian Pascaproyek
-            CS Discoveries Post Course survey:
-              name: Survei Pascakursus CS Discoveries
-            Sprites and Animations:
-              name: Sprite dan Animasi
-            Text and Captioned Scenes:
-              name: Teks dan Adegan Berteks
-            Sample Programs:
-              name: Program-Program Contoh
-          lesson_groups:
-            csd3_1:
-              display_name: 'Bab 1: Gambar dan Animasi'
-          lessons:
-            Programming for Entertainment:
-              name: Pemrograman untuk Hiburan
-              description_student: Murid di kelas diminta untuk mempertimbangkan "masalah"
-                kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati
-                dua masalah tersebut dalam kehidupan masing-masing.  Dari situ mereka
-                akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman
-                secara khusus, memainkan peran entah dalam bentuk hiburan spesifik
-                ataukah sebagai wahana ekspresi diri.
-              description_teacher: Murid diminta untuk mempertimbangkan "masalah"
-                kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati
-                dua masalah tersebut dalam kehidupan masing-masing.  Dari situ murid
-                akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman
-                secara khusus, memainkan peran entah dalam bentuk hiburan spesifik
-                ataukah sebagai wahana ekspresi diri.
-            Plotting Shapes:
-              name: Merancang Bentuk
-              description_student: "Murid mengeksplorasi tantangan mengomunikasikan
-                cara menggambar dengan bentuk dan menggunakan tool yang memperkenalkan
-                cara mendekati masalah ini di Game Lab. Aktivitas pemanasan bisa dengan
-                cepat memperlihatkan tantangan mengomunikasikan posisi tanpa titik
-                acuan bersama. Di dalam aktivitas utama, murid mengeksplorasi tool
-                Game Lab yang mempersilakan murid untuk meletakkan bentuk secara interaktif
-                di kisi-kisi 400 x 400 Game Lab. Mereka lalu secara bergantian memberi
-                instruksi partner tentang cara membuat gambar tersembunyi menggunakan
-                tool ini, dengan mempertimbangkan berbagai tantangan yang akan ditemui
-                oleh murid saat memprogram di Game Lab. Murid secara opsional \nmembuat
-                gambar mereka sendiri untuk dikomunikasikan sebelum diskusi debriefing."
-              description_teacher: "Murid mengeksplorasi tantangan mengomunikasikan
-                cara menggambar dengan bentuk dan menggunakan tool yang memperkenalkan
-                cara mendekati masalah ini di Game Lab. Aktivitas pemanasan bisa dengan
-                cepat memperlihatkan tantangan mengomunikasikan posisi tanpa titik
-                acuan bersama. Di dalam aktivitas utama, murid mengeksplorasi tool
-                Game Lab yang mempersilakan murid untuk meletakkan bentuk secara interaktif
-                di kisi-kisi 400 x 400 Game Lab. Mereka lalu secara bergantian memberi
-                instruksi partner tentang cara membuat gambar tersembunyi menggunakan
-                tool ini, dengan mempertimbangkan berbagai tantangan yang akan ditemui
-                oleh murid saat memprogram di Game Lab. Murid secara opsional \nmembuat
-                gambar mereka sendiri untuk dikomunikasikan sebelum diskusi debriefing."
-            Drawing in Game Lab:
-              name: Menggambar dalam lab permaianan
-              description_student: Murid di kelas diperkenalkan dengan Game Lab, lingkungan
-                pemrograman untuk unit ini, dan mulai menggunakannya untuk meletakkan
-                bentuk di layar. Pelajaran ini membahas dasar-dasar pengurutan dan
-                debugging serta beberapa perintah sederhana. Pada akhir pelajaran,
-                murid di kelas membuat gambar versi online yang sudah dirancang dalam
-                pelajaran sebelumnya.
-              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
-                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
-                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
-                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
-                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
-                pada pelajaran sebelumnya.
-            Shapes and Randomization:
-              name: Bentuk dan Pengacakan
-            Variables:
-              name: Variables
-              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
-                untuk label nomor pada sebuah program atau menyimpan nilai secara
-                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
-                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
-                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
-                menggunakan nomor acak beberapa kali.
-              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
-                variabel untuk label nomor dalam program mereka atau menyimpan nilai
-                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
-                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
-                yang memperkuat model variabel sebagai cara untuk label atau nama
-                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
-                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
-                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
-                nomor acak beberapa kali dalam program-program mereka.
-            Sprites:
-              name: Sprite
-              description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
-                gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
-                gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
-                tentang diri mereka sendiri, yang akan berguna di jalan, ketika membuat
-                animasi. Di akhir pelajaran, semua orang membuat adegan menggunakan
-                sprite.
-              description_teacher: Agar dapat membuat gambar yang lebih menarik dan
-                terperinci, murid diperkenalkan dengan objek sprite. Setiap sprite
-                dapat diberi gambar untuk ditampilkan, dan sprite juga melacak beberapa
-                nilai-nilai tentang diri mereka sendiri, yang pasti akan selalu bermanfaat
-                saat membuat animasi.
-            The Draw Loop:
-              name: Draw Loop
-              description_student: Pelajaran ini memperkenalkan draw loop, salah satu
-                paradigma pemrograman inti di Game Lab.  Murid di kelas menggabungkan
-                draw loop dengan angka acak untuk memanipulasi beberapa animasi sederhana
-                dengan titik dan kemudian dengan sprite. Setelah itu, semua murid
-                menggunakan materi yang sudah dipelajari untuk memperbarui adegan
-                sprite dari pelajaran sebelumnya.
-              description_teacher: Dalam pelajaran ini, murid diperkenalkan dengan
-                draw loop, salah satu paradigma pemrograman inti di Game Lab. Untuk
-                memulai pelajaran, murid mencermati beberapa buku flip fisik untuk
-                melihat bahwa frame yang banyak dengan gambar yang berlainan memunculkan
-                kesan bergerak. Murid kemudian menonton video yang menjelaskan cara
-                draw loop di Game Lab membantu memunculkan kesan yang sama ini dalam
-                program mereka. Murid menggabungkan draw loop dengan angka acak untuk
-                memanipulasi beberapa animasi sederhana dengan titik dan kemudian
-                dengan sprite. Pada akhir pelajaran, murid menggunakan materi yang
-                sudah dipelajari untuk memperbarui adegan sprite mereka dari pelajaran
-                sebelumnya.
-            The Counter Pattern Unplugged:
-              name: The Counter Pattern Unplugged
-              description_student: Pelajaran tanpa komputer ini mengeksplorasi perilaku
-                dasar variable. Dengan menggunakan notecard dan string untuk membuat
-                simulasi variable di dalam program, murid di kelas menerapkan beberapa
-                program pendek. Setelah nyaman dengan syntax ini, murid di kelas menggunakan
-                proses yang sama dengan properti sprite, dengan melacak kemajuan sprite
-                di sekitar layar.
-              description_teacher: Murid mengeksplorasi perilaku dasar variable melalui
-                aktivitas tanpa komputer. Dengan menggunakan notecard dan string untuk
-                membuat simulasi variable di dalam program, murid menerapkan beberapa
-                program pendek. Setelah nyaman dengan syntax ini, murid menggunakan
-                proses yang sama dengan properti sprite, dengan melacak kemajuan sprite
-                di sekitar layar.
-            Sprite Movement:
-              name: Gerakan Sprite
-              description_student: Dengan menggabungkan Draw Loop dan Counter Pattern,
-                murid di kelas menulis program yang menggerakkan sprite di seputar
-                layar serta menghidupkan properti sprite lainnya.
-              description_teacher: Dengan menggabungkan Draw Loop dan Counter Pattern,
-                murid menulis program yang menggerakkan sprite di seputar layar serta
-                menghidupkan properti sprite lainnya.
-            Booleans Unplugged:
-              name: Booleans dicabut
-              description_student: Pelajaran ini memperkenalkan nilai-nilai boolean
-                dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain
-                game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan
-                yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis
-                pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin
-                kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat
-                mempengaruhi aliran program.
-              description_teacher: |-
-                Dalam pelajaran ini, murid diperkenalkan dengan nilai boolean dan logika serta pernyataan conditional. Murid di kelas memulai pelajaran dengan memainkan permainan sederhana Stand Up, Sit Down yang pernyataan boolean (benar/salah) mendeskripsikan ciri pribadi (warna rambut atau mata, jenis baju, usia, dll.). Pelajaran ini memancing murid berpikir tentang cara mereka membingkai ciri khas dengan berbagai nilai potensial (misalnya usia) dengan pertanyaan binary.
-
-                Dari sini murid menghadapi sekelompok objek dengan ciri fisik yang sama, tetapi bervariasi. Bersama seorang rekan, mereka mengelompokkan objek-objek tersebut berdasarkan pernyataan boolean yang semakin kompleks, termasuk boolean majemuk dengan DAN dan ATAU.
-
-                Terakhir, kami membeberkan Conditional sebagai alat untuk mengambil keputusan atau memengaruhi alur program menggunakan pernyataan boolean sebagai input.
-            Conditionals:
-              name: Kondisi
-              description_student: Murid di kelas memulai dengan menggunakan boolean
-                untuk membandingkan nilai properti sprite saat ini dengan nilai target,
-                dan menggunakan perbandingan tersebut untuk menentukan kapan sebuah
-                sprite telah mencapai suatu titik di layar, tumbuh ke ukuran tertentu,
-                atau sebaliknya mencapai suatu nilai menggunakan counter pattern.
-                Setelah menggunakan boolean secara langsung untuk menyelidiki nilai
-                atau properti sprite, murid  di kelas menambahkan pernyataan if conditional
-                untuk menulis code yang menanggapi perbandingan boolean tersebut.
-              description_teacher: Murid memulai dengan menggunakan boolean untuk
-                membandingkan nilai properti sprite saat ini dengan nilai target,
-                dan menggunakan perbandingan tersebut untuk menentukan kapan sebuah
-                sprite telah mencapai suatu titik di layar, tumbuh ke ukuran tertentu,
-                atau sebaliknya mencapai suatu nilai menggunakan counter pattern.
-                Setelah menggunakan boolean secara langsung untuk menyelidiki nilai
-                atau properti sprite, murid menambahkan pernyataan _if_ conditional
-                untuk menulis code yang menanggapi perbandingan boolean tersebut.
-            Keyboard Input:
-              name: Input Keyboard
-              description_student: Menyusul pengenalan boolean dan pernyataan jika
-                dalam pelajaran sebelumnya, murid diperkenalkan dengan blok baru yang
-                disebut keyDown() yang mengembalikan hasil boolean dan dapat digunakan
-                dalam pernyataan kondisional untuk menggerakkan sprite di seputar
-                layar. Pada akhir pelajaran ini, murid akan memiliki program tertulis
-                yang mengambil input keyboard dari pengguna untuk mengontrol sprite
-                di layar.
-              description_teacher: Menyusul pengenalan boolean dan pernyataan _jika_
-                dalam pelajaran sebelumnya, murid diperkenalkan dengan blok baru yang
-                disebut `keyDown()` yang mengembalikan hasil boolean dan dapat digunakan
-                dalam pernyataan kondisional untuk menggerakkan sprite di seputar
-                layar. Pada akhir pelajaran ini, murid akan memiliki program tertulis
-                yang mengambil input keyboard dari pengguna untuk mengontrol sprite
-                di layar.
-            Other Forms of Input:
-              name: Bentuk-Bentuk Input yang Lain
-              description_student: Murid di kelas melanjutkan eksplorasi cara-cara
-                menggunakan pernyataan kondisional untuk mengambil input pengguna.
-                Selain perintah keyDown() sederhana yang dipelajari kemarin, murid
-                di kelas akan belajar tentang beberapa perintah input keyboard lain
-                serta cara-cara mengambil input mouse.
-              description_teacher: Dalam pelajaran ini, murid melanjutkan eksplorasi
-                cara-cara menggunakan pernyataan kondisional untuk mengambil input
-                pengguna. Selain perintah `keyDown()` sederhana yang dipelajari kemarin,
-                murid akan belajar tentang beberapa perintah input keyboard lain serta
-                cara-cara mengambil input mouse.
-            Project - Interactive Card:
-              name: Proyek - kartu interaktif
-              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
-                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
-                semua teknik pemrograman yang telah mereka pelajari saat ini.
-              description_teacher: Dalam proyek kumulatif untuk Bab 1 ini, murid merencanakan
-                dan mengembangkan sebuah kartu ucapan interaktif menggunakan semua
-                teknik pemrograman yang telah mereka pelajari hingga titik ini.
-            Velocity:
-              name: Percepatan
-              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
-                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
-                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
-                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
-                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
-                scroller.
-              description_teacher: Setelah melihat singkat tentang bagaimana mereka
-                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
-                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
-                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
-                baru dengan cara yang berbeda, mereka membangun keterampilan yang
-                mereka butuhkan untuk membuat dasar sisi permainan scroller.
-            Collision Detection:
-              name: Deteksi tumbukan
-              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
-                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
-                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
-                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
-                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
-                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
-                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
-                yang lalu.
-              description_teacher: Murid belajar tentang deteksi benturan di komputer.
-                Secara berpasangan, mereka mengeksplorasi cara komputer menggunakan
-                lokasi sprite, properti ukuran, dan matematika untuk mendeteksi apakah
-                dua sprite bersentuhan atau tidak. Mereka kemudian menggunakan blok
-                `isTouching()` untuk menciptakan efek yang berbeda ketika sprite berbenturan,
-                termasuk suara-suara bermain. Terakhir, mereka menggunakan keterampilan
-                baru untuk meningkatkan permainan sidescroller yang sudah dimulai
-                dalam pelajaran yang terakhir.
-            Complex Sprite Movement:
-              name: Gerakan Sprite Kompleks
-              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
-                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
-                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
-                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
-                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
-                satu sprite dan membangun sebuah permainan sederhana di mana karakter
-                terbang di sekitar dan mengumpulkan koin. '
-              description_teacher: Murid belajar menggabungkan properti kecepatan
-                sprite dengan counter pattern untuk membuat gerakan sprite yang lebih
-                kompleks. Secara khusus, murid akan mempelajari cara membuat simulasi
-                gravitasi, membuat sprite melompat, dan memungkinkan sprite mengapung
-                ke kiri atau ke kanan. Di level akhir kemajuan Code Studio, murid
-                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
-                satu sprite serta membuat sebuah permainan sederhana yang karakternya
-                beterbangan dan mengumpulkan koin. Murid didorong untuk memberikan
-                tambahan sendiri ke permainan di level akhir.
-            Collisions:
-              name: Tumbukan
-              description_student: Murid di kelas memprogram sprite mereka agar berinteraksi
-                dengan cara-cara baru.  Setelah meninjau singkat cara mereka menggunakan
-                blok isTouching, murid di kelas menggodok cara-cara lain kedua sprite
-                bisa berinteraksi.  Mereka kemudian menggunakan isTouching untuk membuat
-                satu sprite mendorong sprite satunya lagi di seputar layar sebelum
-                berlatih dengan empat blok benturan (collide, displace, bounce, dan
-                bounceOff).
-              description_teacher: Murid memprogram sprite mereka agar berinteraksi
-                dengan cara-cara baru.  Setelah meninjau singkat cara mereka menggunakan
-                blok `isTouching`, murid menggodok cara-cara lain kedua sprite bisa
-                berinteraksi.  Mereka kemudian menggunakan `isTouching` untuk membuat
-                satu sprite mendorong sprite satunya lagi di seputar layar sebelum
-                berlatih dengan empat blok benturan (`collide`, `displace`, `bounce`,
-                dan `bounceOff`).
-            Functions:
-              name: fungsi
-              description_student: Pelajaran ini membahas function sebagai cara untuk
-                mengatur code, membuatnya lebih mudah dibaca, dan menghapus blok code
-                yang diulang-ulang. Murid di kelas belajar bahwa level lebih tinggi
-                atau langkah lebih abstrak memudahkan memahami dan bernalar tentang
-                langkah, lalu mulai membuat function di Game Lab. Pada akhir pelajaran,
-                murid di kelas menggunakan keterampilan tersebut untuk mengatur dan
-                menambahkan fungsionalitas ke versi terakhir permainan side scroller.
-              description_teacher: Murid mempelajari cara membuat function untuk mengatur
-                code, membuatnya lebih mudah dibaca, dan menghapus blok-blok code
-                yang berulang. Sebuah pemanasan tanpa komputer mengeksplorasi betapa
-                bermanfaatnya arah di berbagai level berdasarkan konteksnya. Murid
-                belajar bahwa langkah yang berlevel lebih tinggi atau lebih abstrak
-                memudahkannya dipahami dan dinalar. Setelah itu, murid belajar membuat
-                function di Game Lab. Mereka akan menggunakan function untuk menghapus
-                blok-blok code yang panjang dari draw loop dan mengganti potongan-potongan
-                code berulang dengan function tunggal. Pada akhir pelajaran, murid
-                menggunakan keterampilan di atas untuk mengatur dan menambahkan fungsionalitas
-                ke versi terakhir permainan side scroller.
-            The Game Design Process:
-              name: Proses perancangan permainan
-              description_student: Pelajaran ini memperkenalkan proses kelas yang
-                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
-                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
-                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
-                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
-                untuk membuat perbaikan permainan sendiri.
-              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
-                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
-                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
-                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
-                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
-                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
-                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
-                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
-                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
-                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
-                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
-                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
-                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
-            Using the Game Design Process:
-              name: Proses menggunakan desain permainan
-              description_student: Dalam pelajaran beberapa hari ini, murid di kelas
-                menggunakan proses pemecahan masalah dari Unit 1 untuk membuat permainan
-                pelompat platform. Setelah mencermati sebuah contoh permainan, murid
-                di kelas menentukan tampilan permainan mereka dan menggunakan proses
-                terstruktur untuk membuat permainan tersebut. Terakhir, murid di kelas
-                menimbang-nimbang cara untuk dapat meningkatkan permainan, dan menerapkan
-                perubahan tersebut.
-              description_teacher: Dalam pelajaran beberapa hari ini, murid menggunakan
-                proses pemecahan masalah dari Unit 1 untuk membuat permainan pelompat
-                platform. Mereka memulainya dengan mencermati sebuah contoh pelompat
-                platform, lalu menentukan tampilan permainan mereka. Selanjutnya,
-                mereka menggunakan proses terstruktur untuk merencanakan latar belakang,
-                variable, sprite, dan function yang akan mereka butuhkan untuk menerapkan
-                permainan tersebut. Setelah menulis code untuk permainan, murid akan
-                menimbang-nimbang cara untuk dapat meningkatkan permainan, dan menerapkan
-                perubahan tersebut.
-            Project - Design a Game:
-              name: Proyek - merancang sebuah permainan
-              description_student: Kelas rencana dan membangun permainan asli menggunakan
-                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
-                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
-                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
-                kelas saham selesai.
-              description_teacher: Murid akan merencanakan dan membuat permainan sendiri
-                menggunakan panduan proyek dari dua pelajaran sebelumnya untuk memandu
-                proyek mereka. Dengan bekerja sendiri-sendiri atau berpasangan, murid
-                mula-mula memutuskan jenis permainan yang ingin dibuat, dengan mengambil
-                inspirasi dari contoh sekumpulan permainan. Mereka kemudian akan mengisi
-                panduan proyek kosong untuk mendeskripsikan perilaku permainan dan
-                menjelajahi variable, sprite, dan function yang perlu dibuat. Di Code
-                Studio, sederet level mencetuskan inspirasi sebuah urutan umum yang
-                dapat mereka gunakan untuk menerapkan rencana ini. Di pertengahan
-                proses, murid akan berbagi proyek untuk mendapatkan ulasan sejawat
-                dan menerapkan masukan sambil menyelesaikan permainan mereka. Pada
-                akhir pelajaran, murid akan berbagi permainan yang sudah selesai ke
-                teman-teman sekelas. Proyek ini akan mencakup beberapa perkuliahan
-                dan dapat membutuhkan kira-kira 3-5 periode perkuliahan.
-            Post-Project Test:
-              name: Pengujian Pascaproyek
-            CS Discoveries Post Course survey:
-              name: Survei Pascakursus CS Discoveries
-            Sprites and Animations:
-              name: Sprite dan Animasi
-            Text and Captioned Scenes:
-              name: Teks dan Adegan Berteks
-            Sample Programs:
-              name: Program-Program Contoh
         jess-test-script:
           stages:
             Our First Stage:
@@ -43395,7 +42755,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -43456,7 +42816,7 @@ id:
             Console.log and Multi-screen Apps:
               name: Console.log dan Aplikasi Multilayar
             Variables:
-              name: Variables
+              name: variabel
             Moving Memory Challenges:
               name: Tantangan Memori Bergerak
             If-Statements:
@@ -43930,3 +43290,958 @@ id:
               name: Unit 5 penilaian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Penilaian 5 - Pertanyaan AP Pseudocode Practice
+        k5-onlinepd-2020:
+          description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar
+            Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan
+            diri ini!
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Understanding the Computer Science Fundamentals Courses:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Sequencing:
+              name: Urutan
+            Loops:
+              name: Loop
+            Events:
+              name: kegiatan
+            Conditionals:
+              name: Kondisi
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+            Functions:
+              name: fungsi
+            Variables:
+              name: variabel
+            For Loops:
+              name: Untuk Pengulangan
+            Sprite Lab:
+              name: Sprite Lab
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+            Next steps:
+              name: Langkah berikutnya
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Dapat Dimulai
+            k5_basic_concepts_1:
+              display_name: Konsep Coding Dasar dan Praktik Pengajaran
+            k5_diving_deeper_1:
+              display_name: 'Pendalaman: Kursus E dan F'
+            k5_next_steps_1:
+              display_name: Langkah berikutnya
+        dani-june-2020-test:
+          stages:
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
+            Buttons and Events:
+              name: Tombol dan peristiwa
+          lessons:
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
+            Buttons and Events:
+              name: Tombol dan peristiwa
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp5_1:
+              display_name: 'Bab 1: Pemrograman Event-Driven'
+        csd3-virtual:
+          title: Pengenalan Game Lab sesuai Kecepatan Belajar Sendiri
+          description: Anda akan memprogram animasi, seni interaktif, dan permainan
+            di Game Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang
+            hingga ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep
+            pemrograman dan proses desain yang sama yang digunakan sehari-hari oleh
+            ilmuwan komputer. Dalam proyek terakhir, Anda akan mengembangkan program
+            interaktif yang sudah mendapat sentuhan pribadi.
+          description_short: Pemrograman
+          stages:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana ilmu komputer
+                digunakan di dunia hiburan?**\r\n\r\nMurid di kelas diminta untuk
+                mempertimbangkan \"masalah\" kebosanan dan ekspresi diri, lalu menimbang
+                cara mereka mendekati dua masalah tersebut dalam kehidupan masing-masing.
+                \ Dari situ mereka akan mengeksplorasi cara Ilmu Komputer secara umum,
+                dan pemrograman secara khusus, memainkan peran entah dalam bentuk
+                hiburan spesifik ataukah sebagai wahana ekspresi diri."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana ilmu komputer
+                digunakan di dunia hiburan?**\r\n\r\nMurid diminta untuk mempertimbangkan
+                \"masalah\" kebosanan dan ekspresi diri, lalu menimbang cara mereka
+                mendekati dua masalah tersebut dalam kehidupan masing-masing.  Dari
+                situ murid akan mengeksplorasi cara Ilmu Komputer secara umum, dan
+                pemrograman secara khusus, memainkan peran entah dalam bentuk hiburan
+                spesifik ataukah sebagai wahana ekspresi diri."
+            Plotting Shapes:
+              name: Merancang Bentuk
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                dengan jelas cara menggambar sesuatu di layar?**\r\n\r\nPelajaran
+                ini mengeksplorasi tantangan mengomunikasikan cara menggambar dengan
+                bentuk dan menggunakan tool yang memperkenalkan cara mendekati masalah
+                ini di Game Lab. Murid di kelas menggunakan tool Game Lab untuk meletakkan
+                bentuk secara interaktif di kisi-kisi 400 x 400 Game Lab. Partner
+                lalu secara bergantian memberi instruksi satu sama lain tentang cara
+                membuat gambar tersembunyi menggunakan tool ini, dengan mempertimbangkan
+                berbagai tantangan pemrograman di Game Lab."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                dengan jelas cara menggambar sesuatu di layar?**\r\n\r\nMurid mengeksplorasi
+                tantangan mengomunikasikan cara menggambar dengan bentuk dan menggunakan
+                tool yang memperkenalkan cara mendekati masalah ini di Game Lab. Aktivitas
+                pemanasan bisa dengan cepat memperlihatkan tantangan mengomunikasikan
+                posisi tanpa titik acuan bersama. Di dalam aktivitas utama, murid
+                mengeksplorasi tool Game Lab yang mempersilakan murid untuk meletakkan
+                bentuk secara interaktif di kisi-kisi 400 x 400 Game Lab. Mereka lalu
+                secara bergantian memberi instruksi partner tentang cara membuat gambar
+                tersembunyi menggunakan tool ini, dengan mempertimbangkan berbagai
+                tantangan yang akan ditemui oleh murid saat memprogram di Game Lab.
+                Murid secara opsional \nmembuat gambar mereka sendiri untuk dikomunikasikan
+                sebelum diskusi debriefing."
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                cara menggambar bentuk di layar ke komputer?**\r\n\r\nMurid di kelas
+                diperkenalkan dengan Game Lab, lingkungan pemrograman untuk unit ini,
+                dan mulai menggunakannya untuk meletakkan bentuk di layar. Pelajaran
+                ini membahas dasar-dasar pengurutan dan debugging, serta beberapa
+                perintah sederhana. Pada akhir pelajaran, murid akan dapat memprogram
+                gambar seperti gambar yang mereka buat dengan tool gambar pada pelajaran
+                sebelumnya."
+              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
+                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
+                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
+                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
+                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
+                pada pelajaran sebelumnya.
+            Variables:
+              name: variabel
+              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
+                untuk label nomor pada sebuah program atau menyimpan nilai secara
+                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
+                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
+                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
+                menggunakan nomor acak beberapa kali.
+              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
+                variabel untuk label nomor dalam program mereka atau menyimpan nilai
+                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
+                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
+                yang memperkuat model variabel sebagai cara untuk label atau nama
+                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
+                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
+                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
+                nomor acak beberapa kali dalam program-program mereka.
+            Sprites:
+              name: Sprite
+            Text:
+              name: Teks
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                teks untuk memperbaiki adegan dan animasi?**\r\n\r\nPelajaran ini
+                memperkenalkan perintah teks Game Lab sehingga murid di kelas bisa
+                berlatih lebih banyak menggunakan bidang koordinat dan parameter.
+                \ Pada permulaan pelajaran, murid di kelas diminta membuat teks kartun
+                yang dibuat di Game Lab.  Mereka kemudian berpindah ke Code Studio
+                untuk berlatih meletakkan teks di layar dan mengontrol properti teks
+                yang lain, seperti ukuran."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                teks untuk memperbaiki adegan dan animasi?**\r\n\r\nPelajaran ini
+                memperkenalkan perintah teks Game Lab sehingga murid bisa berlatih
+                lebih banyak menggunakan bidang koordinat dan parameter.  Pada permulaan
+                pelajaran, murid diminta membuat teks kartun yang dibuat di Game Lab.
+                \ Mereka kemudian berpindah ke Code Studio untuk berlatih meletakkan
+                teks di layar dan mengontrol properti teks yang lain, seperti ukuran.
+                Murid yang menyelesaikan penilaian lebih awal boleh lanjut mempelajari
+                blok-blok yang lebih menantang yang berkaitan dengan properti teks."
+            'Mini-Project: Captioned Scenes':
+              name: 'Proyek Mini: Adegan Berteks'
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                Game Lab untuk mengekspresikan kreativitas?**\r\n\r\nSetelah meninjau
+                singkat code yang sudah dipelajari sejauh ini, murid di kelas diperkenalkan
+                dengan proyek kreatif pertama unit ini.  Dengan menggunakan proses
+                pemecahan masalah sebagai model, murid menentukan adegan yang ingin
+                mereka buat, mempersiapkan diri dengan memikirkan code lain yang akan
+                dibutuhkan, menguji coba rencana di Game Lab, lalu mengevaluasi apa
+                yang sudah dibuat.  Pada akhir pelajaran, mereka juga berkesempatan
+                membagikan hasil karya mereka kepada rekan sejawat."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                Game Lab untuk mengekspresikan kreativitas?**\r\n\r\nSetelah meninjau
+                singkat code yang sudah dipelajari sejauh ini, murid diperkenalkan
+                dengan proyek kreatif pertama unit ini.  Dengan menggunakan proses
+                pemecahan masalah sebagai model, murid menentukan adegan yang ingin
+                mereka buat, mempersiapkan diri dengan memikirkan code lain yang akan
+                dibutuhkan, menguji coba rencana di Game Lab, lalu mengevaluasi apa
+                yang sudah dibuat.  Pada akhir pelajaran, mereka juga berkesempatan
+                membagikan hasil karya mereka kepada rekan sejawat."
+            The Draw Loop:
+              name: Draw Loop
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gambar animasi di Game Lab?**\r\n\r\nPelajaran ini memperkenalkan
+                draw loop, salah satu paradigma pemrograman inti di Game Lab.  Murid
+                di kelas menggabungkan draw loop dengan angka acak untuk memanipulasi
+                beberapa animasi sederhana dengan titik dan kemudian dengan sprite. "
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gambar animasi di Game Lab?**\r\n\r\nDalam pelajaran ini, murid diperkenalkan
+                dengan draw loop, salah satu paradigma pemrograman inti di Game Lab.
+                Untuk memulai pelajaran, murid mencermati beberapa buku flip fisik
+                untuk melihat bahwa frame yang banyak dengan gambar yang berlainan
+                memunculkan kesan bergerak. Murid kemudian menonton video yang menjelaskan
+                bagaimana draw loop di Game Lab membantu memunculkan kesan yang sama
+                ini dalam program mereka. Murid menggabungkan draw loop dengan angka
+                acak untuk memanipulasi beberapa animasi sederhana dengan titik dan
+                kemudian dengan sprite. "
+            Sprite Movement:
+              name: Gerakan Sprite
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengontrol
+                gerakan sprite di Game Lab?**\r\n\r\nDalam pelajaran ini, murid di
+                kelas mempelajari cara mengontrol gerakan sprite menggunakan sebuah
+                konstruk yang disebut counter pattern, yang sedikit demi sedikit mengubah
+                properti sprite.  Setelah menggodok berbagai cara untuk menggerakkan
+                sprite dengan mengontrol propertinya, murid di kelas mengeksplorasi
+                counter pattern di Code Studio, menggunakan counter pattern untuk
+                membuat berbagai jenis gerakan sprite."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengontrol
+                gerakan sprite di Game Lab?**\r\n\r\nDalam pelajaran ini, murid mempelajari
+                cara mengontrol gerakan sprite menggunakan sebuah konstruk yang disebut
+                counter pattern, yang sedikit demi sedikit mengubah properti sprite.
+                \ Murid mula-mula menggodok berbagai cara untuk menggerakkan sprite
+                dengan mengontrol propertinya, lalu mengeksplorasi counter pattern
+                di Code Studio. Setelah mempelajari code kerja, murid mencoba menggunakan
+                counter pattern untuk membuat berbagai jenis gerakan sprite."
+            'Mini-Project: Animation':
+              name: 'Proyek Mini: Animasi'
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggabungkan
+                pola pemrograman yang berbeda untuk membuat animasi yang utuh?**\r\n\r\nDalam
+                pelajaran ini, murid di kelas diminta menggabungkan berbagai metode
+                dari pelajaran sebelumnya untuk membuat sebuah adegan beranimasi.
+                \ Mula-mulai mereka meninjau jenis gerakan dan animasi yang sudah
+                dipelajari, dan menggodok jenis-jenis adegan yang mungkin membutuhkan
+                gerakan tersebut.  Mereka lantas mulai memerinci rencana adegan animasi
+                sendiri yang dibuat di Game Lab."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggabungkan
+                pola pemrograman yang berbeda untuk membuat animasi yang utuh?**\r\n\r\nDalam
+                pelajaran ini, murid diminta menggabungkan berbagai metode yang sudah
+                dipelajari untuk membuat sebuah adegan beranimasi.  Mula-mulai murid
+                meninjau jenis gerakan dan animasi yang sudah dipelajari, dan menggodok
+                jenis-jenis adegan yang mungkin membutuhkan gerakan tersebut.  Mereka
+                lantas mulai memerinci rencana adegan animasi sendiri yang dibuat
+                di Game Lab."
+            Conditionals:
+              name: Kondisi
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana program bisa
+                bereaksi terhadap perubahan pada saat sedang berjalan?**\r\n\r\nPelajaran
+                ini memperkenalkan boolean dan kondisional, yang memungkinkan sebuah
+                program berjalan secara berbeda bergantung pada benar tidaknya sebuah
+                kondisi (syarat).  Murid di kelas memulainya dengan memainkan permainan
+                singkat dengan tanggapan mereka bergantung pada terpenuhi tidaknya
+                kondisi tertentu.  Mereka kemudian berpindah ke Code Studio untuk
+                mempelajari cara komputer mengevaluasi ekspresi Boolean, dan cara
+                menggunakan ekspresi Boolean untuk membuat struktur program."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana program bisa
+                bereaksi terhadap perubahan pada saat sedang berjalan?**\r\n\r\nPelajaran
+                ini memperkenalkan boolean dan kondisional, yang memungkinkan sebuah
+                program berjalan secara berbeda bergantung pada benar tidaknya sebuah
+                kondisi (syarat).  Murid memulainya dengan memainkan permainan singkat
+                dengan tanggapan mereka bergantung pada terpenuhi tidaknya kondisi
+                tertentu.  Mereka kemudian berpindah ke Code Studio untuk mempelajari
+                cara komputer mengevaluasi ekspresi Boolean, dan cara menggunakan
+                ekspresi Boolean untuk membuat struktur program."
+            Keyboard Input:
+              name: Input Keyboard
+              description_student: "**Pertanyaan Hari Ini: Bagaimana program kita
+                bisa bereaksi terhadap input pengguna?**\r\n\r\nMenyusul pengenalan
+                boolean dan pernyataan _if_ dalam pelajaran sebelumnya, murid di kelas
+                diperkenalkan dengan blok baru yang disebut `keyDown()` yang mengembalikan
+                hasil boolean dan dapat digunakan dalam pernyataan kondisional untuk
+                menggerakkan sprite di seputar layar. Pada akhir pelajaran, murid
+                di kelas akan memiliki program tertulis yang mengambil input keyboard
+                dari pengguna untuk mengontrol sprite di layar."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana program kita
+                bisa bereaksi terhadap input pengguna?**\r\n\r\nMenyusul pengenalan
+                boolean dan pernyataan _if_ dalam pelajaran sebelumnya, murid diperkenalkan
+                dengan blok baru yang disebut `keyDown()` yang mengembalikan hasil
+                boolean dan dapat digunakan dalam pernyataan kondisional untuk menggerakkan
+                sprite di seputar layar. Pada akhir pelajaran, murid akan memiliki
+                program tertulis yang mengambil input keyboard dari pengguna untuk
+                mengontrol sprite di layar."
+            Mouse Input:
+              name: Input Mouse
+              description_student: "**Pertanyaan Hari Ini: Cara-cara apa lagi komputer
+                dapat bereaksi terhadap input pengguna?**\r\n\r\nMurid di kelas terus
+                mengeksplorasi cara-cara menggunakan pernyataan kondisional untuk
+                mengambil input pengguna. Di samping perintah keyboard yang sudah
+                dipelajari kemarin, mereka akan mempelajari beberapa cara untuk mengambil
+                input mouse. Mereka juga akan memperluas pemahaman tentang kondisional
+                yang mencakup `else`, yang memungkinkan komputer menjalankan bagian
+                tertentu code ketika kondisinya benar, dan bagian code yang lain ketika
+                kondisinya salah."
+              description_teacher: "**Pertanyaan Hari Ini: Cara-cara apa lagi komputer
+                dapat bereaksi terhadap input pengguna?**\r\n\r\nDalam pelajaran ini,
+                murid terus mengeksplorasi cara-cara menggunakan pernyataan kondisional
+                untuk mengambil input pengguna. Di samping perintah keyboard yang
+                sudah dipelajari kemarin, murid akan mempelajari beberapa cara untuk
+                mengambil input mouse. Mereka juga akan memperluas pemahaman tentang
+                kondisional yang mencakup `else`, yang memungkinkan komputer menjalankan
+                bagian tertentu code ketika kondisinya benar, dan bagian code yang
+                lain ketika kondisinya salah."
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
+                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
+                semua teknik pemrograman yang telah mereka pelajari saat ini.
+              description_teacher: "**Pertanyaan Hari Ini:  Apa saja keterampilan
+                dan praktik yang penting ketika membuat sebuah program interaktif?**\r\n\r\nDalam
+                proyek kumulatif untuk Bab 1 ini, murid berencana dan mengembangkan
+                kartu sambutan interaktif menggunakan semua teknik pemrograman yang
+                sudah dipelajari hingga titik ini."
+            Velocity:
+              name: Percepatan
+              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
+                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
+                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
+                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
+                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
+                scroller.
+              description_teacher: Setelah melihat singkat tentang bagaimana mereka
+                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
+                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
+                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
+                baru dengan cara yang berbeda, mereka membangun keterampilan yang
+                mereka butuhkan untuk membuat dasar sisi permainan scroller.
+            Collision Detection:
+              name: Deteksi tumbukan
+              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
+                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
+                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
+                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
+                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
+                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
+                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
+                yang lalu.
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrograman bisa
+                membantu menyederhanakan masalah yang rumit?**\r\n\r\nMurid belajar
+                tentang deteksi benturan di komputer. Dengan bekerja secara berpasangan,
+                mereka mengeksplorasi cara komputer menggunakan lokasi sprite, properti
+                ukuran, dan matematika untuk mendeteksi apakah dua sprite bersentuhan
+                atau tidak. Mereka kemudian menggunakan blok `isTouching()` untuk
+                menciptakan efek yang berbeda ketika sprite berbenturan dan berlatih
+                menggunakan blok tersebut untuk membuat model berbagai interaksi."
+            'Mini-Project: Side Scroller':
+              name: 'Proyek-Mini: Side Scroller'
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana jenis baru gerakan
+                sprite dan deteksi benturan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                di kelas menggunakan materi yang sudah dipelajari tentang deteksi
+                benturan dan pengaturan kecepatan untuk membuat permainan side scroller
+                sederhana.  Setelah mencermati sebuah contoh permainan side scroller,
+                murid menggodok jenis side scroller yang mereka sukai, lalu menggunakan
+                proses terstruktur untuk memprogram permainan tersebut di Code Studio."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana jenis baru gerakan
+                sprite dan deteksi benturan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                menggunakan materi yang sudah dipelajari tentang deteksi benturan
+                dan pengaturan kecepatan untuk membuat permainan side scroller sederhana.
+                \ Setelah mencermati sebuah contoh permainan side scroller, murid
+                menggodok jenis side scroller yang mereka sukai, lalu menggunakan
+                proses terstruktur untuk memprogram permainan tersebut di Code Studio."
+            Complex Sprite Movement:
+              name: Gerakan Sprite Kompleks
+              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
+                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
+                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
+                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
+                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
+                satu sprite dan membangun sebuah permainan sederhana di mana karakter
+                terbang di sekitar dan mengumpulkan koin. '
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana blok-blok sebelumnya
+                bisa digabungkan ke dalam pola-pola baru untuk membuat gerakan yang
+                menarik?**\r\n\r\nMurid belajar menggabungkan properti kecepatan sprite
+                dengan counter pattern untuk membuat gerakan sprite yang lebih kompleks.
+                Setelah mempelajari kedua konsep tersebut, mereka mengeksplorasi berbagai
+                skenario yang menggunakan kecepatan di dalam counter pattern, dan
+                mengamati munculnya jenis gerakan yang berbeda-beda.  Secara khusus,
+                murid mempelajari cara membuat simulasi gravitasi.  Mereka kemudian
+                menimbang-nimbang bagaimana caranya membuat perilaku baru dengan menggabungkan
+                blok dan pola yang sudah diketahui."
+            Collisions:
+              name: Tumbukan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                membangun abstraksi sebagai pijakan untuk membuat abstraksi lebih
+                jauh?**\r\n\r\nDalam pelajaran ini, murid di kelas memprogram sprite
+                mereka agar berinteraksi dengan cara-cara baru.  Setelah meninjau
+                singkat cara mereka menggunakan blok `isTouching`, murid menggodok
+                cara-cara lain kedua sprite bisa berinteraksi.  Mereka kemudian menggunakan
+                `isTouching` untuk membuat satu sprite mendorong sprite satunya lagi
+                di seputar layar sebelum berlatih dengan empat blok benturan (`collide`,
+                `displace`, `bounce`, dan `bounceOff`)."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                membangun abstraksi sebagai pijakan untuk membuat abstraksi lebih
+                jauh?**\r\n\r\nDalam pelajaran ini, murid memprogram sprite mereka
+                agar berinteraksi dengan cara-cara baru.  Setelah meninjau singkat
+                cara mereka menggunakan blok `isTouching`, murid menggodok cara-cara
+                lain kedua sprite bisa berinteraksi.  Mereka kemudian menggunakan
+                `isTouching` untuk membuat satu sprite mendorong sprite satunya lagi
+                di seputar layar sebelum berlatih dengan empat blok benturan (`collide`,
+                `displace`, `bounce`, dan `bounceOff`)."
+            'Mini-Project: Flyer Game':
+              name: 'Proyek Mini: Permainan Flyer'
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana jenis baru benturan
+                dan gerakan pemodelan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                di kelas menggunakan materi yang sudah dipelajari tentang simulasi
+                gravitasi dan berbagai jenis benturan untuk membuat permainan flyer
+                sederhana.  Setelah mencermati sebuah contoh permainan flyer, murid
+                menggodok jenis flyer yang mereka sukai, lalu menggunakan proses terstruktur
+                untuk memprogram permainan tersebut di Code Studio."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana jenis baru benturan
+                dan gerakan pemodelan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                menggunakan materi yang sudah dipelajari tentang simulasi gravitasi
+                dan berbagai jenis benturan untuk membuat permainan flyer sederhana.
+                \ Setelah mencermati sebuah contoh permainan flyer, murid menggodok
+                jenis permainan flyer yang mereka sukai, lalu menggunakan proses terstruktur
+                untuk memprogram permainan tersebut di Code Studio."
+            Functions:
+              name: fungsi
+              description_student: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                menggunakan function untuk membuat abstraksinya sendiri?**\r\n\r\nPelajaran
+                ini membahas function sebagai cara untuk mengatur code, membuatnya
+                lebih mudah dibaca, dan menghapus blok code yang diulang-ulang. Murid
+                di kelas belajar bahwa level lebih tinggi atau langkah lebih abstrak
+                memudahkan memahami dan bernalar tentang langkah, lalu mereka mulai
+                membuat function di Game Lab. "
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                menggunakan function untuk membuat abstraksinya sendiri?**\r\n\r\nMurid
+                mempelajari cara membuat function untuk mengatur code mereka, membuatnya
+                lebih mudah dibaca, dan menghapus blok code yang diulang-ulang. Murid
+                mula-mula memikirkan jenis blok baru apa saja yang mereka kehendaki
+                di Game Lab, dan code apa saja yang akan ditampung di dalam blok-blok
+                tersebut. Setelah itu murid belajar membuat function di Game Lab.
+                Mereka akan menggunakan function untuk menghilangkan blok-blok code
+                yang panjang dari draw loop dan menggantikan potongan code berulang-ulang
+                dengan satu function saja."
+            The Game Design Process:
+              name: Proses perancangan permainan
+              description_student: Pelajaran ini memperkenalkan proses kelas yang
+                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
+                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
+                untuk membuat perbaikan permainan sendiri.
+              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
+                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
+                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
+                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
+                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
+                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
+                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
+                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
+                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
+                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
+                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana proses pemecahan
+                masalah bisa membantu pemrogram mengelola proyek-proyek besar?**\r\n\r\n\r\nDalam
+                pelajaran beberapa hari ini, murid di kelas menggunakan proses pemecahan
+                masalah dari Unit 1 untuk membuat permainan pelompat platform. Setelah
+                mencermati sebuah contoh permainan, murid di kelas menentukan tampilan
+                permainan mereka dan menggunakan proses terstruktur untuk membuat
+                permainan tersebut. Terakhir, murid di kelas menimbang-nimbang cara
+                untuk dapat meningkatkan permainan, dan menerapkan perubahan tersebut."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana proses pemecahan
+                masalah bisa membantu pemrogram mengelola proyek-proyek besar?**\r\n\r\n\r\nDalam
+                pelajaran beberapa hari ini, murid menggunakan proses pemecahan masalah
+                dari Unit 1 untuk membuat permainan pelompat platform. Mereka memulainya
+                dengan mencermati sebuah contoh pelompat platform, lalu menentukan
+                tampilan permainan mereka. Selanjutnya, mereka menggunakan proses
+                terstruktur untuk merencanakan latar belakang, variable, sprite, dan
+                function yang akan mereka butuhkan untuk menerapkan permainan tersebut.
+                Setelah menulis code untuk permainan, murid akan menimbang-nimbang
+                cara untuk dapat meningkatkan permainan, dan menerapkan perubahan
+                tersebut."
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+              description_student: Kelas rencana dan membangun permainan asli menggunakan
+                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
+                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
+                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
+                kelas saham selesai.
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana lima CS Practices
+                (pemecahan masalah, kegigihan, komunikasi, kolaborasi, dan kreativitas)
+                bisa membantu pemrogram menyelesaikan proyek-proyek besar?**\r\n\r\nMurid
+                akan merencanakan dan membuat permainan sendiri menggunakan panduan
+                proyek dari dua pelajaran sebelumnya untuk memandu proyek mereka.
+                Dengan bekerja sendiri-sendiri atau berpasangan, murid mula-mula memutuskan
+                jenis permainan yang ingin dibuat, dengan mengambil inspirasi dari
+                contoh sekumpulan permainan. Mereka kemudian akan mengisi panduan
+                proyek kosong untuk mendeskripsikan perilaku permainan dan menjelajahi
+                variable, sprite, dan function yang perlu dibuat. Di Code Studio,
+                sederet level mencetuskan inspirasi sebuah urutan umum yang dapat
+                mereka gunakan untuk menerapkan rencana ini. Di pertengahan proses,
+                murid akan berbagi proyek untuk mendapatkan ulasan sejawat dan menerapkan
+                masukan sambil menyelesaikan permainan mereka. Pada akhir pelajaran,
+                murid akan berbagi permainan yang sudah selesai ke teman-teman sekelas.
+                Proyek ini akan mencakup beberapa perkuliahan dan dapat membutuhkan
+                kira-kira 3-5 periode perkuliahan."
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              name: Survei Pascakursus CS Discoveries
+          lessons:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana ilmu komputer
+                digunakan di dunia hiburan?**\r\n\r\nMurid di kelas diminta untuk
+                mempertimbangkan \"masalah\" kebosanan dan ekspresi diri, lalu menimbang
+                cara mereka mendekati dua masalah tersebut dalam kehidupan masing-masing.
+                \ Dari situ mereka akan mengeksplorasi cara Ilmu Komputer secara umum,
+                dan pemrograman secara khusus, memainkan peran entah dalam bentuk
+                hiburan spesifik ataukah sebagai wahana ekspresi diri."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana ilmu komputer
+                digunakan di dunia hiburan?**\r\n\r\nMurid diminta untuk mempertimbangkan
+                \"masalah\" kebosanan dan ekspresi diri, lalu menimbang cara mereka
+                mendekati dua masalah tersebut dalam kehidupan masing-masing.  Dari
+                situ murid akan mengeksplorasi cara Ilmu Komputer secara umum, dan
+                pemrograman secara khusus, memainkan peran entah dalam bentuk hiburan
+                spesifik ataukah sebagai wahana ekspresi diri."
+            Plotting Shapes:
+              name: Merancang Bentuk
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                dengan jelas cara menggambar sesuatu di layar?**\r\n\r\nPelajaran
+                ini mengeksplorasi tantangan mengomunikasikan cara menggambar dengan
+                bentuk dan menggunakan tool yang memperkenalkan cara mendekati masalah
+                ini di Game Lab. Murid di kelas menggunakan tool Game Lab untuk meletakkan
+                bentuk secara interaktif di kisi-kisi 400 x 400 Game Lab. Partner
+                lalu secara bergantian memberi instruksi satu sama lain tentang cara
+                membuat gambar tersembunyi menggunakan tool ini, dengan mempertimbangkan
+                berbagai tantangan pemrograman di Game Lab."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                dengan jelas cara menggambar sesuatu di layar?**\r\n\r\nMurid mengeksplorasi
+                tantangan mengomunikasikan cara menggambar dengan bentuk dan menggunakan
+                tool yang memperkenalkan cara mendekati masalah ini di Game Lab. Aktivitas
+                pemanasan bisa dengan cepat memperlihatkan tantangan mengomunikasikan
+                posisi tanpa titik acuan bersama. Di dalam aktivitas utama, murid
+                mengeksplorasi tool Game Lab yang mempersilakan murid untuk meletakkan
+                bentuk secara interaktif di kisi-kisi 400 x 400 Game Lab. Mereka lalu
+                secara bergantian memberi instruksi partner tentang cara membuat gambar
+                tersembunyi menggunakan tool ini, dengan mempertimbangkan berbagai
+                tantangan yang akan ditemui oleh murid saat memprogram di Game Lab.
+                Murid secara opsional \nmembuat gambar mereka sendiri untuk dikomunikasikan
+                sebelum diskusi debriefing."
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengomunikasikan
+                cara menggambar bentuk di layar ke komputer?**\r\n\r\nMurid di kelas
+                diperkenalkan dengan Game Lab, lingkungan pemrograman untuk unit ini,
+                dan mulai menggunakannya untuk meletakkan bentuk di layar. Pelajaran
+                ini membahas dasar-dasar pengurutan dan debugging, serta beberapa
+                perintah sederhana. Pada akhir pelajaran, murid akan dapat memprogram
+                gambar seperti gambar yang mereka buat dengan tool gambar pada pelajaran
+                sebelumnya."
+              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
+                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
+                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
+                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
+                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
+                pada pelajaran sebelumnya.
+            Variables:
+              name: variabel
+              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
+                untuk label nomor pada sebuah program atau menyimpan nilai secara
+                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
+                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
+                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
+                menggunakan nomor acak beberapa kali.
+              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
+                variabel untuk label nomor dalam program mereka atau menyimpan nilai
+                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
+                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
+                yang memperkuat model variabel sebagai cara untuk label atau nama
+                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
+                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
+                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
+                nomor acak beberapa kali dalam program-program mereka.
+            Sprites:
+              name: Sprite
+            Text:
+              name: Teks
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                teks untuk memperbaiki adegan dan animasi?**\r\n\r\nPelajaran ini
+                memperkenalkan perintah teks Game Lab sehingga murid di kelas bisa
+                berlatih lebih banyak menggunakan bidang koordinat dan parameter.
+                \ Pada permulaan pelajaran, murid di kelas diminta membuat teks kartun
+                yang dibuat di Game Lab.  Mereka kemudian berpindah ke Code Studio
+                untuk berlatih meletakkan teks di layar dan mengontrol properti teks
+                yang lain, seperti ukuran."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                teks untuk memperbaiki adegan dan animasi?**\r\n\r\nPelajaran ini
+                memperkenalkan perintah teks Game Lab sehingga murid bisa berlatih
+                lebih banyak menggunakan bidang koordinat dan parameter.  Pada permulaan
+                pelajaran, murid diminta membuat teks kartun yang dibuat di Game Lab.
+                \ Mereka kemudian berpindah ke Code Studio untuk berlatih meletakkan
+                teks di layar dan mengontrol properti teks yang lain, seperti ukuran.
+                Murid yang menyelesaikan penilaian lebih awal boleh lanjut mempelajari
+                blok-blok yang lebih menantang yang berkaitan dengan properti teks."
+            'Mini-Project: Captioned Scenes':
+              name: 'Proyek Mini: Adegan Berteks'
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                Game Lab untuk mengekspresikan kreativitas?**\r\n\r\nSetelah meninjau
+                singkat code yang sudah dipelajari sejauh ini, murid di kelas diperkenalkan
+                dengan proyek kreatif pertama unit ini.  Dengan menggunakan proses
+                pemecahan masalah sebagai model, murid menentukan adegan yang ingin
+                mereka buat, mempersiapkan diri dengan memikirkan code lain yang akan
+                dibutuhkan, menguji coba rencana di Game Lab, lalu mengevaluasi apa
+                yang sudah dibuat.  Pada akhir pelajaran, mereka juga berkesempatan
+                membagikan hasil karya mereka kepada rekan sejawat."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
+                Game Lab untuk mengekspresikan kreativitas?**\r\n\r\nSetelah meninjau
+                singkat code yang sudah dipelajari sejauh ini, murid diperkenalkan
+                dengan proyek kreatif pertama unit ini.  Dengan menggunakan proses
+                pemecahan masalah sebagai model, murid menentukan adegan yang ingin
+                mereka buat, mempersiapkan diri dengan memikirkan code lain yang akan
+                dibutuhkan, menguji coba rencana di Game Lab, lalu mengevaluasi apa
+                yang sudah dibuat.  Pada akhir pelajaran, mereka juga berkesempatan
+                membagikan hasil karya mereka kepada rekan sejawat."
+            The Draw Loop:
+              name: Draw Loop
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gambar animasi di Game Lab?**\r\n\r\nPelajaran ini memperkenalkan
+                draw loop, salah satu paradigma pemrograman inti di Game Lab.  Murid
+                di kelas menggabungkan draw loop dengan angka acak untuk memanipulasi
+                beberapa animasi sederhana dengan titik dan kemudian dengan sprite. "
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gambar animasi di Game Lab?**\r\n\r\nDalam pelajaran ini, murid diperkenalkan
+                dengan draw loop, salah satu paradigma pemrograman inti di Game Lab.
+                Untuk memulai pelajaran, murid mencermati beberapa buku flip fisik
+                untuk melihat bahwa frame yang banyak dengan gambar yang berlainan
+                memunculkan kesan bergerak. Murid kemudian menonton video yang menjelaskan
+                bagaimana draw loop di Game Lab membantu memunculkan kesan yang sama
+                ini dalam program mereka. Murid menggabungkan draw loop dengan angka
+                acak untuk memanipulasi beberapa animasi sederhana dengan titik dan
+                kemudian dengan sprite. "
+            Sprite Movement:
+              name: Gerakan Sprite
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengontrol
+                gerakan sprite di Game Lab?**\r\n\r\nDalam pelajaran ini, murid di
+                kelas mempelajari cara mengontrol gerakan sprite menggunakan sebuah
+                konstruk yang disebut counter pattern, yang sedikit demi sedikit mengubah
+                properti sprite.  Setelah menggodok berbagai cara untuk menggerakkan
+                sprite dengan mengontrol propertinya, murid di kelas mengeksplorasi
+                counter pattern di Code Studio, menggunakan counter pattern untuk
+                membuat berbagai jenis gerakan sprite."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengontrol
+                gerakan sprite di Game Lab?**\r\n\r\nDalam pelajaran ini, murid mempelajari
+                cara mengontrol gerakan sprite menggunakan sebuah konstruk yang disebut
+                counter pattern, yang sedikit demi sedikit mengubah properti sprite.
+                \ Murid mula-mula menggodok berbagai cara untuk menggerakkan sprite
+                dengan mengontrol propertinya, lalu mengeksplorasi counter pattern
+                di Code Studio. Setelah mempelajari code kerja, murid mencoba menggunakan
+                counter pattern untuk membuat berbagai jenis gerakan sprite."
+            'Mini-Project: Animation':
+              name: 'Proyek Mini: Animasi'
+              description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggabungkan
+                pola pemrograman yang berbeda untuk membuat animasi yang utuh?**\r\n\r\nDalam
+                pelajaran ini, murid di kelas diminta menggabungkan berbagai metode
+                dari pelajaran sebelumnya untuk membuat sebuah adegan beranimasi.
+                \ Mula-mulai mereka meninjau jenis gerakan dan animasi yang sudah
+                dipelajari, dan menggodok jenis-jenis adegan yang mungkin membutuhkan
+                gerakan tersebut.  Mereka lantas mulai memerinci rencana adegan animasi
+                sendiri yang dibuat di Game Lab."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggabungkan
+                pola pemrograman yang berbeda untuk membuat animasi yang utuh?**\r\n\r\nDalam
+                pelajaran ini, murid diminta menggabungkan berbagai metode yang sudah
+                dipelajari untuk membuat sebuah adegan beranimasi.  Mula-mulai murid
+                meninjau jenis gerakan dan animasi yang sudah dipelajari, dan menggodok
+                jenis-jenis adegan yang mungkin membutuhkan gerakan tersebut.  Mereka
+                lantas mulai memerinci rencana adegan animasi sendiri yang dibuat
+                di Game Lab."
+            Conditionals:
+              name: Kondisi
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana program bisa
+                bereaksi terhadap perubahan pada saat sedang berjalan?**\r\n\r\nPelajaran
+                ini memperkenalkan boolean dan kondisional, yang memungkinkan sebuah
+                program berjalan secara berbeda bergantung pada benar tidaknya sebuah
+                kondisi (syarat).  Murid di kelas memulainya dengan memainkan permainan
+                singkat dengan tanggapan mereka bergantung pada terpenuhi tidaknya
+                kondisi tertentu.  Mereka kemudian berpindah ke Code Studio untuk
+                mempelajari cara komputer mengevaluasi ekspresi Boolean, dan cara
+                menggunakan ekspresi Boolean untuk membuat struktur program."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana program bisa
+                bereaksi terhadap perubahan pada saat sedang berjalan?**\r\n\r\nPelajaran
+                ini memperkenalkan boolean dan kondisional, yang memungkinkan sebuah
+                program berjalan secara berbeda bergantung pada benar tidaknya sebuah
+                kondisi (syarat).  Murid memulainya dengan memainkan permainan singkat
+                dengan tanggapan mereka bergantung pada terpenuhi tidaknya kondisi
+                tertentu.  Mereka kemudian berpindah ke Code Studio untuk mempelajari
+                cara komputer mengevaluasi ekspresi Boolean, dan cara menggunakan
+                ekspresi Boolean untuk membuat struktur program."
+            Keyboard Input:
+              name: Input Keyboard
+              description_student: "**Pertanyaan Hari Ini: Bagaimana program kita
+                bisa bereaksi terhadap input pengguna?**\r\n\r\nMenyusul pengenalan
+                boolean dan pernyataan _if_ dalam pelajaran sebelumnya, murid di kelas
+                diperkenalkan dengan blok baru yang disebut `keyDown()` yang mengembalikan
+                hasil boolean dan dapat digunakan dalam pernyataan kondisional untuk
+                menggerakkan sprite di seputar layar. Pada akhir pelajaran, murid
+                di kelas akan memiliki program tertulis yang mengambil input keyboard
+                dari pengguna untuk mengontrol sprite di layar."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana program kita
+                bisa bereaksi terhadap input pengguna?**\r\n\r\nMenyusul pengenalan
+                boolean dan pernyataan _if_ dalam pelajaran sebelumnya, murid diperkenalkan
+                dengan blok baru yang disebut `keyDown()` yang mengembalikan hasil
+                boolean dan dapat digunakan dalam pernyataan kondisional untuk menggerakkan
+                sprite di seputar layar. Pada akhir pelajaran, murid akan memiliki
+                program tertulis yang mengambil input keyboard dari pengguna untuk
+                mengontrol sprite di layar."
+            Mouse Input:
+              name: Input Mouse
+              description_student: "**Pertanyaan Hari Ini: Cara-cara apa lagi komputer
+                dapat bereaksi terhadap input pengguna?**\r\n\r\nMurid di kelas terus
+                mengeksplorasi cara-cara menggunakan pernyataan kondisional untuk
+                mengambil input pengguna. Di samping perintah keyboard yang sudah
+                dipelajari kemarin, mereka akan mempelajari beberapa cara untuk mengambil
+                input mouse. Mereka juga akan memperluas pemahaman tentang kondisional
+                yang mencakup `else`, yang memungkinkan komputer menjalankan bagian
+                tertentu code ketika kondisinya benar, dan bagian code yang lain ketika
+                kondisinya salah."
+              description_teacher: "**Pertanyaan Hari Ini: Cara-cara apa lagi komputer
+                dapat bereaksi terhadap input pengguna?**\r\n\r\nDalam pelajaran ini,
+                murid terus mengeksplorasi cara-cara menggunakan pernyataan kondisional
+                untuk mengambil input pengguna. Di samping perintah keyboard yang
+                sudah dipelajari kemarin, murid akan mempelajari beberapa cara untuk
+                mengambil input mouse. Mereka juga akan memperluas pemahaman tentang
+                kondisional yang mencakup `else`, yang memungkinkan komputer menjalankan
+                bagian tertentu code ketika kondisinya benar, dan bagian code yang
+                lain ketika kondisinya salah."
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
+                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
+                semua teknik pemrograman yang telah mereka pelajari saat ini.
+              description_teacher: "**Pertanyaan Hari Ini:  Apa saja keterampilan
+                dan praktik yang penting ketika membuat sebuah program interaktif?**\r\n\r\nDalam
+                proyek kumulatif untuk Bab 1 ini, murid berencana dan mengembangkan
+                kartu sambutan interaktif menggunakan semua teknik pemrograman yang
+                sudah dipelajari hingga titik ini."
+            Velocity:
+              name: Percepatan
+              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
+                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
+                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
+                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
+                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
+                scroller.
+              description_teacher: Setelah melihat singkat tentang bagaimana mereka
+                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
+                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
+                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
+                baru dengan cara yang berbeda, mereka membangun keterampilan yang
+                mereka butuhkan untuk membuat dasar sisi permainan scroller.
+            Collision Detection:
+              name: Deteksi tumbukan
+              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
+                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
+                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
+                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
+                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
+                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
+                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
+                yang lalu.
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrograman bisa
+                membantu menyederhanakan masalah yang rumit?**\r\n\r\nMurid belajar
+                tentang deteksi benturan di komputer. Dengan bekerja secara berpasangan,
+                mereka mengeksplorasi cara komputer menggunakan lokasi sprite, properti
+                ukuran, dan matematika untuk mendeteksi apakah dua sprite bersentuhan
+                atau tidak. Mereka kemudian menggunakan blok `isTouching()` untuk
+                menciptakan efek yang berbeda ketika sprite berbenturan dan berlatih
+                menggunakan blok tersebut untuk membuat model berbagai interaksi."
+            'Mini-Project: Side Scroller':
+              name: 'Proyek-Mini: Side Scroller'
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana jenis baru gerakan
+                sprite dan deteksi benturan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                di kelas menggunakan materi yang sudah dipelajari tentang deteksi
+                benturan dan pengaturan kecepatan untuk membuat permainan side scroller
+                sederhana.  Setelah mencermati sebuah contoh permainan side scroller,
+                murid menggodok jenis side scroller yang mereka sukai, lalu menggunakan
+                proses terstruktur untuk memprogram permainan tersebut di Code Studio."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana jenis baru gerakan
+                sprite dan deteksi benturan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                menggunakan materi yang sudah dipelajari tentang deteksi benturan
+                dan pengaturan kecepatan untuk membuat permainan side scroller sederhana.
+                \ Setelah mencermati sebuah contoh permainan side scroller, murid
+                menggodok jenis side scroller yang mereka sukai, lalu menggunakan
+                proses terstruktur untuk memprogram permainan tersebut di Code Studio."
+            Complex Sprite Movement:
+              name: Gerakan Sprite Kompleks
+              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
+                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
+                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
+                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
+                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
+                satu sprite dan membangun sebuah permainan sederhana di mana karakter
+                terbang di sekitar dan mengumpulkan koin. '
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana blok-blok sebelumnya
+                bisa digabungkan ke dalam pola-pola baru untuk membuat gerakan yang
+                menarik?**\r\n\r\nMurid belajar menggabungkan properti kecepatan sprite
+                dengan counter pattern untuk membuat gerakan sprite yang lebih kompleks.
+                Setelah mempelajari kedua konsep tersebut, mereka mengeksplorasi berbagai
+                skenario yang menggunakan kecepatan di dalam counter pattern, dan
+                mengamati munculnya jenis gerakan yang berbeda-beda.  Secara khusus,
+                murid mempelajari cara membuat simulasi gravitasi.  Mereka kemudian
+                menimbang-nimbang bagaimana caranya membuat perilaku baru dengan menggabungkan
+                blok dan pola yang sudah diketahui."
+            Collisions:
+              name: Tumbukan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                membangun abstraksi sebagai pijakan untuk membuat abstraksi lebih
+                jauh?**\r\n\r\nDalam pelajaran ini, murid di kelas memprogram sprite
+                mereka agar berinteraksi dengan cara-cara baru.  Setelah meninjau
+                singkat cara mereka menggunakan blok `isTouching`, murid menggodok
+                cara-cara lain kedua sprite bisa berinteraksi.  Mereka kemudian menggunakan
+                `isTouching` untuk membuat satu sprite mendorong sprite satunya lagi
+                di seputar layar sebelum berlatih dengan empat blok benturan (`collide`,
+                `displace`, `bounce`, dan `bounceOff`)."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                membangun abstraksi sebagai pijakan untuk membuat abstraksi lebih
+                jauh?**\r\n\r\nDalam pelajaran ini, murid memprogram sprite mereka
+                agar berinteraksi dengan cara-cara baru.  Setelah meninjau singkat
+                cara mereka menggunakan blok `isTouching`, murid menggodok cara-cara
+                lain kedua sprite bisa berinteraksi.  Mereka kemudian menggunakan
+                `isTouching` untuk membuat satu sprite mendorong sprite satunya lagi
+                di seputar layar sebelum berlatih dengan empat blok benturan (`collide`,
+                `displace`, `bounce`, dan `bounceOff`)."
+            'Mini-Project: Flyer Game':
+              name: 'Proyek Mini: Permainan Flyer'
+              description_student: "**Pertanyaan Hari Ini:  Bagaimana jenis baru benturan
+                dan gerakan pemodelan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                di kelas menggunakan materi yang sudah dipelajari tentang simulasi
+                gravitasi dan berbagai jenis benturan untuk membuat permainan flyer
+                sederhana.  Setelah mencermati sebuah contoh permainan flyer, murid
+                menggodok jenis flyer yang mereka sukai, lalu menggunakan proses terstruktur
+                untuk memprogram permainan tersebut di Code Studio."
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana jenis baru benturan
+                dan gerakan pemodelan bisa digunakan untuk membuat permainan?**\r\n\r\nMurid
+                menggunakan materi yang sudah dipelajari tentang simulasi gravitasi
+                dan berbagai jenis benturan untuk membuat permainan flyer sederhana.
+                \ Setelah mencermati sebuah contoh permainan flyer, murid menggodok
+                jenis permainan flyer yang mereka sukai, lalu menggunakan proses terstruktur
+                untuk memprogram permainan tersebut di Code Studio."
+            Functions:
+              name: fungsi
+              description_student: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                menggunakan function untuk membuat abstraksinya sendiri?**\r\n\r\nPelajaran
+                ini membahas function sebagai cara untuk mengatur code, membuatnya
+                lebih mudah dibaca, dan menghapus blok code yang diulang-ulang. Murid
+                di kelas belajar bahwa level lebih tinggi atau langkah lebih abstrak
+                memudahkan memahami dan bernalar tentang langkah, lalu mereka mulai
+                membuat function di Game Lab. "
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                menggunakan function untuk membuat abstraksinya sendiri?**\r\n\r\nMurid
+                mempelajari cara membuat function untuk mengatur code mereka, membuatnya
+                lebih mudah dibaca, dan menghapus blok code yang diulang-ulang. Murid
+                mula-mula memikirkan jenis blok baru apa saja yang mereka kehendaki
+                di Game Lab, dan code apa saja yang akan ditampung di dalam blok-blok
+                tersebut. Setelah itu murid belajar membuat function di Game Lab.
+                Mereka akan menggunakan function untuk menghilangkan blok-blok code
+                yang panjang dari draw loop dan menggantikan potongan code berulang-ulang
+                dengan satu function saja."
+            The Game Design Process:
+              name: Proses perancangan permainan
+              description_student: Pelajaran ini memperkenalkan proses kelas yang
+                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
+                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
+                untuk membuat perbaikan permainan sendiri.
+              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
+                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
+                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
+                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
+                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
+                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
+                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
+                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
+                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
+                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
+                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+              description_student: "**Pertanyaan Hari Ini: Bagaimana proses pemecahan
+                masalah bisa membantu pemrogram mengelola proyek-proyek besar?**\r\n\r\n\r\nDalam
+                pelajaran beberapa hari ini, murid di kelas menggunakan proses pemecahan
+                masalah dari Unit 1 untuk membuat permainan pelompat platform. Setelah
+                mencermati sebuah contoh permainan, murid di kelas menentukan tampilan
+                permainan mereka dan menggunakan proses terstruktur untuk membuat
+                permainan tersebut. Terakhir, murid di kelas menimbang-nimbang cara
+                untuk dapat meningkatkan permainan, dan menerapkan perubahan tersebut."
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana proses pemecahan
+                masalah bisa membantu pemrogram mengelola proyek-proyek besar?**\r\n\r\n\r\nDalam
+                pelajaran beberapa hari ini, murid menggunakan proses pemecahan masalah
+                dari Unit 1 untuk membuat permainan pelompat platform. Mereka memulainya
+                dengan mencermati sebuah contoh pelompat platform, lalu menentukan
+                tampilan permainan mereka. Selanjutnya, mereka menggunakan proses
+                terstruktur untuk merencanakan latar belakang, variable, sprite, dan
+                function yang akan mereka butuhkan untuk menerapkan permainan tersebut.
+                Setelah menulis code untuk permainan, murid akan menimbang-nimbang
+                cara untuk dapat meningkatkan permainan, dan menerapkan perubahan
+                tersebut."
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+              description_student: Kelas rencana dan membangun permainan asli menggunakan
+                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
+                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
+                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
+                kelas saham selesai.
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana lima CS Practices
+                (pemecahan masalah, kegigihan, komunikasi, kolaborasi, dan kreativitas)
+                bisa membantu pemrogram menyelesaikan proyek-proyek besar?**\r\n\r\nMurid
+                akan merencanakan dan membuat permainan sendiri menggunakan panduan
+                proyek dari dua pelajaran sebelumnya untuk memandu proyek mereka.
+                Dengan bekerja sendiri-sendiri atau berpasangan, murid mula-mula memutuskan
+                jenis permainan yang ingin dibuat, dengan mengambil inspirasi dari
+                contoh sekumpulan permainan. Mereka kemudian akan mengisi panduan
+                proyek kosong untuk mendeskripsikan perilaku permainan dan menjelajahi
+                variable, sprite, dan function yang perlu dibuat. Di Code Studio,
+                sederet level mencetuskan inspirasi sebuah urutan umum yang dapat
+                mereka gunakan untuk menerapkan rencana ini. Di pertengahan proses,
+                murid akan berbagi proyek untuk mendapatkan ulasan sejawat dan menerapkan
+                masukan sambil menyelesaikan permainan mereka. Pada akhir pelajaran,
+                murid akan berbagi permainan yang sudah selesai ke teman-teman sekelas.
+                Proyek ini akan mencakup beberapa perkuliahan dan dapat membutuhkan
+                kira-kira 3-5 periode perkuliahan."
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd3_1:
+              display_name: Konten
+            csd3_2:
+              display_name: Konten
+            cspSurvey:
+              display_name: Konten

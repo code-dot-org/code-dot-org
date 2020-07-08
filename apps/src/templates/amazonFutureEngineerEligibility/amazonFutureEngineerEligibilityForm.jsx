@@ -58,6 +58,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
   submit = () => {
     const requiredFormData = _.pick(this.state, [
+      'email',
       'firstName',
       'lastName',
       'inspirationKit',
@@ -136,7 +137,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   getMissingRequiredFields() {
-    const requiredFields = ['firstName', 'lastName', 'consentAFE'];
+    const requiredFields = ['email', 'firstName', 'lastName', 'consentAFE'];
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
@@ -172,6 +173,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
+            validationState={
+              this.state.errors.hasOwnProperty('email')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
+            errorMessage={this.state.errors.email}
           />
           <SchoolAutocompleteDropdownWithLabel
             value={this.props.schoolId}
@@ -219,10 +226,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.inspirationKit}
           />
           {this.state.inspirationKit && (
-            <ShippingAddressFormGroup
-              handleChange={this.handleChange}
-              checkValidationState={this.checkValidationState}
-            />
+            <div>
+              <ShippingAddressFormGroup
+                handleChange={this.handleChange}
+                checkValidationState={this.checkValidationState}
+              />
+              <div>
+                For the purposes of shipping you your Inspiration Kit, your
+                email and school address may be shared with a certified third
+                party.
+              </div>
+            </div>
           )}
           <SingleCheckbox
             name="csta"
