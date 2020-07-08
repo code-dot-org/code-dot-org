@@ -438,7 +438,7 @@
   "dataTableHeader": "DATA TABLES",
   "dataTableNamePlaceholder": "Table name",
   "dataLibraryHeader": "Data Library",
-  "dataLibraryDescription": "Tables of real data for your app. Help us [add more data](https://support.code.org/hc/en-us/articles/360044953271-Help-us-add-new-data-sets-into-App-Lab-).",
+  "dataLibraryDescription": "Want to use a dataset not listed here? [Help us add more datasets](https://support.code.org/hc/en-us/articles/360044953271-Help-us-add-new-data-sets-into-App-Lab-).",
   "dataLibrarySearchPlacholder": "Search",
   "dataSource": "Data Source",
   "dataVisualizerPlaceholderText": "Select values to generate a visualization",
