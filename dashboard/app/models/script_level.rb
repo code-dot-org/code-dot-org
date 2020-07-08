@@ -60,8 +60,6 @@ class ScriptLevel < ActiveRecord::Base
 
       properties = raw_script_level.delete(:properties) || {}
 
-      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
-
       if new_suffix && properties[:variants]
         properties[:variants] = properties[:variants].map do |old_level_name, value|
           ["#{old_level_name}_#{new_suffix}", value]
@@ -78,6 +76,9 @@ class ScriptLevel < ActiveRecord::Base
         assessment: raw_script_level[:assessment],
         properties: properties.with_indifferent_access
       }
+
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels

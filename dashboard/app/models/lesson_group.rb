@@ -53,15 +53,10 @@ class LessonGroup < ApplicationRecord
     non_lockable_count = 0
     lesson_position = 0
 
+    LessonGroup.prevent_inconsistent_lesson_group_use(raw_lesson_groups)
+
     raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-      # We want a script to either have all of its lessons have lesson groups
-      # or none of the lessons have lesson groups. We know we have hit this case if
-      # there are more than one lesson group for a script but the lesson group key
-      # for the first lesson is blank
       if raw_lesson_groups[0][:key].nil?
-        if raw_lesson_groups.length > 1
-          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-        end
         lesson_group = LessonGroup.find_or_create_by(
           key: '',
           script: script,
@@ -100,6 +95,16 @@ class LessonGroup < ApplicationRecord
       script_lesson_groups << lesson_group
     end
     [script_lesson_groups, script_lessons]
+  end
+
+  # We want a script to either have all of its lessons have lesson groups
+  # or none of the lessons have lesson groups. We know we have hit this case if
+  # there are more than one lesson group for a script but the lesson group key
+  # for the first lesson is blank
+  def self.prevent_inconsistent_lesson_group_use(raw_lesson_groups)
+    if raw_lesson_groups.length > 1 && raw_lesson_groups[0][:key].nil?
+      raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
+    end
   end
 
   def self.prevent_blank_display_name(raw_lesson_group)

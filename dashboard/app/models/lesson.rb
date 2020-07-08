@@ -55,9 +55,7 @@ class Lesson < ActiveRecord::Base
     lesson_group_lessons = []
     chapter = 0
 
-    # Set/create Lesson containing custom ScriptLevel
     raw_lessons.each do |raw_lesson|
-      # check if that lesson exists for the script otherwise create a new lesson
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
@@ -74,16 +72,13 @@ class Lesson < ActiveRecord::Base
         relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
       )
 
-      # Overwrites current script levels
       lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      chapter += lesson.script_levels.length
       lesson.save! if lesson.changed?
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
       lesson_group_lessons << lesson
-
-      # Todo Remove once clean up position
-      chapter += lesson.script_levels.length
     end
     lesson_group_lessons
   end
