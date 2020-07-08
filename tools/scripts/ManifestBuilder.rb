@@ -55,11 +55,15 @@ class ManifestBuilder
     alias_map = build_alias_map(animation_metadata)
     info "Mapped #{alias_map.size} aliases."
 
+    info "Building category map..."
+    category_map = build_category_map(animation_metadata)
+    info "Mapped #{category_map.size} categories"
+
     output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
 
     # Write result to file
     File.open(output_file, 'w') do |file|
-      file.write(generate_json(animation_metadata, alias_map))
+      file.write(generate_json(animation_metadata, alias_map, category_map))
     end
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
@@ -75,7 +79,7 @@ class ManifestBuilder
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "manifests/spritelabCostumeLibrary.json",
-        generate_json(animation_metadata, alias_map),
+        generate_json(animation_metadata, alias_map, category_map),
         acl: 'public-read',
         no_random: true,
         content_type: 'json'
@@ -204,12 +208,13 @@ The animation has been skipped.
       metadata['aliases'].delete_if(&:blank?)
     end
     alias_map = build_alias_map(animation_metadata)
+    category_map = build_alias_map(animation_metadata)
 
     info "Uploading file to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
       "manifests/spritelabCostumeLibrary.#{locale}.json",
-      generate_json(animation_metadata, alias_map),
+      generate_json(animation_metadata, alias_map, category_map),
       acl: 'public-read',
       no_random: true,
       content_type: 'json'
@@ -384,7 +389,22 @@ The animation has been skipped.
     alias_map
   end
 
-  def generate_json(animation_metadata, alias_map)
+  # Given a metadata map, build the category map
+  def build_category_map(animation_metadata)
+    category_progress_bar = ProgressBar.create(total: animation_metadata.size) unless @options[:quiet]
+    category_map = Hash.new {|h, k| h[k] = []}
+    animation_metadata.each do |name, metadata|
+      categories = metadata['categories']
+      categories.each do |category|
+        category_map[category] = (category_map[category] + [name]).uniq.sort
+      end
+      category_progress_bar.increment unless category_progress_bar.nil?
+    end
+    category_progress_bar.finish unless category_progress_bar.nil?
+    category_map
+  end
+
+  def generate_json(animation_metadata, alias_map, category_map)
     JSON.pretty_generate(
       {
         # JSON-style file comment
@@ -398,6 +418,9 @@ The animation has been skipped.
         #   are represented in the alias map.
         # Also sort for stable updates
         'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+        # Sort category map for stable updates
+        'categories': category_map.sort.to_h,
 
         # Sort alias map for stable updates
         'aliases': alias_map.sort.to_h
