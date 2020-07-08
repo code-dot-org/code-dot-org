@@ -44,7 +44,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         street_1: afe_params['street1'] || school&.address_line1 || '',
         street_2: afe_params['street2'] || school&.address_line2 || '',
         city: afe_params['city'] || school&.city || '',
-        state: afe_params['state'] || school&.state || '',
+        state: get_us_state_abbr_from_name(afe_params['state'], true) || school&.state || '',
         zip: afe_params['zip'] || school&.zip || '',
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
