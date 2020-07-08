@@ -44,12 +44,12 @@ class Services::CSTAEnrollment
         "submission[15_first]" => first_name,
         "submission[15_last]" => last_name,
         "submission[16]" => email,
-        "submission[5]" => school_district_name,
-        "submission[18]" => school_name,
-        "submission[17_st1]" => street_1,
-        "submission[17_st2]" => street_2,
-        "submission[17_city]" => city,
-        "submission[17_state]" => state,
+        "submission[5]" => school_district_name.titleize,
+        "submission[18]" => school_name.titleize,
+        "submission[17_st1]" => titleize_address(street_1),
+        "submission[17_st2]" => titleize_address(street_2),
+        "submission[17_city]" => city.titleize,
+        "submission[17_state]" => get_us_state_abbr(state),
         "submission[17_zip]" => zip,
         "submission[19]" => "Yes, I provide my consent."
       }
@@ -60,5 +60,9 @@ class Services::CSTAEnrollment
     end
 
     nil
+  end
+
+  def self.titleize_address(address)
+    address.titleize.gsub(/\b(N|S|E|W|NE|SE|NW|SW)\b/i, &:upcase)
   end
 end
