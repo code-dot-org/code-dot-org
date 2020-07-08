@@ -6,8 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
-family_name 'csd3'
-version_year '2020'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
@@ -129,8 +128,9 @@ level 'CSD: Animating Sprite Movement_2020', progression: 'Video: Sprite Movemen
 level 'CSD U3 Sprite Movement Right_2020', progression: 'Skill Building'
 level 'CSD U3 Sprite Movement Left_2020', progression: 'Skill Building'
 level 'CSD U3 Diagonal Movement_2020', progression: 'Skill Building'
+level 'CSD U3 Sprite Movement Predict_2020', progression: 'Skill Building'
 level 'CSD web movement practice choice', progression: 'Practice'
-level 'CSD U3 Sprite Movement Predict_2020', progression: 'Assessment', assessment: true
+level 'CSD U3 Movement Fish_2020', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice', progression: 'Challenges'
 
 lesson 'Mini-Project: Animation'

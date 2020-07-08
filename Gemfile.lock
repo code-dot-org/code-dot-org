@@ -197,10 +197,10 @@ GEM
   specs:
     Ascii85 (1.0.2)
     StreetAddress (1.0.6)
-    acme-client (1.0.0)
+    acme-client (2.0.5)
       faraday (~> 0.9, >= 0.9.1)
-    acmesmith (0.11.1)
-      acme-client (~> 1)
+    acmesmith (2.3.1)
+      acme-client (~> 2)
       aws-sdk-acm
       aws-sdk-route53
       aws-sdk-s3
@@ -381,6 +381,11 @@ GEM
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
+    datapackage (0.0.4)
+      colorize
+      json
+      json-schema
+      rest-client
     debug_inspector (0.0.3)
     declarative (0.0.10)
     declarative-option (0.1.0)
@@ -503,6 +508,8 @@ GEM
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jsonapi-serializers (1.0.0)
       activesupport
     jumphash (0.1.0)
@@ -590,6 +597,9 @@ GEM
     omniauth-openid (1.0.1)
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
+    omniauth-rails_csrf_protection (0.1.2)
+      actionpack (>= 4.2)
+      omniauth (>= 1.3.1)
     open_uri_redirections (0.2.1)
     openid_connect (1.0.3)
       activemodel
@@ -877,7 +887,7 @@ PLATFORMS
 
 DEPENDENCIES
   StreetAddress
-  acmesmith (~> 0)
+  acmesmith (~> 2.3.1)
   active_model_serializers!
   active_record_query_trace
   active_record_union
@@ -918,6 +928,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
+  datapackage
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
   dotiw
@@ -978,6 +989,7 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-openid-connect!
+  omniauth-rails_csrf_protection (~> 0.1)
   omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
