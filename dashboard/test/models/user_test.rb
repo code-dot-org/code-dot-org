@@ -2441,8 +2441,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     User.expects(:track_proficiency).once
     track_progress(user.id, csf_script_level, 100)
@@ -2513,8 +2514,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     UserLevel.create!(
       user: user,
