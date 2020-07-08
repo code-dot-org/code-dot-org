@@ -14,9 +14,7 @@ describe('dropletCommon.findDropletParseErrors', () => {
   });
 
   it('returns true when the parser finds codeBlock errors', () => {
-    const lineNumber = 5;
-    const message = 'indent must be inside block';
-    const errorMessage = `Line ${lineNumber}. ${message}`;
+    const error = {line: 5, type: 'IncorrectBlockParent', message: 'test'};
     const callback = sinon.spy();
     replaceOnWindow('dashboard', {
       project: {
@@ -26,19 +24,17 @@ describe('dropletCommon.findDropletParseErrors', () => {
     sinon.stub(window.dashboard.project, 'getShareUrl');
     const editor = {
       parse: () => {
-        throw new Error(errorMessage);
+        throw new Error(JSON.stringify(error));
       }
     };
     expect(DropletCommon.findDropletParseErrors(editor, callback)).to.be.true;
-    expect(callback).to.have.been.calledWith(lineNumber + 1, message);
+    expect(callback).to.have.been.calledWith(error.line + 1, error.message);
     window.dashboard.project.getShareUrl.restore();
     restoreOnWindow('dashboard');
   });
 
   it('returns true when the parser finds errors with line numbers', () => {
-    const lineNumber = 5;
-    const message = 'message';
-    const errorMessage = `Line ${lineNumber}. ${message}`;
+    const error = {line: 5, type: 'DropletParseError', message: 'test message'};
     replaceOnWindow('dashboard', {
       project: {
         getShareUrl: () => {}
@@ -48,11 +44,11 @@ describe('dropletCommon.findDropletParseErrors', () => {
     const callback = sinon.spy();
     const editor = {
       parse: () => {
-        throw new Error(errorMessage);
+        throw new Error(JSON.stringify(error));
       }
     };
     expect(DropletCommon.findDropletParseErrors(editor, callback)).to.be.true;
-    expect(callback).to.have.been.calledWith(lineNumber + 1, message);
+    expect(callback).to.have.been.calledWith(error.line + 1, error.message);
     window.dashboard.project.getShareUrl.restore();
     restoreOnWindow('dashboard');
   });
