@@ -39,8 +39,8 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         <div style={styles.body}>
           Thank you for completing your application information for the Amazon
           Future Engineer program. To finalize your participation and start
-          receiving benefits, sign up for a Code.org account, or sign in if you
-          already have one.
+          receiving benefits, sign up for a Code.org teacher account, or sign in
+          if you already have one.
         </div>
         <div style={styles.body}>
           Already have a Code.org account? <a href={SIGN_IN_URL}>Sign in.</a>
