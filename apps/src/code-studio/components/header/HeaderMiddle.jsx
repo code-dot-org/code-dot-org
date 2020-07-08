@@ -22,6 +22,10 @@ const styles = {
   }
 };
 
+// These components will be given additional width beyond what they desire.
+const scriptNameExtraWidth = 10;
+const lessonProgressExtraWidth = 10;
+
 class HeaderMiddle extends React.Component {
   static propTypes = {
     projectInfoOnly: PropTypes.bool,
@@ -108,7 +112,8 @@ class HeaderMiddle extends React.Component {
 
     // We will take care of padding the lesson progress with an extra 5 pixels
     // on each side.
-    const lessonProgressDesiredWidthAdjusted = lessonProgressDesiredWidth + 10;
+    const lessonProgressDesiredWidthAdjusted =
+      lessonProgressDesiredWidth + lessonProgressExtraWidth;
 
     // Project info gets no more than 30% of the entire width.
     const projectInfoWidth = Math.floor(
@@ -152,7 +157,7 @@ class HeaderMiddle extends React.Component {
     // on each side.
     const scriptNameWidth = Math.min(
       remainingWidth,
-      scriptNameDesiredWidth + 10
+      scriptNameDesiredWidth + scriptNameExtraWidth
     );
 
     remainingWidth = remainingWidth - scriptNameWidth;
@@ -199,7 +204,7 @@ class HeaderMiddle extends React.Component {
     const extraScriptNameData = scriptNameData
       ? {
           ...scriptNameData,
-          width: widths.scriptName - 10,
+          width: widths.scriptName - scriptNameExtraWidth,
           setDesiredWidth: width => {
             this.setDesiredWidth('scriptName', width);
           }
@@ -251,11 +256,14 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 textAlign: 'right',
-                marginLeft: 5,
-                marginRight: 5,
+                marginLeft: scriptNameExtraWidth / 2,
+                marginRight: scriptNameExtraWidth / 2,
                 boxSizing: 'border-box',
-                width: widths.scriptName - 10,
-                visibility: widths.scriptName === 10 ? 'hidden' : undefined
+                width: widths.scriptName - scriptNameExtraWidth,
+                visibility:
+                  widths.scriptName === scriptNameExtraWidth
+                    ? 'hidden'
+                    : undefined
               }}
             >
               <ScriptName {...extraScriptNameData} isRtl={isRtl} />
@@ -268,11 +276,14 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 width: widths.progress,
-                visibility: widths.progress === 10 ? 'hidden' : undefined
+                visibility:
+                  widths.progress === lessonProgressExtraWidth
+                    ? 'hidden'
+                    : undefined
               }}
             >
               <LessonProgress
-                width={widths.progress}
+                width={widths.progress - lessonProgressExtraWidth}
                 setDesiredWidth={width => {
                   this.setDesiredWidth('lessonProgress', width);
                 }}

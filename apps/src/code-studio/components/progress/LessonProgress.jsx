@@ -109,7 +109,7 @@ class LessonProgress extends Component {
 
     if (this.refs.currentLevel && this.props.width) {
       const fullWidth = $('.full_progress_inner').width();
-      const actualWidth = this.props.width - 10;
+      const actualWidth = this.props.width;
       const currentLevelOffset = $(this.refs.currentLevel).position().left;
 
       if (fullWidth > actualWidth) {
