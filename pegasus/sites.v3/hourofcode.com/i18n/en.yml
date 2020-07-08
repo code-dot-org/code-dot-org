@@ -5,12 +5,26 @@
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
 
-  campaign_date_start_short: "Dec. 4"
-  campaign_date_start_long: "December 4"
-  campaign_date_short: "Dec. 4-10"
-  campaign_date_full: "December 4-10"
-  campaign_date_year: "2017"
-  campaign_date_full_year: "December 4-10, 2017"
+  campaign_date_start_short: "Dec. 7"
+  campaign_date_start_long: "December 7"
+  campaign_date_short: "Dec. 7-13"
+  campaign_date_full: "December 7-13"
+  campaign_date_year: "2020"
+  campaign_date_full_year: "December 7-13, 2020"
+
+  international_campaign_date_start_short: "Oct. 1"
+  international_campaign_date_start_long: "October 1"
+  international_campaign_date_short: "Oct. 1-7"
+  international_campaign_date_full: "October 1-7"
+  international_campaign_date_year: "2020"
+  international_campaign_date_full_year: "October 1-7, 2020"
+
+  europe_campaign_date_start_short: "Oct. 10"
+  europe_campaign_date_start_long: "October 10"
+  europe_campaign_date_short: "Oct. 10-25"
+  europe_campaign_date_full: "October 10-25"
+  europe_campaign_date_year: "2020"
+  europe_campaign_date_full_year: "October 10-25, 2020"
 
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'

@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(IO.read(hoc_dir('i18n/countries_dates.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
@@ -150,7 +150,7 @@ def localized_image(path)
   File.join('/', @country, @language, path)
 end
 
-def campaign_date(format)
+def campaign_date_old(format)
   @country ||= hoc_detect_country
 
   case format
@@ -169,6 +169,36 @@ def campaign_date(format)
   else
     return HOC_COUNTRIES[@country]['campaign_date_full']
   end
+end
+
+def campaign_date(format)
+  @country ||= hoc_detect_country
+  type = HOC_COUNTRIES[@country]['type'] || 'default'
+  language = HOC_COUNTRIES[@country]['default_language']
+  id = 'campaign_date_full'
+
+  case format
+  when "start-short"
+    id = 'campaign_date_start_short'
+  when "start-long"
+    id = 'campaign_date_start_long'
+  when "short"
+    id = 'campaign_date_short'
+  when "full"
+    id = 'campaign_date_full'
+  when "year"
+    id = 'campaign_date_year'
+  when "full-year"
+    id = 'campaign_date_full_year'
+  end
+
+  if type == 'international'
+    id = "international_#{id}"
+  elsif type == 'europe'
+    id = "europe_#{id}"
+  end
+
+  return HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
 def company_count
