@@ -774,6 +774,7 @@ Applab.init = function(config) {
 };
 
 async function initDataTab(levelOptions) {
+  const channelExists = await Applab.storage.channelExists();
   if (levelOptions.dataTables) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
   }
@@ -785,7 +786,6 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    const channelExists = await Applab.storage.channelExists();
     const libraryManifest = await Applab.storage.getLibraryManifest();
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
