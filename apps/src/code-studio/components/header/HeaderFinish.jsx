@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
 const styles = {
   headerContainer: {
     position: 'relative',
     overflow: 'hidden',
-    height: 40
+    height: 18
   },
   headerInner: {
     position: 'absolute'
@@ -23,14 +24,6 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     display: 'inline-block'
-  },
-  headerVignetteRight: {
-    position: 'absolute',
-    width: '100%',
-    height: 18,
-    pointerEvents: 'none',
-    background:
-      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
 };
 
@@ -38,7 +31,8 @@ export default class HeaderFinish extends React.Component {
   static propTypes = {
     lessonData: PropTypes.object,
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func
+    setDesiredWidth: PropTypes.func,
+    isRtl: PropTypes.bool
   };
 
   setDesiredWidth() {
@@ -68,7 +62,7 @@ export default class HeaderFinish extends React.Component {
   }
 
   render() {
-    const {lessonData} = this.props;
+    const {lessonData, isRtl} = this.props;
 
     const headerFinishedComponent = $('.header_finished');
     const fullWidth =
@@ -76,7 +70,11 @@ export default class HeaderFinish extends React.Component {
     const actualWidth = this.props.width;
 
     const vignetteStyle =
-      actualWidth < fullWidth ? styles.headerVignetteRight : null;
+      actualWidth < fullWidth
+        ? isRtl
+          ? headerVignetteStyles.left
+          : headerVignetteStyles.right
+        : null;
 
     console.log('HeaderFinish render', this.props.width);
 
@@ -89,7 +87,7 @@ export default class HeaderFinish extends React.Component {
             </a>
           </div>
         </div>
-        <div id="vignette" style={vignetteStyle} />
+        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }

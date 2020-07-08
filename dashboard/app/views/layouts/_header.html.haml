@@ -67,7 +67,7 @@
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
 %div{class: header_class}
-  .navbar-static-top.header
+  .navbar-static-top.header{dir: "ltr"}
     .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
       .header_left
         .header_logo
@@ -76,7 +76,7 @@
           - else
             = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
 
-      .header_middle
+      .header_middle{dir: "auto"}
         - if should_show_progress || level
           -# React will attach to this.
           .header_level
@@ -91,6 +91,7 @@
             = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
         = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
         = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+  }
 
 - if request.path == "/home"
   #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}

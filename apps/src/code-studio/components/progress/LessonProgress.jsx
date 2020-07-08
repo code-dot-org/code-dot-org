@@ -113,7 +113,10 @@ class LessonProgress extends Component {
       const currentLevelOffset = $(this.refs.currentLevel).position().left;
 
       if (fullWidth > actualWidth) {
-        let desiredOffset = actualWidth / 2 - currentLevelOffset - 34 / 2;
+        // A regular highlighted bubble is 34 pixels wide.
+        const currentLevelBubbleWidth = 34;
+        let desiredOffset =
+          actualWidth / 2 - currentLevelOffset - currentLevelBubbleWidth / 2;
 
         let vignetteStyle = styles.headerVignetteLeftRight;
 
@@ -205,7 +208,7 @@ class LessonProgress extends Component {
             )}
           </div>
         </div>
-        <div id="vignette" style={vignetteStyle} />
+        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }

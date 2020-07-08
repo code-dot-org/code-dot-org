@@ -273,6 +273,7 @@ img.video_thumbnail {
     box-sizing: border-box;
     float: left;
     cursor: pointer;
+    white-space: nowrap;
     a:hover {
       text-decoration: none;
       background-color: $orange;

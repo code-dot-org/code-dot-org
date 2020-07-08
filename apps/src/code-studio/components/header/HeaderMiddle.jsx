@@ -32,7 +32,8 @@ class HeaderMiddle extends React.Component {
     lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    linesOfCodeText: PropTypes.string
+    linesOfCodeText: PropTypes.string,
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -176,7 +177,8 @@ class HeaderMiddle extends React.Component {
       lessonData,
       scriptData,
       currentLevelId,
-      linesOfCodeText
+      linesOfCodeText,
+      isRtl
     } = this.props;
 
     const showFinish = !!(
@@ -215,6 +217,7 @@ class HeaderMiddle extends React.Component {
       (this.props.appLoadStarted && this.props.appLoaded)
     ) {
       console.log('HeaderMiddle render', this.getWidth());
+      console.log('isRtl', isRtl);
 
       return (
         <div id="header_middle_content" style={styles.headerMiddleContent}>
@@ -231,6 +234,7 @@ class HeaderMiddle extends React.Component {
               setDesiredWidth={width => {
                 this.setDesiredWidth('projectInfo', width);
               }}
+              isRtl={isRtl}
             />
           </div>
 
@@ -254,7 +258,7 @@ class HeaderMiddle extends React.Component {
                 visibility: widths.scriptName === 10 ? 'hidden' : undefined
               }}
             >
-              <ScriptName {...extraScriptNameData} />
+              <ScriptName {...extraScriptNameData} isRtl={isRtl} />
             </div>
           )}
 
@@ -312,6 +316,7 @@ class HeaderMiddle extends React.Component {
                 style={{
                   visibility: widths.projectInfo === 0 ? 'hidden' : undefined
                 }}
+                isRtl={isRtl}
               />
             </div>
           )}
@@ -324,6 +329,7 @@ class HeaderMiddle extends React.Component {
 }
 
 export default connect(state => ({
+  isRtl: state.isRtl,
   appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
   lessonExtrasUrl: lessonExtrasUrl(
