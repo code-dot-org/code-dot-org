@@ -27,12 +27,13 @@
   DSL Editor
 
 #dsl_editor.in.collapse
-  - if @level.is_a?(External)
-    = f.label "Associated Blocks"
-    = f.select :associated_blocks, options_for_select(External.possible_associated_blocks, @level.associated_blocks), include_blank: true
-
   .script_text
     = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
+
+  - if @level.is_a?(External)
+    = f.label "Associated Blocks (for embedded blocks)"
+    %p Picking a selection from the dropdown will NOT be sufficient to associate the block type with the level. Please add associated_blocks 'block type' to the DSL field.
+    = f.select :associated_blocks, options_for_select(External.possible_associated_blocks, @level.associated_blocks), include_blank: true
 
     .markdown
       %p Edit Markdown:

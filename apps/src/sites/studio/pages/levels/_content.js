@@ -19,7 +19,7 @@ $(document).ready(() => {
     try {
       // Install the custom CDO blocks for the associated level type.
       const appBlocks = require(`@cdo/apps/${associatedBlocks}/blocks`);
-      let skin = undefined;
+      let skin = {};
       // Some apps require an app skin to be defined. Currently all of these
       // can use a skin that has the same name as the app itself. In the future,
       // we might need to allow specifying which skin to use or define a default.
@@ -29,7 +29,7 @@ $(document).ready(() => {
       }
       appBlocks.install(window.Blockly, {
         skin,
-        app: 'studio'
+        app: associatedBlocks
       });
     } catch (error) {
       console.error(
