@@ -310,8 +310,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 }
 
-// This might be better as pure functional component?
-// Just takes handleChange as argument, returns form?
 const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
   const renderedStateOptions = STATES.map(state => (
     <option key={state} value={state}>
