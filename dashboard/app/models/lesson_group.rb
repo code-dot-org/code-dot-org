@@ -20,7 +20,7 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
-  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
+  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy, class_name: 'Lesson'
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
 
@@ -48,7 +48,6 @@ class LessonGroup < ApplicationRecord
   # keys so they can only map to the display_name for their PLC purpose
   def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
     script_lesson_groups = []
-    script_lessons = []
     lockable_count = 0
     non_lockable_count = 0
     lesson_position = 0
@@ -82,18 +81,20 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+      lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+      #puts "lg initial #{lesson_group.lessons.inspect}"
+      lesson_group.save! if lesson_group.changed?
 
       lesson_position += lesson_group.lessons.length
-      new_lessons.each do |lesson|
+      lesson_group.lessons.each do |lesson|
         lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
-        script_lessons << lesson
       end
 
       LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)
       script_lesson_groups << lesson_group
     end
-    [script_lesson_groups, script_lessons]
+    #puts "slg: #{script_lesson_groups}"
+    script_lesson_groups
   end
 
   def self.prevent_blank_display_name(raw_lesson_group)

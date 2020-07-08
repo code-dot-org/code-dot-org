@@ -170,6 +170,10 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
     script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts, _ = Script.setup([script_file_3_lessons])
+
+    #require 'pry'
+    #binding.pry
+
     assert_equal 3, scripts[0].lessons.count
     first = scripts[0].lessons[0]
     second = scripts[0].lessons[1]
@@ -1492,10 +1496,12 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     script.curriculum_path = '//example.com/foo/{LESSON}'
+    script.save!
     assert_equal '//example.com/foo/1', script.lessons.first.lesson_plan_html_url
     assert_equal '//example.com/foo/2', script.lessons.last.lesson_plan_html_url
 
     script.curriculum_path = nil
+    script.save!
     assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.lessons.first.lesson_plan_html_url
   end
 
@@ -2190,6 +2196,7 @@ endvariants
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
+
     assert_equal '', script.lessons[0].lesson_group.key
 
     script = Script.add_script(
