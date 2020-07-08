@@ -20,6 +20,10 @@ class Languages
     table.select(:locale_s).to_a
   end
 
+  cached def self.get_locale_and_code
+    table.select(:locale_s, :code_s).to_a
+  end
+
   cached def self.get_hoc_languages
     table.select(:locale_s, :unique_language_s, :crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'").to_a
   end
