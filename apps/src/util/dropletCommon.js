@@ -19,20 +19,25 @@ const findDropletParseErrors = (dropletEditor, errorCallback) => {
   try {
     dropletEditor.parse();
   } catch (error) {
-    // Example error message: 'Line ###. Error Message'
-    let matchedLineNumber = error.message.match(/Line (\d+)./);
-    if (matchedLineNumber) {
+    let errorObject;
+    try {
+      errorObject = JSON.parse(error.message);
+    } catch (_) {
+      // Do nothing. We are just checking if the error is in a JSON format.
+    }
+
+    let lineNumber = errorObject && errorObject.line;
+    if (lineNumber) {
       // We were able to find the line number. Report it to the user.
 
-      let errorMessage = error.message.match(/Line \d+. (.*)/)[1];
-      if (error.message.includes('indent must be inside block')) {
+      if (errorObject.type === 'IncorrectBlockParent') {
         // June 2020: We believe this specific error is only triggered when a
         // curly bracket isn't attached to a function, loop, or conditional. If
         // in the future we verify this is true, create a user-friendly error
         // message to report to the user.
         trackEvent(
           'Research',
-          'DropletIndentNotInsideBlock',
+          errorObject.type,
           `ShareURL:${dashboard.project.getShareUrl()}`
         );
       } else {
@@ -42,12 +47,12 @@ const findDropletParseErrors = (dropletEditor, errorCallback) => {
         trackEvent(
           'Research',
           'UnknownDropletError',
-          `DropletError:${
-            error.message
+          `DropletError ${errorObject.type}: ${
+            errorObject.message
           }--ShareURL:${dashboard.project.getShareUrl()}`
         );
       }
-      errorCallback(Number(matchedLineNumber[1]) + 1, errorMessage);
+      errorCallback(Number(lineNumber) + 1, errorObject.message);
       return true;
     } else {
       // We couldn't find the line number. Display the error to the student and
