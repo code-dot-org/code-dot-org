@@ -55,14 +55,22 @@ hr-HR:
       Overworld Avoid Monsters_2019: |-
         Naletjeti na "creepera" loša je ideja.
         Oprezno se provucite pored Creepera do sigurnosti svog doma.
+      Overworld Avoid Monsters_2020: |-
+        Naletjeti na "creepera" loša je ideja.
+        Oprezno se provucite pored Creepera do sigurnosti svog doma.
       Overworld Chop Tree: Drvo je vrlo važan resurs. Mnoge stvari napravljeni su
         od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti blok".
       Overworld Chop Tree_2019: Drvo je vrlo važan resurs. Mnoge stvari napravljeni
         su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti
         blok".
+      Overworld Chop Tree_2020: Drvo je vrlo važan resurs. Mnoge stvari napravljeni
+        su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti
+        blok".
       Overworld Chop Trees: Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju
         puno drva stoga srušite sva 3 stabla.
       Overworld Chop Trees_2019: Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju
+        puno drva stoga srušite sva 3 stabla.
+      Overworld Chop Trees_2020: Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju
         puno drva stoga srušite sva 3 stabla.
       Overworld Free Play 20x20: Čestitamo! Završili ste sve naše zagonetke! Sada
         rudarite, gradite i stvorite nešto jedinstveno pomoću svega što ste dosad
@@ -70,13 +78,20 @@ hr-HR:
       Overworld Free Play 20x20_2019: Čestitamo! Završili ste sve naše zagonetke!
         Sada rudarite, gradite i stvorite nešto jedinstveno pomoću svega što ste dosad
         naučili.
+      Overworld Free Play 20x20_2020: Čestitamo! Završili ste sve naše zagonetke!
+        Sada rudarite, gradite i stvorite nešto jedinstveno pomoću svega što ste dosad
+        naučili.
       Overworld House Frame Chosen: Izgradite ostatak svoje kuće od bilo kojeg materijala.
         Petlja za ponavljanje dobro će vam doći.
       Overworld House Frame Chosen_2019: Izgradite ostatak svoje kuće od bilo kojeg
         materijala. Petlja za ponavljanje dobro će vam doći.
+      Overworld House Frame Chosen_2020: Izgradite ostatak svoje kuće od bilo kojeg
+        materijala. Petlja za ponavljanje dobro će vam doći.
       Overworld Move to Sheep: Dodajte drugu 'pomakni desno' naredbu u svoj kod kako
         biste došli do ovce.
       Overworld Move to Sheep_2019: Dodajte drugu 'pomakni desno' naredbu u svoj kod
+        kako biste došli do ovce.
+      Overworld Move to Sheep_2020: Dodajte drugu 'pomakni desno' naredbu u svoj kod
         kako biste došli do ovce.
       Overworld Place Wall: Izgradnja svake kuće počinje od zidova. Izgradi prvi dio
         svoje kuće stavljanjem "postaviti dasku breze" i "idi naprijed" naredbe unutar
@@ -84,17 +99,26 @@ hr-HR:
       Overworld Place Wall_2019: Izgradnja svake kuće počinje od zidova. Izgradi prvi
         dio svoje kuće stavljanjem "postaviti dasku breze" i "idi naprijed" naredbe
         unutar petlje za ponavljanje.
+      Overworld Place Wall_2020: Izgradnja svake kuće počinje od zidova. Izgradi prvi
+        dio svoje kuće stavljanjem "postaviti dasku breze" i "idi naprijed" naredbe
+        unutar petlje za ponavljanje.
       Overworld Plant Crops: Dobro je planirati unaprijed. Posadite usjeve na obje
         obale kako ne biste bili gladni kasnije.
       Overworld Plant Crops_2019: Dobro je planirati unaprijed. Posadite usjeve na
+        obje obale kako ne biste bili gladni kasnije.
+      Overworld Plant Crops_2020: Dobro je planirati unaprijed. Posadite usjeve na
         obje obale kako ne biste bili gladni kasnije.
       Overworld Powered Minecart: Odličan posao! Skupili ste puno resursa i izgradili
         skromni dom. Sada položite željeznicu od ruba karte do vratiju svoje kuće.
       Overworld Powered Minecart_2019: Odličan posao! Skupili ste puno resursa i izgradili
         skromni dom. Sada položite željeznicu od ruba karte do vratiju svoje kuće.
+      Overworld Powered Minecart_2020: Odličan posao! Skupili ste puno resursa i izgradili
+        skromni dom. Sada položite željeznicu od ruba karte do vratiju svoje kuće.
       Overworld Shear Sheep: Vrijeme je za šišanje ovaca! Upotrijebi naredbu "ošišaj"
         kako biste prikupili vunu s obje ovce.
       Overworld Shear Sheep_2019: Vrijeme je za šišanje ovaca! Upotrijebi naredbu
+        "ošišaj" kako biste prikupili vunu s obje ovce.
+      Overworld Shear Sheep_2020: Vrijeme je za šišanje ovaca! Upotrijebi naredbu
         "ošišaj" kako biste prikupili vunu s obje ovce.
       Standalone_Artist_1: Dobrodošao kod Umjetnika! Kao prvo, pokušajmo napraviti
         obični kvadrat koristeći blokove za okret udesno i za ići naprijed. Svaka
@@ -131,19 +155,31 @@ hr-HR:
         potrebno prekriti prije pomicanje naprijed. Naredba "ako" može vam za to pomoći.
         Dodajte i "idi naprijed" naredbu na pravo mjesto kako biste izvadili rudu
         iz blokova.
+      Underground Avoiding Lava_2020: Ispod nekih blokova skriva se lava koju će biti
+        potrebno prekriti prije pomicanje naprijed. Naredba "ako" može vam za to pomoći.
+        Dodajte i "idi naprijed" naredbu na pravo mjesto kako biste izvadili rudu
+        iz blokova.
       Underground If Statements: Sada postaje zeznuto. Iskopaj 3 crvene rude, ali
         nemoj pasti u lavu. Iskoristi "ako" naredbu i položi kocku kaldrme preko lave.
       Underground If Statements_2019: Sada postaje zeznuto. Iskopaj 3 crvene rude,
+        ali nemoj pasti u lavu. Iskoristi "ako" naredbu i položi kocku kaldrme preko
+        lave.
+      Underground If Statements_2020: Sada postaje zeznuto. Iskopaj 3 crvene rude,
         ali nemoj pasti u lavu. Iskoristi "ako" naredbu i položi kocku kaldrme preko
         lave.
       Underground Iron: Hodanje u rastaljene lave je loša ideja. Mjesto kaldrma stvoriti
         most, a zatim moja dva željeza blokova.
       Underground Iron_2019: Hodanje u rastaljene lave je loša ideja. Mjesto kaldrma
         stvoriti most, a zatim moja dva željeza blokova.
+      Underground Iron_2020: Hodanje u rastaljene lave je loša ideja. Mjesto kaldrma
+        stvoriti most, a zatim moja dva željeza blokova.
       Underground Mining Coal: Najcjenjenije resurse pronaći će te ispod zemlje, no
         tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar dva
         bloka ugljena.
       Underground Mining Coal_2019: Najcjenjenije resurse pronaći će te ispod zemlje,
+        no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar
+        dva bloka ugljena.
+      Underground Mining Coal_2020: Najcjenjenije resurse pronaći će te ispod zemlje,
         no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar
         dva bloka ugljena.
       bounce_1: Dodaj blok na blok "kad lijeva strelica" i klikni na "Pokreni". Pomakni
@@ -180,12 +216,16 @@ hr-HR:
         tri strane su iste dužine.'
       courseC_artist_prog5_2019: 'Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve
         tri strane su iste dužine.'
+      courseC_artist_prog5_2020: 'Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve
+        tri strane su iste dužine.'
       courseD_maze_nestedLoops4: Odvedi me do suncokreta!
       courseD_maze_nestedLoops4_2018: Odvedi me do suncokreta!
       courseD_maze_nestedLoops4_2019: Odvedi me do suncokreta!
+      courseD_maze_nestedLoops4_2020: Odvedi me do suncokreta!
       courseD_maze_nestedLoops6: Odvedi me do suncokreta!
       courseD_maze_nestedLoops6_2018: Odvedi me do suncokreta!
       courseD_maze_nestedLoops6_2019: Odvedi me do suncokreta!
+      courseD_maze_nestedLoops6_2020: Odvedi me do suncokreta!
       courseE_artist_functions1: 'Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi
         mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata
         duljine 25 piksela.'

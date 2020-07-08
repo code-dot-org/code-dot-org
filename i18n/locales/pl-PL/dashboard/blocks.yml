@@ -1103,6 +1103,8 @@ pl:
             '"East"': Wschód
             '"South"': Południe
             '"West"': Zachód
+      gamelab_objectSpritePointer:
+        text: kliknął {SPRITE}
       gamelab_patrollingUpDown:
         text: patrolowanie w górę i w dół
       gamelab_playSound:
@@ -1171,6 +1173,8 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
+      gamelab_subjectSpritePointer:
+        text: kliknął {SPRITE}
       gamelab_tumbling:
         text: gimnastykowanie się
       gamelab_turn:

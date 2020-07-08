@@ -20,9 +20,15 @@ it-IT:
       2-3 Artist 7:
         draw_rect:
           name: disegna_rettangolo
+          parameters:
+            width: larghezza
+            height: altezza
       2-3 Artist Debugging 10:
         draw square:
           name: disegna un quadrato
+          parameters:
+            width: larghezza
+            height: altezza
         draw a circle:
           name: disegna un cerchio
         draw a button:
@@ -54,6 +60,9 @@ it-IT:
           name: disegna una D
         draw E:
           name: disegna una E
+      2-3 Artist Functions 1:
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       2-3 Artist Functions 10:
         big gear:
           name: ingranaggio grande
@@ -71,9 +80,13 @@ it-IT:
       2-3 Artist Functions 2:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       2-3 Artist Functions 3:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       2-3 Artist Functions 4:
         draw a square:
           name: disegna un quadrato
@@ -181,18 +194,25 @@ it-IT:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: prendi il nettare e fai il miele
+          parameters:
+            honey: miele
       Course 4 Play Lab Params 1:
         jump:
           name: salta
       Course 4 Play Lab Params 10:
         score_points:
           name: punteggio
+          parameters:
+            points: punti
       Course 4 Play Lab Params 2:
         jump:
           name: salta
       Course 4 Play Lab Params 3:
         jump:
           name: salta
+          parameters:
+            height: altezza
+            actor: personaggio
       Course 4 Play Lab Params 4:
         patrol:
           name: pattuglia
@@ -201,18 +221,30 @@ it-IT:
       Course 4 Play Lab Params 5:
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
       Course 4 Play Lab Params 6:
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
       Course 4 Play Lab Params 7:
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
+            speed: velocità
       Course 4 Play Lab Params 8:
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
+            speed: velocità
       Course 4 Play Lab Params 9:
         score_points:
           name: punteggio
+          parameters:
+            points: punti
       Course 4 Play Lab Vars 1:
         set score:
           name: imposta il punteggio
@@ -229,6 +261,8 @@ it-IT:
       Course 4 SCF 1a:
         get nectar:
           name: prendi il nettare
+          parameters:
+            counter: contatore
       Course 4 SCF 1b:
         make honey up and over:
           name: miele su e prosegui
@@ -246,6 +280,8 @@ it-IT:
           name: fai qualcosa
         draw an octagon:
           name: disegna un ottagono
+          parameters:
+            length: lunghezza
       'Course E: Play Lab Project':
         do something:
           name: fai qualcosa
@@ -255,10 +291,15 @@ it-IT:
       FoodFight:
         score_points:
           name: punteggio
+          parameters:
+            points: punti
       Function intro Ryan:
         build bridge:
           name: costruisci un ponte
       Function intro Ryan_2019:
+        build bridge:
+          name: costruisci un ponte
+      Function intro Ryan_2020:
         build bridge:
           name: costruisci un ponte
       Geometric Sun:
@@ -306,9 +347,23 @@ it-IT:
       InspirationalArtwork:
         n-sided shape:
           name: forma con n lati
+          parameters:
+            length: lunghezza
+        draw a loop:
+          parameters:
+            length: lunghezza
+        draw spiral circle:
+          parameters:
+            size: dimensione
       InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: lunghezza
         n-sided shape:
           name: forma con n lati
+        draw spiral circle:
+          parameters:
+            size: dimensione
       K-1 Artist2 3:
         draw roof:
           name: disegna il tetto
@@ -324,12 +379,20 @@ it-IT:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: libera il passaggio
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: libera il passaggio
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: prepara un percorso lungo
         fix short path:
           name: prepara un percorso breve
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: prepara un percorso lungo
+        fix short path:
+          name: prepara un percorso breve
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: prepara un percorso lungo
         fix short path:
@@ -344,12 +407,22 @@ it-IT:
           name: costruisci un ponte corto
         build long bridge:
           name: costruisci un ponte lungo
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: costruisci un ponte corto
+        build long bridge:
+          name: costruisci un ponte lungo
       MC_HOC_2017_FP20x20:
         function 1:
           name: funzione 1
         function 2:
           name: funzione 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: funzione 1
+        function 2:
+          name: funzione 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: funzione 1
         function 2:
@@ -407,38 +480,66 @@ it-IT:
           name: fai qualcosa
         draw a hexagon:
           name: disegna un esagono
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
         do something:
           name: fai qualcosa
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: disegna una spirale
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 15:
         draw a star:
           name: disegna una stella
+          parameters:
+            points: punti
+            length: lunghezza
         draw a circle:
           name: disegna un cerchio
         draw a pinwheel:
           name: disegna una girandola
+          parameters:
+            length: lunghezza
+            repeat: ripeti
         draw a triangle:
           name: disegna un triangolo
+          parameters:
+            length: lunghezza
         draw a shape:
           name: disegna una forma
+          parameters:
+            length: lunghezza
         draw a house:
           name: disegna una casa
+          parameters:
+            length: lunghezza
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 2:
         do something:
           name: fai qualcosa
@@ -451,52 +552,92 @@ it-IT:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: disegna un triangolo con lunghezza
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: disegna un pentagono
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: disegna un triangolo
+          parameters:
+            length: lunghezza
         draw a hexagon:
           name: disegna un esagono
+          parameters:
+            length: lunghezza
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
         draw a sqaure:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: disegna un triangolo
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: disegna un triangolo con lunghezza
+          parameters:
+            length: lunghezza
       NEW Course 4 Artist Params 9:
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
         do something:
           name: fai qualcosa
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       NEW Course 4 Play Lab Params 11:
         jump:
           name: salta
+          parameters:
+            height: altezza
+            actor: personaggio
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
+            speed: velocità
       New Artist Project:
         draw a star:
           name: disegna una stella
+          parameters:
+            points: punti
+            length: lunghezza
         draw a circle:
           name: disegna un cerchio
         draw a pinwheel:
           name: disegna una girandola
+          parameters:
+            length: lunghezza
+            repeat: ripeti
         draw a triangle:
           name: disegna un triangolo
+          parameters:
+            length: lunghezza
         draw a shape:
           name: disegna una forma
+          parameters:
+            length: lunghezza
         draw a house:
           name: disegna una casa
+          parameters:
+            length: lunghezza
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
       New Minecraft Hero Project:
         function 1:
           name: funzione 1
@@ -505,8 +646,14 @@ it-IT:
       New Play Lab Project:
         jump:
           name: salta
+          parameters:
+            height: altezza
+            actor: personaggio
         patrol:
           name: pattuglia
+          parameters:
+            actor: personaggio
+            speed: velocità
       Robot Doodle:
         25 pixel square:
           name: quadrato da 25 pixel
@@ -590,6 +737,8 @@ it-IT:
       course4_artist_fwp_challenge1:
         draw background:
           name: disegna lo sfondo
+          parameters:
+            color: colore
         draw a polygon:
           name: disegna un poligono
         draw a square 20:
@@ -602,9 +751,13 @@ it-IT:
       course4_bee_fwp_challenge1:
         pick row:
           name: raccogli lungo la riga
+          parameters:
+            length: lunghezza
       course4_bee_fwp_challenge2:
         pick row:
           name: raccogli lungo la riga
+          parameters:
+            length: lunghezza
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: soluzione "semplice"
@@ -617,19 +770,35 @@ it-IT:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: possibile soluzione
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: possibile soluzione
       courseC_artist_prog3:
         draw flame:
           name: disegna fiamma
+          parameters:
+            x: x
         draw fire:
           name: disegna fuoco
       courseC_artist_prog3_2018:
         draw flame:
           name: disegna fiamma
+          parameters:
+            x: x
         draw fire:
           name: disegna fuoco
       courseC_artist_prog3_2019:
         draw flame:
           name: disegna fiamma
+          parameters:
+            x: x
+        draw fire:
+          name: disegna fuoco
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: disegna fiamma
+          parameters:
+            x: x
         draw fire:
           name: disegna fuoco
       courseC_artist_prog4:
@@ -641,7 +810,13 @@ it-IT:
       courseC_artist_prog4_2019:
         booster:
           name: razzo
+      courseC_artist_prog4_2020:
+        booster:
+          name: razzo
       courseC_data wizard:
+        do something:
+          name: fai qualcosa
+      courseC_data wizard_2020:
         do something:
           name: fai qualcosa
       courseE_Dogger_2:
@@ -683,6 +858,9 @@ it-IT:
       courseE_artist_concept_challenge2_2018:
         draw pinwheel:
           name: disegna una girandola
+      courseE_artist_functions1:
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions10:
         do something:
           name: fai qualcosa
@@ -704,22 +882,48 @@ it-IT:
           name: disegna un esagono
         draw line of hexagons:
           name: disegna una fila di esagoni
+      courseE_artist_functions10_2020:
+        do something:
+          name: fai qualcosa
+        draw hexagon:
+          name: disegna un esagono
+        draw line of hexagons:
+          name: disegna una fila di esagoni
+      courseE_artist_functions1_copy:
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions2:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions2_2018:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions2_2019:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions2_copy:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions3_2018:
         draw a star:
           name: disegna una stella
       courseE_artist_functions3_2019:
+        draw a star:
+          name: disegna una stella
+      courseE_artist_functions3_2020:
         draw a star:
           name: disegna una stella
       courseE_artist_functions4:
@@ -735,6 +939,9 @@ it-IT:
         draw a star:
           name: disegna una stella
       courseE_artist_functions5_2019:
+        draw a star:
+          name: disegna una stella
+      courseE_artist_functions5_2020:
         draw a star:
           name: disegna una stella
       courseE_artist_functions5_copy:
@@ -753,6 +960,11 @@ it-IT:
       courseE_artist_functions7_2019:
         draw a window:
           name: disegna una finestra
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: disegna una finestra
+        draw a house:
+          name: disegna una casa
       courseE_artist_functions8:
         do something:
           name: fai qualcosa
@@ -778,12 +990,26 @@ it-IT:
           name: disegna una fila di quadrati
         draw square:
           name: disegna un quadrato
+      courseE_artist_functions8_2020:
+        do something:
+          name: fai qualcosa
+        staggered squares:
+          name: quadrati traslati
+        draw a line of squares:
+          name: disegna una fila di quadrati
+        draw square:
+          name: disegna un quadrato
       courseE_artist_functions8a_2018:
         draw a square:
           name: disegna un quadrato
         do something:
           name: fai qualcosa
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: disegna un quadrato
+        do something:
+          name: fai qualcosa
+      courseE_artist_functions8a_2020:
         draw a square:
           name: disegna un quadrato
         do something:
@@ -802,6 +1028,13 @@ it-IT:
           name: disegna un quadrato
         do something:
           name: fai qualcosa
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: disegna una fila di quadrati
+        draw square:
+          name: disegna un quadrato
+        do something:
+          name: fai qualcosa
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: disegna una fila di quadrati
@@ -812,6 +1045,15 @@ it-IT:
         staggered squares:
           name: quadrati traslati
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: disegna una fila di quadrati
+        draw square:
+          name: disegna un quadrato
+        do something:
+          name: fai qualcosa
+        staggered squares:
+          name: quadrati traslati
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: disegna una fila di quadrati
         draw square:
@@ -841,6 +1083,13 @@ it-IT:
           name: disegna un triangolo
         draw line of triangles:
           name: disegna una fila di triangoli
+      courseE_artist_functions9_2020:
+        do something:
+          name: fai qualcosa
+        draw triangle:
+          name: disegna un triangolo
+        draw line of triangles:
+          name: disegna una fila di triangoli
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: disegna un esagono
@@ -853,6 +1102,17 @@ it-IT:
         draw square:
           name: disegna un quadrato
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: disegna un esagono
+        draw line of hexagons:
+          name: disegna una fila di esagoni
+        staggered squares:
+          name: quadrati traslati
+        draw a line of squares:
+          name: disegna una fila di quadrati
+        draw square:
+          name: disegna un quadrato
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: disegna un esagono
         draw line of hexagons:
@@ -878,6 +1138,11 @@ it-IT:
           name: il mio disegno
         do something:
           name: fai qualcosa
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: il mio disegno
+        do something:
+          name: fai qualcosa
       courseE_artist_functions_challenge2:
         my design:
           name: il mio disegno
@@ -893,18 +1158,36 @@ it-IT:
           name: il mio disegno
         do something:
           name: fai qualcosa
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: il mio disegno
+        do something:
+          name: fai qualcosa
       courseE_artist_functions_predict1:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions_predict1_2018:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions_predict1_2019:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
+      courseE_artist_functions_predict1_2020:
+        draw a square:
+          name: disegna un quadrato
+        draw ear stems:
+          name: disegna le stanghette degli occhiali
       courseE_artist_functions_predict1_copy:
         draw a square:
           name: disegna un quadrato
+        draw ear stems:
+          name: disegna le astine
       courseE_artist_functions_predict2:
         draw line of polygons:
           name: disegna una fila di poligoni
@@ -920,6 +1203,13 @@ it-IT:
         do something:
           name: fai qualcosa
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: disegna una fila di poligoni
+        draw polygon:
+          name: disegna un poligono
+        do something:
+          name: fai qualcosa
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: disegna una fila di poligoni
         draw polygon:
@@ -1004,6 +1294,15 @@ it-IT:
           name: prendi tutte le zucche
         pumpkin square:
           name: zucche quadrato
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: raccogli lungo il percorso
+        check square for corn:
+          name: controlla pannocchie
+        get all pumpkins:
+          name: prendi tutte le zucche
+        pumpkin square:
+          name: zucche quadrato
       courseE_farmer_functions11_predict:
         check and pick:
           name: controlla e prendi
@@ -1021,6 +1320,17 @@ it-IT:
         get all pumpkins:
           name: prendi tutte le zucche
       courseE_farmer_functions11_predict_2019:
+        pick along path:
+          name: raccogli lungo il percorso
+        pumpkin square:
+          name: zucche quadrato
+        check square for corn:
+          name: controlla pannocchie
+        get produce:
+          name: raccogli
+        get all pumpkins:
+          name: prendi tutte le zucche
+      courseE_farmer_functions11_predict_2020:
         pick along path:
           name: raccogli lungo il percorso
         pumpkin square:
@@ -1049,16 +1359,31 @@ it-IT:
           name: rettangolo di pannocchie
         lettuce stairs:
           name: scale di lattuga
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: raccogli lungo il percorso
+        check for corn:
+          name: controlla pannocchie
+        corn rectangle:
+          name: rettangolo di pannocchie
+        lettuce stairs:
+          name: scale di lattuga
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: controlla pannocchie
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: controlla pannocchie
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: controlla pannocchie
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: controlla pannocchie
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: controlla pannocchie
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: controlla pannocchie
       courseE_farmer_functions2ba:
@@ -1070,6 +1395,11 @@ it-IT:
         get all pumpkins:
           name: prendi tutte le zucche
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: controlla pannocchie
+        get all pumpkins:
+          name: prendi tutte le zucche
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: controlla pannocchie
         get all pumpkins:
@@ -1091,12 +1421,24 @@ it-IT:
           name: controlla pannocchie
         get all pumpkins:
           name: prendi tutte le zucche
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: raccogli lungo il percorso
+        check square for corn:
+          name: controlla pannocchie
+        get all pumpkins:
+          name: prendi tutte le zucche
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: controlla pannocchie
         get all pumpkins:
           name: prendi tutte le zucche
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: controlla pannocchie
+        get all pumpkins:
+          name: prendi tutte le zucche
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: controlla pannocchie
         get all pumpkins:
@@ -1116,16 +1458,25 @@ it-IT:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: giardino quadrato
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: giardino quadrato
       courseE_farmer_functions8a1_2018:
         garden square:
           name: giardino quadrato
       courseE_farmer_functions8a1_2019:
         garden square:
           name: giardino quadrato
+      courseE_farmer_functions8a1_2020:
+        garden square:
+          name: giardino quadrato
       courseE_farmer_functions9a1_2018:
         garden square:
           name: giardino quadrato
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: giardino quadrato
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: giardino quadrato
       courseE_playLab_challenge1:
@@ -1150,58 +1501,123 @@ it-IT:
       courseF_artist_fwp1:
         draw a square:
           name: disegna un quadrato
+        checker:
+          parameters:
+            size: dimensione
+            color: colore
         do something:
           name: fai qualcosa
+        Make gingham:
+          parameters:
+            size: dimensione
+        black outline:
+          parameters:
+            length: lunghezza
       courseF_artist_fwp2:
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
+        checker:
+          parameters:
+            size: dimensione
+            color: colore
         do something:
           name: fai qualcosa
+        Make gingham:
+          parameters:
+            size: dimensione
+        black outline:
+          parameters:
+            length: lunghezza
       courseF_artist_fwp2_predict1:
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
       courseF_artist_fwp3:
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
         draw a square2:
           name: disegna un quadrato2
+          parameters:
+            size: dimensione
         filled square:
           name: quadrato pieno
+          parameters:
+            size: dimensione
+            color: colore
+        black outline:
+          parameters:
+            length: lunghezza
       courseF_artist_fwp4:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       courseF_artist_fwp5:
         draw a polygon:
           name: disegna un poligono
+          parameters:
+            length: lunghezza
       courseF_artist_fwp6:
         draw a spiral edge:
           name: disegna una spirale
+          parameters:
+            length: lunghezza
       courseF_artist_fwp7:
         draw a spiral edge:
           name: disegna una spirale
+          parameters:
+            length: lunghezza
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: disegna una spirale
+          parameters:
+            length: lunghezza
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: disegna una stella
+          parameters:
+            points: punti
+            length: lunghezza
         draw a circle:
           name: disegna un cerchio
         draw a pinwheel:
           name: disegna una girandola
+          parameters:
+            length: lunghezza
+            repeat: ripeti
         draw a triangle:
           name: disegna un triangolo
+          parameters:
+            length: lunghezza
         draw a shape:
           name: disegna una forma
+          parameters:
+            length: lunghezza
         draw a house:
           name: disegna una casa
+          parameters:
+            length: lunghezza
         draw a square:
           name: disegna un quadrato
+          parameters:
+            length: lunghezza
         draw a spiral edge:
           name: disegna una spirale
+          parameters:
+            length: lunghezza
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: disegna lo sfondo
+          parameters:
+            color: colore
         draw a polygon:
           name: disegna un poligono
         draw a square 20:
@@ -1215,6 +1631,8 @@ it-IT:
           name: fai qualcosa
         draw an octagon:
           name: disegna un ottagono
+          parameters:
+            length: lunghezza
       courseF_bee_conditionals2:
         move and check:
           name: vai avanti e controlla
@@ -1227,6 +1645,9 @@ it-IT:
         move and get nectar with counter:
           name: vai avanti e prendi il nettare con contatore
       courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: vai avanti e prendi il nettare con contatore
+      courseF_bee_for_challenge1_2020:
         move and get nectar with counter:
           name: vai avanti e prendi il nettare con contatore
       courseF_bee_functions2:
@@ -1285,31 +1706,50 @@ it-IT:
       courseF_bee_fwp4:
         rowOfNectar:
           name: riga di nettare
+          parameters:
+            length: lunghezza
       courseF_bee_fwp5:
         rowOfNectar:
           name: riga di nettare
+          parameters:
+            width: larghezza
       courseF_bee_fwp6:
         rowOfNectar:
           name: riga di nettare
+          parameters:
+            width: larghezza
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: riga di nettare o miele
+          parameters:
+            width: larghezza
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: riga di nettare o miele
+          parameters:
+            width: larghezza
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: riga di nettare o miele
+          parameters:
+            width: larghezza
       courseF_bee_fwp_challenge1:
         pick row:
           name: raccogli lungo la riga
+          parameters:
+            length: lunghezza
       courseF_bee_fwp_challenge2:
         pick row:
           name: raccogli lungo la riga
+          parameters:
+            length: lunghezza
       courseF_bee_variables_1_2018:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_1_2019:
+        collect row:
+          name: raccogli lungo la riga
+      courseF_bee_variables_1_2020:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_2_2018:
@@ -1318,10 +1758,16 @@ it-IT:
       courseF_bee_variables_2_2019:
         collect row:
           name: raccogli lungo la riga
+      courseF_bee_variables_2_2020:
+        collect row:
+          name: raccogli lungo la riga
       courseF_bee_variables_3_2018:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_3_2019:
+        collect row:
+          name: raccogli lungo la riga
+      courseF_bee_variables_3_2020:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_4_2018:
@@ -1330,10 +1776,16 @@ it-IT:
       courseF_bee_variables_4_2019:
         collect row:
           name: raccogli lungo la riga
+      courseF_bee_variables_4_2020:
+        collect row:
+          name: raccogli lungo la riga
       courseF_bee_variables_5_2018:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_5_2019:
+        collect row:
+          name: raccogli lungo la riga
+      courseF_bee_variables_5_2020:
         collect row:
           name: raccogli lungo la riga
       courseF_bee_variables_6_2018:
@@ -1342,10 +1794,16 @@ it-IT:
       courseF_bee_variables_6_2019:
         collect stairs:
           name: raccogli lungo le scale
+      courseF_bee_variables_6_2020:
+        collect stairs:
+          name: raccogli lungo le scale
       courseF_bee_variables_7_2018:
         collect:
           name: raccogli
       courseF_bee_variables_7_2019:
+        collect:
+          name: raccogli
+      courseF_bee_variables_7_2020:
         collect:
           name: raccogli
       courseF_bee_variables_8_2018:
@@ -1354,6 +1812,11 @@ it-IT:
         collect:
           name: raccogli
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: vai avanti e aumenta
+        collect:
+          name: raccogli
+      courseF_bee_variables_8_2020:
         move and increment:
           name: vai avanti e aumenta
         collect:

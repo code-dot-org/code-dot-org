@@ -348,6 +348,27 @@ no-NO:
       Course 4 SCV 4: Løs denne oppgaven med færrest mulig brikker.
       Course 4 SCV 5: Løs denne oppgaven med færrest mulig brikker.
       Course 4 SCV 6: Klikk her for å se instruksjonene en gang til.
+      CourseD_Dance_2020_01: 'Dra <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokken
+        inn på arbeidsområdet, og koble den inni <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>-blokken.'
+      CourseD_Dance_2020_02: Få katten til å bevege seg når du trykker på en tast.
+      CourseD_Dance_2020_03: 'Det er klart for dansekonkurranse! Programmer hver danser
+        til å bevege seg når du bruker ulike taster. Velg din favorittbevegelse for
+        hver danser og sett den til "(Tilfeldig)" for noe helt uforutsett! '
+      CourseD_Dance_2020_04: Få danseren din til å starte en ny bevegekse etter den
+        fjerde takten.
+      CourseD_Dance_2020_06: Sett sammen en gruppe med bakgrunnsdansere rundt danseren
+        i midten.
+      CourseD_Dance_2020_07: Endre størrelsen på gruppen med bakgrunnsdansere.
+      CourseD_Dance_2020_08: Prøv å endre fargetone på minst en av danserne dine (eller
+        hele gruppen)!
+      CourseD_Dance_2020_09: Vær kreativ med de nye blokkene!
+      CourseD_Dance_2020_10: Ta på deg danseskoene! Lag din egen dans og del den med
+        vennene dine.
+      CourseD_Dance_2020_bonus1: Frem og Tilbake (Klikk "Mer" for detaljer)
+      CourseD_Dance_2020_bonus3: La oss komme i formasjon! (Klikk «Mer» for detaljer)
       CourseD_Dance_Party_05: Bruk en annen ny blokk for å få danseren til å bytte
         bevegelse hver 2. takt.
       CourseD_Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den
@@ -395,6 +416,8 @@ no-NO:
       Function intro Ryan: Bruk funksjonen `build bridge` to ganger for å lage en
         vei til redstonefakkelen.
       Function intro Ryan_2019: Bruk funksjonen `build bridge` to ganger for å lage
+        en vei til redstonefakkelen.
+      Function intro Ryan_2020: Bruk funksjonen `build bridge` to ganger for å lage
         en vei til redstonefakkelen.
       Guess The Number: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
       HOC 2018 Level_12: Design ditt eget undervannsmiljø, det er opp til deg!
@@ -544,29 +567,43 @@ no-NO:
         bruk piltastene for å bevege spilleren ut av huset for å komme til kisten. '
       MC_HOC_2017_01_RETRY_2019: 'Få agenten til trykkplaten, deretter klikk "kjør"
         og bruk piltastene for å bevege spilleren ut av huset for å komme til kisten. '
+      MC_HOC_2017_01_RETRY_2020: 'Få agenten til trykkplaten, deretter klikk "kjør"
+        og bruk piltastene for å bevege spilleren ut av huset for å komme til kisten. '
       MC_HOC_2017_02_Cole: 'Beveg agenten til trykkplaten slik at {currentPlayerName}
         kan komme til kartet. '
       MC_HOC_2017_02_Cole_2019: 'Beveg agenten til trykkplaten slik at {currentPlayerName}
         kan komme til kartet. '
+      MC_HOC_2017_02_Cole_2020: 'Beveg agenten til trykkplaten slik at {currentPlayerName}
+        kan komme til kartet. '
       MC_HOC_2017_03_Cole: 'Programmer agenten til å åpne porten. '
       MC_HOC_2017_03_Cole_2019: 'Programmer agenten til å åpne porten. '
+      MC_HOC_2017_03_Cole_2020: 'Programmer agenten til å åpne porten. '
       MC_HOC_2017_04POINT5_RYAN: Få agenten til trykkplaten.
       MC_HOC_2017_04POINT5_RYAN_2019: Få agenten til trykkplaten.
+      MC_HOC_2017_04POINT5_RYAN_2020: Få agenten til trykkplaten.
       MC_HOC_2017_04_Cole: Få agenten til trykkplaten.
       MC_HOC_2017_04_Cole_2019: Få agenten til trykkplaten.
+      MC_HOC_2017_04_Cole_2020: Få agenten til trykkplaten.
       MC_HOC_2017_05_Cole: Få spilleren bort til spaden.
       MC_HOC_2017_05_Cole_2019: Få spilleren bort til spaden.
+      MC_HOC_2017_05_Cole_2020: Få spilleren bort til spaden.
       MC_HOC_2017_06_Cole: Fiks denne koden slik at agenten bygger en bro over elva.
       MC_HOC_2017_06_Cole_2019: Fiks denne koden slik at agenten bygger en bro over
         elva.
+      MC_HOC_2017_06_Cole_2020: Fiks denne koden slik at agenten bygger en bro over
+        elva.
       MC_HOC_2017_07_Cole: Ødelegg isen og få {currentPlayerName} til Minecarten.
       MC_HOC_2017_07_Cole_2019: Ødelegg isen og få {currentPlayerName} til Minecarten.
+      MC_HOC_2017_07_Cole_2020: Ødelegg isen og få {currentPlayerName} til Minecarten.
       MC_HOC_2017_10_RETRY: Bruk funksjoner til å fullføre sporet til denne minecarten.
       MC_HOC_2017_10_RETRY_2019: Bruk funksjoner til å fullføre sporet til denne minecarten.
+      MC_HOC_2017_10_RETRY_2020: Bruk funksjoner til å fullføre sporet til denne minecarten.
       MC_HOC_2017_Ali: Bruk funksjoner til å komme deg over lavaen.
       MC_HOC_2017_Ali_2019: Bruk funksjoner til å komme deg over lavaen.
+      MC_HOC_2017_Ali_2020: Bruk funksjoner til å komme deg over lavaen.
       MC_HOC_2017_FP20x20: "**Fritt spill:** Utforsk på egenhånd!"
       MC_HOC_2017_FP20x20_2019: "**Fritt spill:** Utforsk på egenhånd!"
+      MC_HOC_2017_FP20x20_2020: "**Fritt spill:** Utforsk på egenhånd!"
       NEW Course 4 Artist Functions 11: Nå vil vi lage en ny funksjon, kalt "tegn
         en linje av kvadrat" som tegner seks firkanter som alle sammen er på samme
         rad. Kan du bygge denne funksjonen ved å bruke "tegn et kvadrat 20"-funksjonen
@@ -614,43 +651,64 @@ no-NO:
         forbi creeperene og kom deg trygt hjem.
       Overworld Avoid Monsters_2019: Det er ikke bra å møte på en creeper. Beveg deg
         forsiktig forbi creeperene og kom deg trygt hjem.
+      Overworld Avoid Monsters_2020: Det er ikke bra å møte på en creeper. Beveg deg
+        forsiktig forbi creeperene og kom deg trygt hjem.
       Overworld Chop Tree: Tre er en veldig viktig ressurs. Det er mange ting som
         lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge
         det ned.
       Overworld Chop Tree_2019: Tre er en veldig viktig ressurs. Det er mange ting
         som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge
         det ned.
+      Overworld Chop Tree_2020: Tre er en veldig viktig ressurs. Det er mange ting
+        som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge
+        det ned.
       Overworld Chop Trees: Vi må bygge et hus før sola går ned. Du trenger masse
         tre for å bygge et hus. Hogg ned de tre trærne.
       Overworld Chop Trees_2019: Vi må bygge et hus før sola går ned. Du trenger masse
+        tre for å bygge et hus. Hogg ned de tre trærne.
+      Overworld Chop Trees_2020: Vi må bygge et hus før sola går ned. Du trenger masse
         tre for å bygge et hus. Hogg ned de tre trærne.
       Overworld Free Play 20x20: Gratulerer! Du har fullført alle oppgavene våre!
         Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
       Overworld Free Play 20x20_2019: Gratulerer! Du har fullført alle oppgavene våre!
         Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
+      Overworld Free Play 20x20_2020: Gratulerer! Du har fullført alle oppgavene våre!
+        Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
       Overworld House Frame Chosen: Bygg resten av huset med det materiale du vil.
         Kommandoen "gjenta" vil være nyttig her.
       Overworld House Frame Chosen_2019: Bygg resten av huset med det materiale du
+        vil. Kommandoen "gjenta" vil være nyttig her.
+      Overworld House Frame Chosen_2020: Bygg resten av huset med det materiale du
         vil. Kommandoen "gjenta" vil være nyttig her.
       Overworld Move to Sheep: Legg til enda en "gå fremover"-kommando for å nå fram
         til sauen.
       Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å
         nå fram til sauen.
+      Overworld Move to Sheep_2020: Legg til enda en "gå fremover"-kommando for å
+        nå fram til sauen.
       Overworld Place Wall: Alle hus begynner med en vegg. Bygg den første delen av
         huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
       Overworld Place Wall_2019: Alle hus begynner med en vegg. Bygg den første delen
+        av huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
+      Overworld Place Wall_2020: Alle hus begynner med en vegg. Bygg den første delen
         av huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
       Overworld Plant Crops: Det er lurt å planlegge fremover. Plant avlinger på begge
         sidene av vannet så du ikke blir sulten senere.
       Overworld Plant Crops_2019: Det er lurt å planlegge fremover. Plant avlinger
         på begge sidene av vannet så du ikke blir sulten senere.
+      Overworld Plant Crops_2020: Det er lurt å planlegge fremover. Plant avlinger
+        på begge sidene av vannet så du ikke blir sulten senere.
       Overworld Powered Minecart: Bra jobbet! Du har samlet mange ressurser og bygd
         et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
       Overworld Powered Minecart_2019: Bra jobbet! Du har samlet mange ressurser og
         bygd et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
+      Overworld Powered Minecart_2020: Bra jobbet! Du har samlet mange ressurser og
+        bygd et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
       Overworld Shear Sheep: Tid for å klippe sauer! Bruk "klipp"-kommandoen for å
         samle ull fra begge sauene.
       Overworld Shear Sheep_2019: Tid for å klippe sauer! Bruk "klipp"-kommandoen
+        for å samle ull fra begge sauene.
+      Overworld Shear Sheep_2020: Tid for å klippe sauer! Bruk "klipp"-kommandoen
         for å samle ull fra begge sauene.
       Standalone_Artist_1: Velkommen til Kunstner! Først, la oss prøve å lage en enkelt
         firkant ved å bruke brikkene for å snu til høyre og flytte framover. Hver
@@ -687,19 +745,30 @@ no-NO:
       Underground Avoiding Lava_2019: Under noen av blokkene skjuler det seg lava,
         som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando.
         Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
+      Underground Avoiding Lava_2020: Under noen av blokkene skjuler det seg lava,
+        som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando.
+        Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
       Underground If Statements: Det er nå det blir vanskelig. Utvinn tre rødsteiner,
         men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein
         over lavaen du finner.
       Underground If Statements_2019: Det er nå det blir vanskelig. Utvinn tre rødsteiner,
         men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein
         over lavaen du finner.
+      Underground If Statements_2020: Det er nå det blir vanskelig. Utvinn tre rødsteiner,
+        men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein
+        over lavaen du finner.
       Underground Iron: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein
         til å lage en bro, og så utvinner du minst to av jernblokkene.
       Underground Iron_2019: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein
         til å lage en bro, og så utvinner du minst to av jernblokkene.
+      Underground Iron_2020: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein
+        til å lage en bro, og så utvinner du minst to av jernblokkene.
       Underground Mining Coal: De mest verdifulle ressursene finner du under bakken,
         men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       Underground Mining Coal_2019: De mest verdifulle ressursene finner du under
+        bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst
+        to kull.
+      Underground Mining Coal_2020: De mest verdifulle ressursene finner du under
         bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst
         to kull.
       'Widget: Text Compression': Se etter mønster (repeterende ord eller fraser)
@@ -782,6 +851,7 @@ no-NO:
       courseA_maze_seq1: Få fuglen til den slemme grisen!
       courseA_maze_seq1_2018: Få fuglen til den slemme grisen!
       courseA_maze_seq1_2019: Få fuglen til den slemme grisen!
+      courseA_maze_seq1_2020: Få fuglen til den slemme grisen!
       courseA_maze_seq2: Endre denne koden for å få meg bort til grisen!
       courseA_maze_seq3: Fiks koden for å få fuglen til grisen!
       courseB_playlab_events_challenge2: "La oss gjøre slik at dyr forsvinner når
@@ -796,11 +866,17 @@ no-NO:
         når du trykker på dem! Prøv å spille med hunden nå og etterpå la de andre
         dyrene få være med på moroa!\\\r\nDu kan også legge til lyder og poengsummer
         for å lage et sisten-spill!"
+      courseB_playlab_events_challenge2_2020: "La oss gjøre slik at dyr forsvinner
+        når du trykker på dem! Prøv å spille med hunden nå og etterpå la de andre
+        dyrene få være med på moroa!\\\r\nDu kan også legge til lyder og poengsummer
+        for å lage et sisten-spill!"
       courseC_PlayLab_events3: Kan du skrive et program som får Jorge (skuespiller
         1) til å flytte mot katten Olive?
       courseC_PlayLab_events3_2018: Kan du skrive et program som får Jorge (skuespiller
         1) til å flytte mot katten Olive?
       courseC_PlayLab_events3_2019: Kan du skrive et program som får Jorge (skuespiller
+        1) til å flytte mot katten Olive?
+      courseC_PlayLab_events3_2020: Kan du skrive et program som får Jorge (skuespiller
         1) til å flytte mot katten Olive?
       courseC_artist_prog5: 'Dette huset trenger ett tak. Tegn trekanten. Hint: alle
         de tre sidene skal være like lange.'
@@ -808,11 +884,15 @@ no-NO:
         alle de tre sidene skal være like lange.'
       courseC_artist_prog5_2019: 'Dette huset trenger ett tak. Tegn trekanten. Hint:
         alle de tre sidene skal være like lange.'
+      courseC_artist_prog5_2020: 'Dette huset trenger ett tak. Tegn trekanten. Hint:
+        alle de tre sidene skal være like lange.'
       courseD_artist_binary1: Bruk blokkene under til å la kunstneren tegne "01010101"
         binært i første rad.
       courseD_artist_binary1_2018: Bruk blokkene under til å la kunstneren tegne "01010101"
         binært i første rad.
       courseD_artist_binary1_2019: Bruk blokkene under til å la kunstneren tegne "01010101"
+        binært i første rad.
+      courseD_artist_binary1_2020: Bruk blokkene under til å la kunstneren tegne "01010101"
         binært i første rad.
       courseD_artist_binary4: Kan du tegne dette mønsteret ved å kjøre en løkke over
         en tresifret binærstreng (0-er og 1-erer)?
@@ -820,17 +900,23 @@ no-NO:
         over en tresifret binærstreng (0-er og 1-erer)?
       courseD_artist_binary4_2019: Kan du tegne dette mønsteret ved å kjøre en løkke
         over en tresifret binærstreng (0-er og 1-erer)?
+      courseD_artist_binary4_2020: Kan du tegne dette mønsteret ved å kjøre en løkke
+        over en tresifret binærstreng (0-er og 1-erer)?
       courseD_artist_binary6: Hvilken 6-siftret binærstreng, repetert 11 ganger, vil
         tegne dette bildet?
       courseD_artist_binary6_2018: Hvilken 6-siftret binærstreng, repetert 11 ganger,
         vil tegne dette bildet?
       courseD_artist_binary6_2019: Hvilken 6-siftret binærstreng, repetert 11 ganger,
         vil tegne dette bildet?
+      courseD_artist_binary6_2020: Hvilken 6-siftret binærstreng, repetert 11 ganger,
+        vil tegne dette bildet?
       courseD_artist_binary7: Hva er den korteste binærstrengen du kan repetere for
         å tegne dette bildet?
       courseD_artist_binary7_2018: Hva er den korteste binærstrengen du kan repetere
         for å tegne dette bildet?
       courseD_artist_binary7_2019: Hva er den korteste binærstrengen du kan repetere
+        for å tegne dette bildet?
+      courseD_artist_binary7_2020: Hva er den korteste binærstrengen du kan repetere
         for å tegne dette bildet?
       courseD_autorun_binary4_2019: Kan du tegne dette mønsteret ved å kjøre en løkke
         over en tresifret binærstreng (0-er og 1-erer)?
@@ -844,19 +930,24 @@ no-NO:
         honning i alle bikubene. Bruk løkke i løkke.
       courseD_bee_nestedLoops8_2019: Samle inn all nektaren fra hver blomst og lag
         honning i alle bikubene. Bruk løkke i løkke.
+      courseD_bee_nestedLoops8_2020: Samle inn all nektaren fra hver blomst og lag
+        honning i alle bikubene. Bruk løkke i løkke.
       courseD_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete
         banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
         haugene.
       courseD_farmer_while_challenge1: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge1_2018: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge1_2019: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2020: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge2: Fyll inn alle hullene og fjern alle haugene.
       courseD_maze_nestedLoops4: Få meg til solsikken!
       courseD_maze_nestedLoops4_2018: Få meg til solsikken!
       courseD_maze_nestedLoops4_2019: Få meg til solsikken!
+      courseD_maze_nestedLoops4_2020: Få meg til solsikken!
       courseD_maze_nestedLoops6: Få meg til solsikken!
       courseD_maze_nestedLoops6_2018: Få meg til solsikken!
       courseD_maze_nestedLoops6_2019: Få meg til solsikken!
+      courseD_maze_nestedLoops6_2020: Få meg til solsikken!
       courseE_artist_functions1: 'Hallo. Meg zombie artist. Meg tegne elsker! Hjelp
         meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene
         er 25 piksler kortere enn lengden på firkantene.'
@@ -877,19 +968,25 @@ no-NO:
       courseE_farmer_ramp11a: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11a_2018: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11a_2019: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11a_2020: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b_2018: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b_2019: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11b_2020: Så lenge det er en haug, fjern jord.
       courseF_artist_for7: Gjør tre små endringer i koden fra forrige nivå for å få
         til dette!
       courseF_artist_for7_2018: Gjør tre små endringer i koden fra forrige nivå for
         å få til dette!
       courseF_artist_for7_2019: Gjør tre små endringer i koden fra forrige nivå for
         å få til dette!
+      courseF_artist_for7_2020: Gjør tre små endringer i koden fra forrige nivå for
+        å få til dette!
       courseF_artist_for_challenge1: Finner du ut hvordan du kan gjenskape denne tegningen?
       courseF_artist_for_challenge1_2018: Finner du ut hvordan du kan gjenskape denne
         tegningen?
       courseF_artist_for_challenge1_2019: Finner du ut hvordan du kan gjenskape denne
+        tegningen?
+      courseF_artist_for_challenge1_2020: Finner du ut hvordan du kan gjenskape denne
         tegningen?
       courseF_artist_for_challenge2: Kan du finne ut hvordan du kan lage denne tegningen
         med en enkelt løkke?
@@ -897,19 +994,26 @@ no-NO:
         tegningen med en enkelt løkke?
       courseF_artist_for_challenge2_2019: Kan du finne ut hvordan du kan lage denne
         tegningen med en enkelt løkke?
+      courseF_artist_for_challenge2_2020: Kan du finne ut hvordan du kan lage denne
+        tegningen med en enkelt løkke?
       courseF_bee_for8: Du har forstått dette! Hva må økningen være for å samle 3,
         6, 9, 12 og 15 nektar?
       courseF_bee_for8_2018: Du har forstått dette! Hva må økningen være for å samle
         3, 6, 9, 12 og 15 nektar?
       courseF_bee_for8_2019: Du har forstått dette! Hva må økningen være for å samle
         3, 6, 9, 12 og 15 nektar?
+      courseF_bee_for8_2020: Du har forstått dette! Hva må økningen være for å samle
+        3, 6, 9, 12 og 15 nektar?
       courseF_bee_for_challenge2: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_for_challenge2_2018: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_for_challenge2_2019: Løs denne oppgaven med færrest mulig brikker.
+      courseF_bee_for_challenge2_2020: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bien, samleren
         inn nektar og returnerer til der den startet. Bruk denne funksjonen til å
         samle inn all nektaren.
       express_maze_debugging9_2019: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
+      express_maze_debugging9_2020: Bruk blokkene i verktøykassen til å bygge et program.
         Få ekornet til nøtta.
       flappy_1: Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk eller
         trykk på skjermen for å fly Flakse til målet.

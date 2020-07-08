@@ -433,7 +433,7 @@ sl-SI:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -479,7 +479,7 @@ sl-SI:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Gumb "Zaženi" ti lahko zelo pomaga
           v tem izzivu.
@@ -528,6 +528,13 @@ sl-SI:
 
           To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
       courseF_artist_for4_2019:
+        courseF_artist_for4_a: |-
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
+          Kakšno pa je največje?
+          Kako velik je korak po?
+
+          To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
+      courseF_artist_for4_2020:
         courseF_artist_for4_a: |-
           \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?

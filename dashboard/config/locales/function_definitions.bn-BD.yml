@@ -8,7 +8,14 @@ bn-BD:
       2-3 Artist 3.4:
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: উচ্চতা
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: উচ্চতা
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
       2-3 Artist Functions 12:
@@ -32,6 +39,10 @@ bn-BD:
       4-5 Artist 7:
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: মধু
       Course 4 Play Lab Params 1:
         jump:
           name: লাফান
@@ -41,9 +52,30 @@ bn-BD:
       Course 4 Play Lab Params 3:
         jump:
           name: লাফান
+          parameters:
+            height: উচ্চতা
+            actor: অভিনেতা
       Course 4 Play Lab Params 4:
         do something:
           name: কিছু কর
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: অভিনেতা
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: অভিনেতা
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: অভিনেতা
+            speed: গতি
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: অভিনেতা
+            speed: গতি
       Course 4 Play Lab Vars 1:
         set score:
           name: স্কোর সেট করুন
@@ -53,9 +85,14 @@ bn-BD:
       Course 4 SCF 1a:
         get nectar:
           name: পুষ্পমধু নিন
+          parameters:
+            counter: গণক
       Course 4 SCF 3:
         do something:
           name: কিছু কর
+        draw an octagon:
+          parameters:
+            length: দৈর্ঘ্য
       'Course E: Play Lab Project':
         do something:
           name: কিছু কর
@@ -68,6 +105,23 @@ bn-BD:
       Geometric Sun_2018:
         draw a house:
           name: একটি ঘর আঁকুন।
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: দৈর্ঘ্য
+        draw a loop:
+          parameters:
+            length: দৈর্ঘ্য
+        draw spiral circle:
+          parameters:
+            size: আকার
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: দৈর্ঘ্য
+        draw spiral circle:
+          parameters:
+            size: আকার
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -91,20 +145,59 @@ bn-BD:
       NEW Course 4 Artist Params 10:
         do something:
           name: কিছু কর
+        draw a hexagon:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
         do something:
           name: কিছু কর
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 15:
         draw a star:
           name: একটি বর্গ আঁকুন
+          parameters:
+            length: দৈর্ঘ্য
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
+        draw a pinwheel:
+          parameters:
+            length: দৈর্ঘ্য
+            repeat: পুনরাই
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a shape:
+          parameters:
+            length: দৈর্ঘ্য
         draw a house:
           name: একটি ঘর আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 2:
         do something:
           name: কিছু কর
@@ -114,36 +207,95 @@ bn-BD:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a hexagon:
+          parameters:
+            length: দৈর্ঘ্য
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a sqaure:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Artist Params 9:
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
         do something:
           name: কিছু কর
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
       NEW Course 4 Play Lab Params 11:
         jump:
           name: লাফান
+          parameters:
+            height: উচ্চতা
+            actor: অভিনেতা
+        patrol:
+          parameters:
+            actor: অভিনেতা
+            speed: গতি
       New Artist Project:
         draw a star:
           name: একটি বর্গ আঁকুন
+          parameters:
+            length: দৈর্ঘ্য
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
+        draw a pinwheel:
+          parameters:
+            length: দৈর্ঘ্য
+            repeat: পুনরাই
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a shape:
+          parameters:
+            length: দৈর্ঘ্য
         draw a house:
           name: একটি ঘর আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
       New Play Lab Project:
         jump:
           name: লাফান
+          parameters:
+            height: উচ্চতা
+            actor: অভিনেতা
+        patrol:
+          parameters:
+            actor: অভিনেতা
+            speed: গতি
       Standalone_Artist_7:
         draw a flower:
           name: ফুল আঁকুন
@@ -165,7 +317,34 @@ bn-BD:
       course4_artist_fwp_challenge1:
         do something:
           name: কিছু কর
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: দৈর্ঘ্য
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: দৈর্ঘ্য
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: এক্স
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: এক্স
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: এক্স
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: এক্স
       courseC_data wizard:
+        do something:
+          name: কিছু কর
+      courseC_data wizard_2020:
         do something:
           name: কিছু কর
       courseE_artist_concept1:
@@ -192,6 +371,9 @@ bn-BD:
       courseE_artist_functions10_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions10_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions2:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -201,6 +383,9 @@ bn-BD:
       courseE_artist_functions2_2019:
         draw a square:
           name: একটি বর্গ আঁকুন।
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
       courseE_artist_functions2_copy:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -208,6 +393,9 @@ bn-BD:
         draw a star:
           name: একটি বর্গ আঁকুন
       courseE_artist_functions3_2019:
+        draw a star:
+          name: একটি বর্গ আঁকুন
+      courseE_artist_functions3_2020:
         draw a star:
           name: একটি বর্গ আঁকুন
       courseE_artist_functions4:
@@ -225,6 +413,9 @@ bn-BD:
       courseE_artist_functions5_2019:
         draw a star:
           name: একটি বর্গ আঁকুন
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: একটি বর্গ আঁকুন
       courseE_artist_functions5_copy:
         draw a star:
           name: একটি বর্গ আঁকুন
@@ -234,6 +425,9 @@ bn-BD:
       courseE_artist_functions7_2018:
         draw a house:
           name: একটি ঘর আঁকুন।
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: একটি ঘর আঁকুন।
       courseE_artist_functions8:
         do something:
           name: কিছু কর
@@ -241,6 +435,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions8_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions8_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions8a_2018:
@@ -253,16 +450,27 @@ bn-BD:
           name: একটি বর্গ আঁকুন।
         do something:
           name: কিছু কর
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
+        do something:
+          name: কিছু কর
       courseE_artist_functions8b_2018:
         do something:
           name: কিছু কর
       courseE_artist_functions8b_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions8b_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions8c_2018:
         do something:
           name: কিছু কর
       courseE_artist_functions8c_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions8c_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions9:
@@ -274,6 +482,9 @@ bn-BD:
       courseE_artist_functions9_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions9_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions_challenge1:
         do something:
           name: কিছু কর
@@ -281,6 +492,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: কিছু কর
       courseE_artist_functions_challenge2:
@@ -292,6 +506,9 @@ bn-BD:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: কিছু কর
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: কিছু কর
       courseE_artist_functions_predict1:
         draw a square:
           name: একটি বর্গ আঁকুন।
@@ -299,6 +516,9 @@ bn-BD:
         draw a square:
           name: একটি বর্গ আঁকুন।
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: একটি বর্গ আঁকুন।
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: একটি বর্গ আঁকুন।
       courseE_artist_functions_predict1_copy:
@@ -311,6 +531,9 @@ bn-BD:
         do something:
           name: কিছু কর
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: কিছু কর
+      courseE_artist_functions_predict2_2020:
         do something:
           name: কিছু কর
       courseE_bee_functions1:
@@ -346,36 +569,125 @@ bn-BD:
       courseF_artist_fwp1:
         draw a square:
           name: একটি বর্গ আঁকুন।
+        checker:
+          parameters:
+            size: আকার
         do something:
           name: কিছু কর
+        Make gingham:
+          parameters:
+            size: আকার
+        black outline:
+          parameters:
+            length: দৈর্ঘ্য
       courseF_artist_fwp2:
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        checker:
+          parameters:
+            size: আকার
         do something:
           name: কিছু কর
+        Make gingham:
+          parameters:
+            size: আকার
+        black outline:
+          parameters:
+            length: দৈর্ঘ্য
       courseF_artist_fwp2_predict1:
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
       courseF_artist_fwp3:
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a square2:
+          parameters:
+            size: আকার
+        filled square:
+          parameters:
+            size: আকার
+        black outline:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: দৈর্ঘ্য
+            min: নূন্যতম
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: দৈর্ঘ্য
+            min: নূন্যতম
       courseF_artist_fwp9:
         draw a star:
           name: একটি বর্গ আঁকুন
+          parameters:
+            length: দৈর্ঘ্য
         draw a circle:
           name: একটি বৃত্ত আঁকুন।
+        draw a pinwheel:
+          parameters:
+            length: দৈর্ঘ্য
+            repeat: পুনরাই
         draw a triangle:
           name: একটি ত্রিভুজ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a shape:
+          parameters:
+            length: দৈর্ঘ্য
         draw a house:
           name: একটি ঘর আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
         draw a square:
           name: একটি বর্গ আঁকুন।
+          parameters:
+            length: দৈর্ঘ্য
+        draw a spiral edge:
+          parameters:
+            length: দৈর্ঘ্য
+            min: নূন্যতম
       courseF_artist_fwp_challenge1:
         do something:
           name: কিছু কর
       courseF_artist_fwp_challenge2:
         do something:
           name: কিছু কর
+        draw an octagon:
+          parameters:
+            length: দৈর্ঘ্য
       courseF_bee_functions8a:
         do something:
           name: কিছু কর
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: দৈর্ঘ্য
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: দৈর্ঘ্য

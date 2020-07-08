@@ -15,7 +15,14 @@ fa-IR:
           name: یک دایره بکشید
         draw a car:
           name: یک ماشین بکش
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: ارتفاع
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: ارتفاع
         jump to middle:
           name: به وسط بپر
         draw a circle:
@@ -72,6 +79,10 @@ fa-IR:
           name: یک دایره بکشید
         draw a car:
           name: یک ماشین بکش
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: عسل
       Course 4 Play Lab Params 1:
         jump:
           name: پرش
@@ -81,9 +92,30 @@ fa-IR:
       Course 4 Play Lab Params 3:
         jump:
           name: پرش
+          parameters:
+            height: ارتفاع
+            actor: بازیگر
       Course 4 Play Lab Params 4:
         do something:
           name: یه کاری بکن
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: بازیگر
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: بازیگر
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: بازیگر
+            speed: سرعت
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: بازیگر
+            speed: سرعت
       Course 4 Play Lab Vars 1:
         set score:
           name: تنظیم امتیاز
@@ -96,9 +128,14 @@ fa-IR:
       Course 4 SCF 1a:
         get nectar:
           name: گرفتن شهد
+          parameters:
+            counter: شمارشگر
       Course 4 SCF 3:
         do something:
           name: یه کاری بکن
+        draw an octagon:
+          parameters:
+            length: طول
       'Course E: Play Lab Project':
         do something:
           name: یه کاری بکن
@@ -115,6 +152,23 @@ fa-IR:
           name: الماس
         draw a house:
           name: یک خانه بکشید
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: طول
+        draw a loop:
+          parameters:
+            length: طول
+        draw spiral circle:
+          parameters:
+            size: اندازه
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: طول
+        draw spiral circle:
+          parameters:
+            size: اندازه
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: یک مربع بکشید
@@ -140,20 +194,58 @@ fa-IR:
           name: یه کاری بکن
         draw a hexagon:
           name: یک شش ضلعی بکش
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: طول
         do something:
           name: یه کاری بکن
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 15:
         draw a star:
           name: رسم یک ستاره
+          parameters:
+            length: طول
         draw a circle:
           name: یک دایره بکشید
+        draw a pinwheel:
+          parameters:
+            length: طول
+            repeat: تکرار کن
         draw a triangle:
           name: یک مثلث بکشید
+          parameters:
+            length: طول
+        draw a shape:
+          parameters:
+            length: طول
         draw a house:
           name: یک خانه بکشید
+          parameters:
+            length: طول
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 2:
         do something:
           name: یه کاری بکن
@@ -163,38 +255,96 @@ fa-IR:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: یک مثلث بکشید
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: یک مثلث بکشید
+          parameters:
+            length: طول
         draw a hexagon:
           name: یک شش ضلعی بکش
+          parameters:
+            length: طول
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
+        draw a sqaure:
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: یک مثلث بکشید
+          parameters:
+            length: طول
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: طول
       NEW Course 4 Artist Params 9:
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
         do something:
           name: یه کاری بکن
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: طول
       NEW Course 4 Play Lab Params 11:
         jump:
           name: پرش
+          parameters:
+            height: ارتفاع
+            actor: بازیگر
+        patrol:
+          parameters:
+            actor: بازیگر
+            speed: سرعت
       New Artist Project:
         draw a star:
           name: رسم یک ستاره
+          parameters:
+            length: طول
         draw a circle:
           name: یک دایره بکشید
+        draw a pinwheel:
+          parameters:
+            length: طول
+            repeat: تکرار کن
         draw a triangle:
           name: یک مثلث بکشید
+          parameters:
+            length: طول
+        draw a shape:
+          parameters:
+            length: طول
         draw a house:
           name: یک خانه بکشید
+          parameters:
+            length: طول
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
       New Play Lab Project:
         jump:
           name: پرش
+          parameters:
+            height: ارتفاع
+            actor: بازیگر
+        patrol:
+          parameters:
+            actor: بازیگر
+            speed: سرعت
       Robot Doodle:
         draw head:
           name: سر را بکش
@@ -222,7 +372,34 @@ fa-IR:
       course4_artist_fwp_challenge1:
         do something:
           name: یه کاری بکن
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: طول
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: طول
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: طول (x)
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: طول (x)
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: طول (x)
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: طول (x)
       courseC_data wizard:
+        do something:
+          name: یه کاری بکن
+      courseC_data wizard_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_concept1:
@@ -254,6 +431,9 @@ fa-IR:
       courseE_artist_functions10_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions10_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions2:
         draw a square:
           name: یک مربع بکشید
@@ -263,6 +443,9 @@ fa-IR:
       courseE_artist_functions2_2019:
         draw a square:
           name: یک مربع بکشید
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: یک مربع بکشید
       courseE_artist_functions2_copy:
         draw a square:
           name: یک مربع بکشید
@@ -270,6 +453,9 @@ fa-IR:
         draw a star:
           name: رسم یک ستاره
       courseE_artist_functions3_2019:
+        draw a star:
+          name: رسم یک ستاره
+      courseE_artist_functions3_2020:
         draw a star:
           name: رسم یک ستاره
       courseE_artist_functions4:
@@ -287,6 +473,9 @@ fa-IR:
       courseE_artist_functions5_2019:
         draw a star:
           name: رسم یک ستاره
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: رسم یک ستاره
       courseE_artist_functions5_copy:
         draw a star:
           name: رسم یک ستاره
@@ -296,6 +485,9 @@ fa-IR:
       courseE_artist_functions7_2018:
         draw a house:
           name: یک خانه بکشید
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: یک خانه بکشید
       courseE_artist_functions8:
         do something:
           name: یه کاری بکن
@@ -303,6 +495,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions8_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8a_2018:
@@ -315,16 +510,27 @@ fa-IR:
           name: یک مربع بکشید
         do something:
           name: یه کاری بکن
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: یک مربع بکشید
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions8b_2018:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8b_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions8b_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions8c_2018:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8c_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions8c_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions9:
@@ -336,6 +542,9 @@ fa-IR:
       courseE_artist_functions9_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions9_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions_challenge1:
         do something:
           name: یه کاری بکن
@@ -343,6 +552,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_challenge2:
@@ -354,6 +566,9 @@ fa-IR:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions_predict1:
         draw a square:
           name: یک مربع بکشید
@@ -361,6 +576,9 @@ fa-IR:
         draw a square:
           name: یک مربع بکشید
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: یک مربع بکشید
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: یک مربع بکشید
       courseE_artist_functions_predict1_copy:
@@ -373,6 +591,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions_predict2_2020:
         do something:
           name: یه کاری بکن
       courseE_bee_functions1:
@@ -408,48 +629,143 @@ fa-IR:
       courseF_artist_fwp1:
         draw a square:
           name: یک مربع بکشید
+        checker:
+          parameters:
+            size: اندازه
         do something:
           name: یه کاری بکن
+        Make gingham:
+          parameters:
+            size: اندازه
+        black outline:
+          parameters:
+            length: طول
       courseF_artist_fwp2:
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
+        checker:
+          parameters:
+            size: اندازه
         do something:
           name: یه کاری بکن
+        Make gingham:
+          parameters:
+            size: اندازه
+        black outline:
+          parameters:
+            length: طول
       courseF_artist_fwp2_predict1:
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
       courseF_artist_fwp3:
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
+        draw a square2:
+          parameters:
+            size: اندازه
+        filled square:
+          parameters:
+            size: اندازه
+        black outline:
+          parameters:
+            length: طول
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: طول
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: طول
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: طول
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: طول
+            min: حداقل
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: طول
+            min: حداقل
       courseF_artist_fwp9:
         draw a star:
           name: رسم یک ستاره
+          parameters:
+            length: طول
         draw a circle:
           name: یک دایره بکشید
+        draw a pinwheel:
+          parameters:
+            length: طول
+            repeat: تکرار کن
         draw a triangle:
           name: یک مثلث بکشید
+          parameters:
+            length: طول
+        draw a shape:
+          parameters:
+            length: طول
         draw a house:
           name: یک خانه بکشید
+          parameters:
+            length: طول
         draw a square:
           name: یک مربع بکشید
+          parameters:
+            length: طول
+        draw a spiral edge:
+          parameters:
+            length: طول
+            min: حداقل
       courseF_artist_fwp_challenge1:
         do something:
           name: یه کاری بکن
       courseF_artist_fwp_challenge2:
         do something:
           name: یه کاری بکن
+        draw an octagon:
+          parameters:
+            length: طول
       courseF_bee_functions8a:
         do something:
           name: یه کاری بکن
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: طول
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: طول
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: طول
       courseF_bee_variables_7_2018:
         collect:
           name: جمع آوری
       courseF_bee_variables_7_2019:
         collect:
           name: جمع آوری
+      courseF_bee_variables_7_2020:
+        collect:
+          name: جمع آوری
       courseF_bee_variables_8_2018:
         collect:
           name: جمع آوری
       courseF_bee_variables_8_2019:
+        collect:
+          name: جمع آوری
+      courseF_bee_variables_8_2020:
         collect:
           name: جمع آوری

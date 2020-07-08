@@ -507,6 +507,71 @@ hu-HU:
         függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
         és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
         egyet is elérne.
+      CourseD_Dance_2020_01: |-
+        _Tartsunk tánc party-t!_
+
+        Húzd a <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> blokkot a munkaterületre, és csatlakoztasd a <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> blokkba az első táncos létrehozásához.
+
+        -   _Ezenkívül a bal oldali izzókörtére is kattinthatsz, ha több információra van szükséged vagy kíváncsi vagy újabb kihívásokra._
+      CourseD_Dance_2020_02: |-
+        A <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> blokk segítségével a felfelé mutató nyíl megnyomásakor futtathatsz kódot. A <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> blokk segítségével érd el, hogy a táncos tapsoljon a felfelé gomb megnyomásakor, vagy próbálj ki egy másik mozdulatot!
+
+        _Mindenképp nyomd meg a felfelé mutató nyilat, illetve a ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) gombot a Futtatás gombra kattintás után!_
+      CourseD_Dance_2020_03: Eljött a táncverseny ideje! Programozz be minden táncost,
+        hogy mozogjon egyes gombok megnyomásakor. Válaszd ki a kedvenc mozdulatodat
+        minden egyes táncoshoz, vagy használd a `(Véletlenszerű)` beállítást, ha valami
+        teljesen kiszámíthatatlant szeretnél!
+      CourseD_Dance_2020_04: |-
+        Mozgassuk a táncosokat zenére!
+
+        Húzd a <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületre. Csatlakoztasd a <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> blokk alá. A táncosod új mozdulatba fog kezdeni a negyedik ütem után.
+
+        **Az ütem** az idő számlálására szolgál a zenében. Ebben az oktatóanyagban négy ütemet használunk.
+      CourseD_Dance_2020_05: |-
+        _Most elkezdünk növekedni!_
+
+        Adj hozzá egy <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületedhez. Állítsd be, hogy a táncos 6 ütem után új mozdulatot kezdjen.
+      CourseD_Dance_2020_06: "Az új blokk segítségével állíts össze egy csoportot
+        kisebb háttértáncosokból a középen álló vezető táncos köré. \n  <xml><block
+        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
+        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nMost már
+        egyszerre több táncost is létrehozhatsz!"
+      CourseD_Dance_2020_07: |-
+        Minden táncoshoz tartozik több olyan _tulajdonság_, amely a megjelenését szabályozza.
+
+        A zöld eseményblokk alatt a <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> használatával érheted el, hogy a táncosok közelebbinek vagy távolibbnak tűnjenek.
+      CourseD_Dance_2020_08: A táncosok rendelkeznek egy "színárnyalat" tulajdonsággal,
+        amely színt adhat nekik. Próbáld megváltoztatni az egyik táncos színét (vagy
+        egy egész csoportét)!
+      CourseD_Dance_2020_09: |-
+        Ez egy különleges fajtájú esemény, amely újra és újra kioldódik.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Az eszközkészletedben lévő többi új blokk lehetővé teszi, hogy fokozatosan (vagy véletlenszerűen!) változtasd meg a táncosok tulajdonságait az idő múlásával.
+
+        _Légy kreatív és szórakozz!_
+      CourseD_Dance_2020_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      CourseD_Dance_2020_bonus1: "# Előre és hátra!\n\nElőfordulhat, hogy létre szeretnél
+        hozni egy mintát az általad választott táncmozdulatokból. Ezzel az új blokkal
+        éppen ezt teheted meg.\n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nA fent kiválasztott
+        mozdulatok sorrendben megismétlődnek a végtelenségig.\n\n-   Hozz létre egy
+        váltakozó mozdulatsort az elöl álló vezető táncos számára!\n-   Használj különböző
+        számokat a mozdulatok váltakozási sebességének módosításához. Próbált ki az
+        \"1\" vagy a \"0.5\" értéket a gyorsabb váltakozáshoz!"
+      CourseD_Dance_2020_bonus3: |-
+        # Vegyünk formációba!
+
+        Nézze meg ezt a táncot, amely az <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> blokkot használja a táncosok mentális formációjának megváltoztatásához az egész tánc során. Próbálkozzon az alábbi ötletek egyikével, hogy kibővítse:
+
+        -   Hozzon létre egy második táncoscsoportot más elrendezéssel
+        -   Megváltoztassa az elrendezést, amikor egy gombot megnyomnak
+        -   Tulajdonságok megváltoztatása, ha a táncosok megváltoztatják a formációt
       CourseD_Dance_Party_01: |-
         _Induljon a buli és a tánc!_
 
@@ -516,7 +581,7 @@ hu-HU:
       CourseD_Dance_Party_02: |-
         Táncoltassuk meg ezt a jávorszarvast!
 
-        Húzd ki a <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>  blokk alá. A táncosod a negyedik ütem után egy új mozdulattal kezd táncolni.
+        Húzd ki a <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>  blokk alá. A táncosod a negyedik ütem után egy új mozdulattal kezd táncolni.
 
         A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
       CourseD_Dance_Party_03: |-
@@ -583,28 +648,58 @@ hu-HU:
       CourseE_HOC 2018 Level_10: A Víz alatti templomban valahol egy **tintahal**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         rejtőzik – meg tudod találni?
+      CourseE_HOC 2018 Level_10_2020: A Víz alatti templomban valahol egy **tintahal**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        rejtőzik – meg tudod találni?
       CourseE_HOC 2018 Level_11: Építs falat **prizmarinból** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         a fekete beton köré. Ez aktiválni fogja a **csatornát** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png),
         így teljesítetted a feladatot!
+      CourseE_HOC 2018 Level_11_2020: Építs falat **prizmarinból** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        a fekete beton köré. Ez aktiválni fogja a **csatornát** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png),
+        így teljesítetted a feladatot!
+      CourseE_HOC 2018 Level_1_2020: Az előtted álló utazáshoz fel kell töltened a
+        készleteidet. Vegyél ki egy **csónakot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        a **ládából** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: Csónakkal sokkal egyszerűbb, mint úszni a nyílt vízen!
         Menj a móló végére, ahol vízre szállhatsz.
+      CourseE_HOC 2018 Level_2_2020: Csónakkal sokkal egyszerűbb, mint úszni a nyílt
+        vízen! Menj a móló végére, ahol vízre szállhatsz.
       CourseE_HOC 2018 Level_3: Ragadd meg az evezőt, és hajózz ki a nyílt vizekre,
+        hogy kifoghasd a **tőkehalat** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Ragadd meg az evezőt, és hajózz ki a nyílt vizekre,
         hogy kifoghasd a **tőkehalat** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
+      CourseE_HOC 2018 Level_4_2020: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Ismétlő blokkal gyorsabban átjutsz az óceánon.
       CourseE_HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+      CourseE_HOC 2018 Level_5_2020: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       CourseE_HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz
         vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      CourseE_HOC 2018 Level_6_2020: Úgy tűnik, irtó hideg van odakint! A víz alatti
+        romokhoz vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       CourseE_HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben
+        egy **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        kincset rejt.
+      CourseE_HOC 2018 Level_7a_2020: Megtaláltad a víz alatti romokat. Keress a homokkőben
         egy **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
         ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
         kincset rejt.
       CourseE_HOC 2018 Level_8: Először jéghegyek, most meg láva? Menj végig ezen
         a vulkáni szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         a korallzátonyban.
+      CourseE_HOC 2018 Level_8_2020: Először jéghegyek, most meg láva? Menj végig
+        ezen a vulkáni szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        a korallzátonyban.
       CourseE_HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Elérted a zátonyt, most keresd meg a **Tenger
+        szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_2019_01: |-
@@ -831,6 +926,12 @@ hu-HU:
         [redstone_torch] illeszd a kis, zöld <xml> <block type=\"procedures_callnoreturn\"
         id=\"callMe\"><mutation name=\"build bridge\"/></block></xml>  blokkot kétszer
         a munkaterületre."
+      Function intro Ryan_2020: "Egy \"híd építése\" nevű **függvény** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \n\nAz
+        út kijavításához és hogy {currentPlayerName} játékos eljusson a vöröskő fáklyához,
+        [redstone_torch] illeszd a kis, zöld <xml> <block type=\"procedures_callnoreturn\"
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml>  blokkot kétszer
+        a munkaterületre."
       HOC 2018 Level_1: Az előtted álló utazáshoz fel kell töltened a készleteidet.
         Vegyél ki egy **csónakot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         a **ládából** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -848,7 +949,7 @@ hu-HU:
       HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
         utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
@@ -885,11 +986,21 @@ hu-HU:
         nyomólapra vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal
         juttasd ki {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.
         \ "
+      MC_HOC_2017_01_RETRY_2020: "{currentPlayerName} a ház foglya, de az Agent a
+        segítségére siet!   \\\r\n \\\r\n   \\\r\nIllessz egy \"mozgás előre\" blokkot
+        az \"amikor fut\" blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up]
+        nyomólapra vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal
+        juttasd ki {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.
+        \ "
       MC_HOC_2017_02_Cole: "{currentPlayerName} kalandra készül! Hogy segíts neki,
         szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül. \\\r\n
         \\\r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó kinyitásához
         {currentPlayerName} számára illeszd a kódot a munkaterületre. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} kalandra készül! Hogy segíts
+        neki, szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül.
+        \\\r\n \\\r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó
+        kinyitásához {currentPlayerName} számára illeszd a kódot a munkaterületre. "
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} kalandra készül! Hogy segíts
         neki, szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül.
         \\\r\n \\\r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó
         kinyitásához {currentPlayerName} számára illeszd a kódot a munkaterületre. "
@@ -899,9 +1010,15 @@ hu-HU:
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} kalandjához egy **iránytűre**
         [compass] is szükség lesz.  \\\r\n   \\\r\nProgramozd úgy az Agentet, hogy
         kinyissa a kaput. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} kalandjához egy **iránytűre**
+        [compass] is szükség lesz.  \\\r\n   \\\r\nProgramozd úgy az Agentet, hogy
+        kinyissa a kaput. "
       MC_HOC_2017_04POINT5_RYAN: "Keresztüljutottál! \\\r\n\\\r\nMost segíts {currentPlayerName}
         játékosnak keresztüljutni a labirintuson és felvenni a **baltát** [diamond_axe]\\\r"
       MC_HOC_2017_04POINT5_RYAN_2019: "Keresztüljutottál! \\\r\n\\\r\nMost segíts
+        {currentPlayerName} játékosnak keresztüljutni a labirintuson és felvenni a
+        **baltát** [diamond_axe]\\\r"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Keresztüljutottál! \\\r\n\\\r\nMost segíts
         {currentPlayerName} játékosnak keresztüljutni a labirintuson és felvenni a
         **baltát** [diamond_axe]\\\r"
       MC_HOC_2017_04_Cole: "Az Agent képes a vízen járni!  \\\r\n \\\r\nEgy \"ismétlés\"
@@ -910,10 +1027,16 @@ hu-HU:
       MC_HOC_2017_04_Cole_2019: "Az Agent képes a vízen járni!  \\\r\n \\\r\nEgy \"ismétlés\"
         ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
         az ajtó mögött található **vödörhöz** [bucket_empty]. "
+      MC_HOC_2017_04_Cole_2020: "Az Agent képes a vízen járni!  \\\r\n \\\r\nEgy \"ismétlés\"
+        ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
+        az ajtó mögött található **vödörhöz** [bucket_empty]. "
       MC_HOC_2017_05_Cole: "Ó, jaj, a híd leomlott! \\\r\n\\\r\nProgramozd az Agentet,
         hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
         eljuthasson az **ásóhoz** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Ó, jaj, a híd leomlott! \\\r\n\\\r\nProgramozd az
+        Agentet, hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
+        eljuthasson az **ásóhoz** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2020: "Ó, jaj, a híd leomlott! \\\r\n\\\r\nProgramozd az
         Agentet, hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
         eljuthasson az **ásóhoz** [diamond_shovel]."
       MC_HOC_2017_06_Cole: "Egy újabb folyó, de ez sokkal szélesebb! \\\r\n \\\r\nJavítsd
@@ -922,10 +1045,16 @@ hu-HU:
       MC_HOC_2017_06_Cole_2019: "Egy újabb folyó, de ez sokkal szélesebb! \\\r\n \\\r\nJavítsd
         ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
         eljuthasson a **csákányhoz** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2020: "Egy újabb folyó, de ez sokkal szélesebb! \\\r\n \\\r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
+        eljuthasson a **csákányhoz** [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "Jég torlaszolja el az utat!  \\\r\n \\\r\nAz \"út szabaddá
         tétele\" függvény segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
         játékost a csilléhez [minecart_normal]! "
       MC_HOC_2017_07_Cole_2019: "Jég torlaszolja el az utat!  \\\r\n \\\r\nAz \"út
+        szabaddá tétele\" függvény segítségével feltörheted a jeget, és eljuttathatod
+        {currentPlayerName} játékost a csilléhez [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2020: "Jég torlaszolja el az utat!  \\\r\n \\\r\nAz \"út
         szabaddá tétele\" függvény segítségével feltörheted a jeget, és eljuttathatod
         {currentPlayerName} játékost a csilléhez [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Észreveszed a különbséget a két függvény között a munkaterületen?
@@ -936,15 +1065,24 @@ hu-HU:
         a munkaterületen? \n\nEzeket a függvényeket az eszköztárból származó más kódokkal
         együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
         **a kovakövet és az acélt** [flint_and_steel]. \n "
+      MC_HOC_2017_10_RETRY_2020: "Észreveszed a különbséget a két függvény között
+        a munkaterületen? \n\nEzeket a függvényeket az eszköztárból származó más kódokkal
+        együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
+        **a kovakövet és az acélt** [flint_and_steel]. \n "
       MC_HOC_2017_Ali: 'Nézd meg az alábbi függvényeket.  Hogyan kerülheted el velük
         a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak biztonságban
         eljutni a **varázskönyvhöz** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Nézd meg az alábbi függvényeket.  Hogyan kerülheted el
         velük a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak
         biztonságban eljutni a **varázskönyvhöz** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2020: 'Nézd meg az alábbi függvényeket.  Hogyan kerülheted el
+        velük a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak
+        biztonságban eljutni a **varázskönyvhöz** [book_enchanted]?  '
       MC_HOC_2017_FP20x20: "**Szabad játék:** Most rajtad múlik! Az Agent kódja segítségével
         fedezd fel a világot."
       MC_HOC_2017_FP20x20_2019: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
+        segítségével fedezd fel a világot."
+      MC_HOC_2017_FP20x20_2020: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
         segítségével fedezd fel a világot."
       NEW Course 4 Artist Functions 2: |-
         Tudsz rajzolni 3 négyzetet egymástól 20 képpontra?
@@ -985,6 +1123,35 @@ hu-HU:
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      Overworld Move to Sheep_2020: Adj hozzá egy második előrelépni parancsot, hogy
+        elérd a bárányt.
+      Standalone_Artist_2: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint
+        150 pixel hosszúságú oldalakkal.
+      Standalone_Artist_3: Le tudod rajzolni ezt a hatszöget 100 képpontos oldalakkal
+        és 60 fokos fordulatokkal?
+      Standalone_Artist_4: Van egy új blokkod amivel játszadozhatsz - ez a ciklus,
+        ami egy előre meghatározott parancssort fog ismételni. Mi történik, ha ezeket
+        a parancsokat 6-szor megismételteted ?
+      Standalone_Artist_5: Hányszor kell megismételned a gyémántot, hogy a virágot
+        lerajzold?
+      Standalone_Artist_5.5: 'Figyeld meg, mennyire le tudtuk egyszerűsíteni a gyémánt-kódot
+        azáltal, hogy ciklusba szerveztük. Az egész sorozatot 12-szeres ciklusba szervezve
+        rajzolódik ki a virág. Tipp: A gyémánt ciklus után el kell fordulni 30 fokkal
+        azért, hogy ne ugyanarra a gyémántra rajzolj.'
+      Standalone_Artist_6: 'Szervezd 6-szoros ciklusba ezt a hatszög kódot az alakzat
+        elkészítéséhez. Hány fokot kell fordulni minden egyes alkalommal? Tipp: A
+        kör központi szögét oszd el a ciklusok számával.'
+      Standalone_Artist_7: 'A függvény egy újabb programozási eszköz, hogy elkerülhesd
+        ömagad ismétlését. Ez a függvény egy virágot rajzol, tehát bármikor használhatod
+        ha virágot szeretnél rajzolni. Használd együtt az új "ugrás" blokkal a virágok
+        rajzolásához. Tipp: A virágok 150 képpontra vannak egymástól'
+      Standalone_Artist_8: Itt van a "Rajzolj egy alakzatot" függvény amit a hatszögek
+        rajzolásához programoztunk. Futtasd a kódot, hogy lásd mit csinál, és aztán
+        kísérletezz a függvénnyel, hogy lásd mi történik. Meg tudod csinálni hogy
+        négyzeteket, háromszögeket vagy nyolcszögeket rajzoljon?
+      Standalone_Artist_9: Most gyerünk, készíts bármilyen képet, amilyet csak szeretnél!
+        Van még néhány új blokkod és egy üres függvényed is ahhoz, hogy azt készíts,
+        amit csak akarsz!
       U4 Model Program 5_2019: "# A többi gomb felszerelése\n\nMost, hogy készült
         egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden
         gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik
@@ -1027,6 +1194,10 @@ hu-HU:
         ## Ideje visszatérni a szárazföldre. Segíts nekem azzal, hogy köveket raksz a vízbe, így ne fogok beleesni!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2020: |-
+        ## Ideje visszatérni a szárazföldre. Segíts nekem azzal, hogy köveket raksz a vízbe, így ne fogok beleesni!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
 
@@ -1036,6 +1207,10 @@ hu-HU:
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2019: |-
+        ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2020: |-
         ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -1072,6 +1247,17 @@ hu-HU:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2020: |-
+        A művész látott valami mókás dolgot a távolban. Rajzold le, hogy szerinted mit látott.
+
+        * * *
+
+        ### Néhány tipp
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
 
@@ -1084,11 +1270,17 @@ hu-HU:
         Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2020: |-
+        Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: "A művészünk ötször próbálja megrajzolni a vonalat, de
         nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
       courseA_artist_loops3_2018: "A művészünk ötször próbálja megrajzolni a vonalat,
         de nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
       courseA_artist_loops3_2019: "A művészünk ötször próbálja megrajzolni a vonalat,
+        de nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
+      courseA_artist_loops3_2020: "A művészünk ötször próbálja megrajzolni a vonalat,
         de nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
       courseA_artist_loops4: |-
         Most használj egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, hogy ötször megrajzold ezt a vonalat!
@@ -1102,6 +1294,10 @@ hu-HU:
         Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
+      courseA_artist_loops4_2020: |-
+        Most használj egy <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, hogy ötször megrajzold ezt a vonalat!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
 
@@ -1111,6 +1307,10 @@ hu-HU:
 
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2019: |-
+        ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2020: |-
         ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
 
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
@@ -1126,6 +1326,10 @@ hu-HU:
         ## Tegyünk a háttérbe egy szép hegyet
 
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2020: |-
+        ## Tegyünk a háttérbe egy szép hegyet
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Használd a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámokat adj a vízhez.
 
@@ -1135,6 +1339,10 @@ hu-HU:
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
+        Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
+
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_artist_loops7_2020: |-
         Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -1150,6 +1358,10 @@ hu-HU:
         ## Szükségünk van egy hajóra vezető létrára.
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2020: |-
+        ## Szükségünk van egy hajóra vezető létrára.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9: |-
         ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
 
@@ -1159,6 +1371,10 @@ hu-HU:
 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2019: |-
+        ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2020: |-
         ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
@@ -1186,6 +1402,14 @@ hu-HU:
         Itt van néhány ötlet:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2020: |-
+        Használhatsz ciklust, hogy több vonalat rajzolj meg egyszerre egymás után.
+
+        Tudsz házat rajzolni? Rajzold úgy, ahogy csak szeretnéd! Próbálj találni olyan mintát, ami ismétlődik.
+
+        Itt van néhány ötlet:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2a: |-
         _"Segíts nekem felállítani ezt a három sátrat!"_
 
@@ -1195,6 +1419,10 @@ hu-HU:
 
         Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
       courseA_artist_loops_challenge2a_2019: |-
+        _"Segíts nekem felállítani ezt a három sátrat!"_
+
+        Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
+      courseA_artist_loops_challenge2a_2020: |-
         _"Segíts nekem felállítani ezt a három sátrat!"_
 
         Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
@@ -1211,11 +1439,18 @@ hu-HU:
       courseA_collector_loops12_2019: |-
         _"Heuréka! Gyűjts össze annyi kincset, amennyit csak tudsz!"_\
         (Nem kell az összeset.)
+      courseA_collector_loops12_2020: |-
+        _"Heuréka! Gyűjts össze annyi kincset, amennyit csak tudsz!"_\
+        (Nem kell az összeset.)
       courseA_collector_loops1_2018: "**Szabad játék:** Ő itt Laurel, a Kalandor!
         Mozgasd kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz
         blokkokat a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a
         kincsekhez. Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
       courseA_collector_loops1_2019: "**Szabad játék:** Ő itt Laurel, a Kalandor!
+        Mozgasd kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz
+        blokkokat a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a
+        kincsekhez. Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
+      courseA_collector_loops1_2020: "**Szabad játék:** Ő itt Laurel, a Kalandor!
         Mozgasd kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz
         blokkokat a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a
         kincsekhez. Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
@@ -1225,6 +1460,9 @@ hu-HU:
       courseA_collector_loops2_2019: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
         block-text="get treasure"/></xml> blokkot. '
+      courseA_collector_loops2_2020: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
+        minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> blokkot. '
       courseA_collector_loops3: Hogyan tudja Laurel mind az öt kincset begyűjteni
         mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
       courseA_collector_loops3_2018: Hogyan tudja Laurel mind az öt kincset begyűjteni
@@ -1232,6 +1470,9 @@ hu-HU:
       courseA_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
         mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
         blokk segítségével?
+      courseA_collector_loops3_2020: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        használatával?
       courseA_collector_loops_challenge1: _"Tudsz segíteni abban, hogy rámutatsz a
         hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
         hogy hány lépést is kell megtennem."_
@@ -1241,10 +1482,16 @@ hu-HU:
       courseA_collector_loops_challenge1_2019: _"Tudsz segíteni abban, hogy rámutatsz
         a hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
         hogy hány lépést is kell megtennem."_
+      courseA_collector_loops_challenge1_2020: _"Tudsz segíteni abban, hogy rámutatsz
+        a hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
+        hogy hány lépést is kell megtennem."_
       courseA_collector_preLoops7: |-
         Mindhárom halmot szedd fel! Vidd oda Laurelt a kincs mindegyik darabjához, aztán használd ezt a blokkot:
           <xml><block type="collector_collect"/></xml>
       courseA_maze_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseA_maze_ramp3a_2020: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
         hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
       courseA_maze_seq1: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj meg odavinni
@@ -1266,9 +1513,12 @@ hu-HU:
 
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq13_2019: Kapd el a malacot, bármilyen módon!
+      courseA_maze_seq13_2020: Kapd el a malacot, bármilyen módon!
       courseA_maze_seq1_2018: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj
         meg odavinni a rossz malachoz!"_
       courseA_maze_seq1_2019: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj
+        meg odavinni a rossz malachoz!"_
+      courseA_maze_seq1_2020: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj
         meg odavinni a rossz malachoz!"_
       courseA_maze_seq2: |-
         _"Egy hiba! Javíts a kódon, hogy eljussak a malacig."_
@@ -1296,6 +1546,8 @@ hu-HU:
         elérjen a malacig!
       courseA_maze_seq6_2019: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
+      courseA_maze_seq6_2020: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
+        elérjen a malacig!
       courseA_maze_seq6_copy: |-
         Mozogj az egyik irányba, aztán egy másikba, hogy a madár elérjen a malacig!
 
@@ -1314,6 +1566,7 @@ hu-HU:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_2019: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
+      courseA_maze_seq8_2020: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_copy: |-
         Oldd meg ezt a szintet is: a madár jusson el a malacig!
 
@@ -1328,11 +1581,19 @@ hu-HU:
         blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
       courseA_maze_seq_challenge1_2019: Javísd ki a hibát! Távolítsd el a felesleges
         blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
+      courseA_maze_seq_challenge1_2020: Javísd ki a hibát! Távolítsd el a felesleges
+        blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
       courseA_maze_seq_challenge2_2019: Tervezd meg az utat, hogy a madarat a malahoz
+        vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
+      courseA_maze_seq_challenge2_2020: Tervezd meg az utat, hogy a madarat a malahoz
         vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
       courseA_playLab_events1_2019: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
         és nézd meg, mi történik!
+      courseA_playLab_events1_2020: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
+        és nézd meg, mi történik!
       courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
+        there". Tudsz segíteni neki?
+      courseA_playLab_events2_2020: Jorge, a kutya azt szeretné mondani, hogy "Hi
         there". Tudsz segíteni neki?
       courseA_playLab_events3: "Segíts Jorgénak, a kutyának mozogni azzal, hogy egy
         <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
@@ -1373,6 +1634,10 @@ hu-HU:
         Robin, a madár megjelenik! Tudsz olyan kódot írni, ami megmutatja a többi
         barátomat is? \n\nA tippek segítenek ebben a projektben lépésről lépésre.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)"
+      courseA_playlab_events_challenge1_2020: "Ha rákattintasz Olive cicára, akkor
+        Robin, a madár megjelenik! Tudsz olyan kódot írni, ami megmutatja a többi
+        barátomat is? \n\nA tippek segítenek ebben a projektben lépésről lépésre.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
       courseA_playlab_events_challenge2: |-
         Mindenki csináljon valamit, amikor rákattintasz. Mit mondjanak az állatok? Mi jelenjen még meg?
 
@@ -1391,6 +1656,12 @@ hu-HU:
         Ebben a feladványban érdemes rákattintani a tippekre, vicces dolgokat mutatunk, amit kipróbálhatsz!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2020: |-
+        Mindenki csináljon valamit, amikor rákattintasz. Mit mondjanak az állatok? Mi jelenjen még meg?
+
+        Ebben a feladványban érdemes rákattintani a tippekre, vicces dolgokat mutatunk, amit kipróbálhatsz!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseB_Scrat_ramp1_2019: Ahhoz, hogy Scrat eljusson a makkhoz, kattints a <xml><block
         type="maze_moveEast" block-text="move East"/></xml> blokkra a <xml><block
         type="when_run" block-text="when run"/></xml> blokk alján, majd nyomd meg
@@ -1401,13 +1672,20 @@ hu-HU:
       courseB_Scrat_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
         hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseB_Scrat_ramp3a_2020: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
       courseB_artist_loops1_2019: Ez egy új típusú feladvány, főhősünk a "Művész".
+        Játssz egy kicsit, és rajzolj valami vidám dolgot.
+      courseB_artist_loops1_2020: Ez egy új típusú feladvány, főhősünk a "Művész".
         Játssz egy kicsit, és rajzolj valami vidám dolgot.
       courseB_collector_loops1: "**Szabad játék:** Ő itt Laurel, a Kalandor! Mozgasd
         kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz blokkokat
         a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a kincsekhez.
         Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
       courseB_collector_loops10_2019: Segíts Laurelnek, hogy a barlang összes kincsét
+        megszerezze.
+      courseB_collector_loops10_2020: Segíts Laurelnek, hogy a barlang összes kincsét
         megszerezze.
       courseB_collector_loops3: Hogyan tudja Laurel mind az öt kincset begyűjteni
         mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
@@ -1416,6 +1694,9 @@ hu-HU:
       courseB_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
         mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
         blokk segítségével?
+      courseB_collector_loops3_2020: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        használatával?
       courseB_collector_loops_challenge2a: |-
         _"Szerezzük meg a kincset!"_
 
@@ -1425,6 +1706,10 @@ hu-HU:
 
         Segítsd Laurelnek, hogy legalább **5** kincset összegyűjtsön.
       courseB_collector_loops_challenge2a_2019: |-
+        _"Szerezzük meg a kincset!"_
+
+        Segítsd Laurelnek, hogy legalább **5** kincset összegyűjtsön.
+      courseB_collector_loops_challenge2a_2020: |-
         _"Szerezzük meg a kincset!"_
 
         Segítsd Laurelnek, hogy legalább **5** kincset összegyűjtsön.
@@ -1445,17 +1730,25 @@ hu-HU:
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Gyűjts fémdarabokat, BB-8!"_
 
         Figyelj a falakra és az akadályokra. A fémdarabok így néznek ki: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog1_2020: |-
+        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Gyűjts fémdarabokat, BB-8!"_
+
+        Figyelj a falakra és az akadályokra. A fémdarabok így néznek ki: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Folytasd, BB-8!"_'
       courseB_starWars_prog3_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Folytasd, BB-8!"_'
       courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Folytasd, BB-8!"_'
+      courseB_starWars_prog3_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Folytasd, BB-8!"_'
       courseB_starWars_prog4: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ez az, BB-8!"_'
       courseB_starWars_prog4_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ez az, BB-8!"_'
       courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Ez az, BB-8!"_'
+      courseB_starWars_prog4_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ez az, BB-8!"_'
       courseB_starWars_prog8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
@@ -1466,6 +1759,10 @@ hu-HU:
 
         **Kihívás**: Gyűjtsd össze az összes fémdarabot.
       courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
+
+        **Kihívás**: Gyűjtsd össze az összes fémdarabot.
+      courseB_starWars_prog8_2020: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
 
         **Kihívás**: Gyűjtsd össze az összes fémdarabot.
@@ -1486,13 +1783,22 @@ hu-HU:
       courseC_artist_loopsPrePre1a_2019: |-
         A művész rossz helyen áll.
         Használd a <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> blokkot, hogy a művész a rajzterület közepére kerüljön. Aztán rajzolj egy 50 képpont hosszúsági vonalat a  <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> segítségével.
+      courseC_artist_loopsPrePre1a_2020: |-
+        A művész rossz helyen áll.
+        Használd a <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> blokkot, hogy a művész a rajzterület közepére kerüljön. Aztán rajzolj egy 50 képpont hosszúsági vonalat a  <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> segítségével.
       courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
         type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_collector_prog2_2020: Move Laurelt a kincshez, majd használja <xml><block
+        type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_maze_debugging9_2020: Használd az eszköztár blokkjait a programhoz.
+        Vidd a madarat a malachoz.
       courseC_maze_debugging_challenge2: A motkány szédülni fog, ha túl sokat forog!
         Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
       courseC_maze_debugging_challenge2_2018: A motkány szédülni fog, ha túl sokat
         forog! Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
       courseC_maze_debugging_challenge2_2019: A motkány szédülni fog, ha túl sokat
+        forog! Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
+      courseC_maze_debugging_challenge2_2020: A motkány szédülni fog, ha túl sokat
         forog! Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
       courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
         block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
@@ -1506,6 +1812,8 @@ hu-HU:
         _\"Menj BB-8!\"_\n\nNagyszerű vagy! Tarts ki! "
       courseC_starWars_loops10_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n
         _\"Menj BB-8!\"_\n\nNagyszerű vagy! Tarts ki! "
+      courseC_starWars_loops10_2020: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n
+        _\"Menj BB-8!\"_\n\nNagyszerű vagy! Tarts ki! "
       courseC_starWars_loops11: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Csak így tovább, BB-8!"_
 
@@ -1518,10 +1826,17 @@ hu-HU:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Csak így tovább, BB-8!"_
 
         Már majdnem készen vagyunk! Most bármilyen útvonalt választhatsz!
+      courseC_starWars_loops11_2020: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Csak így tovább, BB-8!"_
+
+        Már majdnem készen vagyunk! Most bármilyen útvonalt választhatsz!
       courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Szedd fel a fémdarabokat, BB-8!\"_ \n\nHasználj ötöt ugyanabból a blokkból,
         hogy begyűjtsd a fémdarabokat. Ezek a fémdarabok így néznek ki: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Szedd fel a fémdarabokat, BB-8!\"_ \n\nHasználj ötöt ugyanabból a blokkból,
+        hogy begyűjtsd a fémdarabokat. Ezek a fémdarabok így néznek ki: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2020: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Szedd fel a fémdarabokat, BB-8!\"_ \n\nHasználj ötöt ugyanabból a blokkból,
         hogy begyűjtsd a fémdarabokat. Ezek a fémdarabok így néznek ki: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops2: |-
@@ -1533,6 +1848,10 @@ hu-HU:
 
         Hogy felszedd az összes fémdarabot, használj ciklust, ami csak egyetlen blokkot használ az 'ismételd' blokkon belül.
       courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Gyerünk, BB-8!"_
+
+        Hogy felszedd az összes fémdarabot, használj ciklust, ami csak egyetlen blokkot használ az 'ismételd' blokkon belül.
+      courseC_starWars_loops2_2020: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Gyerünk, BB-8!"_
 
         Hogy felszedd az összes fémdarabot, használj ciklust, ami csak egyetlen blokkot használ az 'ismételd' blokkon belül.
@@ -1552,6 +1871,10 @@ hu-HU:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8!"_
 
         Ebben a feladványban két 'ismételd' ciklus segíteni fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb blokkot használod fel!
+      courseC_starWars_loops4_2020: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8!"_
+
+        Ebben a feladványban két 'ismételd' ciklus segíteni fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb blokkot használod fel!
       courseC_starWars_loops4_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8!"_
 
@@ -1561,6 +1884,8 @@ hu-HU:
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Gyerünk BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Gyerünk BB-8!"_'
+      courseC_starWars_loops5_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Gyerünk BB-8!"_'
       courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Gyerünk BB-8!"_'
@@ -1576,11 +1901,19 @@ hu-HU:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
 
         **Kihívás:** Az előző feladványok segíthetnek megoldani ezt a pályát.
+      courseC_starWars_loops8_2020: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
+
+        **Kihívás:** Az előző feladványok segíthetnek megoldani ezt a pályát.
       courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tarts ki, BB-8."_
 
         **Kihívás:** Az előző feladványok segíthetnek megoldani ezt a pályát.
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Próbáld megváltoztatni az alakot vagy a vonal hosszát hogy sajátot alkoss\"_\n\n<br/>
+        \ \n\n**Tanács:** bárhogy megváltoztathatod a rajzot, de itt egy ötlet: \n\n-
+        \  Próbáld az alakzatok típusait megváltoztatni a hópehely közepén!"
+      courseD_artist_5_2018_2020: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Próbáld megváltoztatni az alakot vagy a vonal hosszát hogy sajátot alkoss\"_\n\n<br/>
         \ \n\n**Tanács:** bárhogy megváltoztathatod a rajzot, de itt egy ötlet: \n\n-
         \  Próbáld az alakzatok típusait megváltoztatni a hópehely közepén!"
@@ -1593,16 +1926,23 @@ hu-HU:
         és készíts mézet minden méhsejtbe. '
       courseD_bee_nestedLoops8_2019: 'Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden méhsejtbe. '
+      courseD_bee_nestedLoops8_2020: 'Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden méhsejtbe. '
       courseD_bee_nestedLoops9: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_2018: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_2019: Készítsd el az összes mézet.
+      courseD_bee_nestedLoops9_2020: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2_2018: Készítsd el az összes mézet.
       courseD_bee_nestedLoops9_predict2_2019: Készítsd el az összes mézet.
+      courseD_bee_nestedLoops9_predict2_2020: Készítsd el az összes mézet.
       courseD_bounce_events5s_2018: Most egy kosárlabda fog repülni a kéz felé. Adj
         egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül
         elérje a kosarat.
       courseD_bounce_events5s_2019: Most egy kosárlabda fog repülni a kéz felé. Adj
+        egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül
+        elérje a kosarat.
+      courseD_bounce_events5s_2020: Most egy kosárlabda fog repülni a kéz felé. Adj
         egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül
         elérje a kosarat.
       courseD_maze_nestedLoops4: 'Juttass el a napraforgóhoz a lehető legkevesebb
@@ -1611,11 +1951,15 @@ hu-HU:
         blokk használatával!  '
       courseD_maze_nestedLoops4_2019: 'Juttass el a napraforgóhoz a lehető legkevesebb
         blokk használatával!  '
+      courseD_maze_nestedLoops4_2020: 'Juttass el a napraforgóhoz a lehető legkevesebb
+        blokk használatával!  '
       courseD_maze_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és csatold
         a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_maze_ramp2_2018: Húzz egy további "menj előre" blokkot a programhoz,
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_maze_ramp2_2019: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2020: Húzz egy további "menj előre" blokkot a programhoz,
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
         csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
@@ -1634,6 +1978,8 @@ hu-HU:
       courseF_bee_for_challenge2_2018: Oldd meg ezt a feladványt a legkevesebb blokk
         felhasználásával!
       courseF_bee_for_challenge2_2019: Oldd meg ezt a feladványt a legkevesebb blokk
+        felhasználásával!
+      courseF_bee_for_challenge2_2020: Oldd meg ezt a feladványt a legkevesebb blokk
         felhasználásával!
       frozen circle: A kör egy különleges forma. Ki tudod találni, mit kell beírni
         a kérdőjelek helyére, hogy meg tudjunk rajzolni egy kört?
@@ -1688,17 +2034,23 @@ hu-HU:
         minden virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
       ramp_artist_loops1_2019: "Micsoda remek nap!  \n\nSegíts a Művésznek betakarni
         minden virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
+      ramp_artist_loops1_2020: "Micsoda remek nap!  \n\nSegíts a Művésznek betakarni
+        minden virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
       ramp_artist_loops2: Dobd fel azzal a mintát, hogy ötször ismételed ezt, és minden
         lépésnél véletlen színt állítasz be.
       ramp_artist_loops2_2018: Dobd fel azzal a mintát, hogy ötször ismételed ezt,
         és minden lépésnél véletlen színt állítasz be.
       ramp_artist_loops2_2019: Dobd fel azzal a mintát, hogy ötször ismételed ezt,
         és minden lépésnél véletlen színt állítasz be.
+      ramp_artist_loops2_2020: Dobd fel azzal a mintát, hogy ötször ismételed ezt,
+        és minden lépésnél véletlen színt állítasz be.
       ramp_artist_loops3: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
         ciklust használva.
       ramp_artist_loops3_2018: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
         ciklust használva.
       ramp_artist_loops3_2019: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
+        ciklust használva.
+      ramp_artist_loops3_2020: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
         ciklust használva.
       ramp_artist_loops4: Mi történik, ha 72 fokot jobbra fordulsz mindezek után a
         cikluson belül?
@@ -1725,6 +2077,13 @@ hu-HU:
 
         -   Minden lépcsőfok 50 képpont hosszú, és 50 képpont magas
         -   90 fokot kell fordulnod minden irányba
+      ramp_artist_loops5_2020: |-
+        A ciklusok megkönnyítik a kódok írását!
+
+        Használj ciklusokat, hogy megrajzold ezt a lépcsőt.
+
+        -   Minden lépcsőfok 50 képpont hosszú, és 50 képpont magas
+        -   90 fokot kell fordulnod minden irányba
       ramp_artist_loops6: |-
         Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
 
@@ -1737,11 +2096,17 @@ hu-HU:
         Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
 
         Javítsd ki a ciklust, hogy teljesítsd a feladványt.
+      ramp_artist_loops6_2020: |-
+        Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
+
+        Javítsd ki a ciklust, hogy teljesítsd a feladványt.
       ramp_artist_loops7: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops7_2018: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops7_2019: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával!
+      ramp_artist_loops7_2020: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
         használatával!
       ramp_artist_loops8: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt a kódot
         ciklusok használatával."
@@ -1749,9 +2114,13 @@ hu-HU:
         a kódot ciklusok használatával."
       ramp_artist_loops8_2019: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt
         a kódot ciklusok használatával."
+      ramp_artist_loops8_2020: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt
+        a kódot ciklusok használatával."
       ramp_artist_loops9: Oldd meg ezt a feladványt úgy, hogy rajzolsz négyzetet,
         aminek az oldalai 200 képpont hosszúak.
       ramp_artist_loops9_2018: Oldd meg ezt a feladványt úgy, hogy rajzolsz négyzetet,
         aminek az oldalai 200 képpont hosszúak.
       ramp_artist_loops9_2019: Oldd meg ezt a feladványt úgy, hogy rajzolsz négyzetet,
+        aminek az oldalai 200 képpont hosszúak.
+      ramp_artist_loops9_2020: Oldd meg ezt a feladványt úgy, hogy rajzolsz négyzetet,
         aminek az oldalai 200 képpont hosszúak.

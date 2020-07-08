@@ -788,6 +788,115 @@ ro-RO:
           pe jumătate, astfel încât trebuie să întoarcem dreapta cu `180`/`laturi`,
           ceea ce înseamnă că ne trebuie de două ori mai multe decât de obicei (repetări
           de `laturi`\*`2`). '
+      CourseD_Dance_2020_01:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Asigură-te că pe ecran apare un dansator.
+
+          _Acest nivel se termină după 4 măsuri._"
+        challenges: |-
+          **Provocări opționale**
+
+          -   Alege un alt cântec.
+          -   Mută-ți dansatorul într-un alt loc.
+          -   Creează mai mult de un dansator.
+      CourseD_Dance_2020_02:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Dansatorul trebuie să execute o mișcare.
+          -   Trebuie să apeși o tastă cu săgeată.
+
+          _Acest nivel se termină după 4 măsuri._
+        challenges: |-
+          **Provocare opțională**
+
+          -   Folosește mai mult de un bloc <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      CourseD_Dance_2020_03:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Ambii dansatori trebuie să execute o mișcare.
+          -   Trebuie să apeși tastele cu săgeată.
+
+          _Acest nivel se termină după 4 măsuri._
+        challenges: |-
+          **Provocare opțională**
+
+          -   Fă-l pe dansator să răspundă la tastele cu săgeată stânga și dreapta.
+      CourseD_Dance_2020_04:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.
+
+          _Acest nivel se termină după 7 măsuri._"
+      CourseD_Dance_2020_05:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.
+
+          _Acest nivel se termină după 11 măsuri._"
+        challenges: |-
+          **Provocare opțională**
+
+          -   Modifică acompaniamentul când dansatorii schimbă mișcările.
+      CourseD_Dance_2020_06:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Creează un dansator principal și un grup de dansatori de rezervă.
+              _Nivelul se termină după 7 măsuri._
+        challenges: |-
+          **Provocare opțională**
+
+          -   Creează mai multe grupuri de dansatori de rezervă.
+      CourseD_Dance_2020_07:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Modifică dimensiunea a cel puțin un dansator după ce începe muzica.
+
+          _Acest nivel se termină după 6 măsuri._
+        challenges: |-
+          **Optional Challenge**
+
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      CourseD_Dance_2020_08:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Modifică culoarea a cel puțin un dansator.
+
+          _Acest nivel se termină după 6 măsuri._
+        tint_hint: Ai observat că dansatorii tăi nu se schimbă exact în culoarea aleasă
+          de tine? Acest lucru se întâmplă deoarece **nuanțele** amestecă culoarea
+          aleasă de tine cu cele a dansatorului.
+      CourseD_Dance_2020_09:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Apasă butonul „Final"!
+        repeat_every_ideas: |-
+          **Ai nevoie de niște idei?**
+
+          -   Modifică în mod repetat dimensiunea unui dansator pentru a-l face să crească.
+          -   Modifică în mod repetat rotația unui dansator pentru a-l face să se rotească.
+          -   Modifică în mod repetat poziția orizontală și verticală a unui dansator pentru a-l face să se deplaseze pe ecran.
+              _Poți folosi și numere negative pentru a crea un efect contrariu!_
+        next_previous: |-
+          **Provocare opțională**
+
+          -   Poți folosi și acest bloc de evenimente noi pentru a baleia o listă cu mișcări de dans, prin setarea mișcării pe `(Aleatoriu)`, `(Următoare)`, sau `(Anterioară)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      CourseD_Dance_2020_bonus1:
+        alternate: Blocul alternează este în categoria „Dansatori”.
       CourseD_Dance_Party_01:
         validation: |-
           "**Cum trec de acest nivel?**
@@ -1344,7 +1453,7 @@ ro-RO:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -1431,7 +1540,7 @@ ro-RO:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Butonul `PAS` ar putea fi foarte util
           pentru această problemă.
@@ -1490,6 +1599,11 @@ ro-RO:
           Încercați să scrieți codul pas cu pas și să căutați un model.
         courseA_artist_loops7_b: Scrieți mai întâi codul pentru un singur val, apoi
           repetați pentru a desena celelalte două.
+      courseA_artist_loops7_2020:
+        courseA_artist_loops7_a: Nu reușiți să vă dați seama unde să puneți bucla?
+          Încercați să scrieți codul pas cu pas și să căutați un model.
+        courseA_artist_loops7_b: Scrieți mai întâi codul pentru un singur val, apoi
+          repetați pentru a desena celelalte două.
       courseA_artist_loops8:
         courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
           scris pentru dvs.
@@ -1497,6 +1611,9 @@ ro-RO:
         courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
           scris pentru dvs.
       courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
+          scris pentru dvs.
+      courseA_artist_loops8_2020:
         courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
           scris pentru dvs.
       courseA_artist_loops9:
@@ -1508,6 +1625,9 @@ ro-RO:
       courseA_artist_loops9_2019:
         courseA_artist_loops9_c: Dacă nu reușiți să vă dați seama unde să puneți bucla,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
+      courseA_artist_loops9_2020:
+        courseA_artist_loops9_c: Dacă nu reușiți să vă dați seama unde să puneți bucla,
+          încercați să vă scrieți codul pas cu pas și să căutați modele.
       courseA_collector_loops2:
         courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
@@ -1515,6 +1635,9 @@ ro-RO:
         courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseA_collector_loops2_2019:
+        courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
+          orice comoară.
+      courseA_collector_loops2_2020:
         courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseA_collector_loops4:
@@ -1529,6 +1652,10 @@ ro-RO:
         courseA_collector_loops4_b: Nu uitați că Laurel trebuie să meargă în jos și
           să colecteze comoara după ce termină <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> bucla!
+      courseA_collector_loops4_2020:
+        courseA_collector_loops4_b: Nu uitați că Laurel trebuie să meargă în jos și
+          să colecteze comoara după ce termină <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> bucla!
       courseA_collector_loops5:
         courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
           să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
@@ -1538,6 +1665,10 @@ ro-RO:
           să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
           nevoie și căutați un model structural.
       courseA_collector_loops5_2019:
+        courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
+          să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
+          nevoie și căutați un model structural.
+      courseA_collector_loops5_2020:
         courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
           să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
           nevoie și căutați un model structural.
@@ -1556,6 +1687,11 @@ ro-RO:
           încercați să scrieți mișcările pe o bucată de hârtie și să căutați un model.
         courseA_collector_loops8_b: Încercați să rupeți acest puzzle în 3 probleme
           separate și să scrieți bucle pentru fiecare.
+      courseA_collector_loops8_2020:
+        courseA_collector_loops8_a: Dacă aveți dificultăți în rezolvarea acestui puzzle,
+          încercați să scrieți mișcările pe o bucată de hârtie și să căutați un model.
+        courseA_collector_loops8_b: Încercați să rupeți acest puzzle în 3 probleme
+          separate și să scrieți bucle pentru fiecare.
       courseA_collector_loops9:
         courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
           a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
@@ -1563,6 +1699,9 @@ ro-RO:
         courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
           a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
       courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
+          a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
+      courseA_collector_loops9_2020:
         courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
           a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
       courseA_collector_loops_challenge2:
@@ -1587,6 +1726,9 @@ ro-RO:
       courseA_harvester_loops6_2019:
         courseA_harvester_loops6_a: Dacă vă împotmoliți, încercați să scrieți pașii
           pe hârtie și să căutați modele repetate.
+      courseA_harvester_loops6_2020:
+        courseA_harvester_loops6_a: Dacă vă împotmoliți, încercați să scrieți pașii
+          pe hârtie și să căutați modele repetate.
       courseB_artist_loops3:
         courseB_artist_loops3_a: Amintiți-vă să utilizați o buclă `repetă` pentru
           un cod mai bun!
@@ -1597,6 +1739,12 @@ ro-RO:
           <title name="TIMES">???</title>
           </block></xml> pentru un cod mai bun!
       courseB_artist_loops3_2019:
+        courseB_artist_loops3_a: |-
+          Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
+
+          <title name="TIMES">???</title>
+          </block></xml> pentru un cod mai bun!
+      courseB_artist_loops3_2020:
         courseB_artist_loops3_a: |-
           Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
 
@@ -1614,6 +1762,10 @@ ro-RO:
         courseB_artist_loops4_a: Blocul de săritură vă permite să vă deplasați înainte
           fără a trasa o linie.
         courseB_artist_loops4_c: Nu uitați să schimbați numărul de repetări ale buclei.
+      courseB_artist_loops4_2020:
+        courseB_artist_loops4_a: Blocul de săritură vă permite să vă deplasați înainte
+          fără a trasa o linie.
+        courseB_artist_loops4_c: Nu uitați să schimbați numărul de repetări ale buclei.
       courseB_artist_loops6:
         courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
           și să căutați un model.
@@ -1623,6 +1775,9 @@ ro-RO:
       courseB_artist_loops6_2019:
         courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
           și să căutați un model.
+      courseB_artist_loops6_2020:
+        courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
+          și să căutați un model.
       courseB_artist_loops9:
         courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
@@ -1630,6 +1785,9 @@ ro-RO:
         courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
       courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
+          Încercați să scrieți codul pas cu pas și să căutați un model.
+      courseB_artist_loops9_2020:
         courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
       courseB_collector_loops10:
@@ -1647,6 +1805,11 @@ ro-RO:
           `repetă`, scrieți codul pas cu pas și căutați un model structural.
         courseB_collector_loops10_b: Încercați să scrieți mișcările pe o foaie de
           hârtie și să căutați un model.
+      courseB_collector_loops10_2020:
+        courseB_collector_loops10_a: Dacă nu vă puteți da seama unde să puneți buclele
+          `repetă`, scrieți codul pas cu pas și căutați un model structural.
+        courseB_collector_loops10_b: Încercați să scrieți mișcările pe o foaie de
+          hârtie și să căutați un model.
       courseB_collector_loops2:
         courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
@@ -1654,6 +1817,9 @@ ro-RO:
         courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseB_collector_loops2_2019:
+        courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
+          orice comoară.
+      courseB_collector_loops2_2020:
         courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseB_collector_loops7:
@@ -1665,6 +1831,9 @@ ro-RO:
       courseB_collector_loops7_2019:
         courseB_collector_loops7_b: Veți avea nevoie de 3 bucle repetitive pentru
           a rezolva acest puzzle și nu uitați comoara suplimentară de la sfârșit!
+      courseB_collector_loops7_2020:
+        courseB_collector_loops7_b: Veți avea nevoie de 3 bucle repetitive pentru
+          a rezolva acest puzzle și nu uitați comoara suplimentară de la sfârșit!
       courseB_collector_loops8:
         courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
           buclele `repetă`, scrieți codul pas cu pas și căutați un model.
@@ -1674,6 +1843,9 @@ ro-RO:
       courseB_collector_loops8_2019:
         courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
           buclele `repetă`, scrieți codul pas cu pas și căutați un model.
+      courseB_collector_loops8_2020:
+        courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
+          buclele `repetă`, scrieți codul pas cu pas și căutați un model.
       courseB_collector_loops9:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
@@ -1681,6 +1853,9 @@ ro-RO:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
       courseB_collector_loops9_2019:
+        courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
+          alta, pentru această soluție.
+      courseB_collector_loops9_2020:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
       courseB_collector_loops_challenge1:
@@ -1700,6 +1875,14 @@ ro-RO:
           </xml>
           Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
       courseB_collector_loops_challenge1_2019:
+        courseB_collector_loops_challenge1_c: |-
+          Mutați Est de două ori între fiecare traseu.
+          <xml>
+          <block type="maze_moveEast"><next>
+          <block type="maze_moveEast"></block></next></block>
+          </xml>
+          Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
+      courseB_collector_loops_challenge1_2020:
         courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
           <xml>
@@ -1731,13 +1914,25 @@ ro-RO:
         courseB_collector_loops_challenge2a_c: Pentru a strânge toată comoara, va
           trebui ori să adaugi două blocuri <xml> <block type="collector_collect"/></xml>
           în bucla ta ori să pui blocul în interiorul unei bucle `repetă`.
+      courseB_collector_loops_challenge2a_2020:
+        courseB_collector_loops_challenge2a_a: Dacă ceva nu merge bine, încearcă să
+          depanezi. Nu renunţa!
+        courseB_collector_loops_challenge2a_b: Uitați-vă la această opțiune pentru
+          a trece prin labirint. Vedeți un model pe care îl puteți repeta?
+        courseB_collector_loops_challenge2a_c: Pentru a strânge toată comoara, va
+          trebui ori să adaugi două blocuri <xml> <block type="collector_collect"/></xml>
+          în bucla ta ori să pui blocul în interiorul unei bucle `repetă`.
       courseB_iceage_loops1:
         courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseB_iceage_loops10:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
       courseB_iceage_loops10_2019:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseB_iceage_loops10_2020:
+        courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
       courseB_iceage_loops1_2019:
+        courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
+      courseB_iceage_loops1_2020:
         courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseB_iceage_loops2:
         courseB_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
@@ -1745,9 +1940,14 @@ ro-RO:
       courseB_iceage_loops2_2019:
         courseB_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
           colțului și unul după colț.
+      courseB_iceage_loops2_2020:
+        courseB_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
+          colțului și unul după colț.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Există două metode de a rezolva acest puzzle!
       courseC_artist_loop1_2019:
+        '': "[șir gol]"
+      courseC_artist_loop1_2020:
         '': "[șir gol]"
       courseC_artist_loops4a:
         courseC_artist_loops4a_a: |-
@@ -1785,6 +1985,18 @@ ro-RO:
           </xml>
 
           Nu uitați să schimbați cât de departe!
+      courseC_artist_loops4a_2020:
+        courseC_artist_loops4a_a: |-
+          Utilizați acest bloc pentru a sări înainte:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">saltÎnainte</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+
+          Nu uitați să schimbați cât de departe!
       courseC_artist_loops5b:
         courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
           dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
@@ -1792,6 +2004,9 @@ ro-RO:
         courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
           dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
       courseC_artist_loops5b_2019:
+        courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
+          dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
+      courseC_artist_loops5b_2020:
         courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
           dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
       courseC_artist_loops6a:
@@ -1803,6 +2018,9 @@ ro-RO:
       courseC_artist_loops6a_2019:
         courseC_artist_loops6a_a: Pentru a realiza un design ca cel de mai sus, săriți
           înainte mai puțin de 75 de pixel, între fiecare autocolant.
+      courseC_artist_loops6a_2020:
+        courseC_artist_loops6a_a: Pentru a realiza un design ca cel de mai sus, săriți
+          înainte mai puțin de 75 de pixel, între fiecare autocolant.
       courseC_artist_loopsPre1a:
         courseC_artist_loopsPre1a_b: 'Bucla "repetă" ar trebui să aibă 3 blocuri în
           interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
@@ -1812,6 +2030,10 @@ ro-RO:
           interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
           de pixeli" și "întoarceți la dreapta cu 60 de grade".'
       courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_b: 'Bucla "repetă" ar trebui să aibă 3 blocuri în
+          interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
+          de pixeli" și "întoarceți la dreapta cu 60 de grade".'
+      courseC_artist_loopsPre1a_2020:
         courseC_artist_loopsPre1a_b: 'Bucla "repetă" ar trebui să aibă 3 blocuri în
           interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
           de pixeli" și "întoarceți la dreapta cu 60 de grade".'
@@ -1838,6 +2060,15 @@ ro-RO:
           <title name="DIR">mutăÎnainte</title>
           <title name="VALUE">50</title>
           </block></xml>
+      courseC_artist_loopsPrePre1a_2020:
+        courseC_artist_loopsPrePre1a_b: |-
+          Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
+
+          <xml><block type="draw_move_by_constant">
+
+          <title name="DIR">mutăÎnainte</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog2:
         courseC_artist_prog2_a: Dacă utilizaţi blocul pentru a mă face să 'merg înainte
           cu 100 pixeli', voi trasa automat o linie.
@@ -1853,11 +2084,18 @@ ro-RO:
           cu 100 pixeli', voi trasa automat o linie.
         courseC_artist_prog2_b: Probleme la cotitură? Folosiți blocul "întoarce la
           dreapta cu 90 de grade".
+      courseC_artist_prog2_2020:
+        courseC_artist_prog2_a: Dacă utilizaţi blocul pentru a mă face să 'merg înainte
+          cu 100 pixeli', voi trasa automat o linie.
+        courseC_artist_prog2_b: Probleme la cotitură? Folosiți blocul "întoarce la
+          dreapta cu 90 de grade".
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2020:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_harvester_loops2:
         courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
@@ -1874,6 +2112,11 @@ ro-RO:
           pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
           cealaltă va repeta comanda`culege dovleac\`.
+      courseC_harvester_loops2_2020:
+        courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
+          pe hârtie și să căutați modele repetate.
+        courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
+          cealaltă va repeta comanda`culege dovleac\`.
       courseC_harvester_loops3:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
@@ -1881,6 +2124,9 @@ ro-RO:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
       courseC_harvester_loops3_2019:
+        courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
+          asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
+      courseC_harvester_loops3_2020:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
       courseC_harvester_loops5:
@@ -1892,6 +2138,9 @@ ro-RO:
       courseC_harvester_loops5_2019:
         courseC_harvester_loops5_a: Dacă vă împotmoliți, încercați să desenați întregul
           program și apoi să căutați modele repetate.
+      courseC_harvester_loops5_2020:
+        courseC_harvester_loops5_a: Dacă vă împotmoliți, încercați să desenați întregul
+          program și apoi să căutați modele repetate.
       courseC_harvester_loops6:
         courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
           de porumb.
@@ -1899,6 +2148,9 @@ ro-RO:
         courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
           de porumb.
       courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
+          de porumb.
+      courseC_harvester_loops6_2020:
         courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
           de porumb.
       courseC_harvester_loops_challenge1a:
@@ -1963,6 +2215,35 @@ ro-RO:
           </block>
           </statement>
           </block></xml>
+      courseC_harvester_loops_challenge1a_2020:
+        courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
+          și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
+          la fiecare colț.
+        courseC_harvester_loops_challenge1_c: |-
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">mutăÎnainte</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">întoarceLaDreapta</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
@@ -1972,11 +2253,16 @@ ro-RO:
       courseC_harvester_loops_challenge2_2019:
         courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
+      courseC_harvester_loops_challenge2_2020:
+        courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
+          porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
       courseC_maze_programming6:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
       courseC_maze_programming6_2019:
+        courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
+      courseC_maze_programming6_2020:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
       courseD_artist_nestedLoops1:
         courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
@@ -1985,6 +2271,9 @@ ro-RO:
         courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
           căutați modele care pot fi simplificate cu bucle.
       courseD_artist_nestedLoops1_2019:
+        courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
+          căutați modele care pot fi simplificate cu bucle.
+      courseD_artist_nestedLoops1_2020:
         courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
           căutați modele care pot fi simplificate cu bucle.
       courseD_artist_nestedLoops3:
@@ -1998,6 +2287,11 @@ ro-RO:
 
           Dacă pătratele dvs. au 20 de pixeli înălțime și au 20 de pixeli distanță între ele, cât de departe trebuie să săriți?
       courseD_artist_nestedLoops3_2019:
+        courseD_artist_nestedLoops3_a: |-
+          Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
+
+          Dacă pătratele dvs. au 20 de pixeli înălțime și au 20 de pixeli distanță între ele, cât de departe trebuie să săriți?
+      courseD_artist_nestedLoops3_2020:
         courseD_artist_nestedLoops3_a: |-
           Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
 
@@ -2038,6 +2332,18 @@ ro-RO:
           -   desenează un triunghi
           -   sări înainte 50 de pixeli
           -   întoarce la dreapta cu 45 de grade
+      courseD_artist_nestedLoops9_2020:
+        courseD_artist_nestedLoops9_c: |-
+          Utilizați două bucle imbricate:
+
+          -   Repetă de 8 ori
+          -   desenează un pătrat
+          -   sari înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
+          -   Repetă de 8 ori
+          -   desenează un triunghi
+          -   sări înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
       courseD_artist_project3:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
@@ -2059,6 +2365,13 @@ ro-RO:
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
           \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
           \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+      courseD_artist_project3_2020:
+        courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul
+          pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
+          în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
+          să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
           fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
@@ -2071,6 +2384,10 @@ ro-RO:
         courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
           fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
           (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
+      courseD_bee_conditionals8_2020:
+        courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
+          fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
+          (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
       courseD_bee_nestedLoops2:
         courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
@@ -2080,18 +2397,28 @@ ro-RO:
       courseD_bee_nestedLoops2_2019:
         courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
+      courseD_bee_nestedLoops2_2020:
+        courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele?
+          Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
       courseD_iceage_loops1:
         courseD_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseD_iceage_loops10:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
       courseD_iceage_loops10_2019:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseD_iceage_loops10_2020:
+        courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
       courseD_iceage_loops1_2019:
+        courseD_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
+      courseD_iceage_loops1_2020:
         courseD_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseD_iceage_loops2:
         courseD_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
           colțului și unul după colț.
       courseD_iceage_loops2_2019:
+        courseD_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
+          colțului și unul după colț.
+      courseD_iceage_loops2_2020:
         courseD_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
           colțului și unul după colț.
       courseD_maze_nestedLoops3:
@@ -2101,6 +2428,9 @@ ro-RO:
         courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops3_2019:
+        courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele?
+          Încercați să scrieți codul pas cu pas și căutați un model.
+      courseD_maze_nestedLoops3_2020:
         courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops4:
@@ -2115,6 +2445,10 @@ ro-RO:
         courseD_maze_nestedLoops4_b: Dacă modelul structural cu bucle este greu de
           identificat, încercați să îl codificați în întregime mai întâi și să observați
           ce anume se repetă de mai multe ori, înainte de a plasa în interior buclele.
+      courseD_maze_nestedLoops4_2020:
+        courseD_maze_nestedLoops4_b: Dacă modelul structural cu bucle este greu de
+          identificat, încercați să îl codificați în întregime mai întâi și să observați
+          ce anume se repetă de mai multe ori, înainte de a plasa în interior buclele.
       courseD_maze_nestedLoops5:
         courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți codul pas cu pas și căutați un model.
@@ -2124,6 +2458,9 @@ ro-RO:
       courseD_maze_nestedLoops5_2019:
         courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți codul pas cu pas și căutați un model.
+      courseD_maze_nestedLoops5_2020:
+        courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele?
+          Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops6:
         courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul
           pe hârtie fără bucle prima dată și căutați modele de structură.
@@ -2131,6 +2468,9 @@ ro-RO:
         courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul
           pe hârtie fără bucle prima dată și căutați modele de structură.
       courseD_maze_nestedLoops6_2019:
+        courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul
+          pe hârtie fără bucle prima dată și căutați modele de structură.
+      courseD_maze_nestedLoops6_2020:
         courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul
           pe hârtie fără bucle prima dată și căutați modele de structură.
       courseD_maze_ramp6:
@@ -2179,6 +2519,8 @@ ro-RO:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2020:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_concept3:
         courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
@@ -2224,6 +2566,11 @@ ro-RO:
           \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare
           dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru
           a completa spațiile goale din interiorul  buclei imbricate `pentru`."
+      courseF_artist_for4_2020:
+        courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie?
+          \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare
+          dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru
+          a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:
@@ -2248,6 +2595,10 @@ ro-RO:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și
           blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate,
           ambele în interiorul aceleiași bucle imbricate`pentru\`.
+      courseF_bee_for5_2020:
+        courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și
+          blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate,
+          ambele în interiorul aceleiași bucle imbricate`pentru\`.
       courseF_bee_for_challenge2:
         courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`:
           una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face
@@ -2265,6 +2616,14 @@ ro-RO:
 
           Celălaltă buclă "pentru" are nevoie doar de o buclă obișnuită pentru a face cantitatea de "miez" indicată de numărător.
       courseF_bee_for_challenge2_2019:
+        courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`:
+          una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face
+          miere.'
+        courseF_bee_for_challenge2_c: |-
+          Notați că o buclă `pentru` are nevoie de mai multe bucle obișnuite în interiorul acelei repetări de atîtea ori valoarea din`numărător` pentru a face modelul crescător al scărilor.
+
+          Celălaltă buclă "pentru" are nevoie doar de o buclă obișnuită pentru a face cantitatea de "miez" indicată de numărător.
+      courseF_bee_for_challenge2_2020:
         courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`:
           una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face
           miere.'

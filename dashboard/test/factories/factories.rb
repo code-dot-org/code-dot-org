@@ -283,6 +283,16 @@ FactoryGirl.define do
       end
     end
 
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
+      end
+    end
+
     trait :sso_provider do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
@@ -1070,6 +1080,8 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).next).to_s}
+    address_line1 "123 Sample St"
+    address_line2 "attn: Main Office"
     city "Seattle"
     state "WA"
     zip "98122"

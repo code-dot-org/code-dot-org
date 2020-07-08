@@ -20,9 +20,15 @@ el-GR:
       2-3 Artist 7:
         draw_rect:
           name: draw_rect
+          parameters:
+            width: πλάτος
+            height: ύψος
       2-3 Artist Debugging 10:
         draw square:
           name: σχεδίασε τετράγωνο
+          parameters:
+            width: πλάτος
+            height: ύψος
         jump to controller top left:
           name: μετάβαση σε ελεγκτή επάνω αριστερά
         jump to middle:
@@ -196,6 +202,10 @@ el-GR:
       Course 4 Bee Params 6:
         get 5 nectar:
           name: πάρε 5 νέκταρ
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: μέλι
       Course 4 Play Lab Params 1:
         jump:
           name: πήδα
@@ -204,18 +214,43 @@ el-GR:
           name: level_up
         score_points:
           name: score_points
+          parameters:
+            points: πόντοι
       Course 4 Play Lab Params 2:
         jump:
           name: πήδα
       Course 4 Play Lab Params 3:
         jump:
           name: πήδα
+          parameters:
+            height: ύψος
+            actor: ηθοποιός
       Course 4 Play Lab Params 4:
         do something:
           name: κάνε κάτι
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: ηθοποιός
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: ηθοποιός
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: ηθοποιός
+            speed: ταχύτητα
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: ηθοποιός
+            speed: ταχύτητα
       Course 4 Play Lab Params 9:
         score_points:
           name: score_points
+          parameters:
+            points: πόντοι
       Course 4 Play Lab Vars 1:
         set score:
           name: όρισε σκορ
@@ -234,9 +269,14 @@ el-GR:
       Course 4 SCF 1a:
         get nectar:
           name: πάρε νέκταρ
+          parameters:
+            counter: μετρητής
       Course 4 SCF 3:
         do something:
           name: κάνε κάτι
+        draw an octagon:
+          parameters:
+            length: μήκος
       'Course E: Play Lab Project':
         do something:
           name: κάνε κάτι
@@ -250,10 +290,15 @@ el-GR:
           name: level_up
         score_points:
           name: score_points
+          parameters:
+            points: πόντοι
       Function intro Ryan:
         build bridge:
           name: χτίσε γέφυρα
       Function intro Ryan_2019:
+        build bridge:
+          name: χτίσε γέφυρα
+      Function intro Ryan_2020:
         build bridge:
           name: χτίσε γέφυρα
       Geometric Sun:
@@ -300,17 +345,30 @@ el-GR:
       InspirationalArtwork:
         n-sided shape:
           name: σχήμα n όψεων
+          parameters:
+            sides: πλευρές
+            length: μήκος
         draw a loop:
           name: σχεδίασε μια επανάληψη
+          parameters:
+            length: μήκος
+            sides: πλευρές
         draw spiral circle:
           name: σχεδίασε έναν σπιράλ κύκλο
+          parameters:
+            size: μέγεθος
       InspirationalArtwork_2018:
         draw a loop:
           name: σχεδίασε μια επανάληψη
+          parameters:
+            length: μήκος
+            sides: πλευρές
         n-sided shape:
           name: σχήμα n όψεων
         draw spiral circle:
           name: σχεδίασε έναν σπιράλ κύκλο
+          parameters:
+            size: μέγεθος
       K-1 Artist2 3:
         draw roof:
           name: σχεδίαση οροφή
@@ -326,12 +384,20 @@ el-GR:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: καθάρισε το μονοπάτι
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: καθάρισε το μονοπάτι
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: διόρθωσε το μακρύ μονοπάτι
         fix short path:
           name: διόρθωσε το σύντομο μονοπάτι
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: διόρθωσε το μακρύ μονοπάτι
+        fix short path:
+          name: διόρθωσε το σύντομο μονοπάτι
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: διόρθωσε το μακρύ μονοπάτι
         fix short path:
@@ -346,12 +412,22 @@ el-GR:
           name: χτίσε μικρή γέφυρα
         build long bridge:
           name: χτίσε εκτενή γέφυρα
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: χτίσε μικρή γέφυρα
+        build long bridge:
+          name: χτίσε εκτενή γέφυρα
       MC_HOC_2017_FP20x20:
         function 1:
           name: συνάρτηση 1
         function 2:
           name: συνάρτηση 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: συνάρτηση 1
+        function 2:
+          name: συνάρτηση 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: συνάρτηση 1
         function 2:
@@ -384,38 +460,80 @@ el-GR:
           name: κάνε κάτι
         draw a hexagon:
           name: σχεδίασε ένα εξάγωνο
+          parameters:
+            length: μήκος
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            sides: πλευρές
+            length: μήκος
         do something:
           name: κάνε κάτι
+          parameters:
+            sides: πλευρές
+            length: μήκος
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 15:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
+          parameters:
+            points: πόντοι
+            length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
+          parameters:
+            radius: ακτίνα
         draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
+            length: μήκος
+            repeat: επανάλαβε
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+          parameters:
+            length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
+          parameters:
+            sides: πλευρές
+            length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
+          parameters:
+            length: μήκος
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Artist Params 2:
         do something:
           name: κάνε κάτι
@@ -425,45 +543,99 @@ el-GR:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: μήκος
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: σχεδίασε ένα πεντάγωνο
+          parameters:
+            length: μήκος
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+          parameters:
+            length: μήκος
         draw a hexagon:
           name: σχεδίασε ένα εξάγωνο
+          parameters:
+            length: μήκος
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
+        draw a sqaure:
+          parameters:
+            length: μήκος
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+          parameters:
+            length: μήκος
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: μήκος
       NEW Course 4 Artist Params 9:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
         do something:
           name: κάνε κάτι
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       NEW Course 4 Play Lab Params 11:
         jump:
           name: πήδα
+          parameters:
+            height: ύψος
+            actor: ηθοποιός
+        patrol:
+          parameters:
+            actor: ηθοποιός
+            speed: ταχύτητα
       New Artist Project:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
+          parameters:
+            points: πόντοι
+            length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
+          parameters:
+            radius: ακτίνα
         draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
+            length: μήκος
+            repeat: επανάλαβε
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+          parameters:
+            length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
+          parameters:
+            sides: πλευρές
+            length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
+          parameters:
+            length: μήκος
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
       New Minecraft Hero Project:
         function 1:
           name: συνάρτηση 1
@@ -472,6 +644,13 @@ el-GR:
       New Play Lab Project:
         jump:
           name: πήδα
+          parameters:
+            height: ύψος
+            actor: ηθοποιός
+        patrol:
+          parameters:
+            actor: ηθοποιός
+            speed: ταχύτητα
       Robot Doodle:
         draw head:
           name: σχεδίασε κεφάλι
@@ -483,7 +662,7 @@ el-GR:
           name: σχεδίασε ένα λουλούδι
       Standalone_Artist_8:
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
       Standalone_Artist_9:
         my function:
           name: η συνάρτηση μου
@@ -515,10 +694,23 @@ el-GR:
         do something:
           name: κάνε κάτι
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: χρώμα
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            sides: πλευρές
         do something:
           name: κάνε κάτι
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: μήκος
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: μήκος
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"απλή" λύση'
@@ -531,7 +723,29 @@ el-GR:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: πιθανή λύση
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: πιθανή λύση
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: κάνε κάτι
+      courseC_data wizard_2020:
         do something:
           name: κάνε κάτι
       courseD_artist_binary1:
@@ -543,6 +757,9 @@ el-GR:
       courseD_artist_binary1_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary1_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binary2:
         draw:
           name: ισοπαλία
@@ -550,6 +767,9 @@ el-GR:
         draw:
           name: ισοπαλία
       courseD_artist_binary2_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binary2_2020:
         draw:
           name: ισοπαλία
       courseD_artist_binary3:
@@ -561,6 +781,9 @@ el-GR:
       courseD_artist_binary3_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary3_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binary4:
         draw:
           name: ισοπαλία
@@ -568,6 +791,9 @@ el-GR:
         draw:
           name: ισοπαλία
       courseD_artist_binary4_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binary4_2020:
         draw:
           name: ισοπαλία
       courseD_artist_binary5:
@@ -579,6 +805,9 @@ el-GR:
       courseD_artist_binary5_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary5_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binary6:
         draw:
           name: ισοπαλία
@@ -586,6 +815,9 @@ el-GR:
         draw:
           name: ισοπαλία
       courseD_artist_binary6_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binary6_2020:
         draw:
           name: ισοπαλία
       courseD_artist_binary7:
@@ -597,6 +829,9 @@ el-GR:
       courseD_artist_binary7_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary7_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binary8:
         draw:
           name: ισοπαλία
@@ -604,6 +839,9 @@ el-GR:
         draw:
           name: ισοπαλία
       courseD_artist_binary8_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binary8_2020:
         draw:
           name: ισοπαλία
       courseD_artist_binary8_predict1:
@@ -615,10 +853,16 @@ el-GR:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binaryFP_2018:
         draw:
           name: ισοπαλία
       courseD_artist_binaryFP_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binaryFP_2020:
         draw:
           name: ισοπαλία
       courseD_artist_binary_challenge1_2018:
@@ -627,10 +871,16 @@ el-GR:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: ισοπαλία
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: ισοπαλία
       courseD_artist_binary_challenge2_2018:
         draw:
           name: ισοπαλία
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: ισοπαλία
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: ισοπαλία
       courseD_autorun_binary2_2019:
@@ -686,6 +936,9 @@ el-GR:
       courseE_artist_functions10_2019:
         do something:
           name: κάνε κάτι
+      courseE_artist_functions10_2020:
+        do something:
+          name: κάνε κάτι
       courseE_artist_functions2:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
@@ -695,6 +948,9 @@ el-GR:
       courseE_artist_functions2_2019:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: σχεδίασε ένα τετράγωνο
       courseE_artist_functions2_copy:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
@@ -702,6 +958,9 @@ el-GR:
         draw a star:
           name: σχεδίασε ένα αστέρι
       courseE_artist_functions3_2019:
+        draw a star:
+          name: σχεδίασε ένα αστέρι
+      courseE_artist_functions3_2020:
         draw a star:
           name: σχεδίασε ένα αστέρι
       courseE_artist_functions4:
@@ -719,6 +978,9 @@ el-GR:
       courseE_artist_functions5_2019:
         draw a star:
           name: σχεδίασε ένα αστέρι
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: σχεδίασε ένα αστέρι
       courseE_artist_functions5_copy:
         draw a star:
           name: σχεδίασε ένα αστέρι
@@ -726,6 +988,9 @@ el-GR:
         draw a house:
           name: σχεδίασε ένα σπίτι
       courseE_artist_functions7_2018:
+        draw a house:
+          name: σχεδίασε ένα σπίτι
+      courseE_artist_functions7_2020:
         draw a house:
           name: σχεδίασε ένα σπίτι
       courseE_artist_functions8:
@@ -743,12 +1008,22 @@ el-GR:
           name: κάνε κάτι
         draw square:
           name: σχεδίασε τετράγωνο
+      courseE_artist_functions8_2020:
+        do something:
+          name: κάνε κάτι
+        draw square:
+          name: σχεδίασε τετράγωνο
       courseE_artist_functions8a_2018:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
         do something:
           name: κάνε κάτι
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: σχεδίασε ένα τετράγωνο
+        do something:
+          name: κάνε κάτι
+      courseE_artist_functions8a_2020:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
         do something:
@@ -763,12 +1038,22 @@ el-GR:
           name: σχεδίασε τετράγωνο
         do something:
           name: κάνε κάτι
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: σχεδίασε τετράγωνο
+        do something:
+          name: κάνε κάτι
       courseE_artist_functions8c_2018:
         draw square:
           name: σχεδίασε τετράγωνο
         do something:
           name: κάνε κάτι
       courseE_artist_functions8c_2019:
+        draw square:
+          name: σχεδίασε τετράγωνο
+        do something:
+          name: κάνε κάτι
+      courseE_artist_functions8c_2020:
         draw square:
           name: σχεδίασε τετράγωνο
         do something:
@@ -788,10 +1073,18 @@ el-GR:
           name: κάνε κάτι
         draw triangle:
           name: σχεδίασε τρίγωνο
+      courseE_artist_functions9_2020:
+        do something:
+          name: κάνε κάτι
+        draw triangle:
+          name: σχεδίασε τρίγωνο
       courseE_artist_functionsProj_2018:
         draw square:
           name: σχεδίασε τετράγωνο
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: σχεδίασε τετράγωνο
+      courseE_artist_functionsProj_2020:
         draw square:
           name: σχεδίασε τετράγωνο
       courseE_artist_functions_challenge1:
@@ -803,6 +1096,9 @@ el-GR:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: κάνε κάτι
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: κάνε κάτι
       courseE_artist_functions_challenge2:
         do something:
           name: κάνε κάτι
@@ -812,6 +1108,9 @@ el-GR:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: κάνε κάτι
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: κάνε κάτι
       courseE_artist_functions_predict1:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
@@ -819,6 +1118,9 @@ el-GR:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: σχεδίασε ένα τετράγωνο
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
       courseE_artist_functions_predict1_copy:
@@ -831,6 +1133,9 @@ el-GR:
         do something:
           name: κάνε κάτι
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: κάνε κάτι
+      courseE_artist_functions_predict2_2020:
         do something:
           name: κάνε κάτι
       courseE_bee_functions1:
@@ -884,72 +1189,196 @@ el-GR:
       courseF_artist_fwp1:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+        checker:
+          parameters:
+            size: μέγεθος
+            color: χρώμα
         do something:
           name: κάνε κάτι
+        Make gingham:
+          parameters:
+            size: μέγεθος
+        black outline:
+          parameters:
+            length: μήκος
       courseF_artist_fwp2:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
+        checker:
+          parameters:
+            size: μέγεθος
+            color: χρώμα
         do something:
           name: κάνε κάτι
+        Make gingham:
+          parameters:
+            size: μέγεθος
+        black outline:
+          parameters:
+            length: μήκος
       courseF_artist_fwp2_predict1:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
       courseF_artist_fwp3:
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
+        draw a square2:
+          parameters:
+            size: μέγεθος
+        filled square:
+          parameters:
+            size: μέγεθος
+            color: χρώμα
+        black outline:
+          parameters:
+            length: μήκος
       courseF_artist_fwp4:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       courseF_artist_fwp5:
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            length: μήκος
+            sides: πλευρές
       courseF_artist_fwp6:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
+          parameters:
+            length: μήκος
+            sides: πλευρές
       courseF_artist_fwp7:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
+          parameters:
+            length: μήκος
+            sides: πλευρές
+            min: ελάχιστο
       courseF_artist_fwp8:
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
+          parameters:
+            length: μήκος
+            sides: πλευρές
+            min: ελάχιστο
       courseF_artist_fwp9:
         draw a star:
           name: σχεδίασε ένα αστέρι
+          description: Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με
+            δεδομένο μήκος
+          parameters:
+            points: πόντοι
+            length: μήκος
         draw a circle:
           name: Σχεδίασε ένα κύκλο
+          description: να σχεδιάζει ένα κύκλο δεδομένης ακτίνας
+          parameters:
+            radius: ακτίνα
         draw a pinwheel:
-          name: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+          name: να σχεδιάζει έναν μύλο
+          parameters:
+            sides: πλευρές
+            length: μήκος
+            repeat: επανάλαβε
         draw a triangle:
           name: σχεδίασε ένα τρίγωνο
+          parameters:
+            length: μήκος
         draw a shape:
-          name: σχεδίασε ένα σχήμα
+          name: να σχεδιάζει ένα σχήμα
+          parameters:
+            sides: πλευρές
+            length: μήκος
         draw a house:
           name: σχεδίασε ένα σπίτι
+          parameters:
+            length: μήκος
         draw a square:
           name: σχεδίασε ένα τετράγωνο
+          parameters:
+            length: μήκος
         draw a spiral edge:
           name: σχεδίασε μια άκρη του σπιράλ
+          parameters:
+            length: μήκος
+            sides: πλευρές
+            min: ελάχιστο
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: χρώμα
         draw a polygon:
           name: σχεδίασε ένα πολύγωνο
+          parameters:
+            sides: πλευρές
         do something:
           name: κάνε κάτι
       courseF_artist_fwp_challenge2:
         do something:
           name: κάνε κάτι
+        draw an octagon:
+          parameters:
+            length: μήκος
       courseF_bee_functions8a:
         do something:
           name: κάνε κάτι
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: μήκος
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: πλάτος
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: πλάτος
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: πλάτος
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: πλάτος
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: πλάτος
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: μήκος
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: μήκος
       courseF_bee_variables_7_2018:
         collect:
           name: σύλλεξε
       courseF_bee_variables_7_2019:
         collect:
           name: σύλλεξε
+      courseF_bee_variables_7_2020:
+        collect:
+          name: σύλλεξε
       courseF_bee_variables_8_2018:
         collect:
           name: σύλλεξε
       courseF_bee_variables_8_2019:
+        collect:
+          name: σύλλεξε
+      courseF_bee_variables_8_2020:
         collect:
           name: σύλλεξε
       grade5_artist_binary11:

@@ -1834,6 +1834,116 @@ ko-KR:
           </next>
           </block>
           </xml>
+      CourseD_Dance_2020_01:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          -   댄서가 화면에 나타나도록 하세요.
+
+          _이 단계는 4번째 마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   다른 노래를 골라 재생하세요.
+          -   댄서를 다른 위치로 옮기세요.
+          -   댄서를 한 명 이상 만드세요.
+      CourseD_Dance_2020_02:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   댄서가 동작을 수행해야 합니다.
+          -   화살표 키를 눌러야 합니다.
+
+          _이 레벨은 4마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> 블록을 한 개 이상 사용하세요.
+      CourseD_Dance_2020_03:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   두 댄서 모두 동작을 수행해야 합니다.
+          -   화살표 키를 눌러야 합니다.
+
+          _이 레벨은 4마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   댄서가 왼쪽, 오른쪽 화살표 키에 반응하게 하세요.
+      CourseD_Dance_2020_04:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          -   댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
+
+          _이 단계는 8번째 마디 후에 끝납니다._
+      CourseD_Dance_2020_05:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          -   6번째 마디 후 댄서는 4번째 마디 후와는 다른 춤을 추고 있어야 합니다.
+
+          _이 단계는 12번째 마디 후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   댄서들이 동작을 전환할 때마다 배경을 바꿉니다.
+      CourseD_Dance_2020_06:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   리드 댄서 한 명과 백업 댄서 여럿을 생성해세요.
+
+          _이 레벨은 7마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   다수의 백업 댄서 그룹을 생성하세요.
+      CourseD_Dance_2020_07:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   음악이 시작되고 최소 한 댄서의 크기를 변경하세요.
+
+          _이 레벨은 6마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요.
+      CourseD_Dance_2020_08:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   최소 한 댄서의 색조를 변경하세요.
+
+          _이 레벨은 6마디 이후에 끝납니다._
+        tint_hint: 고른 색과 똑같이 댄서의 색이 바뀌지 않는 거 눈치채셨나요? **색조**는 사용자가 고른 색과 댄서의 색을 혼합하기
+          때문입니다.
+      CourseD_Dance_2020_09:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   “마침” 단추를 누르면 됩니다!
+        repeat_every_ideas: |-
+          **아이디어가 필요하세요?**
+
+          -   댄서가 커지도록 계속 크기를 변경하세요.
+          -   댄서가 돌 수 있도록 계속 회전을 변경하세요.
+          -   댄서가 화면을 가로질러 움직이도록 수평 또는 수직 위치를 계속 변경하세요.
+
+          _반대되는 효과가 나타나도록 음수를 사용할 수도 있습니다!_
+        next_previous: |-
+          **선택 과제**
+
+          -   이 새 이벤트 블록을 사용하면 `(Random)`, `(Next)`, `(Previous)`으로 동작을 설정하는 식으로 댄스 동작 목록을 반복하게 할 수도 있습니다.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      CourseD_Dance_2020_bonus1:
+        alternate: 교대 블록은 “댄서” 카테고리에 있습니다.
       CourseD_Dance_Party_01:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -1933,9 +2043,17 @@ ko-KR:
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
           볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?"
+      CourseE_HOC 2018 Level_10_2020:
+        voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
+          볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?"
       CourseE_HOC 2018 Level_7a:
         aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
+      CourseE_HOC 2018 Level_7a_2020:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
       CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
+          확인하세요!
+      CourseE_HOC 2018 Level_9b_2020:
         voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
           확인하세요!
       Dance_2019_01:
@@ -2152,6 +2270,9 @@ ko-KR:
       Function intro Ryan_2019:
         Function_intro_Ryan_b: 함수를 올바르게 호출할 경우 이동 경로입니다.
         Function_intro_Ryan_a: 프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 해결해보세요.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_b: 함수를 올바르게 호출할 경우 이동 경로입니다.
+        Function_intro_Ryan_a: 프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 해결해보세요.
       HOC 2018 Level_10:
         voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
           볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?"
@@ -2170,6 +2291,11 @@ ko-KR:
           블록 아래 공간에 맞추세요.
         MC_HOC_2017_01_RETRY_b: "'실행'을 클릭해 Agent 코드를 실행하는 것도 잊지 마세요."
         MC_HOC_2017_01_RETRY_c: Agent를 통해 모든 코드를 실행하면 방향키를 사용해 플레이어를 이동할 수 있습니다.
+      MC_HOC_2017_01_RETRY_2020:
+        MC_HOC_2017_01_RETRY_a: 툴 박스에 있는 '앞으로 이동하기' 블록을 작업 공간으로 끌어서 이동한 다음, '실행하면'
+          블록 아래 공간에 맞추세요.
+        MC_HOC_2017_01_RETRY_b: "'실행'을 클릭해 Agent 코드를 실행하는 것도 잊지 마세요."
+        MC_HOC_2017_01_RETRY_c: Agent를 통해 모든 코드를 실행하면 방향키를 사용해 플레이어를 이동할 수 있습니다.
       MC_HOC_2017_02_Cole:
         MC_HOC_2017_02_Cole_a: Agent를 두 칸 앞에 있는 감압판 위로 움직이면 문이 열리고 플레이어가 들어갈 수 있습니다.
         MC_HOC_2017_02_Cole_b: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
@@ -2182,10 +2308,19 @@ ko-KR:
           초기화하면서 잘못된 부분을 찾아 보세요."
         MC_HOC_2017_02_Cole_c: Agent가 문을 열면 방향키를 사용해 플레이어를 지도로 움직이세요!
         MC_HOC_2017_02_Cole_d: Agent가 지도에 표시된 경로를 따르고 있는지 확인하십시오!
+      MC_HOC_2017_02_Cole_2020:
+        MC_HOC_2017_02_Cole_a: Agent를 두 칸 앞에 있는 감압판 위로 움직이면 문이 열리고 플레이어가 들어갈 수 있습니다.
+        MC_HOC_2017_02_Cole_b: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
+          초기화하면서 잘못된 부분을 찾아 보세요."
+        MC_HOC_2017_02_Cole_c: Agent가 문을 열면 방향키를 사용해 플레이어를 지도로 움직이세요!
+        MC_HOC_2017_02_Cole_d: Agent가 지도에 표시된 경로를 따르고 있는지 확인하십시오!
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_a: Agent가 감압판 위로 올라가면 방향키를 사용해 나침반 쪽으로 플레이어를 움직이세요!
         MC_HOC_2017_03_Cole_b: 코드가 너무 긴 것 같다고요?  '반복' 루프를 사용해 코드 길이를 줄이는 방법을 알아 보세요!
       MC_HOC_2017_03_Cole_2019:
+        MC_HOC_2017_03_Cole_a: Agent가 감압판 위로 올라가면 방향키를 사용해 나침반 쪽으로 플레이어를 움직이세요!
+        MC_HOC_2017_03_Cole_b: 코드가 너무 긴 것 같다고요?  '반복' 루프를 사용해 코드 길이를 줄이는 방법을 알아 보세요!
+      MC_HOC_2017_03_Cole_2020:
         MC_HOC_2017_03_Cole_a: Agent가 감압판 위로 올라가면 방향키를 사용해 나침반 쪽으로 플레이어를 움직이세요!
         MC_HOC_2017_03_Cole_b: 코드가 너무 긴 것 같다고요?  '반복' 루프를 사용해 코드 길이를 줄이는 방법을 알아 보세요!
       MC_HOC_2017_04POINT5_RYAN:
@@ -2193,6 +2328,10 @@ ko-KR:
         MC_HOC_2017_04POINT5_RYAN_a: Agent에서 첫 번째 감압판을 밟으면 알렉스나 스티브가 도끼 쪽으로 이동할 수
           있습니다.
       MC_HOC_2017_04POINT5_RYAN_2019:
+        MC_HOC_2017_04POINT5_RYAN_b: "'오른쪽으로 회전' 블록을 사용해 Agent의 이동 방향을 바꾸세요."
+        MC_HOC_2017_04POINT5_RYAN_a: Agent에서 첫 번째 감압판을 밟으면 알렉스나 스티브가 도끼 쪽으로 이동할 수
+          있습니다.
+      MC_HOC_2017_04POINT5_RYAN_2020:
         MC_HOC_2017_04POINT5_RYAN_b: "'오른쪽으로 회전' 블록을 사용해 Agent의 이동 방향을 바꾸세요."
         MC_HOC_2017_04POINT5_RYAN_a: Agent에서 첫 번째 감압판을 밟으면 알렉스나 스티브가 도끼 쪽으로 이동할 수
           있습니다.
@@ -2206,6 +2345,11 @@ ko-KR:
         MC_HOC_2017_04_Cole_c: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
           초기화하면서 잘못된 부분을 찾아 보세요."
         MC_HOC_2017_04_Cole_b: Agent가 감압판 위로 올라가면 문을 열어 플레이어가 들어갈 수 있어요.
+      MC_HOC_2017_04_Cole_2020:
+        MC_HOC_2017_04_Cole_a: Agent가 '앞으로 7번 이동'하게 하려면 '반복' 루프를 어떻게 사용하면 될까요?
+        MC_HOC_2017_04_Cole_c: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
+          초기화하면서 잘못된 부분을 찾아 보세요."
+        MC_HOC_2017_04_Cole_b: Agent가 감압판 위로 올라가면 문을 열어 플레이어가 들어갈 수 있어요.
       MC_HOC_2017_05_Cole:
         MC_HOC_2017_05_Cole_a: 루프 안에는 코드를 한 가지 이상 넣을 수 있답니다.  '반복' 안에 판자 설치와 앞으로 이동하기를
           **모두** 넣어 퍼즐을 완성해보세요.
@@ -2214,10 +2358,17 @@ ko-KR:
         MC_HOC_2017_05_Cole_a: 루프 안에는 코드를 한 가지 이상 넣을 수 있답니다.  '반복' 안에 판자 설치와 앞으로 이동하기를
           **모두** 넣어 퍼즐을 완성해보세요.
         MC_HOC_2017_05_Cole_b: Agent강을 건너는 다리를 짓게 하세요.
+      MC_HOC_2017_05_Cole_2020:
+        MC_HOC_2017_05_Cole_a: 루프 안에는 코드를 한 가지 이상 넣을 수 있답니다.  '반복' 안에 판자 설치와 앞으로 이동하기를
+          **모두** 넣어 퍼즐을 완성해보세요.
+        MC_HOC_2017_05_Cole_b: Agent강을 건너는 다리를 짓게 하세요.
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_a: 루프를 사용하면 얼만큼 반복할 수 있을까요?  몇 번 반복하는 것이 _정답_일까요?
         MC_HOC_2017_06_Cole_b: 'Agent를 물 건너편에 다리를 세우도록 도와주세요! '
       MC_HOC_2017_06_Cole_2019:
+        MC_HOC_2017_06_Cole_a: 루프를 사용하면 얼만큼 반복할 수 있을까요?  몇 번 반복하는 것이 _정답_일까요?
+        MC_HOC_2017_06_Cole_b: 'Agent를 물 건너편에 다리를 세우도록 도와주세요! '
+      MC_HOC_2017_06_Cole_2020:
         MC_HOC_2017_06_Cole_a: 루프를 사용하면 얼만큼 반복할 수 있을까요?  몇 번 반복하는 것이 _정답_일까요?
         MC_HOC_2017_06_Cole_b: 'Agent를 물 건너편에 다리를 세우도록 도와주세요! '
       MC_HOC_2017_07_Cole:
@@ -2230,10 +2381,18 @@ ko-KR:
         MC_HOC_2017_07_Cole_a: 이 퍼즐을 해결하려면 '경로 확보하기' 함수로 무슨 일을 할 수 있는지 알아보고 필요한 만큼
           반복해야 합니다. 툴 박스에 '경로 확보하기'라고 표시된 작은 녹색 블록을 사용하세요.
         MC_HOC_2017_07_Cole_b: 함수 블록을 툴 박스에 있는 다른 블록과 조합하면서 퍼즐을 해결하는 방법을 찾아보세요.
+      MC_HOC_2017_07_Cole_2020:
+        MC_HOC_2017_07_Cole_c: Agent에게 필요한 것은 Minecart로 가는 바른 길입니다.
+        MC_HOC_2017_07_Cole_a: 이 퍼즐을 해결하려면 '경로 확보하기' 함수로 무슨 일을 할 수 있는지 알아보고 필요한 만큼
+          반복해야 합니다. 툴 박스에 '경로 확보하기'라고 표시된 작은 녹색 블록을 사용하세요.
+        MC_HOC_2017_07_Cole_b: 함수 블록을 툴 박스에 있는 다른 블록과 조합하면서 퍼즐을 해결하는 방법을 찾아보세요.
       MC_HOC_2017_10_RETRY:
         MC_HOC_2017_10_Cole_b: 어디를 가야할지 모르십니까? 점선이 있는지 확인 하십시오!
         MC_HOC_2017_10_Cole_a: 함수를 사용하면 퍼즐을 좀 더 쉽게 해결할 수 있답니다!
       MC_HOC_2017_10_RETRY_2019:
+        MC_HOC_2017_10_Cole_b: 어디를 가야할지 모르십니까? 점선이 있는지 확인 하십시오!
+        MC_HOC_2017_10_Cole_a: 함수를 사용하면 퍼즐을 좀 더 쉽게 해결할 수 있답니다!
+      MC_HOC_2017_10_RETRY_2020:
         MC_HOC_2017_10_Cole_b: 어디를 가야할지 모르십니까? 점선이 있는지 확인 하십시오!
         MC_HOC_2017_10_Cole_a: 함수를 사용하면 퍼즐을 좀 더 쉽게 해결할 수 있답니다!
       MC_HOC_2017_Ali:
@@ -2246,9 +2405,16 @@ ko-KR:
           초기화하면서 잘못된 부분을 찾아 보세요."
         MC_HOC_2017_08_RY_b: 이 퍼즐을 해결하는 방법은 아주 다양해요.  여러 방식을 시도해보세요!
         MC_HOC_2017_08_RY_c: 용암을 통과하는 간단한 경로를 위해 점선을 따라 가보십시오.
+      MC_HOC_2017_Ali_2020:
+        MC_HOC_2017_08_RY_a: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
+          초기화하면서 잘못된 부분을 찾아 보세요."
+        MC_HOC_2017_08_RY_b: 이 퍼즐을 해결하는 방법은 아주 다양해요.  여러 방식을 시도해보세요!
+        MC_HOC_2017_08_RY_c: 용암을 통과하는 간단한 경로를 위해 점선을 따라 가보십시오.
       MC_HOC_2017_FP20x20:
         MC_HOC_2017_13_Cole_a: Agent를 통해 필요한 곳에 다리를 지어 알렉스나 스티브가 이동할 수 있게 해주세요.
       MC_HOC_2017_FP20x20_2019:
+        MC_HOC_2017_13_Cole_a: Agent를 통해 필요한 곳에 다리를 지어 알렉스나 스티브가 이동할 수 있게 해주세요.
+      MC_HOC_2017_FP20x20_2020:
         MC_HOC_2017_13_Cole_a: Agent를 통해 필요한 곳에 다리를 지어 알렉스나 스티브가 이동할 수 있게 해주세요.
       NEW Course 4 Artist Functions 13:
         NEW_Course_4_Artist_Functions_13_a: "\\`정사각형의 선 그리기 '기능을 수정하면 두 번 호출하지 않아도
@@ -2399,16 +2565,26 @@ ko-KR:
         mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
         mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
         mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
+      Overworld Avoid Monsters_2020:
+        mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
+        mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
+        mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
       Overworld Chop Tree:
         mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
         mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Tree_2019:
         mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
         mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
+      Overworld Chop Tree_2020:
+        mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
+        mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Trees:
         mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
         mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Trees_2019:
+        mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
+        mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
+      Overworld Chop Trees_2020:
         mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
         mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld House Frame Chosen:
@@ -2419,10 +2595,17 @@ ko-KR:
         mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
         mc_6_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
         mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
+      Overworld House Frame Chosen_2020:
+        mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
+        mc_6_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
+        mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Move to Sheep:
         mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
         mc_1_b: "'앞으로 이동`블록이`실행하면\\` 블록에 붙여지는지 확인하십시오.  "
       Overworld Move to Sheep_2019:
+        mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
+        mc_1_b: "'앞으로 이동`블록이`실행하면\\` 블록에 붙여지는지 확인하십시오.  "
+      Overworld Move to Sheep_2020:
         mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
         mc_1_b: "'앞으로 이동`블록이`실행하면\\` 블록에 붙여지는지 확인하십시오.  "
       Overworld Place Wall:
@@ -2430,6 +2613,10 @@ ko-KR:
         mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
         mc_5_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Overworld Place Wall_2019:
+        mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
+        mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
+        mc_5_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
+      Overworld Place Wall_2020:
         mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
         mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
         mc_5_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
@@ -2441,10 +2628,17 @@ ko-KR:
         mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
         mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
         mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
+      Overworld Plant Crops_2020:
+        mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
+        mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
+        mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Powered Minecart:
         mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해\`놓기 레일'을 사용하십시오.
         mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Powered Minecart_2019:
+        mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해\`놓기 레일'을 사용하십시오.
+        mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
+      Overworld Powered Minecart_2020:
         mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해\`놓기 레일'을 사용하십시오.
         mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Shear Sheep:
@@ -2452,6 +2646,10 @@ ko-KR:
         mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
         mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Overworld Shear Sheep_2019:
+        mc_3_a: "\\`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
+        mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
+        mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
+      Overworld Shear Sheep_2020:
         mc_3_a: "\\`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
         mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
         mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
@@ -2463,11 +2661,19 @@ ko-KR:
         mc_11_a: 이미 모든 코드는 용암에 대해 확인하고 조절하도록 설정되어 있습니다. 당신이 할 것은 그저 하나의 블록을 더하여 움직이도록
           하는 것입니다.
         mc_11_b: "'앞으로 가기' 명령어가 If문 안에 가야할까요, 아니면 그 후에 가야할까요?"
+      Underground Avoiding Lava_2020:
+        mc_11_a: 이미 모든 코드는 용암에 대해 확인하고 조절하도록 설정되어 있습니다. 당신이 할 것은 그저 하나의 블록을 더하여 움직이도록
+          하는 것입니다.
+        mc_11_b: "'앞으로 가기' 명령어가 If문 안에 가야할까요, 아니면 그 후에 가야할까요?"
       Underground If Statements:
         mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
         mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
       Underground If Statements_2019:
+        mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
+        mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
+        mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
+      Underground If Statements_2020:
         mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
         mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
@@ -2481,6 +2687,11 @@ ko-KR:
         mc_10_b: 용암의 가장자리에 서 있을때, 'place cobblestone ahead' 명령어를 사용해 안전한 길을 만드세요.
           그러면 그 위를 걸어갈 수 있습니다!
         mc_10_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
+      Underground Iron_2020:
+        mc_10_a: 횃불 뒤에 얼룩진 공간이 바로 철 블록입니다! 어떻게 저 곳으로 갈 건가요?
+        mc_10_b: 용암의 가장자리에 서 있을때, 'place cobblestone ahead' 명령어를 사용해 안전한 길을 만드세요.
+          그러면 그 위를 걸어갈 수 있습니다!
+        mc_10_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Underground Mining Coal:
         mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
         mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
@@ -2489,7 +2700,15 @@ ko-KR:
         mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
         mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
         mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      Underground Mining Coal_2020:
+        mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
+        mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
+        mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
       behaviors 3:
+        behavior hint: |-
+          잘 생각해 보세요!
+          \*어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 3_2020:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?
@@ -2497,7 +2716,15 @@ ko-KR:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 3a_2020:
+        behavior hint: |-
+          잘 생각해 보세요!
+          \*어떤 값이 각 개체의 속도를 조절하나요?
       behaviors 6:
+        behavior hint: |-
+          잘 생각해 보세요!
+          \*어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 6_2020:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?
@@ -2505,6 +2732,8 @@ ko-KR:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: '반복 블럭안에 실행 블럭들을 넣으면 반복해서 실행이 됩니다. 한번 해보세요! '
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
@@ -2635,6 +2864,8 @@ ko-KR:
         courseB_maze_seq5_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseB_maze_seq6_2019:
         courseB_maze_seq5_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+      courseB_maze_seq6_2020:
+        courseB_maze_seq5_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseB_maze_seq8:
         courseB_maze_seq8_b: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseB_maze_seq9:
@@ -2643,6 +2874,8 @@ ko-KR:
         courseB_maze_seq9_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseB_maze_seq9_2019:
         courseB_maze_seq9_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+      courseB_maze_seq9_2020:
+        courseB_maze_seq9_c: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseB_starWars_prog9:
         courseB_starWars_prog9_a: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
@@ -2650,6 +2883,9 @@ ko-KR:
         courseB_starWars_prog9_a: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseB_starWars_prog9_2019:
+        courseB_starWars_prog9_a: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
+          일이 발생하는지 확인하십시오.  '
+      courseB_starWars_prog9_2020:
         courseB_starWars_prog9_a: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_artist_prog2:
@@ -2661,17 +2897,24 @@ ko-KR:
       courseC_artist_prog2_2019:
         courseC_artist_prog2_a: "'앞으로 100 픽셀 이동' 블록을 쓰면 자동으로 라인을 그려질 것입니다."
         courseC_artist_prog2_b: 옆으로 도는 것이 어려우신가요? '오른쪽으로 90도 회전' 블록을 사용하세요.
+      courseC_artist_prog2_2020:
+        courseC_artist_prog2_a: "'앞으로 100 픽셀 이동' 블록을 쓰면 자동으로 라인을 그려질 것입니다."
+        courseC_artist_prog2_b: 옆으로 도는 것이 어려우신가요? '오른쪽으로 90도 회전' 블록을 사용하세요.
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2020:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_maze_programming6:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseC_maze_programming6_2019:
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+      courseC_maze_programming6_2020:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseC_starWars_loops1:
         courseC_starWars_loops1_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
@@ -2685,10 +2928,16 @@ ko-KR:
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여
           어떤 일이 발생하는지 확인하십시오.  '
+      courseC_starWars_loops10_2020:
+        courseC_starWars_loops10_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여
+          어떤 일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops1_2018:
         courseC_starWars_loops1_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
+          일이 발생하는지 확인하십시오.  '
+      courseC_starWars_loops1_2020:
         courseC_starWars_loops1_b: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops7:
@@ -2698,6 +2947,9 @@ ko-KR:
         courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
+          일이 발생하는지 확인하십시오.  '
+      courseC_starWars_loops7_2020:
         courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
       courseC_starWars_loops7_copy:
@@ -2715,6 +2967,10 @@ ko-KR:
         courseD_artist_nestedLoops3_a: |-
           다음번에 그릴 사각형 꼭대기로 이동하기 위해서 '앞으로 점프' 블록을 이용해보세요.
           만약 사각형이 20픽셀이고, 사각형끼리 20픽셀 씩 떨어져 있다면 얼마만큼이나 점프해야 할까요?
+      courseD_artist_nestedLoops3_2020:
+        courseD_artist_nestedLoops3_a: |-
+          다음번에 그릴 사각형 꼭대기로 이동하기 위해서 '앞으로 점프' 블록을 이용해보세요.
+          만약 사각형이 20픽셀이고, 사각형끼리 20픽셀 씩 떨어져 있다면 얼마만큼이나 점프해야 할까요?
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: |-
           **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
@@ -2726,6 +2982,11 @@ ko-KR:
 
           문제를 해결하기 위해 조건 블록(`만약` 또는 `만약/아니면`)을 사용해보세요.
       courseD_bee_conditionals8_2019:
+        courseD_bee_conditionals8_a: |-
+          **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
+
+          문제를 해결하기 위해 조건 블록(`만약` 또는 `만약/아니면`)을 사용해보세요.
+      courseD_bee_conditionals8_2020:
         courseD_bee_conditionals8_a: |-
           **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
 
@@ -2901,6 +3162,63 @@ ko-KR:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2020:
+        courseD_bee_nested_loops_challenge2_d: |-
+          **예제 답안:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseD_scrat_ramp7:
@@ -2941,6 +3259,12 @@ ko-KR:
           \-함수 사용
           \-100 + 75픽셀 앞으로 이동
           \-함수 사용
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_a: |-
+          여러분의 프로그램은 반드시:
+          \-함수 사용
+          \-100 + 75픽셀 앞으로 이동
+          \-함수 사용
       courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
@@ -2952,6 +3276,8 @@ ko-KR:
       courseE_artist_functions8_2018:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2020:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_functions6:
         courseE_bee_functions6_a: |-
@@ -2992,6 +3318,13 @@ ko-KR:
 
           그것들은`카운트 반복` 문을 채우기 위해 당신이 물어야 할 질문들입니다.
       courseF_artist_for4_2019:
+        courseF_artist_for4_a: |-
+          \*\* 가장 작은 번호는 무엇입니까?
+          가장 큰 숫자는 무엇입니까?
+          매회 얼마나 큽니까? \*\*
+
+          그것들은`카운트 반복` 문을 채우기 위해 당신이 물어야 할 질문들입니다.
+      courseF_artist_for4_2020:
         courseF_artist_for4_a: |-
           \*\* 가장 작은 번호는 무엇입니까?
           가장 큰 숫자는 무엇입니까?
@@ -3200,6 +3533,68 @@ ko-KR:
           </block>
           </xml>
       courseF_artist_for_challenge1_2019:
+        courseF_artist_for_challenge1_a: "'펜 폭'은 1입니다. 첫 번째 정사각형은 50 픽셀 측면을 가지며 각
+          정사각형은 마지막 픽셀보다 50 픽셀 넓습니다."
+        courseF_artist_for_challenge1_b: 브러쉬의 불투명도는 항상`counter` / 2입니다.
+        courseF_artist_for_challenge1_c: 각 사각형을 만든 후에는 뒤로 점프하고, 돌고, 다시 점프하고, 다시 돌아
+          오는 것을 잊지 마십시오!
+        courseF_artist_for_challenge1_d: |-
+          **예제 답안:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_artist_for_challenge1_2020:
         courseF_artist_for_challenge1_a: "'펜 폭'은 1입니다. 첫 번째 정사각형은 50 픽셀 측면을 가지며 각
           정사각형은 마지막 픽셀보다 50 픽셀 넓습니다."
         courseF_artist_for_challenge1_b: 브러쉬의 불투명도는 항상`counter` / 2입니다.
@@ -3544,6 +3939,101 @@ ko-KR:
           </xml>
 
           ![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)
+      courseF_artist_for_challenge2_2020:
+        courseF_artist_for_challenge2_c: "\\`카운터 반복'문은 5에서 250로 2씩 증가됩니다. "
+        courseF_artist_for_challenge2_a: 색상 변경은 '빨강, 초록, 파랑으로 색 설정'블록을 사용할 수 있습니다.
+          빨간색은 '255'로 일정하게 설정되고 녹색은 항상 'counter'의 값으로, 파란색은 항상 '255 - counter' 설정됩니다.
+        courseF_artist_for_challenge2_d: |-
+          **예제 답안:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+
+          ![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: '이것은 ''counter''픽셀 값이 변의 길이를 가지는 여러 팔각형들
@@ -3571,6 +4061,14 @@ ko-KR:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2019:
+        courseF_artist_variables_challenge2_a: '변수는 반복문을 통해 매번 추가 할 수 있기 때문에 유용합니다. '
+        courseF_artist_variables_challenge2_c: "'sides'변수와 'length'변수를 사용하면 번호를 설정하기
+          위해 매번 같은 코드만드는 대신 동일한 코드를 여러번 반복 할 수 있기 때문에 코드가 보다 명확 해집니다."
+        courseF_artist_variables_challenge2_d: |-
+          **예제 답안:**
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_2020:
         courseF_artist_variables_challenge2_a: '변수는 반복문을 통해 매번 추가 할 수 있기 때문에 유용합니다. '
         courseF_artist_variables_challenge2_c: "'sides'변수와 'length'변수를 사용하면 번호를 설정하기
           위해 매번 같은 코드만드는 대신 동일한 코드를 여러번 반복 할 수 있기 때문에 코드가 보다 명확 해집니다."
@@ -3795,6 +4293,73 @@ ko-KR:
           </block>
           </xml>
       courseF_bee_for_challenge2_2019:
+        courseF_bee_for_challenge2_a: |-
+          이동을 위해 이 옵션을 보세요.
+
+          ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_b: '두 개의 ''카운트 반복''문을 사용하여 시도해보십시오: 하나는 등반하고 꽃꿀을
+          잡고 다른 하나는 아래로 내려와 꿀을 만들기위한 것입니다.'
+        courseF_bee_for_challenge2_c: |-
+          하나의 '카운트 반복'문은 여러개의 반복문이 필요하며 증가하는 계단 패턴을 만들기 위해 반복되는\`counter '시간 안에 여러 개의 정규 루프를 필요로 합니다.
+
+          다른`카운트 반복`문은 'counter'양의 꿀을 만들기 위해 하나의 일반 반복문만 필요합니다.
+        courseF_bee_for_challenge2_d: |-
+          **예제 답안:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_for_challenge2_2020:
         courseF_bee_for_challenge2_a: |-
           이동을 위해 이 옵션을 보세요.
 

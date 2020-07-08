@@ -20,9 +20,15 @@ is-IS:
       2-3 Artist 7:
         draw_rect:
           name: teikna_rétth
+          parameters:
+            width: breidd
+            height: hæð
       2-3 Artist Debugging 10:
         draw square:
           name: teikna ferning
+          parameters:
+            width: breidd
+            height: hæð
         jump to controller top left:
           name: hoppa efst til vinstri á stjórnborði
         jump to middle:
@@ -260,6 +266,8 @@ is-IS:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: safna blómasafa búa til hunang
+          parameters:
+            honey: hunang
       Course 4 Play Lab Params 1:
         jump:
           name: hoppa
@@ -268,12 +276,17 @@ is-IS:
           name: borð_upp
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Course 4 Play Lab Params 2:
         jump:
           name: hoppa
       Course 4 Play Lab Params 3:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
       Course 4 Play Lab Params 4:
         patrol:
           name: rása
@@ -282,18 +295,30 @@ is-IS:
       Course 4 Play Lab Params 5:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 6:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 7:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 8:
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 9:
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Course 4 Play Lab Vars 1:
         set score:
           name: setja stig á
@@ -314,6 +339,8 @@ is-IS:
       Course 4 SCF 1a:
         get nectar:
           name: sækja blómasafa
+          parameters:
+            counter: teljari
       Course 4 SCF 1b:
         make honey up and over:
           name: gera hunang upp til hægri
@@ -333,6 +360,8 @@ is-IS:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       'Course E: Play Lab Project':
         do something:
           name: gera eitthvað
@@ -346,10 +375,15 @@ is-IS:
           name: borð_upp
         score_points:
           name: skora_stig
+          parameters:
+            points: stig
       Function intro Ryan:
         build bridge:
           name: byggja brú
       Function intro Ryan_2019:
+        build bridge:
+          name: byggja brú
+      Function intro Ryan_2020:
         build bridge:
           name: byggja brú
       Geometric Sun:
@@ -400,17 +434,27 @@ is-IS:
       InspirationalArtwork:
         n-sided shape:
           name: n-hliða form
+          parameters:
+            length: lengd
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       InspirationalArtwork_2018:
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
         n-sided shape:
           name: n-hliða form
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       K-1 Artist2 3:
         draw roof:
           name: teikna þak
@@ -426,12 +470,20 @@ is-IS:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: hreinsa slóð
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: hreinsa slóð
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: laga langa slóð
         fix short path:
           name: laga stutta slóð
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: laga langa slóð
+        fix short path:
+          name: laga stutta slóð
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: laga langa slóð
         fix short path:
@@ -446,12 +498,22 @@ is-IS:
           name: byggja stutta brú
         build long bridge:
           name: byggja langa brú
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: byggja stutta brú
+        build long bridge:
+          name: byggja langa brú
       MC_HOC_2017_FP20x20:
         function 1:
           name: fall 1
         function 2:
           name: fall 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: fall 1
+        function 2:
+          name: fall 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: fall 1
         function 2:
@@ -509,38 +571,66 @@ is-IS:
           name: gera eitthvað
         draw a hexagon:
           name: teikna sexkant
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
         do something:
           name: gera eitthvað
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 15:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 2:
         do something:
           name: gera eitthvað
@@ -553,52 +643,92 @@ is-IS:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: teikna fimmhyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a hexagon:
           name: teikna sexkant
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a sqaure:
           name: teikna ferning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 9:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         do something:
           name: gera eitthvað
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       NEW Course 4 Play Lab Params 11:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       New Artist Project:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       New Minecraft Hero Project:
         function 1:
           name: fall 1
@@ -607,8 +737,14 @@ is-IS:
       New Play Lab Project:
         jump:
           name: hoppa
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Robot Doodle:
         25 pixel square:
           name: 25 díla ferningur
@@ -702,6 +838,8 @@ is-IS:
       course4_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
         draw a square 20:
@@ -714,9 +852,13 @@ is-IS:
       course4_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       course4_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"einföld" lausn'
@@ -729,19 +871,35 @@ is-IS:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: möguleg lausn
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: möguleg lausn
       courseC_artist_prog3:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2018:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2019:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
+        draw fire:
+          name: teikna eld
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog4:
@@ -753,7 +911,13 @@ is-IS:
       courseC_artist_prog4_2019:
         booster:
           name: magnari
+      courseC_artist_prog4_2020:
+        booster:
+          name: magnari
       courseC_data wizard:
+        do something:
+          name: gera eitthvað
+      courseC_data wizard_2020:
         do something:
           name: gera eitthvað
       courseD_artist_binary1:
@@ -767,6 +931,11 @@ is-IS:
         draw:
           name: teikna
       courseD_artist_binary1_2019:
+        draw bit:
+          name: teikna bita
+        draw:
+          name: teikna
+      courseD_artist_binary1_2020:
         draw bit:
           name: teikna bita
         draw:
@@ -786,6 +955,11 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary2_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binary3:
         draw:
           name: teikna
@@ -797,6 +971,11 @@ is-IS:
         draw bit:
           name: teikna bita
       courseD_artist_binary3_2019:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
+      courseD_artist_binary3_2020:
         draw:
           name: teikna
         draw bit:
@@ -816,6 +995,11 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary4_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binary5:
         draw:
           name: teikna
@@ -827,6 +1011,11 @@ is-IS:
         draw bit:
           name: teikna bita
       courseD_artist_binary5_2019:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
+      courseD_artist_binary5_2020:
         draw:
           name: teikna
         draw bit:
@@ -846,6 +1035,11 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary6_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binary7:
         draw:
           name: teikna
@@ -857,6 +1051,11 @@ is-IS:
         draw bit:
           name: teikna bita
       courseD_artist_binary7_2019:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
+      courseD_artist_binary7_2020:
         draw:
           name: teikna
         draw bit:
@@ -876,6 +1075,11 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary8_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binary8_predict1:
         draw:
           name: teikna
@@ -891,12 +1095,22 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binaryFP_2018:
         draw:
           name: teikna
         draw bit:
           name: teikna bita
       courseD_artist_binaryFP_2019:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
+      courseD_artist_binaryFP_2020:
         draw:
           name: teikna
         draw bit:
@@ -911,12 +1125,22 @@ is-IS:
           name: teikna
         draw bit:
           name: teikna bita
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
       courseD_artist_binary_challenge2_2018:
         draw:
           name: teikna
         draw bit:
           name: teikna bita
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: teikna
+        draw bit:
+          name: teikna bita
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: teikna
         draw bit:
@@ -1024,6 +1248,13 @@ is-IS:
           name: teikna sexhyrning
         draw line of hexagons:
           name: teikna röð sexhyrninga
+      courseE_artist_functions10_2020:
+        do something:
+          name: gera eitthvað
+        draw hexagon:
+          name: teikna sexhyrning
+        draw line of hexagons:
+          name: teikna röð sexhyrninga
       courseE_artist_functions1_copy:
         draw ear stems:
           name: teikna spangir
@@ -1042,6 +1273,11 @@ is-IS:
           name: teikna ferning
         draw ear stems:
           name: teikna spangir
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: teikna ferning
+        draw ear stems:
+          name: teikna spangir
       courseE_artist_functions2_copy:
         draw a square:
           name: teikna ferning
@@ -1051,6 +1287,9 @@ is-IS:
         draw a star:
           name: teikna stjörnu
       courseE_artist_functions3_2019:
+        draw a star:
+          name: teikna stjörnu
+      courseE_artist_functions3_2020:
         draw a star:
           name: teikna stjörnu
       courseE_artist_functions4:
@@ -1066,6 +1305,9 @@ is-IS:
         draw a star:
           name: teikna stjörnu
       courseE_artist_functions5_2019:
+        draw a star:
+          name: teikna stjörnu
+      courseE_artist_functions5_2020:
         draw a star:
           name: teikna stjörnu
       courseE_artist_functions5_copy:
@@ -1084,6 +1326,11 @@ is-IS:
       courseE_artist_functions7_2019:
         draw a window:
           name: teikna glugga
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: teikna glugga
+        draw a house:
+          name: teikna hús
       courseE_artist_functions8:
         do something:
           name: gera eitthvað
@@ -1109,12 +1356,26 @@ is-IS:
           name: teikna röð ferninga
         draw square:
           name: teikna ferning
+      courseE_artist_functions8_2020:
+        do something:
+          name: gera eitthvað
+        staggered squares:
+          name: víxlaðir ferningar
+        draw a line of squares:
+          name: teikna röð ferninga
+        draw square:
+          name: teikna ferning
       courseE_artist_functions8a_2018:
         draw a square:
           name: teikna ferning
         do something:
           name: gera eitthvað
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: teikna ferning
+        do something:
+          name: gera eitthvað
+      courseE_artist_functions8a_2020:
         draw a square:
           name: teikna ferning
         do something:
@@ -1133,6 +1394,13 @@ is-IS:
           name: teikna ferning
         do something:
           name: gera eitthvað
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: teikna röð ferninga
+        draw square:
+          name: teikna ferning
+        do something:
+          name: gera eitthvað
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: teikna röð ferninga
@@ -1143,6 +1411,15 @@ is-IS:
         staggered squares:
           name: víxlaðir ferningar
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: teikna röð ferninga
+        draw square:
+          name: teikna ferning
+        do something:
+          name: gera eitthvað
+        staggered squares:
+          name: víxlaðir ferningar
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: teikna röð ferninga
         draw square:
@@ -1172,6 +1449,13 @@ is-IS:
           name: teikna þríhyrning
         draw line of triangles:
           name: teikna röð þríhyrninga
+      courseE_artist_functions9_2020:
+        do something:
+          name: gera eitthvað
+        draw triangle:
+          name: teikna þríhyrning
+        draw line of triangles:
+          name: teikna röð þríhyrninga
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: teikna sexhyrning
@@ -1184,6 +1468,17 @@ is-IS:
         draw square:
           name: teikna ferning
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: teikna sexhyrning
+        draw line of hexagons:
+          name: teikna röð sexhyrninga
+        staggered squares:
+          name: víxlaðir ferningar
+        draw a line of squares:
+          name: teikna röð ferninga
+        draw square:
+          name: teikna ferning
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: teikna sexhyrning
         draw line of hexagons:
@@ -1209,6 +1504,11 @@ is-IS:
           name: hönnun mín
         do something:
           name: gera eitthvað
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: hönnun mín
+        do something:
+          name: gera eitthvað
       courseE_artist_functions_challenge2:
         my design:
           name: hönnun mín
@@ -1224,6 +1524,11 @@ is-IS:
           name: hönnun mín
         do something:
           name: gera eitthvað
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: hönnun mín
+        do something:
+          name: gera eitthvað
       courseE_artist_functions_predict1:
         draw a square:
           name: teikna ferning
@@ -1235,6 +1540,11 @@ is-IS:
         draw ear stems:
           name: teikna spangir
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: teikna ferning
+        draw ear stems:
+          name: teikna spangir
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: teikna ferning
         draw ear stems:
@@ -1259,6 +1569,13 @@ is-IS:
         do something:
           name: gera eitthvað
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: teikna röð marghyrninga
+        draw polygon:
+          name: teikna marghyrning
+        do something:
+          name: gera eitthvað
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: teikna röð marghyrninga
         draw polygon:
@@ -1343,6 +1660,15 @@ is-IS:
           name: safna graskerum
         pumpkin square:
           name: graskersferningur
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: tína á slóð
+        check square for corn:
+          name: athuga maís á reit
+        get all pumpkins:
+          name: safna graskerum
+        pumpkin square:
+          name: graskersferningur
       courseE_farmer_functions10b:
         navigate:
           name: ferðast
@@ -1375,6 +1701,17 @@ is-IS:
           name: sækja afurð
         get all pumpkins:
           name: safna graskerum
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: tína á slóð
+        pumpkin square:
+          name: graskersferningur
+        check square for corn:
+          name: athuga maís á reit
+        get produce:
+          name: sækja afurð
+        get all pumpkins:
+          name: safna graskerum
       courseE_farmer_functions13_2018:
         pick along path:
           name: tína á slóð
@@ -1393,16 +1730,31 @@ is-IS:
           name: maísrétthyrningur
         lettuce stairs:
           name: káltröppur
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: tína á slóð
+        check for corn:
+          name: athuga með maís
+        corn rectangle:
+          name: maísrétthyrningur
+        lettuce stairs:
+          name: káltröppur
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: athuga maís á reit
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: athuga maís á reit
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: athuga maís á reit
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: athuga maís á reit
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: athuga maís á reit
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: athuga maís á reit
       courseE_farmer_functions2ba:
@@ -1414,6 +1766,11 @@ is-IS:
         get all pumpkins:
           name: safna graskerum
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: athuga maís á reit
+        get all pumpkins:
+          name: safna graskerum
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: athuga maís á reit
         get all pumpkins:
@@ -1435,12 +1792,24 @@ is-IS:
           name: athuga maís á reit
         get all pumpkins:
           name: safna graskerum
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: tína á slóð
+        check square for corn:
+          name: athuga maís á reit
+        get all pumpkins:
+          name: safna graskerum
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: athuga maís á reit
         get all pumpkins:
           name: safna graskerum
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: athuga maís á reit
+        get all pumpkins:
+          name: safna graskerum
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: athuga maís á reit
         get all pumpkins:
@@ -1460,10 +1829,16 @@ is-IS:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: garðferningur
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: garðferningur
       courseE_farmer_functions8a1_2018:
         garden square:
           name: garðferningur
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: garðferningur
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: garðferningur
       courseE_farmer_functions8b:
@@ -1473,6 +1848,9 @@ is-IS:
         garden square:
           name: garðferningur
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: garðferningur
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: garðferningur
       courseE_farmer_functions9b:
@@ -1502,70 +1880,128 @@ is-IS:
           name: teikna ferning
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2_predict1:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       courseF_artist_fwp3:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a square2:
           name: teikna ferning2
+          parameters:
+            size: stærð
         filled square:
           name: fylltur ferningur
+          parameters:
+            size: stærð
+            color: litur
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp4:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       courseF_artist_fwp5:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
       courseF_artist_fwp6:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
       courseF_artist_fwp7:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: teikna stjörnu
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
         draw a square 20:
@@ -1579,6 +2015,8 @@ is-IS:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       courseF_bee_conditionals2:
         move and check:
           name: færa og athuga
@@ -1591,6 +2029,9 @@ is-IS:
         move and get nectar with counter:
           name: færa og ná blómasafa með teljara
       courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: færa og ná blómasafa með teljara
+      courseF_bee_for_challenge1_2020:
         move and get nectar with counter:
           name: færa og ná blómasafa með teljara
       courseF_bee_functions2:
@@ -1649,31 +2090,50 @@ is-IS:
       courseF_bee_fwp4:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            length: lengd
       courseF_bee_fwp5:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp6:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_variables_1_2018:
         collect row:
           name: safna röð
       courseF_bee_variables_1_2019:
+        collect row:
+          name: safna röð
+      courseF_bee_variables_1_2020:
         collect row:
           name: safna röð
       courseF_bee_variables_2_2018:
@@ -1682,10 +2142,16 @@ is-IS:
       courseF_bee_variables_2_2019:
         collect row:
           name: safna röð
+      courseF_bee_variables_2_2020:
+        collect row:
+          name: safna röð
       courseF_bee_variables_3_2018:
         collect row:
           name: safna röð
       courseF_bee_variables_3_2019:
+        collect row:
+          name: safna röð
+      courseF_bee_variables_3_2020:
         collect row:
           name: safna röð
       courseF_bee_variables_4_2018:
@@ -1694,10 +2160,16 @@ is-IS:
       courseF_bee_variables_4_2019:
         collect row:
           name: safna röð
+      courseF_bee_variables_4_2020:
+        collect row:
+          name: safna röð
       courseF_bee_variables_5_2018:
         collect row:
           name: safna röð
       courseF_bee_variables_5_2019:
+        collect row:
+          name: safna röð
+      courseF_bee_variables_5_2020:
         collect row:
           name: safna röð
       courseF_bee_variables_6_2018:
@@ -1706,10 +2178,16 @@ is-IS:
       courseF_bee_variables_6_2019:
         collect stairs:
           name: tröppuslóð
+      courseF_bee_variables_6_2020:
+        collect stairs:
+          name: tröppuslóð
       courseF_bee_variables_7_2018:
         collect:
           name: safna
       courseF_bee_variables_7_2019:
+        collect:
+          name: safna
+      courseF_bee_variables_7_2020:
         collect:
           name: safna
       courseF_bee_variables_8_2018:
@@ -1718,6 +2196,11 @@ is-IS:
         collect:
           name: safna
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: færa og auka
+        collect:
+          name: safna
+      courseF_bee_variables_8_2020:
         move and increment:
           name: færa og auka
         collect:

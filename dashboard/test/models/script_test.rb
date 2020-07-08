@@ -599,7 +599,16 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
 
     assert latest_in_english.can_view_version?(student, locale: 'it-it')
+    assert latest_in_english.can_view_version?(nil)
     assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+    assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
+  end
+
+  test 'can_view_version? is false if script is unstable and has no progress and is not assigned' do
+    unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
+    student = create :student
+
+    refute unstable.can_view_version?(student, locale: 'it-it')
   end
 
   test 'can_view_version? is true if student is assigned to script' do
@@ -1515,6 +1524,36 @@ class ScriptTest < ActiveSupport::TestCase
       'Level 4_copy,Level 5_copy',
       lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
+  end
+
+  # This test case doesn't cover hidden (not a property) or version year (only
+  # updated under certain conditions). These are covered in other test cases.
+  test 'clone with suffix clears certain properties' do
+    script_file = File.join(self.class.fixture_path, "test-all-properties.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts.first
+
+    # all properties that should change
+    assert script.tts
+    assert script.is_stable
+    assert script.script_announcements
+
+    # some properties that should not change
+    assert script.curriculum_path
+    assert script.has_lesson_plan
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-all-properties-copy', script_copy.name
+
+    # all properties that should change
+    refute script_copy.tts
+    refute script_copy.is_stable
+    refute script_copy.script_announcements
+
+    # some properties that should not change
+    assert script_copy.curriculum_path
+    assert script_copy.has_lesson_plan
   end
 
   test 'clone versioned script with suffix' do

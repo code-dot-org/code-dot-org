@@ -2,6 +2,12 @@
 mr-IN:
   data:
     long_instructions:
+      CourseD_Dance_2020_05: |-
+        "_आता जरा मजा येत आहे!_
+
+        तुमच्या वर्कस्पेसमध्ये एक <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक जोडा. 6 मापांनंतर डांसरला नवीन मूव्ह सुरू करायला लावा.".
+      CourseD_Dance_2020_10: स्वतःचा डांस बनवा! एक स्वतःचा डांस तयार करून मित्रांसोबत
+        शेअर करा.
       CourseD_Dance_Party_01: |-
         _चला डांस पार्टी करूया!_
 
@@ -11,7 +17,7 @@ mr-IN:
       CourseD_Dance_Party_02: |-
         चला या मूसला नाचवू या!
 
-        <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> या ब्लॉकला बाहेर वर्कस्पेस मध्ये ड्रॅग करा. याला <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ईव्हेंट ब्लॉकच्या खाली लावा. चौथ्या मापानंतर तुमच्या डांसरने नवीन मूव्ह सुरू करायला हवी.
+        <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> या ब्लॉकला बाहेर वर्कस्पेस मध्ये ड्रॅग करा. याला <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ईव्हेंट ब्लॉकच्या खाली लावा. चौथ्या मापानंतर तुमच्या डांसरने नवीन मूव्ह सुरू करायला हवी.
 
         **माप** संगीतात वेळ मोजायला वापरतात. या ट्यूटोरियल मध्ये एक माप चार बीट्स एवढा आहे.
       CourseD_Dance_Party_03: |-
@@ -85,7 +91,7 @@ mr-IN:
       Dance_Party_02: |-
         "चला या मूसला नाचवू या!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> या ब्लॉकला बाहेर ड्रॅग करा. चौथ्या मापानंतर तुमच्या डांसरने नवीन मूव्ह सुरू करायला हवी.
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> या ब्लॉकला बाहेर ड्रॅग करा. चौथ्या मापानंतर तुमच्या डांसरने नवीन मूव्ह सुरू करायला हवी.
 
         **माप** संगीतात वेळ मोजायला वापरतात. या ट्यूटोरियल मध्ये एक माप चार बीट्स एवढा आहे.".
       Dance_Party_03: |-

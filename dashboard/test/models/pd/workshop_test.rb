@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/delete_accounts_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
@@ -298,6 +299,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
 
     workshop.end!
 
@@ -854,7 +856,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     assert_equal 4, workshop.teachers_attending_all_sessions.count
+
+    # Test that scholarship filter works.
+    # Set argument to filter to only scholarship teachers to true.
     assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
+  test 'teachers_attending_all_sessions with a teacher who deleted their account' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSF
+
+    workshop_participant = create :pd_workshop_participant,
+      enrolled: true,
+      attended: true,
+      cdo_scholarship_recipient: true,
+      workshop: workshop
+
+    # Should return 1 before we've done anything.
+    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+
+    # Delete the user.
+    workshop_participant.destroy!
+    workshop.reload
+
+    # With no user account, the user doesn't show up in array of attending teachers.
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+
+    # Fully purge the user account's PD records,
+    # which removes their user ID from attendances.
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    workshop.reload
+
+    # Should still return 0 once we've fully purged the teacher user ID from the attendance
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

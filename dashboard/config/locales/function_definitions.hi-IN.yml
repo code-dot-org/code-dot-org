@@ -8,9 +8,17 @@ hi-IN:
       2-3 Artist 3.4:
         draw a circle:
           name: एक चक्र बनाएं
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: चौड़ाई
+            height: ऊंचाई
       2-3 Artist Debugging 10:
         draw square:
           name: वर्ग खींचें
+          parameters:
+            width: चौड़ाई
+            height: ऊंचाई
         draw a circle:
           name: एक चक्र बनाएं
       2-3 Artist Debugging 6:
@@ -152,18 +160,49 @@ hi-IN:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: मधुरस प्राप्त करें शहद बनाएं
+          parameters:
+            honey: शहद
       Course 4 Play Lab Params 1:
         jump:
           name: कूदें
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: अंक
       Course 4 Play Lab Params 2:
         jump:
           name: कूदें
       Course 4 Play Lab Params 3:
         jump:
           name: कूदें
+          parameters:
+            height: ऊंचाई
+            actor: अभिनेता
       Course 4 Play Lab Params 4:
         do something:
           name: कुछ कीजिए
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: अभिनेता
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: अभिनेता
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: अभिनेता
+            speed: गति
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: अभिनेता
+            speed: गति
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: अंक
       Course 4 Play Lab Vars 1:
         set score:
           name: स्कोर सेट करें
@@ -178,6 +217,8 @@ hi-IN:
       Course 4 SCF 1a:
         get nectar:
           name: मधुरस ​​पाने के लिए
+          parameters:
+            counter: काउंटर
       Course 4 SCF 2:
         draw a square 20:
           name: वर्ग खींचें 20
@@ -190,6 +231,8 @@ hi-IN:
           name: कुछ कीजिए
         draw an octagon:
           name: अष्टभुज खींचें
+          parameters:
+            length: लंबाई
       'Course E: Play Lab Project':
         do something:
           name: कुछ कीजिए
@@ -198,6 +241,10 @@ hi-IN:
           name: अंदाजा जांचें
         do something:
           name: कुछ कीजिए
+      FoodFight:
+        score_points:
+          parameters:
+            points: अंक
       Geometric Sun:
         draw a door:
           name: दरवाजा चित्रित करें
@@ -246,17 +293,27 @@ hi-IN:
       InspirationalArtwork:
         n-sided shape:
           name: N-की तरफ वाली आकृति
+          parameters:
+            length: लंबाई
         draw a loop:
           name: लूप खींचें
+          parameters:
+            length: लंबाई
         draw spiral circle:
           name: सर्पिल गोला खींचें
+          parameters:
+            size: आकार
       InspirationalArtwork_2018:
         draw a loop:
           name: लूप खींचें
+          parameters:
+            length: लंबाई
         n-sided shape:
           name: N-की तरफ वाली आकृति
         draw spiral circle:
           name: सर्पिल गोला खींचें
+          parameters:
+            size: आकार
       NEW Course 4 Artist Functions 11:
         draw a line of  squares:
           name: वर्गों की लाइन खींचें
@@ -304,38 +361,66 @@ hi-IN:
           name: कुछ कीजिए
         draw a hexagon:
           name: एक हेक्सागोन खींचे
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
         do something:
           name: कुछ कीजिए
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: सर्पिल किनारा खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 15:
         draw a star:
           name: एक सितारा खींचे
+          parameters:
+            points: अंक
+            length: लंबाई
         draw a circle:
           name: एक चक्र बनाएं
         draw a pinwheel:
           name: चकरी चित्रित करें
+          parameters:
+            length: लंबाई
+            repeat: दोहराएँ
         draw a triangle:
           name: एक त्रिकोण खींचें
+          parameters:
+            length: लंबाई
         draw a shape:
           name: आकृति खींचें
+          parameters:
+            length: लंबाई
         draw a house:
           name: एक घर खींचे
+          parameters:
+            length: लंबाई
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 2:
         do something:
           name: कुछ कीजिए
@@ -345,45 +430,100 @@ hi-IN:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: एक त्रिकोण खींचें
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: लंबाई
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: एक त्रिकोण खींचें
+          parameters:
+            length: लंबाई
         draw a hexagon:
           name: एक हेक्सागोन खींचे
+          parameters:
+            length: लंबाई
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
+        draw a sqaure:
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: एक त्रिकोण खींचें
+          parameters:
+            length: लंबाई
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: लंबाई
       NEW Course 4 Artist Params 9:
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
         do something:
           name: कुछ कीजिए
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       NEW Course 4 Play Lab Params 11:
         jump:
           name: कूदें
+          parameters:
+            height: ऊंचाई
+            actor: अभिनेता
+        patrol:
+          parameters:
+            actor: अभिनेता
+            speed: गति
       New Artist Project:
         draw a star:
           name: एक सितारा खींचे
+          parameters:
+            points: अंक
+            length: लंबाई
         draw a circle:
           name: एक चक्र बनाएं
         draw a pinwheel:
           name: चकरी चित्रित करें
+          parameters:
+            length: लंबाई
+            repeat: दोहराएँ
         draw a triangle:
           name: एक त्रिकोण खींचें
+          parameters:
+            length: लंबाई
         draw a shape:
           name: आकृति खींचें
+          parameters:
+            length: लंबाई
         draw a house:
           name: एक घर खींचे
+          parameters:
+            length: लंबाई
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
       New Play Lab Project:
         jump:
           name: कूदें
+          parameters:
+            height: ऊंचाई
+            actor: अभिनेता
+        patrol:
+          parameters:
+            actor: अभिनेता
+            speed: गति
       Robot Doodle:
         25 pixel square:
           name: 25 पिक्सल वर्ग
@@ -470,6 +610,8 @@ hi-IN:
       course4_artist_fwp_challenge1:
         draw background:
           name: पृष्ठभूमि चित्रित करें
+          parameters:
+            color: रंग
         draw a polygon:
           name: बहुभुज खींचें
         draw a square 20:
@@ -482,9 +624,13 @@ hi-IN:
       course4_bee_fwp_challenge1:
         pick row:
           name: पंक्ति चुनें
+          parameters:
+            length: लंबाई
       course4_bee_fwp_challenge2:
         pick row:
           name: पंक्ति चुनें
+          parameters:
+            length: लंबाई
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"साधारण" समाधान'
@@ -497,19 +643,35 @@ hi-IN:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: संभावी समाधान
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: संभावी समाधान
       courseC_artist_prog3:
         draw flame:
           name: लौ चित्रित करें
+          parameters:
+            x: x
         draw fire:
           name: आग चित्रित करें
       courseC_artist_prog3_2018:
         draw flame:
           name: लौ चित्रित करें
+          parameters:
+            x: x
         draw fire:
           name: आग चित्रित करें
       courseC_artist_prog3_2019:
         draw flame:
           name: लौ चित्रित करें
+          parameters:
+            x: x
+        draw fire:
+          name: आग चित्रित करें
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: लौ चित्रित करें
+          parameters:
+            x: x
         draw fire:
           name: आग चित्रित करें
       courseC_artist_prog4:
@@ -521,7 +683,13 @@ hi-IN:
       courseC_artist_prog4_2019:
         booster:
           name: बूस्टर
+      courseC_artist_prog4_2020:
+        booster:
+          name: बूस्टर
       courseC_data wizard:
+        do something:
+          name: कुछ कीजिए
+      courseC_data wizard_2020:
         do something:
           name: कुछ कीजिए
       courseD_artist_binary1:
@@ -535,6 +703,11 @@ hi-IN:
         draw:
           name: खींचें (चित्रित करें)
       courseD_artist_binary1_2019:
+        draw bit:
+          name: बिट चित्रित करें
+        draw:
+          name: खींचें (चित्रित करें)
+      courseD_artist_binary1_2020:
         draw bit:
           name: बिट चित्रित करें
         draw:
@@ -554,6 +727,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary2_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary3:
         draw:
           name: खींचें (चित्रित करें)
@@ -565,6 +743,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary3_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary3_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -584,6 +767,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary4_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary5:
         draw:
           name: खींचें (चित्रित करें)
@@ -595,6 +783,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary5_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary5_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -614,6 +807,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary6_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary7:
         draw:
           name: खींचें (चित्रित करें)
@@ -625,6 +823,11 @@ hi-IN:
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary7_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary7_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -644,6 +847,11 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary8_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary8_predict1:
         draw:
           name: खींचें (चित्रित करें)
@@ -659,12 +867,22 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binaryFP_2018:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binaryFP_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binaryFP_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -679,12 +897,22 @@ hi-IN:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
       courseD_artist_binary_challenge2_2018:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
           name: बिट चित्रित करें
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: खींचें (चित्रित करें)
+        draw bit:
+          name: बिट चित्रित करें
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: खींचें (चित्रित करें)
         draw bit:
@@ -787,6 +1015,13 @@ hi-IN:
           name: षट्कोण खींचें
         draw line of hexagons:
           name: षट्भुजों की लाइन खींचें
+      courseE_artist_functions10_2020:
+        do something:
+          name: कुछ कीजिए
+        draw hexagon:
+          name: षट्कोण खींचें
+        draw line of hexagons:
+          name: षट्भुजों की लाइन खींचें
       courseE_artist_functions1_copy:
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
@@ -805,6 +1040,11 @@ hi-IN:
           name: एक वर्ग खींचें
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: एक वर्ग खींचें
+        draw ear stems:
+          name: ईयर स्टेम चित्रित करें
       courseE_artist_functions2_copy:
         draw a square:
           name: एक वर्ग खींचें
@@ -814,6 +1054,9 @@ hi-IN:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions3_2019:
+        draw a star:
+          name: एक सितारा खींचे
+      courseE_artist_functions3_2020:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions4:
@@ -829,6 +1072,9 @@ hi-IN:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions5_2019:
+        draw a star:
+          name: एक सितारा खींचे
+      courseE_artist_functions5_2020:
         draw a star:
           name: एक सितारा खींचे
       courseE_artist_functions5_copy:
@@ -847,6 +1093,11 @@ hi-IN:
       courseE_artist_functions7_2019:
         draw a window:
           name: खिड़की चित्रित करें
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: खिड़की चित्रित करें
+        draw a house:
+          name: एक घर खींचे
       courseE_artist_functions8:
         do something:
           name: कुछ कीजिए
@@ -868,12 +1119,24 @@ hi-IN:
           name: वर्गों की लाइन खींचें
         draw square:
           name: वर्ग खींचें
+      courseE_artist_functions8_2020:
+        do something:
+          name: कुछ कीजिए
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
       courseE_artist_functions8a_2018:
         draw a square:
           name: एक वर्ग खींचें
         do something:
           name: कुछ कीजिए
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: एक वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions8a_2020:
         draw a square:
           name: एक वर्ग खींचें
         do something:
@@ -892,6 +1155,13 @@ hi-IN:
           name: वर्ग खींचें
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: वर्गों की लाइन खींचें
@@ -900,6 +1170,13 @@ hi-IN:
         do something:
           name: कुछ कीजिए
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: वर्गों की लाइन खींचें
         draw square:
@@ -927,6 +1204,13 @@ hi-IN:
           name: त्रिकोण चित्रित करें
         draw line of triangles:
           name: त्रिकोणों की लाइन खींचें
+      courseE_artist_functions9_2020:
+        do something:
+          name: कुछ कीजिए
+        draw triangle:
+          name: त्रिकोण चित्रित करें
+        draw line of triangles:
+          name: त्रिकोणों की लाइन खींचें
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: षट्कोण खींचें
@@ -937,6 +1221,15 @@ hi-IN:
         draw square:
           name: वर्ग खींचें
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: षट्कोण खींचें
+        draw line of hexagons:
+          name: षट्भुजों की लाइन खींचें
+        draw a line of squares:
+          name: वर्गों की लाइन खींचें
+        draw square:
+          name: वर्ग खींचें
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: षट्कोण खींचें
         draw line of hexagons:
@@ -960,6 +1253,11 @@ hi-IN:
           name: मेरा डिज़ाइन
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: मेरा डिज़ाइन
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions_challenge2:
         my design:
           name: मेरा डिज़ाइन
@@ -975,6 +1273,11 @@ hi-IN:
           name: मेरा डिज़ाइन
         do something:
           name: कुछ कीजिए
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: मेरा डिज़ाइन
+        do something:
+          name: कुछ कीजिए
       courseE_artist_functions_predict1:
         draw a square:
           name: एक वर्ग खींचें
@@ -986,6 +1289,11 @@ hi-IN:
         draw ear stems:
           name: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: एक वर्ग खींचें
+        draw ear stems:
+          name: ईयर स्टेम चित्रित करें
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: एक वर्ग खींचें
         draw ear stems:
@@ -1010,6 +1318,13 @@ hi-IN:
         do something:
           name: कुछ कीजिए
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: बहुभुजों की लाइन खींचें
+        draw polygon:
+          name: बहुभुज चित्रित करें
+        do something:
+          name: कुछ कीजिए
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: बहुभुजों की लाइन खींचें
         draw polygon:
@@ -1131,70 +1446,128 @@ hi-IN:
           name: एक वर्ग खींचें
         checker:
           name: जांचकर्ता
+          parameters:
+            size: आकार
+            color: रंग
         do something:
           name: कुछ कीजिए
         Make gingham:
           name: छाता बनाएं
+          parameters:
+            size: आकार
         black outline:
           name: काली आउटलाइन
+          parameters:
+            length: लंबाई
       courseF_artist_fwp2:
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
         checker:
           name: जांचकर्ता
+          parameters:
+            size: आकार
+            color: रंग
         do something:
           name: कुछ कीजिए
         Make gingham:
           name: छाता बनाएं
+          parameters:
+            size: आकार
         black outline:
           name: काली आउटलाइन
+          parameters:
+            length: लंबाई
       courseF_artist_fwp2_predict1:
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
       courseF_artist_fwp3:
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
         draw a square2:
           name: वर्ग2 खींचें
+          parameters:
+            size: आकार
         filled square:
           name: भरा हुआ वर्ग
+          parameters:
+            size: आकार
+            color: रंग
         black outline:
           name: काली आउटलाइन
+          parameters:
+            length: लंबाई
       courseF_artist_fwp4:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       courseF_artist_fwp5:
         draw a polygon:
           name: बहुभुज खींचें
+          parameters:
+            length: लंबाई
       courseF_artist_fwp6:
         draw a spiral edge:
           name: सर्पिल किनारा खींचें
+          parameters:
+            length: लंबाई
       courseF_artist_fwp7:
         draw a spiral edge:
           name: सर्पिल किनारा खींचें
+          parameters:
+            length: लंबाई
+            min: न्यूनतम
       courseF_artist_fwp8:
         draw a spiral edge:
           name: सर्पिल किनारा खींचें
+          parameters:
+            length: लंबाई
+            min: न्यूनतम
       courseF_artist_fwp9:
         draw a star:
           name: एक सितारा खींचे
+          parameters:
+            points: अंक
+            length: लंबाई
         draw a circle:
           name: एक चक्र बनाएं
         draw a pinwheel:
           name: चकरी चित्रित करें
+          parameters:
+            length: लंबाई
+            repeat: दोहराएँ
         draw a triangle:
           name: एक त्रिकोण खींचें
+          parameters:
+            length: लंबाई
         draw a shape:
           name: आकृति खींचें
+          parameters:
+            length: लंबाई
         draw a house:
           name: एक घर खींचे
+          parameters:
+            length: लंबाई
         draw a square:
           name: एक वर्ग खींचें
+          parameters:
+            length: लंबाई
         draw a spiral edge:
           name: सर्पिल किनारा खींचें
+          parameters:
+            length: लंबाई
+            min: न्यूनतम
       courseF_artist_fwp_challenge1:
         draw background:
           name: पृष्ठभूमि चित्रित करें
+          parameters:
+            color: रंग
         draw a polygon:
           name: बहुभुज खींचें
         draw a square 20:
@@ -1208,6 +1581,8 @@ hi-IN:
           name: कुछ कीजिए
         draw an octagon:
           name: अष्टभुज खींचें
+          parameters:
+            length: लंबाई
       courseF_bee_conditionals2:
         move and check:
           name: मूव करके जांचें
@@ -1220,6 +1595,9 @@ hi-IN:
         move and get nectar with counter:
           name: मूव करके काउंटर के साथ मधुरस प्राप्त करें
       courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: मूव करके काउंटर के साथ मधुरस प्राप्त करें
+      courseF_bee_for_challenge1_2020:
         move and get nectar with counter:
           name: मूव करके काउंटर के साथ मधुरस प्राप्त करें
       courseF_bee_functions2:
@@ -1265,22 +1643,56 @@ hi-IN:
           name: मूव करके जांचें
         check nectar or honey:
           name: मधुरस या शहद जांचें
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: लंबाई
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: चौड़ाई
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: चौड़ाई
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: चौड़ाई
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: चौड़ाई
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: चौड़ाई
       courseF_bee_fwp_challenge1:
         pick row:
           name: पंक्ति चुनें
+          parameters:
+            length: लंबाई
       courseF_bee_fwp_challenge2:
         pick row:
           name: पंक्ति चुनें
+          parameters:
+            length: लंबाई
       courseF_bee_variables_7_2018:
         collect:
           name: एकत्र करें
       courseF_bee_variables_7_2019:
         collect:
           name: एकत्र करें
+      courseF_bee_variables_7_2020:
+        collect:
+          name: एकत्र करें
       courseF_bee_variables_8_2018:
         collect:
           name: एकत्र करें
       courseF_bee_variables_8_2019:
+        collect:
+          name: एकत्र करें
+      courseF_bee_variables_8_2020:
         collect:
           name: एकत्र करें
       grade5_artist_binary11:

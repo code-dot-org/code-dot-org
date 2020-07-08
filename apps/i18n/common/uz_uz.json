@@ -45,6 +45,7 @@
   "courses": "Kurslar",
   "create": "Yaratmoq",
   "dancePartyButton": "Boshlash",
+  "dataLibrarySearchPlacholder": "Qidiruv",
   "delete": "O'chirish",
   "deleteConfirm": "O'chirasizmi?",
   "description": "Ta‘rif",
@@ -127,6 +128,7 @@
   "too_young": "Bu dars uchun yoshga cheklov bo‘lib, yoshi to‘lmaganlar uchun kirish imkoni yo‘q.",
   "tos": "Xizmat shartlari",
   "tryIt": "Sinab ko‘ring",
+  "versionHistory_clearProgress_cancel": "Bekor qilish",
   "viewCourse": "Darslarni ko'rish",
   "viewLessonPlan": "Dars rejasini ko‘rish"
 }

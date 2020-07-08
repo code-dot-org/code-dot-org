@@ -38,6 +38,10 @@ my-MM:
       NEW Course 4 Artist Params 11:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      NEW Course 4 Artist Params 15:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
       NEW Course 4 Artist Params 2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -47,6 +51,10 @@ my-MM:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: ခုန်ပါ
+      New Artist Project:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
       New Play Lab Project:
         jump:
           name: ခုန်ပါ
@@ -68,7 +76,26 @@ my-MM:
       course4_artist_fwp_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: "×"
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: "×"
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: "×"
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: "×"
       courseC_data wizard:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseC_data wizard_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_concept1:
@@ -89,6 +116,9 @@ my-MM:
       courseE_artist_functions10_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions10_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -98,10 +128,16 @@ my-MM:
       courseE_artist_functions8_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8a_2018:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8a_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8a_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8b_2018:
@@ -110,10 +146,16 @@ my-MM:
       courseE_artist_functions8b_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8b_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8c_2018:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8c_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8c_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions9:
@@ -125,6 +167,9 @@ my-MM:
       courseE_artist_functions9_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions9_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -132,6 +177,9 @@ my-MM:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge2:
@@ -143,6 +191,9 @@ my-MM:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_predict2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -150,6 +201,9 @@ my-MM:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_predict2_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_bee_functions1:
@@ -188,6 +242,21 @@ my-MM:
       courseF_artist_fwp2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
+      courseF_artist_fwp9:
+        draw a pinwheel:
+          parameters:
+            repeat: ထပ်မံ ပြုလုပ်ပါ
+        draw a spiral edge:
+          parameters:
+            min: အနည်းဆုံး
       courseF_artist_fwp_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ

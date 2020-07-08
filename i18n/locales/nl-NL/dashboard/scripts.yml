@@ -54,40 +54,42 @@ nl:
             The Big Event:
               name: De grote gebeurtenis
           lessons:
-            Happy Maps:
-              name: Vrolijke Routes
-            Move it, Move it:
-              name: Beweeg, Beweeg
-            'Jigsaw: Learn to drag and drop':
-              name: 'Puzzel: Leer hoe je kan knippen en plakken'
-            'Maze: Sequence':
-              name: 'Doolhof: Nummering'
-            'Maze: Debugging':
-              name: 'Doolhof: foutopsporing'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmen in het echte leven: Plant een zaadje'
-            'Bee: Sequence':
-              name: 'Bij: volgorde'
-            'Artist: Sequence':
-              name: 'Kunstenaar: volgorde'
-            Building a Foundation:
-              name: Een Basis Bouwen
-            'Artist: Shapes':
-              name: 'kunstenaar: Vormen'
-            Spelling Bee:
-              name: Spellingswedstrijd
-            Getting Loopy:
-              name: Rondjes lopen
-            'Maze: Loops':
-              name: 'Doolhof: lussen'
-            'Bee: Loops':
-              name: 'Bij: lussen'
-            The Big Event:
-              name: De grote gebeurtenis
-            Going Places Safely:
-              name: Veilig Reizen
             'Artist: Loops':
               name: 'Kustenaar: lussen'
+            'Artist: Sequence':
+              name: 'Kunstenaar: volgorde'
+            'Artist: Shapes':
+              name: 'kunstenaar: Vormen'
+            'Bee: Loops':
+              name: 'Bij: lussen'
+            'Bee: Sequence':
+              name: 'Bij: volgorde'
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Getting Loopy:
+              name: Rondjes lopen
+            Going Places Safely:
+              name: Veilig Reizen
+            Happy Maps:
+              name: Vrolijke Routes
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puzzel: Leer hoe je kan knippen en plakken'
+            'Maze: Debugging':
+              name: 'Doolhof: foutopsporing'
+            'Maze: Loops':
+              name: 'Doolhof: lussen'
+            'Maze: Sequence':
+              name: 'Doolhof: Nummering'
+            Move it, Move it:
+              name: Beweeg, Beweeg
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'
+            Spelling Bee:
+              name: Spellingswedstrijd
+            'Studio: Create a Story':
+              name: 'Speel Lab: Maak een Verhaal'
+            The Big Event:
+              name: De grote gebeurtenis
         course2:
           title: Cursus 2
           description: Les 2 is ontwikkeld voor studenten die kunnen lezen en geen eerdere programeerervaring hebben. In deze les maken studenten programma's om problemen op te lossen en ontwikkelen ze interactieve spellen en verhalen die ze kunnen delen. Aanbevolen voor graad 2-5.
@@ -133,42 +135,44 @@ nl:
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
           lessons:
-            Graph Paper Programming:
-              name: Programmeren op Ruitjespapier
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
-            'Maze: Sequence':
-              name: 'Doolhof: Nummering'
-            'Artist: Sequence':
-              name: 'Kunstenaar: volgorde'
-            Getting Loopy:
-              name: Rondjes lopen
-            'Maze: Loops':
-              name: 'Doolhof: lussen'
-            'Artist: Loops':
-              name: 'Kustenaar: lussen'
-            'Bee: Loops':
-              name: 'Bij: lussen'
-            Relay programming:
-              name: Estafette Programmeren
-            'Bee: Debugging':
-              name: 'Bij: Foutopsporing'
             'Artist: Debugging':
               name: 'Kunstenaar: foutopsporing'
-            Conditionals:
-              name: Voorwaardelijke instructies
-            'Bee: Conditionals':
-              name: 'Bij: voorwaardelijke instructies'
-            Binary Bracelets:
-              name: Binaire armbanden
-            The Big Event:
-              name: De grote gebeurtenis
-            Flappy:
-              name: Flappy
-            Your Digital Footprint:
-              name: Jouw Digitale Voetafdruk
+            'Artist: Loops':
+              name: 'Kustenaar: lussen'
             'Artist: Nested Loops':
               name: 'Kunstenaar: geneste lussen'
+            'Artist: Sequence':
+              name: 'Kunstenaar: volgorde'
+            'Bee: Conditionals':
+              name: 'Bij: voorwaardelijke instructies'
+            'Bee: Debugging':
+              name: 'Bij: Foutopsporing'
+            'Bee: Loops':
+              name: 'Bij: lussen'
+            Binary Bracelets:
+              name: Binaire armbanden
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Flappy:
+              name: Flappy
+            Getting Loopy:
+              name: Rondjes lopen
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
+            'Maze: Loops':
+              name: 'Doolhof: lussen'
+            'Maze: Sequence':
+              name: 'Doolhof: Nummering'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            Relay programming:
+              name: Estafette Programmeren
+            'Studio: Create a Story':
+              name: 'Speel Lab: Maak een Verhaal'
+            The Big Event:
+              name: De grote gebeurtenis
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
         course3:
           title: Cursus 3
           description: Cursus 3 is ontwikkeld voor studenten die Cursus 2 hebben gevolgd. Studenten zullen dieper ingaan op de programmeeronderwerpen die geïntroduceerd zijn in vorige cursussen om flexibele oplossingen te maken om moeilijkere problemen op te lossen. Aan het einde van deze cursus kunnen leerlingen interactieve verhalen en spellen maken die ze met iedereen kunnen delen. Aanbevolen voor rangen 4-5.
@@ -218,44 +222,48 @@ nl:
             'Studio: Create a Story':
               name: 'Speel Lab: Maak een Verhaal'
           lessons:
-            Computational Thinking:
-              name: Rekenend Denken
-            Maze:
-              name: Doolhof
             Artist:
               name: Kunstenaar
-            Functional Suncatchers:
-              name: Functionele Zonnevangers
             'Artist: Functions':
               name: 'Kunstenaar: Functies'
-            'Bee: Functions':
-              name: 'Bij: functies'
+            'Artist: Nested Loops':
+              name: 'Kunstenaar: geneste lussen'
+            'Artist: Patterns':
+              name: 'Kunstenaar: Patronen'
             'Bee: Conditionals':
               name: 'Bij: voorwaardelijke instructies'
+            'Bee: Debugging':
+              name: 'Bij: Foutopsporing'
+            'Bee: Functions':
+              name: 'Bij: functies'
+            'Bee: Nested Loops':
+              name: 'Bij: geneste lussen'
+            Bounce:
+              name: Stuiter
+            Computational Thinking:
+              name: Rekenend Denken
+            Crowdsourcing:
+              name: Crowdsourcing
+            Dice Race:
+              name: Dobbelstenen Race
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            'Farmer: While Loops':
+              name: 'Boer: Zolang-lussen'
+            Functional Suncatchers:
+              name: Functionele Zonnevangers
+            Internet:
+              name: Internet
+            Maze:
+              name: Doolhof
             'Maze: Conditionals':
               name: 'Doolhof: voorwaardelijke instructies'
             Songwriting:
               name: Songwriting
-            Dice Race:
-              name: Dobbelstenen Race
-            'Artist: Nested Loops':
-              name: 'Kunstenaar: geneste lussen'
-            'Farmer: While Loops':
-              name: 'Boer: Zolang-lussen'
-            'Bee: Nested Loops':
-              name: 'Bij: geneste lussen'
-            'Bee: Debugging':
-              name: 'Bij: Foutopsporing'
-            Bounce:
-              name: Stuiter
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Digital Citizenship:
-              name: Digitaal Burgerschap
-            'Artist: Patterns':
-              name: 'Kunstenaar: Patronen'
+            'Studio: Create a Game':
+              name: 'Speel Lab - Maak een Spel'
+            'Studio: Create a Story':
+              name: 'Speel Lab: Maak een Verhaal'
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -347,50 +355,50 @@ nl:
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
-            Maze and Bee:
-              name: Maze en Bee
             Artist:
               name: Kunstenaar
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelop variabelen'
-            'Unplugged: Madlibs':
-              name: 'Unplugged:Madlibs'
-            'Artist: Variables':
-              name: 'Artiest: variabelen'
-            'Play Lab: Variables':
-              name: 'Speel Lab: variabelen'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: Voor-Lus plezier'
-            'Bee: For Loops':
-              name: 'Bij : For-lussen'
-            'Artist: For Loops':
-              name: 'Artiest: For-lussen'
-            'Play Lab: For Loops':
-              name: 'Speel Lab: For-lussen'
-            'Artist: Functions':
-              name: 'Kunstenaar: Functies'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Liedjes schrijven met Parameters'
-            'Artist: Functions with Parameters':
-              name: 'Artiest: Functies met Parameters'
-            'Play Lab: Functions with Parameters':
-              name: 'Speel Lab: Functies met Parameters'
-            'Bee: Functions with Parameters':
-              name: 'Bij: Functies met Parameters'
-            'Unplugged: Binary':
-              name: 'Unplugged: binair'
             Artist Binary:
               name: Kunstenaar Binary
-            Super Challenge - Variables:
-              name: Super Uitdaging - Variabelen
+            'Artist: For Loops':
+              name: 'Artiest: For-lussen'
+            'Artist: Functions':
+              name: 'Kunstenaar: Functies'
+            'Artist: Functions with Parameters':
+              name: 'Artiest: Functies met Parameters'
+            'Artist: Variables':
+              name: 'Artiest: variabelen'
+            'Bee: For Loops':
+              name: 'Bij : For-lussen'
+            'Bee: Functions with Parameters':
+              name: 'Bij: Functies met Parameters'
+            Extreme Challenge - Comprehensive:
+              name: Extreme uitdaging - Omvangrijk
+            Maze and Bee:
+              name: Maze en Bee
+            'Play Lab: For Loops':
+              name: 'Speel Lab: For-lussen'
+            'Play Lab: Functions with Parameters':
+              name: 'Speel Lab: Functies met Parameters'
+            'Play Lab: Variables':
+              name: 'Speel Lab: variabelen'
             Super Challenge - For Loops:
               name: Grote uitdaging - herhalingen
             Super Challenge - Functions and Parameters:
               name: Grote uitdaging - functies en parameters
-            Extreme Challenge - Comprehensive:
-              name: Extreme uitdaging - Omvangrijk
+            Super Challenge - Variables:
+              name: Super Uitdaging - Variabelen
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Envelop variabelen'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: Voor-Lus plezier'
+            'Unplugged: Madlibs':
+              name: 'Unplugged:Madlibs'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Liedjes schrijven met Parameters'
+            'Unplugged: Tangrams':
+              name: 'Unplugged: Tangrams'
         Course4pre:
           title: Vereisten voor cursus 4
           description: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
@@ -415,24 +423,24 @@ nl:
             'Maze: Sequence':
               name: 'Doolhof: Nummering'
           lessons:
-            'Maze: Sequence':
-              name: 'Doolhof: Nummering'
-            'Artist: Sequence':
-              name: 'Kunstenaar: volgorde'
-            'Artist: Loops':
-              name: 'Kustenaar: lussen'
-            'Bee: Conditionals':
-              name: 'Bij: voorwaardelijke instructies'
-            'Artist: Nested Loops':
-              name: 'Kunstenaar: geneste lussen'
-            'Farmer: While Loops':
-              name: 'Boer: Zolang-lussen'
-            'Bee: Nested Loops':
-              name: 'Bij: geneste lussen'
             'Artist: Functions':
               name: 'Kunstenaar: Functies'
+            'Artist: Loops':
+              name: 'Kustenaar: lussen'
+            'Artist: Nested Loops':
+              name: 'Kunstenaar: geneste lussen'
+            'Artist: Sequence':
+              name: 'Kunstenaar: volgorde'
+            'Bee: Conditionals':
+              name: 'Bij: voorwaardelijke instructies'
             'Bee: Debugging':
               name: 'Bij: Foutopsporing'
+            'Bee: Nested Loops':
+              name: 'Bij: geneste lussen'
+            'Farmer: While Loops':
+              name: 'Boer: Zolang-lussen'
+            'Maze: Sequence':
+              name: 'Doolhof: Nummering'
         usability:
           title: Gebruiksvriendelijkheid testen
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
@@ -448,16 +456,16 @@ nl:
             Variables:
               name: Variabelen
           lessons:
-            Intro:
-              name: Introductie
-            Variables:
-              name: Variabelen
+            Binary:
+              name: Binaire
             For Loops:
               name: For-lussen
             Functions and Functions with Parameters:
               name: Functies en functies met Parameters
-            Binary:
-              name: Binaire
+            Intro:
+              name: Introductie
+            Variables:
+              name: Variabelen
         algebra:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
@@ -482,46 +490,24 @@ nl:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluatie blokken'
-            'Eval: Strings and Images':
-              name: 'Eval: Tekenreeksen en afbeeldingen'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Functies ontwerpen'
-            'Eval: Writing Contracts':
-              name: 'Samenvatting: Functies ontwerpen'
-            'Calc: Defining Variables':
-              name: 'Calc: Variabelen definiëren'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Speel Lab: Variabelen definiëren (Groot Spel)'
-            'Eval: Defining Functions':
-              name: 'Eval: Het definiëren van functies'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: Het ontwerp recept'
-            'Play Lab: Defining Functions':
-              name: 'Play Lab: Functies definiëren'
-            'Eval: Functions':
-              name: 'Eval: functies'
-            'Play Lab: Animation (Big Game)':
-              name: 'Speel Lab: Animatie (Groot Spel)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
             'Eval: Boolean Operators':
-              name: 'Eval: Booleaanse operatoren'
+              name: Booleaanse operatoren
+            'Eval: Conditionals':
+              name: Voorwaardelijke instructies
+            'Eval: Defining Functions':
+              name: Samengestelde functies
+            'Eval: Strings and Images':
+              name: Woorden en afbeeldingen
             'Play Lab: Booleans':
-              name: 'Speel Lab: Booleans'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Speel Lab: Booleans (Groot Spel)'
+              name: Sam de Vleermuis
+            'Play Lab: Defining Functions':
+              name: Hoogte van de raket
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Unplugged: Conditionals en stuksgewijze functies'
-            'Eval: Conditionals':
-              name: 'Eval: Conditionals'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Botsingdetectie en de afstand formule'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Speel Lab: Botsingdetectie (Groot Spel)'
+            'Unplugged: The Design Recipe':
+              name: 'Unplugged: Het ontwerp recept'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
         infinity:
           title: Disney Infinity Play Lab
           description: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol.
@@ -548,18 +534,33 @@ nl:
             The Design Recipe:
               name: Het ontwerp Recept
           lessons:
+            Defining Simple Functions:
+              name: Eenvoudige functies definiëren
+            Defining Variables:
+              name: Variabelen definiëren
             Evaluation Blocks:
               name: evaluatie blokken
             Making Pictures:
               name: Foto's maken
-            Defining Variables:
-              name: Variabelen definiëren
-            Defining Simple Functions:
-              name: Eenvoudige functies definiëren
             The Design Recipe:
               name: Het ontwerp Recept
         K5PD:
           stages:
+            Introduction to PD:
+              name: Inleiding tot PD
+            K-5 Courses:
+              name: Cursussen voor klas 1-7
+            Next Steps:
+              name: Volgende stappen
+            Teacher Dashboard:
+              name: Dashboard Leerkrachten
+            Unplugged lessons:
+              name: Offline lessen
+            Writing computer programs:
+              name: Computerprogramma's schrijven
+            new stage:
+              name: nieuw niveau
+          lessons:
             Introduction to PD:
               name: Inleiding tot PD
             K-5 Courses:
@@ -590,16 +591,16 @@ nl:
             Routers and addresses:
               name: Routers en Adressen
           lessons:
+            Manual DNS:
+              name: Manuele DNS
+            Peer to Peer - Sending Ascii:
+              name: Peer to Peer - Verzend Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
               name: Peer to Peer - Verzend Bits op een Gedeelde Lijn
             Peer to Peer - Sending Numbers:
               name: Peer to Peer - Verzend Getallen
-            Peer to Peer - Sending Ascii:
-              name: Peer to Peer - Verzend Ascii
             Routers and addresses:
               name: Routers en Adressen
-            Manual DNS:
-              name: Manuele DNS
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
@@ -651,44 +652,44 @@ nl:
             Wrap-up:
               name: Einde
           lessons:
-            Introduction to Computer Science:
-              name: Inleiding Informatica
-            The Maze:
-              name: Het Doolhof
-            Computational Thinking:
-              name: Rekenend Denken
-            Graph Paper Programming:
-              name: Programmeren op Ruitjespapier
-            The Artist:
-              name: De Artiest
-            Algorithms:
-              name: Algoritmen
-            The Artist 2:
-              name: De Artiest 2
-            Functions:
-              name: Functies
-            The Farmer:
-              name: De Boer
-            Conditionals:
-              name: Voorwaardelijke instructies
-            The Artist 3:
-              name: De Artiest 3
-            Song Writing:
-              name: Liedjes Schrijven
-            The Farmer 2:
-              name: De Boer 2
             Abstraction:
               name: Abstractie
-            The Artist 4:
-              name: De Artiest 4
+            Algorithms:
+              name: Algoritmen
+            Computational Thinking:
+              name: Rekenend Denken
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Functions:
+              name: Functies
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
+            Introduction to Computer Science:
+              name: Inleiding Informatica
             Relay Programming:
               name: Estafette Programmeren
+            Song Writing:
+              name: Liedjes Schrijven
+            The Artist:
+              name: De Artiest
+            The Artist 2:
+              name: De Artiest 2
+            The Artist 3:
+              name: De Artiest 3
+            The Artist 4:
+              name: De Artiest 4
+            The Artist 5:
+              name: De Artiest 5
+            The Farmer:
+              name: De Boer
+            The Farmer 2:
+              name: De Boer 2
             The Farmer 3:
               name: De Boer 3
             The Internet:
               name: Het Internet
-            The Artist 5:
-              name: De Artiest 5
+            The Maze:
+              name: Het Doolhof
             Wrap-up:
               name: Einde
         edit-code:
@@ -705,14 +706,14 @@ nl:
             The Maze:
               name: Het Doolhof
           lessons:
-            The Maze:
-              name: Het Doolhof
             Applab:
               name: Applab
-            The Artist:
-              name: De Artiest
             Play Lab:
               name: Speel Lab
+            The Artist:
+              name: De Artiest
+            The Maze:
+              name: Het Doolhof
         events:
           title: Gebeurtenissen
           description: Gebeurtenissen
@@ -729,12 +730,12 @@ nl:
           lessons:
             Bounce:
               name: Stuiter
-            Studio:
-              name: Studio
             Calc:
               name: Bereken
             Eval:
               name: Evalueer
+            Studio:
+              name: Studio
         flappy:
           title: Flappy Code
           description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!
@@ -811,18 +812,20 @@ nl:
             Sending Bits in the Real World:
               name: Bits verzenden in de Echte Wereld
           lessons:
-            Sending Binary Messages:
-              name: Binaire berichten verzenden
-            Sending Bits in the Real World:
-              name: Bits verzenden in de Echte Wereld
-            Number Systems:
-              name: Systemen voor getalnotatie
             Binary Numbers:
               name: Binaire getallen
+            Encode a Complex Thing:
+              name: Verzend een Ervaring
             Encoding B&W Images:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Number Systems:
+              name: Systemen voor getalnotatie
+            Sending Binary Messages:
+              name: Binaire berichten verzenden
+            Sending Bits in the Real World:
+              name: Bits verzenden in de Echte Wereld
         algebraPD:
           stages:
             Course Overview:
@@ -834,12 +837,12 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
             Course Overview:
               name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
+            Introduction to PD:
+              name: Inleiding tot PD
             Teacher Dashboard:
               name: Dashboard Leerkrachten
         algPDmiami:
@@ -863,22 +866,22 @@ nl:
             Your Game - Collision Detection:
               name: Jouw spel - Botsingsdetectie
           lessons:
-            Evaluation Blocks:
-              name: evaluatie blokken
-            Strings and Images:
-              name: Woorden en afbeeldingen
-            Rocket-Height:
-              name: Rakethoogte
-            Your Game - Animation:
-              name: Jouw spel - Animatie
             Booleans:
               name: Booleans
-            Sam the Bat:
-              name: Sam de Vleermuis
-            Your Game - Booleans:
-              name: Jouw spel - Booleans
+            Evaluation Blocks:
+              name: evaluatie blokken
             Luigi's Pizza:
               name: Luigi's Pizza
+            Rocket-Height:
+              name: Rakethoogte
+            Sam the Bat:
+              name: Sam de Vleermuis
+            Strings and Images:
+              name: Woorden en afbeeldingen
+            Your Game - Animation:
+              name: Jouw spel - Animatie
+            Your Game - Booleans:
+              name: Jouw spel - Booleans
             Your Game - Collision Detection:
               name: Jouw spel - Botsingsdetectie
         CSPPD:
@@ -925,14 +928,14 @@ nl:
             What to Expect:
               name: Wat te Verwachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
-            What to Expect:
-              name: Wat te Verwachten
             Introduction to Complex Adaptive Systems:
               name: Inleiding tot Complex Adaptieve Systemen
+            Introduction to PD:
+              name: Inleiding tot PD
             The Tutorial:
               name: De Tutorial
+            What to Expect:
+              name: Wat te Verwachten
         rbo-reference:
           stages:
             reference:
@@ -975,30 +978,30 @@ nl:
             While Loops:
               name: Zolang-lussen
           lessons:
-            The Need For Programming Languages:
-              name: De Nood Aan Programmeertalen
-            Using Simple Commands:
-              name: Simpele Commando's Gebruiken
-            Creating Functions:
-              name: Maken van functies
-            Functions and Top-Down Design:
-              name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
+            Creating Functions:
+              name: Maken van functies
             Events Unplugged:
               name: Gebeurtenissen Unplugged
-            Using Variables in Apps:
-              name: Variabelen Gebruiken In Apps
-            User Input and Strings:
-              name: Gebruikersinvoer en Strings
-            While Loops:
-              name: Zolang-lussen
-            Loops and Simulations:
-              name: Lussen en Simulaties
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
             Introduction to Arrays:
               name: Inleiding tot Arrays
+            Loops and Simulations:
+              name: Lussen en Simulaties
             Processing Arrays:
               name: Arrays Verwerken
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
+            Using Variables in Apps:
+              name: Variabelen Gebruiken In Apps
+            While Loops:
+              name: Zolang-lussen
         algebraPD3:
           stages:
             Course Overview:
@@ -1018,18 +1021,18 @@ nl:
           lessons:
             Course Overview:
               name: Cursusoverzicht
-            Teacher Dashboard:
-              name: Dashboard Leerkrachten
             Evaluation Blocks:
               name: evaluatie blokken
-            Strings and Images:
-              name: Woorden en afbeeldingen
-            The Design Recipe:
-              name: Het ontwerp Recept
-            The Big Game:
-              name: Het Grote Spel
             Next Steps:
               name: Volgende stappen
+            Strings and Images:
+              name: Woorden en afbeeldingen
+            Teacher Dashboard:
+              name: Dashboard Leerkrachten
+            The Big Game:
+              name: Het Grote Spel
+            The Design Recipe:
+              name: Het ontwerp Recept
         ECSPD-NexTech:
           stages:
             Introduction to PD:
@@ -1063,12 +1066,12 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
             Course Overview:
               name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
+            Introduction to PD:
+              name: Inleiding tot PD
             Teacher Dashboard:
               name: Dashboard Leerkrachten
         algebraPD-iZone:
@@ -1082,12 +1085,12 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
             Course Overview:
               name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
+            Introduction to PD:
+              name: Inleiding tot PD
             Teacher Dashboard:
               name: Dashboard Leerkrachten
         sciencePD-NexTech:
@@ -1101,14 +1104,14 @@ nl:
             What to Expect:
               name: Wat te Verwachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
-            What to Expect:
-              name: Wat te Verwachten
             Introduction to Complex Adaptive Systems:
               name: Inleiding tot Complex Adaptieve Systemen
+            Introduction to PD:
+              name: Inleiding tot PD
             The Tutorial:
               name: De Tutorial
+            What to Expect:
+              name: Wat te Verwachten
         sciencePD-iZone:
           stages:
             Introduction to Complex Adaptive Systems:
@@ -1120,14 +1123,14 @@ nl:
             What to Expect:
               name: Wat te Verwachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
-            What to Expect:
-              name: Wat te Verwachten
             Introduction to Complex Adaptive Systems:
               name: Inleiding tot Complex Adaptieve Systemen
+            Introduction to PD:
+              name: Inleiding tot PD
             The Tutorial:
               name: De Tutorial
+            What to Expect:
+              name: Wat te Verwachten
         sciencePD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -1148,10 +1151,10 @@ nl:
             Welcome Back!:
               name: Welkom Terug!
           lessons:
-            Welcome Back!:
-              name: Welkom Terug!
             Mystery Model:
               name: Mysterie Model
+            Welcome Back!:
+              name: Welkom Terug!
         cspunit2:
           description_short: Programmeren
           stages:
@@ -1172,6 +1175,16 @@ nl:
             The Need for DNS:
               name: De Nood aan DNS
           lessons:
+            Algorithms Detour - Hard Problems TSP:
+              name: Moeilijke Problemen - Het Reizende-Verkoper-Probleem
+            Algorithms Detour - How Routers Learn:
+              name: Hoe Routers Leren
+            Encryption Algorithms:
+              name: Sleutels en Paswoorden
+            HTTP and Abstraction:
+              name: HTTP en Abstractie op het Internet
+            Tell Me a Secret - Encrypting Text:
+              name: De Nood aan Encryptie
             The Internet:
               name: Het Internet
             The Need for Addressing:
@@ -1201,24 +1214,24 @@ nl:
             The Design Recipe:
               name: Het ontwerp Recept
           lessons:
-            Evaluation Blocks:
-              name: evaluatie blokken
-            Strings and Images:
-              name: Woorden en afbeeldingen
-            Defining Variables:
-              name: Variabelen definiëren
-            Rocket-Height:
-              name: Rakethoogte
-            The Design Recipe:
-              name: Het ontwerp Recept
             Booleans:
               name: Booleans
-            Sam the Bat:
-              name: Sam de Vleermuis
-            Luigi's Pizza:
-              name: Luigi's Pizza
+            Defining Variables:
+              name: Variabelen definiëren
+            Evaluation Blocks:
+              name: evaluatie blokken
             Free Play:
               name: Gratis spelen
+            Luigi's Pizza:
+              name: Luigi's Pizza
+            Rocket-Height:
+              name: Rakethoogte
+            Sam the Bat:
+              name: Sam de Vleermuis
+            Strings and Images:
+              name: Woorden en afbeeldingen
+            The Design Recipe:
+              name: Het ontwerp Recept
         allthethings:
           title: Alle dingen!
           description: Alle de level types voor UI testing
@@ -1259,36 +1272,36 @@ nl:
             Standalone video:
               name: Alleenstaande video
           lessons:
-            Jigsaw:
-              name: Legpuzzel
-            Maze:
-              name: Doolhof
+            AppLab:
+              name: AppLab
             Artist:
               name: Kunstenaar
             Bee:
               name: Bee
+            Bounce:
+              name: Stuiter
             Farmer:
               name: Boer
             Flappy:
               name: Flappy
-            Bounce:
-              name: Stuiter
-            Multi:
-              name: meerdere
+            Jigsaw:
+              name: Legpuzzel
             Match:
               name: Overeenkomst
+            Maze:
+              name: Doolhof
+            Minecraft:
+              name: Minecraft
+            Multi:
+              name: meerdere
             Odometer:
               name: Kilometerteller
             Pixelation:
               name: Pixelachtig
-            AppLab:
-              name: AppLab
-            Studio:
-              name: Studio
             Star wars:
               name: Star Wars
-            Minecraft:
-              name: Minecraft
+            Studio:
+              name: Studio
             Web Lab:
               name: Web Lab
             Standalone video:
@@ -1318,26 +1331,26 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Course Overview:
-              name: Cursusoverzicht
-            Teacher Dashboard:
-              name: Dashboard Leerkrachten
-            Evaluation Blocks:
-              name: evaluatie blokken
-            Strings and Images:
-              name: Woorden en afbeeldingen
-            Defining Variables:
-              name: Variabelen definiëren
-            Defining Functions:
-              name: Functies definiëren
-            Rocket-Height:
-              name: Rakethoogte
             Booleans:
               name: Booleans
+            Course Overview:
+              name: Cursusoverzicht
+            Defining Functions:
+              name: Functies definiëren
+            Defining Variables:
+              name: Variabelen definiëren
             'Eval: Conditionals':
               name: 'Eval: Conditionals'
+            Evaluation Blocks:
+              name: evaluatie blokken
             Next Steps:
               name: Volgende stappen
+            Rocket-Height:
+              name: Rakethoogte
+            Strings and Images:
+              name: Woorden en afbeeldingen
+            Teacher Dashboard:
+              name: Dashboard Leerkrachten
         cspfacilitator:
           stages:
             App Lab:
@@ -1347,12 +1360,12 @@ nl:
             Welcome!:
               name: Welkom!
           lessons:
-            Welcome!:
-              name: Welkom!
-            Internet Simulator:
-              name: Internet Simulator
             App Lab:
               name: App Lab
+            Internet Simulator:
+              name: Internet Simulator
+            Welcome!:
+              name: Welkom!
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
@@ -1379,14 +1392,14 @@ nl:
             Wrap-up:
               name: Einde
           lessons:
-            Welcome!:
-              name: Welkom!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welkom!
             Wrap-up:
               name: Einde
         algebraPD2:
@@ -1400,12 +1413,12 @@ nl:
             Welcome!:
               name: Welkom!
           lessons:
-            Welcome!:
-              name: Welkom!
-            The Design Recipe:
-              name: Het ontwerp Recept
             Teacher Dashboard:
               name: Dashboard Leerkrachten
+            The Design Recipe:
+              name: Het ontwerp Recept
+            Welcome!:
+              name: Welkom!
         sciencePD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -1467,14 +1480,14 @@ nl:
             Wrap-up:
               name: Einde
           lessons:
-            Welcome!:
-              name: Welkom!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welkom!
             Wrap-up:
               name: Einde
         ECSPD2-NexTech:
@@ -1492,14 +1505,14 @@ nl:
             Wrap-up:
               name: Einde
           lessons:
-            Welcome!:
-              name: Welkom!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welkom!
             Wrap-up:
               name: Einde
         asUnplugged:
@@ -1523,24 +1536,24 @@ nl:
             The Big Event:
               name: De grote gebeurtenis
           lessons:
+            Binary Bracelets:
+              name: Binaire armbanden
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Getting Loopy:
+              name: Rondjes lopen
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
             Happy Maps:
               name: Vrolijke Routes
             Move it, Move it:
               name: Beweeg, Beweeg
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-            Graph Paper Programming:
-              name: Programmeren op Ruitjespapier
-            Building a Foundation:
-              name: Een Basis Bouwen
-            Getting Loopy:
-              name: Rondjes lopen
-            The Big Event:
-              name: De grote gebeurtenis
-            Binary Bracelets:
-              name: Binaire armbanden
             Songwriting:
               name: Songwriting
+            The Big Event:
+              name: De grote gebeurtenis
         sciencePD3_pre1:
           stages:
             Welcome Back!:
@@ -1550,6 +1563,11 @@ nl:
               name: Welkom Terug!
         ScienceP3OLPT2:
           stages:
+            Welcome!:
+              name: Welkom!
+            Wrap-Up:
+              name: Terugblik
+          lessons:
             Welcome!:
               name: Welkom!
             Wrap-Up:
@@ -1580,14 +1598,14 @@ nl:
             While Loops:
               name: Zolang-lussen
           lessons:
-            While Loops:
-              name: Zolang-lussen
-            Loops and Simulations:
-              name: Lussen en Simulaties
             Introduction to Arrays:
               name: Inleiding tot Arrays
+            Loops and Simulations:
+              name: Lussen en Simulaties
             Processing Arrays:
               name: Arrays Verwerken
+            While Loops:
+              name: Zolang-lussen
         gumball:
           title: Kauwgom Speel Lab
           description: Maken een verhaal of een spel met de Kauwgom Speel Lab!
@@ -1666,24 +1684,24 @@ nl:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Het ontwerp recept'
           lessons:
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluatie blokken'
-            'Eval: Strings and Images':
-              name: 'Eval: Tekenreeksen en afbeeldingen'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Functies ontwerpen'
-            'Eval: Writing Contracts':
-              name: 'Samenvatting: Functies ontwerpen'
             'Calc: Defining Variables':
               name: 'Calc: Variabelen definiëren'
+            'Calc: Evaluation Blocks':
+              name: 'Calc: Evaluatie blokken'
             'Eval: Defining Functions':
               name: 'Eval: Het definiëren van functies'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: Het ontwerp recept'
             'Eval: Functions':
               name: 'Eval: functies'
+            'Eval: Strings and Images':
+              name: 'Eval: Tekenreeksen en afbeeldingen'
+            'Eval: Writing Contracts':
+              name: 'Samenvatting: Functies ontwerpen'
             'Play Lab: Defining Functions':
               name: 'Play Lab: Functies definiëren'
+            'Unplugged: Contracts':
+              name: 'Unplugged: Functies ontwerpen'
+            'Unplugged: The Design Recipe':
+              name: 'Unplugged: Het ontwerp recept'
         AlgebraB:
           title: 'Informatica in Algebra'
           description: Leer functioneel programmeren door Algebra
@@ -1712,28 +1730,28 @@ nl:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Speel Lab: Variabelen definiëren (Groot Spel)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Speel Lab: Animatie (Groot Spel)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
             'Eval: Boolean Operators':
               name: 'Eval: Booleaanse operatoren'
-            'Play Lab: Booleans':
-              name: 'Speel Lab: Booleans'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Speel Lab: Booleans (Groot Spel)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals en stuksgewijze functies'
             'Eval: Conditionals':
               name: 'Eval: Conditionals'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Botsingdetectie en de afstand formule'
+            'Play Lab: Animation (Big Game)':
+              name: 'Speel Lab: Animatie (Groot Spel)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Speel Lab: Booleans (Groot Spel)'
+            'Play Lab: Booleans':
+              name: 'Speel Lab: Booleans'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Speel Lab: Botsingdetectie (Groot Spel)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Speel Lab: Variabelen definiëren (Groot Spel)'
+            'Unplugged: Booleans':
+              name: 'Unplugged: Booleans'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Unplugged: Botsingdetectie en de afstand formule'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Conditionals en stuksgewijze functies'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
         algebraPD1:
           stages:
             Course Overview:
@@ -1745,12 +1763,12 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
             Course Overview:
               name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
+            Introduction to PD:
+              name: Inleiding tot PD
             Teacher Dashboard:
               name: Dashboard Leerkrachten
         csp1-2017:
@@ -1773,12 +1791,12 @@ nl:
             csp1_2:
               display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
           lessons:
-            Sending Binary Messages:
-              name: Binaire berichten verzenden
-            Number Systems:
-              name: Systemen voor getalnotatie
             Binary Numbers:
               name: Binaire getallen
+            Number Systems:
+              name: Systemen voor getalnotatie
+            Sending Binary Messages:
+              name: Binaire berichten verzenden
             The Internet:
               name: Het Internet
             The Need for Addressing:
@@ -1817,16 +1835,16 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
-            The Need For Programming Languages:
-              name: De Nood Aan Programmeertalen
-            Using Simple Commands:
-              name: Simpele Commando's Gebruiken
+            APIs and Function Parameters:
+              name: API's en Functieparameters
             Creating Functions:
               name: Maken van functies
             Functions and Top-Down Design:
               name: Functies en Top-Down Designs
-            APIs and Function Parameters:
-              name: API's en Functieparameters
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
         csp4-2017:
           lesson_groups:
             cspSurvey:
@@ -1852,19 +1870,30 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
-            User Input and Strings:
-              name: Gebruikersinvoer en Strings
-            While Loops:
-              name: Zolang-lussen
-            Loops and Simulations:
-              name: Lussen en Simulaties
+            Events Unplugged:
+              name: Gebeurtenissen Unplugged
             Introduction to Arrays:
               name: Inleiding tot Arrays
+            Loops and Simulations:
+              name: Lussen en Simulaties
             Processing Arrays:
               name: Arrays Verwerken
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            Using Variables in Apps:
+              name: Variabelen Gebruiken In Apps
+            While Loops:
+              name: Zolang-lussen
         CSDU3-Draft:
           description_short: Programmeren
           stages:
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+            Velocity:
+              name: Snelheid
+          lessons:
             Collision Detection:
               name: Botsingdetectie
             Functions:
@@ -1882,14 +1911,14 @@ nl:
             What to Expect:
               name: Wat te Verwachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
-            What to Expect:
-              name: Wat te Verwachten
             Introduction to Complex Adaptive Systems:
               name: Inleiding tot Complex Adaptieve Systemen
+            Introduction to PD:
+              name: Inleiding tot PD
             The Tutorial:
               name: De Tutorial
+            What to Expect:
+              name: Wat te Verwachten
         TEMP CSD Unit 3:
           description_short: Programmeren
         CSF_Secret_Sample:
@@ -1903,10 +1932,10 @@ nl:
             Teacher Dashboard:
               name: Dashboard Leerkrachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
             Evaluation Blocks:
               name: evaluatie blokken
+            Introduction to PD:
+              name: Inleiding tot PD
             Teacher Dashboard:
               name: Dashboard Leerkrachten
         sciencePD1:
@@ -1920,14 +1949,14 @@ nl:
             What to Expect:
               name: Wat te Verwachten
           lessons:
-            Introduction to PD:
-              name: Inleiding tot PD
-            What to Expect:
-              name: Wat te Verwachten
             Introduction to Complex Adaptive Systems:
               name: Inleiding tot Complex Adaptieve Systemen
+            Introduction to PD:
+              name: Inleiding tot PD
             The Tutorial:
               name: De Tutorial
+            What to Expect:
+              name: Wat te Verwachten
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -1959,6 +1988,9 @@ nl:
               name: Game Lab
         CSDU4-Draft:
           stages:
+            Design Mode:
+              name: Ontwerpmodus
+          lessons:
             Design Mode:
               name: Ontwerpmodus
         MikeTest:
@@ -2003,6 +2035,23 @@ nl:
               name: Programmeren
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
+          lessons:
+            Debugging:
+              name: Foutopsporing
+            Events:
+              name: Gebeurtenissen
+            Events Unplugged:
+              name: Gebeurtenissen Unplugged
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puzzel: Leer hoe je kan knippen en plakken'
+            Loops:
+              name: Lussen
+            Loops Intro:
+              name: Lussen Intro
+            Programming:
+              name: Programmeren
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'
         grade4:
           stages:
             Build a Star Wars Game!:
@@ -2011,8 +2060,32 @@ nl:
               name: Digitaal Burgerschap
             Songwriting:
               name: Songwriting
+          lessons:
+            Build a Star Wars Game!:
+              name: Bouw een Star Wars Spel!
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Songwriting:
+              name: Songwriting
         grade1:
           stages:
+            Debugging:
+              name: Foutopsporing
+            Events:
+              name: Gebeurtenissen
+            Events Unplugged:
+              name: Gebeurtenissen Unplugged
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puzzel: Leer hoe je kan knippen en plakken'
+            Loops:
+              name: Lussen
+            Loops Intro:
+              name: Lussen Intro
+            Programming:
+              name: Programmeren
+            Unspotted Bugs:
+              name: Onbekende bugs
+          lessons:
             Debugging:
               name: Foutopsporing
             Events:
@@ -2051,6 +2124,27 @@ nl:
               name: 'Unplugged: Voor-Lus plezier'
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Liedjes schrijven met Parameters'
+          lessons:
+            'Artist: For Loops':
+              name: 'Artiest: For-lussen'
+            'Artist: Functions with Parameters':
+              name: 'Artiest: Functies met Parameters'
+            'Artist: Variables':
+              name: 'Artiest: variabelen'
+            'Bee: For Loops':
+              name: 'Bij : For-lussen'
+            'Bee: Functions with Parameters':
+              name: 'Bij: Functies met Parameters'
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            'Play Lab: Variables':
+              name: 'Speel Lab: variabelen'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Envelop variabelen'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: Voor-Lus plezier'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Liedjes schrijven met Parameters'
         ecs-unit1:
           stages:
             0: |-
@@ -2064,18 +2158,29 @@ nl:
             Wrap-up:
               name: Einde
           lessons:
-            Welcome!:
-              name: Welkom!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welkom!
             Wrap-up:
               name: Einde
         grade3:
           stages:
+            " Bee: Conditionals":
+              name: "Bij: voorwaardelijke instructies"
+            'Artist: Nested Loops':
+              name: 'Kunstenaar: geneste lussen'
+            Bee Debugging:
+              name: Bij foutopsporing
+            Bounce:
+              name: Stuiter
+            'Farmer: While Loops':
+              name: 'Boer: Zolang-lussen'
+          lessons:
             " Bee: Conditionals":
               name: "Bij: voorwaardelijke instructies"
             'Artist: Nested Loops':
@@ -2113,18 +2218,29 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
             Collision Detection:
               name: Botsingdetectie
             Functions:
               name: Functies
+            'Project: Design a Game':
+              name: 'Project: Ontwerp een Spel'
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
         grade2:
           stages:
+            Flappy:
+              name: Flappy
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            The Big Event:
+              name: De grote gebeurtenis
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -2156,26 +2272,26 @@ nl:
             While Loops:
               name: Zolang-lussen
           lessons:
+            Binary:
+              name: Binaire
+            Conditionals:
+              name: Voorwaardelijke instructies
             Events:
               name: Gebeurtenissen
+            For Loops:
+              name: For-lussen
+            Functions:
+              name: Functies
+            Functions with Parameters:
+              name: Functies met Parameters
             Loops:
               name: Lussen
             Nested Loops:
               name: Genestelde lussen
-            Conditionals:
-              name: Voorwaardelijke instructies
-            While Loops:
-              name: Zolang-lussen
-            Functions:
-              name: Functies
             Variables:
               name: Variabelen
-            For Loops:
-              name: For-lussen
-            Functions with Parameters:
-              name: Functies met Parameters
-            Binary:
-              name: Binaire
+            While Loops:
+              name: Zolang-lussen
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -2185,12 +2301,12 @@ nl:
             Welcome!:
               name: Welkom!
           lessons:
-            Welcome!:
-              name: Welkom!
-            The Design Recipe:
-              name: Het ontwerp Recept
             Teacher Dashboard:
               name: Dashboard Leerkrachten
+            The Design Recipe:
+              name: Het ontwerp Recept
+            Welcome!:
+              name: Welkom!
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -2227,6 +2343,13 @@ nl:
               name: Binaire afbeeldingen
             Play Lab:
               name: Speel Lab
+          lessons:
+            Binary Bracelets:
+              name: Binaire armbanden
+            Binary Images:
+              name: Binaire afbeeldingen
+            Play Lab:
+              name: Speel Lab
         csd2-2017:
           stages:
             new stage:
@@ -2234,6 +2357,8 @@ nl:
             Lists:
               name: Lijsten
           lessons:
+            new stage:
+              name: nieuw niveau
             Lists:
               name: Lijsten
         csp2-support:
@@ -2294,12 +2419,14 @@ nl:
             Building a Foundation:
               name: Een Basis Bouwen
           lessons:
-            Building a Foundation:
-              name: Een Basis Bouwen
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
             Binary Bracelets:
               name: Binaire armbanden
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            Building a Foundation:
+              name: Een Basis Bouwen
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -2315,10 +2442,6 @@ nl:
             Introduction:
               name: Introductie
           lessons:
-            Introduction:
-              name: Introductie
-            Nested Loops:
-              name: Genestelde lussen
             Conditionals with Cards:
               name: Statements met Kaarten
             Digital Citizenship:
@@ -2327,6 +2450,10 @@ nl:
               name: 'Unplugged: binair'
             Artist Binary:
               name: Kunstenaar Binary
+            Nested Loops:
+              name: Genestelde lussen
+            Introduction:
+              name: Introductie
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -2347,16 +2474,18 @@ nl:
             extra_course_content:
               display_name: Extra cursusinhoud
           lessons:
-            Introduction:
-              name: Introductie
-            Conditionals:
-              name: Voorwaardelijke instructies
+            Digital Citizenship:
+              name: Digitaal Burgerschap
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Introduction:
+              name: Introductie
+            Conditionals:
+              name: Voorwaardelijke instructies
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -2377,21 +2506,26 @@ nl:
             content:
               display_name: Content
           lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmen: Tangrams'
-            Introduction:
-              name: Introductie
-            Ice Age Play Lab:
-              name: Ijs tijd Speel Lab
+            Digital Citizenship:
+              name: Digitaal Burgerschap
             Envelope Variables:
               name: Envelop variabelen
             For Loop Fun:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+            Introduction:
+              name: Introductie
+            Ice Age Play Lab:
+              name: Ijs tijd Speel Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
         classic-hoc-impact-study:
           description_short: Probeer de grondbeginselen van de informatica met veel leuke figuren!
           stages:
+            Hour of Code 2013:
+              name: Uur van Code 2013
+          lessons:
             Hour of Code 2013:
               name: Uur van Code 2013
         hoc-impact-study:
@@ -2443,6 +2577,9 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp4-support:
           lesson_groups:
             required:
@@ -2464,6 +2601,11 @@ nl:
               name: Terugblik
         science-pd-ol-pt-5:
           stages:
+            Welcome!:
+              name: Welkom!
+            Wrap-Up:
+              name: Terugblik
+          lessons:
             Welcome!:
               name: Welkom!
             Wrap-Up:
@@ -2517,6 +2659,10 @@ nl:
             csd6_2:
               display_name: 'Hoofdstuk 2: Hardware Input'
           lessons:
+            Lists:
+              name: Lijsten
+            For Loops:
+              name: For-lussen
             Functions with Parameters:
               name: Functies met Parameters
         workshop-gamelab:
@@ -2530,8 +2676,14 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         applab-2hour:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         coursed-ramp:
@@ -2550,12 +2702,12 @@ nl:
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmen in het echt: Dobbelstenenrace'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'Algoritmen in het echt: Dobbelstenenrace'
             Introduction:
               name: Introductie
             Conditionals:
               name: Voorwaardelijke instructies
+            'Real Life Algorithms: Dice Race':
+              name: 'Algoritmen in het echt: Dobbelstenenrace'
         csd6-2017:
           stages:
             Lists:
@@ -2572,10 +2724,29 @@ nl:
             csd6_2:
               display_name: 'Hoofdstuk 2: Hardware Input'
           lessons:
+            Lists:
+              name: Lijsten
+            For Loops:
+              name: For-lussen
+            Functions with Parameters:
+              name: Functies met Parameters
             Functions with Parameters_:
               name: Functies met Parameters
         csd3-draft:
           stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+            'Project: Design a Game':
+              name: 'Project: Ontwerp een Spel'
+          lessons:
             Variables:
               name: Variabelen
             Conditionals:
@@ -2611,8 +2782,26 @@ nl:
           stages:
             Lists:
               name: Lijsten
+          lessons:
+            Lists:
+              name: Lijsten
         csd3-chapters:
           stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+            'Project: Design a Game':
+              name: 'Project: Ontwerp een Spel'
+            'null':
+              name: 'niets'
+          lessons:
             Variables:
               name: Variabelen
             Conditionals:
@@ -2664,8 +2853,6 @@ nl:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-            Going Places Safely:
-              name: Veilig Reizen
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2673,19 +2860,13 @@ nl:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-            Your Digital Footprint:
-              name: Jouw Digitale Voetafdruk
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
           lessons:
-            Building a Foundation:
-              name: Een Basis Bouwen
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
-            Binary Bracelets:
-              name: Binaire armbanden
         coursed-2017:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2693,18 +2874,10 @@ nl:
             Nested Loops:
               name: Genestelde lussen
           lessons:
-            Introduction:
-              name: Introductie
+            'Algorithms: Graph Paper Programming':
+              description_teacher: Door elkaar te programmeren om tekeningen te maken, zullen de leerlingen beginnen te begrijpen wat programmeren nu eigenlijk is. De klas begint met elkaar instructies geven om vakjes op ruitjespapier in te kleuren, om zo de bestaande tekening na te maken. Als er tijd is, kan de les worden afgesloten met tekeningen die de leerlingen zelf maken.
             Nested Loops:
               name: Genestelde lussen
-            Conditionals with Cards:
-              name: Statements met Kaarten
-            Digital Citizenship:
-              name: Digitaal Burgerschap
-            'Unplugged: Binary':
-              name: 'Unplugged: binair'
-            Artist Binary:
-              name: Kunstenaar Binary
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2729,33 +2902,8 @@ nl:
             extra_course_content:
               display_name: Extra cursusinhoud
           lessons:
-            Building a Foundation:
-              name: Een Basis Bouwen
-            Nested Loops:
-              name: Genestelde lussen
-            Introduction:
-              name: Introductie
-            Conditionals:
-              name: Voorwaardelijke instructies
-            Build a Star Wars Game:
-              name: Bouw een Star Wars Spel!
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        coursef-2017:
-          stages:
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
-            Building a Foundation:
-              name: Een Basis Bouwen
-          lessons:
-            Building a Foundation:
-              name: Een Basis Bouwen
-            'Algorithms: Tangrams':
-              name: 'Algoritmen: Tangrams'
-            Introduction:
-              name: Introductie
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
             Envelope Variables:
@@ -2764,6 +2912,25 @@ nl:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            'Functions: Songwriting':
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+        coursef-2017:
+          stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
+            Building a Foundation:
+              name: Een Basis Bouwen
+          lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
+            Building a Foundation:
+              name: Een Basis Bouwen
         cspnovice:
           lesson_groups:
             required:
@@ -2864,6 +3031,20 @@ nl:
           lessons:
             Introduction:
               name: Introductie
+            Internet:
+              name: Internet
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Songwriting with Parameters:
+              name: Liedjes schrijven met Parameters
             Building a Foundation:
               name: Een Basis Bouwen
             Nested Loops:
@@ -2883,8 +3064,14 @@ nl:
           stages:
             Thanks:
               name: Bedankt
+          lessons:
+            Thanks:
+              name: Bedankt
         csp-pre-survey-test-2017:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp3-research-mxghyt:
@@ -2906,6 +3093,8 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            new stage:
+              name: nieuw niveau
             The Need For Programming Languages:
               name: De Nood Aan Programmeertalen
             Using Simple Commands:
@@ -2936,6 +3125,8 @@ nl:
           lessons:
             Building a Foundation:
               name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
             Conditionals:
               name: Voorwaardelijke instructies
             Build a Star Wars Game:
@@ -2963,8 +3154,8 @@ nl:
           lessons:
             Introduction:
               name: Introductie
-            Building a Foundation:
-              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
             Conditionals with Cards:
               name: Statements met Kaarten
             Digital Citizenship:
@@ -2973,8 +3164,13 @@ nl:
               name: 'Unplugged: binair'
             Artist Binary:
               name: Kunstenaar Binary
+            Building a Foundation:
+              name: Een Basis Bouwen
         csp3-a:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         new-express:
@@ -3052,6 +3248,9 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -3079,6 +3278,9 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         hero:
           stages:
             Minecraft Hour of Code:
@@ -3094,6 +3296,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp-create-2017:
           lesson_groups:
             cspSurvey:
@@ -3107,6 +3312,9 @@ nl:
               name: nieuw niveau
         colehoc17:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         course-e-2018:
@@ -3137,12 +3345,12 @@ nl:
               name: Introductie
             Conditionals:
               name: Voorwaardelijke instructies
-            Build a Star Wars Game:
-              name: Bouw een Star Wars Spel!
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
         course-f-2018:
           stages:
             Building a Foundation:
@@ -3274,10 +3482,16 @@ nl:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
           lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmen in het echte leven: Plant een zaadje'
+            'Debugging: Unspotted Bugs':
+              name: Onbekende bugs
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie en het Grote Project
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie en het Grote Project
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3315,12 +3529,22 @@ nl:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
           lessons:
-            Graph Paper Programming:
+            'Algorithms: Graph Paper Programming':
               name: Programmeren op Ruitjespapier
-            Relay Programming:
-              name: Estafette Programmeren
+            Introduction:
+              name: Introductie
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
             Conditionals with Cards:
               name: Statements met Kaarten
+            'Functions: Songwriting':
+              name: Songwriting
             Envelope Variables:
               name: Envelop variabelen
             For Loop Fun:
@@ -3328,13 +3552,17 @@ nl:
             Binary Bracelets:
               name: Binaire armbanden
             'Unplugged: Binary':
-              name: 'Unplugged: binair'
+              name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
             Internet:
-              name: Internet
+              name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Relay Programming:
+              name: Estafette Programmeren
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3344,10 +3572,12 @@ nl:
             Move It, Move It:
               name: verplaats het, verplaats het
           lessons:
-            Move It, Move It:
-              name: verplaats het, verplaats het
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
+            Move It, Move It:
+              name: verplaats het, verplaats het
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3369,16 +3599,24 @@ nl:
             Relay Programming:
               name: Estafette Programmeren
           lessons:
-            Relay Programming:
-              name: Estafette Programmeren
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            Introduction:
+              name: Introductie
+            Building a Foundation:
+              name: Een Basis Bouwen
             Conditionals with Cards:
               name: Statements met Kaarten
             Digital Citizenship:
               name: Digitaal Burgerschap
             'Unplugged: Binary':
-              name: 'Unplugged: binair'
+              name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              name: Estafette Programmeren
         coursec-2018:
           stages:
             Building a Foundation:
@@ -3392,8 +3630,10 @@ nl:
           lessons:
             Building a Foundation:
               name: Een Basis Bouwen
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+            'Events: The Big Event':
+              name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
         csd6-2018:
@@ -3410,6 +3650,8 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Functions with Parameters_:
+              name: Functies met Parameters
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
@@ -3437,20 +3679,25 @@ nl:
             extra_course_content:
               display_name: Extra cursusinhoud
           lessons:
+            'Programming: My Robotic Friends':
+              name: My Robotic Friends
             Building a Foundation:
               name: Een Basis Bouwen
-            Nested Loops:
-              name: Genestelde lussen
-            Conditionals with Cards:
-              name: Statements met Kaarten
-            Conditionals:
-              name: Voorwaardelijke instructies
+            Introduction:
+              name: Introductie
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
             Internet:
-              name: Internet
+              name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Minecraft Hour of Code:
+              name: Minecraft programmeer uur
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -3472,14 +3719,24 @@ nl:
             Conditionals with Cards:
               name: Statements met Kaarten
           lessons:
+            'Programming: My Robotic Friends':
+              name: My Robotic Friends
             Building a Foundation:
               name: Een Basis Bouwen
-            Conditionals with Cards:
-              name: Statements met Kaarten
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
+            Introduction:
+              name: Introductie
+            Ice Age Play Lab:
+              name: Ijs tijd Speel Lab
             Envelope Variables:
               name: Envelop variabelen
             For Loop Fun:
               name: For Lus fun
+            Songwriting with Parameters:
+              name: Liedjes schrijven met Parameters
+            Conditionals with Cards:
+              name: Statements met Kaarten
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -3724,12 +3981,20 @@ nl:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: Onbekende bugs
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie en het Grote Project
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'
+            Spelling Bee:
+              name: Spellingswedstrijd
             Move It, Move It:
               name: verplaats het, verplaats het
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
-            Spelling Bee:
-              name: Spellingswedstrijd
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie en het Grote Project
         fit-test:
           lesson_groups:
             required:
@@ -3760,6 +4025,8 @@ nl:
           description_short: Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara en nog 25 anderen!
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
           lessons:
+            new stage:
+              name: nieuw niveau
             Dance Party:
               name: Dansfeest
         frozen-2018-test-b:
@@ -3782,8 +4049,14 @@ nl:
           stages:
             Dance Party:
               name: Dansfeest
+          lessons:
+            Dance Party:
+              name: Dansfeest
         dance-draft:
           stages:
+            Dance Party:
+              name: Dansfeest
+          lessons:
             Dance Party:
               name: Dansfeest
         cspplayground:
@@ -3822,16 +4095,25 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
           lessons:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Conditionals with Cards:
+              name: Statements met Kaarten
             Envelope Variables:
               name: Envelop variabelen
             For Loop Fun:
               name: For Lus fun
+            The Artist:
+              name: De Artiest
             Internet:
-              name: Internet
+              name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
           stages:
+            Dance Party:
+              name: Dansfeest
+          lessons:
             Dance Party:
               name: Dansfeest
         coursed-2019:
@@ -3864,18 +4146,20 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
             Relay Programming:
               name: Estafette Programmeren
-            Build a Star Wars Game:
-              name: Bouw een Star Wars Spel!
             Conditionals with Cards:
               name: Statements met Kaarten
-            'Unplugged: Binary':
-              name: 'Unplugged: binair'
-            Artist Binary:
-              name: Kunstenaar Binary
             Digital Citizenship:
               name: Digitaal Burgerschap
+            'Unplugged: Binary':
+              name: Binaire afbeeldingen
+            Artist Binary:
+              name: Kunstenaar Binary
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Dance Party:
               name: Dansfeest
         coursee-2019:
@@ -3905,8 +4189,23 @@ nl:
             csf_functions:
               display_name: Functies
           lessons:
-            Conditionals:
-              name: Voorwaardelijke instructies
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Songwriting:
+              name: Songwriting
         express-2019:
           stages:
             Relay Programming:
@@ -3941,6 +4240,24 @@ nl:
             csf_for_loops:
               display_name: For-lussen
           lessons:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Dance Party:
               name: Dansfeest
         csd1-2019:
@@ -3958,6 +4275,11 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            new stage:
+              name: nieuw niveau
+            'null':
+              name: 'niets'
         dance-extras-gallery:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
@@ -3979,6 +4301,10 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            'Events: The Big Event':
+              name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
         csp-mid-survey:
@@ -4001,6 +4327,8 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
           lessons:
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
         courseb-2019:
@@ -4019,10 +4347,12 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
           lessons:
-            Your Digital Footprint:
-              name: Jouw Digitale Voetafdruk
             Move It, Move It:
               name: verplaats het, verplaats het
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -4037,6 +4367,10 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
           lessons:
+            Move It, Move It:
+              name: verplaats het, verplaats het
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
             Spelling Bee:
               name: Spellingswedstrijd
         removed19:
@@ -4048,6 +4382,9 @@ nl:
               name: 'Algoritmen in het echte leven: Plant een zaadje'
         dani-test-script:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csd2-2019:
@@ -4122,6 +4459,9 @@ nl:
               display_name: Functies
             required:
               display_name: Overzicht
+          lessons:
+            Surveys:
+              name: Enquêtes
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -4254,10 +4594,19 @@ nl:
             required:
               display_name: Overzicht
           lessons:
+            new stage:
+              name: nieuw niveau
+            Number Systems:
+              name: Systemen voor getalnotatie
+            Sending Binary Messages:
+              name: Binaire berichten verzenden
             Binary Numbers:
               name: Binaire getallen
         csd-videos:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         time4csdemo:
@@ -4271,12 +4620,12 @@ nl:
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
           lessons:
-            Building a Foundation:
-              name: Een Basis Bouwen
             Crowdsourcing:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Statements met Kaarten
+            Building a Foundation:
+              name: Een Basis Bouwen
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
         csp1-pilot-staging:
@@ -4328,6 +4677,9 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -4356,6 +4708,9 @@ nl:
           stages:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
+          lessons:
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -4375,6 +4730,9 @@ nl:
               display_name: Lussen
             required:
               display_name: Overzicht
+          lessons:
+            new stage:
+              name: nieuw niveau
         fit2019-novice:
           lesson_groups:
             required:
@@ -4398,6 +4756,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Lists:
+              name: Lijsten
         csd3-pilot:
           description_short: "Programmeren"
           stages:
@@ -4427,6 +4788,9 @@ nl:
               name: Functies
         maddie-test:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp3-pilot:
@@ -4478,6 +4842,9 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            new stage:
+              name: nieuw niveau
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
@@ -4526,6 +4893,8 @@ nl:
             required:
               display_name: Overzicht
           lessons:
+            new stage:
+              name: nieuw niveau
             The Need for Addressing:
               name: De Nood aan Adressering
         peru-2019:
@@ -4537,6 +4906,8 @@ nl:
             Nested Loops:
               name: Genestelde lussen
           lessons:
+            new stage:
+              name: nieuw niveau
             Introduction:
               name: Introductie
             Nested Loops:
@@ -4577,12 +4948,16 @@ nl:
             k5_next_steps:
               display_name: Volgende stappen
           lessons:
+            Computer Science Fundamentals:
+              name: Basisbegrippen Computer Wetenschappen
+            Next Steps:
+              name: Volgende stappen
             Loops:
               name: Lussen
-            Events:
-              name: Gebeurtenissen
             Conditionals:
               name: Voorwaardelijke instructies
+            Events:
+              name: Gebeurtenissen
             Functions:
               name: Functies
             Variables:
@@ -4593,6 +4968,9 @@ nl:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         csp10-pilot:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp4-preview:
@@ -4606,8 +4984,14 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+          lessons:
+            new stage:
+              name: nieuw niveau
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: Voorwaardelijke instructies
+          lessons:
             Conditionals:
               name: Voorwaardelijke instructies
         time4cs-control-unit-2:
@@ -4670,6 +5054,9 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -4686,6 +5073,9 @@ nl:
               display_name: Lussen
         csp9-pilot:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csd2-2020:
@@ -4739,8 +5129,6 @@ nl:
           lessons:
             Variables:
               name: Variabelen
-            Text:
-              name: Tekst
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -4749,6 +5137,8 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+            Text:
+              name: Tekst
         coursea-2020:
           stages:
             Going Places Safely:
@@ -4762,6 +5152,11 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+          lessons:
+            Going Places Safely:
+              name: Veilig Reizen
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -4778,8 +5173,12 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
           lessons:
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
             Move It, Move It:
               name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -4798,6 +5197,8 @@ nl:
           lessons:
             Binary Bracelets:
               name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4828,18 +5229,22 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
             Relay Programming:
               name: Estafette Programmeren
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
-            Dance Party:
-              name: Dansfeest
             Conditionals with Cards:
               name: Statements met Kaarten
             'Unplugged: Binary':
-              name: 'Unplugged: binair'
+              name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Dance Party:
+              name: Dansfeest
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -4853,8 +5258,9 @@ nl:
             csf_functions:
               display_name: Functies
           lessons:
-            Conditionals:
-              name: Voorwaardelijke instructies
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
         coursef-2020:
           stages:
             Envelope Variables:
@@ -4875,10 +5281,12 @@ nl:
           lessons:
             Envelope Variables:
               name: Envelop variabelen
-            Internet:
-              name: Internet
             For Loop Fun:
               name: For Lus fun
+            Internet:
+              name: Het Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         express-2020:
           stages:
             Dance Party:
@@ -4915,7 +5323,12 @@ nl:
               name: nieuw niveau
             Binary Numbers:
               name: Binaire getallen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
           lessons:
+            new stage:
+              name: nieuw niveau
             Binary Numbers:
               name: Binaire getallen
         csp2-2020:
@@ -4925,6 +5338,8 @@ nl:
             The Need for Addressing:
               name: De Nood aan Adressering
           lessons:
+            new stage:
+              name: nieuw niveau
             The Need for Addressing:
               name: De Nood aan Adressering
         csp3-2020:
@@ -4936,6 +5351,8 @@ nl:
             Debugging:
               name: Foutopsporing
           lessons:
+            new stage:
+              name: nieuw niveau
             The Need for Programming Languages:
               name: De Nood Aan Programmeertalen
             Debugging:
@@ -4944,20 +5361,35 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp8-2020:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp9-2020:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp10-2020:
           stages:
             new stage:
               name: nieuw niveau
+          lessons:
+            new stage:
+              name: nieuw niveau
         csp-march-virtual:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp3-virtual:
@@ -4974,30 +5406,16 @@ nl:
             APIs and Function Parameters:
               name: API's en Functieparameters
           lessons:
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
             Using Simple Commands:
               name: Simpele Commando's Gebruiken
             Creating Functions:
               name: Maken van functies
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
-        csd3-virtual:
-          description_short: "Programmeren"
-          stages:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
-            Velocity:
-              name: Snelheid
-            Collision Detection:
-              name: Botsingdetectie
-            Functions:
-              name: Functies
-          lessons:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
         jess-test-script:
           stages:
             new stage:
@@ -5005,6 +5423,8 @@ nl:
             Debugging:
               name: Foutopsporing
           lessons:
+            new stage:
+              name: nieuw niveau
             Debugging:
               name: Foutopsporing
         csp5-virtual:
@@ -5023,10 +5443,18 @@ nl:
             Variables:
               name: Variabelen
           lessons:
-            Variables:
-              name: Variabelen
             User Input and Strings:
               name: Gebruikersinvoer en Strings
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken
+            Variables:
+              name: Variabelen
         virtual-holding-place:
           stages:
             Velocity:
@@ -5053,8 +5481,18 @@ nl:
               name: Algoritmen
             Events:
               name: Gebeurtenissen
+          lessons:
+            new stage:
+              name: nieuw niveau
+            Algorithms:
+              name: Algoritmen
+            Events:
+              name: Gebeurtenissen
         no-lg:
           stages:
+            new stage:
+              name: nieuw niveau
+          lessons:
             new stage:
               name: nieuw niveau
         csp5-virtual-part2:
@@ -5077,3 +5515,72 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Lussen
+            Events:
+              name: Gebeurtenissen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Functions:
+              name: Functies
+            Variables:
+              name: Variabelen
+            For Loops:
+              name: For-lussen
+          lessons:
+            Loops:
+              name: Lussen
+            Events:
+              name: Gebeurtenissen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Functions:
+              name: Functies
+            Variables:
+              name: Variabelen
+            For Loops:
+              name: For-lussen
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Volgende stappen
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd3-virtual:
+          description_short: "Programmeren"
+          stages:
+            Variables:
+              name: Variabelen
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+          lessons:
+            Variables:
+              name: Variabelen
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+          lesson_groups:
+            csd3_1:
+              display_name: Content
+            csd3_2:
+              display_name: Content
+            cspSurvey:
+              display_name: Content

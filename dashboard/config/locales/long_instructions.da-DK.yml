@@ -150,12 +150,83 @@ da-DK:
 
         -   Hvordan fulgte du problemlæsnings processen i den sidste lektion?
         -   Hvordan ville du kunne bruge den her process på et probelm i det hverdag??
+      CourseD_Dance_2020_01: |-
+        _Lad os holde en dansefest!_
+
+        Træk blokken <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> til arbejdsområdet, og tilslut den inde i blokken <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> for at oprette din første danser.
+
+        -   _Du kan også klikke på lyspæren til venstre, hvis du ønsker mere information eller ekstra udfordringer._
+      CourseD_Dance_2020_02: |-
+        Blokken <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> giver dig mulighed for at køre kode, når pil trykkes op. Brug blokken <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> til at få danseren til at klappe, når du trykker op, eller prøv en anden bevægelse!
+
+        \_Sørg for at trykke på din pil op eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) efter at have klikket på knappen Kør
+      CourseD_Dance_2020_03: Det er tid til at få danset! Programmér hver danser til
+        at bevæge sig, når du trykker på forskellige taster. Vælg dit foretrukne træk
+        for hver danser, eller indstil det til `(Tilfældig)` for at opnå noget helt
+        uforudsigeligt!
+      CourseD_Dance_2020_04: |-
+        Lad os få danserne til at bevæge sig i takt med musikken!
+
+        Træk blokken <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ud på arbejdsområdet. Tilslut den under blokken <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Din danser bør starte en ny bevægelse efter den fjerde handling.
+        .
+
+        **Handlinger** bruges til at tælle takten i musikken. I denne tutorial er en handling fire takter lang.
+      CourseD_Dance_2020_05: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blokken til dit arbejdsområde. Få danseren til at begynde et nyt move efter
+        6 takter."
+      CourseD_Dance_2020_06: "Brug denne nye blok til at oprette en gruppe mindre
+        backup-dansere omkring en solodanser i midten. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nNu kan du oprette en gruppe dansere på én gang!"
+      CourseD_Dance_2020_07: "Hver danser har et sæt _properties_, der styrer, hvordan
+        den ser ud. \n\nBrug <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> under en grøn begivenhedsblok for at
+        få dansere til at se ud som om de er tættere på eller længere væk."
+      CourseD_Dance_2020_08: Dansere har en ”farvenuance”-egenskab, der kan tilføje
+        et lag farve. Prøv at ændre farven for en af dine dansere (eller en hel gruppe)!
+      CourseD_Dance_2020_09: |-
+        Dette er en speciel type begivenhed, der udløses igen og igen.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        De andre nye blokke i din værktøjskasse giver dig mulighed for gradvist (eller tilfældigt!) at ændre dansernes egenskaber over tid.
+
+        _Vær kreativ og hav det sjovt!_
+      CourseD_Dance_2020_10: Bliv groovy! Skab dit eget Dance Party som du kan dele
+        med dine venner.
+      CourseD_Dance_2020_bonus1: |-
+        # Frem og tilbage!
+
+        Nogle gange har du måske lyst til selv at bestemme, hvordan danserne skal danse. Med denne nye blok kan du det.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Dansetrinene som du vælger foroven vil blive gentaget.
+
+        -   Kod dansetrinene for den forreste danser!
+        -   Brug forskellige talværdier til hastigheden af skiftene mellem trinene. Prøv med `1` eller `0.5` for at skiftene bliver hurtigere!
+      CourseD_Dance_2020_bonus3: |-
+        # Let's Get in Formation!
+
+        Tjek denne dans, der bruger blokken <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
+
+        # Lad os tage opstilling!
+
+        \*Opret en anden gruppe dansere i et andet layout
+        \*Skift layout, når der trykkes på en tast
+        \*Skift en egenskab, når danserne ændrer stilling
       CourseD_Dance_Party_01: "_Lad os have et dance party!_ \n\nTræk blokken `Lav
         en ny` ind i arbejdsområdet, og tilslut den inden i `indstillings`-blokken,
         for at skabe din første danser. \n\n-   _Du kan også klikke på pæren til venstre,
         hvis du ønsker mere information eller ekstra udfordringer._"
       CourseD_Dance_Party_02: "Lad os få denne elg til at danse! \n\nTræk <xml><block
-        type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new\\_dancer</title><title
+        type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new&#95;dancer</title><title
         name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title
         name=\"DIR\">-1</title></block></xml> blokken ud på arbejdsområdet. Forbinde
         den under <xml><block type=\"Dancelab_atTimestamp\" block-text=\"after 4 measures\"><title
@@ -186,7 +257,7 @@ da-DK:
       CourseD_Dance_Party_10: "Nu ved vi, hvordan man ændrer en dansers egenskaber.
         Vi kan også få de samme egenskaber til at reagere automatisk på musikken ved
         hjælp af denne blok: <xml>\n  <block type=\"Dancelab_startMapping\" block-text=\"right_unicorn
-        begins following bass\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n
+        begins following bass\">\n    <title name=\"SPRITE\">right_unicorn</title>\n
         \   <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n
         \ </block></xml> \n\nDette program bruger musikens \"bas\"-volumen (de lave
         lyde) til at kontrollere en dansers højde. Kan du også få den anden danser
@@ -213,28 +284,56 @@ da-DK:
         fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: Der er en **blæksprutte** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
         der gemmer sig i havmonumentet et sted, kan du finde den?
+      CourseE_HOC 2018 Level_10_2020: Der er en **blæksprutte** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
+        der gemmer sig i havmonumentet et sted, kan du finde den?
       CourseE_HOC 2018 Level_11: Byg en mur af **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         rundt om den sorte beton. Dette vil aktivere **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         og færdiggøre din udfordring!
+      CourseE_HOC 2018 Level_11_2020: Byg en mur af **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        rundt om den sorte beton. Dette vil aktivere **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        og færdiggøre din udfordring!
+      CourseE_HOC 2018 Level_1_2020: Du har brug for forsyninger til rejsen. Indsaml
+        en **båd** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: Det er meget lettere at tage en båd end at svømme
+        i åbent vand! Gå til enden af molen, og hop om bord.
+      CourseE_HOC 2018 Level_2_2020: Det er meget lettere at tage en båd end at svømme
         i åbent vand! Gå til enden af molen, og hop om bord.
       CourseE_HOC 2018 Level_3: Tag årene, og ro båden over det åbne hav for at fange
         **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Tag årene, og ro båden over det åbne hav for
+        at fange **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: Lad os give torsken til **delfinen** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Brug en blok magen til for at krydse havet hurtigere.
+      CourseE_HOC 2018 Level_4_2020: Lad os give torsken til **delfinen** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Brug en blok magen til for at krydse havet hurtigere.
       CourseE_HOC 2018 Level_5: Der er en **nautil-skal.** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         gemt et sted! Udforsk skibsvraget for at nå til **kisten** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_5_2020: Der er en **nautil-skal.** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        gemt et sted! Udforsk skibsvraget for at nå til **kisten** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Det ser koldt ud derude! Fang en **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        på din vej ud til de undersøiske ruiner.
+      CourseE_HOC 2018 Level_6_2020: Det ser koldt ud derude! Fang en **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         på din vej ud til de undersøiske ruiner.
       CourseE_HOC 2018 Level_7a: Du har fundet de undersøiske ruiner. Søg efter en
         **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
         med en **prismarineskat** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
         ved sandstenen.
+      CourseE_HOC 2018 Level_7a_2020: Du har fundet de undersøiske ruiner. Søg efter
+        en **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        med en **prismarineskat** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        ved sandstenen.
       CourseE_HOC 2018 Level_8: De første isbjerge, nu lava? Kryds vulkanøen, og find
         den **tropiske fisk** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         i koralrevet.
+      CourseE_HOC 2018 Level_8_2020: De første isbjerge, nu lava? Kryds vulkanøen,
+        og find den **tropiske fisk** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i koralrevet.
       CourseE_HOC 2018 Level_9b: Du har nået koralrevet, led nu efter **Havets hjerte**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Brug den blå og røde koral til at nå hen til **skattekisten** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Du har nået koralrevet, led nu efter **Havets
+        hjerte** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Brug den blå og røde koral til at nå hen til **skattekisten** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_2019_01: |-
         _Lad os holde en dansefest!_
@@ -292,7 +391,7 @@ da-DK:
       Dance_Party_02: |-
         Lad os få denne elg til at danse
 
-        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
+        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
 
         **Takter** bliver brugt til at måle tiden i musik. I denne vejledning er en takt på fire slag.
       Dance_Party_03: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -317,7 +416,7 @@ da-DK:
       Dance_Party_10: "Nu ved vi, hvordan man ændrer en dansers egenskaber. Vi kan
         også få de samme egenskaber til at reagere automatisk på musikken ved hjælp
         af denne blok: <xml>\n  <block type=\"Dancelab_startMapping\">\n    <title
-        name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
+        name=\"SPRITE\">right_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
         \   <title name=\"RANGE\">\"bass\"</title>\n  </block></xml> \n\nDette program
         bruger musikens \"bas\"-volumen (de lave lyde) til at kontrollere en dansers
         højde. Kan du også få den anden danser til at reagere på musikken?"
@@ -453,6 +552,10 @@ da-DK:
         dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over
         floden! \\\r\n \\\r\nKlik den lille grønne blok ind i dit arbejdsområde to
         gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+      Function intro Ryan_2020: "Du har en **funktion**, der hedder \"byg bro\" i
+        dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over
+        floden! \\\r\n \\\r\nKlik den lille grønne blok ind i dit arbejdsområde to
+        gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       HOC 2018 Level_1: Du har brug for forsyninger til rejsen. Indsaml en **båd**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -499,11 +602,21 @@ da-DK:
         at gå hen til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og
         brug piletasterne til at flytte {currentPlayerName} ud af huset og hen til
         **kisten** [chest].  "
+      MC_HOC_2017_01_RETRY_2020: "{currentPlayerName} er fanget inde i huset, men
+        heldigvis er agenten klar til at hjælpe!   \\\r\n \\\r\n   \\\r\nKlik en \"gå
+        fremad\" blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til
+        at gå hen til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og
+        brug piletasterne til at flytte {currentPlayerName} ud af huset og hen til
+        **kisten** [chest].  "
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på vej på eventyr! **Kortet** [map_empty]
         bag den låste dør til højre vil være en stor hjælp. \\\r\n \\\r\nKlik kode
         ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
         og åbner op for {currentPlayerName}. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på vej på eventyr! **Kortet**
+        [map_empty] bag den låste dør til højre vil være en stor hjælp. \\\r\n \\\r\nKlik
+        kode ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
+        og åbner op for {currentPlayerName}. "
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} er på vej på eventyr! **Kortet**
         [map_empty] bag den låste dør til højre vil være en stor hjælp. \\\r\n \\\r\nKlik
         kode ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
         og åbner op for {currentPlayerName}. "
@@ -513,9 +626,15 @@ da-DK:
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsætter sit eventyr og har
         nu brug for **kompasset** [compass] til turen.  \\\r\n   \\\r\nKod agenten
         til at åbne porten. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} fortsætter sit eventyr og har
+        nu brug for **kompasset** [compass] til turen.  \\\r\n   \\\r\nKod agenten
+        til at åbne porten. "
       MC_HOC_2017_04POINT5_RYAN: "Du slap over! \\\r\n\\\r\nNu gælder det om at få
         {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\\\r"
       MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \\\r\n\\\r\nNu gælder det om
+        at få {currentPlayerName} sikkert igennem labyrinten og hen til **øksen**
+        [diamond_axe]\\\r"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Du slap over! \\\r\n\\\r\nNu gælder det om
         at få {currentPlayerName} sikkert igennem labyrinten og hen til **øksen**
         [diamond_axe]\\\r"
       MC_HOC_2017_04_Cole: "Agenten kan bevæge sig over vand!  \\\r\n \\\r\nLøs opgaven
@@ -524,10 +643,16 @@ da-DK:
       MC_HOC_2017_04_Cole_2019: "Agenten kan bevæge sig over vand!  \\\r\n \\\r\nLøs
         opgaven med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
         [bucket_empty] bag ved døren. "
+      MC_HOC_2017_04_Cole_2020: "Agenten kan bevæge sig over vand!  \\\r\n \\\r\nLøs
+        opgaven med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
+        [bucket_empty] bag ved døren. "
       MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \\\r\n\\\r\nKod agenten til at genopbygge
         broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen**
         [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \\\r\n\\\r\nKod agenten til
+        at genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå
+        frem til **skovlen** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2020: "Åh nej, broen er væk! \\\r\n\\\r\nKod agenten til
         at genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå
         frem til **skovlen** [diamond_shovel]."
       MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \\\r\n \\\r\nRet
@@ -536,10 +661,16 @@ da-DK:
       MC_HOC_2017_06_Cole_2019: "Endnu en flod – og den er meget bredere! \\\r\n \\\r\nRet
         koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
         **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2020: "Endnu en flod – og den er meget bredere! \\\r\n \\\r\nRet
+        koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
+        **hakken** [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "Der er is i vejen!  \\\r\n \\\r\n\"Ryd vej\" funktionen
         kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
         minevognen [minecart_normal]! "
       MC_HOC_2017_07_Cole_2019: "Der er is i vejen!  \\\r\n \\\r\n\"Ryd vej\" funktionen
+        kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
+        minevognen [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2020: "Der er is i vejen!  \\\r\n \\\r\n\"Ryd vej\" funktionen
         kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
         minevognen [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Kan du se forskellen mellem de to funktioner i dit arbejdsområde?
@@ -550,21 +681,32 @@ da-DK:
         arbejdsområde? \\\r\n \\\r\nKombiner funktionerne med andre koder fra værktøjskassen,
         så du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
         \\\r\n "
+      MC_HOC_2017_10_RETRY_2020: "Kan du se forskellen mellem de to funktioner i dit
+        arbejdsområde? \\\r\n \\\r\nKombiner funktionerne med andre koder fra værktøjskassen,
+        så du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
+        \\\r\n "
       MC_HOC_2017_Ali: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til
         at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede
         bog** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem
         til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den
         **fortryllede bog** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2020: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem
+        til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den
+        **fortryllede bog** [book_enchanted]?  '
       MC_HOC_2017_FP20x20: "**Fri leg:** Nu er det op til dig! Brug agentens kode
         til at hjælpe dig med at udforske verden."
       MC_HOC_2017_FP20x20_2019: "**Fri leg:** Nu er det op til dig! Brug agentens
+        kode til at hjælpe dig med at udforske verden."
+      MC_HOC_2017_FP20x20_2020: "**Fri leg:** Nu er det op til dig! Brug agentens
         kode til at hjælpe dig med at udforske verden."
       New Minecraft Hero Project: "**Fri leg:** Nu er det op til dig! Brug agentens
         kode til at hjælpe dig med at udforske verden."
       Overworld Move to Sheep: Tilføje en "flyt fremad"-blok mere for at komme hen
         til fårene.
       Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
+        hen til fårene.
+      Overworld Move to Sheep_2020: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
       Standalone_Artist_2: Tegn denne diamant med 120 og 60 graders vinkler og 150
         pixel lange sider.
@@ -616,6 +758,10 @@ da-DK:
         ## Tid til at komme tilbage til land. Hjælp mig med at lægge nogle sten, så jeg ikke falder i vandet!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2020: |-
+        ## Tid til at komme tilbage til land. Hjælp mig med at lægge nogle sten, så jeg ikke falder i vandet!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Hjælp mig med at bygge trin så jeg kan se skibene sejle.
 
@@ -625,6 +771,10 @@ da-DK:
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2019: |-
+        ## Hjælp mig med at bygge trin så jeg kan se skibene sejle.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2020: |-
         ## Hjælp mig med at bygge trin så jeg kan se skibene sejle.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -661,6 +811,17 @@ da-DK:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2020: |-
+        Kunstneren så noget sjovt. Tegn hvad du tror han så.
+
+        * * *
+
+        ### Ideas
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops_challenge1: |-
         Du kan bruge en løkke til at tegen flere linjer efter hinanden.
 
@@ -685,6 +846,14 @@ da-DK:
         Her er nogle idéer:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2020: |-
+        Du kan bruge en løkke til at tegen flere linjer efter hinanden.
+
+        Kan du tegne et hus? Tegn det som du vil!  Prøv at se om der er nogle gentagelser!
+
+        Her er nogle idéer:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2a: |-
         _"Hjælp mig med at få campingpladsen klar!"_
 
@@ -694,6 +863,10 @@ da-DK:
 
         Use the blocks in the toolbox to draw these three tents.
       courseA_artist_loops_challenge2a_2019: |-
+        _"Hjælp mig med at få campingpladsen klar!"_
+
+        Use the blocks in the toolbox to draw these three tents.
+      courseA_artist_loops_challenge2a_2020: |-
         _"Hjælp mig med at få campingpladsen klar!"_
 
         Use the blocks in the toolbox to draw these three tents.
@@ -709,6 +882,10 @@ da-DK:
         **Åben opgave:** Dette er Laurels eventyr! Bevæg Laurel rundt og saml så mange skatte som du kan.
 
         Træk blokke over på arbejdsområdet, så hun kan samle skattene.  Hun skal samle mindst en skat for at komme videre.
+      courseA_collector_loops1_2020: |-
+        **Åben opgave:** Dette er Laurels eventyr! Bevæg Laurel rundt og saml så mange skatte som du kan.
+
+        Træk blokke over på arbejdsområdet, så hun kan samle skattene.  Hun skal samle mindst en skat for at komme videre.
       courseA_collector_loops2: |-
         Saml alle 3 skatte! Bevæg Laurel til hver af skattene, og brug derefter denne blok:
           <xml><block type="collector_collect"/></xml>
@@ -717,6 +894,9 @@ da-DK:
       courseA_collector_loops3_2018: Hvordan kan Laurel samle alle 4 skatte med brug
         af kun én <xml><block type="maze_moveEast"/></xml> blok?
       courseA_collector_loops3_2019: Hvordan kan Laurel samle alle 4 skatte med brug
+        af kun én <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blok?
+      courseA_collector_loops3_2020: Hvordan kan Laurel samle alle 4 skatte med brug
         af kun én <xml><block type="maze_moveEast" block-text="move east"/></xml>
         blok?
       courseA_collector_preLoops7: |-
@@ -740,9 +920,12 @@ da-DK:
 
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq13_2019: Fang den gris, hvis du kan!
+      courseA_maze_seq13_2020: Fang den gris, hvis du kan!
       courseA_maze_seq1_2018: '"Leg med blokkene og prøv at få mig hen til den onde
         gris!"'
       courseA_maze_seq1_2019: '"Leg med blokkene og prøv at få mig hen til den onde
+        gris!"'
+      courseA_maze_seq1_2020: '"Leg med blokkene og prøv at få mig hen til den onde
         gris!"'
       courseA_maze_seq2: |-
         "En fejl! Fiks koden for at få mig hen til grisen."
@@ -770,6 +953,8 @@ da-DK:
         grisen!
       courseA_maze_seq6_2019: Flyt i en retning, så en anden, for at komme hen til
         grisen!
+      courseA_maze_seq6_2020: Flyt i en retning, så en anden, for at komme hen til
+        grisen!
       courseA_maze_seq6_copy: |-
         Flyt i en retning, så en anden, for at komme hen til grisen!
 
@@ -788,6 +973,7 @@ da-DK:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2019: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_2020: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_copy: |-
         Løs dette level for at få fuglen hen til grisen!
 
@@ -802,7 +988,11 @@ da-DK:
         og tilføj de manglende blokke. Få fuglen hen til grisen!
       courseA_maze_seq_challenge1_2019: Ret fejlene på dette trin. Fjern ekstra blokke,
         og tilføj de manglende blokke. Få fuglen hen til grisen!
+      courseA_maze_seq_challenge1_2020: Ret fejlene på dette trin. Fjern ekstra blokke,
+        og tilføj de manglende blokke. Få fuglen hen til grisen!
       courseA_maze_seq_challenge2_2019: Følg sporet og før fuglen hen til den tåbelige
+        gris. Undgå TNT ellers vil fjerene flyve væk!
+      courseA_maze_seq_challenge2_2020: Følg sporet og før fuglen hen til den tåbelige
         gris. Undgå TNT ellers vil fjerene flyve væk!
       courseA_playLab_events3: |-
         Hjælp hunden Jorge med at bevæge sig, ved at forbinde <xml><block type="studio_move">
@@ -843,6 +1033,11 @@ da-DK:
 
         Sørg for at klikke på tips(elpæren) i denne opgave! Tipsene vil hjælpe dig med opgaven trin for trin!
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2020: |-
+        Hvis du klikker på Olive vil Robin komme frem! Kan du skrive en kode, som får de øvrige figurer vist?
+
+        Sørg for at klikke på tips(elpæren) i denne opgave! Tipsene vil hjælpe dig med opgaven trin for trin!
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge2: |-
         Få alle til at gøre noget, når der bliver klikket på dem. Hvad skal dyrene sige? Hvad skal der ellers ske?
 
@@ -861,6 +1056,12 @@ da-DK:
         I denne opgave skal du klikke på elpæren. Der kan du få nogle sjove tips til hvad du kan prøve!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2020: |-
+        Få alle til at gøre noget, når der bliver klikket på dem. Hvad skal dyrene sige? Hvad skal der ellers ske?
+
+        I denne opgave skal du klikke på elpæren. Der kan du få nogle sjove tips til hvad du kan prøve!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseB_collector_loops1: |-
         **Åben opgave:** Dette er Laurels eventyr! Bevæg Laurel rundt og saml så mange skatte som du kan.
 
@@ -870,6 +1071,9 @@ da-DK:
       courseB_collector_loops3_2018: Hvordan kan Laurel samle alle 4 skatte med brug
         af kun én <xml><block type="maze_moveEast"/></xml> blok?
       courseB_collector_loops3_2019: Hvordan kan Laurel samle alle 4 skatte med brug
+        af kun én <xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blok?
+      courseB_collector_loops3_2020: Hvordan kan Laurel samle alle 4 skatte med brug
         af kun én <xml><block type="maze_moveEast" block-text="move east"/></xml>
         blok?
       courseB_collector_loops_challenge2a: |-
@@ -884,15 +1088,22 @@ da-DK:
         _"Prøv at samle skattene!"_
 
         "Hjælp Laurel med at få mindst **5** skatte i denne opgave.
+      courseB_collector_loops_challenge2a_2020: |-
+        _"Prøv at samle skattene!"_
+
+        "Hjælp Laurel med at få mindst **5** skatte i denne opgave.
       courseD_bee_nestedLoops8: 'Indsaml al nektar fra alle blomster, og lav honning
         i alle bikuber. Brug indlejrede løkker. '
       courseD_bee_nestedLoops8_2018: 'Indsaml al nektar fra alle blomster, og lav
         honning i alle bikuber. Brug indlejrede løkker. '
       courseD_bee_nestedLoops8_2019: 'Indsaml al nektar fra alle blomster, og lav
         honning i alle bikuber. Brug indlejrede løkker. '
+      courseD_bee_nestedLoops8_2020: 'Indsaml al nektar fra alle blomster, og lav
+        honning i alle bikuber. Brug indlejrede løkker. '
       courseD_maze_nestedLoops4: Få mig til solsikken!
       courseD_maze_nestedLoops4_2018: Få mig til solsikken!
       courseD_maze_nestedLoops4_2019: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2020: Få mig til solsikken!
       courseE_bee_functions3: Funktioner er blokke/klodser af code som udfører en
         arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster
         ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.

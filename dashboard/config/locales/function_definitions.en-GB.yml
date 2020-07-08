@@ -8,7 +8,14 @@ en-GB:
       2-3 Artist 3.4:
         draw a circle:
           name: dibujar un circulo
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: height
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: height
         draw a circle:
           name: dibujar un circulo
       2-3 Artist Functions 11:
@@ -38,6 +45,10 @@ en-GB:
       4-5 Artist 7:
         draw a circle:
           name: dibujar un circulo
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: honey
       Course 4 Play Lab Params 1:
         jump:
           name: jump
@@ -47,9 +58,28 @@ en-GB:
       Course 4 Play Lab Params 3:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
       Course 4 Play Lab Params 4:
         do something:
           name: do something
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: actor
       Course 4 Play Lab Vars 1:
         set score:
           name: set score
@@ -110,6 +140,9 @@ en-GB:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
@@ -143,11 +176,20 @@ en-GB:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
       New Artist Project:
         draw a star:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
@@ -157,6 +199,12 @@ en-GB:
       New Play Lab Project:
         jump:
           name: jump
+          parameters:
+            height: height
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
       Standalone_Artist_7:
         draw a flower:
           name: dibujar una flor
@@ -178,7 +226,26 @@ en-GB:
       course4_artist_fwp_challenge1:
         do something:
           name: do something
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: do something
+      courseC_data wizard_2020:
         do something:
           name: do something
       courseE_artist_concept1:
@@ -210,6 +277,9 @@ en-GB:
       courseE_artist_functions10_2019:
         do something:
           name: do something
+      courseE_artist_functions10_2020:
+        do something:
+          name: do something
       courseE_artist_functions2:
         draw a square:
           name: dibuja un cuadrado
@@ -219,6 +289,9 @@ en-GB:
       courseE_artist_functions2_2019:
         draw a square:
           name: dibuja un cuadrado
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: dibuja un cuadrado
       courseE_artist_functions2_copy:
         draw a square:
           name: dibuja un cuadrado
@@ -226,6 +299,9 @@ en-GB:
         draw a star:
           name: dibuja una estrella
       courseE_artist_functions3_2019:
+        draw a star:
+          name: dibuja una estrella
+      courseE_artist_functions3_2020:
         draw a star:
           name: dibuja una estrella
       courseE_artist_functions4:
@@ -243,6 +319,9 @@ en-GB:
       courseE_artist_functions5_2019:
         draw a star:
           name: dibuja una estrella
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: dibuja una estrella
       courseE_artist_functions5_copy:
         draw a star:
           name: dibuja una estrella
@@ -252,6 +331,9 @@ en-GB:
       courseE_artist_functions7_2018:
         draw a house:
           name: dibuja una casa
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: dibuja una casa
       courseE_artist_functions8:
         do something:
           name: do something
@@ -259,6 +341,9 @@ en-GB:
         do something:
           name: do something
       courseE_artist_functions8_2019:
+        do something:
+          name: do something
+      courseE_artist_functions8_2020:
         do something:
           name: do something
       courseE_artist_functions8a_2018:
@@ -271,16 +356,27 @@ en-GB:
           name: dibuja un cuadrado
         do something:
           name: do something
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: dibuja un cuadrado
+        do something:
+          name: do something
       courseE_artist_functions8b_2018:
         do something:
           name: do something
       courseE_artist_functions8b_2019:
         do something:
           name: do something
+      courseE_artist_functions8b_2020:
+        do something:
+          name: do something
       courseE_artist_functions8c_2018:
         do something:
           name: do something
       courseE_artist_functions8c_2019:
+        do something:
+          name: do something
+      courseE_artist_functions8c_2020:
         do something:
           name: do something
       courseE_artist_functions9:
@@ -292,6 +388,9 @@ en-GB:
       courseE_artist_functions9_2019:
         do something:
           name: do something
+      courseE_artist_functions9_2020:
+        do something:
+          name: do something
       courseE_artist_functions_challenge1:
         do something:
           name: do something
@@ -299,6 +398,9 @@ en-GB:
         do something:
           name: do something
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: do something
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: do something
       courseE_artist_functions_challenge2:
@@ -310,6 +412,9 @@ en-GB:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: do something
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: do something
       courseE_artist_functions_predict1:
         draw a square:
           name: dibuja un cuadrado
@@ -317,6 +422,9 @@ en-GB:
         draw a square:
           name: dibuja un cuadrado
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: dibuja un cuadrado
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: dibuja un cuadrado
       courseE_artist_functions_predict1_copy:
@@ -329,6 +437,9 @@ en-GB:
         do something:
           name: do something
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: do something
+      courseE_artist_functions_predict2_2020:
         do something:
           name: do something
       courseE_bee_functions1:
@@ -377,17 +488,31 @@ en-GB:
       courseF_artist_fwp3:
         draw a square:
           name: dibuja un cuadrado
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: dibuja una estrella
         draw a circle:
           name: dibujar un circulo
+        draw a pinwheel:
+          parameters:
+            repeat: repeat
         draw a triangle:
           name: dibuja un triangulo
         draw a house:
           name: dibuja una casa
         draw a square:
           name: dibuja un cuadrado
+        draw a spiral edge:
+          parameters:
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: do something
@@ -403,9 +528,15 @@ en-GB:
       courseF_bee_variables_7_2019:
         collect:
           name: collect
+      courseF_bee_variables_7_2020:
+        collect:
+          name: collect
       courseF_bee_variables_8_2018:
         collect:
           name: collect
       courseF_bee_variables_8_2019:
+        collect:
+          name: collect
+      courseF_bee_variables_8_2020:
         collect:
           name: collect

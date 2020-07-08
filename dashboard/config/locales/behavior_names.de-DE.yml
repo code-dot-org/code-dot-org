@@ -10,6 +10,7 @@ de-DE:
         shrinking: shrinking
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: jittering
         moving west: nach Westen gehend
@@ -22,6 +23,7 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -34,10 +36,12 @@ de-DE:
         shrinking: shrinking
         growing: wachsend
         moving south: nach Süden gehend
+        being hungry: hungrig sein
         moving north: nach Norden gehend
         jittering: jittering
         moving west: nach Westen gehend
         patrolling: patrouillierend
+        swimming left and right: links und rechts schwimmend
       CourseF_Project_SpriteLab:
         wandering: wandernd
         moving east: nach Osten gehend
@@ -46,6 +50,7 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -57,6 +62,7 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -74,6 +80,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
         spinning left: linksdrehend
+        swimming left and right: links und rechts schwimmend
       Dance Party 2_2019:
         spinning left: linksdrehend
         shrinking: schrumpfend
@@ -86,6 +93,20 @@ de-DE:
         moving south: nach Süden gehend
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
+      Dance Party 2_2020:
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
       Dance Party 3_2019:
         spinning left: linksdrehend
         shrinking: schrumpfend
@@ -98,6 +119,20 @@ de-DE:
         moving south: nach Süden gehend
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
+      Dance Party 3_2020:
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
       Dance Party 4_2019:
         spinning left: linksdrehend
         shrinking: schrumpfend
@@ -110,6 +145,20 @@ de-DE:
         moving south: nach Süden gehend
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
+      Dance Party 4_2020:
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
       Dance Party 5_2019:
         spinning left: linksdrehend
         shrinking: schrumpfend
@@ -122,8 +171,23 @@ de-DE:
         moving south: nach Süden gehend
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
+      Dance Party 5_2020:
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+        swimming left and right: links und rechts schwimmend
       Dance Party 6:
         jittering: zitternd
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -135,6 +199,19 @@ de-DE:
         spinning right: rechtsdrehend
       Dance Party 6_2019:
         jittering: zitternd
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Dance Party 6_2020:
+        jittering: zitternd
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -146,6 +223,19 @@ de-DE:
         spinning right: rechtsdrehend
       Dance Party 7_2019:
         jittering: zitternd
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Dance Party 7_2020:
+        jittering: zitternd
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -157,6 +247,7 @@ de-DE:
         spinning right: rechtsdrehend
       Dance Party Freeplay:
         jittering: zitternd
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -167,6 +258,19 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       Fish Tank 2-validated_2019:
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Fish Tank 2-validated_2020:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -178,6 +282,19 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       Fish Tank 3-validated_2019:
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Fish Tank 3-validated_2020:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -189,6 +306,19 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       Fish Tank 4-validated_2019:
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Fish Tank 4-validated_2020:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -200,6 +330,19 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       Fish Tank 5-validated_2019:
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Fish Tank 5-validated_2020:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -211,6 +354,19 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       Fish Tank 6-validated_2019:
+        swimming left and right: links und rechts schwimmend
+        shrinking: schrumpfend
+        patrolling: patrouillierend
+        wandering: wandernd
+        growing: wachsend
+        jittering: zitternd
+        moving east: nach Osten gehend
+        moving north: nach Norden gehend
+        moving south: nach Süden gehend
+        moving west: nach Westen gehend
+        spinning right: rechtsdrehend
+      Fish Tank 6-validated_2020:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -222,6 +378,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       OPD-K5-spritelab-2:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -233,6 +390,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       OPD-K5-spritelab-3:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -244,6 +402,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       OPD-K5-spritelab-4:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -255,6 +414,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       OPD-K5-spritelab-6:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -266,6 +426,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
       OPD-K5-spritelab-7:
+        swimming left and right: links und rechts schwimmend
         shrinking: schrumpfend
         patrolling: patrouillierend
         wandering: wandernd
@@ -286,6 +447,23 @@ de-DE:
         spinning left: linksdrehend
         shrinking: schrumpfend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        growing: wachsend
+        patrolling: patrouillierend
+      Virtual Pet 1_2020:
+        wandering: wandernd
+        mystery: 'Geheimnis
+
+'
+        spinning right: rechtsdrehend
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -303,6 +481,7 @@ de-DE:
         moving west: nach Westen gehend
         spinning right: rechtsdrehend
         spinning left: linksdrehend
+        swimming left and right: links und rechts schwimmend
       Virtual Pet 2_2019:
         wandering: wandernd
         moving east: nach Osten gehend
@@ -311,6 +490,20 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      Virtual Pet 2_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -334,6 +527,48 @@ de-DE:
 '
         moving south: nach Süden gehend
         shrinking2: schrumpfend2
+        swimming left and right: links und rechts schwimmend
+        growing2: 'wachsen2
+
+'
+        moving south2: 'nach Süden bewegen2
+
+'
+        swimming left and right2: 'links und rechts schwimmen2
+
+'
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        moving north2: 'nach Norden bewegen2
+
+'
+        patrolling: patrouillierend
+        jittering2: schwankend2
+        moving west2: 'nach Westen bewegen2
+
+'
+        patrolling2: patrollierend2
+      Virtual Pet 3_2020:
+        wandering: wandernd
+        wandering2: wandernd2
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        moving east2: 'nach Osten bewegen2
+
+'
+        shrinking: schrumpfend
+        spinning left2: 'linksdrehen2
+
+'
+        growing: wachsend
+        spinning right2: 'rechtsdrehen2
+
+'
+        moving south: nach Süden gehend
+        shrinking2: schrumpfend2
+        swimming left and right: links und rechts schwimmend
         growing2: 'wachsen2
 
 '
@@ -374,6 +609,20 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      Virtual Pet 4_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -424,6 +673,26 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 1_2020:
+        mystery behavior: 'geheimnisvolles Verhalten
+
+'
+        wandering: wandernd
+        running east: 'nach Osten verlaufend
+
+'
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -440,6 +709,24 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 2_2020:
+        flying: fliegend
+        wandering: wandernd
+        running east: 'nach Osten verlaufend
+
+'
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -458,6 +745,26 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 3_2020:
+        zooming east: 'nach Osten zoomen
+
+'
+        driving east: 'In Richtung Osten
+
+'
+        wandering: wandernd
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -476,6 +783,26 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 3a_2020:
+        spinning right: rechtsdrehend
+        zooming east: 'nach Osten zoomen
+
+'
+        driving east: 'In Richtung Osten
+
+'
+        wandering: wandernd
+        spinning left: linksdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -494,6 +821,26 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 4_2020:
+        move south and west: 'nach Süden und Westen ziehen
+
+'
+        wandering: wandernd
+        running east: 'nach Osten verlaufend
+
+'
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -505,11 +852,30 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving east: nach Osten gehend
+        rolling: rolling
         running east: 'nach Osten verlaufend
 
 '
         wandering: wandernd
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      behaviors 6_2020:
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving east: nach Osten gehend
+        rolling: rolling
+        running east: 'nach Osten verlaufend
+
+'
+        wandering: wandernd
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -520,16 +886,37 @@ de-DE:
         spinning right: rechtsdrehend
         shrinking: schrumpfend
         growing: wachsend
+        rolling: rolling
         running east: 'nach Osten verlaufend
 
 '
         wandering: wandernd
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        moving east: nach Osten gehend
+      behaviors 7_2020:
+        moving north: nach Norden gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        rolling: rolling
+        running east: 'nach Osten verlaufend
+
+'
+        wandering: wandernd
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         jittering: zitternd
         moving west: nach Westen gehend
         patrolling: patrouillierend
         moving east: nach Osten gehend
       behaviors free play:
+        spinning and growing: drehend und wachsend
+      behaviors free play_2020:
         spinning and growing: drehend und wachsend
       courseE_Dogger_2:
         drive left: fahre nach links
@@ -541,6 +928,7 @@ de-DE:
         shrinking: shrinking
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: jittering
         moving west: nach Westen gehend
@@ -553,6 +941,20 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      courseE_aboutme_1_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -565,6 +967,20 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      courseE_aboutme_2_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
@@ -577,8 +993,22 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: jittering
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      courseE_aboutme_3_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
         moving west: nach Westen gehend
         patrolling: patrouillierend
       courseE_aboutme_4:
@@ -589,8 +1019,22 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: jittering
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+      courseE_aboutme_4_2020:
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
+        moving north: nach Norden gehend
+        jittering: zitternd
         moving west: nach Westen gehend
         patrolling: patrouillierend
       courseE_aboutme_5:
@@ -601,11 +1045,12 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: jittering
         moving west: nach Westen gehend
         patrolling: patrouillierend
-      courseF_project_1:
+      courseE_aboutme_5_2020:
         wandering: wandernd
         moving east: nach Osten gehend
         spinning left: linksdrehend
@@ -613,7 +1058,24 @@ de-DE:
         shrinking: schrumpfend
         growing: wachsend
         moving south: nach Süden gehend
+        swimming left and right: links und rechts schwimmend
         moving north: nach Norden gehend
         jittering: zitternd
         moving west: nach Westen gehend
         patrolling: patrouillierend
+      courseF_project_1:
+        flying south and loop: nach dem Süden fliegend und Schleife
+        drive south and loop: nach dem Süden fahrend und Schleife
+        wandering: wandernd
+        moving east: nach Osten gehend
+        spinning left: linksdrehend
+        spinning right: rechtsdrehend
+        shrinking: schrumpfend
+        growing: wachsend
+        moving south: nach Süden gehend
+        being hungry: hungrig sein
+        moving north: nach Norden gehend
+        jittering: zitternd
+        moving west: nach Westen gehend
+        patrolling: patrouillierend
+        swimming left and right: links und rechts schwimmend

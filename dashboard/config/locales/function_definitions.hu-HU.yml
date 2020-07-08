@@ -20,9 +20,15 @@ hu-HU:
       2-3 Artist 7:
         draw_rect:
           name: rajzolj_téglalapot
+          parameters:
+            width: szélesség
+            height: magasság
       2-3 Artist Debugging 10:
         draw square:
           name: rajzolj négyzetet
+          parameters:
+            width: szélesség
+            height: magasság
         jump to controller top left:
           name: ugorj a szabályozóra bal fent
         jump to middle:
@@ -251,6 +257,8 @@ hu-HU:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: gyűjts nektárt készíts mézet
+          parameters:
+            honey: méz
       Course 4 Play Lab Params 1:
         jump:
           name: Ugorj
@@ -259,12 +267,17 @@ hu-HU:
           name: szintlépés
         score_points:
           name: szerzett_pontok
+          parameters:
+            points: pontok
       Course 4 Play Lab Params 2:
         jump:
           name: Ugorj
       Course 4 Play Lab Params 3:
         jump:
           name: Ugorj
+          parameters:
+            height: magasság
+            actor: szereplő
       Course 4 Play Lab Params 4:
         patrol:
           name: járőr
@@ -273,18 +286,30 @@ hu-HU:
       Course 4 Play Lab Params 5:
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
       Course 4 Play Lab Params 6:
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
       Course 4 Play Lab Params 7:
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
+            speed: sebesség
       Course 4 Play Lab Params 8:
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
+            speed: sebesség
       Course 4 Play Lab Params 9:
         score_points:
           name: szerzett_pontok
+          parameters:
+            points: pontok
       Course 4 Play Lab Vars 1:
         set score:
           name: Pontszám beállítása
@@ -301,6 +326,8 @@ hu-HU:
       Course 4 SCF 1a:
         get nectar:
           name: gyűjts nektárt
+          parameters:
+            counter: számláló
       Course 4 SCF 2:
         draw a square 20:
           name: rajzolj négyzetet 20
@@ -315,6 +342,8 @@ hu-HU:
           name: csinálj valamit
         draw an octagon:
           name: rajzolj nyolcszöget
+          parameters:
+            length: hossza
       'Course E: Play Lab Project':
         do something:
           name: csinálj valamit
@@ -326,10 +355,15 @@ hu-HU:
           name: szintlépés
         score_points:
           name: szerzett_pontok
+          parameters:
+            points: pontok
       Function intro Ryan:
         build bridge:
           name: építs hidat
       Function intro Ryan_2019:
+        build bridge:
+          name: építs hidat
+      Function intro Ryan_2020:
         build bridge:
           name: építs hidat
       Geometric Sun:
@@ -377,13 +411,25 @@ hu-HU:
       InspirationalArtwork:
         n-sided shape:
           name: n-oldalú síkidom
+          parameters:
+            length: hossza
         draw a loop:
           name: rajzolj hurkot
+          parameters:
+            length: hossza
+        draw spiral circle:
+          parameters:
+            size: méret
       InspirationalArtwork_2018:
         draw a loop:
           name: rajzolj hurkot
+          parameters:
+            length: hossza
         n-sided shape:
           name: n-oldalú síkidom
+        draw spiral circle:
+          parameters:
+            size: méret
       K-1 Artist2 3:
         draw roof:
           name: rajzolj tetőt
@@ -399,12 +445,20 @@ hu-HU:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: tisztítsd meg az ösvényt
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: tisztítsd meg az ösvényt
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: javítsd meg a hosszú utat
         fix short path:
           name: javítsd meg a rövid utat
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: javítsd meg a hosszú utat
+        fix short path:
+          name: javítsd meg a rövid utat
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: javítsd meg a hosszú utat
         fix short path:
@@ -419,12 +473,22 @@ hu-HU:
           name: építs rövid hidat
         build long bridge:
           name: építs hosszú hidat
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: építs rövid hidat
+        build long bridge:
+          name: építs hosszú hidat
       MC_HOC_2017_FP20x20:
         function 1:
           name: függvény 1
         function 2:
           name: függvény 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: függvény 1
+        function 2:
+          name: függvény 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: függvény 1
         function 2:
@@ -482,35 +546,65 @@ hu-HU:
           name: csinálj valamit
         draw a hexagon:
           name: rajzolj egy hatszöget
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
         do something:
           name: csinálj valamit
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 15:
         draw a star:
           name: rajzolj egy csillagot
+          parameters:
+            points: pontok
+            length: hossza
         draw a circle:
           name: kör rajzolása
         draw a pinwheel:
           name: rajzolj szélkereket
+          parameters:
+            length: hossza
+            repeat: ismételd
         draw a triangle:
           name: Rajzolj egy háromszöget
+          parameters:
+            length: hossza
         draw a shape:
           name: rajzolj síkidomot
+          parameters:
+            length: hossza
         draw a house:
           name: rajzoljon egy házat
+          parameters:
+            length: hossza
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 2:
         do something:
           name: csinálj valamit
@@ -523,52 +617,92 @@ hu-HU:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: rajzolj háromszöget, oldala
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: rajzolj ötszöget
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: Rajzolj egy háromszöget
+          parameters:
+            length: hossza
         draw a hexagon:
           name: rajzolj egy hatszöget
+          parameters:
+            length: hossza
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
         draw a sqaure:
           name: rajzolj négyzetet
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: Rajzolj egy háromszöget
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: rajzolj háromszöget, oldala
+          parameters:
+            length: hossza
       NEW Course 4 Artist Params 9:
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
         do something:
           name: csinálj valamit
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
       NEW Course 4 Play Lab Params 11:
         jump:
           name: Ugorj
+          parameters:
+            height: magasság
+            actor: szereplő
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
+            speed: sebesség
       New Artist Project:
         draw a star:
           name: rajzolj egy csillagot
+          parameters:
+            points: pontok
+            length: hossza
         draw a circle:
           name: kör rajzolása
         draw a pinwheel:
           name: rajzolj szélkereket
+          parameters:
+            length: hossza
+            repeat: ismételd
         draw a triangle:
           name: Rajzolj egy háromszöget
+          parameters:
+            length: hossza
         draw a shape:
           name: rajzolj síkidomot
+          parameters:
+            length: hossza
         draw a house:
           name: rajzoljon egy házat
+          parameters:
+            length: hossza
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
       New Minecraft Hero Project:
         function 1:
           name: függvény 1
@@ -577,8 +711,14 @@ hu-HU:
       New Play Lab Project:
         jump:
           name: Ugorj
+          parameters:
+            height: magasság
+            actor: szereplő
         patrol:
           name: járőr
+          parameters:
+            actor: szereplő
+            speed: sebesség
       Robot Doodle:
         25 pixel square:
           name: 25 képpontos négyzet
@@ -672,6 +812,8 @@ hu-HU:
       course4_artist_fwp_challenge1:
         draw background:
           name: rajzolj hátteret
+          parameters:
+            color: szín
         draw a polygon:
           name: rajzolj sokszöget
         draw a square 20:
@@ -681,6 +823,14 @@ hu-HU:
       course4_bee_for_challenge1:
         move and get nectar with counter:
           name: menj és gyűjts nektárt számlálóval
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: hossza
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: hossza
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"egyszerű" megoldás'
@@ -693,22 +843,41 @@ hu-HU:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: lehetséges megoldás
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: lehetséges megoldás
       courseC_artist_prog3:
         draw flame:
           name: rajzolj lángot
+          parameters:
+            x: x
         draw fire:
           name: rajzolj tüzet
       courseC_artist_prog3_2018:
         draw flame:
           name: rajzolj lángot
+          parameters:
+            x: x
         draw fire:
           name: rajzolj tüzet
       courseC_artist_prog3_2019:
         draw flame:
           name: rajzolj lángot
+          parameters:
+            x: x
+        draw fire:
+          name: rajzolj tüzet
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: rajzolj lángot
+          parameters:
+            x: x
         draw fire:
           name: rajzolj tüzet
       courseC_data wizard:
+        do something:
+          name: csinálj valamit
+      courseC_data wizard_2020:
         do something:
           name: csinálj valamit
       courseD_artist_binary1:
@@ -722,6 +891,11 @@ hu-HU:
         draw:
           name: rajzolj
       courseD_artist_binary1_2019:
+        draw bit:
+          name: rajzolj bitet
+        draw:
+          name: rajzolj
+      courseD_artist_binary1_2020:
         draw bit:
           name: rajzolj bitet
         draw:
@@ -741,6 +915,11 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary2_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binary3:
         draw:
           name: rajzolj
@@ -752,6 +931,11 @@ hu-HU:
         draw bit:
           name: rajzolj bitet
       courseD_artist_binary3_2019:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
+      courseD_artist_binary3_2020:
         draw:
           name: rajzolj
         draw bit:
@@ -771,6 +955,11 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary4_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binary5:
         draw:
           name: rajzolj
@@ -782,6 +971,11 @@ hu-HU:
         draw bit:
           name: rajzolj bitet
       courseD_artist_binary5_2019:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
+      courseD_artist_binary5_2020:
         draw:
           name: rajzolj
         draw bit:
@@ -801,6 +995,11 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary6_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binary7:
         draw:
           name: rajzolj
@@ -812,6 +1011,11 @@ hu-HU:
         draw bit:
           name: rajzolj bitet
       courseD_artist_binary7_2019:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
+      courseD_artist_binary7_2020:
         draw:
           name: rajzolj
         draw bit:
@@ -831,6 +1035,11 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary8_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binary8_predict1:
         draw:
           name: rajzolj
@@ -846,12 +1055,22 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binaryFP_2018:
         draw:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
       courseD_artist_binaryFP_2019:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
+      courseD_artist_binaryFP_2020:
         draw:
           name: rajzolj
         draw bit:
@@ -866,12 +1085,22 @@ hu-HU:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
       courseD_artist_binary_challenge2_2018:
         draw:
           name: rajzolj
         draw bit:
           name: rajzolj bitet
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: rajzolj
+        draw bit:
+          name: rajzolj bitet
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: rajzolj
         draw bit:
@@ -972,6 +1201,13 @@ hu-HU:
           name: rajzolj hatszöget
         draw line of hexagons:
           name: rajzolj egy sor hatszöget
+      courseE_artist_functions10_2020:
+        do something:
+          name: csinálj valamit
+        draw hexagon:
+          name: rajzolj hatszöget
+        draw line of hexagons:
+          name: rajzolj egy sor hatszöget
       courseE_artist_functions2:
         draw a square:
           name: rajzoljon egy négyzetet
@@ -981,6 +1217,9 @@ hu-HU:
       courseE_artist_functions2_2019:
         draw a square:
           name: rajzoljon egy négyzetet
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: rajzoljon egy négyzetet
       courseE_artist_functions2_copy:
         draw a square:
           name: rajzoljon egy négyzetet
@@ -988,6 +1227,9 @@ hu-HU:
         draw a star:
           name: rajzolj egy csillagot
       courseE_artist_functions3_2019:
+        draw a star:
+          name: rajzolj egy csillagot
+      courseE_artist_functions3_2020:
         draw a star:
           name: rajzolj egy csillagot
       courseE_artist_functions4:
@@ -1003,6 +1245,9 @@ hu-HU:
         draw a star:
           name: rajzolj egy csillagot
       courseE_artist_functions5_2019:
+        draw a star:
+          name: rajzolj egy csillagot
+      courseE_artist_functions5_2020:
         draw a star:
           name: rajzolj egy csillagot
       courseE_artist_functions5_copy:
@@ -1021,6 +1266,11 @@ hu-HU:
       courseE_artist_functions7_2019:
         draw a window:
           name: rajzolj ablakot
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: rajzolj ablakot
+        draw a house:
+          name: rajzoljon egy házat
       courseE_artist_functions8:
         do something:
           name: csinálj valamit
@@ -1042,12 +1292,24 @@ hu-HU:
           name: rajzolj egy sor négyzetet
         draw square:
           name: rajzolj négyzetet
+      courseE_artist_functions8_2020:
+        do something:
+          name: csinálj valamit
+        draw a line of squares:
+          name: rajzolj egy sor négyzetet
+        draw square:
+          name: rajzolj négyzetet
       courseE_artist_functions8a_2018:
         draw a square:
           name: rajzoljon egy négyzetet
         do something:
           name: csinálj valamit
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: rajzoljon egy négyzetet
+        do something:
+          name: csinálj valamit
+      courseE_artist_functions8a_2020:
         draw a square:
           name: rajzoljon egy négyzetet
         do something:
@@ -1066,6 +1328,13 @@ hu-HU:
           name: rajzolj négyzetet
         do something:
           name: csinálj valamit
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: rajzolj egy sor négyzetet
+        draw square:
+          name: rajzolj négyzetet
+        do something:
+          name: csinálj valamit
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: rajzolj egy sor négyzetet
@@ -1074,6 +1343,13 @@ hu-HU:
         do something:
           name: csinálj valamit
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: rajzolj egy sor négyzetet
+        draw square:
+          name: rajzolj négyzetet
+        do something:
+          name: csinálj valamit
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: rajzolj egy sor négyzetet
         draw square:
@@ -1101,6 +1377,13 @@ hu-HU:
           name: rajzolj háromszöget
         draw line of triangles:
           name: rajzolj vonalat és háromszöget
+      courseE_artist_functions9_2020:
+        do something:
+          name: csinálj valamit
+        draw triangle:
+          name: rajzolj háromszöget
+        draw line of triangles:
+          name: rajzolj vonalat és háromszöget
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: rajzolj hatszöget
@@ -1111,6 +1394,15 @@ hu-HU:
         draw square:
           name: rajzolj négyzetet
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: rajzolj hatszöget
+        draw line of hexagons:
+          name: rajzolj egy sor hatszöget
+        draw a line of squares:
+          name: rajzolj egy sor négyzetet
+        draw square:
+          name: rajzolj négyzetet
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: rajzolj hatszöget
         draw line of hexagons:
@@ -1134,6 +1426,11 @@ hu-HU:
           name: az én tervem
         do something:
           name: csinálj valamit
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: az én tervem
+        do something:
+          name: csinálj valamit
       courseE_artist_functions_challenge2:
         my design:
           name: az én tervem
@@ -1149,6 +1446,11 @@ hu-HU:
           name: az én tervem
         do something:
           name: csinálj valamit
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: az én tervem
+        do something:
+          name: csinálj valamit
       courseE_artist_functions_predict1:
         draw a square:
           name: rajzoljon egy négyzetet
@@ -1156,6 +1458,9 @@ hu-HU:
         draw a square:
           name: rajzoljon egy négyzetet
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: rajzoljon egy négyzetet
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: rajzoljon egy négyzetet
       courseE_artist_functions_predict1_copy:
@@ -1176,6 +1481,13 @@ hu-HU:
         do something:
           name: csinálj valamit
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: rajzolj egy sor sokszöget
+        draw polygon:
+          name: rajzolj sokszöget
+        do something:
+          name: csinálj valamit
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: rajzolj egy sor sokszöget
         draw polygon:
@@ -1252,6 +1564,11 @@ hu-HU:
           name: gyűjtsd be az összes sütőtököt
         pumpkin square:
           name: sütőtök négyzet
+      courseE_farmer_functions10a1_2020:
+        get all pumpkins:
+          name: gyűjtsd be az összes sütőtököt
+        pumpkin square:
+          name: sütőtök négyzet
       courseE_farmer_functions10b:
         navigate:
           name: navigálj
@@ -1270,6 +1587,11 @@ hu-HU:
           name: sütőtök négyzet
         get all pumpkins:
           name: gyűjtsd be az összes sütőtököt
+      courseE_farmer_functions11_predict_2020:
+        pumpkin square:
+          name: sütőtök négyzet
+        get all pumpkins:
+          name: gyűjtsd be az összes sütőtököt
       courseE_farmer_functions13_2018:
         check for corn:
           name: ellenőrizd kukoricát
@@ -1278,6 +1600,13 @@ hu-HU:
         lettuce stairs:
           name: saláta lépcsők
       courseE_farmer_functions13_2019:
+        check for corn:
+          name: ellenőrizd kukoricát
+        corn rectangle:
+          name: kukorica téglalap
+        lettuce stairs:
+          name: saláta lépcsők
+      courseE_farmer_functions13_2020:
         check for corn:
           name: ellenőrizd kukoricát
         corn rectangle:
@@ -1293,6 +1622,9 @@ hu-HU:
       courseE_farmer_functions2ba_2019:
         get all pumpkins:
           name: gyűjtsd be az összes sütőtököt
+      courseE_farmer_functions2ba_2020:
+        get all pumpkins:
+          name: gyűjtsd be az összes sütőtököt
       courseE_farmer_functions3c:
         corn and pumpkin:
           name: kukorica és sütőtök
@@ -1302,10 +1634,16 @@ hu-HU:
       courseE_farmer_functions3c1_2019:
         get all pumpkins:
           name: gyűjtsd be az összes sütőtököt
+      courseE_farmer_functions3c1_2020:
+        get all pumpkins:
+          name: gyűjtsd be az összes sütőtököt
       courseE_farmer_functions3c_2018:
         get all pumpkins:
           name: gyűjtsd be az összes sütőtököt
       courseE_farmer_functions3c_2019:
+        get all pumpkins:
+          name: gyűjtsd be az összes sütőtököt
+      courseE_farmer_functions3c_2020:
         get all pumpkins:
           name: gyűjtsd be az összes sütőtököt
       courseE_farmer_functions4b:
@@ -1347,49 +1685,119 @@ hu-HU:
           name: rajzoljon egy négyzetet
         checker:
           name: ellenőrző
+          parameters:
+            size: méret
+            color: szín
         do something:
           name: csinálj valamit
+        Make gingham:
+          parameters:
+            size: méret
+        black outline:
+          parameters:
+            length: hossza
       courseF_artist_fwp2:
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
         checker:
           name: ellenőrző
+          parameters:
+            size: méret
+            color: szín
         do something:
           name: csinálj valamit
+        Make gingham:
+          parameters:
+            size: méret
+        black outline:
+          parameters:
+            length: hossza
       courseF_artist_fwp2_predict1:
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
       courseF_artist_fwp3:
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
         draw a square2:
           name: rajzolj négyzetet2
+          parameters:
+            size: méret
         filled square:
           name: kitöltött négyzet
+          parameters:
+            size: méret
+            color: szín
+        black outline:
+          parameters:
+            length: hossza
       courseF_artist_fwp4:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
       courseF_artist_fwp5:
         draw a polygon:
           name: rajzolj sokszöget
+          parameters:
+            length: hossza
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: hossza
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: hossza
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: hossza
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: rajzolj egy csillagot
+          parameters:
+            points: pontok
+            length: hossza
         draw a circle:
           name: kör rajzolása
         draw a pinwheel:
           name: rajzolj szélkereket
+          parameters:
+            length: hossza
+            repeat: ismételd
         draw a triangle:
           name: Rajzolj egy háromszöget
+          parameters:
+            length: hossza
         draw a shape:
           name: rajzolj síkidomot
+          parameters:
+            length: hossza
         draw a house:
           name: rajzoljon egy házat
+          parameters:
+            length: hossza
         draw a square:
           name: rajzoljon egy négyzetet
+          parameters:
+            length: hossza
+        draw a spiral edge:
+          parameters:
+            length: hossza
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: rajzolj hátteret
+          parameters:
+            color: szín
         draw a polygon:
           name: rajzolj sokszöget
         draw a square 20:
@@ -1403,6 +1811,8 @@ hu-HU:
           name: csinálj valamit
         draw an octagon:
           name: rajzolj nyolcszöget
+          parameters:
+            length: hossza
       courseF_bee_conditionals2:
         move and check:
           name: menj és ellenőrizd
@@ -1415,6 +1825,9 @@ hu-HU:
         move and get nectar with counter:
           name: menj és gyűjts nektárt számlálóval
       courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: menj és gyűjts nektárt számlálóval
+      courseF_bee_for_challenge1_2020:
         move and get nectar with counter:
           name: menj és gyűjts nektárt számlálóval
       courseF_bee_functions2:
@@ -1473,25 +1886,48 @@ hu-HU:
       courseF_bee_fwp4:
         rowOfNectar:
           name: nektárokSora
+          parameters:
+            length: hossza
       courseF_bee_fwp5:
         rowOfNectar:
           name: nektárokSora
+          parameters:
+            width: szélesség
       courseF_bee_fwp6:
         rowOfNectar:
           name: nektárokSora
+          parameters:
+            width: szélesség
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: NektárVagyMézSor
+          parameters:
+            width: szélesség
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: NektárVagyMézSor
+          parameters:
+            width: szélesség
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: NektárVagyMézSor
+          parameters:
+            width: szélesség
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: hossza
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: hossza
       courseF_bee_variables_1_2018:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_1_2019:
+        collect row:
+          name: gyűjtsd be a sort
+      courseF_bee_variables_1_2020:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_2_2018:
@@ -1500,10 +1936,16 @@ hu-HU:
       courseF_bee_variables_2_2019:
         collect row:
           name: gyűjtsd be a sort
+      courseF_bee_variables_2_2020:
+        collect row:
+          name: gyűjtsd be a sort
       courseF_bee_variables_3_2018:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_3_2019:
+        collect row:
+          name: gyűjtsd be a sort
+      courseF_bee_variables_3_2020:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_4_2018:
@@ -1512,10 +1954,16 @@ hu-HU:
       courseF_bee_variables_4_2019:
         collect row:
           name: gyűjtsd be a sort
+      courseF_bee_variables_4_2020:
+        collect row:
+          name: gyűjtsd be a sort
       courseF_bee_variables_5_2018:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_5_2019:
+        collect row:
+          name: gyűjtsd be a sort
+      courseF_bee_variables_5_2020:
         collect row:
           name: gyűjtsd be a sort
       courseF_bee_variables_7_2018:
@@ -1524,12 +1972,20 @@ hu-HU:
       courseF_bee_variables_7_2019:
         collect:
           name: begyűjtés
+      courseF_bee_variables_7_2020:
+        collect:
+          name: begyűjtés
       courseF_bee_variables_8_2018:
         move and increment:
           name: menj és növeld
         collect:
           name: begyűjtés
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: menj és növeld
+        collect:
+          name: begyűjtés
+      courseF_bee_variables_8_2020:
         move and increment:
           name: menj és növeld
         collect:

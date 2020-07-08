@@ -24,10 +24,10 @@ ms:
               name: Peta-peta Gembira
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Belajar untuk drag and drop'
-            'Maze: Sequence':
-              name: 'SImpang Siur: Turutan'
             'Maze: Debugging':
               name: 'Simpang Siur: Debugging'
+            'Maze: Sequence':
+              name: 'SImpang Siur: Turutan'
             Spelling Bee:
               name: Lebah Ejaan
         course2:
@@ -44,16 +44,16 @@ ms:
             Relay programming:
               name: Pengaturcaraan penyampai
           lessons:
+            Conditionals:
+              name: Bersyarat
+            Flappy:
+              name: Flappy
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
             'Maze: Sequence':
               name: 'SImpang Siur: Turutan'
             Relay programming:
               name: Pengaturcaraan penyampai
-            Conditionals:
-              name: Bersyarat
-            Flappy:
-              name: Flappy
         course3:
           title: Kursus 3
           stages:
@@ -68,16 +68,16 @@ ms:
             Maze:
               name: Maze
           lessons:
-            Computational Thinking:
-              name: Pengiraan pemikiran
-            Maze:
-              name: Maze
-            Dice Race:
-              name: Perlumbaan Dadu
             Bounce:
               name: Lantunan
+            Computational Thinking:
+              name: Pengiraan pemikiran
+            Dice Race:
+              name: Perlumbaan Dadu
             Internet:
               name: Internet
+            Maze:
+              name: Maze
         hourofcode:
           stages:
             Maze:
@@ -101,6 +101,9 @@ ms:
               name: Pembolehubah
         algebra:
           stages:
+            'Eval: Conditionals':
+              name: Bersyarat
+          lessons:
             'Eval: Conditionals':
               name: Bersyarat
         infinity:
@@ -156,44 +159,44 @@ ms:
             Wrap-up:
               name: Wrap-up
           lessons:
-            Introduction to Computer Science:
-              name: Pengenalan kepada Sains komputer
-            The Maze:
-              name: Simpang Siur
-            Computational Thinking:
-              name: Pengiraan pemikiran
-            Graph Paper Programming:
-              name: Pengaturcaraan kertas graf
-            The Artist:
-              name: Pelukis
-            Algorithms:
-              name: Algoritma
-            The Artist 2:
-              name: Artis 2
-            Functions:
-              name: Fungsi
-            The Farmer:
-              name: Petani
-            Conditionals:
-              name: Bersyarat
-            The Artist 3:
-              name: Artis 3
-            Song Writing:
-              name: Lagu
-            The Farmer 2:
-              name: Petani 2
             Abstraction:
               name: Abstraksi
-            The Artist 4:
-              name: Artis 4
+            Algorithms:
+              name: Algoritma
+            Computational Thinking:
+              name: Pengiraan pemikiran
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
+            Introduction to Computer Science:
+              name: Pengenalan kepada Sains komputer
             Relay Programming:
               name: Pengaturcaraan penyampai
+            Song Writing:
+              name: Lagu
+            The Artist:
+              name: Pelukis
+            The Artist 2:
+              name: Artis 2
+            The Artist 3:
+              name: Artis 3
+            The Artist 4:
+              name: Artis 4
+            The Artist 5:
+              name: Artis 5
+            The Farmer:
+              name: Petani
+            The Farmer 2:
+              name: Petani 2
             The Farmer 3:
               name: Petani 3
             The Internet:
               name: Internet
-            The Artist 5:
-              name: Artis 5
+            The Maze:
+              name: Simpang Siur
             Wrap-up:
               name: Wrap-up
         edit-code:
@@ -206,10 +209,10 @@ ms:
             The Maze:
               name: Simpang Siur
           lessons:
-            The Maze:
-              name: Simpang Siur
             The Artist:
               name: Pelukis
+            The Maze:
+              name: Simpang Siur
         events:
           title: Acara-acara
           description: Acara-acara
@@ -257,16 +260,16 @@ ms:
             Multi:
               name: Pelbagai
           lessons:
-            Maze:
-              name: Maze
-            Flappy:
-              name: Flappy
             Bounce:
               name: Lantunan
-            Multi:
-              name: Pelbagai
+            Flappy:
+              name: Flappy
             Match:
               name: Suaikan
+            Maze:
+              name: Maze
+            Multi:
+              name: Pelbagai
         ECSPD2:
           stages:
             0: |-
@@ -331,10 +334,10 @@ ms:
             Happy Maps:
               name: Peta-peta Gembira
           lessons:
-            Happy Maps:
-              name: Peta-peta Gembira
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
+            Happy Maps:
+              name: Peta-peta Gembira
         starwars:
           title: 'Star Wars: Membina galaksi dengan kod'
         starwarsblocks:
@@ -354,6 +357,9 @@ ms:
           stages:
             Functions:
               name: Fungsi
+          lessons:
+            Functions:
+              name: Fungsi
         MikeTest:
           stages:
             Artist Functions:
@@ -369,8 +375,22 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+          lessons:
+            Events:
+              name: Acara-acara
+            'Jigsaw: Learn to drag and drop':
+              name: 'Jigsaw: Belajar untuk drag and drop'
+            Loops:
+              name: Gelung
         grade1:
           stages:
+            Events:
+              name: Acara-acara
+            'Jigsaw: Learn to drag and drop':
+              name: 'Jigsaw: Belajar untuk drag and drop'
+            Loops:
+              name: Gelung
+          lessons:
             Events:
               name: Acara-acara
             'Jigsaw: Learn to drag and drop':
@@ -400,6 +420,9 @@ ms:
           stages:
             Bounce:
               name: Lantunan
+          lessons:
+            Bounce:
+              name: Lantunan
         csd3-2017:
           stages:
             Functions:
@@ -409,14 +432,17 @@ ms:
             Conditionals:
               name: Bersyarat
           lessons:
+            Functions:
+              name: Fungsi
             Variables:
               name: Pembolehubah
             Conditionals:
               name: Bersyarat
-            Functions:
-              name: Fungsi
         grade2:
           stages:
+            Flappy:
+              name: Flappy
+          lessons:
             Flappy:
               name: Flappy
         k5concepts:
@@ -434,18 +460,18 @@ ms:
             Variables:
               name: Pembolehubah
           lessons:
-            Events:
-              name: Acara-acara
-            Loops:
-              name: Gelung
             Conditionals:
               name: Bersyarat
+            Events:
+              name: Acara-acara
             Functions:
               name: Fungsi
-            Variables:
-              name: Pembolehubah
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+            Loops:
+              name: Gelung
+            Variables:
+              name: Pembolehubah
         basketball:
           stages:
             Bounce:
@@ -474,10 +500,10 @@ ms:
             Conditionals:
               name: Bersyarat
           lessons:
-            Conditionals:
-              name: Bersyarat
             Internet:
               name: Internet
+            Conditionals:
+              name: Bersyarat
         csd6-draft:
           stages:
             Lists:
@@ -485,6 +511,8 @@ ms:
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
           lessons:
+            Lists:
+              name: Senarai
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         coursee-ramp:
@@ -502,8 +530,22 @@ ms:
               name: Fungsi-fungsi dengan parameter
             Functions with Parameters_:
               name: Fungsi-fungsi dengan parameter
+          lessons:
+            Lists:
+              name: Senarai
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
+            Functions with Parameters_:
+              name: Fungsi-fungsi dengan parameter
         csd3-draft:
           stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+          lessons:
             Variables:
               name: Pembolehubah
             Conditionals:
@@ -521,8 +563,20 @@ ms:
           stages:
             Lists:
               name: Senarai
+          lessons:
+            Lists:
+              name: Senarai
         csd3-chapters:
           stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            'null':
+              name: 'null'
+          lessons:
             Variables:
               name: Pembolehubah
             Conditionals:
@@ -538,14 +592,11 @@ ms:
           lessons:
             Bounce:
               name: Lantunan
-        coursee-2017:
-          lessons:
-            Conditionals:
-              name: Bersyarat
-            Internet:
-              name: Internet
         express-2017:
           stages:
+            Internet:
+              name: Internet
+          lessons:
             Internet:
               name: Internet
         pre-express-2017:
@@ -636,6 +687,9 @@ ms:
           stages:
             'Programming: Happy Maps':
               name: Peta-peta Gembira
+          lessons:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -647,12 +701,14 @@ ms:
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
           lessons:
-            Graph Paper Programming:
+            'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
-            Relay Programming:
-              name: Pengaturcaraan penyampai
             Internet:
               name: Internet
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -662,6 +718,10 @@ ms:
             Relay Programming:
               name: Pengaturcaraan penyampai
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
         csd6-2018:
@@ -676,8 +736,6 @@ ms:
             Internet:
               name: Internet
           lessons:
-            Conditionals:
-              name: Bersyarat
             Internet:
               name: Internet
         csp1-2018:
@@ -712,8 +770,14 @@ ms:
           stages:
             Dance Party:
               name: Majlis Tari-Menari
+          lessons:
+            Dance Party:
+              name: Majlis Tari-Menari
         dance-draft:
           stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+          lessons:
             Dance Party:
               name: Majlis Tari-Menari
         cspplayground:
@@ -736,10 +800,15 @@ ms:
             csf_internet:
               display_name: Internet
           lessons:
+            The Artist:
+              name: Pelukis
             Internet:
               name: Internet
         dance-low:
           stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+          lessons:
             Dance Party:
               name: Majlis Tari-Menari
         coursed-2019:
@@ -758,6 +827,8 @@ ms:
             csf_conditionals:
               display_name: Bersyarat
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
             Dance Party:
@@ -770,8 +841,8 @@ ms:
             csf_functions:
               display_name: Fungsi
           lessons:
-            Conditionals:
-              name: Bersyarat
+            Internet:
+              name: Internet
         express-2019:
           stages:
             Relay Programming:
@@ -790,10 +861,17 @@ ms:
             csf_variables:
               display_name: Pembolehubah
           lessons:
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Internet:
+              name: Internet
             Dance Party:
               name: Majlis Tari-Menari
         andrea-test:
           stages:
+            'null':
+              name: 'null'
+          lessons:
             'null':
               name: 'null'
         coursec-2019:
@@ -811,6 +889,9 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+          lessons:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
         courseb-2019:
           lesson_groups:
             csf_loops:
@@ -943,6 +1024,9 @@ ms:
           stages:
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
+          lessons:
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -951,6 +1035,9 @@ ms:
               display_name: Gelung
         csd2-pilot:
           stages:
+            Lists:
+              name: Senarai
+          lessons:
             Lists:
               name: Senarai
         csd3-pilot:
@@ -996,10 +1083,10 @@ ms:
           lessons:
             Loops:
               name: Gelung
-            Events:
-              name: Acara-acara
             Conditionals:
               name: Bersyarat
+            Events:
+              name: Acara-acara
             Functions:
               name: Fungsi
             Variables:
@@ -1014,6 +1101,9 @@ ms:
               display_name: Fungsi
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: Bersyarat
+          lessons:
             Conditionals:
               name: Bersyarat
         time4cs-control-unit-2:
@@ -1084,12 +1174,12 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
-            Text:
-              name: teks
             Conditionals:
               name: Bersyarat
             Functions:
               name: Fungsi
+            Text:
+              name: teks
         coursea-2020:
           stages:
             'Programming: Happy Maps':
@@ -1099,6 +1189,9 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+          lessons:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
         courseb-2020:
           lesson_groups:
             csf_loops:
@@ -1127,6 +1220,8 @@ ms:
             csf_conditionals:
               display_name: Bersyarat
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
             Dance Party:
@@ -1135,9 +1230,6 @@ ms:
           lesson_groups:
             csf_functions:
               display_name: Fungsi
-          lessons:
-            Conditionals:
-              name: Bersyarat
         coursef-2020:
           stages:
             Internet:
@@ -1176,19 +1268,6 @@ ms:
           lessons:
             Spelling Bee:
               name: Lebah Ejaan
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Pembolehubah
-            Conditionals:
-              name: Bersyarat
-            Functions:
-              name: Fungsi
-          lessons:
-            Variables:
-              name: Pembolehubah
-            Conditionals:
-              name: Bersyarat
         csp5-virtual:
           stages:
             Variables:
@@ -1209,3 +1288,50 @@ ms:
               name: Algoritma
             Events:
               name: Acara-acara
+          lessons:
+            Algorithms:
+              name: Algoritma
+            Events:
+              name: Acara-acara
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah
+          lessons:
+            Loops:
+              name: Gelung
+            Events:
+              name: Acara-acara
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Text:
+              name: teks
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+          lessons:
+            Variables:
+              name: Pembolehubah
+            Text:
+              name: teks
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi

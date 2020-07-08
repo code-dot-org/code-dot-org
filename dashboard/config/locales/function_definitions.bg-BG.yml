@@ -17,9 +17,15 @@ bg-BG:
           name: чертае кръг
         draw a car:
           name: начертайте кола
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: височина
       2-3 Artist Debugging 10:
         draw square:
           name: начертайте квадрат
+          parameters:
+            height: височина
         draw a circle:
           name: чертае кръг
       2-3 Artist Debugging 5:
@@ -101,18 +107,51 @@ bg-BG:
           name: чертае кръг
         draw a car:
           name: начертайте кола
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: мед
       Course 4 Play Lab Params 1:
         jump:
           name: скок
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: точки
       Course 4 Play Lab Params 2:
         jump:
           name: скок
       Course 4 Play Lab Params 3:
         jump:
           name: скок
+          parameters:
+            height: височина
+            actor: актьор
       Course 4 Play Lab Params 4:
         do something:
           name: изпълнява нещо
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: актьор
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: актьор
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: актьор
+            speed: скорост
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: актьор
+            speed: скорост
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: точки
       Course 4 Play Lab Vars 1:
         set score:
           name: задава резултат
@@ -125,15 +164,24 @@ bg-BG:
       Course 4 SCF 1a:
         get nectar:
           name: вземи нектар
+          parameters:
+            counter: брояч
       Course 4 SCF 3:
         do something:
           name: изпълнява нещо
+        draw an octagon:
+          parameters:
+            length: дължина
       'Course E: Play Lab Project':
         do something:
           name: изпълнява нещо
       Find the Wizard:
         do something:
           name: изпълнява нещо
+      FoodFight:
+        score_points:
+          parameters:
+            points: точки
       Geometric Sun:
         diamond:
           name: диамант
@@ -144,6 +192,23 @@ bg-BG:
           name: диамант
         draw a house:
           name: рисува къща
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: дължина
+        draw a loop:
+          parameters:
+            length: дължина
+        draw spiral circle:
+          parameters:
+            size: размер
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: дължина
+        draw spiral circle:
+          parameters:
+            size: размер
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: чертае квадрат
@@ -169,20 +234,59 @@ bg-BG:
           name: изпълнява нещо
         draw a hexagon:
           name: чертае шестоъгълник
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: дължина
         do something:
           name: изпълнява нещо
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 15:
         draw a star:
           name: рисува звезда
+          parameters:
+            points: точки
+            length: дължина
         draw a circle:
           name: чертае кръг
+        draw a pinwheel:
+          parameters:
+            length: дължина
+            repeat: повтори
         draw a triangle:
           name: чертае триъгълник
+          parameters:
+            length: дължина
+        draw a shape:
+          parameters:
+            length: дължина
         draw a house:
           name: рисува къща
+          parameters:
+            length: дължина
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 2:
         do something:
           name: изпълнява нещо
@@ -192,38 +296,97 @@ bg-BG:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: чертае триъгълник
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: чертае триъгълник
+          parameters:
+            length: дължина
         draw a hexagon:
           name: чертае шестоъгълник
+          parameters:
+            length: дължина
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
+        draw a sqaure:
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: чертае триъгълник
+          parameters:
+            length: дължина
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: дължина
       NEW Course 4 Artist Params 9:
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
         do something:
           name: изпълнява нещо
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: дължина
       NEW Course 4 Play Lab Params 11:
         jump:
           name: скок
+          parameters:
+            height: височина
+            actor: актьор
+        patrol:
+          parameters:
+            actor: актьор
+            speed: скорост
       New Artist Project:
         draw a star:
           name: рисува звезда
+          parameters:
+            points: точки
+            length: дължина
         draw a circle:
           name: чертае кръг
+        draw a pinwheel:
+          parameters:
+            length: дължина
+            repeat: повтори
         draw a triangle:
           name: чертае триъгълник
+          parameters:
+            length: дължина
+        draw a shape:
+          parameters:
+            length: дължина
         draw a house:
           name: рисува къща
+          parameters:
+            length: дължина
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
       New Play Lab Project:
         jump:
           name: скок
+          parameters:
+            height: височина
+            actor: актьор
+        patrol:
+          parameters:
+            actor: актьор
+            speed: скорост
       Robot Doodle:
         draw head:
           name: начертайте глава
@@ -254,7 +417,34 @@ bg-BG:
       course4_artist_fwp_challenge1:
         do something:
           name: изпълнява нещо
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: дължина
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: дължина
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: изпълнява нещо
+      courseC_data wizard_2020:
         do something:
           name: изпълнява нещо
       courseE_artist_concept1:
@@ -286,6 +476,9 @@ bg-BG:
       courseE_artist_functions10_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions10_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions2:
         draw a square:
           name: чертае квадрат
@@ -295,6 +488,9 @@ bg-BG:
       courseE_artist_functions2_2019:
         draw a square:
           name: чертае квадрат
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: чертае квадрат
       courseE_artist_functions2_copy:
         draw a square:
           name: чертае квадрат
@@ -302,6 +498,9 @@ bg-BG:
         draw a star:
           name: рисува звезда
       courseE_artist_functions3_2019:
+        draw a star:
+          name: рисува звезда
+      courseE_artist_functions3_2020:
         draw a star:
           name: рисува звезда
       courseE_artist_functions4:
@@ -319,6 +518,9 @@ bg-BG:
       courseE_artist_functions5_2019:
         draw a star:
           name: рисува звезда
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: рисува звезда
       courseE_artist_functions5_copy:
         draw a star:
           name: рисува звезда
@@ -326,6 +528,9 @@ bg-BG:
         draw a house:
           name: рисува къща
       courseE_artist_functions7_2018:
+        draw a house:
+          name: рисува къща
+      courseE_artist_functions7_2020:
         draw a house:
           name: рисува къща
       courseE_artist_functions8:
@@ -343,12 +548,22 @@ bg-BG:
           name: изпълнява нещо
         draw square:
           name: начертайте квадрат
+      courseE_artist_functions8_2020:
+        do something:
+          name: изпълнява нещо
+        draw square:
+          name: начертайте квадрат
       courseE_artist_functions8a_2018:
         draw a square:
           name: чертае квадрат
         do something:
           name: изпълнява нещо
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: чертае квадрат
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions8a_2020:
         draw a square:
           name: чертае квадрат
         do something:
@@ -363,12 +578,22 @@ bg-BG:
           name: начертайте квадрат
         do something:
           name: изпълнява нещо
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: начертайте квадрат
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions8c_2018:
         draw square:
           name: начертайте квадрат
         do something:
           name: изпълнява нещо
       courseE_artist_functions8c_2019:
+        draw square:
+          name: начертайте квадрат
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions8c_2020:
         draw square:
           name: начертайте квадрат
         do something:
@@ -388,10 +613,18 @@ bg-BG:
           name: изпълнява нещо
         draw triangle:
           name: начертайте триъгълник
+      courseE_artist_functions9_2020:
+        do something:
+          name: изпълнява нещо
+        draw triangle:
+          name: начертайте триъгълник
       courseE_artist_functionsProj_2018:
         draw square:
           name: начертайте квадрат
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: начертайте квадрат
+      courseE_artist_functionsProj_2020:
         draw square:
           name: начертайте квадрат
       courseE_artist_functions_challenge1:
@@ -403,6 +636,9 @@ bg-BG:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions_challenge2:
         do something:
           name: изпълнява нещо
@@ -412,6 +648,9 @@ bg-BG:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: изпълнява нещо
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: изпълнява нещо
       courseE_artist_functions_predict1:
         draw a square:
           name: чертае квадрат
@@ -419,6 +658,9 @@ bg-BG:
         draw a square:
           name: чертае квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: чертае квадрат
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: чертае квадрат
       courseE_artist_functions_predict1_copy:
@@ -431,6 +673,9 @@ bg-BG:
         do something:
           name: изпълнява нещо
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: изпълнява нещо
+      courseE_artist_functions_predict2_2020:
         do something:
           name: изпълнява нещо
       courseE_bee_functions1:
@@ -484,48 +729,144 @@ bg-BG:
       courseF_artist_fwp1:
         draw a square:
           name: чертае квадрат
+        checker:
+          parameters:
+            size: размер
         do something:
           name: изпълнява нещо
+        Make gingham:
+          parameters:
+            size: размер
+        black outline:
+          parameters:
+            length: дължина
       courseF_artist_fwp2:
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
+        checker:
+          parameters:
+            size: размер
         do something:
           name: изпълнява нещо
+        Make gingham:
+          parameters:
+            size: размер
+        black outline:
+          parameters:
+            length: дължина
       courseF_artist_fwp2_predict1:
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
       courseF_artist_fwp3:
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
+        draw a square2:
+          parameters:
+            size: размер
+        filled square:
+          parameters:
+            size: размер
+        black outline:
+          parameters:
+            length: дължина
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: дължина
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: дължина
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: дължина
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: дължина
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: дължина
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: рисува звезда
+          parameters:
+            points: точки
+            length: дължина
         draw a circle:
           name: чертае кръг
+        draw a pinwheel:
+          parameters:
+            length: дължина
+            repeat: повтори
         draw a triangle:
           name: чертае триъгълник
+          parameters:
+            length: дължина
+        draw a shape:
+          parameters:
+            length: дължина
         draw a house:
           name: рисува къща
+          parameters:
+            length: дължина
         draw a square:
           name: чертае квадрат
+          parameters:
+            length: дължина
+        draw a spiral edge:
+          parameters:
+            length: дължина
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: изпълнява нещо
       courseF_artist_fwp_challenge2:
         do something:
           name: изпълнява нещо
+        draw an octagon:
+          parameters:
+            length: дължина
       courseF_bee_functions8a:
         do something:
           name: изпълнява нещо
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: дължина
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: дължина
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: дължина
       courseF_bee_variables_7_2018:
         collect:
           name: събери
       courseF_bee_variables_7_2019:
         collect:
           name: събери
+      courseF_bee_variables_7_2020:
+        collect:
+          name: събери
       courseF_bee_variables_8_2018:
         collect:
           name: събери
       courseF_bee_variables_8_2019:
+        collect:
+          name: събери
+      courseF_bee_variables_8_2020:
         collect:
           name: събери

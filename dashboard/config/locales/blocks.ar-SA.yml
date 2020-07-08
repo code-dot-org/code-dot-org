@@ -1024,6 +1024,7 @@ ar:
         options:
           CHOICE:
             '"this"': هذا
+            '"other"': أخرى
       gamelab_hideTitleScreen:
         text: إخفاء شاشة العنوان
       gamelab_isTouchingEdges:
@@ -1098,6 +1099,8 @@ ar:
             '"West"': غرب
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
+      gamelab_objectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_playSound:
         text: بلاي ساوند {SOUND}
       gamelab_pointInDirection:
@@ -1178,6 +1181,8 @@ ar:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
+      gamelab_subjectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_turn:
         text: دوره {SPRITE} {DIRECTION} {N} درجه
         options:

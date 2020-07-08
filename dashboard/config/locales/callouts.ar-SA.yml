@@ -37,6 +37,22 @@ ar-SA:
         edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
       Course 4 Play Lab Vars 1:
         arrows_move_actor: استخدم الأسهم لتحريك الفنان
+      CourseD_Dance_2020_01:
+        dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: أضف هذا المربع البرمجي إلى البرنامج الخاص بك.
+        arrow_buttons: اضغط أزرار الأسهم للتحكم في الراقص الخاص بك.
+      CourseD_Dance_2020_04:
+        dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
+      CourseD_Dance_2020_05:
+        dance_callout_05: إضافة حدث جديد إلى البرنامج.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: مربع برمجي جديد!
+      CourseD_Dance_2020_07:
+        setprop_hint: مربع برمجي جديد!
+      CourseD_Dance_2020_09:
+        new_block_3: مربع برمجي جديد!
+        new_block_4: مربع برمجي جديد!
       CourseD_Dance_Party_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
       CourseD_Dance_Party_02:
@@ -82,10 +98,16 @@ ar-SA:
       Fish Tank 3-validated_2019:
         spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
           كيفية عمل التعليمات البرمجية الخاصة بك.
+      Fish Tank 3-validated_2020:
+        spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
+          كيفية عمل التعليمات البرمجية الخاصة بك.
       Function intro Ryan:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
       Function intro Ryan_2019:
+        Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
+          البرنامج بنفس الاسم في مساحة العمل.
+      Function intro Ryan_2020:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
       Geometric Sun:
@@ -118,20 +140,31 @@ ar-SA:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
           البرمجية التي تريد تكرارها مراراً.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
+          البرمجية التي تريد تكرارها مراراً.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: يمكن للكائن أن يمشي فوق الماء، لكن اللاعب لا يمكنه
           فعل ذلك!
       MC_HOC_2017_04_Cole_2019:
         MC_HOC_2017_04_Cole_a: يمكن للكائن أن يمشي فوق الماء، لكن اللاعب لا يمكنه
           فعل ذلك!
+      MC_HOC_2017_04_Cole_2020:
+        MC_HOC_2017_04_Cole_a: يمكن للكائن أن يمشي فوق الماء، لكن اللاعب لا يمكنه
+          فعل ذلك!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: لا يمكنك رمي هذه الكتل البرمجية بعيداً، لكن يمكنك تعديلها!
       MC_HOC_2017_06_Cole_2019:
+        MC_HOC_2017_06_Cole_1: لا يمكنك رمي هذه الكتل البرمجية بعيداً، لكن يمكنك تعديلها!
+      MC_HOC_2017_06_Cole_2020:
         MC_HOC_2017_06_Cole_1: لا يمكنك رمي هذه الكتل البرمجية بعيداً، لكن يمكنك تعديلها!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
           لا يمكنهم فعل ذلك!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
+          لا يمكنهم فعل ذلك!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
           لا يمكنهم فعل ذلك!  '
       NEW Course 4 Artist Functions 7:
@@ -184,10 +217,15 @@ ar-SA:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld Chop Trees_2019:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
+          منزلك. هل يمكنك الانتهاء من ذلك؟
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld Move to Sheep:
@@ -198,9 +236,15 @@ ar-SA:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
         craft_drag_block_callout: اسحب المربع البرمجي "التحرك إلى الأمام" وإطباقه
           إدناه بالمربع البرمجي الآخر
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
+        craft_drag_block_callout: اسحب المربع البرمجي "التحرك إلى الأمام" وإطباقه
+          إدناه بالمربع البرمجي الآخر
       Overworld Place Wall:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Overworld Place Wall_2019:
+        craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
+      Overworld Place Wall_2020:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Robot Doodle:
         4-5_Artist_Patterns_Free_Play_2: جرب استخدام المربع البرمجي "تعليق" الجديد
@@ -214,11 +258,18 @@ ar-SA:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
           إضافة أمر للتقدم؟
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
+          إضافة أمر للتقدم؟
       Underground Iron:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Underground Iron_2019:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
+      Underground Iron_2020:
+        craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Virtual Pet 2_2019:
+        '': انقر هنا!
+      Virtual Pet 2_2020:
         '': انقر هنا!
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: استخدم هذه الحلقة لجمع كل الرحيق (أو
@@ -267,6 +318,11 @@ ar-SA:
           استخدامها في هذا اللغز.
 
 '
+      courseA_artist_loops4_2020:
+        courseA_artist_loops4_1: 'هذا الرقم يخبرك كم من هذه المربعات البرمجية يمكنك
+          استخدامها في هذا اللغز.
+
+'
       courseA_artist_loops7:
         courseA_artist_loops7_1: 'هذا العدد يعني أن نوعًا واحدًا من هذا المربع البرمجي
           يمكن استخدامه في الجواب الآخير.
@@ -282,6 +338,11 @@ ar-SA:
           يمكن استخدامه في الجواب الآخير.
 
 '
+      courseA_artist_loops7_2020:
+        courseA_artist_loops7_1: 'هذا العدد يعني أن نوعًا واحدًا من هذا المربع البرمجي
+          يمكن استخدامه في الجواب الآخير.
+
+'
       courseA_artist_loops8:
         courseA_artist_loops8_1: 'هل تعلم أنك يمكن أن ترسم فوق سطر متى ما شئت؟
 
@@ -291,6 +352,10 @@ ar-SA:
 
 '
       courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: 'هل تعلم أنك يمكن أن ترسم فوق سطر متى ما شئت؟
+
+'
+      courseA_artist_loops8_2020:
         courseA_artist_loops8_1: 'هل تعلم أنك يمكن أن ترسم فوق سطر متى ما شئت؟
 
 '
@@ -310,6 +375,11 @@ ar-SA:
 
 '
       courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: 'هذا الرقم يخبرك كم من هذه المربعات البرمجية يمكنك
+          استخدامها في هذا اللغز.
+
+'
+      courseA_collector_loops3_2020:
         gradek_adventurer_loops2_1: 'هذا الرقم يخبرك كم من هذه المربعات البرمجية يمكنك
           استخدامها في هذا اللغز.
 
@@ -342,6 +412,9 @@ ar-SA:
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
+      courseA_maze_ramp2_2020:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
       courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
@@ -354,6 +427,10 @@ ar-SA:
 
 '
       courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 'انقر على المصباح عندما تحتاج إلى تلميح!
+
+'
+      courseA_maze_seq1_2020:
         courseA_maze_seq1_1: 'انقر على المصباح عندما تحتاج إلى تلميح!
 
 '
@@ -381,6 +458,11 @@ ar-SA:
           عند الضغط على زري "الأعلى" و "الأسفل".
 
 '
+      courseA_playLab_events4_2020:
+        courseA_playlab_events4_callout1: 'أضف أحداث لتحريك الكلب جورج للأعلى وللأسفل
+          عند الضغط على زري "الأعلى" و "الأسفل".
+
+'
       courseA_playLab_events5:
         courseA_playLab_events5_1: 'أنقر هنا لتغيير اتجاه سهم الحدث.
 
@@ -390,6 +472,10 @@ ar-SA:
 
 '
       courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: 'أنقر هنا لتغيير اتجاه سهم الحدث.
+
+'
+      courseA_playLab_events5_2020:
         courseA_playLab_events5_1: 'أنقر هنا لتغيير اتجاه سهم الحدث.
 
 '
@@ -408,13 +494,24 @@ ar-SA:
           لا تعرف ماذا ستحصل عليه إلى أن تسمعه.
 
 '
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: 'هذا يتيح لك اختيار صوت "عشوائي"، الذي يعني أنك
+          لا تعرف ماذا ستحصل عليه إلى أن تسمعه.
+
+'
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
           برنامجك.
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
           برنامجك.
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
       courseB_artist_loops3:
@@ -424,6 +521,9 @@ ar-SA:
         courseB_artist_loops3_1: يوجد مربع برمجي واحد فقط من هذه المربعات البرمجية
           في مربع الأدوات.؟ كيف سوف تستخدمه؟
       courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: يوجد مربع برمجي واحد فقط من هذه المربعات البرمجية
+          في مربع الأدوات.؟ كيف سوف تستخدمه؟
+      courseB_artist_loops3_2020:
         courseB_artist_loops3_1: يوجد مربع برمجي واحد فقط من هذه المربعات البرمجية
           في مربع الأدوات.؟ كيف سوف تستخدمه؟
       courseB_artist_loops5:
@@ -446,6 +546,10 @@ ar-SA:
         courseB_maze_seq1: 'انقر على المصباح عندما تحتاج إلى تلميح!
 
 '
+      courseB_maze_seq1_2020:
+        courseB_maze_seq1: 'انقر على المصباح عندما تحتاج إلى تلميح!
+
+'
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: 'استخدم زر الخطوة لتذهب خطوة بعد خطوة من خلال
           البرنامج. هذا يساعدك عل اكتشاف الخطأ!
@@ -459,7 +563,12 @@ ar-SA:
         courseB_playlab_events6_a: استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات.
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات.
+      courseB_playlab_events6_2020:
+        courseB_playlab_events6_a: استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات.
       courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى
+          التالي
+      courseC19_playLab_EOC3_2020:
         courseE_playLab_scaffold3_1: أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى
           التالي
       courseC_PlayLab_events8:
@@ -471,6 +580,9 @@ ar-SA:
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
           التمساح!
+      courseC_PlayLab_events8_2020:
+        courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
+          التمساح!
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
@@ -480,9 +592,16 @@ ar-SA:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
+      courseC_PlayLab_events_challenge1_2020:
+        courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
+          في ساحة اللعب.
       courseC_artist_loops1a_2019:
         jumpto_callout: هذه البلوكة مهمة جداً لبرنامجك. احرص على استخدامها!
+      courseC_artist_loops1a_2020:
+        jumpto_callout: هذه البلوكة مهمة جداً لبرنامجك. احرص على استخدامها!
       courseC_artist_loops1b_2019:
+        sticker2: أضف هذه في منتصف برنامجك.
+      courseC_artist_loops1b_2020:
         sticker2: أضف هذه في منتصف برنامجك.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
@@ -491,6 +610,9 @@ ar-SA:
         courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
           منتصف الشاشة.
       courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
+          منتصف الشاشة.
+      courseC_artist_loopsPrePre1a_2020:
         courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
           منتصف الشاشة.
       courseC_collector_prog1:
@@ -504,6 +626,9 @@ ar-SA:
       courseC_collector_prog1_2019:
         courseC_collector_prog1_1: هل ترى بلوكات جديدة في صندوق الأدوات؟ لا تقلق,
           سنريك كيفية استخدامها في دروس قادمة.
+      courseC_collector_prog1_2020:
+        courseC_collector_prog1_1: هل ترى بلوكات جديدة في صندوق الأدوات؟ لا تقلق,
+          سنريك كيفية استخدامها في دروس قادمة.
       courseC_collector_prog7:
         courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
           الأدوات في حال احتجت إليهم!
@@ -511,6 +636,9 @@ ar-SA:
         courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
           الأدوات في حال احتجت إليهم!
       courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
+          الأدوات في حال احتجت إليهم!
+      courseC_collector_prog7_2020:
         courseC_collector_prog7_1: يمكنك استخدام بعض من البلوكات الموجودة في صندوق
           الأدوات في حال احتجت إليهم!
       courseC_harvester_loops1:
@@ -522,13 +650,24 @@ ar-SA:
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات
           يمكنك جمعها.
+      courseC_harvester_loops1_2020:
+        courseC_harvester_loops1_callout1: الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات
+          يمكنك جمعها.
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: المربعات الرمادية لا يمكن إلغائها.
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: هذه البلوكات الرمادية مقفلة ولا يمكنك حذفها!
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: هذه البلوكات مغلقة ولايمكن حذفها!
+      courseC_maze_debugging5_2020:
+        courseC_maze_debugging5_1: هذه البلوكات مغلقة ولايمكن حذفها!
       courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
+          الخاصة بك.
+      courseC_maze_debugging9_2020:
+        courseC_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
+          الخاصة بك.
+      courseC_maze_debugging9_copy_2020:
         courseC_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
           الخاصة بك.
       courseC_maze_programming1:
@@ -540,6 +679,9 @@ ar-SA:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
           برنامجك.
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
       courseC_maze_programming2:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
@@ -547,6 +689,9 @@ ar-SA:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseC_maze_programming2_2020:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
       courseC_maze_programming3:
@@ -561,6 +706,10 @@ ar-SA:
         courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
           الأدوات من أجل الحذف بعيداً.
         courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
+      courseC_maze_programming3_2020:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
+        courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
       courseC_maze_programming4:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
@@ -570,6 +719,9 @@ ar-SA:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseC_maze_programming4_2020:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
       courseC_maze_programming5:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
@@ -577,6 +729,9 @@ ar-SA:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
       courseC_maze_programming5_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseC_maze_programming5_2020:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
       courseC_maze_programming7:
@@ -591,6 +746,10 @@ ar-SA:
         courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
           صعباً ويحتاج العديد من المحاولات لحلها.
         courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
+      courseC_maze_programming7_2020:
+        courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
+          صعباً ويحتاج العديد من المحاولات لحلها.
+        courseC_maze_programming7_2: هذه البلوكات ثابتة ولايمكن حذفها.
       courseC_starWars_loops2:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
@@ -598,6 +757,9 @@ ar-SA:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
       courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
+          في هذا اللغز.
+      courseC_starWars_loops2_2020:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
       courseC_starWars_loops2_copy:
@@ -610,6 +772,9 @@ ar-SA:
         courseD_artist_nestedLoops1a_1: لست ملزمًا باستخدام الألوان لتكملة هذا اللغز.
           وإذا أردت، فإن هذا المربع البرمجي "اللون العشوائي" يسهّل المهمة!
       courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: لست ملزمًا باستخدام الألوان لتكملة هذا اللغز.
+          وإذا أردت، فإن هذا المربع البرمجي "اللون العشوائي" يسهّل المهمة!
+      courseD_artist_nestedLoops1a_2020:
         courseD_artist_nestedLoops1a_1: لست ملزمًا باستخدام الألوان لتكملة هذا اللغز.
           وإذا أردت، فإن هذا المربع البرمجي "اللون العشوائي" يسهّل المهمة!
       courseD_artist_ramp11:
@@ -625,6 +790,9 @@ ar-SA:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: تذكّر، افحص لتتأكد ما إذا كان لكل غيمة زهرة. لست
           ملزمًا لفحص خلايا النحل بتاتًا.
+      courseD_bee_conditionals2_2020:
+        4_5_Bee_Conditionals_2_1: تذكّر، افحص لتتأكد ما إذا كان لكل غيمة زهرة. لست
+          ملزمًا لفحص خلايا النحل بتاتًا.
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: تذكّر، افحص لتتأكد ما إذا كان لكل غيمة زهرة. لست
           ملزمًا لفحص خلايا النحل بتاتًا.
@@ -638,6 +806,9 @@ ar-SA:
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: استخدم هذه الحلقة لجمع كل الرحيق (أو
           العسل) من زهرة واحدة (أو من خلية نحل).
+      courseD_bee_conditionals_challenge2_2020:
+        courseD_bee_conditionals_challenge2_1: استخدم هذه الحلقة لجمع كل الرحيق (أو
+          العسل) من زهرة واحدة (أو من خلية نحل).
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: استخدم هذا الأمر لجعل النحل يتحرك
           للخلف.
@@ -649,7 +820,13 @@ ar-SA:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_intro4_2020:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
       courseD_maze_intro5a_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_intro5a_2020:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
       courseD_maze_ramp1:
@@ -661,6 +838,9 @@ ar-SA:
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
           برنامجك.
+      courseD_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
       courseD_maze_ramp2:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
@@ -668,6 +848,9 @@ ar-SA:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseD_maze_ramp2_2020:
         courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
           الإضافية لإكمال الإلغاز الخاصة بك.
       courseD_maze_ramp3:
@@ -682,6 +865,10 @@ ar-SA:
         courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
           الأدوات من أجل الحذف بعيداً.
         stone_block_2: القطع البرمجية الرمادية لا يمكن حذفها.
+      courseD_maze_ramp3_2020:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
+        stone_block_2: القطع البرمجية الرمادية لا يمكن حذفها.
       courseD_maze_ramp4:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
@@ -689,6 +876,9 @@ ar-SA:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
       courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_ramp4_2020:
         courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
           بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
       courseD_maze_ramp5:
@@ -700,6 +890,9 @@ ar-SA:
       courseD_maze_ramp5_2019:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
+      courseD_maze_ramp5_2020:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
       courseD_maze_ramp5a:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
@@ -707,6 +900,9 @@ ar-SA:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
       courseD_maze_ramp5a_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5a_2020:
         '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
           كما تريد!
       courseD_maze_ramp6:
@@ -747,6 +943,8 @@ ar-SA:
           ويحتاج العديد من المحاولات لحلها.
       courseE_aboutme_2:
         '': انقر هنا!
+      courseE_aboutme_2_2020:
+        '': انقر هنا!
       courseE_artist_functions1:
         courseD_artist_functions1_1: لنبدأ في استخدام هذا المربع البرمجي للمساعدة
           في إنشاء المربع الأول.
@@ -762,6 +960,9 @@ ar-SA:
       courseE_artist_functions2_2019:
         courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
           جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
+          جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
       courseE_artist_functions2_copy:
         courseD_artist_functions2_1: عند اشتغال هذا المربع البرمجي الأخضر، ستشتغل
           جميع التعليمات البرمجية في الدالة. ما الذي يفعله الفنان بعد رسم المربع الأول؟
@@ -772,6 +973,9 @@ ar-SA:
         courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
           هذه التسمية في مربع الأدوات.
       courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
+          هذه التسمية في مربع الأدوات.
+      courseE_artist_functions8a_2020:
         courseD_artist_functions8_1: مربعاتك الخاصة لإنشاء الدالات تم تحريكها تحت
           هذه التسمية في مربع الأدوات.
       courseE_artist_functions_challenge1:
@@ -785,6 +989,11 @@ ar-SA:
         courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
           إلى أي شيء يحلو لك!
       courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge1_2020:
         courseE_artist_functions_challenge1_callout1: استمر في استخدام البرنامج عن
           طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
         courseE_artist_functions_challenge1_callout2: إذا لم يعجبك هذا التصميم، غيره
@@ -804,6 +1013,11 @@ ar-SA:
           طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
         courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
           إلى أي شيء يحلو لك!
+      courseE_artist_functions_challenge2_2020:
+        courseE_artist_functions_challenge2_callout1: استمر في استخدام البرنامج عن
+          طريق إضافة المزيد من التعليمات البرمجية إلى الأسفل.
+        courseE_artist_functions_challenge2_callout2: إذا لم يعجبك هذا التصميم، غيره
+          إلى أي شيء يحلو لك!
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: يمكنك تغيير هذا الرقم.
         courseE_artist_ramp8_2: انقر هنا لطباعة رقم مرات تكرار تعليماتك البرمجية.
@@ -819,10 +1033,16 @@ ar-SA:
       courseE_farmer_functions13_2019:
         courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
           فيها بتشغيل البرنامج.
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
       courseE_farmer_functions1_2018:
         courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
           انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
       courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
+          انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
+      courseE_farmer_functions1_2020:
         courseE_farmer_functions1_2: تم تنظيم مربع الأدوات بصورة مختلفة هذه المرة!
           انقر على الفئات المختلفة لمشاهدة أي مربعات برمجية لديك.
       courseE_farmer_functions1a:
@@ -834,6 +1054,9 @@ ar-SA:
       courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
           فيها بتشغيل البرنامج.
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
       courseE_farmer_functions2b:
         courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
           فيها بتشغيل البرنامج.
@@ -841,6 +1064,9 @@ ar-SA:
         courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
           فيها بتشغيل البرنامج.
       courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
+          فيها بتشغيل البرنامج.
+      courseE_farmer_functions2b_2020:
         courseE_farmer_functions1a_1: هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم
           فيها بتشغيل البرنامج.
       courseE_playLab_challenge1:
@@ -858,6 +1084,9 @@ ar-SA:
       courseF_artist_for1_2019:
         courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
           البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.
+      courseF_artist_for1_2020:
+        courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
+          البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.
       courseF_artist_fwp1:
         courseF_artist_fwp1_1: انقر على الزر "تحرير" لتغيير التعليمات البرمجية داخل
           الدالة.
@@ -872,6 +1101,8 @@ ar-SA:
         courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
+      courseF_artist_variables3_2020:
+        courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
       courseF_artist_variables6:
         courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
           عدد كبير من النسخ الخاصة بهذا العدد.
@@ -881,6 +1112,9 @@ ar-SA:
       courseF_artist_variables6_2019:
         courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
           عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6_2020:
+        courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
       courseF_artist_variables6a:
         courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
           عدد كبير من النسخ الخاصة بهذا العدد.
@@ -888,6 +1122,9 @@ ar-SA:
         courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
           عدد كبير من النسخ الخاصة بهذا العدد.
       courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6a_2020:
         courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
           عدد كبير من النسخ الخاصة بهذا العدد.
       courseF_bee_conditionals2:
@@ -902,11 +1139,15 @@ ar-SA:
         courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
       courseF_bee_for4_2019:
         courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      courseF_bee_for4_2020:
+        courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
       courseF_bee_for9:
         courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
       courseF_bee_for9_2018:
         courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
       courseF_bee_for9_2019:
+        courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
+      courseF_bee_for9_2020:
         courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
       courseF_bee_functions2:
         courseF_bee_functions2_1: يستدعي هذا المربع البرمجي الوظيفة. انقر على زر "تحرير"
@@ -936,6 +1177,8 @@ ar-SA:
         courseF_bee_functions_1_2018_1: بإمكانك إيجاد المتغيرات الخاصة بك هنا!
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: بإمكانك إيجاد المتغيرات الخاصة بك هنا!
+      courseF_bee_variables_1_2020:
+        courseF_bee_functions_1_2018_1: بإمكانك إيجاد المتغيرات الخاصة بك هنا!
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: تم تنظيم مربع الأدوات هذا في فئات لجعله أكثر
           سهولة من حيث البحث عن المربعات البرمجية التي تحتاجها.
@@ -946,6 +1189,9 @@ ar-SA:
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: ابحث عن المربع البرمجي "اسأل" هنا!
       express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
+          الخاصة بك.
+      express_maze_debugging9_2020:
         express_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
           الخاصة بك.
       frozen circle function with parameter:
@@ -990,6 +1236,10 @@ ar-SA:
           الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
           للخارج والتحرك حولها!
       grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
+          الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
+          للخارج والتحرك حولها!
+      grade5_artist_variables_triangles1_2020:
         grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
           الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
           للخارج والتحرك حولها!
