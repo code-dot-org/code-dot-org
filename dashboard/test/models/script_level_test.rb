@@ -686,7 +686,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')
-    @stage = create(:lesson)
+    @lesson_group = create(:lesson_group, script: @plc_script)
+    @stage = create(:lesson, script: @plc_script)
     @level1 = create(:maze)
     create(:evaluation_multi, name: 'Evaluation Multi')
     evaluation_level_dsl = <<~DSL
@@ -697,9 +698,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     DSL
     @evaluation_level = LevelGroup.create_from_level_builder({}, {name: 'Evaluation Quiz', dsl_text: evaluation_level_dsl})
     @level2 = create(:maze)
-    @script_level1 = create(:script_level, script: @plc_script, lesson: @stage, position: 1, levels: [@level1])
-    @evaluation_script_level = create(:script_level, script: @plc_script, lesson: @stage, position: 2, levels: [@evaluation_level])
-    @script_level2 = create(:script_level, script: @plc_script, lesson: @stage, position: 3, levels: [@level2])
+    @script_level1 = create(:script_level, script: @plc_script, lesson: @stage, position: 1, levels: [@level1], chapter: 1)
+    @evaluation_script_level = create(:script_level, script: @plc_script, lesson: @stage, position: 2, levels: [@evaluation_level], chapter: 2)
+    @script_level2 = create(:script_level, script: @plc_script, lesson: @stage, position: 3, levels: [@level2], chapter: 3)
     @user = create :teacher
     user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
