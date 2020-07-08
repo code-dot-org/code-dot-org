@@ -1,4 +1,5 @@
 require 'honeybadger/ruby'
+require 'state_abbr'
 
 #
 # Handles submissions to our AFE form at code.org/afe, and in turn submits on
@@ -20,7 +21,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       street_1: afe_params['street1'],
       street_2: afe_params['street2'],
       city: afe_params['city'],
-      state: afe_params['state'],
+      state: get_us_state_abbr_from_name(afe_params['state'], true),
       zip: afe_params['zip'],
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
