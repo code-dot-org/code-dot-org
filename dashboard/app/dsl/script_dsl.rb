@@ -236,15 +236,6 @@ class ScriptDSL < BaseDSL
       script_level = {
         levels: [level]
       }
-      if assessment
-        script_level[:assessment] = assessment
-      end
-      if bonus
-        script_level[:bonus] = bonus
-      end
-      if named
-        script_level[:named_level] = named
-      end
 
       if assessment
         script_level[:assessment] = assessment
