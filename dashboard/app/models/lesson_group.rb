@@ -84,7 +84,7 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
       end
 
-      lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lesson_position, chapter, lockable_count, non_lockable_count, new_suffix, editor_experiment)
+      lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
       lesson_group.save!
 
       LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)

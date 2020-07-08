@@ -51,15 +51,9 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, current_lesson_position, current_chapter, current_lockable_count, current_non_lockable_count, new_suffix, editor_experiment)
+  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
     lesson_group_lessons = []
-
-    lesson_position = current_lesson_position # Todo set to 0 when clean up position
-
-    # Todo Remove once clean up position
-    lockable_count = current_lockable_count
-    non_lockable_count = current_non_lockable_count
-    chapter = current_chapter
+    chapter = 0
 
     #Lessons
     raw_lessons&.each do |raw_lesson|
