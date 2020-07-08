@@ -118,8 +118,10 @@ class Census::StateCsOffering < ApplicationRecord
     NE
     NJ
     NM
+    NY
     OH
     OR
+    PA
     RI
     SC
     SD
