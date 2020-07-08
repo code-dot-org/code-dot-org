@@ -20,10 +20,6 @@ class Languages
     table.select(:locale_s).to_a
   end
 
-  cached def self.get_locale_and_code
-    table.select(:locale_s, :code_s).to_a
-  end
-
   cached def self.get_hoc_languages
     table.select(:locale_s, :unique_language_s, :crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'").to_a
   end
@@ -38,6 +34,10 @@ class Languages
 
   cached def self.get_native_name_by_locale(locale)
     table.select(:native_name_s, :locale_s).where("locale_s = '#{locale}'").to_a
+  end
+
+  cached def self.get_code_by_locale(locale)
+    table.select(:code_s, :locale_s).where("locale_s = '#{locale}'").first[:code_s]
   end
 
   cached def self.get_csf_languages
