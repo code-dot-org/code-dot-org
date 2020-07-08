@@ -6,6 +6,9 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 
+require 'cdo/crowdin/utils'
+require 'cdo/crowdin/project'
+
 require 'fileutils'
 require 'json'
 require 'tempfile'
@@ -27,6 +30,28 @@ def sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  end
+end
+
+def file_changed?(locale_code, file)
+  @change_datas ||= CROWDIN_PROJECTS.keys.map do |crowdin_project|
+    project = Crowdin::Project.new(crowdin_project, nil)
+    utils = Crowdin::Utils.new(project)
+    unless File.exist?(utils.changes_json)
+      raise <<~ERR
+        No "changes" json found.
+
+        We expect to find a file at #{utils.changes_json} containing a list of
+        files changes by the most recent sync down; if this file does not
+        exist, it likely means that no sync down has been run on this machine,
+        so there is nothing to sync out.
+      ERR
+    end
+    JSON.load(File.read(utils.changes_json))
+  end
+
+  return @change_datas.any? do |change_data|
+    change_data.dig(locale_code, file)
   end
 end
 
@@ -68,7 +93,8 @@ end
 
 def restore_redacted_files
   total_locales = Languages.get_locale.count
-  original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
+  original_dir = "i18n/locales/original"
+  original_files = Dir.glob("#{original_dir}/**/*.*").to_a
   if original_files.empty?
     raise <<~ERR
       No original files found from which to restore.
@@ -78,13 +104,17 @@ def restore_redacted_files
       corresponding sync-in.
     ERR
   end
-  Languages.get_locale.each_with_index do |prop, locale_index|
+  Languages.get_locale_and_code.each_with_index do |prop, locale_index|
     locale = prop[:locale_s]
+    locale_code = prop[:code_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
     puts "Restoring #{locale} (#{locale_index}/#{total_locales})"
     original_files.each do |original_path|
+      relative_path = original_path.delete_prefix(original_dir)
+      next unless file_changed?(locale_code, relative_path)
+
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
