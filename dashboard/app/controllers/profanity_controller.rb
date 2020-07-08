@@ -10,7 +10,7 @@ class ProfanityController < ApplicationController
     profanity_result = []
     unless params[:text].nil?
       if params[:should_cache]
-        cache_key = "profanity/#{params[:language] || request.locale}/#{params[:text] || ''}"
+        cache_key = "profanity/#{params[:language] || request.locale}/#{params[:text]}"
         profanity_result = Rails.cache.fetch(cache_key) do
           ProfanityFilter.find_potential_profanities(params[:text], params[:language] || request.locale)
         end
