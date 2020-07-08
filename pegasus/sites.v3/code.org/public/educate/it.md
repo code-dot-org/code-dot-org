@@ -10,7 +10,7 @@ theme: responsive
 - We recommend at least a 15 MBit/sec Internet connection for your school.
 - The smallest screen size we support is 1024 x 728 px.
 - You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. iPads (including with a keyboard attachment) or other tablets are not supported for CS Discoveries, CS Principles, and Intro to App Lab.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks, in addition to all other modern laptop or desktop computers.
+- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
 - Looking for mobile device support details? Read below.
 
 ## Supported Browsers and Platforms
@@ -41,13 +41,13 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 
 ## Mobile Support Details
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on Macbooks) are required. Surface Pros with a keyboard attachment and Chromebooks are compatible. iPads or other tablets with a keyboard attachment are not compatible.
+All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Microsoft Surface Pros with a keyboard attachment and Chromebooks are compatible. iPads or other tablets with a keyboard attachment are not compatible.
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern laptop or desktop computers.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be used on mobile phones. While these activities should be usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
 
 ## Videos
 
