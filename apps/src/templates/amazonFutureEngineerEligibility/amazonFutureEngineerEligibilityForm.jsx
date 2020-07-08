@@ -13,12 +13,6 @@ import {STATES} from '@cdo/apps/geographyConstants';
 
 const VALIDATION_STATE_ERROR = 'error';
 
-const renderedStateOptions = STATES.map(state => (
-  <option key={state} value={state}>
-    {state}
-  </option>
-));
-
 const styles = {
   wrong_school: {
     textAlign: 'right'
@@ -318,82 +312,72 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
 // This might be better as pure functional component?
 // Just takes handleChange as argument, returns form?
-class ShippingAddressFormGroup extends React.Component {
-  static propTypes = {
-    handleChange: PropTypes.func.isRequired,
-    checkValidationState: PropTypes.func.isRequired
-  };
+const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
+  const renderedStateOptions = STATES.map(state => (
+    <option key={state} value={state}>
+      {state}
+    </option>
+  ));
 
-  handleChange = change => {
-    this.props.handleChange(change);
-  };
-
-  render() {
-    // TO DO: Maybe outermost element should be FormGroup, not div
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          Since you checked the box above, please verify your school address
-          below.
-        </div>
-        <FieldGroup
-          id="street1"
-          label="Street 1"
-          type="text"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('street1')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
-        <FieldGroup
-          id="street2"
-          label="Street 2"
-          type="text"
-          required={false}
-          onChange={this.handleChange}
-        />
-        <FieldGroup
-          id="city"
-          label="City"
-          type="text"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('city')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
-        <FieldGroup
-          id="state"
-          label="State"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('stateSelect')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-          componentClass="select"
-        >
-          {renderedStateOptions}
-        </FieldGroup>
-        <FieldGroup
-          id="zip"
-          label="Zip code"
-          type="number"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('zip')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
+        Since you checked the box above, please verify your school address
+        below.
       </div>
-    );
-  }
-}
+      <FieldGroup
+        id="street1"
+        label="Street 1"
+        type="text"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('street1') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+      <FieldGroup
+        id="street2"
+        label="Street 2"
+        type="text"
+        required={false}
+        onChange={handleChange}
+      />
+      <FieldGroup
+        id="city"
+        label="City"
+        type="text"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('city') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+      <FieldGroup
+        id="state"
+        label="State"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('state') ? VALIDATION_STATE_ERROR : null
+        }
+        componentClass="select"
+      >
+        {renderedStateOptions}
+      </FieldGroup>
+      <FieldGroup
+        id="zip"
+        label="Zip code"
+        type="number"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('zip') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+    </div>
+  );
+};
+ShippingAddressFormGroup.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  checkValidationState: PropTypes.func.isRequired
+};
