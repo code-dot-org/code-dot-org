@@ -6,6 +6,7 @@ import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import {possibleHeaders} from '../../headerRedux';
+import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
 const headerComponents = {
@@ -23,14 +24,6 @@ const styles = {
   },
   projectInfo: {
     position: 'absolute'
-  },
-  headerVignetteRight: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    pointerEvents: 'none',
-    background:
-      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
 };
 
@@ -38,7 +31,8 @@ class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func
+    setDesiredWidth: PropTypes.func,
+    isRtl: PropTypes.bool
   };
 
   setDesiredWidth() {
@@ -66,7 +60,11 @@ class ProjectInfo extends React.Component {
     const actualWidth = this.props.width;
 
     const vignetteStyle =
-      actualWidth < fullWidth ? styles.headerVignetteRight : null;
+      actualWidth < fullWidth
+        ? this.props.isRtl
+          ? headerVignetteStyles.left
+          : headerVignetteStyles.right
+        : null;
 
     console.log('ProjectInfo render', this.props.width);
 
@@ -76,7 +74,7 @@ class ProjectInfo extends React.Component {
         <div className="project_info" style={styles.projectInfo}>
           <HeaderComponent />
         </div>
-        <div id="vignette" style={vignetteStyle} />
+        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }

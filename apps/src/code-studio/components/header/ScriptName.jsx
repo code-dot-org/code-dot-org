@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
 const styles = {
@@ -22,14 +23,6 @@ const styles = {
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
     display: 'inline-block'
-  },
-  headerVignetteRight: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    pointerEvents: 'none',
-    background:
-      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
   }
 };
 
@@ -40,7 +33,8 @@ class ScriptName extends React.Component {
     smallText: PropTypes.bool,
     showProjectUpdatedAt: PropTypes.bool,
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func
+    setDesiredWidth: PropTypes.func,
+    isRtl: PropTypes.bool
   };
 
   setDesiredWidth() {
@@ -93,7 +87,11 @@ class ScriptName extends React.Component {
     const actualWidth = this.props.width;
 
     const vignetteStyle =
-      actualWidth < fullWidth ? styles.headerVignetteRight : null;
+      actualWidth < fullWidth
+        ? this.props.isRtl
+          ? headerVignetteStyles.left
+          : headerVignetteStyles.right
+        : null;
 
     console.log('ScriptName render', this.props.width);
 
@@ -103,7 +101,7 @@ class ScriptName extends React.Component {
           <div className="script_name" style={styles.headerInner}>
             {this.renderScriptLink()}
           </div>
-          <div id="vignette" style={vignetteStyle} />
+          <div className="vignette" style={vignetteStyle} />
         </div>
       );
     }
@@ -121,7 +119,7 @@ class ScriptName extends React.Component {
             </div>
           </div>
         </div>
-        <div id="vignette" style={vignetteStyle} />
+        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
