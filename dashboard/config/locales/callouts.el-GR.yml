@@ -42,6 +42,22 @@ el-GR:
           στην συνάρτή σου
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      CourseD_Dance_2020_01:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.
+        arrow_buttons: Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Νέο μπλοκ*!
+      CourseD_Dance_2020_07:
+        setprop_hint: Νέο μπλοκ*!
+      CourseD_Dance_2020_09:
+        new_block_3: Νέο μπλοκ*!
+        new_block_4: Νέο μπλοκ*!
       CourseD_Dance_Party_01:
         dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
       CourseD_Dance_Party_02:
@@ -90,6 +106,9 @@ el-GR:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει
           το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει
+          το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
       Infinity_move_collide:
         Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
       Infinity_move_directions:
@@ -114,10 +133,17 @@ el-GR:
         MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον
           στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά
           και ξανά.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον
+          στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά
+          και ξανά.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο
           παίκτης όχι!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο
+          παίκτης όχι!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο
           παίκτης όχι!
       MC_HOC_2017_06_Cole:
@@ -126,10 +152,16 @@ el-GR:
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά
           μπορείς να τους επεξεργαστείς!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά
+          μπορείς να τους επεξεργαστείς!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
           όχι!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
+          όχι!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
           όχι!  '
       NEW Course 4 Artist Functions 7:
@@ -173,10 +205,15 @@ el-GR:
         craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
           σου. Μπορείς να τον ολοκληρώσεις;
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
+          σου. Μπορείς να τον ολοκληρώσεις;
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
           σου. Μπορείς να τον ολοκληρώσεις;
       Overworld Move to Sheep:
@@ -185,9 +222,14 @@ el-GR:
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
           σου
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
       Overworld Place Wall:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2019:
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Overworld Place Wall_2020:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Underground Avoiding Lava:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
@@ -195,9 +237,14 @@ el-GR:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
           προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
+          προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
       Underground Iron:
         craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       Underground Iron_2019:
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+      Underground Iron_2020:
         craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία

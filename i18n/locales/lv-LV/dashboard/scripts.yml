@@ -3267,25 +3267,6 @@ lv:
           lessons:
             Creating Functions:
               name: Funkciju veidošana
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Mainīgie
-            Conditionals:
-              name: Sazarojumi
-            Velocity:
-              name: Ātrums
-            Functions:
-              name: Funkcijas
-          lessons:
-            Variables:
-              name: Mainīgie
-            Conditionals:
-              name: Sazarojumi
-            Velocity:
-              name: Ātrums
-            Functions:
-              name: Funkcijas
         csp5-virtual:
           stages:
             While Loops:
@@ -3353,3 +3334,26 @@ lv:
               name: Mainīgie
             For Loops:
               name: '"par" cikli'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Mainīgie
+            Text:
+              name: Teksts
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+          lessons:
+            Variables:
+              name: Mainīgie
+            Text:
+              name: Teksts
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas

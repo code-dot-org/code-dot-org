@@ -66,19 +66,28 @@ eu-ES:
         craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen
           hasiko da. Bukatu dezakezu zuk?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen
           hasiko da. Bukatu dezakezu zuk?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen
+          hasiko da. Bukatu dezakezu zuk?
       Overworld Move to Sheep:
         craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
       Overworld Place Wall:
         craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
       Overworld Place Wall_2019:
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+      Overworld Place Wall_2020:
         craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
       Underground Avoiding Lava:
         craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu
@@ -86,9 +95,14 @@ eu-ES:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu
           bat aurrera mugitzeko?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu
+          bat aurrera mugitzeko?
       Underground Iron:
         craft_what_is_iron: Erauzi burdina!
       Underground Iron_2019:
+        craft_what_is_iron: Erauzi burdina!
+      Underground Iron_2020:
         craft_what_is_iron: Erauzi burdina!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
@@ -97,6 +111,9 @@ eu-ES:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
           duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
+          duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      courseD_bee_conditionals2_2020:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat
           duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
       courseD_bee_conditionals2_copy:

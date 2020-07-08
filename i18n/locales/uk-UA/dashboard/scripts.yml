@@ -5014,29 +5014,6 @@ uk:
           lessons:
             Creating Functions:
               name: Створення функцій
-        csd3-virtual:
-          description_short: "Програмування"
-          stages:
-            Variables:
-              name: змінні
-            Conditionals:
-              name: Умови
-            Velocity:
-              name: Швидкість
-            Functions:
-              name: функції
-          lesson_groups:
-            csd3_1:
-              display_name: 'Глава 1: Зображення та анімації'
-          lessons:
-            Variables:
-              name: змінні
-            Conditionals:
-              name: Умови
-            Velocity:
-              name: Швидкість
-            Functions:
-              name: функції
         csd2-virtual:
           stages:
             CSS Classes:
@@ -5135,3 +5112,40 @@ uk:
           lesson_groups:
             k5_next_steps_1:
               display_name: Наступні Кроки
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp5_1:
+              display_name: 'Глава 1: Програмування, кероване подіями'
+        csd3-virtual:
+          description_short: "Програмування"
+          stages:
+            Variables:
+              name: змінні
+            Text:
+              name: Текст
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+          lessons:
+            Variables:
+              name: змінні
+            Text:
+              name: Текст
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+          lesson_groups:
+            csd3_1:
+              display_name: Зміст
+            csd3_2:
+              display_name: Зміст
+            cspSurvey:
+              display_name: Зміст

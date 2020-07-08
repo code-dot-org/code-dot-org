@@ -756,19 +756,55 @@ pt-PT:
         Se contarmos usando números maiores,
         podemos contar até números ainda maiores no mesmo intervalo de tempo. Tente fazer o cão
         contar de 10 até 1000, contando de 10 em 10.
+      CourseD_Dance_2020_01: 'Arrasta o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        para o ambiente de trabalho e liga-o dentro do bloco <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      CourseD_Dance_2020_02: Faz com que o gato realize um movimento de dança quando
+        primes uma tecla.
+      CourseD_Dance_2020_03: 'Está na hora da dança! Programa cada dançarino para
+        se mover quando premires teclas diferentes. Escolhe o teu movimento preferido
+        para cada dançarino ou defini-o para "(Aleatório)" para algo completamente
+        imprevisível! '
+      CourseD_Dance_2020_04: Faz o teu dançarino iniciar um novo movimento após o
+        quarto compasso.
+      CourseD_Dance_2020_06: Forma um grupo de dançarinos secundários à volta do dançarino
+        principal que está no meio.
+      CourseD_Dance_2020_07: Altera o tamanho do grupo de dançarinos secundários.
+      CourseD_Dance_2020_08: Experimenta trocar o tom de cor dum dos teus dançarinos
+        (ou dum grupo inteiro)!
+      CourseD_Dance_2020_09: Sê criativo com estes blocos novos!
+      CourseD_Dance_2020_bonus1: Para a frente e para trás! (Clica em "Mais" para
+        ver os detalhes)
+      CourseD_Dance_2020_bonus3: Ponham-se em formação! (Clica em "Mais" para veres
+        os detalhes)
       CourseE_HOC 2018 Level_1: Coleciona um barco do baú.
       CourseE_HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
+      CourseE_HOC 2018 Level_10_2020: Vai até à entrada deste Monumento do Oceano.
       CourseE_HOC 2018 Level_11: Constrói um canal com Prismarine dentro do Monumento
         do Oceano.
+      CourseE_HOC 2018 Level_11_2020: Constrói um canal com Prismarine dentro do Monumento
+        do Oceano.
+      CourseE_HOC 2018 Level_1_2020: Coleciona um barco do baú.
       CourseE_HOC 2018 Level_2: Vai até ao final do cais.
+      CourseE_HOC 2018 Level_2_2020: Vai até ao final do cais.
       CourseE_HOC 2018 Level_3: Navega os mares por bacalhau.
+      CourseE_HOC 2018 Level_3_2020: Navega os mares por bacalhau.
       CourseE_HOC 2018 Level_4: Utiliza uma argola para chegar ao golfinho.
+      CourseE_HOC 2018 Level_4_2020: Utiliza uma argola para chegar ao golfinho.
       CourseE_HOC 2018 Level_5: Explora o navio encalhado para chegar ao baú.
+      CourseE_HOC 2018 Level_5_2020: Explora o navio encalhado para chegar ao baú.
       CourseE_HOC 2018 Level_6: Navega pelo gelo para chegar ao salmão.
+      CourseE_HOC 2018 Level_6_2020: Navega pelo gelo para chegar ao salmão.
       CourseE_HOC 2018 Level_7a: Revista estas ruínas subaquáticas para encontrar
+        um baú.
+      CourseE_HOC 2018 Level_7a_2020: Revista estas ruínas subaquáticas para encontrar
         um baú.
       CourseE_HOC 2018 Level_9b: Utiliza o coral como pontos de passagem para chegar
         ao tesouro.
+      CourseE_HOC 2018 Level_9b_2020: Utiliza o coral como pontos de passagem para
+        chegar ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
       Dance_2019_01: 'Arrasta o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite"
@@ -817,6 +853,8 @@ pt-PT:
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar
         um caminho até à tocha.
       Function intro Ryan_2019: Utiliza a função "construir ponte" duas vezes para
+        criar um caminho até à tocha.
+      Function intro Ryan_2020: Utiliza a função "construir ponte" duas vezes para
         criar um caminho até à tocha.
       HOC 2018 Level_1: Coleciona um barco do baú.
       HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
@@ -1029,30 +1067,45 @@ pt-PT:
       MC_HOC_2017_01_RETRY_2019: 'Leva o Agent até à placa de pressão, prime "Executar"
         e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
         o baú. '
+      MC_HOC_2017_01_RETRY_2020: 'Leva o Agent até à placa de pressão, prime "Executar"
+        e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
+        o baú. '
       MC_HOC_2017_02_Cole: 'Move o Agent até à placa de pressão para que {currentPlayerName}
         chegue ao mapa. '
       MC_HOC_2017_02_Cole_2019: 'Move o Agent até à placa de pressão para que {currentPlayerName}
         chegue ao mapa. '
+      MC_HOC_2017_02_Cole_2020: 'Move o Agent até à placa de pressão para que {currentPlayerName}
+        chegue ao mapa. '
       MC_HOC_2017_03_Cole: 'Programa o Agent para abrir o portão. '
       MC_HOC_2017_03_Cole_2019: 'Programa o Agent para abrir o portão. '
+      MC_HOC_2017_03_Cole_2020: 'Programa o Agent para abrir o portão. '
       MC_HOC_2017_04POINT5_RYAN: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04POINT5_RYAN_2019: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04POINT5_RYAN_2020: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Cole: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Cole_2019: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04_Cole_2020: Leva o Agent até à placa de pressão.
       MC_HOC_2017_05_Cole: Leva o jogador até à pá.
       MC_HOC_2017_05_Cole_2019: Leva o jogador até à pá.
+      MC_HOC_2017_05_Cole_2020: Leva o jogador até à pá.
       MC_HOC_2017_06_Cole: Corrige este código para fazer com que o Agent construa
         uma ponte sobre este rio.
       MC_HOC_2017_06_Cole_2019: Corrige este código para fazer com que o Agent construa
         uma ponte sobre este rio.
+      MC_HOC_2017_06_Cole_2020: Corrige este código para fazer com que o Agent construa
+        uma ponte sobre este rio.
       MC_HOC_2017_07_Cole: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
       MC_HOC_2017_07_Cole_2019: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
+      MC_HOC_2017_07_Cole_2020: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
       MC_HOC_2017_10_RETRY: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RETRY_2019: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RETRY_2020: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_Ali: Utiliza as funções para atravessar a lava.
       MC_HOC_2017_Ali_2019: Utiliza as funções para atravessar a lava.
+      MC_HOC_2017_Ali_2020: Utiliza as funções para atravessar a lava.
       MC_HOC_2017_FP20x20: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_FP20x20_2019: "**Jogo livre:**  É hora de explorar sozinho!"
+      MC_HOC_2017_FP20x20_2020: "**Jogo livre:**  É hora de explorar sozinho!"
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -1166,15 +1219,22 @@ pt-PT:
         dos Creepers e põe-te em segurança em casa.
       Overworld Avoid Monsters_2019: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
         dos Creepers e põe-te em segurança em casa.
+      Overworld Avoid Monsters_2020: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
+        dos Creepers e põe-te em segurança em casa.
       Overworld Chop Tree: A madeira é um recurso muito importante. Fazem-se muitas
         coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco"
         para a cortares.
       Overworld Chop Tree_2019: A madeira é um recurso muito importante. Fazem-se
         muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir
         bloco" para a cortares.
+      Overworld Chop Tree_2020: A madeira é um recurso muito importante. Fazem-se
+        muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir
+        bloco" para a cortares.
       Overworld Chop Trees: Temos de construir uma casa antes que o sol se ponha.
         As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Chop Trees_2019: Temos de construir uma casa antes que o sol se ponha.
+        As casas precisam de muita madeira. Abate todas as 3 árvores.
+      Overworld Chop Trees_2020: Temos de construir uma casa antes que o sol se ponha.
         As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Free Play 20x20: 'Parabéns! Completaste todos os nossos quebra-cabeças!
         Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste
@@ -1182,13 +1242,20 @@ pt-PT:
       Overworld Free Play 20x20_2019: 'Parabéns! Completaste todos os nossos quebra-cabeças!
         Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste
         até agora. '
+      Overworld Free Play 20x20_2020: 'Parabéns! Completaste todos os nossos quebra-cabeças!
+        Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste
+        até agora. '
       Overworld House Frame Chosen: Construa o resto da casa de qualquer material
         que goste. O comando "repetir" vai dar jeito.
       Overworld House Frame Chosen_2019: Construa o resto da casa de qualquer material
         que goste. O comando "repetir" vai dar jeito.
+      Overworld House Frame Chosen_2020: Construa o resto da casa de qualquer material
+        que goste. O comando "repetir" vai dar jeito.
       Overworld Move to Sheep: Adiciona um segundo comando "mover para a frente" para
         chegares às ovelhas.
       Overworld Move to Sheep_2019: Adiciona um segundo comando "mover para a frente"
+        para chegares às ovelhas.
+      Overworld Move to Sheep_2020: Adiciona um segundo comando "mover para a frente"
         para chegares às ovelhas.
       Overworld Place Wall: Cada casa começa com uma parede. Constrói a primeira parte
         da tua casa encaixando os comandos "colocar" e "mover para a frente" no interior
@@ -1196,18 +1263,28 @@ pt-PT:
       Overworld Place Wall_2019: Cada casa começa com uma parede. Constrói a primeira
         parte da tua casa encaixando os comandos "colocar" e "mover para a frente"
         no interior da sequência de repetição.
+      Overworld Place Wall_2020: Cada casa começa com uma parede. Constrói a primeira
+        parte da tua casa encaixando os comandos "colocar" e "mover para a frente"
+        no interior da sequência de repetição.
       Overworld Plant Crops: É bom fazer planos para o futuro. Planta plantações nos
         dois lados da água para não teres fome mais tarde.
       Overworld Plant Crops_2019: É bom fazer planos para o futuro. Planta plantações
+        nos dois lados da água para não teres fome mais tarde.
+      Overworld Plant Crops_2020: É bom fazer planos para o futuro. Planta plantações
         nos dois lados da água para não teres fome mais tarde.
       Overworld Powered Minecart: Bom trabalho! Recolheste imensos recursos e construíste
         uma casa modesta. Agora dispõe carris da orla do mapa até à porta da tua casa.
       Overworld Powered Minecart_2019: Bom trabalho! Recolheste imensos recursos e
         construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta
         da tua casa.
+      Overworld Powered Minecart_2020: Bom trabalho! Recolheste imensos recursos e
+        construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta
+        da tua casa.
       Overworld Shear Sheep: Está na hora de tosquiar ovelhas! Utiliza o comando "tosquiar"
         para recolheres lã das duas ovelhas.
       Overworld Shear Sheep_2019: Está na hora de tosquiar ovelhas! Utiliza o comando
+        "tosquiar" para recolheres lã das duas ovelhas.
+      Overworld Shear Sheep_2020: Está na hora de tosquiar ovelhas! Utiliza o comando
         "tosquiar" para recolheres lã das duas ovelhas.
       Standalone_Artist_1: Bem-vindo ao Artista! Primeiro, vamos tentar fazer um quadrado
         simples usando os blocos "virar à direita" e "avançar". Cada lado deve medir
@@ -1247,20 +1324,32 @@ pt-PT:
         e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando
         "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares
         estes blocos.
+      Underground Avoiding Lava_2020: A lava esconde-se debaixo de alguns destes blocos,
+        e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando
+        "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares
+        estes blocos.
       Underground If Statements: Agora as coisas começam a ficar difíceis. Escava
         3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
         empedrado sobre qualquer lava que destapares.
       Underground If Statements_2019: Agora as coisas começam a ficar difíceis. Escava
         3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
         empedrado sobre qualquer lava que destapares.
+      Underground If Statements_2020: Agora as coisas começam a ficar difíceis. Escava
+        3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
+        empedrado sobre qualquer lava que destapares.
       Underground Iron: Caminhar sobre lava derretida é má ideia. Coloca empedrado
         para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
       Underground Iron_2019: Caminhar sobre lava derretida é má ideia. Coloca empedrado
+        para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
+      Underground Iron_2020: Caminhar sobre lava derretida é má ideia. Coloca empedrado
         para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
       Underground Mining Coal: Vais encontrar os recursos mais valiosos no subsolo,
         mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
         menos 2 carvões.
       Underground Mining Coal_2019: Vais encontrar os recursos mais valiosos no subsolo,
+        mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
+        menos 2 carvões.
+      Underground Mining Coal_2020: Vais encontrar os recursos mais valiosos no subsolo,
         mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
         menos 2 carvões.
       Vigenere: Teste
@@ -1336,11 +1425,14 @@ pt-PT:
       courseA_maze_seq12: Consegue esse porco!
       courseA_maze_seq12_2018: Consegue esse porco!
       courseA_maze_seq12_2019: Consegue esse porco!
+      courseA_maze_seq12_2020: Consegue esse porco!
       courseA_maze_seq13: Consegue esse porco de qualquer maneira!
       courseA_maze_seq13_2018: Consegue esse porco de qualquer maneira!
       courseA_maze_seq13_2019: Consegue esse porco de qualquer maneira!
+      courseA_maze_seq13_2020: Consegue esse porco de qualquer maneira!
       courseA_maze_seq1_2018: Leve o pássaro até o porquinho!
       courseA_maze_seq1_2019: Leve o pássaro até o porquinho!
+      courseA_maze_seq1_2020: Leve o pássaro até o porquinho!
       courseA_maze_seq2: Altera o código para me levar para o porco!
       courseA_maze_seq3: Arranja o código para levar o pássaro até ao porco!
       courseA_maze_seq4: REMOVE um bloco para fazer chegar o pássaro ao porco!
@@ -1349,6 +1441,8 @@ pt-PT:
       courseB_collector_loops_challenge2a_2018: Ajuda a Laurel a conseguir pelo menos
         **5** peças do tesouro para acabar este puzzle.
       courseB_collector_loops_challenge2a_2019: Ajuda a Laurel a conseguir pelo menos
+        **5** peças do tesouro para acabar este puzzle.
+      courseB_collector_loops_challenge2a_2020: Ajuda a Laurel a conseguir pelo menos
         **5** peças do tesouro para acabar este puzzle.
       courseB_maze_seq2: _"Um erro! Altera o código para me levares até ao porco."_
       courseB_maze_seq3: '"Altera o código para me levares até ao porco!"'
@@ -1359,26 +1453,34 @@ pt-PT:
       courseB_playLab_events1: Vê se consegues descobrir o que cada bloco faz.
       courseB_playLab_events1_2018: Vê se consegues descobrir o que cada bloco faz.
       courseB_playLab_events1_2019: Vê se consegues descobrir o que cada bloco faz.
+      courseB_playLab_events1_2020: Vê se consegues descobrir o que cada bloco faz.
       courseB_starWars_prog1: '"Vai arranjar sucata, BB-8!"'
       courseB_starWars_prog1_2018: '"Vai arranjar sucata, BB-8!"'
       courseB_starWars_prog1_2019: '"Vai arranjar sucata, BB-8!"'
+      courseB_starWars_prog1_2020: '"Vai arranjar sucata, BB-8!"'
       courseB_starWars_prog2: Consegue todo o metal.
       courseB_starWars_prog2_2018: Consegue todo o metal.
       courseB_starWars_prog2_2019: Consegue todo o metal.
+      courseB_starWars_prog2_2020: Consegue todo o metal.
       courseB_starWars_prog3: Consegue toda a sucata
       courseB_starWars_prog3_2018: Consegue toda a sucata
       courseB_starWars_prog3_2019: Consegue toda a sucata
+      courseB_starWars_prog3_2020: Consegue toda a sucata
       courseB_starWars_prog4: Consegue toda a sucata
       courseB_starWars_prog4_2018: Consegue toda a sucata
       courseB_starWars_prog4_2019: Consegue toda a sucata
+      courseB_starWars_prog4_2020: Consegue toda a sucata
       courseB_starWars_prog6: Consegue toda a sucata
       courseB_starWars_prog6_2018: Consegue toda a sucata
       courseB_starWars_prog6_2019: Consegue toda a sucata
+      courseB_starWars_prog6_2020: Consegue toda a sucata
       courseC_artist_prog5: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
         os três lados têm o mesmo comprimento.'
       courseC_artist_prog5_2018: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
         os três lados têm o mesmo comprimento.'
       courseC_artist_prog5_2019: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
+        os três lados têm o mesmo comprimento.'
+      courseC_artist_prog5_2020: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
         os três lados têm o mesmo comprimento.'
       courseC_maze_programming6: |-
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
@@ -1387,6 +1489,9 @@ pt-PT:
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
         eu vou ficar braco!
       courseC_maze_programming6_2019: |-
+        Fique calmo e ajude-me a chegar até o porco malvado. Senão
+        eu vou ficar braco!
+      courseC_maze_programming6_2020: |-
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
         eu vou ficar braco!
       courseD_artist_binary4: |-
@@ -1398,6 +1503,9 @@ pt-PT:
       courseD_artist_binary4_2019: |-
         Você consegue desenhar este padrão usando
         a repetição de uma string binária de 3 dígitos?
+      courseD_artist_binary4_2020: |-
+        Você consegue desenhar este padrão usando
+        a repetição de uma string binária de 3 dígitos?
       courseD_artist_binary6: |-
         Que string binária de 6 dígitos, repetida
         11 vezes, vai desenhar essa imagem?
@@ -1407,6 +1515,9 @@ pt-PT:
       courseD_artist_binary6_2019: |-
         Que string binária de 6 dígitos, repetida
         11 vezes, vai desenhar essa imagem?
+      courseD_artist_binary6_2020: |-
+        Que string binária de 6 dígitos, repetida
+        11 vezes, vai desenhar essa imagem?
       courseD_artist_binary7: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
@@ -1414,6 +1525,9 @@ pt-PT:
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
       courseD_artist_binary7_2019: |-
+        Qual é a menor string binária que você
+        pode repetir para desenhar esta imagem?
+      courseD_artist_binary7_2020: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
       courseD_autorun_binary4_2019: |-
@@ -1434,18 +1548,24 @@ pt-PT:
       courseD_bee_nestedLoops8_2019: |-
         Colete todo o néctar de cada flor
         e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8_2020: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
       courseD_maze_nestedLoops4: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
+      courseD_maze_nestedLoops4_2020: Leve-me até o girassol!
       courseD_maze_nestedLoops6: Leve-me até o girassol!
       courseD_maze_nestedLoops6_2018: Leve-me até o girassol!
       courseD_maze_nestedLoops6_2019: Leve-me até o girassol!
+      courseD_maze_nestedLoops6_2020: Leve-me até o girassol!
       courseD_maze_ramp6: |-
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
         eu vou ficar braco!
       courseD_maze_until1: Leve o Angry Bird até o porco!
       courseD_maze_until1_2018: Leve o Angry Bird até o porco!
       courseD_maze_until1_2019: Leve o Angry Bird até o porco!
+      courseD_maze_until1_2020: Leve o Angry Bird até o porco!
       courseD_scrat_ramp4: Evita o gelo rachado e mantém o Scrat seguro!
       courseD_scrat_ramp5: Evita o gelo rachado.
       courseE_artist_functions1: |-
@@ -1478,6 +1598,9 @@ pt-PT:
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
         3, 6 e 9 néctares?\\\r"
       courseF_bee_for8_2019: "Se seu laço está contando, o\nincremento é somado à
+        variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
+        3, 6 e 9 néctares?\\\r"
+      courseF_bee_for8_2020: "Se seu laço está contando, o\nincremento é somado à
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
         3, 6 e 9 néctares?\\\r"
       courseF_bee_functions4: |-

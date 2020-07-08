@@ -98,6 +98,22 @@ vi-VN:
         edit_add_parameter: Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
+      CourseD_Dance_2020_01:
+        dance_callout_01: Chọn loại vũ công ở đây.
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Thêm khối này vào chương trình của bạn.
+        arrow_buttons: Nhấn các nút mũi tên để điều khiển vũ công của bạn.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Thêm khối này vào chương trình của bạn!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Thêm một sự kiện mới vào chương trình của bạn.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Khối mới!
+      CourseD_Dance_2020_07:
+        setprop_hint: Khối mới!
+      CourseD_Dance_2020_09:
+        new_block_3: Khối mới!
+        new_block_4: Khối mới!
       CourseD_Dance_Party_01:
         dance_callout_01: Thêm khối này vào chương trình của bạn!
       CourseD_Dance_Party_02:
@@ -164,10 +180,16 @@ vi-VN:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm
           việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm
+          việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
+          thì không thể!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       MC_HOC_2017_06_Cole:
@@ -176,10 +198,16 @@ vi-VN:
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối lệnh đi, nhưng bạn có thể
           chỉnh sửa chúng!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối lệnh đi, nhưng bạn có thể
+          chỉnh sửa chúng!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
+          thì không thể!
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       NEW Course 4 Artist Functions 7:
@@ -207,19 +235,29 @@ vi-VN:
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn
           bắt đầu
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn
+          bắt đầu
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn.
           Bạn có hoàn thành được không?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn.
           Bạn có hoàn thành được không?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn.
+          Bạn có hoàn thành được không?
       Overworld Move to Sheep:
         craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Place Wall:
         craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
       Overworld Place Wall_2019:
+        craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
+      Overworld Place Wall_2020:
         craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
       Underground Avoiding Lava:
         craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không,
@@ -227,9 +265,14 @@ vi-VN:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không,
           bạn có thể thêm một lệnh để di chuyển về phía trước không?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không,
+          bạn có thể thêm một lệnh để di chuyển về phía trước không?
       Underground Iron:
         craft_what_is_iron: Hãy đào khối sắt này!
       Underground Iron_2019:
+        craft_what_is_iron: Hãy đào khối sắt này!
+      Underground Iron_2020:
         craft_what_is_iron: Hãy đào khối sắt này!
       courseA_artist_loops4:
         courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
@@ -238,6 +281,9 @@ vi-VN:
         courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
           thể sử dụng trong câu đố này.
       courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
+          thể sử dụng trong câu đố này.
+      courseA_artist_loops4_2020:
         courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
           thể sử dụng trong câu đố này.
       courseA_collector_loops3:
@@ -249,7 +295,13 @@ vi-VN:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Con số này cho bạn biết có bao nhiêu khối bạn
           có thể sử dụng trong câu đố này.
+      courseA_collector_loops3_2020:
+        gradek_adventurer_loops2_1: Con số này cho bạn biết có bao nhiêu khối bạn
+          có thể sử dụng trong câu đố này.
       courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseA_maze_ramp2_2020:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseA_maze_ramp3a_2018:
@@ -261,13 +313,21 @@ vi-VN:
         courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
       courseA_playLab_events6_2019:
         courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
           để bắt đầu chương trình.
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
           để bắt đầu chương trình.
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseC_maze_programming1:
@@ -279,6 +339,9 @@ vi-VN:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
           để bắt đầu chương trình.
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
       courseC_maze_programming2:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
@@ -286,6 +349,9 @@ vi-VN:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseC_maze_programming2_2020:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseD_maze_ramp1:
@@ -297,6 +363,9 @@ vi-VN:
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
           để bắt đầu chương trình.
+      courseD_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
       courseD_maze_ramp2:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
@@ -304,6 +373,9 @@ vi-VN:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseD_maze_ramp2_2020:
         courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
           chương trình.
       courseD_scrat_ramp1:

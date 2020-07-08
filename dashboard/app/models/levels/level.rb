@@ -94,12 +94,16 @@ class Level < ActiveRecord::Base
     script_level_levels = []
     levels_by_key = script.levels.index_by(&:key)
     raw_levels.each do |raw_level|
-      key = raw_level.delete(:name)
+      raw_level.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
       raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
         (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
       end
+
+      raw_level_data = raw_level.dup
+
+      key = raw_level.delete(:name)
 
       if raw_level[:level_num] && !key.starts_with?('blockly')
         # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
@@ -116,8 +120,8 @@ class Level < ActiveRecord::Base
       if key.starts_with?('blockly')
         # this level is defined in levels.js. find/create the reference to this level
         level = Level.
-            create_with(name: 'blockly').
-            find_or_create_by!(Level.key_to_params(key))
+          create_with(name: 'blockly').
+          find_or_create_by!(Level.key_to_params(key))
         level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
         if level.video_key && !raw_level[:video_key]
           raw_level[:video_key] = nil
@@ -129,7 +133,7 @@ class Level < ActiveRecord::Base
       end
 
       unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{raw_level.to_json}, Script: #{script.name}"
+        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
       end
 
       level.save!

@@ -200,6 +200,9 @@ th-TH:
       Function intro Ryan_2019:
         build bridge:
           name: สร้างสะพาน
+      Function intro Ryan_2020:
+        build bridge:
+          name: สร้างสะพาน
       Geometric Sun:
         diamond:
           name: เพชร
@@ -242,12 +245,20 @@ th-TH:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: เคลียร์เส้นทาง
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: เคลียร์เส้นทาง
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: ซ่อมทางระยะยาว
         fix short path:
           name: ซ่อมทางระยะสั้น
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: ซ่อมทางระยะยาว
+        fix short path:
+          name: ซ่อมทางระยะสั้น
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: ซ่อมทางระยะยาว
         fix short path:
@@ -262,12 +273,22 @@ th-TH:
           name: สร้างสะพานสั้น
         build long bridge:
           name: สร้างสะพานยาว
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: สร้างสะพานสั้น
+        build long bridge:
+          name: สร้างสะพานยาว
       MC_HOC_2017_FP20x20:
         function 1:
           name: ฟังก์ชั่น 1
         function 2:
           name: ฟังก์ชั่น 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: ฟังก์ชั่น 1
+        function 2:
+          name: ฟังก์ชั่น 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: ฟังก์ชั่น 1
         function 2:
@@ -529,7 +550,14 @@ th-TH:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: ทำบางสิ่ง
+      courseC_data wizard_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_concept1:
@@ -571,6 +599,11 @@ th-TH:
           name: ทำบางสิ่ง
         draw hexagon:
           name: วาดรูปหกเหลี่ยม
+      courseE_artist_functions10_2020:
+        do something:
+          name: ทำบางสิ่ง
+        draw hexagon:
+          name: วาดรูปหกเหลี่ยม
       courseE_artist_functions2:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -580,6 +613,9 @@ th-TH:
       courseE_artist_functions2_2019:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions2_copy:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -587,6 +623,9 @@ th-TH:
         draw a star:
           name: วาดรูปดวงดาว
       courseE_artist_functions3_2019:
+        draw a star:
+          name: วาดรูปดวงดาว
+      courseE_artist_functions3_2020:
         draw a star:
           name: วาดรูปดวงดาว
       courseE_artist_functions4:
@@ -604,6 +643,9 @@ th-TH:
       courseE_artist_functions5_2019:
         draw a star:
           name: วาดรูปดวงดาว
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: วาดรูปดวงดาว
       courseE_artist_functions5_copy:
         draw a star:
           name: วาดรูปดวงดาว
@@ -611,6 +653,9 @@ th-TH:
         draw a house:
           name: วาดรูปบ้าน
       courseE_artist_functions7_2018:
+        draw a house:
+          name: วาดรูปบ้าน
+      courseE_artist_functions7_2020:
         draw a house:
           name: วาดรูปบ้าน
       courseE_artist_functions8:
@@ -634,12 +679,24 @@ th-TH:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions8_2020:
+        do something:
+          name: ทำบางสิ่ง
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions8a_2018:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions8a_2020:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
@@ -652,6 +709,13 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
@@ -672,6 +736,13 @@ th-TH:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
           name: ทำบางสิ่ง
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
       courseE_artist_functions9:
         do something:
           name: ทำบางสิ่ง
@@ -679,6 +750,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions9_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions9_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functionsProj_2018:
@@ -695,6 +769,13 @@ th-TH:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functionsProj_2020:
+        draw hexagon:
+          name: วาดรูปหกเหลี่ยม
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_challenge1:
         do something:
           name: ทำบางสิ่ง
@@ -702,6 +783,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_challenge2:
@@ -713,6 +797,9 @@ th-TH:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: ทำบางสิ่ง
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: ทำบางสิ่ง
       courseE_artist_functions_predict1:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -720,6 +807,9 @@ th-TH:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_predict1_copy:
@@ -732,6 +822,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions_predict2_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_bee_functions1:
@@ -916,6 +1009,9 @@ th-TH:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
       courseF_bee_functions8a:
         do something:
           name: ทำบางสิ่ง
@@ -957,9 +1053,15 @@ th-TH:
       courseF_bee_variables_7_2019:
         collect:
           name: เก็บ
+      courseF_bee_variables_7_2020:
+        collect:
+          name: เก็บ
       courseF_bee_variables_8_2018:
         collect:
           name: เก็บ
       courseF_bee_variables_8_2019:
+        collect:
+          name: เก็บ
+      courseF_bee_variables_8_2020:
         collect:
           name: เก็บ

@@ -1512,7 +1512,7 @@ fr:
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
       RyanLab_moveForward:
-        text: avancer plus
+        text: avancer
       RyanLab_turnLeft:
         text: tourner à gauche
       RyanLab_turnRight:
@@ -1655,7 +1655,7 @@ fr:
       craft_log:
         text: message de journal {MESSAGE}
       craft_moveForward:
-        text: avancer plus
+        text: avancer
       craft_placeBlock:
         text: placer {blockType}
         options:

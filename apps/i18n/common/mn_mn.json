@@ -370,6 +370,7 @@
   "dataTableNamePlaceholder": "Хүснэгтийн нэр",
   "dataLibraryHeader": "Өгөгдлийн номын сан",
   "dataLibraryDescription": "Code.org номын сангаас бодит өгөгдлийн хүснэгтүүдийг олж импортлоорой.",
+  "dataLibrarySearchPlacholder": "Хайлт",
   "dataWorkspaceHeader": "Өгөгдлийн хөтөч",
   "dateUpdatedByTeacher": "Date Updated By Teacher",
   "debugMakerToolkit": "Нийтлэг асуудлуудын алдааг засах талаар тусламж авах бол манай ерөнхий [Бүтээгчийн багажны хэрэгслийн тусламжийн нийтлэл]-г (https://codeorg.zendesk.com/hc/en-us/articles/115003407851)-с үзээрэй.",

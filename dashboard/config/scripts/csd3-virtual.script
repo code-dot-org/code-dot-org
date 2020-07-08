@@ -79,13 +79,6 @@ level 'CSD web text practice choice_2020_virtual_2020', progression: 'Practice'
 level 'CSD web text assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web text challenge choice_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Mini-Project: Captioned Scenes'
-level 'CSD U3 Scene Example_2018_virtual_2020', progression: 'Sprite Scenes'
-level 'CSD U3 Sprites scene drawing_virtual_2020', progression: 'Create a Background'
-level 'CSD U3 Sprites scene sprites_virtual_2020', progression: 'Add Sprites'
-level 'CSD U3 Sprites scene text_virtual_2020', progression: 'Add Text'
-level 'CSD U3 Sprites scene challenge_virtual_2020', progression: 'Review Your Scene'
-
 lesson 'The Draw Loop'
 level 'CSD: Introduction to the Draw Loop_virtual_2020', progression: 'Video: Introduction to the Draw Loop'
 level 'CSD U3 Draw Loop Plugged predict 1_virtual_2020', progression: 'Exploration'

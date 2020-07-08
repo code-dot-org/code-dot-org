@@ -354,7 +354,7 @@ it:
             'Unplugged: Binary':
               name: 'Binario'
             'Unplugged: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'Unplugged: For Loop Fun':
               name: 'Divertiti usando i Cicli con Contatore'
             'Unplugged: Madlibs':
@@ -399,7 +399,7 @@ it:
             'Unplugged: Binary':
               name: 'Binario'
             'Unplugged: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'Unplugged: For Loop Fun':
               name: 'Divertiti usando i Cicli con Contatore'
             'Unplugged: Madlibs':
@@ -606,7 +606,7 @@ it:
             K-5 Courses:
               name: Corsi per scuola elementare
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             'Programming Concept: Conditionals':
               name: 'Concetti di programmazione: condizionali'
             'Programming Concept: Events':
@@ -631,7 +631,7 @@ it:
             K-5 Courses:
               name: Corsi per scuola elementare
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             'Programming Concept: Conditionals':
               name: 'Concetti di programmazione: condizionali'
             'Programming Concept: Events':
@@ -1113,7 +1113,7 @@ it:
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -1130,7 +1130,7 @@ it:
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -1383,7 +1383,7 @@ it:
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -1406,7 +1406,7 @@ it:
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -1460,7 +1460,7 @@ it:
             'Mastering the Basics: Sequencing':
               name: 'I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Planning:
               name: Gestione della classe
           lessons:
@@ -1483,7 +1483,7 @@ it:
             'Mastering the Basics: Sequencing':
               name: 'I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Planning:
               name: Gestione della classe
         ECSPD2:
@@ -1559,12 +1559,12 @@ it:
             Getting Started:
               name: Per cominciare
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
           lessons:
             Getting Started:
               name: Per cominciare
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
         sciencePD2b-iZone:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -2264,7 +2264,7 @@ it:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
@@ -2281,7 +2281,7 @@ it:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
@@ -2318,7 +2318,7 @@ it:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
@@ -2339,7 +2339,7 @@ it:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
@@ -2371,7 +2371,7 @@ it:
             'Play Lab: Variables':
               name: 'Laboratorio: Variabili'
             'Unplugged: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'Unplugged: For Loop Fun':
               name: 'Divertiti usando i Cicli con Contatore'
             'Unplugged: Songwriting with Parameters':
@@ -2394,7 +2394,7 @@ it:
             'Play Lab: Variables':
               name: 'Laboratorio: Variabili'
             'Unplugged: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'Unplugged: For Loop Fun':
               name: 'Divertiti usando i Cicli con Contatore'
             'Unplugged: Songwriting with Parameters':
@@ -2559,7 +2559,7 @@ it:
             Functions with Parameters:
               name: Funzioni con parametri
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Nested Loops:
               name: Cicli annidati
             Variables:
@@ -2580,7 +2580,7 @@ it:
             Functions with Parameters:
               name: Funzioni con parametri
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Nested Loops:
               name: Cicli annidati
             Variables:
@@ -3038,7 +3038,7 @@ it:
             Digital Citizenship:
               name: Cittadinanza digitale
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             Variables in Artist:
@@ -3082,7 +3082,7 @@ it:
             Digital Citizenship:
               name: Cittadinanza digitale
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             Variables in Artist:
@@ -3894,7 +3894,7 @@ it:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -4011,7 +4011,7 @@ it:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -4116,7 +4116,7 @@ it:
             Ice Age Play Lab:
               name: Eventi con l'Era Glaciale
             Envelope Variables:
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables in Artist:
@@ -4209,7 +4209,7 @@ it:
             Ice Age Play Lab:
               name: Eventi con l'Era Glaciale
             Envelope Variables:
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables in Artist:
@@ -4395,7 +4395,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -4435,7 +4435,7 @@ it:
             Conditional Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'For Loops: For Loop Fun':
               name: 'Divertiti usando i cicli con contatore'
             'Functions: Songwriting with Parameters':
@@ -4493,7 +4493,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -4533,7 +4533,7 @@ it:
             Conditional Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             'For Loops: For Loop Fun':
               name: 'Divertiti usando i cicli con contatore'
             'Functions: Songwriting with Parameters':
@@ -4878,7 +4878,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -4940,7 +4940,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5119,7 +5119,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5183,7 +5183,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5463,7 +5463,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5529,7 +5529,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5798,7 +5798,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -5872,7 +5872,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables as Constant in Artist:
               name: Variabili con l'artista
             Variables that Change in Bee:
@@ -5927,7 +5927,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
-              name: 'Variabili e Buste'
+              name: 'Variabili e buste'
             Variables in Artist:
               name: Variabili con l'Artista
             Variables in Play Lab:
@@ -6001,7 +6001,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables as Constant in Artist:
               name: Variabili con l'artista
             Variables that Change in Bee:
@@ -6548,7 +6548,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables in Artist:
@@ -6654,7 +6654,7 @@ it:
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables in Artist:
@@ -7253,7 +7253,7 @@ it:
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
               description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables as Constant in Artist:
@@ -7368,7 +7368,7 @@ it:
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
               description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables as Constant in Artist:
@@ -7519,7 +7519,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_binary:
@@ -7841,7 +7841,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables as Constant in Artist:
               name: Variabili con l'artista
             Variables that Change in Bee:
@@ -7892,7 +7892,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_functions:
@@ -7959,7 +7959,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
             Variables as Constant in Artist:
               name: Variabili con l'artista
             Variables that Change in Bee:
@@ -8092,7 +8092,7 @@ it:
             csf_binary:
               display_name: Binario
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
             end_of_course_project:
@@ -8195,7 +8195,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -8291,7 +8291,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -8388,7 +8388,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -8960,7 +8960,7 @@ it:
             csp_lists:
               display_name: Liste
             csp_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csp_traversals:
               display_name: Traversali
             csp_project:
@@ -9144,7 +9144,7 @@ it:
             csp_lists:
               display_name: Liste
             csp_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csp_traversals:
               display_name: Traversali
             csp_project:
@@ -9261,7 +9261,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -9419,9 +9419,9 @@ it:
             Planning:
               name: Gestione della classe
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Understanding the Computer Science Fundamentals Courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
             extra:
               name: supplementare
             Welcome to this online course:
@@ -9433,7 +9433,7 @@ it:
             Sequencing:
               name: Sequenze di istruzioni
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Conditionals:
               name: Istruzioni condizionali
             Events:
@@ -9443,7 +9443,7 @@ it:
             Diving Deeper:
               name: Andando più a fondo
             Next steps:
-              name: I prossimi passi
+              name: Passi successivi
             Diving deeper:
               name: Andando più a fondo
             Diving deeper (for Courses E and F):
@@ -9453,7 +9453,7 @@ it:
             Diving Deeper (for Courses E and F):
               name: Andando più a fondo (per corsi E e F)
             'Diving Deeper: Courses E and F':
-              name: 'Andando più a fondo (per i corsi E ed F)'
+              name: 'Approfondimenti (per i corsi E ed F)'
             Sprite Lab:
               name: Laboratorio dei Personaggi
             Variables:
@@ -9476,9 +9476,9 @@ it:
             k5_basic_concepts:
               display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper:
-              display_name: 'Andando più a fondo (per i corsi E ed F)'
+              display_name: 'Approfondimenti (per i corsi E ed F)'
             k5_next_steps:
-              display_name: I prossimi passi
+              display_name: Passi successivi
           lessons:
             Getting Started:
               name: Per cominciare
@@ -9501,9 +9501,9 @@ it:
             Planning:
               name: Gestione della classe
             Next Steps:
-              name: I prossimi passi
+              name: Passi successivi
             Understanding the Computer Science Fundamentals Courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
             extra:
               name: supplementare
             Welcome to this online course:
@@ -9515,7 +9515,7 @@ it:
             Sequencing:
               name: Sequenze di istruzioni
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Conditionals:
               name: Istruzioni condizionali
             Events:
@@ -9525,7 +9525,7 @@ it:
             Diving Deeper:
               name: Andando più a fondo
             Next steps:
-              name: I prossimi passi
+              name: Passi successivi
             Diving deeper:
               name: Andando più a fondo
             Diving deeper (for Courses E and F):
@@ -9535,7 +9535,7 @@ it:
             Diving Deeper (for Courses E and F):
               name: Andando più a fondo (per corsi E e F)
             'Diving Deeper: Courses E and F':
-              name: 'Andando più a fondo (per i corsi E ed F)'
+              name: 'Approfondimenti (per i corsi E ed F)'
             Sprite Lab:
               name: Laboratorio dei Personaggi
             Variables:
@@ -9703,7 +9703,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_events:
@@ -9741,7 +9741,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_events:
@@ -9786,7 +9786,7 @@ it:
             csp_lists:
               display_name: Liste
             csp_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csp_traversals:
               display_name: Traversali
             csp_project:
@@ -9941,7 +9941,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -10015,7 +10015,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -10091,7 +10091,7 @@ it:
             csf_binary:
               display_name: Binario
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
             end_of_course_project:
@@ -10200,7 +10200,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_binary:
@@ -10283,7 +10283,10 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
-              description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
+              description_teacher: |-
+                In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
+
+                Mentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online.
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
@@ -10308,6 +10311,7 @@ it:
               name: Progetto di fine corso
             Digital Sharing:
               name: Condivisione digitale
+              description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
           lesson_groups:
             ramp_up:
               display_name: Introduzione
@@ -10331,7 +10335,10 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
-              description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
+              description_teacher: |-
+                In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
+
+                Mentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online.
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
@@ -10356,6 +10363,7 @@ it:
               name: Progetto di fine corso
             Digital Sharing:
               name: Condivisione digitale
+              description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
         coursef-2020:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
@@ -10370,7 +10378,7 @@ it:
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables as Constant in Artist:
@@ -10397,7 +10405,10 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
-              description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
+              description_teacher: |-
+                Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.
+
+                Gli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. 
             Crowdsourcing:
               name: Intelligenza collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
@@ -10431,7 +10442,7 @@ it:
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Envelope Variables:
-              name: Variabili e Buste
+              name: Variabili e buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables as Constant in Artist:
@@ -10458,7 +10469,10 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
-              description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
+              description_teacher: |-
+                Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.
+
+                Gli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. 
             Crowdsourcing:
               name: Intelligenza collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
@@ -10522,7 +10536,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_conditionals:
               display_name: Istruzioni condizionali
             csf_functions:
@@ -10609,7 +10623,7 @@ it:
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
-              display_name: Ripetizioni
+              display_name: Cicli
             csf_events:
               display_name: Eventi
           lessons:
@@ -10669,41 +10683,6 @@ it:
           lessons:
             Creating Functions:
               name: Creazione di funzioni
-        csd3-virtual:
-          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
-          stages:
-            Drawing in Game Lab:
-              name: Disegnare in Sviluppo Giochi
-            Variables:
-              name: Variabili
-            Sprites:
-              name: Personaggi
-            Conditionals:
-              name: Istruzioni condizionali
-            Velocity:
-              name: Velocità
-            Collision Detection:
-              name: Rilevamento delle Collisioni
-            Functions:
-              name: Funzioni
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capitolo 1: Immagini e animazioni'
-          lessons:
-            Drawing in Game Lab:
-              name: Disegnare in Sviluppo Giochi
-            Variables:
-              name: Variabili
-            Sprites:
-              name: Personaggi
-            Conditionals:
-              name: Istruzioni condizionali
-            Velocity:
-              name: Velocità
-            Collision Detection:
-              name: Rilevamento delle Collisioni
-            Functions:
-              name: Funzioni
         jess-test-script:
           stages:
             Debugging:
@@ -10791,11 +10770,11 @@ it:
             Welcome to "Teaching Computer Science Fundamentals":
               name: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
             Understanding the Computer Science Fundamentals Courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
             Sequencing:
               name: Sequenze di istruzioni
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Events:
               name: Eventi
             Conditionals:
@@ -10813,16 +10792,16 @@ it:
             Reviewing your reflections:
               name: Analizza le tue riflessioni
             Next steps:
-              name: I prossimi passi
+              name: Passi successivi
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               name: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
             Understanding the Computer Science Fundamentals Courses:
-              name: Per capire i corsi di Fondamenti di informatica (CSF)
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
             Sequencing:
               name: Sequenze di istruzioni
             Loops:
-              name: Ripetizioni
+              name: Cicli
             Events:
               name: Eventi
             Conditionals:
@@ -10840,13 +10819,62 @@ it:
             Reviewing your reflections:
               name: Analizza le tue riflessioni
             Next steps:
-              name: I prossimi passi
+              name: Passi successivi
           lesson_groups:
             k5_getting_started_1:
               display_name: Per cominciare
             k5_basic_concepts_1:
               display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper_1:
-              display_name: 'Andando più a fondo (per i corsi E ed F)'
+              display_name: 'Approfondimenti (per i corsi E ed F)'
             k5_next_steps_1:
-              display_name: I prossimi passi
+              display_name: Passi successivi
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp5_1:
+              display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
+        csd3-virtual:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Text:
+              name: Testo
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+          lessons:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Text:
+              name: Testo
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+          lesson_groups:
+            csd3_1:
+              display_name: Contenuto
+            csd3_2:
+              display_name: Contenuto
+            cspSurvey:
+              display_name: Contenuto

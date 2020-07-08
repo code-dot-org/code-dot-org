@@ -5132,37 +5132,6 @@ pt:
           lessons:
             Creating Functions:
               name: Criando funções
-        csd3-virtual:
-          description_short: Programação
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Random Numbers:
-              name: Números Aleatórios
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capítulo 1: Imagens e Animações'
-          lessons:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Random Numbers:
-              name: Números Aleatórios
         jess-test-script:
           stages:
             new stage:
@@ -5260,3 +5229,46 @@ pt:
           lesson_groups:
             k5_next_steps_1:
               display_name: Próximos Passos
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csd3-virtual:
+          description_short: Programação
+          stages:
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Variables:
+              name: Variáveis
+            Random Numbers:
+              name: Números Aleatórios
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Velocity:
+              name: Velocidade
+            Functions:
+              name: Funções
+          lessons:
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Variables:
+              name: Variáveis
+            Random Numbers:
+              name: Números Aleatórios
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Velocity:
+              name: Velocidade
+            Functions:
+              name: Funções
+          lesson_groups:
+            csd3_1:
+              display_name: Conteúdo
+            csd3_2:
+              display_name: Conteúdo
+            cspSurvey:
+              display_name: Conteúdo

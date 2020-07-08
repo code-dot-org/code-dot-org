@@ -49,34 +49,48 @@ km-KH:
       Crack a Caesar Cipher: សេចក្ដី​ណែនាំ
       Function intro Ryan: ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។
       Function intro Ryan_2019: ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។
+      Function intro Ryan_2020: ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។
       MC HOC 2016 Level 3: "Great, the chicken moved! But then she stopped.\nIn games,
         chickens walk forever. Use a `forever do` loop to keep these chickens\nmoving.\\\r"
       MC_HOC_2017_01_RETRY: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ រួចចុចប៊ូតុង
         "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
       MC_HOC_2017_01_RETRY_2019: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ រួចចុចប៊ូតុង
         "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
+      MC_HOC_2017_01_RETRY_2020: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ រួចចុចប៊ូតុង
+        "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
       MC_HOC_2017_02_Cole: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​ \n{currentPlayerName}
         អាចទៅតាមផែនទីបាន។ "
       MC_HOC_2017_02_Cole_2019: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​ \n{currentPlayerName}
         អាចទៅតាមផែនទីបាន។ "
+      MC_HOC_2017_02_Cole_2020: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​ \n{currentPlayerName}
+        អាចទៅតាមផែនទីបាន។ "
       MC_HOC_2017_03_Cole: 'សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ '
       MC_HOC_2017_03_Cole_2019: 'សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ '
+      MC_HOC_2017_03_Cole_2020: 'សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ '
       MC_HOC_2017_04POINT5_RYAN: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04POINT5_RYAN_2019: អោយជំនួយការសង្កត់បន្ទះក្តារ។
+      MC_HOC_2017_04POINT5_RYAN_2020: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04_Cole: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04_Cole_2019: អោយជំនួយការសង្កត់បន្ទះក្តារ។
+      MC_HOC_2017_04_Cole_2020: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_05_Cole: អោយតួអង្គទៅរកចបជីក។
       MC_HOC_2017_05_Cole_2019: អោយតួអង្គទៅរកចបជីក។
+      MC_HOC_2017_05_Cole_2020: អោយតួអង្គទៅរកចបជីក។
       MC_HOC_2017_06_Cole: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
       MC_HOC_2017_06_Cole_2019: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
+      MC_HOC_2017_06_Cole_2020: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
       MC_HOC_2017_07_Cole: បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName} ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។
       MC_HOC_2017_07_Cole_2019: បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName} ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។
+      MC_HOC_2017_07_Cole_2020: បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName} ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។
       MC_HOC_2017_10_RETRY: ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។
       MC_HOC_2017_10_RETRY_2019: ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។
+      MC_HOC_2017_10_RETRY_2020: ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។
       MC_HOC_2017_Ali: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
       MC_HOC_2017_Ali_2019: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
+      MC_HOC_2017_Ali_2020: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
       MC_HOC_2017_FP20x20: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
       MC_HOC_2017_FP20x20_2019: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
+      MC_HOC_2017_FP20x20_2020: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
       New Minecraft Hero Project: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
       course3_playLab_challenge1: "Something should happen when\nyou get enough points
         or when you run out of points. Add some code to the\n`win game` and `lose
@@ -93,6 +107,9 @@ km-KH:
       courseB_playlab_events6_2019: "Help your knight get all of the flags!\\\r\n\\\r\nTo\ndo
         this, you'll need to add events to help the knight move up, down, left,\nand
         right."
+      courseB_playlab_events6_2020: "Help your knight get all of the flags!\\\r\n\\\r\nTo\ndo
+        this, you'll need to add events to help the knight move up, down, left,\nand
+        right."
       courseC_PlayLab_events8: "Can you have Waddles (actor 1) play a\n\"hit\" sound
         and say \"Ouch!\" if he runs into Chomp? \\\r\nWhen you're done,\nplay the
         game to make that happen."
@@ -100,6 +117,9 @@ km-KH:
         sound and say \"Ouch!\" if he runs into Chomp? \\\r\nWhen you're done,\nplay
         the game to make that happen."
       courseC_PlayLab_events8_2019: "Can you have Waddles (actor 1) play a\n\"hit\"
+        sound and say \"Ouch!\" if he runs into Chomp? \\\r\nWhen you're done,\nplay
+        the game to make that happen."
+      courseC_PlayLab_events8_2020: "Can you have Waddles (actor 1) play a\n\"hit\"
         sound and say \"Ouch!\" if he runs into Chomp? \\\r\nWhen you're done,\nplay
         the game to make that happen."
       courseC_PlayLab_events9: "Can you add a block to score a point\nwhen Waddles
@@ -111,6 +131,9 @@ km-KH:
       courseC_PlayLab_events9_2019: "Can you add a block to score a point\nwhen Waddles
         the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\\\r\nPlay
         the game and move Waddles with the arrows until you score!"
+      courseC_PlayLab_events9_2020: "Can you add a block to score a point\nwhen Waddles
+        the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\\\r\nPlay
+        the game and move Waddles with the arrows until you score!"
       courseC_PlayLab_eventsA: "Add blocks to the `when run` event to\nchange the
         background scene and the speed of Waddles the Penguin.\\\r\n\\\r\nPlay\nthe
         game and move Waddles with the arrows until you score."
@@ -118,6 +141,9 @@ km-KH:
         the background scene and the speed of Waddles the Penguin.\\\r\n\\\r\nPlay\nthe
         game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsA_2019: "Add blocks to the `when run` event to\nchange
+        the background scene and the speed of Waddles the Penguin.\\\r\n\\\r\nPlay\nthe
+        game and move Waddles with the arrows until you score."
+      courseC_PlayLab_eventsA_2020: "Add blocks to the `when run` event to\nchange
         the background scene and the speed of Waddles the Penguin.\\\r\n\\\r\nPlay\nthe
         game and move Waddles with the arrows until you score."
       courseC_PlayLab_events_challenge1: "Use a new block to make Waddles\nautomatically
@@ -132,6 +158,10 @@ km-KH:
         move back to the start when he runs into the Dinosaur and when\nhe scores
         a point. \\\r\nPlay the game and move Waddles with the arrows until\nyou score
         enough points."
+      courseC_PlayLab_events_challenge1_2020: "Use a new block to make Waddles\nautomatically
+        move back to the start when he runs into the Dinosaur and when\nhe scores
+        a point. \\\r\nPlay the game and move Waddles with the arrows until\nyou score
+        enough points."
       courseC_artist_prog5: "Finish this tag by drawing a rectangle around\nthe outside.\\\r\n(The
         long sides are 200 pixels each and the short sides are\neach 100 pixels)"
       courseC_artist_prog5_2018: "Finish this tag by drawing a rectangle around\nthe
@@ -140,11 +170,16 @@ km-KH:
       courseC_artist_prog5_2019: "Finish this tag by drawing a rectangle around\nthe
         outside.\\\r\n(The long sides are 200 pixels each and the short sides are\neach
         100 pixels)"
+      courseC_artist_prog5_2020: "Finish this tag by drawing a rectangle around\nthe
+        outside.\\\r\n(The long sides are 200 pixels each and the short sides are\neach
+        100 pixels)"
       courseC_artist_prog8: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
         is 150 pixels)"
       courseC_artist_prog8_2018: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
         is 150 pixels)"
       courseC_artist_prog8_2019: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
+        is 150 pixels)"
+      courseC_artist_prog8_2020: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
         is 150 pixels)"
       courseD_artist_binary5: "Each binary string below represents one\nrow of this
         picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead
@@ -153,6 +188,9 @@ km-KH:
         this picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead
         of a frown?"
       courseD_artist_binary5_2019: "Each binary string below represents one\nrow of
+        this picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead
+        of a frown?"
+      courseD_artist_binary5_2020: "Each binary string below represents one\nrow of
         this picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead
         of a frown?"
       courseD_artist_binaryFP: "Here's a higher resolution canvas to\ndraw on - 16
@@ -164,6 +202,9 @@ km-KH:
       courseD_artist_binaryFP_2019: "Here's a higher resolution canvas to\ndraw on
         - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we start to\nget
         creative with the bits!"
+      courseD_artist_binaryFP_2020: "Here's a higher resolution canvas to\ndraw on
+        - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we start to\nget
+        creative with the bits!"
       courseD_artist_nestedLoops1: "Draw a triangle to kickstart this\nstage.  \\\r\n(Each
         side is 100 pixels long and you'll need to turn 120 degrees\nfor each exterior
         angle.)"
@@ -173,6 +214,9 @@ km-KH:
       courseD_artist_nestedLoops1_2019: "Draw a triangle to kickstart this\nstage.
         \ \\\r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor
         each exterior angle.)"
+      courseD_artist_nestedLoops1_2020: "Draw a triangle to kickstart this\nstage.
+        \ \\\r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor
+        each exterior angle.)"
       courseD_artist_nestedLoops3: "Use your new skills to quickly draw\nthe last
         row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
         each 20 pixels apart."
@@ -180,6 +224,9 @@ km-KH:
         last row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
         each 20 pixels apart."
       courseD_artist_nestedLoops3_2019: "Use your new skills to quickly draw\nthe
+        last row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
+        each 20 pixels apart."
+      courseD_artist_nestedLoops3_2020: "Use your new skills to quickly draw\nthe
         last row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
         each 20 pixels apart."
       courseD_artist_project4a: "Try playing around with what you've\ncreated. Draw
@@ -197,6 +244,11 @@ km-KH:
         \   angles in your stair step pattern?\\\r\n-   What happens if you make your
         diamond\n    pattern longer or shorter?\\\r\n-   What does it look like to
         draw two snowflakes\n    on top of one another?"
+      courseD_artist_project4a_2020: "Try playing around with what you've\ncreated.
+        Draw whatever you like!\\\r\n\n-   What happens if you use two different\n
+        \   angles in your stair step pattern?\\\r\n-   What happens if you make your
+        diamond\n    pattern longer or shorter?\\\r\n-   What does it look like to
+        draw two snowflakes\n    on top of one another?"
       courseD_autorun_binary5_2019: "Each binary string below represents one\nrow
         of this picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead
         of a frown?"
@@ -209,6 +261,9 @@ km-KH:
       courseD_bee_conditionals3_2019: "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou
         can only collect nectar from flowers, but you can check any space\nto see
         if there is a flower."
+      courseD_bee_conditionals3_2020: "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou
+        can only collect nectar from flowers, but you can check any space\nto see
+        if there is a flower."
       courseD_bee_conditionals3_copy: "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou
         can only collect nectar from flowers, but you can check any space\nto see
         if there is a flower."
@@ -217,6 +272,8 @@ km-KH:
       courseD_bee_conditionals8_2018: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
         honey (because there is a honeycomb)."
       courseD_bee_conditionals8_2019: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
+      courseD_bee_conditionals8_2020: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
         honey (because there is a honeycomb)."
       courseD_playLab_cond6: "1.  Slow the ninja (actor 3) down before\n    you set
         him to chase the pirate.  \\\r\n2.  If the pirate is greater than 225\n    pixels

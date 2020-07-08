@@ -905,6 +905,28 @@ ro-RO:
       Course 4 SCV 4: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       Course 4 SCV 5: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       Course 4 SCV 6: Apasă aici pentru a vedea din nou instrucţiunile.
+      CourseD_Dance_2020_01: Trage blocul `creează un nou` în spaţiul de lucru, şi
+        conectează-l în interiorul blocului `configurare`.
+      CourseD_Dance_2020_02: Blocul `când se apasă sus` îți permite să rulezi codul
+        când se apasă săgeata sus. Fă ca dansatorul să aplaude când apeși sus sau
+        încearcă altă mișcare!
+      CourseD_Dance_2020_03: E timpul de dans! Programează fiecare dansator să se
+        miște când apeși diferite taste. Alege mișcarea ta preferată pentru fiecare
+        dansator sau setează-l pe „(Aleatoriu)" pentru ceva cu totul neașteptat!
+      CourseD_Dance_2020_04: Acum fă dansatorul să înceapă o nouă mişcare după a patra
+        măsură.
+      CourseD_Dance_2020_05: Acum fă dansatorul să înceapă o nouă mişcare după 6 măsuri!
+      CourseD_Dance_2020_06: Creează un grup de dansatori de rezervă în jurul dansatorului
+        principal din mijloc.
+      CourseD_Dance_2020_07: Modifică dimensiunea grupului de dansatori de rezervă.
+      CourseD_Dance_2020_08: Încearcă să schimbi culoarea unuia dintre dansatorii
+        tăi (sau a întregului grup)!
+      CourseD_Dance_2020_09: Fii creativ cu aceste blocuri noi!
+      CourseD_Dance_2020_10: Dezlănțuiește-te! Creează un dans al tău pe care să-l
+        dansezi cu prietenii.
+      CourseD_Dance_2020_bonus1: Înainte și înapoi! (Apasă "Mai mult" pentru detalii)
+      CourseD_Dance_2020_bonus3: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
+        detalii)
       CourseD_Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi
         conectează-l în interiorul blocului `configurare`.
       CourseD_Dance_Party_02: Acum fă elanul să înceapă o nouă mişcare după 4 măsuri!
@@ -1308,15 +1330,23 @@ ro-RO:
       Overworld Avoid Monsters_2019: |-
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Avoid Monsters_2020: |-
+        Intalnirea unui Vierme nu este o idee buna.
+        Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
       Overworld Chop Tree: Lemnul este o resursa importanta. Se pot construi multe
         cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru
         a-l taia.
       Overworld Chop Tree_2019: Lemnul este o resursa importanta. Se pot construi
         multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru
         a-l taia.
+      Overworld Chop Tree_2020: Lemnul este o resursa importanta. Se pot construi
+        multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru
+        a-l taia.
       Overworld Chop Trees: 'Trebuie sa construim o casa inainte de apus. Este necesar
         mult lemn. Taie toti cei trei copaci. '
       Overworld Chop Trees_2019: 'Trebuie sa construim o casa inainte de apus. Este
+        necesar mult lemn. Taie toti cei trei copaci. '
+      Overworld Chop Trees_2020: 'Trebuie sa construim o casa inainte de apus. Este
         necesar mult lemn. Taie toti cei trei copaci. '
       Overworld Free Play 20x20: Felicitări! Ai finalizat toate puzzle-urile! Acum
         extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat
@@ -1324,22 +1354,34 @@ ro-RO:
       Overworld Free Play 20x20_2019: Felicitări! Ai finalizat toate puzzle-urile!
         Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat
         pana acum.
+      Overworld Free Play 20x20_2020: Felicitări! Ai finalizat toate puzzle-urile!
+        Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat
+        pana acum.
       Overworld House Frame Chosen: Construieste restul casei din orice material doresti.
         Comanda "Repeta" iti va fi de ajutor.
       Overworld House Frame Chosen_2019: Construieste restul casei din orice material
         doresti. Comanda "Repeta" iti va fi de ajutor.
+      Overworld House Frame Chosen_2020: Construieste restul casei din orice material
+        doresti. Comanda "Repeta" iti va fi de ajutor.
       Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru
         a ajunge la oaie.
       Overworld Move to Sheep_2019: Adauga din nou instructiunea "Mergi inainte" pentru
+        a ajunge la oaie.
+      Overworld Move to Sheep_2020: Adauga din nou instructiunea "Mergi inainte" pentru
         a ajunge la oaie.
       Overworld Place Wall: Fiecare casa incepe cu un perete. Construieste prima parte
         a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei "Repeta".
       Overworld Place Wall_2019: Fiecare casa incepe cu un perete. Construieste prima
         parte a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei
         "Repeta".
+      Overworld Place Wall_2020: Fiecare casa incepe cu un perete. Construieste prima
+        parte a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei
+        "Repeta".
       Overworld Plant Crops: Este bine sa planifici dinainte. Planteaza culturi pe
         ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
       Overworld Plant Crops_2019: Este bine sa planifici dinainte. Planteaza culturi
+        pe ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
+      Overworld Plant Crops_2020: Este bine sa planifici dinainte. Planteaza culturi
         pe ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
       Overworld Powered Minecart: Buna treaba! Ai adunat suficiente resurse pentru
         a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii
@@ -1347,9 +1389,14 @@ ro-RO:
       Overworld Powered Minecart_2019: Buna treaba! Ai adunat suficiente resurse pentru
         a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii
         pana la usa casei tale.
+      Overworld Powered Minecart_2020: Buna treaba! Ai adunat suficiente resurse pentru
+        a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii
+        pana la usa casei tale.
       Overworld Shear Sheep: E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru
         a aduna lana de la oi.
       Overworld Shear Sheep_2019: E vremea sa tunzi oile! Foloseste comanda "Tunde"
+        pentru a aduna lana de la oi.
+      Overworld Shear Sheep_2020: E vremea sa tunzi oile! Foloseste comanda "Tunde"
         pentru a aduna lana de la oi.
       Standalone_Artist_1: Bine ai venit la Artist! În primul rând, să încercăm să
         facem un pătrat simplu folosind blocul "rotește la dreapta" şi blocul "mută
@@ -1388,10 +1435,17 @@ ro-RO:
         trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor
         aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste
         blocuri.
+      Underground Avoiding Lava_2020: Sub aceste blocuri se gaseste lava, pe care
+        trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor
+        aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste
+        blocuri.
       Underground If Statements: Acum lucrurile devin mai dificile. Aduna 3 pietre
         rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi
         lava cu piatra.
       Underground If Statements_2019: Acum lucrurile devin mai dificile. Aduna 3 pietre
+        rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi
+        lava cu piatra.
+      Underground If Statements_2020: Acum lucrurile devin mai dificile. Aduna 3 pietre
         rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi
         lava cu piatra.
       Underground Iron: A merge in lava topita este o idee rea. Plaseaza placi de
@@ -1399,9 +1453,15 @@ ro-RO:
       Underground Iron_2019: A merge in lava topita este o idee rea. Plaseaza placi
         de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de
         fier.
+      Underground Iron_2020: A merge in lava topita este o idee rea. Plaseaza placi
+        de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de
+        fier.
       Underground Mining Coal: Vei gasi cele mai valoroase resurse in subteran, dar
         se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin 2 carbuni.
       Underground Mining Coal_2019: Vei gasi cele mai valoroase resurse in subteran,
+        dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin
+        2 carbuni.
+      Underground Mining Coal_2020: Vei gasi cele mai valoroase resurse in subteran,
         dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin
         2 carbuni.
       Vigenere: Test
@@ -1561,11 +1621,15 @@ ro-RO:
         Evită dinamita (TNT) sau penele vor zbura!
       courseA_maze_seq_challenge2_2019: Urmărește traseul şi condupasărea la porc.
         Evită dinamita (TNT) sau penele vor zbura!
+      courseA_maze_seq_challenge2_2020: Urmărește traseul şi condupasărea la porc.
+        Evită dinamita (TNT) sau penele vor zbura!
       courseB_collector_loops_challenge2a: Ajută-l pe Laurel să ia cel puţin **5**
         bucăţi din comoară pentru a rezolva această problemă.
       courseB_collector_loops_challenge2a_2018: Ajută-l pe Laurel să ia cel puţin
         **5** bucăţi din comoară pentru a rezolva această problemă.
       courseB_collector_loops_challenge2a_2019: Ajută-l pe Laurel să ia cel puţin
+        **5** bucăţi din comoară pentru a rezolva această problemă.
+      courseB_collector_loops_challenge2a_2020: Ajută-l pe Laurel să ia cel puţin
         **5** bucăţi din comoară pentru a rezolva această problemă.
       courseC_PlayLab_events3: Poți scrie un program pentru a-l face pe Jorge (actor
         1) să se mute spre Pisica Olive?
@@ -1573,15 +1637,20 @@ ro-RO:
         (actor 1) să se mute spre Pisica Olive?
       courseC_PlayLab_events3_2019: Poți scrie un program pentru a-l face pe Jorge
         (actor 1) să se mute spre Pisica Olive?
+      courseC_PlayLab_events3_2020: Poți scrie un program pentru a-l face pe Jorge
+        (actor 1) să se mute spre Pisica Olive?
       courseC_artist_prog5: 'Această casă are nevoie de un acoperiş! Desenează triunghiul.  Sugestie:
         toate trei laturile au aceeaşi lungime.'
       courseC_artist_prog5_2018: 'Această casă are nevoie de un acoperiş! Desenează
         triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
       courseC_artist_prog5_2019: 'Această casă are nevoie de un acoperiş! Desenează
         triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
+      courseC_artist_prog5_2020: 'Această casă are nevoie de un acoperiş! Desenează
+        triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
       courseC_maze_programming4: Evită dinamita (TNT) sau penele vor zbura!
       courseC_maze_programming4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseC_maze_programming4_2019: Evită dinamita (TNT) sau penele vor zbura!
+      courseC_maze_programming4_2020: Evită dinamita (TNT) sau penele vor zbura!
       courseD_artist_binary1: "Codul binar este un mod de a reprezenta informatia
         utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat
         de numarul zero) si \"on\" (reprezentat de numarul 1). \\\r\\\r V-am pus la
@@ -1600,11 +1669,19 @@ ro-RO:
         dispozitie o grila de pixeli prin care va puteti plimba si face design-uri
         intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in
         cod binar in primul rand?"
+      courseD_artist_binary1_2020: "Codul binar este un mod de a reprezenta informatia
+        utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat
+        de numarul zero) si \"on\" (reprezentat de numarul 1). \\\r\\\r V-am pus la
+        dispozitie o grila de pixeli prin care va puteti plimba si face design-uri
+        intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in
+        cod binar in primul rand?"
       courseD_artist_binary4: Poţi desena acest model prin rularea în buclă a unui
         şir binar de trei digiți?
       courseD_artist_binary4_2018: Poţi desena acest model prin rularea în buclă a
         unui şir binar de trei digiți?
       courseD_artist_binary4_2019: Poţi desena acest model prin rularea în buclă a
+        unui şir binar de trei digiți?
+      courseD_artist_binary4_2020: Poţi desena acest model prin rularea în buclă a
         unui şir binar de trei digiți?
       courseD_artist_binary6: Care şir binar de 6 caractere, repetat de 11 ori va
         desena această imagine?
@@ -1612,11 +1689,15 @@ ro-RO:
         va desena această imagine?
       courseD_artist_binary6_2019: Care şir binar de 6 caractere, repetat de 11 ori
         va desena această imagine?
+      courseD_artist_binary6_2020: Care şir binar de 6 caractere, repetat de 11 ori
+        va desena această imagine?
       courseD_artist_binary7: Care este cel mai scurt şir binar pe care tu poţi să-l
         rulezi repetat pentru a desena această imagine?
       courseD_artist_binary7_2018: Care este cel mai scurt şir binar pe care tu poţi
         să-l rulezi repetat pentru a desena această imagine?
       courseD_artist_binary7_2019: Care este cel mai scurt şir binar pe care tu poţi
+        să-l rulezi repetat pentru a desena această imagine?
+      courseD_artist_binary7_2020: Care este cel mai scurt şir binar pe care tu poţi
         să-l rulezi repetat pentru a desena această imagine?
       courseD_autorun_binary4_2019: Poţi desena acest model prin rularea în buclă
         a unui şir binar de trei digiți?
@@ -1630,15 +1711,20 @@ ro-RO:
         fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2019: 'Colectează tot nectarul din fiecare floare și
         fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2020: 'Colectează tot nectarul din fiecare floare și
+        fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_maze_nestedLoops4: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2018: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2019: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
+      courseD_maze_nestedLoops4_2020: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops6: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2018: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2019: Du-mă la floarea-soarelui!
+      courseD_maze_nestedLoops6_2020: Du-mă la floarea-soarelui!
       courseD_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
       courseD_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseD_scrat_ramp4: Evită dinamita (TNT) sau penele vor zbura!
@@ -1665,10 +1751,14 @@ ro-RO:
         pentru a obţine aceast lucru!
       courseF_artist_for7_2019: Fă trei modificări mici la codul de la ultimul nivel
         pentru a obţine aceast lucru!
+      courseF_artist_for7_2020: Fă trei modificări mici la codul de la ultimul nivel
+        pentru a obţine aceast lucru!
       courseF_artist_for_challenge1: Îți poți da seama cum să re-creezi acest desen?
       courseF_artist_for_challenge1_2018: Îți poți da seama cum să re-creezi acest
         desen?
       courseF_artist_for_challenge1_2019: Îți poți da seama cum să re-creezi acest
+        desen?
+      courseF_artist_for_challenge1_2020: Îți poți da seama cum să re-creezi acest
         desen?
       courseF_artist_for_challenge2: Îţi poți da seama cum să re-creezi acest desen
         cu o singură buclă?
@@ -1676,17 +1766,23 @@ ro-RO:
         desen cu o singură buclă?
       courseF_artist_for_challenge2_2019: Îţi poți da seama cum să re-creezi acest
         desen cu o singură buclă?
+      courseF_artist_for_challenge2_2020: Îţi poți da seama cum să re-creezi acest
+        desen cu o singură buclă?
       courseF_bee_for8: "Ati prins ideea! Care ar trebui sa fie variabila voastra
         crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\\r"
       courseF_bee_for8_2018: "Ati prins ideea! Care ar trebui sa fie variabila voastra
         crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\\r"
       courseF_bee_for8_2019: "Ati prins ideea! Care ar trebui sa fie variabila voastra
         crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\\r"
+      courseF_bee_for8_2020: "Ati prins ideea! Care ar trebui sa fie variabila voastra
+        crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\\r"
       courseF_bee_for_challenge2: Rezolvă acest puzzle folosind cât mai puține blocuri
         posibil.
       courseF_bee_for_challenge2_2018: Rezolvă acest puzzle folosind cât mai puține
         blocuri posibil.
       courseF_bee_for_challenge2_2019: Rezolvă acest puzzle folosind cât mai puține
+        blocuri posibil.
+      courseF_bee_for_challenge2_2020: Rezolvă acest puzzle folosind cât mai puține
         blocuri posibil.
       courseF_bee_functions4: "Funcţia \"mută şi obține nectar\" face albina să se
         întoarcă, să colecteze nectar şi apoi returnează albina la locul de unde a
