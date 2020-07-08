@@ -12,7 +12,8 @@ describe('AmazonFutureEngineerEligibility', () => {
     signedIn: false,
     schoolId: null,
     schoolEligible: null,
-    accountEmail: null
+    accountEmail: null,
+    isStudentAccount: false
   };
 
   let server;
@@ -111,5 +112,30 @@ describe('AmazonFutureEngineerEligibility', () => {
       'consentAFE'
     );
     expect(wrapper.find(AmazonFutureEngineerAccountConfirmation)).to.be.empty;
+  });
+
+  it('continues to account confirmation with required fields', () => {
+    let formProps = {
+      email: 'test@test.com',
+      schoolId: '123456789012',
+      updateFormData: () => {}
+    };
+
+    const wrapper = shallow(
+      <AmazonFutureEngineerEligibilityForm {...formProps} />
+    );
+
+    // Assumes form controls appropriately update state
+    // when user inputs first name, last name, and consents to sharing
+    // information with AFE.
+    wrapper.setState({
+      firstName: 'testFirst',
+      lastName: 'testLast',
+      consentAFE: true
+    });
+
+    wrapper.find('#continue').simulate('click');
+
+    expect(wrapper.exists(AmazonFutureEngineerAccountConfirmation));
   });
 });
