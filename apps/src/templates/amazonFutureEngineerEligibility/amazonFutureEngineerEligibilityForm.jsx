@@ -9,8 +9,15 @@ import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {STATES} from '@cdo/apps/geographyConstants';
 
 const VALIDATION_STATE_ERROR = 'error';
+
+const renderedStateOptions = STATES.map(state => (
+  <option key={state} value={state}>
+    {state}
+  </option>
+));
 
 const styles = {
   wrong_school: {
@@ -363,15 +370,17 @@ class ShippingAddressFormGroup extends React.Component {
         <FieldGroup
           id="state"
           label="State"
-          type="text"
           required={true}
           onChange={this.handleChange}
           validationState={
-            this.props.checkValidationState('state')
+            this.props.checkValidationState('stateSelect')
               ? VALIDATION_STATE_ERROR
               : null
           }
-        />
+          componentClass="select"
+        >
+          {renderedStateOptions}
+        </FieldGroup>
         <FieldGroup
           id="zip"
           label="Zip code"
