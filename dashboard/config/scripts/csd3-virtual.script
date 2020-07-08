@@ -132,16 +132,6 @@ level 'CSD web mouse practice choice_virtual_2020', progression: 'Practice'
 level 'CSD web mouse assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web mouse challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Project - Interactive Card'
-level 'CSD U3 Interactive Card Exemplar_virtual_2020', progression: 'interactive Card'
-level 'CSD U3 Card Examples_2018_2019_pilot_2020_virtual_2020', progression: 'Make an Interactive Card'
-level 'CSD U3 Interactive Card Background_virtual_2020', progression: 'Project Work'
-level 'CSD U3 Interactive Card Sprites_virtual_2020', progression: 'Project Work'
-level 'CSD U3 Interactive Card User Input_virtual_2020', progression: 'Project Work'
-level 'CSD U3 Interactive Card Other Conditionals_virtual_2020', progression: 'Project Work'
-level 'CSD U3 Interactive Card Final_virtual_2020', progression: 'Project Work'
-level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_virtual_2020', progression: 'Reflection', assessment: true
-
 lesson 'Velocity'
 level 'CSD U3 abstraction velocityX_virtual_2020', progression: 'Skill Building'
 level 'CSD: Sprite Velocity_virtual_2020', progression: 'Video: Velocity'
@@ -265,5 +255,4 @@ level 'CSD U3 game sprite movement_virtual_2020', progression: 'Project - Sprite
 level 'CSD U3 game user controls_virtual_2020', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions_virtual_2020', progression: 'Project - Sprites and Interactions'
 level 'CSD games project review_virtual_2020', progression: 'Review Your Game'
-level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_virtual_2020', progression: 'Reflection', assessment: true
 
