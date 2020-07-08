@@ -157,18 +157,6 @@ The animation has been skipped.
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading file to S3"
-      AWS::S3.upload_to_bucket(
-        DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.json",
-        generate_json(animation_metadata, alias_map),
-        acl: 'public-read',
-        no_random: true,
-        content_type: 'json'
-      )
-    end
-
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
