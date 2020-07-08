@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
 const styles = {
@@ -38,7 +38,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     signedIn: PropTypes.bool.isRequired,
     schoolId: PropTypes.string,
     schoolEligible: PropTypes.bool,
-    accountEmail: PropTypes.string
+    accountEmail: PropTypes.string,
+    isStudentAccount: PropTypes.bool
   };
 
   constructor(props) {
@@ -249,6 +250,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   render() {
     let {formData, submissionError} = this.state;
 
+    if (this.props.isStudentAccount) {
+      return StudentAccountNotification;
+    }
+
     if (submissionError) {
       return (
         <SubmissionError
@@ -324,6 +329,27 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     );
   }
 }
+
+const StudentAccountNotification = (
+  <div style={styles.container}>
+    <h2 style={styles.header}>You need a Code.org teacher account</h2>
+    <div>
+      <p>You're currently signed in to Code.org with a student account.</p>
+      <p>
+        You'll need to sign in with a teacher account to apply to receive Amazon
+        Future Engineer benefits. You can use the button below to sign out, then
+        return to <a href={pegasus('/afe')}>code.org/afe</a> to continue.
+      </p>
+      <Button
+        id="sign_out"
+        href={studio('/users/sign_out')}
+        style={styles.button}
+      >
+        Sign out
+      </Button>
+    </div>
+  </div>
+);
 
 const SubmissionError = ({submissionError, submissionErrorTime}) => (
   <div style={styles.container}>

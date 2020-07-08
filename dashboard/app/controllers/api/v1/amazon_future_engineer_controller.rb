@@ -9,7 +9,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def submit
-    return head :forbidden unless current_user
+    return head :forbidden unless current_user&.teacher?
 
     afe_params = submit_params
     Services::AFEEnrollment.submit(
