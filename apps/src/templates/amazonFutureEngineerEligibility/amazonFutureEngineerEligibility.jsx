@@ -198,18 +198,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submitToAFE = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'submit_to_afe',
-      data_json: JSON.stringify({
-        accountEmail: this.props.accountEmail,
-        accountSchoolId: this.props.schoolId,
-        formEmail: this.state.formData.email,
-        formSchoolId: this.state.formData.schoolId
-      })
-    });
-
-    // returns a promise
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {
