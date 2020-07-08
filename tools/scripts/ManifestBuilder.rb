@@ -208,7 +208,7 @@ The animation has been skipped.
       metadata['aliases'].delete_if(&:blank?)
     end
     alias_map = build_alias_map(animation_metadata)
-    category_map = build_alias_map(animation_metadata)
+    category_map = build_category_map(animation_metadata)
 
     info "Uploading file to S3"
     AWS::S3.upload_to_bucket(
