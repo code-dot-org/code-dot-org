@@ -95,22 +95,19 @@ header.build = function(
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
   $(document).ready(function() {
-    const headerMiddle = React.createElement(
-      Provider,
-      {
-        store: getStore()
-      },
-      React.createElement(HeaderMiddle, {
-        scriptNameData: scriptNameData,
-        lessonData: lessonData,
-        scriptData: scriptData,
-        currentLevelId: currentLevelId,
-        linesOfCodeText: linesOfCodeText,
-        hasAppOptions: hasAppOptions
-      })
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <HeaderMiddle
+          scriptNameData={scriptNameData}
+          lessonData={lessonData}
+          scriptData={scriptData}
+          currentLevelId={currentLevelId}
+          linesOfCodeText={linesOfCodeText}
+          hasAppOptions={hasAppOptions}
+        />
+      </Provider>,
+      document.querySelector('.header_level')
     );
-
-    ReactDOM.render(headerMiddle, document.querySelector('.header_level'));
   });
 };
 
