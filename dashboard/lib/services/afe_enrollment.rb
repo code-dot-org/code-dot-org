@@ -43,7 +43,7 @@ class Services::AFEEnrollment
       'school-address-1' => street_1,
       'school-address-2' => street_2,
       'school-city' => city,
-      'school-state' => state,
+      'school-state' => get_us_state_abbr(state),
       'school-zip' => zip,
       'inspirational-marketing-kit' => booleanize(marketing_kit),
       'csta-plus' => booleanize(csta_plus),
