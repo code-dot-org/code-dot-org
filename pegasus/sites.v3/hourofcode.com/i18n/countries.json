@@ -273,7 +273,7 @@
   "us": {
     "full_name": "United States",
     "default_language": "en",
-    "type": "international"
+    "type": "default"
   },
   "vn": {
     "full_name": "Vietnam",
