@@ -40,7 +40,7 @@ export default storybook => {
               }
             ]}
             studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
+            rosterProvider={OAuthSectionTypes.google_classroom}
           />
         </ExampleDialogButton>
       )
@@ -52,7 +52,7 @@ export default storybook => {
         <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
           <RosterDialog
             studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
+            rosterProvider={OAuthSectionTypes.google_classroom}
           />
         </ExampleDialogButton>
       )
@@ -66,7 +66,7 @@ export default storybook => {
           <RosterDialog
             classrooms={[]}
             studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
+            rosterProvider={OAuthSectionTypes.google_classroom}
           />
         </ExampleDialogButton>
       )
@@ -79,7 +79,7 @@ export default storybook => {
           <RosterDialog
             loadError={{status: 403, message: 'Sample error message.'}}
             studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
+            rosterProvider={OAuthSectionTypes.google_classroom}
           />
         </ExampleDialogButton>
       )
@@ -90,7 +90,7 @@ export default storybook => {
       story: () => (
         <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
           <RosterDialog
-            provider={OAuthSectionTypes.clever}
+            rosterProvider={OAuthSectionTypes.clever}
             classrooms={[
               {
                 id: '123',
@@ -129,7 +129,7 @@ export default storybook => {
       story: () => (
         <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
           <RosterDialog
-            provider={OAuthSectionTypes.clever}
+            rosterProvider={OAuthSectionTypes.clever}
             classrooms={[]}
             studioUrl=""
           />
