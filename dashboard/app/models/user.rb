@@ -1781,7 +1781,11 @@ class User < ActiveRecord::Base
 
     if should_track_pairing
       group_levels = script.levels.select {|level| level.type == "LevelGroup"}
-      if group_levels.detect {|group_level| group_level.properties["anonymous"] == "true" && group_level.levels.detect {|child_level| child_level.name == current_level.name}}
+      if group_levels.detect do |group_level|
+        group_level.properties["anonymous"] == "true" && group_level.levels.detect do |child_level|
+          child_level.name == current_level.name
+        end
+      end
         should_track_pairing = false
       end
     end
