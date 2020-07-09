@@ -174,7 +174,10 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+# temporarily disabled as of July 9 2020; an existing feature still depends on
+# the GET functionality blocked here, so we disable this gem to allow the
+# feature to continue to work until we can develop a secure alternative.
+#gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
