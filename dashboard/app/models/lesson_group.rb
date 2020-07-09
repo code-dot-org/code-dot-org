@@ -81,9 +81,10 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
-
-      lesson_group.save! if lesson_group.changed?
+      temp_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+      lesson_group.reload
+      lesson_group.lessons = temp_lessons
+      lesson_group.save!
 
       lesson_position += lesson_group.lessons.length
       lesson_group.lessons.each do |lesson|
