@@ -34,35 +34,37 @@ class Services::AFEEnrollment
   def self.submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
     city:, state:, zip:, marketing_kit:, csta_plus:, aws_educate:,
     amazon_terms:, new_code_account:)
-    return unless CDO.afe_pardot_form_handler_url
+    submission_body = {
+      'traffic-source' => 'AFE-code.org-2020',
+      'first-name' => first_name,
+      'last-name' => last_name,
+      'email' => email,
+      'nces-id' => nces_id,
+      'school-address-1' => street_1,
+      'school-address-2' => street_2,
+      'school-city' => city,
+      'school-state' => state,
+      'school-zip' => zip,
+      'inspirational-marketing-kit' => booleanize(marketing_kit),
+      'csta-plus' => booleanize(csta_plus),
+      'aws-educate' => booleanize(aws_educate),
+      'amazon-terms' => booleanize(amazon_terms),
+      'new-code-account' => booleanize(new_code_account),
+      'registration-date-time' => Time.now.iso8601
+    }
+
+    return submission_body unless CDO.afe_pardot_form_handler_url
 
     raise Error.new('AFE submission skipped: Terms and conditions were not accepted') unless amazon_terms
 
     response = Net::HTTP.post_form(
       URI(CDO.afe_pardot_form_handler_url),
-      {
-        'traffic-source' => 'AFE-code.org-2020',
-        'first-name' => first_name,
-        'last-name' => last_name,
-        'email' => email,
-        'nces-id' => nces_id,
-        'school-address-1' => street_1,
-        'school-address-2' => street_2,
-        'school-city' => city,
-        'school-state' => state,
-        'school-zip' => zip,
-        'inspirational-marketing-kit' => booleanize(marketing_kit),
-        'csta-plus' => booleanize(csta_plus),
-        'aws-educate' => booleanize(aws_educate),
-        'amazon-terms' => booleanize(amazon_terms),
-        'new-code-account' => booleanize(new_code_account),
-        'registration-date-time' => Time.now.iso8601
-      }
+      submission_body
     )
 
     raise Error.new("AFE submission failed with HTTP #{response.code}") unless response.code == '200'
     raise Error.new("AFE submission failed with a validation error") if response.body =~ /Cannot find error page/
-    nil
+    submission_body
   end
 
   private_class_method def self.booleanize(val)
