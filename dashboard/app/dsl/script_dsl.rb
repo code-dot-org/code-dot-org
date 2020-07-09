@@ -92,10 +92,10 @@ class ScriptDSL < BaseDSL
           key: nil,
           display_name: nil,
           lessons: []
-        }.compact
+        }
       end
 
-      @lesson_groups[@lesson_groups.length - 1][:lessons] << {
+      @lesson_groups.last[:lessons] << {
         name: name,
         lockable: properties[:lockable],
         visible_after: determine_visible_after_time(properties[:visible_after]),
@@ -237,15 +237,9 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      if assessment
-        script_level[:assessment] = assessment
-      end
-      if bonus
-        script_level[:bonus] = bonus
-      end
-      if named
-        script_level[:named_level] = named
-      end
+      script_level[:assessment] = assessment if assessment
+      script_level[:bonus] = bonus if bonus
+      script_level[:named_level] = named if named
 
       if progression || challenge
         script_level[:properties] = {}
@@ -264,9 +258,7 @@ class ScriptDSL < BaseDSL
   end
 
   def endvariants
-    current_lesson_group = @lesson_groups.length - 1
-    current_lesson = @lesson_groups[current_lesson_group][:lessons].length - 1
-    @lesson_groups[current_lesson_group][:lessons][current_lesson][:script_levels] << @current_scriptlevel
+    @lesson_groups.last[:lessons].last[:script_levels] << @current_scriptlevel
     @current_scriptlevel = nil
   end
 
@@ -276,7 +268,7 @@ class ScriptDSL < BaseDSL
 
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
-      unless lesson_group[:key].nil?
+      if lesson_group[:key]
         i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
       end
       lesson_group[:lessons].each do |lesson|

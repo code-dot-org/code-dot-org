@@ -52,6 +52,8 @@ class ScriptDslTest < ActiveSupport::TestCase
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: 'Lesson1',
@@ -104,6 +106,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -147,6 +151,8 @@ endvariants
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -226,6 +232,8 @@ endvariants
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -379,6 +387,8 @@ endvariants
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -410,6 +420,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -464,6 +476,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -504,6 +518,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -532,6 +548,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -723,6 +741,8 @@ level 'Level 3'
         version_year: "3035",
         is_stable: true,
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "Lesson1",
@@ -790,6 +810,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "stage 1",
@@ -834,6 +856,8 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
+          key: nil,
+          display_name: nil,
           lessons: [
             {
               name: "stage 1",
