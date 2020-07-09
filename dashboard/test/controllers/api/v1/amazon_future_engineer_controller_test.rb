@@ -274,6 +274,22 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :bad_request, "Wrong response: #{response.body}"
   end
 
+  test 'submits Firehose logging for valid request' do
+    FirehoseClient.any_instance.expects(:put_record).once
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params, as: :json
+  end
+
+  test 'no Firehose logging for invalid request' do
+    FirehoseClient.any_instance.expects(:put_record).never
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params.delete('email'), as: :json
+  end
+
   private
 
   def capture_csta_args_for_request(request_params)
