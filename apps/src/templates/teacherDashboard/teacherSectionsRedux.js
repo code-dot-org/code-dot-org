@@ -1018,7 +1018,7 @@ export function assignedScriptName(state) {
 
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
-  return (allSections || []).filter(s => !s.hidden);
+  return sortSectionsList(allSections || []).filter(s => !s.hidden);
 }
 
 /**
