@@ -72,6 +72,7 @@ class Lesson < ActiveRecord::Base
         relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
       )
 
+      script.reload
       lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
       chapter += lesson.script_levels.length
       lesson.save! if lesson.changed?

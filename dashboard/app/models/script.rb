@@ -930,14 +930,11 @@ class Script < ActiveRecord::Base
     script.prevent_duplicate_lesson_groups(raw_lesson_groups)
     Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-    script.lesson_groups = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
-    #puts "script.lesson_groups #{script.lesson_groups.inspect}"
-    #puts "script.lesson_groups.first.lessons #{script.lesson_groups.first.lessons.inspect}"
-    #puts "script.lessons #{script.lessons.inspect}"
-    #puts "script.changed? #{script.changed?}"
-    script.save!
+    temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
 
     script.reload
+    script.lesson_groups = temp_lgs
+    script.save!
 
     script.generate_plc_objects
 

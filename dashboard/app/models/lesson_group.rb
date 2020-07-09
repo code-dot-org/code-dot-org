@@ -82,7 +82,7 @@ class LessonGroup < ApplicationRecord
       end
 
       lesson_group.lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
-      #puts "lg initial #{lesson_group.lessons.inspect}"
+
       lesson_group.save! if lesson_group.changed?
 
       lesson_position += lesson_group.lessons.length
@@ -93,7 +93,6 @@ class LessonGroup < ApplicationRecord
       LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)
       script_lesson_groups << lesson_group
     end
-    #puts "slg: #{script_lesson_groups}"
     script_lesson_groups
   end
 

@@ -171,9 +171,6 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts, _ = Script.setup([script_file_3_lessons])
 
-    #require 'pry'
-    #binding.pry
-
     assert_equal 3, scripts[0].lessons.count
     first = scripts[0].lessons[0]
     second = scripts[0].lessons[1]
