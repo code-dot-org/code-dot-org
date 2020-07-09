@@ -1,4 +1,6 @@
 require 'honeybadger/ruby'
+require 'cdo/firehose'
+require 'state_abbr'
 
 #
 # Handles submissions to our AFE form at code.org/afe, and in turn submits on
@@ -12,7 +14,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     return head :forbidden unless current_user&.teacher?
 
     afe_params = submit_params
-    Services::AFEEnrollment.submit(
+    submission_body = Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
       email: afe_params['email'],
@@ -20,13 +22,27 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       street_1: afe_params['street1'],
       street_2: afe_params['street2'],
       city: afe_params['city'],
-      state: afe_params['state'],
+      state: get_us_state_abbr_from_name(afe_params['state'], true),
       zip: afe_params['zip'],
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
       aws_educate: afe_params['awsEducate'],
       amazon_terms: afe_params['consentAFE'],
       new_code_account: current_user.created_at > 5.minutes.ago
+    )
+
+    FirehoseClient.instance.put_record(
+      {
+        study: 'amazon-future-engineer-eligibility',
+        event: 'submit_to_afe',
+        data_json: {
+          accountEmail: current_user.email,
+          accountSchoolId: current_user&.school_info&.school&.id,
+          formEmail: afe_params['email'],
+          formSchoolId: afe_params['schoolId'],
+          formData: submission_body
+        }.to_json
+      }
     )
 
     # If the teacher requested it, submit to CSTA as well
@@ -43,7 +59,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         street_1: afe_params['street1'] || school&.address_line1 || '',
         street_2: afe_params['street2'] || school&.address_line2 || '',
         city: afe_params['city'] || school&.city || '',
-        state: afe_params['state'] || school&.state || '',
+        state: get_us_state_abbr_from_name(afe_params['state'], true) || school&.state || '',
         zip: afe_params['zip'] || school&.zip || '',
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
