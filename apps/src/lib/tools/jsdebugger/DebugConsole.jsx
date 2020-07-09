@@ -245,16 +245,14 @@ export default connect(
     displayOutputToConsole() {
       const inspectorTheme = {
         ...chromeLight,
-        ...{
-          OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
-          OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
-          OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
-          OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
-          OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
-          OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
-          OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
-          OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
-        }
+        OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
+        OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
+        OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
+        OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
+        OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
       };
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
