@@ -243,6 +243,7 @@ export default connect(
     }
 
     displayOutputToConsole() {
+      // These colors come from the ace editor defaults
       const inspectorTheme = {
         ...chromeLight,
         OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
