@@ -70,6 +70,22 @@ fi-FI:
         edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      CourseD_Dance_2020_01:
+        dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Lisää tämä blokki ohjelmaasi.
+        arrow_buttons: Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Lisää tämä blokki ohjelmaasi!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Lisää uusi tapahtuma ohjelmaan.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Uusi blokki!
+      CourseD_Dance_2020_07:
+        setprop_hint: Uusi blokki!
+      CourseD_Dance_2020_09:
+        new_block_3: Uusi blokki!
+        new_block_4: Uusi blokki!
       CourseD_Dance_Party_01:
         dance_callout_01: Lisää tämä blokki ohjelmaasi!
       CourseD_Dance_Party_02:
@@ -118,6 +134,9 @@ fi-FI:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
           samannimistä koodia työtilassa.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
+          samannimistä koodia työtilassa.
       Infinity_move_collide:
         Infinity_move_collide_callout: Anna äänimerkki, kun tämä tapahtuma toteutuu.
       Infinity_move_directions:
@@ -134,9 +153,14 @@ fi-FI:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
           ja lisää koodia, jota haluat toistaa yhä uudelleen.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
+          ja lisää koodia, jota haluat toistaa yhä uudelleen.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
@@ -144,9 +168,14 @@ fi-FI:
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
           niitä!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
+          niitä!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
       NEW Course 4 Artist Functions 7:
         edit_function: Muokkaa funktiotasi napsauttamalla tästä.
@@ -170,19 +199,28 @@ fi-FI:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
       Overworld Move to Sheep:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Place Wall:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Overworld Place Wall_2019:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Overworld Place Wall_2020:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Underground Avoiding Lava:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
@@ -190,9 +228,14 @@ fi-FI:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
           etenemiskomennon?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
       Underground Iron:
         craft_what_is_iron: Louhi tämä rauta!
       Underground Iron_2019:
+        craft_what_is_iron: Louhi tämä rauta!
+      Underground Iron_2020:
         craft_what_is_iron: Louhi tämä rauta!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja

@@ -22,6 +22,10 @@ bs-BA:
       4-5 Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod
         za trokut u petlji?
       4-5 Nested Loops 9: Nacrtaj zube u ustima aligatora!
+      CourseD_Dance_2020_05: |-
+        _Sada smo napredovali!_
+
+        Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       CourseD_Dance_Party_01: |-
         _Hajde da održimo jednu plesnu zabavu!_
 
@@ -231,9 +235,12 @@ bs-BA:
         u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bee_nestedLoops8_2019: 'Sakupi nektar iz svakog cvijeta i napravi med
         u svakom saću meda. Upotrijebi ugniježdenu petlju. '
+      courseD_bee_nestedLoops8_2020: 'Sakupi nektar iz svakog cvijeta i napravi med
+        u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_maze_nestedLoops4: Dovedi me do suncokreta!
       courseD_maze_nestedLoops4_2018: Dovedi me do suncokreta!
       courseD_maze_nestedLoops4_2019: Dovedi me do suncokreta!
+      courseD_maze_nestedLoops4_2020: Dovedi me do suncokreta!
       courseE_bee_functions3: Funkcije su blokovi koda koji izvršavaju određeni zadatak.
         Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš
         petlju da bi se postigao blok brojanja.

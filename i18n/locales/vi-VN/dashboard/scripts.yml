@@ -11388,6 +11388,8 @@ vi:
               name: Số nhị phân
             Intellectual Property:
               name: Sở hữu trí tuệ
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
           lessons:
             new stage:
               name: giai đoạn mới
@@ -11397,6 +11399,8 @@ vi:
               name: Số nhị phân
             Intellectual Property:
               name: Sở hữu trí tuệ
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
         csp2-2020:
           stages:
             new stage:
@@ -11506,84 +11510,6 @@ vi:
               name: Thực hành PT - thiết kế một cảnh kỹ thuật số
             Unit 3 Chapter 1 Assessment:
               name: Phần 3 Chương 1 Đánh giá
-        csd3-virtual:
-          description_short: "Lập trình"
-          stages:
-            Drawing in Game Lab:
-              name: Bản vẽ trong Kho trò chơi
-              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
-            Shapes and Randomization:
-              name: Hình dạng và tạo sự ngẫu nhiên
-            Variables:
-              name: Các biến
-            Booleans Unplugged:
-              name: Booleans
-            Conditionals:
-              name: Điều kiện
-            Project - Interactive Card:
-              name: 'Dự án: Thẻ tương tác'
-            Velocity:
-              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-            Collision Detection:
-              name: Phát hiện va chạm
-              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
-              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
-            Complex Sprite Movement:
-              name: Di chuyển nhân vật phức tạp
-              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
-              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
-            Collisions:
-              name: Va chạm
-              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-            Functions:
-              name: Các hàm
-            The Game Design Process:
-              name: Quá trình thiết kế trò chơi
-            Using the Game Design Process:
-              name: Sử dụng quy trình thiết kế trò chơi
-            Project - Design a Game:
-              name: Dự án - thiết kế một trò chơi
-          lessons:
-            Drawing in Game Lab:
-              name: Bản vẽ trong Kho trò chơi
-              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
-            Shapes and Randomization:
-              name: Hình dạng và tạo sự ngẫu nhiên
-            Variables:
-              name: Các biến
-            Booleans Unplugged:
-              name: Booleans
-            Conditionals:
-              name: Điều kiện
-            Project - Interactive Card:
-              name: 'Dự án: Thẻ tương tác'
-            Velocity:
-              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-            Collision Detection:
-              name: Phát hiện va chạm
-              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
-              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
-            Complex Sprite Movement:
-              name: Di chuyển nhân vật phức tạp
-              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
-              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
-            Collisions:
-              name: Va chạm
-              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-            Functions:
-              name: Các hàm
-            The Game Design Process:
-              name: Quá trình thiết kế trò chơi
-            Using the Game Design Process:
-              name: Sử dụng quy trình thiết kế trò chơi
-            Project - Design a Game:
-              name: Dự án - thiết kế một trò chơi
         jess-test-script:
           stages:
             new stage:
@@ -11818,3 +11744,131 @@ vi:
               name: Phần 5 Đánh giá 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+            Events:
+              name: Các sự kiện
+            Conditionals:
+              name: Điều kiện
+            Functions:
+              name: Các hàm
+            Variables:
+              name: Các biến
+            For Loops:
+              name: Cho vòng lặp
+          lessons:
+            Sequencing:
+              name: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+            Events:
+              name: Các sự kiện
+            Conditionals:
+              name: Điều kiện
+            Functions:
+              name: Các hàm
+            Variables:
+              name: Các biến
+            For Loops:
+              name: Cho vòng lặp
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Bắt đầu
+            k5_next_steps_1:
+              display_name: Bước tiếp theo
+        dani-june-2020-test:
+          stages:
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
+            Buttons and Events:
+              name: Các nút và các sự kiện
+          lessons:
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
+            Buttons and Events:
+              name: Các nút và các sự kiện
+        csd3-virtual:
+          description_short: "Lập trình"
+          stages:
+            Drawing in Game Lab:
+              name: Bản vẽ trong Kho trò chơi
+              description_student: "Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó."
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
+            Variables:
+              name: Các biến
+            Text:
+              name: Văn bản
+            Conditionals:
+              name: Điều kiện
+            Project - Interactive Card:
+              name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_student: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+            Collision Detection:
+              name: Phát hiện va chạm
+              description_student: "Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất."
+              description_teacher: "Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất."
+            Complex Sprite Movement:
+              name: Di chuyển nhân vật phức tạp
+              description_student: "Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. "
+              description_teacher: "Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng."
+            Collisions:
+              name: Va chạm
+              description_student: "Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+              description_teacher: "Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+            Functions:
+              name: Các hàm
+            The Game Design Process:
+              name: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              name: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              name: Dự án - thiết kế một trò chơi
+          lessons:
+            Drawing in Game Lab:
+              name: Bản vẽ trong Kho trò chơi
+              description_student: "Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó."
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
+            Variables:
+              name: Các biến
+            Text:
+              name: Văn bản
+            Conditionals:
+              name: Điều kiện
+            Project - Interactive Card:
+              name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_student: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+            Collision Detection:
+              name: Phát hiện va chạm
+              description_student: "Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất."
+              description_teacher: "Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất."
+            Complex Sprite Movement:
+              name: Di chuyển nhân vật phức tạp
+              description_student: "Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. "
+              description_teacher: "Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng."
+            Collisions:
+              name: Va chạm
+              description_student: "Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+              description_teacher: "Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+            Functions:
+              name: Các hàm
+            The Game Design Process:
+              name: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              name: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            csd3_1:
+              display_name: Nội dung
+            csd3_2:
+              display_name: Nội dung
+            cspSurvey:
+              display_name: Nội dung

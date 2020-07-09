@@ -578,6 +578,27 @@ pl-PL:
       Course 4 SCV 4: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 5: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 6: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
+      CourseD_Dance_2020_01: 'Przeciągnij blok <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        do obszaru roboczego i podłącz go w bloku <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      CourseD_Dance_2020_02: Spowoduj, że kot zatańczy po naciśnięciu klawisza.
+      CourseD_Dance_2020_03: Pora na tańce! Zaprogramuj każdego tancerza, aby poruszał
+        się po naciśnięciu różnych klawiszy. Wybierz ulubiony ruch dla każdego tancerza
+        lub ustaw tę opcję na „(Losowo)”, aby stworzyć coś zupełnie nieprzewidywalnego!
+      CourseD_Dance_2020_04: Upewnij się, że Twój tancerz rozpocznie nowy ruch po
+        czwartym takcie.
+      CourseD_Dance_2020_05: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      CourseD_Dance_2020_06: Ustaw grupę tancerzy pomocniczych wokół głównego tancerza
+        pośrodku.
+      CourseD_Dance_2020_07: Zmień rozmiar grupy tancerzy pomocniczych.
+      CourseD_Dance_2020_08: Spróbuj zmienić odcień jednego ze swoich tancerzy (lub
+        całej grupy)!
+      CourseD_Dance_2020_09: Bądź kreatywny dzięki tym nowym blokom!
+      CourseD_Dance_2020_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      CourseD_Dance_2020_bonus1: Tam i z powrotem! (Kliknij Więcej po szczegóły)
+      CourseD_Dance_2020_bonus3: Twórzmy formację (Kliknij Więcej po szczegóły)
       CourseD_Dance_Party_01: Przeciągnij blok 'utwórz nowego' do obszaru roboczego
         i podłącz go w bloku 'układ'.
       CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
@@ -603,15 +624,27 @@ pl-PL:
         przyjaciołom.
       CourseE_HOC 2018 Level_1: Weź łódkę z kufra.
       CourseE_HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
+      CourseE_HOC 2018 Level_10_2020: Dostań się do wejścia do tego Oceanicznego Monumentu.
       CourseE_HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego
         Monumentu.  '
+      CourseE_HOC 2018 Level_11_2020: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego
+        Monumentu.  '
+      CourseE_HOC 2018 Level_1_2020: Weź łódkę z kufra.
       CourseE_HOC 2018 Level_2: Skieruj się do końca doku.
+      CourseE_HOC 2018 Level_2_2020: Skieruj się do końca doku.
       CourseE_HOC 2018 Level_3: Kieruj się przez otwarte morza do dorsza.
+      CourseE_HOC 2018 Level_3_2020: Kieruj się przez otwarte morza do dorsza.
       CourseE_HOC 2018 Level_4: Użyj pętli, aby dotrzeć się do delfina.
+      CourseE_HOC 2018 Level_4_2020: Użyj pętli, aby dotrzeć się do delfina.
       CourseE_HOC 2018 Level_5: Zbadaj wrak statku, aby odnaleźć kufer.
+      CourseE_HOC 2018 Level_5_2020: Zbadaj wrak statku, aby odnaleźć kufer.
       CourseE_HOC 2018 Level_6: Nawiguj przez lody, aby dotrzeć do łososia.
+      CourseE_HOC 2018 Level_6_2020: Nawiguj przez lody, aby dotrzeć do łososia.
       CourseE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
+      CourseE_HOC 2018 Level_7a_2020: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
       CourseE_HOC 2018 Level_9b: Użyj korala, jako punktu orientacyjnego na drodze
+        do skarbu.
+      CourseE_HOC 2018 Level_9b_2020: Użyj korala, jako punktu orientacyjnego na drodze
         do skarbu.
       Crack Random Substitution: Instrukcje
       Crack a Caesar Cipher: Instrukcje
@@ -673,6 +706,8 @@ pl-PL:
       Function intro Ryan: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
         użyj funkcji "build bridge".
       Function intro Ryan_2019: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
+        użyj funkcji "build bridge".
+      Function intro Ryan_2020: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
         użyj funkcji "build bridge".
       Guess The Number: Buduj, co chcesz. To jest przykład gry w zgadywanie numeru!
       HOC 2018 Level_1: Weź łódkę z kufra.
@@ -816,30 +851,46 @@ pl-PL:
       MC_HOC_2017_01_RETRY_2019: 'Pokieruj Agentem tak, by dotarł do płyty naciskowej,
         a następnie naciśnij przycisk "Uruchom". Użyj klawiszy strzałek, aby wyjść
         postacią gracza z domu i zabrać skrzynię. '
+      MC_HOC_2017_01_RETRY_2020: 'Pokieruj Agentem tak, by dotarł do płyty naciskowej,
+        a następnie naciśnij przycisk "Uruchom". Użyj klawiszy strzałek, aby wyjść
+        postacią gracza z domu i zabrać skrzynię. '
       MC_HOC_2017_02_Cole: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName}
         mógł dotrzeć do mapy. '
       MC_HOC_2017_02_Cole_2019: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName}
         mógł dotrzeć do mapy. '
+      MC_HOC_2017_02_Cole_2020: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName}
+        mógł dotrzeć do mapy. '
       MC_HOC_2017_03_Cole: 'Zakoduj Agenta tak, aby otworzył bramę. '
       MC_HOC_2017_03_Cole_2019: 'Zakoduj Agenta tak, aby otworzył bramę. '
+      MC_HOC_2017_03_Cole_2020: 'Zakoduj Agenta tak, aby otworzył bramę. '
       MC_HOC_2017_04POINT5_RYAN: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04POINT5_RYAN_2019: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04POINT5_RYAN_2020: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04_Cole: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04_Cole_2019: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04_Cole_2020: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_05_Cole: Doprowadź gracza do łopaty.
       MC_HOC_2017_05_Cole_2019: Doprowadź gracza do łopaty.
+      MC_HOC_2017_05_Cole_2020: Doprowadź gracza do łopaty.
       MC_HOC_2017_06_Cole: Napraw ten kod, aby Agent mógł przerzucić przez rzekę most.
       MC_HOC_2017_06_Cole_2019: Napraw ten kod, aby Agent mógł przerzucić przez rzekę
+        most.
+      MC_HOC_2017_06_Cole_2020: Napraw ten kod, aby Agent mógł przerzucić przez rzekę
         most.
       MC_HOC_2017_07_Cole: Zniszcz lód. Dzięki temu {currentPlayerName} dotrze Minecart.
       MC_HOC_2017_07_Cole_2019: Zniszcz lód. Dzięki temu {currentPlayerName} dotrze
         Minecart.
+      MC_HOC_2017_07_Cole_2020: Zniszcz lód. Dzięki temu {currentPlayerName} dotrze
+        Minecart.
       MC_HOC_2017_10_RETRY: Użyj funkcji, aby ukończyć ten minecart.
       MC_HOC_2017_10_RETRY_2019: Użyj funkcji, aby ukończyć ten minecart.
+      MC_HOC_2017_10_RETRY_2020: Użyj funkcji, aby ukończyć ten minecart.
       MC_HOC_2017_Ali: Użyj funkcji, aby przedostać się przez lawę.
       MC_HOC_2017_Ali_2019: Użyj funkcji, aby przedostać się przez lawę.
+      MC_HOC_2017_Ali_2020: Użyj funkcji, aby przedostać się przez lawę.
       MC_HOC_2017_FP20x20: 'Zabaw się:  Czas na samodzielną eksplorację!'
       MC_HOC_2017_FP20x20_2019: 'Zabaw się:  Czas na samodzielną eksplorację!'
+      MC_HOC_2017_FP20x20_2020: 'Zabaw się:  Czas na samodzielną eksplorację!'
       NEW Course 4 Artist Functions 14: 'Czas zabawy! '
       NEW Course 4 Artist Params 9: Kliknij przycisk "edytuj", aby wypełnić definicję
         funkcji "draw a square" (rysuj kwadratu) i dodać parametr. Parametr powinien
@@ -875,15 +926,22 @@ pl-PL:
         Pełzaki, aby bezpiecznie dotrzeć do domu.
       Overworld Avoid Monsters_2019: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie
         omijaj Pełzaki, aby bezpiecznie dotrzeć do domu.
+      Overworld Avoid Monsters_2020: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie
+        omijaj Pełzaki, aby bezpiecznie dotrzeć do domu.
       Overworld Chop Tree: Drewno to bardzo ważny materiał. Można z niego zbudować
         wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia "zniszcz blok", aby
         je ściąć.
       Overworld Chop Tree_2019: Drewno to bardzo ważny materiał. Można z niego zbudować
         wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia "zniszcz blok", aby
         je ściąć.
+      Overworld Chop Tree_2020: Drewno to bardzo ważny materiał. Można z niego zbudować
+        wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia "zniszcz blok", aby
+        je ściąć.
       Overworld Chop Trees: Musimy wybudować dom, zanim zajdzie słońce. Na dom potrzeba
         dużo drewna. Zetnij wszystkie 3 drzewa.
       Overworld Chop Trees_2019: Musimy wybudować dom, zanim zajdzie słońce. Na dom
+        potrzeba dużo drewna. Zetnij wszystkie 3 drzewa.
+      Overworld Chop Trees_2020: Musimy wybudować dom, zanim zajdzie słońce. Na dom
         potrzeba dużo drewna. Zetnij wszystkie 3 drzewa.
       Overworld Free Play 20x20: 'Gratulacje! Udało Ci się ułożyć wszystkie nasze
         układanki! Teraz wydobywaj, buduj i twórz co tylko zechcesz, korzystając ze
@@ -891,13 +949,20 @@ pl-PL:
       Overworld Free Play 20x20_2019: 'Gratulacje! Udało Ci się ułożyć wszystkie nasze
         układanki! Teraz wydobywaj, buduj i twórz co tylko zechcesz, korzystając ze
         swoich nowych umiejętności. '
+      Overworld Free Play 20x20_2020: 'Gratulacje! Udało Ci się ułożyć wszystkie nasze
+        układanki! Teraz wydobywaj, buduj i twórz co tylko zechcesz, korzystając ze
+        swoich nowych umiejętności. '
       Overworld House Frame Chosen: Zbuduj resztę domu z materiałów, jakie chcesz.
         Przydatne tutaj będzie polecenie "powtórz".
       Overworld House Frame Chosen_2019: Zbuduj resztę domu z materiałów, jakie chcesz.
         Przydatne tutaj będzie polecenie "powtórz".
+      Overworld House Frame Chosen_2020: Zbuduj resztę domu z materiałów, jakie chcesz.
+        Przydatne tutaj będzie polecenie "powtórz".
       Overworld Move to Sheep: Dodaj drugie polecenie "przejdź do przodu", aby dotrzeć
         do owcy.
       Overworld Move to Sheep_2019: Dodaj drugie polecenie "przejdź do przodu", aby
+        dotrzeć do owcy.
+      Overworld Move to Sheep_2020: Dodaj drugie polecenie "przejdź do przodu", aby
         dotrzeć do owcy.
       Overworld Place Wall: Każdy dom powinien mieć ściany. Zbuduj pierwszą część
         swojego domu, korzystając z poleceń "umieść" i "idź do przodu" umieszczonych
@@ -905,9 +970,14 @@ pl-PL:
       Overworld Place Wall_2019: Każdy dom powinien mieć ściany. Zbuduj pierwszą część
         swojego domu, korzystając z poleceń "umieść" i "idź do przodu" umieszczonych
         w pętli powtórzeń.
+      Overworld Place Wall_2020: Każdy dom powinien mieć ściany. Zbuduj pierwszą część
+        swojego domu, korzystając z poleceń "umieść" i "idź do przodu" umieszczonych
+        w pętli powtórzeń.
       Overworld Plant Crops: Dobrze jest planować z wyprzedzeniem. Zasadź rośliny
         po obu stronach wody, aby później nie konać z głodu.
       Overworld Plant Crops_2019: Dobrze jest planować z wyprzedzeniem. Zasadź rośliny
+        po obu stronach wody, aby później nie konać z głodu.
+      Overworld Plant Crops_2020: Dobrze jest planować z wyprzedzeniem. Zasadź rośliny
         po obu stronach wody, aby później nie konać z głodu.
       Overworld Powered Minecart: Świetna robota! Udało Ci się zgromadzić wiele zasobów
         i zbudować skromny dom. Teraz ułóż tory prowadzące od drzwi swojego domu do
@@ -915,9 +985,14 @@ pl-PL:
       Overworld Powered Minecart_2019: Świetna robota! Udało Ci się zgromadzić wiele
         zasobów i zbudować skromny dom. Teraz ułóż tory prowadzące od drzwi swojego
         domu do końca mapy.
+      Overworld Powered Minecart_2020: Świetna robota! Udało Ci się zgromadzić wiele
+        zasobów i zbudować skromny dom. Teraz ułóż tory prowadzące od drzwi swojego
+        domu do końca mapy.
       Overworld Shear Sheep: Nadszedł czas strzyży! Używając polecenia "strzyż" pozyskaj
         wełnę z obu owiec.
       Overworld Shear Sheep_2019: Nadszedł czas strzyży! Używając polecenia "strzyż"
+        pozyskaj wełnę z obu owiec.
+      Overworld Shear Sheep_2020: Nadszedł czas strzyży! Używając polecenia "strzyż"
         pozyskaj wełnę z obu owiec.
       Robot Doodle: 'Pomysł na projekt: Stwórz obraz czegoś znajomego z prawdziwego
         świata. Wymaga to wytrwałości oraz planowania!'
@@ -958,10 +1033,17 @@ pl-PL:
         którą musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek
         "jeżeli". Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć
         coś z tych bloków.
+      Underground Avoiding Lava_2020: Pod niektórymi z tych bloków ukrywa się lawa,
+        którą musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek
+        "jeżeli". Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć
+        coś z tych bloków.
       Underground If Statements: Teraz sprawy się skomplikowały. Wydobądź 3 czerwone
         kamienie, nie wpadając w lawę. Skorzystaj z polecenia "jeżeli", aby ułożyć
         bruk na każdym polu odkrytej lawy.
       Underground If Statements_2019: Teraz sprawy się skomplikowały. Wydobądź 3 czerwone
+        kamienie, nie wpadając w lawę. Skorzystaj z polecenia "jeżeli", aby ułożyć
+        bruk na każdym polu odkrytej lawy.
+      Underground If Statements_2020: Teraz sprawy się skomplikowały. Wydobądź 3 czerwone
         kamienie, nie wpadając w lawę. Skorzystaj z polecenia "jeżeli", aby ułożyć
         bruk na każdym polu odkrytej lawy.
       Underground Iron: Wchodzenie w płynną lawę nie jest dobrym pomysłem. Umieść
@@ -970,10 +1052,16 @@ pl-PL:
       Underground Iron_2019: Wchodzenie w płynną lawę nie jest dobrym pomysłem. Umieść
         na niej bruk, aby stworzyć most, a następnie wydobądź żelazo z co najmniej
         3 bloków.
+      Underground Iron_2020: Wchodzenie w płynną lawę nie jest dobrym pomysłem. Umieść
+        na niej bruk, aby stworzyć most, a następnie wydobądź żelazo z co najmniej
+        3 bloków.
       Underground Mining Coal: Najcenniejsze surowce znajdują się pod ziemią, ale
         robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej
         2 bloków.
       Underground Mining Coal_2019: Najcenniejsze surowce znajdują się pod ziemią,
+        ale robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co
+        najmniej 2 bloków.
+      Underground Mining Coal_2020: Najcenniejsze surowce znajdują się pod ziemią,
         ale robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co
         najmniej 2 bloków.
       'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
@@ -981,7 +1069,9 @@ pl-PL:
         ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
         wzorca.
       behaviors 1: Czy mógłbyś przewidzieć!
+      behaviors 1_2020: Czy mógłbyś przewidzieć!
       behaviors 4: Czy mógłbyś przewidzieć!
+      behaviors 4_2020: Czy mógłbyś przewidzieć!
       bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
         Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
       bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
@@ -1097,23 +1187,30 @@ pl-PL:
       courseA_artist_loops10: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2018: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2019: Pomóż mi położyć kamienie niżej, a nie spadnę!
+      courseA_artist_loops10_2020: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops12: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co
         Twoim zdaniem zobaczył.
       courseA_artist_loops12_2018: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
         co Twoim zdaniem zobaczył.
       courseA_artist_loops12_2019: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
         co Twoim zdaniem zobaczył.
+      courseA_artist_loops12_2020: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
+        co Twoim zdaniem zobaczył.
       courseA_artist_loops7: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2018: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2019: Użyj pętli `repeat` aby dodać fale na wodzie.
+      courseA_artist_loops7_2020: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2019: 'Wyzwanie: Napraw schody.'
+      courseA_artist_loops9_2020: 'Wyzwanie: Napraw schody.'
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie
         skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać
         wszystkie skarby?
       courseA_collector_loops7_2019: Co powinieneś dodać do tego kodu, aby zebrać
+        wszystkie skarby?
+      courseA_collector_loops7_2020: Co powinieneś dodać do tego kodu, aby zebrać
         wszystkie skarby?
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej _3_ części skarbu
         aby przejść ten poziom.
@@ -1121,11 +1218,22 @@ pl-PL:
         aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2019: Zbierz przynajmniej _3_ części skarbu
         aby przejść ten poziom.
+      courseA_collector_loops_challenge2kp_2020: Zbierz przynajmniej _3_ części skarbu
+        aby przejść ten poziom.
       courseA_harvester_loops6_2019: Będziesz potrzebować **jednego** klocka `Move
+        South` i **jednego** klocka `Move West`.
+      courseA_harvester_loops6_2020: Będziesz potrzebować **jednego** klocka `Move
         South` i **jednego** klocka `Move West`.
       courseA_maze_ramp5a_2018: Doprowadź ptaka do świnki!
       courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
+      courseA_maze_ramp5a_2020: Doprowadź ptaka do świnki!
+      courseA_maze_seq1: Doprowadź ptaka do złej świnki!
+      courseA_maze_seq1_2018: Doprowadź ptaka do złej świnki!
+      courseA_maze_seq1_2019: Doprowadź ptaka do złej świnki!
+      courseA_maze_seq1_2020: Doprowadź ptaka do złej świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
+      courseA_maze_seq3: Napraw kod, aby doprowadzić ptaka do świnki!
+      courseA_maze_seq4: USUŃ blok, aby doprowadzić ptaka do świnki!
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
@@ -1135,11 +1243,16 @@ pl-PL:
       courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_artist_loops_challenge2_2020: |-
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops_challenge2a: Pomóż Laurelowi zabrać co najmniej **5**
         części skarbu, aby ukończyć tę łamigłówkę.
       courseB_collector_loops_challenge2a_2018: Pomóż Laurelowi zabrać co najmniej
         **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_collector_loops_challenge2a_2019: Pomóż Laurelowi zabrać co najmniej
+        **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2020: Pomóż Laurelowi zabrać co najmniej
         **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w
         złej kolejności!
@@ -1147,52 +1260,126 @@ pl-PL:
         ale w złej kolejności!
       courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
+      courseB_maze_seq_challenge2_2020: Debuguj ten poziom. Te bloki są poprawne,
+        ale w złej kolejności!
       courseC19_playLab_EOC5: Teraz poświęć trochę czasu, żeby upewnić się, że gra
         działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją
         grę, a następnie zagraj, aby spełnić jeden z tych warunków.
+      courseC19_playLab_EOC5_2020: Teraz poświęć trochę czasu, żeby upewnić się, że
+        gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
+        twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
       courseC_PlayLab_events3: Czy możesz napisać program, który sprawia, że Jorge
         (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że
         Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2019: Czy możesz napisać program, który sprawia, że
         Jorge (postać 1) idzie w kierunku Kota Oliwek?
+      courseC_PlayLab_events3_2020: Czy możesz napisać program, który sprawia, że
+        Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_artist_loops5a: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2018: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2019: Spróbuj nowych nalepek!
+      courseC_artist_loops5a_2020: Spróbuj nowych nalepek!
       courseC_artist_loops5b: Spróbuj dodać linie!
       courseC_artist_loops5b_2018: Spróbuj dodać linie!
       courseC_artist_loops5b_2019: Spróbuj dodać linie!
+      courseC_artist_loops5b_2020: Spróbuj dodać linie!
       courseC_artist_loops6a: Dodaj kolejną nalepkę!
       courseC_artist_loops6a_2018: Dodaj kolejną nalepkę!
       courseC_artist_loops6a_2019: Dodaj kolejną nalepkę!
+      courseC_artist_loops6a_2020: Dodaj kolejną nalepkę!
       courseC_artist_loops7a: Baw się pętlami i kątami.
       courseC_artist_loops7a_2018: Baw się pętlami i kątami.
       courseC_artist_loops7a_2019: Baw się pętlami i kątami.
+      courseC_artist_loops7a_2020: Baw się pętlami i kątami.
       courseC_artist_loops8a: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_loops8a_2018: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_loops8a_2019: A teraz spróbuj czegoś na własną rękę!
+      courseC_artist_loops8a_2020: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_prog5: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog5_2018: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog5_2019: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
+      courseC_artist_prog5_2020: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
+        Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog_challenge2a: _Pomóż mi narysować żółte linie na tej drodze!_
       courseC_artist_prog_challenge2a_2018: _Pomóż mi narysować żółte linie na tej
         drodze!_
       courseC_artist_prog_challenge2a_2019: _Pomóż mi narysować żółte linie na tej
         drodze!_
+      courseC_artist_prog_challenge2a_2020: _Pomóż mi narysować żółte linie na tej
+        drodze!_
       courseC_collector_loops_challenge2: Zbierz co najmniej **5** części skarbu!
       courseC_collector_loops_challenge2_2018: Zbierz co najmniej **5** części skarbu!
       courseC_collector_loops_challenge2_2019: Zbierz co najmniej **5** części skarbu!
+      courseC_collector_loops_challenge2_2020: Zbierz co najmniej **5** części skarbu!
+      courseC_collector_prog1: Graz blokami, aby przekonać się, czy jesteś w stanie
+        pomów Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2018: Graz blokami, aby przekonać się, czy jesteś w
+        stanie pomów Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2019: Graz blokami, aby przekonać się, czy jesteś w
+        stanie pomów Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2020: Graz blokami, aby przekonać się, czy jesteś w
+        stanie pomów Laurel zebrać trochę skarbów.
+      courseC_collector_prog2: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
+        aby go podnieść.
+      courseC_collector_prog2_2018: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
+        aby go podnieść.
+      courseC_collector_prog2_2019: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
+        aby go podnieść.
+      courseC_collector_prog2_2020: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
+        aby go podnieść.
+      courseC_collector_prog3: 'Zamów te bloki, aby zebrać skarb i rozwiązać zadanie. '
+      courseC_collector_prog3_2018: 'Zamów te bloki, aby zebrać skarb i rozwiązać
+        zadanie. '
+      courseC_collector_prog3_2019: 'Zamów te bloki, aby zebrać skarb i rozwiązać
+        zadanie. '
+      courseC_collector_prog3_2020: 'Zamów te bloki, aby zebrać skarb i rozwiązać
+        zadanie. '
+      courseC_collector_prog4: Ustaw te bloki w takiej kolejności, aby zebrać cały
+        skarb i rozwiązać zadanie.
+      courseC_collector_prog4_2018: Ustaw te bloki w takiej kolejności, aby zebrać
+        cały skarb i rozwiązać zadanie.
+      courseC_collector_prog4_2019: Ustaw te bloki w takiej kolejności, aby zebrać
+        cały skarb i rozwiązać zadanie.
+      courseC_collector_prog4_2020: Ustaw te bloki w takiej kolejności, aby zebrać
+        cały skarb i rozwiązać zadanie.
+      courseC_collector_prog5: Te bloki są ustawione w złej kolejności. Czy mógłbyś
+        je naprawić?
+      courseC_collector_prog5_2018: Te bloki są ustawione w złej kolejności. Czy mógłbyś
+        je naprawić?
+      courseC_collector_prog5_2019: Te bloki są ustawione w złej kolejności. Czy mógłbyś
+        je naprawić?
+      courseC_collector_prog5_2020: Te bloki są ustawione w złej kolejności. Czy mógłbyś
+        je naprawić?
+      courseC_collector_prog6: Zmień porządek ustawienia bloków, aby zebrać cały skarb.
+      courseC_collector_prog6_2018: Zmień porządek ustawienia bloków, aby zebrać cały
+        skarb.
+      courseC_collector_prog6_2019: Zmień porządek ustawienia bloków, aby zebrać cały
+        skarb.
+      courseC_collector_prog6_2020: Zmień porządek ustawienia bloków, aby zebrać cały
+        skarb.
+      courseC_collector_prog7: Użyj bloków z przybornika, aby zebrać cały skarb.
+      courseC_collector_prog7_2018: Użyj bloków z przybornika, aby zebrać cały skarb.
+      courseC_collector_prog7_2019: Użyj bloków z przybornika, aby zebrać cały skarb.
+      courseC_collector_prog7_2020: Użyj bloków z przybornika, aby zebrać cały skarb.
+      courseC_collector_prog8: _"Tak trzymaj! Pomóż mi zebrać cały skarb."_
+      courseC_collector_prog8_2018: _"Tak trzymaj! Pomóż mi zebrać cały skarb."_
+      courseC_collector_prog8_2019: _"Tak trzymaj! Pomóż mi zebrać cały skarb."_
+      courseC_collector_prog8_2020: _"Tak trzymaj! Pomóż mi zebrać cały skarb."_
       courseC_collector_prog9: _"Zbierzmy cały skarb!"_
       courseC_collector_prog9_2018: _"Zbierzmy cały skarb!"_
       courseC_collector_prog9_2019: _"Zbierzmy cały skarb!"_
+      courseC_collector_prog9_2020: _"Zbierzmy cały skarb!"_
       courseC_collector_prog_challenge1: Spójrz uważnie! Czy potrafisz zebrać wszystkie
         _10_ części skarbu?
       courseC_collector_prog_challenge1_2018: Spójrz uważnie! Czy potrafisz zebrać
         wszystkie _10_ części skarbu?
       courseC_collector_prog_challenge1_2019: Spójrz uważnie! Czy potrafisz zebrać
+        wszystkie _10_ części skarbu?
+      courseC_collector_prog_challenge1_2020: Spójrz uważnie! Czy potrafisz zebrać
         wszystkie _10_ części skarbu?
       courseC_collector_prog_challenge2: Zbierz co najmniej **10** części skarbu,
         aby ukończyć to wyzwanie!
@@ -1200,16 +1387,22 @@ pl-PL:
         aby ukończyć to wyzwanie!
       courseC_collector_prog_challenge2_2019: Zbierz co najmniej **10** części skarbu,
         aby ukończyć to wyzwanie!
+      courseC_collector_prog_challenge2_2020: Zbierz co najmniej **10** części skarbu,
+        aby ukończyć to wyzwanie!
       courseC_flappy_events1: Dołącz block "pofruń na normalną wysokość" do zdarzenia
         "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
         aby przesunąć Flappy'ego do miejsca docelowego.
       courseC_flappy_events10: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events10_2018: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events10_2019: 'Stwórz swoją własną grę z Flappym! '
+      courseC_flappy_events10_2020: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events1_2018: Dołącz block "pofruń na normalną wysokość" do zdarzenia
         "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
         aby przesunąć Flappy'ego do miejsca docelowego.
       courseC_flappy_events1_2019: Dołącz block "pofruń na normalną wysokość" do zdarzenia
+        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
+        aby przesunąć Flappy'ego do miejsca docelowego.
+      courseC_flappy_events1_2020: Dołącz block "pofruń na normalną wysokość" do zdarzenia
         "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
         aby przesunąć Flappy'ego do miejsca docelowego.
       courseC_flappy_events2: Spróbuj dodać blok, który ustawia poziom prędkości po
@@ -1221,11 +1414,16 @@ pl-PL:
       courseC_flappy_events2_2019: Spróbuj dodać blok, który ustawia poziom prędkości
         po naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
         aby kontynuować.
+      courseC_flappy_events2_2020: Spróbuj dodać blok, który ustawia poziom prędkości
+        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
+        aby kontynuować.
       courseC_flappy_events3: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
         na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
       courseC_flappy_events3_2018: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
         na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
       courseC_flappy_events3_2019: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
+        na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      courseC_flappy_events3_2020: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
         na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
       courseC_flappy_events4: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
@@ -1234,6 +1432,9 @@ pl-PL:
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
       courseC_flappy_events4_2019: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
+        tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
+        rur.
+      courseC_flappy_events4_2020: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
       courseC_flappy_events5: Dołącz blok do zdarzenia "kiedy minie przeszkodę", a
@@ -1245,11 +1446,16 @@ pl-PL:
       courseC_flappy_events5_2019: Dołącz blok do zdarzenia "kiedy minie przeszkodę",
         a następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
         zestaw rur.
+      courseC_flappy_events5_2020: Dołącz blok do zdarzenia "kiedy minie przeszkodę",
+        a następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
+        zestaw rur.
       courseC_flappy_events6: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy fruwa
         na małą lub dużą wysokość.
       courseC_flappy_events6_2018: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
         fruwa na małą lub dużą wysokość.
       courseC_flappy_events6_2019: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
+        fruwa na małą lub dużą wysokość.
+      courseC_flappy_events6_2020: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
         fruwa na małą lub dużą wysokość.
       courseC_flappy_events7: Następnie, spróbuj zmienić scenę dołączając inny blok
         do bloku "po uruchomieniu".
@@ -1257,11 +1463,15 @@ pl-PL:
         blok do bloku "po uruchomieniu".
       courseC_flappy_events7_2019: Następnie, spróbuj zmienić scenę dołączając inny
         blok do bloku "po uruchomieniu".
+      courseC_flappy_events7_2020: Następnie, spróbuj zmienić scenę dołączając inny
+        blok do bloku "po uruchomieniu".
       courseC_flappy_events8: Ustaw **losową** scenę podczas innego zdarzenia... na
         przykład po minięciu przeszkody.
       courseC_flappy_events8_2018: Ustaw **losową** scenę podczas innego zdarzenia...
         na przykład po minięciu przeszkody.
       courseC_flappy_events8_2019: Ustaw **losową** scenę podczas innego zdarzenia...
+        na przykład po minięciu przeszkody.
+      courseC_flappy_events8_2020: Ustaw **losową** scenę podczas innego zdarzenia...
         na przykład po minięciu przeszkody.
       courseC_flappy_events9: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
         ustawić wynik z powrotem na 0.
@@ -1269,44 +1479,59 @@ pl-PL:
         spróbuj ustawić wynik z powrotem na 0.
       courseC_flappy_events9_2019: Po uderzeniu w przeszkodę, zamiast kończyć grę,
         spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9_2020: Po uderzeniu w przeszkodę, zamiast kończyć grę,
+        spróbuj ustawić wynik z powrotem na 0.
       courseC_harvester_loops10: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops10_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops11_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops4_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops5_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops6_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops7_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2019: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops9_2020: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops_challenge1a: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a_2018: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a_2019: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge1a_2020: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
       courseC_harvester_loops_challenge2_2018: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
       courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
+      courseC_harvester_loops_challenge2_2020: Zbierz wszystkie sałaty. Unikaj drzew
+        i pól!
       courseC_maze_debugging_challenge1: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2018: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2019: _"Czy ja właśnie chodzę w kółko?"_
+      courseC_maze_debugging_challenge1_2020: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_programming1: W przypadku tej łamigłówki, przeciągnij wszystkie
         bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
       courseC_maze_programming1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie
         bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
       courseC_maze_programming1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming1_2020: W przypadku tej łamigłówki, przeciągnij wszystkie
         bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
       courseC_maze_programming2: Przeciągnij z przybornika dodatkowy blok "idź do
         przodu", aby ukończyć kod.
@@ -1314,23 +1539,31 @@ pl-PL:
         do przodu", aby ukończyć kod.
       courseC_maze_programming2_2019: Przeciągnij z przybornika dodatkowy blok "idź
         do przodu", aby ukończyć kod.
+      courseC_maze_programming2_2020: Przeciągnij z przybornika dodatkowy blok "idź
+        do przodu", aby ukończyć kod.
       courseC_maze_programming3: Jest jeden dodatkowy blok, który spowoduje wypadek
         ptaka. Wyrzuć go, przeciągając go z powrotem do przybornika.
       courseC_maze_programming3_2018: Jest jeden dodatkowy blok, który spowoduje wypadek
         ptaka. Wyrzuć go, przeciągając go z powrotem do przybornika.
       courseC_maze_programming3_2019: Jest jeden dodatkowy blok, który spowoduje wypadek
         ptaka. Wyrzuć go, przeciągając go z powrotem do przybornika.
+      courseC_maze_programming3_2020: Jest jeden dodatkowy blok, który spowoduje wypadek
+        ptaka. Wyrzuć go, przeciągając go z powrotem do przybornika.
       courseC_maze_programming4: Unikaj TNT lub pióra będą latać!
       courseC_maze_programming4_2018: Unikaj TNT lub pióra będą latać!
       courseC_maze_programming4_2019: Unikaj TNT lub pióra będą latać!
+      courseC_maze_programming4_2020: Unikaj TNT lub pióra będą latać!
       courseC_maze_programming5: Unikaj TNT.
       courseC_maze_programming5_2018: Unikaj TNT.
       courseC_maze_programming5_2019: Unikaj TNT.
+      courseC_maze_programming5_2020: Unikaj TNT.
       courseC_maze_programming6: '"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę.
         W przeciwnym razie mogę się rozgniewać!"'
       courseC_maze_programming6_2018: '"Zachowaj spokój i pomóż mi znaleźć tę złą
         świnkę. W przeciwnym razie mogę się rozgniewać!"'
       courseC_maze_programming6_2019: '"Zachowaj spokój i pomóż mi znaleźć tę złą
+        świnkę. W przeciwnym razie mogę się rozgniewać!"'
+      courseC_maze_programming6_2020: '"Zachowaj spokój i pomóż mi znaleźć tę złą
         świnkę. W przeciwnym razie mogę się rozgniewać!"'
       courseC_maze_programming7: "**Wyzwanie:** Ten kod zawiera wiele błędów. Musisz
         usunąć niektóre bloki i dodać inne."
@@ -1338,14 +1571,19 @@ pl-PL:
         Musisz usunąć niektóre bloki i dodać inne."
       courseC_maze_programming7_2019: "**Wyzwanie:** Ten kod zawiera wiele błędów.
         Musisz usunąć niektóre bloki i dodać inne."
+      courseC_maze_programming7_2020: "**Wyzwanie:** Ten kod zawiera wiele błędów.
+        Musisz usunąć niektóre bloki i dodać inne."
       courseC_maze_programming8: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
       courseC_maze_programming8_2018: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
       courseC_maze_programming8_2019: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_2020: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
       courseC_maze_programming8_predict1: _„Zachowaj spokój i pomóż mi znaleźć złą
         świnkę."_
       courseC_maze_programming8_predict1_2018: _„Zachowaj spokój i pomóż mi znaleźć
         złą świnkę."_
       courseC_maze_programming8_predict1_2019: _„Zachowaj spokój i pomóż mi znaleźć
+        złą świnkę."_
+      courseC_maze_programming8_predict1_2020: _„Zachowaj spokój i pomóż mi znaleźć
         złą świnkę."_
       courseC_maze_programming9: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
         sposób chcesz!”_
@@ -1353,18 +1591,90 @@ pl-PL:
         sposób chcesz!”_
       courseC_maze_programming9_2019: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
         sposób chcesz!”_
+      courseC_maze_programming9_2020: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
+      courseC_maze_programming_challenge1: Świnka się ukrywa, a celem jest jej znalezienie.
+      courseC_maze_programming_challenge1_2018: Świnka się ukrywa, a celem jest jej
+        znalezienie.
+      courseC_maze_programming_challenge1_2019: Świnka się ukrywa, a celem jest jej
+        znalezienie.
+      courseC_maze_programming_challenge1_2020: Świnka się ukrywa, a celem jest jej
+        znalezienie.
       courseC_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2018: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2019: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      courseC_maze_programming_challenge2_2020: Czasami jest więcej sposobów na rozwiązanie
+        tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      courseC_starWars_loops1: BB-8 podniesie każdy kawałek złomu, na jaki natrafi
+        na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby skłonić
+        BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
       courseC_starWars_loops10: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_2018: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_2019: Dobrze sobie radzisz! Oby tak dalej!
+      courseC_starWars_loops10_2020: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_predict2: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_predict2_2018: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_predict2_2019: Dobrze sobie radzisz! Oby tak dalej!
+      courseC_starWars_loops10_predict2_2020: Dobrze sobie radzisz! Oby tak dalej!
+      courseC_starWars_loops1_2018: BB-8 podniesie każdy kawałek złomu, na jaki natrafi
+        na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby skłonić
+        BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_2019: BB-8 podniesie każdy kawałek złomu, na jaki natrafi
+        na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby skłonić
+        BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_2020: BB-8 podniesie każdy kawałek złomu, na jaki natrafi
+        na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby skłonić
+        BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_predict1: BB-8 podniesie każdy kawałek złomu, na jaki
+        natrafi na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby
+        skłonić BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_predict1_2018: BB-8 podniesie każdy kawałek złomu, na
+        jaki natrafi na ścieżce, po której się porusza. Użyj 5 tych samych bloków,
+        aby skłonić BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_predict1_2019: BB-8 podniesie każdy kawałek złomu, na
+        jaki natrafi na ścieżce, po której się porusza. Użyj 5 tych samych bloków,
+        aby skłonić BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops1_predict1_2020: BB-8 podniesie każdy kawałek złomu, na
+        jaki natrafi na ścieżce, po której się porusza. Użyj 5 tych samych bloków,
+        aby skłonić BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
+      courseC_starWars_loops2: Aby uzyskać cały złom, spróbuj utworzyć pętlę, która
+        wykorzystuje tylko jeden blok w bloku „Powtarzaj”.
+      courseC_starWars_loops2_2018: Aby uzyskać cały złom, spróbuj utworzyć pętlę,
+        która wykorzystuje tylko jeden blok w bloku „Powtarzaj”.
+      courseC_starWars_loops2_2019: Aby uzyskać cały złom, spróbuj utworzyć pętlę,
+        która wykorzystuje tylko jeden blok w bloku „Powtarzaj”.
+      courseC_starWars_loops2_2020: Aby uzyskać cały złom, spróbuj utworzyć pętlę,
+        która wykorzystuje tylko jeden blok w bloku „Powtarzaj”.
+      courseC_starWars_loops2_copy: Aby uzyskać cały złom, spróbuj utworzyć pętlę,
+        która wykorzystuje tylko jeden blok w bloku „Powtarzaj”.
+      courseC_starWars_loops4: W tym zadaniu dwie pętle 'Powtórz' pomogą doprowadzić
+        BB-8 do całego złomu za pomocą mniejszej liczby bloków!
+      courseC_starWars_loops4_2018: W tym zadaniu dwie pętle 'Powtórz' pomogą doprowadzić
+        BB-8 do całego złomu za pomocą mniejszej liczby bloków!
+      courseC_starWars_loops4_2019: W tym zadaniu dwie pętle 'Powtórz' pomogą doprowadzić
+        BB-8 do całego złomu za pomocą mniejszej liczby bloków!
+      courseC_starWars_loops4_2020: W tym zadaniu dwie pętle 'Powtórz' pomogą doprowadzić
+        BB-8 do całego złomu za pomocą mniejszej liczby bloków!
+      courseC_starWars_loops4_copy: W tym zadaniu dwie pętle 'Powtórz' pomogą doprowadzić
+        BB-8 do całego złomu za pomocą mniejszej liczby bloków!
+      courseC_starWars_loops5: Spraw, by BB-8 zebrał cały złom jak najszybciej!
+      courseC_starWars_loops5_2018: Spraw, by BB-8 zebrał cały złom jak najszybciej!
+      courseC_starWars_loops5_2019: Spraw, by BB-8 zebrał cały złom jak najszybciej!
+      courseC_starWars_loops5_2020: Spraw, by BB-8 zebrał cały złom jak najszybciej!
+      courseC_starWars_loops5_copy: Spraw, by BB-8 zebrał cały złom jak najszybciej!
+      courseC_starWars_loops6: Pętle działają  nawet z wieloma blokami w środku. Czy
+        potrafisz umieścić pętlę w tym ciągu?
+      courseC_starWars_loops6_2018: Pętle działają  nawet z wieloma blokami w środku.
+        Czy potrafisz umieścić pętlę w tym ciągu?
+      courseC_starWars_loops6_2019: Pętle działają  nawet z wieloma blokami w środku.
+        Czy potrafisz umieścić pętlę w tym ciągu?
+      courseC_starWars_loops6_2020: Pętle działają  nawet z wieloma blokami w środku.
+        Czy potrafisz umieścić pętlę w tym ciągu?
+      courseC_starWars_loops6_copy: Pętle działają  nawet z wieloma blokami w środku.
+        Czy potrafisz umieścić pętlę w tym ciągu?
       courseD_artist_binary1: "Kod binarny to sposób reprezentowania informacji przy
         użyciu tylko dwóch stanów. Tutaj będziemy używać stanu \"off\" (wyłączony),
         reprezentowanego przez 0, i \"on\" (włączony), reprezentowanego przez 1).
@@ -1383,11 +1693,19 @@ pl-PL:
         \\\r \\\r Udostępniliśmy Ci siatkę \"pikseli\", po której możesz chodzić i
         tworzyć wzory przez włączanie pewnych kwadratów. Czy mógłbyś spowodować, by
         artysta narysował \"01010101\" binarnie w pierwszym rzędzie?"
+      courseD_artist_binary1_2020: "Kod binarny to sposób reprezentowania informacji
+        przy użyciu tylko dwóch stanów. Tutaj będziemy używać stanu \"off\" (wyłączony),
+        reprezentowanego przez 0, i \"on\" (włączony), reprezentowanego przez 1).
+        \\\r \\\r Udostępniliśmy Ci siatkę \"pikseli\", po której możesz chodzić i
+        tworzyć wzory przez włączanie pewnych kwadratów. Czy mógłbyś spowodować, by
+        artysta narysował \"01010101\" binarnie w pierwszym rzędzie?"
       courseD_artist_binary4: Czy potrafisz narysować ten wzorek powtarzając binarny
         łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_artist_binary4_2018: Czy potrafisz narysować ten wzorek powtarzając
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_artist_binary4_2019: Czy potrafisz narysować ten wzorek powtarzając
+        binarny łańcuch złożony z trzech cyfr (0 lub 1)?
+      courseD_artist_binary4_2020: Czy potrafisz narysować ten wzorek powtarzając
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_artist_binary6: Który 6-cyfrowy binarny łańcuch, powtórzony 11 razy,
         narysuje ten obraz?
@@ -1395,26 +1713,36 @@ pl-PL:
         razy, narysuje ten obraz?
       courseD_artist_binary6_2019: Który 6-cyfrowy binarny łańcuch, powtórzony 11
         razy, narysuje ten obraz?
+      courseD_artist_binary6_2020: Który 6-cyfrowy binarny łańcuch, powtórzony 11
+        razy, narysuje ten obraz?
       courseD_artist_binary7: Jaki jest najkrótszy łańcuch binarny, który możesz powtórzyć,
         by narysować ten obraz?
       courseD_artist_binary7_2018: Jaki jest najkrótszy łańcuch binarny, który możesz
         powtórzyć, by narysować ten obraz?
       courseD_artist_binary7_2019: Jaki jest najkrótszy łańcuch binarny, który możesz
         powtórzyć, by narysować ten obraz?
+      courseD_artist_binary7_2020: Jaki jest najkrótszy łańcuch binarny, który możesz
+        powtórzyć, by narysować ten obraz?
       courseD_artist_binary8: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_2018: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_2019: Ukończ kod, aby utworzyć ten rysunek.
+      courseD_artist_binary8_2020: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_predict1: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_predict1_2018: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_predict1_2019: Ukończ kod, aby utworzyć ten rysunek.
+      courseD_artist_binary8_predict1_2020: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binaryFP8: "**Czas na zabawę:** Narysuj binarnie cokolwiek chcesz! "
       courseD_artist_binary_challenge1_2018: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_artist_binary_challenge1_2019: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
+      courseD_artist_binary_challenge1_2020: Możesz użyć tylko binarnych wartości
+        (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_artist_binary_challenge2_2018: Czy jesteś wystarczająco wytrwały, aby
         przywrócić to logo do normy?
       courseD_artist_binary_challenge2_2019: Czy jesteś wystarczająco wytrwały, aby
+        przywrócić to logo do normy?
+      courseD_artist_binary_challenge2_2020: Czy jesteś wystarczająco wytrwały, aby
         przywrócić to logo do normy?
       courseD_artist_nestedLoops9: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść do tego
         jak utworzyć obrazek taki jak ten?"
@@ -1422,11 +1750,15 @@ pl-PL:
         do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_2019: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
+      courseD_artist_nestedLoops9_2020: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
+        do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_predict1: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_predict1_2018: "\\*\\* Wyzwanie: \\*\\* Czy możesz
         dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_predict1_2019: "\\*\\* Wyzwanie: \\*\\* Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
+      courseD_artist_nestedLoops9_predict1_2020: "\\*\\* Wyzwanie: \\*\\* Czy możesz
         dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops_challenge1: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
@@ -1434,20 +1766,27 @@ pl-PL:
         dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops_challenge1_2019: "\\*\\* Wyzwanie: \\*\\* Czy możesz
         dojść do tego jak utworzyć obrazek taki jak ten?"
+      courseD_artist_nestedLoops_challenge1_2020: "\\*\\* Wyzwanie: \\*\\* Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops_challenge2: Napraw kod, aby utworzyć ten rysunek!
       courseD_artist_nestedLoops_challenge2_2018: Napraw kod, aby utworzyć ten rysunek!
       courseD_artist_nestedLoops_challenge2_2019: Napraw kod, aby utworzyć ten rysunek!
+      courseD_artist_nestedLoops_challenge2_2020: Napraw kod, aby utworzyć ten rysunek!
       courseD_artist_project1: 'Narysuj mały kształt, szeroki na  **20 do 50** pikseli.
         To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project1_2018: 'Narysuj mały kształt, szeroki na  **20 do 50**
         pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project1_2019: 'Narysuj mały kształt, szeroki na  **20 do 50**
         pikseli. To może być kształt jakikolwiek chcesz.  '
+      courseD_artist_project1_2020: 'Narysuj mały kształt, szeroki na  **20 do 50**
+        pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project2: Teraz weź swój kształt i narysuj go dwa lub trzy z
         rzędu!
       courseD_artist_project2_2018: Teraz weź swój kształt i narysuj go dwa lub trzy
         z rzędu!
       courseD_artist_project2_2019: Teraz weź swój kształt i narysuj go dwa lub trzy
+        z rzędu!
+      courseD_artist_project2_2020: Teraz weź swój kształt i narysuj go dwa lub trzy
         z rzędu!
       courseD_autorun_binary4_2019: Czy potrafisz narysować ten wzorek powtarzając
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
@@ -1463,6 +1802,8 @@ pl-PL:
         Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_2019: Sprawdź, czy pod chmurką jest kwiat.
         Jeśli jest, zbierz nektar.
+      courseD_bee_conditionals1_predict1_2020: Sprawdź, czy pod chmurką jest kwiat.
+        Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_copy: Sprawdź, czy pod chmurką jest kwiat.
         Jeśli jest, zbierz nektar.
       courseD_bee_conditionals7: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać
@@ -1471,11 +1812,15 @@ pl-PL:
         zebrać nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_2019: Użyj bloku 'jeśli/w przeciwnym razie', żeby
         zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_2020: Użyj bloku 'jeśli/w przeciwnym razie', żeby
+        zebrać nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_predict2: Użyj bloku 'jeśli/w przeciwnym razie', żeby
         zebrać nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_predict2_2018: Użyj bloku 'jeśli/w przeciwnym razie',
         żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_predict2_2019: Użyj bloku 'jeśli/w przeciwnym razie',
+        żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_predict2_2020: Użyj bloku 'jeśli/w przeciwnym razie',
         żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals8: |-
         Zbierz nektar jeśli to kwiatek.
@@ -1486,15 +1831,21 @@ pl-PL:
       courseD_bee_conditionals8_2019: |-
         Zbierz nektar jeśli to kwiatek.
         W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
+      courseD_bee_conditionals8_2020: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
       courseD_bee_conditionals9: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals9_2018: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals9_2019: Zbierz cały nektar i zrób cały miód.
+      courseD_bee_conditionals9_2020: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge1: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge1_2018: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge1_2019: Zbierz cały nektar i zrób cały miód.
+      courseD_bee_conditionals_challenge1_2020: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge2: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge2_2018: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals_challenge2_2019: Zbierz cały nektar i zrób cały miód.
+      courseD_bee_conditionals_challenge2_2020: Zbierz cały nektar i zrób cały miód.
       courseD_bee_debugging_challenge1: Zobacz, jak pszczółka zbiera nektar. Czy dasz
         radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_debugging_challenge1a: Zobacz, jak pszczółka zbiera nektar. Czy
@@ -1502,14 +1853,18 @@ pl-PL:
       courseD_bee_nestedLoops1: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops1_2018: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops1_2019: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1_2020: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops1a: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops1a_2018: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops1a_2019: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1a_2020: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops2: Tym raze, pomóż pszczołom zebrać cały nektar używając
         jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2018: Tym raze, pomóż pszczołom zebrać cały nektar
         używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2019: Tym raze, pomóż pszczołom zebrać cały nektar
+        używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_2020: Tym raze, pomóż pszczołom zebrać cały nektar
         używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1: Tym raze, pomóż pszczołom zebrać cały nektar
         używając jak najmniejszej liczby bloków.
@@ -1517,41 +1872,58 @@ pl-PL:
         nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1_2019: Tym raze, pomóż pszczołom zebrać cały
         nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_predict1_2020: Tym raze, pomóż pszczołom zebrać cały
+        nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops8: "Zbierz cały nektar z każdego kwiatka i zrób miód
         na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_2018: "Zbierz cały nektar z każdego kwiatka i zrób
         miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_2019: "Zbierz cały nektar z każdego kwiatka i zrób
         miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
+      courseD_bee_nestedLoops8_2020: "Zbierz cały nektar z każdego kwiatka i zrób
+        miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_collector_debugging1: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging1a_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging1a_2019: Napraw błędy, aby zebrać wszystkie skarby.
+      courseD_collector_debugging1a_2020: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging2: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging2a_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging2a_2019: Napraw błędy, aby zebrać wszystkie skarby.
+      courseD_collector_debugging2a_2020: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging3: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging3a_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging3a_2019: Napraw błędy, aby zebrać wszystkie skarby.
+      courseD_collector_debugging3a_2020: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging4: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging4a_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging4a_2019: Napraw błędy, aby zebrać wszystkie skarby.
+      courseD_collector_debugging4a_2020: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging6: 'Wyzwanie: Użyj swoich umiejętności debugowania,
         aby naprawić błędy i zebrać cały skarb.'
       courseD_collector_debugging6a_2018: 'Wyzwanie: Użyj kodu w obszarze roboczym,
         aby uzyskać co najmniej **6** części skarbu!'
       courseD_collector_debugging6a_2019: 'Wyzwanie: Użyj kodu w obszarze roboczym,
         aby uzyskać co najmniej **6** części skarbu!'
+      courseD_collector_debugging6a_2020: 'Wyzwanie: Użyj kodu w obszarze roboczym,
+        aby uzyskać co najmniej **6** części skarbu!'
       courseD_collector_debugging_challenge2: Czy jesteś ekspertem od zagnieżdżonych
         pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały skarb!
+      courseD_collector_ramp10: Pomóż Laurel zebrać cały skarb.
+      courseD_collector_ramp8: Pomóż Laurel zebrać cały skarb.
+      courseD_collector_ramp9: Pomóż Laurel zebrać cały skarb.
       courseD_farmer_condLoops5: Zbierz całą kukurydzę oraz sałatę, a na koniec dynie.
       courseD_farmer_condLoops5_2018: Zbierz całą kukurydzę oraz sałatę, a na koniec
         dynie.
       courseD_farmer_condLoops5_2019: Zbierz całą kukurydzę oraz sałatę, a na koniec
         dynie.
+      courseD_farmer_condLoops5_2020: Zbierz całą kukurydzę oraz sałatę, a na koniec
+        dynie.
       courseD_farmer_condLoops_challenge2: Zbierz wszystko, aby ukończyć ten poziom.
       courseD_farmer_condLoops_challenge2_2018: Zbierz wszystko, aby ukończyć ten
         poziom.
       courseD_farmer_condLoops_challenge2_2019: Zbierz wszystko, aby ukończyć ten
+        poziom.
+      courseD_farmer_condLoops_challenge2_2020: Zbierz wszystko, aby ukończyć ten
         poziom.
       courseD_farmer_while_challenge1: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
@@ -1559,10 +1931,14 @@ pl-PL:
         stosy.
       courseD_farmer_while_challenge1_2019: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
+      courseD_farmer_while_challenge1_2020: Wypełnij wszystkie dziury i usuń wszystkie
+        stosy.
       courseD_farmer_while_challenge2: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
       courseD_maze_intro4_2019: Pomóż Redowi dotrzeć do świnki.
+      courseD_maze_intro4_2020: Pomóż Redowi dotrzeć do świnki.
       courseD_maze_intro5c_2019: Uważaj na TNT! Pomóż Redowi dotrzeć do świnki.
+      courseD_maze_intro5c_2020: Uważaj na TNT! Pomóż Redowi dotrzeć do świnki.
       courseD_maze_nestedLoops4: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
@@ -1570,6 +1946,9 @@ pl-PL:
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_nestedLoops4_2019: "Doprowadź mnie do słonecznika używając możliwie
+        najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
+        innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
+      courseD_maze_nestedLoops4_2020: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_nestedLoops6: "Sprowadźmy to na inny poziom! \\\r Użyj pętli, aby
@@ -1580,22 +1959,29 @@ pl-PL:
       courseD_maze_nestedLoops6_2019: "Sprowadźmy to na inny poziom! \\\r Użyj pętli,
         aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby
         bloków."
+      courseD_maze_nestedLoops6_2020: "Sprowadźmy to na inny poziom! \\\r Użyj pętli,
+        aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby
+        bloków."
       courseD_maze_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
         razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseD_maze_ramp1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
         razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseD_maze_ramp1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
         razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp1_2020: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseD_maze_ramp3: Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.
         Wyrzuć go, przeciągając go z powrotem do przybornika.
       courseD_maze_ramp3_2018: Jest jeden dodatkowy blok, który spowoduje wypadek
         ptaka. Wyrzuć go, przeciągając go z powrotem do przybornika.
       courseD_maze_ramp3_2019: Usuń nadmiarowy blok "przesuń do przodu".
+      courseD_maze_ramp3_2020: Usuń nadmiarowy blok "przesuń do przodu".
       courseD_maze_ramp4: Unikaj TNT lub pióra będą latać!
       courseD_maze_ramp4_2018: Unikaj TNT lub pióra będą latać!
       courseD_maze_ramp5: Unikaj TNT.
       courseD_maze_ramp5_2018: Unikaj TNT.
       courseD_maze_ramp5_2019: Unikaj TNT.
+      courseD_maze_ramp5_2020: Unikaj TNT.
       courseD_maze_ramp5a: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz dojść
         do tej świnki!
       courseD_maze_ramp5a_2018: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz
@@ -1605,6 +1991,8 @@ pl-PL:
       courseD_maze_ramp5b_2018: Poruszaj się w tym labiryncie, aby pomóc ptakowi znaleźć
         świnkę!
       courseD_maze_ramp5b_2019: Poruszaj się w tym labiryncie, aby pomóc ptakowi znaleźć
+        świnkę!
+      courseD_maze_ramp5b_2020: Poruszaj się w tym labiryncie, aby pomóc ptakowi znaleźć
         świnkę!
       courseD_maze_ramp5c: Doprowadź ptaka do świnki.
       courseD_maze_ramp5c_2018: Doprowadź ptaka do świnki.
@@ -1628,6 +2016,8 @@ pl-PL:
       courseE_artist_functions2_2018: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
       courseE_artist_functions2_2019: 'Tym razem użyj funkcji `draw a square`, aby
+        utworzyć okulary. '
+      courseE_artist_functions2_2020: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
       courseE_artist_ramp9: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
         trójkąt.
@@ -1657,14 +2047,19 @@ pl-PL:
         poziomu, aby to otrzymać!
       courseF_artist_for7_2019: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
         poziomu, aby to otrzymać!
+      courseF_artist_for7_2020: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
+        poziomu, aby to otrzymać!
       courseF_artist_for_challenge1: Czy wiesz, jak odtworzyć ten rysunek?
       courseF_artist_for_challenge1_2018: Czy wiesz, jak odtworzyć ten rysunek?
       courseF_artist_for_challenge1_2019: Czy wiesz, jak odtworzyć ten rysunek?
+      courseF_artist_for_challenge1_2020: Czy wiesz, jak odtworzyć ten rysunek?
       courseF_artist_for_challenge2: Czy wiesz, jak odtworzyć ten rysunek używając
         pojedynczej pętli?
       courseF_artist_for_challenge2_2018: Czy wiesz, jak odtworzyć ten rysunek używając
         pojedynczej pętli?
       courseF_artist_for_challenge2_2019: Czy wiesz, jak odtworzyć ten rysunek używając
+        pojedynczej pętli?
+      courseF_artist_for_challenge2_2020: Czy wiesz, jak odtworzyć ten rysunek używając
         pojedynczej pętli?
       courseF_bee_conditionals1_predict1: Sprawdź, czy pod chmurką jest kwiat. Jeśli
         jest, zbierz nektar.
@@ -1677,17 +2072,22 @@ pl-PL:
       courseF_bee_for4: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for4_2018: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for4_2019: Pomóż pszczółce zebrać cały nektar.
+      courseF_bee_for4_2020: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for8: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6,
         9, 12, 15 nektarów?
       courseF_bee_for8_2018: Masz teraz to! Jaki powinien być przyrost, aby zebrać
         3, 6, 9, 12, 15 nektarów?
       courseF_bee_for8_2019: Masz teraz to! Jaki powinien być przyrost, aby zebrać
         3, 6, 9, 12, 15 nektarów?
+      courseF_bee_for8_2020: Masz teraz to! Jaki powinien być przyrost, aby zebrać
+        3, 6, 9, 12, 15 nektarów?
       courseF_bee_for_challenge2: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_for_challenge2_2018: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_for_challenge2_2019: Rozwiąż tę łamigłówkę używając jak najmniejszej
+        liczby bloków.
+      courseF_bee_for_challenge2_2020: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_functions3a: Napisz funkcję, dzięki której pszczółka zbiera nektar,
         jeśli jest na kwiatku, a w przeciwnym razie robi miód. Użyj swojej funkcji
@@ -1789,6 +2189,18 @@ pl-PL:
       frozen square snowflake: Czy potrafisz narysować śnieżynkę używając bloku "powtórz",
         powtarzając tworzenie kwadratu 10 razy i bloku "skręć" aby obrócić się o 36
         stopni po każdym kwadracie?
+      grade2_collector_10: Już prawie gotowe! Zbierz tyle elementów skarbu, ile się
+        da, abyś mógł ukończyć ten etap!
+      grade2_collector_10_2018: Już prawie gotowe! Zbierz tyle elementów skarbu, ile
+        się da, abyś mógł ukończyć ten etap!
+      grade2_collector_10_2019: Już prawie gotowe! Zbierz tyle elementów skarbu, ile
+        się da, abyś mógł ukończyć ten etap!
+      grade2_collector_10_2020: Już prawie gotowe! Zbierz tyle elementów skarbu, ile
+        się da, abyś mógł ukończyć ten etap!
+      grade2_collector_A: Pomóż Laurel zebrać cały skarb.
+      grade2_collector_A_2018: Pomóż Laurel zebrać cały skarb.
+      grade2_collector_A_2019: Pomóż Laurel zebrać cały skarb.
+      grade2_collector_A_2020: Pomóż Laurel zebrać cały skarb.
       grade5_artist_binary11: 'Czas na zabawę: Tutaj jest dla Ciebie czyste płótno
         do rysowania na nim. Dobrej zabawy!'
       grade5_artist_binary4: Czy potrafisz narysować ten wzorek powtarzając binarny
@@ -1811,22 +2223,31 @@ pl-PL:
         łamigłówkę.
       ramp_artist_loops1_2019: Przesuń się do przodu o 60 pikseli, aby ukończyć tę
         łamigłówkę.
+      ramp_artist_loops1_2020: Przesuń się do przodu o 60 pikseli, aby ukończyć tę
+        łamigłówkę.
       ramp_artist_loops2: Przesuń się do przodu pięć razy i utwórz tę kolorową linię.
       ramp_artist_loops2_2018: Przesuń się do przodu pięć razy i utwórz tę kolorową
         linię.
       ramp_artist_loops2_2019: Przesuń się do przodu pięć razy i utwórz tę kolorową
+        linię.
+      ramp_artist_loops2_2020: Przesuń się do przodu pięć razy i utwórz tę kolorową
         linię.
       ramp_artist_loops3: Użyj pętli `powtarzaj` do narysowania 5 kolorowych kresek.
       ramp_artist_loops3_2018: Użyj pętli `powtarzaj` do narysowania 5 kolorowych
         kresek.
       ramp_artist_loops3_2019: Użyj pętli `powtarzaj` do narysowania 5 kolorowych
         kresek.
+      ramp_artist_loops3_2020: Użyj pętli `powtarzaj` do narysowania 5 kolorowych
+        kresek.
       ramp_artist_loops5: Użyj pętli do narysowania tych schodów.
       ramp_artist_loops5_2018: Użyj pętli do narysowania tych schodów.
       ramp_artist_loops5_2019: Użyj pętli do narysowania tych schodów.
+      ramp_artist_loops5_2020: Użyj pętli do narysowania tych schodów.
       ramp_artist_loops6: Edytuj swoją pętlę, by narysować te schody.
       ramp_artist_loops6_2018: Edytuj swoją pętlę, by narysować te schody.
       ramp_artist_loops6_2019: Edytuj swoją pętlę, by narysować te schody.
+      ramp_artist_loops6_2020: Edytuj swoją pętlę, by narysować te schody.
       ramp_artist_loops9: Rozwiąż to zadanie rysując kwadrat.
       ramp_artist_loops9_2018: Rozwiąż to zadanie rysując kwadrat.
       ramp_artist_loops9_2019: Rozwiąż to zadanie rysując kwadrat.
+      ramp_artist_loops9_2020: Rozwiąż to zadanie rysując kwadrat.

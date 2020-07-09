@@ -428,13 +428,6 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-          lessons:
-            Variables:
-              name: Variables
         csp5-virtual:
           stages:
             Variables:
@@ -442,3 +435,25 @@ my:
           lessons:
             Variables:
               name: Variables
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ

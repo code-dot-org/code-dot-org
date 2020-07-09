@@ -3695,22 +3695,6 @@ kk:
           lessons:
             Creating Functions:
               name: Функцияларды Құру
-        csd3-virtual:
-          description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
-          lessons:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
         csp5-virtual:
           stages:
             While Loops:
@@ -3750,3 +3734,57 @@ kk:
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Ілмек
+            Events:
+              name: Шаралар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
+          lessons:
+            Loops:
+              name: Ілмек
+            Events:
+              name: Шаралар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
+        csd3-virtual:
+          description_short: "Бағдарламалау"
+          stages:
+            Variables:
+              name: Айнымалылар
+            Text:
+              name: Мәтін
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+          lessons:
+            Variables:
+              name: Айнымалылар
+            Text:
+              name: Мәтін
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+          lesson_groups:
+            csd3_1:
+              display_name: Контент
+            csd3_2:
+              display_name: Контент
+            cspSurvey:
+              display_name: Контент

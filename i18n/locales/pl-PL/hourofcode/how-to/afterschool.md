@@ -28,7 +28,7 @@ Promuj swoją Godzinę Kodowania [przy pomocy tych narzędzi]({{ urls/promote }}
 
 ## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
-Najlepsze doświadczenia z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale **nie** potrzebujesz komputera dla każdego ucznia, możesz przeprowadzić Godzinę Kodowania nawet bez żadnych komputerów.
+Najlepsze efekty z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale **nie** potrzebujesz komputera dla każdego ucznia, możesz przeprowadzić Godzinę Kodowania nawet bez żadnych komputerów.
 
 Przetestuj samouczki na komputerach lub innych urządzeniach uczniów, aby upewnić się, że działają poprawnie w przeglądarkach z dźwiękiem i wideo. **Jeśli masz zbyt wolne łącze internetowe,** to pokazuj filmy przed całą klasą, aby każdy uczeń nie musiał pobierać swojego filmu. Lub wypróbuj samouczki bez komputerów lub z komputerami bez dostępu do sieci.
 

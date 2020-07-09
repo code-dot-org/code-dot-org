@@ -46,8 +46,8 @@
     "makerlab_enabled": "false",
     "palette_category_at_start": "variables",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
-      "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
     ],
     "mini_rubric": "false",
     "slider_speed": "0.2",

@@ -17,8 +17,9 @@ it-IT:
       AppLab Intro 7 - thisOrThatAddScreen: Questo o Quello
       AppLab Intro 7 - thisOrThatPersonalize: Questo o Quello
       AppLab Intro 7 - thisOrThatSetScreen: Questo o Quello
-      CDEF_video_SpritesInAction: Come fare un Personaggio
-      CDEF_video_SpritesInAction_2019: Come fare un Personaggio
+      CDEF_video_SpritesInAction: Come creare un personaggio
+      CDEF_video_SpritesInAction_2019: Come creare un personaggio
+      CDEF_video_SpritesInAction_2020: Come creare un personaggio
       CSD Problem Solving Process Video: 'Video: Processo di Risoluzione Problemi'
       CSD U1L02 TFMD_2018: Panoramica della Lezione
       CSD U1L02 TFMD_2019: Panoramica della Lezione
@@ -309,13 +310,21 @@ it-IT:
       'Course F: Artist Project - Revise_2018': 'Riesamina il tuo progetto con l''Artista '
       'Course F: Artist Project_2018': 'Corso F: Progetto con l''Artista'
       'Course F: Artist Project_2019': 'Corso F: Progetto con l''Artista'
+      CourseD_Dance_2020_bonus1: Avanti e indietro!
+      CourseD_Dance_2020_bonus3: Tutti in formazione!
       CourseEF_video_IntroSpriteLab: Questo è il Laboratorio dei personaggi
       CourseEF_video_IntroSpriteLab_2019: Questo è il Laboratorio dei personaggi
-      CourseEF_video_MakeSprite: Come fare un Personaggio
-      CourseEF_video_MakeSprite_2019: Come fare un Personaggio
+      CourseEF_video_IntroSpriteLab_2020: Questo è il Laboratorio dei personaggi
+      CourseEF_video_MakeSprite: Come creare un personaggio
+      CourseEF_video_MakeSprite_2019: Come creare un personaggio
+      CourseEF_video_MakeSprite_2020: Come creare un personaggio
       CourseE_Project_SpriteLab: 'Corso E: Progetto nel Laboratorio dei personaggi'
       CourseE_Project_SpriteLab_2019: 'Corso E: Progetto nel Laboratorio dei personaggi'
       CourseE_hoops: Flipper
+      CourseF_Oceans_Video_Machine_Learning: 'Video: Cos''è l''Apprendimento Automatico
+        (Machine Learning)'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: Ripercussioni sociali'
+      CourseF_Oceans_Video_Training_Data: 'Video: Dati di apprendimento e distorsioni'
       CourseF_Project_Revise_SpriteLab: Riesamina il tuo progetto nel Laboratorio
         dei personaggi
       CourseF_Project_SpriteLab: 'Corso F: Progetto nel Laboratorio dei personaggi'
@@ -344,10 +353,11 @@ it-IT:
       Intro to Web Lab - Part 2_2019: 'Video: Introduzione a Web Lab - Parte 2'
       MC_HOC_2017_FP20x20: Tempo di giocare
       MC_HOC_2017_FP20x20_2019: Tempo di giocare
+      MC_HOC_2017_FP20x20_2020: Tempo di giocare
       New Minecraft Hero Project: Tempo di giocare
       OPD-K5 WhatIsCS: Cos'è l'informatica?
       OPD-K5 WhatIsCS_copy: Cos'è l'informatica?
-      OPD-K5-spritelab-5-video: Come fare un Personaggio
+      OPD-K5-spritelab-5-video: Come creare uno Sprite
       Oceans_Video_Machine_Learning: 'Video: Cos''è l''Apprendimento Automatico (Machine
         Learning)'
       Oceans_Video_Societal_Implications: 'Video: Ripercussioni sociali'
@@ -365,3 +375,4 @@ it-IT:
       csd-pre-survey-levelgroup_2019: Panoramica della Lezione
       scrat_loops_C-F_video: 'Video: Cicli con l''Era Glaciale'
       scrat_loops_C-F_video_2019: 'Video: Cicli con l''Era Glaciale'
+      scrat_loops_C-F_video_2020: 'Video: Cicli con l''Era Glaciale'

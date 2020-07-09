@@ -809,17 +809,6 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        csd3-virtual:
-          stages:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         csp5-virtual:
           stages:
             Variables:
@@ -834,3 +823,37 @@ ur:
           lessons:
             Events:
               name: ایونٹس/واقعات
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+          lessons:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط

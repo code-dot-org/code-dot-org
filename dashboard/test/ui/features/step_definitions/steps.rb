@@ -1787,6 +1787,17 @@ Then /^I navigate to the saved URL$/ do
   steps %Q{Then I am on "#{saved_url}"}
 end
 
+channel_id = nil
+Then /^I save the channel id$/ do
+  channel_id = @browser.execute_script('return (appOptions && appOptions.channel)')
+end
+
+And /^I type the saved channel id into element "([^"]*)"/ do |selector|
+  individual_steps %Q{
+    And I press keys "#{channel_id}" for element "#{selector}"
+  }
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;
@@ -1807,6 +1818,13 @@ Then /^I open the Manage Assets dialog$/ do
   steps <<-STEPS
     Then I click selector ".settings-cog"
     And I click selector ".pop-up-menu-item"
+  STEPS
+end
+
+Then /^I open the Manage Libraries dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item:contains(Manage Libraries)"
   STEPS
 end
 

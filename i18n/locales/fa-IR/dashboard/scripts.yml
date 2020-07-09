@@ -3700,22 +3700,6 @@ fa:
           lessons:
             Creating Functions:
               name: ساختن تابع ها
-        csd3-virtual:
-          description_short: "برنامه نویسی"
-          stages:
-            Variables:
-              name: متغیرها
-            Conditionals:
-              name: شرطی ها
-            Functions:
-              name: توابع
-          lessons:
-            Variables:
-              name: متغیرها
-            Conditionals:
-              name: شرطی ها
-            Functions:
-              name: توابع
         csp5-virtual:
           stages:
             While Loops:
@@ -3752,3 +3736,50 @@ fa:
           lessons:
             While Loops:
               name: حلقه ها ی While
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+          lessons:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+        csd3-virtual:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Text:
+              name: متن
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+          lessons:
+            Variables:
+              name: متغیرها
+            Text:
+              name: متن
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع

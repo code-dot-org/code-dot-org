@@ -3715,22 +3715,6 @@ da:
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
-        csd3-virtual:
-          description_short: Programmering
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
-          lessons:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
         csp5-virtual:
           stages:
             While Loops:
@@ -3767,3 +3751,54 @@ da:
           lessons:
             While Loops:
               name: Mens løkker
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab
+        csd3-virtual:
+          description_short: Programmering
+          stages:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+          lessons:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner

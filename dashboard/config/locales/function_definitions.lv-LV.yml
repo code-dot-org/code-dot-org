@@ -305,6 +305,9 @@ lv-LV:
       Function intro Ryan_2019:
         build bridge:
           name: būvēt tiltu
+      Function intro Ryan_2020:
+        build bridge:
+          name: būvēt tiltu
       Geometric Sun:
         draw a door:
           name: zīmēt durvis
@@ -378,12 +381,20 @@ lv-LV:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: atbrīvot ceļu
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: atbrīvot ceļu
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: labot garo ceļu
         fix short path:
           name: labot īso ceļu
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: labot garo ceļu
+        fix short path:
+          name: labot īso ceļu
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: labot garo ceļu
         fix short path:
@@ -398,12 +409,22 @@ lv-LV:
           name: būvēt īsu tiltu
         build long bridge:
           name: būvēt garu tiltu
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: būvēt īsu tiltu
+        build long bridge:
+          name: būvēt garu tiltu
       MC_HOC_2017_FP20x20:
         function 1:
           name: funkcija 1
         function 2:
           name: funkcija 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: funkcija 1
+        function 2:
+          name: funkcija 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: funkcija 1
         function 2:
@@ -680,7 +701,14 @@ lv-LV:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: kaut ko
+      courseC_data wizard_2020:
         do something:
           name: kaut ko
       courseD_artist_binary1:
@@ -692,6 +720,9 @@ lv-LV:
       courseD_artist_binary1_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary1_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binary2:
         draw:
           name: zīmēt
@@ -699,6 +730,9 @@ lv-LV:
         draw:
           name: zīmēt
       courseD_artist_binary2_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binary2_2020:
         draw:
           name: zīmēt
       courseD_artist_binary3:
@@ -710,6 +744,9 @@ lv-LV:
       courseD_artist_binary3_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary3_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binary4:
         draw:
           name: zīmēt
@@ -717,6 +754,9 @@ lv-LV:
         draw:
           name: zīmēt
       courseD_artist_binary4_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binary4_2020:
         draw:
           name: zīmēt
       courseD_artist_binary5:
@@ -728,6 +768,9 @@ lv-LV:
       courseD_artist_binary5_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary5_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binary6:
         draw:
           name: zīmēt
@@ -735,6 +778,9 @@ lv-LV:
         draw:
           name: zīmēt
       courseD_artist_binary6_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binary6_2020:
         draw:
           name: zīmēt
       courseD_artist_binary7:
@@ -746,6 +792,9 @@ lv-LV:
       courseD_artist_binary7_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary7_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binary8:
         draw:
           name: zīmēt
@@ -753,6 +802,9 @@ lv-LV:
         draw:
           name: zīmēt
       courseD_artist_binary8_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binary8_2020:
         draw:
           name: zīmēt
       courseD_artist_binary8_predict1:
@@ -764,10 +816,16 @@ lv-LV:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binaryFP_2018:
         draw:
           name: zīmēt
       courseD_artist_binaryFP_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binaryFP_2020:
         draw:
           name: zīmēt
       courseD_artist_binary_challenge1_2018:
@@ -776,10 +834,16 @@ lv-LV:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: zīmēt
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: zīmēt
       courseD_artist_binary_challenge2_2018:
         draw:
           name: zīmēt
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: zīmēt
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: zīmēt
       courseD_autorun_binary2_2019:
@@ -839,6 +903,9 @@ lv-LV:
       courseE_artist_functions10_2019:
         do something:
           name: kaut ko
+      courseE_artist_functions10_2020:
+        do something:
+          name: kaut ko
       courseE_artist_functions2:
         draw a square:
           name: zīmēt kvadrātu
@@ -848,6 +915,9 @@ lv-LV:
       courseE_artist_functions2_2019:
         draw a square:
           name: zīmēt kvadrātu
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: zīmēt kvadrātu
       courseE_artist_functions2_copy:
         draw a square:
           name: zīmēt kvadrātu
@@ -855,6 +925,9 @@ lv-LV:
         draw a star:
           name: zīmet zvaigzni
       courseE_artist_functions3_2019:
+        draw a star:
+          name: zīmet zvaigzni
+      courseE_artist_functions3_2020:
         draw a star:
           name: zīmet zvaigzni
       courseE_artist_functions4:
@@ -872,6 +945,9 @@ lv-LV:
       courseE_artist_functions5_2019:
         draw a star:
           name: zīmet zvaigzni
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: zīmet zvaigzni
       courseE_artist_functions5_copy:
         draw a star:
           name: zīmet zvaigzni
@@ -879,6 +955,9 @@ lv-LV:
         draw a house:
           name: zīmēt māju
       courseE_artist_functions7_2018:
+        draw a house:
+          name: zīmēt māju
+      courseE_artist_functions7_2020:
         draw a house:
           name: zīmēt māju
       courseE_artist_functions8:
@@ -902,12 +981,24 @@ lv-LV:
           name: zīmēt kvadrātu rindu
         draw square:
           name: zīmēt kvadrātu
+      courseE_artist_functions8_2020:
+        do something:
+          name: kaut ko
+        draw a line of squares:
+          name: zīmēt kvadrātu rindu
+        draw square:
+          name: zīmēt kvadrātu
       courseE_artist_functions8a_2018:
         draw a square:
           name: zīmēt kvadrātu
         do something:
           name: kaut ko
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: zīmēt kvadrātu
+        do something:
+          name: kaut ko
+      courseE_artist_functions8a_2020:
         draw a square:
           name: zīmēt kvadrātu
         do something:
@@ -926,6 +1017,13 @@ lv-LV:
           name: zīmēt kvadrātu
         do something:
           name: kaut ko
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: zīmēt kvadrātu rindu
+        draw square:
+          name: zīmēt kvadrātu
+        do something:
+          name: kaut ko
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: zīmēt kvadrātu rindu
@@ -934,6 +1032,13 @@ lv-LV:
         do something:
           name: kaut ko
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: zīmēt kvadrātu rindu
+        draw square:
+          name: zīmēt kvadrātu
+        do something:
+          name: kaut ko
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: zīmēt kvadrātu rindu
         draw square:
@@ -955,12 +1060,22 @@ lv-LV:
           name: kaut ko
         draw triangle:
           name: uzzīmēt trijstūri
+      courseE_artist_functions9_2020:
+        do something:
+          name: kaut ko
+        draw triangle:
+          name: uzzīmēt trijstūri
       courseE_artist_functionsProj_2018:
         draw a line of squares:
           name: zīmēt kvadrātu rindu
         draw square:
           name: zīmēt kvadrātu
       courseE_artist_functionsProj_2019:
+        draw a line of squares:
+          name: zīmēt kvadrātu rindu
+        draw square:
+          name: zīmēt kvadrātu
+      courseE_artist_functionsProj_2020:
         draw a line of squares:
           name: zīmēt kvadrātu rindu
         draw square:
@@ -974,6 +1089,9 @@ lv-LV:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: kaut ko
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: kaut ko
       courseE_artist_functions_challenge2:
         do something:
           name: kaut ko
@@ -983,6 +1101,9 @@ lv-LV:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: kaut ko
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: kaut ko
       courseE_artist_functions_predict1:
         draw a square:
           name: zīmēt kvadrātu
@@ -990,6 +1111,9 @@ lv-LV:
         draw a square:
           name: zīmēt kvadrātu
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: zīmēt kvadrātu
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: zīmēt kvadrātu
       courseE_artist_functions_predict1_copy:
@@ -1002,6 +1126,9 @@ lv-LV:
         do something:
           name: kaut ko
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: kaut ko
+      courseE_artist_functions_predict2_2020:
         do something:
           name: kaut ko
       courseE_bee_functions1:
@@ -1194,10 +1321,16 @@ lv-LV:
       courseF_bee_variables_7_2019:
         collect:
           name: iegūt
+      courseF_bee_variables_7_2020:
+        collect:
+          name: iegūt
       courseF_bee_variables_8_2018:
         collect:
           name: iegūt
       courseF_bee_variables_8_2019:
+        collect:
+          name: iegūt
+      courseF_bee_variables_8_2020:
         collect:
           name: iegūt
       grade5_artist_binary11:

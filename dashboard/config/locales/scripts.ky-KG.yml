@@ -2970,21 +2970,6 @@ ky:
               name: Океан көрүнүшү циклдар менен
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-          lessons:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
         csp5-virtual:
           stages:
             Variables:
@@ -3010,3 +2995,45 @@ ky:
               name: Алгоритмдер
             Events:
               name: Окуялар
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+          lessons:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+          lessons:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар

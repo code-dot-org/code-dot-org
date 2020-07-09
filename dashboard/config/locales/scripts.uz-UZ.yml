@@ -1032,25 +1032,6 @@ uz:
           lessons:
             Spelling Bee:
               name: Bilimdon Ari
-        csd3-virtual:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Sprite Properties:
-              name: Sprait hususiyatlari
-          lessons:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Sprite Properties:
-              name: Sprait hususiyatlari
         csp5-virtual:
           stages:
             Variables:
@@ -1072,3 +1053,45 @@ uz:
           lessons:
             Algorithms:
               name: Algoritmlar
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
+          lessons:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
+        csd3-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+            Text:
+              name: Matn
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+          lessons:
+            Variables:
+              name: O‘zgaruvchilar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+            Text:
+              name: Matn
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar

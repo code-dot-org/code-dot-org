@@ -87,6 +87,8 @@ lv-LV:
         craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Izmanto bloku "zīmē apli" un
           maini izmēru.

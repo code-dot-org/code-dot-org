@@ -3410,21 +3410,6 @@ hr:
           lessons:
             Creating Functions:
               name: Stvaranje funkcija
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Functions:
-              name: Funkcije
-          lessons:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Functions:
-              name: Funkcije
         csp5-virtual:
           stages:
             While Loops:
@@ -3461,3 +3446,49 @@ hr:
           lessons:
             While Loops:
               name: Petlje s uvjetom
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Text:
+              name: tekst
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Text:
+              name: tekst
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
