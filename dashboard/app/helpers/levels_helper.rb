@@ -5,6 +5,7 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -463,17 +464,44 @@ module LevelsHelper
     speech_service_options = {}
 
     if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
-      uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-      header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      request = Net::HTTP::Post.new(uri.request_uri, header)
-      response = http.request(request)
-      speech_service_options[:azureSpeechServiceToken] = response.body
+      # First, get the token
+      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+      token_http_request.use_ssl = true
+      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
+      token_response = token_http_request.request(token_request)
+      speech_service_options[:azureSpeechServiceToken] = token_response.body
       speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
-    end
 
+      # Then, get the list of voices and languages
+      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_header = {'Authorization': 'Bearer ' + token_response.body}
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
+      voice_response = voice_http_request.request(voice_request)
+
+      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
+      language_dictionary = {}
+      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+      all_voices.each do |voice|
+        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        next if native_locale_name.empty?
+        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
+        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
+      end
+
+      language_dictionary.delete_if {|_, voices| voices.length < 3}
+
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+    end
+    speech_service_options
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
     speech_service_options
   end
 

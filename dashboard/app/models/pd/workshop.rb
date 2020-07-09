@@ -677,7 +677,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Get all teachers who have attended all sessions of this workshop.
   def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
-    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers
     if filter_by_cdo_scholarship
@@ -867,5 +867,9 @@ class Pd::Workshop < ActiveRecord::Base
 
   def friday_institute?
     third_party_provider == 'friday_institute'
+  end
+
+  def user_attended?(user)
+    attending_teachers.include?(user)
   end
 end

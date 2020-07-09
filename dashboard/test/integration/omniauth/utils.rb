@@ -38,7 +38,7 @@ module OmniauthCallbacksControllerTests
     # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
     # @param [String] provider
     def sign_in_through(provider)
-      get "/users/auth/#{provider}"
+      post "/users/auth/#{provider}"
       assert_redirected_to "/users/auth/#{provider}/callback"
       follow_redirect!
     end

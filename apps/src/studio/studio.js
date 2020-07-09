@@ -6364,10 +6364,10 @@ function getSpritesByName(name) {
 }
 
 Studio.setSpriteBehavior = function(opts) {
-  Studio.sprite[opts.spriteIndex].setActivity(
-    opts.behavior,
-    opts.targetSpriteIndex
-  );
+  const sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite) {
+    sprite.setActivity(opts.behavior, opts.targetSpriteIndex);
+  }
 };
 
 Studio.setSpritesWander = function(opts) {

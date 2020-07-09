@@ -11,7 +11,8 @@ export default class ConfirmationDialog extends React.Component {
     onOk: PropTypes.func.isRequired,
     onCancel: PropTypes.func,
     headerText: PropTypes.string.isRequired,
-    bodyText: PropTypes.string.isRequired,
+    bodyText: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+      .isRequired,
     okText: PropTypes.string,
     cancelText: PropTypes.string,
     width: PropTypes.number
