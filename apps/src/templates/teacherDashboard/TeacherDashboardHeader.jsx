@@ -13,12 +13,9 @@ import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
-  sectionsForDropdown
+  sortedSectionsList
 } from './teacherSectionsRedux';
-import {
-  sectionShape,
-  sectionForDropdownShape
-} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
 
@@ -45,7 +42,7 @@ const styles = {
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    sections: PropTypes.arrayOf(sectionShape).isRequired,
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
     assignmentName: PropTypes.string
@@ -140,12 +137,11 @@ export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 
 export default connect(
   state => {
-    let sections = sectionsForDropdown(
-      state.teacherSections,
-      null,
-      null,
-      false,
-      false
+    // In most cases, filtering out hidden sections is done on the backend.
+    // However in this case, we need hidden sections in the redux tree in case
+    // the selected section is hidden.
+    let sections = sortedSectionsList(state.teacherSections.sections).filter(
+      s => !s.hidden
     );
     let selectedSectionId = state.teacherSections.selectedSectionId;
     let selectedSection = state.teacherSections.sections[selectedSectionId];

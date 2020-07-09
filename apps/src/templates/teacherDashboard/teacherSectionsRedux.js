@@ -1175,34 +1175,48 @@ export function editedSectionId(state) {
 }
 
 /**
+ * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
 export function sectionsNameAndId(state) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name
-  }));
+  return sortSectionsList(
+    state.sectionIds.map(id => ({
+      id: parseInt(id, 10),
+      name: state.sections[id].name
+    }))
+  );
 }
 
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ */
 export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
-  onCourseOverview,
-  includeHidden = true
+  onCourseOverview
 ) {
-  return state.sectionIds
-    .map(id => ({
-      ...state.sections[id],
-      isAssigned:
-        (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-        (courseId !== null &&
-          state.sections[id].courseId === courseId &&
-          onCourseOverview)
-    }))
-    .filter(section => includeHidden || !section.hidden)
-    .sort((a, b) => b.id - a.id);
+  return sortedSectionsList(state.sections).map(s => ({
+    ...s,
+    isAssigned:
+      (scriptId !== null && s.scriptId === scriptId) ||
+      (courseId !== null && s.courseId === courseId && onCourseOverview)
+  }));
 }
+
+/**
+ * @param {object} sectionsObject - an object containing sections keyed by id
+ * Converts an unordered dictionary of sections into a sorted array
+ */
+export const sortedSectionsList = sectionsObject =>
+  sortSectionsList(Object.values(sectionsObject));
+
+/**
+ * @param {array} sectionsList - an array of section objects
+ * Sorts an array of sections by descending id
+ */
+export const sortSectionsList = sectionsList =>
+  sectionsList.sort((a, b) => b.id - a.id);
 
 /**
  * @param {object} state - Full state of redux tree

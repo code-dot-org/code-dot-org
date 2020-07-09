@@ -5,14 +5,10 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-// The array only needs to conform to sectionForDropdownShape,
-// but for convenience we're using the first entry as the selectedSection,
-// which needs to conform to the whole sectionShape
 const MOCK_SECTIONS = [
   {
     id: 3,
     name: 'intro to computer science III',
-    isAssigned: false,
     stageExtras: true,
     pairingAllowed: true,
     studentCount: 5,
@@ -22,12 +18,20 @@ const MOCK_SECTIONS = [
   {
     id: 2,
     name: 'intro to computer science II',
-    isAssigned: false
+    stageExtras: true,
+    pairingAllowed: true,
+    studentCount: 4,
+    code: 'TQGSJR',
+    providerManaged: false
   },
   {
     id: 1,
     name: 'intro to computer science I',
-    isAssigned: false
+    stageExtras: true,
+    pairingAllowed: true,
+    studentCount: 6,
+    code: 'XQGSJR',
+    providerManaged: false
   }
 ];
 
