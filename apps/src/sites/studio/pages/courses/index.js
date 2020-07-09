@@ -15,6 +15,7 @@ function showCourses() {
   const script = document.querySelector('script[data-courses]');
   const coursesData = JSON.parse(script.dataset.courses);
   const isEnglish = coursesData.english;
+  const locale = coursesData.locale;
   const isTeacher = coursesData.teacher;
   const linesCount = coursesData.linescount;
   const studentsCount = coursesData.studentscount;
@@ -28,6 +29,7 @@ function showCourses() {
     <Provider store={getStore()}>
       <Courses
         isEnglish={isEnglish}
+        locale={locale}
         isTeacher={isTeacher}
         linesCount={linesCount}
         studentsCount={studentsCount}

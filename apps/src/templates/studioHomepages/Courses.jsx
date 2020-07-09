@@ -26,6 +26,7 @@ const styles = {
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
+    locale: PropTypes.string.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
@@ -74,6 +75,7 @@ class Courses extends Component {
   render() {
     const {
       isEnglish,
+      locale,
       isTeacher,
       isSignedOut,
       modernElementaryCoursesAvailable,
@@ -131,6 +133,7 @@ class Courses extends Component {
           <CourseBlocksIntl
             isTeacher={isTeacher}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
+            locale={locale}
           />
         )}
       </div>

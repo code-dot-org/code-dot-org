@@ -12,6 +12,10 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class ExpressCourses extends Component {
+  static propTypes = {
+    locale: PropTypes.string.isRequired
+  };
+
   componentDidMount() {
     $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
@@ -22,6 +26,7 @@ class ExpressCourses extends Component {
   }
 
   render() {
+    const {locale} = this.props;
     return (
       <ContentContainer
         heading={i18n.courseBlocksCsfExpressHeading()}
@@ -31,7 +36,7 @@ class ExpressCourses extends Component {
           <ProtectedStatefulDiv ref="pre_express" />
           <ProtectedStatefulDiv ref="express" />
         </div>
-        <AcceleratedAndUnplugged />
+        <AcceleratedAndUnplugged locale={locale} />
       </ContentContainer>
     );
   }
@@ -103,10 +108,18 @@ class Courses1To4 extends Component {
 }
 
 class AcceleratedAndUnplugged extends Component {
+  static propTypes = {
+    locale: PropTypes.string.isRequired
+  };
+
   componentDidMount() {
-    $('#20-hour')
-      .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
-      .show();
+    const {locale} = this.props;
+    // [FND-1203] - replace this 'es-MX' conditional once full localization customization is implemented.
+    if (locale !== 'es-MX') {
+      $('#20-hour')
+        .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
+        .show();
+    }
     $('#unplugged')
       .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
       .show();
@@ -194,7 +207,8 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksIntl extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool.isRequired,
-    showModernElementaryCourses: PropTypes.bool.isRequired
+    showModernElementaryCourses: PropTypes.bool.isRequired,
+    locale: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -204,15 +218,23 @@ export class CourseBlocksIntl extends Component {
   }
 
   render() {
-    const {isTeacher, showModernElementaryCourses: modernCsf} = this.props;
+    const {
+      isTeacher,
+      showModernElementaryCourses: modernCsf,
+      locale
+    } = this.props;
     const AcceleratedCourses = () => (
       <ContentContainer>
-        <AcceleratedAndUnplugged />
+        <AcceleratedAndUnplugged locale={locale} />
       </ContentContainer>
     );
     return (
       <div>
-        {modernCsf ? <ExpressCourses /> : <AcceleratedCourses />}
+        {modernCsf ? (
+          <ExpressCourses locale={locale} />
+        ) : (
+          <AcceleratedCourses />
+        )}
 
         <CourseBlocksHoc isInternational />
 
