@@ -2,7 +2,7 @@
   "ac": {
     "full_name": "Africa",
     "default_language": "en",
-    "type": "international"
+    "type": "africa"
   },
   "ad": {
     "full_name": "Andorra",
@@ -27,7 +27,7 @@
   "ar": {
     "full_name": "Argentina",
     "default_language": "la",
-    "type": "international"
+    "type": "latam"
   },
   "au": {
     "full_name": "Australia",
@@ -47,7 +47,7 @@
   "br": {
     "full_name": "Brazil",
     "default_language": "pt",
-    "type": "international"
+    "type": "latam"
   },
   "ca": {
     "full_name": "Canada",
@@ -62,7 +62,7 @@
   "co": {
     "full_name": "Colombia",
     "default_language": "es",
-    "type": "international"
+    "type": "latam"
   },
   "cz": {
     "full_name": "Czech Republic",
@@ -82,7 +82,7 @@
   "eg": {
     "full_name": "Egypt",
     "default_language": "ar",
-    "type": "international"
+    "type": "africa"
   },
   "es": {
     "full_name": "Spain",
@@ -157,7 +157,7 @@
   "la": {
     "full_name": "Latinoamérica",
     "default_language": "la",
-    "type": "international"
+    "type": "latam"
   },
   "lk": {
     "full_name": "Sri Lanka",
@@ -172,7 +172,7 @@
   "ma": {
     "full_name": "Morocco",
     "default_language": "ar",
-    "type": "international"
+    "type": "africa"
   },
   "me": {
     "full_name": "Middle East",
@@ -187,7 +187,7 @@
   "mz": {
     "full_name": "Mozambique",
     "default_language": "po",
-    "type": "international"
+    "type": "africa"
   },
   "nl": {
     "full_name": "Netherlands",
@@ -212,7 +212,7 @@
   "pe": {
     "full_name": "Peru",
     "default_language": "es",
-    "type": "international"
+    "type": "latam"
   },
   "pk": {
     "full_name": "Pakistan",
@@ -242,7 +242,7 @@
   "ru": {
     "full_name": "Russia",
     "default_language": "ru",
-    "type": "default"
+    "type": "europe"
   },
   "si": {
     "full_name": "Slovenia",
@@ -257,7 +257,7 @@
   "tr": {
     "full_name": "Turkey",
     "default_language": "tr",
-    "type": "default"
+    "type": "europe"
   },
   "ua": {
     "full_name": "Ukraine",
@@ -283,6 +283,6 @@
   "za": {
     "full_name": "South Africa",
     "default_language": "en",
-    "type": "international"
+    "type": "africa"
   }
 }

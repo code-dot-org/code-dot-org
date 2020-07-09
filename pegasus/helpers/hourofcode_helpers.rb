@@ -171,10 +171,8 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  if type == 'international'
-    id = "international_#{id}"
-  elsif type == 'europe'
-    id = "europe_#{id}"
+  if %w(latam europe africa).include? type
+    id = "#{type}_#{id}"
   end
 
   return HOC_I18N[language][id] || HOC_I18N['en'][id]

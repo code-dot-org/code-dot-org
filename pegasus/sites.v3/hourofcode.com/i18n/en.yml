@@ -12,12 +12,12 @@
   campaign_date_year: "2020"
   campaign_date_full_year: "December 7-13, 2020"
 
-  international_campaign_date_start_short: "Oct. 1"
-  international_campaign_date_start_long: "October 1"
-  international_campaign_date_short: "Oct. 1-7"
-  international_campaign_date_full: "October 1-7"
-  international_campaign_date_year: "2020"
-  international_campaign_date_full_year: "October 1-7, 2020"
+  latam_campaign_date_start_short: "Oct. 1"
+  latam_campaign_date_start_long: "October 1"
+  latam_campaign_date_short: "Oct. 1 - Dec. 18"
+  latam_campaign_date_full: "October 1 - December 18"
+  latam_campaign_date_year: "2020"
+  latam_campaign_date_full_year: "October 1, 2020 - December 18, 2020"
 
   europe_campaign_date_start_short: "Oct. 10"
   europe_campaign_date_start_long: "October 10"
@@ -25,6 +25,13 @@
   europe_campaign_date_full: "October 10-25"
   europe_campaign_date_year: "2020"
   europe_campaign_date_full_year: "October 10-25, 2020"
+
+  africa_campaign_date_start_short: "Oct. 1"
+  africa_campaign_date_start_long: "October 1"
+  africa_campaign_date_short: "Oct. 1-31"
+  africa_campaign_date_full: "October 1-31"
+  africa_campaign_date_year: "2020"
+  africa_campaign_date_full_year: "October 1-31, 2020"
 
   hoc2019_header: 'Learn computer science. Change the world.'
   hoc2019_header_line1_mobile: 'Learn computer science.'
