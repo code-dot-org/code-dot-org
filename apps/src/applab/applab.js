@@ -85,6 +85,7 @@ import {
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {findDropletParseErrors} from '@cdo/apps/util/dropletCommon';
 
 /**
  * Create a namespace for the application.
@@ -774,6 +775,7 @@ Applab.init = function(config) {
 };
 
 async function initDataTab(levelOptions) {
+  const channelExists = await Applab.storage.channelExists();
   if (levelOptions.dataTables) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
   }
@@ -785,7 +787,6 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    const channelExists = await Applab.storage.channelExists();
     const libraryManifest = await Applab.storage.getLibraryManifest();
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
@@ -1262,6 +1263,17 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
+
+    // Check that droplet can parse this code.
+    let foundDropletErrors = findDropletParseErrors(
+      studioApp().editor,
+      (lineNumber, message) =>
+        handleExecutionError('error', lineNumber, message)
+    );
+
+    if (foundDropletErrors) {
+      return;
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
