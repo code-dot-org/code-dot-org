@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(IO.read(hoc_dir('i18n/countries_dates.json')))
+  JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
@@ -148,27 +148,6 @@ end
 
 def localized_image(path)
   File.join('/', @country, @language, path)
-end
-
-def campaign_date_old(format)
-  @country ||= hoc_detect_country
-
-  case format
-  when "start-short"
-    return HOC_COUNTRIES[@country]['campaign_date_start_short']
-  when "start-long"
-    return HOC_COUNTRIES[@country]['campaign_date_start_long']
-  when "short"
-    return HOC_COUNTRIES[@country]['campaign_date_short']
-  when "full"
-    return HOC_COUNTRIES[@country]['campaign_date_full']
-  when "year"
-    return HOC_COUNTRIES[@country]['campaign_date_year']
-  when "full-year"
-    return HOC_COUNTRIES[@country]['campaign_date_full_year']
-  else
-    return HOC_COUNTRIES[@country]['campaign_date_full']
-  end
 end
 
 def campaign_date(format)
