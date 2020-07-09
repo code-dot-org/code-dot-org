@@ -2,7 +2,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {
@@ -14,6 +14,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import project from '@cdo/apps/code-studio/initApp/project';
+import DropletCommon from '@cdo/apps/util/dropletCommon';
 
 describe('The ShowCodeToggle component', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
@@ -23,12 +24,14 @@ describe('The ShowCodeToggle component', () => {
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
     sinon.stub(project, 'getCurrentId').returns('some-project-id');
+    sinon.stub(DropletCommon, 'findDropletParseErrors').returns(false);
   });
   afterEach(() => {
     server.restore();
     $.post.restore();
     $.getJSON.restore();
     project.getCurrentId.restore();
+    DropletCommon.findDropletParseErrors.restore();
   });
 
   beforeEach(stubStudioApp);
@@ -109,6 +112,40 @@ describe('The ShowCodeToggle component', () => {
     });
 
     it("will render with the 'Show Blocks' label", () => {
+      expect(
+        toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass=""
+            label="Show Blocks"
+            style={{display: 'inline-block'}}
+          />
+        )
+      ).to.be.true;
+    });
+
+    it('will not transition to block mode if there is a parsing error', () => {
+      DropletCommon.findDropletParseErrors.restore();
+      sinon.stub(DropletCommon, 'findDropletParseErrors').returns(true);
+      expect(
+        toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass=""
+            label="Show Blocks"
+            style={{display: 'inline-block'}}
+          />
+        )
+      ).to.be.true;
+      toggle
+        .find('ShowCodeButton')
+        .instance()
+        .onClick();
+      toggle.update();
       expect(
         toggle.containsMatchingElement(
           <PaneButton
