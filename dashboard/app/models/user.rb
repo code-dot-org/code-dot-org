@@ -1740,6 +1740,7 @@ class User < ActiveRecord::Base
     new_csf_level_perfected = false
 
     user_level = nil
+    script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -1772,7 +1773,20 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
-    if pairing_user_ids
+    should_track_pairing = true
+    current_level = user_level.level
+    if current_level.type == "LevelGroup" && current_level.properties["anonymous"] == "true"
+      should_track_pairing = false
+    end
+
+    if should_track_pairing
+      group_levels = script.levels.select {|level| level.type == "LevelGroup"}
+      if group_levels.detect {|group_level| group_level.properties["anonymous"] == "true" && group_level.levels.detect {|child_level| child_level.name == current_level.name}}
+        should_track_pairing = false
+      end
+    end
+
+    if should_track_pairing && pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
