@@ -72,7 +72,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       street_1: 'test street',
       street_2: 'test street 2',
       city: 'seattle',
-      state: 'wa',
+      state: 'WA',
       zip: '98105',
       marketing_kit: '0',
       csta_plus: '0',
@@ -142,7 +142,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         street_1: 'test street',
         street_2: 'test street 2',
         city: 'seattle',
-        state: 'wa',
+        state: 'WA',
         zip: '98105',
         privacy_permission: true
       },
@@ -185,6 +185,9 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     school = create :school
     refute_equal 'example-street-1', school.address_line1
 
+    # We have to use an actual state here (Florida)
+    # that is different than what is in valid_params (Washington)
+    # because the form uses a select element to limit users to submit real states
     actual_args = capture_csta_args_for_request(
       valid_params.merge(
         'csta' => true,
@@ -192,7 +195,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         'street1' => 'example-street-1',
         'street2' => 'example-street-2',
         'city' => 'example-city',
-        'state' => 'example-state',
+        'state' => 'Florida',
         'zip' => 'example-zip'
       )
     )
@@ -200,7 +203,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_equal 'example-street-1', actual_args[:street_1]
     assert_equal 'example-street-2', actual_args[:street_2]
     assert_equal 'example-city', actual_args[:city]
-    assert_equal 'example-state', actual_args[:state]
+    assert_equal 'FL', actual_args[:state]
     assert_equal 'example-zip', actual_args[:zip]
   end
 
@@ -317,7 +320,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       'street1' => 'test street',
       'street2' => 'test street 2',
       'city' => 'seattle',
-      'state' => 'wa',
+      'state' => 'Washington',
       'zip' => '98105',
       'inspirationKit' => '0',
       'csta' => '0',
