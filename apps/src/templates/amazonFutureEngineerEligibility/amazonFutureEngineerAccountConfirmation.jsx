@@ -59,7 +59,9 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
         </div>
         <div style={styles.body}>
           Already have a Code.org account?{' '}
-          <a onClick={this.signInButtonPress}>Sign in.</a>
+          <a href="#" onClick={this.signInButtonPress}>
+            Sign in.
+          </a>
         </div>
         <Button
           id="sign_up"
