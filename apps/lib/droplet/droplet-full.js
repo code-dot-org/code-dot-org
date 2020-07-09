@@ -1,8 +1,8 @@
 /* Droplet.
- * Copyright (c) 2019 Anthony Bau.
+ * Copyright (c) 2020 Anthony Bau.
  * MIT License.
  *
- * Date: 2019-07-24
+ * Date: 2020-07-08
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -9312,6 +9312,13 @@ containsCursor = function(block) {
   return false;
 };
 
+Editor.prototype.parse = function() {
+  return this.session.mode.parse(this.getAceValue(), {
+    wrapAtRoot: true,
+    preserveEmpty: this.session.options.preserveEmpty
+  });
+};
+
 Editor.prototype.copyAceEditor = function() {
   this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
   this.resizeBlockMode();
@@ -15074,7 +15081,7 @@ exports.Parser = Parser = (function() {
   };
 
   Parser.prototype.applyMarkup = function(opts) {
-    var block, currentlyCommented, document, head, i, indentDepth, j, k, l, lastIndex, len, len1, len2, line, lines, mark, markupOnLines, name, placedSomething, ref, ref1, ref10, ref11, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, stack;
+    var block, currentlyCommented, document, error, head, i, indentDepth, j, k, l, lastIndex, len, len1, len2, line, lines, mark, markupOnLines, name, placedSomething, ref, ref1, ref10, ref11, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, stack;
     markupOnLines = {};
     ref = this.markup;
     for (j = 0, len = ref.length; j < len; j++) {
@@ -15170,21 +15177,30 @@ exports.Parser = Parser = (function() {
               currentlyCommented = false;
             }
           }
+          error = {
+            line: mark.location.line
+          };
           switch (mark.token.type) {
             case 'indentStart':
               if ((stack != null ? (ref7 = stack[stack.length - 1]) != null ? ref7.type : void 0 : void 0) !== 'block') {
-                throw new Error('Improper parser: indent must be inside block, but is inside ' + (stack != null ? (ref8 = stack[stack.length - 1]) != null ? ref8.type : void 0 : void 0));
+                error.type = "IncorrectBlockParent";
+                error.message = "Improper parser: indent must be inside block, but is inside " + (stack != null ? (ref8 = stack[stack.length - 1]) != null ? ref8.type : void 0 : void 0);
+                throw new Error(JSON.stringify(error));
               }
               indentDepth += mark.token.container.prefix.length;
               break;
             case 'blockStart':
               if (((ref9 = stack[stack.length - 1]) != null ? ref9.type : void 0) === 'block') {
-                throw new Error('Improper parser: block cannot nest immediately inside another block.');
+                error.type = "DropletParseError";
+                error.message = "Improper parser: block cannot nest immediately inside another block.";
+                throw new Error(JSON.stringify(error));
               }
               break;
             case 'socketStart':
               if (((ref10 = stack[stack.length - 1]) != null ? ref10.type : void 0) !== 'block') {
-                throw new Error('Improper parser: socket must be immediately inside a block.');
+                error.type = "DropletParseError";
+                error.message = "Improper parser: socket must be immediately inside a block.";
+                throw new Error(JSON.stringify(error));
               }
               break;
             case 'indentEnd':
@@ -15194,7 +15210,9 @@ exports.Parser = Parser = (function() {
             stack.push(mark.token.container);
           } else if (mark.token instanceof model.EndToken) {
             if (mark.token.container !== stack[stack.length - 1]) {
-              throw new Error("Improper parser: " + head.container.type + " ended too early.");
+              error.type = "DropletParseError";
+              error.message = "Improper parser: " + head.container.type + " ended too early.";
+              throw new Error(JSON.stringify(error));
             }
             stack.pop();
           }
