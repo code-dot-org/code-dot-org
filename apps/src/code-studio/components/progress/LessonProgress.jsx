@@ -84,10 +84,14 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func
   };
 
+  getFullWidth() {
+    const component = $(this.refs.fullProgressInner);
+    return component.length > 0 ? component.width() : 0;
+  }
+
   setDesiredWidth() {
-    const fullWidth = $('.full_progress_inner').width();
     if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(fullWidth);
+      this.props.setDesiredWidth(this.getFullWidth());
     }
   }
 
@@ -108,7 +112,7 @@ class LessonProgress extends Component {
     // of the available width.
 
     if (this.refs.currentLevel && this.props.width) {
-      const fullWidth = $('.full_progress_inner').width();
+      const fullWidth = this.getFullWidth();
       const actualWidth = this.props.width;
       const currentLevelOffset = $(this.refs.currentLevel).position().left;
 
@@ -173,7 +177,11 @@ class LessonProgress extends Component {
           className="full_progress_outer"
           style={{...styles.outer, left: headerFullProgressOffset}}
         >
-          <div className="full_progress_inner" style={styles.inner}>
+          <div
+            className="full_progress_inner"
+            ref="fullProgressInner"
+            style={styles.inner}
+          >
             {lessonTrophyEnabled && <div style={styles.spacer} />}
             {levels.map((level, index) => (
               <div

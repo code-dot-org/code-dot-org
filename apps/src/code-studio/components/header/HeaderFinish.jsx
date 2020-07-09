@@ -35,11 +35,15 @@ export default class HeaderFinish extends React.Component {
     isRtl: PropTypes.bool
   };
 
+  getFullWidth() {
+    const component = $(this.refs.headerFinish);
+    return component.length > 0 ? component.width() : 0;
+  }
+
   setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.header_finished').width();
     if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(fullWidth);
+      this.props.setDesiredWidth(this.getFullWidth());
     }
   }
 
@@ -64,9 +68,7 @@ export default class HeaderFinish extends React.Component {
   render() {
     const {lessonData, isRtl} = this.props;
 
-    const headerFinishedComponent = $('.header_finished');
-    const fullWidth =
-      headerFinishedComponent.length > 0 ? headerFinishedComponent.width() : 0;
+    const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
 
     const vignetteStyle =
@@ -80,7 +82,11 @@ export default class HeaderFinish extends React.Component {
 
     return (
       <div style={styles.headerContainer}>
-        <div className="header_finished" style={styles.headerInner}>
+        <div
+          className="header_finished"
+          ref="headerFinish"
+          style={styles.headerInner}
+        >
           <div className="header_finished_link" style={styles.finishedLink}>
             <a href={lessonData.finishLink} title={lessonData.finishText}>
               {lessonData.finishText}
