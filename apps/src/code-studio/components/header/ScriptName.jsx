@@ -37,11 +37,15 @@ class ScriptName extends React.Component {
     isRtl: PropTypes.bool
   };
 
+  getFullWidth() {
+    const component = $(this.refs.scriptName);
+    return component.length > 0 ? component.width() : 0;
+  }
+
   setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.script_name').width();
     if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(fullWidth);
+      this.props.setDesiredWidth(this.getFullWidth());
     }
   }
 
@@ -83,7 +87,7 @@ class ScriptName extends React.Component {
   }
 
   render() {
-    const fullWidth = $('.script_name').width();
+    const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
 
     const vignetteStyle =
@@ -98,7 +102,11 @@ class ScriptName extends React.Component {
     if (!this.props.showProjectUpdatedAt) {
       return (
         <div style={{...styles.headerContainer, height: 18}}>
-          <div className="script_name" style={styles.headerInner}>
+          <div
+            className="script_name"
+            ref="scriptName"
+            style={styles.headerInner}
+          >
             {this.renderScriptLink()}
           </div>
           <div className="vignette" style={vignetteStyle} />
@@ -110,6 +118,7 @@ class ScriptName extends React.Component {
       <div style={styles.headerContainer}>
         <div
           className="script_name"
+          ref="scriptName"
           style={{...styles.headerInner, height: 40}}
         >
           <div style={styles.outerContainer}>

@@ -35,11 +35,15 @@ class ProjectInfo extends React.Component {
     isRtl: PropTypes.bool
   };
 
+  getFullWidth() {
+    const component = $(this.refs.projectInfo);
+    return component.length > 0 ? component.width() : 0;
+  }
+
   setDesiredWidth() {
     // Report back to our parent how wide we would like to be.
-    const fullWidth = $('.project_info').width();
     if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(fullWidth);
+      this.props.setDesiredWidth(this.getFullWidth());
     }
   }
 
@@ -56,7 +60,7 @@ class ProjectInfo extends React.Component {
       return null;
     }
 
-    const fullWidth = $('.project_info').width();
+    const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
 
     const vignetteStyle =
@@ -71,7 +75,11 @@ class ProjectInfo extends React.Component {
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
       <div style={styles.headerContainer}>
-        <div className="project_info" style={styles.projectInfo}>
+        <div
+          className="project_info"
+          ref="projectInfo"
+          style={styles.projectInfo}
+        >
           <HeaderComponent />
         </div>
         <div className="vignette" style={vignetteStyle} />
