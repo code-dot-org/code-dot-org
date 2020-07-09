@@ -165,7 +165,7 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)).isRequired
   };
 
   state = {selectedId: null};
