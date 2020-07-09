@@ -6,7 +6,7 @@ subject: "¡Gracias por inscribirte para ser anfitrión de una Hora de Código!"
   <% codedotorg = CDO.canonical_hostname('code.org') %>
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
-Usted está haciendo posible para que los estudiantes de todo el mundo aprendan una Hora de Código que puede cambiar el resto de sus vidas, durante los días del 1 al 7 de octubre. Estaremos en contacto sobre nuevos tutoriales y otras noticias interesantes. ¿Qué puede usted hacer ahora?
+Usted está haciendo posible para que los estudiantes de todo el mundo aprendan una Hora de Código que puede cambiar el resto de sus vidas, desde el 1 de Octubre hasta el 18 de Diciembre. Estaremos en contacto sobre nuevos tutoriales y otras noticias interesantes. ¿Qué puede usted hacer ahora?
 
 ## 1. Encuentre a un voluntario local para ayudarle con su evento.
 [Buscar en nuestro mapa del voluntariado](https://<%= codedotorg %>/volunteer/local) para que los voluntarios puedan visitar tu aula o hagan un videochat remotamente para inspirar a tus estudiantes acerca de la amplitud de posibilidades con las Ciencias de la Computación.
