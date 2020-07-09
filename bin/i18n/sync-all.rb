@@ -175,6 +175,13 @@ class I18nSync
 
     I18nScriptUtils.git_add_and_commit(
       [
+        "i18n/locales/source/animations"
+      ],
+      "animation library i18n sync"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
         "i18n/locales/source/hourofcode/",
       ],
       "hoc i18n sync"
@@ -252,6 +259,13 @@ class I18nSync
         "i18n/locales/*-*/blockly-core",
       ],
       "blockly i18n updates"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
+        "i18n/locales/*-*/animations"
+      ],
+      "animation library i18n updates"
     )
 
     I18nScriptUtils.git_add_and_commit(
