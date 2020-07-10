@@ -11,13 +11,16 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-class ExpressCourses extends Component {
+class ModernCsfCourses extends Component {
   componentDidMount() {
     $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
     $('#express')
       .appendTo(ReactDOM.findDOMNode(this.refs.express))
+      .show();
+    $('#unplugged')
+      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
       .show();
   }
 
@@ -31,7 +34,9 @@ class ExpressCourses extends Component {
           <ProtectedStatefulDiv ref="pre_express" />
           <ProtectedStatefulDiv ref="express" />
         </div>
-        <AcceleratedAndUnplugged />
+        <div className="row">
+          <ProtectedStatefulDiv ref="unplugged" />
+        </div>
       </ContentContainer>
     );
   }
@@ -212,7 +217,7 @@ export class CourseBlocksIntl extends Component {
     );
     return (
       <div>
-        {modernCsf ? <ExpressCourses /> : <AcceleratedCourses />}
+        {modernCsf ? <ModernCsfCourses /> : <AcceleratedCourses />}
 
         <CourseBlocksHoc isInternational />
 
