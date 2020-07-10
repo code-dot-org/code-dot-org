@@ -1,0 +1,28 @@
+name 'CSD U3 naming md_virtual'
+title 'Naming Variables'
+description 'description here'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+#Variables
+
+Variable labels should be meaningful, but you can choose almost any label you like. There are just a few rules and guidelines to be aware of.
+
+## Naming Rules
+
+There are a **few rules** when choosing labels:
+
+* Labels **cannot include spaces**. For example, `width of rectangle` would generate an error.
+* Labels **cannot begin with a number**. `4sides` and `2morrow` will generate errors.
+* Be very careful with **spelling**.  If labels are not spelled exactly the same way, the computer will not realize that they refer to the same variable.
+* Labels are **case-sensitive**. `size` is not the same as `Size` or `SIZE`.
+
+
+#Note about this course: 
+**Help & Tips articles like this one are available inside most programming levels. Be sure to look for this option any time you feel you need more information.**
+
+![](https://images.code.org/cbbdf58b67eeb5baa66c4fd39636aa10-image-1594397543622.11.16 PM.png)
+MARKDOWN
