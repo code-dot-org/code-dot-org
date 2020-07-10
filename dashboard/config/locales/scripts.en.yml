@@ -32157,3 +32157,16 @@ en:
           lesson_groups:
             lg_1:
               display_name: Content
+        kaitie-test-script:
+          stages:
+            new lesson: &2
+              name: new lesson
+          lessons:
+            new lesson: *2
+          lesson_groups:
+            lesson group:
+              display_name: display name
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
