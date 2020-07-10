@@ -85,7 +85,6 @@ import {
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
-import {findDropletParseErrors} from '@cdo/apps/util/dropletCommon';
 
 /**
  * Create a namespace for the application.
@@ -1263,17 +1262,6 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
-
-    // Check that droplet can parse this code.
-    let foundDropletErrors = findDropletParseErrors(
-      studioApp().editor,
-      (lineNumber, message) =>
-        handleExecutionError('error', lineNumber, message)
-    );
-
-    if (foundDropletErrors) {
-      return;
-    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
