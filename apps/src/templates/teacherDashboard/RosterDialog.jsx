@@ -11,6 +11,15 @@ import {
   isRosterDialogOpen
 } from './teacherSectionsRedux';
 
+const orangeButtonStyle = {
+  background: color.orange,
+  color: color.white,
+  border: '1px solid #b07202',
+  borderRadius: 3,
+  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
+  fontSize: 14,
+  padding: '8px 20px'
+};
 const styles = {
   title: {
     position: 'absolute',
@@ -41,14 +50,8 @@ const styles = {
     left: 20
   },
   buttonPrimary: {
-    float: 'right',
-    background: color.orange,
-    color: color.white,
-    border: '1px solid #b07202',
-    borderRadius: 3,
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-    fontSize: 14,
-    padding: '8px 20px'
+    ...orangeButtonStyle,
+    float: 'right'
   },
   buttonSecondary: {
     float: 'left',
@@ -121,19 +124,14 @@ NoClassroomsFound.propTypes = {
 
 const ROSTERED_SECTIONS_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
-const LoadError = ({rosterProvider, loginType}) => {
+
+const LoadError = ({rosterProvider, loginType, authenticityToken}) => {
   switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
-          <p>
-            {locale.authorizeGoogleClassroomsText()}{' '}
-            <a
-              href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}
-            >
-              {locale.authorizeGoogleClassrooms()}
-            </a>
-          </p>
+          <p>{locale.authorizeGoogleClassroomsText()}</p>
+          <ReauthorizeGoogleClassroom authenticityToken={authenticityToken} />
           <p>
             <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
               {locale.errorLoadingRosteredSectionsSupport()}
@@ -154,7 +152,28 @@ const LoadError = ({rosterProvider, loginType}) => {
 };
 LoadError.propTypes = {
   rosterProvider: PropTypes.string,
-  loginType: PropTypes.string
+  loginType: PropTypes.string,
+  authenticityToken: PropTypes.string
+};
+
+const REAUTHORIZE_URL =
+  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
+function ReauthorizeGoogleClassroom({authenticityToken}) {
+  return (
+    <form method="POST" action={REAUTHORIZE_URL}>
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value={authenticityToken}
+      />
+      <button type="submit" style={orangeButtonStyle}>
+        {locale.authorizeGoogleClassrooms()}
+      </button>
+    </form>
+  );
+}
+ReauthorizeGoogleClassroom.propTypes = {
+  authenticityToken: PropTypes.string
 };
 
 class RosterDialog extends React.Component {
@@ -165,7 +184,8 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)).isRequired
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)).isRequired,
+    authenticityToken: PropTypes.string
   };
 
   state = {selectedId: null};
@@ -218,6 +238,7 @@ class RosterDialog extends React.Component {
             <LoadError
               rosterProvider={this.props.rosterProvider}
               loginType={loginType}
+              authenticityToken={this.props.authenticityToken}
             />
           ) : this.props.classrooms ? (
             <ClassroomList

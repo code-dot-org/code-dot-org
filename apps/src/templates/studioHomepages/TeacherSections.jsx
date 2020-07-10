@@ -9,6 +9,7 @@ import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 class TeacherSections extends Component {
   static propTypes = {
     queryStringOpen: PropTypes.string,
+    authenticityToken: PropTypes.string,
 
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired
@@ -19,12 +20,15 @@ class TeacherSections extends Component {
   }
 
   render() {
-    const {queryStringOpen} = this.props;
+    const {authenticityToken, queryStringOpen} = this.props;
 
     return (
       <div id="classroom-sections">
         <ContentContainer heading={i18n.sectionsTitle()}>
-          <OwnedSections queryStringOpen={queryStringOpen} />
+          <OwnedSections
+            queryStringOpen={queryStringOpen}
+            authenticityToken={authenticityToken}
+          />
         </ContentContainer>
       </div>
     );
