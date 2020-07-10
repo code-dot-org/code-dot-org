@@ -4,6 +4,7 @@ import {UnconnectedManageLinkedAccounts as ManageLinkedAccounts} from './ManageL
 
 const DEFAULT_PROPS = {
   userType: 'student',
+  authenticityToken: 'fake CSRF token',
   authenticationOptions: {},
   connect: action('connect'),
   disconnect: action('disconnect'),

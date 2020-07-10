@@ -8,7 +8,16 @@ mi-NZ:
       2-3 Artist 3.4:
         draw a circle:
           name: tāngia he porohita
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: whānui
+            height: teitei
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            width: whānui
+            height: teitei
         draw a circle:
           name: tāngia he porohita
       2-3 Artist Functions 11:
@@ -41,18 +50,51 @@ mi-NZ:
       4-5 Artist 7:
         draw a circle:
           name: tāngia he porohita
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: mīere
       Course 4 Play Lab Params 1:
         jump:
           name: peke
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: ngā piro
       Course 4 Play Lab Params 2:
         jump:
           name: peke
       Course 4 Play Lab Params 3:
         jump:
           name: peke
+          parameters:
+            height: teitei
+            actor: kaiwhakaari
       Course 4 Play Lab Params 4:
         do something:
           name: mahia atu
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+            speed: terenga
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+            speed: terenga
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: ngā piro
       Course 4 Play Lab Vars 1:
         set score:
           name: tautuhi whiwhinga
@@ -65,15 +107,24 @@ mi-NZ:
       Course 4 SCF 1a:
         get nectar:
           name: tiki waireka
+          parameters:
+            counter: pūtatau
       Course 4 SCF 3:
         do something:
           name: mahia atu
+        draw an octagon:
+          parameters:
+            length: roanga
       'Course E: Play Lab Project':
         do something:
           name: mahia atu
       Find the Wizard:
         do something:
           name: mahia atu
+      FoodFight:
+        score_points:
+          parameters:
+            points: ngā piro
       Geometric Sun:
         diamond:
           name: taimana
@@ -84,6 +135,23 @@ mi-NZ:
           name: taimana
         draw a house:
           name: tāngia he whare
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: roanga
+        draw a loop:
+          parameters:
+            length: roanga
+        draw spiral circle:
+          parameters:
+            size: te rahi
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: roanga
+        draw spiral circle:
+          parameters:
+            size: te rahi
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: tāngia he tapawhā
@@ -109,20 +177,59 @@ mi-NZ:
           name: mahia atu
         draw a hexagon:
           name: tāngia he tapaono
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: roanga
         do something:
           name: mahia atu
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 15:
         draw a star:
           name: tāngia he whetū
+          parameters:
+            points: ngā piro
+            length: roanga
         draw a circle:
           name: tāngia he porohita
+        draw a pinwheel:
+          parameters:
+            length: roanga
+            repeat: tōai
         draw a triangle:
           name: tāngia he tapatoru
+          parameters:
+            length: roanga
+        draw a shape:
+          parameters:
+            length: roanga
         draw a house:
           name: tāngia he whare
+          parameters:
+            length: roanga
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 2:
         do something:
           name: mahia atu
@@ -132,38 +239,97 @@ mi-NZ:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: tāngia he tapatoru
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: tāngia he tapatoru
+          parameters:
+            length: roanga
         draw a hexagon:
           name: tāngia he tapaono
+          parameters:
+            length: roanga
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
+        draw a sqaure:
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: tāngia he tapatoru
+          parameters:
+            length: roanga
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: roanga
       NEW Course 4 Artist Params 9:
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
         do something:
           name: mahia atu
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: roanga
       NEW Course 4 Play Lab Params 11:
         jump:
           name: peke
+          parameters:
+            height: teitei
+            actor: kaiwhakaari
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+            speed: terenga
       New Artist Project:
         draw a star:
           name: tāngia he whetū
+          parameters:
+            points: ngā piro
+            length: roanga
         draw a circle:
           name: tāngia he porohita
+        draw a pinwheel:
+          parameters:
+            length: roanga
+            repeat: tōai
         draw a triangle:
           name: tāngia he tapatoru
+          parameters:
+            length: roanga
+        draw a shape:
+          parameters:
+            length: roanga
         draw a house:
           name: tāngia he whare
+          parameters:
+            length: roanga
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
       New Play Lab Project:
         jump:
           name: peke
+          parameters:
+            height: teitei
+            actor: kaiwhakaari
+        patrol:
+          parameters:
+            actor: kaiwhakaari
+            speed: terenga
       Standalone_Artist_7:
         draw a flower:
           name: tāngia he putiputi
@@ -185,7 +351,34 @@ mi-NZ:
       course4_artist_fwp_challenge1:
         do something:
           name: mahia atu
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: roanga
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: roanga
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: mahia atu
+      courseC_data wizard_2020:
         do something:
           name: mahia atu
       courseE_artist_concept1:
@@ -217,6 +410,9 @@ mi-NZ:
       courseE_artist_functions10_2019:
         do something:
           name: mahia atu
+      courseE_artist_functions10_2020:
+        do something:
+          name: mahia atu
       courseE_artist_functions2:
         draw a square:
           name: tāngia he tapawhā
@@ -226,6 +422,9 @@ mi-NZ:
       courseE_artist_functions2_2019:
         draw a square:
           name: tāngia he tapawhā
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: tāngia he tapawhā
       courseE_artist_functions2_copy:
         draw a square:
           name: tāngia he tapawhā
@@ -233,6 +432,9 @@ mi-NZ:
         draw a star:
           name: tāngia he whetū
       courseE_artist_functions3_2019:
+        draw a star:
+          name: tāngia he whetū
+      courseE_artist_functions3_2020:
         draw a star:
           name: tāngia he whetū
       courseE_artist_functions4:
@@ -250,6 +452,9 @@ mi-NZ:
       courseE_artist_functions5_2019:
         draw a star:
           name: tāngia he whetū
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: tāngia he whetū
       courseE_artist_functions5_copy:
         draw a star:
           name: tāngia he whetū
@@ -259,6 +464,9 @@ mi-NZ:
       courseE_artist_functions7_2018:
         draw a house:
           name: tāngia he whare
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: tāngia he whare
       courseE_artist_functions8:
         do something:
           name: mahia atu
@@ -266,6 +474,9 @@ mi-NZ:
         do something:
           name: mahia atu
       courseE_artist_functions8_2019:
+        do something:
+          name: mahia atu
+      courseE_artist_functions8_2020:
         do something:
           name: mahia atu
       courseE_artist_functions8a_2018:
@@ -278,16 +489,27 @@ mi-NZ:
           name: tāngia he tapawhā
         do something:
           name: mahia atu
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: tāngia he tapawhā
+        do something:
+          name: mahia atu
       courseE_artist_functions8b_2018:
         do something:
           name: mahia atu
       courseE_artist_functions8b_2019:
         do something:
           name: mahia atu
+      courseE_artist_functions8b_2020:
+        do something:
+          name: mahia atu
       courseE_artist_functions8c_2018:
         do something:
           name: mahia atu
       courseE_artist_functions8c_2019:
+        do something:
+          name: mahia atu
+      courseE_artist_functions8c_2020:
         do something:
           name: mahia atu
       courseE_artist_functions9:
@@ -299,6 +521,9 @@ mi-NZ:
       courseE_artist_functions9_2019:
         do something:
           name: mahia atu
+      courseE_artist_functions9_2020:
+        do something:
+          name: mahia atu
       courseE_artist_functions_challenge1:
         do something:
           name: mahia atu
@@ -306,6 +531,9 @@ mi-NZ:
         do something:
           name: mahia atu
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: mahia atu
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: mahia atu
       courseE_artist_functions_challenge2:
@@ -317,6 +545,9 @@ mi-NZ:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: mahia atu
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: mahia atu
       courseE_artist_functions_predict1:
         draw a square:
           name: tāngia he tapawhā
@@ -324,6 +555,9 @@ mi-NZ:
         draw a square:
           name: tāngia he tapawhā
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: tāngia he tapawhā
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: tāngia he tapawhā
       courseE_artist_functions_predict1_copy:
@@ -336,6 +570,9 @@ mi-NZ:
         do something:
           name: mahia atu
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: mahia atu
+      courseE_artist_functions_predict2_2020:
         do something:
           name: mahia atu
       courseE_bee_functions1:
@@ -371,48 +608,164 @@ mi-NZ:
       courseF_artist_fwp1:
         draw a square:
           name: tāngia he tapawhā
+        checker:
+          parameters:
+            size: te rahi
         do something:
           name: mahia atu
+        Make gingham:
+          parameters:
+            size: te rahi
+        black outline:
+          parameters:
+            length: roanga
       courseF_artist_fwp2:
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
+        checker:
+          parameters:
+            size: te rahi
         do something:
           name: mahia atu
+        Make gingham:
+          parameters:
+            size: te rahi
+        black outline:
+          parameters:
+            length: roanga
       courseF_artist_fwp2_predict1:
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
       courseF_artist_fwp3:
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
+        draw a square2:
+          parameters:
+            size: te rahi
+        filled square:
+          parameters:
+            size: te rahi
+        black outline:
+          parameters:
+            length: roanga
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: roanga
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: roanga
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: roanga
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: roanga
+            min: mōkito
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: roanga
+            min: mōkito
       courseF_artist_fwp9:
         draw a star:
           name: tāngia he whetū
+          parameters:
+            points: ngā piro
+            length: roanga
         draw a circle:
           name: tāngia he porohita
+        draw a pinwheel:
+          parameters:
+            length: roanga
+            repeat: tōai
         draw a triangle:
           name: tāngia he tapatoru
+          parameters:
+            length: roanga
+        draw a shape:
+          parameters:
+            length: roanga
         draw a house:
           name: tāngia he whare
+          parameters:
+            length: roanga
         draw a square:
           name: tāngia he tapawhā
+          parameters:
+            length: roanga
+        draw a spiral edge:
+          parameters:
+            length: roanga
+            min: mōkito
       courseF_artist_fwp_challenge1:
         do something:
           name: mahia atu
       courseF_artist_fwp_challenge2:
         do something:
           name: mahia atu
+        draw an octagon:
+          parameters:
+            length: roanga
       courseF_bee_functions8a:
         do something:
           name: mahia atu
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: roanga
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: whānui
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: whānui
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: whānui
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: whānui
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: whānui
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: roanga
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: roanga
       courseF_bee_variables_7_2018:
         collect:
           name: kohia
       courseF_bee_variables_7_2019:
         collect:
           name: kohia
+      courseF_bee_variables_7_2020:
+        collect:
+          name: kohia
       courseF_bee_variables_8_2018:
         collect:
           name: kohia
       courseF_bee_variables_8_2019:
+        collect:
+          name: kohia
+      courseF_bee_variables_8_2020:
         collect:
           name: kohia

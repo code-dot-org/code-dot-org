@@ -8,7 +8,14 @@ eu-ES:
       2-3 Artist 3.4:
         draw a circle:
           name: marraztu zirkulu bat
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: Altuera
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: Altuera
         draw a circle:
           name: marraztu zirkulu bat
       2-3 Artist Functions 11:
@@ -41,18 +48,51 @@ eu-ES:
       4-5 Artist 7:
         draw a circle:
           name: marraztu zirkulu bat
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: eztia
       Course 4 Play Lab Params 1:
         jump:
           name: salto egin
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: puntuak
       Course 4 Play Lab Params 2:
         jump:
           name: salto egin
       Course 4 Play Lab Params 3:
         jump:
           name: salto egin
+          parameters:
+            height: Altuera
+            actor: aktore
       Course 4 Play Lab Params 4:
         do something:
           name: egin zerbait
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: aktore
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: aktore
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: aktore
+            speed: abiadura
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: aktore
+            speed: abiadura
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: puntuak
       Course 4 Play Lab Vars 1:
         set score:
           name: ezarri markagailua
@@ -65,15 +105,24 @@ eu-ES:
       Course 4 SCF 1a:
         get nectar:
           name: lortu nektarra
+          parameters:
+            counter: kontagailua
       Course 4 SCF 3:
         do something:
           name: egin zerbait
+        draw an octagon:
+          parameters:
+            length: luzera
       'Course E: Play Lab Project':
         do something:
           name: egin zerbait
       Find the Wizard:
         do something:
           name: egin zerbait
+      FoodFight:
+        score_points:
+          parameters:
+            points: puntuak
       Geometric Sun:
         diamond:
           name: diamantea
@@ -84,6 +133,23 @@ eu-ES:
           name: diamantea
         draw a house:
           name: marraztu etxe bat
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: luzera
+        draw a loop:
+          parameters:
+            length: luzera
+        draw spiral circle:
+          parameters:
+            size: tamaina
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: luzera
+        draw spiral circle:
+          parameters:
+            size: tamaina
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: marraztu karratu bat
@@ -109,20 +175,59 @@ eu-ES:
           name: egin zerbait
         draw a hexagon:
           name: marraztu hexagono bat
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: luzera
         do something:
           name: egin zerbait
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 15:
         draw a star:
           name: marraztu izar bat
+          parameters:
+            points: puntuak
+            length: luzera
         draw a circle:
           name: marraztu zirkulu bat
+        draw a pinwheel:
+          parameters:
+            length: luzera
+            repeat: errepikatu
         draw a triangle:
           name: marraztu triangelu bat
+          parameters:
+            length: luzera
+        draw a shape:
+          parameters:
+            length: luzera
         draw a house:
           name: marraztu etxe bat
+          parameters:
+            length: luzera
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 2:
         do something:
           name: egin zerbait
@@ -132,38 +237,97 @@ eu-ES:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: marraztu triangelu bat
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: marraztu triangelu bat
+          parameters:
+            length: luzera
         draw a hexagon:
           name: marraztu hexagono bat
+          parameters:
+            length: luzera
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
+        draw a sqaure:
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: marraztu triangelu bat
+          parameters:
+            length: luzera
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: luzera
       NEW Course 4 Artist Params 9:
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
         do something:
           name: egin zerbait
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: luzera
       NEW Course 4 Play Lab Params 11:
         jump:
           name: salto egin
+          parameters:
+            height: Altuera
+            actor: aktore
+        patrol:
+          parameters:
+            actor: aktore
+            speed: abiadura
       New Artist Project:
         draw a star:
           name: marraztu izar bat
+          parameters:
+            points: puntuak
+            length: luzera
         draw a circle:
           name: marraztu zirkulu bat
+        draw a pinwheel:
+          parameters:
+            length: luzera
+            repeat: errepikatu
         draw a triangle:
           name: marraztu triangelu bat
+          parameters:
+            length: luzera
+        draw a shape:
+          parameters:
+            length: luzera
         draw a house:
           name: marraztu etxe bat
+          parameters:
+            length: luzera
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
       New Play Lab Project:
         jump:
           name: salto egin
+          parameters:
+            height: Altuera
+            actor: aktore
+        patrol:
+          parameters:
+            actor: aktore
+            speed: abiadura
       Standalone_Artist_7:
         draw a flower:
           name: marraztu lore bat
@@ -185,7 +349,34 @@ eu-ES:
       course4_artist_fwp_challenge1:
         do something:
           name: egin zerbait
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: luzera
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: luzera
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: egin zerbait
+      courseC_data wizard_2020:
         do something:
           name: egin zerbait
       courseE_artist_concept1:
@@ -217,6 +408,9 @@ eu-ES:
       courseE_artist_functions10_2019:
         do something:
           name: egin zerbait
+      courseE_artist_functions10_2020:
+        do something:
+          name: egin zerbait
       courseE_artist_functions2:
         draw a square:
           name: marraztu karratu bat
@@ -226,6 +420,9 @@ eu-ES:
       courseE_artist_functions2_2019:
         draw a square:
           name: marraztu karratu bat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: marraztu karratu bat
       courseE_artist_functions2_copy:
         draw a square:
           name: marraztu karratu bat
@@ -233,6 +430,9 @@ eu-ES:
         draw a star:
           name: marraztu izar bat
       courseE_artist_functions3_2019:
+        draw a star:
+          name: marraztu izar bat
+      courseE_artist_functions3_2020:
         draw a star:
           name: marraztu izar bat
       courseE_artist_functions4:
@@ -250,6 +450,9 @@ eu-ES:
       courseE_artist_functions5_2019:
         draw a star:
           name: marraztu izar bat
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: marraztu izar bat
       courseE_artist_functions5_copy:
         draw a star:
           name: marraztu izar bat
@@ -259,6 +462,9 @@ eu-ES:
       courseE_artist_functions7_2018:
         draw a house:
           name: marraztu etxe bat
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: marraztu etxe bat
       courseE_artist_functions8:
         do something:
           name: egin zerbait
@@ -266,6 +472,9 @@ eu-ES:
         do something:
           name: egin zerbait
       courseE_artist_functions8_2019:
+        do something:
+          name: egin zerbait
+      courseE_artist_functions8_2020:
         do something:
           name: egin zerbait
       courseE_artist_functions8a_2018:
@@ -278,16 +487,27 @@ eu-ES:
           name: marraztu karratu bat
         do something:
           name: egin zerbait
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: marraztu karratu bat
+        do something:
+          name: egin zerbait
       courseE_artist_functions8b_2018:
         do something:
           name: egin zerbait
       courseE_artist_functions8b_2019:
         do something:
           name: egin zerbait
+      courseE_artist_functions8b_2020:
+        do something:
+          name: egin zerbait
       courseE_artist_functions8c_2018:
         do something:
           name: egin zerbait
       courseE_artist_functions8c_2019:
+        do something:
+          name: egin zerbait
+      courseE_artist_functions8c_2020:
         do something:
           name: egin zerbait
       courseE_artist_functions9:
@@ -299,6 +519,9 @@ eu-ES:
       courseE_artist_functions9_2019:
         do something:
           name: egin zerbait
+      courseE_artist_functions9_2020:
+        do something:
+          name: egin zerbait
       courseE_artist_functions_challenge1:
         do something:
           name: egin zerbait
@@ -306,6 +529,9 @@ eu-ES:
         do something:
           name: egin zerbait
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: egin zerbait
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: egin zerbait
       courseE_artist_functions_challenge2:
@@ -317,6 +543,9 @@ eu-ES:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: egin zerbait
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: egin zerbait
       courseE_artist_functions_predict1:
         draw a square:
           name: marraztu karratu bat
@@ -324,6 +553,9 @@ eu-ES:
         draw a square:
           name: marraztu karratu bat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: marraztu karratu bat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: marraztu karratu bat
       courseE_artist_functions_predict1_copy:
@@ -336,6 +568,9 @@ eu-ES:
         do something:
           name: egin zerbait
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: egin zerbait
+      courseE_artist_functions_predict2_2020:
         do something:
           name: egin zerbait
       courseE_bee_functions1:
@@ -371,48 +606,144 @@ eu-ES:
       courseF_artist_fwp1:
         draw a square:
           name: marraztu karratu bat
+        checker:
+          parameters:
+            size: tamaina
         do something:
           name: egin zerbait
+        Make gingham:
+          parameters:
+            size: tamaina
+        black outline:
+          parameters:
+            length: luzera
       courseF_artist_fwp2:
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
+        checker:
+          parameters:
+            size: tamaina
         do something:
           name: egin zerbait
+        Make gingham:
+          parameters:
+            size: tamaina
+        black outline:
+          parameters:
+            length: luzera
       courseF_artist_fwp2_predict1:
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
       courseF_artist_fwp3:
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
+        draw a square2:
+          parameters:
+            size: tamaina
+        filled square:
+          parameters:
+            size: tamaina
+        black outline:
+          parameters:
+            length: luzera
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: luzera
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: luzera
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: luzera
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: luzera
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: luzera
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: marraztu izar bat
+          parameters:
+            points: puntuak
+            length: luzera
         draw a circle:
           name: marraztu zirkulu bat
+        draw a pinwheel:
+          parameters:
+            length: luzera
+            repeat: errepikatu
         draw a triangle:
           name: marraztu triangelu bat
+          parameters:
+            length: luzera
+        draw a shape:
+          parameters:
+            length: luzera
         draw a house:
           name: marraztu etxe bat
+          parameters:
+            length: luzera
         draw a square:
           name: marraztu karratu bat
+          parameters:
+            length: luzera
+        draw a spiral edge:
+          parameters:
+            length: luzera
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: egin zerbait
       courseF_artist_fwp_challenge2:
         do something:
           name: egin zerbait
+        draw an octagon:
+          parameters:
+            length: luzera
       courseF_bee_functions8a:
         do something:
           name: egin zerbait
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: luzera
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: luzera
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: luzera
       courseF_bee_variables_7_2018:
         collect:
           name: uzta bildu
       courseF_bee_variables_7_2019:
         collect:
           name: uzta bildu
+      courseF_bee_variables_7_2020:
+        collect:
+          name: uzta bildu
       courseF_bee_variables_8_2018:
         collect:
           name: uzta bildu
       courseF_bee_variables_8_2019:
+        collect:
+          name: uzta bildu
+      courseF_bee_variables_8_2020:
         collect:
           name: uzta bildu

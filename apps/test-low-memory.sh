@@ -54,9 +54,6 @@ ${PARALLEL} <<SCRIPT
 npm run lint
 (PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
 (PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook)
-# Since scratch tests are disable this also needs to be disable. If enable scratch tests
-# then uncomment this
-# (PORT=9878 $GRUNT_CMD scratchTest && ${CODECOV} -cF scratch)
 (PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 (PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 (PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)

@@ -18,6 +18,12 @@ id-ID:
       AppLab Intro 7 - thisOrThatAddScreen: Ini atau itu
       AppLab Intro 7 - thisOrThatPersonalize: Ini atau itu
       AppLab Intro 7 - thisOrThatSetScreen: Ini atau itu
+      CDEF_video_SpritesInAction: Bagaimana cara Membuat sebuah Sprite
+      CDEF_video_SpritesInAction_2019: Bagaimana cara Membuat sebuah Sprite
+      CDEF_video_SpritesInAction_2020: Bagaimana cara Membuat sebuah Sprite
+      CSD Polling Events Map: Event Angket
+      CSD Polling Events Map_2018: Event Angket
+      CSD Polling Events Map_2019: Event Angket
       CSD Problem Solving Process Video: 'Video: proses pemecahan masalah'
       CSD U2 CC Search Map: Karya kreatif
       CSD U2 CC Search Map_2018: Karya kreatif
@@ -70,6 +76,9 @@ id-ID:
       CSD U2 formatting map: Format HTML
       CSD U2 formatting map_2018: Format HTML
       CSD U2 formatting map_2019: Format HTML
+      CSD U2 images map: Gambar dalam HTML
+      CSD U2 images map_2018: Gambar dalam HTML
+      CSD U2 images map_2019: Gambar dalam HTML
       CSD U2 lists map: List dalam HTML
       CSD U2 lists map_2018: List dalam HTML
       CSD U2 lists map_2019: List dalam HTML
@@ -119,9 +128,12 @@ id-ID:
       CSD U3 L9 Freeplay: Permainan Gratis
       CSD U3 L9 Freeplay_2018: Permainan Gratis
       CSD U3 L9 Freeplay_2019: Permainan Gratis
-      CSD U3 Variables Map: Variables
-      CSD U3 Variables Map_2018: Variables
-      CSD U3 Variables Map_2019: Variables
+      CSD U3 The Draw Loop Map: Draw Loop
+      CSD U3 The Draw Loop Map_2018: Draw Loop
+      CSD U3 The Draw Loop Map_2019: Draw Loop
+      CSD U3 Variables Map: variabel
+      CSD U3 Variables Map_2018: variabel
+      CSD U3 Variables Map_2019: variabel
       CSD U3 collisions build isTouching: Deteksi tumbukan
       CSD U3 collisions build isTouching_2018: Deteksi tumbukan
       CSD U3 collisions build isTouching_2019: Deteksi tumbukan
@@ -149,8 +161,12 @@ id-ID:
       CSD U5 black white images pixelation 5_2019: Hitam dan putih Pixelation Widget
       CSD U5 black white images pixelation_2018: Hitam dan putih Pixelation Widget
       CSD U5 black white images pixelation_2019: Hitam dan putih Pixelation Widget
+      CSD U6 Event Types: Jenis Event
+      CSD U6 Event Types_2018: Jenis Event
+      CSD U6 Event Types_2019: Jenis Event
       CSD U6 arrays intro: Pengenalan untuk array
       CSD U6 arrays intro_2018: Pengenalan untuk array
+      CSD U6 arrays intro_2019: Array
       CSD U6 for loop map: Untuk Pengulangan
       CSD U6 for loop map_2018: Untuk Pengulangan
       CSD U6 for loop map_2019: Untuk Pengulangan
@@ -176,11 +192,20 @@ id-ID:
       'Course F: Artist Project - Revise_2018': Merevisi Proyek Seniman
       'Course F: Artist Project_2018': Proyek Seniman Kursus F
       'Course F: Artist Project_2019': Proyek Seniman Kursus F
+      CourseD_Dance_2020_bonus1: Maju mundur
+      CourseD_Dance_2020_bonus3: Masuk formasi
       CourseEF_video_IntroSpriteLab: Ini adalah Lab Sprite
       CourseEF_video_IntroSpriteLab_2019: Ini adalah Lab Sprite
+      CourseEF_video_IntroSpriteLab_2020: Ini adalah Lab Sprite
+      CourseEF_video_MakeSprite: Bagaimana cara Membuat sebuah Sprite
+      CourseEF_video_MakeSprite_2019: Bagaimana cara Membuat sebuah Sprite
+      CourseEF_video_MakeSprite_2020: Bagaimana cara Membuat sebuah Sprite
       CourseE_Project_SpriteLab: Kursus E Proyek Sprite Lab
       CourseE_Project_SpriteLab_2019: Kursus E Proyek Sprite Lab
       CourseE_hoops: Kelinci
+      CourseF_Oceans_Video_Machine_Learning: 'Video: Pembelajaran Mesin'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: Implikasi Sosial'
+      CourseF_Oceans_Video_Training_Data: 'Video: Data Pelatihan'
       CourseF_Project_Revise_SpriteLab: Merevisi Proyek Sprite Lab
       CourseF_Project_SpriteLab: Proyek Sprite Lab Kursus F
       CourseF_Project_SpriteLab_2019: Proyek Sprite Lab Kursus F
@@ -211,31 +236,43 @@ id-ID:
       Intro to Web Lab - Part 2_2019: Pendahuluan Web Lab - Bagian 2
       MC_HOC_2017_01_RETRY: Rumah dan pekarangannya
       MC_HOC_2017_01_RETRY_2019: Rumah dan pekarangannya
+      MC_HOC_2017_01_RETRY_2020: Rumah dan pekarangannya
       MC_HOC_2017_02_Cole: Ladang
       MC_HOC_2017_02_Cole_2019: Ladang
+      MC_HOC_2017_02_Cole_2020: Ladang
       MC_HOC_2017_03_Cole: Hutan
       MC_HOC_2017_03_Cole_2019: Hutan
+      MC_HOC_2017_03_Cole_2020: Hutan
       MC_HOC_2017_04POINT5_RYAN: Gurun Pasir
       MC_HOC_2017_04POINT5_RYAN_2019: Gurun Pasir
+      MC_HOC_2017_04POINT5_RYAN_2020: Gurun Pasir
       MC_HOC_2017_04_Cole: Rawa
       MC_HOC_2017_04_Cole_2019: Rawa
+      MC_HOC_2017_04_Cole_2020: Rawa
       MC_HOC_2017_05_Cole: Sungai
       MC_HOC_2017_05_Cole_2019: Sungai
+      MC_HOC_2017_05_Cole_2020: Sungai
       MC_HOC_2017_06_Cole: Air Pasang
       MC_HOC_2017_06_Cole_2019: Air Pasang
+      MC_HOC_2017_06_Cole_2020: Air Pasang
       MC_HOC_2017_07_Cole: Jalan Bersalju
       MC_HOC_2017_07_Cole_2019: Jalan Bersalju
+      MC_HOC_2017_07_Cole_2020: Jalan Bersalju
       MC_HOC_2017_10_RETRY: Gua
       MC_HOC_2017_10_RETRY_2019: Gua
+      MC_HOC_2017_10_RETRY_2020: Gua
       MC_HOC_2017_Ali: Di Bawah Benteng
       MC_HOC_2017_Ali_2019: Di Bawah Benteng
+      MC_HOC_2017_Ali_2020: Di Bawah Benteng
       MC_HOC_2017_FP20x20: Main Bebas
       MC_HOC_2017_FP20x20_2019: Main Bebas
+      MC_HOC_2017_FP20x20_2020: Main Bebas
       Making Music_2018: Membuat musik
       Making Music_2019: Membuat musik
       New Minecraft Hero Project: Main Bebas
       OPD-K5 WhatIsCS: Apakah ilmu komputer?
       OPD-K5 WhatIsCS_copy: Apakah ilmu komputer?
+      OPD-K5-spritelab-5-video: Bagaimana cara Membuat sebuah Sprite
       Oceans_Video_Machine_Learning: 'Video: Pembelajaran Mesin'
       Oceans_Video_Societal_Implications: 'Video: Implikasi Sosial'
       Oceans_Video_Training_Data: 'Video: Data Pelatihan'
@@ -244,8 +281,18 @@ id-ID:
       'Video: Intro to CSS Part 2_2019': 'Video: Pendahuluan untuk CSS Bagian 2'
       'Video: Intro to CSS_2018': 'Video: Pendahuluan untuk CSS'
       'Video: Intro to CSS_2019': 'Video: Pendahuluan untuk CSS'
+      courseA_video_Stevie: Stevie dan Proyek Besar
+      courseA_video_Stevie_2018: Stevie dan Proyek Besar
+      courseB_video_Unspotted: Masalah tak Terlihat
+      courseB_video_Unspotted_2018: Masalah tak Terlihat
       courseE_Dogger_2: Contoh Dogger
+      courseF_artist_for1: For Loops Freeplay (Permulaan)
+      courseF_artist_for1_2018: For Loops Freeplay (Permulaan)
+      courseF_artist_for1_2019: For Loops Freeplay (Permulaan)
+      courseF_artist_for1_2020: For Loops Freeplay (Permulaan)
       courseF_project_1: Proyek Contoh Sprite Lab
+      courseF_video_csMatters: Akhir dari Proyek Kursus
       courseF_video_csMatters_2018: 'Video: Masalah CS'
       scrat_loops_C-F_video: Lingkaran dalam Video Zaman Es
       scrat_loops_C-F_video_2019: Lingkaran dalam Video Zaman Es
+      scrat_loops_C-F_video_2020: Lingkaran dalam Video Zaman Es

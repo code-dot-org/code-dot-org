@@ -8,7 +8,16 @@ bs-BA:
       2-3 Artist 3.4:
         draw a circle:
           name: nacrtaj krug
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: širina
+            height: visina
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            width: širina
+            height: visina
         draw a circle:
           name: nacrtaj krug
       2-3 Artist Functions 11:
@@ -41,6 +50,10 @@ bs-BA:
       4-5 Artist 7:
         draw a circle:
           name: nacrtaj krug
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: med
       Course 4 Play Lab Params 1:
         jump:
           name: skoči
@@ -50,9 +63,30 @@ bs-BA:
       Course 4 Play Lab Params 3:
         jump:
           name: skoči
+          parameters:
+            height: visina
+            actor: lik
       Course 4 Play Lab Params 4:
         do something:
           name: uradi nešto
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: lik
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: lik
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: lik
+            speed: brzina
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: lik
+            speed: brzina
       Course 4 Play Lab Vars 1:
         set score:
           name: postavi rezultat
@@ -65,9 +99,14 @@ bs-BA:
       Course 4 SCF 1a:
         get nectar:
           name: pokupi nektar
+          parameters:
+            counter: brojač
       Course 4 SCF 3:
         do something:
           name: uradi nešto
+        draw an octagon:
+          parameters:
+            length: dužina
       'Course E: Play Lab Project':
         do something:
           name: uradi nešto
@@ -84,6 +123,23 @@ bs-BA:
           name: dijamant
         draw a house:
           name: nacrtaj kuću
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: dužina
+        draw a loop:
+          parameters:
+            length: dužina
+        draw spiral circle:
+          parameters:
+            size: veličina
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: dužina
+        draw spiral circle:
+          parameters:
+            size: veličina
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: nacrtaj kvadrat
@@ -109,20 +165,58 @@ bs-BA:
           name: uradi nešto
         draw a hexagon:
           name: nacrtaj šesterougao
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: dužina
         do something:
           name: uradi nešto
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 15:
         draw a star:
           name: nacrtaj zvijezdu
+          parameters:
+            length: dužina
         draw a circle:
           name: nacrtaj krug
+        draw a pinwheel:
+          parameters:
+            length: dužina
+            repeat: ponovi
         draw a triangle:
           name: nacrtaj trougao
+          parameters:
+            length: dužina
+        draw a shape:
+          parameters:
+            length: dužina
         draw a house:
           name: nacrtaj kuću
+          parameters:
+            length: dužina
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 2:
         do something:
           name: uradi nešto
@@ -132,38 +226,96 @@ bs-BA:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: nacrtaj trougao
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: nacrtaj trougao
+          parameters:
+            length: dužina
         draw a hexagon:
           name: nacrtaj šesterougao
+          parameters:
+            length: dužina
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
+        draw a sqaure:
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: nacrtaj trougao
+          parameters:
+            length: dužina
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: dužina
       NEW Course 4 Artist Params 9:
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
         do something:
           name: uradi nešto
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: dužina
       NEW Course 4 Play Lab Params 11:
         jump:
           name: skoči
+          parameters:
+            height: visina
+            actor: lik
+        patrol:
+          parameters:
+            actor: lik
+            speed: brzina
       New Artist Project:
         draw a star:
           name: nacrtaj zvijezdu
+          parameters:
+            length: dužina
         draw a circle:
           name: nacrtaj krug
+        draw a pinwheel:
+          parameters:
+            length: dužina
+            repeat: ponovi
         draw a triangle:
           name: nacrtaj trougao
+          parameters:
+            length: dužina
+        draw a shape:
+          parameters:
+            length: dužina
         draw a house:
           name: nacrtaj kuću
+          parameters:
+            length: dužina
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
       New Play Lab Project:
         jump:
           name: skoči
+          parameters:
+            height: visina
+            actor: lik
+        patrol:
+          parameters:
+            actor: lik
+            speed: brzina
       Standalone_Artist_7:
         draw a flower:
           name: nacrtaj cvijet
@@ -185,7 +337,34 @@ bs-BA:
       course4_artist_fwp_challenge1:
         do something:
           name: uradi nešto
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: dužina
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: dužina
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: uradi nešto
+      courseC_data wizard_2020:
         do something:
           name: uradi nešto
       courseE_artist_concept1:
@@ -217,6 +396,9 @@ bs-BA:
       courseE_artist_functions10_2019:
         do something:
           name: uradi nešto
+      courseE_artist_functions10_2020:
+        do something:
+          name: uradi nešto
       courseE_artist_functions2:
         draw a square:
           name: nacrtaj kvadrat
@@ -226,6 +408,9 @@ bs-BA:
       courseE_artist_functions2_2019:
         draw a square:
           name: nacrtaj kvadrat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: nacrtaj kvadrat
       courseE_artist_functions2_copy:
         draw a square:
           name: nacrtaj kvadrat
@@ -233,6 +418,9 @@ bs-BA:
         draw a star:
           name: nacrtaj zvijezdu
       courseE_artist_functions3_2019:
+        draw a star:
+          name: nacrtaj zvijezdu
+      courseE_artist_functions3_2020:
         draw a star:
           name: nacrtaj zvijezdu
       courseE_artist_functions4:
@@ -250,6 +438,9 @@ bs-BA:
       courseE_artist_functions5_2019:
         draw a star:
           name: nacrtaj zvijezdu
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: nacrtaj zvijezdu
       courseE_artist_functions5_copy:
         draw a star:
           name: nacrtaj zvijezdu
@@ -259,6 +450,9 @@ bs-BA:
       courseE_artist_functions7_2018:
         draw a house:
           name: nacrtaj kuću
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: nacrtaj kuću
       courseE_artist_functions8:
         do something:
           name: uradi nešto
@@ -266,6 +460,9 @@ bs-BA:
         do something:
           name: uradi nešto
       courseE_artist_functions8_2019:
+        do something:
+          name: uradi nešto
+      courseE_artist_functions8_2020:
         do something:
           name: uradi nešto
       courseE_artist_functions8a_2018:
@@ -278,16 +475,27 @@ bs-BA:
           name: nacrtaj kvadrat
         do something:
           name: uradi nešto
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: nacrtaj kvadrat
+        do something:
+          name: uradi nešto
       courseE_artist_functions8b_2018:
         do something:
           name: uradi nešto
       courseE_artist_functions8b_2019:
         do something:
           name: uradi nešto
+      courseE_artist_functions8b_2020:
+        do something:
+          name: uradi nešto
       courseE_artist_functions8c_2018:
         do something:
           name: uradi nešto
       courseE_artist_functions8c_2019:
+        do something:
+          name: uradi nešto
+      courseE_artist_functions8c_2020:
         do something:
           name: uradi nešto
       courseE_artist_functions9:
@@ -299,6 +507,9 @@ bs-BA:
       courseE_artist_functions9_2019:
         do something:
           name: uradi nešto
+      courseE_artist_functions9_2020:
+        do something:
+          name: uradi nešto
       courseE_artist_functions_challenge1:
         do something:
           name: uradi nešto
@@ -306,6 +517,9 @@ bs-BA:
         do something:
           name: uradi nešto
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: uradi nešto
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: uradi nešto
       courseE_artist_functions_challenge2:
@@ -317,6 +531,9 @@ bs-BA:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: uradi nešto
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: uradi nešto
       courseE_artist_functions_predict1:
         draw a square:
           name: nacrtaj kvadrat
@@ -324,6 +541,9 @@ bs-BA:
         draw a square:
           name: nacrtaj kvadrat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: nacrtaj kvadrat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: nacrtaj kvadrat
       courseE_artist_functions_predict1_copy:
@@ -336,6 +556,9 @@ bs-BA:
         do something:
           name: uradi nešto
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: uradi nešto
+      courseE_artist_functions_predict2_2020:
         do something:
           name: uradi nešto
       courseE_bee_functions1:
@@ -371,48 +594,163 @@ bs-BA:
       courseF_artist_fwp1:
         draw a square:
           name: nacrtaj kvadrat
+        checker:
+          parameters:
+            size: veličina
         do something:
           name: uradi nešto
+        Make gingham:
+          parameters:
+            size: veličina
+        black outline:
+          parameters:
+            length: dužina
       courseF_artist_fwp2:
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
+        checker:
+          parameters:
+            size: veličina
         do something:
           name: uradi nešto
+        Make gingham:
+          parameters:
+            size: veličina
+        black outline:
+          parameters:
+            length: dužina
       courseF_artist_fwp2_predict1:
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
       courseF_artist_fwp3:
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
+        draw a square2:
+          parameters:
+            size: veličina
+        filled square:
+          parameters:
+            size: veličina
+        black outline:
+          parameters:
+            length: dužina
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: dužina
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: dužina
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: dužina
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: dužina
+            min: min.
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: dužina
+            min: min.
       courseF_artist_fwp9:
         draw a star:
           name: nacrtaj zvijezdu
+          parameters:
+            length: dužina
         draw a circle:
           name: nacrtaj krug
+        draw a pinwheel:
+          parameters:
+            length: dužina
+            repeat: ponovi
         draw a triangle:
           name: nacrtaj trougao
+          parameters:
+            length: dužina
+        draw a shape:
+          parameters:
+            length: dužina
         draw a house:
           name: nacrtaj kuću
+          parameters:
+            length: dužina
         draw a square:
           name: nacrtaj kvadrat
+          parameters:
+            length: dužina
+        draw a spiral edge:
+          parameters:
+            length: dužina
+            min: min.
       courseF_artist_fwp_challenge1:
         do something:
           name: uradi nešto
       courseF_artist_fwp_challenge2:
         do something:
           name: uradi nešto
+        draw an octagon:
+          parameters:
+            length: dužina
       courseF_bee_functions8a:
         do something:
           name: uradi nešto
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: dužina
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: širina
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: širina
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: širina
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: širina
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: širina
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: dužina
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: dužina
       courseF_bee_variables_7_2018:
         collect:
           name: pokupi
       courseF_bee_variables_7_2019:
         collect:
           name: pokupi
+      courseF_bee_variables_7_2020:
+        collect:
+          name: pokupi
       courseF_bee_variables_8_2018:
         collect:
           name: pokupi
       courseF_bee_variables_8_2019:
+        collect:
+          name: pokupi
+      courseF_bee_variables_8_2020:
         collect:
           name: pokupi

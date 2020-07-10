@@ -4,6 +4,12 @@ ta-IN:
     long_instructions:
       2-3 Artist 4: அவையை அவமதித்த இந்த கேட் நிறைவு செய்ய எனக்கு உதவவும்.
       2-3 Artist 9 NEW: இப்பட்டத்தை முடி
+      CourseD_Dance_2020_05: "_இப்போது நாங்கள் ஃக்ரூவிங் செய்கிறோம்!_ \n\nஒரு <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        ப்ளாக்கை உங்கள் பணியிடத்தில் சேர்க்கவும். 6 மெஷர்களுக்குப் பிறகு நடனக் கலைஞர்
+        ஒரு புதிய அசைவைத் தொடங்க வேக்கவும்."
+      CourseD_Dance_2020_10: உங்களது சொந்த நடன அசைவை கொண்டு வாருங்கள்! உங்களது சொந்த
+        நடனத்தை உருவாக்கி உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்.
       CourseD_Dance_Party_01: "_இன்று நாம் செய்வோம் ஒரு dance party!_\n\nஒர்க்ஸ்பேசுக்குள்
         “மேக் எ நியூ” பிளாக்கை இழுத்து, அதை “செட்அப்” பிளாக்குக்குள் உங்கள் முதல்
         டான்சரை உருவாக்குங்கள்.    \n\n-   _நீங்கள் மேலதிக தகவல்களையோ அல்லது கூடுதல்
@@ -11,7 +17,7 @@ ta-IN:
       CourseD_Dance_Party_02: |-
         நாம் இந்த மூஸை ஆடச் செய்வோம்!
 
-        <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> நிகழ்வு ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
+        <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> நிகழ்வு ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
 
         **அளவீடுகள்** என்பன இசையில் நேரத்தைக் கணக்கிட பயன்படுகின்றன. இந்தப் பயிற்சியில், ஒரு அளவீடு (மெஷர்) என்பது நான்கு பீட்டுகள் நீளம் கொண்டது.
       CourseD_Dance_Party_04: |-
@@ -37,7 +43,7 @@ ta-IN:
       CourseD_Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -76,7 +82,7 @@ ta-IN:
       Dance_Party_02: |-
         நாம் இந்த மூஸை ஆடச் செய்வோம்!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
 
         **அளவீடுகள்** என்பன இசையில் நேரத்தைக் கணக்கிட பயன்படுகின்றன. இந்தப் பயிற்சியில், ஒரு அளவீடு (மெஷர்) என்பது நான்கு பீட்டுகள் நீளம் கொண்டது.
       Dance_Party_03: "_இப்போது நாங்கள் ஃக்ரூவிங் செய்கிறோம்!_ \n\nஒரு <xml><block
@@ -106,7 +112,7 @@ ta-IN:
       Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>

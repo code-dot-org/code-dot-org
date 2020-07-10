@@ -8,7 +8,16 @@ fi-FI:
       2-3 Artist 3.4:
         draw a circle:
           name: piirrä ympyrä
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: leveys
+            height: korkeus
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            width: leveys
+            height: korkeus
         draw a circle:
           name: piirrä ympyrä
       2-3 Artist Functions 11:
@@ -41,18 +50,51 @@ fi-FI:
       4-5 Artist 7:
         draw a circle:
           name: piirrä ympyrä
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: hunaja
       Course 4 Play Lab Params 1:
         jump:
           name: hyppää
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: pisteet
       Course 4 Play Lab Params 2:
         jump:
           name: hyppää
       Course 4 Play Lab Params 3:
         jump:
           name: hyppää
+          parameters:
+            height: korkeus
+            actor: hahmo
       Course 4 Play Lab Params 4:
         do something:
           name: tee jotain
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: hahmo
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: hahmo
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: hahmo
+            speed: nopeus
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: hahmo
+            speed: nopeus
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: pisteet
       Course 4 Play Lab Vars 1:
         set score:
           name: aseta pisteet
@@ -65,15 +107,24 @@ fi-FI:
       Course 4 SCF 1a:
         get nectar:
           name: kerää mesi
+          parameters:
+            counter: laskuri
       Course 4 SCF 3:
         do something:
           name: tee jotain
+        draw an octagon:
+          parameters:
+            length: pituus
       'Course E: Play Lab Project':
         do something:
           name: tee jotain
       Find the Wizard:
         do something:
           name: tee jotain
+      FoodFight:
+        score_points:
+          parameters:
+            points: pisteet
       Geometric Sun:
         diamond:
           name: timantti
@@ -84,6 +135,23 @@ fi-FI:
           name: timantti
         draw a house:
           name: piirrä talo
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: pituus
+        draw a loop:
+          parameters:
+            length: pituus
+        draw spiral circle:
+          parameters:
+            size: koko
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: pituus
+        draw spiral circle:
+          parameters:
+            size: koko
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: piirrä neliö
@@ -109,20 +177,59 @@ fi-FI:
           name: tee jotain
         draw a hexagon:
           name: piirrä kuusikulmio
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: pituus
         do something:
           name: tee jotain
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 15:
         draw a star:
           name: piirrä tähti
+          parameters:
+            points: pisteet
+            length: pituus
         draw a circle:
           name: piirrä ympyrä
+        draw a pinwheel:
+          parameters:
+            length: pituus
+            repeat: toista
         draw a triangle:
           name: piirrä kolmio
+          parameters:
+            length: pituus
+        draw a shape:
+          parameters:
+            length: pituus
         draw a house:
           name: piirrä talo
+          parameters:
+            length: pituus
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 2:
         do something:
           name: tee jotain
@@ -132,38 +239,97 @@ fi-FI:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: piirrä kolmio
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: piirrä kolmio
+          parameters:
+            length: pituus
         draw a hexagon:
           name: piirrä kuusikulmio
+          parameters:
+            length: pituus
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
+        draw a sqaure:
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: piirrä kolmio
+          parameters:
+            length: pituus
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: pituus
       NEW Course 4 Artist Params 9:
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
         do something:
           name: tee jotain
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: pituus
       NEW Course 4 Play Lab Params 11:
         jump:
           name: hyppää
+          parameters:
+            height: korkeus
+            actor: hahmo
+        patrol:
+          parameters:
+            actor: hahmo
+            speed: nopeus
       New Artist Project:
         draw a star:
           name: piirrä tähti
+          parameters:
+            points: pisteet
+            length: pituus
         draw a circle:
           name: piirrä ympyrä
+        draw a pinwheel:
+          parameters:
+            length: pituus
+            repeat: toista
         draw a triangle:
           name: piirrä kolmio
+          parameters:
+            length: pituus
+        draw a shape:
+          parameters:
+            length: pituus
         draw a house:
           name: piirrä talo
+          parameters:
+            length: pituus
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
       New Play Lab Project:
         jump:
           name: hyppää
+          parameters:
+            height: korkeus
+            actor: hahmo
+        patrol:
+          parameters:
+            actor: hahmo
+            speed: nopeus
       Standalone_Artist_7:
         draw a flower:
           name: piirrä kukka
@@ -183,9 +349,39 @@ fi-FI:
         do something:
           name: tee jotain
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: väri
         do something:
           name: tee jotain
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: pituus
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: pituus
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: tee jotain
+      courseC_data wizard_2020:
         do something:
           name: tee jotain
       courseE_artist_concept1:
@@ -217,6 +413,9 @@ fi-FI:
       courseE_artist_functions10_2019:
         do something:
           name: tee jotain
+      courseE_artist_functions10_2020:
+        do something:
+          name: tee jotain
       courseE_artist_functions2:
         draw a square:
           name: piirrä neliö
@@ -226,6 +425,9 @@ fi-FI:
       courseE_artist_functions2_2019:
         draw a square:
           name: piirrä neliö
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: piirrä neliö
       courseE_artist_functions2_copy:
         draw a square:
           name: piirrä neliö
@@ -233,6 +435,9 @@ fi-FI:
         draw a star:
           name: piirrä tähti
       courseE_artist_functions3_2019:
+        draw a star:
+          name: piirrä tähti
+      courseE_artist_functions3_2020:
         draw a star:
           name: piirrä tähti
       courseE_artist_functions4:
@@ -250,6 +455,9 @@ fi-FI:
       courseE_artist_functions5_2019:
         draw a star:
           name: piirrä tähti
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: piirrä tähti
       courseE_artist_functions5_copy:
         draw a star:
           name: piirrä tähti
@@ -259,6 +467,9 @@ fi-FI:
       courseE_artist_functions7_2018:
         draw a house:
           name: piirrä talo
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: piirrä talo
       courseE_artist_functions8:
         do something:
           name: tee jotain
@@ -266,6 +477,9 @@ fi-FI:
         do something:
           name: tee jotain
       courseE_artist_functions8_2019:
+        do something:
+          name: tee jotain
+      courseE_artist_functions8_2020:
         do something:
           name: tee jotain
       courseE_artist_functions8a_2018:
@@ -278,16 +492,27 @@ fi-FI:
           name: piirrä neliö
         do something:
           name: tee jotain
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: piirrä neliö
+        do something:
+          name: tee jotain
       courseE_artist_functions8b_2018:
         do something:
           name: tee jotain
       courseE_artist_functions8b_2019:
         do something:
           name: tee jotain
+      courseE_artist_functions8b_2020:
+        do something:
+          name: tee jotain
       courseE_artist_functions8c_2018:
         do something:
           name: tee jotain
       courseE_artist_functions8c_2019:
+        do something:
+          name: tee jotain
+      courseE_artist_functions8c_2020:
         do something:
           name: tee jotain
       courseE_artist_functions9:
@@ -299,6 +524,9 @@ fi-FI:
       courseE_artist_functions9_2019:
         do something:
           name: tee jotain
+      courseE_artist_functions9_2020:
+        do something:
+          name: tee jotain
       courseE_artist_functions_challenge1:
         do something:
           name: tee jotain
@@ -306,6 +534,9 @@ fi-FI:
         do something:
           name: tee jotain
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: tee jotain
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: tee jotain
       courseE_artist_functions_challenge2:
@@ -317,6 +548,9 @@ fi-FI:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: tee jotain
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: tee jotain
       courseE_artist_functions_predict1:
         draw a square:
           name: piirrä neliö
@@ -324,6 +558,9 @@ fi-FI:
         draw a square:
           name: piirrä neliö
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: piirrä neliö
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: piirrä neliö
       courseE_artist_functions_predict1_copy:
@@ -336,6 +573,9 @@ fi-FI:
         do something:
           name: tee jotain
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: tee jotain
+      courseE_artist_functions_predict2_2020:
         do something:
           name: tee jotain
       courseE_bee_functions1:
@@ -371,48 +611,170 @@ fi-FI:
       courseF_artist_fwp1:
         draw a square:
           name: piirrä neliö
+        checker:
+          parameters:
+            size: koko
+            color: väri
         do something:
           name: tee jotain
+        Make gingham:
+          parameters:
+            size: koko
+        black outline:
+          parameters:
+            length: pituus
       courseF_artist_fwp2:
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
+        checker:
+          parameters:
+            size: koko
+            color: väri
         do something:
           name: tee jotain
+        Make gingham:
+          parameters:
+            size: koko
+        black outline:
+          parameters:
+            length: pituus
       courseF_artist_fwp2_predict1:
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
       courseF_artist_fwp3:
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
+        draw a square2:
+          parameters:
+            size: koko
+        filled square:
+          parameters:
+            size: koko
+            color: väri
+        black outline:
+          parameters:
+            length: pituus
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: pituus
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: pituus
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: pituus
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: pituus
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: pituus
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: piirrä tähti
+          parameters:
+            points: pisteet
+            length: pituus
         draw a circle:
           name: piirrä ympyrä
+        draw a pinwheel:
+          parameters:
+            length: pituus
+            repeat: toista
         draw a triangle:
           name: piirrä kolmio
+          parameters:
+            length: pituus
+        draw a shape:
+          parameters:
+            length: pituus
         draw a house:
           name: piirrä talo
+          parameters:
+            length: pituus
         draw a square:
           name: piirrä neliö
+          parameters:
+            length: pituus
+        draw a spiral edge:
+          parameters:
+            length: pituus
+            min: min
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: väri
         do something:
           name: tee jotain
       courseF_artist_fwp_challenge2:
         do something:
           name: tee jotain
+        draw an octagon:
+          parameters:
+            length: pituus
       courseF_bee_functions8a:
         do something:
           name: tee jotain
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: pituus
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: leveys
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: leveys
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: leveys
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: leveys
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: leveys
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: pituus
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: pituus
       courseF_bee_variables_7_2018:
         collect:
           name: kerätä
       courseF_bee_variables_7_2019:
         collect:
           name: kerätä
+      courseF_bee_variables_7_2020:
+        collect:
+          name: kerätä
       courseF_bee_variables_8_2018:
         collect:
           name: kerätä
       courseF_bee_variables_8_2019:
+        collect:
+          name: kerätä
+      courseF_bee_variables_8_2020:
         collect:
           name: kerätä

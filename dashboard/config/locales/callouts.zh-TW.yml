@@ -183,6 +183,22 @@ zh-TW:
         Course_4_Playlab_For_Loops_4b_2: 這個關卡你只能修改`計數迴圈`中的「增量」。
       Course 4 SCV 6:
         Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
+      CourseD_Dance_2020_01:
+        dance_callout_01: 在這裡選擇舞者的類型。
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: 將此程式積木添加到您的程式中。
+        arrow_buttons: 按箭頭按鈕控制舞者。
+      CourseD_Dance_2020_04:
+        dance_callout_02: 把這個積木拖曳到工作區！
+      CourseD_Dance_2020_05:
+        dance_callout_05: 將新事件添加到程式中。
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: 新的程式積木！
+      CourseD_Dance_2020_07:
+        setprop_hint: 新的程式積木！
+      CourseD_Dance_2020_09:
+        new_block_3: 新的程式積木！
+        new_block_4: 新的程式積木！
       CourseD_Dance_Party_01:
         dance_callout_01: 把這個積木拖曳到工作區！
       CourseD_Dance_Party_02:
@@ -225,9 +241,19 @@ zh-TW:
         dance_callout_11_b: 新的程式積木！
       Dance_Party_11_5:
         dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
+      Fish Tank 3-validated_2019:
+        spritelab_comment: '使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。
+
+'
+      Fish Tank 3-validated_2020:
+        spritelab_comment: '使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。
+
+'
       Function intro Ryan:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Function intro Ryan_2019:
+        Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
+      Function intro Ryan_2020:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
@@ -244,6 +270,10 @@ zh-TW:
         Infinity_repeat_callout: 放置移動積木到這裡面
       InspirationalArtwork:
         InspirationalArtwork_1: 嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！
+      InspirationalArtwork_2018:
+        InspirationalArtwork_1: '嘗試使用該標籤下的`註釋`積木在程式中留下註釋！
+
+'
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: 當你準備好時，點擊「運行」試試你的程式。
       MC HOC 2016 New Walk:
@@ -252,17 +282,25 @@ zh-TW:
         MC_HOC_2017_03_Cole_1: 這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: 這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: 這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Agent 可以在水上漂浮，但玩家不可以！
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Agent 可以在水上漂浮，但玩家不可以！
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Agent 可以在水上漂浮，但玩家不可以！
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: 這些方塊無法丟棄，但可以編輯！
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: 這些方塊無法丟棄，但可以編輯！
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: 這些方塊無法丟棄，但可以編輯！
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'Agent 可以在熔岩上漂浮，但玩家不可以！  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'Agent 可以在熔岩上漂浮，但玩家不可以！  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'Agent 可以在熔岩上漂浮，但玩家不可以！  '
       NEW Course 4 Artist Functions 3:
         NEW_Course_4_Artist_Functions_3_1: 點擊此處以編輯新的函式，好讓它能建立一個正方形。
@@ -287,6 +325,10 @@ zh-TW:
         courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
       OPD-K5-projects-4:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      OPD-K5-spritelab-3:
+        spritelab_comment: '使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。
+
+'
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
       OPD-K5-variables-5:
@@ -295,9 +337,13 @@ zh-TW:
         craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld Chop Trees_2019:
         craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
       Overworld Move to Sheep:
         craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
@@ -305,9 +351,14 @@ zh-TW:
       Overworld Move to Sheep_2019:
         craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
         craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
+        craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
       Overworld Place Wall:
         craft_inside_repeat: 將積木放在這裡可以重複執行程式
       Overworld Place Wall_2019:
+        craft_inside_repeat: 將積木放在這裡可以重複執行程式
+      Overworld Place Wall_2020:
         craft_inside_repeat: 將積木放在這裡可以重複執行程式
       Robot Doodle:
         4-5_Artist_Patterns_Free_Play_2: 嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！
@@ -317,13 +368,65 @@ zh-TW:
         craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
       Underground Iron:
         craft_what_is_iron: 開採這塊鐵礦！
       Underground Iron_2019:
         craft_what_is_iron: 開採這塊鐵礦！
+      Underground Iron_2020:
+        craft_what_is_iron: 開採這塊鐵礦！
+      Virtual Pet 2_2019:
+        '': '請按一下這裡！
+
+'
+      Virtual Pet 2_2020:
+        '': '請按一下這裡！
+
+'
+      behaviors 1:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
+      behaviors 1_2020:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
+      behaviors 3a:
+        behavior_callout: '為什麼這個行為對中間的星星不起作用？
+
+'
+        star2_callout: '刪除這個服裝積木，用「這個精靈」積木代替。
+
+'
+        this_sprite_callout: '將下面的服裝積木替換成這個。
+
+'
+      behaviors 3a_2020:
+        behavior_callout: '為什麼這個行為對中間的星星不起作用？
+
+'
+        star2_callout: '刪除這個服裝積木，用「這個精靈」積木代替。
+
+'
+        this_sprite_callout: '將下面的服裝積木替換成這個。
+
+'
+      behaviors 4:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
+      behaviors 4_2020:
+        behaviors_edit: '按一下這裡檢視這個行為是如何工作的。
+
+'
       behaviors 5:
         behaviors_edit: 給這個行為添加程式。
+      behaviors 5_2020:
+        behaviors_edit: 給這個行為添加程式。
       behaviors free play:
+        behaviors_edit: 給這個行為添加程式。
+      behaviors free play_2020:
         behaviors_edit: 給這個行為添加程式。
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
@@ -352,11 +455,15 @@ zh-TW:
         courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_artist_loops4_2020:
+        courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops7:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_2018:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
+      courseA_artist_loops7_2020:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops8:
         courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
@@ -364,15 +471,21 @@ zh-TW:
         courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
       courseA_artist_loops8_2019:
         courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
+      courseA_artist_loops8_2020:
+        courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
       courseA_collector_loops1:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops1_2019:
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseA_collector_loops1_2020:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2018:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_collector_loops3_2020:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_preLoops1:
         courseA_collector_preLoops1_1: 點擊此處觀看程式運行！
@@ -388,6 +501,8 @@ zh-TW:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
+      courseA_maze_ramp2_2020:
+        courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseA_maze_seq1:
@@ -395,6 +510,8 @@ zh-TW:
       courseA_maze_seq1_2018:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
+      courseA_maze_seq1_2020:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
@@ -406,11 +523,15 @@ zh-TW:
         courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: 這是一個標注
+      courseA_playLab_events4_2020:
+        courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events5:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2018:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
+      courseA_playLab_events5_2020:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events6:
         courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
@@ -418,17 +539,25 @@ zh-TW:
         courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
       courseA_playLab_events6_2019:
         courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseB_artist_loops3:
         courseB_artist_loops3_1: 工具箱裡只有一個模塊可以做到。您會如何使用它？
       courseB_artist_loops3_2018:
         courseB_artist_loops3_1: 工具箱裡只有一個模塊可以做到。您會如何使用它？
       courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: 工具箱裡只有一個模塊可以做到。您會如何使用它？
+      courseB_artist_loops3_2020:
         courseB_artist_loops3_1: 工具箱裡只有一個模塊可以做到。您會如何使用它？
       courseB_artist_loops5:
         courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
@@ -438,11 +567,15 @@ zh-TW:
         courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_collector_loops1_2019:
         courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseB_collector_loops1_2020:
+        courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_maze_seq1:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq1_2018:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq1_2019:
+        courseB_maze_seq1: 當您需要提示時，點一下燈泡！
+      courseB_maze_seq1_2020:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
@@ -454,7 +587,11 @@ zh-TW:
         courseB_playlab_events6_a: 使用綠色的下拉箭頭來改變方向。
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: 使用綠色的下拉箭頭來改變方向。
+      courseB_playlab_events6_2020:
+        courseB_playlab_events6_a: 使用綠色的下拉箭頭來改變方向。
       courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      courseC19_playLab_EOC3_2020:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
@@ -462,17 +599,39 @@ zh-TW:
         courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
+      courseC_PlayLab_events8_2020:
+        courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
       courseC_PlayLab_events_challenge1_2018:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_PlayLab_events_challenge1_2020:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_artist_loops1a_2019:
+        jumpto_callout: '這個積木對這個專案非常重要。請務必使用它！
+
+'
+      courseC_artist_loops1a_2020:
+        jumpto_callout: '這個積木對這個專案非常重要。請務必使用它！
+
+'
+      courseC_artist_loops1b_2019:
+        sticker2: '把這個新增到你的程式中間。
+
+'
+      courseC_artist_loops1b_2020:
+        sticker2: '把這個新增到你的程式中間。
+
+'
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
       courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
       courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
+      courseC_artist_loopsPrePre1a_2020:
         courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
       courseC_collector_prog1:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
@@ -480,11 +639,15 @@ zh-TW:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseC_collector_prog1_2019:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseC_collector_prog1_2020:
+        courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseC_collector_prog7:
         courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
       courseC_collector_prog7_2018:
         courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
       courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
+      courseC_collector_prog7_2020:
         courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
@@ -492,19 +655,49 @@ zh-TW:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
+      courseC_harvester_loops1_2020:
+        courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: 灰化的程式積木無法被刪除！
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_1: '這些灰色積木被鎖定了，無法刪除！
+
+'
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: '這些積木被鎖定了，無法刪除！
+
+'
+      courseC_maze_debugging5_2020:
+        courseC_maze_debugging5_1: '這些積木被鎖定了，無法刪除！
+
+'
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
+      courseC_maze_debugging9_2020:
+        courseC_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
+      courseC_maze_debugging9_copy_2020:
+        courseC_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming1_2018:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming2:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseC_maze_programming2_2018:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
+      courseC_maze_programming2_2020:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseC_maze_programming3:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
@@ -518,17 +711,25 @@ zh-TW:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
         courseC_maze_programming3_3: You can drag extra blocks to the toolbox to throw
           them away.
+      courseC_maze_programming3_2020:
+        courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        courseC_maze_programming3_3: You can drag extra blocks to the toolbox to throw
+          them away.
       courseC_maze_programming4:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseC_maze_programming4_2018:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
+      courseC_maze_programming4_2020:
+        courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseC_maze_programming5:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseC_maze_programming5_2018:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseC_maze_programming5_2019:
+        '': 這些模塊上沒有數字。您可以想用多少就用多少！
+      courseC_maze_programming5_2020:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseC_maze_programming7:
         courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
@@ -539,11 +740,16 @@ zh-TW:
       courseC_maze_programming7_2019:
         courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
         courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
+      courseC_maze_programming7_2020:
+        courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
+        courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
       courseC_starWars_loops2:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseC_starWars_loops2_2018:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
+      courseC_starWars_loops2_2020:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseC_starWars_loops2_copy:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
@@ -552,6 +758,8 @@ zh-TW:
       courseD_artist_nestedLoops1a_2018:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
+      courseD_artist_nestedLoops1a_2020:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: 你可以修改這個數字。
@@ -563,6 +771,8 @@ zh-TW:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      courseD_bee_conditionals2_2020:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
         4_5_Bee_Conditionals_2_2: 需要幫忙？點擊此處獲取影片提示！
@@ -572,15 +782,33 @@ zh-TW:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
+      courseD_bee_conditionals_challenge2_2020:
+        courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_bee_debugging_challenge1a:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 使用這個積木來收集寶藏。
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: '你需要使用`重複 判斷 前面有路`積木來解決這個關卡。
+
+'
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: '你需要使用`重複 判斷 前面有路`積木來解決這個關卡。
+
+'
+      courseD_farmer_while7_2020:
+        courseD_farmer_while7_2018_PathAhead: '你需要使用`重複 判斷 前面有路`積木來解決這個關卡。
+
+'
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
+      courseD_maze_intro4_2020:
+        courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_intro5a_2019:
+        '': 這些模塊上沒有數字。您可以想用多少就用多少！
+      courseD_maze_intro5a_2020:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
@@ -588,11 +816,15 @@ zh-TW:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseD_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_maze_ramp2:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseD_maze_ramp2_2018:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
+      courseD_maze_ramp2_2020:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseD_maze_ramp3:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
@@ -602,11 +834,21 @@ zh-TW:
         stone_block_2: 灰色積木是用石頭製成的，不能扔掉。
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        stone_block_2: '灰色的積木是不能扔掉的。
+
+'
+      courseD_maze_ramp3_2020:
+        courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        stone_block_2: '灰色的積木是不能扔掉的。
+
+'
       courseD_maze_ramp4:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_ramp4_2018:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
+      courseD_maze_ramp4_2020:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseD_maze_ramp5:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
@@ -614,11 +856,15 @@ zh-TW:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp5_2019:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
+      courseD_maze_ramp5_2020:
+        '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp5a:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp5a_2018:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp5a_2019:
+        '': 這些模塊上沒有數字。您可以想用多少就用多少！
+      courseD_maze_ramp5a_2020:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
@@ -642,6 +888,14 @@ zh-TW:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
+      courseE_aboutme_2:
+        '': '請按一下這裡！
+
+'
+      courseE_aboutme_2_2020:
+        '': '請按一下這裡！
+
+'
       courseE_artist_functions1:
         courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
       courseE_artist_functions1_copy:
@@ -652,6 +906,8 @@ zh-TW:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions2_2019:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions2_copy:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions8:
@@ -659,6 +915,8 @@ zh-TW:
       courseE_artist_functions8a_2018:
         courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
       courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
+      courseE_artist_functions8a_2020:
         courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
@@ -669,6 +927,9 @@ zh-TW:
       courseE_artist_functions_challenge1_2019:
         courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
         courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge1_2020:
+        courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
@@ -676,6 +937,9 @@ zh-TW:
         courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       courseE_artist_ramp8:
@@ -690,9 +954,13 @@ zh-TW:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions13_2019:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions1_2018:
         courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
       courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
+      courseE_farmer_functions1_2020:
         courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
       courseE_farmer_functions1a:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
@@ -700,11 +968,15 @@ zh-TW:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions2b:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions2b_2018:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions2b_2020:
         courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
@@ -715,6 +987,8 @@ zh-TW:
       courseF_artist_for1_2018:
         courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for1_2019:
+        courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
+      courseF_artist_for1_2020:
         courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_fwp1:
         courseF_artist_fwp1_1: 點選「edit」鍵以更改函式內部的代碼。
@@ -728,17 +1002,23 @@ zh-TW:
         courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
+      courseF_artist_variables3_2020:
+        courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       courseF_artist_variables6:
         courseF_artist_variables6_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_artist_variables6_2018:
         courseF_artist_variables6_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_artist_variables6_2019:
         courseF_artist_variables6_1: 當您必須更改許多相同数字的副本時，變數會很有用。
+      courseF_artist_variables6_2020:
+        courseF_artist_variables6_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_artist_variables6a:
         courseF_artist_variables6a_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_artist_variables6a_2018:
         courseF_artist_variables6a_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: 當您必須更改許多相同数字的副本時，變數會很有用。
+      courseF_artist_variables6a_2020:
         courseF_artist_variables6a_1: 當您必須更改許多相同数字的副本時，變數會很有用。
       courseF_bee_conditionals2:
         courseF_bee_conditionals2_2: 這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！
@@ -750,11 +1030,15 @@ zh-TW:
         courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
       courseF_bee_for4_2019:
         courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
+      courseF_bee_for4_2020:
+        courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
       courseF_bee_for9:
         courseF_bee_for9_1: 您將在此處找到「math」模塊。
       courseF_bee_for9_2018:
         courseF_bee_for9_1: 您將在此處找到「math」模塊。
       courseF_bee_for9_2019:
+        courseF_bee_for9_1: 您將在此處找到「math」模塊。
+      courseF_bee_for9_2020:
         courseF_bee_for9_1: 您將在此處找到「math」模塊。
       courseF_bee_functions2:
         courseF_bee_functions2_1: 這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！
@@ -778,6 +1062,8 @@ zh-TW:
         courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
+      courseF_bee_variables_1_2020:
+        courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: 工具箱已分類，可以更輕鬆地找到所需的模塊。
       courseF_playlab_variables5c:
@@ -786,6 +1072,26 @@ zh-TW:
         courseF_playlab_variables5c_1: 您將在這裡找到變數模塊。
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: 在這裡找到「ask」模塊！
+      coursea_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: '在將所有的積木連在一起後，按「執行」啟動程式。
+
+'
+      coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: '在將所有的積木連在一起後，按「執行」啟動程式。
+
+'
+      coursea_maze_ramp1_2020:
+        grade2_CaringForNewPet_0_1: '在將所有的積木連在一起後，按「執行」啟動程式。
+
+'
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
+      express_maze_debugging9_2020:
+        express_maze_debugging9_2019_1: '將工具箱中的積木拖到你的工作區。
+
+'
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross:
@@ -819,4 +1125,6 @@ zh-TW:
       grade5_artist_variables_triangles1_2018:
         grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
       grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
+      grade5_artist_variables_triangles1_2020:
         grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！

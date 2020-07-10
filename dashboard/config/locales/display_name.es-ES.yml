@@ -21,6 +21,7 @@ es-ES:
       AppLab Intro 7 - thisOrThatSetScreen: Esto o aquello
       CDEF_video_SpritesInAction: Cómo crear un sprite
       CDEF_video_SpritesInAction_2019: Cómo crear un sprite
+      CDEF_video_SpritesInAction_2020: Cómo crear un sprite
       CSD Board Buttons Map: Botones e interruptores
       CSD Board Buttons Map_2018: Botones e interruptores
       CSD Board Buttons Map_2019: Botones e interruptores
@@ -264,9 +265,9 @@ es-ES:
       CSD U3 Variables Draw Challenge: 'Desafío: dibujar una imagen'
       CSD U3 Variables Draw Challenge_2018: 'Desafío: dibujar una imagen'
       CSD U3 Variables Draw Challenge_2019: 'Desafío: dibujar una imagen'
-      CSD U3 Variables Map: variables
-      CSD U3 Variables Map_2018: variables
-      CSD U3 Variables Map_2019: variables
+      CSD U3 Variables Map: Variables
+      CSD U3 Variables Map_2018: Variables
+      CSD U3 Variables Map_2019: Variables
       CSD U3 Watchers Map: Depurar con observadores
       CSD U3 Watchers Map_2018: Depurar con observadores
       CSD U3 Watchers Map_2019: Depurar con observadores
@@ -673,14 +674,21 @@ es-ES:
       'Course F: Artist Project - Revise_2018': Revisar el proyecto de Artista
       'Course F: Artist Project_2018': Proyecto de Artista del Curso F
       'Course F: Artist Project_2019': Proyecto de Artista del Curso F
+      CourseD_Dance_2020_bonus1: Ida y vuelta
+      CourseD_Dance_2020_bonus3: Poner en Formación
       CourseEF_video_IntroSpriteLab: Esto es Laboratorio de sprites
       CourseEF_video_IntroSpriteLab_2019: Esto es Laboratorio de sprites
+      CourseEF_video_IntroSpriteLab_2020: Esto es Laboratorio de sprites
       CourseEF_video_MakeSprite: Cómo crear un sprite
       CourseEF_video_MakeSprite_2019: Cómo crear un sprite
+      CourseEF_video_MakeSprite_2020: Cómo crear un sprite
       CourseE_Project_SpriteLab: Proyecto del Laboratorio de sprites del Curso E
       CourseE_Project_SpriteLab_2019: Proyecto del Laboratorio de sprites del Curso
         E
       CourseE_hoops: 'Conejito '
+      CourseF_Oceans_Video_Machine_Learning: 'Video: aprendizaje automático'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: implicaciones para la sociedad'
+      CourseF_Oceans_Video_Training_Data: 'Video: datos de entrenamiento'
       CourseF_Project_Revise_SpriteLab: Revisar el proyecto del Laboratorio de sprites
       CourseF_Project_SpriteLab: Proyecto del Laboratorio de sprites del Curso F
       CourseF_Project_SpriteLab_2019: Proyecto del Laboratorio de sprites del Curso
@@ -718,26 +726,37 @@ es-ES:
       Introduction to Variables - Part 1_2019: Introducción a las variables
       MC_HOC_2017_01_RETRY: Hogar
       MC_HOC_2017_01_RETRY_2019: Hogar
+      MC_HOC_2017_01_RETRY_2020: Hogar
       MC_HOC_2017_02_Cole: La granja
       MC_HOC_2017_02_Cole_2019: La granja
+      MC_HOC_2017_02_Cole_2020: La granja
       MC_HOC_2017_03_Cole: El bosque
       MC_HOC_2017_03_Cole_2019: El bosque
+      MC_HOC_2017_03_Cole_2020: El bosque
       MC_HOC_2017_04POINT5_RYAN: El desierto
       MC_HOC_2017_04POINT5_RYAN_2019: El desierto
+      MC_HOC_2017_04POINT5_RYAN_2020: El desierto
       MC_HOC_2017_04_Cole: El pantano
       MC_HOC_2017_04_Cole_2019: El pantano
+      MC_HOC_2017_04_Cole_2020: El pantano
       MC_HOC_2017_05_Cole: El río
       MC_HOC_2017_05_Cole_2019: El río
+      MC_HOC_2017_05_Cole_2020: El río
       MC_HOC_2017_06_Cole: Marea alta
       MC_HOC_2017_06_Cole_2019: Marea alta
+      MC_HOC_2017_06_Cole_2020: Marea alta
       MC_HOC_2017_07_Cole: Paso nevado
       MC_HOC_2017_07_Cole_2019: Paso nevado
+      MC_HOC_2017_07_Cole_2020: Paso nevado
       MC_HOC_2017_10_RETRY: La cueva
       MC_HOC_2017_10_RETRY_2019: La cueva
+      MC_HOC_2017_10_RETRY_2020: La cueva
       MC_HOC_2017_Ali: La fortaleza del Nether
       MC_HOC_2017_Ali_2019: La fortaleza del Nether
+      MC_HOC_2017_Ali_2020: La fortaleza del Nether
       MC_HOC_2017_FP20x20: Juego libre
       MC_HOC_2017_FP20x20_2019: Juego libre
+      MC_HOC_2017_FP20x20_2020: Juego libre
       Making Music_2018: Crear música
       Making Music_2019: Crear música
       New Dance Lab Project: Nuevo proyecto de Fiesta de baile
@@ -767,6 +786,7 @@ es-ES:
       courseF_artist_for1: Juego libre de bucles 'desde' (inicio)
       courseF_artist_for1_2018: Juego libre de bucles 'desde' (inicio)
       courseF_artist_for1_2019: Juego libre de bucles 'desde' (inicio)
+      courseF_artist_for1_2020: Juego libre de bucles 'desde' (inicio)
       courseF_project_1: Ejemplo de proyecto del Laboratorio de sprites
       courseF_video_csMatters: Proyectos de final de curso
       courseF_video_csMatters_2018: 'Video: asuntos de las Ciencias de la Computación'
@@ -778,3 +798,4 @@ es-ES:
       csd-pre-survey-levelgroup_2019: Resumen de la lección
       scrat_loops_C-F_video: Video de bucles en la Era de Hielo
       scrat_loops_C-F_video_2019: Video de bucles en la Era de Hielo
+      scrat_loops_C-F_video_2020: Video de bucles en la Era de Hielo

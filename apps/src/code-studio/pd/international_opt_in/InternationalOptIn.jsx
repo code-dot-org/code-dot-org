@@ -130,11 +130,11 @@ class InternationalOptInComponent extends FormComponent {
           type: 'text',
           required: true
         })}
-        {this.buildButtonsFromOptions({
+        {this.buildSelectFieldGroupFromOptions({
           name: 'schoolCountry',
           label: labels.schoolCountry,
-          type: 'radio',
-          required: true
+          required: true,
+          placeholder: i18n.selectAnOption()
         })}
         {this.buildButtonsFromOptions({
           name: 'ages',

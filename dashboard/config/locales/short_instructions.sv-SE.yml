@@ -113,6 +113,28 @@ sv-SE:
       Course 4 SCV 4: Lös detta pussel med minsta möjliga antal block.
       Course 4 SCV 5: Lös detta pussel med minsta möjliga antal block.
       Course 4 SCV 6: Klicka här för att se anvisningarna igen.
+      CourseD_Dance_2020_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla
+        det i ”setup”-blocket.
+      CourseD_Dance_2020_02: Få katten att göra ett dansrörelse när du trycker på
+        en tangent.
+      CourseD_Dance_2020_03: 'Det är dags för en danstävling! Programmera varje dansare
+        så att de rör sig när du trycker på olika tangenter. Välj ett favoritsteg
+        för varje dansare eller ange ”(Random)” och få en överraskning! '
+      CourseD_Dance_2020_04: Få din dansare att ta ett nytt danssteg efter den fjärde
+        takten.
+      CourseD_Dance_2020_05: Gör nu så att dansaren startar en ny rörelse efter 6
+        åtgärder!
+      CourseD_Dance_2020_06: Skapa en grupp bakgrundsdansare runt den ledande dansaren
+        i mitten.
+      CourseD_Dance_2020_07: Ändra storleken på gruppen med bakgrundsdansare.
+      CourseD_Dance_2020_08: Försök byta nyans på en av dina dansare (eller en hel
+        grupp)!
+      CourseD_Dance_2020_09: Var kreativ med de nya blocken!
+      CourseD_Dance_2020_10: Dags att svänga på höfterna! Skapa en egen dans att dela
+        med dina vänner.
+      CourseD_Dance_2020_bonus1: Fram och tillbaka (klicka på "More" för detaljer)
+      CourseD_Dance_2020_bonus3: Låt oss få i Formation! (Klicka på ”Mer” för mer
+        information)
       CourseD_Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla
         det i ”setup”-blocket.
       CourseD_Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
@@ -140,14 +162,25 @@ sv-SE:
         dela med dina vänner.
       CourseE_HOC 2018 Level_1: Skaffa en båt från kistan
       CourseE_HOC 2018 Level_10: Ta dig till ingången av detta havsmonument.
+      CourseE_HOC 2018 Level_10_2020: Ta dig till ingången av detta havsmonument.
       CourseE_HOC 2018 Level_11: Bygg en kanal med prismarin inuti havsmonumentet.
+      CourseE_HOC 2018 Level_11_2020: Bygg en kanal med prismarin inuti havsmonumentet.
+      CourseE_HOC 2018 Level_1_2020: Skaffa en båt från kistan
       CourseE_HOC 2018 Level_2: Bege dig till slutet av bryggan.
+      CourseE_HOC 2018 Level_2_2020: Bege dig till slutet av bryggan.
       CourseE_HOC 2018 Level_3: Ta dig över det öppna havet till torsken.
+      CourseE_HOC 2018 Level_3_2020: Ta dig över det öppna havet till torsken.
       CourseE_HOC 2018 Level_4: Använd dig av en slinga för att ta dig till delfinen.
+      CourseE_HOC 2018 Level_4_2020: Använd dig av en slinga för att ta dig till delfinen.
       CourseE_HOC 2018 Level_5: Utforska skeppsvraket för att nå kistan.
+      CourseE_HOC 2018 Level_5_2020: Utforska skeppsvraket för att nå kistan.
       CourseE_HOC 2018 Level_6: Navigera genom isen för att komma till laxen.
+      CourseE_HOC 2018 Level_6_2020: Navigera genom isen för att komma till laxen.
       CourseE_HOC 2018 Level_7a: Sök igenom dessa undervattensruiner efter en skattkista.
+      CourseE_HOC 2018 Level_7a_2020: Sök igenom dessa undervattensruiner efter en
+        skattkista.
       CourseE_HOC 2018 Level_9b: Använd korallen som riktmärken för att nå skatten.
+      CourseE_HOC 2018 Level_9b_2020: Använd korallen som riktmärken för att nå skatten.
       Crack Random Substitution: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Dance_2019_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i
@@ -211,6 +244,8 @@ sv-SE:
       Function intro Ryan: Använd "bygg bro"-funktionen två gånger för att skapa en
         väg till facklan.
       Function intro Ryan_2019: Använd "bygg bro"-funktionen två gånger för att skapa
+        en väg till facklan.
+      Function intro Ryan_2020: Använd "bygg bro"-funktionen två gånger för att skapa
         en väg till facklan.
       HOC 2018 Level_1: Skaffa en båt från kistan
       HOC 2018 Level_10: Ta dig till ingången av detta havsmonument.
@@ -332,29 +367,43 @@ sv-SE:
         använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
       MC_HOC_2017_01_RETRY_2019: 'Ta agenten till tryckplattan, tryck sedan på "Kör"
         och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
+      MC_HOC_2017_01_RETRY_2020: 'Ta agenten till tryckplattan, tryck sedan på "Kör"
+        och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
       MC_HOC_2017_02_Cole: 'Flytta agenten till tryckplattan så att {currentPlayerName}
         kan ta sig till kartan. '
       MC_HOC_2017_02_Cole_2019: 'Flytta agenten till tryckplattan så att {currentPlayerName}
         kan ta sig till kartan. '
+      MC_HOC_2017_02_Cole_2020: 'Flytta agenten till tryckplattan så att {currentPlayerName}
+        kan ta sig till kartan. '
       MC_HOC_2017_03_Cole: 'Koda agenten att öppna grinden. '
       MC_HOC_2017_03_Cole_2019: 'Koda agenten att öppna grinden. '
+      MC_HOC_2017_03_Cole_2020: 'Koda agenten att öppna grinden. '
       MC_HOC_2017_04POINT5_RYAN: Ta agenten till tryckplattan.
       MC_HOC_2017_04POINT5_RYAN_2019: Ta agenten till tryckplattan.
+      MC_HOC_2017_04POINT5_RYAN_2020: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Cole: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Cole_2019: Ta agenten till tryckplattan.
+      MC_HOC_2017_04_Cole_2020: Ta agenten till tryckplattan.
       MC_HOC_2017_05_Cole: Ta spelaren till spaden.
       MC_HOC_2017_05_Cole_2019: Ta spelaren till spaden.
+      MC_HOC_2017_05_Cole_2020: Ta spelaren till spaden.
       MC_HOC_2017_06_Cole: Fixa koden för att få agenten att bygga en bro över floden.
       MC_HOC_2017_06_Cole_2019: Fixa koden för att få agenten att bygga en bro över
         floden.
+      MC_HOC_2017_06_Cole_2020: Fixa koden för att få agenten att bygga en bro över
+        floden.
       MC_HOC_2017_07_Cole: Förstör isen och ta {currentPlayerName} till gruvvagnen.
       MC_HOC_2017_07_Cole_2019: Förstör isen och ta {currentPlayerName} till gruvvagnen.
+      MC_HOC_2017_07_Cole_2020: Förstör isen och ta {currentPlayerName} till gruvvagnen.
       MC_HOC_2017_10_RETRY: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RETRY_2019: Skapa en funktion som hjälper dig bygga gruvvagnen.
+      MC_HOC_2017_10_RETRY_2020: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_Ali: Använd funktionerna för att ta dig över lavan.
       MC_HOC_2017_Ali_2019: Använd funktionerna för att ta dig över lavan.
+      MC_HOC_2017_Ali_2020: Använd funktionerna för att ta dig över lavan.
       MC_HOC_2017_FP20x20: "**Spela fritt:**  Dags att utforska på egen hand!"
       MC_HOC_2017_FP20x20_2019: "**Spela fritt:**  Dags att utforska på egen hand!"
+      MC_HOC_2017_FP20x20_2020: "**Spela fritt:**  Dags att utforska på egen hand!"
       NEW Course 4 Artist Functions 14: 'Fri spel tid! '
       NEW Course 4 Artist Params 9: 'Klicka på "Redigera" för att fylla i funktionsdefinitionen
         för "Rita en kvadrat" och lägga till en parameter. Den bör ta en längdparameter,
@@ -373,42 +422,63 @@ sv-SE:
         förbi smygarna och nå tryggheten i ditt hem.
       Overworld Avoid Monsters_2019: Att springa på en smygare är en dålig idé. Gå
         försiktigt förbi smygarna och nå tryggheten i ditt hem.
+      Overworld Avoid Monsters_2020: Att springa på en smygare är en dålig idé. Gå
+        försiktigt förbi smygarna och nå tryggheten i ditt hem.
       Overworld Chop Tree: Trä är en viktig resurs. Mycket kan tillverkas av det.
         Gå till trädet och använd kommandot "förstör block" för att hugga ned det.
       Overworld Chop Tree_2019: Trä är en viktig resurs. Mycket kan tillverkas av
+        det. Gå till trädet och använd kommandot "förstör block" för att hugga ned
+        det.
+      Overworld Chop Tree_2020: Trä är en viktig resurs. Mycket kan tillverkas av
         det. Gå till trädet och använd kommandot "förstör block" för att hugga ned
         det.
       Overworld Chop Trees: Vi måste bygga ett hus innan solen går ned. Hus kräver
         mycket träd. Hugg ned alla 3 träd.
       Overworld Chop Trees_2019: Vi måste bygga ett hus innan solen går ned. Hus kräver
         mycket träd. Hugg ned alla 3 träd.
+      Overworld Chop Trees_2020: Vi måste bygga ett hus innan solen går ned. Hus kräver
+        mycket träd. Hugg ned alla 3 träd.
       Overworld Free Play 20x20: Grattis! Du har klarat alla pussel! Bryt, bygg och
         skapa något unikt med allt du har lärt dig hittills.
       Overworld Free Play 20x20_2019: Grattis! Du har klarat alla pussel! Bryt, bygg
+        och skapa något unikt med allt du har lärt dig hittills.
+      Overworld Free Play 20x20_2020: Grattis! Du har klarat alla pussel! Bryt, bygg
         och skapa något unikt med allt du har lärt dig hittills.
       Overworld House Frame Chosen: Bygg resten av ditt hus med valfritt material.
         Kommandot "Upprepa" kommer bra till hands.
       Overworld House Frame Chosen_2019: Bygg resten av ditt hus med valfritt material.
         Kommandot "Upprepa" kommer bra till hands.
+      Overworld House Frame Chosen_2020: Bygg resten av ditt hus med valfritt material.
+        Kommandot "Upprepa" kommer bra till hands.
       Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma
         till fåret.
       Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att
+        komma till fåret.
+      Overworld Move to Sheep_2020: Lägg till ett till "gå framåt"-kommando för att
         komma till fåret.
       Overworld Place Wall: Varje hus börjar med en vägg. Bygg den första delen av
         ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
       Overworld Place Wall_2019: Varje hus börjar med en vägg. Bygg den första delen
         av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
+      Overworld Place Wall_2020: Varje hus börjar med en vägg. Bygg den första delen
+        av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
       Overworld Plant Crops: Det är bra att planera framåt. Plantera grödor på båda
         sidor om vattnet så att du inte blir hungrig längre fram.
       Overworld Plant Crops_2019: Det är bra att planera framåt. Plantera grödor på
+        båda sidor om vattnet så att du inte blir hungrig längre fram.
+      Overworld Plant Crops_2020: Det är bra att planera framåt. Plantera grödor på
         båda sidor om vattnet så att du inte blir hungrig längre fram.
       Overworld Powered Minecart: Bra jobbat! Du har samlat många resurser och byggt
         ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
       Overworld Powered Minecart_2019: Bra jobbat! Du har samlat många resurser och
         byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
+      Overworld Powered Minecart_2020: Bra jobbat! Du har samlat många resurser och
+        byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
       Overworld Shear Sheep: Dags för fårklippning! Använd kommandot "klipp" för att
         samla ull från båda får.
       Overworld Shear Sheep_2019: Dags för fårklippning! Använd kommandot "klipp"
+        för att samla ull från båda får.
+      Overworld Shear Sheep_2020: Dags för fårklippning! Använd kommandot "klipp"
         för att samla ull från båda får.
       Standalone_Artist_1: Välkommen till Artisten! Först och främst, låt oss försöka
         göra en enkel kvadrat med 'sväng höger'-blocket och 'gå framåt'-blocket. Varje
@@ -448,19 +518,30 @@ sv-SE:
         och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt
         här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här
         blocken.
+      Underground Avoiding Lava_2020: Lava döljer sig under några av de här blocken,
+        och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt
+        här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här
+        blocken.
       Underground If Statements: Nu blir det svårare. Bryt 3 eldstenar utan att ramla
         ned i lavan. Använd ett "om"-kommando för att lägga kullersten över lava du
         hittar.
       Underground If Statements_2019: Nu blir det svårare. Bryt 3 eldstenar utan att
         ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över
         lava du hittar.
+      Underground If Statements_2020: Nu blir det svårare. Bryt 3 eldstenar utan att
+        ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över
+        lava du hittar.
       Underground Iron: Det är ingen bra idé att gå in i lava. Placera kullersten
         för att skapa en bro och bryt minst två av järnblocken.
       Underground Iron_2019: Det är ingen bra idé att gå in i lava. Placera kullersten
         för att skapa en bro och bryt minst två av järnblocken.
+      Underground Iron_2020: Det är ingen bra idé att gå in i lava. Placera kullersten
+        för att skapa en bro och bryt minst två av järnblocken.
       Underground Mining Coal: Du hittar mer värdefulla resurser under marken, men
         det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       Underground Mining Coal_2019: Du hittar mer värdefulla resurser under marken,
+        men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      Underground Mining Coal_2020: Du hittar mer värdefulla resurser under marken,
         men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       bounce_1: Lägg till ett block till den "när vänster pile" blocket och tryck
         på "Kör". Flytta paddeln med vänsterpilen för att nå målet.
@@ -493,10 +574,13 @@ sv-SE:
       courseA_maze_seq12: 'Fånga den där grisen! '
       courseA_maze_seq12_2018: 'Fånga den där grisen! '
       courseA_maze_seq12_2019: 'Fånga den där grisen! '
+      courseA_maze_seq12_2020: 'Fånga den där grisen! '
       courseA_maze_seq2: Ändra koden för att få mig till grisen!
       courseB_maze_seq10_2018: Fixa buggarna för att hjälpa Scrat att ta sig till
         ekollonet.
       courseB_maze_seq10_2019: Fixa buggarna för att hjälpa Scrat att ta sig till
+        ekollonet.
+      courseB_maze_seq10_2020: Fixa buggarna för att hjälpa Scrat att ta sig till
         ekollonet.
       courseC_PlayLab_events3: Kan du skriva ett program som får hunden Jorge (actor
         2) att gå mot katten Olive?
@@ -504,16 +588,22 @@ sv-SE:
         (actor 2) att gå mot katten Olive?
       courseC_PlayLab_events3_2019: Kan du skriva ett program som får hunden Jorge
         (actor 2) att gå mot katten Olive?
+      courseC_PlayLab_events3_2020: Kan du skriva ett program som får hunden Jorge
+        (actor 2) att gå mot katten Olive?
       courseC_artist_prog5: 'Huset behöver ett tak! Rita en triangel. Tips: alla tre
         sidor är lika långa.'
       courseC_artist_prog5_2018: 'Huset behöver ett tak! Rita en triangel. Tips: alla
         tre sidor är lika långa.'
       courseC_artist_prog5_2019: 'Huset behöver ett tak! Rita en triangel. Tips: alla
         tre sidor är lika långa.'
+      courseC_artist_prog5_2020: 'Huset behöver ett tak! Rita en triangel. Tips: alla
+        tre sidor är lika långa.'
       courseC_maze_debugging1: Fixa koden för att hjälpa Scrat att ta sig till ekollonet.
       courseC_maze_debugging1_2018: Fixa koden för att hjälpa Scrat att ta sig till
         ekollonet.
       courseC_maze_debugging1_2019: Fixa koden för att hjälpa Scrat att ta sig till
+        ekollonet.
+      courseC_maze_debugging1_2020: Fixa koden för att hjälpa Scrat att ta sig till
         ekollonet.
       courseD_artist_binary1: "Binärt är ett sätt att representera information med
         hjälp av endast två alternativ.  Här kommer vi att använda alternativen \"av\"
@@ -533,11 +623,19 @@ sv-SE:
         \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
         och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
         att rita \"01010101\" i binärt i första raden?"
+      courseD_artist_binary1_2020: "Binärt är ett sätt att representera information
+        med hjälp av endast två alternativ.  Här kommer vi att använda alternativen
+        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r
+        \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
+        och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
+        att rita \"01010101\" i binärt i första raden?"
       courseD_artist_binary4: Kan du rita detta mönster genom att upprepa en tresiffrig
         binär sträng?
       courseD_artist_binary4_2018: Kan du rita detta mönster genom att upprepa en
         tresiffrig binär sträng?
       courseD_artist_binary4_2019: Kan du rita detta mönster genom att upprepa en
+        tresiffrig binär sträng?
+      courseD_artist_binary4_2020: Kan du rita detta mönster genom att upprepa en
         tresiffrig binär sträng?
       courseD_artist_binary6: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer
         att rita denna bild?
@@ -545,11 +643,15 @@ sv-SE:
         kommer att rita denna bild?
       courseD_artist_binary6_2019: Vilken 6-siffriga binära sträng upprepad 11 gånger
         kommer att rita denna bild?
+      courseD_artist_binary6_2020: Vilken 6-siffriga binära sträng upprepad 11 gånger
+        kommer att rita denna bild?
       courseD_artist_binary7: Vilken är den kortaste binära stäng som du kan upprepa
         för att rita denna bild?
       courseD_artist_binary7_2018: Vilken är den kortaste binära stäng som du kan
         upprepa för att rita denna bild?
       courseD_artist_binary7_2019: Vilken är den kortaste binära stäng som du kan
+        upprepa för att rita denna bild?
+      courseD_artist_binary7_2020: Vilken är den kortaste binära stäng som du kan
         upprepa för att rita denna bild?
       courseD_autorun_binary4_2019: Kan du rita detta mönster genom att upprepa en
         tresiffrig binär sträng?
@@ -563,12 +665,16 @@ sv-SE:
         vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bee_nestedLoops8_2019: 'Samla all nektar från varje blomma och gör honung
         vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2020: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_maze_nestedLoops4: Få mig till Solrosen!
       courseD_maze_nestedLoops4_2018: Få mig till Solrosen!
       courseD_maze_nestedLoops4_2019: Få mig till Solrosen!
+      courseD_maze_nestedLoops4_2020: Få mig till Solrosen!
       courseD_maze_nestedLoops6: Få mig till Solrosen!
       courseD_maze_nestedLoops6_2018: Få mig till Solrosen!
       courseD_maze_nestedLoops6_2019: Få mig till Solrosen!
+      courseD_maze_nestedLoops6_2020: Få mig till Solrosen!
       courseE_artist_functions1: 'Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp
         mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar
         kortare än längden på kvadraten.'
@@ -591,16 +697,22 @@ sv-SE:
         för att få den här!
       courseF_artist_for7_2019: Gör tre små ändringar i koden från den sista nivån
         för att få den här!
+      courseF_artist_for7_2020: Gör tre små ändringar i koden från den sista nivån
+        för att få den här!
       courseF_artist_for_challenge1: Kan du lista ut hur du kan återskapa denna ritning?
       courseF_artist_for_challenge1_2018: Kan du lista ut hur du kan återskapa denna
         ritning?
       courseF_artist_for_challenge1_2019: Kan du lista ut hur du kan återskapa denna
+        ritning?
+      courseF_artist_for_challenge1_2020: Kan du lista ut hur du kan återskapa denna
         ritning?
       courseF_artist_for_challenge2: Kan du lista ut hur du kan återskapa denna ritning
         med en enda slinga?
       courseF_artist_for_challenge2_2018: Kan du lista ut hur du kan återskapa denna
         ritning med en enda slinga?
       courseF_artist_for_challenge2_2019: Kan du lista ut hur du kan återskapa denna
+        ritning med en enda slinga?
+      courseF_artist_for_challenge2_2020: Kan du lista ut hur du kan återskapa denna
         ritning med en enda slinga?
       courseF_bee_for8: "Du kan detta! Vad bör din ökning vara för att samla 3, 6,
         9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer för
@@ -611,10 +723,15 @@ sv-SE:
       courseF_bee_for8_2019: "Du kan detta! Vad bör din ökning vara för att samla
         3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer
         för att få numret efter det?"
+      courseF_bee_for8_2020: "Du kan detta! Vad bör din ökning vara för att samla
+        3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer
+        för att få numret efter det?"
       courseF_bee_for_challenge2: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge2_2018: Lösa detta pussel med minsta möjliga antal
         block.
       courseF_bee_for_challenge2_2019: Lösa detta pussel med minsta möjliga antal
+        block.
+      courseF_bee_for_challenge2_2020: Lösa detta pussel med minsta möjliga antal
         block.
       courseF_bee_functions4: Funktionen "flytta och få nektar" vänder biet, samlar
         nektar, och vänder sedan tillbaka biet till där det började. Använd funktionen

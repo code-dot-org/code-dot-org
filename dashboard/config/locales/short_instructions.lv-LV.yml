@@ -112,13 +112,20 @@ lv-LV:
       Overworld Avoid Monsters_2019: |-
         Ieskriet ložņā ir bīstami.
         Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
+      Overworld Avoid Monsters_2020: |-
+        Ieskriet ložņā ir bīstami.
+        Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
       Overworld Chop Tree: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas
         lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Tree_2019: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt
         daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
+      Overworld Chop Tree_2020: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt
+        daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Trees: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz
         koku. Nocērt visus 3 kokus.
       Overworld Chop Trees_2019: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz
+        koku. Nocērt visus 3 kokus.
+      Overworld Chop Trees_2020: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz
         koku. Nocērt visus 3 kokus.
       Overworld Free Play 20x20: |-
         Apsveicam! Tu uzveici visus uzdevumus!
@@ -126,34 +133,52 @@ lv-LV:
       Overworld Free Play 20x20_2019: |-
         Apsveicam! Tu uzveici visus uzdevumus!
         Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
+      Overworld Free Play 20x20_2020: |-
+        Apsveicam! Tu uzveici visus uzdevumus!
+        Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
       Overworld House Frame Chosen: Būvē pārējo māju no jebkuriem materiāliem. Tev
         noderēs cikla "atkārtot" komandas.
       Overworld House Frame Chosen_2019: Būvē pārējo māju no jebkuriem materiāliem.
+        Tev noderēs cikla "atkārtot" komandas.
+      Overworld House Frame Chosen_2020: Būvē pārējo māju no jebkuriem materiāliem.
         Tev noderēs cikla "atkārtot" komandas.
       Overworld Move to Sheep: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu
         aitu.
       Overworld Move to Sheep_2019: Pievieno otru "pārvieto uz priekšu" komandu, lai
         sasniegtu aitu.
+      Overworld Move to Sheep_2020: Pievieno otru "pārvieto uz priekšu" komandu, lai
+        sasniegtu aitu.
       Overworld Place Wall: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu,
         ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
       Overworld Place Wall_2019: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu,
+        ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
+      Overworld Place Wall_2020: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu,
         ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
       Overworld Plant Crops: Jādomā par priekšdienām. Iestādi augus ūdens abās pusēs,
         lai vēlāk būtu ko ēst.
       Overworld Plant Crops_2019: Jādomā par priekšdienām. Iestādi augus ūdens abās
         pusēs, lai vēlāk būtu ko ēst.
+      Overworld Plant Crops_2020: Jādomā par priekšdienām. Iestādi augus ūdens abās
+        pusēs, lai vēlāk būtu ko ēst.
       Overworld Powered Minecart: Teicami! Tu savāci daudzus resursus un uzbūvēji
         jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
       Overworld Powered Minecart_2019: Teicami! Tu savāci daudzus resursus un uzbūvēji
+        jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
+      Overworld Powered Minecart_2020: Teicami! Tu savāci daudzus resursus un uzbūvēji
         jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
       Overworld Shear Sheep: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu
         no abām aitām.
       Overworld Shear Sheep_2019: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu
         vilnu no abām aitām.
+      Overworld Shear Sheep_2020: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu
+        vilnu no abām aitām.
       Underground Avoiding Lava: Zem dažiem blokiem var būt lava, un, pirms pārvietoties
         tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot
         uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
       Underground Avoiding Lava_2019: Zem dažiem blokiem var būt lava, un, pirms pārvietoties
+        tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot
+        uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
+      Underground Avoiding Lava_2020: Zem dažiem blokiem var būt lava, un, pirms pārvietoties
         tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot
         uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
       Underground If Statements: Tagad uzdevums kļūst grūtāks. Iznīcini trīs sarkanakmeņus,
@@ -162,14 +187,22 @@ lv-LV:
       Underground If Statements_2019: Tagad uzdevums kļūst grūtāks. Iznīcini trīs
         sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto
         lavu nosegtu ar bruģakmeni.
+      Underground If Statements_2020: Tagad uzdevums kļūst grūtāks. Iznīcini trīs
+        sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto
+        lavu nosegtu ar bruģakmeni.
       Underground Iron: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu
         tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Iron_2019: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni,
+        lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
+      Underground Iron_2020: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni,
         lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Mining Coal: |-
         Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
         Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
       Underground Mining Coal_2019: |-
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
+      Underground Mining Coal_2020: |-
         Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
         Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
       bounce_1: Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto
@@ -245,14 +278,19 @@ lv-LV:
         putnam nokļūt līdz cūkai.
       courseA_maze_seq11_2019: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
         putnam nokļūt līdz cūkai.
+      courseA_maze_seq11_2020: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
+        putnam nokļūt līdz cūkai.
       courseA_maze_seq12: 'Notver to cūku! '
       courseA_maze_seq12_2018: 'Notver to cūku! '
       courseA_maze_seq12_2019: 'Notver to cūku! '
+      courseA_maze_seq12_2020: 'Notver to cūku! '
       courseA_maze_seq13: Notver to cūku, kā vien māki!
       courseA_maze_seq13_2018: Notver to cūku, kā vien māki!
       courseA_maze_seq13_2019: Notver to cūku, kā vien māki!
+      courseA_maze_seq13_2020: Notver to cūku, kā vien māki!
       courseA_maze_seq1_2018: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
       courseA_maze_seq1_2019: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
+      courseA_maze_seq1_2020: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
       courseA_maze_seq2: Izlabo kodu, lai palīdzētu putnam tikt līdz cūkai.
       courseA_maze_seq3: Izlabo kodu, lai palīdzētu putnam nokļūt līdz cūkai!
       courseA_maze_seq4: IZDZĒS bloku, lai palīdzētu putnam nokļūt līdz cūkai!
@@ -261,6 +299,8 @@ lv-LV:
       courseA_maze_seq6_2018: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
         putnam nokļūt līdz cūkai!
       courseA_maze_seq6_2019: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
+        putnam nokļūt līdz cūkai!
+      courseA_maze_seq6_2020: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
         putnam nokļūt līdz cūkai!
       courseA_maze_seq6_copy: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
         putnam nokļūt līdz cūkai!
@@ -271,12 +311,14 @@ lv-LV:
       courseA_maze_seq8: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2018: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2019: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
+      courseA_maze_seq8_2020: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_copy: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq9: Atrodi kļūdas šajā līmenī, pievienojot blokus, lai palīdzētu
         putnam tikt līdz cūkai!
       courseB_maze_seq12: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2018: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2019: Tagad notver to cūku, kā vien māki!
+      courseB_maze_seq12_2020: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq2: _"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz
         cūkai."_
       courseB_maze_seq6: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam
@@ -294,6 +336,9 @@ lv-LV:
         Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
         visas trīs malas ir vienāda garuma.
       courseC_artist_prog5_2019: |-
+        Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
+        visas trīs malas ir vienāda garuma.
+      courseC_artist_prog5_2020: |-
         Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
         visas trīs malas ir vienāda garuma.
       courseE_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi

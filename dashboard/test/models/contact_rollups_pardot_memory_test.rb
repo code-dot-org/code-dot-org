@@ -2,6 +2,8 @@ require 'test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   setup do
     assert_equal 0, ContactRollupsPardotMemory.count
   end
@@ -113,16 +115,43 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'create_new_pardot_prospects' do
-    assert_equal 0, ContactRollupsPardotMemory.count
-    contact = create :contact_rollups_processed, data: {'opt_in' => 1}
-
+    contact = create :contact_rollups_processed,
+      data: {
+        'opt_in' => 1,
+        'user_id' => 111,
+        'professional_learning_enrolled' => "#{COURSE_CSD},#{COURSE_CSF}",
+        'professional_learning_attended' => COURSE_CSF,
+        'hoc_organizer_years' => '2019',
+        'forms_submitted' => 'Census,Petition',
+        'form_roles' => 'engineer,teacher',
+        'roles' => 'Form Submitter',
+        'state' => 'Washington',
+        'city' => 'Seattle',
+        'postal_code' => '98101',
+        'country' => 'United States',
+      }
+    refute ContactRollupsPardotMemory.find_by_email(contact.email)
     PardotV2.expects(:submit_batch_request).once.returns([])
 
     ContactRollupsPardotMemory.create_new_pardot_prospects
 
-    assert_equal 1, ContactRollupsPardotMemory.count
-    record = ContactRollupsPardotMemory.find_by(email: contact.email)
-    assert_equal({'db_Opt_In' => 'Yes'}, record.data_synced)
+    record = ContactRollupsPardotMemory.find_by_email!(contact.email)
+    expected_data_synced = {
+      'db_Opt_In' => 'Yes',
+      'db_Has_Teacher_Account' => 'true',
+      'db_Professional_Learning_Enrolled_0' => COURSE_CSD,
+      'db_Professional_Learning_Enrolled_1' => COURSE_CSF,
+      'db_Professional_Learning_Attended_0' => COURSE_CSF,
+      'db_Hour_of_Code_Organizer_0' => '2019',
+      'db_Forms_Submitted' => 'Census,Petition',
+      'db_Form_Roles' => 'engineer,teacher',
+      'db_Roles_0' => 'Form Submitter',
+      'db_State' => 'Washington',
+      'db_City' => 'Seattle',
+      'db_Postal_Code' => '98101',
+      'db_Country' => 'United States',
+    }
+    assert_equal expected_data_synced, record[:data_synced]
   end
 
   test 'query_updated_contacts' do
@@ -198,16 +227,35 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   test 'update_pardot_prospects' do
     email = 'test@domain.com'
     last_sync_time = Time.now.utc - 7.days
-    create :contact_rollups_pardot_memory, email: email, data_synced: {db_Opt_In: 'No'}, data_synced_at: last_sync_time
-    create :contact_rollups_processed, email: email, data: {'opt_in' => 1}
+    # current data
+    create :contact_rollups_pardot_memory,
+      email: email,
+      data_synced: {
+        'db_Opt_In' => 'No',
+        'db_Professional_Learning_Attended' => COURSE_CSF
+      },
+      data_synced_at: last_sync_time
+
+    # new data
+    create :contact_rollups_processed,
+      email: email,
+      data: {
+        'opt_in' => 1,
+        'professional_learning_attended' => "#{COURSE_CSD},#{COURSE_CSF}",
+      }
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
     ContactRollupsPardotMemory.update_pardot_prospects
 
-    record = ContactRollupsPardotMemory.find_by(email: email)
-    assert_equal({'db_Opt_In' => 'Yes'}, record.data_synced)
-    assert last_sync_time < record.data_synced_at
+    record = ContactRollupsPardotMemory.find_by_email!(email)
+    expected_data_synced = {
+      'db_Opt_In' => 'Yes',
+      'db_Professional_Learning_Attended_0' => COURSE_CSD,
+      'db_Professional_Learning_Attended_1' => COURSE_CSF
+    }
+    assert_equal expected_data_synced, record[:data_synced]
+    assert last_sync_time < record[:data_synced_at]
   end
 
   test 'save_sync_results new prospect' do

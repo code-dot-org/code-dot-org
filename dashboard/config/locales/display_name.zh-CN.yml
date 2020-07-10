@@ -21,6 +21,7 @@ zh-CN:
       AppLab Intro 7 - thisOrThatSetScreen: 交替摆臂
       CDEF_video_SpritesInAction: 如何制作精灵图
       CDEF_video_SpritesInAction_2019: 如何制作精灵图
+      CDEF_video_SpritesInAction_2020: 如何制作精灵图
       CSD Board Buttons Map: 按钮和开关
       CSD Board Buttons Map_2018: 按钮和开关
       CSD Board Buttons Map_2019: 按钮和开关
@@ -653,13 +654,20 @@ zh-CN:
       'Course F: Artist Project - Revise_2018': 修改艺术家项目
       'Course F: Artist Project_2018': 课程 F 艺术家项目
       'Course F: Artist Project_2019': 课程 F 艺术家项目
+      CourseD_Dance_2020_bonus1: 不断重复
+      CourseD_Dance_2020_bonus3: 进入阵型
       CourseEF_video_IntroSpriteLab: 这是精灵图实验室
       CourseEF_video_IntroSpriteLab_2019: 这是精灵图实验室
+      CourseEF_video_IntroSpriteLab_2020: 这是精灵图实验室
       CourseEF_video_MakeSprite: 如何制作精灵图
       CourseEF_video_MakeSprite_2019: 如何制作精灵图
+      CourseEF_video_MakeSprite_2020: 如何制作精灵图
       CourseE_Project_SpriteLab: 课程 E 精灵图实验室项目
       CourseE_Project_SpriteLab_2019: 课程 E 精灵图实验室项目
       CourseE_hoops: '兔子 '
+      CourseF_Oceans_Video_Machine_Learning: 视频：机器学习
+      CourseF_Oceans_Video_Societal_Implications: 视频：社会影响
+      CourseF_Oceans_Video_Training_Data: 视频：训练数据
       CourseF_Project_Revise_SpriteLab: 修改精灵图实验室项目
       CourseF_Project_SpriteLab: 课程 F 精灵图实验室项目
       CourseF_Project_SpriteLab_2019: 课程 F 精灵图实验室项目
@@ -690,28 +698,45 @@ zh-CN:
       Intro to Web Lab - Part 2_2019: 视频：网络实验室简介 - 第二部分
       Introduction to Variables - Part 1_2018: 变量简介
       Introduction to Variables - Part 1_2019: 变量简介
-      MC_HOC_2017_01_RETRY: Homestead
-      MC_HOC_2017_01_RETRY_2019: Homestead
+      MC_HOC_2017_01_RETRY: '宅基地
+
+'
+      MC_HOC_2017_01_RETRY_2019: '宅基地
+
+'
+      MC_HOC_2017_01_RETRY_2020: '宅基地
+
+'
       MC_HOC_2017_02_Cole: 农场
       MC_HOC_2017_02_Cole_2019: 农场
+      MC_HOC_2017_02_Cole_2020: 农场
       MC_HOC_2017_03_Cole: 森林
       MC_HOC_2017_03_Cole_2019: 森林
+      MC_HOC_2017_03_Cole_2020: 森林
       MC_HOC_2017_04POINT5_RYAN: 沙漠
       MC_HOC_2017_04POINT5_RYAN_2019: 沙漠
+      MC_HOC_2017_04POINT5_RYAN_2020: 沙漠
       MC_HOC_2017_04_Cole: 沼泽
       MC_HOC_2017_04_Cole_2019: 沼泽
+      MC_HOC_2017_04_Cole_2020: 沼泽
       MC_HOC_2017_05_Cole: 这条河
       MC_HOC_2017_05_Cole_2019: 这条河
+      MC_HOC_2017_05_Cole_2020: 这条河
       MC_HOC_2017_06_Cole: 高潮流
       MC_HOC_2017_06_Cole_2019: 高潮流
+      MC_HOC_2017_06_Cole_2020: 高潮流
       MC_HOC_2017_07_Cole: 通过雪山
       MC_HOC_2017_07_Cole_2019: 通过雪山
+      MC_HOC_2017_07_Cole_2020: 通过雪山
       MC_HOC_2017_10_RETRY: 洞穴
       MC_HOC_2017_10_RETRY_2019: 洞穴
+      MC_HOC_2017_10_RETRY_2020: 洞穴
       MC_HOC_2017_Ali: 空中堡垒
       MC_HOC_2017_Ali_2019: 空中堡垒
+      MC_HOC_2017_Ali_2020: 空中堡垒
       MC_HOC_2017_FP20x20: 自由游戏
       MC_HOC_2017_FP20x20_2019: 自由游戏
+      MC_HOC_2017_FP20x20_2020: 自由游戏
       Making Music_2018: 制作音乐
       Making Music_2019: 制作音乐
       New Dance Lab Project: 新的舞蹈派对项目
@@ -741,6 +766,7 @@ zh-CN:
       courseF_artist_for1: For 循环自由游戏 (开始)
       courseF_artist_for1_2018: For 循环自由游戏 (开始)
       courseF_artist_for1_2019: For 循环自由游戏 (开始)
+      courseF_artist_for1_2020: For 循环自由游戏 (开始)
       courseF_project_1: 精灵图实验室示例项目
       courseF_video_csMatters: 结课项目
       courseF_video_csMatters_2018: 视频：CS 事项
@@ -752,3 +778,4 @@ zh-CN:
       csd-pre-survey-levelgroup_2019: 课程概述
       scrat_loops_C-F_video: 冰河时代视频中的循环
       scrat_loops_C-F_video_2019: 冰河时代视频中的循环
+      scrat_loops_C-F_video_2020: 冰河时代视频中的循环

@@ -1,5 +1,3 @@
-require 'cdo/honeybadger'
-
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
@@ -30,8 +28,8 @@ class CoursesController < ApplicationController
     # csp and csd are each "course families", each containing multiple "course versions".
     # When the url of a course family is requested, redirect to a specific course version.
     #
-    # For now, use hard-coded list to determine whether the given course_name is actually
-    if ScriptConstants::COURSE_FAMILY_NAMES.include?(params[:course_name])
+    # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
+    if Course::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = Course.all_courses.
           select {|c| c.family_name == params[:course_name] && c.is_stable?}.
@@ -47,15 +45,7 @@ class CoursesController < ApplicationController
     end
 
     course = Course.get_from_cache(params[:course_name])
-    unless course
-      # PLC courses have different ways of getting to name. ideally this goes
-      # away eventually
-      course_name = params[:course_name].tr('-', '_').titleize
-      course = Course.get_from_cache(course_name)
-      # only support this alternative course name for plc courses
-      raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
-      Honeybadger.notify "Deprecated PLC course name logic used for course #{course_name}"
-    end
+    raise ActiveRecord::RecordNotFound unless course
 
     if course.plc_course
       authorize! :show, Plc::UserCourseEnrollment

@@ -8,9 +8,17 @@ th-TH:
       2-3 Artist 3.4:
         draw a circle:
           name: วาดวงกลม
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: ความกว้าง
+            height: ความสูง
       2-3 Artist Debugging 10:
         draw square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            width: ความกว้าง
+            height: ความสูง
         draw a circle:
           name: วาดวงกลม
       2-3 Artist Functions 11:
@@ -102,18 +110,51 @@ th-TH:
       Course 4 Bee Params 6:
         get 5 nectar:
           name: เก็บนำหวาน 5 ครั้ง
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: น้ำผึ้ง
       Course 4 Play Lab Params 1:
         jump:
           name: กระโดดออกไปที่
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: คะแนน
       Course 4 Play Lab Params 2:
         jump:
           name: กระโดดออกไปที่
       Course 4 Play Lab Params 3:
         jump:
           name: กระโดดออกไปที่
+          parameters:
+            height: ความสูง
+            actor: นักแสดง
       Course 4 Play Lab Params 4:
         do something:
           name: ทำบางสิ่ง
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: นักแสดง
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: นักแสดง
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: นักแสดง
+            speed: ความเร็ว
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: นักแสดง
+            speed: ความเร็ว
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: คะแนน
       Course 4 Play Lab Vars 1:
         set score:
           name: ตั้งค่า คะแนน
@@ -130,6 +171,8 @@ th-TH:
       Course 4 SCF 1a:
         get nectar:
           name: เก็บน้ำหวาน
+          parameters:
+            counter: ตัวนับ
       Course 4 SCF 2:
         draw a square 20:
           name: วาดสี่เหลี่ยมจตุรัส 20
@@ -138,16 +181,26 @@ th-TH:
           name: วาดสี่เหลี่ยมจตุรัส 20
         do something:
           name: ทำบางสิ่ง
+        draw an octagon:
+          parameters:
+            length: ความยาว
       'Course E: Play Lab Project':
         do something:
           name: ทำบางสิ่ง
       Find the Wizard:
         do something:
           name: ทำบางสิ่ง
+      FoodFight:
+        score_points:
+          parameters:
+            points: คะแนน
       Function intro Ryan:
         build bridge:
           name: สร้างสะพาน
       Function intro Ryan_2019:
+        build bridge:
+          name: สร้างสะพาน
+      Function intro Ryan_2020:
         build bridge:
           name: สร้างสะพาน
       Geometric Sun:
@@ -160,6 +213,23 @@ th-TH:
           name: เพชร
         draw a house:
           name: วาดรูปบ้าน
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: ความยาว
+        draw a loop:
+          parameters:
+            length: ความยาว
+        draw spiral circle:
+          parameters:
+            size: ขนาด
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: ความยาว
+        draw spiral circle:
+          parameters:
+            size: ขนาด
       K-1 Artist2 3:
         draw roof:
           name: วาดหลังคา
@@ -175,12 +245,20 @@ th-TH:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: เคลียร์เส้นทาง
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: เคลียร์เส้นทาง
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: ซ่อมทางระยะยาว
         fix short path:
           name: ซ่อมทางระยะสั้น
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: ซ่อมทางระยะยาว
+        fix short path:
+          name: ซ่อมทางระยะสั้น
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: ซ่อมทางระยะยาว
         fix short path:
@@ -195,12 +273,22 @@ th-TH:
           name: สร้างสะพานสั้น
         build long bridge:
           name: สร้างสะพานยาว
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: สร้างสะพานสั้น
+        build long bridge:
+          name: สร้างสะพานยาว
       MC_HOC_2017_FP20x20:
         function 1:
           name: ฟังก์ชั่น 1
         function 2:
           name: ฟังก์ชั่น 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: ฟังก์ชั่น 1
+        function 2:
+          name: ฟังก์ชั่น 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: ฟังก์ชั่น 1
         function 2:
@@ -252,20 +340,59 @@ th-TH:
           name: ทำบางสิ่ง
         draw a hexagon:
           name: วาดรูปหกเหลี่ยม
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: ความยาว
         do something:
           name: ทำบางสิ่ง
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 15:
         draw a star:
           name: วาดรูปดวงดาว
+          parameters:
+            points: คะแนน
+            length: ความยาว
         draw a circle:
           name: วาดวงกลม
+        draw a pinwheel:
+          parameters:
+            length: ความยาว
+            repeat: ทำซ้ำ
         draw a triangle:
           name: วาดสามเหลี่ยม
+          parameters:
+            length: ความยาว
+        draw a shape:
+          parameters:
+            length: ความยาว
         draw a house:
           name: วาดรูปบ้าน
+          parameters:
+            length: ความยาว
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 2:
         do something:
           name: ทำบางสิ่ง
@@ -275,35 +402,87 @@ th-TH:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: วาดสามเหลี่ยม
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: วาดสามเหลี่ยม
+          parameters:
+            length: ความยาว
         draw a hexagon:
           name: วาดรูปหกเหลี่ยม
+          parameters:
+            length: ความยาว
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
+        draw a sqaure:
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: วาดสามเหลี่ยม
+          parameters:
+            length: ความยาว
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: ความยาว
       NEW Course 4 Artist Params 9:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
         do something:
           name: ทำบางสิ่ง
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: ความยาว
       NEW Course 4 Play Lab Params 11:
         jump:
           name: กระโดดออกไปที่
+          parameters:
+            height: ความสูง
+            actor: นักแสดง
+        patrol:
+          parameters:
+            actor: นักแสดง
+            speed: ความเร็ว
       New Artist Project:
         draw a star:
           name: วาดรูปดวงดาว
+          parameters:
+            points: คะแนน
+            length: ความยาว
         draw a circle:
           name: วาดวงกลม
+        draw a pinwheel:
+          parameters:
+            length: ความยาว
+            repeat: ทำซ้ำ
         draw a triangle:
           name: วาดสามเหลี่ยม
+          parameters:
+            length: ความยาว
+        draw a shape:
+          parameters:
+            length: ความยาว
         draw a house:
           name: วาดรูปบ้าน
+          parameters:
+            length: ความยาว
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
       New Minecraft Hero Project:
         function 1:
           name: ฟังก์ชั่น 1
@@ -312,6 +491,13 @@ th-TH:
       New Play Lab Project:
         jump:
           name: กระโดดออกไปที่
+          parameters:
+            height: ความสูง
+            actor: นักแสดง
+        patrol:
+          parameters:
+            actor: นักแสดง
+            speed: ความเร็ว
       Standalone_Artist_7:
         draw a flower:
           name: วาดดอกไม้
@@ -334,6 +520,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: สี
         draw a square 20:
           name: วาดสี่เหลี่ยมจตุรัส 20
         do something:
@@ -341,7 +530,34 @@ th-TH:
       course4_bee_for_challenge1:
         move and get nectar with counter:
           name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: ความยาว
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: ความยาว
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: ทำบางสิ่ง
+      courseC_data wizard_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_concept1:
@@ -383,6 +599,11 @@ th-TH:
           name: ทำบางสิ่ง
         draw hexagon:
           name: วาดรูปหกเหลี่ยม
+      courseE_artist_functions10_2020:
+        do something:
+          name: ทำบางสิ่ง
+        draw hexagon:
+          name: วาดรูปหกเหลี่ยม
       courseE_artist_functions2:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -392,6 +613,9 @@ th-TH:
       courseE_artist_functions2_2019:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions2_copy:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -399,6 +623,9 @@ th-TH:
         draw a star:
           name: วาดรูปดวงดาว
       courseE_artist_functions3_2019:
+        draw a star:
+          name: วาดรูปดวงดาว
+      courseE_artist_functions3_2020:
         draw a star:
           name: วาดรูปดวงดาว
       courseE_artist_functions4:
@@ -416,6 +643,9 @@ th-TH:
       courseE_artist_functions5_2019:
         draw a star:
           name: วาดรูปดวงดาว
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: วาดรูปดวงดาว
       courseE_artist_functions5_copy:
         draw a star:
           name: วาดรูปดวงดาว
@@ -423,6 +653,9 @@ th-TH:
         draw a house:
           name: วาดรูปบ้าน
       courseE_artist_functions7_2018:
+        draw a house:
+          name: วาดรูปบ้าน
+      courseE_artist_functions7_2020:
         draw a house:
           name: วาดรูปบ้าน
       courseE_artist_functions8:
@@ -446,12 +679,24 @@ th-TH:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions8_2020:
+        do something:
+          name: ทำบางสิ่ง
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions8a_2018:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions8a_2020:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
@@ -464,6 +709,13 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
@@ -484,6 +736,13 @@ th-TH:
           name: วาดสี่เหลี่ยมจตุรัส
         do something:
           name: ทำบางสิ่ง
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
+        do something:
+          name: ทำบางสิ่ง
       courseE_artist_functions9:
         do something:
           name: ทำบางสิ่ง
@@ -491,6 +750,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions9_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions9_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functionsProj_2018:
@@ -507,6 +769,13 @@ th-TH:
           name: วาดเส้นสีเหลี่ยมจตุรัส
         draw square:
           name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functionsProj_2020:
+        draw hexagon:
+          name: วาดรูปหกเหลี่ยม
+        draw a line of squares:
+          name: วาดเส้นสีเหลี่ยมจตุรัส
+        draw square:
+          name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_challenge1:
         do something:
           name: ทำบางสิ่ง
@@ -514,6 +783,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_challenge2:
@@ -525,6 +797,9 @@ th-TH:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: ทำบางสิ่ง
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: ทำบางสิ่ง
       courseE_artist_functions_predict1:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
@@ -532,6 +807,9 @@ th-TH:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: วาดสี่เหลี่ยมจตุรัส
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
       courseE_artist_functions_predict1_copy:
@@ -544,6 +822,9 @@ th-TH:
         do something:
           name: ทำบางสิ่ง
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: ทำบางสิ่ง
+      courseE_artist_functions_predict2_2020:
         do something:
           name: ทำบางสิ่ง
       courseE_bee_functions1:
@@ -600,33 +881,113 @@ th-TH:
       courseF_artist_fwp1:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+        checker:
+          parameters:
+            size: ขนาด
+            color: สี
         do something:
           name: ทำบางสิ่ง
+        Make gingham:
+          parameters:
+            size: ขนาด
+        black outline:
+          parameters:
+            length: ความยาว
       courseF_artist_fwp2:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
+        checker:
+          parameters:
+            size: ขนาด
+            color: สี
         do something:
           name: ทำบางสิ่ง
+        Make gingham:
+          parameters:
+            size: ขนาด
+        black outline:
+          parameters:
+            length: ความยาว
       courseF_artist_fwp2_predict1:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
       courseF_artist_fwp3:
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
         draw a square2:
           name: วาดสี่เหลี่ยมจตุรัส2
+          parameters:
+            size: ขนาด
+        filled square:
+          parameters:
+            size: ขนาด
+            color: สี
+        black outline:
+          parameters:
+            length: ความยาว
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: ความยาว
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: ความยาว
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: ความยาว
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: ความยาว
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: ความยาว
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: วาดรูปดวงดาว
+          parameters:
+            points: คะแนน
+            length: ความยาว
         draw a circle:
           name: วาดวงกลม
+        draw a pinwheel:
+          parameters:
+            length: ความยาว
+            repeat: ทำซ้ำ
         draw a triangle:
           name: วาดสามเหลี่ยม
+          parameters:
+            length: ความยาว
+        draw a shape:
+          parameters:
+            length: ความยาว
         draw a house:
           name: วาดรูปบ้าน
+          parameters:
+            length: ความยาว
         draw a square:
           name: วาดสี่เหลี่ยมจตุรัส
+          parameters:
+            length: ความยาว
+        draw a spiral edge:
+          parameters:
+            length: ความยาว
+            min: min
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: สี
         draw a square 20:
           name: วาดสี่เหลี่ยมจตุรัส 20
         do something:
@@ -636,6 +997,9 @@ th-TH:
           name: วาดสี่เหลี่ยมจตุรัส 20
         do something:
           name: ทำบางสิ่ง
+        draw an octagon:
+          parameters:
+            length: ความยาว
       courseF_bee_for_challenge1:
         move and get nectar with counter:
           name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
@@ -645,18 +1009,59 @@ th-TH:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
       courseF_bee_functions8a:
         do something:
           name: ทำบางสิ่ง
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: ความยาว
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: ความกว้าง
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: ความกว้าง
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ความกว้าง
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ความกว้าง
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ความกว้าง
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: ความยาว
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: ความยาว
       courseF_bee_variables_7_2018:
         collect:
           name: เก็บ
       courseF_bee_variables_7_2019:
         collect:
           name: เก็บ
+      courseF_bee_variables_7_2020:
+        collect:
+          name: เก็บ
       courseF_bee_variables_8_2018:
         collect:
           name: เก็บ
       courseF_bee_variables_8_2019:
+        collect:
+          name: เก็บ
+      courseF_bee_variables_8_2020:
         collect:
           name: เก็บ

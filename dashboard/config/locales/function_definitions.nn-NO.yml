@@ -20,9 +20,15 @@ nn-NO:
       2-3 Artist 7:
         draw_rect:
           name: teikn_kvad
+          parameters:
+            width: breidde
+            height: høgd
       2-3 Artist Debugging 10:
         draw square:
           name: teikn kvadrat
+          parameters:
+            width: breidde
+            height: høgd
         jump to controller top left:
           name: gå til kontrollaren øvst til venstre
         jump to middle:
@@ -186,6 +192,8 @@ nn-NO:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: få nektar lag honning
+          parameters:
+            honey: honning
       Course 4 Play Lab Params 1:
         jump:
           name: hopp
@@ -194,18 +202,43 @@ nn-NO:
           name: nivå_opp
         score_points:
           name: score_poeng
+          parameters:
+            points: poeng
       Course 4 Play Lab Params 2:
         jump:
           name: hopp
       Course 4 Play Lab Params 3:
         jump:
           name: hopp
+          parameters:
+            height: høgd
+            actor: spelar
       Course 4 Play Lab Params 4:
         do something:
           name: gjer noko
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: spelar
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: spelar
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: spelar
+            speed: fart
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: spelar
+            speed: fart
       Course 4 Play Lab Params 9:
         score_points:
           name: score_poeng
+          parameters:
+            points: poeng
       Course 4 Play Lab Vars 1:
         set score:
           name: set poengsum
@@ -226,6 +259,8 @@ nn-NO:
       Course 4 SCF 1a:
         get nectar:
           name: få nektar
+          parameters:
+            counter: teljar
       Course 4 SCF 1b:
         make honey up and over:
           name: lag honning opp og over
@@ -245,6 +280,8 @@ nn-NO:
           name: gjer noko
         draw an octagon:
           name: teikn ein åttekant
+          parameters:
+            length: lengde
       'Course E: Play Lab Project':
         do something:
           name: gjer noko
@@ -258,10 +295,15 @@ nn-NO:
           name: nivå_opp
         score_points:
           name: score_poeng
+          parameters:
+            points: poeng
       Function intro Ryan:
         build bridge:
           name: bygg bru
       Function intro Ryan_2019:
+        build bridge:
+          name: bygg bru
+      Function intro Ryan_2020:
         build bridge:
           name: bygg bru
       Geometric Sun:
@@ -312,17 +354,27 @@ nn-NO:
       InspirationalArtwork:
         n-sided shape:
           name: n-sidig figur
+          parameters:
+            length: lengde
         draw a loop:
           name: teikn ei løkke
+          parameters:
+            length: lengde
         draw spiral circle:
           name: teikn spiralsirkel
+          parameters:
+            size: størrelse
       InspirationalArtwork_2018:
         draw a loop:
           name: teikn ei løkke
+          parameters:
+            length: lengde
         n-sided shape:
           name: n-sidig figur
         draw spiral circle:
           name: teikn spiralsirkel
+          parameters:
+            size: størrelse
       K-1 Artist2 3:
         draw roof:
           name: teikn tak
@@ -338,6 +390,9 @@ nn-NO:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: fjern bane
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: fjern bane
       MC_HOC_2017_Ali:
         build short bridge:
           name: bygg kort bru
@@ -348,12 +403,22 @@ nn-NO:
           name: bygg kort bru
         build long bridge:
           name: bygg lang bru
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: bygg kort bru
+        build long bridge:
+          name: bygg lang bru
       MC_HOC_2017_FP20x20:
         function 1:
           name: funksjon 1
         function 2:
           name: funksjon 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: funksjon 1
+        function 2:
+          name: funksjon 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: funksjon 1
         function 2:
@@ -411,20 +476,59 @@ nn-NO:
           name: gjer noko
         draw a hexagon:
           name: teikn ein sekskant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: lengde
         do something:
           name: gjer noko
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 15:
         draw a star:
           name: teikn ei stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: teikn ein sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: teikn ein trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: teikn eit hus
+          parameters:
+            length: lengde
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 2:
         do something:
           name: gjer noko
@@ -437,40 +541,87 @@ nn-NO:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: tegn en trekant med lengde
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: teikn ein trekant
+          parameters:
+            length: lengde
         draw a hexagon:
           name: teikn ein sekskant
+          parameters:
+            length: lengde
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
         draw a sqaure:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: teikn ein trekant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: tegn en trekant med lengde
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 9:
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
         do something:
           name: gjer noko
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: lengde
       NEW Course 4 Play Lab Params 11:
         jump:
           name: hopp
+          parameters:
+            height: høgd
+            actor: spelar
+        patrol:
+          parameters:
+            actor: spelar
+            speed: fart
       New Artist Project:
         draw a star:
           name: teikn ei stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: teikn ein sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: teikn ein trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: teikn eit hus
+          parameters:
+            length: lengde
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
       New Minecraft Hero Project:
         function 1:
           name: funksjon 1
@@ -479,6 +630,13 @@ nn-NO:
       New Play Lab Project:
         jump:
           name: hopp
+          parameters:
+            height: høgd
+            actor: spelar
+        patrol:
+          parameters:
+            actor: spelar
+            speed: fart
       Robot Doodle:
         25 pixel square:
           name: 25 piksler stor firkant
@@ -515,7 +673,34 @@ nn-NO:
           name: tegn en firkant 20
         do something:
           name: gjer noko
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lengde
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lengde
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: gjer noko
+      courseC_data wizard_2020:
         do something:
           name: gjer noko
       courseE_Dogger_2:
@@ -572,6 +757,13 @@ nn-NO:
           name: teikn sekskant
         draw line of hexagons:
           name: teikn ei linje av sekskantar
+      courseE_artist_functions10_2020:
+        do something:
+          name: gjer noko
+        draw hexagon:
+          name: teikn sekskant
+        draw line of hexagons:
+          name: teikn ei linje av sekskantar
       courseE_artist_functions2:
         draw a square:
           name: teikn eit kvadrat
@@ -581,6 +773,9 @@ nn-NO:
       courseE_artist_functions2_2019:
         draw a square:
           name: teikn eit kvadrat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: teikn eit kvadrat
       courseE_artist_functions2_copy:
         draw a square:
           name: teikn eit kvadrat
@@ -588,6 +783,9 @@ nn-NO:
         draw a star:
           name: teikn ei stjerne
       courseE_artist_functions3_2019:
+        draw a star:
+          name: teikn ei stjerne
+      courseE_artist_functions3_2020:
         draw a star:
           name: teikn ei stjerne
       courseE_artist_functions4:
@@ -605,6 +803,9 @@ nn-NO:
       courseE_artist_functions5_2019:
         draw a star:
           name: teikn ei stjerne
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: teikn ei stjerne
       courseE_artist_functions5_copy:
         draw a star:
           name: teikn ei stjerne
@@ -612,6 +813,9 @@ nn-NO:
         draw a house:
           name: teikn eit hus
       courseE_artist_functions7_2018:
+        draw a house:
+          name: teikn eit hus
+      courseE_artist_functions7_2020:
         draw a house:
           name: teikn eit hus
       courseE_artist_functions8:
@@ -639,12 +843,26 @@ nn-NO:
           name: tegn en linje av firkanter
         draw square:
           name: teikn kvadrat
+      courseE_artist_functions8_2020:
+        do something:
+          name: gjer noko
+        staggered squares:
+          name: forskjøvne kvadrat
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: teikn kvadrat
       courseE_artist_functions8a_2018:
         draw a square:
           name: teikn eit kvadrat
         do something:
           name: gjer noko
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: teikn eit kvadrat
+        do something:
+          name: gjer noko
+      courseE_artist_functions8a_2020:
         draw a square:
           name: teikn eit kvadrat
         do something:
@@ -657,6 +875,13 @@ nn-NO:
         do something:
           name: gjer noko
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: teikn kvadrat
+        do something:
+          name: gjer noko
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
@@ -681,6 +906,15 @@ nn-NO:
           name: gjer noko
         staggered squares:
           name: forskjøvne kvadrat
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: teikn kvadrat
+        do something:
+          name: gjer noko
+        staggered squares:
+          name: forskjøvne kvadrat
       courseE_artist_functions9:
         do something:
           name: gjer noko
@@ -692,6 +926,11 @@ nn-NO:
         draw triangle:
           name: teikn trekant
       courseE_artist_functions9_2019:
+        do something:
+          name: gjer noko
+        draw triangle:
+          name: teikn trekant
+      courseE_artist_functions9_2020:
         do something:
           name: gjer noko
         draw triangle:
@@ -718,6 +957,17 @@ nn-NO:
           name: tegn en linje av firkanter
         draw square:
           name: teikn kvadrat
+      courseE_artist_functionsProj_2020:
+        draw hexagon:
+          name: teikn sekskant
+        draw line of hexagons:
+          name: teikn ei linje av sekskantar
+        staggered squares:
+          name: forskjøvne kvadrat
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: teikn kvadrat
       courseE_artist_functions_challenge1:
         do something:
           name: gjer noko
@@ -725,6 +975,9 @@ nn-NO:
         do something:
           name: gjer noko
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: gjer noko
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: gjer noko
       courseE_artist_functions_challenge2:
@@ -736,6 +989,9 @@ nn-NO:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: gjer noko
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: gjer noko
       courseE_artist_functions_predict1:
         draw a square:
           name: teikn eit kvadrat
@@ -743,6 +999,9 @@ nn-NO:
         draw a square:
           name: teikn eit kvadrat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: teikn eit kvadrat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: teikn eit kvadrat
       courseE_artist_functions_predict1_copy:
@@ -763,6 +1022,13 @@ nn-NO:
         do something:
           name: gjer noko
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: teikn linje av polygon
+        draw polygon:
+          name: teikn polygon
+        do something:
+          name: gjer noko
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: teikn linje av polygon
         draw polygon:
@@ -843,6 +1109,15 @@ nn-NO:
           name: få alle gresskar
         pumpkin square:
           name: gresskarkvadrat
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: plukk opp langs banen
+        check square for corn:
+          name: sjekk kvadrat for korn
+        get all pumpkins:
+          name: få alle gresskar
+        pumpkin square:
+          name: gresskarkvadrat
       courseE_farmer_functions10b:
         navigate:
           name: naviger
@@ -875,6 +1150,17 @@ nn-NO:
           name: få produksjon
         get all pumpkins:
           name: få alle gresskar
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: plukk opp langs banen
+        pumpkin square:
+          name: gresskarkvadrat
+        check square for corn:
+          name: sjekk kvadrat for korn
+        get produce:
+          name: få produksjon
+        get all pumpkins:
+          name: få alle gresskar
       courseE_farmer_functions13_2018:
         pick along path:
           name: plukk opp langs banen
@@ -893,16 +1179,31 @@ nn-NO:
           name: kornrektangel
         lettuce stairs:
           name: salat trapper
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: plukk opp langs banen
+        check for corn:
+          name: sjekk for korn
+        corn rectangle:
+          name: kornrektangel
+        lettuce stairs:
+          name: salat trapper
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: sjekk kvadrat for korn
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: sjekk kvadrat for korn
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: sjekk kvadrat for korn
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: sjekk kvadrat for korn
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: sjekk kvadrat for korn
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: sjekk kvadrat for korn
       courseE_farmer_functions2ba:
@@ -914,6 +1215,11 @@ nn-NO:
         get all pumpkins:
           name: få alle gresskar
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: sjekk kvadrat for korn
+        get all pumpkins:
+          name: få alle gresskar
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: sjekk kvadrat for korn
         get all pumpkins:
@@ -935,12 +1241,24 @@ nn-NO:
           name: sjekk kvadrat for korn
         get all pumpkins:
           name: få alle gresskar
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: plukk opp langs banen
+        check square for corn:
+          name: sjekk kvadrat for korn
+        get all pumpkins:
+          name: få alle gresskar
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: sjekk kvadrat for korn
         get all pumpkins:
           name: få alle gresskar
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: sjekk kvadrat for korn
+        get all pumpkins:
+          name: få alle gresskar
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: sjekk kvadrat for korn
         get all pumpkins:
@@ -960,10 +1278,16 @@ nn-NO:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: hagekvadrat
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: hagekvadrat
       courseE_farmer_functions8a1_2018:
         garden square:
           name: hagekvadrat
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: hagekvadrat
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: hagekvadrat
       courseE_farmer_functions8b:
@@ -973,6 +1297,9 @@ nn-NO:
         garden square:
           name: hagekvadrat
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: hagekvadrat
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: hagekvadrat
       courseE_farmer_functions9b:
@@ -995,46 +1322,112 @@ nn-NO:
           name: teikn eit kvadrat
         checker:
           name: sjekkar
+          parameters:
+            size: størrelse
         do something:
           name: gjer noko
         Make gingham:
           name: Lag gingham
+          parameters:
+            size: størrelse
         black outline:
           name: svart ramme
+          parameters:
+            length: lengde
       courseF_artist_fwp2:
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
         checker:
           name: sjekkar
+          parameters:
+            size: størrelse
         do something:
           name: gjer noko
         Make gingham:
           name: Lag gingham
+          parameters:
+            size: størrelse
         black outline:
           name: svart ramme
+          parameters:
+            length: lengde
       courseF_artist_fwp2_predict1:
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
       courseF_artist_fwp3:
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
         draw a square2:
           name: teikn eit kvadrat2
+          parameters:
+            size: størrelse
         filled square:
           name: fyll kvadrat
+          parameters:
+            size: størrelse
         black outline:
           name: svart ramme
+          parameters:
+            length: lengde
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: lengde
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: lengde
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
       courseF_artist_fwp9:
         draw a star:
           name: teikn ei stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: teikn ein sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: teikn ein trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: teikn eit hus
+          parameters:
+            length: lengde
         draw a square:
           name: teikn eit kvadrat
+          parameters:
+            length: lengde
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
       courseF_artist_fwp_challenge1:
         draw a square 20:
           name: tegn en firkant 20
@@ -1047,6 +1440,8 @@ nn-NO:
           name: gjer noko
         draw an octagon:
           name: teikn ein åttekant
+          parameters:
+            length: lengde
       courseF_bee_functions2:
         get only nectar:
           name: få berre nektar
@@ -1067,19 +1462,48 @@ nn-NO:
       courseF_bee_functionsPre7:
         get nectar make honey:
           name: få nektar lag honning
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: lengde
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: breidde
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: breidde
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: radAvNektarEllerHonning
+          parameters:
+            width: breidde
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: radAvNektarEllerHonning
+          parameters:
+            width: breidde
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: radAvNektarEllerHonning
+          parameters:
+            width: breidde
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lengde
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lengde
       courseF_bee_variables_1_2018:
         collect row:
           name: samle rad
       courseF_bee_variables_1_2019:
+        collect row:
+          name: samle rad
+      courseF_bee_variables_1_2020:
         collect row:
           name: samle rad
       courseF_bee_variables_2_2018:
@@ -1088,10 +1512,16 @@ nn-NO:
       courseF_bee_variables_2_2019:
         collect row:
           name: samle rad
+      courseF_bee_variables_2_2020:
+        collect row:
+          name: samle rad
       courseF_bee_variables_3_2018:
         collect row:
           name: samle rad
       courseF_bee_variables_3_2019:
+        collect row:
+          name: samle rad
+      courseF_bee_variables_3_2020:
         collect row:
           name: samle rad
       courseF_bee_variables_4_2018:
@@ -1100,10 +1530,16 @@ nn-NO:
       courseF_bee_variables_4_2019:
         collect row:
           name: samle rad
+      courseF_bee_variables_4_2020:
+        collect row:
+          name: samle rad
       courseF_bee_variables_5_2018:
         collect row:
           name: samle rad
       courseF_bee_variables_5_2019:
+        collect row:
+          name: samle rad
+      courseF_bee_variables_5_2020:
         collect row:
           name: samle rad
       courseF_bee_variables_6_2018:
@@ -1112,10 +1548,16 @@ nn-NO:
       courseF_bee_variables_6_2019:
         collect stairs:
           name: samle trapper
+      courseF_bee_variables_6_2020:
+        collect stairs:
+          name: samle trapper
       courseF_bee_variables_7_2018:
         collect:
           name: samle
       courseF_bee_variables_7_2019:
+        collect:
+          name: samle
+      courseF_bee_variables_7_2020:
         collect:
           name: samle
       courseF_bee_variables_8_2018:
@@ -1124,6 +1566,11 @@ nn-NO:
         collect:
           name: samle
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: flytt og øk
+        collect:
+          name: samle
+      courseF_bee_variables_8_2020:
         move and increment:
           name: flytt og øk
         collect:

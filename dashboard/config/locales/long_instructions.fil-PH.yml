@@ -112,6 +112,76 @@ fil-PH:
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Course 4 Artist For Loops 6a: Gumawa ng tatlong maliliit na pagbabago sa code
         mula sa huling antas para makuha ito!
+      CourseD_Dance_2020_01: |-
+        _Mag-dance party tayo!_
+
+        Hilahin ang <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> block papunta sa workspace, at ikonekta ito sa loob ng <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> block para likhain ang iyong unang dancer.
+
+        -   _Pwede mo ring i-click ang bombilya sa kaliwa kung gusto mo ng mas maraming impormasyon o ekstrang mga hamon._
+      CourseD_Dance_2020_02: |-
+        Ang <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> block ay nagpapahintulot sa iyo na i-run ang code kapag pinindot ang paitaas na arrow. Gamitin ang l<xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> block para papalakpakin ang dancer kapag nagpindot ka paitaas, o sumubok ng ibang galaw!
+
+        _Tiyakin na pinindot mo ang paitaas na arrow o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) matapos i-click ang Run button!_
+      CourseD_Dance_2020_03: 'Oras na para sa dance-off! I-program ang bawat dancer
+        na gumalaw kapag pinindot mo ang iba-ibang key. Piliin ang iyong paboritong
+        galaw para sa bawat dancer o itakda ito sa "(Random)" para sa isang bagay
+        na lubos na hindi mahuhulaan! '
+      CourseD_Dance_2020_04: |-
+        Pagalawin natin ang mga dancer na sabay sa musika!
+
+        Hilahin ang <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> block. Dapat mag-umpisa ng bagong galaw ang iyong dancer matapos ang ikaapat na measure.
+
+        Ginagamit ang **mga measure** para magbilang ng oras sa musika. Sa tutorial na ito, ang isang measure ay apat na beat ang haba.
+      CourseD_Dance_2020_05: "_Ngayon naggo-groove tayo!_ \n\nMagdagdag ng <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        block sa iyong workspace. Paumpisahin ang dancer ng bagong galaw matapos ang
+        6 na measure."
+      CourseD_Dance_2020_06: "Gamitin ang bagong block na ito para mag-set up ng isang
+        grupo ng mas maliit na mga backup dancer sa paligid ng nangungunang dancer
+        na nasa gitna. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nNgayon pwede ka  nang lumikha ng pangkat ng mga dancer nang
+        sabay-sabay lahat!"
+      CourseD_Dance_2020_07: "Ang bawat dancer ay may set ng _properties_ na kumukontrol
+        kung ano ang hitsura nito. \n\nGumamit ng <xml><block type=\"Dancelab_setPropEach\"
+        block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;,
+        &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        sa ilalim ng berdeng event block para gawing mas malapit o mas malayong tingnan
+        ang mga dancer."
+      CourseD_Dance_2020_08: Ang mga dancer ay may "tint" property na makapagdagdag
+        ng layer sa kulay. Subukang palitan ang tint ng isa sa iyong mga dancer (o
+        ang buong pangkat)!
+      CourseD_Dance_2020_09: |-
+        Ito ay isang espesyal na uri ng event na napapasimulan nang paulit-ulit.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Ang ibang mga bagong block sa iyong toolbox ay magpapahintulot sa iyo na dahan-dahan (o random) na palitan ang mga property ng dancer paglipas ng panahon.
+
+        _Maging mapanlikha at magsaya!_
+      CourseD_Dance_2020_10: Mg-Groove! Lumikha ng iyong sariling sayaw na ibahagi
+        sa iyong mga kaibigan.
+      CourseD_Dance_2020_bonus1: "# Back and Forth!\n\nMinsan, maaaring gusto mong
+        gumawa ng isang pattern ng mga galaw sa sayaw na pipiliin mo, Ang bagong block
+        na ito ay nagpapahintulot sa iyo na gawin iyan. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nAng mga galaw na pipiliin
+        mo sa itaas ay magpaulit-ulit sa sequence nang walang hanggan. \n\n-   Gumawa
+        ng kahaliling routine para sa lead dance sa harap! \n-   Gamitin ang iba't
+        ibang numero para baguhin ang rate sa paghahalili ng mga galaw. Subukan ang
+        `1` o `0.5` para hahalili nang mas mabilis!"
+      CourseD_Dance_2020_bonus3: |-
+        # Mag-formation Tayo!
+
+        Tingnan ang sayaw na ito na gumagamit ng <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
+
+        -   Lumikha ng ikalawang grupo ng mga dancer sa iba’t ibang layout
+        -   Palitan ang layout kapag pinindot ang key
+        -   Palitan ang property kapag nagbago ng formation ang mga dancer
       CourseD_Dance_Party_01: "_Mag-dance party tayo!_\n\nHilahin ang block na `gumawa
         ng bago` papasok sa workspace, at ikonekta ito sa loob ng `setup` blockpara
         likhain ang iyong unang dancer. \n\n-   _Pwede mo ring i-click ang bumbilya
@@ -119,7 +189,7 @@ fil-PH:
       CourseD_Dance_Party_02: |-
         "Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.".
       CourseD_Dance_Party_03: |-
@@ -150,7 +220,7 @@ fil-PH:
         "Ngayon, alam na natin kung paano pangasiwaan ang mga property ng isang dancer, Pwede rin tayong gumawa ng kaparehong mga property na awtomatikong tutugon sa musika gamit ang block na ito:
         <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -240,7 +310,7 @@ fil-PH:
       Dance_Party_02: |-
         Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.
       Dance_Party_03: "_Ngayon naggo-groove tayo!_ \n\nMagdagdag ng <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -271,7 +341,7 @@ fil-PH:
         "Ngayon, alam na natin kung paano pangasiwaan ang mga property ng isang dancer, Pwede rin tayong gumawa ng kaparehong mga property na awtomatikong tutugon sa musika gamit ang block na ito:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -414,6 +484,8 @@ fil-PH:
         maabot ang tupa.
       Overworld Move to Sheep_2019: Magdagdag ng pangalawang `move forward` na bloke
         para maabot ang tupa.
+      Overworld Move to Sheep_2020: Magdagdag ng pangalawang `move forward` na bloke
+        para maabot ang tupa.
       Standalone_Artist_4: Ngayon ay mayroon ka nang bagong bloke para paglaruan,
         ang loop. Ito ay mag-uulit sa isang hanay ng mga utos. Ano ang mangyayari
         kung i-loop mo ang mga utos na ito nang 6 na beses?
@@ -457,21 +529,35 @@ fil-PH:
         sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length`
         na parameter.
       courseA_maze_seq13_2019: Kunin ang baboy sa kahit anong paraan na kaya mo!
+      courseA_maze_seq13_2020: Kunin ang baboy sa kahit anong paraan na kaya mo!
       courseA_maze_seq6_2018: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta
         ang ibon sa baboy!
       courseA_maze_seq6_2019: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta
         ang ibon sa baboy!
+      courseA_maze_seq6_2020: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta
+        ang ibon sa baboy!
       courseA_maze_seq8_2018: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq8_2019: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
+      courseA_maze_seq8_2020: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq_challenge2_2019: Sundan ang landas para gabayan ang ibon papunta
+        sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
+      courseA_maze_seq_challenge2_2020: Sundan ang landas para gabayan ang ibon papunta
         sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseB_artist_loops1_2019: Ito ay isang bagong tipo ng palaisipan na tinatawag
         na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
+      courseB_artist_loops1_2020: Ito ay isang bagong tipo ng palaisipan na tinatawag
+        na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops2_2019: Ang Artist ay sinusubukang gumuhit ng linya mga
+        **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
+      courseB_artist_loops2_2020: Ang Artist ay sinusubukang gumuhit ng linya mga
         **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
       courseB_artist_loops3_2019: Tulungan ang artista na gumuhit ng linya ng mga
         7 beses para makagawa ng pader sa halamanan.
+      courseB_artist_loops3_2020: Tulungan ang artista na gumuhit ng linya ng mga
+        7 beses para makagawa ng pader sa halamanan.
       courseB_artist_loops5_2019: Oras na para ayusin ang hagdanan! Ulitin ang pattern
+        na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
+      courseB_artist_loops5_2020: Oras na para ayusin ang hagdanan! Ulitin ang pattern
         na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
       courseB_artist_loops7: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay
         maglakad sa paligid."
@@ -479,9 +565,15 @@ fil-PH:
         ay maglakad sa paligid."
       courseB_artist_loops7_2019: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo
         ay maglakad sa paligid."
+      courseB_artist_loops7_2020: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo
+        ay maglakad sa paligid."
       courseB_artist_loops8_2019: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang
         ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
+      courseB_artist_loops8_2020: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang
+        ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
       courseB_artist_loops9_2019: Ating daanan ang maikling daan pauwi, sa itaas ng
+        lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
+      courseB_artist_loops9_2020: Ating daanan ang maikling daan pauwi, sa itaas ng
         lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
       courseB_artist_loops_challenge2: Magguhit ng maraming mga X hangga't kaya mo.
         Maaari ka bang makakuha ng 3 sa isang hanay?
@@ -489,32 +581,60 @@ fil-PH:
         mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_artist_loops_challenge2_2019: Magguhit ng maraming mga X hangga't kaya
         mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_artist_loops_challenge2_2020: Magguhit ng maraming mga X hangga't kaya
+        mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_collector_loops10_2019: Tulungan si Laurel na kunin ang lahat ng mga
+        kayamanan mula sa kuwebang ito.
+      courseB_collector_loops10_2020: Tulungan si Laurel na kunin ang lahat ng mga
         kayamanan mula sa kuwebang ito.
       courseB_collector_loops11_2019: Eureka! Magkuha ng maraming mga yaman hangga't
         kaya mo!
+      courseB_collector_loops11_2020: Eureka! Magkuha ng maraming mga yaman hangga't
+        kaya mo!
       courseB_collector_loops4_2019: Ayusin ang daanan ni Laurel para makuha ang lahat
+        ng mga yaman!
+      courseB_collector_loops4_2020: Ayusin ang daanan ni Laurel para makuha ang lahat
         ng mga yaman!
       courseB_collector_loops5_2019: 'Magdagdag sa code mula sa huling palaisipan
         para makuha ang lahat ng mga yaman. '
+      courseB_collector_loops5_2020: 'Magdagdag sa code mula sa huling palaisipan
+        para makuha ang lahat ng mga yaman. '
       courseB_collector_loops6_2019: Alamin ang code para matulungan si Laurel na
         makuha ang lahat ng mga yaman!
+      courseB_collector_loops6_2020: Alamin ang code para matulungan si Laurel na
+        makuha ang lahat ng mga yaman!
       courseB_collector_loops7_2019: Isulat ang code para makuha ang lahat ng mga
+        yamang ito.
+      courseB_collector_loops7_2020: Isulat ang code para makuha ang lahat ng mga
         yamang ito.
       courseB_collector_loops8_2019: "**Hamon:** Ang kayamanan ay umabot hanggang
         sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha
         ang lahat ng ito."
+      courseB_collector_loops8_2020: "**Hamon:** Ang kayamanan ay umabot hanggang
+        sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha
+        ang lahat ng ito."
       courseB_collector_loops9_2019: _"Tulungan akong makuha ang kayamanan mula sa
+        malalim na lambak na ito."_
+      courseB_collector_loops9_2020: _"Tulungan akong makuha ang kayamanan mula sa
         malalim na lambak na ito."_
       courseB_collector_loops_challenge1_2019: 'Sa oras na ito, mayroon ka lang limitadong
         mga bloke. Kunin ang lahat ng mga yaman! '
+      courseB_collector_loops_challenge1_2020: 'Sa oras na ito, mayroon ka lang limitadong
+        mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_iceage_loops11_2020: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_maze_seq12_2019: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan
+        na kaya mo!
+      courseB_maze_seq12_2020: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan
         na kaya mo!
       courseB_maze_seq_challenge2_2019: I-debug ang antas na ito. Ito ang tamang mga
         bloke, ngunit sila ay nasa maling pagkasunod-sunod!
+      courseB_maze_seq_challenge2_2020: I-debug ang antas na ito. Ito ang tamang mga
+        bloke, ngunit sila ay nasa maling pagkasunod-sunod!
       courseB_playlab_events2_2019: Pasalitain ang Daisy na Dragon kapag na-click
+        mo ang "Run".
+      courseB_playlab_events2_2020: Pasalitain ang Daisy na Dragon kapag na-click
         mo ang "Run".
       courseB_playlab_events6: "Tulungan ang iyong kabalyero para makuha ang lahat
         ng mga bandila!\\\r\n\\\r\nPara magawa ito, kailangan mong magdagdag ng mga
@@ -528,9 +648,18 @@ fil-PH:
         lahat ng mga bandila!\\\r\n\\\r\nPara magawa ito, kailangan mong magdagdag
         ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa,
         pakaliwa, at pakanan."
+      courseB_playlab_events6_2020: "Tulungan ang iyong kabalyero para makuha ang
+        lahat ng mga bandila!\\\r\n\\\r\nPara magawa ito, kailangan mong magdagdag
+        ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa,
+        pakaliwa, at pakanan."
       courseC19_playLab_EOC6: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong
         laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
+      courseC19_playLab_EOC6_2020: Natapos mo na! Ngayon ay maaari ka nang maglaro
+        sa iyong laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
       courseC_PlayLab_events6_2019: Ngayon, magsulat ng programa para mapagalaw si
+        Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na
+        mga key para matamaan ang lahat ng mga target!
+      courseC_PlayLab_events6_2020: Ngayon, magsulat ng programa para mapagalaw si
         Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na
         mga key para matamaan ang lahat ng mga target!
       courseC_artist_loops2a: Ngayon, gumamit ng loop para paikutin ang iyong ibon
@@ -539,20 +668,27 @@ fil-PH:
         ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_loops2a_2019: Ngayon, gumamit ng loop para paikutin ang iyong
         ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
+      courseC_artist_loops2a_2020: Ngayon, gumamit ng loop para paikutin ang iyong
+        ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_collector_prog8: _"Panatilihin ang magandang trabaho! Tulungan akong
         kolektahin ang lahat ng mga kayamanan."_
       courseC_collector_prog8_2018: _"Panatilihin ang magandang trabaho! Tulungan
         akong kolektahin ang lahat ng mga kayamanan."_
       courseC_collector_prog8_2019: _"Panatilihin ang magandang trabaho! Tulungan
         akong kolektahin ang lahat ng mga kayamanan."_
+      courseC_collector_prog8_2020: _"Panatilihin ang magandang trabaho! Tulungan
+        akong kolektahin ang lahat ng mga kayamanan."_
       courseC_collector_prog9: _"Ating kunin ang lahat ng mga kayamanan!"_
       courseC_collector_prog9_2018: _"Ating kunin ang lahat ng mga kayamanan!"_
       courseC_collector_prog9_2019: _"Ating kunin ang lahat ng mga kayamanan!"_
+      courseC_collector_prog9_2020: _"Ating kunin ang lahat ng mga kayamanan!"_
       courseC_flappy_events7: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
         ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events7_2018: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
         ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events7_2019: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
+        ng paglakip ng bloke sa `when run` na pangyayari.
+      courseC_flappy_events7_2020: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
         ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events9: Para haluin ang mga bagay, sa halip na tapusin ang laro
         kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score
@@ -563,17 +699,24 @@ fil-PH:
       courseC_flappy_events9_2019: Para haluin ang mga bagay, sa halip na tapusin
         ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang
         score pabalik sa 0.
+      courseC_flappy_events9_2020: Para haluin ang mga bagay, sa halip na tapusin
+        ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang
+        score pabalik sa 0.
       courseC_harvester_loops10: Kolektahin ang lahat ng mga mais at ang lahat ng
         mga kalabasa.
       courseC_harvester_loops10_2018: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops10_2019: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
+      courseC_harvester_loops10_2020: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
       courseC_harvester_loops11: Kolektahin ang lahat ng mga mais at ang lahat ng
         mga kalabasa.
       courseC_harvester_loops11_2018: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops11_2019: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
+      courseC_harvester_loops11_2020: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops2: Maaari mo bang haluin ang dalawang iba't ibang mga
         loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng
@@ -584,14 +727,20 @@ fil-PH:
       courseC_harvester_loops2_2019: Maaari mo bang haluin ang dalawang iba't ibang
         mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat
         ng mga ito?
+      courseC_harvester_loops2_2020: Maaari mo bang haluin ang dalawang iba't ibang
+        mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat
+        ng mga ito?
       courseC_harvester_loops3: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops3_2018: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops3_2019: Kolektahin ang lahat ng mga kalabasa.
+      courseC_harvester_loops3_2020: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops5: Kolektahin ang lahat ng mga mais at ang lahat ng mga
         kalabasa.
       courseC_harvester_loops5_2018: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops5_2019: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
+      courseC_harvester_loops5_2020: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops6: Kolektahin ang lahat ng mga mais at ang lahat ng mga
         kalabasa.
@@ -599,11 +748,15 @@ fil-PH:
         ng mga kalabasa.
       courseC_harvester_loops6_2019: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
+      courseC_harvester_loops6_2020: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
       courseC_harvester_loops7: Kolektahin ang lahat ng mga mais at ang lahat ng mga
         kalabasa.
       courseC_harvester_loops7_2018: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops7_2019: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
+      courseC_harvester_loops7_2020: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
       courseC_harvester_loops9: Kolektahin ang lahat ng mga mais at ang lahat ng mga
         kalabasa.
@@ -611,11 +764,15 @@ fil-PH:
         ng mga kalabasa.
       courseC_harvester_loops9_2019: Kolektahin ang lahat ng mga mais at ang lahat
         ng mga kalabasa.
+      courseC_harvester_loops9_2020: Kolektahin ang lahat ng mga mais at ang lahat
+        ng mga kalabasa.
       courseC_harvester_loops_challenge2: Kolektahin ang lahat ng mga letsugas. Iwasan
         ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_challenge2_2018: Kolektahin ang lahat ng mga letsugas.
         Iwasan ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_challenge2_2019: Kolektahin ang lahat ng mga letsugas.
+        Iwasan ang mga kahoy ay mga kabukiran!
+      courseC_harvester_loops_challenge2_2020: Kolektahin ang lahat ng mga letsugas.
         Iwasan ang mga kahoy ay mga kabukiran!
       courseC_maze_programming1: Para sa palaisipang ito, kaladkarin ang lahat ng
         mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
@@ -623,11 +780,15 @@ fil-PH:
         ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming1_2019: Para sa palaisipang ito, kaladkarin ang lahat
         ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseC_maze_programming1_2020: Para sa palaisipang ito, kaladkarin ang lahat
+        ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming8: _"Maging kalmado at tulungan akong hanapin ang masamang
         baboy."_
       courseC_maze_programming8_2018: _"Maging kalmado at tulungan akong hanapin ang
         masamang baboy."_
       courseC_maze_programming8_2019: _"Maging kalmado at tulungan akong hanapin ang
+        masamang baboy."_
+      courseC_maze_programming8_2020: _"Maging kalmado at tulungan akong hanapin ang
         masamang baboy."_
       courseC_maze_programming8_predict1: _"Maging kalmado at tulungan akong hanapin
         ang masamang baboy."_
@@ -635,11 +796,15 @@ fil-PH:
         hanapin ang masamang baboy."_
       courseC_maze_programming8_predict1_2019: _"Maging kalmado at tulungan akong
         hanapin ang masamang baboy."_
+      courseC_maze_programming8_predict1_2020: _"Maging kalmado at tulungan akong
+        hanapin ang masamang baboy."_
       courseC_maze_programming9: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit
         anong paraan na gusto mo!"\*'
       courseC_maze_programming9_2018: '""Ngayon, tulungan akong mag-abang sa baboy
         sa kahit anong paraan na gusto mo!"\*'
       courseC_maze_programming9_2019: '""Ngayon, tulungan akong mag-abang sa baboy
+        sa kahit anong paraan na gusto mo!"\*'
+      courseC_maze_programming9_2020: '""Ngayon, tulungan akong mag-abang sa baboy
         sa kahit anong paraan na gusto mo!"\*'
       courseC_maze_programming_challenge2: Minsan ay mayroong higit sa isang pamamaraan
         para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik
@@ -650,10 +815,16 @@ fil-PH:
       courseC_maze_programming_challenge2_2019: Minsan ay mayroong higit sa isang
         pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad
         pabalik kaysa sa pumunta pasulong!
+      courseC_maze_programming_challenge2_2020: Minsan ay mayroong higit sa isang
+        pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad
+        pabalik kaysa sa pumunta pasulong!
       courseD_artist_binary_challenge1_2018: Maaari ka lang gumamin ng bawat halaga
         ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
         na mga loop para makumpleto ang drowing na ito.
       courseD_artist_binary_challenge1_2019: Maaari ka lang gumamin ng bawat halaga
+        ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
+        na mga loop para makumpleto ang drowing na ito.
+      courseD_artist_binary_challenge1_2020: Maaari ka lang gumamin ng bawat halaga
         ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
         na mga loop para makumpleto ang drowing na ito.
       courseD_bee_debugging_challenge1: Tingnan kung paano ang mga bubuyog kumuha
@@ -665,11 +836,15 @@ fil-PH:
         ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_2019: Sa oras na ito, tulungan ang bubuyog na kolektahin
         ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
+      courseD_bee_nestedLoops2_2020: Sa oras na ito, tulungan ang bubuyog na kolektahin
+        ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_predict1: Sa oras na ito, tulungan ang bubuyog na kolektahin
         ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_predict1_2018: Sa oras na ito, tulungan ang bubuyog
         na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_predict1_2019: Sa oras na ito, tulungan ang bubuyog
+        na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
+      courseD_bee_nestedLoops2_predict1_2020: Sa oras na ito, tulungan ang bubuyog
         na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops8: 'Kolektahin ang lahat ng nektar mula sa bawat isa
         sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
@@ -677,19 +852,27 @@ fil-PH:
         isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
       courseD_bee_nestedLoops8_2019: 'Kolektahin ang lahat ng nektar mula sa bawat
         isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
+      courseD_bee_nestedLoops8_2020: 'Kolektahin ang lahat ng nektar mula sa bawat
+        isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
       courseD_bee_nestedLoops9: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_2018: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_2019: Gawin ang lahat ng pulot.
+      courseD_bee_nestedLoops9_2020: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2_2018: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2_2019: Gawin ang lahat ng pulot.
+      courseD_bee_nestedLoops9_predict2_2020: Gawin ang lahat ng pulot.
       courseD_bounce_events2s_2018: Ngayon, ilakip ang bloke sa `when right event`
         para ang kamay ay maaaring makakuha sa parehong buslo.
       courseD_bounce_events2s_2019: Ngayon, ilakip ang bloke sa `when right event`
         para ang kamay ay maaaring makakuha sa parehong buslo.
+      courseD_bounce_events2s_2020: Ngayon, ilakip ang bloke sa `when right event`
+        para ang kamay ay maaaring makakuha sa parehong buslo.
       courseD_collector_debugging6a_2018: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
         lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
       courseD_collector_debugging6a_2019: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
+        lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
+      courseD_collector_debugging6a_2020: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
         lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
       courseD_farmer_condLoops8: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
@@ -697,11 +880,15 @@ fil-PH:
         ay kunin ang kalabasa.
       courseD_farmer_condLoops8_2019: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
+      courseD_farmer_condLoops8_2020: Kolektahin ang lahat ng mais at letsugas, pagkatapos
+        ay kunin ang kalabasa.
       courseD_farmer_condLoops9: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
       courseD_farmer_condLoops9_2018: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
       courseD_farmer_condLoops9_2019: Kolektahin ang lahat ng mais at letsugas, pagkatapos
+        ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_2020: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
       courseD_farmer_condLoops9_predict1: Kolektahin ang lahat ng mais at letsugas,
         pagkatapos ay kunin ang kalabasa.
@@ -709,17 +896,24 @@ fil-PH:
         pagkatapos ay kunin ang kalabasa.
       courseD_farmer_condLoops9_predict1_2019: Kolektahin ang lahat ng mais at letsugas,
         pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_predict1_2020: Kolektahin ang lahat ng mais at letsugas,
+        pagkatapos ay kunin ang kalabasa.
       courseD_farmer_while_challenge1: Punan ang lahat ng mga butas at tanggalin ang
         lahat ng mga tumpok.
       courseD_farmer_while_challenge1_2018: Punan ang lahat ng mga butas at tanggalin
         ang lahat ng mga tumpok.
       courseD_farmer_while_challenge1_2019: Punan ang lahat ng mga butas at tanggalin
         ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge1_2020: Punan ang lahat ng mga butas at tanggalin
+        ang lahat ng mga tumpok.
       courseD_farmer_while_challenge2: Punan ang lahat ng mga butas at tanggalin ang
         lahat ng mga tumpok.
       courseD_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseD_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_iceage_loops11_2020: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseD_maze_intro5a_2019: Bigyang-pansin ang pagkasunod-sunod at tingnan kung
+        matukoy mo kung paano makapunta sa baboy na iyan!
+      courseD_maze_intro5a_2020: Bigyang-pansin ang pagkasunod-sunod at tingnan kung
         matukoy mo kung paano makapunta sa baboy na iyan!
       courseD_maze_nestedLoops4: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting
         bloke na posible!  '
@@ -727,11 +921,15 @@ fil-PH:
         bloke na posible!  '
       courseD_maze_nestedLoops4_2019: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting
         bloke na posible!  '
+      courseD_maze_nestedLoops4_2020: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting
+        bloke na posible!  '
       courseD_maze_ramp1: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang
         sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_maze_ramp1_2018: Para sa palaisipang ito, i-snap ang lahat ng mga bloke
         nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_maze_ramp1_2019: Para sa palaisipang ito, i-snap ang lahat ng mga bloke
+        nang sama-sama at i-click ang "Run" para tingnan itong umalis!
+      courseD_maze_ramp1_2020: Para sa palaisipang ito, i-snap ang lahat ng mga bloke
         nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_maze_ramp2: Mag-kaladkad ng ekstrang `move forward` na bloke palabas
         sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para
@@ -742,24 +940,33 @@ fil-PH:
       courseD_maze_ramp2_2019: Mag-kaladkad ng ekstrang `move forward` na bloke palabas
         sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para
         matapos ang iyong code.
+      courseD_maze_ramp2_2020: Mag-kaladkad ng ekstrang `move forward` na bloke palabas
+        sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para
+        matapos ang iyong code.
       courseD_maze_ramp5a: Bigyang-pansin ang pagkasunod-sunod at tingnan kung matukoy
         mo kung paano makapunta sa baboy na iyan!
       courseD_maze_ramp5a_2018: Bigyang-pansin ang pagkasunod-sunod at tingnan kung
         matukoy mo kung paano makapunta sa baboy na iyan!
       courseD_maze_ramp5a_2019: Bigyang-pansin ang pagkasunod-sunod at tingnan kung
         matukoy mo kung paano makapunta sa baboy na iyan!
+      courseD_maze_ramp5a_2020: Bigyang-pansin ang pagkasunod-sunod at tingnan kung
+        matukoy mo kung paano makapunta sa baboy na iyan!
       courseD_maze_ramp5c: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5c_2018: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5c_2019: Tulungan ang ibon na makapunta sa baboy.
+      courseD_maze_ramp5c_2020: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5d: Dalhin ang ibon sa baboy.
       courseD_maze_ramp5d_2018: Dalhin ang ibon sa baboy.
       courseD_maze_ramp5d_2019: Dalhin ang ibon sa baboy.
+      courseD_maze_ramp5d_2020: Dalhin ang ibon sa baboy.
       courseD_maze_until10: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_2018: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_2019: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until10_2020: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2_2018: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2_2019: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until10_predict2_2020: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until5: Gamitin ang `if` na bloke para matulungan ang zombie na
         makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie sa mirasol.
       courseD_maze_until5_2018: Gamitin ang `if` na bloke para matulungan ang zombie
@@ -768,18 +975,25 @@ fil-PH:
       courseD_maze_until5_2019: Gamitin ang `if` na bloke para matulungan ang zombie
         na makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie sa
         mirasol.
+      courseD_maze_until5_2020: Gamitin ang `if` na bloke para matulungan ang zombie
+        na makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie sa
+        mirasol.
       courseD_maze_until6: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until6_2018: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until6_2019: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until6_2020: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7_2018: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7_2019: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until7_2020: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until8: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until9: "**Hamon:** Iwasan ang mga chomper at tulungan ang zombie
         na makapunta sa mirasol."
       courseD_maze_until9_2018: "**Hamon:** Iwasan ang mga chomper at tulungan ang
         zombie na makapunta sa mirasol."
       courseD_maze_until9_2019: "**Hamon:** Iwasan ang mga chomper at tulungan ang
+        zombie na makapunta sa mirasol."
+      courseD_maze_until9_2020: "**Hamon:** Iwasan ang mga chomper at tulungan ang
         zombie na makapunta sa mirasol."
       courseD_maze_until_challenge1: Walang pahiwatig, hamon lang. Dalhin ang zombie
         sa mirasol.
@@ -809,6 +1023,11 @@ fil-PH:
         at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano
         ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang
         mga disenyo!
+      courseE_artist_functions_challenge1_2020: Kapag nagbigay-kahulugan ka na sa
+        isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang
+        at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano
+        ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang
+        mga disenyo!
       courseE_bee_functions2: "Ang mga functions ay mga bloke ng code na gumagawa
         ng isang gawin.  \\\r\n\\\r\nGamitin ang `get 2 nectar` na function para magkolekta
         ng nektar mula sa bawat bulaklak."
@@ -829,6 +1048,9 @@ fil-PH:
       courseF_artist_variables4_2019: Ngayon, gamitin ang `length` na variable para
         mapatalon ang artista paharap at pababa mga `length` pixels sa gitna ng mga
         tatsulok.
+      courseF_artist_variables4_2020: Ngayon, gamitin ang `length` na variable para
+        mapatalon ang artista paharap at pababa mga `length` pixels sa gitna ng mga
+        tatsulok.
       courseF_artist_variablesFP: "**Libreng laro:** Kunin ang natutunan mo at gumawa
         ng iyong sariling drowing. \\\r\n\\\r\nPaano mo magagamit ang mga variables
         sa mga parisukat, mga pentagon, o mga hexagon?"
@@ -838,11 +1060,16 @@ fil-PH:
       courseF_artist_variablesFP_2019: "**Libreng laro:** Kunin ang natutunan mo at
         gumawa ng iyong sariling drowing. \\\r\n\\\r\nPaano mo magagamit ang mga variables
         sa mga parisukat, mga pentagon, o mga hexagon?"
+      courseF_artist_variablesFP_2020: "**Libreng laro:** Kunin ang natutunan mo at
+        gumawa ng iyong sariling drowing. \\\r\n\\\r\nPaano mo magagamit ang mga variables
+        sa mga parisukat, mga pentagon, o mga hexagon?"
       courseF_bee_for_challenge2: Lutasin ang palaisipang ito gamit ang pinakakaunting
         bilang ng mga bloke hangga't maaari.
       courseF_bee_for_challenge2_2018: Lutasin ang palaisipang ito gamit ang pinakakaunting
         bilang ng mga bloke hangga't maaari.
       courseF_bee_for_challenge2_2019: Lutasin ang palaisipang ito gamit ang pinakakaunting
+        bilang ng mga bloke hangga't maaari.
+      courseF_bee_for_challenge2_2020: Lutasin ang palaisipang ito gamit ang pinakakaunting
         bilang ng mga bloke hangga't maaari.
       courseF_bee_functions_challenge1: Maglikha ng bagong function para makolekta
         ang lahat ng nektar at pulot habang mayroon pang landas sa unahan. Gamitin
@@ -913,6 +1140,7 @@ fil-PH:
       grade2_collector_A: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       grade2_collector_A_2018: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       grade2_collector_A_2019: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
+      grade2_collector_A_2020: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       iceage_move_to_flag: Si Scrat ay naghahanap sa kayang bunga ng oak! Maari mo
         ba siyang tulungan ng gumalaw sa huling 200 na mga pixels?
       ramp_artist_loops4: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko
@@ -921,9 +1149,13 @@ fil-PH:
         na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
       ramp_artist_loops4_2019: Ano ang mangyayari kapag nagdagdag ka ng 72 degree
         na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
+      ramp_artist_loops4_2020: Ano ang mangyayari kapag nagdagdag ka ng 72 degree
+        na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
       ramp_artist_loops7: Maghanap ng paterno at paikilin ang code na ito gamit ang
         mga loop!
       ramp_artist_loops7_2018: Maghanap ng paterno at paikilin ang code na ito gamit
         ang mga loop!
       ramp_artist_loops7_2019: Maghanap ng paterno at paikilin ang code na ito gamit
+        ang mga loop!
+      ramp_artist_loops7_2020: Maghanap ng paterno at paikilin ang code na ito gamit
         ang mga loop!

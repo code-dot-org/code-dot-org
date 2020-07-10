@@ -61,40 +61,42 @@ ru:
             The Big Event:
               name: Большое Событие
           lessons:
-            Happy Maps:
-              name: Весёлые карты
-            Move it, Move it:
-              name: Двигай, двигай
-            'Jigsaw: Learn to drag and drop':
-              name: 'Головоломки: Научитесь перетаскивать'
-            'Maze: Sequence':
-              name: 'Лабиринт: Последовательность'
-            'Maze: Debugging':
-              name: 'Лабиринт: Отладка'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            'Bee: Sequence':
-              name: 'Пчела: Последовательность'
-            'Artist: Sequence':
-              name: 'Художник: Последовательность'
-            Building a Foundation:
-              name: Создание основы
-            'Artist: Shapes':
-              name: 'Художник: Фигуры'
-            Spelling Bee:
-              name: Пчела
-            Getting Loopy:
-              name: Зацикливание
-            'Maze: Loops':
-              name: 'Лабиринт: Циклы'
-            'Bee: Loops':
-              name: 'Пчела: Циклы'
-            The Big Event:
-              name: Большое Событие
-            Going Places Safely:
-              name: Безопасное путешествие
             'Artist: Loops':
               name: 'Художник: Циклы'
+            'Artist: Sequence':
+              name: 'Художник: Последовательность'
+            'Artist: Shapes':
+              name: 'Художник: Фигуры'
+            'Bee: Loops':
+              name: 'Пчела: Циклы'
+            'Bee: Sequence':
+              name: 'Пчела: Последовательность'
+            Building a Foundation:
+              name: Создание основы
+            Getting Loopy:
+              name: Зацикливание
+            Going Places Safely:
+              name: Безопасное путешествие
+            Happy Maps:
+              name: Весёлые карты
+            'Jigsaw: Learn to drag and drop':
+              name: 'Головоломки: Научитесь перетаскивать'
+            'Maze: Debugging':
+              name: 'Лабиринт: Отладка'
+            'Maze: Loops':
+              name: 'Лабиринт: Циклы'
+            'Maze: Sequence':
+              name: 'Лабиринт: Последовательность'
+            Move it, Move it:
+              name: Двигай, двигай
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Spelling Bee:
+              name: Пчела
+            'Studio: Create a Story':
+              name: 'Лаборатория игр: Создай историю'
+            The Big Event:
+              name: Большое Событие
         course2:
           title: Курс 2
           description: Начните с курса 2, если ваши ученики умеют читать,но не имеют
@@ -143,42 +145,44 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
           lessons:
-            Graph Paper Programming:
-              name: Программирование на бумаге в клеточку
-            'Real-life Algorithms: Paper Planes':
-              name: 'Реальные алгоритмы: Бумажные самолетики'
-            'Maze: Sequence':
-              name: 'Лабиринт: Последовательность'
-            'Artist: Sequence':
-              name: 'Художник: Последовательность'
-            Getting Loopy:
-              name: Зацикливание
-            'Maze: Loops':
-              name: 'Лабиринт: Циклы'
-            'Artist: Loops':
-              name: 'Художник: Циклы'
-            'Bee: Loops':
-              name: 'Пчела: Циклы'
-            Relay programming:
-              name: Эстафетное программирование
-            'Bee: Debugging':
-              name: 'Пчела: Отладка'
             'Artist: Debugging':
               name: 'Художник: Отладка'
-            Conditionals:
-              name: Условные команды
-            'Bee: Conditionals':
-              name: 'Пчела: Условные команды'
-            Binary Bracelets:
-              name: Двоичные браслеты
-            The Big Event:
-              name: Большое Событие
-            Flappy:
-              name: Порхающий код
-            Your Digital Footprint:
-              name: Твой цифровой след
+            'Artist: Loops':
+              name: 'Художник: Циклы'
             'Artist: Nested Loops':
               name: 'Художник: Вложенные циклы'
+            'Artist: Sequence':
+              name: 'Художник: Последовательность'
+            'Bee: Conditionals':
+              name: 'Пчела: Условные команды'
+            'Bee: Debugging':
+              name: 'Пчела: Отладка'
+            'Bee: Loops':
+              name: 'Пчела: Циклы'
+            Binary Bracelets:
+              name: Двоичные браслеты
+            Conditionals:
+              name: Условные команды
+            Flappy:
+              name: Порхающий код
+            Getting Loopy:
+              name: Зацикливание
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
+            'Maze: Loops':
+              name: 'Лабиринт: Циклы'
+            'Maze: Sequence':
+              name: 'Лабиринт: Последовательность'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Реальные алгоритмы: Бумажные самолетики'
+            Relay programming:
+              name: Эстафетное программирование
+            'Studio: Create a Story':
+              name: 'Лаборатория игр: Создай историю'
+            The Big Event:
+              name: Большое Событие
+            Your Digital Footprint:
+              name: Твой цифровой след
         course3:
           title: Курс 3
           description: Курс 3 разработан для учеников, прошедших Курс 2. Ученики будут
@@ -231,44 +235,48 @@ ru:
             'Studio: Create a Story':
               name: 'Лаборатория игр: Создай историю'
           lessons:
-            Computational Thinking:
-              name: Вычислительное мышление
-            Maze:
-              name: Лабиринт
             Artist:
               name: Художник
-            Functional Suncatchers:
-              name: Функциональные витражи
             'Artist: Functions':
               name: 'Художник: Функции'
-            'Bee: Functions':
-              name: 'Пчела: Функции'
+            'Artist: Nested Loops':
+              name: 'Художник: Вложенные циклы'
+            'Artist: Patterns':
+              name: 'Художник: шаблоны'
             'Bee: Conditionals':
               name: 'Пчела: Условные команды'
+            'Bee: Debugging':
+              name: 'Пчела: Отладка'
+            'Bee: Functions':
+              name: 'Пчела: Функции'
+            'Bee: Nested Loops':
+              name: 'Пчела: Вложенные циклы'
+            Bounce:
+              name: Прыжок
+            Computational Thinking:
+              name: Вычислительное мышление
+            Crowdsourcing:
+              name: Краудсорсинг
+            Dice Race:
+              name: Гонки кубиков
+            Digital Citizenship:
+              name: Цифровое гражданство
+            'Farmer: While Loops':
+              name: 'Фермер: Циклы с проверкой условия'
+            Functional Suncatchers:
+              name: Функциональные витражи
+            Internet:
+              name: интернет
+            Maze:
+              name: Лабиринт
             'Maze: Conditionals':
               name: 'Лабиринт: Условные команды'
             Songwriting:
               name: Написание песен
-            Dice Race:
-              name: Гонки кубиков
-            'Artist: Nested Loops':
-              name: 'Художник: Вложенные циклы'
-            'Farmer: While Loops':
-              name: 'Фермер: Циклы с проверкой условия'
-            'Bee: Nested Loops':
-              name: 'Пчела: Вложенные циклы'
-            'Bee: Debugging':
-              name: 'Пчела: Отладка'
-            Bounce:
-              name: Прыжок
-            Internet:
-              name: интернет
-            Crowdsourcing:
-              name: Краудсорсинг
-            Digital Citizenship:
-              name: Цифровое гражданство
-            'Artist: Patterns':
-              name: 'Художник: шаблоны'
+            'Studio: Create a Game':
+              name: 'Лаборатория игр: создай игру'
+            'Studio: Create a Story':
+              name: 'Лаборатория игр: Создай историю'
         playlab:
           title: Лаборатория игр
           description: Создай историю или игру с лабораторией игр!
@@ -370,50 +378,50 @@ ru:
             'Unplugged: Tangrams':
               name: 'Урок без компьютера: Танграмы'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Урок без компьютера: Танграмы'
-            Maze and Bee:
-              name: Лабиринт и пчела
             Artist:
               name: Художник
-            'Unplugged: Envelope Variables':
-              name: 'Урок без компьютера: Конвертные переменные'
-            'Unplugged: Madlibs':
-              name: 'Урок без компьютера: игра «Пропуски»'
-            'Artist: Variables':
-              name: 'Художник: Переменные'
-            'Play Lab: Variables':
-              name: 'Лаборатория игр: Переменные'
-            'Unplugged: For Loop Fun':
-              name: 'Урок без компьютера: Игры с циклами'
-            'Bee: For Loops':
-              name: 'Пчела: Циклы с параметром'
-            'Artist: For Loops':
-              name: 'Художник: Циклы с параметром'
-            'Play Lab: For Loops':
-              name: 'Лаборатория игр: Циклы с параметром'
-            'Artist: Functions':
-              name: 'Художник: Функции'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Урок без компьютера: Написание песен с параметрами'
-            'Artist: Functions with Parameters':
-              name: 'Художник: Функции с параметрами'
-            'Play Lab: Functions with Parameters':
-              name: 'Лаборатория игр: Функции с параметрами'
-            'Bee: Functions with Parameters':
-              name: 'Пчела: Функции с параметрами'
-            'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
             Artist Binary:
               name: 'Художник: двоичная система'
-            Super Challenge - Variables:
-              name: Супериспытание — переменные
+            'Artist: For Loops':
+              name: 'Художник: Циклы с параметром'
+            'Artist: Functions':
+              name: 'Художник: Функции'
+            'Artist: Functions with Parameters':
+              name: 'Художник: Функции с параметрами'
+            'Artist: Variables':
+              name: 'Художник: Переменные'
+            'Bee: For Loops':
+              name: 'Пчела: Циклы с параметром'
+            'Bee: Functions with Parameters':
+              name: 'Пчела: Функции с параметрами'
+            Extreme Challenge - Comprehensive:
+              name: Невозможное задание — комплекс
+            Maze and Bee:
+              name: Лабиринт и пчела
+            'Play Lab: For Loops':
+              name: 'Лаборатория игр: Циклы с параметром'
+            'Play Lab: Functions with Parameters':
+              name: 'Лаборатория игр: Функции с параметрами'
+            'Play Lab: Variables':
+              name: 'Лаборатория игр: Переменные'
             Super Challenge - For Loops:
               name: Супер задание — циклы со счетчиком
             Super Challenge - Functions and Parameters:
               name: Супер задание — функции и параметры
-            Extreme Challenge - Comprehensive:
-              name: Невозможное задание — комплекс
+            Super Challenge - Variables:
+              name: Супериспытание — переменные
+            'Unplugged: Binary':
+              name: 'Урок без компьютера: Двоичный'
+            'Unplugged: Envelope Variables':
+              name: 'Урок без компьютера: Конвертные переменные'
+            'Unplugged: For Loop Fun':
+              name: 'Урок без компьютера: Игры с циклами'
+            'Unplugged: Madlibs':
+              name: 'Урок без компьютера: игра «Пропуски»'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Урок без компьютера: Написание песен с параметрами'
+            'Unplugged: Tangrams':
+              name: 'Урок без компьютера: Танграмы'
         Course4pre:
           title: Знания, необходимые для курса 4
           description: Краткое введение для учеников, которые не проходили курсы 2
@@ -440,24 +448,24 @@ ru:
             'Maze: Sequence':
               name: 'Лабиринт: Последовательность'
           lessons:
-            'Maze: Sequence':
-              name: 'Лабиринт: Последовательность'
-            'Artist: Sequence':
-              name: 'Художник: Последовательность'
-            'Artist: Loops':
-              name: 'Художник: Циклы'
-            'Bee: Conditionals':
-              name: 'Пчела: Условные команды'
-            'Artist: Nested Loops':
-              name: 'Художник: Вложенные циклы'
-            'Farmer: While Loops':
-              name: 'Фермер: Циклы с проверкой условия'
-            'Bee: Nested Loops':
-              name: 'Пчела: Вложенные циклы'
             'Artist: Functions':
               name: 'Художник: Функции'
+            'Artist: Loops':
+              name: 'Художник: Циклы'
+            'Artist: Nested Loops':
+              name: 'Художник: Вложенные циклы'
+            'Artist: Sequence':
+              name: 'Художник: Последовательность'
+            'Bee: Conditionals':
+              name: 'Пчела: Условные команды'
             'Bee: Debugging':
               name: 'Пчела: Отладка'
+            'Bee: Nested Loops':
+              name: 'Пчела: Вложенные циклы'
+            'Farmer: While Loops':
+              name: 'Фермер: Циклы с проверкой условия'
+            'Maze: Sequence':
+              name: 'Лабиринт: Последовательность'
         usability:
           title: Тестирование практичности
           description: Подборка из курса 4 для тестирования практичности.
@@ -473,16 +481,16 @@ ru:
             Variables:
               name: переменные
           lessons:
-            Intro:
-              name: Введение
-            Variables:
-              name: переменные
+            Binary:
+              name: Двоичный
             For Loops:
               name: Циклы с параметром
             Functions and Functions with Parameters:
               name: Процедуры и процедуры с параметрами
-            Binary:
-              name: Двоичный
+            Intro:
+              name: Введение
+            Variables:
+              name: переменные
         algebra:
           title: Информатика в алгебре
           description: Изучайте функциональное программирование, используя алгебру
@@ -519,46 +527,36 @@ ru:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Урок без компьютера: Видеоигры и координатные плоскости'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Урок без компьютера: Видеоигры и координатные плоскости'
-            'Calc: Evaluation Blocks':
-              name: 'Расчет: Блоки оценки'
-            'Eval: Strings and Images':
-              name: 'Анализ: Строки и картинки'
-            'Unplugged: Contracts':
-              name: 'Урок без компьютера: Контракты'
-            'Eval: Writing Contracts':
-              name: 'Анализ: Написание контрактов'
             'Calc: Defining Variables':
-              name: 'Расчет: Определение переменных'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Лаборатория игр: определение переменных (большая игра)'
-            'Eval: Defining Functions':
-              name: 'Оценка: Определение процедур'
-            'Unplugged: The Design Recipe':
-              name: 'Урок без компьютера: Создание рецепта'
-            'Play Lab: Defining Functions':
-              name: 'Лаборатория игр: определение процедур'
-            'Eval: Functions':
-              name: 'Оценка: процедуры'
-            'Play Lab: Animation (Big Game)':
-              name: 'Лаборатория игр: анимация (большая игра)'
-            'Unplugged: Booleans':
-              name: 'Урок без компьютера: Логические выражения'
+              name: Определение переменных и их замена
+            'Calc: Evaluation Blocks':
+              name: Оценка блоков и арифметические выражения
             'Eval: Boolean Operators':
-              name: 'Анализ: Логические операторы'
-            'Play Lab: Booleans':
-              name: 'Лаборатория игр: Логические выражения'
+              name: Логические операторы
+            'Eval: Conditionals':
+              name: Условные команды
+            'Eval: Defining Functions':
+              name: Составные функции
+            'Eval: Functions':
+              name: Решение проблем с использованием рецепта дизайна
+            'Eval: Strings and Images':
+              name: Строки и картинки
+            'Eval: Writing Contracts':
+              name: Текстовые соглашения
+            'Play Lab: Animation (Big Game)':
+              name: Большая игра - Анимация
             'Play Lab: Boolean (Big Game)':
-              name: 'Лаборатория игр: логические выражения (большая игра)'
+              name: Большая игра - Логические переменные
+            'Play Lab: Collision Detection (Big Game)':
+              name: Большая игра - Обнаружение коллизий
+            'Play Lab: Defining Variables (Big Game)':
+              name: Большая игра - Переменные
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Урок без компьютера: Условные выражения и сложные функции'
-            'Eval: Conditionals':
-              name: 'Анализ: Условные команды'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Лаборатория игр: обнаружение конфликтов (большая игра)'
+            'Unplugged: The Design Recipe':
+              name: 'Урок без компьютера: Создание рецепта'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Урок без компьютера: Видеоигры и координатные плоскости'
         infinity:
           title: Лаборатория игр Disney Infinity
           description: Используйте лабораторию игр, чтобы создать историю или игру
@@ -589,18 +587,39 @@ ru:
             The Design Recipe:
               name: Создание рецепта
           lessons:
+            Defining Simple Functions:
+              name: Определение простых функций
+            Defining Variables:
+              name: Определение переменных
             Evaluation Blocks:
               name: Блоки оценки
             Making Pictures:
               name: Создание изображений
-            Defining Variables:
-              name: Определение переменных
-            Defining Simple Functions:
-              name: Определение простых функций
             The Design Recipe:
               name: Создание рецепта
         K5PD:
           stages:
+            Introduction to PD:
+              name: Введение в профессиональные разработки
+            Next Steps:
+              name: Следующие шаги
+            'Programming Concept: Conditionals':
+              name: 'Понятие программирования: условия'
+            'Programming Concept: Events':
+              name: 'Понятие программирования: события'
+            'Programming Concept: Functions':
+              name: 'Понятие программирования: функции'
+            'Programming Concept: Loops':
+              name: 'Понятие программирования: циклы'
+            Reflection:
+              name: Рефлексия
+            Teacher Dashboard:
+              name: Панель управления преподавателя
+            Unplugged lessons:
+              name: Уроки без компьютера
+            Writing computer programs:
+              name: Написание компьютерных программ
+          lessons:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Next Steps:
@@ -635,14 +654,14 @@ ru:
             Routers and addresses:
               name: Маршрутизаторы и адреса
           lessons:
-            Overview and Setup Instructions:
-              name: Обзор и инструкция по установке
             Broadcasting messages:
               name: Широковещательные сообщения
-            Routers and addresses:
-              name: Маршрутизаторы и адреса
+            Overview and Setup Instructions:
+              name: Обзор и инструкция по установке
             Packets and Reliability:
               name: Пакеты и надёжность
+            Routers and addresses:
+              name: Маршрутизаторы и адреса
         pixelation:
           title: Пикселизация
           description: Создавайте картинки при помощи битов и байтов.
@@ -697,44 +716,44 @@ ru:
             Wrap-up:
               name: Итоги
           lessons:
-            Introduction to Computer Science:
-              name: Введение в Информатику
-            The Maze:
-              name: Лабиринт
-            Computational Thinking:
-              name: Вычислительное мышление
-            Graph Paper Programming:
-              name: Программирование на бумаге в клеточку
-            The Artist:
-              name: Художник
-            Algorithms:
-              name: Алгоритмы
-            The Artist 2:
-              name: Художник 2
-            Functions:
-              name: функции
-            The Farmer:
-              name: Фермер
-            Conditionals:
-              name: Условные команды
-            The Artist 3:
-              name: Художник 3
-            Song Writing:
-              name: Написание песни
-            The Farmer 2:
-              name: Фермер 2
             Abstraction:
               name: Абстракция
-            The Artist 4:
-              name: Художник 4
+            Algorithms:
+              name: Алгоритмы
+            Computational Thinking:
+              name: Вычислительное мышление
+            Conditionals:
+              name: Условные команды
+            Functions:
+              name: функции
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
+            Introduction to Computer Science:
+              name: Введение в Информатику
             Relay Programming:
               name: Эстафетное программирование
+            Song Writing:
+              name: Написание песни
+            The Artist:
+              name: Художник
+            The Artist 2:
+              name: Художник 2
+            The Artist 3:
+              name: Художник 3
+            The Artist 4:
+              name: Художник 4
+            The Artist 5:
+              name: Художник 5
+            The Farmer:
+              name: Фермер
+            The Farmer 2:
+              name: Фермер 2
             The Farmer 3:
               name: Фермер 3
             The Internet:
               name: Интернет
-            The Artist 5:
-              name: Художник 5
+            The Maze:
+              name: Лабиринт
             Wrap-up:
               name: Итоги
         edit-code:
@@ -753,16 +772,16 @@ ru:
             The Maze:
               name: Лабиринт
           lessons:
-            The Maze:
-              name: Лабиринт
             Applab:
               name: Лаборатория приложений
-            The Artist:
-              name: Художник
-            Play Lab:
-              name: Лаборатория игр
             Hoc2015 Blockly:
               name: Час Кода 2015 Блокли
+            Play Lab:
+              name: Лаборатория игр
+            The Artist:
+              name: Художник
+            The Maze:
+              name: Лабиринт
         events:
           title: События
           description: События
@@ -779,12 +798,12 @@ ru:
           lessons:
             Bounce:
               name: Прыжок
-            Studio:
-              name: Студия
             Calc:
               name: Калькулятор
             Eval:
               name: Вычисление
+            Studio:
+              name: Студия
         flappy:
           title: Порхающий код
           description: Хочешь написать свою игру меньше чем за 10 минут? Пройди наш
@@ -873,32 +892,34 @@ ru:
             Sending Numbers:
               name: Отправка чисел
           lessons:
-            Sending Binary Messages:
-              name: Отправка двоичных сообщений
-            Sending Complex Messages:
-              name: Отправка сложных сообщений
-            Sending Binary Messages with the Internet Simulator:
-              name: Отправка двоичных сообщений с интернет симулятором
-            Sending Bits in the Real World:
-              name: Отправка битов в реальном мире
             Binary Numbers:
               name: Двоичные числа
-            Sending Numbers:
-              name: Отправка чисел
-            Encoding Numbers in the Real World:
-              name: Кодирование чисел в реальном мире
-            Encoding and Sending Text:
-              name: Кодирование и отправка текста
-            Sending Formatted Text:
-              name: Отправка форматированного текста
             Bytes and File Sizes:
               name: Байты и размеры файлов
+            Encode a Complex Thing:
+              name: Навык кодирования
             Encoding B&W Images:
               name: Кодирование чёрно-белых изображений
             Encoding Color Images:
               name: Кодирование цветных изображений
+            Encoding Numbers in the Real World:
+              name: Кодирование чисел в реальном мире
+            Encoding and Sending Text:
+              name: Кодирование и отправка текста
             Lossy Compression and File Formats:
               name: Сжатие с потерями и форматы файлов
+            Sending Binary Messages:
+              name: Отправка двоичных сообщений
+            Sending Binary Messages with the Internet Simulator:
+              name: Отправка двоичных сообщений с интернет симулятором
+            Sending Bits in the Real World:
+              name: Отправка битов в реальном мире
+            Sending Complex Messages:
+              name: Отправка сложных сообщений
+            Sending Formatted Text:
+              name: Отправка форматированного текста
+            Sending Numbers:
+              name: Отправка чисел
         algebraPD:
           stages:
             Course Overview:
@@ -910,12 +931,12 @@ ru:
             Teacher Dashboard:
               name: Панель управления преподавателя
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
             Course Overview:
               name: Обзор курса
             Evaluation Blocks:
               name: Блоки оценки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Teacher Dashboard:
               name: Панель управления преподавателя
         algPDmiami:
@@ -935,20 +956,20 @@ ru:
             Your Game - Player Movement:
               name: Ваша игра - движение игрока
           lessons:
+            Booleans:
+              name: Логические выражения
             Evaluation Blocks:
               name: Блоки оценки
             Strings and Images:
               name: Строки и картинки
             Your Game - Animation:
               name: Ваша игра - анимация
-            Booleans:
-              name: Логические выражения
             Your Game - Booleans:
               name: Ваша игра - логические переменные
-            Your Game - Player Movement:
-              name: Ваша игра - движение игрока
             Your Game - Collision Detection:
               name: Ваша игра - обнаружение коллизий
+            Your Game - Player Movement:
+              name: Ваша игра - движение игрока
         CSPPD:
           stages:
             Introduction to PD:
@@ -989,18 +1010,18 @@ ru:
             What to Expect:
               name: Чего ожидать
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
-            What to Expect:
-              name: Чего ожидать
             Introduction to Complex Adaptive Systems:
               name: Введение в сложные адаптивные системы
             Introduction to Computational Science:
               name: Введение в вычислительные науки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Using Computer Models in Science:
               name: Использование компьютерных моделей в науке
             Using Models in the Classroom:
               name: Использование моделей в классе
+            What to Expect:
+              name: Чего ожидать
         rbo-reference:
           stages:
             reference:
@@ -1042,36 +1063,36 @@ ru:
             While Loops:
               name: Циклы «пока»
           lessons:
-            The Need For Programming Languages:
-              name: Необходимость языков программирования
-            Using Simple Commands:
-              name: Использование простых команд
-            Creating Functions:
-              name: Создание функций
             APIs and Function Parameters:
               name: API и параметры функции
-            Creating functions with Parameters:
-              name: Создание функций с параметрами
-            Introducing Design Mode:
-              name: Введение в дизайн режим
-            Controlling Memory with Variables:
-              name: Контролирование памяти с помощью переменных
-            Using Variables in Apps:
-              name: Использование переменных в приложениях
-            User Input and Strings:
-              name: Пользовательский ввод и строки
-            Introduction to Conditional Logic:
-              name: Введение в условную логику
             Compound Conditional Logic:
               name: Составная условная логика
-            While Loops:
-              name: Циклы «пока»
-            Introduction to Arrays:
-              name: Введение в массивы
-            Processing Arrays:
-              name: Обработка массивов
+            Controlling Memory with Variables:
+              name: Контролирование памяти с помощью переменных
+            Creating Functions:
+              name: Создание функций
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+            Introducing Design Mode:
+              name: Введение в дизайн режим
+            Introduction to Arrays:
+              name: Введение в массивы
+            Introduction to Conditional Logic:
+              name: Введение в условную логику
+            Processing Arrays:
+              name: Обработка массивов
+            The Need For Programming Languages:
+              name: Необходимость языков программирования
+            User Input and Strings:
+              name: Пользовательский ввод и строки
+            Using Simple Commands:
+              name: Использование простых команд
+            Using Variables in Apps:
+              name: Использование переменных в приложениях
+            While Loops:
+              name: Циклы «пока»
         algebraPD3:
           stages:
             Course Overview:
@@ -1091,18 +1112,18 @@ ru:
           lessons:
             Course Overview:
               name: Обзор курса
-            Teacher Dashboard:
-              name: Панель управления преподавателя
             Evaluation Blocks:
               name: Блоки оценки
-            Strings and Images:
-              name: Строки и картинки
-            The Design Recipe:
-              name: Создание рецепта
-            The Big Game:
-              name: Большая игра
             Next Steps:
               name: Следующие шаги
+            Strings and Images:
+              name: Строки и картинки
+            Teacher Dashboard:
+              name: Панель управления преподавателя
+            The Big Game:
+              name: Большая игра
+            The Design Recipe:
+              name: Создание рецепта
         ECSPD-NexTech:
           stages:
             Introduction to PD:
@@ -1128,12 +1149,12 @@ ru:
             Teacher Dashboard:
               name: Панель управления преподавателя
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
             Course Overview:
               name: Обзор курса
             Evaluation Blocks:
               name: Блоки оценки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Teacher Dashboard:
               name: Панель управления преподавателя
         algebraPD-iZone:
@@ -1147,12 +1168,12 @@ ru:
             Teacher Dashboard:
               name: Панель управления преподавателя
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
             Course Overview:
               name: Обзор курса
             Evaluation Blocks:
               name: Блоки оценки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Teacher Dashboard:
               name: Панель управления преподавателя
         sciencePD-NexTech:
@@ -1170,18 +1191,18 @@ ru:
             What to Expect:
               name: Чего ожидать
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
-            What to Expect:
-              name: Чего ожидать
             Introduction to Complex Adaptive Systems:
               name: Введение в сложные адаптивные системы
             Introduction to Computational Science:
               name: Введение в вычислительные науки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Using Computer Models in Science:
               name: Использование компьютерных моделей в науке
             Using Models in the Classroom:
               name: Использование моделей в классе
+            What to Expect:
+              name: Чего ожидать
         sciencePD-iZone:
           stages:
             Introduction to Complex Adaptive Systems:
@@ -1197,18 +1218,18 @@ ru:
             What to Expect:
               name: Чего ожидать
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
-            What to Expect:
-              name: Чего ожидать
             Introduction to Complex Adaptive Systems:
               name: Введение в сложные адаптивные системы
             Introduction to Computational Science:
               name: Введение в вычислительные науки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Using Computer Models in Science:
               name: Использование компьютерных моделей в науке
             Using Models in the Classroom:
               name: Использование моделей в классе
+            What to Expect:
+              name: Чего ожидать
         sciencePD2:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1249,16 +1270,22 @@ ru:
             The Need for DNS:
               name: Необходимость DNS
           lessons:
-            The Internet:
-              name: Интернет
-            The Need for Addressing:
-              name: Необходимость адресации
-            Routers and Redundancy:
-              name: Маршрутизаторы и резервирование
-            The Need for DNS:
-              name: Необходимость DNS
             DNS in the Real World:
               name: DNS в реальном мире
+            Encryption Algorithms:
+              name: Ключи и пароли
+            Public Key Crypto:
+              name: Криптография с открытым ключом
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+            Tell Me a Secret - Encrypting Text:
+              name: Необходимость шифрования
+            The Internet:
+              name: Интернет предназначен для всех
+            The Need for Addressing:
+              name: Необходимость адресации
+            The Need for DNS:
+              name: Необходимость DNS
         algebraPD2a:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1286,28 +1313,28 @@ ru:
             The Design Recipe:
               name: Создание рецепта
           lessons:
-            Evaluation Blocks:
-              name: Блоки оценки
-            Strings and Images:
-              name: Строки и картинки
-            Defining Variables:
-              name: Определение переменных
-            Big Game - Variables:
-              name: Большая игра - переменные
-            The Design Recipe:
-              name: Создание рецепта
             Big Game - Animation:
               name: Большая игра - Анимация
-            Booleans:
-              name: Логические выражения
             Big Game - Booleans:
               name: Большая игра - логические переменные
-            Big Game - Player Movement:
-              name: Большая игра - движение игрока
             Big Game - Collision Detection:
               name: Большая игра - обнаружение коллизий
+            Big Game - Player Movement:
+              name: Большая игра - движение игрока
+            Big Game - Variables:
+              name: Большая игра - переменные
+            Booleans:
+              name: Логические выражения
+            Defining Variables:
+              name: Определение переменных
+            Evaluation Blocks:
+              name: Блоки оценки
             Free Play:
               name: Свободная игра
+            Strings and Images:
+              name: Строки и картинки
+            The Design Recipe:
+              name: Создание рецепта
         allthethings:
           stages:
             Anonymous student survey:
@@ -1351,40 +1378,40 @@ ru:
             Sprite Lab:
               name: Лаборатория Спрайтов
           lessons:
-            Jigsaw:
-              name: Головоломки
-            Maze:
-              name: Лабиринт
-            Artist:
-              name: Художник
-            Bee:
-              name: Пчела
-            Farmer:
-              name: Фермер
-            Flappy:
-              name: Порхающий код
-            Bounce:
-              name: Прыжок
-            Multi:
-              name: Мульти
-            Match:
-              name: Соответствие
-            Pixelation:
-              name: Пикселизация
-            AppLab:
-              name: Лаборатория приложений
-            Studio:
-              name: Студия
-            Star wars:
-              name: Звёздные войны
-            Minecraft:
-              name: Minecraft
             Anonymous student survey:
               name: Анонимный опрос учащихся
             Anonymous student survey 2:
               name: Анонимный опрос учащихся 2
+            AppLab:
+              name: Лаборатория приложений
+            Artist:
+              name: Художник
+            Bee:
+              name: Пчела
+            Bounce:
+              name: Прыжок
+            Farmer:
+              name: Фермер
+            Flappy:
+              name: Порхающий код
+            Jigsaw:
+              name: Головоломки
+            Match:
+              name: Соответствие
+            Maze:
+              name: Лабиринт
+            Minecraft:
+              name: Minecraft
+            Multi:
+              name: Мульти
+            Pixelation:
+              name: Пикселизация
             Public Key Cryptography:
               name: Криптография с открытым ключом
+            Star wars:
+              name: Звёздные войны
+            Studio:
+              name: Студия
             Web Lab:
               name: Веб-лаборатория
             Curriculum Reference:
@@ -1416,26 +1443,26 @@ ru:
             Writing Contracts:
               name: Текстовые соглашения
           lessons:
-            Course Overview:
-              name: Обзор курса
-            Teacher Dashboard:
-              name: Панель управления преподавателя
-            Evaluation Blocks:
-              name: Блоки оценки
-            Strings and Images:
-              name: Строки и картинки
-            Writing Contracts:
-              name: Текстовые соглашения
-            Defining Variables:
-              name: Определение переменных
-            Defining Functions:
-              name: Определение процедур
             Booleans:
               name: Логические выражения
+            Course Overview:
+              name: Обзор курса
+            Defining Functions:
+              name: Определение процедур
+            Defining Variables:
+              name: Определение переменных
             'Eval: Conditionals':
               name: 'Анализ: Условные команды'
+            Evaluation Blocks:
+              name: Блоки оценки
             Next Steps:
               name: Следующие шаги
+            Strings and Images:
+              name: Строки и картинки
+            Teacher Dashboard:
+              name: Панель управления преподавателя
+            Writing Contracts:
+              name: Текстовые соглашения
         cspfacilitator:
           stages:
             App Lab:
@@ -1449,16 +1476,16 @@ ru:
             Welcome!:
               name: Добро пожаловать!
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
-            Text Compression Widget:
-              name: Виджет сжатия текста
-            Internet Simulator:
-              name: Интернет-симулятор
             App Lab:
               name: Лаборатория приложений
+            Internet Simulator:
+              name: Интернет-симулятор
             Text Compression Lesson:
               name: Урок по сжатию текста
+            Text Compression Widget:
+              name: Виджет сжатия текста
+            Welcome!:
+              name: Добро пожаловать!
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
@@ -1480,24 +1507,24 @@ ru:
             Planning:
               name: Планирование
           lessons:
-            Getting Started:
-              name: Приступить к работе
             Computer Science Fundamentals:
               name: Основы программирования
-            'Mastering the Basics: Sequencing':
-              name: 'Освоение основ: последовательности'
-            'Mastering the Basics: Loops':
-              name: 'Освоение основ: циклы'
+            Getting Started:
+              name: Приступить к работе
             'Mastering the Basics: Conditionals':
               name: 'Освоение основ: условные операторы'
-            'Mastering the Basics: Functions':
-              name: 'Освоение основ: функции'
             'Mastering the Basics: Events':
               name: 'Освоение основ: события'
-            Planning:
-              name: Планирование
+            'Mastering the Basics: Functions':
+              name: 'Освоение основ: функции'
+            'Mastering the Basics: Loops':
+              name: 'Освоение основ: циклы'
+            'Mastering the Basics: Sequencing':
+              name: 'Освоение основ: последовательности'
             Next Steps:
               name: Следующие шаги
+            Planning:
+              name: Планирование
         ECSPD2:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1513,14 +1540,14 @@ ru:
             Wrap-up:
               name: Итоги
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Добро пожаловать!
             Wrap-up:
               name: Итоги
         algebraPD2:
@@ -1534,12 +1561,12 @@ ru:
             Welcome!:
               name: Добро пожаловать!
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
-            The Design Recipe:
-              name: Создание рецепта
             Teacher Dashboard:
               name: Панель управления преподавателя
+            The Design Recipe:
+              name: Создание рецепта
+            Welcome!:
+              name: Добро пожаловать!
         sciencePD2b:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1605,14 +1632,14 @@ ru:
             Wrap-up:
               name: Итоги
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Добро пожаловать!
             Wrap-up:
               name: Итоги
         ECSPD2-NexTech:
@@ -1630,14 +1657,14 @@ ru:
             Wrap-up:
               name: Итоги
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Добро пожаловать!
             Wrap-up:
               name: Итоги
         CSPPD2:
@@ -1672,24 +1699,24 @@ ru:
             The Big Event:
               name: Большое Событие
           lessons:
+            Binary Bracelets:
+              name: Двоичные браслеты
+            Building a Foundation:
+              name: Создание основы
+            Getting Loopy:
+              name: Зацикливание
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
             Happy Maps:
               name: Весёлые карты
             Move it, Move it:
               name: Двигай, двигай
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            Graph Paper Programming:
-              name: Программирование на бумаге в клеточку
-            Building a Foundation:
-              name: Создание основы
-            Getting Loopy:
-              name: Зацикливание
-            The Big Event:
-              name: Большое Событие
-            Binary Bracelets:
-              name: Двоичные браслеты
             Songwriting:
               name: Написание песен
+            The Big Event:
+              name: Большое Событие
         sciencePD3_pre1:
           stages:
             Welcome Back!:
@@ -1738,6 +1765,11 @@ ru:
               name: Добро пожаловать!
             Wrap-Up:
               name: Итоги
+          lessons:
+            Welcome!:
+              name: Добро пожаловать!
+            Wrap-Up:
+              name: Итоги
         algebraPD3b:
           stages:
             Getting Started:
@@ -1757,14 +1789,14 @@ ru:
               name: Приступить к работе
             Teaching Support - Lessons 1-3:
               name: Помощь в обучении - Уроки 1-3
-            Teaching Support - Lessons 4-7:
-              name: Помощь в обучении - Уроки 4-7
-            Teaching Support - Lessons 8-12:
-              name: Помощь в обучении - Уроки 8-12
             Teaching Support - Lessons 13-16:
               name: Помощь в обучении - Уроки 13-16
             Teaching Support - Lessons 17-20:
               name: Помощь в обучении - Уроки 17-20
+            Teaching Support - Lessons 4-7:
+              name: Помощь в обучении - Уроки 4-7
+            Teaching Support - Lessons 8-12:
+              name: Помощь в обучении - Уроки 8-12
         CSPPD3-Unit2:
           stages:
             Getting Started:
@@ -1777,6 +1809,9 @@ ru:
         SpecialSeries:
           description_audience: Возраст 10-18 лет
           stages:
+            Spring 2016:
+              name: Весна 2016
+          lessons:
             Spring 2016:
               name: Весна 2016
         iceage:
@@ -1809,14 +1844,14 @@ ru:
             While Loops:
               name: Циклы «пока»
           lessons:
-            While Loops:
-              name: Циклы «пока»
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями
             Introduction to Arrays:
               name: Введение в массивы
             Processing Arrays:
               name: Обработка массивов
-            Functions with Return Values:
-              name: Функции с возвращаемыми значениями
+            While Loops:
+              name: Циклы «пока»
         gumball:
           title: Лаборатория игр Гамбола
           description: Создай сказку или игру с лабораторией игр Гамбола!
@@ -1883,6 +1918,8 @@ ru:
             What is Big Data?:
               name: Что такое Большие Данные?
           lessons:
+            Intro to Data:
+              name: Введение в данные
             What is Big Data?:
               name: Что такое Большие Данные?
         CSPPD3-Unit4:
@@ -1901,12 +1938,12 @@ ru:
             Visualizing Data:
               name: Визуализация данных
           lessons:
+            Final Project:
+              name: Финальный проект
             Importing and Exporting Data:
               name: Импорт и экспорт данных
             Visualizing Data:
               name: Визуализация данных
-            Final Project:
-              name: Финальный проект
         CSPPD3-Unit5:
           stages:
             Getting Started:
@@ -1923,12 +1960,12 @@ ru:
             Visualizing Data:
               name: Визуализация данных
           lessons:
+            Final Project:
+              name: Финальный проект
             Importing and Exporting Data:
               name: Импорт и экспорт данных
             Visualizing Data:
               name: Визуализация данных
-            Final Project:
-              name: Финальный проект
         AlgebraA:
           description: Изучайте функциональное программирование, используя алгебру
           description_short: Изучайте функциональное программирование, используя алгебру
@@ -1952,24 +1989,24 @@ ru:
             'Unplugged: The Design Recipe':
               name: 'Урок без компьютера: Создание рецепта'
           lessons:
-            'Calc: Evaluation Blocks':
-              name: 'Расчет: Блоки оценки'
-            'Eval: Strings and Images':
-              name: 'Анализ: Строки и картинки'
-            'Unplugged: Contracts':
-              name: 'Урок без компьютера: Контракты'
-            'Eval: Writing Contracts':
-              name: 'Анализ: Написание контрактов'
             'Calc: Defining Variables':
               name: 'Расчет: Определение переменных'
+            'Calc: Evaluation Blocks':
+              name: 'Расчет: Блоки оценки'
             'Eval: Defining Functions':
               name: 'Оценка: Определение процедур'
-            'Unplugged: The Design Recipe':
-              name: 'Урок без компьютера: Создание рецепта'
             'Eval: Functions':
               name: 'Оценка: процедуры'
+            'Eval: Strings and Images':
+              name: 'Анализ: Строки и картинки'
+            'Eval: Writing Contracts':
+              name: 'Анализ: Написание контрактов'
             'Play Lab: Defining Functions':
               name: 'Лаборатория игр: определение процедур'
+            'Unplugged: Contracts':
+              name: 'Урок без компьютера: Контракты'
+            'Unplugged: The Design Recipe':
+              name: 'Урок без компьютера: Создание рецепта'
         AlgebraB:
           title: Информатика в алгебре
           description: Изучайте функциональное программирование, используя алгебру
@@ -1998,28 +2035,28 @@ ru:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Урок без компьютера: Видеоигры и координатные плоскости'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Урок без компьютера: Видеоигры и координатные плоскости'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Лаборатория игр: определение переменных (большая игра)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Лаборатория игр: анимация (большая игра)'
-            'Unplugged: Booleans':
-              name: 'Урок без компьютера: Логические выражения'
             'Eval: Boolean Operators':
               name: 'Анализ: Логические операторы'
-            'Play Lab: Booleans':
-              name: 'Лаборатория игр: Логические выражения'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Лаборатория игр: логические выражения (большая игра)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Урок без компьютера: Условные выражения и сложные функции'
             'Eval: Conditionals':
               name: 'Анализ: Условные команды'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
+            'Play Lab: Animation (Big Game)':
+              name: 'Лаборатория игр: анимация (большая игра)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Лаборатория игр: логические выражения (большая игра)'
+            'Play Lab: Booleans':
+              name: 'Лаборатория игр: Логические выражения'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Лаборатория игр: обнаружение конфликтов (большая игра)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Лаборатория игр: определение переменных (большая игра)'
+            'Unplugged: Booleans':
+              name: 'Урок без компьютера: Логические выражения'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Урок без компьютера: Условные выражения и сложные функции'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Урок без компьютера: Видеоигры и координатные плоскости'
         algebraPD1:
           title: Информатика в Алгебре - Часть 1
           stages:
@@ -2032,12 +2069,12 @@ ru:
             Teacher Dashboard:
               name: Панель управления преподавателя
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
             Course Overview:
               name: Обзор курса
             Evaluation Blocks:
               name: Блоки оценки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Teacher Dashboard:
               name: Панель управления преподавателя
         algebraPD3c:
@@ -2075,20 +2112,20 @@ ru:
             csp1_2:
               display_name: 'Глава 2: Изобретение Интернета'
           lessons:
+            Binary Numbers:
+              name: Двоичные числа
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
             Sending Binary Messages:
               name: Отправка двоичных сообщений
             Sending Binary Messages with the Internet Simulator:
               name: Отправка двоичных сообщений с интернет симулятором
-            Binary Numbers:
-              name: Двоичные числа
             Sending Numbers:
               name: Отправка чисел
             The Internet:
               name: Интернет
             The Need for Addressing:
               name: Необходимость адресации
-            Routers and Redundancy:
-              name: Маршрутизаторы и резервирование
             The Need for DNS:
               name: Необходимость DNS
             Post-Course Survey:
@@ -2148,15 +2185,17 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            APIs and Function Parameters:
+              name: API и параметры функции
+            Creating Functions:
+              name: Создание функций
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
             The Need For Programming Languages:
               name: Необходимость языков программирования
             Using Simple Commands:
               name: Использование простых команд
-            Creating Functions:
-              name: Создание функций
-            APIs and Function Parameters:
-              name: API и параметры функции
-            Creating functions with Parameters:
+            Creating Functions with Parameters:
               name: Создание функций с параметрами
             Post-Course Survey:
               name: Опрос после окончания курса
@@ -2178,12 +2217,14 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
-            What is Big Data?:
-              name: Что такое Большие Данные?
             Simple Encryption:
               name: Простое шифрование
+            What is Big Data?:
+              name: Что такое Большие Данные?
             Post-Course Survey:
               name: Опрос после окончания курса
+            Student Post-Course Survey:
+              name: Опрос учащихся после обучения
         csp5-2017:
           stages:
             Compound Conditional Logic:
@@ -2219,23 +2260,40 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Compound Conditional Logic:
+              name: Составная условная логика
             Controlling Memory with Variables:
               name: Контролирование памяти с помощью переменных
-            User Input and Strings:
-              name: Пользовательский ввод и строки
-            While Loops:
-              name: Циклы «пока»
-            Introduction to Arrays:
-              name: Введение в массивы
-            Processing Arrays:
-              name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+            Introducing Design Mode:
+              name: Введение в дизайн режим
+            Introduction to Arrays:
+              name: Введение в массивы
+            Introduction to Conditional Logic:
+              name: Введение в условную логику
+            Processing Arrays:
+              name: Обработка массивов
+            User Input and Strings:
+              name: Пользовательский ввод и строки
+            Using Variables in Apps:
+              name: Использование переменных в приложениях
+            While Loops:
+              name: Циклы «пока»
+            If statements:
+              name: Операторы Если
             Post-Course Survey:
               name: Опрос после окончания курса
         CSDU3-Draft:
           description_short: Программирование
           stages:
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+            Velocity:
+              name: Скорость
+          lessons:
             Collision Detection:
               name: Обнаружение столкновений
             Functions:
@@ -2257,18 +2315,18 @@ ru:
             What to Expect:
               name: Чего ожидать
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
-            What to Expect:
-              name: Чего ожидать
             Introduction to Complex Adaptive Systems:
               name: Введение в сложные адаптивные системы
             Introduction to Computational Science:
               name: Введение в вычислительные науки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Using Computer Models in Science:
               name: Использование компьютерных моделей в науке
             Using Models in the Classroom:
               name: Использование моделей в классе
+            What to Expect:
+              name: Чего ожидать
         TEMP CSD Unit 3:
           description_short: Программирование
         CSF_Secret_Sample:
@@ -2282,10 +2340,10 @@ ru:
             Teacher Dashboard:
               name: Панель управления преподавателя
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
             Evaluation Blocks:
               name: Блоки оценки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Teacher Dashboard:
               name: Панель управления преподавателя
         sciencePD1:
@@ -2303,18 +2361,18 @@ ru:
             What to Expect:
               name: Чего ожидать
           lessons:
-            Introduction to PD:
-              name: Введение в профессиональные разработки
-            What to Expect:
-              name: Чего ожидать
             Introduction to Complex Adaptive Systems:
               name: Введение в сложные адаптивные системы
             Introduction to Computational Science:
               name: Введение в вычислительные науки
+            Introduction to PD:
+              name: Введение в профессиональные разработки
             Using Computer Models in Science:
               name: Использование компьютерных моделей в науке
             Using Models in the Classroom:
               name: Использование моделей в классе
+            What to Expect:
+              name: Чего ожидать
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -2348,8 +2406,16 @@ ru:
           stages:
             Design Mode:
               name: Режим дизайна
+          lessons:
+            Design Mode:
+              name: Режим дизайна
         CSDU2-Draft:
           stages:
+            Introduction to HTML:
+              name: Введение в HTML
+            Peer Review:
+              name: Рецензирование
+          lessons:
             Introduction to HTML:
               name: Введение в HTML
             Peer Review:
@@ -2392,14 +2458,45 @@ ru:
               name: Программирование
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+          lessons:
+            Events:
+              name: События
+            'Jigsaw: Learn to drag and drop':
+              name: 'Головоломки: Научитесь перетаскивать'
+            Loops:
+              name: Циклы
+            Loops Intro:
+              name: Введение в циклы
+            Programming:
+              name: Программирование
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Алгоритмы из повседневной жизни: Посади семечко'
         grade4:
           stages:
             Digital Citizenship:
               name: Цифровое гражданство
             Songwriting:
               name: Написание песен
+          lessons:
+            Digital Citizenship:
+              name: Цифровое гражданство
+            Songwriting:
+              name: Написание песен
         grade1:
           stages:
+            Events:
+              name: События
+            'Jigsaw: Learn to drag and drop':
+              name: 'Головоломки: Научитесь перетаскивать'
+            Loops:
+              name: Циклы
+            Loops Intro:
+              name: Введение в циклы
+            Programming:
+              name: Программирование
+            Unspotted Bugs:
+              name: Незамеченные Баги
+          lessons:
             Events:
               name: События
             'Jigsaw: Learn to drag and drop':
@@ -2434,6 +2531,27 @@ ru:
               name: 'Урок без компьютера: Игры с циклами'
             'Unplugged: Songwriting with Parameters':
               name: 'Урок без компьютера: Написание песен с параметрами'
+          lessons:
+            'Artist: For Loops':
+              name: 'Художник: Циклы с параметром'
+            'Artist: Functions with Parameters':
+              name: 'Художник: Функции с параметрами'
+            'Artist: Variables':
+              name: 'Художник: Переменные'
+            'Bee: For Loops':
+              name: 'Пчела: Циклы с параметром'
+            'Bee: Functions with Parameters':
+              name: 'Пчела: Функции с параметрами'
+            Digital Citizenship:
+              name: Цифровое гражданство
+            'Play Lab: Variables':
+              name: 'Лаборатория игр: Переменные'
+            'Unplugged: Envelope Variables':
+              name: 'Урок без компьютера: Конвертные переменные'
+            'Unplugged: For Loop Fun':
+              name: 'Урок без компьютера: Игры с циклами'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Урок без компьютера: Написание песен с параметрами'
         ecs-unit1:
           stages:
             0: |-
@@ -2447,14 +2565,14 @@ ru:
             Wrap-up:
               name: Итоги
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Добро пожаловать!
             Wrap-up:
               name: Итоги
         ecs-unit2:
@@ -2504,6 +2622,17 @@ ru:
               name: 'Фермер: Циклы с проверкой условия'
             'Maze: Nested Loops':
               name: 'Лабиринт: вложенные циклы'
+          lessons:
+            'Artist: Nested Loops':
+              name: 'Художник: Вложенные циклы'
+            Bee Debugging:
+              name: 'Пчела: Отладка'
+            Bounce:
+              name: Прыжок
+            'Farmer: While Loops':
+              name: 'Фермер: Циклы с проверкой условия'
+            'Maze: Nested Loops':
+              name: 'Лабиринт: вложенные циклы'
         alltheplcthings:
           lesson_groups:
             required:
@@ -2537,20 +2666,29 @@ ru:
             csd_survey:
               display_name: Опрос после окончания курса
           lessons:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
             Functions:
               name: функции
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Conditionals:
+              name: Условные команды
         grade2:
           stages:
+            Flappy:
+              name: Порхающий код
+            Binary Bracelets:
+              name: Двоичные браслеты
+            'Real-life Algorithms: Paper Planes':
+              name: 'Реальные алгоритмы: Бумажные самолетики'
+            The Big Event:
+              name: Большое Событие
+          lessons:
             Flappy:
               name: Порхающий код
             Binary Bracelets:
@@ -2582,26 +2720,26 @@ ru:
             While Loops:
               name: Циклы «пока»
           lessons:
+            Binary:
+              name: Двоичный
+            Conditionals:
+              name: Условные команды
             Events:
               name: События
+            For Loops:
+              name: Циклы с параметром
+            Functions:
+              name: функции
+            Functions with Parameters:
+              name: Процедуры с параметрами
             Loops:
               name: Циклы
             Nested Loops:
               name: Вложенные циклы
-            Conditionals:
-              name: Условные команды
-            While Loops:
-              name: Циклы «пока»
-            Functions:
-              name: функции
             Variables:
               name: переменные
-            For Loops:
-              name: Циклы с параметром
-            Functions with Parameters:
-              name: Процедуры с параметрами
-            Binary:
-              name: Двоичный
+            While Loops:
+              name: Циклы «пока»
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -2611,12 +2749,12 @@ ru:
             Welcome!:
               name: Добро пожаловать!
           lessons:
-            Welcome!:
-              name: Добро пожаловать!
-            The Design Recipe:
-              name: Создание рецепта
             Teacher Dashboard:
               name: Панель управления преподавателя
+            The Design Recipe:
+              name: Создание рецепта
+            Welcome!:
+              name: Добро пожаловать!
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -2650,6 +2788,23 @@ ru:
               display_name: Содержимое
             practice:
               display_name: Практика учителя
+          lessons:
+            'Lessons 2-3: Binary Messages':
+              name: 'Уроки 2-3: бинарные сообщения'
+            'Lessons 4-6: Encoding and Sending Numbers':
+              name: 'Уроки 4-6: кодирование и отправка чисел'
+            'Lesson 7: Encoding and Sending Text':
+              name: 'Урок 7: кодирование и отправка текста'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Уроки 4-6: кодирование и отправка чисел'
+            'Lesson 9: Internet Addressing':
+              name: 'Урок 9: адресация в интернете'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Уроки 1-2: байты, размеры файлов и сжатие текста'
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Уроки 3-4: кодирование изображений'
+            'Lessons 1 - 3: Algorithms':
+              name: 'Уроки 1-3: алгоритмы'
         csp1-support:
           stages:
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -2686,6 +2841,9 @@ ru:
           stages:
             Controlling Memory with Variables:
               name: Контролирование памяти с помощью переменных
+          lessons:
+            Controlling Memory with Variables:
+              name: Контролирование памяти с помощью переменных
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -2696,6 +2854,15 @@ ru:
         fesbinary:
           title: Двоичный
           stages:
+            Binary Bracelets:
+              name: Двоичные браслеты
+            Binary Images:
+              name: Двоичные образы
+            RGB Color:
+              name: RGB цвета
+            Play Lab:
+              name: Лаборатория игр
+          lessons:
             Binary Bracelets:
               name: Двоичные браслеты
             Binary Images:
@@ -2718,6 +2885,8 @@ ru:
             csd_survey:
               display_name: Опрос после окончания курса
           lessons:
+            Peer Review:
+              name: Рецензирование
             Lists:
               name: Списки
         csp2-support:
@@ -2778,12 +2947,12 @@ ru:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            Going Places Safely:
-              name: Безопасное путешествие
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Going Places Safely:
+              name: Безопасное путешествие
         courseb-draft:
           stages:
             Loops in Collector:
@@ -2795,14 +2964,14 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
           lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            Your Digital Footprint:
-              name: Твой цифровой след
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Your Digital Footprint:
+              name: Твой цифровой след
         coursec-draft:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -2814,12 +2983,14 @@ ru:
             Building a Foundation:
               name: Создание основы
           lessons:
-            Building a Foundation:
-              name: Создание основы
             'Real-life Algorithms: Paper Planes':
               name: 'Реальные алгоритмы: Бумажные самолетики'
             Binary Bracelets:
               name: Двоичные браслеты
+            Your Digital Footprint:
+              name: Твой цифровой след
+            Building a Foundation:
+              name: Создание основы
         coursed-draft:
           stages:
             Nested Loops in Maze:
@@ -2845,10 +3016,8 @@ ru:
             Introduction:
               name: Введение
           lessons:
-            Introduction:
-              name: Введение
-            Nested Loops:
-              name: Вложенные циклы
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
@@ -2863,6 +3032,12 @@ ru:
               name: 'Урок без компьютера: Двоичный'
             Artist Binary:
               name: 'Художник: двоичная система'
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Nested Loops:
+              name: Вложенные циклы
+            Introduction:
+              name: Введение
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -2883,16 +3058,18 @@ ru:
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
-            Introduction:
-              name: Введение
-            Conditionals:
-              name: Условные команды
+            Digital Citizenship:
+              name: Цифровое гражданство
             Build Your Project:
               name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Introduction:
+              name: Введение
+            Conditionals:
+              name: Условные команды
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -2919,12 +3096,8 @@ ru:
             content:
               display_name: Содержимое
           lessons:
-            'Algorithms: Tangrams':
-              name: 'Алгоритмы: Танграмы'
-            Introduction:
-              name: Введение
-            Ice Age Play Lab:
-              name: Лаборатория игр Ледниковый период
+            Digital Citizenship:
+              name: Цифровое гражданство
             Envelope Variables:
               name: Конвертные переменные
             For Loop Fun:
@@ -2933,13 +3106,22 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
-            Songwriting with Parameters:
-              name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+            Songwriting with Parameters:
+              name: Написание песен с параметрами
+            Introduction:
+              name: Введение
+            Ice Age Play Lab:
+              name: Лаборатория игр Ледниковый период
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
         classic-hoc-impact-study:
           description_short: Постигай азы программирования с забавными персонажами!
           stages:
+            Hour of Code 2013:
+              name: Час кода 2013
+          lessons:
             Hour of Code 2013:
               name: Час кода 2013
         hoc-impact-study:
@@ -3018,6 +3200,11 @@ ru:
               name: Итоги
         science-pd-ol-pt-5:
           stages:
+            Welcome!:
+              name: Добро пожаловать!
+            Wrap-Up:
+              name: Итоги
+          lessons:
             Welcome!:
               name: Добро пожаловать!
             Wrap-Up:
@@ -3107,14 +3294,28 @@ ru:
             csd6_2:
               display_name: 'Глава 2: Создание физических прототипов'
           lessons:
+            Lists:
+              name: Списки
+            For Loops:
+              name: Циклы с параметром
+            List and For Loops:
+              name: Список и цикл for
+            Lists and For Loops:
+              name: Список и цикл for
             Analog Input:
               name: Иной ввод
+            Polling Events:
+              name: Опросы
+            Sensor Applications:
+              name: Датчик Приложений
+            'Project: Prototype an Innovation':
+              name: 'Проект: Прототип Инновации'
+            Map:
+              name: Карта
             Arrays and For Loops:
               name: Множества и цикл for
             Functions with Parameters:
               name: Процедуры с параметрами
-            'Project: Prototype an Innovation':
-              name: 'Проект: Прототип Инновации'
         workshop-gamelab:
           stages:
             Introduction:
@@ -3144,17 +3345,22 @@ ru:
             csd5_2:
               display_name: 'Глава 2: Решение информационных проблем'
           lessons:
-            ASCII and Binary Representation:
-              name: ASCII и Двоичное Представление
             Representing Images:
               name: Представление изображений
-            Representing Numbers:
-              name: Представления чисел
+            ASCII and Binary Representation:
+              name: ASCII и Двоичное Представление
             Making Decisions with Data:
               name: Использование данных для принятия решений
+            Representing Numbers:
+              name: Представления чисел
+            8-bit Numbers:
+              name: 8-битные числа
         applab-1hour:
           description_audience: Учащиеся средних и старших классов
           stages:
+            Extra:
+              name: Дополнительно
+          lessons:
             Extra:
               name: Дополнительно
         applab-2hour:
@@ -3182,12 +3388,12 @@ ru:
             'Real Life Algorithms: Dice Race':
               name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
             Introduction:
               name: Введение
             Conditionals:
               name: Условные команды
+            'Real Life Algorithms: Dice Race':
+              name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
         csd6-2017:
           description_short: Программирование с физическими устройствами
           stages:
@@ -3223,6 +3429,24 @@ ru:
             csd_survey:
               display_name: Опрос после окончания курса
           lessons:
+            Lists:
+              name: Списки
+            For Loops:
+              name: Циклы с параметром
+            Lists and For Loops:
+              name: Список и цикл for
+            Analog Input:
+              name: Иной ввод
+            Sensor Applications:
+              name: Датчик Приложений
+            'Project: Prototype an Innovation':
+              name: 'Проект: Прототип Инновации'
+            Arrays and For Loops:
+              name: Множества и цикл for
+            Functions with Parameters:
+              name: Процедуры с параметрами
+            Analog Input_:
+              name: Иной ввод
             Arrays and For Loops_:
               name: Множества и цикл for
             Functions with Parameters_:
@@ -3232,6 +3456,19 @@ ru:
         csd3-draft:
           description_short: Анимация и игры
           stages:
+            Variables:
+              name: переменные
+            Plotting Shapes:
+              name: Рисование фигур
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lessons:
             Variables:
               name: переменные
             Plotting Shapes:
@@ -3268,10 +3505,12 @@ ru:
               name: ASCII и Двоичное Представление
             Representing Images:
               name: Представление изображений
-            Representing Numbers:
-              name: Представления чисел
             Making Decisions with Data:
               name: Использование данных для принятия решений
+            Representing Numbers:
+              name: Представления чисел
+            8-bit Numbers:
+              name: 8-битные числа
         csd3-old:
           stages:
             Velocity:
@@ -3291,8 +3530,28 @@ ru:
           stages:
             Lists:
               name: Списки
+          lessons:
+            Lists:
+              name: Списки
         csd3-chapters:
           stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+            'Chapter 1: Images and Animation':
+              name: 'Глава 1: Изображения и анимации'
+            'null':
+              name: нуль
+          lessons:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
@@ -3353,10 +3612,10 @@ ru:
             Bounce:
               name: Прыжок
           lessons:
-            Loops with BB-8:
-              name: Циклы с BB-8
             C9 Artist Loops:
               name: 'Художник: Циклы'
+            Loops with BB-8:
+              name: Циклы с BB-8
             Ice Age Play Lab:
               name: Лаборатория игр Ледниковый период
             Bounce:
@@ -3380,8 +3639,11 @@ ru:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            Going Places Safely:
-              name: Безопасное путешествие
+            'Loops: Happy Loops':
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3399,8 +3661,6 @@ ru:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
-            Your Digital Footprint:
-              name: Твой цифровой след
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3414,14 +3674,10 @@ ru:
           title: Курс С
           assignment_family_title: Курс С
           lessons:
-            Building a Foundation:
-              name: Создание основы
             'Real-life Algorithms: Paper Planes':
               name: 'Реальные алгоритмы: Бумажные самолетики'
             Loops in Artist:
               name: Циклы в исполнителе Художник
-            Binary Bracelets:
-              name: Двоичные браслеты
         coursed-2017:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3444,24 +3700,22 @@ ru:
           assignment_family_title: Курс D
           description_audience: 'Возраст: 7-11'
           lessons:
-            Introduction:
-              name: Введение
+            'Algorithms: Graph Paper Programming':
+              description_teacher: Составляя друг для друга программы для рисования
+                картинок, ученики начнут понимать суть программирования. Занятие начнется
+                с того, что ученики будут давать друг другу команды раскрасить клеточки
+                линованной бумаги для воспроизведения существующего рисунка.  Если
+                останется время, урок можно будет завершить самостоятельным рисованием.
             Nested Loops:
               name: Вложенные циклы
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
               name: Цикл while в Фермере
-            Conditionals with Cards:
-              name: Условные выражения с картами
             Conditionals & Loops in Maze:
               name: Условия и циклы в Лабиринте
-            Digital Citizenship:
-              name: Цифровое гражданство
-            'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
-            Artist Binary:
-              name: 'Художник: двоичная система'
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -3503,22 +3757,34 @@ ru:
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
+            Ice Age Play Lab:
+              name: Лаборатория игр Ледниковый период
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
+            For Loops in Bee:
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              name: Цикл for в Художнике
+            Songwriting with Parameters:
+              name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
+            'Functions: Songwriting':
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
             Building a Foundation:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
               name: Вложенные циклы
-            Introduction:
-              name: Введение
-            Conditionals:
-              name: Условные команды
-            Build Your Project:
-              name: Создать свой проект
-            Internet:
-              name: интернет
-            Crowdsourcing:
-              name: Краудсорсинг
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -3542,28 +3808,18 @@ ru:
             csf_f_2:
               display_name: Содержание Курса Ф
           lessons:
-            Building a Foundation:
-              name: Создание основы
-            Loops in Artist:
-              name: Циклы в исполнителе Художник
             'Algorithms: Tangrams':
               name: 'Алгоритмы: Танграмы'
-            Introduction:
-              name: Введение
-            Ice Age Play Lab:
-              name: Лаборатория игр Ледниковый период
-            Envelope Variables:
-              name: Конвертные переменные
-            For Loop Fun:
-              name: Игры с циклами
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
-            Songwriting with Parameters:
-              name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
         csdnovice:
           stages:
             Tuesday:
@@ -3575,14 +3831,14 @@ ru:
             Welcome:
               name: Добро пожаловать
           lessons:
-            Welcome:
-              name: Добро пожаловать
             Tuesday:
               name: Вторник
             Wednesday:
               name: Среда
             Thursday:
               name: Четверг
+            Welcome:
+              name: Добро пожаловать
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -3724,20 +3980,36 @@ ru:
           lessons:
             Introduction:
               name: Введение
-            Building a Foundation:
-              name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
-            Nested Loops:
-              name: Вложенные циклы
+            Internet:
+              name: интернет
+            Digital Citizenship:
+              name: Цифровое гражданство
+            Conditionals with Cards:
+              name: Условные выражения с картами
             While Loops in Farmer:
               name: Цикл while в Фермере
+            Conditionals & Loops in Maze:
+              name: Условия и циклы в Лабиринте
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Songwriting with Parameters:
+              name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+            Conditional Loops in Maze:
+              name: Условия и циклы в Лабиринте
+            Building a Foundation:
+              name: Создание основы
+            Nested Loops:
+              name: Вложенные циклы
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3760,6 +4032,9 @@ ru:
               name: Пчела
         subgoal-labels-opt-in:
           stages:
+            Thanks:
+              name: Спасибо
+          lessons:
             Thanks:
               name: Спасибо
         csp3-research-mxghyt:
@@ -3829,6 +4104,8 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Nested Loops:
+              name: Вложенные циклы
             Conditionals:
               name: Условные команды
             Build Your Project:
@@ -3837,6 +4114,8 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
         new-d:
           stages:
             Introduction:
@@ -3868,14 +4147,8 @@ ru:
           lessons:
             Introduction:
               name: Введение
-            Building a Foundation:
-              name: Создание основы
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
-            Loops in Artist:
-              name: Циклы в исполнителе Художник
-            Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+            Nested Loops:
+              name: Вложенные циклы
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
@@ -3890,6 +4163,14 @@ ru:
               name: 'Урок без компьютера: Двоичный'
             Artist Binary:
               name: 'Художник: двоичная система'
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -3918,12 +4199,8 @@ ru:
           lessons:
             Introduction:
               name: Введение
-            Building a Foundation:
-              name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
-            Nested Loops:
-              name: Вложенные циклы
             While Loops in Farmer:
               name: Цикл while в Фермере
             For Loops in Bee:
@@ -3932,6 +4209,10 @@ ru:
               name: Цикл for в Художнике
             Build Your Project:
               name: Создать свой проект
+            Building a Foundation:
+              name: Создание основы
+            Nested Loops:
+              name: Вложенные циклы
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -4102,6 +4383,8 @@ ru:
           description: Возвращение Minecraft с новыми возможностями на «Час кода»!
             Путешествие по миру программирования с Minecraft.
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Майнкрафт\: Путешествие Героя. Час Кода'
             Minecraft Hour of Code:
               name: Час кода с Minecraft
         csp-explore-2017:
@@ -4362,14 +4645,25 @@ ru:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
           lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            'Debugging: Unspotted Bugs':
+              name: Незамеченные Баги
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Стиви и Большой Проект
+            'Programming: Happy Maps':
+              name: Весёлые карты
             Going Places Safely:
               name: Безопасное путешествие
+            'Loops: Happy Loops':
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Стиви и Большой Проект
         express-2018:
           title: Экспресс-курс
           assignment_family_title: Экспресс-курс
@@ -4422,38 +4716,52 @@ ru:
             Graph Paper Programming:
               name: Программирование на бумаге в клеточку
           lessons:
-            Graph Paper Programming:
+            'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
-            Relay Programming:
-              name: Эстафетное программирование
+            Introduction:
+              name: Введение
+            Building a Foundation:
+              name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
-            Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+            Nested Loops:
+              name: Вложенные циклы
+            'Events: The Big Event':
+              name: Большое Событие
             While Loops in Farmer:
               name: Цикл while в Фермере
-            Conditionals with Cards:
-              name: Условные выражения с картами
-            Envelope Variables:
-              name: Конвертные переменные
-            For Loop Fun:
-              name: Игры с циклами
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
             Build Your Project:
               name: Создать свой проект
+            'Loops: Getting Loopy':
+              name: Зацикливание
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            'Functions: Songwriting':
+              name: Написание песен
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
             Binary Bracelets:
               name: Двоичные браслеты
             'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
             Artist Binary:
               name: 'Художник: двоичная система'
             Internet:
-              name: интернет
+              name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Relay Programming:
+              name: Эстафетное программирование
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
         courseb-2018:
           assignment_family_title: Курс B
           stages:
@@ -4468,16 +4776,16 @@ ru:
             Move It, Move It:
               name: Вперед, вперед
           lessons:
-            Move It, Move It:
-              name: Вперед, вперед
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Алгоритмы из повседневной жизни: Посади семечко'
             Your Digital Footprint:
               name: Твой цифровой след
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Move It, Move It:
+              name: Вперед, вперед
         coursed-2018:
           assignment_family_title: Курс D
           description_audience: 'Возраст: 7-11'
@@ -4517,26 +4825,40 @@ ru:
             Nested Loops in Maze:
               name: Вложенные циклы в Лабиринте
           lessons:
-            Relay Programming:
-              name: Эстафетное программирование
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
+            Introduction:
+              name: Введение
+            Building a Foundation:
+              name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
               name: Цикл while в Фермере
             Conditionals with Cards:
               name: Условные выражения с картами
+            Conditionals & Loops in Maze:
+              name: Условия и циклы в Лабиринте
             Digital Citizenship:
               name: Цифровое гражданство
             'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
             Artist Binary:
               name: 'Художник: двоичная система'
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
+            Relay Programming:
+              name: Эстафетное программирование
+            Nested Loops in Bees:
+              name: Вложенные циклы в Пчеле
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
         coursec-2018:
           assignment_family_title: Курс С
           stages:
@@ -4553,10 +4875,12 @@ ru:
           lessons:
             Building a Foundation:
               name: Создание основы
-            'Real-life Algorithms: Paper Planes':
-              name: 'Реальные алгоритмы: Бумажные самолетики'
+            'Loops: Getting Loopy':
+              name: Зацикливание
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
             Binary Bracelets:
               name: Двоичные браслеты
         csd6-2018:
@@ -4584,6 +4908,12 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Arrays and For Loops_:
+              name: Множества и цикл for
+            Functions with Parameters_:
+              name: Процедуры с параметрами
+            'Project: Prototype an Innovation_':
+              name: 'Проект: Прототип Инновации'
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -4631,22 +4961,33 @@ ru:
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
+            'Programming: My Robotic Friends':
+              name: Мои друзья роботы
             Building a Foundation:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
-              name: Вложенные циклы
-            Conditionals with Cards:
-              name: Условные выражения с картами
-            Conditionals:
-              name: Условные команды
+              name: Вложенные циклы в Лабиринте
+            Introduction:
+              name: Введение
+            'Functions: Songwriting':
+              name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
             Build Your Project:
               name: Создать свой проект
             Internet:
-              name: интернет
+              name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Minecraft Hour of Code:
+              name: Час кода с Minecraft
         coursef-2018:
           assignment_family_title: Курс F
           description_audience: 'Возраст: 9-13'
@@ -4685,12 +5026,20 @@ ru:
             csf_f_2:
               display_name: Содержание Курса Ф
           lessons:
+            'Programming: My Robotic Friends':
+              name: Мои друзья роботы
             Building a Foundation:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
-            Conditionals with Cards:
-              name: Условные выражения с картами
+            Nested Loops in Bee/Zombie:
+              name: Вложенные циклы в Лабиринте
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
+            Introduction:
+              name: Введение
+            Ice Age Play Lab:
+              name: Лаборатория игр Ледниковый период
             Envelope Variables:
               name: Конвертные переменные
             For Loop Fun:
@@ -4699,8 +5048,12 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Songwriting with Parameters:
+              name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+            Conditionals with Cards:
+              name: Условные выражения с картами
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -4807,6 +5160,8 @@ ru:
               name: Кодирование чёрно-белых изображений
             Encoding Color Images:
               name: Кодирование цветных изображений
+            Lossy Compression and File Formats:
+              name: Сжатие с потерями и форматы файлов
         csp3-2018:
           description_short: Программирование
           stages:
@@ -4839,6 +5194,8 @@ ru:
             APIs and Function Parameters:
               name: API и параметры функции
             Creating functions with Parameters:
+              name: Создание функций с параметрами
+            Creating Functions with Parameters:
               name: Создание функций с параметрами
         csp-explore-2018:
           lesson_groups:
@@ -5024,6 +5381,15 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+          lessons:
+            Welcome:
+              name: Добро пожаловать
+            Tuesday:
+              name: Вторник
+            Wednesday:
+              name: Среда
+            Thursday:
+              name: Четверг
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -5037,6 +5403,13 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+          lessons:
+            Tuesday:
+              name: Вторник
+            Wednesday:
+              name: Среда
+            Thursday:
+              name: Четверг
         csp-novice-18:
           stages:
             Tuesday:
@@ -5050,6 +5423,13 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+          lessons:
+            Tuesday:
+              name: Вторник
+            Wednesday:
+              name: Среда
+            Thursday:
+              name: Четверг
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -5063,6 +5443,13 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+          lessons:
+            Tuesday:
+              name: Вторник
+            Wednesday:
+              name: Среда
+            Thursday:
+              name: Четверг
         pre-express-2018:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -5085,18 +5472,24 @@ ru:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
           lessons:
-            Move It, Move It:
-              name: Вперед, вперед
-            Your Digital Footprint:
-              name: Твой цифровой след
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
+            'Debugging: Unspotted Bugs':
+              name: Незамеченные Баги
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Стиви и Большой Проект
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Алгоритмы из повседневной жизни: Посади семечко'
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Spelling Bee:
               name: Пчела
+            Move It, Move It:
+              name: Вперед, вперед
+            Your Digital Footprint:
+              name: Твой цифровой след
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Стиви и Большой Проект
         fit-test:
           lesson_groups:
             required:
@@ -5143,8 +5536,14 @@ ru:
           stages:
             Dance Party:
               name: Танцевальная вечеринка
+          lessons:
+            Dance Party:
+              name: Танцевальная вечеринка
         dance-draft:
           stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+          lessons:
             Dance Party:
               name: Танцевальная вечеринка
         cspplayground:
@@ -5201,6 +5600,12 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Conditionals with Cards:
+              name: Условные выражения с картами
             Envelope Variables:
               name: Конвертные переменные
             For Loop Fun:
@@ -5209,12 +5614,23 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
+            The Artist:
+              name: Художник
+            Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Internet:
-              name: интернет
+              name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
         dance-low:
           stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+          lessons:
             Dance Party:
               name: Танцевальная вечеринка
         coursed-2019:
@@ -5258,6 +5674,8 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
             Loops in Ice Age:
@@ -5265,17 +5683,19 @@ ru:
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
-            Conditionals with Cards:
-              name: Условные выражения с картами
+              name: Вложенные циклы в Лабиринте
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
             While Loops in Farmer:
               name: Цикл while в Фермере
-            'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
-            Artist Binary:
-              name: 'Художник: двоичная система'
+            Conditionals with Cards:
+              name: Условные выражения с картами
             Digital Citizenship:
               name: Цифровое гражданство
+            'Unplugged: Binary':
+              name: Двоичные образы
+            Artist Binary:
+              name: 'Художник: двоичная система'
             Dance Party:
               name: Танцевальная вечеринка
         coursee-2019:
@@ -5320,12 +5740,35 @@ ru:
             csf_functions:
               display_name: функции
           lessons:
-            Conditionals:
-              name: Условные команды
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops:
+              name: Вложенные циклы
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            'Functions: Songwriting':
+              name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
+            Build Your Project:
+              name: Создать свой проект
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
+            Songwriting:
+              name: Написание песен
         express-2019:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -5378,18 +5821,38 @@ ru:
             csf_for_loops:
               display_name: Циклы с параметром
           lessons:
-            Dance Party:
-              name: Танцевальная вечеринка
+            Relay Programming:
+              name: Эстафетное программирование
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             While Loops in Farmer:
               name: Цикл while в Фермере
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
+            Binary Bracelets:
+              name: Двоичные браслеты
+            'Unplugged: Binary':
+              name: 'Урок без компьютера: Двоичный'
+            Artist Binary:
+              name: 'Художник: двоичная система'
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
+            Dance Party:
+              name: Танцевальная вечеринка
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -5407,6 +5870,9 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+          lessons:
+            'null':
+              name: нуль
         dance-extras-gallery:
           title: Продолжайте танцевать
           description: Дополнительные идеи для проектов уведут вас за пределы первого
@@ -5421,6 +5887,8 @@ ru:
               name: Большое Событие
             Binary Bracelets:
               name: Двоичные браслеты
+            Powerful Passwords:
+              name: Надёжные пароли
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
           lesson_groups:
@@ -5435,8 +5903,16 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Реальные алгоритмы: Бумажные самолетики'
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
             Binary Bracelets:
               name: Двоичные браслеты
+            Powerful Passwords:
+              name: Надёжные пароли
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
         csp-mid-survey:
@@ -5473,12 +5949,19 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            'Programming: Happy Maps':
+              name: Весёлые карты
             Going Places Safely:
               name: Безопасное путешествие
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
+            'Loops: Happy Loops':
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
             Loops in Collector:
               name: Циклы в Собирателе
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
         courseb-2019:
@@ -5505,14 +5988,18 @@ ru:
             csf_events:
               display_name: События
           lessons:
-            Your Digital Footprint:
-              name: Твой цифровой след
             Move It, Move It:
               name: Вперед, вперед
+            Your Digital Footprint:
+              name: Твой цифровой след
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Loops: Getting Loopy':
+              name: Зацикливание
         pre-express-2019:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -5536,15 +6023,17 @@ ru:
             csf_events:
               display_name: События
           lessons:
-            Spelling Bee:
-              name: Пчела
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
+            Move It, Move It:
+              name: Вперед, вперед
+            Your Digital Footprint:
+              name: Твой цифровой след
             Loops in Collector:
               name: Циклы в Собирателе
-            Ocean Scene with Loops:
-              name: Циклы в исполнителе Художник
             Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Spelling Bee:
+              name: Пчела
+            Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
         removed19:
           stages:
@@ -5680,6 +6169,9 @@ ru:
               display_name: Проект
             required:
               display_name: Краткий обзор
+          lessons:
+            Surveys:
+              name: Опросы
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -5876,6 +6368,10 @@ ru:
             required:
               display_name: Краткий обзор
           lessons:
+            Sending Binary Messages:
+              name: Отправка двоичных сообщений
+            Sending Binary Messages with the Internet Simulator:
+              name: Отправка двоичных сообщений с интернет симулятором
             Binary Numbers:
               name: Двоичные числа
         time4csdemo:
@@ -5902,14 +6398,14 @@ ru:
             time4cs_c5:
               display_name: Граждане влияют на изменения в Эверглейдс
           lessons:
-            Building a Foundation:
-              name: Создание основы
-            Loops in Artist:
-              name: Циклы в исполнителе Художник
             Crowdsourcing:
               name: Краудсорсинг
             Conditionals with Cards:
               name: Условные выражения с картами
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -5979,6 +6475,9 @@ ru:
               display_name: Параметры и возвращаемые значения
             csp_libraries:
               display_name: Библиотеки
+          lessons:
+            Libraries:
+              name: Библиотеки
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -6011,6 +6510,9 @@ ru:
               display_name: Проект
         express-2018-vn:
           stages:
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
+          lessons:
             Graph Paper Programming:
               name: Программирование на бумаге в клеточку
         csd-post-survey-2018:
@@ -6067,6 +6569,8 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Lists:
+              name: Списки
             CSS Classes:
               name: CSS классы
         csd3-pilot:
@@ -6098,8 +6602,6 @@ ru:
               name: Рисование фигур
             Variables:
               name: переменные
-            Random Numbers:
-              name: Случайные числа
             Conditionals:
               name: Условные команды
             Velocity:
@@ -6108,6 +6610,8 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+            Random Numbers:
+              name: Случайные числа
         csp3-pilot:
           stages:
             The Need for Programming Languages:
@@ -6214,10 +6718,10 @@ ru:
             required:
               display_name: Краткий обзор
           lessons:
-            The Need for Addressing:
-              name: Необходимость адресации
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
+            The Need for Addressing:
+              name: Необходимость адресации
         peru-2019:
           stages:
             Introduction:
@@ -6295,22 +6799,42 @@ ru:
             k5_next_steps:
               display_name: Следующие шаги
           lessons:
+            Getting Started:
+              name: Приступить к работе
+            Computer Science Fundamentals:
+              name: Основы программирования
+            'Mastering the Basics: Sequencing':
+              name: 'Освоение основ: последовательности'
+            'Mastering the Basics: Loops':
+              name: 'Освоение основ: циклы'
+            'Mastering the Basics: Conditionals':
+              name: 'Освоение основ: условные операторы'
+            'Mastering the Basics: Functions':
+              name: 'Освоение основ: функции'
+            'Mastering the Basics: Events':
+              name: 'Освоение основ: события'
+            Planning:
+              name: Планирование
+            Next Steps:
+              name: Следующие шаги
             Sequencing:
               name: Последовательность действий
             Loops:
               name: Циклы
-            Events:
-              name: События
             Conditionals:
               name: Условные команды
+            Events:
+              name: События
             Functions:
               name: функции
+            'Diving Deeper: Courses E and F':
+              name: 'Погружаемся глубже: курсы E и F'
+            Sprite Lab:
+              name: Лаборатория Спрайтов
             Variables:
               name: переменные
             For Loops:
               name: Циклы с параметром
-            Sprite Lab:
-              name: Лаборатория Спрайтов
         dance-extras-2019:
           description: Дополнительные идеи для проектов уведут вас за пределы первого
             часа.
@@ -6326,6 +6850,9 @@ ru:
               display_name: Проект
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: Условные команды
+          lessons:
             Conditionals:
               name: Условные команды
         time4cs-control-unit-2:
@@ -6570,8 +7097,6 @@ ru:
               name: переменные
             Random Numbers:
               name: Случайные числа
-            Text:
-              name: Текст
             Conditionals:
               name: Условные команды
             Velocity:
@@ -6580,6 +7105,8 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+            Text:
+              name: Текст
         coursea-2020:
           description_audience: 'Возраст: 4-7'
           stages:
@@ -6606,8 +7133,15 @@ ru:
             csf_events:
               display_name: События
           lessons:
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
+            Going Places Safely:
+              name: Безопасное путешествие
+            'Programming: Happy Maps':
+              name: Весёлые карты
+            'Loops: Happy Loops':
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
             Loops in Collector:
               name: Циклы в Собирателе
             Ocean Scene with Loops:
@@ -6634,14 +7168,20 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            Your Digital Footprint:
+              name: Твой цифровой след
             Move It, Move It:
               name: Вперед, вперед
+            'Loops: Getting Loopy':
+              name: Зацикливание
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
         coursec-2020:
           stages:
+            Powerful Passwords:
+              name: Надёжные пароли
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:
@@ -6660,10 +7200,14 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            Powerful Passwords:
+              name: Надёжные пароли
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
         coursed-2020:
           description_audience: 'Возраст: 7-11'
           stages:
@@ -6703,24 +7247,28 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
-            Dance Party:
-              name: Танцевальная вечеринка
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             Conditionals with Cards:
               name: Условные выражения с картами
             While Loops in Farmer:
               name: Цикл while в Фермере
             'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
             Artist Binary:
               name: 'Художник: двоичная система'
+            Digital Citizenship:
+              name: Цифровое гражданство
+            Dance Party:
+              name: Танцевальная вечеринка
         coursee-2020:
           description_audience: 'Возраст: 8-12'
           stages:
@@ -6747,12 +7295,19 @@ ru:
             csf_functions:
               display_name: функции
           lessons:
-            Conditionals:
-              name: Условные команды
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
+            'Functions: Songwriting':
+              name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
         coursef-2020:
           description_audience: 'Возраст: 9-13'
           stages:
@@ -6782,16 +7337,22 @@ ru:
             csf_for_loops:
               display_name: Циклы с параметром
           lessons:
+            Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Envelope Variables:
               name: Конвертные переменные
-            Internet:
-              name: интернет
             For Loop Fun:
               name: Игры с циклами
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Краудсорсинг
         express-2020:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -6874,6 +7435,8 @@ ru:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Урок 1: Цифровая информация'
+            cspSurvey:
+              display_name: Опрос
           lessons:
             Binary Numbers:
               name: Двоичные числа
@@ -6915,6 +7478,8 @@ ru:
             csp3_1_2018:
               display_name: 'Блок 3: Введение в программирование'
           lessons:
+            The Need For Programming Languages:
+              name: Необходимость языков программирования
             Using Simple Commands:
               name: Использование простых команд
             Creating Functions:
@@ -6923,33 +7488,6 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
-        csd3-virtual:
-          description_short: Программирование
-          stages:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
-            Velocity:
-              name: Скорость
-            Collision Detection:
-              name: Обнаружение столкновений
-            Functions:
-              name: функции
-            Random Numbers:
-              name: Случайные числа
-          lesson_groups:
-            csd3_1:
-              display_name: 'Глава 1: Изображения и анимации'
-          lessons:
-            Variables:
-              name: переменные
-            Random Numbers:
-              name: Случайные числа
-            Conditionals:
-              name: Условные команды
         csd2-virtual:
           stages:
             CSS Classes:
@@ -6979,10 +7517,20 @@ ru:
             Variables:
               name: переменные
           lessons:
-            Variables:
-              name: переменные
+            Controlling Memory with Variables:
+              name: Контролирование памяти с помощью переменных
             User Input and Strings:
               name: Пользовательский ввод и строки
+            While Loops:
+              name: Циклы «пока»
+            Introduction to Arrays:
+              name: Введение в массивы
+            Processing Arrays:
+              name: Обработка массивов
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями
+            Variables:
+              name: переменные
         virtual-holding-place:
           stages:
             Velocity:
@@ -7005,6 +7553,11 @@ ru:
               name: функции
         code-break:
           stages:
+            Algorithms:
+              name: Алгоритмы
+            Events:
+              name: События
+          lessons:
             Algorithms:
               name: Алгоритмы
             Events:
@@ -7034,3 +7587,96 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Events:
+              name: События
+            Conditionals:
+              name: Условные команды
+            Functions:
+              name: функции
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром
+            Sprite Lab:
+              name: Лаборатория Спрайтов
+          lessons:
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Events:
+              name: События
+            Conditionals:
+              name: Условные команды
+            Functions:
+              name: функции
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром
+            Sprite Lab:
+              name: Лаборатория Спрайтов
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Приступить к работе
+            k5_basic_concepts_1:
+              display_name: Основы принципов программирования и практики обучения
+            k5_diving_deeper_1:
+              display_name: 'Погружаемся глубже: курсы E и F'
+            k5_next_steps_1:
+              display_name: Следующие шаги
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+        csd3-virtual:
+          description_short: Программирование
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lessons:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: Содержимое
+            csd3_2:
+              display_name: Содержимое
+            cspSurvey:
+              display_name: Содержимое

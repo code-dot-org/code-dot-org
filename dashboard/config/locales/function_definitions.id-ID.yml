@@ -20,9 +20,15 @@ id-ID:
       2-3 Artist 7:
         draw_rect:
           name: gambar_persegi panjang
+          parameters:
+            width: lebar
+            height: tinggi
       2-3 Artist Debugging 10:
         draw square:
           name: gambar kotak
+          parameters:
+            width: lebar
+            height: tinggi
         jump to controller top left:
           name: lompat ke kiri atas pengontrol
         jump to middle:
@@ -167,18 +173,51 @@ id-ID:
       Course 4 Bee Params 6:
         get 5 nectar:
           name: dapatkan 5 nektar
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: madu
       Course 4 Play Lab Params 1:
         jump:
           name: lompat
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: poin
       Course 4 Play Lab Params 2:
         jump:
           name: lompat
       Course 4 Play Lab Params 3:
         jump:
           name: lompat
+          parameters:
+            height: tinggi
+            actor: aktor
       Course 4 Play Lab Params 4:
         do something:
           name: buat sesuatu
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: aktor
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: aktor
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: aktor
+            speed: kecepatan
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: aktor
+            speed: kecepatan
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: poin
       Course 4 Play Lab Vars 1:
         set score:
           name: tetapkan skor
@@ -191,9 +230,14 @@ id-ID:
       Course 4 SCF 1a:
         get nectar:
           name: Dapatkan madu
+          parameters:
+            counter: Pencacah
       Course 4 SCF 3:
         do something:
           name: buat sesuatu
+        draw an octagon:
+          parameters:
+            length: panjang
       'Course E: Play Lab Project':
         do something:
           name: buat sesuatu
@@ -202,6 +246,10 @@ id-ID:
           name: periksa tebak
         do something:
           name: buat sesuatu
+      FoodFight:
+        score_points:
+          parameters:
+            points: poin
       Geometric Sun:
         diamond:
           name: berlian
@@ -215,6 +263,23 @@ id-ID:
       Guess The Number:
         check guess:
           name: periksa tebak
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: panjang
+        draw a loop:
+          parameters:
+            length: panjang
+        draw spiral circle:
+          parameters:
+            size: ukuran
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: panjang
+        draw spiral circle:
+          parameters:
+            size: ukuran
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -240,20 +305,59 @@ id-ID:
           name: buat sesuatu
         draw a hexagon:
           name: menggambar segi enam
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: panjang
         do something:
           name: buat sesuatu
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 15:
         draw a star:
           name: menggambar bintang
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+        draw a pinwheel:
+          parameters:
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          parameters:
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 2:
         do something:
           name: buat sesuatu
@@ -263,38 +367,97 @@ id-ID:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: menggambar sebuah segitiga
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
         draw a hexagon:
           name: menggambar segi enam
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
+        draw a sqaure:
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: panjang
       NEW Course 4 Artist Params 9:
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
         do something:
           name: buat sesuatu
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: panjang
       NEW Course 4 Play Lab Params 11:
         jump:
           name: lompat
+          parameters:
+            height: tinggi
+            actor: aktor
+        patrol:
+          parameters:
+            actor: aktor
+            speed: kecepatan
       New Artist Project:
         draw a star:
           name: menggambar bintang
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+        draw a pinwheel:
+          parameters:
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          parameters:
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
       New Play Lab Project:
         jump:
           name: lompat
+          parameters:
+            height: tinggi
+            actor: aktor
+        patrol:
+          parameters:
+            actor: aktor
+            speed: kecepatan
       Robot Doodle:
         draw head:
           name: gambar kepala
@@ -326,8 +489,19 @@ id-ID:
         do something:
           name: buat sesuatu
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: warna
         do something:
           name: buat sesuatu
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: panjang
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: panjang
       courseB_artist_loops_challenge2:
         potential solution:
           name: Kemungkinan solusi
@@ -337,7 +511,29 @@ id-ID:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: Kemungkinan solusi
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: Kemungkinan solusi
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: buat sesuatu
+      courseC_data wizard_2020:
         do something:
           name: buat sesuatu
       courseE_artist_concept1:
@@ -369,6 +565,9 @@ id-ID:
       courseE_artist_functions10_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions10_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions2:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -378,6 +577,9 @@ id-ID:
       courseE_artist_functions2_2019:
         draw a square:
           name: menggambar sebuah persegi empat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: menggambar sebuah persegi empat
       courseE_artist_functions2_copy:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -385,6 +587,9 @@ id-ID:
         draw a star:
           name: menggambar bintang
       courseE_artist_functions3_2019:
+        draw a star:
+          name: menggambar bintang
+      courseE_artist_functions3_2020:
         draw a star:
           name: menggambar bintang
       courseE_artist_functions4:
@@ -402,6 +607,9 @@ id-ID:
       courseE_artist_functions5_2019:
         draw a star:
           name: menggambar bintang
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: menggambar bintang
       courseE_artist_functions5_copy:
         draw a star:
           name: menggambar bintang
@@ -409,6 +617,9 @@ id-ID:
         draw a house:
           name: gambar sebuah rumah
       courseE_artist_functions7_2018:
+        draw a house:
+          name: gambar sebuah rumah
+      courseE_artist_functions7_2020:
         draw a house:
           name: gambar sebuah rumah
       courseE_artist_functions8:
@@ -426,12 +637,22 @@ id-ID:
           name: buat sesuatu
         draw square:
           name: gambar kotak
+      courseE_artist_functions8_2020:
+        do something:
+          name: buat sesuatu
+        draw square:
+          name: gambar kotak
       courseE_artist_functions8a_2018:
         draw a square:
           name: menggambar sebuah persegi empat
         do something:
           name: buat sesuatu
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: menggambar sebuah persegi empat
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions8a_2020:
         draw a square:
           name: menggambar sebuah persegi empat
         do something:
@@ -446,12 +667,22 @@ id-ID:
           name: gambar kotak
         do something:
           name: buat sesuatu
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: gambar kotak
+        do something:
+          name: buat sesuatu
       courseE_artist_functions8c_2018:
         draw square:
           name: gambar kotak
         do something:
           name: buat sesuatu
       courseE_artist_functions8c_2019:
+        draw square:
+          name: gambar kotak
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions8c_2020:
         draw square:
           name: gambar kotak
         do something:
@@ -471,10 +702,18 @@ id-ID:
           name: buat sesuatu
         draw triangle:
           name: gambar segitiga
+      courseE_artist_functions9_2020:
+        do something:
+          name: buat sesuatu
+        draw triangle:
+          name: gambar segitiga
       courseE_artist_functionsProj_2018:
         draw square:
           name: gambar kotak
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: gambar kotak
+      courseE_artist_functionsProj_2020:
         draw square:
           name: gambar kotak
       courseE_artist_functions_challenge1:
@@ -486,6 +725,9 @@ id-ID:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions_challenge2:
         do something:
           name: buat sesuatu
@@ -495,6 +737,9 @@ id-ID:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: buat sesuatu
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: buat sesuatu
       courseE_artist_functions_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -502,6 +747,9 @@ id-ID:
         draw a square:
           name: menggambar sebuah persegi empat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: menggambar sebuah persegi empat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: menggambar sebuah persegi empat
       courseE_artist_functions_predict1_copy:
@@ -514,6 +762,9 @@ id-ID:
         do something:
           name: buat sesuatu
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: buat sesuatu
+      courseE_artist_functions_predict2_2020:
         do something:
           name: buat sesuatu
       courseE_bee_concept4:
@@ -615,54 +866,129 @@ id-ID:
           name: menggambar sebuah persegi empat
         checker:
           name: pemeriksa
+          parameters:
+            size: ukuran
+            color: warna
         do something:
           name: buat sesuatu
         Make gingham:
           name: Buat genggang
+          parameters:
+            size: ukuran
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
       courseF_artist_fwp2:
         draw a square:
           name: menggambar sebuah persegi empat
           description: gambar persegi empat dengan parameter panjang
+          parameters:
+            length: panjang
         checker:
           name: pemeriksa
+          parameters:
+            size: ukuran
+            color: warna
         do something:
           name: buat sesuatu
         Make gingham:
           name: Buat genggang
+          parameters:
+            size: ukuran
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
       courseF_artist_fwp2_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
           description: gambar persegi empat dengan parameter panjang
+          parameters:
+            length: panjang
       courseF_artist_fwp3:
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
         draw a square2:
           name: draw a square2
+          parameters:
+            size: ukuran
         filled square:
           name: persegi empat terisi
+          parameters:
+            size: ukuran
+            color: warna
         black outline:
           name: garis luar hitam
+          parameters:
+            length: panjang
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: panjang
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: panjang
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: panjang
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: panjang
+            min: menit
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: panjang
+            min: menit
       courseF_artist_fwp9:
         draw a star:
           name: menggambar bintang
+          parameters:
+            points: poin
+            length: panjang
         draw a circle:
           name: Gambar sebuah lingkaran
+        draw a pinwheel:
+          parameters:
+            length: panjang
+            repeat: Ulangi
         draw a triangle:
           name: menggambar sebuah segitiga
+          parameters:
+            length: panjang
+        draw a shape:
+          parameters:
+            length: panjang
         draw a house:
           name: gambar sebuah rumah
+          parameters:
+            length: panjang
         draw a square:
           name: menggambar sebuah persegi empat
+          parameters:
+            length: panjang
+        draw a spiral edge:
+          parameters:
+            length: panjang
+            min: menit
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: warna
         do something:
           name: buat sesuatu
       courseF_artist_fwp_challenge2:
         do something:
           name: buat sesuatu
+        draw an octagon:
+          parameters:
+            length: panjang
       courseF_bee_functions2:
         get only nectar:
           name: dapatkan nektar saja
@@ -672,24 +998,56 @@ id-ID:
       courseF_bee_functions8a:
         do something:
           name: buat sesuatu
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: panjang
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: lebar
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: lebar
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: barisNektarAtauMadu
+          parameters:
+            width: lebar
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: panjang
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: panjang
       courseF_bee_variables_7_2018:
         collect:
           name: kumpulkan
       courseF_bee_variables_7_2019:
         collect:
           name: kumpulkan
+      courseF_bee_variables_7_2020:
+        collect:
+          name: kumpulkan
       courseF_bee_variables_8_2018:
         collect:
           name: kumpulkan
       courseF_bee_variables_8_2019:
+        collect:
+          name: kumpulkan
+      courseF_bee_variables_8_2020:
         collect:
           name: kumpulkan

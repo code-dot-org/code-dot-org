@@ -53,40 +53,42 @@ da:
             The Big Event:
               name: Den store begivenhed
           lessons:
-            Happy Maps:
-              name: Glade Kort
-            Move it, Move it:
-              name: Flyt det, Flyt det
-            'Jigsaw: Learn to drag and drop':
-              name: 'Øvelse: Lær at trække og slippe'
-            'Maze: Sequence':
-              name: 'Labyrint: Sekvens'
-            'Maze: Debugging':
-              name: 'Labyrint: Fejlfinding'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life algoritmer: Plante et frø'
-            'Bee: Sequence':
-              name: 'Bi: Sekvens'
-            'Artist: Sequence':
-              name: 'Kunstner: Sekvens'
-            Building a Foundation:
-              name: Opbygge et fundament
-            'Artist: Shapes':
-              name: 'Kunstner: Figurer'
-            Spelling Bee:
-              name: Stave-bien
-            Getting Loopy:
-              name: Blive Svimmel
-            'Maze: Loops':
-              name: 'Labyrint: Løkker'
-            'Bee: Loops':
-              name: 'Bi: Løkker'
-            The Big Event:
-              name: Den store begivenhed
-            Going Places Safely:
-              name: Gå til sikre steder
             'Artist: Loops':
               name: 'Kunstner: Sløjfer'
+            'Artist: Sequence':
+              name: 'Kunstner: Sekvens'
+            'Artist: Shapes':
+              name: 'Kunstner: Figurer'
+            'Bee: Loops':
+              name: 'Bi: Løkker'
+            'Bee: Sequence':
+              name: 'Bi: Sekvens'
+            Building a Foundation:
+              name: Opbygge et fundament
+            Getting Loopy:
+              name: Blive Svimmel
+            Going Places Safely:
+              name: Gå til sikre steder
+            Happy Maps:
+              name: Glade Kort
+            'Jigsaw: Learn to drag and drop':
+              name: 'Øvelse: Lær at trække og slippe'
+            'Maze: Debugging':
+              name: 'Labyrint: Fejlfinding'
+            'Maze: Loops':
+              name: 'Labyrint: Løkker'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
+            Move it, Move it:
+              name: Flyt det, Flyt det
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'
+            Spelling Bee:
+              name: Stave-bien
+            'Studio: Create a Story':
+              name: Spil Lab - Opret en historie
+            The Big Event:
+              name: Den store begivenhed
         course2:
           title: Kursus 2
           description: Kursus 2 er designet til elever der kan læse, men uden forudgående
@@ -134,42 +136,44 @@ da:
             Your Digital Footprint:
               name: Dit digitale fodspor
           lessons:
-            Graph Paper Programming:
-              name: Programmering på millimeterpapir
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life algoritmer: Papir fly'
-            'Maze: Sequence':
-              name: 'Labyrint: Sekvens'
-            'Artist: Sequence':
-              name: 'Kunstner: Sekvens'
-            Getting Loopy:
-              name: Blive Svimmel
-            'Maze: Loops':
-              name: 'Labyrint: Løkker'
-            'Artist: Loops':
-              name: 'Kunstner: Sløjfer'
-            'Bee: Loops':
-              name: 'Bi: Løkker'
-            Relay programming:
-              name: Stafet-programmering
-            'Bee: Debugging':
-              name: 'Bi: Fejlfinding'
             'Artist: Debugging':
               name: 'Kunstner: Fejlfinding'
-            Conditionals:
-              name: Betingelser
-            'Bee: Conditionals':
-              name: 'Bi: Betingelser'
-            Binary Bracelets:
-              name: Binære armbånd
-            The Big Event:
-              name: Den store begivenhed
-            Flappy:
-              name: Flappy
-            Your Digital Footprint:
-              name: Dit digitale fodspor
+            'Artist: Loops':
+              name: 'Kunstner: Sløjfer'
             'Artist: Nested Loops':
               name: 'Kunstner: Indlejrede løkker'
+            'Artist: Sequence':
+              name: 'Kunstner: Sekvens'
+            'Bee: Conditionals':
+              name: 'Bi: Betingelser'
+            'Bee: Debugging':
+              name: 'Bi: Fejlfinding'
+            'Bee: Loops':
+              name: 'Bi: Løkker'
+            Binary Bracelets:
+              name: Binære armbånd
+            Conditionals:
+              name: Betingelser
+            Flappy:
+              name: Flappy
+            Getting Loopy:
+              name: Blive Svimmel
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            'Maze: Loops':
+              name: 'Labyrint: Løkker'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life algoritmer: Papir fly'
+            Relay programming:
+              name: Stafet-programmering
+            'Studio: Create a Story':
+              name: Spil Lab - Opret en historie
+            The Big Event:
+              name: Den store begivenhed
+            Your Digital Footprint:
+              name: Dit digitale fodspor
         course3:
           title: Kursus 3
           description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne kommer
@@ -223,44 +227,48 @@ da:
             'Studio: Create a Story':
               name: Spil Lab - Opret en historie
           lessons:
-            Computational Thinking:
-              name: Data-Tænkning
-            Maze:
-              name: Labyrint
             Artist:
               name: Kunstner
-            Functional Suncatchers:
-              name: Funktionelle solfangere
             'Artist: Functions':
               name: 'Kunstner: Funktioner'
-            'Bee: Functions':
-              name: 'Bi: Funktioner'
+            'Artist: Nested Loops':
+              name: 'Kunstner: Indlejrede løkker'
+            'Artist: Patterns':
+              name: 'Kunstner: Mønstre'
             'Bee: Conditionals':
               name: 'Bi: Betingelser'
+            'Bee: Debugging':
+              name: 'Bi: Fejlfinding'
+            'Bee: Functions':
+              name: 'Bi: Funktioner'
+            'Bee: Nested Loops':
+              name: 'Bi: Indlejrede løkker'
+            Bounce:
+              name: Hoppe
+            Computational Thinking:
+              name: Data-Tænkning
+            Crowdsourcing:
+              name: Crowdsourcing
+            Dice Race:
+              name: Terning Race
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            'Farmer: While Loops':
+              name: 'Landmand: Når sløjfer'
+            Functional Suncatchers:
+              name: Funktionelle solfangere
+            Internet:
+              name: Internet
+            Maze:
+              name: Labyrint
             'Maze: Conditionals':
               name: 'Labyrint: Betingelser'
             Songwriting:
               name: Sangskrivning
-            Dice Race:
-              name: Terning Race
-            'Artist: Nested Loops':
-              name: 'Kunstner: Indlejrede løkker'
-            'Farmer: While Loops':
-              name: 'Landmand: Når sløjfer'
-            'Bee: Nested Loops':
-              name: 'Bi: Indlejrede løkker'
-            'Bee: Debugging':
-              name: 'Bi: Fejlfinding'
-            Bounce:
-              name: Hoppe
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Digital Citizenship:
-              name: Digital statsborgerskab
-            'Artist: Patterns':
-              name: 'Kunstner: Mønstre'
+            'Studio: Create a Game':
+              name: 'Play Lab: Opret et spil'
+            'Studio: Create a Story':
+              name: Spil Lab - Opret en historie
         playlab:
           title: Play Lab
           description: Opret en historie eller lav et spil med Play Lab!
@@ -363,50 +371,50 @@ da:
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrammer'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrammer'
-            Maze and Bee:
-              name: Labyrint og bi
             Artist:
               name: Kunstner
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Indpakkede variabler'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs - ordspil'
-            'Artist: Variables':
-              name: 'Kunstner: variabler'
-            'Play Lab: Variables':
-              name: 'Play Lab: Variable'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For løkke sjov'
-            'Bee: For Loops':
-              name: 'Bee: For loops/sløjfer'
-            'Artist: For Loops':
-              name: Kunstner For loops/sløjfer
-            'Play Lab: For Loops':
-              name: 'Play Lab: For løkker'
-            'Artist: Functions':
-              name: 'Kunstner: Funktioner'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Sangskrivning med parametre'
-            'Artist: Functions with Parameters':
-              name: 'Kunstner: Funktioner med parametre'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: Funktioner med parametre'
-            'Bee: Functions with Parameters':
-              name: 'Bee: Funktioner med parametre'
-            'Unplugged: Binary':
-              name: 'Unplugged: Binære'
             Artist Binary:
               name: Kunstner binære
-            Super Challenge - Variables:
-              name: Superudfordringen - variable
+            'Artist: For Loops':
+              name: Kunstner For loops/sløjfer
+            'Artist: Functions':
+              name: 'Kunstner: Funktioner'
+            'Artist: Functions with Parameters':
+              name: 'Kunstner: Funktioner med parametre'
+            'Artist: Variables':
+              name: 'Kunstner: variabler'
+            'Bee: For Loops':
+              name: 'Bee: For loops/sløjfer'
+            'Bee: Functions with Parameters':
+              name: 'Bee: Funktioner med parametre'
+            Extreme Challenge - Comprehensive:
+              name: Ekstremudfordringen - den er omfattende
+            Maze and Bee:
+              name: Labyrint og bi
+            'Play Lab: For Loops':
+              name: 'Play Lab: For løkker'
+            'Play Lab: Functions with Parameters':
+              name: 'Play Lab: Funktioner med parametre'
+            'Play Lab: Variables':
+              name: 'Play Lab: Variable'
             Super Challenge - For Loops:
               name: Superudfordringen - For Loops
             Super Challenge - Functions and Parameters:
               name: Super Challenge - Funktioner og Parametre
-            Extreme Challenge - Comprehensive:
-              name: Ekstremudfordringen - den er omfattende
+            Super Challenge - Variables:
+              name: Superudfordringen - variable
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Indpakkede variabler'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: For løkke sjov'
+            'Unplugged: Madlibs':
+              name: 'Unplugged: Madlibs - ordspil'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Sangskrivning med parametre'
+            'Unplugged: Tangrams':
+              name: 'Unplugged: Tangrammer'
         Course4pre:
           title: Kursus 4 forudsætninger
           description: En kort opsamling af koncepter for elever, der ikke har taget
@@ -433,24 +441,24 @@ da:
             'Maze: Sequence':
               name: 'Labyrint: Sekvens'
           lessons:
-            'Maze: Sequence':
-              name: 'Labyrint: Sekvens'
-            'Artist: Sequence':
-              name: 'Kunstner: Sekvens'
-            'Artist: Loops':
-              name: 'Kunstner: Sløjfer'
-            'Bee: Conditionals':
-              name: 'Bi: Betingelser'
-            'Artist: Nested Loops':
-              name: 'Kunstner: Indlejrede løkker'
-            'Farmer: While Loops':
-              name: 'Landmand: Når sløjfer'
-            'Bee: Nested Loops':
-              name: 'Bi: Indlejrede løkker'
             'Artist: Functions':
               name: 'Kunstner: Funktioner'
+            'Artist: Loops':
+              name: 'Kunstner: Sløjfer'
+            'Artist: Nested Loops':
+              name: 'Kunstner: Indlejrede løkker'
+            'Artist: Sequence':
+              name: 'Kunstner: Sekvens'
+            'Bee: Conditionals':
+              name: 'Bi: Betingelser'
             'Bee: Debugging':
               name: 'Bi: Fejlfinding'
+            'Bee: Nested Loops':
+              name: 'Bi: Indlejrede løkker'
+            'Farmer: While Loops':
+              name: 'Landmand: Når sløjfer'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
         usability:
           title: Usability test
           description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
@@ -466,16 +474,16 @@ da:
             Variables:
               name: Variabler
           lessons:
-            Intro:
-              name: Introduktion
-            Variables:
-              name: Variabler
+            Binary:
+              name: Binære
             For Loops:
               name: For Loops
             Functions and Functions with Parameters:
               name: Funktioner og funktioner med parametre
-            Binary:
-              name: Binære
+            Intro:
+              name: Introduktion
+            Variables:
+              name: Variabler
         algebra:
           title: Datalogi i Algebra
           description: Lære funktionel programmering gennem Algebra
@@ -492,40 +500,16 @@ da:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games og Coordinate Planes'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games og Coordinate Planes'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluering blokke'
+            'Eval: Conditionals':
+              name: Betingelser
             'Eval: Strings and Images':
-              name: 'Eval: Strings og Images'
-            'Unplugged: Contracts':
-              name: 'Unplugged: kontrakter'
-            'Eval: Writing Contracts':
-              name: 'Eval: Skrive kontrakter'
-            'Calc: Defining Variables':
-              name: 'Calc: Definere variabler'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Play Lab: Definere variabler (Big Game)'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: Design opskrift'
-            'Play Lab: Animation (Big Game)':
-              name: 'Play Lab: Animation (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
-            'Eval: Boolean Operators':
-              name: 'Eval: Boolean Operators'
-            'Play Lab: Booleans':
-              name: 'Play Lab: Boolske operatorer'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Play Lab: Boolean (Big Game)'
+              name: Strenge og billeder
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Unplugged: Conditionals og stykvise funktioner'
-            'Eval: Conditionals':
-              name: 'Eval: Conditionals'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision detection og the Distance Formula'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Play Lab: Collision Detection (Big Game)'
+            'Unplugged: The Design Recipe':
+              name: 'Unplugged: Design opskrift'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Video Games og Coordinate Planes'
         infinity:
           title: Disney Infinity Play Lab
           description: Brug Play Lab til at skabe en historie eller et spil med karakterer
@@ -547,10 +531,10 @@ da:
             The Design Recipe:
               name: Design opskrift
           lessons:
-            Evaluation Blocks:
-              name: Evalueringsblokke
             Defining Variables:
               name: Definere variabler
+            Evaluation Blocks:
+              name: Evalueringsblokke
             The Design Recipe:
               name: Design opskrift
         netsim:
@@ -608,44 +592,44 @@ da:
             Wrap-up:
               name: Afslutning
           lessons:
-            Introduction to Computer Science:
-              name: Introduktion til programmering
-            The Maze:
-              name: Labyrinten
-            Computational Thinking:
-              name: Data-Tænkning
-            Graph Paper Programming:
-              name: Programmering på millimeterpapir
-            The Artist:
-              name: Kunstneren
-            Algorithms:
-              name: Algoritmer
-            The Artist 2:
-              name: Kunstneren 2
-            Functions:
-              name: Funktioner
-            The Farmer:
-              name: Landmanden
-            Conditionals:
-              name: Betingelser
-            The Artist 3:
-              name: Kunstneren 3
-            Song Writing:
-              name: Sang Skrivning
-            The Farmer 2:
-              name: Landmanden 2
             Abstraction:
               name: Abstraktion
-            The Artist 4:
-              name: Kunstneren 4
+            Algorithms:
+              name: Algoritmer
+            Computational Thinking:
+              name: Data-Tænkning
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Introduction to Computer Science:
+              name: Introduktion til programmering
             Relay Programming:
               name: Stafet-programmering
+            Song Writing:
+              name: Sang Skrivning
+            The Artist:
+              name: Kunstneren
+            The Artist 2:
+              name: Kunstneren 2
+            The Artist 3:
+              name: Kunstneren 3
+            The Artist 4:
+              name: Kunstneren 4
+            The Artist 5:
+              name: Kunstneren 5
+            The Farmer:
+              name: Landmanden
+            The Farmer 2:
+              name: Landmanden 2
             The Farmer 3:
               name: Landmanden 3
             The Internet:
               name: Internettet
-            The Artist 5:
-              name: Kunstneren 5
+            The Maze:
+              name: Labyrinten
             Wrap-up:
               name: Afslutning
         edit-code:
@@ -660,12 +644,12 @@ da:
             The Maze:
               name: Labyrinten
           lessons:
-            The Maze:
-              name: Labyrinten
-            The Artist:
-              name: Kunstneren
             Play Lab:
               name: Play Lab
+            The Artist:
+              name: Kunstneren
+            The Maze:
+              name: Labyrinten
         events:
           title: Hændelser
           description: Hændelser
@@ -682,12 +666,12 @@ da:
           lessons:
             Bounce:
               name: Hoppe
-            Studio:
-              name: Studio
             Calc:
               name: Infinitesimalregning
             Eval:
               name: Evaluer
+            Studio:
+              name: Studio
         flappy:
           title: Flappy kode
           description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv
@@ -763,12 +747,12 @@ da:
             Strings and Images:
               name: Strenge og billeder
           lessons:
+            Booleans:
+              name: Booleans
             Evaluation Blocks:
               name: Evalueringsblokke
             Strings and Images:
               name: Strenge og billeder
-            Booleans:
-              name: Booleans
         cspunit3:
           description_short: Programmering
           stages:
@@ -848,18 +832,18 @@ da:
             The Design Recipe:
               name: Design opskrift
           lessons:
-            Evaluation Blocks:
-              name: Evalueringsblokke
-            Strings and Images:
-              name: Strenge og billeder
-            Defining Variables:
-              name: Definere variabler
-            The Design Recipe:
-              name: Design opskrift
             Booleans:
               name: Booleans
+            Defining Variables:
+              name: Definere variabler
+            Evaluation Blocks:
+              name: Evalueringsblokke
             Free Play:
               name: Fri leg
+            Strings and Images:
+              name: Strenge og billeder
+            The Design Recipe:
+              name: Design opskrift
         allthethings:
           stages:
             Artist:
@@ -885,26 +869,26 @@ da:
             Sprite Lab:
               name: SpriteLab
           lessons:
-            Jigsaw:
-              name: Puslespil
-            Maze:
-              name: Labyrint
             Artist:
               name: Kunstner
             Bee:
               name: Bee
-            Flappy:
-              name: Flappy
             Bounce:
               name: Hoppe
-            Multi:
-              name: Multi
+            Flappy:
+              name: Flappy
+            Jigsaw:
+              name: Puslespil
             Match:
               name: Match
-            Studio:
-              name: Studio
+            Maze:
+              name: Labyrint
             Minecraft:
               name: Minecraft
+            Multi:
+              name: Multi
+            Studio:
+              name: Studio
             Sprite Lab:
               name: SpriteLab
         algebraPD2b:
@@ -924,18 +908,18 @@ da:
             Strings and Images:
               name: Strenge og billeder
           lessons:
+            Booleans:
+              name: Booleans
+            Defining Functions:
+              name: Definere funktioner
+            Defining Variables:
+              name: Definere variabler
+            'Eval: Conditionals':
+              name: 'Eval: Conditionals'
             Evaluation Blocks:
               name: Evalueringsblokke
             Strings and Images:
               name: Strenge og billeder
-            Defining Variables:
-              name: Definere variabler
-            Defining Functions:
-              name: Definere funktioner
-            Booleans:
-              name: Booleans
-            'Eval: Conditionals':
-              name: 'Eval: Conditionals'
         cspfacilitator:
           stages:
             App Lab:
@@ -945,12 +929,12 @@ da:
             Welcome!:
               name: Velkommen!
           lessons:
-            Welcome!:
-              name: Velkommen!
-            Internet Simulator:
-              name: Internet Simulator
             App Lab:
               name: App Lab
+            Internet Simulator:
+              name: Internet Simulator
+            Welcome!:
+              name: Velkommen!
         ECSPD2:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -966,14 +950,14 @@ da:
             Wrap-up:
               name: Afslutning
           lessons:
-            Welcome!:
-              name: Velkommen!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Velkommen!
             Wrap-up:
               name: Afslutning
         algebraPD2:
@@ -985,10 +969,10 @@ da:
             Welcome!:
               name: Velkommen!
           lessons:
-            Welcome!:
-              name: Velkommen!
             The Design Recipe:
               name: Design opskrift
+            Welcome!:
+              name: Velkommen!
         sciencePD2b:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -1043,14 +1027,14 @@ da:
             Wrap-up:
               name: Afslutning
           lessons:
-            Welcome!:
-              name: Velkommen!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Velkommen!
             Wrap-up:
               name: Afslutning
         ECSPD2-NexTech:
@@ -1068,14 +1052,14 @@ da:
             Wrap-up:
               name: Afslutning
           lessons:
-            Welcome!:
-              name: Velkommen!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Velkommen!
             Wrap-up:
               name: Afslutning
         asUnplugged:
@@ -1099,26 +1083,31 @@ da:
             The Big Event:
               name: Den store begivenhed
           lessons:
+            Binary Bracelets:
+              name: Binære armbånd
+            Building a Foundation:
+              name: Opbygge et fundament
+            Getting Loopy:
+              name: Blive Svimmel
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
             Happy Maps:
               name: Glade Kort
             Move it, Move it:
               name: Flyt det, Flyt det
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
-            Graph Paper Programming:
-              name: Programmering på millimeterpapir
-            Building a Foundation:
-              name: Opbygge et fundament
-            Getting Loopy:
-              name: Blive Svimmel
-            The Big Event:
-              name: Den store begivenhed
-            Binary Bracelets:
-              name: Binære armbånd
             Songwriting:
               name: Sangskrivning
+            The Big Event:
+              name: Den store begivenhed
         ScienceP3OLPT2:
           stages:
+            Welcome!:
+              name: Velkommen!
+            Wrap-Up:
+              name: Konklusion
+          lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
@@ -1222,16 +1211,16 @@ da:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Design opskrift'
           lessons:
+            'Calc: Defining Variables':
+              name: 'Calc: Definere variabler'
             'Calc: Evaluation Blocks':
               name: 'Calc: Evaluering blokke'
             'Eval: Strings and Images':
               name: 'Eval: Strings og Images'
-            'Unplugged: Contracts':
-              name: 'Unplugged: kontrakter'
             'Eval: Writing Contracts':
               name: 'Eval: Skrive kontrakter'
-            'Calc: Defining Variables':
-              name: 'Calc: Definere variabler'
+            'Unplugged: Contracts':
+              name: 'Unplugged: kontrakter'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Design opskrift'
         AlgebraB:
@@ -1262,28 +1251,28 @@ da:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games og Coordinate Planes'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games og Coordinate Planes'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Play Lab: Definere variabler (Big Game)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Play Lab: Animation (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
             'Eval: Boolean Operators':
               name: 'Eval: Boolean Operators'
-            'Play Lab: Booleans':
-              name: 'Play Lab: Boolske operatorer'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Play Lab: Boolean (Big Game)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals og stykvise funktioner'
             'Eval: Conditionals':
               name: 'Eval: Conditionals'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision detection og the Distance Formula'
+            'Play Lab: Animation (Big Game)':
+              name: 'Play Lab: Animation (Big Game)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Play Lab: Boolean (Big Game)'
+            'Play Lab: Booleans':
+              name: 'Play Lab: Boolske operatorer'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Play Lab: Collision Detection (Big Game)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Play Lab: Definere variabler (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Unplugged: Booleans'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Unplugged: Collision detection og the Distance Formula'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Conditionals og stykvise funktioner'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Video Games og Coordinate Planes'
         algebraPD1:
           stages:
             Evaluation Blocks:
@@ -1323,6 +1312,9 @@ da:
         CSDU3-Draft:
           description_short: Programmering
           stages:
+            Functions:
+              name: Funktioner
+          lessons:
             Functions:
               name: Funktioner
         TEMP CSD Unit 3:
@@ -1383,8 +1375,24 @@ da:
               name: Programmering
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
+          lessons:
+            Events:
+              name: Hændelser
+            'Jigsaw: Learn to drag and drop':
+              name: 'Øvelse: Lær at trække og slippe'
+            Loops:
+              name: Løkker
+            Programming:
+              name: Programmering
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'
         grade4:
           stages:
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            Songwriting:
+              name: Sangskrivning
+          lessons:
             Digital Citizenship:
               name: Digital statsborgerskab
             Songwriting:
@@ -1399,8 +1407,38 @@ da:
               name: Løkker
             Programming:
               name: Programmering
+          lessons:
+            Events:
+              name: Hændelser
+            'Jigsaw: Learn to drag and drop':
+              name: 'Øvelse: Lær at trække og slippe'
+            Loops:
+              name: Løkker
+            Programming:
+              name: Programmering
         grade5:
           stages:
+            'Artist: For Loops':
+              name: Kunstner For loops/sløjfer
+            'Artist: Functions with Parameters':
+              name: 'Kunstner: Funktioner med parametre'
+            'Artist: Variables':
+              name: 'Kunstner: variabler'
+            'Bee: For Loops':
+              name: 'Bee: For loops/sløjfer'
+            'Bee: Functions with Parameters':
+              name: 'Bee: Funktioner med parametre'
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            'Play Lab: Variables':
+              name: 'Play Lab: Variable'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Indpakkede variabler'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: For løkke sjov'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Sangskrivning med parametre'
+          lessons:
             'Artist: For Loops':
               name: Kunstner For loops/sløjfer
             'Artist: Functions with Parameters':
@@ -1434,18 +1472,27 @@ da:
             Wrap-up:
               name: Afslutning
           lessons:
-            Welcome!:
-              name: Velkommen!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Velkommen!
             Wrap-up:
               name: Afslutning
         grade3:
           stages:
+            'Artist: Nested Loops':
+              name: 'Kunstner: Indlejrede løkker'
+            Bee Debugging:
+              name: Bi fejlfinding
+            Bounce:
+              name: Hoppe
+            'Farmer: While Loops':
+              name: 'Landmand: Når sløjfer'
+          lessons:
             'Artist: Nested Loops':
               name: 'Kunstner: Indlejrede løkker'
             Bee Debugging:
@@ -1468,14 +1515,23 @@ da:
             Conditionals:
               name: Betingelser
           lessons:
+            Functions:
+              name: Funktioner
             Variables:
               name: Variabler
             Conditionals:
               name: Betingelser
-            Functions:
-              name: Funktioner
         grade2:
           stages:
+            Flappy:
+              name: Flappy
+            Binary Bracelets:
+              name: Binære armbånd
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life algoritmer: Papir fly'
+            The Big Event:
+              name: Den store begivenhed
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -1507,26 +1563,26 @@ da:
             While Loops:
               name: Mens løkker
           lessons:
+            Binary:
+              name: Binære
+            Conditionals:
+              name: Betingelser
             Events:
               name: Hændelser
+            For Loops:
+              name: For Loops
+            Functions:
+              name: Funktioner
+            Functions with Parameters:
+              name: Funktioner med parametre
             Loops:
               name: Løkker
             Nested Loops:
               name: Indlejret Løkker
-            Conditionals:
-              name: Betingelser
-            While Loops:
-              name: Mens løkker
-            Functions:
-              name: Funktioner
             Variables:
               name: Variabler
-            For Loops:
-              name: For Loops
-            Functions with Parameters:
-              name: Funktioner med parametre
-            Binary:
-              name: Binære
+            While Loops:
+              name: Mens løkker
         algebrapdnext:
           stages:
             The Design Recipe:
@@ -1534,10 +1590,10 @@ da:
             Welcome!:
               name: Velkommen!
           lessons:
-            Welcome!:
-              name: Velkommen!
             The Design Recipe:
               name: Design opskrift
+            Welcome!:
+              name: Velkommen!
         csp-online-test:
           lesson_groups:
             required:
@@ -1563,6 +1619,13 @@ da:
         fesbinary:
           title: Binære
           stages:
+            Binary Bracelets:
+              name: Binære armbånd
+            Binary Images:
+              name: Binære billeder
+            Play Lab:
+              name: Play Lab
+          lessons:
             Binary Bracelets:
               name: Binære armbånd
             Binary Images:
@@ -1620,12 +1683,14 @@ da:
             Building a Foundation:
               name: Opbygge et fundament
           lessons:
-            Building a Foundation:
-              name: Opbygge et fundament
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life algoritmer: Papir fly'
             Binary Bracelets:
               name: Binære armbånd
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+            Building a Foundation:
+              name: Opbygge et fundament
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1641,10 +1706,6 @@ da:
             Introduction:
               name: Introduktion
           lessons:
-            Introduction:
-              name: Introduktion
-            Nested Loops:
-              name: Indlejret Løkker
             Conditionals with Cards:
               name: Betingelser med kortspil
             Digital Citizenship:
@@ -1653,6 +1714,10 @@ da:
               name: 'Unplugged: Binære'
             Artist Binary:
               name: Kunstner binære
+            Nested Loops:
+              name: Indlejret Løkker
+            Introduction:
+              name: Introduktion
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1666,14 +1731,16 @@ da:
             Conditionals:
               name: Betingelser
           lessons:
-            Introduction:
-              name: Introduktion
-            Conditionals:
-              name: Betingelser
+            Digital Citizenship:
+              name: Digital statsborgerskab
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Introduction:
+              name: Introduktion
+            Conditionals:
+              name: Betingelser
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1689,20 +1756,25 @@ da:
             Ice Age Play Lab:
               name: Ice Age Play Lab
           lessons:
-            Introduction:
-              name: Introduktion
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
+            Digital Citizenship:
+              name: Digital statsborgerskab
             Envelope Variables:
               name: Omslut variabler
             For Loop Fun:
               name: For loop sjov
             Songwriting with Parameters:
               name: Sangskrivning med parametre
+            Introduction:
+              name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
         classic-hoc-impact-study:
           description_short: Prøv grundlæggende programmering med masser af sjove
             figurer!
           stages:
+            Hour of Code 2013:
+              name: Hour of Code 2013
+          lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         hoc-impact-study:
@@ -1761,6 +1833,11 @@ da:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
+          lessons:
+            Welcome!:
+              name: Velkommen!
+            Wrap-Up:
+              name: Konklusion
         csf2harvey:
           stages:
             Binary:
@@ -1792,6 +1869,10 @@ da:
             Functions with Parameters:
               name: Funktioner med parametre
           lessons:
+            Lists:
+              name: Lister
+            For Loops:
+              name: For Loops
             Functions with Parameters:
               name: Funktioner med parametre
         workshop-gamelab:
@@ -1817,12 +1898,12 @@ da:
             'Real Life Algorithms: Dice Race':
               name: 'Virkelige liv algoritmer: Terning Race'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'Virkelige liv algoritmer: Terning Race'
             Introduction:
               name: Introduktion
             Conditionals:
               name: Betingelser
+            'Real Life Algorithms: Dice Race':
+              name: 'Virkelige liv algoritmer: Terning Race'
         csd6-2017:
           stages:
             Lists:
@@ -1833,8 +1914,24 @@ da:
               name: Funktioner med parametre
             Functions with Parameters_:
               name: Funktioner med parametre
+          lessons:
+            Lists:
+              name: Lister
+            For Loops:
+              name: For Loops
+            Functions with Parameters:
+              name: Funktioner med parametre
+            Functions with Parameters_:
+              name: Funktioner med parametre
         csd3-draft:
           stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+          lessons:
             Variables:
               name: Variabler
             Conditionals:
@@ -1852,8 +1949,20 @@ da:
           stages:
             Lists:
               name: Lister
+          lessons:
+            Lists:
+              name: Lister
         csd3-chapters:
           stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            'null':
+              name: nul
+          lessons:
             Variables:
               name: Variabler
             Conditionals:
@@ -1891,8 +2000,6 @@ da:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
-            Going Places Safely:
-              name: Gå til sikre steder
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1900,36 +2007,20 @@ da:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
-            Your Digital Footprint:
-              name: Dit digitale fodspor
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life algoritmer: Papir fly'
           lessons:
-            Building a Foundation:
-              name: Opbygge et fundament
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life algoritmer: Papir fly'
-            Binary Bracelets:
-              name: Binære armbånd
         coursed-2017:
           stages:
             Nested Loops:
               name: Indlejret Løkker
           lessons:
-            Introduction:
-              name: Introduktion
             Nested Loops:
               name: Indlejret Løkker
-            Conditionals with Cards:
-              name: Betingelser med kortspil
-            Digital Citizenship:
-              name: Digital statsborgerskab
-            'Unplugged: Binary':
-              name: 'Unplugged: Binære'
-            Artist Binary:
-              name: Kunstner binære
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1945,27 +2036,6 @@ da:
             Nested Loops:
               name: Indlejret Løkker
           lessons:
-            Building a Foundation:
-              name: Opbygge et fundament
-            Nested Loops:
-              name: Indlejret Løkker
-            Introduction:
-              name: Introduktion
-            Conditionals:
-              name: Betingelser
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Opbygge et fundament
-          lessons:
-            Building a Foundation:
-              name: Opbygge et fundament
-            Introduction:
-              name: Introduktion
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Envelope Variables:
@@ -1974,6 +2044,17 @@ da:
               name: For loop sjov
             Songwriting with Parameters:
               name: Sangskrivning med parametre
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+        coursef-2017:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+          lessons:
+            Building a Foundation:
+              name: Opbygge et fundament
         cspnovice:
           lesson_groups:
             required:
@@ -2045,6 +2126,18 @@ da:
           lessons:
             Introduction:
               name: Introduktion
+            Internet:
+              name: Internet
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Songwriting with Parameters:
+              name: Sangskrivning med parametre
             Building a Foundation:
               name: Opbygge et fundament
             Nested Loops:
@@ -2062,6 +2155,9 @@ da:
               name: Stave-bien
         subgoal-labels-opt-in:
           stages:
+            Thanks:
+              name: Tak
+          lessons:
             Thanks:
               name: Tak
         csp3-research-mxghyt:
@@ -2087,6 +2183,8 @@ da:
           lessons:
             Building a Foundation:
               name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
             Conditionals:
               name: Betingelser
             Internet:
@@ -2112,8 +2210,8 @@ da:
           lessons:
             Introduction:
               name: Introduktion
-            Building a Foundation:
-              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
             Conditionals with Cards:
               name: Betingelser med kortspil
             Digital Citizenship:
@@ -2122,6 +2220,8 @@ da:
               name: 'Unplugged: Binære'
             Artist Binary:
               name: Kunstner binære
+            Building a Foundation:
+              name: Opbygge et fundament
         new-express:
           stages:
             Introduction:
@@ -2313,8 +2413,8 @@ da:
             Going Places Safely:
               name: Gå til sikre steder
           lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life algoritmer: Plante et frø'
+            'Programming: Happy Maps':
+              name: Glade Kort
             Going Places Safely:
               name: Gå til sikre steder
         express-2018:
@@ -2354,12 +2454,22 @@ da:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
           lessons:
-            Graph Paper Programming:
+            'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
-            Relay Programming:
-              name: Stafet-programmering
+            Introduction:
+              name: Introduktion
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+            'Events: The Big Event':
+              name: Den store begivenhed
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
             Conditionals with Cards:
               name: Betingelser med kortspil
+            'Functions: Songwriting':
+              name: Sangskrivning
             Envelope Variables:
               name: Omslut variabler
             For Loop Fun:
@@ -2367,13 +2477,17 @@ da:
             Binary Bracelets:
               name: Binære armbånd
             'Unplugged: Binary':
-              name: 'Unplugged: Binære'
+              name: Binære billeder
             Artist Binary:
               name: Kunstner binære
             Internet:
-              name: Internet
+              name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
+            Relay Programming:
+              name: Stafet-programmering
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2383,10 +2497,12 @@ da:
             Move It, Move It:
               name: Flyt det, flyt det
           lessons:
-            Move It, Move It:
-              name: Flyt det, flyt det
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'
             Your Digital Footprint:
               name: Dit digitale fodspor
+            Move It, Move It:
+              name: Flyt det, flyt det
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2408,16 +2524,24 @@ da:
             Relay Programming:
               name: Stafet-programmering
           lessons:
-            Relay Programming:
-              name: Stafet-programmering
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+            Introduction:
+              name: Introduktion
+            Building a Foundation:
+              name: Opbygge et fundament
             Conditionals with Cards:
               name: Betingelser med kortspil
             Digital Citizenship:
               name: Digital statsborgerskab
             'Unplugged: Binary':
-              name: 'Unplugged: Binære'
+              name: Binære billeder
             Artist Binary:
               name: Kunstner binære
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Stafet-programmering
         coursec-2018:
           stages:
             Building a Foundation:
@@ -2431,8 +2555,10 @@ da:
           lessons:
             Building a Foundation:
               name: Opbygge et fundament
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life algoritmer: Papir fly'
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
+            'Events: The Big Event':
+              name: Den store begivenhed
             Binary Bracelets:
               name: Binære armbånd
         csd6-2018:
@@ -2461,18 +2587,22 @@ da:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           lessons:
+            'Programming: My Robotic Friends':
+              name: Mine robot venner
             Building a Foundation:
               name: Opbygge et fundament
-            Nested Loops:
-              name: Indlejret Løkker
-            Conditionals with Cards:
-              name: Betingelser med kortspil
-            Conditionals:
-              name: Betingelser
+            Introduction:
+              name: Introduktion
+            'Functions: Songwriting':
+              name: Sangskrivning
             Internet:
-              name: Internet
+              name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2492,14 +2622,22 @@ da:
             Conditionals with Cards:
               name: Betingelser med kortspil
           lessons:
+            'Programming: My Robotic Friends':
+              name: Mine robot venner
             Building a Foundation:
               name: Opbygge et fundament
-            Conditionals with Cards:
-              name: Betingelser med kortspil
+            Introduction:
+              name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Envelope Variables:
               name: Omslut variabler
             For Loop Fun:
               name: For loop sjov
+            Songwriting with Parameters:
+              name: Sangskrivning med parametre
+            Conditionals with Cards:
+              name: Betingelser med kortspil
         csp1-2018:
           stages:
             The Internet:
@@ -2608,12 +2746,14 @@ da:
             Your Digital Footprint:
               name: Dit digitale fodspor
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'
+            Spelling Bee:
+              name: Stave-bien
             Move It, Move It:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
-            Spelling Bee:
-              name: Stave-bien
         fit-test:
           lesson_groups:
             required:
@@ -2664,8 +2804,14 @@ da:
           stages:
             Dance Party:
               name: Dance Party
+          lessons:
+            Dance Party:
+              name: Dance Party
         dance-draft:
           stages:
+            Dance Party:
+              name: Dance Party
+          lessons:
             Dance Party:
               name: Dance Party
         cspplayground:
@@ -2704,16 +2850,25 @@ da:
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Conditionals with Cards:
+              name: Betingelser med kortspil
             Envelope Variables:
               name: Omslut variabler
             For Loop Fun:
               name: For loop sjov
+            The Artist:
+              name: Kunstneren
             Internet:
-              name: Internet
+              name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
           stages:
+            Dance Party:
+              name: Dance Party
+          lessons:
             Dance Party:
               name: Dance Party
         coursed-2019:
@@ -2744,16 +2899,18 @@ da:
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
             Relay Programming:
               name: Stafet-programmering
             Conditionals with Cards:
               name: Betingelser med kortspil
-            'Unplugged: Binary':
-              name: 'Unplugged: Binære'
-            Artist Binary:
-              name: Kunstner binære
             Digital Citizenship:
               name: Digital statsborgerskab
+            'Unplugged: Binary':
+              name: Binære billeder
+            Artist Binary:
+              name: Kunstner binære
             Dance Party:
               name: Dance Party
         coursee-2019:
@@ -2780,8 +2937,20 @@ da:
             csf_functions:
               display_name: Funktioner
           lessons:
-            Conditionals:
-              name: Betingelser
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            'Functions: Songwriting':
+              name: Sangskrivning
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Songwriting:
+              name: Sangskrivning
         express-2019:
           stages:
             Relay Programming:
@@ -2816,6 +2985,24 @@ da:
             csf_for_loops:
               display_name: For Loops
           lessons:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Binary Bracelets:
+              name: Binære armbånd
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Dance Party:
               name: Dance Party
         andrea-test:
@@ -2825,6 +3012,9 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+          lessons:
+            'null':
+              name: nul
         dance-extras-gallery:
           title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
@@ -2846,6 +3036,10 @@ da:
             csf_events:
               display_name: Hændelser
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life algoritmer: Papir fly'
+            'Events: The Big Event':
+              name: Den store begivenhed
             Binary Bracelets:
               name: Binære armbånd
         gamelab:
@@ -2864,6 +3058,8 @@ da:
             csf_events:
               display_name: Hændelser
           lessons:
+            'Programming: Happy Maps':
+              name: Glade Kort
             Going Places Safely:
               name: Gå til sikre steder
         courseb-2019:
@@ -2882,10 +3078,12 @@ da:
             csf_events:
               display_name: Hændelser
           lessons:
-            Your Digital Footprint:
-              name: Dit digitale fodspor
             Move It, Move It:
               name: Flyt det, flyt det
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2900,6 +3098,10 @@ da:
             csf_events:
               display_name: Hændelser
           lessons:
+            Move It, Move It:
+              name: Flyt det, flyt det
+            Your Digital Footprint:
+              name: Dit digitale fodspor
             Spelling Bee:
               name: Stave-bien
         removed19:
@@ -2952,6 +3154,9 @@ da:
               display_name: Funktioner
             required:
               display_name: Oversigt
+          lessons:
+            Surveys:
+              name: Undersøgelser
         csp1-2019:
           stages:
             The Internet:
@@ -2994,12 +3199,12 @@ da:
             Building a Foundation:
               name: Opbygge et fundament
           lessons:
-            Building a Foundation:
-              name: Opbygge et fundament
             Crowdsourcing:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Betingelser med kortspil
+            Building a Foundation:
+              name: Opbygge et fundament
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3066,6 +3271,9 @@ da:
           stages:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
+          lessons:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -3084,6 +3292,9 @@ da:
               display_name: Oversigt
         csd2-pilot:
           stages:
+            Lists:
+              name: Lister
+          lessons:
             Lists:
               name: Lister
         csd3-pilot:
@@ -3198,18 +3409,18 @@ da:
           lessons:
             Loops:
               name: Løkker
-            Events:
-              name: Hændelser
             Conditionals:
               name: Betingelser
+            Events:
+              name: Hændelser
             Functions:
               name: Funktioner
+            Sprite Lab:
+              name: SpriteLab
             Variables:
               name: Variabler
             For Loops:
               name: For Loops
-            Sprite Lab:
-              name: SpriteLab
         dance-extras-2019:
           description: Overskrid den første time med udvidede projektideer.
         csp4-preview:
@@ -3222,6 +3433,9 @@ da:
               display_name: Funktioner
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: Betingelser
+          lessons:
             Conditionals:
               name: Betingelser
         time4cs-control-unit-2:
@@ -3315,12 +3529,12 @@ da:
           lessons:
             Variables:
               name: Variabler
-            Text:
-              name: Tekst
             Conditionals:
               name: Betingelser
             Functions:
               name: Funktioner
+            Text:
+              name: Tekst
         coursea-2020:
           stages:
             Going Places Safely:
@@ -3334,6 +3548,11 @@ da:
               display_name: Løkker
             csf_events:
               display_name: Hændelser
+          lessons:
+            Going Places Safely:
+              name: Gå til sikre steder
+            'Programming: Happy Maps':
+              name: Glade Kort
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -3350,8 +3569,12 @@ da:
             csf_events:
               display_name: Hændelser
           lessons:
+            Your Digital Footprint:
+              name: Dit digitale fodspor
             Move It, Move It:
               name: Flyt det, flyt det
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -3370,6 +3593,8 @@ da:
           lessons:
             Binary Bracelets:
               name: Binære armbånd
+            'Events: The Big Event':
+              name: Den store begivenhed
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3398,16 +3623,20 @@ da:
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
             Relay Programming:
               name: Stafet-programmering
-            Dance Party:
-              name: Dance Party
             Conditionals with Cards:
               name: Betingelser med kortspil
             'Unplugged: Binary':
-              name: 'Unplugged: Binære'
+              name: Binære billeder
             Artist Binary:
               name: Kunstner binære
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            Dance Party:
+              name: Dance Party
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -3420,8 +3649,8 @@ da:
             csf_functions:
               display_name: Funktioner
           lessons:
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Sangskrivning
         coursef-2020:
           stages:
             Envelope Variables:
@@ -3442,10 +3671,12 @@ da:
           lessons:
             Envelope Variables:
               name: Omslut variabler
-            Internet:
-              name: Internet
             For Loop Fun:
               name: For loop sjov
+            Internet:
+              name: Internettet
+            Crowdsourcing:
+              name: Crowdsourcing
         express-2020:
           stages:
             Dance Party:
@@ -3484,20 +3715,6 @@ da:
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
-        csd3-virtual:
-          description_short: Programmering
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
-          lessons:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
         csp5-virtual:
           stages:
             While Loops:
@@ -3505,6 +3722,8 @@ da:
             Variables:
               name: Variabler
           lessons:
+            While Loops:
+              name: Mens løkker
             Variables:
               name: Variabler
         virtual-holding-place:
@@ -3520,6 +3739,11 @@ da:
               name: Algoritmer
             Events:
               name: Hændelser
+          lessons:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hændelser
         csp5-virtual-part2:
           stages:
             While Loops:
@@ -3527,3 +3751,54 @@ da:
           lessons:
             While Loops:
               name: Mens løkker
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+            Sprite Lab:
+              name: SpriteLab
+        csd3-virtual:
+          description_short: Programmering
+          stages:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+          lessons:
+            Variables:
+              name: Variabler
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner

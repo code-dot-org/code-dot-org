@@ -55,40 +55,42 @@ fa:
             The Big Event:
               name: رویداد بزرگ
           lessons:
-            Happy Maps:
-              name: نقشه های شاد
-            Move it, Move it:
-              name: تکانش بده، تکانش بده
-            'Jigsaw: Learn to drag and drop':
-              name: 'پازل: یاد بگیر که بکشی و رها کنی'
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
-            'Maze: Debugging':
-              name: 'هزارتو: اشکال زدایی'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            'Bee: Sequence':
-              name: 'زنبور عسل: دنباله'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            Building a Foundation:
-              name: ساختن بنیان
-            'Artist: Shapes':
-              name: 'هنرمند: شکل ها'
-            Spelling Bee:
-              name: زنبور عسل هجی کن
-            Getting Loopy:
-              name: سر گیجه گرفتن
-            'Maze: Loops':
-              name: 'هزارتو: حلقه ها'
-            'Bee: Loops':
-              name: 'زنبور عسل: حلقه ها'
-            The Big Event:
-              name: رویداد بزرگ
-            Going Places Safely:
-              name: با خیال راحت سفرکردن
             'Artist: Loops':
               name: 'هنرمند: حلقه ها'
+            'Artist: Sequence':
+              name: 'هنرمند: دنباله'
+            'Artist: Shapes':
+              name: 'هنرمند: شکل ها'
+            'Bee: Loops':
+              name: 'زنبور عسل: حلقه ها'
+            'Bee: Sequence':
+              name: 'زنبور عسل: دنباله'
+            Building a Foundation:
+              name: ساختن بنیان
+            Getting Loopy:
+              name: سر گیجه گرفتن
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+            Happy Maps:
+              name: نقشه های شاد
+            'Jigsaw: Learn to drag and drop':
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
+            'Maze: Debugging':
+              name: 'هزارتو: اشکال زدایی'
+            'Maze: Loops':
+              name: 'هزارتو: حلقه ها'
+            'Maze: Sequence':
+              name: 'هزارتو: دنباله'
+            Move it, Move it:
+              name: تکانش بده، تکانش بده
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+            'Studio: Create a Story':
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
+            The Big Event:
+              name: رویداد بزرگ
         course2:
           title: دوره 2
           description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه
@@ -137,42 +139,44 @@ fa:
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
           lessons:
-            Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ رسم شطرنجی
-            'Real-life Algorithms: Paper Planes':
-              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            Getting Loopy:
-              name: سر گیجه گرفتن
-            'Maze: Loops':
-              name: 'هزارتو: حلقه ها'
-            'Artist: Loops':
-              name: 'هنرمند: حلقه ها'
-            'Bee: Loops':
-              name: 'زنبور عسل: حلقه ها'
-            Relay programming:
-              name: برنامه نویسی دست به دست
-            'Bee: Debugging':
-              name: 'زنبور عسل: اشکال زدایی'
             'Artist: Debugging':
               name: 'هنرمند: اشکال زدایی'
-            Conditionals:
-              name: شرطی ها
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
-            Binary Bracelets:
-              name: دستبند دودویی
-            The Big Event:
-              name: رویداد بزرگ
-            Flappy:
-              name: فلاپی
-            Your Digital Footprint:
-              name: ردپای دیجیتالی شما
+            'Artist: Loops':
+              name: 'هنرمند: حلقه ها'
             'Artist: Nested Loops':
               name: 'هنرمند: حلقه های تو در تو'
+            'Artist: Sequence':
+              name: 'هنرمند: دنباله'
+            'Bee: Conditionals':
+              name: 'زنبور عسل: شرطی ها'
+            'Bee: Debugging':
+              name: 'زنبور عسل: اشکال زدایی'
+            'Bee: Loops':
+              name: 'زنبور عسل: حلقه ها'
+            Binary Bracelets:
+              name: دستبند دودویی
+            Conditionals:
+              name: شرطی ها
+            Flappy:
+              name: فلاپی
+            Getting Loopy:
+              name: سر گیجه گرفتن
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            'Maze: Loops':
+              name: 'هزارتو: حلقه ها'
+            'Maze: Sequence':
+              name: 'هزارتو: دنباله'
+            'Real-life Algorithms: Paper Planes':
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            Relay programming:
+              name: برنامه نویسی دست به دست
+            'Studio: Create a Story':
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
+            The Big Event:
+              name: رویداد بزرگ
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
         course3:
           title: دورۀ 3
           description_short: دوره 3 ادامه دوره 2 است.
@@ -221,44 +225,48 @@ fa:
             'Studio: Create a Story':
               name: 'آزمایشگاه بازی: یک داستان بنویس'
           lessons:
-            Computational Thinking:
-              name: تفکر محاسباتی
-            Maze:
-              name: پیچ و خم
             Artist:
               name: هنرمند
-            Functional Suncatchers:
-              name: نورگیرهای کاربردی
             'Artist: Functions':
               name: 'هنرمند: توابع'
-            'Bee: Functions':
-              name: 'زنبور عسل: توابع'
+            'Artist: Nested Loops':
+              name: 'هنرمند: حلقه های تو در تو'
+            'Artist: Patterns':
+              name: 'هنرمند: الگوها'
             'Bee: Conditionals':
               name: 'زنبور عسل: شرطی ها'
+            'Bee: Debugging':
+              name: 'زنبور عسل: اشکال زدایی'
+            'Bee: Functions':
+              name: 'زنبور عسل: توابع'
+            'Bee: Nested Loops':
+              name: 'زنبور عسل: حلقه های تو در تو'
+            Bounce:
+              name: پریدن
+            Computational Thinking:
+              name: تفکر محاسباتی
+            Crowdsourcing:
+              name: کمک گیری جمعی
+            Dice Race:
+              name: مسابقۀ تاس انداختن
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            'Farmer: While Loops':
+              name: 'کشاورز: حلقه‌های "در حالیکه"'
+            Functional Suncatchers:
+              name: نورگیرهای کاربردی
+            Internet:
+              name: اینترنت
+            Maze:
+              name: پیچ و خم
             'Maze: Conditionals':
               name: 'هزارتو: شرطی ها'
             Songwriting:
               name: ترانه سرایی
-            Dice Race:
-              name: مسابقۀ تاس انداختن
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
-            'Farmer: While Loops':
-              name: 'کشاورز: حلقه‌های "در حالیکه"'
-            'Bee: Nested Loops':
-              name: 'زنبور عسل: حلقه های تو در تو'
-            'Bee: Debugging':
-              name: 'زنبور عسل: اشکال زدایی'
-            Bounce:
-              name: پریدن
-            Internet:
-              name: اینترنت
-            Crowdsourcing:
-              name: کمک گیری جمعی
-            Digital Citizenship:
-              name: شهروندی دیجیتالی
-            'Artist: Patterns':
-              name: 'هنرمند: الگوها'
+            'Studio: Create a Game':
+              name: 'آزمایشگاه بازی: یک بازی بساز'
+            'Studio: Create a Story':
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
         playlab:
           title: آزمایشگاه بازی
           description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
@@ -356,50 +364,50 @@ fa:
             'Unplugged: Tangrams':
               name: 'بدون دستگاه: تنگرام'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'بدون دستگاه: تنگرام'
-            Maze and Bee:
-              name: هزارتو و زنبور عسل
             Artist:
               name: هنرمند
-            'Unplugged: Envelope Variables':
-              name: 'بدون دستگاه: متغیرهای پاکت'
-            'Unplugged: Madlibs':
-              name: 'بدون دستگاه: جای خالی را پُرکن'
-            'Artist: Variables':
-              name: 'هنرمند: متغیرها'
-            'Play Lab: Variables':
-              name: 'آزمایشگاه بازی: متغیرها'
-            'Unplugged: For Loop Fun':
-              name: 'بدون دستگاه: بازی حلقه های "برای"'
-            'Bee: For Loops':
-              name: 'زنبور عسل: برای حلقه ها'
-            'Artist: For Loops':
-              name: 'هنرمند: برای حلقه ها'
-            'Play Lab: For Loops':
-              name: 'آزمایشگاه بازی: برای حلقه ها'
-            'Artist: Functions':
-              name: 'هنرمند: توابع'
-            'Unplugged: Songwriting with Parameters':
-              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
-            'Artist: Functions with Parameters':
-              name: 'هنرمند: توابع با پارامترها'
-            'Play Lab: Functions with Parameters':
-              name: 'آزمایشگاه بازی: توابع با پارامترها'
-            'Bee: Functions with Parameters':
-              name: 'زنبور عسل: توابع با پارامترها'
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
             Artist Binary:
               name: دودویی هنرمند
-            Super Challenge - Variables:
-              name: چالش های فوق العاده - متغیر
+            'Artist: For Loops':
+              name: 'هنرمند: برای حلقه ها'
+            'Artist: Functions':
+              name: 'هنرمند: توابع'
+            'Artist: Functions with Parameters':
+              name: 'هنرمند: توابع با پارامترها'
+            'Artist: Variables':
+              name: 'هنرمند: متغیرها'
+            'Bee: For Loops':
+              name: 'زنبور عسل: برای حلقه ها'
+            'Bee: Functions with Parameters':
+              name: 'زنبور عسل: توابع با پارامترها'
+            Extreme Challenge - Comprehensive:
+              name: چالش شدید - جامع
+            Maze and Bee:
+              name: هزارتو و زنبور عسل
+            'Play Lab: For Loops':
+              name: 'آزمایشگاه بازی: برای حلقه ها'
+            'Play Lab: Functions with Parameters':
+              name: 'آزمایشگاه بازی: توابع با پارامترها'
+            'Play Lab: Variables':
+              name: 'آزمایشگاه بازی: متغیرها'
             Super Challenge - For Loops:
               name: چالش های فوق العاده - به صورت حلقه
             Super Challenge - Functions and Parameters:
               name: چالش فوق العاده - توابع و پارامترها
-            Extreme Challenge - Comprehensive:
-              name: چالش شدید - جامع
+            Super Challenge - Variables:
+              name: چالش های فوق العاده - متغیر
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            'Unplugged: Envelope Variables':
+              name: 'بدون دستگاه: متغیرهای پاکت'
+            'Unplugged: For Loop Fun':
+              name: 'بدون دستگاه: بازی حلقه های "برای"'
+            'Unplugged: Madlibs':
+              name: 'بدون دستگاه: جای خالی را پُرکن'
+            'Unplugged: Songwriting with Parameters':
+              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
+            'Unplugged: Tangrams':
+              name: 'بدون دستگاه: تنگرام'
         Course4pre:
           title: پیش نیاز دوره 4
           description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2
@@ -426,24 +434,24 @@ fa:
             'Maze: Sequence':
               name: 'هزارتو: دنباله'
           lessons:
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            'Artist: Loops':
-              name: 'هنرمند: حلقه ها'
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
-            'Farmer: While Loops':
-              name: 'کشاورز: حلقه‌های "در حالیکه"'
-            'Bee: Nested Loops':
-              name: 'زنبور عسل: حلقه های تو در تو'
             'Artist: Functions':
               name: 'هنرمند: توابع'
+            'Artist: Loops':
+              name: 'هنرمند: حلقه ها'
+            'Artist: Nested Loops':
+              name: 'هنرمند: حلقه های تو در تو'
+            'Artist: Sequence':
+              name: 'هنرمند: دنباله'
+            'Bee: Conditionals':
+              name: 'زنبور عسل: شرطی ها'
             'Bee: Debugging':
               name: 'زنبور عسل: اشکال زدایی'
+            'Bee: Nested Loops':
+              name: 'زنبور عسل: حلقه های تو در تو'
+            'Farmer: While Loops':
+              name: 'کشاورز: حلقه‌های "در حالیکه"'
+            'Maze: Sequence':
+              name: 'هزارتو: دنباله'
         usability:
           title: امتحان قابل استفاده بودن
           description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
@@ -459,16 +467,16 @@ fa:
             Variables:
               name: متغیرها
           lessons:
-            Intro:
-              name: مقدمه
-            Variables:
-              name: متغیرها
+            Binary:
+              name: دو دویی
             For Loops:
               name: حلقه های "برای"
             Functions and Functions with Parameters:
               name: توابع و توابع با پارامترها
-            Binary:
-              name: دو دویی
+            Intro:
+              name: مقدمه
+            Variables:
+              name: متغیرها
         algebra:
           title: علوم کامپیوتر در جبر
           description: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -485,40 +493,16 @@ fa:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
-            'Calc: Evaluation Blocks':
-              name: 'حساب: ارزیابی بلوکها'
+            'Eval: Conditionals':
+              name: شرطی ها
             'Eval: Strings and Images':
-              name: 'ارزیابی: رشته ها و تصاویر'
-            'Unplugged: Contracts':
-              name: 'بدون دستگاه: قراردادها'
-            'Eval: Writing Contracts':
-              name: 'ارزبابی: نوشتن قراردادها'
-            'Calc: Defining Variables':
-              name: 'حساب: تعریف متغیرها'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
-            'Unplugged: The Design Recipe':
-              name: 'بدون دستگاه: دستور العمل طرح'
-            'Play Lab: Animation (Big Game)':
-              name: 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
-            'Unplugged: Booleans':
-              name: 'بدون دستگاه: بولی ها'
-            'Eval: Boolean Operators':
-              name: 'ارزیابی: عملگرهای بولی'
-            'Play Lab: Booleans':
-              name: 'آزمایشگاه بازی: بولی'
-            'Play Lab: Boolean (Big Game)':
-              name: 'آزمایشگاه بازی: بولی (بازی بزرگ)'
+              name: رشته ها و تصاویر
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
-            'Eval: Conditionals':
-              name: 'ارزیابی: شرطی ها'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
+            'Unplugged: The Design Recipe':
+              name: 'بدون دستگاه: دستور العمل طرح'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
         infinity:
           title: آزمایشگاه بازی بی نهایت دیزنی
           description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
@@ -549,18 +533,21 @@ fa:
             The Design Recipe:
               name: دستور العمل طراحی
           lessons:
+            Defining Simple Functions:
+              name: تعریف توابع ساده
+            Defining Variables:
+              name: تعریف متغیرها
             Evaluation Blocks:
               name: بلوک های ارزیابی
             Making Pictures:
               name: ساخت تصاویر
-            Defining Variables:
-              name: تعریف متغیرها
-            Defining Simple Functions:
-              name: تعریف توابع ساده
             The Design Recipe:
               name: دستور العمل طراحی
         K5PD:
           stages:
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
+          lessons:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
         netsim:
@@ -613,44 +600,44 @@ fa:
             Wrap-up:
               name: خلاصه
           lessons:
-            Introduction to Computer Science:
-              name: آشنایی با علوم کامپیوتر
-            The Maze:
-              name: مارپیچ
-            Computational Thinking:
-              name: تفکر محاسباتی
-            Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ رسم شطرنجی
-            The Artist:
-              name: هنرمند
-            Algorithms:
-              name: الگوریتم ها
-            The Artist 2:
-              name: هنرمند 2
-            Functions:
-              name: توابع
-            The Farmer:
-              name: کشاورز
-            Conditionals:
-              name: شرطی ها
-            The Artist 3:
-              name: هنرمند 3
-            Song Writing:
-              name: آهنگ سازی
-            The Farmer 2:
-              name: کشاورز 2
             Abstraction:
               name: انتزاع
-            The Artist 4:
-              name: هنرمند 4
+            Algorithms:
+              name: الگوریتم ها
+            Computational Thinking:
+              name: تفکر محاسباتی
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Introduction to Computer Science:
+              name: آشنایی با علوم کامپیوتر
             Relay Programming:
               name: برنامه نویسی دست به دست
+            Song Writing:
+              name: آهنگ سازی
+            The Artist:
+              name: هنرمند
+            The Artist 2:
+              name: هنرمند 2
+            The Artist 3:
+              name: هنرمند 3
+            The Artist 4:
+              name: هنرمند 4
+            The Artist 5:
+              name: هنرمند 5
+            The Farmer:
+              name: کشاورز
+            The Farmer 2:
+              name: کشاورز 2
             The Farmer 3:
               name: کشاورز 3
             The Internet:
               name: اینترنت
-            The Artist 5:
-              name: هنرمند 5
+            The Maze:
+              name: مارپیچ
             Wrap-up:
               name: خلاصه
         edit-code:
@@ -665,12 +652,12 @@ fa:
             The Maze:
               name: مارپیچ
           lessons:
-            The Maze:
-              name: مارپیچ
-            The Artist:
-              name: هنرمند
             Play Lab:
               name: آزمایشگاه بازی
+            The Artist:
+              name: هنرمند
+            The Maze:
+              name: مارپیچ
         events:
           title: رویدادها
           description: رویدادها
@@ -735,10 +722,10 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
           lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
             Evaluation Blocks:
               name: بلوک های ارزیابی
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
         algPDmiami:
           stages:
             Booleans:
@@ -748,12 +735,12 @@ fa:
             Strings and Images:
               name: رشته ها و تصاویر
           lessons:
+            Booleans:
+              name: بولی ها
             Evaluation Blocks:
               name: بلوک های ارزیابی
             Strings and Images:
               name: رشته ها و تصاویر
-            Booleans:
-              name: بولی ها
         CSPPD:
           stages:
             Introduction to PD:
@@ -846,10 +833,10 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
           lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
             Evaluation Blocks:
               name: بلوک های ارزیابی
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
         algebraPD-iZone:
           stages:
             Evaluation Blocks:
@@ -857,10 +844,10 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
           lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
             Evaluation Blocks:
               name: بلوک های ارزیابی
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
         sciencePD-NexTech:
           stages:
             Introduction to PD:
@@ -913,18 +900,18 @@ fa:
             The Design Recipe:
               name: دستور العمل طراحی
           lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Strings and Images:
-              name: رشته ها و تصاویر
-            Defining Variables:
-              name: تعریف متغیرها
-            The Design Recipe:
-              name: دستور العمل طراحی
             Booleans:
               name: بولی ها
+            Defining Variables:
+              name: تعریف متغیرها
+            Evaluation Blocks:
+              name: بلوک های ارزیابی
             Free Play:
               name: بازی رایگان
+            Strings and Images:
+              name: رشته ها و تصاویر
+            The Design Recipe:
+              name: دستور العمل طراحی
         allthethings:
           stages:
             Artist:
@@ -948,26 +935,26 @@ fa:
             Studio:
               name: استودیو
           lessons:
-            Jigsaw:
-              name: جورچین
-            Maze:
-              name: پیچ و خم
             Artist:
               name: هنرمند
             Bee:
               name: زنبور عسل
-            Flappy:
-              name: فلاپی
             Bounce:
               name: پریدن
-            Multi:
-              name: چند
+            Flappy:
+              name: فلاپی
+            Jigsaw:
+              name: جورچین
             Match:
               name: مسابقه
-            Studio:
-              name: استودیو
+            Maze:
+              name: پیچ و خم
             Minecraft:
               name: ماینکرفت
+            Multi:
+              name: چند
+            Studio:
+              name: استودیو
         algebraPD2b:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -985,18 +972,18 @@ fa:
             Strings and Images:
               name: رشته ها و تصاویر
           lessons:
+            Booleans:
+              name: بولی ها
+            Defining Functions:
+              name: تعریف توابع
+            Defining Variables:
+              name: تعریف متغیرها
+            'Eval: Conditionals':
+              name: 'ارزیابی: شرطی ها'
             Evaluation Blocks:
               name: بلوک های ارزیابی
             Strings and Images:
               name: رشته ها و تصاویر
-            Defining Variables:
-              name: تعریف متغیرها
-            Defining Functions:
-              name: تعریف توابع
-            Booleans:
-              name: بولی ها
-            'Eval: Conditionals':
-              name: 'ارزیابی: شرطی ها'
         cspfacilitator:
           stages:
             App Lab:
@@ -1006,12 +993,12 @@ fa:
             Welcome!:
               name: خوش آمدی!
           lessons:
-            Welcome!:
-              name: خوش آمدی!
-            Internet Simulator:
-              name: شبیه ساز اینترنت
             App Lab:
               name: آزمایشگاه نرم افزار
+            Internet Simulator:
+              name: شبیه ساز اینترنت
+            Welcome!:
+              name: خوش آمدی!
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
@@ -1034,14 +1021,14 @@ fa:
             Wrap-up:
               name: خلاصه
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
         algebraPD2:
@@ -1053,10 +1040,10 @@ fa:
             Welcome!:
               name: خوش آمدی!
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             The Design Recipe:
               name: دستور العمل طراحی
+            Welcome!:
+              name: خوش آمدی!
         sciencePD2b:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -1111,14 +1098,14 @@ fa:
             Wrap-up:
               name: خلاصه
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
         ECSPD2-NexTech:
@@ -1136,14 +1123,14 @@ fa:
             Wrap-up:
               name: خلاصه
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
         asUnplugged:
@@ -1167,26 +1154,31 @@ fa:
             The Big Event:
               name: رویداد بزرگ
           lessons:
+            Binary Bracelets:
+              name: دستبند دودویی
+            Building a Foundation:
+              name: ساختن بنیان
+            Getting Loopy:
+              name: سر گیجه گرفتن
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Happy Maps:
               name: نقشه های شاد
             Move it, Move it:
               name: تکانش بده، تکانش بده
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ رسم شطرنجی
-            Building a Foundation:
-              name: ساختن بنیان
-            Getting Loopy:
-              name: سر گیجه گرفتن
-            The Big Event:
-              name: رویداد بزرگ
-            Binary Bracelets:
-              name: دستبند دودویی
             Songwriting:
               name: ترانه سرایی
+            The Big Event:
+              name: رویداد بزرگ
         ScienceP3OLPT2:
           stages:
+            Welcome!:
+              name: خوش آمدی!
+            Wrap-Up:
+              name: جمع و جور کن
+          lessons:
             Welcome!:
               name: خوش آمدی!
             Wrap-Up:
@@ -1279,16 +1271,16 @@ fa:
             'Unplugged: The Design Recipe':
               name: 'بدون دستگاه: دستور العمل طرح'
           lessons:
+            'Calc: Defining Variables':
+              name: 'حساب: تعریف متغیرها'
             'Calc: Evaluation Blocks':
               name: 'حساب: ارزیابی بلوکها'
             'Eval: Strings and Images':
               name: 'ارزیابی: رشته ها و تصاویر'
-            'Unplugged: Contracts':
-              name: 'بدون دستگاه: قراردادها'
             'Eval: Writing Contracts':
               name: 'ارزبابی: نوشتن قراردادها'
-            'Calc: Defining Variables':
-              name: 'حساب: تعریف متغیرها'
+            'Unplugged: Contracts':
+              name: 'بدون دستگاه: قراردادها'
             'Unplugged: The Design Recipe':
               name: 'بدون دستگاه: دستور العمل طرح'
         AlgebraB:
@@ -1319,28 +1311,28 @@ fa:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
-            'Play Lab: Animation (Big Game)':
-              name: 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
-            'Unplugged: Booleans':
-              name: 'بدون دستگاه: بولی ها'
             'Eval: Boolean Operators':
               name: 'ارزیابی: عملگرهای بولی'
-            'Play Lab: Booleans':
-              name: 'آزمایشگاه بازی: بولی'
-            'Play Lab: Boolean (Big Game)':
-              name: 'آزمایشگاه بازی: بولی (بازی بزرگ)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
             'Eval: Conditionals':
               name: 'ارزیابی: شرطی ها'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
+            'Play Lab: Animation (Big Game)':
+              name: 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'آزمایشگاه بازی: بولی (بازی بزرگ)'
+            'Play Lab: Booleans':
+              name: 'آزمایشگاه بازی: بولی'
             'Play Lab: Collision Detection (Big Game)':
               name: 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
+            'Unplugged: Booleans':
+              name: 'بدون دستگاه: بولی ها'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
         algebraPD1:
           title: CS در جبر قسمت 1
           stages:
@@ -1349,10 +1341,10 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
           lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
             Evaluation Blocks:
               name: بلوک های ارزیابی
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
         csp1-2017:
           stages:
             The Internet:
@@ -1380,6 +1372,9 @@ fa:
           stages:
             Functions:
               name: توابع
+          lessons:
+            Functions:
+              name: توابع
         2016_sciencePD_phase1:
           stages:
             Introduction to PD:
@@ -1398,10 +1393,10 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
           lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
             Evaluation Blocks:
               name: بلوک های ارزیابی
+            Introduction to PD:
+              name: آشنايي با پیشرفت حرفه ای
         sciencePD1:
           stages:
             Introduction to PD:
@@ -1456,8 +1451,24 @@ fa:
               name: برنامه نویسی
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+          lessons:
+            Events:
+              name: رویدادها
+            'Jigsaw: Learn to drag and drop':
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
+            Loops:
+              name: حلقه‌ها
+            Programming:
+              name: برنامه نویسی
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
         grade4:
           stages:
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            Songwriting:
+              name: ترانه سرایی
+          lessons:
             Digital Citizenship:
               name: شهروندی دیجیتالی
             Songwriting:
@@ -1472,8 +1483,38 @@ fa:
               name: حلقه‌ها
             Programming:
               name: برنامه نویسی
+          lessons:
+            Events:
+              name: رویدادها
+            'Jigsaw: Learn to drag and drop':
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
+            Loops:
+              name: حلقه‌ها
+            Programming:
+              name: برنامه نویسی
         grade5:
           stages:
+            'Artist: For Loops':
+              name: 'هنرمند: برای حلقه ها'
+            'Artist: Functions with Parameters':
+              name: 'هنرمند: توابع با پارامترها'
+            'Artist: Variables':
+              name: 'هنرمند: متغیرها'
+            'Bee: For Loops':
+              name: 'زنبور عسل: برای حلقه ها'
+            'Bee: Functions with Parameters':
+              name: 'زنبور عسل: توابع با پارامترها'
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            'Play Lab: Variables':
+              name: 'آزمایشگاه بازی: متغیرها'
+            'Unplugged: Envelope Variables':
+              name: 'بدون دستگاه: متغیرهای پاکت'
+            'Unplugged: For Loop Fun':
+              name: 'بدون دستگاه: بازی حلقه های "برای"'
+            'Unplugged: Songwriting with Parameters':
+              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
+          lessons:
             'Artist: For Loops':
               name: 'هنرمند: برای حلقه ها'
             'Artist: Functions with Parameters':
@@ -1507,18 +1548,27 @@ fa:
             Wrap-up:
               name: خلاصه
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
         grade3:
           stages:
+            'Artist: Nested Loops':
+              name: 'هنرمند: حلقه های تو در تو'
+            Bee Debugging:
+              name: اشکال زدایی زنبور عسل
+            Bounce:
+              name: پریدن
+            'Farmer: While Loops':
+              name: 'کشاورز: حلقه‌های "در حالیکه"'
+          lessons:
             'Artist: Nested Loops':
               name: 'هنرمند: حلقه های تو در تو'
             Bee Debugging:
@@ -1541,14 +1591,23 @@ fa:
             Conditionals:
               name: شرطی ها
           lessons:
+            Functions:
+              name: توابع
             Variables:
               name: متغیرها
             Conditionals:
               name: شرطی ها
-            Functions:
-              name: توابع
         grade2:
           stages:
+            Flappy:
+              name: فلاپی
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Real-life Algorithms: Paper Planes':
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            The Big Event:
+              name: رویداد بزرگ
+          lessons:
             Flappy:
               name: فلاپی
             Binary Bracelets:
@@ -1580,26 +1639,26 @@ fa:
             While Loops:
               name: حلقه ها ی While
           lessons:
+            Binary:
+              name: دو دویی
+            Conditionals:
+              name: شرطی ها
             Events:
               name: رویدادها
+            For Loops:
+              name: حلقه های "برای"
+            Functions:
+              name: توابع
+            Functions with Parameters:
+              name: معادله با پارامترها
             Loops:
               name: حلقه‌ها
             Nested Loops:
               name: حلقه های تو در تو
-            Conditionals:
-              name: شرطی ها
-            While Loops:
-              name: حلقه ها ی While
-            Functions:
-              name: توابع
             Variables:
               name: متغیرها
-            For Loops:
-              name: حلقه های "برای"
-            Functions with Parameters:
-              name: معادله با پارامترها
-            Binary:
-              name: دو دویی
+            While Loops:
+              name: حلقه ها ی While
         algebrapdnext:
           stages:
             The Design Recipe:
@@ -1607,10 +1666,10 @@ fa:
             Welcome!:
               name: خوش آمدی!
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             The Design Recipe:
               name: دستور العمل طراحی
+            Welcome!:
+              name: خوش آمدی!
         csp-online-test:
           lesson_groups:
             required:
@@ -1629,6 +1688,13 @@ fa:
         fesbinary:
           title: دو دویی
           stages:
+            Binary Bracelets:
+              name: دستبند دودویی
+            Binary Images:
+              name: تصاویر دوتایی
+            Play Lab:
+              name: آزمایشگاه بازی
+          lessons:
             Binary Bracelets:
               name: دستبند دودویی
             Binary Images:
@@ -1686,12 +1752,14 @@ fa:
             Building a Foundation:
               name: ساختن بنیان
           lessons:
-            Building a Foundation:
-              name: ساختن بنیان
             'Real-life Algorithms: Paper Planes':
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Binary Bracelets:
               name: دستبند دودویی
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Building a Foundation:
+              name: ساختن بنیان
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1707,10 +1775,6 @@ fa:
             Introduction:
               name: مقدمه
           lessons:
-            Introduction:
-              name: مقدمه
-            Nested Loops:
-              name: حلقه های تو در تو
             Conditionals with Cards:
               name: شرطی ها با کارتها
             Digital Citizenship:
@@ -1719,6 +1783,10 @@ fa:
               name: 'بدون دستگاه: دودویی'
             Artist Binary:
               name: دودویی هنرمند
+            Nested Loops:
+              name: حلقه های تو در تو
+            Introduction:
+              name: مقدمه
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1732,14 +1800,16 @@ fa:
             Conditionals:
               name: شرطی ها
           lessons:
-            Introduction:
-              name: مقدمه
-            Conditionals:
-              name: شرطی ها
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
             Internet:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Introduction:
+              name: مقدمه
+            Conditionals:
+              name: شرطی ها
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1755,20 +1825,25 @@ fa:
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
           lessons:
-            Introduction:
-              name: مقدمه
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
               name: برای تفریح حلقه ای
             Songwriting with Parameters:
               name: ترانه نویسی با پارامترها
+            Introduction:
+              name: مقدمه
+            Ice Age Play Lab:
+              name: آزمایشگاه بازی عصر یخبندان
         classic-hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
             سرگرم کننده آزمایش کن!
           stages:
+            Hour of Code 2013:
+              name: ساعت کد نویسی سال 2013
+          lessons:
             Hour of Code 2013:
               name: ساعت کد نویسی سال 2013
         hoc-impact-study:
@@ -1827,6 +1902,11 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+          lessons:
+            Welcome!:
+              name: خوش آمدی!
+            Wrap-Up:
+              name: جمع و جور کن
         csf2harvey:
           stages:
             Binary:
@@ -1858,6 +1938,10 @@ fa:
             Functions with Parameters:
               name: معادله با پارامترها
           lessons:
+            Lists:
+              name: فهرست‌ها
+            For Loops:
+              name: حلقه های "برای"
             Functions with Parameters:
               name: معادله با پارامترها
         workshop-gamelab:
@@ -1883,12 +1967,12 @@ fa:
             'Real Life Algorithms: Dice Race':
               name: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
             Introduction:
               name: مقدمه
             Conditionals:
               name: شرطی ها
+            'Real Life Algorithms: Dice Race':
+              name: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
         csd6-2017:
           stages:
             Lists:
@@ -1899,8 +1983,24 @@ fa:
               name: معادله با پارامترها
             Functions with Parameters_:
               name: معادله با پارامترها
+          lessons:
+            Lists:
+              name: فهرست‌ها
+            For Loops:
+              name: حلقه های "برای"
+            Functions with Parameters:
+              name: معادله با پارامترها
+            Functions with Parameters_:
+              name: معادله با پارامترها
         csd3-draft:
           stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+          lessons:
             Variables:
               name: متغیرها
             Conditionals:
@@ -1918,8 +2018,20 @@ fa:
           stages:
             Lists:
               name: فهرست‌ها
+          lessons:
+            Lists:
+              name: فهرست‌ها
         csd3-chapters:
           stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            'null':
+              name: تهی
+          lessons:
             Variables:
               name: متغیرها
             Conditionals:
@@ -1957,8 +2069,6 @@ fa:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Going Places Safely:
-              name: با خیال راحت سفرکردن
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1966,36 +2076,20 @@ fa:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Your Digital Footprint:
-              name: ردپای دیجیتالی شما
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
           lessons:
-            Building a Foundation:
-              name: ساختن بنیان
             'Real-life Algorithms: Paper Planes':
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
-            Binary Bracelets:
-              name: دستبند دودویی
         coursed-2017:
           stages:
             Nested Loops:
               name: حلقه های تو در تو
           lessons:
-            Introduction:
-              name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
-            Conditionals with Cards:
-              name: شرطی ها با کارتها
-            Digital Citizenship:
-              name: شهروندی دیجیتالی
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            Artist Binary:
-              name: دودویی هنرمند
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -2011,27 +2105,6 @@ fa:
             Nested Loops:
               name: حلقه های تو در تو
           lessons:
-            Building a Foundation:
-              name: ساختن بنیان
-            Nested Loops:
-              name: حلقه های تو در تو
-            Introduction:
-              name: مقدمه
-            Conditionals:
-              name: شرطی ها
-            Internet:
-              name: اینترنت
-            Crowdsourcing:
-              name: کمک گیری جمعی
-        coursef-2017:
-          stages:
-            Building a Foundation:
-              name: ساختن بنیان
-          lessons:
-            Building a Foundation:
-              name: ساختن بنیان
-            Introduction:
-              name: مقدمه
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
@@ -2040,6 +2113,17 @@ fa:
               name: برای تفریح حلقه ای
             Songwriting with Parameters:
               name: ترانه نویسی با پارامترها
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+        coursef-2017:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+          lessons:
+            Building a Foundation:
+              name: ساختن بنیان
         cspnovice:
           lesson_groups:
             required:
@@ -2111,6 +2195,18 @@ fa:
           lessons:
             Introduction:
               name: مقدمه
+            Internet:
+              name: اینترنت
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Songwriting with Parameters:
+              name: ترانه نویسی با پارامترها
             Building a Foundation:
               name: ساختن بنیان
             Nested Loops:
@@ -2128,6 +2224,9 @@ fa:
               name: زنبور عسل هجی کن
         subgoal-labels-opt-in:
           stages:
+            Thanks:
+              name: متشکرم
+          lessons:
             Thanks:
               name: متشکرم
         csp3-research-mxghyt:
@@ -2153,6 +2252,8 @@ fa:
           lessons:
             Building a Foundation:
               name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
             Conditionals:
               name: شرطی ها
             Internet:
@@ -2178,8 +2279,8 @@ fa:
           lessons:
             Introduction:
               name: مقدمه
-            Building a Foundation:
-              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
             Conditionals with Cards:
               name: شرطی ها با کارتها
             Digital Citizenship:
@@ -2188,6 +2289,8 @@ fa:
               name: 'بدون دستگاه: دودویی'
             Artist Binary:
               name: دودویی هنرمند
+            Building a Foundation:
+              name: ساختن بنیان
         new-express:
           stages:
             Introduction:
@@ -2260,6 +2363,9 @@ fa:
           description_short: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
           description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با
             کد زدن به دنیای ماینکرافت سفر کنید.
+          lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2371,8 +2477,8 @@ fa:
             Going Places Safely:
               name: با خیال راحت سفرکردن
           lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            'Programming: Happy Maps':
+              name: نقشه های شاد
             Going Places Safely:
               name: با خیال راحت سفرکردن
         express-2018:
@@ -2412,12 +2518,22 @@ fa:
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
           lessons:
-            Graph Paper Programming:
+            'Algorithms: Graph Paper Programming':
               name: برنامه نویسی روی کاغذ رسم شطرنجی
-            Relay Programming:
-              name: برنامه نویسی دست به دست
+            Introduction:
+              name: مقدمه
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+            'Events: The Big Event':
+              name: رویداد بزرگ
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
             Conditionals with Cards:
               name: شرطی ها با کارتها
+            'Functions: Songwriting':
+              name: ترانه سرایی
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -2425,13 +2541,17 @@ fa:
             Binary Bracelets:
               name: دستبند دودویی
             'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
+              name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
             Internet:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2441,10 +2561,12 @@ fa:
             Move It, Move It:
               name: حرکت کن، حرکت کن
           lessons:
-            Move It, Move It:
-              name: حرکت کن، حرکت کن
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2466,16 +2588,24 @@ fa:
             Relay Programming:
               name: برنامه نویسی دست به دست
           lessons:
-            Relay Programming:
-              name: برنامه نویسی دست به دست
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Introduction:
+              name: مقدمه
+            Building a Foundation:
+              name: ساختن بنیان
             Conditionals with Cards:
               name: شرطی ها با کارتها
             Digital Citizenship:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
+              name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
         coursec-2018:
           stages:
             Building a Foundation:
@@ -2489,8 +2619,10 @@ fa:
           lessons:
             Building a Foundation:
               name: ساختن بنیان
-            'Real-life Algorithms: Paper Planes':
-              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
+            'Events: The Big Event':
+              name: رویداد بزرگ
             Binary Bracelets:
               name: دستبند دودویی
         csd6-2018:
@@ -2517,18 +2649,20 @@ fa:
             Conditionals with Cards:
               name: شرطی ها با کارتها
           lessons:
+            'Programming: My Robotic Friends':
+              name: دوستان رباتی من
             Building a Foundation:
               name: ساختن بنیان
-            Nested Loops:
-              name: حلقه های تو در تو
-            Conditionals with Cards:
-              name: شرطی ها با کارتها
-            Conditionals:
-              name: شرطی ها
+            Introduction:
+              name: مقدمه
+            'Functions: Songwriting':
+              name: ترانه سرایی
             Internet:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2548,14 +2682,22 @@ fa:
             Conditionals with Cards:
               name: شرطی ها با کارتها
           lessons:
+            'Programming: My Robotic Friends':
+              name: دوستان رباتی من
             Building a Foundation:
               name: ساختن بنیان
-            Conditionals with Cards:
-              name: شرطی ها با کارتها
+            Introduction:
+              name: مقدمه
+            Ice Age Play Lab:
+              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
               name: برای تفریح حلقه ای
+            Songwriting with Parameters:
+              name: ترانه نویسی با پارامترها
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
         csp1-2018:
           stages:
             The Internet:
@@ -2657,12 +2799,14 @@ fa:
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            Spelling Bee:
+              name: زنبور عسل هجی کن
             Move It, Move It:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
-            Spelling Bee:
-              name: زنبور عسل هجی کن
         fit-test:
           lesson_groups:
             required:
@@ -2699,8 +2843,14 @@ fa:
           stages:
             Dance Party:
               name: جشن و رقص
+          lessons:
+            Dance Party:
+              name: جشن و رقص
         dance-draft:
           stages:
+            Dance Party:
+              name: جشن و رقص
+          lessons:
             Dance Party:
               name: جشن و رقص
         cspplayground:
@@ -2737,16 +2887,25 @@ fa:
             csf_digcit:
               display_name: شهروندی دیجیتالی
           lessons:
+            Building a Foundation:
+              name: ساختن بنیان
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
               name: برای تفریح حلقه ای
+            The Artist:
+              name: هنرمند
             Internet:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
         dance-low:
           stages:
+            Dance Party:
+              name: جشن و رقص
+          lessons:
             Dance Party:
               name: جشن و رقص
         coursed-2019:
@@ -2777,16 +2936,18 @@ fa:
             csf_digcit:
               display_name: شهروندی دیجیتالی
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
               name: برنامه نویسی دست به دست
             Conditionals with Cards:
               name: شرطی ها با کارتها
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            Artist Binary:
-              name: دودویی هنرمند
             Digital Citizenship:
               name: شهروندی دیجیتالی
+            'Unplugged: Binary':
+              name: تصاویر دوتایی
+            Artist Binary:
+              name: دودویی هنرمند
             Dance Party:
               name: جشن و رقص
         coursee-2019:
@@ -2813,8 +2974,20 @@ fa:
             csf_functions:
               display_name: توابع
           lessons:
-            Conditionals:
-              name: شرطی ها
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            'Functions: Songwriting':
+              name: ترانه سرایی
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+            Songwriting:
+              name: ترانه سرایی
         express-2019:
           stages:
             Relay Programming:
@@ -2849,6 +3022,24 @@ fa:
             csf_for_loops:
               display_name: حلقه های "برای"
           lessons:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
             Dance Party:
               name: جشن و رقص
         andrea-test:
@@ -2858,6 +3049,9 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+          lessons:
+            'null':
+              name: تهی
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -2876,6 +3070,10 @@ fa:
             csf_events:
               display_name: رویدادها
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            'Events: The Big Event':
+              name: رویداد بزرگ
             Binary Bracelets:
               name: دستبند دودویی
         gamelab:
@@ -2894,6 +3092,8 @@ fa:
             csf_events:
               display_name: رویدادها
           lessons:
+            'Programming: Happy Maps':
+              name: نقشه های شاد
             Going Places Safely:
               name: با خیال راحت سفرکردن
         courseb-2019:
@@ -2912,10 +3112,12 @@ fa:
             csf_events:
               display_name: رویدادها
           lessons:
-            Your Digital Footprint:
-              name: ردپای دیجیتالی شما
             Move It, Move It:
               name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2930,6 +3132,10 @@ fa:
             csf_events:
               display_name: رویدادها
           lessons:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
             Spelling Bee:
               name: زنبور عسل هجی کن
         removed19:
@@ -3014,12 +3220,12 @@ fa:
             Building a Foundation:
               name: ساختن بنیان
           lessons:
-            Building a Foundation:
-              name: ساختن بنیان
             Crowdsourcing:
               name: کمک گیری جمعی
             Conditionals with Cards:
               name: شرطی ها با کارتها
+            Building a Foundation:
+              name: ساختن بنیان
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3086,6 +3292,9 @@ fa:
           stages:
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
+          lessons:
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -3104,6 +3313,9 @@ fa:
               display_name: بررسی اجمالی
         csd2-pilot:
           stages:
+            Lists:
+              name: فهرست‌ها
+          lessons:
             Lists:
               name: فهرست‌ها
         csd3-pilot:
@@ -3215,12 +3427,14 @@ fa:
             For Loops:
               name: حلقه های "برای"
           lessons:
+            Computer Science Fundamentals:
+              name: مقدمات علم کامپیوتر
             Loops:
               name: حلقه‌ها
-            Events:
-              name: رویدادها
             Conditionals:
               name: شرطی ها
+            Events:
+              name: رویدادها
             Functions:
               name: توابع
             Variables:
@@ -3237,6 +3451,9 @@ fa:
               display_name: توابع
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: شرطی ها
+          lessons:
             Conditionals:
               name: شرطی ها
         time4cs-control-unit-2:
@@ -3330,12 +3547,12 @@ fa:
           lessons:
             Variables:
               name: متغیرها
-            Text:
-              name: متن
             Conditionals:
               name: شرطی ها
             Functions:
               name: توابع
+            Text:
+              name: متن
         coursea-2020:
           stages:
             Going Places Safely:
@@ -3349,6 +3566,11 @@ fa:
               display_name: حلقه‌ها
             csf_events:
               display_name: رویدادها
+          lessons:
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+            'Programming: Happy Maps':
+              name: نقشه های شاد
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -3365,8 +3587,12 @@ fa:
             csf_events:
               display_name: رویدادها
           lessons:
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
             Move It, Move It:
               name: حرکت کن، حرکت کن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -3385,6 +3611,8 @@ fa:
           lessons:
             Binary Bracelets:
               name: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3413,16 +3641,20 @@ fa:
             csf_digcit:
               display_name: شهروندی دیجیتالی
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
               name: برنامه نویسی دست به دست
-            Dance Party:
-              name: جشن و رقص
             Conditionals with Cards:
               name: شرطی ها با کارتها
             'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
+              name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            Dance Party:
+              name: جشن و رقص
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -3435,8 +3667,8 @@ fa:
             csf_functions:
               display_name: توابع
           lessons:
-            Conditionals:
-              name: شرطی ها
+            'Functions: Songwriting':
+              name: ترانه سرایی
         coursef-2020:
           stages:
             Envelope Variables:
@@ -3457,10 +3689,12 @@ fa:
           lessons:
             Envelope Variables:
               name: متغیرهای پاکت
-            Internet:
-              name: اینترنت
             For Loop Fun:
               name: برای تفریح حلقه ای
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
         express-2020:
           stages:
             Dance Party:
@@ -3499,20 +3733,6 @@ fa:
           lessons:
             Creating Functions:
               name: ساختن تابع ها
-        csd3-virtual:
-          description_short: برنامه نویسی
-          stages:
-            Variables:
-              name: متغیرها
-            Conditionals:
-              name: شرطی ها
-            Functions:
-              name: توابع
-          lessons:
-            Variables:
-              name: متغیرها
-            Conditionals:
-              name: شرطی ها
         csp5-virtual:
           stages:
             While Loops:
@@ -3520,6 +3740,8 @@ fa:
             Variables:
               name: متغیرها
           lessons:
+            While Loops:
+              name: حلقه ها ی While
             Variables:
               name: متغیرها
         virtual-holding-place:
@@ -3535,6 +3757,11 @@ fa:
               name: الگوریتم ها
             Events:
               name: رویدادها
+          lessons:
+            Algorithms:
+              name: الگوریتم ها
+            Events:
+              name: رویدادها
         csp5-virtual-part2:
           stages:
             While Loops:
@@ -3542,3 +3769,50 @@ fa:
           lessons:
             While Loops:
               name: حلقه ها ی While
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+          lessons:
+            Loops:
+              name: حلقه‌ها
+            Events:
+              name: رویدادها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Variables:
+              name: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+        csd3-virtual:
+          description_short: برنامه نویسی
+          stages:
+            Variables:
+              name: متغیرها
+            Text:
+              name: متن
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+          lessons:
+            Variables:
+              name: متغیرها
+            Text:
+              name: متن
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع

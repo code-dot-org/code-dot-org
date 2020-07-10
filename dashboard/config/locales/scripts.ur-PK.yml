@@ -32,6 +32,9 @@ ur:
           stages:
             'Eval: Conditionals':
               name: شرائط
+          lessons:
+            'Eval: Conditionals':
+              name: شرائط
         infinity:
           stages:
             Infinity:
@@ -41,6 +44,9 @@ ur:
               name: Infinity
         K5PD:
           stages:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
+          lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         20-hour:
@@ -56,16 +62,16 @@ ur:
             The Maze:
               name: بھول بھلیا
           lessons:
+            Conditionals:
+              name: شرائط
             Introduction to Computer Science:
               name: کمپیوٹر سائنس کا تعارف
-            The Maze:
-              name: بھول بھلیا
             The Artist:
               name: مصور
             The Farmer:
               name: کسان
-            Conditionals:
-              name: شرائط
+            The Maze:
+              name: بھول بھلیا
         edit-code:
           stages:
             The Artist:
@@ -73,10 +79,10 @@ ur:
             The Maze:
               name: بھول بھلیا
           lessons:
-            The Maze:
-              name: بھول بھلیا
             The Artist:
               name: مصور
+            The Maze:
+              name: بھول بھلیا
         events:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
@@ -160,8 +166,18 @@ ur:
               name: ایونٹس/واقعات
             Loops:
               name: لوپس
+          lessons:
+            Events:
+              name: ایونٹس/واقعات
+            Loops:
+              name: لوپس
         grade1:
           stages:
+            Events:
+              name: ایونٹس/واقعات
+            Loops:
+              name: لوپس
+          lessons:
             Events:
               name: ایونٹس/واقعات
             Loops:
@@ -188,12 +204,12 @@ ur:
             Variables:
               name: متغیرات
           lessons:
+            Conditionals:
+              name: شرائط
             Events:
               name: ایونٹس/واقعات
             Loops:
               name: لوپس
-            Conditionals:
-              name: شرائط
             Variables:
               name: متغیرات
         algebrapdnext:
@@ -205,6 +221,9 @@ ur:
               name: ٹیچر کا ڈیش بورڈ
         fesbinary:
           stages:
+            Binary Images:
+              name: ثنائی تصاویر
+          lessons:
             Binary Images:
               name: ثنائی تصاویر
         csd2-2017:
@@ -232,6 +251,9 @@ ur:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         coursee-ramp:
           stages:
             Conditionals:
@@ -243,8 +265,16 @@ ur:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         csd3-draft:
           stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+          lessons:
             Variables:
               name: متغیرات
             Conditionals:
@@ -253,8 +283,18 @@ ur:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         csd3-chapters:
           stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+            'null':
+              name: نَل
+          lessons:
             Variables:
               name: متغیرات
             Conditionals:
@@ -266,14 +306,13 @@ ur:
             Envelope Variables:
               name: لفافہ متغیرات
           lessons:
-            Conditionals:
-              name: شرائط
-        coursef-2017:
-          lessons:
             Envelope Variables:
               name: لفافہ متغیرات
         express-2017:
           stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+          lessons:
             Envelope Variables:
               name: لفافہ متغیرات
         e-f-ramp:
@@ -363,8 +402,13 @@ ur:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
         coursed-2018:
           stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+          lessons:
             'Unplugged: Binary':
               name: ثنائی تصاویر
         coursee-2018:
@@ -372,8 +416,8 @@ ur:
             Minecraft Hour of Code:
               name: Minecraft کوڈ کی گھڑی
           lessons:
-            Conditionals:
-              name: شرائط
+            Minecraft Hour of Code:
+              name: Minecraft کوڈ کی گھڑی
         coursef-2018:
           stages:
             Envelope Variables:
@@ -395,8 +439,14 @@ ur:
           stages:
             Dance Party:
               name: ڈانس پارٹی
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
         dance-draft:
           stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
             Dance Party:
               name: ڈانس پارٹی
         cspplayground:
@@ -417,8 +467,13 @@ ur:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+            The Artist:
+              name: مصور
         dance-low:
           stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
             Dance Party:
               name: ڈانس پارٹی
         coursed-2019:
@@ -435,12 +490,10 @@ ur:
             csf_conditionals:
               display_name: شرائط
           lessons:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
-        coursee-2019:
-          lessons:
-            Conditionals:
-              name: شرائط
         express-2019:
           stages:
             Envelope Variables:
@@ -455,10 +508,15 @@ ur:
             csf_variables:
               display_name: متغیرات
           lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
             Dance Party:
               name: ڈانس پارٹی
         andrea-test:
           stages:
+            'null':
+              name: نَل
+          lessons:
             'null':
               name: نَل
         coursec-2019:
@@ -567,6 +625,9 @@ ur:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         csd3-pilot:
           stages:
             Variables:
@@ -604,10 +665,10 @@ ur:
           lessons:
             Loops:
               name: لوپس
-            Events:
-              name: ایونٹس/واقعات
             Conditionals:
               name: شرائط
+            Events:
+              name: ایونٹس/واقعات
             Variables:
               name: متغیرات
         csp4-preview:
@@ -618,6 +679,9 @@ ur:
               display_name: شرائط
         time4cs-original-unit-1:
           stages:
+            Conditionals:
+              name: شرائط
+          lessons:
             Conditionals:
               name: شرائط
         time4cs-control-unit-2:
@@ -675,10 +739,10 @@ ur:
           lessons:
             Variables:
               name: متغیرات
-            Text:
-              name: متن
             Conditionals:
               name: شرائط
+            Text:
+              name: متن
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -711,12 +775,10 @@ ur:
             csf_conditionals:
               display_name: شرائط
           lessons:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
-        coursee-2020:
-          lessons:
-            Conditionals:
-              name: شرائط
         coursef-2020:
           stages:
             Envelope Variables:
@@ -747,17 +809,6 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        csd3-virtual:
-          stages:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         csp5-virtual:
           stages:
             Variables:
@@ -769,3 +820,40 @@ ur:
           stages:
             Events:
               name: ایونٹس/واقعات
+          lessons:
+            Events:
+              name: ایونٹس/واقعات
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+          lessons:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط

@@ -20,7 +20,10 @@ module Crowdin
 
     # @see https://support.crowdin.com/api/info/
     def project_info
-      self.class.post("/info")
+      # cache the result; we end up calling this method quite a lot since it's
+      # the source of both our lists of files and of languages, and it also
+      # shouldn't ever change mid-sync.
+      @info ||= self.class.post("/info")
     end
 
     # @param file [String] name of file (within crowdin) to be downloaded

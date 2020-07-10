@@ -63,10 +63,15 @@ kk-KZ:
         craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
           аласын ба?
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
+          аласын ба?
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
           аласын ба?
       Overworld Move to Sheep:
@@ -75,9 +80,14 @@ kk-KZ:
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу"
           батырмасын басыңыз
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу"
+          батырмасын басыңыз
       Overworld Place Wall:
         craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
       Overworld Place Wall_2019:
+        craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
+      Overworld Place Wall_2020:
         craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
       Underground Avoiding Lava:
         craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
@@ -85,9 +95,14 @@ kk-KZ:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
           үшін код еңгіз?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
+          үшін код еңгіз?
       Underground Iron:
         craft_what_is_iron: Осы темірді өнде!
       Underground Iron_2019:
+        craft_what_is_iron: Осы темірді өнде!
+      Underground Iron_2020:
         craft_what_is_iron: Осы темірді өнде!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: '"Шеңбер салу" блогын қолданыңыз

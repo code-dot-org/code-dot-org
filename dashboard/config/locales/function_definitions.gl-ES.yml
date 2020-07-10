@@ -5,7 +5,14 @@ gl-ES:
       2-3 Artist 3.4:
         draw a circle:
           name: debuxar un círculo
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: altura
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: altura
         draw a circle:
           name: debuxar un círculo
       2-3 Artist Functions 11:
@@ -38,18 +45,51 @@ gl-ES:
       4-5 Artist 7:
         draw a circle:
           name: debuxar un círculo
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: mel
       Course 4 Play Lab Params 1:
         jump:
           name: saltar
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: puntos
       Course 4 Play Lab Params 2:
         jump:
           name: saltar
       Course 4 Play Lab Params 3:
         jump:
           name: saltar
+          parameters:
+            height: altura
+            actor: actor
       Course 4 Play Lab Params 4:
         do something:
           name: facer algo
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: actor
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: actor
+            speed: velocidade
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: actor
+            speed: velocidade
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: puntos
       Course 4 Play Lab Vars 1:
         set score:
           name: defina a puntuación
@@ -62,21 +102,47 @@ gl-ES:
       Course 4 SCF 1a:
         get nectar:
           name: obteña néctar
+          parameters:
+            counter: contador
       Course 4 SCF 3:
         do something:
           name: facer algo
+        draw an octagon:
+          parameters:
+            length: lonxitude
       'Course E: Play Lab Project':
         do something:
           name: facer algo
       Find the Wizard:
         do something:
           name: facer algo
+      FoodFight:
+        score_points:
+          parameters:
+            points: puntos
       Geometric Sun:
         draw a house:
           name: debuxar unha casa
       Geometric Sun_2018:
         draw a house:
           name: debuxar unha casa
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: lonxitude
+        draw a loop:
+          parameters:
+            length: lonxitude
+        draw spiral circle:
+          parameters:
+            size: tamaño
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: lonxitude
+        draw spiral circle:
+          parameters:
+            size: tamaño
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: debuxar un cadrado
@@ -102,20 +168,59 @@ gl-ES:
           name: facer algo
         draw a hexagon:
           name: debuxar un hexágono
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: lonxitude
         do something:
           name: facer algo
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 15:
         draw a star:
           name: debuxar unha estrela
+          parameters:
+            points: puntos
+            length: lonxitude
         draw a circle:
           name: debuxar un círculo
+        draw a pinwheel:
+          parameters:
+            length: lonxitude
+            repeat: repetir
         draw a triangle:
           name: debuxar un triángulo
+          parameters:
+            length: lonxitude
+        draw a shape:
+          parameters:
+            length: lonxitude
         draw a house:
           name: debuxar unha casa
+          parameters:
+            length: lonxitude
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 2:
         do something:
           name: facer algo
@@ -125,38 +230,97 @@ gl-ES:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: debuxar un triángulo
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: debuxar un triángulo
+          parameters:
+            length: lonxitude
         draw a hexagon:
           name: debuxar un hexágono
+          parameters:
+            length: lonxitude
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
+        draw a sqaure:
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: debuxar un triángulo
+          parameters:
+            length: lonxitude
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: lonxitude
       NEW Course 4 Artist Params 9:
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
         do something:
           name: facer algo
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: lonxitude
       NEW Course 4 Play Lab Params 11:
         jump:
           name: saltar
+          parameters:
+            height: altura
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
+            speed: velocidade
       New Artist Project:
         draw a star:
           name: debuxar unha estrela
+          parameters:
+            points: puntos
+            length: lonxitude
         draw a circle:
           name: debuxar un círculo
+        draw a pinwheel:
+          parameters:
+            length: lonxitude
+            repeat: repetir
         draw a triangle:
           name: debuxar un triángulo
+          parameters:
+            length: lonxitude
+        draw a shape:
+          parameters:
+            length: lonxitude
         draw a house:
           name: debuxar unha casa
+          parameters:
+            length: lonxitude
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
       New Play Lab Project:
         jump:
           name: saltar
+          parameters:
+            height: altura
+            actor: actor
+        patrol:
+          parameters:
+            actor: actor
+            speed: velocidade
       Standalone_Artist_7:
         draw a flower:
           name: debuxar unha flor
@@ -178,7 +342,18 @@ gl-ES:
       course4_artist_fwp_challenge1:
         do something:
           name: facer algo
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lonxitude
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lonxitude
       courseC_data wizard:
+        do something:
+          name: facer algo
+      courseC_data wizard_2020:
         do something:
           name: facer algo
       courseE_artist_concept1:
@@ -210,6 +385,9 @@ gl-ES:
       courseE_artist_functions10_2019:
         do something:
           name: facer algo
+      courseE_artist_functions10_2020:
+        do something:
+          name: facer algo
       courseE_artist_functions2:
         draw a square:
           name: debuxar un cadrado
@@ -219,6 +397,9 @@ gl-ES:
       courseE_artist_functions2_2019:
         draw a square:
           name: debuxar un cadrado
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: debuxar un cadrado
       courseE_artist_functions2_copy:
         draw a square:
           name: debuxar un cadrado
@@ -226,6 +407,9 @@ gl-ES:
         draw a star:
           name: debuxar unha estrela
       courseE_artist_functions3_2019:
+        draw a star:
+          name: debuxar unha estrela
+      courseE_artist_functions3_2020:
         draw a star:
           name: debuxar unha estrela
       courseE_artist_functions4:
@@ -243,6 +427,9 @@ gl-ES:
       courseE_artist_functions5_2019:
         draw a star:
           name: debuxar unha estrela
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: debuxar unha estrela
       courseE_artist_functions5_copy:
         draw a star:
           name: debuxar unha estrela
@@ -252,6 +439,9 @@ gl-ES:
       courseE_artist_functions7_2018:
         draw a house:
           name: debuxar unha casa
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: debuxar unha casa
       courseE_artist_functions8:
         do something:
           name: facer algo
@@ -259,6 +449,9 @@ gl-ES:
         do something:
           name: facer algo
       courseE_artist_functions8_2019:
+        do something:
+          name: facer algo
+      courseE_artist_functions8_2020:
         do something:
           name: facer algo
       courseE_artist_functions8a_2018:
@@ -271,16 +464,27 @@ gl-ES:
           name: debuxar un cadrado
         do something:
           name: facer algo
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: debuxar un cadrado
+        do something:
+          name: facer algo
       courseE_artist_functions8b_2018:
         do something:
           name: facer algo
       courseE_artist_functions8b_2019:
         do something:
           name: facer algo
+      courseE_artist_functions8b_2020:
+        do something:
+          name: facer algo
       courseE_artist_functions8c_2018:
         do something:
           name: facer algo
       courseE_artist_functions8c_2019:
+        do something:
+          name: facer algo
+      courseE_artist_functions8c_2020:
         do something:
           name: facer algo
       courseE_artist_functions9:
@@ -292,6 +496,9 @@ gl-ES:
       courseE_artist_functions9_2019:
         do something:
           name: facer algo
+      courseE_artist_functions9_2020:
+        do something:
+          name: facer algo
       courseE_artist_functions_challenge1:
         do something:
           name: facer algo
@@ -299,6 +506,9 @@ gl-ES:
         do something:
           name: facer algo
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: facer algo
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: facer algo
       courseE_artist_functions_challenge2:
@@ -310,6 +520,9 @@ gl-ES:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: facer algo
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: facer algo
       courseE_artist_functions_predict1:
         draw a square:
           name: debuxar un cadrado
@@ -317,6 +530,9 @@ gl-ES:
         draw a square:
           name: debuxar un cadrado
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: debuxar un cadrado
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: debuxar un cadrado
       courseE_artist_functions_predict1_copy:
@@ -329,6 +545,9 @@ gl-ES:
         do something:
           name: facer algo
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: facer algo
+      courseE_artist_functions_predict2_2020:
         do something:
           name: facer algo
       courseE_bee_functions1:
@@ -364,48 +583,144 @@ gl-ES:
       courseF_artist_fwp1:
         draw a square:
           name: debuxar un cadrado
+        checker:
+          parameters:
+            size: tamaño
         do something:
           name: facer algo
+        Make gingham:
+          parameters:
+            size: tamaño
+        black outline:
+          parameters:
+            length: lonxitude
       courseF_artist_fwp2:
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
+        checker:
+          parameters:
+            size: tamaño
         do something:
           name: facer algo
+        Make gingham:
+          parameters:
+            size: tamaño
+        black outline:
+          parameters:
+            length: lonxitude
       courseF_artist_fwp2_predict1:
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
       courseF_artist_fwp3:
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
+        draw a square2:
+          parameters:
+            size: tamaño
+        filled square:
+          parameters:
+            size: tamaño
+        black outline:
+          parameters:
+            length: lonxitude
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: lonxitude
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: lonxitude
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: lonxitude
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: lonxitude
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: lonxitude
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: debuxar unha estrela
+          parameters:
+            points: puntos
+            length: lonxitude
         draw a circle:
           name: debuxar un círculo
+        draw a pinwheel:
+          parameters:
+            length: lonxitude
+            repeat: repetir
         draw a triangle:
           name: debuxar un triángulo
+          parameters:
+            length: lonxitude
+        draw a shape:
+          parameters:
+            length: lonxitude
         draw a house:
           name: debuxar unha casa
+          parameters:
+            length: lonxitude
         draw a square:
           name: debuxar un cadrado
+          parameters:
+            length: lonxitude
+        draw a spiral edge:
+          parameters:
+            length: lonxitude
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: facer algo
       courseF_artist_fwp_challenge2:
         do something:
           name: facer algo
+        draw an octagon:
+          parameters:
+            length: lonxitude
       courseF_bee_functions8a:
         do something:
           name: facer algo
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: lonxitude
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lonxitude
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lonxitude
       courseF_bee_variables_7_2018:
         collect:
           name: apañar
       courseF_bee_variables_7_2019:
         collect:
           name: apañar
+      courseF_bee_variables_7_2020:
+        collect:
+          name: apañar
       courseF_bee_variables_8_2018:
         collect:
           name: apañar
       courseF_bee_variables_8_2019:
+        collect:
+          name: apañar
+      courseF_bee_variables_8_2020:
         collect:
           name: apañar

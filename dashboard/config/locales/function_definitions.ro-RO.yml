@@ -20,9 +20,15 @@ ro-RO:
       2-3 Artist 7:
         draw_rect:
           name: desenează_dreptunghi
+          parameters:
+            width: lăţime
+            height: înălțime
       2-3 Artist Debugging 10:
         draw square:
           name: desenează pătrat
+          parameters:
+            width: lăţime
+            height: înălțime
         jump to controller top left:
           name: sari în colţul stânga sus al controller-ului
         jump to middle:
@@ -216,15 +222,24 @@ ro-RO:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: obține nectar fă miere
+          parameters:
+            honey: miere
       Course 4 Play Lab Params 1:
         jump:
           name: sari
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: puncte
       Course 4 Play Lab Params 2:
         jump:
           name: sari
       Course 4 Play Lab Params 3:
         jump:
           name: sari
+          parameters:
+            height: înălțime
+            actor: actor
       Course 4 Play Lab Params 4:
         patrol:
           name: patrulează
@@ -233,15 +248,29 @@ ro-RO:
       Course 4 Play Lab Params 5:
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
       Course 4 Play Lab Params 6:
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
       Course 4 Play Lab Params 7:
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
+            speed: viteză
       Course 4 Play Lab Params 8:
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
+            speed: viteză
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: puncte
       Course 4 Play Lab Vars 1:
         set score:
           name: Setează scor
@@ -260,6 +289,8 @@ ro-RO:
       Course 4 SCF 1a:
         get nectar:
           name: obţine nectar
+          parameters:
+            counter: numărător
       Course 4 SCF 1b:
         make honey up and over:
           name: fă miere şi întoarce-te
@@ -271,12 +302,19 @@ ro-RO:
       Course 4 SCF 3:
         do something:
           name: facă ceva
+        draw an octagon:
+          parameters:
+            length: lungime
       'Course E: Play Lab Project':
         do something:
           name: facă ceva
       Find the Wizard:
         do something:
           name: facă ceva
+      FoodFight:
+        score_points:
+          parameters:
+            points: puncte
       Geometric Sun:
         draw grass:
           name: desenează iarbă
@@ -303,6 +341,23 @@ ro-RO:
           name: triunghi
         square:
           name: pătrat
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: lungime
+        draw a loop:
+          parameters:
+            length: lungime
+        draw spiral circle:
+          parameters:
+            size: dimensiune
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: lungime
+        draw spiral circle:
+          parameters:
+            size: dimensiune
       K-1 Artist2 3:
         draw roof:
           name: desenează acoperişul
@@ -347,33 +402,64 @@ ro-RO:
           name: facă ceva
         draw a hexagon:
           name: desenează un hexagon
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
         do something:
           name: facă ceva
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 15:
         draw a star:
           name: desenează o stea
+          parameters:
+            points: puncte
+            length: lungime
         draw a circle:
           name: desenează un cerc
+        draw a pinwheel:
+          parameters:
+            length: lungime
+            repeat: repetă
         draw a triangle:
           name: desenează un triunghi
+          parameters:
+            length: lungime
         draw a shape:
           name: desenează o formă
+          parameters:
+            length: lungime
         draw a house:
           name: desenează o casă
+          parameters:
+            length: lungime
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 2:
         do something:
           name: facă ceva
@@ -386,55 +472,102 @@ ro-RO:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: desenează un triunghi cu lungime
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: desenează un pentagon
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: desenează un triunghi
+          parameters:
+            length: lungime
         draw a hexagon:
           name: desenează un hexagon
+          parameters:
+            length: lungime
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
         draw a sqaure:
           name: desenează un pătrat
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: desenează un triunghi
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: desenează un triunghi cu lungime
+          parameters:
+            length: lungime
       NEW Course 4 Artist Params 9:
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
         do something:
           name: facă ceva
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
       NEW Course 4 Play Lab Params 11:
         jump:
           name: sari
+          parameters:
+            height: înălțime
+            actor: actor
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
+            speed: viteză
       New Artist Project:
         draw a star:
           name: desenează o stea
+          parameters:
+            points: puncte
+            length: lungime
         draw a circle:
           name: desenează un cerc
+        draw a pinwheel:
+          parameters:
+            length: lungime
+            repeat: repetă
         draw a triangle:
           name: desenează un triunghi
+          parameters:
+            length: lungime
         draw a shape:
           name: desenează o formă
+          parameters:
+            length: lungime
         draw a house:
           name: desenează o casă
+          parameters:
+            length: lungime
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
       New Play Lab Project:
         jump:
           name: sari
+          parameters:
+            height: înălțime
+            actor: actor
         patrol:
           name: patrulează
+          parameters:
+            actor: actor
+            speed: viteză
       Robot Doodle:
         draw head:
           name: desenează cap
@@ -472,11 +605,41 @@ ro-RO:
         do something:
           name: facă ceva
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: culoare
         draw a polygon:
           name: desenează un poligon
         do something:
           name: facă ceva
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lungime
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lungime
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: facă ceva
+      courseC_data wizard_2020:
         do something:
           name: facă ceva
       courseD_artist_binary1:
@@ -488,6 +651,9 @@ ro-RO:
       courseD_artist_binary1_2019:
         draw:
           name: desenează
+      courseD_artist_binary1_2020:
+        draw:
+          name: desenează
       courseD_artist_binary2:
         draw:
           name: desenează
@@ -495,6 +661,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary2_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary2_2020:
         draw:
           name: desenează
       courseD_artist_binary3:
@@ -506,6 +675,9 @@ ro-RO:
       courseD_artist_binary3_2019:
         draw:
           name: desenează
+      courseD_artist_binary3_2020:
+        draw:
+          name: desenează
       courseD_artist_binary4:
         draw:
           name: desenează
@@ -513,6 +685,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary4_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary4_2020:
         draw:
           name: desenează
       courseD_artist_binary5:
@@ -524,6 +699,9 @@ ro-RO:
       courseD_artist_binary5_2019:
         draw:
           name: desenează
+      courseD_artist_binary5_2020:
+        draw:
+          name: desenează
       courseD_artist_binary6:
         draw:
           name: desenează
@@ -531,6 +709,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary6_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary6_2020:
         draw:
           name: desenează
       courseD_artist_binary7:
@@ -542,6 +723,9 @@ ro-RO:
       courseD_artist_binary7_2019:
         draw:
           name: desenează
+      courseD_artist_binary7_2020:
+        draw:
+          name: desenează
       courseD_artist_binary8:
         draw:
           name: desenează
@@ -549,6 +733,9 @@ ro-RO:
         draw:
           name: desenează
       courseD_artist_binary8_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary8_2020:
         draw:
           name: desenează
       courseD_artist_binary8_predict1:
@@ -560,10 +747,16 @@ ro-RO:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: desenează
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: desenează
       courseD_artist_binaryFP_2018:
         draw:
           name: desenează
       courseD_artist_binaryFP_2019:
+        draw:
+          name: desenează
+      courseD_artist_binaryFP_2020:
         draw:
           name: desenează
       courseD_artist_binary_challenge1_2018:
@@ -572,10 +765,16 @@ ro-RO:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: desenează
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: desenează
       courseD_artist_binary_challenge2_2018:
         draw:
           name: desenează
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: desenează
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: desenează
       courseD_autorun_binary2_2019:
@@ -631,6 +830,9 @@ ro-RO:
       courseE_artist_functions10_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions10_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions2:
         draw a square:
           name: desenează un pătrat
@@ -640,6 +842,9 @@ ro-RO:
       courseE_artist_functions2_2019:
         draw a square:
           name: desenează un pătrat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: desenează un pătrat
       courseE_artist_functions2_copy:
         draw a square:
           name: desenează un pătrat
@@ -647,6 +852,9 @@ ro-RO:
         draw a star:
           name: desenează o stea
       courseE_artist_functions3_2019:
+        draw a star:
+          name: desenează o stea
+      courseE_artist_functions3_2020:
         draw a star:
           name: desenează o stea
       courseE_artist_functions4:
@@ -664,6 +872,9 @@ ro-RO:
       courseE_artist_functions5_2019:
         draw a star:
           name: desenează o stea
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: desenează o stea
       courseE_artist_functions5_copy:
         draw a star:
           name: desenează o stea
@@ -671,6 +882,9 @@ ro-RO:
         draw a house:
           name: desenează o casă
       courseE_artist_functions7_2018:
+        draw a house:
+          name: desenează o casă
+      courseE_artist_functions7_2020:
         draw a house:
           name: desenează o casă
       courseE_artist_functions8:
@@ -688,12 +902,22 @@ ro-RO:
           name: facă ceva
         draw square:
           name: desenează pătrat
+      courseE_artist_functions8_2020:
+        do something:
+          name: facă ceva
+        draw square:
+          name: desenează pătrat
       courseE_artist_functions8a_2018:
         draw a square:
           name: desenează un pătrat
         do something:
           name: facă ceva
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: desenează un pătrat
+        do something:
+          name: facă ceva
+      courseE_artist_functions8a_2020:
         draw a square:
           name: desenează un pătrat
         do something:
@@ -708,12 +932,22 @@ ro-RO:
           name: desenează pătrat
         do something:
           name: facă ceva
+      courseE_artist_functions8b_2020:
+        draw square:
+          name: desenează pătrat
+        do something:
+          name: facă ceva
       courseE_artist_functions8c_2018:
         draw square:
           name: desenează pătrat
         do something:
           name: facă ceva
       courseE_artist_functions8c_2019:
+        draw square:
+          name: desenează pătrat
+        do something:
+          name: facă ceva
+      courseE_artist_functions8c_2020:
         draw square:
           name: desenează pătrat
         do something:
@@ -733,10 +967,18 @@ ro-RO:
           name: facă ceva
         draw triangle:
           name: desenează triunghi
+      courseE_artist_functions9_2020:
+        do something:
+          name: facă ceva
+        draw triangle:
+          name: desenează triunghi
       courseE_artist_functionsProj_2018:
         draw square:
           name: desenează pătrat
       courseE_artist_functionsProj_2019:
+        draw square:
+          name: desenează pătrat
+      courseE_artist_functionsProj_2020:
         draw square:
           name: desenează pătrat
       courseE_artist_functions_challenge1:
@@ -748,6 +990,9 @@ ro-RO:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions_challenge2:
         do something:
           name: facă ceva
@@ -757,6 +1002,9 @@ ro-RO:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: facă ceva
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: facă ceva
       courseE_artist_functions_predict1:
         draw a square:
           name: desenează un pătrat
@@ -764,6 +1012,9 @@ ro-RO:
         draw a square:
           name: desenează un pătrat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: desenează un pătrat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: desenează un pătrat
       courseE_artist_functions_predict1_copy:
@@ -776,6 +1027,9 @@ ro-RO:
         do something:
           name: facă ceva
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: facă ceva
+      courseE_artist_functions_predict2_2020:
         do something:
           name: facă ceva
       courseE_bee_functions1:
@@ -829,39 +1083,115 @@ ro-RO:
       courseF_artist_fwp1:
         draw a square:
           name: desenează un pătrat
+        checker:
+          parameters:
+            size: dimensiune
+            color: culoare
         do something:
           name: facă ceva
+        Make gingham:
+          parameters:
+            size: dimensiune
+        black outline:
+          parameters:
+            length: lungime
       courseF_artist_fwp2:
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
+        checker:
+          parameters:
+            size: dimensiune
+            color: culoare
         do something:
           name: facă ceva
+        Make gingham:
+          parameters:
+            size: dimensiune
+        black outline:
+          parameters:
+            length: lungime
       courseF_artist_fwp2_predict1:
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
       courseF_artist_fwp3:
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
+        draw a square2:
+          parameters:
+            size: dimensiune
+        filled square:
+          parameters:
+            size: dimensiune
+            color: culoare
+        black outline:
+          parameters:
+            length: lungime
       courseF_artist_fwp4:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
       courseF_artist_fwp5:
         draw a polygon:
           name: desenează un poligon
+          parameters:
+            length: lungime
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: lungime
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: lungime
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: lungime
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: desenează o stea
+          parameters:
+            points: puncte
+            length: lungime
         draw a circle:
           name: desenează un cerc
+        draw a pinwheel:
+          parameters:
+            length: lungime
+            repeat: repetă
         draw a triangle:
           name: desenează un triunghi
+          parameters:
+            length: lungime
         draw a shape:
           name: desenează o formă
+          parameters:
+            length: lungime
         draw a house:
           name: desenează o casă
+          parameters:
+            length: lungime
         draw a square:
           name: desenează un pătrat
+          parameters:
+            length: lungime
+        draw a spiral edge:
+          parameters:
+            length: lungime
+            min: min
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: culoare
         draw a polygon:
           name: desenează un poligon
         do something:
@@ -869,6 +1199,9 @@ ro-RO:
       courseF_artist_fwp_challenge2:
         do something:
           name: facă ceva
+        draw an octagon:
+          parameters:
+            length: lungime
       courseF_bee_functions6:
         get nectar make honey:
           name: obține nectar fă miere
@@ -883,16 +1216,54 @@ ro-RO:
       courseF_bee_functionsPre7:
         get nectar make honey:
           name: obține nectar fă miere
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: lungime
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: lăţime
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: lăţime
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: lăţime
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: lăţime
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: lăţime
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lungime
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lungime
       courseF_bee_variables_7_2018:
         collect:
           name: colectează
       courseF_bee_variables_7_2019:
         collect:
           name: colectează
+      courseF_bee_variables_7_2020:
+        collect:
+          name: colectează
       courseF_bee_variables_8_2018:
         collect:
           name: colectează
       courseF_bee_variables_8_2019:
+        collect:
+          name: colectează
+      courseF_bee_variables_8_2020:
         collect:
           name: colectează
       grade5_artist_binary11:

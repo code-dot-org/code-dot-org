@@ -15,9 +15,17 @@ no-NO:
           name: tegn en sirkel
         draw a car:
           name: tegn en bil
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: bredde
+            height: høyde
       2-3 Artist Debugging 10:
         draw square:
           name: tegn en firkant
+          parameters:
+            width: bredde
+            height: høyde
         draw a circle:
           name: tegn en sirkel
         draw a button:
@@ -97,18 +105,49 @@ no-NO:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: hent nektar for å lage honning
+          parameters:
+            honey: honning
       Course 4 Play Lab Params 1:
         jump:
           name: Hopp
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: poeng
       Course 4 Play Lab Params 2:
         jump:
           name: Hopp
       Course 4 Play Lab Params 3:
         jump:
           name: Hopp
+          parameters:
+            height: høyde
+            actor: figur
       Course 4 Play Lab Params 4:
         do something:
           name: gjør noe
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: figur
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: figur
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: figur
+            speed: fart
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: figur
+            speed: fart
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: poeng
       Course 4 Play Lab Vars 1:
         set score:
           name: Angi poengsum
@@ -123,6 +162,8 @@ no-NO:
       Course 4 SCF 1a:
         get nectar:
           name: få nektar
+          parameters:
+            counter: teller
       Course 4 SCF 2:
         draw a square 20:
           name: tegn en firkant 20
@@ -137,12 +178,18 @@ no-NO:
           name: gjør noe
         draw an octagon:
           name: tegn en åttekant
+          parameters:
+            length: lengde
       'Course E: Play Lab Project':
         do something:
           name: gjør noe
       Find the Wizard:
         do something:
           name: gjør noe
+      FoodFight:
+        score_points:
+          parameters:
+            points: poeng
       Geometric Sun:
         diamond:
           name: diamant
@@ -161,6 +208,23 @@ no-NO:
           name: trekant
         square:
           name: firkant
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: lengde
+        draw a loop:
+          parameters:
+            length: lengde
+        draw spiral circle:
+          parameters:
+            size: størrelse
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: lengde
+        draw spiral circle:
+          parameters:
+            size: størrelse
       NEW Course 4 Artist Functions 11:
         draw a line of  squares:
           name: tegn en linje av firkanter
@@ -212,20 +276,59 @@ no-NO:
           name: gjør noe
         draw a hexagon:
           name: tegn en sekskant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: lengde
         do something:
           name: gjør noe
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 15:
         draw a star:
           name: tegn en stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: tegn en sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: tegn en trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: tegn et hus
+          parameters:
+            length: lengde
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 2:
         do something:
           name: gjør noe
@@ -238,43 +341,97 @@ no-NO:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: tegn en trekant med lengde
+          parameters:
+            length: lengde
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: tegn en trekant
+          parameters:
+            length: lengde
         draw a hexagon:
           name: tegn en sekskant
+          parameters:
+            length: lengde
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
         draw a sqaure:
           name: tegn en firkant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: tegn en trekant
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: tegn en trekant med lengde
+          parameters:
+            length: lengde
       NEW Course 4 Artist Params 9:
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
         do something:
           name: gjør noe
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: lengde
       NEW Course 4 Play Lab Params 11:
         jump:
           name: Hopp
+          parameters:
+            height: høyde
+            actor: figur
+        patrol:
+          parameters:
+            actor: figur
+            speed: fart
       New Artist Project:
         draw a star:
           name: tegn en stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: tegn en sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: tegn en trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: tegn et hus
+          parameters:
+            length: lengde
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
       New Play Lab Project:
         jump:
           name: Hopp
+          parameters:
+            height: høyde
+            actor: figur
+        patrol:
+          parameters:
+            actor: figur
+            speed: fart
       Robot Doodle:
         25 pixel square:
           name: 25 piksler stor firkant
@@ -307,7 +464,34 @@ no-NO:
           name: tegn en firkant 20
         do something:
           name: gjør noe
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lengde
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lengde
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: gjør noe
+      courseC_data wizard_2020:
         do something:
           name: gjør noe
       courseE_artist_concept1:
@@ -343,6 +527,9 @@ no-NO:
       courseE_artist_functions10_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions10_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions2:
         draw a square:
           name: tegn en firkant
@@ -352,6 +539,9 @@ no-NO:
       courseE_artist_functions2_2019:
         draw a square:
           name: tegn en firkant
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: tegn en firkant
       courseE_artist_functions2_copy:
         draw a square:
           name: tegn en firkant
@@ -359,6 +549,9 @@ no-NO:
         draw a star:
           name: tegn en stjerne
       courseE_artist_functions3_2019:
+        draw a star:
+          name: tegn en stjerne
+      courseE_artist_functions3_2020:
         draw a star:
           name: tegn en stjerne
       courseE_artist_functions4:
@@ -376,6 +569,9 @@ no-NO:
       courseE_artist_functions5_2019:
         draw a star:
           name: tegn en stjerne
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: tegn en stjerne
       courseE_artist_functions5_copy:
         draw a star:
           name: tegn en stjerne
@@ -383,6 +579,9 @@ no-NO:
         draw a house:
           name: tegn et hus
       courseE_artist_functions7_2018:
+        draw a house:
+          name: tegn et hus
+      courseE_artist_functions7_2020:
         draw a house:
           name: tegn et hus
       courseE_artist_functions8:
@@ -406,12 +605,24 @@ no-NO:
           name: tegn en linje av firkanter
         draw square:
           name: tegn en firkant
+      courseE_artist_functions8_2020:
+        do something:
+          name: gjør noe
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
       courseE_artist_functions8a_2018:
         draw a square:
           name: tegn en firkant
         do something:
           name: gjør noe
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
+      courseE_artist_functions8a_2020:
         draw a square:
           name: tegn en firkant
         do something:
@@ -424,6 +635,13 @@ no-NO:
         do something:
           name: gjør noe
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
@@ -444,6 +662,13 @@ no-NO:
           name: tegn en firkant
         do something:
           name: gjør noe
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
       courseE_artist_functions9:
         do something:
           name: gjør noe
@@ -453,12 +678,20 @@ no-NO:
       courseE_artist_functions9_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions9_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functionsProj_2018:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
           name: tegn en firkant
       courseE_artist_functionsProj_2019:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+      courseE_artist_functionsProj_2020:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
@@ -472,6 +705,9 @@ no-NO:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions_challenge2:
         do something:
           name: gjør noe
@@ -481,6 +717,9 @@ no-NO:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions_predict1:
         draw a square:
           name: tegn en firkant
@@ -488,6 +727,9 @@ no-NO:
         draw a square:
           name: tegn en firkant
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: tegn en firkant
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: tegn en firkant
       courseE_artist_functions_predict1_copy:
@@ -500,6 +742,9 @@ no-NO:
         do something:
           name: gjør noe
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: gjør noe
+      courseE_artist_functions_predict2_2020:
         do something:
           name: gjør noe
       courseE_bee_functions1:
@@ -535,30 +780,105 @@ no-NO:
       courseF_artist_fwp1:
         draw a square:
           name: tegn en firkant
+        checker:
+          parameters:
+            size: størrelse
         do something:
           name: gjør noe
+        Make gingham:
+          parameters:
+            size: størrelse
+        black outline:
+          parameters:
+            length: lengde
       courseF_artist_fwp2:
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
+        checker:
+          parameters:
+            size: størrelse
         do something:
           name: gjør noe
+        Make gingham:
+          parameters:
+            size: størrelse
+        black outline:
+          parameters:
+            length: lengde
       courseF_artist_fwp2_predict1:
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
       courseF_artist_fwp3:
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
+        draw a square2:
+          parameters:
+            size: størrelse
+        filled square:
+          parameters:
+            size: størrelse
+        black outline:
+          parameters:
+            length: lengde
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: lengde
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: lengde
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
       courseF_artist_fwp9:
         draw a star:
           name: tegn en stjerne
+          parameters:
+            points: poeng
+            length: lengde
         draw a circle:
           name: tegn en sirkel
+        draw a pinwheel:
+          parameters:
+            length: lengde
+            repeat: gjenta
         draw a triangle:
           name: tegn en trekant
+          parameters:
+            length: lengde
+        draw a shape:
+          parameters:
+            length: lengde
         draw a house:
           name: tegn et hus
+          parameters:
+            length: lengde
         draw a square:
           name: tegn en firkant
+          parameters:
+            length: lengde
+        draw a spiral edge:
+          parameters:
+            length: lengde
+            min: minimum
       courseF_artist_fwp_challenge1:
         draw a square 20:
           name: tegn en firkant 20
@@ -571,6 +891,8 @@ no-NO:
           name: gjør noe
         draw an octagon:
           name: tegn en åttekant
+          parameters:
+            length: lengde
       courseF_bee_functions6:
         get nectar make honey:
           name: hent nektar for å lage honning
@@ -585,15 +907,53 @@ no-NO:
       courseF_bee_functionsPre7:
         get nectar make honey:
           name: hent nektar for å lage honning
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: lengde
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: bredde
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: bredde
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: bredde
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: bredde
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: bredde
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: lengde
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: lengde
       courseF_bee_variables_7_2018:
         collect:
           name: samle
       courseF_bee_variables_7_2019:
         collect:
           name: samle
+      courseF_bee_variables_7_2020:
+        collect:
+          name: samle
       courseF_bee_variables_8_2018:
         collect:
           name: samle
       courseF_bee_variables_8_2019:
+        collect:
+          name: samle
+      courseF_bee_variables_8_2020:
         collect:
           name: samle

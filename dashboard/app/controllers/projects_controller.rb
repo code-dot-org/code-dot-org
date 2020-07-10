@@ -70,10 +70,6 @@ class ProjectsController < ApplicationController
       # public gallery, and to be published from the share dialog.
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
-    scratch: {
-      name: 'New Scratch Project',
-      levelbuilder_required: true,
-    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
@@ -311,6 +307,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
+    azure_speech_service = azure_speech_service_options
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -322,6 +319,9 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
+      azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
+      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
+      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
     )
 
     if params[:key] == 'artist'

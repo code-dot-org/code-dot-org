@@ -8,7 +8,14 @@ lt-LT:
       2-3 Artist 3.4:
         draw a circle:
           name: nubrėžk apskritimą
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            height: aukštis
       2-3 Artist Debugging 10:
+        draw square:
+          parameters:
+            height: aukštis
         draw a circle:
           name: nubrėžk apskritimą
       2-3 Artist Functions 11:
@@ -41,18 +48,51 @@ lt-LT:
       4-5 Artist 7:
         draw a circle:
           name: nubrėžk apskritimą
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: medus
       Course 4 Play Lab Params 1:
         jump:
           name: šok
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: taškai
       Course 4 Play Lab Params 2:
         jump:
           name: šok
       Course 4 Play Lab Params 3:
         jump:
           name: šok
+          parameters:
+            height: aukštis
+            actor: veikėjas
       Course 4 Play Lab Params 4:
         do something:
           name: daryk kažką
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: veikėjas
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: veikėjas
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: veikėjas
+            speed: greitis
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: veikėjas
+            speed: greitis
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: taškai
       Course 4 Play Lab Vars 1:
         set score:
           name: 'taškai = '
@@ -65,15 +105,24 @@ lt-LT:
       Course 4 SCF 1a:
         get nectar:
           name: gauk nektarą
+          parameters:
+            counter: skaitiklis
       Course 4 SCF 3:
         do something:
           name: daryk kažką
+        draw an octagon:
+          parameters:
+            length: n
       'Course E: Play Lab Project':
         do something:
           name: daryk kažką
       Find the Wizard:
         do something:
           name: daryk kažką
+      FoodFight:
+        score_points:
+          parameters:
+            points: taškai
       Geometric Sun:
         diamond:
           name: deimantą
@@ -84,6 +133,23 @@ lt-LT:
           name: deimantą
         draw a house:
           name: namas
+      InspirationalArtwork:
+        n-sided shape:
+          parameters:
+            length: n
+        draw a loop:
+          parameters:
+            length: n
+        draw spiral circle:
+          parameters:
+            size: dydis
+      InspirationalArtwork_2018:
+        draw a loop:
+          parameters:
+            length: n
+        draw spiral circle:
+          parameters:
+            size: dydis
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: nubrėžk kvadratą
@@ -109,20 +175,59 @@ lt-LT:
           name: daryk kažką
         draw a hexagon:
           name: nupiešk šešiakampį
+          parameters:
+            length: n
       NEW Course 4 Artist Params 11:
+        draw a polygon:
+          parameters:
+            length: n
         do something:
           name: daryk kažką
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 12:
+        draw a polygon:
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 12a:
+        draw a polygon:
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 13:
+        draw a polygon:
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: n
       NEW Course 4 Artist Params 15:
         draw a star:
           name: nupiešk žvaigždę
+          parameters:
+            points: taškai
+            length: n
         draw a circle:
           name: nubrėžk apskritimą
+        draw a pinwheel:
+          parameters:
+            length: n
+            repeat: kartok
         draw a triangle:
           name: nubrėžk trikampį
+          parameters:
+            length: n
+        draw a shape:
+          parameters:
+            length: n
         draw a house:
           name: namas
+          parameters:
+            length: n
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
       NEW Course 4 Artist Params 2:
         do something:
           name: daryk kažką
@@ -132,38 +237,97 @@ lt-LT:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: nubrėžk trikampį
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length:
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: n
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: nubrėžk trikampį
+          parameters:
+            length: n
         draw a hexagon:
           name: nupiešk šešiakampį
+          parameters:
+            length: n
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
+        draw a sqaure:
+          parameters:
+            length: n
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: nubrėžk trikampį
+          parameters:
+            length: n
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length:
+          parameters:
+            length: n
       NEW Course 4 Artist Params 9:
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
         do something:
           name: daryk kažką
+      NEW Course 4 Artist Params inspire:
+        draw a polygon:
+          parameters:
+            length: n
       NEW Course 4 Play Lab Params 11:
         jump:
           name: šok
+          parameters:
+            height: aukštis
+            actor: veikėjas
+        patrol:
+          parameters:
+            actor: veikėjas
+            speed: greitis
       New Artist Project:
         draw a star:
           name: nupiešk žvaigždę
+          parameters:
+            points: taškai
+            length: n
         draw a circle:
           name: nubrėžk apskritimą
+        draw a pinwheel:
+          parameters:
+            length: n
+            repeat: kartok
         draw a triangle:
           name: nubrėžk trikampį
+          parameters:
+            length: n
+        draw a shape:
+          parameters:
+            length: n
         draw a house:
           name: namas
+          parameters:
+            length: n
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
       New Play Lab Project:
         jump:
           name: šok
+          parameters:
+            height: aukštis
+            actor: veikėjas
+        patrol:
+          parameters:
+            actor: veikėjas
+            speed: greitis
       Standalone_Artist_7:
         draw a flower:
           name: nupiešk gėlę
@@ -185,7 +349,34 @@ lt-LT:
       course4_artist_fwp_challenge1:
         do something:
           name: daryk kažką
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: n
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: n
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: daryk kažką
+      courseC_data wizard_2020:
         do something:
           name: daryk kažką
       courseE_artist_concept1:
@@ -217,6 +408,9 @@ lt-LT:
       courseE_artist_functions10_2019:
         do something:
           name: daryk kažką
+      courseE_artist_functions10_2020:
+        do something:
+          name: daryk kažką
       courseE_artist_functions2:
         draw a square:
           name: nubrėžk kvadratą
@@ -226,6 +420,9 @@ lt-LT:
       courseE_artist_functions2_2019:
         draw a square:
           name: nubrėžk kvadratą
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: nubrėžk kvadratą
       courseE_artist_functions2_copy:
         draw a square:
           name: nubrėžk kvadratą
@@ -233,6 +430,9 @@ lt-LT:
         draw a star:
           name: nupiešk žvaigždę
       courseE_artist_functions3_2019:
+        draw a star:
+          name: nupiešk žvaigždę
+      courseE_artist_functions3_2020:
         draw a star:
           name: nupiešk žvaigždę
       courseE_artist_functions4:
@@ -250,6 +450,9 @@ lt-LT:
       courseE_artist_functions5_2019:
         draw a star:
           name: nupiešk žvaigždę
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: nupiešk žvaigždę
       courseE_artist_functions5_copy:
         draw a star:
           name: nupiešk žvaigždę
@@ -259,6 +462,9 @@ lt-LT:
       courseE_artist_functions7_2018:
         draw a house:
           name: namas
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: namas
       courseE_artist_functions8:
         do something:
           name: daryk kažką
@@ -266,6 +472,9 @@ lt-LT:
         do something:
           name: daryk kažką
       courseE_artist_functions8_2019:
+        do something:
+          name: daryk kažką
+      courseE_artist_functions8_2020:
         do something:
           name: daryk kažką
       courseE_artist_functions8a_2018:
@@ -278,16 +487,27 @@ lt-LT:
           name: nubrėžk kvadratą
         do something:
           name: daryk kažką
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: nubrėžk kvadratą
+        do something:
+          name: daryk kažką
       courseE_artist_functions8b_2018:
         do something:
           name: daryk kažką
       courseE_artist_functions8b_2019:
         do something:
           name: daryk kažką
+      courseE_artist_functions8b_2020:
+        do something:
+          name: daryk kažką
       courseE_artist_functions8c_2018:
         do something:
           name: daryk kažką
       courseE_artist_functions8c_2019:
+        do something:
+          name: daryk kažką
+      courseE_artist_functions8c_2020:
         do something:
           name: daryk kažką
       courseE_artist_functions9:
@@ -299,6 +519,9 @@ lt-LT:
       courseE_artist_functions9_2019:
         do something:
           name: daryk kažką
+      courseE_artist_functions9_2020:
+        do something:
+          name: daryk kažką
       courseE_artist_functions_challenge1:
         do something:
           name: daryk kažką
@@ -306,6 +529,9 @@ lt-LT:
         do something:
           name: daryk kažką
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: daryk kažką
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: daryk kažką
       courseE_artist_functions_challenge2:
@@ -317,6 +543,9 @@ lt-LT:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: daryk kažką
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: daryk kažką
       courseE_artist_functions_predict1:
         draw a square:
           name: nubrėžk kvadratą
@@ -324,6 +553,9 @@ lt-LT:
         draw a square:
           name: nubrėžk kvadratą
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: nubrėžk kvadratą
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: nubrėžk kvadratą
       courseE_artist_functions_predict1_copy:
@@ -336,6 +568,9 @@ lt-LT:
         do something:
           name: daryk kažką
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: daryk kažką
+      courseE_artist_functions_predict2_2020:
         do something:
           name: daryk kažką
       courseE_bee_functions1:
@@ -371,48 +606,144 @@ lt-LT:
       courseF_artist_fwp1:
         draw a square:
           name: nubrėžk kvadratą
+        checker:
+          parameters:
+            size: dydis
         do something:
           name: daryk kažką
+        Make gingham:
+          parameters:
+            size: dydis
+        black outline:
+          parameters:
+            length: n
       courseF_artist_fwp2:
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
+        checker:
+          parameters:
+            size: dydis
         do something:
           name: daryk kažką
+        Make gingham:
+          parameters:
+            size: dydis
+        black outline:
+          parameters:
+            length: n
       courseF_artist_fwp2_predict1:
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
       courseF_artist_fwp3:
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
+        draw a square2:
+          parameters:
+            size: dydis
+        filled square:
+          parameters:
+            size: dydis
+        black outline:
+          parameters:
+            length: n
+      courseF_artist_fwp4:
+        draw a polygon:
+          parameters:
+            length: n
+      courseF_artist_fwp5:
+        draw a polygon:
+          parameters:
+            length: n
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: n
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: n
+            min: min
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: n
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: nupiešk žvaigždę
+          parameters:
+            points: taškai
+            length: n
         draw a circle:
           name: nubrėžk apskritimą
+        draw a pinwheel:
+          parameters:
+            length: n
+            repeat: kartok
         draw a triangle:
           name: nubrėžk trikampį
+          parameters:
+            length: n
+        draw a shape:
+          parameters:
+            length: n
         draw a house:
           name: namas
+          parameters:
+            length: n
         draw a square:
           name: nubrėžk kvadratą
+          parameters:
+            length: n
+        draw a spiral edge:
+          parameters:
+            length: n
+            min: min
       courseF_artist_fwp_challenge1:
         do something:
           name: daryk kažką
       courseF_artist_fwp_challenge2:
         do something:
           name: daryk kažką
+        draw an octagon:
+          parameters:
+            length: n
       courseF_bee_functions8a:
         do something:
           name: daryk kažką
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: n
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: n
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: n
       courseF_bee_variables_7_2018:
         collect:
           name: surink
       courseF_bee_variables_7_2019:
         collect:
           name: surink
+      courseF_bee_variables_7_2020:
+        collect:
+          name: surink
       courseF_bee_variables_8_2018:
         collect:
           name: surink
       courseF_bee_variables_8_2019:
+        collect:
+          name: surink
+      courseF_bee_variables_8_2020:
         collect:
           name: surink

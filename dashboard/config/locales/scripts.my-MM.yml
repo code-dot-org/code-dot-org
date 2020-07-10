@@ -23,6 +23,9 @@ my:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+          lessons:
+            Teacher Dashboard:
+              name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -101,8 +104,14 @@ my:
           stages:
             Loops:
               name: Loops
+          lessons:
+            Loops:
+              name: Loops
         grade1:
           stages:
+            Loops:
+              name: Loops
+          lessons:
             Loops:
               name: Loops
         csd3-2017:
@@ -141,20 +150,37 @@ my:
           stages:
             Lists:
               name: စာရင်းများ
+          lessons:
+            Lists:
+              name: စာရင်းများ
         csd6-2017:
           stages:
+            Lists:
+              name: စာရင်းများ
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-draft:
           stages:
             Variables:
               name: Variables
+          lessons:
+            Variables:
+              name: Variables
         csd2-draft:
           stages:
             Lists:
               name: စာရင်းများ
+          lessons:
+            Lists:
+              name: စာရင်းများ
         csd3-chapters:
           stages:
+            Variables:
+              name: Variables
+            'null':
+              name: 'null'
+          lessons:
             Variables:
               name: Variables
             'null':
@@ -170,6 +196,8 @@ my:
           description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။
             Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         csd6-old:
@@ -204,6 +232,9 @@ my:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          lessons:
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -224,6 +255,9 @@ my:
               display_name: Variables
         andrea-test:
           stages:
+            'null':
+              name: 'null'
+          lessons:
             'null':
               name: 'null'
         coursec-2019:
@@ -304,6 +338,9 @@ my:
           stages:
             Lists:
               name: စာရင်းများ
+          lessons:
+            Lists:
+              name: စာရင်းများ
         csd3-pilot:
           stages:
             Variables:
@@ -324,6 +361,8 @@ my:
             Variables:
               name: Variables
           lessons:
+            Computer Science Fundamentals:
+              name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
             Loops:
               name: Loops
             Variables:
@@ -391,13 +430,6 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-          lessons:
-            Variables:
-              name: Variables
         csp5-virtual:
           stages:
             Variables:
@@ -405,3 +437,25 @@ my:
           lessons:
             Variables:
               name: Variables
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ

@@ -20,9 +20,15 @@ sk-SK:
       2-3 Artist 7:
         draw_rect:
           name: nakresli_obdĺžnik
+          parameters:
+            width: šírka
+            height: výška
       2-3 Artist Debugging 10:
         draw square:
           name: nakresli štvorec
+          parameters:
+            width: šírka
+            height: výška
         jump to controller top left:
           name: prejsť na ovládači doľava hore
         jump to middle:
@@ -260,6 +266,8 @@ sk-SK:
       Course 4 Bee Params 8:
         get nectar make honey:
           name: získaj nektár a vyrob med
+          parameters:
+            honey: med
       Course 4 Play Lab Params 1:
         jump:
           name: skoč
@@ -268,12 +276,17 @@ sk-SK:
           name: level_hore
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Course 4 Play Lab Params 2:
         jump:
           name: skoč
       Course 4 Play Lab Params 3:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
       Course 4 Play Lab Params 4:
         patrol:
           name: hliadkuj
@@ -282,18 +295,30 @@ sk-SK:
       Course 4 Play Lab Params 5:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
       Course 4 Play Lab Params 6:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
       Course 4 Play Lab Params 7:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Course 4 Play Lab Params 8:
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Course 4 Play Lab Params 9:
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Course 4 Play Lab Vars 1:
         set score:
           name: nastav skóre
@@ -314,6 +339,8 @@ sk-SK:
       Course 4 SCF 1a:
         get nectar:
           name: získaj nektár
+          parameters:
+            counter: počítadlo
       Course 4 SCF 1b:
         make honey up and over:
           name: vyrob med vpravo hore
@@ -333,6 +360,8 @@ sk-SK:
           name: urob niečo
         draw an octagon:
           name: nakresli osemuholník
+          parameters:
+            length: dĺžka
       'Course E: Play Lab Project':
         do something:
           name: urob niečo
@@ -346,10 +375,15 @@ sk-SK:
           name: level_hore
         score_points:
           name: skóruj_body
+          parameters:
+            points: body
       Function intro Ryan:
         build bridge:
           name: postav most
       Function intro Ryan_2019:
+        build bridge:
+          name: postav most
+      Function intro Ryan_2020:
         build bridge:
           name: postav most
       Geometric Sun:
@@ -361,6 +395,7 @@ sk-SK:
           name: nakresli okná
         rectangle:
           name: obdĺžnik
+          description: hahaha
         sun:
           name: slnko
         diamond:
@@ -373,6 +408,7 @@ sk-SK:
           name: trojuholník
         square:
           name: štvorec
+          description: hahaha
       Geometric Sun_2018:
         draw a door:
           name: nakresli dvere
@@ -382,6 +418,7 @@ sk-SK:
           name: nakresli okná
         rectangle:
           name: obdĺžnik
+          description: hahaha
         sun:
           name: slnko
         diamond:
@@ -394,23 +431,38 @@ sk-SK:
           name: trojuholník
         square:
           name: štvorec
+          description: hahaha
       Guess The Number:
         check guess:
           name: skontroluj odhad
       InspirationalArtwork:
         n-sided shape:
           name: n-stranný tvar
+          description: Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva
+            parametre, dĺžku a počet strán. Dĺžka
+          parameters:
+            length: dĺžka
         draw a loop:
           name: nakresli cyklus
+          parameters:
+            length: dĺžka
         draw spiral circle:
           name: nakresli špirálu
+          parameters:
+            size: veľkosť
       InspirationalArtwork_2018:
         draw a loop:
           name: nakresli cyklus
+          parameters:
+            length: dĺžka
         n-sided shape:
           name: n-stranný tvar
+          description: Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva
+            parametre, dĺžku a počet strán. Dĺžka
         draw spiral circle:
           name: nakresli špirálu
+          parameters:
+            size: veľkosť
       K-1 Artist2 3:
         draw roof:
           name: nakresli strechu
@@ -426,12 +478,20 @@ sk-SK:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: vymaž cestu
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: vymaž cestu
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: oprav dlhú cestu
         fix short path:
           name: oprav krátku cestu
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: oprav dlhú cestu
+        fix short path:
+          name: oprav krátku cestu
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: oprav dlhú cestu
         fix short path:
@@ -446,12 +506,22 @@ sk-SK:
           name: postav krátky most
         build long bridge:
           name: postav dlhý most
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: postav krátky most
+        build long bridge:
+          name: postav dlhý most
       MC_HOC_2017_FP20x20:
         function 1:
           name: funkcia 1
         function 2:
           name: funkcia 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: funkcia 1
+        function 2:
+          name: funkcia 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: funkcia 1
         function 2:
@@ -509,38 +579,66 @@ sk-SK:
           name: urob niečo
         draw a hexagon:
           name: nakresli šesťuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
         do something:
           name: urob niečo
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 15:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 2:
         do something:
           name: urob niečo
@@ -553,52 +651,92 @@ sk-SK:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: nakresli trojuholník s dĺžkou
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: nakresli päťuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a hexagon:
           name: nakresli šesťuholník
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a sqaure:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: nakresli trojuholník s dĺžkou
+          parameters:
+            length: dĺžka
       NEW Course 4 Artist Params 9:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         do something:
           name: urob niečo
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       NEW Course 4 Play Lab Params 11:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       New Artist Project:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       New Minecraft Hero Project:
         function 1:
           name: funkcia 1
@@ -607,8 +745,14 @@ sk-SK:
       New Play Lab Project:
         jump:
           name: skoč
+          parameters:
+            height: výška
+            actor: postava
         patrol:
           name: hliadkuj
+          parameters:
+            actor: postava
+            speed: rýchlosť
       Robot Doodle:
         25 pixel square:
           name: 25pixelový štvorec
@@ -702,6 +846,8 @@ sk-SK:
       course4_artist_fwp_challenge1:
         draw background:
           name: nakresli pozadie
+          parameters:
+            color: farba
         draw a polygon:
           name: nakresli mnohouholník
         draw a square 20:
@@ -714,9 +860,13 @@ sk-SK:
       course4_bee_fwp_challenge1:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       course4_bee_fwp_challenge2:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"jednoduché" riešenie'
@@ -729,19 +879,35 @@ sk-SK:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: možné riešenie
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: možné riešenie
       courseC_artist_prog3:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog3_2018:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog3_2019:
         draw flame:
           name: nakresli plameň
+          parameters:
+            x: x
+        draw fire:
+          name: nakresli oheň
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: nakresli plameň
+          parameters:
+            x: x
         draw fire:
           name: nakresli oheň
       courseC_artist_prog4:
@@ -753,7 +919,13 @@ sk-SK:
       courseC_artist_prog4_2019:
         booster:
           name: urýchľovač
+      courseC_artist_prog4_2020:
+        booster:
+          name: urýchľovač
       courseC_data wizard:
+        do something:
+          name: urob niečo
+      courseC_data wizard_2020:
         do something:
           name: urob niečo
       courseD_artist_binary1:
@@ -767,6 +939,11 @@ sk-SK:
         draw:
           name: nakresli
       courseD_artist_binary1_2019:
+        draw bit:
+          name: nakresli bit
+        draw:
+          name: nakresli
+      courseD_artist_binary1_2020:
         draw bit:
           name: nakresli bit
         draw:
@@ -786,6 +963,11 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary2_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binary3:
         draw:
           name: nakresli
@@ -797,6 +979,11 @@ sk-SK:
         draw bit:
           name: nakresli bit
       courseD_artist_binary3_2019:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
+      courseD_artist_binary3_2020:
         draw:
           name: nakresli
         draw bit:
@@ -816,6 +1003,11 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary4_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binary5:
         draw:
           name: nakresli
@@ -827,6 +1019,11 @@ sk-SK:
         draw bit:
           name: nakresli bit
       courseD_artist_binary5_2019:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
+      courseD_artist_binary5_2020:
         draw:
           name: nakresli
         draw bit:
@@ -846,6 +1043,11 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary6_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binary7:
         draw:
           name: nakresli
@@ -857,6 +1059,11 @@ sk-SK:
         draw bit:
           name: nakresli bit
       courseD_artist_binary7_2019:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
+      courseD_artist_binary7_2020:
         draw:
           name: nakresli
         draw bit:
@@ -876,6 +1083,11 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary8_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binary8_predict1:
         draw:
           name: nakresli
@@ -891,12 +1103,22 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binaryFP_2018:
         draw:
           name: nakresli
         draw bit:
           name: nakresli bit
       courseD_artist_binaryFP_2019:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
+      courseD_artist_binaryFP_2020:
         draw:
           name: nakresli
         draw bit:
@@ -911,12 +1133,22 @@ sk-SK:
           name: nakresli
         draw bit:
           name: nakresli bit
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
       courseD_artist_binary_challenge2_2018:
         draw:
           name: nakresli
         draw bit:
           name: nakresli bit
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: nakresli
+        draw bit:
+          name: nakresli bit
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: nakresli
         draw bit:
@@ -1024,6 +1256,13 @@ sk-SK:
           name: nakresli šesťuholník
         draw line of hexagons:
           name: nakresli rad šesťuholníkov
+      courseE_artist_functions10_2020:
+        do something:
+          name: urob niečo
+        draw hexagon:
+          name: nakresli šesťuholník
+        draw line of hexagons:
+          name: nakresli rad šesťuholníkov
       courseE_artist_functions1_copy:
         draw ear stems:
           name: nakresli uši
@@ -1042,6 +1281,11 @@ sk-SK:
           name: nakresli štvorec
         draw ear stems:
           name: nakresli uši
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: nakresli štvorec
+        draw ear stems:
+          name: nakresli uši
       courseE_artist_functions2_copy:
         draw a square:
           name: nakresli štvorec
@@ -1051,6 +1295,9 @@ sk-SK:
         draw a star:
           name: nakresli hviezdu
       courseE_artist_functions3_2019:
+        draw a star:
+          name: nakresli hviezdu
+      courseE_artist_functions3_2020:
         draw a star:
           name: nakresli hviezdu
       courseE_artist_functions4:
@@ -1066,6 +1313,9 @@ sk-SK:
         draw a star:
           name: nakresli hviezdu
       courseE_artist_functions5_2019:
+        draw a star:
+          name: nakresli hviezdu
+      courseE_artist_functions5_2020:
         draw a star:
           name: nakresli hviezdu
       courseE_artist_functions5_copy:
@@ -1084,6 +1334,11 @@ sk-SK:
       courseE_artist_functions7_2019:
         draw a window:
           name: nakresli okno
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: nakresli okno
+        draw a house:
+          name: nakresli dom
       courseE_artist_functions8:
         do something:
           name: urob niečo
@@ -1109,12 +1364,26 @@ sk-SK:
           name: nakresli rad štvorcov
         draw square:
           name: nakresli štvorec
+      courseE_artist_functions8_2020:
+        do something:
+          name: urob niečo
+        staggered squares:
+          name: posunuté štvorce
+        draw a line of squares:
+          name: nakresli rad štvorcov
+        draw square:
+          name: nakresli štvorec
       courseE_artist_functions8a_2018:
         draw a square:
           name: nakresli štvorec
         do something:
           name: urob niečo
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: nakresli štvorec
+        do something:
+          name: urob niečo
+      courseE_artist_functions8a_2020:
         draw a square:
           name: nakresli štvorec
         do something:
@@ -1133,6 +1402,13 @@ sk-SK:
           name: nakresli štvorec
         do something:
           name: urob niečo
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: nakresli rad štvorcov
+        draw square:
+          name: nakresli štvorec
+        do something:
+          name: urob niečo
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: nakresli rad štvorcov
@@ -1143,6 +1419,15 @@ sk-SK:
         staggered squares:
           name: posunuté štvorce
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: nakresli rad štvorcov
+        draw square:
+          name: nakresli štvorec
+        do something:
+          name: urob niečo
+        staggered squares:
+          name: posunuté štvorce
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: nakresli rad štvorcov
         draw square:
@@ -1172,6 +1457,13 @@ sk-SK:
           name: nakresli trojuholník
         draw line of triangles:
           name: nakresli rad trojuholníkov
+      courseE_artist_functions9_2020:
+        do something:
+          name: urob niečo
+        draw triangle:
+          name: nakresli trojuholník
+        draw line of triangles:
+          name: nakresli rad trojuholníkov
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: nakresli šesťuholník
@@ -1184,6 +1476,17 @@ sk-SK:
         draw square:
           name: nakresli štvorec
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: nakresli šesťuholník
+        draw line of hexagons:
+          name: nakresli rad šesťuholníkov
+        staggered squares:
+          name: posunuté štvorce
+        draw a line of squares:
+          name: nakresli rad štvorcov
+        draw square:
+          name: nakresli štvorec
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: nakresli šesťuholník
         draw line of hexagons:
@@ -1209,6 +1512,11 @@ sk-SK:
           name: môj dizajn
         do something:
           name: urob niečo
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: môj dizajn
+        do something:
+          name: urob niečo
       courseE_artist_functions_challenge2:
         my design:
           name: môj dizajn
@@ -1224,6 +1532,11 @@ sk-SK:
           name: môj dizajn
         do something:
           name: urob niečo
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: môj dizajn
+        do something:
+          name: urob niečo
       courseE_artist_functions_predict1:
         draw a square:
           name: nakresli štvorec
@@ -1235,6 +1548,11 @@ sk-SK:
         draw ear stems:
           name: nakresli uši
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: nakresli štvorec
+        draw ear stems:
+          name: nakresli uši
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: nakresli štvorec
         draw ear stems:
@@ -1259,6 +1577,13 @@ sk-SK:
         do something:
           name: urob niečo
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: nakresli rad mnohouholníkov
+        draw polygon:
+          name: nakresli mnohouholník
+        do something:
+          name: urob niečo
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: nakresli rad mnohouholníkov
         draw polygon:
@@ -1343,6 +1668,15 @@ sk-SK:
           name: získaj všetky tekvice
         pumpkin square:
           name: štvorec s tekvicou
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: pozbieraj popri ceste
+        check square for corn:
+          name: kukurica
+        get all pumpkins:
+          name: získaj všetky tekvice
+        pumpkin square:
+          name: štvorec s tekvicou
       courseE_farmer_functions10b:
         navigate:
           name: naviguj
@@ -1375,6 +1709,17 @@ sk-SK:
           name: získaj plody
         get all pumpkins:
           name: získaj všetky tekvice
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: pozbieraj popri ceste
+        pumpkin square:
+          name: štvorec s tekvicou
+        check square for corn:
+          name: kukurica
+        get produce:
+          name: získaj plody
+        get all pumpkins:
+          name: získaj všetky tekvice
       courseE_farmer_functions13_2018:
         pick along path:
           name: pozbieraj popri ceste
@@ -1393,16 +1738,31 @@ sk-SK:
           name: obdĺžnik kukurice
         lettuce stairs:
           name: schody so šalátom
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: pozbieraj popri ceste
+        check for corn:
+          name: skontroluj kukuricu
+        corn rectangle:
+          name: obdĺžnik kukurice
+        lettuce stairs:
+          name: schody so šalátom
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: kukurica
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: kukurica
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: kukurica
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: kukurica
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: kukurica
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: kukurica
       courseE_farmer_functions2ba:
@@ -1414,6 +1774,11 @@ sk-SK:
         get all pumpkins:
           name: získaj všetky tekvice
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: kukurica
+        get all pumpkins:
+          name: získaj všetky tekvice
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: kukurica
         get all pumpkins:
@@ -1435,12 +1800,24 @@ sk-SK:
           name: kukurica
         get all pumpkins:
           name: získaj všetky tekvice
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: pozbieraj popri ceste
+        check square for corn:
+          name: kukurica
+        get all pumpkins:
+          name: získaj všetky tekvice
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: kukurica
         get all pumpkins:
           name: získaj všetky tekvice
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: kukurica
+        get all pumpkins:
+          name: získaj všetky tekvice
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: kukurica
         get all pumpkins:
@@ -1460,10 +1837,16 @@ sk-SK:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: štvorec so záhradou
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: štvorec so záhradou
       courseE_farmer_functions8a1_2018:
         garden square:
           name: štvorec so záhradou
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: štvorec so záhradou
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: štvorec so záhradou
       courseE_farmer_functions8b:
@@ -1473,6 +1856,9 @@ sk-SK:
         garden square:
           name: štvorec so záhradou
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: štvorec so záhradou
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: štvorec so záhradou
       courseE_farmer_functions9b:
@@ -1502,70 +1888,128 @@ sk-SK:
           name: nakresli štvorec
         checker:
           name: kontrola
+          parameters:
+            size: veľkosť
+            color: farba
         do something:
           name: urob niečo
         Make gingham:
           name: Vyrob farebné štvorce
+          parameters:
+            size: veľkosť
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp2:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         checker:
           name: kontrola
+          parameters:
+            size: veľkosť
+            color: farba
         do something:
           name: urob niečo
         Make gingham:
           name: Vyrob farebné štvorce
+          parameters:
+            size: veľkosť
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp2_predict1:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
       courseF_artist_fwp3:
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a square2:
           name: nakresli štvorec2
+          parameters:
+            size: veľkosť
         filled square:
           name: vyplnený štvorec
+          parameters:
+            size: veľkosť
+            color: farba
         black outline:
           name: čierny obrys
+          parameters:
+            length: dĺžka
       courseF_artist_fwp4:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       courseF_artist_fwp5:
         draw a polygon:
           name: nakresli mnohouholník
+          parameters:
+            length: dĺžka
       courseF_artist_fwp6:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
       courseF_artist_fwp7:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: nakresli hviezdu
+          parameters:
+            points: body
+            length: dĺžka
         draw a circle:
           name: nakresli kružnicu
         draw a pinwheel:
           name: nakresli veterník
+          parameters:
+            length: dĺžka
+            repeat: opakuj
         draw a triangle:
           name: nakresli trojuholník
+          parameters:
+            length: dĺžka
         draw a shape:
           name: nakresli tvar
+          parameters:
+            length: dĺžka
         draw a house:
           name: nakresli dom
+          parameters:
+            length: dĺžka
         draw a square:
           name: nakresli štvorec
+          parameters:
+            length: dĺžka
         draw a spiral edge:
           name: nakresli kraj špirály
+          parameters:
+            length: dĺžka
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: nakresli pozadie
+          parameters:
+            color: farba
         draw a polygon:
           name: nakresli mnohouholník
         draw a square 20:
@@ -1579,6 +2023,8 @@ sk-SK:
           name: urob niečo
         draw an octagon:
           name: nakresli osemuholník
+          parameters:
+            length: dĺžka
       courseF_bee_conditionals2:
         move and check:
           name: posuň sa a skontroluj
@@ -1591,6 +2037,9 @@ sk-SK:
         move and get nectar with counter:
           name: posuň sa a získaj nektár s počítadlom
       courseF_bee_for_challenge1_2019:
+        move and get nectar with counter:
+          name: posuň sa a získaj nektár s počítadlom
+      courseF_bee_for_challenge1_2020:
         move and get nectar with counter:
           name: posuň sa a získaj nektár s počítadlom
       courseF_bee_functions2:
@@ -1649,31 +2098,50 @@ sk-SK:
       courseF_bee_fwp4:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            length: dĺžka
       courseF_bee_fwp5:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            width: šírka
       courseF_bee_fwp6:
         rowOfNectar:
           name: radNektáru
+          parameters:
+            width: šírka
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: riadokNektáruAleboMedu
+          parameters:
+            width: šírka
       courseF_bee_fwp_challenge1:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseF_bee_fwp_challenge2:
         pick row:
           name: vyber riadok
+          parameters:
+            length: dĺžka
       courseF_bee_variables_1_2018:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_1_2019:
+        collect row:
+          name: pozbieraj riadok
+      courseF_bee_variables_1_2020:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_2_2018:
@@ -1682,10 +2150,16 @@ sk-SK:
       courseF_bee_variables_2_2019:
         collect row:
           name: pozbieraj riadok
+      courseF_bee_variables_2_2020:
+        collect row:
+          name: pozbieraj riadok
       courseF_bee_variables_3_2018:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_3_2019:
+        collect row:
+          name: pozbieraj riadok
+      courseF_bee_variables_3_2020:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_4_2018:
@@ -1694,10 +2168,16 @@ sk-SK:
       courseF_bee_variables_4_2019:
         collect row:
           name: pozbieraj riadok
+      courseF_bee_variables_4_2020:
+        collect row:
+          name: pozbieraj riadok
       courseF_bee_variables_5_2018:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_5_2019:
+        collect row:
+          name: pozbieraj riadok
+      courseF_bee_variables_5_2020:
         collect row:
           name: pozbieraj riadok
       courseF_bee_variables_6_2018:
@@ -1706,10 +2186,16 @@ sk-SK:
       courseF_bee_variables_6_2019:
         collect stairs:
           name: pozbieraj schody
+      courseF_bee_variables_6_2020:
+        collect stairs:
+          name: pozbieraj schody
       courseF_bee_variables_7_2018:
         collect:
           name: zbieraj
       courseF_bee_variables_7_2019:
+        collect:
+          name: zbieraj
+      courseF_bee_variables_7_2020:
         collect:
           name: zbieraj
       courseF_bee_variables_8_2018:
@@ -1718,6 +2204,11 @@ sk-SK:
         collect:
           name: zbieraj
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: posunúť a zvýšiť
+        collect:
+          name: zbieraj
+      courseF_bee_variables_8_2020:
         move and increment:
           name: posunúť a zvýšiť
         collect:

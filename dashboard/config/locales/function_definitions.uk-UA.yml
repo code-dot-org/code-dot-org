@@ -17,9 +17,17 @@ uk-UA:
           name: намалювати коло
         draw a car:
           name: намалюйте автомобіль
+      2-3 Artist 7:
+        draw_rect:
+          parameters:
+            width: ширина
+            height: висота
       2-3 Artist Debugging 10:
         draw square:
           name: намалюйте квадрат
+          parameters:
+            width: ширина
+            height: висота
         draw a circle:
           name: намалювати коло
       2-3 Artist Functions 11:
@@ -89,18 +97,51 @@ uk-UA:
       Course 4 Bee Params 6:
         get 5 nectar:
           name: отримати нектар. Кількість - 5
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          parameters:
+            honey: мед
       Course 4 Play Lab Params 1:
         jump:
           name: стрибок
+      Course 4 Play Lab Params 10:
+        score_points:
+          parameters:
+            points: балів
       Course 4 Play Lab Params 2:
         jump:
           name: стрибок
       Course 4 Play Lab Params 3:
         jump:
           name: стрибок
+          parameters:
+            height: висота
+            actor: персонаж
       Course 4 Play Lab Params 4:
         do something:
           name: щось зробити
+      Course 4 Play Lab Params 5:
+        patrol:
+          parameters:
+            actor: персонаж
+      Course 4 Play Lab Params 6:
+        patrol:
+          parameters:
+            actor: персонаж
+      Course 4 Play Lab Params 7:
+        patrol:
+          parameters:
+            actor: персонаж
+            speed: швидкість
+      Course 4 Play Lab Params 8:
+        patrol:
+          parameters:
+            actor: персонаж
+            speed: швидкість
+      Course 4 Play Lab Params 9:
+        score_points:
+          parameters:
+            points: балів
       Course 4 Play Lab Vars 1:
         set score:
           name: встановити рахунок
@@ -115,6 +156,8 @@ uk-UA:
       Course 4 SCF 1a:
         get nectar:
           name: взяти нектар
+          parameters:
+            counter: лічильник
       Course 4 SCF 2:
         draw a square 20:
           name: намалювати квадрат 20
@@ -123,12 +166,19 @@ uk-UA:
           name: намалювати квадрат 20
         do something:
           name: щось зробити
+        draw an octagon:
+          parameters:
+            length: довжина
       'Course E: Play Lab Project':
         do something:
           name: щось зробити
       Find the Wizard:
         do something:
           name: щось зробити
+      FoodFight:
+        score_points:
+          parameters:
+            points: балів
       Geometric Sun:
         rectangle:
           name: прямокутник
@@ -154,13 +204,25 @@ uk-UA:
       InspirationalArtwork:
         n-sided shape:
           name: n-стороння фігура
+          parameters:
+            length: довжина
         draw a loop:
           name: намалювати цикл
+          parameters:
+            length: довжина
+        draw spiral circle:
+          parameters:
+            size: розмір
       InspirationalArtwork_2018:
         draw a loop:
           name: намалювати цикл
+          parameters:
+            length: довжина
         n-sided shape:
           name: n-стороння фігура
+        draw spiral circle:
+          parameters:
+            size: розмір
       K-1 Artist2 3:
         draw roof:
           name: намалюйте дах
@@ -170,10 +232,16 @@ uk-UA:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: очистити шлях
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: очистити шлях
       MC_HOC_2017_Ali:
         build short bridge:
           name: побудувати короткий міст
       MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: побудувати короткий міст
+      MC_HOC_2017_Ali_2020:
         build short bridge:
           name: побудувати короткий міст
       MC_HOC_2017_FP20x20:
@@ -182,6 +250,11 @@ uk-UA:
         function 2:
           name: функція 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: функція 1
+        function 2:
+          name: функція 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: функція 1
         function 2:
@@ -235,31 +308,63 @@ uk-UA:
           name: щось зробити
         draw a hexagon:
           name: намалювати шестикутник
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
         do something:
           name: щось зробити
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge:
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 15:
         draw a star:
           name: намалювати зірку
+          parameters:
+            points: балів
+            length: довжина
         draw a circle:
           name: намалювати коло
+        draw a pinwheel:
+          parameters:
+            length: довжина
+            repeat: повторити
         draw a triangle:
           name: намалювати трикутник
+          parameters:
+            length: довжина
+        draw a shape:
+          parameters:
+            length: довжина
         draw a house:
           name: намалювати будинок
+          parameters:
+            length: довжина
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 2:
         do something:
           name: щось зробити
@@ -272,41 +377,87 @@ uk-UA:
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: намалюйте трикутник з довжиною
+          parameters:
+            length: довжина
+      NEW Course 4 Artist Params 5:
+        draw a pentagon:
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: намалювати трикутник
+          parameters:
+            length: довжина
         draw a hexagon:
           name: намалювати шестикутник
+          parameters:
+            length: довжина
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
+        draw a sqaure:
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: намалювати трикутник
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: намалюйте трикутник з довжиною
+          parameters:
+            length: довжина
       NEW Course 4 Artist Params 9:
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
         do something:
           name: щось зробити
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
       NEW Course 4 Play Lab Params 11:
         jump:
           name: стрибок
+          parameters:
+            height: висота
+            actor: персонаж
+        patrol:
+          parameters:
+            actor: персонаж
+            speed: швидкість
       New Artist Project:
         draw a star:
           name: намалювати зірку
+          parameters:
+            points: балів
+            length: довжина
         draw a circle:
           name: намалювати коло
+        draw a pinwheel:
+          parameters:
+            length: довжина
+            repeat: повторити
         draw a triangle:
           name: намалювати трикутник
+          parameters:
+            length: довжина
+        draw a shape:
+          parameters:
+            length: довжина
         draw a house:
           name: намалювати будинок
+          parameters:
+            length: довжина
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
       New Minecraft Hero Project:
         function 1:
           name: функція 1
@@ -315,6 +466,13 @@ uk-UA:
       New Play Lab Project:
         jump:
           name: стрибок
+          parameters:
+            height: висота
+            actor: персонаж
+        patrol:
+          parameters:
+            actor: персонаж
+            speed: швидкість
       Standalone_Artist_7:
         draw a flower:
           name: намалювати квітку
@@ -334,13 +492,43 @@ uk-UA:
         do something:
           name: щось зробити
       course4_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: колір
         draw a polygon:
           name: намалюйте багатокутник
         draw a square 20:
           name: намалювати квадрат 20
         do something:
           name: щось зробити
+      course4_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: довжина
+      course4_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: довжина
+      courseC_artist_prog3:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2018:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2019:
+        draw flame:
+          parameters:
+            x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: щось зробити
+      courseC_data wizard_2020:
         do something:
           name: щось зробити
       courseE_artist_concept1:
@@ -376,6 +564,9 @@ uk-UA:
       courseE_artist_functions10_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions10_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions2:
         draw a square:
           name: намалювати квадрат
@@ -385,6 +576,9 @@ uk-UA:
       courseE_artist_functions2_2019:
         draw a square:
           name: намалювати квадрат
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: намалювати квадрат
       courseE_artist_functions2_copy:
         draw a square:
           name: намалювати квадрат
@@ -392,6 +586,9 @@ uk-UA:
         draw a star:
           name: намалювати зірку
       courseE_artist_functions3_2019:
+        draw a star:
+          name: намалювати зірку
+      courseE_artist_functions3_2020:
         draw a star:
           name: намалювати зірку
       courseE_artist_functions4:
@@ -409,6 +606,9 @@ uk-UA:
       courseE_artist_functions5_2019:
         draw a star:
           name: намалювати зірку
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: намалювати зірку
       courseE_artist_functions5_copy:
         draw a star:
           name: намалювати зірку
@@ -416,6 +616,9 @@ uk-UA:
         draw a house:
           name: намалювати будинок
       courseE_artist_functions7_2018:
+        draw a house:
+          name: намалювати будинок
+      courseE_artist_functions7_2020:
         draw a house:
           name: намалювати будинок
       courseE_artist_functions8:
@@ -439,12 +642,24 @@ uk-UA:
           name: малювати лінію квадрату
         draw square:
           name: намалюйте квадрат
+      courseE_artist_functions8_2020:
+        do something:
+          name: щось зробити
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
       courseE_artist_functions8a_2018:
         draw a square:
           name: намалювати квадрат
         do something:
           name: щось зробити
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: намалювати квадрат
+        do something:
+          name: щось зробити
+      courseE_artist_functions8a_2020:
         draw a square:
           name: намалювати квадрат
         do something:
@@ -457,6 +672,13 @@ uk-UA:
         do something:
           name: щось зробити
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+        do something:
+          name: щось зробити
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
@@ -477,6 +699,13 @@ uk-UA:
           name: намалюйте квадрат
         do something:
           name: щось зробити
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+        do something:
+          name: щось зробити
       courseE_artist_functions9:
         do something:
           name: щось зробити
@@ -486,12 +715,20 @@ uk-UA:
       courseE_artist_functions9_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions9_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functionsProj_2018:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
           name: намалюйте квадрат
       courseE_artist_functionsProj_2019:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+      courseE_artist_functionsProj_2020:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
@@ -505,6 +742,9 @@ uk-UA:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions_challenge2:
         do something:
           name: щось зробити
@@ -514,6 +754,9 @@ uk-UA:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions_predict1:
         draw a square:
           name: намалювати квадрат
@@ -521,6 +764,9 @@ uk-UA:
         draw a square:
           name: намалювати квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: намалювати квадрат
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: намалювати квадрат
       courseE_artist_functions_predict1_copy:
@@ -533,6 +779,9 @@ uk-UA:
         do something:
           name: щось зробити
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: щось зробити
+      courseE_artist_functions_predict2_2020:
         do something:
           name: щось зробити
       courseE_bee_functions1:
@@ -568,37 +817,114 @@ uk-UA:
       courseF_artist_fwp1:
         draw a square:
           name: намалювати квадрат
+        checker:
+          parameters:
+            size: розмір
+            color: колір
         do something:
           name: щось зробити
+        Make gingham:
+          parameters:
+            size: розмір
+        black outline:
+          parameters:
+            length: довжина
       courseF_artist_fwp2:
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
+        checker:
+          parameters:
+            size: розмір
+            color: колір
         do something:
           name: щось зробити
+        Make gingham:
+          parameters:
+            size: розмір
+        black outline:
+          parameters:
+            length: довжина
       courseF_artist_fwp2_predict1:
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
       courseF_artist_fwp3:
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
+        draw a square2:
+          parameters:
+            size: розмір
+        filled square:
+          parameters:
+            size: розмір
+            color: колір
+        black outline:
+          parameters:
+            length: довжина
       courseF_artist_fwp4:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
       courseF_artist_fwp5:
         draw a polygon:
           name: намалюйте багатокутник
+          parameters:
+            length: довжина
+      courseF_artist_fwp6:
+        draw a spiral edge:
+          parameters:
+            length: довжина
+      courseF_artist_fwp7:
+        draw a spiral edge:
+          parameters:
+            length: довжина
+            min: мінімум
+      courseF_artist_fwp8:
+        draw a spiral edge:
+          parameters:
+            length: довжина
+            min: мінімум
       courseF_artist_fwp9:
         draw a star:
           name: намалювати зірку
+          parameters:
+            points: балів
+            length: довжина
         draw a circle:
           name: намалювати коло
+        draw a pinwheel:
+          parameters:
+            length: довжина
+            repeat: повторити
         draw a triangle:
           name: намалювати трикутник
+          parameters:
+            length: довжина
+        draw a shape:
+          parameters:
+            length: довжина
         draw a house:
           name: намалювати будинок
+          parameters:
+            length: довжина
         draw a square:
           name: намалювати квадрат
+          parameters:
+            length: довжина
+        draw a spiral edge:
+          parameters:
+            length: довжина
+            min: мінімум
       courseF_artist_fwp_challenge1:
+        draw background:
+          parameters:
+            color: колір
         draw a polygon:
           name: намалюйте багатокутник
         draw a square 20:
@@ -610,18 +936,59 @@ uk-UA:
           name: намалювати квадрат 20
         do something:
           name: щось зробити
+        draw an octagon:
+          parameters:
+            length: довжина
       courseF_bee_functions8a:
         do something:
           name: щось зробити
+      courseF_bee_fwp4:
+        rowOfNectar:
+          parameters:
+            length: довжина
+      courseF_bee_fwp5:
+        rowOfNectar:
+          parameters:
+            width: ширина
+      courseF_bee_fwp6:
+        rowOfNectar:
+          parameters:
+            width: ширина
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ширина
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ширина
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          parameters:
+            width: ширина
+      courseF_bee_fwp_challenge1:
+        pick row:
+          parameters:
+            length: довжина
+      courseF_bee_fwp_challenge2:
+        pick row:
+          parameters:
+            length: довжина
       courseF_bee_variables_7_2018:
         collect:
           name: збирати
       courseF_bee_variables_7_2019:
         collect:
           name: збирати
+      courseF_bee_variables_7_2020:
+        collect:
+          name: збирати
       courseF_bee_variables_8_2018:
         collect:
           name: збирати
       courseF_bee_variables_8_2019:
+        collect:
+          name: збирати
+      courseF_bee_variables_8_2020:
         collect:
           name: збирати

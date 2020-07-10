@@ -78,6 +78,15 @@ bs-BA:
         edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Koristi strelice za pomicanje lika
+      CourseD_Dance_2020_04:
+        dance_callout_02: Dodajte ovaj blok u svoj program!
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Novi blok!
+      CourseD_Dance_2020_07:
+        setprop_hint: Novi blok!
+      CourseD_Dance_2020_09:
+        new_block_3: Novi blok!
+        new_block_4: Novi blok!
       CourseD_Dance_Party_01:
         dance_callout_01: Dodajte ovaj blok u svoj program!
       CourseD_Dance_Party_02:
@@ -142,19 +151,28 @@ bs-BA:
         craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš
           li ga završiti?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš
           li ga završiti?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš
+          li ga završiti?
       Overworld Move to Sheep:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Place Wall:
         craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
       Overworld Place Wall_2019:
+        craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
+      Overworld Place Wall_2020:
         craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
       Underground Avoiding Lava:
         craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li
@@ -162,9 +180,14 @@ bs-BA:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li
           dodati komandu za pokretanje naprijed?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li
+          dodati komandu za pokretanje naprijed?
       Underground Iron:
         craft_what_is_iron: Iskopaj ovo željezo!
       Underground Iron_2019:
+        craft_what_is_iron: Iskopaj ovo željezo!
+      Underground Iron_2020:
         craft_what_is_iron: Iskopaj ovo željezo!
       course3_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn,
@@ -198,6 +221,8 @@ bs-BA:
         stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
       courseD_maze_ramp3_2019:
         stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
+      courseD_maze_ramp3_2020:
+        stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
@@ -207,6 +232,9 @@ bs-BA:
       courseE_artist_functions_challenge1_2019:
         courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
+      courseE_artist_functions_challenge1_2020:
+        courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn,
+          promijeni ga u šta želiš!
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
@@ -214,6 +242,9 @@ bs-BA:
         courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
       courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn,
+          promijeni ga u šta želiš!
+      courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
       courseE_artist_ramp8:
@@ -227,6 +258,8 @@ bs-BA:
       courseF_bee_for4_2018:
         courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
       courseF_bee_for4_2019:
+        courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
+      courseF_bee_for4_2020:
         courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Ova funkcija će uraditi dobar posao sa

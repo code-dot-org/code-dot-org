@@ -421,6 +421,65 @@ nn-NO:
         som er 50 piksler bred i størrelse.
       Course 4 Artist For Loops 6a: Gjer tre små endringar i koden frå førre nivå
         for å få dette til!
+      CourseD_Dance_2020_01: |-
+        Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokka.
+
+        Velg 'katt' eller 'dovendyr' for å laga den første dansaren.
+
+        -   _Du kan også trykke på lyspæra til venstre dersom du ønsker meir informasjon eller ekstrautfordringar._
+      CourseD_Dance_2020_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml>-blokka har deg køyre kode når du trykker på piltastane. Bruk <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>-blokka til å få katten til å klappe!
+
+        _Sørg for at du presser "piltast opp" eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) etter du har klikka Køyr-knappen!_
+      CourseD_Dance_2020_03: Det er tid for dansevisning! Programmer kvar dansar til
+        å danse når du trykker på ulike tastar. Velg ditt favoritt dansetrinn for
+        kvar dansar eller sett det til "(Tilfeldig)" for noko totalt uforutsigbart!
+      CourseD_Dance_2020_04: |-
+        La oss få dansarane til å danse i takt med musikken!
+
+        Koble saman <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka med ei <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>-blokk frå verktøykassa.
+
+        Dansaren din bør starte på eit nytt dansetrinn etter fjerde takt.
+
+        **Taktar** blir brukt til å telje tid i musikk. I denne øvinga er ei takt på fire slag.
+      CourseD_Dance_2020_05: |-
+        _Groovy greier!_
+
+        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
+      CourseD_Dance_2020_06: "Bruk denne nye blokka til å sette opp ei gruppe mindre
+        bakgrunnsdansarar rundt hoveddansaren i midten. \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nNo kan du lage mange bakgrunnsdansarar på ein gong!"
+      CourseD_Dance_2020_07: |-
+        Kvar dansar har eit sett med _eigenskapar_ som kontrollerer korleis dansaren ser ut.
+
+        Bruk <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> under ei gronn hending-blokk for å få dansarar til å sjå ut som dei står nærare eller lengre borte.
+      CourseD_Dance_2020_08: Dansarar har ein "farge"-eigenskap som kan legge til
+        eit lag med farge. Prøv å endre fargen på ein av dansarane dine (eller heile
+        gruppa)!
+      CourseD_Dance_2020_09: "Denne **nye blokka** er ein spesiell type hending som
+        blir trigga igjen og igjen. \n\n<xml><block type=\"Dancelab_everySeconds\"><title
+        name=\"N\">2</title><title name=\"UNIT\">\"measures\"</title></block></xml>\n\nVed
+        å plassere andre nye blokker frå verktøykassa di innanfor ei gjenta-blokk
+        gjer at du kan gjenta å endre eigenskapane til dansarane over tid. Ver kreativ
+        og ha det gøy!\n\n_Når du er ferdig trykker du på Ferdig-knappen._"
+      CourseD_Dance_2020_10: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseD_Dance_2020_bonus1: "# Fram og tilbake!\n\nAv og til vil du kanskje ønske
+        å lage eit mønster med dansetrinn du velger. Denne nye blokka lar deg gjere
+        akkurat det. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nDansetrinna
+        du vel over vil gjenta seg i ein evig sekvens.\n\n-   Lag ein alternativ dans
+        for hoveddansaren foran!\n-   Bruk ulike tal til å endre korleis dansetrinna
+        skiftar. Prøv 1 eller 0,5 for å skifte fortare!"
+      CourseD_Dance_2020_bonus3: "# La oss komme i formasjon!\n\nSjekk ut denne dansen
+        som bruker <xml><block type=\"Dancelab_layoutSprites\" block-text=\"layout\"><title
+        name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>-blokk
+        for å endre formasjonen til bakgrunnsdansarane gjennom dansen. Prøv ein av
+        desse ideane for å utvide den: \n\n-   Lag ei ny gruppe dansarar i eit anna
+        oppsett \n-   Endre oppsett når du trykker på ein tast \n-   Endre ein eigenskap
+        når dansarane endrar formasjon"
       CourseD_Dance_Party_01: |-
         _La oss ha ein dansefest!_
 
@@ -495,27 +554,55 @@ nn-NO:
         i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         gøymd ein stad i dette havmonumentet. Greier du å finne den?
+      CourseE_HOC 2018 Level_10_2020: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        gøymd ein stad i dette havmonumentet. Greier du å finne den?
       CourseE_HOC 2018 Level_11: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         og fullfører utfordringa!
+      CourseE_HOC 2018 Level_11_2020: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        og fullfører utfordringa!
+      CourseE_HOC 2018 Level_1_2020: Du treng forsyningar til reisa vidare. Hent ein
+        **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: Det er mykje enklare å bruke båt enn å svømme i ope
         vatn! Gå til enden av bryggja for å hoppe om bord.
+      CourseE_HOC 2018 Level_2_2020: Det er mykje enklare å bruke båt enn å svømme
+        i ope vatn! Gå til enden av bryggja for å hoppe om bord.
       CourseE_HOC 2018 Level_3: Ta tak i årene og styr båten over ope hav for å fange
         **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Ta tak i årene og styr båten over ope hav for
+        å fange **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: No må vi mate **delfinen** med ein torsk. ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Bruk ei gjentakingblokk for å komme raskare over havet.
+      CourseE_HOC 2018 Level_4_2020: No må vi mate **delfinen** med ein torsk. ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Bruk ei gjentakingblokk for å komme raskare over havet.
       CourseE_HOC 2018 Level_5: Eit **nautilusskjell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        er gøymd ein stad! Utforsk skipsvraket for å finne **kista** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_5_2020: Eit **nautilusskjell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         er gøymd ein stad! Utforsk skipsvraket for å finne **kista** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Det ser ut som om det er iskaldt der ute! Fang ein
         **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         på veg til undervassruinane.
+      CourseE_HOC 2018 Level_6_2020: Det ser ut som om det er iskaldt der ute! Fang
+        ein **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        på veg til undervassruinane.
       CourseE_HOC 2018 Level_7a: Du fant undervassruinane. Leit i sandsteinen etter
         ei **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_7a_2020: Du fant undervassruinane. Leit i sandsteinen
+        etter ei **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
         som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       CourseE_HOC 2018 Level_8: Først isfjell og no lava? Kom deg gjennom denne vulkanøya
         og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         i korallrevet.
+      CourseE_HOC 2018 Level_8_2020: Først isfjell og no lava? Kom deg gjennom denne
+        vulkanøya og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i korallrevet.
       CourseE_HOC 2018 Level_9b: Du kom deg til revet. No må du leite etter **hjarta
+        til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Du kom deg til revet. No må du leite etter **hjarta
         til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Crack Random Substitution: |-
@@ -612,7 +699,7 @@ nn-NO:
       Dance_Party_02: |-
         No må vi få elgen til å danse!
 
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
 
         **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       Dance_Party_03: |-
@@ -643,7 +730,7 @@ nn-NO:
         No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -766,6 +853,10 @@ nn-NO:
         Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\\
 
         Fest den lille grøne <xml><block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml>-blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch].
+      Function intro Ryan_2020: |-
+        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\\
+
+        Fest den lille grøne <xml><block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml>-blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch].
       HOC 2018 Level_1: Du treng forsyningar til reisa vidare. Hent ein **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       HOC 2018 Level_10: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
@@ -812,11 +903,20 @@ nn-NO:
         i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up].
         Trykk deretter på \"Køyr\", og bruk piltastane til å flytte {currentPlayerName}
         ut av huset og bort til **kista** [chest]."
+      MC_HOC_2017_01_RETRY_2020: "Døra er låst, men heldigvis er agenten klar til
+        å hjelpe! \\\r\n \\\r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka
+        i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up].
+        Trykk deretter på \"Køyr\", og bruk piltastane til å flytte {currentPlayerName}
+        ut av huset og bort til **kista** [chest]."
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på veg på eventyr! **Kartet** [map_empty]
         er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n \\\r\nSkriv
         inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata [PressurePlate_Up]
         og opner opp for {currentPlayerName}. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på veg på eventyr! **Kartet**
+        [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n
+        \\\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata
+        [PressurePlate_Up] og opner opp for {currentPlayerName}. "
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} er på veg på eventyr! **Kartet**
         [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n
         \\\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata
         [PressurePlate_Up] og opner opp for {currentPlayerName}. "
@@ -826,14 +926,22 @@ nn-NO:
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} held fram med eventyret sitt
         og har bruk for **kompasset**[compass] til turen. \\\r\n\\\r\nKod agenten
         til å opne porten. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} held fram med eventyret sitt
+        og har bruk for **kompasset**[compass] til turen. \\\r\n\\\r\nKod agenten
+        til å opne porten. "
       MC_HOC_2017_04POINT5_RYAN: "Du kom deg overover! \\\r \n\\\r \nNå skal du få
         {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "Du kom deg overover! \\\r \n\\\r \nNå skal
+        du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Du kom deg overover! \\\r \n\\\r \nNå skal
         du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
       MC_HOC_2017_04_Cole: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk ei
         løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
         bak døra. "
       MC_HOC_2017_04_Cole_2019: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk
+        ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
+        bak døra. "
+      MC_HOC_2017_04_Cole_2020: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk
         ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
         bak døra. "
       MC_HOC_2017_05_Cole: "Å nei, brua er borte! \n\nKod agenten til å bygge opp
@@ -842,16 +950,25 @@ nn-NO:
       MC_HOC_2017_05_Cole_2019: "Å nei, brua er borte! \n\nKod agenten til å bygge
         opp at brua ved å bruke <xml><block type=\"craft_placeBlock\"><title name=\"TYPE\"></title></block></xml>-blokka
         slik at slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
+      MC_HOC_2017_05_Cole_2020: "Å nei, brua er borte! \n\nKod agenten til å bygge
+        opp at brua ved å bruke <xml><block type=\"craft_placeBlock\"><title name=\"TYPE\"></title></block></xml>-blokka
+        slik at slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
       MC_HOC_2017_06_Cole: "Ei anna elv, men dette er ei mykje større ei! \\\r \n\\\r
         \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
         kan komme til den **hakka** [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Ei anna elv, men dette er ei mykje større ei! \\\r
         \n\\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
         kan komme til den **hakka** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2020: "Ei anna elv, men dette er ei mykje større ei! \\\r
+        \n\\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
+        kan komme til den **hakka** [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar bane\"
         kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
         [minecart_normal]! "
       MC_HOC_2017_07_Cole_2019: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar
+        bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2020: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar
         bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
         [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Kan du sjå skilnaden mellom dei to funksjonane i arbeidsområdet
@@ -862,15 +979,24 @@ nn-NO:
         arbeidsområdet ditt? \\\r\n\\\r\nBruk desse funksjonane saman med anna kode
         frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint
         og stål**[flint_and_steel]. \\\r "
+      MC_HOC_2017_10_RETRY_2020: "Kan du sjå skilnaden mellom dei to funksjonane i
+        arbeidsområdet ditt? \\\r\n\\\r\nBruk desse funksjonane saman med anna kode
+        frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint
+        og stål**[flint_and_steel]. \\\r "
       MC_HOC_2017_Ali: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei til
         å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
         boka** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei
         til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
         boka** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2020: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei
+        til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
+        boka** [book_enchanted]?  '
       MC_HOC_2017_FP20x20: "**Frileik:** No er det opp til deg! Bruk agenten sin kode
         for å hjelpe deg med å utforske denne verda."
       MC_HOC_2017_FP20x20_2019: "**Frileik:** No er det opp til deg! Bruk agenten
+        sin kode for å hjelpe deg med å utforske denne verda."
+      MC_HOC_2017_FP20x20_2020: "**Frileik:** No er det opp til deg! Bruk agenten
         sin kode for å hjelpe deg med å utforske denne verda."
       NEW Course 4 Artist Functions 3: |-
         Her er ei ny type blokk. Den er ein "funksjon"-blokk. Trykk på "endre" og fyll inn koden for å teikne eit kvadrat med 100 pikslar lange sider.
@@ -883,6 +1009,8 @@ nn-NO:
       Overworld Move to Sheep: Legg til endå ei "gå framover"-blokk for å nå fram
         til sauen.
       Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå
+        fram til sauen.
+      Overworld Move to Sheep_2020: Legg til endå ei "gå framover"-blokk for å nå
         fram til sauen.
       Standalone_Artist_2: Teikn denne diamanten med vinklar på 120 og 60 gradar og
         langsider på 150 pikslar.
@@ -918,10 +1046,17 @@ nn-NO:
         Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando
         vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
         ut desse blokkene.
+      Underground Avoiding Lava_2020: Lava er gøymt under nokre av desse blokkene.
+        Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando
+        vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
+        ut desse blokkene.
       Underground If Statements: No begynnar ting å bli vanskeleg. Grav ut 3 redstone,
         men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein
         over all lavaen du grev fram.
       Underground If Statements_2019: No begynnar ting å bli vanskeleg. Grav ut 3
+        redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
+        brustein over all lavaen du grev fram.
+      Underground If Statements_2020: No begynnar ting å bli vanskeleg. Grav ut 3
         redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
         brustein over all lavaen du grev fram.
       'Widget: Text Compression': Sjå etter mønster (repeterande ord eller fraser)
@@ -967,33 +1102,55 @@ nn-NO:
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
+      courseA_collector_loops1_2020: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
       courseA_maze_seq1: _"Prøv deg fram med disse blokkene og prøv å få meg bort
         den slemme grisen!"_
       courseA_maze_seq13_2019: Få tak i grisen!
+      courseA_maze_seq13_2020: Få tak i grisen!
       courseA_maze_seq1_2018: _"Prøv deg fram med disse blokkene og prøv å få meg
         bort den slemme grisen!"_
       courseA_maze_seq1_2019: _"Prøv deg fram med disse blokkene og prøv å få meg
+        bort den slemme grisen!"_
+      courseA_maze_seq1_2020: _"Prøv deg fram med disse blokkene og prøv å få meg
         bort den slemme grisen!"_
       courseA_maze_seq6_2018: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
       courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
+      courseA_maze_seq6_2020: Flytt meg først ein veg og så ein anna veg for å få
+        meg bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq8_2020: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq_challenge2_2019: Følg stien og led meg til grisen. Unngå dynamitten
+        om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      courseA_maze_seq_challenge2_2020: Følg stien og led meg til grisen. Unngå dynamitten
         om du ikkje vil at eg skal forsvinne i ei sky av fjør!
       courseB_artist_loops2_2019: Kunstnaren prøver å teikne ei linje **6** gongar,
         men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops2_2020: Kunstnaren prøver å teikne ei linje **6** gongar,
+        men kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops3_2019: Hjelp kunstnaren med å teike ei linje 7 gongar slik
         at han kan lage ein vegg i hagen.
+      courseB_artist_loops3_2020: Hjelp kunstnaren med å teike ei linje 7 gongar slik
+        at han kan lage ein vegg i hagen.
       courseB_artist_loops5_2019: På tide å fikse trappa! Gjenta dette mønsteret **5**
+        gongar slik at kunstnaren kan nå toppen av buskane.
+      courseB_artist_loops5_2020: På tide å fikse trappa! Gjenta dette mønsteret **5**
         gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops7: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops7_2018: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
       courseB_artist_loops7_2019: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
+      courseB_artist_loops7_2020: "**Utfordring:** Det er en skjult hage! La oss går
+        rundt."
       courseB_artist_loops8_2019: På tide å dra heim. Kan du fikse denne stigen med
+        berre ei blokk for å hjelpe kunstnaren ned?
+      courseB_artist_loops8_2020: På tide å dra heim. Kan du fikse denne stigen med
         berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar
         som du kan! Klarar du tre på rad?
@@ -1001,13 +1158,19 @@ nn-NO:
         X'ar som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2019: La oss spele eit spel! Teikn så mange
         X'ar som du kan! Klarar du tre på rad?
+      courseB_artist_loops_challenge2_2020: La oss spele eit spel! Teikn så mange
+        X'ar som du kan! Klarar du tre på rad?
       courseB_collector_loops1: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
       courseB_collector_loops10_2019: Hjelp Laurel til å få tak i alle skattane i
         grotta.
+      courseB_collector_loops10_2020: Hjelp Laurel til å få tak i alle skattane i
+        grotta.
       courseB_collector_loops11_2019: Eureka!  Få tak i så mange skattar du berre
+        kan!
+      courseB_collector_loops11_2020: Eureka!  Få tak i så mange skattar du berre
         kan!
       courseB_collector_loops1_2018: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
@@ -1017,21 +1180,42 @@ nn-NO:
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops1_2020: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
       courseB_collector_loops4_2019: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops4_2020: Fiks Laurel si bane for å få tak i all skatten!
       courseB_collector_loops5_2019: 'Legg til meir i koden frå forrige oppgåve for
+        å få all skatten. '
+      courseB_collector_loops5_2020: 'Legg til meir i koden frå forrige oppgåve for
         å få all skatten. '
       courseB_collector_loops6_2019: |-
         Finn koden som hjelper Laurel
         til å få tak i heile skatten!
+      courseB_collector_loops6_2020: |-
+        Finn koden som hjelper Laurel
+        til å få tak i heile skatten!
       courseB_collector_loops7_2019: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops7_2020: Skriv koden for å få tak i heile skatten.
       courseB_collector_loops8_2019: "**Utfordring:** Skatten går heile vegen opp
+        trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops8_2020: "**Utfordring:** Skatten går heile vegen opp
         trappa! \nSkriv koden slik at Laurel får tak i alt."
       courseB_collector_loops9_2019: _"Hjelp meg med å få skatten frå denne djupe
         dalen."_
+      courseB_collector_loops9_2020: _"Hjelp meg med å få skatten frå denne djupe
+        dalen."_
       courseB_collector_loops_challenge1_2019: "Denne gangen har du avgrensa tal \npå
         blokker. Få tak i heile skatten! "
+      courseB_collector_loops_challenge1_2020: "Denne gangen har du avgrensa tal \npå
+        blokker. Få tak i heile skatten! "
       courseB_maze_seq12_2019: Få tak i grisen!
+      courseB_maze_seq12_2020: Få tak i grisen!
       courseB_maze_seq_challenge2_2019: |-
+        Feilsøk dette nivået. Dette er dei rette
+        blokkene, men dei ligg i feil rekkefølgje!
+      courseB_maze_seq_challenge2_2020: |-
         Feilsøk dette nivået. Dette er dei rette
         blokkene, men dei ligg i feil rekkefølgje!
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt
@@ -1041,7 +1225,15 @@ nn-NO:
       courseC_artist_loops2a_2019: "No kan du bruke ei løkke for å lage fleire kopiar.
         Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
         \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
+      courseC_artist_loops2a_2020: "No kan du bruke ei løkke for å lage fleire kopiar.
+        Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
+        \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
       courseC_artist_loopsPrePre1a_2019: |-
+        Kunstneren er på feil sted!
+
+        Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
+        Deretter tegn en 50 piksler lang linje med <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>-blokken.
+      courseC_artist_loopsPrePre1a_2020: |-
         Kunstneren er på feil sted!
 
         Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
@@ -1049,11 +1241,14 @@ nn-NO:
       courseC_collector_prog9: _"La oss få heile skatten!"_
       courseC_collector_prog9_2018: _"La oss få heile skatten!"_
       courseC_collector_prog9_2019: _"La oss få heile skatten!"_
+      courseC_collector_prog9_2020: _"La oss få heile skatten!"_
       courseC_flappy_events7: Prøv å endre scena ved å leggje ei anna blokk til "når
         køyrt"-hendinga.
       courseC_flappy_events7_2018: Prøv å endre scena ved å leggje ei anna blokk til
         "når køyrt"-hendinga.
       courseC_flappy_events7_2019: Prøv å endre scena ved å leggje ei anna blokk til
+        "når køyrt"-hendinga.
+      courseC_flappy_events7_2020: Prøv å endre scena ved å leggje ei anna blokk til
         "når køyrt"-hendinga.
       courseC_flappy_events9: For å gjere ting anleis, kan du sette skårsummen tilbake
         til 0 når Flakse treff ei hindring.
@@ -1061,11 +1256,17 @@ nn-NO:
         tilbake til 0 når Flakse treff ei hindring.
       courseC_flappy_events9_2019: For å gjere ting anleis, kan du sette skårsummen
         tilbake til 0 når Flakse treff ei hindring.
+      courseC_flappy_events9_2020: For å gjere ting anleis, kan du sette skårsummen
+        tilbake til 0 når Flakse treff ei hindring.
       courseC_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_harvester_loops_challenge2_2018: "Samle all salaten. \nUnngå tre og
         åkrar!"
       courseC_harvester_loops_challenge2_2019: "Samle all salaten. \nUnngå tre og
         åkrar!"
+      courseC_harvester_loops_challenge2_2020: "Samle all salaten. \nUnngå tre og
+        åkrar!"
+      courseC_maze_debugging9_2020: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
       courseC_maze_programming_challenge2: Nokre gongar er det meir enn ein måte å
         løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
@@ -1075,7 +1276,15 @@ nn-NO:
       courseC_maze_programming_challenge2_2019: Nokre gongar er det meir enn ein måte
         å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
+      courseC_maze_programming_challenge2_2020: Nokre gongar er det meir enn ein måte
+        å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
+        å gå framover!
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
+        \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
+        forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
+        enden av hver linje!"
+      courseD_artist_5_2018_2020: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
         \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
         forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
@@ -1086,6 +1295,9 @@ nn-NO:
       courseD_artist_binary_challenge1_2019: Du kan berre bruke kvar binærverdi (0
         eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
         teikninga.
+      courseD_artist_binary_challenge1_2020: Du kan berre bruke kvar binærverdi (0
+        eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
+        teikninga.
       courseD_bee_debugging_challenge1: Sjå korleis biene får nektar. Kan du bruke
         det same mønsteret til å hjelpe biene å lage honning?
       courseD_bee_nestedLoops8: 'Saml inn all nektar frå kvar blomst og lag honning
@@ -1094,9 +1306,13 @@ nn-NO:
         i alle bikubene. '
       courseD_bee_nestedLoops8_2019: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
+      courseD_bee_nestedLoops8_2020: 'Saml inn all nektar frå kvar blomst og lag honning
+        i alle bikubene. '
       courseD_collector_debugging6a_2018: 'Utfordring: Bruk koden i arbeidsområdet
         til å få tak i minst **6** delar av skatten!'
       courseD_collector_debugging6a_2019: 'Utfordring: Bruk koden i arbeidsområdet
+        til å få tak i minst **6** delar av skatten!'
+      courseD_collector_debugging6a_2020: 'Utfordring: Bruk koden i arbeidsområdet
         til å få tak i minst **6** delar av skatten!'
       courseD_collector_ramp8: "Denne oppgåva er mykje lik som det siste, men no er
         det Laurel, eventyraren, som er stjerna!\\\r\n \\_\\_\\_\\\r \n\\\r \nTa samme
@@ -1108,12 +1324,15 @@ nn-NO:
       courseD_farmer_while_challenge1: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge1_2018: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge1_2019: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge1_2020: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge2: Fyll i alle hulla og fjern alle haugane.
       courseD_maze_nestedLoops4: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
       courseD_maze_nestedLoops4_2018: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
       courseD_maze_nestedLoops4_2019: 'Få zombien til solsikka ved å bruke så få blokker
+        som mogleg!  '
+      courseD_maze_nestedLoops4_2020: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
       courseD_maze_until_challenge1: Ingen hint, berre utfordringar. Få zombien til
         solsikka.
@@ -1123,6 +1342,7 @@ nn-NO:
       courseF_bee_for_challenge2: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2018: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2019: Løys denne oppgåva med færrast mogleg blokker.
+      courseF_bee_for_challenge2_2020: Løys denne oppgåva med færrast mogleg blokker.
       frozen circle: Ein sirkel er ei spesiell form. Klarar du å finne ut kva tal
         som skal erstatte spørsmålteikna for å teikne ein sirkel?
       frozen circle function: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande
@@ -1171,4 +1391,6 @@ nn-NO:
       ramp_artist_loops7_2018: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker!
       ramp_artist_loops7_2019: Sjå etter eit mønster, og gjer denne koden kortare
+        ved å bruke løkker!
+      ramp_artist_loops7_2020: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker!

@@ -27,3 +27,6 @@ tg:
           stages:
             Surveys:
               name: Тадқиқҳо
+          lessons:
+            Surveys:
+              name: Тадқиқҳо
