@@ -242,7 +242,7 @@
       {
        "type": "matrix",
        "name": "friday_institute_sync_tools",
-       "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?  ",
+       "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?",
        "columns": [
         {
          "value": "1",
