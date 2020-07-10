@@ -56,7 +56,7 @@ module Lighthouse
 
     perf = (JSON.parse(json).dig('categories', 'performance', 'score') * 100).to_i
     ChatClient.log "#{url} Page Speed: <a href='#{html_url}'>#{perf}</a>"
-    Cdo::Metrics.instance.put 'Website/PageSpeed', perf,
+    Cdo::Metrics.put 'Website/PageSpeed', perf,
       Environment: CDO.rack_env, URL: url.to_s
   rescue => e
     ChatClient.log "Page speed report failed: #{e}"
