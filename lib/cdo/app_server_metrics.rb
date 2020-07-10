@@ -62,6 +62,7 @@ module Cdo
     end
 
     # Collect current snapshot of tcp/unix listener stats.
+    # @return [Hash{Symbol => Number}]
     def collect_listener_stats
       stats = {}
       stats.merge! Raindrops::Linux.tcp_listener_stats(@tcp.uniq) if @tcp

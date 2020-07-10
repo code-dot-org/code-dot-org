@@ -22,7 +22,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       street_1: afe_params['street1'],
       street_2: afe_params['street2'],
       city: afe_params['city'],
-      state: get_us_state_abbr_from_name(afe_params['state'], true),
+      state: afe_params['state'],
       zip: afe_params['zip'],
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
@@ -59,7 +59,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         street_1: afe_params['street1'] || school&.address_line1 || '',
         street_2: afe_params['street2'] || school&.address_line2 || '',
         city: afe_params['city'] || school&.city || '',
-        state: get_us_state_abbr_from_name(afe_params['state'], true) || school&.state || '',
+        state: afe_params['state'] || school&.state || '',
         zip: afe_params['zip'] || school&.zip || '',
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )

@@ -26,7 +26,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'school-address-1' => 'test-street-1',
           'school-address-2' => 'test-street-2',
           'school-city' => 'test-city',
-          'school-state' => 'test-state',
+          'school-state' => 'WA',
           'school-zip' => 'test-zip',
           'inspirational-marketing-kit' => '1',
           'csta-plus' => '1',
@@ -95,6 +95,19 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
+  test 'converts state to a two-letter code' do
+    assert_param_translation(
+      {state: 'OHIO'},
+      {'school-state' => 'OH'}
+    )
+
+    # No transform if the state is already a two-letter code
+    assert_param_translation(
+      {state: 'OH'},
+      {'school-state' => 'OH'}
+    )
+  end
+
   private
 
   # Check that certain input params turn into expected output params
@@ -124,7 +137,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       street_1: 'test-street-1',
       street_2: 'test-street-2',
       city: 'test-city',
-      state: 'test-state',
+      state: 'WA',
       zip: 'test-zip',
       marketing_kit: true,
       csta_plus: true,
