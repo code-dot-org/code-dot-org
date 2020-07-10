@@ -134,7 +134,7 @@ class HeaderMiddle extends React.Component {
     // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (numScriptLessons) {
+    if (numScriptLessons > 1) {
       showPopup = true;
     } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
