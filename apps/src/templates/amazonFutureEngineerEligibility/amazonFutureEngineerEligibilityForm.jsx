@@ -13,6 +13,20 @@ import {STATES} from '@cdo/apps/geographyConstants';
 
 const VALIDATION_STATE_ERROR = 'error';
 
+const AMAZON_PRIVACY_POLICY_URL =
+  'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+const AFE_CONSENT_BODY = (
+  <span>
+    I give Code.org permission to share my name and email address, and my
+    school's name, address, and NCES ID, with Amazon.com (required to
+    participate). Use of your personal information is subject to{' '}
+    <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
+      Amazon’s Privacy Policy
+    </a>
+    .
+  </span>
+);
+
 const styles = {
   wrong_school: {
     textAlign: 'right'
@@ -28,7 +42,6 @@ const styles = {
     color: color.white
   }
 };
-
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -241,9 +254,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           )}
           <SingleCheckbox
             name="csta"
-            label="Send me a free annual Computer Science Teachers Association (CSTA)
-              Plus membership - which includes access to Amazon expert-led
-              webinars and other exclusive content."
+            label="Send me a free annual Computer Science Teachers Association Plus (CSTA+) membership - which includes access to Amazon expert-led webinars and other exclusive content."
             onChange={this.handleChange}
             value={this.state.csta}
           />
@@ -253,7 +264,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 Since you checked the box above, please consent to the sharing
                 and use of your personal data with the CSTA. Your information
                 will be shared as described in accordance with the{' '}
-                <a href="https://csteachers.org/privacy-policy/">
+                <a
+                  href="https://csteachers.org/privacy-policy/"
+                  target="_blank"
+                >
                   CSTA Privacy Policy.
                 </a>
               </div>
@@ -281,10 +295,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="consentAFE"
-            label="I give Code.org permission to share my name, email address, and
-              school name, address, and ID with Amazon.com (required to
-              participate). Use of your personal information is subject to
-              Amazon’s Privacy Policy."
+            label={AFE_CONSENT_BODY}
             onChange={this.handleChange}
             value={this.state.consentAFE}
             validationState={
@@ -297,9 +308,9 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           <div>
             By clicking Continue, you will receive an email from Amazon Future
             Engineer to claim your benefits. You will also receive occasional
-            emails from Amazon Future Engineer about new opportunities. You
-            always have the choice to adjust your interest settings or
-            unsubscribe.
+            emails from Amazon Future Engineer about new opportunities, such as
+            Amazon Future Engineer scholarships and grants. You always have the
+            choice to adjust your interest settings or unsubscribe.
           </div>
           <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
