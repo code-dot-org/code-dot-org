@@ -41,7 +41,8 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    authenticityToken: PropTypes.string
   };
 
   state = {
@@ -163,7 +164,8 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      specialAnnouncement
+      specialAnnouncement,
+      authenticityToken
     } = this.props;
 
     // Hide the regular announcement/notification for now.
@@ -226,7 +228,10 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} />
+        <TeacherSections
+          queryStringOpen={queryStringOpen}
+          authenticityToken={authenticityToken}
+        />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
