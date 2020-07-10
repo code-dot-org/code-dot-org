@@ -126,24 +126,6 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   }
 end
 
-Given(/^I am a facilitator with completed courses$/) do
-  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
-  }
-end
-
-Given(/^I am an organizer with completed courses$/) do
-  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
-  }
-end
-
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
