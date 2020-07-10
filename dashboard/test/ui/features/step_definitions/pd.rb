@@ -105,7 +105,7 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
     :pd_enrollment,
     :with_attendance,
     :from_user,
-    user: User.find_by(email: @users[test_teacher_name][:email])
+    user: find_test_user_by_name(test_teacher_name)
   )
   steps %Q{
     And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
@@ -115,7 +115,7 @@ end
 Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   require_rails_env
 
-  user = User.find_by_email @users[name][:email]
+  user = find_test_user_by_name(name)
   application = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.find_by(user: user)
 
   # TODO(Andrew) ensure regional partner in the original application, and remove this:
@@ -147,7 +147,7 @@ end
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::FACILITATOR
   Pd::CourseFacilitator.create(facilitator_id: user.id, course: course)
 end
@@ -155,14 +155,14 @@ end
 And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
 And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
@@ -471,7 +471,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   # Organizer
   organizer =
     if role == 'organized'
-      User.find_by(name: name)
+      find_test_user_by_name(name)
     else
       User.find_or_create_teacher(
         {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
@@ -497,7 +497,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       workshop.facilitators << create_facilitator(course)
     end
   else
-    facilitator = role == 'facilitated' ? User.find_by(name: name) : create_facilitator(course)
+    facilitator = role == 'facilitated' ? find_test_user_by_name(name) : create_facilitator(course)
     workshop.facilitators << facilitator
   end
 
