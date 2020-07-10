@@ -109,7 +109,6 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MD
-    ME
     MN
     MO
     MS

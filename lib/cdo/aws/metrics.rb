@@ -1,18 +1,16 @@
 require 'aws-sdk-cloudwatch'
-require 'active_support/core_ext/module/attribute_accessors'
-require 'concurrent/async'
 require 'honeybadger/ruby'
 require 'cdo/buffer'
 
 module Cdo
   # Singleton interface for asynchronously sending a collection of CloudWatch metrics in batches.
-  class Metrics
-    include Singleton
-    cattr_accessor :client
-
-    def initialize
-      @buffers = Hash.new {|h, key| h[key] = Buffer.new(key)}
+  module Metrics
+    class << self
+      # @return [Aws::CloudWatch::Client]
+      attr_accessor :client
     end
+
+    BUFFERS = Hash.new {|h, key| h[key] = Buffer.new(key)}
 
     # '20/PutMetricData request.'
     # Ref: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html
@@ -39,7 +37,7 @@ module Cdo
       end
 
       def flush(events)
-        client = Metrics.client ||= ::Aws::CloudWatch::Client.new(
+        client = Cdo::Metrics.client ||= ::Aws::CloudWatch::Client.new(
           retry_limit: 3,
           http_open_timeout: 5,
           http_read_timeout: 5,
@@ -62,9 +60,12 @@ module Cdo
     # Accepts a single '[namespace]/[metric_name]' name parameter
     # and a standard Ruby hash to specify dimension key/values.
     #
-    # @param [Hash] options Additional keyword arguments will be merged
+    # @param [String] name in the form of 'namespace'/'metric_name'
+    # @param [Number] value
+    # @param [Hash{Symbol => String}] dimensions
+    # @param [Hash] options Additional keyword arguments to be merged
     #  into the {Aws::CloudWatch::Types::MetricDatum} object.
-    def put(name, value, dimensions={}, **options)
+    def self.put(name, value, dimensions, **options)
       namespace, metric_name = name.split('/', 2)
       metric = {
         metric_name: metric_name,
@@ -75,20 +76,10 @@ module Cdo
       put_metric(namespace, metric)
     end
 
-    # @see {Metrics#put}
-    def self.put(name, value, dimensions={}, **options)
-      instance.put(name, value, dimensions, **options)
-    end
-
     # @param [String] namespace
     # @param [Hash, Aws::CloudWatch::Types::MetricDatum] metric
-    def put_metric(namespace, metric)
-      @buffers[namespace].buffer(metric)
-    end
-
-    # @see {Metrics#put_metric}
     def self.put_metric(namespace, metric)
-      instance.put_metric(namespace, metric)
+      BUFFERS[namespace].buffer(metric)
     end
 
     # Asynchronously send a collection of CloudWatch metrics in batches.
@@ -98,6 +89,10 @@ module Cdo
       metrics.each do |metric|
         put_metric(namespace, metric)
       end
+    end
+
+    def self.flush!
+      BUFFERS.values.each(&:flush!)
     end
   end
 end
