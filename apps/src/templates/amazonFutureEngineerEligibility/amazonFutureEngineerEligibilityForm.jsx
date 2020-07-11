@@ -273,7 +273,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               <SingleCheckbox
                 name="consentCSTA"
                 label="I give Code.org permission to share my name and email address, and my
-                school's name, address, and NCES ID with the Computer Science Teachers
+                school's name, address, and NCES ID, with the Computer Science Teachers
                 Association. I provide my consent to the use of my personal data as
                 described in the CSTA Privacy Policy (required if you want a CSTA Plus
                 membership)."
