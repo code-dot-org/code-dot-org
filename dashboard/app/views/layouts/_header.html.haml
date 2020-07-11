@@ -76,7 +76,7 @@
           - else
             = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
 
-      .header_middle{dir: "auto"}
+      .header_middle{dir: locale_dir}
         - if should_show_progress || level
           -# React will attach to this.
           .header_level

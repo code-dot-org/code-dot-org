@@ -142,6 +142,16 @@ const EditProjectName = connect(
 )(UnconnectedEditProjectName);
 
 export default class EditableProjectName extends React.Component {
+  static propTypes = {
+    onChangedWidth: PropTypes.func.isRequired
+  };
+
+  componentDidUpdate() {
+    if (this.props.onChangedWidth) {
+      this.props.onChangedWidth();
+    }
+  }
+
   state = {
     editName: false
   };
