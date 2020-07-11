@@ -23,7 +23,6 @@ const AFE_CONSENT_BODY = (
     <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
       Amazon’s Privacy Policy
     </a>
-    .
   </span>
 );
 
@@ -273,7 +272,11 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               </div>
               <SingleCheckbox
                 name="consentCSTA"
-                label="I give Code.org permission to share my name, email address, and school name, address, and NCES ID with the Computer Science Teachers Association. I provide my consent to the use of my personal data as described in the CSTA Privacy Policy (required if you want a CSTA Plus membership)."
+                label="I give Code.org permission to share my name and email address, and my
+                school's name, address, and NCES ID with the Computer Science Teachers
+                Association. I provide my consent to the use of my personal data as
+                described in the CSTA Privacy Policy (required if you want a CSTA Plus
+                membership)."
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
                 validationState={
