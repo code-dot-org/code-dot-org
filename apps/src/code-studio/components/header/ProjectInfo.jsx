@@ -20,7 +20,7 @@ const styles = {
   headerContainer: {
     position: 'relative',
     overflow: 'hidden',
-    height: 40
+    height: 38
   },
   projectInfo: {
     position: 'absolute'
@@ -55,6 +55,10 @@ class ProjectInfo extends React.Component {
     this.setDesiredWidth();
   }
 
+  onChangedWidth() {
+    this.setDesiredWidth();
+  }
+
   render() {
     if (!this.props.currentHeader) {
       return null;
@@ -80,7 +84,7 @@ class ProjectInfo extends React.Component {
           ref="projectInfo"
           style={styles.projectInfo}
         >
-          <HeaderComponent />
+          <HeaderComponent onChangedWidth={() => this.onChangedWidth()} />
         </div>
         <div className="vignette" style={vignetteStyle} />
       </div>
