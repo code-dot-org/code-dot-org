@@ -767,7 +767,7 @@ id-ID:
     kepada anda tentang pembaruan kursus kami, kesempatan relawan, atau berita ilmu
     komputer yang lain?
   volunteer_engineer_submission_field_email_preference_privacy: "(Lihat kebijakan
-    privasi)"
+    privasi kami)\n"
   volunteer_engineer_submission_field_email_preference_yes: Ya
   volunteer_engineer_submission_field_email_preference_no: Tidak
   volunteer_engineer_submission_final_paragraph: Anda akan didaftarkan dalam sebuah
@@ -2167,7 +2167,7 @@ id-ID:
   header_course_catalog: Katalog Kursus
   header_project_gallery: Proyek
   header_sections: Sesi
-  header_professional_learning: Pembelajaran profesional
+  header_professional_learning: Belajar profesional
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
   header_educate_middle: Sekolah Menengah Pertama
@@ -2397,9 +2397,9 @@ id-ID:
   hoc2018_mc_back_journey: Minecraft hadir kembali dengan aktivitas baru untuk Hour
     of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2018_mc_teacher_guide: Lihat petunjuk guru
-  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_minecraft_education: Pendidikan Minecraft
   hoc2018_mc_continue_learning: Lanjutkan pembelajaran dengan Minecraft.
-  hoc2018_mc_go_to_mc_education: Pergi ke Minecraft Education
+  hoc2018_mc_go_to_mc_education: Pergi ke pendidikan Minecraft
   hoc2018_mc_short_description: Gunakan kreatifitasmu dan keterampilan memecahkan
     masalah untuk menemukan harta terpendam dan eksplor dunia bawah air dengan kekuatan
     kode.

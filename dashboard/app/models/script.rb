@@ -901,10 +901,14 @@ class Script < ActiveRecord::Base
         name = File.basename(script, '.script')
         base_name = Script.base_name(name)
         name = "#{base_name}-#{new_suffix}" if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script, name)
+        script_data, i18n =
+          begin
+            ScriptDSL.parse_file(script, name)
+          rescue => e
+            raise e, "Error parsing script file #{script}: #{e}"
+          end
 
         lesson_groups = script_data[:lesson_groups]
-        lessons = script_data[:lessons]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
@@ -916,12 +920,14 @@ class Script < ActiveRecord::Base
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
           properties: Script.build_property_hash(script_data).merge(new_properties)
-        }, lesson_groups, lessons]
+        }, lesson_groups]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
-        add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+        add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      rescue => e
+        raise e, "Error adding script named '#{options[:name]}': #{e}"
       end
       [added_scripts, custom_i18n]
     end
@@ -929,8 +935,40 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil)
-    raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
+  def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+    raw_lessons = []
+
+    #recreate raw_lessons from raw_lesson_groups
+    raw_lesson_groups.each do |lesson_group|
+      lesson_group[:lessons].each do |lesson|
+        temp_lesson = lesson.merge(
+          {
+            lesson: lesson[:name],
+            script_levels: lesson[:script_levels].map do |sl|
+              sl.merge(
+                {
+                  lesson: lesson[:name],
+                  levels: sl[:levels].map do |level|
+                    level.merge(
+                      {
+                        lesson_lockable: lesson[:lockable],
+                        assessment: sl[:assessment],
+                        named_level: sl[:named_level],
+                        lesson_group: lesson_group[:key],
+                        bonus: sl[:bonus]
+                      }
+                    )
+                  end
+                }
+              )
+            end
+          }
+        )
+        raw_lessons << temp_lesson
+      end
+    end
+
+    raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     chapter = 0
@@ -943,7 +981,13 @@ class Script < ActiveRecord::Base
     non_lockable_count = 0
 
     unless raw_script_levels.empty?
-      if raw_lesson_groups.empty?
+      # We want a script to either have all of its lessons have lesson groups
+      # or none of the lessons have lesson groups. We know we have hit this case if
+      # there are more than one lesson group for a script but the lesson group key
+      # for the first lesson is blank
+      if raw_lesson_groups[0][:key].nil? && raw_lesson_groups.length > 1
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
+      elsif raw_lesson_groups.length == 1 && raw_lesson_groups[0][:key].nil?
         lesson_group = LessonGroup.find_or_create_by(
           key: '',
           script: script,
@@ -982,7 +1026,7 @@ class Script < ActiveRecord::Base
             new_lesson_group = true
           end
 
-          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
           lesson_group.save! if lesson_group.changed?
 
           if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
@@ -1083,13 +1127,6 @@ class Script < ActiveRecord::Base
 
       # Set/create Lesson containing custom ScriptLevel
       if lesson_name
-        # We want a script to either have all of its lessons have lesson groups
-        # or none of the lessons have lesson groups. We know we have hit this case if
-        # there are lesson groups for a script but the lesson group key
-        # for this specific lesson is blank
-        if !lesson_group_key.present? && !raw_lesson_groups.empty?
-          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
-        end
         # find the lesson group for this lesson
         lesson_group = LessonGroup.find_by!(
           key: lesson_group_key.presence || "",
@@ -1206,6 +1243,7 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
+      tts: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1285,8 +1323,7 @@ class Script < ActiveRecord::Base
             family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:lesson_groups],
-          script_data[:lessons]
+          script_data[:lesson_groups]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
@@ -1528,8 +1565,8 @@ class Script < ActiveRecord::Base
     lessons.each do |stage|
       stage_data = {
         'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
       }
       data['stages'][stage.name] = stage_data
       data['lessons'][stage.name] = stage_data
@@ -1547,8 +1584,8 @@ class Script < ActiveRecord::Base
       data['stageDescriptions'] = lessons.map do |stage|
         {
           name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
         }
       end
     end

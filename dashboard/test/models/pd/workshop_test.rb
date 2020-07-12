@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/delete_accounts_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
@@ -801,6 +802,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
 
+  test '10 day reminder for academic year workshop sends pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csf_deep_dive_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '3 day reminder for summer workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csp_summer_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(3)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Date.today + 15.days),
@@ -855,7 +892,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     assert_equal 4, workshop.teachers_attending_all_sessions.count
+
+    # Test that scholarship filter works.
+    # Set argument to filter to only scholarship teachers to true.
     assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
+  test 'teachers_attending_all_sessions with a teacher who deleted their account' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSF
+
+    workshop_participant = create :pd_workshop_participant,
+      enrolled: true,
+      attended: true,
+      cdo_scholarship_recipient: true,
+      workshop: workshop
+
+    # Should return 1 before we've done anything.
+    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+
+    # Delete the user.
+    workshop_participant.destroy!
+    workshop.reload
+
+    # With no user account, the user doesn't show up in array of attending teachers.
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+
+    # Fully purge the user account's PD records,
+    # which removes their user ID from attendances.
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    workshop.reload
+
+    # Should still return 0 once we've fully purged the teacher user ID from the attendance
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

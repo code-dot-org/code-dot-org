@@ -632,6 +632,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
+    'code.org/views/amazon_future_engineer_eligibility':
+      './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -697,7 +699,8 @@ describe('entry tests', () => {
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
+    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js',
+    'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
@@ -734,10 +737,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
-
-    amazonFutureEngineerEligibility:
-      './src/amazonFutureEngineerEligibility/amazonFutureEngineerEligibility'
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };
 
   // Create a config for each of our bundles

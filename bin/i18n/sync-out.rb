@@ -14,6 +14,7 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative 'hoc_sync_utils'
+require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_out
   rename_from_crowdin_name_to_locale
@@ -102,7 +103,6 @@ def restore_redacted_files
       end
       find_malformed_links_images(locale, translated_path)
     end
-    I18nScriptUtils.upload_malformed_restorations(locale)
   end
 end
 
@@ -238,6 +238,13 @@ def distribute_translations
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Animation library
+    @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+    spritelab_animation_translation_file = "i18n/locales/#{locale}/animations/spritelab_animation_library.json"
+    translations = JSON.load(File.open(spritelab_animation_translation_file))
+    # Use js_locale here as the animation library is used by apps
+    @manifest_builder.upload_localized_manifest(js_locale, translations)
+
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
@@ -255,6 +262,15 @@ def distribute_translations
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
       sanitize_data_and_write(translations_with_fallback, destination)
+    end
+
+    ### Pegasus markdown
+    Dir.glob("i18n/locales/#{locale}/codeorg-markdown/**/*.*") do |loc_file|
+      destination_dir = "pegasus/sites.v3/code.org/i18n/public"
+      relative_dir = File.dirname(loc_file.delete_prefix("i18n/locales/#{locale}/codeorg-markdown"))
+      name = File.basename(loc_file, ".*")
+      destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      FileUtils.mv(loc_file, destination)
     end
 
     ### Pegasus

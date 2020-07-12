@@ -106,7 +106,7 @@ const sections = [
     sharing_disabled: false,
     script: {
       id: 112,
-      name: 'csp1'
+      name: 'csp1-2017'
     },
     course_id: 29,
     createdAt: createdAt,
@@ -186,7 +186,7 @@ const validScripts = [
   {
     id: 112,
     name: 'Unit 1: The Internet',
-    script_name: 'csp1',
+    script_name: 'csp1-2017',
     category: "'16-'17 CS Principles",
     position: 0,
     category_priority: 7
@@ -194,7 +194,7 @@ const validScripts = [
   {
     id: 113,
     name: 'Unit 2: Digital Information',
-    script_name: 'csp2',
+    script_name: 'csp2-2017',
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7
@@ -1286,7 +1286,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.validAssignments,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
+      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {

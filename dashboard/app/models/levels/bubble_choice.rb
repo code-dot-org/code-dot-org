@@ -158,4 +158,21 @@ class BubbleChoice < DSLDefined
   def icon
     'fa fa-sitemap'
   end
+
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
+    level = super(new_suffix, editor_experiment: editor_experiment)
+
+    new_sublevel_names = sublevels.map do |sublevel|
+      sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
+    end
+
+    update_params = {
+      properties: {
+        sublevels: new_sublevel_names
+      }
+    }
+    level.update!(update_params)
+    level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
+    level
+  end
 end
