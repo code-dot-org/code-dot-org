@@ -7,21 +7,6 @@ import {
   validAssignments,
   testSection
 } from './teacherDashboardTestHelpers';
-
-const testSection = {
-  id: 11,
-  courseId: 29,
-  scriptId: null,
-  name: 'my_section',
-  loginType: 'word',
-  grade: '3',
-  providerManaged: false,
-  stageExtras: false,
-  pairingAllowed: true,
-  autoplayEnabled: false,
-  studentCount: 10,
-  code: 'PMTKVH'
-};
         
 export default storybook => {
   storybook = storybook.storiesOf('EditSectionForm', module);
