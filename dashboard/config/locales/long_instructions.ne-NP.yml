@@ -35,6 +35,9 @@ ne-NP:
       Overworld Move to Sheep_2019: |-
         Add a second “move forward” command to
         reach the sheep.
+      Overworld Move to Sheep_2020: |-
+        Add a second “move forward” command to
+        reach the sheep.
       course4_artist_fwp_challenge1: Try running this program, and make changes to
         see what happens. Can you figure out how it works? (Or delete it and replace
         it with something totally different)
@@ -45,6 +48,9 @@ ne-NP:
         Solve this puzzle with the fewest number of blocks
         possible.
       courseF_bee_for_challenge2_2019: |-
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      courseF_bee_for_challenge2_2020: |-
         Solve this puzzle with the fewest number of blocks
         possible.
       frozen circle: |-

@@ -51,24 +51,27 @@ class ScriptDslTest < ActiveSupport::TestCase
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: 'Lesson1',
-            scriptlevels: [
-              {lesson: 'Lesson1', levels: [{name: 'Level 1'}]},
-              {lesson: 'Lesson1', levels: [{name: 'Level 2'}]},
-              {lesson: 'Lesson1', levels: [{name: 'Level 3'}]}
-            ]
-          },
-          {
-            lesson: 'Lesson2',
-            scriptlevels: [
-              {lesson: 'Lesson2', levels: [{name: 'Level 4'}]},
-              {lesson: 'Lesson2', levels: [{name: 'Level 5'}]}
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: 'Lesson1',
+              script_levels: [
+                {levels: [{name: 'Level 1'}]},
+                {levels: [{name: 'Level 2'}]},
+                {levels: [{name: 'Level 3'}]}
+              ]
+            },
+            {
+              name: 'Lesson2',
+              script_levels: [
+                {levels: [{name: 'Level 4'}]},
+                {levels: [{name: 'Level 5'}]}
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -102,23 +105,25 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {
-                lesson: "Lesson1",
-                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-                properties: {
-                  variants: {"Level 2b" => {active: false}}
-                }
-              },
-              {lesson: "Lesson1", levels: [{name: "Level 3"}]}
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {
+                  levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                  properties: {
+                    variants: {"Level 2b" => {active: false}}
+                  }
+                },
+                {levels: [{name: "Level 3"}]}
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -145,39 +150,39 @@ endvariants
 "
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {
-                lesson: "Lesson1",
-                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-                properties: {
-                  variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
-                }
-              },
-              {
-                lesson: "Lesson1",
-                levels: [{name: "Level 3a"}, {name: "Level 3b"}],
-                properties: {
-                  variants: {
-                    "Level 3a" => {active: false},
-                    "Level 3b" => {experiments: ["experiment2"]}
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {
+                  levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                  properties: {
+                    variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
                   }
-                }
-              },
-              {
-                lesson: "Lesson1",
-                levels: [{name: "Level 4a"}, {name: "Level 4b"}],
-                properties: {
-                  variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
-                }
-              },
-            ]
-          }
-        ],
-        lesson_groups: []
+                },
+                {
+                  levels: [{name: "Level 3a"}, {name: "Level 3b"}],
+                  properties: {
+                    variants: {
+                      "Level 3a" => {active: false},
+                      "Level 3b" => {experiments: ["experiment2"]}
+                    }
+                  }
+                },
+                {
+                  levels: [{name: "Level 4a"}, {name: "Level 4b"}],
+                  properties: {
+                    variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
+                  }
+                },
+              ]
+            }
+          ]
+        ]
       }
     )
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -226,21 +231,25 @@ endvariants
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1", lesson_lockable: true}]},
-            ]
-          },
-          {
-            lesson: "Lesson2",
-            scriptlevels: [
-              {lesson: "Lesson2", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              lockable: true,
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+              ]
+            },
+            {
+              name: "Lesson2",
+              script_levels: [
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -377,17 +386,20 @@ endvariants
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
-              {lesson: "Lesson1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
+                {levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -407,24 +419,26 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {
-                lesson: "Lesson1",
-                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-                properties: {
-                  variants: {"Level 2b" => {active: false}},
-                  progression: 'Foo'
-                }
-              },
-              {lesson: "Lesson1", levels: [{name: "Level 3"}]}
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {
+                  levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                  properties: {
+                    variants: {"Level 2b" => {active: false}},
+                    progression: 'Foo'
+                  }
+                },
+                {levels: [{name: "Level 3"}]}
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -461,29 +475,31 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-              {lesson: "Lesson1", levels: [{name: "Level 4"}]},
-              {
-                lesson: "Lesson1",
-                levels: [
-                  {name: "Level 5"},
-                  {name: "Level 5.1"},
-                ],
-                properties: {
-                  variants: {"Level 5.1" => {active: false}},
-                  challenge: true,
-                },
-              },
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+                {levels: [{name: "Level 3"}], properties: {challenge: true}},
+                {levels: [{name: "Level 4"}]},
+                {
+                  levels: [
+                    {name: "Level 5"},
+                    {name: "Level 5.1"},
+                  ],
+                  properties: {
+                    variants: {"Level 5.1" => {active: false}},
+                    challenge: true,
+                  },
+                }
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -501,17 +517,20 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            visible_after: '2020-04-01 08:00:00 -0700',
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              visible_after: '2020-04-01 08:00:00 -0700',
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -528,17 +547,20 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Lesson1",
-            visible_after: '2020-04-01 10:00:00 -0700',
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              visible_after: '2020-04-01 10:00:00 -0700',
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ],
+        ]
       }
     )
 
@@ -571,19 +593,17 @@ level 'Level 3'
     expected = DEFAULT_PROPS.merge(
       {
         lesson_groups: [
-          {
-            key: "required",
-            display_name: "Overview"
-          }
-        ],
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1", lesson_group: "required"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2", lesson_group: "required"}]},
-            ]
-          }
+          key: "required",
+          display_name: "Overview",
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
         ]
       }
     )
@@ -595,7 +615,7 @@ level 'Level 3'
   test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key: 'content', script: script
+    lesson_group = create :lesson_group, key: 'content', script: script, properties: {display_name: "Content"}
     lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -632,8 +652,8 @@ level 'Level 3'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
     # intentionally made in the opposite order of how we want them to show to test
-    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2
-    lesson_group1 = create :lesson_group, key: 'content', script: script, position: 1
+    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2, properties: {display_name: "Content2"}
+    lesson_group1 = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content1"}
 
     lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group1
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group2
@@ -642,11 +662,11 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content1', display_name: 'Content1'
       lesson 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'content2', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content2'
       lesson 'lesson 2'
       level 'maze 2'
 
@@ -658,7 +678,6 @@ level 'Level 3'
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [],
         lesson_groups: [],
         project_sharing: true
       }
@@ -684,7 +703,6 @@ level 'Level 3'
     input_dsl = "curriculum_umbrella 'CSF'"
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [],
         lesson_groups: [],
         curriculum_umbrella: 'CSF'
       }
@@ -722,16 +740,19 @@ level 'Level 3'
         family_name: "family name",
         version_year: "3035",
         is_stable: true,
-        lessons: [
-          {
-            lesson: "Lesson1",
-            scriptlevels: [
-              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
-              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "Lesson1",
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -788,13 +809,16 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "stage 1",
-            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "stage 1",
+              script_levels: [{levels: [{name: "maze 1"}], named_level: true},]
+            }
+          ]
+        ]
       }
     )
 
@@ -831,13 +855,21 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "stage 1",
-            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", assessment: true}]},]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              name: "stage 1",
+              script_levels: [
+                {
+                  levels: [{name: "maze 1"}],
+                  assessment: true
+                }
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -847,6 +879,7 @@ level 'Level 3'
 
   test 'script DSL with single quotes' do
     input_dsl = <<~DSL
+      lesson_group 'my_group', display_name: 'Display Name'
       lesson 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
@@ -856,16 +889,19 @@ level 'Level 3'
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        lessons: [
-          {
-            lesson: "Bob's stage",
-            scriptlevels: [
-              {lesson: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
-              {lesson: "Bob's stage", levels: [{name: 'Level 2'}]},
-            ]
-          }
-        ],
-        lesson_groups: []
+        lesson_groups: [
+          key: "my_group",
+          display_name: "Display Name",
+          lessons: [
+            {
+              name: "Bob's stage",
+              script_levels: [
+                {levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
+                {levels: [{name: 'Level 2'}]},
+              ]
+            }
+          ]
+        ]
       }
     )
 
@@ -878,7 +914,9 @@ level 'Level 3'
         'lessons' => {
           "Bob's stage" => {'name' => "Bob's stage"}
         },
-        "lesson_groups" => {}
+        "lesson_groups" => {
+          "my_group" => {"display_name" => "Display Name"}
+        }
       }
     }
     assert_equal expected, output
@@ -891,7 +929,7 @@ level 'Level 3'
     level1 = create :maze, name: 'maze 1', level_num: 'custom'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
-    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content"}
 
     # intentionally made in the opposite order of how we want them to show to test
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2

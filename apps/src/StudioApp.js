@@ -42,7 +42,12 @@ import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
+import {
+  KeyCodes,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
+  NOTIFICATION_ALERT_TYPE
+} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
@@ -51,7 +56,7 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
-import {setIsRunning, setStepSpeed} from './redux/runState';
+import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
@@ -73,6 +78,7 @@ import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 var copyrightStrings;
 
 /**
@@ -195,6 +201,16 @@ class StudioApp extends EventEmitter {
      * Levelbuilder-defined helper libraries.
      */
     this.libraries = {};
+
+    /*
+     * Stores the alert that appears if the user edits code while its running. It will be unmounted and set to undefined on reset.
+     */
+    this.editDuringRunAlert = undefined;
+
+    /*
+     * Stores the code at run. It's undefined if the code is not running.
+     */
+    this.executingCode = undefined;
   }
 }
 /**
@@ -536,6 +552,26 @@ StudioApp.prototype.init = function(config) {
       />,
       startDialogDiv
     );
+  }
+  if (!config.readOnlyWorkspace) {
+    this.addChangeHandler(() => {
+      // if the code has changed (other than whitespace at the beginning or end) and the code is running,
+      // we want to show an alert to tell the user to reset and run their code again. We trim the whitespace
+      // because droplet sometimes adds an extra newline when switching from block to code mode.
+      if (
+        this.isRunning() &&
+        this.editDuringRunAlert === undefined &&
+        this.getCode().trim() !== this.executingCode.trim()
+      ) {
+        getStore().dispatch(setIsEditWhileRun(true));
+        this.editDuringRunAlert = this.displayWorkspaceAlert(
+          'warning',
+          React.createElement('div', {}, msg.editDuringRunMessage()),
+          true
+        );
+        this.clearHighlighting();
+      }
+    });
   }
 
   this.emit('afterInit');
@@ -935,6 +971,16 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   getStore().dispatch(setIsRunning(!showRun));
+
+  if (showRun) {
+    if (this.editDuringRunAlert !== undefined) {
+      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.editDuringRunAlert = undefined;
+      getStore().dispatch(setIsEditWhileRun(false));
+    }
+  } else {
+    this.executingCode = this.getCode().trim();
+  }
 
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -1517,7 +1563,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.isUsingBlockly()) {
+  if (this.isUsingBlockly() && this.editDuringRunAlert === undefined) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -3032,25 +3078,30 @@ function rectFromElementBoundingBox(element) {
  * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
-  var container = this.displayAlert(
-    '#codeWorkspace',
-    {type: type},
+StudioApp.prototype.displayWorkspaceAlert = function(
+  type,
+  alertContents,
+  bottom = false
+) {
+  var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
+  var container = $('<div/>');
+  parent.append(container);
+  const workspaceAlert = React.createElement(
+    WorkspaceAlert,
+    {
+      type: type,
+      onClose: () => {
+        ReactDOM.unmountComponentAtNode(container[0]);
+      },
+      isBlockly: this.usingBlockly_,
+      isCraft: this.config && this.config.app === 'craft',
+      displayBottom: bottom
+    },
     alertContents
   );
+  ReactDOM.render(workspaceAlert, container[0]);
 
-  var toolbarWidth;
-  if (this.usingBlockly_) {
-    toolbarWidth = $('.blocklyToolboxDiv').width();
-  } else {
-    toolbarWidth =
-      $('.droplet-palette-element').width() + $('.droplet-gutter').width();
-  }
-
-  $(container).css({
-    left: toolbarWidth,
-    top: $('#headers').height()
-  });
+  return container[0];
 };
 
 /**
@@ -3059,56 +3110,11 @@ StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: type,
-      sideMargin: 20
-    },
-    alertContents
-  );
-};
-
-/**
- * Displays a small notification box inside the playspace that goes away after 5 seconds
- * @param {React.Component} notificationContents
- */
-StudioApp.prototype.displayPlayspaceNotification = function(
-  notificationContents
-) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: 'notification',
-      closeDelayMillis: 5000,
-      childPadding: '8px 14px'
-    },
-    notificationContents
-  );
-};
-
-/**
- * Displays a small alert box inside DOM element at parentSelector. Parent is
- * assumed to have at most a single alert (we'll either create a new one or
- * replace the existing one).
- * @param {object} props
- * @param {string} object.type - Alert type (error or warning)
- * @param {number} [object.sideMaring] - Optional param specifying margin on
- *   either side of element
- * @param {React.Component} alertContents
- * @param {?string} position
- */
-StudioApp.prototype.displayAlert = function(
-  selector,
-  props,
-  alertContents,
-  position = 'absolute'
-) {
-  var parent = $(selector);
+  var parent = $('#visualization');
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
-      position: position,
+      position: 'absolute',
       left: 0,
       right: 0,
       top: 0,
@@ -3119,23 +3125,22 @@ StudioApp.prototype.displayAlert = function(
   }
   var renderElement = container[0];
 
-  var handleAlertClose = function() {
-    ReactDOM.unmountComponentAtNode(renderElement);
+  let alertProps = {
+    onClose: () => {
+      ReactDOM.unmountComponentAtNode(renderElement);
+    },
+    type: type
   };
-  ReactDOM.render(
-    <Alert
-      onClose={handleAlertClose}
-      type={props.type}
-      sideMargin={props.sideMargin}
-      closeDelayMillis={props.closeDelayMillis}
-      childPadding={props.childPadding}
-    >
-      {alertContents}
-    </Alert>,
-    renderElement
-  );
 
-  return renderElement;
+  if (type === NOTIFICATION_ALERT_TYPE) {
+    alertProps.closeDelayMillis = 5000;
+    alertProps.childPadding = '8px 14px';
+  } else {
+    alertProps.sideMargin = 20;
+  }
+
+  const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
+  ReactDOM.render(playspaceAlert, renderElement);
 };
 
 /**

@@ -4618,6 +4618,8 @@
           lesson_groups:
             csp_unit1_2020:
               display_name: '(gammel) Enhet 1: Digital informasjon'
+            cspSurvey:
+              display_name: Undersøkelse
           lessons:
             Binary Numbers:
               name: Binære Tall
@@ -4628,32 +4630,6 @@
           lessons:
             Creating Functions:
               name: Lage Funksjoner
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Hastighet
-            Functions:
-              name: Funksjoner
-            Sprite Properties:
-              name: Figuregenskaper
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapittel 1: Bilder og animasjoner'
-          lessons:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Hastighet
-            Functions:
-              name: Funksjoner
-            Sprite Properties:
-              name: Figuregenskaper
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4710,3 +4686,73 @@
           lessons:
             While Loops:
               name: Gjenta-løkker
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjoner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For-løkker
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjoner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For-løkker
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: De Neste Trinnene
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csp5_1:
+              display_name: 'Kapittel 1: Hendelsesdrevet programmering'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Text:
+              name: tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+          lessons:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Text:
+              name: tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+          lesson_groups:
+            csd3_1:
+              display_name: Innhold
+            csd3_2:
+              display_name: Innhold
+            cspSurvey:
+              display_name: Innhold

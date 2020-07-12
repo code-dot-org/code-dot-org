@@ -4999,32 +4999,14 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
               display_name: 'יחידה 3: מבוא לתכנות'
-        csd3-virtual:
-          stages:
-            Variables:
-              name: משתנים
-            Conditionals:
-              name: תנאים
-            Functions:
-              name: פונקציות
-            Sprite Properties:
-              name: מאפייני ספרייט
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-          lessons:
-            Variables:
-              name: משתנים
-            Conditionals:
-              name: תנאים
-            Functions:
-              name: פונקציות
-            Sprite Properties:
-              name: מאפייני ספרייט
         csd2-virtual:
           stages:
             Intro to HTML:
@@ -5112,3 +5094,60 @@ he:
           lessons:
             While Loops:
               name: לולאות "כל עוד"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lessons:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-virtual:
+          stages:
+            Variables:
+              name: משתנים
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+          lessons:
+            Variables:
+              name: משתנים
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות

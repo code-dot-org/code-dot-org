@@ -9,6 +9,7 @@ import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {STATES} from '@cdo/apps/geographyConstants';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -21,6 +22,10 @@ const styles = {
   },
   consentIndent: {
     marginLeft: '25px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
   }
 };
 
@@ -28,7 +33,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    onContinue: PropTypes.func
+    updateFormData: PropTypes.func
   };
 
   constructor(props) {
@@ -49,8 +54,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
+  resetSchool = () =>
+    this.props.updateFormData({schoolEligible: null, schoolId: null});
+
   submit = () => {
     const requiredFormData = _.pick(this.state, [
+      'email',
       'firstName',
       'lastName',
       'inspirationKit',
@@ -87,7 +96,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       data_json: JSON.stringify(submitData)
     });
 
-    this.props.onContinue(submitData);
+    this.props.updateFormData(submitData);
   };
 
   onContinue = () => {
@@ -129,7 +138,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   getMissingRequiredFields() {
-    const requiredFields = ['firstName', 'lastName', 'consentAFE'];
+    const requiredFields = ['email', 'firstName', 'lastName', 'consentAFE'];
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
@@ -147,9 +156,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 
   render() {
-    // TO DO: gray out school dropdown and disable editing
-    // TO DO: Add "Not your school? go back" link below school dropdown
-    // TO DO: Enforce that these required fields are actually required
     return (
       <div>
         <div>
@@ -168,6 +174,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
+            validationState={
+              this.state.errors.hasOwnProperty('email')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
+            errorMessage={this.state.errors.email}
           />
           <SchoolAutocompleteDropdownWithLabel
             value={this.props.schoolId}
@@ -175,7 +187,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             includeSchoolNotFoundCheckbox={false}
           />
           <div style={styles.wrong_school}>
-            Wrong school? Go back
+            Wrong school? <a onClick={this.resetSchool}>Go back</a>
             <br />
           </div>
           <FieldGroup
@@ -215,10 +227,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.inspirationKit}
           />
           {this.state.inspirationKit && (
-            <ShippingAddressFormGroup
-              handleChange={this.handleChange}
-              checkValidationState={this.checkValidationState}
-            />
+            <div>
+              <ShippingAddressFormGroup
+                handleChange={this.handleChange}
+                checkValidationState={this.checkValidationState}
+              />
+              <div>
+                For the purposes of shipping you your Inspiration Kit, your
+                email and school address may be shared with a certified third
+                party.
+              </div>
+            </div>
           )}
           <SingleCheckbox
             name="csta"
@@ -282,7 +301,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             always have the choice to adjust your interest settings or
             unsubscribe.
           </div>
-          <Button id="continue" onClick={this.onContinue}>
+          <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
           </Button>
         </form>
@@ -291,82 +310,72 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   }
 }
 
-// This might be better as pure functional component?
-// Just takes handleChange as argument, returns form?
-class ShippingAddressFormGroup extends React.Component {
-  static propTypes = {
-    handleChange: PropTypes.func.isRequired,
-    checkValidationState: PropTypes.func.isRequired
-  };
+const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
+  const renderedStateOptions = STATES.map(state => (
+    <option key={state} value={state}>
+      {state}
+    </option>
+  ));
 
-  handleChange = change => {
-    this.props.handleChange(change);
-  };
-
-  render() {
-    // TO DO: Maybe outermost element should be FormGroup, not div
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          Since you checked the box above, please verify your school address
-          below.
-        </div>
-        <FieldGroup
-          id="street1"
-          label="Street 1"
-          type="text"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('street1')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
-        <FieldGroup
-          id="street2"
-          label="Street 2"
-          type="text"
-          required={false}
-          onChange={this.handleChange}
-        />
-        <FieldGroup
-          id="city"
-          label="City"
-          type="text"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('city')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
-        <FieldGroup
-          id="state"
-          label="State"
-          type="text"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('state')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
-        <FieldGroup
-          id="zip"
-          label="Zip code"
-          type="number"
-          required={true}
-          onChange={this.handleChange}
-          validationState={
-            this.props.checkValidationState('zip')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-        />
+        Since you checked the box above, please verify your school address
+        below.
       </div>
-    );
-  }
-}
+      <FieldGroup
+        id="street1"
+        label="Street 1"
+        type="text"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('street1') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+      <FieldGroup
+        id="street2"
+        label="Street 2"
+        type="text"
+        required={false}
+        onChange={handleChange}
+      />
+      <FieldGroup
+        id="city"
+        label="City"
+        type="text"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('city') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+      <FieldGroup
+        id="state"
+        label="State"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('state') ? VALIDATION_STATE_ERROR : null
+        }
+        componentClass="select"
+      >
+        {renderedStateOptions}
+      </FieldGroup>
+      <FieldGroup
+        id="zip"
+        label="Zip code"
+        type="number"
+        required={true}
+        onChange={handleChange}
+        validationState={
+          checkValidationState('zip') ? VALIDATION_STATE_ERROR : null
+        }
+      />
+    </div>
+  );
+};
+ShippingAddressFormGroup.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  checkValidationState: PropTypes.func.isRequired
+};

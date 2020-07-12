@@ -42,7 +42,9 @@ const fakeScriptData789 = {
   hasStandards: false,
   title: 'Title 789',
   path: '/',
-  lessons: [{id: 1, levels: []}, {id: 2, levels: []}]
+  lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
+  family_name: 'fakeScript789',
+  version_year: 2020
 };
 
 const fakeScriptData456 = {
@@ -51,7 +53,9 @@ const fakeScriptData456 = {
   hasStandards: false,
   title: 'Title 456',
   path: '/',
-  lessons: [{id: 3, levels: []}, {id: 4, levels: []}]
+  lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
+  family_name: 'fakeScript456',
+  version_year: 2020
 };
 
 const fakeStudentProgress = {
@@ -327,7 +331,8 @@ describe('sectionProgressRedux', () => {
                       is_concept_level: false,
                       title: 'hello world',
                       bonus: false,
-                      display_as_unplugged: false
+                      display_as_unplugged: false,
+                      sublevels: []
                     }
                   ]
                 }
@@ -349,7 +354,8 @@ describe('sectionProgressRedux', () => {
                 name: 'name',
                 progression: 'progression',
                 url: 'url',
-                bonus: false
+                bonus: false,
+                sublevels: []
               }
             ]
           }

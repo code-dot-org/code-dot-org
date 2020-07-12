@@ -659,3 +659,16 @@ csf_intro_post_workshop:
    ]
   }]
   }'
+daily_survey:
+  name: surveys/pd/summer_workshop_daily_survey
+  version: 0
+  created_at: 2020-03-25 21:58:28
+  updated_at: 2020-03-26 21:58:28
+  questions: '{}'
+
+post_course_survey:
+  name: surveys/teachers/teacher_end_of_year_survey
+  version: 0
+  created_at: 2020-03-25 21:58:28
+  updated_at: 2020-03-26 21:58:28
+  questions: '{}'

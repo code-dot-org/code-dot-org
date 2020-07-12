@@ -3595,25 +3595,6 @@ eu:
           lessons:
             Creating Functions:
               name: Funtzioak sortzen
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Functions:
-              name: Funtzioak
-            Sprite Properties:
-              name: Sprite-n Propietateak
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Functions:
-              name: Funtzioak
-            Sprite Properties:
-              name: Sprite-n Propietateak
         csp5-virtual:
           stages:
             While Loops:
@@ -3650,3 +3631,53 @@ eu:
           lessons:
             While Loops:
               name: '"Bitartean" begiztak'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Itzuliak
+            Events:
+              name: Gertaerak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Variables:
+              name: Aldagaiak
+            For Loops:
+              name: For begiztak
+          lessons:
+            Loops:
+              name: Itzuliak
+            Events:
+              name: Gertaerak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Variables:
+              name: Aldagaiak
+            For Loops:
+              name: For begiztak
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+            Text:
+              name: Testua
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+          lessons:
+            Variables:
+              name: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+            Text:
+              name: Testua
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak

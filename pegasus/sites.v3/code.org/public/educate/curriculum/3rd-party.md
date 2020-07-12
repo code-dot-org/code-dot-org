@@ -7,7 +7,7 @@ style_min: true
 <img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Professional Development and Curricula</h1>
 <div>
-<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/page/quality-pd-review-process/" target="_blank">Quality PD Review Process page</a>.</p>
+<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/page/quality-pd-review-process/" target="_blank">Quality PD Review Process page</a>. To view an interactive display of the table below, <a href="https://csteachers.org/page/quality-pd">click here</a>.</p>  
 <p>If you’d like to explore additional opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#supporters">Resources from our supporters</a> and <a href="#more">More Resources</a> below the table of CSTA-recommended programs.</p>
 </div>
 

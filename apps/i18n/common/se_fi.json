@@ -1,3 +1,12 @@
 {
-  "projectTypeEvents": "Dáhpáhusaid"
+  "csf": "DihtorDiehtaga Vuođut",
+  "playzoneArtistDescription": "Tevdne kulas govaid ja ráhkat daid Dáiddariin!",
+  "playzonePlaylabDescription": "Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!",
+  "projectTypeArtist": "Dáiddár",
+  "projectTypeCalc": "Rehkenastte",
+  "projectTypeEval": "Evaluere",
+  "projectTypeEvents": "Dáhpáhusaid",
+  "projectTypeFlappy": "Flappy",
+  "projectTypePlaylab": "Speallan-lab",
+  "projectTypeSpriteLab": "Sprite-lab"
 }

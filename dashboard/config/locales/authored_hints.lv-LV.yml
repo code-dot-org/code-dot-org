@@ -145,6 +145,11 @@ lv-LV:
           Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
 
           Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
+      courseD_artist_nestedLoops3_2020:
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
       courseE_artist_functions1:
         courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
           ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
@@ -174,5 +179,8 @@ lv-LV:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
           īsāks.
       grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
+      grade5_artist_variables_triangles1_2020:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
           īsāks.

@@ -7310,6 +7310,8 @@ ru:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Урок 1: Цифровая информация'
+            cspSurvey:
+              display_name: Опрос
           lessons:
             Binary Numbers:
               name: Двоичные числа
@@ -7361,41 +7363,6 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
-        csd3-virtual:
-          description_short: "Программирование"
-          stages:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
-            Velocity:
-              name: Скорость
-            Collision Detection:
-              name: Обнаружение столкновений
-            Functions:
-              name: функции
-            Random Numbers:
-              name: Случайные числа
-          lesson_groups:
-            csd3_1:
-              display_name: 'Глава 1: Изображения и анимации'
-          lessons:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
-            Velocity:
-              name: Скорость
-            Collision Detection:
-              name: Обнаружение столкновений
-            Functions:
-              name: функции
-            Random Numbers:
-              name: Случайные числа
         csd2-virtual:
           stages:
             CSS Classes:
@@ -7494,3 +7461,96 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Events:
+              name: События
+            Conditionals:
+              name: Условные команды
+            Functions:
+              name: функции
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром
+            Sprite Lab:
+              name: Лаборатория Спрайтов
+          lessons:
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Events:
+              name: События
+            Conditionals:
+              name: Условные команды
+            Functions:
+              name: функции
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром
+            Sprite Lab:
+              name: Лаборатория Спрайтов
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Приступить к работе
+            k5_basic_concepts_1:
+              display_name: Основы принципов программирования и практики обучения
+            k5_diving_deeper_1:
+              display_name: 'Погружаемся глубже: курсы E и F'
+            k5_next_steps_1:
+              display_name: Следующие шаги
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+        csd3-virtual:
+          description_short: "Программирование"
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lessons:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: Содержимое
+            csd3_2:
+              display_name: Содержимое
+            cspSurvey:
+              display_name: Содержимое

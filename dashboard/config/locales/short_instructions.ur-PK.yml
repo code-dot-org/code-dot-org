@@ -4,6 +4,29 @@ ur-PK:
     short_instructions:
       2-3 Artist 9 NEW: یہ پتنگ مکمل کریں
       2-3 Artist Loops New 15: کچھ تفریحی بنائیں ۔
+      CourseD_Dance_2020_01: '<xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        کو ورک اسپیس میں گھسیٹیں، اور اسے <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true"
+        block-text="setup"></block></xml> بلاک سے منسلک کریں۔.'
+      CourseD_Dance_2020_02: بلی کو ایک ڈانس کرائیں جب آپ ایک کلید دباتے ہیں۔.
+      CourseD_Dance_2020_03: 'یہ ڈانس مقابلہ کا وقت ہے! جب آپ مختلف کلیدیں دبائیں
+        تو ہر ڈانسر کو حرکت میں لانے کا پروگرام بنائیں۔ ہر ڈانسر کے لئے اپنی پسندیدہ
+        حرکات کا انتخاب کریں یا ناقابل پیشگوئی چیز کے لئے اسے "(بے ترتیب)" پر مقرر
+        کریں! '
+      CourseD_Dance_2020_04: چوتھی پیمائش کے بعد اپنے ڈانسر سے نئی حرکت شروع کرائیں۔.
+      CourseD_Dance_2020_05: اب 6 پیمائشوں کے بعد ڈانسر سے ایک نئی حرکت شروع کرائیں!
+      CourseD_Dance_2020_06: درمیان میں قیادتی ڈانسر کے اررگرد بیک اپ ڈانسرز کا ایک
+        گروپ مرتب کریں۔.
+      CourseD_Dance_2020_07: بیک اپ ڈانسرز کے گروپ کا سائز تبدیل کریں۔.
+      CourseD_Dance_2020_08: اپنے ڈانسر میں سے کسی کی رنگت تبدیل کرنے کی کوشش کریں
+        (یا ایک مکمل گروپ)!
+      CourseD_Dance_2020_09: ان نئے بلاکس کے ساتھ تخلیقی بنیں!
+      CourseD_Dance_2020_10: اپنا گروو جاری رکھیں! اپنے دوستوں کے ساتھ اشتراک کرنے
+        کے لئے اپنا خود کا ڈانس بنائیں۔.
+      CourseD_Dance_2020_bonus1: آگے پیچھے! (تفصیلات کیلئے "مزید" پر کلک کریں)
+      CourseD_Dance_2020_bonus3: آئیے تشکیل میں آئیں! (تفصیلات کیلئے "مزید" پر کلک
+        کریں)
       CourseD_Dance_Party_01: ورک اسپیس میں 'ایک نیا بنائیں' بلاک گھسیٹ کر لائیں اور
         اسے 'سیٹ اپ' بلاک کے اندر مربوط کریں۔.
       CourseD_Dance_Party_02: 4 پیمائشوں کے بعد موس سے ایک نئی حرکت شروع کرائیں!

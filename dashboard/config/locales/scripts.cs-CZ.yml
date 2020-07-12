@@ -5964,29 +5964,6 @@ cs:
           lessons:
             Creating Functions:
               name: Vytvářející funkce
-        csd3-virtual:
-          description_short: Programování
-          stages:
-            Variables:
-              name: Proměnné
-            Conditionals:
-              name: Podmínky
-            Functions:
-              name: Funkce
-            Random Numbers:
-              name: Náhodná čísla
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitola 1: Obrázky a animace'
-          lessons:
-            Variables:
-              name: Proměnné
-            Conditionals:
-              name: Podmínky
-            Functions:
-              name: Funkce
-            Random Numbers:
-              name: Náhodná čísla
         jess-test-script:
           stages:
             Debugging:
@@ -6041,3 +6018,69 @@ cs:
           lessons:
             While Loops:
               name: While (pokud) cykly
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Sekvence
+            Loops:
+              name: Cykly
+            Events:
+              name: Události
+            Conditionals:
+              name: Podmínky
+            End of Course projects:
+              name: Projekty k ukončení kurzu
+            Functions:
+              name: Funkce
+            Variables:
+              name: Proměnné
+            For Loops:
+              name: Cykly "For"
+          lessons:
+            Sequencing:
+              name: Sekvence
+            Loops:
+              name: Cykly
+            Events:
+              name: Události
+            Conditionals:
+              name: Podmínky
+            End of Course projects:
+              name: Projekty k ukončení kurzu
+            Functions:
+              name: Funkce
+            Variables:
+              name: Proměnné
+            For Loops:
+              name: Cykly "For"
+        csd3-virtual:
+          description_short: Programování
+          stages:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Text:
+              name: Text
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce
+          lessons:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Text:
+              name: Text
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce
+          lesson_groups:
+            csd3_1:
+              display_name: Obsah
+            csd3_2:
+              display_name: Obsah
+            cspSurvey:
+              display_name: Obsah

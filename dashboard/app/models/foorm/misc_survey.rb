@@ -18,4 +18,61 @@
 class Foorm::MiscSurvey < ActiveRecord::Base
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
+
+  def self.all_form_data
+    [
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course',
+        survey_data: {course: 'CS Fundamentals', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course_pd',
+        survey_data: {course: 'CS Fundamentals', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course',
+        survey_data: {course: 'CS Discoveries', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course_pd',
+        survey_data: {course: 'CS Discoveries', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course',
+        survey_data: {course: 'CS Principles', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course_pd',
+        survey_data: {course: 'CS Principles', pd: true},
+        allow_multiple_submissions: false
+      }
+    ]
+  end
+
+  def self.find_form_data(misc_form_path)
+    all_form_data.detect {|form_data| form_data[:misc_form_path] == misc_form_path}
+  end
+
+  def save_with_foorm_submission(answers, form_name, form_version)
+    ActiveRecord::Base.transaction do
+      create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
+      save!
+    end
+  end
+
+  def self.form_disabled?(misc_form_path)
+    disabled_forms = DCDO.get('foorm_misc_survey_disabled', [])
+    disabled_forms && disabled_forms.include?(misc_form_path)
+  end
 end

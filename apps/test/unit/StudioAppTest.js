@@ -292,8 +292,15 @@ describe('StudioApp', () => {
   });
 
   describe('addChangeHandler', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+    });
 
     it('calls a handler in response to a blockly change', () => {
       let changed = false;

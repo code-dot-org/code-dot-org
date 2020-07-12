@@ -80,7 +80,6 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'regionalPartnerMiniContact',
-  'amazonFutureEngineerEligibility',
 
   // other entry points
   'blockly',
