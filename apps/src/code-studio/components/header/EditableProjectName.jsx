@@ -143,7 +143,7 @@ const EditProjectName = connect(
 
 export default class EditableProjectName extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func.isRequired
+    onChangedWidth: PropTypes.func
   };
 
   componentDidUpdate() {
