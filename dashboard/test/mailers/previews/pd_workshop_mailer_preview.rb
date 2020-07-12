@@ -198,6 +198,20 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :facilitator_enrollment_reminder, target: :facilitator
   end
 
+  def facilitator_pre_workshop_csp
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSP,
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      target: :facilitator
+  end
+
+  def facilitator_pre_workshop_csd
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSD,
+      Pd::Workshop::SUBJECT_CSD_VIRTUAL_1,
+      target: :facilitator
+  end
+
   def facilitator_post_workshop_csp_summer
     regional_partner = build :regional_partner, name: 'We Teach Code'
 
