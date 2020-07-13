@@ -240,10 +240,10 @@ state-facts: true
         - if state_param != 'AK' && state_param != 'AL' && state_param != 'AR' && state_param != 'CA' && state_param != 'FL' && state_param != 'IL' && state_param != 'LA' && state_param != 'MD' && state_param != 'MI' && state_param != 'MN' && state_param != 'MT' && state_param != 'ND' && state_param != 'NE' && state_param != 'NH' && state_param != 'NJ' && state_param != 'NY' && state_param != 'OH' && state_param != 'PA' && state_param != 'RI' && state_param != 'VA'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li
-        Universities in
+        Teacher preparation programs in
         = state_info[:state_name_s]
         - if state_info[:preservice_prepared_i] == 0
-          did not graduate a single new teacher prepared to teach computer science in 2017.
+          did not graduate a single new teacher prepared to teach computer science in 2018.
         - else
           only graduated
           = state_info[:preservice_prepared_i]
@@ -252,7 +252,7 @@ state-facts: true
             teacher
           - else
             teachers
-          prepared to teach computer science in 2017.
+          prepared to teach computer science in 2018.
 
       - if state_info[:principals_core_i] != 0
         %li
