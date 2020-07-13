@@ -10,8 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   hiddenSectionIds,
   beginEditingNewSection,
-  beginEditingSection,
-  beginImportRosterFlow
+  beginEditingSection
 } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -43,7 +42,6 @@ const styles = {
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    queryStringOpen: PropTypes.string,
     authenticityToken: PropTypes.string,
 
     // redux provided
@@ -51,8 +49,7 @@ class OwnedSections extends React.Component {
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
-    beginEditingSection: PropTypes.func.isRequired,
-    beginImportRosterFlow: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired
   };
 
   state = {
@@ -66,14 +63,6 @@ class OwnedSections extends React.Component {
       recordImpression('owned_sections_table_with_dashboard_header_buttons');
     } else {
       recordImpression('owned_sections_table_without_dashboard_header_buttons');
-    }
-  }
-
-  componentDidMount() {
-    const {queryStringOpen, beginImportRosterFlow} = this.props;
-
-    if (queryStringOpen === 'rosterDialog') {
-      beginImportRosterFlow();
     }
   }
 
@@ -169,7 +158,6 @@ export default connect(
   }),
   {
     beginEditingNewSection,
-    beginEditingSection,
-    beginImportRosterFlow
+    beginEditingSection
   }
 )(OwnedSections);

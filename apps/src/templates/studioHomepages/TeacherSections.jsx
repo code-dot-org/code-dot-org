@@ -8,7 +8,6 @@ import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 
 class TeacherSections extends Component {
   static propTypes = {
-    queryStringOpen: PropTypes.string,
     authenticityToken: PropTypes.string,
 
     //Redux provided
@@ -20,15 +19,12 @@ class TeacherSections extends Component {
   }
 
   render() {
-    const {authenticityToken, queryStringOpen} = this.props;
+    const {authenticityToken} = this.props;
 
     return (
       <div id="classroom-sections">
         <ContentContainer heading={i18n.sectionsTitle()}>
-          <OwnedSections
-            queryStringOpen={queryStringOpen}
-            authenticityToken={authenticityToken}
-          />
+          <OwnedSections authenticityToken={authenticityToken} />
         </ContentContainer>
       </div>
     );
