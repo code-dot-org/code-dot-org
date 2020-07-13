@@ -941,6 +941,11 @@ $default-modal-width: 640px;
   }
   .project_name_wrapper {
     min-width: 160px;
+
+    html[dir=rtl] & {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   .project_name_wrapper .header_text {
     float: left;
