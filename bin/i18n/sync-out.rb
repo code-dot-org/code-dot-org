@@ -103,7 +103,6 @@ def restore_redacted_files
       end
       find_malformed_links_images(locale, translated_path)
     end
-    I18nScriptUtils.upload_malformed_restorations(locale)
   end
 end
 
