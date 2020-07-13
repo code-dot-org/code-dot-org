@@ -127,7 +127,7 @@ class UsersHelperTest < ActionView::TestCase
     user = create :user, total_lines: 150
     script = create :script
     lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
     sublevel1 = create :level, name: 'choice_1'
