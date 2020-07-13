@@ -460,7 +460,8 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:lesson_groups]
+      script_data[:lesson_groups],
+      script_data[:lessons]
     )
 
     stage = script.lessons[0]
@@ -508,7 +509,8 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_bonus_level_links'},
-      script_data[:lesson_groups]
+      script_data[:lesson_groups],
+      script_data[:lessons]
     )
 
     bonus_script_level = script.lessons.first.script_levels[1]
@@ -537,7 +539,8 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'my_cool_script'},
-      script_data[:lesson_groups]
+      script_data[:lesson_groups],
+      script_data[:lessons]
     )
 
     stage = script.lessons[0]
