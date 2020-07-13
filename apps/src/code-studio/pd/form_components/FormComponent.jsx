@@ -128,9 +128,10 @@ export default class FormComponent extends React.Component {
    * @param {String} [placeholder] - if specified, will add a valueless option
    *        with the specified placeholder text
    * @param {boolean} [required=false]
-   * @param {String[]|Object} options - can be specified as either an array (in which case
-   *        the values and display name will be the same) or an object (in which case
-   *        we'll use the keys for the values and the values for the display names)
+   * @param {Answer[]|SimpleAnswer[]|Object} options - can be specified as
+   *        either an array (of either Answers or SimpleAnswers, as defined in
+   *        utils.js) or an object (in which case we'll use the keys for the
+   *        values and the values for the display names)
    *
    * @returns {FieldGroup}
    */
