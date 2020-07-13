@@ -7,6 +7,19 @@ import AmazonFutureEngineerEligibilityForm from '@cdo/apps/templates/amazonFutur
 import AmazonFutureEngineerAccountConfirmation from '@cdo/apps/templates/amazonFutureEngineerEligibility/amazonFutureEngineerAccountConfirmation';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 
+// Note: this is an incomplete set of tests for the flow that checks
+// teacher eligibility for benefits from the Amazon Future Engineer program.
+// We've done substantial manual testing here, and are not even sure if this
+// will be reused in coming years, so we are releasing it without automated
+// testing that fully covers the feature.
+// Here are some aspects of that flow that are not fully tested:
+// - the ability of the child AmazonFutureEngineerEligibilityForm component
+//   to pass form data to the parent AmazonFutureEngineerEligibility component
+//   when a user submits their information.
+// - ability for a user to proceed to a sign in page, return signed in,
+//   and effectively submit their information.
+// - appropriate API calls to submit information to AFE.
+
 describe('AmazonFutureEngineerEligibility', () => {
   const defaultProps = {
     signedIn: false,
