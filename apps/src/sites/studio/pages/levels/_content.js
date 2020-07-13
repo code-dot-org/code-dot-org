@@ -14,8 +14,8 @@ $(document).ready(() => {
   Blockly.Css.inject(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
-  const associatedBlocks = getScriptData('associatedblocks');
-  if (associatedBlocks) {
+  if (document.querySelector('script[data-associatedBlocks]')) {
+    const associatedBlocks = getScriptData('associatedblocks');
     try {
       // Install the custom CDO blocks for the associated level type.
       const appBlocks = require(`@cdo/apps/${associatedBlocks}/blocks`);
