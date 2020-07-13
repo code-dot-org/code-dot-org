@@ -221,9 +221,6 @@ class HeaderMiddle extends React.Component {
       (!this.state.initialDelay && !this.props.appLoadStarted) ||
       (this.props.appLoadStarted && this.props.appLoaded)
     ) {
-      console.log('HeaderMiddle render', this.getWidth());
-      console.log('isRtl', isRtl);
-
       return (
         <div id="header_middle_content" style={styles.headerMiddleContent}>
           <div
