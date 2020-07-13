@@ -12,6 +12,7 @@ module Pd::Foorm
     #   If all facilitator data can be viewed, facilitator_id_filter is nil
     # @return workshop report in format specified in README
     def self.get_workshop_report(workshop_id, facilitator_id_filter)
+      start_time = Time.now
       return unless workshop_id
 
       # get workshop summary
@@ -42,7 +43,7 @@ module Pd::Foorm
         facilitators,
         split_by_facilitator: true
       )
-      # get overall rollup
+      # get overall rollup per facilitator
       overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details, facilitators)
       overall_rollup_per_facilitator = facilitators ?
                                          get_facilitator_rollup_for_course(
@@ -62,7 +63,7 @@ module Pd::Foorm
           overall: overall_rollup[key]
         }
       end
-
+      puts "total time: #{Time.now - start_time}"
       result_data
     end
 
