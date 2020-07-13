@@ -6,7 +6,7 @@ Feature: Libraries
 
   @as_student
   Scenario: Publishing and unpublishing a library
-    Given I publish a basic library in Applab
+    Given I publish a basic library in Game Lab
     Then I save the URL
 
     # Check for library on /projects/libraries
@@ -24,12 +24,12 @@ Feature: Libraries
   Scenario: Adding and removing a library from a project
     # Student1 publishes a library
     Given I create a student named "Student1"
-    Given I publish a basic library in Applab
+    Given I publish a basic library in Game Lab
     Then I save the channel id
 
     # Student2 imports Student1's library
     Given I create a student named "Student2"
-    And I start a new Applab project
+    And I start a new Game Lab project
     And I wait for the page to fully load
     Then I open the Manage Libraries dialog
     And I wait until element "h1:contains('Import library from ID')" is visible
@@ -50,7 +50,7 @@ Feature: Libraries
   Scenario: Assigning a library to a section as a teacher
     Given I create a teacher named "Library_Teacher"
     And I create a new section
-    Given I publish a basic library in Applab
+    Given I publish a basic library in Game Lab
     When I close the dialog
 
     # Teacher assigns library to a section
@@ -66,7 +66,7 @@ Feature: Libraries
     # Student in teacher's section should see teacher's library
     Given I create a student named "Library_Student"
     And I join the section
-    And I start a new Applab project
+    And I start a new Game Lab project
     And I wait for the page to fully load
     Then I open the Manage Libraries dialog
     And I wait until element "a:contains('UntitledProject')" is visible
