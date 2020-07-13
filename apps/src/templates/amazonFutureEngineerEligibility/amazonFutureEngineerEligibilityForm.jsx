@@ -274,18 +274,21 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.csta}
           />
           {this.state.csta && (
-            <SingleCheckbox
-              name="consentCSTA"
-              label={CSTA_CONSENT_BODY}
-              style={styles.consentIndent}
-              onChange={this.handleChange}
-              value={this.state.consentCSTA}
-              validationState={
-                this.state.errors.hasOwnProperty('consentCSTA')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-            />
+            <div style={styles.consentIndent}>
+              Since you checked the box above, please consent to sharing your
+              information with the CSTA.
+              <SingleCheckbox
+                name="consentCSTA"
+                label={CSTA_CONSENT_BODY}
+                onChange={this.handleChange}
+                value={this.state.consentCSTA}
+                validationState={
+                  this.state.errors.hasOwnProperty('consentCSTA')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+              />
+            </div>
           )}
           <SingleCheckbox
             name="awsEducate"
