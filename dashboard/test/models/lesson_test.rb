@@ -118,10 +118,11 @@ class StageTest < ActiveSupport::TestCase
 
   test "next_level_path_for_stage_extras" do
     script = create :script
-    stage1 = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    stage1 = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: stage1
     create :script_level, script: script, lesson: stage1
-    stage2 = create :lesson, script: script
+    stage2 = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: stage2
     create :script_level, script: script, lesson: stage2
 
