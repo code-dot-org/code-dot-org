@@ -23,6 +23,21 @@ const AFE_CONSENT_BODY = (
     <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
       Amazon’s Privacy Policy
     </a>
+    .
+  </span>
+);
+
+const CSTA_PRIVACY_POLICY_URL = 'https://csteachers.org/privacy-policy/';
+const CSTA_CONSENT_BODY = (
+  <span>
+    I give Code.org permission to share my name and email address, and my
+    school's name, address, and NCES ID, with the Computer Science Teachers
+    Association (required if you want a CSTA+ membership). I provide my consent
+    to the use of my personal data as described in the{' '}
+    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank">
+      CSTA Privacy Policy
+    </a>
+    .
   </span>
 );
 
@@ -41,6 +56,7 @@ const styles = {
     color: color.white
   }
 };
+
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -258,34 +274,18 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             value={this.state.csta}
           />
           {this.state.csta && (
-            <div style={styles.consentIndent}>
-              <div>
-                Since you checked the box above, please consent to the sharing
-                and use of your personal data with the CSTA. Your information
-                will be shared as described in accordance with the{' '}
-                <a
-                  href="https://csteachers.org/privacy-policy/"
-                  target="_blank"
-                >
-                  CSTA Privacy Policy.
-                </a>
-              </div>
-              <SingleCheckbox
-                name="consentCSTA"
-                label="I give Code.org permission to share my name and email address, and my
-                school's name, address, and NCES ID, with the Computer Science Teachers
-                Association. I provide my consent to the use of my personal data as
-                described in the CSTA Privacy Policy (required if you want a CSTA Plus
-                membership)."
-                onChange={this.handleChange}
-                value={this.state.consentCSTA}
-                validationState={
-                  this.state.errors.hasOwnProperty('consentCSTA')
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-              />
-            </div>
+            <SingleCheckbox
+              name="consentCSTA"
+              label={CSTA_CONSENT_BODY}
+              style={styles.consentIndent}
+              onChange={this.handleChange}
+              value={this.state.consentCSTA}
+              validationState={
+                this.state.errors.hasOwnProperty('consentCSTA')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+            />
           )}
           <SingleCheckbox
             name="awsEducate"
