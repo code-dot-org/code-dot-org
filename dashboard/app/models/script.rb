@@ -957,6 +957,7 @@ class Script < ActiveRecord::Base
     end
 
     raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
+
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     chapter = 0
