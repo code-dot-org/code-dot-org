@@ -40,6 +40,20 @@ class Pd::InternationalOptIn < ApplicationRecord
     ]
   end
 
+  def validate_with(options)
+    # Because we're using the special "answerText/answerValue" format in
+    # self.options, we need to normalize to just answerValue here for
+    # validation.
+    normalized_options = options.map do |key, values|
+      normalized_values = values.map do |value|
+        return value.fetch(:answerValue, nil) if value.is_a? Hash
+        value
+      end
+      [key, normalized_values]
+    end.to_h
+    super(normalized_options)
+  end
+
   def validate_required_fields
     super
 
