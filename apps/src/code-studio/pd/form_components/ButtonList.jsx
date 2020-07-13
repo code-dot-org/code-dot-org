@@ -9,6 +9,8 @@ import {
   HelpBlock
 } from 'react-bootstrap';
 
+import utils from './utils';
+
 const otherString = 'Other:';
 
 const styles = {
@@ -27,15 +29,20 @@ class ButtonList extends React.Component {
     answers: PropTypes.arrayOf(
       PropTypes.oneOfType([
         // Standard string answer
+        // See typedef SimpleAnswer in utils
         PropTypes.string,
 
         // or an answer followed by an input for additional text
+        // See typedef ExtraInputAnswer in utils
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           inputId: PropTypes.string,
           inputValue: PropTypes.string,
           onInputChange: PropTypes.func
         }),
+
+        // or an answer with different strings for display vs value
+        // See typedef Answer in utils
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           answerValue: PropTypes.string.isRequired
@@ -94,10 +101,7 @@ class ButtonList extends React.Component {
     }
 
     const options = answers.map((answer, i) => {
-      const answerText =
-        typeof answer === 'string' ? answer : answer.answerText;
-      const answerValue =
-        typeof answer === 'string' ? answer : answer.answerValue || answerText;
+      const {answerText, answerValue} = utils.normalizeAnswer(answer);
 
       const checked =
         this.props.type === 'radio'
