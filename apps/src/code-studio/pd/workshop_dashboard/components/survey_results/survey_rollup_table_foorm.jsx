@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-const INCLUDE_OVERALL = true;
+const INCLUDE_OVERALL = false;
 
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
@@ -72,49 +72,47 @@ export default class SurveyRollupTableFoorm extends React.Component {
     const thisWorkshop = this.props.workshopRollups.single_workshop;
     const overallFacilitator = this.props.workshopRollups.overall_facilitator;
     const questions = this.props.workshopRollups.questions;
-    if (thisWorkshop && thisWorkshop.averages) {
-      for (const questionId in thisWorkshop.averages) {
-        const questionData = questions[questionId];
-        let overallQuestionAverages = {};
-        if (overall && overall.averages) {
-          overallQuestionAverages = overall.averages[questionId];
-        }
-        let thisWorkshopAverages = this.props.isPerFacilitator
-          ? {}
-          : thisWorkshop.averages[questionId];
-        let overallFacilitatorAverages = this.getFacilitatorAveragesForQuestion(
-          overallFacilitator,
+    for (const questionId in questions) {
+      const questionData = questions[questionId];
+      let overallQuestionAverages = {};
+      if (overall && overall.averages) {
+        overallQuestionAverages = overall.averages[questionId];
+      }
+      let thisWorkshopAverages = this.props.isPerFacilitator
+        ? {}
+        : thisWorkshop.averages[questionId];
+      let overallFacilitatorAverages = this.getFacilitatorAveragesForQuestion(
+        overallFacilitator,
+        questionId
+      );
+      if (this.props.isPerFacilitator && thisWorkshop) {
+        thisWorkshopAverages = this.getFacilitatorAveragesForQuestion(
+          thisWorkshop,
           questionId
         );
-        if (this.props.isPerFacilitator && thisWorkshop) {
-          thisWorkshopAverages = this.getFacilitatorAveragesForQuestion(
-            thisWorkshop,
-            questionId
-          );
-        }
-        if (questionData.type === 'matrix') {
-          this.parseMatrixData(
-            rows,
-            questionData,
-            questionId,
-            thisWorkshopAverages,
-            overallFacilitatorAverages,
-            overallQuestionAverages
-          );
-        } else if (
-          questionData.type === 'scale' ||
-          questionData.type === 'singleSelect' ||
-          questionData.type === 'multiSelect'
-        ) {
-          this.parseSelectData(
-            rows,
-            questionData,
-            questionId,
-            thisWorkshopAverages,
-            overallFacilitatorAverages,
-            overallQuestionAverages
-          );
-        }
+      }
+      if (questionData.type === 'matrix') {
+        this.parseMatrixData(
+          rows,
+          questionData,
+          questionId,
+          thisWorkshopAverages,
+          overallFacilitatorAverages,
+          overallQuestionAverages
+        );
+      } else if (
+        questionData.type === 'scale' ||
+        questionData.type === 'singleSelect' ||
+        questionData.type === 'multiSelect'
+      ) {
+        this.parseSelectData(
+          rows,
+          questionData,
+          questionId,
+          thisWorkshopAverages,
+          overallFacilitatorAverages,
+          overallQuestionAverages
+        );
       }
     }
     return rows;
@@ -183,7 +181,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
 
     // add individual rows
     const denominator = questionData.column_count;
-    for (const rowId in thisWorkshopAverages.rows) {
+    for (const rowId in questionData.rows) {
       let rowData = {
         question: {
           text: questionData.rows[rowId],
