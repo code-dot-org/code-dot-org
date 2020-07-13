@@ -30084,23 +30084,23 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: ''
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming in Maze
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               name: Programming in Harvester
               description_student: ''
-              description_teacher: ''
+              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Spelling Bee:
               name: Spelling Bee
               description_student: ''
@@ -30108,27 +30108,27 @@ en:
             Loops in Ice Age:
               name: Loops in Ice Age
               description_student: ''
-              description_teacher: ''
+              description_teacher: Building on the concept of repeating instructions from "My Loopy Robotic Friends," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Loops in Collector:
               name: Loops in Collector
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Tell a Story in Play Lab:
               name: Tell a Story in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Make a Game in Play Lab:
               name: Make a Game in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -30140,23 +30140,23 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: ''
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming in Maze
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               name: Programming in Harvester
               description_student: ''
-              description_teacher: ''
+              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Spelling Bee:
               name: Spelling Bee
               description_student: ''
@@ -30164,27 +30164,27 @@ en:
             Loops in Ice Age:
               name: Loops in Ice Age
               description_student: ''
-              description_teacher: ''
+              description_teacher: Building on the concept of repeating instructions from "My Loopy Robotic Friends," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Loops in Collector:
               name: Loops in Collector
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Tell a Story in Play Lab:
               name: Tell a Story in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Make a Game in Play Lab:
               name: Make a Game in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
         csp1-2020:
           stages:
             new stage:
@@ -30757,6 +30757,20 @@ en:
               name: Virtual Professional Learning Overview
             Module 1:
               name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 8:
+              name: Module 8
+            Module 7:
+              name: Module 7
           title: Jess's Script
           description_audience: ''
           description_short: ''
@@ -30785,6 +30799,20 @@ en:
               name: Virtual Professional Learning Overview
             Module 1:
               name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 8:
+              name: Module 8
+            Module 7:
+              name: Module 7
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
           description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
@@ -32129,3 +32157,16 @@ en:
           lesson_groups:
             lg_1:
               display_name: Content
+        kaitie-test-script:
+          stages:
+            new lesson: &2
+              name: new lesson
+          lessons:
+            new lesson: *2
+          lesson_groups:
+            lesson group:
+              display_name: display name
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
