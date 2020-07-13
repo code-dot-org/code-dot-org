@@ -33,7 +33,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  test 'score_stages_for_section succeeds with only one stage' do
+  test 'score_stages_for_section succeeds with only one lesson' do
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << create(:student)
@@ -47,15 +47,15 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
         create(:maze, name: 'test level 1')
       ]
     )
-    stage = script_level.lesson
+    lesson = script_level.lesson
 
     sign_in teacher
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: 100}]}
     assert TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :no_content
   end
 
-  test 'score_stages_for_section fails if stage is not found' do
+  test 'score_stages_for_section fails if lesson is not found' do
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << create(:student)
@@ -72,9 +72,9 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
         create(:maze, name: 'test level 1')
       ]
     )
-    destroyed_stage = create :lesson
-    destroyed_stage.destroy
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: 100}, {stage_id: destroyed_stage.id, score: 0}]}
+    destroyed_lesson = create :lesson
+    destroyed_lesson.destroy
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: 100}, {stage_id: destroyed_lesson.id, score: 0}]}
     refute TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :forbidden
   end
