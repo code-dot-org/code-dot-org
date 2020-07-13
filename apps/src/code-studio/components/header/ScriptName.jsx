@@ -97,8 +97,6 @@ class ScriptName extends React.Component {
           : headerVignetteStyles.right
         : null;
 
-    console.log('ScriptName render', this.props.width);
-
     if (!this.props.showProjectUpdatedAt) {
       return (
         <div style={{...styles.headerContainer, height: 18}}>

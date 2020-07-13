@@ -163,8 +163,6 @@ class LessonProgress extends Component {
       vignetteStyle
     } = this.getFullProgressOffset();
 
-    console.log('LessonProgress render', this.props.width);
-
     return (
       <div
         className="react_stage"

@@ -74,8 +74,6 @@ class ProjectInfo extends React.Component {
           : headerVignetteStyles.right
         : null;
 
-    console.log('ProjectInfo render', this.props.width);
-
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
       <div style={styles.headerContainer}>

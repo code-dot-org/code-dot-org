@@ -78,8 +78,6 @@ export default class HeaderFinish extends React.Component {
           : headerVignetteStyles.right
         : null;
 
-    console.log('HeaderFinish render', this.props.width);
-
     return (
       <div style={styles.headerContainer}>
         <div
