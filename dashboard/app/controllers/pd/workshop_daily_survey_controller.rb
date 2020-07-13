@@ -333,7 +333,7 @@ module Pd
     # GET workshop_survey/csf/post201(/:enrollment_code)
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
-      # or search all CSF201 workshops the current user enrolled in.
+      # or search all CSF201 workshops the current user is enrolled in and attended.
       attended_workshop = get_attended_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
@@ -342,6 +342,24 @@ module Pd
       return unless attended_workshop
 
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
+    end
+
+    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
+    # Temporary separate method for testing--will eventually replace new_csf_pre201
+    # once all CSF201 surveys are converted to Foorm
+    # GET workshop_survey/foorm/csf/post201
+    def new_csf_post201_foorm
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF201 workshops the current user enrolled in.
+      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+        params[:enrollment_code],
+        COURSE_CSF,
+        SUBJECT_CSF_201
+      )
+      return unless attended_workshop
+
+      survey_name = POST_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
+      render_survey_foorm(survey_name: survey_name, workshop: attended_workshop, session: nil, day: nil)
     end
 
     # GET /pd/workshop_survey/thanks
