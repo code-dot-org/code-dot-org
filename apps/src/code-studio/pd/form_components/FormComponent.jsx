@@ -4,6 +4,7 @@ import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
 import SingleCheckbox from '../form_components/SingleCheckbox';
+import utils from './utils';
 
 /**
  * Helper class for dashboard forms. Provides helper methods for easily
@@ -143,11 +144,14 @@ export default class FormComponent extends React.Component {
   }) {
     let renderedOptions;
     if (Array.isArray(options)) {
-      renderedOptions = options.map(value => (
-        <option key={value} value={value}>
-          {value}
-        </option>
-      ));
+      renderedOptions = options.map(value => {
+        const {answerText, answerValue} = utils.normalizeAnswer(value);
+        return (
+          <option key={answerValue} value={answerValue}>
+            {answerText}
+          </option>
+        );
+      });
     } else {
       renderedOptions = Object.keys(options).map(key => (
         <option key={key} value={key}>
