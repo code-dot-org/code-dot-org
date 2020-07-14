@@ -190,7 +190,7 @@ The animation has been skipped.
         strings[aliaz] = aliaz
       end
     end
-    return strings
+    return strings.sort.to_h
   end
 
   # Takes in a locale (for the file suffix) and a map of string translations
