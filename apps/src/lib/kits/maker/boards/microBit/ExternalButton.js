@@ -2,11 +2,10 @@ import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 import {EventEmitter} from 'events';
 import '../../../../../utils'; // For Function.prototype.inherits
 
-export default function ExternalButton(board, touchSensor = null) {
+export default function ExternalButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
   this.buttonEvents = new Array(6).fill(0);
   this.board = board;
-
   this.pullup = MB_EXTERNAL_PINS.includes(this.board.pin);
   if (this.pullup) {
     this.board.mb.trackDigitalPin(this.board.pin, 1);
@@ -17,12 +16,6 @@ export default function ExternalButton(board, touchSensor = null) {
   // Default from Johnny-Five Button implementation.
   this.holdThreshold = 500;
   this.holdTimer = null;
-
-  // Create a capacitive touch sensor, if indicated
-  if (touchSensor) {
-    this.board.mb.setTouchMode(this.board.pin, true);
-    this.board.mb.setPinMode(this.board.pin, 0);
-  }
 
   this.board.mb.trackDigitalComponent(this.board.pin, (sourceID, eventID) => {
     if (this.board.pin === sourceID) {
