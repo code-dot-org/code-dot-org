@@ -816,6 +816,7 @@ en:
     global_supporters: "Global Supporters"
     support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
     support_codeorg_2: "Join our donors to support Code.org."
+    get_started: "Get started on Code.org"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Please enter your school information below."
