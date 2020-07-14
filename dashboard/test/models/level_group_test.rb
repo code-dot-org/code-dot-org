@@ -411,6 +411,8 @@ level 'level1 copy2'"
 
     # Create script with an anonymous assessment.
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
@@ -431,7 +433,7 @@ level 'level1 copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true
+    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     updated_at = Time.now
 
@@ -524,6 +526,8 @@ level 'level1 copy2'"
   test 'get_summarized_survey_results returns no results when less than 5 responses' do
     # Create script with an anonymous assessment.
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :text_match, name: 'level_free_response', type: 'TextMatch'
     create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
@@ -540,7 +544,7 @@ level 'level1 copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true
+    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Create a section
     teacher = create(:teacher)
