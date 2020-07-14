@@ -57,7 +57,7 @@ function getCookie(key) {
 
 $(document).ready(function() {
   var already_shown = !!getCookie('hide_tos');
-  if (!already_shown && screen.width > 970) {
+  if (!already_shown) {
     $('#terms-modal').modal('show');
     setCookie('hide_tos', '1');
   }
