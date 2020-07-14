@@ -5995,29 +5995,29 @@ fr-FR:
         courseA_artist_loops2_b: Utilise ce bloc <xml><block type="simple_move_right"/></xml>
           pour résoudre le casse-tête.
       courseA_artist_loops3:
-        courseA_artist_loops3_a: Trace lentement du doigt à travers ton programme
-          pour voir où il tourne mal.
+        courseA_artist_loops3_a: Trace lentement à l'aide de ton doigt le trajet de
+          ton programme pour voir à quel moment il tourne mal.
         courseA_artist_loops3_b: |-
           Tu devras utiliser un bloc comme celui-ci pour résoudre ce casse-tête.
 
           ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2018:
-        courseA_artist_loops3_a: Trace lentement du doigt à travers ton programme
-          pour voir où il tourne mal.
+        courseA_artist_loops3_a: Trace lentement à l'aide de ton doigt le trajet de
+          ton programme pour voir à quel moment il tourne mal.
         courseA_artist_loops3_b: |-
           Tu devras utiliser un bloc comme celui-ci pour résoudre ce casse-tête.
 
           ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2019:
-        courseA_artist_loops3_a: Trace lentement du doigt à travers ton programme
-          pour voir où il tourne mal.
+        courseA_artist_loops3_a: Trace lentement à l'aide de ton doigt le trajet de
+          ton programme pour voir à quel moment il tourne mal.
         courseA_artist_loops3_b: |-
           Tu devras utiliser un bloc comme celui-ci pour résoudre ce casse-tête.
 
           ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2020:
-        courseA_artist_loops3_a: Trace lentement du doigt à travers ton programme
-          pour voir où il tourne mal.
+        courseA_artist_loops3_a: Trace lentement à l'aide de ton doigt le trajet de
+          ton programme pour voir à quel moment il tourne mal.
         courseA_artist_loops3_b: |-
           Tu devras utiliser un bloc comme celui-ci pour résoudre ce casse-tête.
 
@@ -6091,28 +6091,28 @@ fr-FR:
           la boucle \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
           name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6:
-        courseA_artist_loops6_a: Tu n’arrives pas à faire la colline ? Essaie de jouer
-          un peu avec les blocs pour voir ce qu’ils dessinent.
+        courseA_artist_loops6_a: Tu ne trouves pas comment faire la colline ? Essaie
+          de jouer un peu avec les blocs pour voir ce qu’ils dessinent.
         courseA_artist_loops6_b: Tu auras besoin de 2 blocs dans 2 directions pour
           résoudre ce casse-tête.
       courseA_artist_loops6_2018:
-        courseA_artist_loops6_a: Tu n’arrives pas à faire la colline ? Essaie de jouer
-          un peu avec les blocs pour voir ce qu’ils dessinent.
+        courseA_artist_loops6_a: Tu ne trouves pas comment faire la colline ? Essaie
+          de jouer un peu avec les blocs pour voir ce qu’ils dessinent.
         courseA_artist_loops6_b: Tu auras besoin de 2 blocs dans 2 directions pour
           résoudre ce casse-tête.
       courseA_artist_loops6_2019:
-        courseA_artist_loops6_a: Tu n’arrives pas à faire la colline ? Essaie de jouer
-          un peu avec les blocs pour voir ce qu’ils dessinent.
+        courseA_artist_loops6_a: Tu ne trouves pas comment faire la colline ? Essaie
+          de jouer un peu avec les blocs pour voir ce qu’ils dessinent.
         courseA_artist_loops6_b: Tu auras besoin de 2 blocs dans 2 directions pour
           résoudre ce casse-tête.
       courseA_artist_loops6_2020:
-        courseA_artist_loops6_a: Tu n’arrives pas à faire la colline ? Essaie de jouer
-          un peu avec les blocs pour voir ce qu’ils dessinent.
+        courseA_artist_loops6_a: Tu ne trouves pas comment faire la colline ? Essaie
+          de jouer un peu avec les blocs pour voir ce qu’ils dessinent.
         courseA_artist_loops6_b: Tu auras besoin de 2 blocs dans 2 directions pour
           résoudre ce casse-tête.
       courseA_artist_loops7:
         courseA_artist_loops7_a: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le
           pour dessiner les deux autres.
         courseA_artist_loops7_c: N’oublie pas que tu peux mettre plus d’un bloc dans
@@ -6120,7 +6120,7 @@ fr-FR:
           name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops7_2018:
         courseA_artist_loops7_a: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le
           pour dessiner les deux autres.
         courseA_artist_loops7_c: |-
@@ -6130,7 +6130,7 @@ fr-FR:
           </block></xml>.
       courseA_artist_loops7_2019:
         courseA_artist_loops7_a: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le
           pour dessiner les deux autres.
         courseA_artist_loops7_c: |-
@@ -6140,7 +6140,7 @@ fr-FR:
           </block></xml>.
       courseA_artist_loops7_2020:
         courseA_artist_loops7_a: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le
           pour dessiner les deux autres.
         courseA_artist_loops7_c: |-
@@ -6150,8 +6150,8 @@ fr-FR:
       courseA_artist_loops8:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
-        courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
-          ?
+        courseA_artist_loops8_b: Comment ferais-tu pour boucler le code qui t’a été
+          donné ?
         courseA_artist_loops8_c: |-
           Que fait le code ?\
           Qu’est-il censé faire ?\
@@ -6159,8 +6159,8 @@ fr-FR:
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
-        courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
-          ?
+        courseA_artist_loops8_b: Comment ferais-tu pour boucler le code qui t’a été
+          donné ?
         courseA_artist_loops8_c: |-
           Que fait le code ?\
           Qu’est-il censé faire ?\
@@ -6168,8 +6168,8 @@ fr-FR:
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
-        courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
-          ?
+        courseA_artist_loops8_b: Comment ferais-tu pour boucler le code qui t’a été
+          donné ?
         courseA_artist_loops8_c: |-
           Que fait le code ?\
           Qu’est-il censé faire ?\
@@ -6177,8 +6177,8 @@ fr-FR:
       courseA_artist_loops8_2020:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
-        courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
-          ?
+        courseA_artist_loops8_b: Comment ferais-tu pour boucler le code qui t’a été
+          donné ?
         courseA_artist_loops8_c: |-
           Que fait le code ?\
           Qu’est-il censé faire ?\
@@ -6480,9 +6480,6 @@ fr-FR:
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
           si tu fais quelque chose qu’une seule fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 trésorpierres précieuses sur
-          le côté droit de la grotte quand tu commences, mais tu n’as besoin de récupérer
-          les trésors que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
@@ -6504,9 +6501,6 @@ fr-FR:
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
           si tu fais quelque chose qu’une seule fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 trésorpierres précieuses sur
-          le côté droit de la grotte quand tu commences, mais tu n’as besoin de récupérer
-          les trésors que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
@@ -6528,9 +6522,6 @@ fr-FR:
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
           si tu fais quelque chose qu’une seule fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 trésorpierres précieuses sur
-          le côté droit de la grotte quand tu commences, mais tu n’as besoin de récupérer
-          les trésors que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
@@ -6552,9 +6543,6 @@ fr-FR:
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
           si tu fais quelque chose qu’une seule fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 trésorpierres précieuses sur
-          le côté droit de la grotte quand tu commences, mais tu n’as besoin de récupérer
-          les trésors que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
@@ -8545,28 +8533,28 @@ fr-FR:
         courseB_artist_loops9_b: Tu devras utiliser le bloc W pour résoudre cette
           énigme.
         courseB_artist_loops9_c: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
       courseB_artist_loops9_2018:
         courseB_artist_loops9_a: Rappelle-toi que les blocs de saut permettent de
           déplacer sans tracer de ligne.
         courseB_artist_loops9_b: Tu devras utiliser le bloc W pour résoudre cette
           énigme.
         courseB_artist_loops9_c: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
       courseB_artist_loops9_2019:
         courseB_artist_loops9_a: Rappelle-toi que les blocs de saut permettent de
           déplacer sans tracer de ligne.
         courseB_artist_loops9_b: Tu devras utiliser le bloc W pour résoudre cette
           énigme.
         courseB_artist_loops9_c: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
       courseB_artist_loops9_2020:
         courseB_artist_loops9_a: Rappelle-toi que les blocs de saut permettent de
           déplacer sans tracer de ligne.
         courseB_artist_loops9_b: Tu devras utiliser le bloc W pour résoudre cette
           énigme.
         courseB_artist_loops9_c: Tu ne sais pas où mettre la boucle ? Essaie d’écrire
-          le code étape par étape et cherche un modèle.
+          le code étape par étape et cherche un schéma récurrent.
       courseB_artist_loops_challenge1:
         courseB_artist_loops_challenge1_a: 'Les blocs comme ceux-ci : <xml>  <block
           type="simple_move_up_right"/></xml> déplaceront ton artiste en diagonale
@@ -9443,8 +9431,8 @@ fr-FR:
           pour atteindre le cochon.
       courseB_maze_seq11:
         courseB_maze_seq11_a: Essaie d’abord d’écrire les étapes sur un papier.
-        courseB_maze_seq11_b: 'Résous l’énigme en deux parties : une avant le coin
-          et une après.'
+        courseB_maze_seq11_b: 'Résous l’énigme en deux temps : 1) avant le virage
+          et 2) après le virage.'
       courseB_maze_seq1_2018:
         courseB_maze_seq1_a: Connecte des blocs au bloc <xml><block type="when_run"/></xml>
           pour déplacer Scrat !
@@ -9496,53 +9484,53 @@ fr-FR:
         courseB_maze_seq4_b: Tu devras utiliser le <xml><block type="maze_moveEast"/></xml>
           bloc pour résoudre cette énigme.
       courseB_maze_seq5:
-        courseB_maze_seq5_a: Si tu es bloqué, essaie de dessiner le chemin sur du
-          papier.
+        courseB_maze_seq5_a: Si tu es bloqué(e), essaie de dessiner le chemin sur
+          du papier.
         courseB_maze_seq5_b: Il y a 2 façons de résoudre cette énigme !
         courseB_maze_seq5_c: Pas sûr de savoir comment atteindre le cochon ? Essaie
           ce chemin.
       courseB_maze_seq5_2018:
-        courseB_maze_seq5_a: Si tu es bloqué, essaie de dessiner le chemin sur du
-          papier.
+        courseB_maze_seq5_a: Si tu es bloqué(e), essaie de dessiner le chemin sur
+          du papier.
         courseB_maze_seq5_b: Il y a 2 façons de résoudre cette énigme !
         courseB_maze_seq5_c: Pas sûr de savoir comment atteindre le gland ? Essaie
           ce chemin.
       courseB_maze_seq5_2019:
-        courseB_maze_seq5_a: Si tu es bloqué, essaie de dessiner le chemin sur du
-          papier.
+        courseB_maze_seq5_a: Si tu es bloqué(e), essaie de dessiner le chemin sur
+          du papier.
         courseB_maze_seq5_b: Il y a 2 façons de résoudre cette énigme !
         courseB_maze_seq5_c: Pas sûr de savoir comment atteindre le gland ? Essaie
           ce chemin.
       courseB_maze_seq5_2020:
-        courseB_maze_seq5_a: Si tu es bloqué, essaie de dessiner le chemin sur du
-          papier.
+        courseB_maze_seq5_a: Si tu es bloqué(e), essaie de dessiner le chemin sur
+          du papier.
         courseB_maze_seq5_b: Il y a 2 façons de résoudre cette énigme !
         courseB_maze_seq5_c: Pas sûr de savoir comment atteindre le gland ? Essaie
           ce chemin.
       courseB_maze_seq6:
         courseB_maze_seq6_a: Ton code final devrait avoir trois blocs de mouvement.
-        courseB_maze_seq6_b: Si tu te trouves bloqué, essaie de résoudre l‘énigme
+        courseB_maze_seq6_b: Si tu te trouves bloqué(e), essaie de résoudre l‘énigme
           en deux parties, une de gauche à droite, et une de haut en bas.
         courseB_maze_seq5_c: Il y a deux façons de résoudre ce casse-tête.
         courseB_maze_seq5_d: Pas sûr de savoir comment atteindre le cochon ? Essaie
           ce chemin !
       courseB_maze_seq6_2018:
         courseB_maze_seq6_a: Ton code final devrait avoir trois blocs de mouvement.
-        courseB_maze_seq6_b: Si tu te trouves bloqué, essaie de résoudre l‘énigme
+        courseB_maze_seq6_b: Si tu te trouves bloqué(e), essaie de résoudre l‘énigme
           en deux parties, une de gauche à droite, et une de haut en bas.
         courseB_maze_seq5_c: Il y a deux façons de résoudre ce casse-tête.
         courseB_maze_seq5_d: Pas sûr de savoir comment atteindre le gland ? Essaie
           ce chemin !
       courseB_maze_seq6_2019:
         courseB_maze_seq6_a: Ton code final devrait avoir trois blocs de mouvement.
-        courseB_maze_seq6_b: Si tu te trouves bloqué, essaie de résoudre l‘énigme
+        courseB_maze_seq6_b: Si tu te trouves bloqué(e), essaie de résoudre l‘énigme
           en deux parties, une de gauche à droite, et une de haut en bas.
         courseB_maze_seq5_c: Il y a deux façons de résoudre ce casse-tête.
         courseB_maze_seq5_d: Pas sûr de savoir comment atteindre le gland ? Essaie
           ce chemin !
       courseB_maze_seq6_2020:
         courseB_maze_seq6_a: Ton code final devrait avoir trois blocs de mouvement.
-        courseB_maze_seq6_b: Si tu te trouves bloqué, essaie de résoudre l‘énigme
+        courseB_maze_seq6_b: Si tu te trouves bloqué(e), essaie de résoudre l‘énigme
           en deux parties, une de gauche à droite, et une de haut en bas.
         courseB_maze_seq5_c: Il y a deux façons de résoudre ce casse-tête.
         courseB_maze_seq5_d: Pas sûr de savoir comment atteindre le gland ? Essaie
@@ -9596,25 +9584,25 @@ fr-FR:
         courseB_maze_seq9_b: Construit ton programme un bloc à la fois et teste-le
           tout le long.
         courseB_maze_seq9_c: Il y a deux façons de résoudre ce casse-tête.
-        courseB_maze_seq9_d: Bloqué ? Essaie ce chemin !
+        courseB_maze_seq9_d: Bloqué(e) ? Essaie ce chemin !
       courseB_maze_seq9_2018:
         courseB_maze_seq9_a: Essaie d’abord d’écrire toutes les étapes sur un papier.
         courseB_maze_seq9_b: Construit ton programme un bloc à la fois et teste-le
           tout le long.
         courseB_maze_seq9_c: Il y a deux façons de résoudre ce casse-tête.
-        courseB_maze_seq9_d: Bloqué ? Essaie ce chemin !
+        courseB_maze_seq9_d: Bloqué(e) ? Essaie ce chemin !
       courseB_maze_seq9_2019:
         courseB_maze_seq9_a: Essaie d’abord d’écrire toutes les étapes sur un papier.
         courseB_maze_seq9_b: Construit ton programme un bloc à la fois et teste-le
           tout le long.
         courseB_maze_seq9_c: Il y a deux façons de résoudre ce casse-tête.
-        courseB_maze_seq9_d: Bloqué ? Essaie ce chemin !
+        courseB_maze_seq9_d: Bloqué(e) ? Essaie ce chemin !
       courseB_maze_seq9_2020:
         courseB_maze_seq9_a: Essaie d’abord d’écrire toutes les étapes sur un papier.
         courseB_maze_seq9_b: Construit ton programme un bloc à la fois et teste-le
           tout le long.
         courseB_maze_seq9_c: Il y a deux façons de résoudre ce casse-tête.
-        courseB_maze_seq9_d: Bloqué ? Essaie ce chemin !
+        courseB_maze_seq9_d: Bloqué(e) ? Essaie ce chemin !
       courseB_maze_seq_challenge1:
         courseB_maze_seq_challenge1_a: Le chemin le plus court pourrait ne pas être
           le bon, cette fois.

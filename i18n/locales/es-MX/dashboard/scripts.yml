@@ -26154,26 +26154,37 @@ es-MX:
           stages:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
+              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
             Sequencing with Scrat:
               name: Secuencias con Scrat
+              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
             Programming in Maze:
               name: Programación en Laberinto
+              description_teacher: A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
+              description_teacher: En esta lección, los estudiantes usarán sus nuevas habilidades de programación de formas más complejas para recorrer un camino difícil con BB-8.
             Programming in Harvester:
               name: Programación con la cosechadora
+              description_teacher: 'Los estudiantes aplicarán los conceptos de programación que han aprendido en el ambiente de la Cosechadora. Ahora, además de llevar al personaje hacia una meta, los estudiantes tienen que recolectar maíz mediante un nuevo bloque. Continuarán con el desarrollo de las habilidades de algoritmo secuencial y comenzarán a usar el proceso de depuración. '
             Spelling Bee:
               name: Concurso de ortografía
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Loops in Collector:
               name: Loops en Recolectora
+              description_teacher: En esta lección, los estudiantes continúan aprendiendo el concepto de bucles. Aquí, Laurel la Aventurera utiliza bucles para recolectar tesoros en cuevas abiertas. Se introduce un nuevo bloque `obtener tesoro` que la ayudará en su recorrido.
             Ocean Scene with Loops:
               name: Escena del océano con bucles
+              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
             Loops in Artist:
               name: Bucles en el artista
+              description_teacher: Volviendo a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la lección sin conexión anterior, se usaron los bucles para recorrer un laberinto y recoger tesoro. Aquí, los estudiantes usan los bucles para crear patrones. Al final de esta etapa, tendrán la oportunidad de usar bucles para crear sus propias imágenes.
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+            Make a Game in Play Lab:
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -26184,26 +26195,37 @@ es-MX:
           lessons:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
+              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
             Sequencing with Scrat:
               name: Secuencias con Scrat
+              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
             Programming in Maze:
               name: Programación en Laberinto
+              description_teacher: A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
+              description_teacher: En esta lección, los estudiantes usarán sus nuevas habilidades de programación de formas más complejas para recorrer un camino difícil con BB-8.
             Programming in Harvester:
               name: Programación con la cosechadora
+              description_teacher: 'Los estudiantes aplicarán los conceptos de programación que han aprendido en el ambiente de la Cosechadora. Ahora, además de llevar al personaje hacia una meta, los estudiantes tienen que recolectar maíz mediante un nuevo bloque. Continuarán con el desarrollo de las habilidades de algoritmo secuencial y comenzarán a usar el proceso de depuración. '
             Spelling Bee:
               name: Concurso de ortografía
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Loops in Collector:
               name: Loops en Recolectora
+              description_teacher: En esta lección, los estudiantes continúan aprendiendo el concepto de bucles. Aquí, Laurel la Aventurera utiliza bucles para recolectar tesoros en cuevas abiertas. Se introduce un nuevo bloque `obtener tesoro` que la ayudará en su recorrido.
             Ocean Scene with Loops:
               name: Escena del océano con bucles
+              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
             Loops in Artist:
               name: Bucles en el artista
+              description_teacher: Volviendo a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la lección sin conexión anterior, se usaron los bucles para recorrer un laberinto y recoger tesoro. Aquí, los estudiantes usan los bucles para crear patrones. Al final de esta etapa, tendrán la oportunidad de usar bucles para crear sus propias imágenes.
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+            Make a Game in Play Lab:
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
         csp1-2020:
           stages:
             new stage:
@@ -26626,11 +26648,15 @@ es-MX:
               name: nueva etapa
             Debugging:
               name: Depuración
+            Module 1:
+              name: Módulo 1
           lessons:
             new stage:
               name: nueva etapa
             Debugging:
               name: Depuración
+            Module 1:
+              name: Módulo 1
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -27299,4 +27325,44 @@ es-MX:
             csd3_2:
               display_name: Contenido
             cspSurvey:
+              display_name: Contenido
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lección
+          lessons:
+            Lesson:
+              name: Lección
+          lesson_groups:
+            lg_1:
+              display_name: Contenido
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lección
+          lessons:
+            Lesson:
+              name: Lección
+          lesson_groups:
+            lg_1:
+              display_name: Contenido
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lección
+          lessons:
+            Lesson:
+              name: Lección
+          lesson_groups:
+            lg_1:
+              display_name: Contenido
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lección
+          lessons:
+            Lesson:
+              name: Lección
+          lesson_groups:
+            lg_1:
               display_name: Contenido

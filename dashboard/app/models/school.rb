@@ -81,7 +81,7 @@ class School < ActiveRecord::Base
 
     # To align with maker_high_needs? definition above,
     # returning false if we don't have all data for a given school.
-    stats.title_i_eligible? || (stats.urm_percent || 0) >= 0.4 || (stats.frl_eligible_percent || 0) >= 0.4
+    stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
   end
 
   # Public school ids from NCES are always 12 digits, possibly with

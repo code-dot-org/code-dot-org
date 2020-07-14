@@ -901,22 +901,22 @@ de-DE:
       courseC_maze_programming3:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming3_2018:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming3_2019:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming3_2020:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming4:
         courseC_maze_programming4_1: Dies ist deine maximal Anzahl an Blöcken. Die
@@ -931,8 +931,8 @@ de-DE:
         courseC_maze_programming4_1: Dies ist deine maximal Anzahl an Blöcken. Die
           Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst.
       courseC_maze_programming5:
-        '': Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du
-          willst!
+        '': Auf diesen Blöcken sind keine Zahlen. Du kannst so viele verwenden, wie
+          du willst!
       courseC_maze_programming5_2018:
         '': Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du
           willst!
@@ -943,28 +943,24 @@ de-DE:
         '': Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du
           willst!
       courseC_maze_programming7:
-        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
-          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
-          bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming7_1: 'Das hier ist deine erste Herausforderung! Herausforderungen
+          sind schwierig und vielleicht sind mehrere Versuche nötig. '
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
-          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
-          bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming7_1: 'Das hier ist deine erste Herausforderung! Herausforderungen
+          sind schwierig und vielleicht sind mehrere Versuche nötig. '
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
-          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
-          bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming7_1: 'Das hier ist deine erste Herausforderung! Herausforderungen
+          sind schwierig und vielleicht sind mehrere Versuche nötig. '
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming7_2020:
-        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
-          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
-          bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
+        courseC_maze_programming7_1: 'Das hier ist deine erste Herausforderung! Herausforderungen
+          sind schwierig und vielleicht sind mehrere Versuche nötig. '
+        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
           weggeworfen werden.
       courseC_starWars_loops2:
         courseC_starWars_loops2: In dieser Aufgabe steht dir nur einer dieser Bausteine
@@ -1176,9 +1172,8 @@ de-DE:
           wiederholt, wie du es vorschreibst, und führt dann das verbleibende Programm
           aus.
       courseD_scrat_ramp8:
-        courseD_maze_ramp7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben sind
-          nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen, bis
-          du sie gelöst hast.
+        courseD_maze_ramp7_1: 'Das hier ist deine erste Herausforderung! Herausforderungen
+          sind schwierig und vielleicht sind mehrere Versuche nötig. '
       courseE_aboutme_2:
         '': Klicke hier!
       courseE_aboutme_2_2020:
