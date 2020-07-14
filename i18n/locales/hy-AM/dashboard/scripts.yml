@@ -3825,3 +3825,19 @@ hy:
               display_name: պարունակություն
             cspSurvey:
               display_name: պարունակություն
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն

@@ -11529,18 +11529,27 @@ sk:
           description_short: 'Predstavenie informatiky pre predškolákov: kombinuje to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description_audience: 'Vek: 4-8'
           stages:
+            Learn to Drag and Drop:
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
             Programming in Maze:
               name: Programovanie v bludisku
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť doľava alebo otočiť doprava.
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
+            Programming in Harvester:
+              description_teacher: 'Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces.'
             Spelling Bee:
               name: Včela Hláskovanie
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
+            Tell a Story in Play Lab:
+              description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -11549,18 +11558,27 @@ sk:
             csf_events:
               display_name: Udalosti
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
             Programming in Maze:
               name: Programovanie v bludisku
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť doľava alebo otočiť doprava.
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
+            Programming in Harvester:
+              description_teacher: 'Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces.'
             Spelling Bee:
               name: Včela Hláskovanie
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
+            Tell a Story in Play Lab:
+              description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
         csp1-2020:
           stages:
             Binary Numbers:
@@ -11886,4 +11904,44 @@ sk:
             csd3_2:
               display_name: Obsah
             cspSurvey:
+              display_name: Obsah
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
               display_name: Obsah

@@ -2300,3 +2300,43 @@ az:
               display_name: Məzmun
             cspSurvey:
               display_name: Məzmun
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun

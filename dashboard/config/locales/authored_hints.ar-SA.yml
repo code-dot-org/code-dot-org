@@ -4725,7 +4725,7 @@ ar-SA:
                   <statement name="DO">
                     <block type="bee_whileNectarAmount">
                       <title name="ARG1">nectarRemaining</title>
-                      <title name="OP">></title>
+                      <title name="OP">&gt;</title>
                       <title name="ARG2">0</title>
                       <statement name="DO">
                         <block type="maze_nectar"/>
@@ -4735,7 +4735,7 @@ ar-SA:
                   <statement name="ELSE">
                     <block type="bee_whileNectarAmount">
                       <title name="ARG1">honeyAvailable</title>
-                      <title name="OP">></title>
+                      <title name="OP">&gt;</title>
                       <title name="ARG2">0</title>
                       <statement name="DO">
                         <block type="maze_honey"/>
@@ -4784,31 +4784,17 @@ ar-SA:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          قم بتجميع المجوهرات المتبقية في هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
-        courseD_collector_debugging_challenge2_c: |-
-          في النهاية، قم بتجميع الكنز المتبقي. اضف هذه المربعات البرمجية إلى برنامجك.<xml>
-            <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_b: "قم بتجميع المجوهرات المتبقية في
+          هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "في النهاية، قم بتجميع الكنز المتبقي.
+          اضف هذه المربعات البرمجية إلى برنامجك.<xml>\n  <block type=\"maze_turn\">\n
+          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
+          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
+          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           ها هو الحل المتكامل لهذا اللغز.<xml>
             <block type="when_run" deletable="false" movable="false">
@@ -12079,7 +12065,7 @@ ar-SA:
         courseD_bee_conditionals_challenge1_b: |-
           تمامًا مثل المربعات البرمجية "إذا في الزهرة"، التعليمات البرمجية داخل "بينما الرحيق >0" تعمل فقط إذا كانت النحلة عند زهرة. الفرق هو أن التعليمات البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:<xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12088,7 +12074,7 @@ ar-SA:
         courseD_bee_conditionals_challenge1_b: |-
           تمامًا مثل المربعات البرمجية "إذا في الزهرة"، التعليمات البرمجية داخل "بينما الرحيق >0" تعمل فقط إذا كانت النحلة عند زهرة. الفرق هو أن التعليمات البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:<xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12097,7 +12083,7 @@ ar-SA:
         courseD_bee_conditionals_challenge1_b: |-
           تمامًا مثل المربعات البرمجية "إذا في الزهرة"، التعليمات البرمجية داخل "بينما الرحيق >0" تعمل فقط إذا كانت النحلة عند زهرة. الفرق هو أن التعليمات البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:<xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12106,7 +12092,7 @@ ar-SA:
         courseD_bee_conditionals_challenge1_b: |-
           تمامًا مثل المربعات البرمجية "إذا في الزهرة"، التعليمات البرمجية داخل "بينما الرحيق >0" تعمل فقط إذا كانت النحلة عند زهرة. الفرق هو أن التعليمات البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:<xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12377,46 +12363,25 @@ ar-SA:
         courseD_collector_debugging9_b: تعرّف على كيفية حل اللغز، ثم تحرك خطوة بعد
           خطوة لجعل التعليمات البرمجية مطابقة لما تفكّر فيه.
       courseD_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: |-
-          أبدأ بتجميع فقط عدد "اثنان" من المجوهرات من كل كومة من "الكومتين" الأوليتين.![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)استخدم هذه المربعات البرمجية.<xml>
-          <block type="collector_collect"></block>
-          <block type="controls_repeat" limit="2">
-              <title name="TIMES">2</title>
-            </block>
-          <block type="maze_move" x="175px" y="17px">
-                              <title name="DIR">moveForward</title>
-                            </block>
-
-             <block type="controls_repeat" limit="2" x="175px" y="56px">
-              <title name="TIMES">2</title>
-            </block>
-
-          </xml>
-        courseD_collector_debugging_challenge2_b: |-
-          قم بتجميع المجوهرات المتبقية في هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
-        courseD_collector_debugging_challenge2_c: |-
-          في النهاية، قم بتجميع الكنز المتبقي. اضف هذه المربعات البرمجية إلى برنامجك.<xml>
-            <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                        </block>
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_a: "أبدأ بتجميع فقط عدد \"اثنان\" من
+          المجوهرات من كل كومة من \"الكومتين\" الأوليتين.![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)استخدم هذه المربعات البرمجية.<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "قم بتجميع المجوهرات المتبقية في
+          هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "في النهاية، قم بتجميع الكنز المتبقي.
+          اضف هذه المربعات البرمجية إلى برنامجك.<xml>\n  <block type=\"maze_turn\">\n
+          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
+          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
+          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           ها هو الحل المتكامل لهذا اللغز.<xml>
             <block type="when_run" deletable="false" movable="false">
@@ -18462,7 +18427,7 @@ ar-SA:
               <statement name="STACK">
                 <block type="bee_whileNectarAmount">
                   <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">></title>
+                  <title name="OP">&gt;</title>
                   <title name="ARG2">0</title>
                   <statement name="DO">
                     <block type="maze_nectar"/>
@@ -18470,7 +18435,7 @@ ar-SA:
                   <next>
                     <block type="bee_whileNectarAmount">
                       <title name="ARG1">honeyAvailable</title>
-                      <title name="OP">></title>
+                      <title name="OP">&gt;</title>
                       <title name="ARG2">0</title>
                       <statement name="DO">
                         <block type="maze_honey"/>
