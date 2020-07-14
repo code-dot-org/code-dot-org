@@ -51,6 +51,7 @@ scripts_map = {
 @lessons = {}
 @script_levels = {}
 @levels = {}
+@level_concept_difficulty = {}
 @level_sources = {}
 @callouts = {}
 
@@ -58,6 +59,13 @@ def handle_level(level)
   attributes = level.attributes.clone
   attributes.delete('id')
   @levels["level_#{level.id}"] = attributes
+
+  if level.level_concept_difficulty
+    lcd_attributes = level.level_concept_difficulty.attributes
+    lcd_attributes.delete('level_id')
+    lcd_attributes = lcd_attributes.merge({"level" => "level_#{level.id}"})
+    @level_concept_difficulty["level_concept_difficulty_#{level.id}"] = lcd_attributes
+  end
 
   level_source = level.level_sources.first
   @level_sources["level_source_#{level.id}"] = level_source.attributes if level_source
@@ -107,5 +115,6 @@ File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
+File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
 File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
