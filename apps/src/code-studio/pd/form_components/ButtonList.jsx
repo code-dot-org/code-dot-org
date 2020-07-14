@@ -28,12 +28,12 @@ class ButtonList extends React.Component {
     groupName: PropTypes.string.isRequired,
     answers: PropTypes.arrayOf(
       PropTypes.oneOfType([
-        // Standard string answer
-        // See typedef SimpleAnswer in utils
+        // Standard string answer ...
+        // (see typedef SimpleAnswer in utils)
         PropTypes.string,
 
-        // or an answer followed by an input for additional text
-        // See typedef ExtraInputAnswer in utils
+        // ... or an answer followed by an input for additional text ...
+        // (see typedef ExtraInputAnswer in utils)
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           inputId: PropTypes.string,
@@ -41,8 +41,8 @@ class ButtonList extends React.Component {
           onInputChange: PropTypes.func
         }),
 
-        // or an answer with different strings for display vs value
-        // See typedef Answer in utils
+        // ... or an answer with different strings for display vs value.
+        // (see typedef Answer in utils)
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           answerValue: PropTypes.string.isRequired
