@@ -22,13 +22,13 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
         'submission[15_first]' => 'test-first-name',
         'submission[15_last]' => 'test-last-name',
         'submission[16]' => 'test-email',
-        'submission[5]' => 'test-school-district-name',
-        'submission[18]' => 'test-school-name',
-        'submission[17_st1]' => 'test-street-1',
-        'submission[17_st2]' => 'test-street-2',
-        'submission[17_city]' => 'test-city',
-        'submission[17_state]' => 'test-state',
-        'submission[17_zip]' => 'test-zip',
+        'submission[5]' => 'Test School District Name',
+        'submission[18]' => 'Test School Name',
+        'submission[17_st1]' => 'Test Street 1',
+        'submission[17_st2]' => 'Test Street 2',
+        'submission[17_city]' => 'Test City',
+        'submission[17_state]' => 'WA',
+        'submission[17_zip]' => '12345',
         'submission[19]' => "Yes, I provide my consent."
       }
     )
@@ -51,20 +51,101 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
+  test 'converts school name to title case' do
+    assert_transform(
+      {school_name: 'HOLMES ACADEMY'},
+      {'submission[18]' => 'Holmes Academy'}
+    )
+
+    # Does not handle acronyms; we're fine with this.
+    assert_transform(
+      {school_name: 'D.W. DUCK USD'},
+      {'submission[18]' => 'D.W. Duck Usd'}
+    )
+  end
+
+  test 'converts school district name to title case' do
+    assert_transform(
+      {school_district_name: 'NORTH LONDON SCHOOL DISTRICT'},
+      {'submission[5]' => 'North London School District'}
+    )
+  end
+
+  test 'converts address 1 to title case' do
+    assert_transform(
+      {street_1: '101 WALKING WAY'},
+      {'submission[17_st1]' => '101 Walking Way'}
+    )
+
+    # Cardinal directions are upcased (since they are so common)
+    assert_transform(
+      {street_1: '123 SE SEMVER WAY'},
+      {'submission[17_st1]' => '123 SE Semver Way'}
+    )
+
+    # An odd case: The "B" is separated from the house number
+    assert_transform(
+      {street_1: '221B BAKER STREET'},
+      {'submission[17_st1]' => '221 B Baker Street'}
+    )
+  end
+
+  test 'converts address 2 to title case' do
+    assert_transform(
+      {street_2: 'ATTN: MRS. HUDSON'},
+      {'submission[17_st2]' => 'Attn: Mrs. Hudson'}
+    )
+  end
+
+  test 'converts city to title case' do
+    assert_transform(
+      {city: 'LONDON'},
+      {'submission[17_city]' => 'London'}
+    )
+  end
+
+  test 'converts state to a two-letter code' do
+    assert_transform(
+      {state: 'OHIO'},
+      {'submission[17_state]' => 'OH'}
+    )
+
+    # No transform if the state is already a two-letter code
+    assert_transform(
+      {state: 'OH'},
+      {'submission[17_state]' => 'OH'}
+    )
+  end
+
   private
+
+  # @param [Hash] input params, merged over an existing set of valid parameters.
+  # @param [Hash] expected_output POST parameters as key-value pairs that we expect to see
+  #   in the request to CSTA given the provided input params.
+  def assert_transform(input, expected_output)
+    captured_args = nil
+    expected_request = Net::HTTP.expects(:post_form).with {|_, args| captured_args = args}
+    expected_request.returns(success_response)
+
+    Services::CSTAEnrollment.submit(valid_params.merge(input))
+
+    expected_output.each do |key, value|
+      assert_equal value, captured_args[key]
+    end
+  end
 
   def valid_params
     {
       first_name: 'test-first-name',
       last_name: 'test-last-name',
       email: 'test-email',
-      school_district_name: 'test-school-district-name',
-      school_name: 'test-school-name',
-      street_1: 'test-street-1',
-      street_2: 'test-street-2',
-      city: 'test-city',
-      state: 'test-state',
-      zip: 'test-zip',
+      school_district_name: 'Test School District Name',
+      school_name: 'Test School Name',
+      street_1: 'Test Street 1',
+      street_2: 'Test Street 2',
+      city: 'Test City',
+      state: 'WA',
+      zip: '12345',
       privacy_permission: true
     }
   end

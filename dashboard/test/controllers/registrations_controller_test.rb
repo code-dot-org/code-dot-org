@@ -488,4 +488,11 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
     assert_select '#user_name', 1
   end
+
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
+  end
 end
