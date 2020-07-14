@@ -190,6 +190,10 @@ export const commands = {
     worldCommands.comment(text);
   },
 
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
+  },
+
   hideTitleScreen() {
     worldCommands.hideTitleScreen();
   },
