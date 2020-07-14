@@ -19,10 +19,10 @@ require_relative 'redact_restore_utils'
 require_relative 'hoc_sync_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
-def sync_out
+def sync_out(upload_manifests=false)
   rename_from_crowdin_name_to_locale
   restore_redacted_files
-  distribute_translations
+  distribute_translations(upload_manifests)
   copy_untranslated_apps
   rebuild_blockly_js_files
   restore_markdown_headers
@@ -144,7 +144,6 @@ def restore_redacted_files
       end
       find_malformed_links_images(locale, translated_path)
     end
-    I18nScriptUtils.upload_malformed_restorations(locale)
   end
 end
 
@@ -253,7 +252,7 @@ end
 
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
-def distribute_translations
+def distribute_translations(upload_manifests)
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
@@ -299,7 +298,7 @@ def distribute_translations
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
       translations = JSON.load(File.open(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps
-      @manifest_builder.upload_localized_manifest(js_locale, translations)
+      @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
     end
 
     ### Blockly Core
