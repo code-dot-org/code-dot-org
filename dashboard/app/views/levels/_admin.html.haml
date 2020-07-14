@@ -47,7 +47,7 @@
           %li
             sublevels
             %ol
-              - @level.levels.each do |level|
+              - @level.question_levels.each do |level|
                 %li= link_to level.name, level_path(level)
         - if contained_level_names = @level.properties['contained_level_names']
           %li

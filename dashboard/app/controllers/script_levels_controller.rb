@@ -447,7 +447,7 @@ class ScriptLevelsController < ApplicationController
       @pages = [@level.pages[puzzle_page.to_i - 1]]
       raise ActiveRecord::RecordNotFound if @pages.first.nil?
       @total_page_count = @level.pages.count
-      @total_level_count = @level.levels.length
+      @total_level_count = @level.question_levels.length
     end
 
     if @level.try(:peer_reviewable?)

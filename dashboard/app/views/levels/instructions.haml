@@ -21,7 +21,7 @@
       .script_level
         = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level)
         %div= "type: #{script_level.level.class}"
-        - levels = level.is_a?(LevelGroup) ? level.levels : [level]
+        - levels = level.is_a?(LevelGroup) ? level.question_levels : [level]
         - levels.each do |level|
           - if level.try(:contained_levels).present?
             - level.try(:contained_levels).each do |contained|
