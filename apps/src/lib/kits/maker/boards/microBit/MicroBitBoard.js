@@ -10,6 +10,8 @@ import {
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
+import CapacitiveTouchSensor from "./CapacitiveTouchSensor";
+import MicroBitThermometer from "./MicroBitThermometer";
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -107,7 +109,8 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   createCapacitiveTouchSensor(pin) {
-    const newSensor = new ExternalButton({mb: this.boardClient_, pin}, true);
+    const newSensor = new CapacitiveTouchSensor({mb: this.boardClient_, pin});
+    //const newSensor = new MicroBitThermometer({mb: this.boardClient_});
     this.dynamicComponents_.push(newSensor);
     return newSensor;
   }
