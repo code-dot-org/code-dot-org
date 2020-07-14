@@ -131,13 +131,16 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    invalid_provider: "Sorry, %{provider} accounts cannot be linked to Code.org accounts."
+    migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
-      sign_in: "Please sign in and we'll link your %{provider} profile."
-      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
+      sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
+      sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
@@ -1094,6 +1097,7 @@ en:
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        not_applicable: "Not applicable"
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
@@ -1102,6 +1106,9 @@ en:
       intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
       instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
       thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+      facilitator_not_listed: "My facilitator is not listed"
+      facilitator_not_applicable: "Not applicable"
+      organizer_not_listed: "My organizer is not listed"
     logged_out:
       heading: 'Thanks for your interest in the Professional Learning Program!'
       body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
