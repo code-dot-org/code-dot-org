@@ -1,0 +1,23 @@
+
+#terms-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
+  .modal-dialog
+    .modal-content.no-modal-icon
+      %h2.donor-header= t('donor_interstitial.title') + '...'
+      %p= t('donor_interstitial.subtitle')
+      %h2.donor-subheader= t('donor_interstitial.global_supporters')
+      .clear
+      .scroll-box
+        .donor-container
+          - Donor.where(level: %w(platinum diamond)).order(:weight).pluck(:name).each do |donor|
+            .donor= donor
+      %p= t('donor_interstitial.support_codeorg_1')
+      %p= t('donor_interstitial.support_codeorg_2')
+      / FND-893 - Stop using markdown in <Label>s
+      .left
+        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+          .form-group
+            = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
+          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+      .clear
+
+%script{src: webpack_asset_path('js/layouts/_terms_interstitial.js')}

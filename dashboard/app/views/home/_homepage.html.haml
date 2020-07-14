@@ -15,7 +15,7 @@
 - if current_user
   - if current_user.teacher?
     #teacher_reminders
-      - if true
+      - unless current_user.accepted_latest_terms?
         = render template: 'api/accept_terms_reminder'
         = render partial: 'layouts/terms_interstitial'
       - if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2019
