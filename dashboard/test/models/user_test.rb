@@ -3947,8 +3947,26 @@ class UserTest < ActiveSupport::TestCase
 
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
-    script = Script.twenty_hour_script
-    script_levels = script.script_levels.first(2)
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    script_level1 = create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [
+        create(:maze, name: 'level 1')
+      ]
+    )
+    script_level2 = create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [
+        create(:maze, name: 'level 2')
+      ]
+    )
+    script_levels = [script_level1, script_level2]
     script_levels.each do |script_level|
       users.first(2).each do |user|
         create :user_level, user: user, level: script_level.level, script: script
