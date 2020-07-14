@@ -179,12 +179,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      firehoseClient.putRecord({
-        study: 'amazon-future-engineer-eligibility',
-        event: 'ineligible'
-      });
-
-      window.location = pegasus('/afe/start-codeorg');
+      firehoseClient.putRecord(
+        {
+          study: 'amazon-future-engineer-eligibility',
+          event: 'ineligible'
+        },
+        {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
+      );
     }
   }
 
@@ -198,18 +199,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submitToAFE = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'submit_to_afe',
-      data_json: JSON.stringify({
-        accountEmail: this.props.accountEmail,
-        accountSchoolId: this.props.schoolId,
-        formEmail: this.state.formData.email,
-        formSchoolId: this.state.formData.schoolId
-      })
-    });
-
-    // returns a promise
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {

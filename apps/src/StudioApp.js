@@ -15,7 +15,7 @@ import * as aceMode from './acemode/mode-javascript_codeorg';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
-import * as codegen from './lib/tools/jsinterpreter/codegen';
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
@@ -3094,7 +3094,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      isCraft: this.config.app === 'craft',
+      isCraft: this.config && this.config.app === 'craft',
       displayBottom: bottom
     },
     alertContents
