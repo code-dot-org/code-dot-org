@@ -11,21 +11,47 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import $ from 'jquery';
 
 const styles = {
-  headerContainer: {
-    // With our new bubble we don't want any padding above/below
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: 5,
-    paddingRight: 5,
+  container: {
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
-    marginLeft: 4,
-    marginRight: 4
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  outer: {
+    position: 'absolute',
+    paddingLeft: 4,
+    paddingRight: 4,
+    height: '100%',
+    whiteSpace: 'nowrap'
+  },
+  inner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  },
+  headerVignette: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none'
+  },
+  headerVignetteLeftRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  headerVignetteLeft: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+  },
+  headerVignetteRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
   },
   spacer: {
     marginRight: 'auto'
@@ -50,12 +76,75 @@ const styles = {
  */
 class LessonProgress extends Component {
   static propTypes = {
-    // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     onLessonExtras: PropTypes.bool,
-    lessonTrophyEnabled: PropTypes.bool
+    lessonTrophyEnabled: PropTypes.bool,
+    width: PropTypes.number,
+    setDesiredWidth: PropTypes.func
   };
+
+  getFullWidth() {
+    const component = $(this.refs.fullProgressInner);
+    return component.length > 0 ? component.width() : 0;
+  }
+
+  setDesiredWidth() {
+    if (this.props.setDesiredWidth) {
+      this.props.setDesiredWidth(this.getFullWidth());
+    }
+  }
+
+  componentDidMount() {
+    this.setDesiredWidth();
+  }
+
+  componentDidUpdate() {
+    this.setDesiredWidth();
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.width !== nextProps.width;
+  }
+
+  getFullProgressOffset() {
+    // We want to set the offset so that the current level is in the middle
+    // of the available width.
+
+    if (this.refs.currentLevel && this.props.width) {
+      const fullWidth = this.getFullWidth();
+      const actualWidth = this.props.width;
+      const currentLevelOffset = $(this.refs.currentLevel).position().left;
+
+      if (fullWidth > actualWidth) {
+        // A regular highlighted bubble is 34 pixels wide.
+        const currentLevelBubbleWidth = 34;
+        let desiredOffset =
+          actualWidth / 2 - currentLevelOffset - currentLevelBubbleWidth / 2;
+
+        let vignetteStyle = styles.headerVignetteLeftRight;
+
+        // don't go too far to the left
+        if (desiredOffset + fullWidth < actualWidth) {
+          desiredOffset = actualWidth - fullWidth;
+          vignetteStyle = styles.headerVignetteLeft;
+        }
+
+        // don't go too far to the right
+        if (desiredOffset > 0) {
+          desiredOffset = 0;
+          vignetteStyle = styles.headerVignetteRight;
+        }
+
+        return {
+          headerFullProgressOffset: desiredOffset,
+          vignetteStyle: {...styles.headerVignette, ...vignetteStyle}
+        };
+      }
+    }
+
+    return {headerFullProgressOffset: 0, vignetteStyle: null};
+  }
 
   render() {
     const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
@@ -69,43 +158,63 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
+    const {
+      headerFullProgressOffset,
+      vignetteStyle
+    } = this.getFullProgressOffset();
+
     return (
       <div
         className="react_stage"
         style={{
-          ...styles.headerContainer,
+          ...styles.container,
           ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
         }}
       >
-        {lessonTrophyEnabled && <div style={styles.spacer} />}
-        {levels.map((level, index) => (
+        <div
+          className="full_progress_outer"
+          style={{...styles.outer, left: headerFullProgressOffset}}
+        >
           <div
-            key={index}
-            style={{
-              ...(level.isUnplugged &&
-                level.isCurrentLevel &&
-                styles.pillContainer)
-            }}
+            className="full_progress_inner"
+            ref="fullProgressInner"
+            style={styles.inner}
           >
-            <ProgressBubble
-              level={level}
-              disabled={false}
-              smallBubble={!level.isCurrentLevel}
-              lessonTrophyEnabled={lessonTrophyEnabled}
-            />
+            {lessonTrophyEnabled && <div style={styles.spacer} />}
+            {levels.map((level, index) => (
+              <div
+                key={index}
+                ref={level.isCurrentLevel ? 'currentLevel' : null}
+                style={{
+                  ...(level.isUnplugged &&
+                    level.isCurrentLevel &&
+                    styles.pillContainer)
+                }}
+              >
+                <ProgressBubble
+                  level={level}
+                  disabled={false}
+                  smallBubble={!level.isCurrentLevel}
+                  lessonTrophyEnabled={lessonTrophyEnabled}
+                />
+              </div>
+            ))}
+            {lessonExtrasUrl && !lessonTrophyEnabled && (
+              <div ref={onLessonExtras ? 'currentLevel' : null}>
+                <LessonExtrasProgressBubble
+                  lessonExtrasUrl={lessonExtrasUrl}
+                  perfect={onLessonExtras}
+                />
+              </div>
+            )}
+            {lessonTrophyEnabled && (
+              <LessonTrophyProgressBubble
+                percentPerfect={getPercentPerfect(levels)}
+              />
+            )}
           </div>
-        ))}
-        {lessonExtrasUrl && !lessonTrophyEnabled && (
-          <LessonExtrasProgressBubble
-            lessonExtrasUrl={lessonExtrasUrl}
-            perfect={onLessonExtras}
-          />
-        )}
-        {lessonTrophyEnabled && (
-          <LessonTrophyProgressBubble
-            percentPerfect={getPercentPerfect(levels)}
-          />
-        )}
+        </div>
+        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
