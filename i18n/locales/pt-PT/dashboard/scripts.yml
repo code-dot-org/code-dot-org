@@ -5177,3 +5177,43 @@ pt:
               display_name: Conteúdo
             cspSurvey:
               display_name: Conteúdo
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
