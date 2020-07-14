@@ -268,8 +268,8 @@ MARKDOWN
     assert_equal 'my level group_copy', level_group_copy.name
     assert_equal 1, level_group_copy.pages.count
     page = level_group_copy.pages.first
-    assert_equal 1, page.levels.count
-    assert_equal 'level1_copy', page.levels.first.name
+    assert_equal 1, page.question_levels.count
+    assert_equal 'level1_copy', page.question_levels.first.name
   end
 
   # Test that clone_with_suffix performs a deep copy of a LevelGroup, and the
@@ -395,7 +395,7 @@ level 'level1 copy2'"
     level_group_copy1 = level_group.clone_with_suffix(' copy1')
     assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
     assert_equal 'level_group_test assessment copy1', level_group_copy1.name
-    assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
+    assert_equal 'level1 copy1', level_group_copy1.pages.first.question_levels.first.name
     assert_equal 'external1 copy1', level_group_copy1.properties['texts'].first['level_name']
     refute_nil Level.find_by_name('external1 copy1')
 
@@ -404,7 +404,7 @@ level 'level1 copy2'"
     level_group_copy2 = level_group.clone_with_suffix(' copy2')
     assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
     assert_equal 'level_group_test assessment copy2', level_group_copy2.name
-    assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
+    assert_equal 'level1 copy2', level_group_copy2.pages.first.question_levels.first.name
     assert_equal 'external1 copy2', level_group_copy2.properties['texts'].first['level_name']
     refute_nil Level.find_by_name('external1 copy2')
 

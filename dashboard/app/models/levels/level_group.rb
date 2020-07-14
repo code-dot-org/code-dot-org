@@ -50,7 +50,7 @@ class LevelGroup < DSLDefined
   end
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
-  def levels
+  def question_levels
     child_levels.all
   end
 
@@ -58,10 +58,10 @@ class LevelGroup < DSLDefined
     def initialize(page_number, offset, levels)
       @page_number = page_number
       @offset = offset
-      @levels = levels
+      @question_levels = levels
     end
 
-    attr_reader :levels
+    attr_reader :question_levels
     attr_reader :page_number
     attr_reader :offset
   end
@@ -75,7 +75,7 @@ class LevelGroup < DSLDefined
     offset = 0
     @pages ||= properties['levels_per_page'].map.with_index do |page_size, page_index|
       page_number = page_index + 1
-      levels_by_page = levels[offset..(offset + page_size - 1)]
+      levels_by_page = question_levels[offset..(offset + page_size - 1)]
       page_object = LevelGroupPage.new(page_number, offset, levels_by_page)
       offset += page_size
       page_object
@@ -122,7 +122,7 @@ class LevelGroup < DSLDefined
   end
 
   def levels_by_page
-    pages.map(&:levels)
+    pages.map(&:question_levels)
   end
 
   def assign_attributes(params)
@@ -131,7 +131,7 @@ class LevelGroup < DSLDefined
   end
 
   def plc_evaluation?
-    levels.map(&:class).uniq == [EvaluationMulti]
+    question_levels.map(&:class).uniq == [EvaluationMulti]
   end
 
   # Surveys: How many students must complete a survey before any results are shown.
@@ -192,7 +192,7 @@ class LevelGroup < DSLDefined
   # Returns survey results for a single LevelGroup level by students in a single section.
   def self.get_levelgroup_survey_results(script_level, section)
     # Go through each sublevel
-    script_level.level.levels.map do |sublevel|
+    script_level.level.question_levels.map do |sublevel|
       question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
                       sublevel.properties.try(:[], "long_instructions")
 
