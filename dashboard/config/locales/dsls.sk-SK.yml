@@ -1634,6 +1634,11 @@ sk-SK:
           Na tejto hodine sa naučíte, aký je rozdiel medzi tým čo je a nie je bezpečné zdielať na internete. Lekciu pripravili Common Sense Education.
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Súkromné a osobné informácie
+
+          ## Ktoré tvoje osobné informácie je v poriadku zdieľať online?
       SimonSays-Unplugged:
         markdown: |-
           # Simon vraví
@@ -2051,6 +2056,8 @@ sk-SK:
         questions:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_EOC_2020:
+        description: Práve si na poslednej úlohe kurzu D! Vyber si projekt, ktorý
+          chceš vytvoriť.
         display_name: Záverečný projekt
       courseD_multi_artist_binary8_predict1:
         answers:
@@ -2795,7 +2802,25 @@ sk-SK:
             "Spustiť"?
       courseD_project_exemplars_2020_2021:
         content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # Príklady projektov
+
+          Práve ideš začať so svojím finálnym projektom. Ešte predtým ako začneš, dobre si poprezeraj príklady projektov.
+
+
+          | Náhodná rýchlosť pri Odrážačke (Basketbal) | Množenie stromprúperov (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa stormtrúperom lebo sa rozmnožia! |
+
+
+          | Panika na diskotéke (Tanečná Párty) | Scéna z pláže (Umelec) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Tvoji vedľajší tanečníci neustále menia svoje pohyby! | Vyskúšaj pridať nejakú farbu a zmeniť pozadie tejto scény! |
       courseE_EOC_2020:
+        description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
+          chceš vytvoriť.
         display_name: Záverečný projekt
       courseE_multi_bee_functions_predict1:
         answers:
@@ -3586,6 +3611,42 @@ sk-SK:
         title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
         title: Objavujeme informatiku - rýchly prieskum!
+      csf_be_a_super_digital_citizen:
+        markdown: |-
+          #  Skvelý digitálny občan
+
+          ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+      csf_digital_trails:
+        markdown: |-
+          # Nasleduj digitálnu stopu
+
+          ## Aké informácie je v poriadku mať vo svojej digitálnej stope?
+      csf_password_power-up:
+        markdown: |-
+          # Posilni svoje heslo
+
+          ## Tipy pre heslá na zapamätanie
+
+          * Začni s ľahko zapamätateľnou **frázou**.
+          * Len tvoji **rodičia** by mali poznať tvoje heslo.
+          * Nikdy nepoužívaj ako heslo svoje **osobné** údaje.
+          * Vytváraj si heslá, ktoré máju aspoň **osem** znakov.
+          * Vo svojom hesle použi písmená, číslice a **znaky**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        markdown: |
+          # STOP zlomyseľnosti
+
+          ## Čo urobiť ak je k vám niekto zlomyseľný v online svete?
+
+          * **S**túp preč.
+          * **T**oto všetko povedz nejakému dospelákovi.
+          * **O**verené stránky najprv.
+          * **P**očkaj a popremýšľaj.
+      csf_safety_in_my_online_neighborhood:
+        markdown: "# Moje online susedstvo\n\n##  Ako sa bezpečne presúvať na miesta
+          v online svete? "
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.

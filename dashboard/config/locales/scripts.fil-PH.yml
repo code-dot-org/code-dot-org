@@ -32636,12 +32636,39 @@ fil:
           stages:
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming in Maze:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            Tell a Story in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -32650,12 +32677,39 @@ fil:
           lessons:
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming in Maze:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            Tell a Story in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
         csp1-2020:
           stages:
             new stage:

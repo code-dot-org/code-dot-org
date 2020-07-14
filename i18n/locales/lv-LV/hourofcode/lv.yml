@@ -11,6 +11,24 @@ lv:
   campaign_date_full: 5.-11. decembris
   campaign_date_year: '2016'
   campaign_date_full_year: 5.-11. decembris, 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Mācies datorzinātni. Maini pasauli.
   hoc2019_header_line1_mobile: Mācies datorzinātni.
   hoc2019_header_line2_mobile: Maini pasauli.
@@ -459,7 +477,7 @@ lv:
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
   signup_registration_deadline: Registration for the Hour of Code closes December
-    11.
+    13.
   signup_name_placeholder: Jūsu vārds
   signup_email_placeholder: jūs@piemērs.com
   signup_organization_name_placeholder: Piemēram, Linkolna vidusskola
