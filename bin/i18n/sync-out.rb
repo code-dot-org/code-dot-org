@@ -6,6 +6,9 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 
+require 'cdo/crowdin/utils'
+require 'cdo/crowdin/project'
+
 require 'fileutils'
 require 'json'
 require 'tempfile'
@@ -27,6 +30,40 @@ def sync_out(upload_manifests=false)
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  end
+end
+
+# Return true iff the specified file in the specified locale had changes
+# as of the most recent sync down.
+#
+# @param locale [String] the locale code to check. This can be either the
+#  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
+#  the two-letter code used by crowdin, for those languages for which we have
+#  only a single variation ("it", "de", etc).
+#
+# @param file [String] the path to the file to check. Note that this should be
+#  the relative path of the file as it exists within the locale directory; ie
+#  "/dashboard/base.yml", "/blockly-mooc/maze.json",
+#  "/course_content/2018/coursea-2018.json", etc.
+def file_changed?(locale, file)
+  @change_datas ||= CROWDIN_PROJECTS.keys.map do |crowdin_project|
+    project = Crowdin::Project.new(crowdin_project, nil)
+    utils = Crowdin::Utils.new(project)
+    unless File.exist?(utils.changes_json)
+      raise <<~ERR
+        No "changes" json found at #{utils.changes_json}.
+
+        We expect to find a file containing a list of files changed by the most
+        recent sync down; if this file does not exist, it likely means that no
+        sync down has been run on this machine, so there is nothing to sync out
+      ERR
+    end
+    JSON.load(File.read(utils.changes_json))
+  end
+
+  crowdin_code = Languages.get_code_by_locale(locale)
+  return @change_datas.any? do |change_data|
+    change_data.dig(locale, file) || change_data.dig(crowdin_code, file)
   end
 end
 
@@ -68,7 +105,8 @@ end
 
 def restore_redacted_files
   total_locales = Languages.get_locale.count
-  original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
+  original_dir = "i18n/locales/original"
+  original_files = Dir.glob("#{original_dir}/**/*.*").to_a
   if original_files.empty?
     raise <<~ERR
       No original files found from which to restore.
@@ -85,6 +123,9 @@ def restore_redacted_files
 
     puts "Restoring #{locale} (#{locale_index}/#{total_locales})"
     original_files.each do |original_path|
+      relative_path = original_path.delete_prefix(original_dir)
+      next unless file_changed?(locale, relative_path)
+
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
