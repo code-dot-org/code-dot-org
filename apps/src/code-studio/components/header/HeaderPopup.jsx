@@ -4,6 +4,7 @@ import color from '@cdo/apps/util/color';
 import progress from '../../progress';
 import MiniView from '../progress/MiniView';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   container: {
@@ -51,6 +52,17 @@ export default class HeaderPopup extends Component {
       this.props.scriptData,
       this.props.currentLevelId
     );
+
+    firehoseClient.putRecord(
+      {
+        study: 'mini_view',
+        event: 'mini_view_opened',
+        data_json: JSON.stringify({
+          current_level_id: this.props.currentLevelId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   handleClickClose = () => {
@@ -64,8 +76,6 @@ export default class HeaderPopup extends Component {
   };
 
   render() {
-    console.log('HeaderPopup render');
-
     return (
       <div style={styles.container}>
         {!this.state.open && (
