@@ -33,11 +33,13 @@ export function searchAssets(
     }, Immutable.Set());
 
   if (categoryQuery !== '' && categoryQuery !== 'category_all') {
-    let categoryResultSet = Immutable.Set(
-      assetLibrary.categories[categoryQuery]
-    );
+    let categoryResultSet = Object.keys(assetLibrary.aliases)
+      .filter(alias => alias === categoryQuery)
+      .reduce((resultSet, nextAlias) => {
+        return resultSet.union(assetLibrary.aliases[nextAlias]);
+      }, Immutable.Set());
     if (searchQuery !== '') {
-      resultSet = resultSet.intersect(categoryResultSet);
+      resultSet = resultSet.intersect(categoryResultSet.toArray());
     } else {
       resultSet = categoryResultSet;
     }

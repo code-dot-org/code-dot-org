@@ -11,7 +11,7 @@ describe('search assets from animation library', function() {
     const pageCount = 0;
     const searchedData = searchAssets(
       'hip',
-      'animals',
+      'category_animals',
       testAnimationLibrary,
       pageCount,
       maxResults
@@ -50,7 +50,7 @@ describe('search assets from animation library', function() {
     const pageCount = 0;
     const searchedData = searchAssets(
       'click',
-      'objects',
+      'category_objects',
       soundLibrary,
       pageCount,
       maxResults
