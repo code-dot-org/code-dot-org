@@ -72,7 +72,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       street_1: 'test street',
       street_2: 'test street 2',
       city: 'seattle',
-      state: 'WA',
+      state: 'Washington',
       zip: '98105',
       marketing_kit: '0',
       csta_plus: '0',
@@ -142,7 +142,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         street_1: 'test street',
         street_2: 'test street 2',
         city: 'seattle',
-        state: 'WA',
+        state: 'Washington',
         zip: '98105',
         privacy_permission: true
       },
@@ -185,9 +185,6 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     school = create :school
     refute_equal 'example-street-1', school.address_line1
 
-    # We have to use an actual state here (Florida)
-    # that is different than what is in valid_params (Washington)
-    # because the form uses a select element to limit users to submit real states
     actual_args = capture_csta_args_for_request(
       valid_params.merge(
         'csta' => true,
@@ -203,7 +200,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_equal 'example-street-1', actual_args[:street_1]
     assert_equal 'example-street-2', actual_args[:street_2]
     assert_equal 'example-city', actual_args[:city]
-    assert_equal 'FL', actual_args[:state]
+    assert_equal 'Florida', actual_args[:state]
     assert_equal 'example-zip', actual_args[:zip]
   end
 
@@ -275,6 +272,22 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       params: valid_params.merge('csta' => true),
       as: :json
     assert_response :bad_request, "Wrong response: #{response.body}"
+  end
+
+  test 'submits Firehose logging for valid request' do
+    FirehoseClient.any_instance.expects(:put_record).once
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params, as: :json
+  end
+
+  test 'no Firehose logging for invalid request' do
+    FirehoseClient.any_instance.expects(:put_record).never
+
+    sign_in create :teacher
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: valid_params.delete('email'), as: :json
   end
 
   private
