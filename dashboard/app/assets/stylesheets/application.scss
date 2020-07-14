@@ -141,6 +141,7 @@ img.video_thumbnail {
   padding-top: 0;
   min-height: 60px;
   position: relative;
+  user-select: none;
 
   .header {
     position: absolute;
@@ -186,8 +187,6 @@ img.video_thumbnail {
   }
 
   .project_info {
-    padding-top: 7px;
-
     .header_text, .header_button {
       float: left;
     }
@@ -210,7 +209,10 @@ img.video_thumbnail {
 
   .header_text {
     font-size: 16px;
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   @media screen and (min-width: 971px) {
@@ -233,7 +235,6 @@ img.video_thumbnail {
 
   .headerlinks {
     margin-top: 12px;
-    margin-left: 74px;
 
     .headerlink {
       font-family: 'Gotham 4r', sans-serif;
@@ -252,7 +253,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 350px;
+      padding-right: 30px;
     }
   }
 
@@ -272,6 +273,7 @@ img.video_thumbnail {
     box-sizing: border-box;
     float: left;
     cursor: pointer;
+    white-space: nowrap;
     a:hover {
       text-decoration: none;
       background-color: $orange;
@@ -905,12 +907,11 @@ $default-modal-width: 640px;
 }
 
 .header_left {
-  position: absolute;
-  left: 25px;
+  display: flex;
+  float: left;
   z-index: 2;
-  .header_button, .header_input, .header_text {
-    margin-left: 10px;
-  }
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .header_left, .header_right {
@@ -940,6 +941,11 @@ $default-modal-width: 640px;
   }
   .project_name_wrapper {
     min-width: 160px;
+
+    html[dir=rtl] & {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   .project_name_wrapper .header_text {
     float: left;
@@ -1016,12 +1022,24 @@ $default-modal-width: 640px;
   }
 }
 
+@keyframes header_fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header_middle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  .header_button {
-    margin-top: 3px;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
+  float: left;
+
+  .header_button, .header_input {
+    margin-left: 10px;
   }
 }
 
@@ -1032,21 +1050,35 @@ $default-modal-width: 640px;
 }
 
 .header_level {
-  padding-top: 2px;
-  padding-bottom: 0;
-  text-align: center;
   font-size: 150%;
   cursor: default;
-  white-space: nowrap;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .progress_container {
-    display: inline-block;
+    overflow: hidden;
   }
 }
 
+.script_name_container {
+  overflow: hidden;
+  padding-right: 5px;
+}
+
 .header_right {
-  position: absolute;
-  right: 16px;
+  float: right;
+  margin-right: 13px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sign_in_or_user {
+  float: left;
 }
 
 input.header_input {
@@ -1062,9 +1094,18 @@ input.header_input {
   height: 38px;
 }
 
+.header_popup_background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
 .header_popup {
-  display: none;
   position: absolute;
+  text-align: left;
   // Set to have a 4 px gap with the bottom of the header
   top: 48px;
   right: 0;
@@ -1094,47 +1135,29 @@ input.header_input {
   color: $charcoal;
 
   .loading {
-    height: 400px;
     margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 }
 
-.header_popup_link {
-  min-width: 40px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  height: 26px;
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
+  overflow: hidden;
+  padding-left: 5px;
+  box-sizing: border-box;
+
+  a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_finished_link:hover {
   background-color: transparent;
   text-decoration: underline;
-}
-
-.header_popup_link:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.header_popup_link_glyph {
-  font-size: 22px;
-  color: $orange;
-  line-height: 10px;
-}
-
-.header_popup_link_text {
-  font-size: 10px;
-  color: $header_text;
-  display: inline-block;
-  line-height: 20px;
 }
 
 #alert {
