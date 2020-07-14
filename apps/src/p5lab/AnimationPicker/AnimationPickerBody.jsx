@@ -131,7 +131,11 @@ export default class AnimationPickerBody extends React.Component {
     return Object.keys(categories).map(category => (
       <AnimationPickerListItem
         key={category}
-        label={msg[`animationCategory_${category}`]()}
+        label={
+          msg[`animationCategory_${category}`]
+            ? msg[`animationCategory_${category}`]()
+            : category
+        }
         category={category}
         onClick={this.onCategoryChange}
       />
