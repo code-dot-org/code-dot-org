@@ -42,8 +42,7 @@ module Pd::Foorm
         facilitators,
         split_by_facilitator: true
       )
-      # get overall rollup
-      overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details, facilitators)
+      # get overall rollup per facilitator
       overall_rollup_per_facilitator = facilitators ?
                                          get_facilitator_rollup_for_course(
                                            facilitators,
@@ -59,10 +58,9 @@ module Pd::Foorm
           questions: questions,
           single_workshop: rollup[key],
           overall_facilitator: facilitators ? overall_rollup_per_facilitator[key] : {},
-          overall: overall_rollup[key]
+          overall: {}
         }
       end
-
       result_data
     end
 
