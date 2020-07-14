@@ -147,8 +147,10 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    if (spriteArg.costume) {
+      return spriteCommands.countByAnimation(spriteArg.costume);
+    }
   },
 
   createNewSprite(name, animation, location) {
