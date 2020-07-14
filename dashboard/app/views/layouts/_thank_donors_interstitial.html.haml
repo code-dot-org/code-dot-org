@@ -1,5 +1,7 @@
 
-#terms-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
+#terms-modal.modal{style: 'display: none;'}
+  %button.close{'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+    %span{'aria-hidden' => 'true'}= '&times;'.html_safe
   .modal-dialog
     .modal-content.no-modal-icon
       %h2.donor-header= t('donor_interstitial.title') + '...'
