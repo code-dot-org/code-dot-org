@@ -172,6 +172,7 @@ export default class MicroBitBoard extends EventEmitter {
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
+
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
