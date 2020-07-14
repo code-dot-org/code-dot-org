@@ -15,7 +15,7 @@ const styles = {
     paddingRight: 12,
     paddingBottom: 0
   },
-  test: {
+  bottom: {
     paddingBottom: 8
   }
 };
@@ -27,14 +27,14 @@ class DataEntryError extends React.Component {
 
   render() {
     return this.props.isVisible ? (
-      <div style={styles.test}>
+      <div style={styles.bottom}>
         <div style={{...styles.container, ...styles.visible}}>
           <SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />
         </div>
       </div>
     ) : (
       // Blank space so layout stays the same whether or not error is visible.
-      <div style={{...styles.container, ...styles.test}} />
+      <div style={{...styles.container, ...styles.bottom}} />
     );
   }
 }
