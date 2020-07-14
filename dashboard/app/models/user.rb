@@ -1773,24 +1773,21 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
-    should_track_pairing = true
     current_level = user_level.level
-    if current_level.type == "LevelGroup" && current_level.properties["anonymous"] == "true"
-      should_track_pairing = false
-    end
+    should_disable_pairing = current_level.should_disable_pairing?
 
-    if should_track_pairing
+    unless should_disable_pairing
       group_levels = script.levels.select {|level| level.type == "LevelGroup"}
       if group_levels.detect do |group_level|
-        group_level.properties["anonymous"] == "true" && group_level.levels.detect do |child_level|
+        group_level.levels.detect do |child_level|
           child_level.name == current_level.name
         end
       end
-        should_track_pairing = false
+        should_disable_pairing = true
       end
     end
 
-    if should_track_pairing && pairing_user_ids
+    if !should_disable_pairing && pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,

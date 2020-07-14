@@ -275,6 +275,10 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def should_disable_pairing?
+    type == "LevelGroup"
+  end
+
   def self.level_file_path(level_name)
     level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
     raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
