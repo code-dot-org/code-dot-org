@@ -46,8 +46,18 @@ class StageTest < ActiveSupport::TestCase
 
   test "summary for single page long assessment" do
     script = create :script
-    properties = {pages: [{levels: ['level_free_response', 'level_multi_unsubmitted']}]}
-    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true, properties: properties
+    create :text_match, name: 'level_free_response', type: 'TextMatch'
+    create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    level_group_dsl = <<~DSL
+      name 'level1'
+      title 'title1'
+      submittable 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
     stage = create :lesson, name: 'stage1', script: script, lockable: true
     create :script_level, script: script, levels: [level1], assessment: true, lesson: stage
 
