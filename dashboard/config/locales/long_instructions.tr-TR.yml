@@ -124,9 +124,8 @@ tr-TR:
       2-3 Bee Debugging Assessment 1: "\\*\\* Değerlendirme: \\*\\* Şimdi bildiklerini
         gösterme zamanı! \\\r \\\r Tüm nektarı toplamak ve tüm balları yapmak için
         hataları düzelt."
-      2-3 Bee Functions 1: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.
-        \ \\\r\n\\\r\n'2 nektar al' fonksiyonunu kullanarak tüm çiçeklerden nektarları
-        topla."
+      2-3 Bee Functions 1: "Fonksiyonlar, bir görev gerçekleştiren kod bloklarıdır.
+        \ \n\n\"2 nektar al\" fonksiyonunu kullanarak her çiçekten nektar toplayın."
       2-3 Bee Functions 10: "Bulmacayı her çalıştırdığında mor çiçeklerdeki nektar
         sayıları 1 ya da 0 nektar olarak değişmektedir.  \\\r\n\\\r\nSadece nektar
         bulunan mor çiçeklerden nektar toplayan bir fonksiyon oluştur."
@@ -301,7 +300,7 @@ tr-TR:
         toprak at.
       4-5 While Loops 3: "Bu bulmacayı tamamlamak için mümkün olduğunca az blok kullanın!
         \ \\\r \\\r beni yığına götür, toprağı al ve çukura götür ve çukuru doldur."
-      Alien Defender: "\\*\\* Proje Fikri \\*\\*: Play Lab'da bir savunma oyunu yap!"
+      Alien Defender: "\\*\\* Proje Fikri \\*\\*: Play Lab'da bir savunma oyunu yapın!"
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\r\n\\t<img\nsrc=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54\nAM.png\"
         style=\"height:150px\"> \r\n</div>\r\n\r\n**Hedef:** Ekranı yeşil yapın.\r\n\r\n**Nasıl:**
         Bir `setProperty()` bloğunda sürükleyin. Ekranın `\"background-color\"` ını
@@ -5024,9 +5023,9 @@ tr-TR:
         ölçütten sonra yeni bir hareket yapmalıdır.  **Ölçütler** müzikte zamanı saymak
         için kullanılır. Bu eğiticide, bir ölçüt dört atım uzunluğundadır.
       CourseD_Dance_2020_05: |-
-        _Şimdi hareketleniyoruz!_
+        "\_Şimdi oluk açıyoruz! \_
 
-        Çalışma alanına bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın.
+        Çalışma alanınıza bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> etkinlik bloğu ekleyin. Dansçının 6 ölçütten sonra yeni bir hareket yapmasını sağlayın. ".
       CourseD_Dance_2020_06: |-
         Ortada bir dansçı etrafında bir grup küçük yedek dansçı oluşturmak için bu yeni bloğu kullanın.     <xml><block type="Dancelab_makeNewDanceSpriteGroup">
             <title name="N">???</title>
@@ -5218,9 +5217,9 @@ tr-TR:
         ölçütten sonra yeni bir hareket yapmalıdır.  **Ölçütler** müzikte zamanı saymak
         için kullanılır. Bu eğiticide, bir ölçüt dört atım uzunluğundadır.
       Dance_2019_05: |-
-        _Şimdi hareketleniyoruz!_
+        "\_Şimdi oluk açıyoruz! \_
 
-        Çalışma alanına bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın.
+        Çalışma alanınıza bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> etkinlik bloğu ekleyin. Dansçının 6 ölçütten sonra yeni bir hareket yapmasını sağlayın. ".
       Dance_2019_06: |-
         Ortada bir dansçı etrafında bir grup küçük yedek dansçı oluşturmak için bu yeni bloğu kullanın.     <xml><block type="Dancelab_makeNewDanceSpriteGroup">
             <title name="N">???</title>
@@ -5255,9 +5254,9 @@ tr-TR:
 
         **Ölçüler** müziğin içindeki zamanı hesaplamak için kullanılır. Bu eğitimde bir ölçü dört vuruş uzunluğundadır.
       Dance_Party_03: |-
-        _Şimdi hareketleniyoruz!_
+        "\_Şimdi oluk açıyoruz! \_
 
-        Çalışma alanına bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın.
+        Çalışma alanınıza bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> etkinlik bloğu ekleyin. Dansçının 6 ölçütten sonra yeni bir hareket yapmasını sağlayın. ".
       Dance_Party_04: |-
         _Bu dansın biraz parıltıya ihtiyacı var!_
 
@@ -5419,10 +5418,10 @@ tr-TR:
         var.  Nehrin karşısına geçmek için gereken tüm kodlar orada bulunuyor! \\\r\n
         \\\r\nKüçük yeşil bloğu çalışma alanına iki kez tutturarak yolu tamir et ve
         {currentPlayerName} karakterini Redstone Meşalesine [redstone_torch] ulaştır."
-      Geometric Sun: "\\*\\* Proje fikri: \\*\\* geometrik şekiller fikirler kullanarak
-        bir model oluşturma. Bu sebat ve planlama gerektirir!"
-      Geometric Sun_2018: "\\*\\* Proje fikri: \\*\\* geometrik şekiller fikirler
-        kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
+      Geometric Sun: "**Proje Fikri:** Şekiller gibi geometrik fikirler kullanarak
+        bir desen oluşturun. Bu ısrar ve planlama gerektirir!"
+      Geometric Sun_2018: "**Proje Fikri:** Şekiller gibi geometrik fikirler kullanarak
+        bir desen oluşturun. Bu ısrar ve planlama gerektirir!"
       HOC 2018 Level_1: Seni bekleyen yolculuk için malzemelere ihtiyacın var. **Sandık**tan
         ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
         **sandalı** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
@@ -5698,15 +5697,17 @@ tr-TR:
       OPD-K5-events-6: "Flappy engelleri geçtiğinde puan sayan bir skor tabelası ekledik.
         \ \n\n\"'Bir engel geçildiğinde\" olayına, puan sayacak bir kod bloğu ekleyin,
         sonra Flappy'yi ilk boru setinden geçirmek için \"Çalıştır\"a basın."
-      OPD-K5-projects-2: "Ne kadar öğrendiğin hayret verici! Adım adım bir oyun hazırlayalım.\\\r\n\\\r\nAraç
-        kutusunda yeni bloklar kullanarak, yeni bir arka plan seçin, ardından oyununuzda
-        olabilecek bir oyuncu seçin."
+      OPD-K5-projects-2: |-
+        Bu aşamaya kadar gelmeniz inanılmaz! Adım adım bir oyun hazırlayalım.
+
+        Araç kutunuzdaki yeni blokları kullanarak yeni bir arka plan seçin, ardından oyununuz için bir aktör seçin.
       OPD-K5-projects-3: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek için
         olay işleyicileri ve işlemler gibi blokları kullan.\\\r\n\\\r\nBu bulmacayı
         tamamlamak için oyuncuyu hedeflere götürün."
-      OPD-K5-projects-4: "Oyununa biraz daha karakter katalım!\\\r\n\\\r\nDaha fazla
-        karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
-        tamamlamak için hedefe ilerleyin."
+      OPD-K5-projects-4: |-
+        Oyununa birkaç karakter daha ekleyelim!
+
+        Daha fazla karakter eklemek için "aktörü ayarla" bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
       OPD-K5-projects-5: "Birden fazla karakter ve aktörlerin hareket ettirilmesi
         oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek
         için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\\\r\n\\\r\nSkoru
@@ -5716,7 +5717,7 @@ tr-TR:
         Şimdi oyunu oynamak istediğine emin olmak için biraz vakit geçir. Oyunu kazanmak
         ya da kaybetmek için bir yol ekle, sonra bu koşullardan birini yerine getirene
         kadar oyna.
-      OPD-K5-projects-7: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+      OPD-K5-projects-7: Tamamladınız! Artık oyununuzu oynayabilir veya dostlarınızla
         ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       Overworld Chop Tree: |-
         Odun çok önemli bir kaynaktır.
@@ -5758,9 +5759,9 @@ tr-TR:
         ancak son iki kareyi bıraktık.\n-   Resmi, hangi iki rengin eksik olduğunu
         bularak ve onları kodlayarak bitirmelisin."
       Robot Doodle: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun.
-        Bu biraz sabır ve planlama gerektirir!"
+        Bu sabır ve planlama gerektirir!"
       Robot Doodle_2018: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini
-        oluşturun. Bu biraz sabır ve planlama gerektirir!"
+        oluşturun. Bu sabır ve planlama gerektirir!"
       Room Escape Workshop - 1: "# Odayı Kur\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44\nAM.png\"
         style=\"width:200px; float:right\">\\\r\n\\\r\nOdadan kaçış oyununu yapmak
         için kullanıcının içerisinde macera yaşayabileceği bir şekilde odayı kurmalısın.
@@ -5771,7 +5772,7 @@ tr-TR:
         ihtiycın var.\\\r\n-   Odanın neye benzeyecebileceği sağdaki resimde var."
       Room Escape Workshop - 3: "# Kodu Gizle\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
         \ Tasarım Görünümünde \"CODE\" diyen beyaz kareye tıklayın. Seçiminizin gizli
-        kodunu göstermesi için değiştirin.\\\r\n2.  2.\n    Kodu kaplamak için resmi
+        kodunu göstermesi için değiştirin.\\\r\n2.  2\\.\n    Kodu kaplamak için resmi
         aşağıya çekin\\\r\n    \\\r\n    ![](<>)"
       Room Escape Workshop - 5: "# Gizli Kodu Kontrol Etme\\\r\n\n\\\r\nŞimdi kullanıcıdan
         gizli kod tahminlerini topladınız, kodların doğruluğunu kontrol etmeye ihtiyacınız
@@ -5882,19 +5883,21 @@ tr-TR:
         ve tarlalardan sakının!
       course2_maze_programming_challenge2: Bazen aynı sorunu çözmek için birden fazla
         yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
-      course3_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra
-        onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını
-        görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak
-        için değiştirin!
-      course3_artist_functions_challenge2: "Sadece tuvalin köşeleri gibi daha önceden
-        belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam
-        olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki
-        kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
+      course3_artist_functions_challenge1: Bir fonksiyonu bir kez tanımladığınızda
+        tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz! Nasıl çalıştığını
+        görmek için bu kodu deneyin, sonra kendi etkileyici tasarımınızı yapmak için
+        değiştirin!
+      course3_artist_functions_challenge2: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course3_bee_debugging_challenge1: Arıların nasıl nektar topladığını izle. Benzer
         deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
-      course3_bee_functions_challenge1: Bu meydan okumada tek başınasın. Göründüğünden
+      course3_bee_functions_challenge1: Bu meydan okumada tek başınasınız. Bu göründüğünden
         daha zor olabilir!
       course3_bee_functions_challenge2: Bu mücadelede tamamen kendi başınasın!
       course3_bee_functions_challenge3: Bir yol var iken nektar ve bal toplayan yeni
@@ -5914,27 +5917,30 @@ tr-TR:
         Sadece dört dönüş komutu ile domuza ulaşmama yardım et." \*'
       course3_maze_until_challenge1: Hiçbir ipuçları yok sadece meydan okuma. Zombiyi
         ayçiçeğine ulaştır.
-      course3_playLab_challenge1: "-   **Sincaplar** **dinozorların** şehre indiğini
-        görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir
-        mi?\\*\\\r\n    \\\r\n    Burada sizin için önceden başlatılmış çeşitli oyunlar
-        var! Nasıl çalıştığını görmek için oyna. \\\r\n    \\\r\n    \\\r\n    Yeterince
-        puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği
-        gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına
-        birkaç kod ekleyin. \\\r\n    Fikirler için ipucuna tıklayın!"
+      course3_playLab_challenge1: "_**Sincaplar** bir **dinozorun** şehre indiğini
+        görünce dehşete kapıldılar! Cesur **şövalye** korkmalarına engel olabilir
+        mi?_\n\nKurallar:\n\n1.  _Sincaplara dokunduğunuzda puan alırsınız._\n2.  _Dinozora
+        dokunduğunuzda puan kaybedersiniz._\n\nBurada sizin için başlatılmış farklı
+        bir türde oyun var! Nasıl çalıştığını görmek için oynayın. \n\nYeterince puan
+        aldığınızda yada puanlarınız bittiğinde bir şey olmalı. Oyunun gerektiği gibi
+        çalışması için \"oyunu kazan\" ve \"oyunu kaybet\" fonksiyonlarına birkaç
+        kod ekleyin. \nFikir için ipuçlarına tıklayın!"
       course4_artist_binary_challenge1: Bulmaca içinde her ikili değeri (0 veya 1)
         yalnızca bir kez kullanabilirsiniz. Bu çizimi tamamlamak için iç içe döngüleri
         kullanmayı deneyin.
       course4_artist_binary_challenge2: "Bu ızgarada temsil edilen 256 bit var - bu,
         küçük bir değişikliğin kolayca büyük problemlere sebep olacağı anlamına gelir.
         Bu logoyu normal haline çevirmekte yeterince ısrarcı mısın?\\\r\n\\\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
-      course4_artist_concept_challenge2: Aşağıdaki kodları kullanarak beş adet rüzgar
-        gülü tasarımı oluştur.
-      course4_artist_functions_challenge2: "Sadece tuvalin köşeleri gibi daha önceden
-        belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam
-        olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki
-        kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
+      course4_artist_concept_challenge2: Aşağıdaki kodu kullanarak beş rüzgar gülü
+        tasarımı oluşturun.
+      course4_artist_functions_challenge2: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course4_artist_fwp_challenge1: Bu programı çalıştırmayı deneyin ve ne olacağını
         görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun?
         (Ya da silin ve tamamen farklı bir şey ile değiştirin)
@@ -6777,24 +6783,28 @@ tr-TR:
       courseB_starWars_prog9_2020: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bunu yapabilirsin!"_
-      courseC19_playLab_EOC1: "Ne kadar öğrendiğin hayret verici! Adım adım bir oyun
-        hazırlayalım.\\\r\n\\\r\nAraç kutusunda yeni bloklar kullanarak, yeni bir
-        arka plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin."
-      courseC19_playLab_EOC1_2020: "Ne kadar öğrendiğin hayret verici! Adım adım bir
-        oyun hazırlayalım.\\\r\n\\\r\nAraç kutusunda yeni bloklar kullanarak, yeni
-        bir arka plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin."
+      courseC19_playLab_EOC1: |-
+        Bu aşamaya kadar gelmeniz inanılmaz! Adım adım bir oyun hazırlayalım.
+
+        Araç kutunuzdaki yeni blokları kullanarak yeni bir arka plan seçin, ardından oyununuz için bir aktör seçin.
+      courseC19_playLab_EOC1_2020: |-
+        Bu aşamaya kadar gelmeniz inanılmaz! Adım adım bir oyun hazırlayalım.
+
+        Araç kutunuzdaki yeni blokları kullanarak yeni bir arka plan seçin, ardından oyununuz için bir aktör seçin.
       courseC19_playLab_EOC2: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek
         için olay işleyicileri ve işlemler gibi blokları kullan.\\\r\n\\\r\nBu bulmacayı
         tamamlamak için oyuncuyu hedeflere götürün."
       courseC19_playLab_EOC2_2020: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek
         için olay işleyicileri ve işlemler gibi blokları kullan.\\\r\n\\\r\nBu bulmacayı
         tamamlamak için oyuncuyu hedeflere götürün."
-      courseC19_playLab_EOC3: "Oyununa biraz daha karakter katalım!\\\r\n\\\r\nDaha
-        fazla karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
-        tamamlamak için hedefe ilerleyin."
-      courseC19_playLab_EOC3_2020: "Oyununa biraz daha karakter katalım!\\\r\n\\\r\nDaha
-        fazla karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
-        tamamlamak için hedefe ilerleyin."
+      courseC19_playLab_EOC3: |-
+        Oyununa birkaç karakter daha ekleyelim!
+
+        Daha fazla karakter eklemek için "aktörü ayarla" bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
+      courseC19_playLab_EOC3_2020: |-
+        Oyununa birkaç karakter daha ekleyelim!
+
+        Daha fazla karakter eklemek için "aktörü ayarla" bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
       courseC19_playLab_EOC4: "Birden fazla karakter ve aktörlerin hareket ettirilmesi
         oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek
         için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\\\r\n\\\r\nSkoru
@@ -6813,10 +6823,10 @@ tr-TR:
         sahipsin. Şimdi oyunu oynamak istediğine emin olmak için biraz vakit geçir.
         Oyunu kazanmak ya da kaybetmek için bir yol ekle, sonra bu koşullardan birini
         yerine getirene kadar oyna.
-      courseC19_playLab_EOC6: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+      courseC19_playLab_EOC6: Tamamladınız! Artık oyununuzu oynayabilir veya dostlarınızla
         ve sınıf arkadaşlarınızla paylaşabilirsiniz!
-      courseC19_playLab_EOC6_2020: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
-        ve sınıf arkadaşlarınızla paylaşabilirsiniz!
+      courseC19_playLab_EOC6_2020: Tamamladınız! Artık oyununuzu oynayabilir veya
+        dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       courseC_PlayLab_events6_2019: Şimdi, Waddles the Penguin'i tüm hedefleri vurmak
         için yukarı/aşağı/sol/sağ ok tuşlarını kullanarak etrafta dolaştırmayı sağlayan
         bir program yazın!
@@ -7021,18 +7031,154 @@ tr-TR:
       courseC_artist_loopsPrePre1a_2020: Sanatçıyı oyun alanının merkezine getirmek
         için '200 yukarı 200 aşağı zıpla' komutunu kullan, ardından '50 piksel ilerle'
         bloğu ile 50 piksel uzunluğunda bir çizgi çiz.
-      courseC_artist_prog_challenge1: 'Hayvanların her biri için odalar çiz. Bu bulmacayı
-        çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı
-        100 piksel uzunluğundadır. '
-      courseC_artist_prog_challenge1_2018: 'Hayvanların her biri için odalar çiz.
-        Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin
-        her kenarı 100 piksel uzunluğundadır. '
-      courseC_artist_prog_challenge1_2019: 'Hayvanların her biri için odalar çiz.
-        Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin
-        her kenarı 100 piksel uzunluğundadır. '
-      courseC_artist_prog_challenge1_2020: 'Hayvanların her biri için odalar çiz.
-        Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin
-        her kenarı 100 piksel uzunluğundadır. '
+      courseC_artist_prog1: |-
+        _"Selam, ben Artist. Kod yazarak ne isterseniz çizmemi sağlayabilirsiniz."_
+
+        Ne yaptıklarını anlamak için araç kutusundaki bloklarla oynayın!
+      courseC_artist_prog1_2018: |-
+        _"Selam, ben Artist. Kod yazarak ne isterseniz çizmemi sağlayabilirsiniz."_
+
+        Ne yaptıklarını anlamak için araç kutusundaki bloklarla oynayın!
+      courseC_artist_prog1_2019: |-
+        _"Selam, ben Artist. Kod yazarak ne isterseniz çizmemi sağlayabilirsiniz."_
+
+        Ne yaptıklarını anlamak için araç kutusundaki bloklarla oynayın!
+      courseC_artist_prog1_2020: |-
+        _"Selam, ben Artist. Kod yazarak ne isterseniz çizmemi sağlayabilirsiniz."_
+
+        Ne yaptıklarını anlamak için araç kutusundaki bloklarla oynayın!
+      courseC_artist_prog2: |-
+        _"Evcil canavarıma kafes yapalım!"_
+
+        Artist'in resimdeki gri çizgilerin üzerinden geçmesi için ekrana blok çekin.\
+        (Her çizgi 100 piksel uzunluğunda)
+      courseC_artist_prog2_2018: |-
+        _"Evcil canavarıma kafes yapalım!"_
+
+        Artist'in resimdeki gri çizgilerin üzerinden geçmesi için ekrana blok çekin.\
+        (Her çizgi 100 piksel uzunluğunda)
+      courseC_artist_prog2_2019: |-
+        _"Evcil canavarıma kafes yapalım!"_
+
+        Artist'in resimdeki gri çizgilerin üzerinden geçmesi için ekrana blok çekin.\
+        (Her çizgi 100 piksel uzunluğunda)
+      courseC_artist_prog2_2020: |-
+        _"Evcil canavarıma kafes yapalım!"_
+
+        Artist'in resimdeki gri çizgilerin üzerinden geçmesi için ekrana blok çekin.\
+        (Her çizgi 100 piksel uzunluğunda)
+      courseC_artist_prog3: |-
+        _"Bu uzay gemisine pencere lazım!!"_
+
+        İçteki karenin her kenarı 100 piksel ve her açısı 90 derece.
+      courseC_artist_prog3_2018: |-
+        _"Bu uzay gemisine pencere lazım!!"_
+
+        İçteki karenin her kenarı 100 piksel ve her açısı 90 derece.
+      courseC_artist_prog3_2019: |-
+        _"Bu uzay gemisine pencere lazım!!"_
+
+        İçteki karenin her kenarı 100 piksel ve her açısı 90 derece.
+      courseC_artist_prog3_2020: |-
+        _"Bu uzay gemisine pencere lazım!!"_
+
+        İçteki karenin her kenarı 100 piksel ve her açısı 90 derece.
+      courseC_artist_prog4: |-
+        _"Olamaz! Starla'nın evcil uzaylısı kaçtı! Astronota yardım edelim!"_
+
+        Starla'nın roketini tamamlayın ki peşinden gitsin.\
+        (Üçgenin kenarları 100 piksel uzunluğunda ve dış açıları 120 derece.)
+      courseC_artist_prog4_2018: |-
+        _"Olamaz! Starla'nın evcil uzaylısı kaçtı! Astronota yardım edelim!"_
+
+        Starla'nın roketini tamamlayın ki peşinden gitsin.\
+        (Üçgenin kenarları 100 piksel uzunluğunda ve dış açıları 120 derece.)
+      courseC_artist_prog4_2019: |-
+        _"Olamaz! Starla'nın evcil uzaylısı kaçtı! Astronota yardım edelim!"_
+
+        Starla'nın roketini tamamlayın ki peşinden gitsin.\
+        (Üçgenin kenarları 100 piksel uzunluğunda ve dış açıları 120 derece.)
+      courseC_artist_prog4_2020: |-
+        _"Olamaz! Starla'nın evcil uzaylısı kaçtı! Astronota yardım edelim!"_
+
+        Starla'nın roketini tamamlayın ki peşinden gitsin.\
+        (Üçgenin kenarları 100 piksel uzunluğunda ve dış açıları 120 derece.)
+      courseC_artist_prog5: |-
+        _"Kaybolurlarsa diye evcil hayvanlarımıza künye yapsak iyi olabilir!"_
+
+        Dışına bir dikdörtgen çizerek bu künyeyi tamamlayın.\
+        (Uzun kenarlar 200 piksel ve kısa kenarlar 100 piksel uzunluğunda)
+      courseC_artist_prog5_2018: |-
+        _"Kaybolurlarsa diye evcil hayvanlarımıza künye yapsak iyi olabilir!"_
+
+        Dışına bir dikdörtgen çizerek bu künyeyi tamamlayın.\
+        (Uzun kenarlar 200 piksel ve kısa kenarlar 100 piksel uzunluğunda)
+      courseC_artist_prog5_2019: |-
+        _"Kaybolurlarsa diye evcil hayvanlarımıza künye yapsak iyi olabilir!"_
+
+        Dışına bir dikdörtgen çizerek bu künyeyi tamamlayın.\
+        (Uzun kenarlar 200 piksel ve kısa kenarlar 100 piksel uzunluğunda)
+      courseC_artist_prog5_2020: |-
+        _"Kaybolurlarsa diye evcil hayvanlarımıza künye yapsak iyi olabilir!"_
+
+        Dışına bir dikdörtgen çizerek bu künyeyi tamamlayın.\
+        (Uzun kenarlar 200 piksel ve kısa kenarlar 100 piksel uzunluğunda)
+      courseC_artist_prog6: |-
+        _"Sıra, Belle'in künyesinde!"_
+
+        Kenarları 200 piksel olan bu baklava şeklini çizin.
+      courseC_artist_prog7: "**Meydan Okuma:** Bu künye çok özel!  \n\nDış kısmını
+        nasıl çizeceğinizi anladınız mı?\\\n(Uzun kenarları 150 piksel ve kısa kenarları
+        75 piksel.)"
+      courseC_artist_prog7_2018: "**Meydan Okuma:** Bu künye çok özel!  \n\nDış kısmını
+        nasıl çizeceğinizi anladınız mı?\\\n(Uzun kenarları 150 piksel ve kısa kenarları
+        75 piksel.)"
+      courseC_artist_prog7_2019: "**Meydan Okuma:** Bu künye çok özel!  \n\nDış kısmını
+        nasıl çizeceğinizi anladınız mı?\\\n(Uzun kenarları 150 piksel ve kısa kenarları
+        75 piksel.)"
+      courseC_artist_prog7_2020: "**Meydan Okuma:** Bu künye çok özel!  \n\nDış kısmını
+        nasıl çizeceğinizi anladınız mı?\\\n(Uzun kenarları 150 piksel ve kısa kenarları
+        75 piksel.)"
+      courseC_artist_prog8: |-
+        Bir künye daha. Bu, Pi için bir üçgen.\
+        (Kenarları 150 piksel)
+      courseC_artist_prog8_2018: |-
+        Bir künye daha. Bu, Pi için bir üçgen.\
+        (Kenarları 150 piksel)
+      courseC_artist_prog8_2019: |-
+        Bir künye daha. Bu, Pi için bir üçgen.\
+        (Kenarları 150 piksel)
+      courseC_artist_prog8_2020: |-
+        Bir künye daha. Bu, Pi için bir üçgen.\
+        (Kenarları 150 piksel)
+      courseC_artist_prog_challenge1: Her bir hayvan için oda çizin. Bu bulmacayı
+        çözmenin birçok farklı yolu var, tadını çıkarın! Her bir karenin kenarları
+        100 piksel uzunluğunda.
+      courseC_artist_prog_challenge1_2018: Her bir hayvan için oda çizin. Bu bulmacayı
+        çözmenin birçok farklı yolu var, tadını çıkarın! Her bir karenin kenarları
+        100 piksel uzunluğunda.
+      courseC_artist_prog_challenge1_2019: Her bir hayvan için oda çizin. Bu bulmacayı
+        çözmenin birçok farklı yolu var, tadını çıkarın! Her bir karenin kenarları
+        100 piksel uzunluğunda.
+      courseC_artist_prog_challenge1_2020: Her bir hayvan için oda çizin. Bu bulmacayı
+        çözmenin birçok farklı yolu var, tadını çıkarın! Her bir karenin kenarları
+        100 piksel uzunluğunda.
+      courseC_artist_prog_challenge2a: |-
+        _"Bu yoldaki sarı çizgileri boyamama yardım et!"_
+
+        Üç çizginin uzunlukları 150, 100 ve 200 piksel!
+      courseC_artist_prog_challenge2a_2018: |-
+        _"Bu yoldaki sarı çizgileri boyamama yardım et!"_
+
+        Üç çizginin uzunlukları 150, 100 ve 200 piksel!
+      courseC_artist_prog_challenge2a_2019: |-
+        _"Bu yoldaki sarı çizgileri boyamama yardım et!"_
+
+        Üç çizginin uzunlukları 150, 100 ve 200 piksel!
+      courseC_artist_prog_challenge2a_2020: |-
+        _"Bu yoldaki sarı çizgileri boyamama yardım et!"_
+
+        Üç çizginin uzunlukları 150, 100 ve 200 piksel!
       courseC_collector_loops_challenge2: |-
         _"Hazine avına çıkalım!"_
 
@@ -7372,6 +7518,22 @@ tr-TR:
         ve tarlalardan sakının!
       courseC_harvester_loops_challenge2_2020: Marulların tamamını toplayın. Ağaçlardan
         ve tarlalardan sakının!
+      courseC_maze_debugging1: "Bu kodda sorun var!  \n\nScrat'in meşe palamuduna
+        ulaşması için kodu düzeltin."
+      courseC_maze_debugging1_2018: "Bu kodda sorun var!  \n\nScrat'in meşe palamuduna
+        ulaşması için kodu düzeltin."
+      courseC_maze_debugging1_2019: "Bu kodda sorun var!  \n\nScrat'in meşe palamuduna
+        ulaşması için kodu düzeltin."
+      courseC_maze_debugging1_2020: "Bu kodda sorun var!  \n\nScrat'in meşe palamuduna
+        ulaşması için kodu düzeltin."
+      courseC_maze_debugging3: "Doğru olmayan bir şeyler var. \n\nScrat'in meşe palamuduna
+        ulaşması için blokları çıkarın!"
+      courseC_maze_debugging3_2018: "Doğru olmayan bir şeyler var. \n\nScrat'in meşe
+        palamuduna ulaşması için blokları çıkarın!"
+      courseC_maze_debugging3_2019: "Doğru olmayan bir şeyler var. \n\nScrat'in meşe
+        palamuduna ulaşması için blokları çıkarın!"
+      courseC_maze_debugging3_2020: "Doğru olmayan bir şeyler var. \n\nScrat'in meşe
+        palamuduna ulaşması için blokları çıkarın!"
       courseC_maze_debugging_challenge2: '-   "Çok sık dönersem, başım dönebilir!
         Sadece dört dönüş komutu ile domuza ulaşmama yardım et." \*'
       courseC_maze_debugging_challenge2_2018: '-   "Çok sık dönersem, başım dönebilir!
@@ -7418,22 +7580,18 @@ tr-TR:
 
         Kuşun çarpmasına neden olacak fazladan bir blok var.\
         Bu bloğu gri bloklardan çıkarıp araç kutusuna geri sürükleyerek atın.
-      courseC_maze_programming4: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
-        edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseC_maze_programming4_2018: Yolu izleyin ve aptal domuza ulaşmamda bana
-        öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseC_maze_programming4_2019: Yolu izleyin ve aptal domuza ulaşmamda bana
-        öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseC_maze_programming4_2020: Yolu izleyin ve aptal domuza ulaşmamda bana
-        öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseC_maze_programming5: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r
-        \\\r TNT den kaçının."
-      courseC_maze_programming5_2018: "-   Domuza ulaşmak için yolu takip edin!\"
-        \\* \\\r \\\r TNT den kaçının."
-      courseC_maze_programming5_2019: "-   Domuza ulaşmak için yolu takip edin!\"
-        \\* \\\r \\\r TNT den kaçının."
-      courseC_maze_programming5_2020: "-   Domuza ulaşmak için yolu takip edin!\"
-        \\* \\\r \\\r TNT den kaçının."
+      courseC_maze_programming4: "_\"Yolu izleyin ve bana aptal domuza giden yolu
+        gösterin.\"_ \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
+      courseC_maze_programming4_2018: "_\"Yolu izleyin ve bana aptal domuza giden
+        yolu gösterin.\"_ \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
+      courseC_maze_programming4_2019: "_\"Yolu izleyin ve bana aptal domuza giden
+        yolu gösterin.\"_ \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
+      courseC_maze_programming4_2020: "_\"Yolu izleyin ve bana aptal domuza giden
+        yolu gösterin.\"_ \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
+      courseC_maze_programming5: _"Beni domuza götürmek için bu yolu izle!"_
+      courseC_maze_programming5_2018: _"Beni domuza götürmek için bu yolu izle!"_
+      courseC_maze_programming5_2019: _"Beni domuza götürmek için bu yolu izle!"_
+      courseC_maze_programming5_2020: _"Beni domuza götürmek için bu yolu izle!"_
       courseC_maze_programming6: |-
         _"Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!"_
 
@@ -8651,14 +8809,14 @@ tr-TR:
       courseD_maze_nestedLoops4_2018: Beni ayçiçeğine götür!
       courseD_maze_nestedLoops4_2019: Beni ayçiçeğine götür!
       courseD_maze_nestedLoops4_2020: Beni ayçiçeğine götür!
-      courseD_maze_ramp1: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek
-        için "Çalıştır" ı tıklatın!
-      courseD_maze_ramp1_2018: Bu bulmaca için tüm blokların birlikte sürükleyin ve
-        izlemek için "Çalıştır" ı tıklatın!
-      courseD_maze_ramp1_2019: Bu bulmaca için tüm blokların birlikte sürükleyin ve
-        izlemek için "Çalıştır" ı tıklatın!
-      courseD_maze_ramp1_2020: Bu bulmaca için tüm blokların birlikte sürükleyin ve
-        izlemek için "Çalıştır" ı tıklatın!
+      courseD_maze_ramp1: Bu bulmaca için tüm blokları birbirine tutturun ve izlemek
+        için "Çalıştır"a tıklayın!
+      courseD_maze_ramp1_2018: Bu bulmaca için tüm blokları birbirine tutturun ve
+        izlemek için "Çalıştır"a tıklayın!
+      courseD_maze_ramp1_2019: Bu bulmaca için tüm blokları birbirine tutturun ve
+        izlemek için "Çalıştır"a tıklayın!
+      courseD_maze_ramp1_2020: Bu bulmaca için tüm blokları birbirine tutturun ve
+        izlemek için "Çalıştır"a tıklayın!
       courseD_maze_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
         zaman ' tüm blokları ekleyebilirsiniz.
       courseD_maze_ramp2_2018: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
@@ -8667,44 +8825,52 @@ tr-TR:
         zaman ' tüm blokları ekleyebilirsiniz.
       courseD_maze_ramp2_2020: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
         zaman ' tüm blokları ekleyebilirsiniz.
-      courseD_maze_ramp3: "-   \"Bu domuz benim tüylerini  diken d\n    iken ediyor.\"
-        \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\\r
-        Onu geri araç kutusuna geri sürükle."
-      courseD_maze_ramp3_2018: "-   \"Bu domuz benim tüylerini  diken d\n    iken
-        ediyor.\" \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.
-        \ \\\r Onu geri araç kutusuna geri sürükle."
+      courseD_maze_ramp3: |-
+        _"Bu domuz benim sinirime dokunuyor."_
+
+        Kuşun taşa çarpmasına neden olacak fazladan bir blok var.\
+        O bloğu diğer bloklardan ayırdıktan sonra araç kutusuna sürükleyip bırakın.
+      courseD_maze_ramp3_2018: |-
+        _"Bu domuz benim sinirime dokunuyor."_
+
+        Kuşun taşa çarpmasına neden olacak fazladan bir blok var.\
+        O bloğu diğer bloklardan ayırdıktan sonra araç kutusuna sürükleyip bırakın.
       courseD_maze_ramp3_2019: "-   \"Bu domuz benim tüylerini  diken d\n    iken
         ediyor.\" \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.
         \ \\\r Onu geri araç kutusuna geri sürükle."
       courseD_maze_ramp3_2020: "-   \"Bu domuz benim tüylerini  diken d\n    iken
         ediyor.\" \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.
         \ \\\r Onu geri araç kutusuna geri sürükle."
-      courseD_maze_ramp4: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin.
-        TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseD_maze_ramp4_2018: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
-        edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
+      courseD_maze_ramp4: "_\"Yolu izleyin ve bana aptal domuza giden yolu gösterin.\"_
+        \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
+      courseD_maze_ramp4_2018: "_\"Yolu izleyin ve bana aptal domuza giden yolu gösterin.\"_
+        \n\nTNT'den uzak durun yoksa tüyler havaya uçar!"
       courseD_maze_ramp4_2019: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
         edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
       courseD_maze_ramp4_2020: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
         edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      courseD_maze_ramp5: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r \\\r
-        TNT den kaçının."
-      courseD_maze_ramp5_2018: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r
-        \\\r TNT den kaçının."
-      courseD_maze_ramp5_2019: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r
-        \\\r TNT den kaçının."
-      courseD_maze_ramp5_2020: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r
-        \\\r TNT den kaçının."
-      courseD_maze_ramp5a: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya
+      courseD_maze_ramp5: _"Beni domuza götürmek için bu yolu izle!"_
+      courseD_maze_ramp5_2018: _"Beni domuza götürmek için bu yolu izle!"_
+      courseD_maze_ramp5_2019: _"Beni domuza götürmek için bu yolu izle!"_
+      courseD_maze_ramp5_2020: _"Beni domuza götürmek için bu yolu izle!"_
+      courseD_maze_ramp5a: Dizilime dikkat edin ve domuza nasıl ulaşacağınızı bulmaya
         çalışın!
-      courseD_maze_ramp5a_2018: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı
+      courseD_maze_ramp5a_2018: Dizilime dikkat edin ve domuza nasıl ulaşacağınızı
         bulmaya çalışın!
       courseD_maze_ramp5a_2019: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı
         bulmaya çalışın!
       courseD_maze_ramp5a_2020: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı
         bulmaya çalışın!
-      courseD_maze_ramp5c: Domuza ulaşması için kuşa yardım et.
-      courseD_maze_ramp5c_2018: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5b: "**Meydan Okuma:** Kuşun domuzu bulmasını sağlamak için
+        labirentte gezinin!"
+      courseD_maze_ramp5b_2018: "**Meydan Okuma:** Kuşun domuzu bulmasını sağlamak
+        için labirentte gezinin!"
+      courseD_maze_ramp5b_2019: "**Meydan Okuma:** Kuşun domuzu bulmasını sağlamak
+        için labirentte gezinin!"
+      courseD_maze_ramp5b_2020: "**Meydan Okuma:** Kuşun domuzu bulmasını sağlamak
+        için labirentte gezinin!"
+      courseD_maze_ramp5c: Kuşun domuza ulaşmasına yardım edin.
+      courseD_maze_ramp5c_2018: Kuşun domuza ulaşmasına yardım edin.
       courseD_maze_ramp5c_2019: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5c_2020: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d: Kuşu domuza götür.
@@ -8792,8 +8958,8 @@ tr-TR:
         istemeyiz!  \n\nAşağıdaki \"eğer\" ifadesine kod ekleyerek eğer korsan (aktör
         1) güvenli bölgedeyse programın bir saniye beklemesini ve ahtapot satırının
         altında kaldığı sürece bir puan eksiltmesini sağlayın."
-      courseD_scrat_ramp1: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek
-        için "Çalıştır" ı tıklatın!
+      courseD_scrat_ramp1: Bu bulmaca için tüm blokları birbirine tutturun ve izlemek
+        için "Çalıştır"a tıklayın!
       courseD_scrat_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
         zaman ' tüm blokları ekleyebilirsiniz.
       courseD_scrat_ramp3: "-   \"Bu domuz benim tüylerini  diken d\n    iken ediyor.\"
@@ -8806,86 +8972,272 @@ tr-TR:
         takdirde sinirleniyorum!\" \\* \\\r \\\r bir satırda birkaç blok varsa 'tekrarla'
         döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!"
       courseD_scrat_ramp7: Scrat'in meşe palamuduna ulaşmasını sağlayın!
-      courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
-        width=\"200px\"/> \\\r \\\r şimdi bir meydan okuma!  \\\r \\\r burada sadece
-        gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan
-        çekinmeyin. \\\r \\\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde
-        kullanılan uzunluk biraz daha küçük. "
-      courseE_artist_concept_challenge1_2018: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
-        width=\"200px\"/> \\\r \\\r şimdi bir meydan okuma!  \\\r \\\r burada sadece
-        gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan
-        çekinmeyin. \\\r \\\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde
-        kullanılan uzunluk biraz daha küçük. "
-      courseE_artist_concept_challenge2: Aşağıdaki kodları kullanarak beş adet rüzgar
-        gülü tasarımı oluştur.
-      courseE_artist_concept_challenge2_2018: Aşağıdaki kodları kullanarak beş adet
-        rüzgar gülü tasarımı oluştur.
-      courseE_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra
-        onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını
-        görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak
-        için değiştirin!
-      courseE_artist_functions_challenge1_2018: Bir kez bir fonksiyonu tanımladıktan
-        sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl
-        çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı
-        yapmak için değiştirin!
-      courseE_artist_functions_challenge1_2019: Bir kez bir fonksiyonu tanımladıktan
-        sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl
-        çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı
-        yapmak için değiştirin!
-      courseE_artist_functions_challenge1_2020: Bir kez bir fonksiyonu tanımladıktan
-        sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl
-        çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı
-        yapmak için değiştirin!
-      courseE_artist_functions_challenge2: "Sadece tuvalin köşeleri gibi daha önceden
-        belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam
-        olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki
-        kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
-      courseE_artist_functions_challenge2_2018: "Sadece tuvalin köşeleri gibi daha
-        önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak
-        tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için
-        aşağıdaki kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
-      courseE_artist_functions_challenge2_2019: "Sadece tuvalin köşeleri gibi daha
-        önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak
-        tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için
-        aşağıdaki kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
-      courseE_artist_functions_challenge2_2020: "Sadece tuvalin köşeleri gibi daha
-        önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak
-        tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için
-        aşağıdaki kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
-        \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>"
-      courseE_artist_ramp8: "Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!
-        \ Bloklar biraz farklıdır, ancak fikir aynıdır. \\\r <hr/> \\\r  200 piksel
-        uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir."
-      courseE_artist_ramp8_2: "Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!
-        \ Bloklar biraz farklıdır, ancak fikir aynıdır. \\\r <hr/> \\\r  200 piksel
-        uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir."
-      courseE_artist_ramp9: "Bu üçgeni. \\\r çizmek için öğrendiklerini kullanın <hr/>
-        \\\r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek gerekir."
-      courseE_artist_ramp9_2: "Bu üçgeni. \\\r çizmek için öğrendiklerini kullanın
-        <hr/> \\\r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek
-        gerekir."
-      courseE_bee_functions2: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.
-        \ \\\r\n\\\r\n'2 nektar al' fonksiyonunu kullanarak tüm çiçeklerden nektarları
-        topla."
-      courseE_bee_functions3: Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.Bir
-        seferde 5 nektar almak için ''5 al''fonksiyonunu kulllan.En ideal döngü bloğunu
-        kullandığından emin ol.
-      courseE_bee_functions_challenge1: Bu meydan okumada tek başınasın. Göründüğünden
+      courseD_scrat_ramp8: "**Meydan Okuma:** Öğrendiklerinizi kullanarak Scrat'i
+        meşe palamuduna ulaştırın!"
+      courseE_artist_concept1: "Bu resmi yeniden oluşturun. \n\n-   Altıgenlerin kenarları
+        50 piksel\n-   Altıgenlerin arasında 100 piksel var\n-   Altıgenlerin kalem
+        genişliği 1 piksel, 4 piksel ve 8 piksel."
+      courseE_artist_concept1_2018: "Bu resmi yeniden oluşturun. \n\n-   Altıgenlerin
+        kenarları 50 piksel\n-   Altıgenlerin arasında 100 piksel var\n-   Altıgenlerin
+        kalem genişliği 1 piksel, 4 piksel ve 8 piksel."
+      courseE_artist_concept4: "Bu çizimi yeniden oluşturun. \n\nKarelerin kenarları
+        **20 piksel** ve **her satırda 15 kare** var."
+      courseE_artist_concept4_2018: "Bu çizimi yeniden oluşturun. \n\nKarelerin kenarları
+        **20 piksel** ve **her satırda 15 kare** var."
+      courseE_artist_concept_challenge1: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/>
+
+        Meydan okuma vakti!
+
+        İşte, yalnızca daha önce gösterilen blokları kullanan bir tasarım. Nasıl yeniden oluşturacağınızı anladınız mı? Deneyip yanılmaktan çekinmeyin. İlk seferde kusursuz çizmek zorunda değilsiniz.
+      courseE_artist_concept_challenge1_2018: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/>
+
+        Meydan okuma vakti!
+
+        İşte, yalnızca daha önce gösterilen blokları kullanan bir tasarım. Nasıl yeniden oluşturacağınızı anladınız mı? Deneyip yanılmaktan çekinmeyin. İlk seferde kusursuz çizmek zorunda değilsiniz.
+      courseE_artist_concept_challenge2: Aşağıdaki kodu kullanarak beş rüzgar gülü
+        tasarımı oluşturun.
+      courseE_artist_concept_challenge2_2018: Aşağıdaki kodu kullanarak beş rüzgar
+        gülü tasarımı oluşturun.
+      courseE_artist_functions1: |-
+        _"Ben zombi Artist. Ben sevmek çizmek!"_
+
+        Zombinin kenarları 100 piksel olan karelerle gözlük çizmesine yardım edin.\
+        İki cam arasındaki uzunluk 75 piksel.
+      courseE_artist_functions10: |-
+        Bu kez, kenarları 25 piksel olan 8 altıgenden oluşan satırlar kullanın.
+
+        -   Her bir altıgen için kenarları 60 derecelik dönüşlerle 6 kez tekrarla.
+        -   Her bir altıgen arasında 25 piksel atla.
+        -   Bir baklava şekli çizmek için 60 derecelik ve 120 derecelik dönüşler kullan.
+      courseE_artist_functions10_2018: |-
+        Bu kez, kenarları 25 piksel olan 8 altıgenden oluşan satırlar kullanın.
+
+        -   Her bir altıgen için kenarları 60 derecelik dönüşlerle 6 kez tekrarla.
+        -   Her bir altıgen arasında 25 piksel atla.
+        -   Bir baklava şekli çizmek için 60 derecelik ve 120 derecelik dönüşler kullan.
+      courseE_artist_functions10_2019: |-
+        Bu kez, kenarları 25 piksel olan 8 altıgenden oluşan satırlar kullanın.
+
+        -   Her bir altıgen için kenarları 60 derecelik dönüşlerle 6 kez tekrarla.
+        -   Her bir altıgen arasında 25 piksel atla.
+        -   Bir baklava şekli çizmek için 60 derecelik ve 120 derecelik dönüşler kullan.
+      courseE_artist_functions10_2020: |-
+        Bu kez, kenarları 25 piksel olan 8 altıgenden oluşan satırlar kullanın.
+
+        -   Her bir altıgen için kenarları 60 derecelik dönüşlerle 6 kez tekrarla.
+        -   Her bir altıgen arasında 25 piksel atla.
+        -   Bir baklava şekli çizmek için 60 derecelik ve 120 derecelik dönüşler kullan.
+      courseE_artist_functions1_copy: |-
+        _"Ben zombi Artist. Ben sevmek çizmek!"_
+
+        Zombinin kenarları 100 piksel olan karelerle gözlük çizmesine yardım edin.\
+        İki cam arasındaki uzunluk 75 piksel.
+      courseE_artist_functions2: "Fonksiyonlar yeni blokları tanımlamanızı sağlar!
+        \n\nBir kare çizmek için gereken blokları \"bir kare çiz\" adlı fonksiyona
+        taşıdık.\nGözlükleri oluşturmak için bu kez \"bir kare çiz\" fonksiyonunu
+        kullanın. \n\n* * *\n\nKareler arasındaki mesafe 75 piksel."
+      courseE_artist_functions2_copy: "Fonksiyonlar yeni blokları tanımlamanızı sağlar!
+        \n\nBir kare çizmek için gereken blokları \"bir kare çiz\" adlı fonksiyona
+        taşıdık.\nGözlükleri oluşturmak için bu kez \"bir kare çiz\" fonksiyonunu
+        kullanın. \n\n* * *\n\nKareler arasındaki mesafe 75 piksel."
+      courseE_artist_functions3: "Fonksiyonlara kısaca geri döneceğiz. Bir ara verip
+        yıldız çizme pratiği yapalım. \n\nBu çizimi, bir tekrar bloğu ekleyerek yapabilirsiniz."
+      courseE_artist_functions3_copy: "Fonksiyonlara kısaca geri döneceğiz. Bir ara
+        verip yıldız çizme pratiği yapalım. \n\nBu çizimi, bir tekrar bloğu ekleyerek
+        yapabilirsiniz."
+      courseE_artist_functions4: |-
+        Artık, yıldız çizebildiğinize göre dört yıldız çizmeyi deneyin!
+
+        -   Yıldızın her bir kolu 25 piksel uzunluğunda
+        -   Kollar arasında 45 derece dön
+        -   Her yıldız arasında 100 piksel atla
+      courseE_artist_functions4_copy: |-
+        Artık, yıldız çizebildiğinize göre dört yıldız çizmeyi deneyin!
+
+        -   Yıldızın her bir kolu 25 piksel uzunluğunda
+        -   Kollar arasında 45 derece dön
+        -   Her yıldız arasında 100 piksel atla
+      courseE_artist_functions5: |-
+        Ne zamandan beri üç yıldız çizmek dört yıldız çizmekten daha zor? Bir de ayın üzerinden atlamak gerekiyor!
+
+        Bu bulmacayı tamamlamak için üç yıldız çizin.
+      courseE_artist_functions5_copy: |-
+        Ne zamandan beri üç yıldız çizmek dört yıldız çizmekten daha zor? Bir de ayın üzerinden atlamak gerekiyor!
+
+        Bu bulmacayı tamamlamak için üç yıldız çizin.
+      courseE_artist_functions6: "Harika gidiyorsunuz! \n\nBu pencereyi bir kare çizip,
+        diğerine geçmeden 90 derece dönüp, bunu tekrar ederek çizin."
+      courseE_artist_functions7: "Pencere kodunu alıp \"bir pencere çiz\" fonksiyonuna
+        ekleyin. Artık, fonksiyonu her pencere çizmemiz gerektiğinde kodu tekrar yazmak
+        zorunda kalmadan çağırabiliriz. \n\n![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)\n\nBu
+        bulmacayı, \"bir pencere çiz\" fonksiyonu oluşturup beş kez çağırarak çözmeyi
+        deneyin. Kapıya dikkat edin!\n\n-   Üstteki pencereler birbirlerinden 50 piksel
+        uzaklıkta.  \n-   Alttaki pencereler üsttekilerin 100 piksel aşağısında."
+      courseE_artist_functions8: |-
+        **Meydan Okuma:** Diğer fonksiyonların _içindeki_ fonksiyonları çağırabileceğinizi biliyor muydunuz?
+
+        50 piksellik karelerden oluşan bu çizimi yapmak için ihtiyacınız olduğunu düşündüğünüz kadar fonksiyon oluşturun.
+      courseE_artist_functions9: "Bu resmi, yalnızca verilen blokları kullanarak yapın.
+        \n\n-   Üçgenlerin her bir kenarı **50 piksel**  \n-   Bir baklava şekli çizmek
+        için **60 derecelik ve 120 derecelik** dönüşler kullan."
+      courseE_artist_functions_challenge1: Bir fonksiyonu bir kez tanımladığınızda
+        tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz! Nasıl çalıştığını
+        görmek için bu kodu deneyin, sonra kendi etkileyici tasarımınızı yapmak için
+        değiştirin!
+      courseE_artist_functions_challenge1_2018: Bir fonksiyonu bir kez tanımladığınızda
+        tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz! Nasıl çalıştığını
+        görmek için bu kodu deneyin, sonra kendi etkileyici tasarımınızı yapmak için
+        değiştirin!
+      courseE_artist_functions_challenge1_2019: Bir fonksiyonu bir kez tanımladığınızda
+        tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz! Nasıl çalıştığını
+        görmek için bu kodu deneyin, sonra kendi etkileyici tasarımınızı yapmak için
+        değiştirin!
+      courseE_artist_functions_challenge1_2020: Bir fonksiyonu bir kez tanımladığınızda
+        tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz! Nasıl çalıştığını
+        görmek için bu kodu deneyin, sonra kendi etkileyici tasarımınızı yapmak için
+        değiştirin!
+      courseE_artist_functions_challenge2: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_challenge2_2018: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_challenge2_2019: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_challenge2_2020: |-
+        Sadece tuvalin köşeleri gibi daha önceden belirlenen yerlere zıplamakla kalmayıp "zıpla" komutunu kullanarak istediğiniz her noktaya ulaşabilirsiniz! Nasıl çalıştığını görmek için bu kodu deneyin, sonra kendi programınızı yapın!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_predict1: Bu, daha önce tanımladığımız bir fonksiyonu
+        kullanan bir bulmaca.
+      courseE_artist_functions_predict1_2018: Bu, daha önce tanımladığımız bir fonksiyonu
+        kullanan bir bulmaca.
+      courseE_artist_functions_predict1_2019: Bu, daha önce tanımladığımız bir fonksiyonu
+        kullanan bir bulmaca.
+      courseE_artist_functions_predict1_2020: Bu, daha önce tanımladığımız bir fonksiyonu
+        kullanan bir bulmaca.
+      courseE_artist_functions_predict1_copy: Bu, daha önce tanımladığımız bir fonksiyonu
+        kullanan bir bulmaca.
+      courseE_artist_ramp8: |-
+        Harika! Şimdi Artist ile bir kare yapmak için "tekrar" döngüsünü kullanalım! Artist için kullanılan bloklar diğer bulmacalardan biraz farklı fakat mantık aynı.
+
+        ##### Karenin her bir kenarı 200 piksel uzunlukta ve her açıyı yapmak için 90 derece dönmelisiniz.
+      courseE_artist_ramp8_2: |-
+        Harika! Şimdi Artist ile bir kare yapmak için "tekrar" döngüsünü kullanalım! Artist için kullanılan bloklar diğer bulmacalardan biraz farklı fakat mantık aynı.
+
+        ##### Karenin her bir kenarı 200 piksel uzunlukta ve her açıyı yapmak için 90 derece dönmelisiniz.
+      courseE_artist_ramp9: |-
+        Bu üçgeni çizmek için öğrendiklerinizi kullanın.
+
+        * * *
+
+        ##### Kenarlar 100 piksel uzunluğunda. Her köşede 120 derece dönmelisiniz.
+      courseE_artist_ramp9_2: |-
+        Bu üçgeni çizmek için öğrendiklerinizi kullanın.
+
+        * * *
+
+        ##### Kenarlar 100 piksel uzunluğunda. Her köşede 120 derece dönmelisiniz.
+      courseE_bee_concept1: "_\"Ne kadar çok çiçek var!\"_\n\nHer çiçekteki nektarın
+        tamamını toplayın. "
+      courseE_bee_concept1_2018: "_\"Ne kadar çok çiçek var!\"_\n\nHer çiçekteki nektarın
+        tamamını toplayın. "
+      courseE_bee_concept2: "Arının balların tamamını yapmasını sağlayın.  \n\nBalı
+        yalnızca petekte yapabilirsiniz fakat petek var mı diye bakmak için herhangi
+        bir alanı kontrol edebilirsiniz."
+      courseE_bee_concept2_2018: "Arının balların tamamını yapmasını sağlayın.  \n\nBalı
+        yalnızca petekte yapabilirsiniz fakat petek var mı diye bakmak için herhangi
+        bir alanı kontrol edebilirsiniz."
+      courseE_bee_concept5: "Arının çiçeklerden nektar toplamasına yardım eder misiniz?
+        \n\nYalnızca çiçeklerden nektar toplayabilirsiniz fakat çiçek var mı diye
+        herhangi bir yeri kontrol edebilirsiniz."
+      courseE_bee_concept5_2018: "Arının çiçeklerden nektar toplamasına yardım eder
+        misiniz? \n\nYalnızca çiçeklerden nektar toplayabilirsiniz fakat çiçek var
+        mı diye herhangi bir yeri kontrol edebilirsiniz."
+      courseE_bee_functions10: "_\"Bana BALI göster!\"_\n\nArının şunları yapmasını
+        sağlayan bir fonksiyon oluşturarak bu bulmacayı çözün: \n\n-   yol ayrımına
+        git\n-   ilerle\n-   balın tamamını yap\n-   ana yola dön \n-   ilk yöne geri
+        dön"
+      courseE_bee_functions2: "Fonksiyonlar, bir görev gerçekleştiren kod bloklarıdır.
+        \ \n\n\"2 nektar al\" fonksiyonunu kullanarak her çiçekten nektar toplayın."
+      courseE_bee_functions3: Bu bulmacada kullanacağınız "5 al" fonksiyonunu oluşturun.
+      courseE_bee_functions4: "''İlerle ve nektarı al'' ffonksiyonu arıyı döndürür
+        ve nektarı toplar, sonra arıyı başladığı noktaya döndürür.  \n\nTüm nektarları
+        toplamak için ''ilerle ve nektarı al'' fonksiyonunu kullanın."
+      courseE_bee_functions8: "**Meydan Okuma:** Bulmacayı her çalıştırdığınızda çiçeklerde
+        farklı miktarda nektar olabilir.   \n\nHer çiçekten nektarın tamamını toplayan
+        bir fonksiyon oluşturun."
+      courseE_bee_functions_challenge1: Bu meydan okumada tek başınasınız. Bu göründüğünden
         daha zor olabilir!
-      courseE_farmer_functions2ba: "_\"Çok fonksiyonel hissediyorum!\"_\\\r\n\\\r\nBu
+      courseE_farmer_functions1: |-
+        _"Sizinle tanışmış mıydık? Ben çiftçi!"_
+
+        Çiftçinin balkabağına ulaşmasını ve toplamasını sağlayın.
+      courseE_farmer_functions10b: Bu bulmacayı çözmek için yeni fonksiyonu iki kez
+        kullanın.
+      courseE_farmer_functions11_predict: Hangi fonksiyonu kullanıp hangisini sileceğinizi
+        bulun ve bu bulmacayı çözün!
+      courseE_farmer_functions11_predict_2018: Hangi fonksiyonu kullanıp hangisini
+        sileceğinizi bulun ve bu bulmacayı çözün!
+      courseE_farmer_functions11_predict_2019: Hangi fonksiyonu kullanıp hangisini
+        sileceğinizi bulun ve bu bulmacayı çözün!
+      courseE_farmer_functions11_predict_2020: Hangi fonksiyonu kullanıp hangisini
+        sileceğinizi bulun ve bu bulmacayı çözün!
+      courseE_farmer_functions1_2018: |-
+        _"Sizinle tanışmış mıydık? Ben çiftçi!"_
+
+        Çiftçinin balkabağına ulaşmasını ve toplamasını sağlayın.
+      courseE_farmer_functions1_2019: |-
+        _"Sizinle tanışmış mıydık? Ben çiftçi!"_
+
+        Çiftçinin balkabağına ulaşmasını ve toplamasını sağlayın.
+      courseE_farmer_functions1_2020: |-
+        _"Sizinle tanışmış mıydık? Ben çiftçi!"_
+
+        Çiftçinin balkabağına ulaşmasını ve toplamasını sağlayın.
+      courseE_farmer_functions1a: |-
+        _"Amanın, bitkiler her yeri sarıyor!"_
+
+        Şimdi, çiftçinin sondaki balkabağına varana dek yoldaki tüm mısırı toplamasını sağlayın.
+
+        * * *
+
+        ##### Not: Balkabağına giden yolda her karede mısır ya _bir_ mısır vardır ya da yoktur. Toplamaya çalışmadan önce mısır olup olmadığını kontrol etmek için "eğer" ifadesi kullanmalısınız!
+      courseE_farmer_functions2b: |-
+        Çiftçinin mısır ve balkabaklarını hasat etmesini sağlayın.
+
+        * * *
+
+        ##### Bir filizde ya _bir_ mısır vardır ya da yoktur.
+      courseE_farmer_functions2ba: "_\"Çok fonksiyonel hissediyorum!\"_\n\nBir önceki
         bulmacadaki tekrarlayan kodları fark ettin mi? Hepsini döngünün içine yerleştiremeyiz
-        ama fonksiyonları **kullanabiliriz.**\n  \\\r\n\\\r\nBu bulmaca için tekrarlayan
-        \ kodları 'mısır ve kabak' (corn and pumpkin) isimli fonksiyona taşıdık. Şimdi
-        bütün ihtiyacın olan küçük 'mısır ve kabak' (corn and pumpkin) **fonksiyon
-        çağırma blokunu** ihtiyacın olan yere yerleştirmek. \\\r\n\\\r\n\\_\\_\\_\\\r\n\n#####
-        Her filiz _bir_ mısır olarak büyüyecek yada hiçbir şey olmayacak."
+        ama fonksiyonları **kullanabiliriz.**  \n\nBu bulmaca için, tekrarlayan kodu
+        \"mısır ve balkabağı\" fonksiyonuna taşıdık. Şimdi, tek yapmanız gereken minik
+        \"mısır ve balkabağı\" **fonksiyon çağırma bloğunu** ihtiyacınız olan yere
+        yerleştirmek.\n\n* * *\n\n##### Her filiz _bir_ mısır olarak büyüyecek yada
+        hiçbir şey olmayacak."
       courseE_farmer_functions2ba_2018: "_\"Çok fonksiyonel hissediyorum!\"_\\\r\n\\\r\nBu
         bulmacadaki tekrarlayan kodları fark ettin mi? Hepsini döngünün içine yerleştiremeyiz
         ama fonksiyonları **kullanabiliriz.**\n  \\\r\n\\\r\nBu bulmaca için tekrarlayan
@@ -8907,21 +9259,44 @@ tr-TR:
         bütün ihtiyacın olan küçük 'mısır ve kabak' (corn and pumpkin) **fonksiyon
         çağırma blokunu** ihtiyacın olan yere yerleştirmek. \\\r\n\\\r\n\\_\\_\\_\\\r\n\n#####
         Her filiz _bir_ mısır olarak büyüyecek yada hiçbir şey olmayacak."
+      courseE_farmer_functions3c: "Şimdi, koddan blok çekip **fonksiyon tanımı** içerisine
+        bırakarak fonksiyonu kendiniz doldurun.  \n\nİşiniz bittiğinde fonksiyonu
+        programınızda kullanmak için minik **fonksiyon çağır** bloklarını eklemeyi
+        unutmayın."
       courseE_farmer_functions4b: Bu bulmacayı çözmek için yeni fonksiyonu kullanın.
+      courseE_farmer_functions5c: Fonksiyonunuz burada işe yarayacak.
+      courseE_farmer_functions6c: |-
+        _"Tüm marul mahsulünü topla!"_
+
+        Artık, filizler mısır **veya** marul olabilir. Toplamadan önce her filizi kontrol etmek için bu programa ne eklemelisiniz?
+
+        * * *
+
+        ##### Not: Filizler ya **bir** mısır ya da **bir** marul olacak.
+      courseE_farmer_functions7b: "_\"Bu hasat MUHTEŞEM!\"_\n\nÇiftçinin mısırda **sola**
+        ve marulda **sağa** dönerek balkabağına giden bu kafa karıştırıcı yolda yönünü
+        bulmasına yardım edin.  \n\n_(Yolda mahsulün tamamını toplamayı unutmayın!)_"
+      courseE_farmer_functions8b: "**Meydan Okuma:** Bu labirentteki tüm köşeler işaretli
+        değil, gitmeniz gereken yere varmak için navigasyon kodunuzu birden çok kez
+        kullanmanız gerekecek.  \n\nNe yapmanız gerektiğini buldunuz mu?"
       courseE_farmer_functions9b: Bu bulmacaya iyice göz atın. Bu deseni çözebilir
         misiniz?
-      courseE_farmer_ramp11a: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç tane
-        olduklarını bilmiyor! \\\r \\\r <hr/> \\\r \\\rYeni bir blok ekledik 'marul
-        (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın"
-      courseE_farmer_ramp11a_2018: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç
-        tane olduklarını bilmiyor! \\\r \\\r <hr/> \\\r \\\rYeni bir blok ekledik
-        'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın"
-      courseE_farmer_ramp11a_2019: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç
-        tane olduklarını bilmiyor! \\\r \\\r <hr/> \\\r \\\rYeni bir blok ekledik
-        'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın"
-      courseE_farmer_ramp11a_2020: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç
-        tane olduklarını bilmiyor! \\\r \\\r <hr/> \\\r \\\rYeni bir blok ekledik
-        'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın"
+      courseE_farmer_ramp11a: "Amanın! Bu yığın o kadar büyük ki ne kadar toprak çıkacağını
+        kestirmek güç.  \n\n* * *\n\nAraç kutusuna \"yığın olduğu sürece\" adlı yeni
+        bir blok ekledik. Bu bloğu, yalnızca çıkarılacak toprak olduğu sürece toprak
+        atmak için kullanın! "
+      courseE_farmer_ramp11a_2018: "Amanın! Bu yığın o kadar büyük ki ne kadar toprak
+        çıkacağını kestirmek güç.  \n\n* * *\n\nAraç kutusuna \"yığın olduğu sürece\"
+        adlı yeni bir blok ekledik. Bu bloğu, yalnızca çıkarılacak toprak olduğu sürece
+        toprak atmak için kullanın! "
+      courseE_farmer_ramp11a_2019: "Amanın! Bu yığın o kadar büyük ki ne kadar toprak
+        çıkacağını kestirmek güç.  \n\n* * *\n\nAraç kutusuna \"yığın olduğu sürece\"
+        adlı yeni bir blok ekledik. Bu bloğu, yalnızca çıkarılacak toprak olduğu sürece
+        toprak atmak için kullanın! "
+      courseE_farmer_ramp11a_2020: "Amanın! Bu yığın o kadar büyük ki ne kadar toprak
+        çıkacağını kestirmek güç.  \n\n* * *\n\nAraç kutusuna \"yığın olduğu sürece\"
+        adlı yeni bir blok ekledik. Bu bloğu, yalnızca çıkarılacak toprak olduğu sürece
+        toprak atmak için kullanın! "
       courseE_farmer_ramp12_forswap: "Şimdi iç içe döngüleri kullanın ('tekrarla'
         ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12_forswap_2018: "Şimdi iç içe döngüleri kullanın ('tekrarla'
@@ -8930,42 +9305,42 @@ tr-TR:
         ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12_forswap_2020: "Şimdi iç içe döngüleri kullanın ('tekrarla'
         ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12c: "Vay be!  Bu fidelere bak. Bazıları marul mazıları Mısıra
-        dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al \\*\\* değilse
-        \\*\\*maruldur ve marul al. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12c: "Marul artık yalnızca yolun sonunda.\\\nMarula ulaşana
+        **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya devam
+        edin.  "
       courseE_farmer_ramp12c_2018: "Marul şimdi sadece yolun sonundadır.\\\r\nBir
         marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar
         **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12c_2019: "Vay be!  Bu fidelere bak. Bazıları marul mazıları
-        Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al \\*\\*
-        değilse \\*\\*maruldur ve marul al. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12c_2020: "Vay be!  Bu fidelere bak. Bazıları marul mazıları
-        Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al \\*\\*
-        değilse \\*\\*maruldur ve marul al. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12d: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r \\\r
-        Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12c_2019: "Marul artık yalnızca yolun sonunda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12c_2020: "Marul artık yalnızca yolun sonunda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12d: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
       courseE_farmer_ramp12d_2018: "Marul bahçenin her tarafına dağılmış durumda.\\\r\nBir
         marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından
         hala kalanlar **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12d_2019: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
-        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12d_2020: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
-        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12e: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r \\\r
-        Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12e_2018: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
-        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12e_2019: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
-        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12e_2020: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
-        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
-        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12d_2019: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12d_2020: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12e: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12e_2018: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12e_2019: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
+      courseE_farmer_ramp12e_2020: "Marul bahçenin her tarafına dağılmış durumda.\\\nMarula
+        ulaşana **kadar** yolda ilerleyin ve marul olduğu **sürece (while)** toplamaya
+        devam edin.  "
       courseE_farmer_ramp12f: "\\*\\* Meydan Okuma **: Bütün bitkileri elde etmenin
         tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  \\*\\*eğer** sola giden
         bir yol varsa sola dönün. Aksi takdirde sağa dönün."
@@ -8978,40 +9353,42 @@ tr-TR:
       courseE_farmer_ramp12f_2020: "\\*\\* Meydan Okuma **: Bütün bitkileri elde etmenin
         tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  \\*\\*eğer** sola giden
         bir yol varsa sola dönün. Aksi takdirde sağa dönün."
-      courseE_farmer_ramp12g: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
-        sola doğru yol varsa. Aksi taktirde, sağa dön.
-      courseE_farmer_ramp12g_2018: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
-        sola doğru yol varsa. Aksi taktirde, sağa dön.
-      courseE_farmer_ramp12g_2019: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
-        sola doğru yol varsa. Aksi taktirde, sağa dön.
-      courseE_farmer_ramp12g_2020: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
-        sola doğru yol varsa. Aksi taktirde, sağa dön.
-      courseE_playLab_challenge1: "-   **Sincaplar** **dinozorların** şehre indiğini
-        görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir
-        mi?\\*\\\r\n    \\\r\n    Burada sizin için önceden başlatılmış çeşitli oyunlar
-        var! Nasıl çalıştığını görmek için oyna. \\\r\n    \\\r\n    \\\r\n    Yeterince
-        puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği
-        gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına
-        birkaç kod ekleyin. \\\r\n    Fikirler için ipucuna tıklayın!"
-      courseE_playLab_scaffold1: "Ne kadar öğrendiğin hayret verici! Adım adım bir
-        oyun hazırlayalım.\\\r\n\\\r\nAraç kutusunda yeni bloklar kullanarak, yeni
-        bir arka plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin."
-      courseE_playLab_scaffold2: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek
-        için olay işleyicileri ve işlemler gibi blokları kullan.\\\r\n\\\r\nBu bulmacayı
-        tamamlamak için oyuncuyu hedeflere götürün."
-      courseE_playLab_scaffold3: "Oyununa biraz daha karakter katalım!\\\r\n\\\r\nDaha
-        fazla karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
-        tamamlamak için hedefe ilerleyin."
-      courseE_playLab_scaffold4: "Birden fazla karakter ve aktörlerin hareket ettirilmesi
-        oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek
-        için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\\\r\n\\\r\nSkoru
-        değiştirmek için 'aktör dokunursa' gibi etkinlik bloklarını kullanın. Bu bulmacayı
-        tamamlamak için 10 puan topla."
-      courseE_playLab_scaffold5: İyi iş! Çalışan bir oyunun bütün temel bileşenlerine
-        sahipsin. Şimdi oyunu oynamak istediğine emin olmak için biraz vakit geçir.
-        Oyunu kazanmak ya da kaybetmek için bir yol ekle, sonra bu koşullardan birini
-        yerine getirene kadar oyna.
-      courseE_playLab_scaffold6: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+      courseE_farmer_ramp12g: Marula ulaşana kadar ilerleyin, sonra **eğer** solda
+        yol varsa sola dönün. Yoksa, sağa dönün.
+      courseE_farmer_ramp12g_2018: Marula ulaşana kadar ilerleyin, sonra **eğer**
+        solda yol varsa sola dönün. Yoksa, sağa dönün.
+      courseE_farmer_ramp12g_2019: Marula ulaşana kadar ilerleyin, sonra **eğer**
+        solda yol varsa sola dönün. Yoksa, sağa dönün.
+      courseE_farmer_ramp12g_2020: Marula ulaşana kadar ilerleyin, sonra **eğer**
+        solda yol varsa sola dönün. Yoksa, sağa dönün.
+      courseE_playLab_challenge1: "_**Sincaplar** bir **dinozorun** şehre indiğini
+        görünce dehşete kapıldılar! Cesur **şövalye** korkmalarına engel olabilir
+        mi?_\n\nKurallar:\n\n1.  _Sincaplara dokunduğunuzda puan alırsınız._\n2.  _Dinozora
+        dokunduğunuzda puan kaybedersiniz._\n\nBurada sizin için başlatılmış farklı
+        bir türde oyun var! Nasıl çalıştığını görmek için oynayın. \n\nYeterince puan
+        aldığınızda yada puanlarınız bittiğinde bir şey olmalı. Oyunun gerektiği gibi
+        çalışması için \"oyunu kazan\" ve \"oyunu kaybet\" fonksiyonlarına birkaç
+        kod ekleyin. \nFikir için ipuçlarına tıklayın!"
+      courseE_playLab_scaffold1: |-
+        Bu aşamaya kadar gelmeniz inanılmaz! Adım adım bir oyun hazırlayalım.
+
+        Araç kutunuzdaki yeni blokları kullanarak yeni bir arka plan seçin, ardından oyununuz için bir aktör seçin.
+      courseE_playLab_scaffold2: "Oyuncunuzu klavyenizdeki ok tuşlarına göre hareket
+        ettirmek için olay yöneticileri ve eylemler gibi bloklar kullanın.  \n\nBu
+        bulmacayı tamamlamak için oyuncuyu hedeflere götürün."
+      courseE_playLab_scaffold3: |-
+        Oyununa birkaç karakter daha ekleyelim!
+
+        Daha fazla karakter eklemek için "aktörü ayarla" bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
+      courseE_playLab_scaffold4: |-
+        Birden fazla karakter ve aktörlerin hareket ettirilmesi oyun için büyük bir başlangıç fakat bunun gerçek bir oyuna benzemesi için daha fazlasını yapmalıyız. Haydi, puan ekleyelim!
+
+        Skoru değiştirmek için "aktör dokunduğunda" gibi olay blokları kullanın. Bu bulmacayı tamamlamak için 10 puan kazanın.
+      courseE_playLab_scaffold5: İyi iş! Çalışan bir oyunun tüm temel ögelerine sahipsiniz.
+        Şimdi, oyunun istediğiniz gibi çalıştığına emin olmak için zaman harcayın.
+        Oyun kazanma ve kaybetme durumlarını belirleyin ve bu durumlardan biri oluşana
+        dek oynayın.
+      courseE_playLab_scaffold6: Tamamladınız! Artık oyununuzu oynayabilir veya dostlarınızla
         ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       courseF_artist_for2: 50 pikselden 100 piksel kenarına çıkan bu üçgen yığını
         oluşturmak için bir \`for 'döngüsü içinde bir' tekrarlama 'döngüsü kullanın.
@@ -9313,38 +9690,43 @@ tr-TR:
       grade2_collector_A_2018: Laurel'ın hazinenin tamamını toplamasına yardım edin.
       grade2_collector_A_2019: Laurel'ın hazinenin tamamını toplamasına yardım edin.
       grade2_collector_A_2020: Laurel'ın hazinenin tamamını toplamasına yardım edin.
-      iceage_click_hello: "Sid' e tıkladığında, arkadaşlarına seslenmesine yardımcı
-        olur musun?  \\\r\n\\\r\nTamamladığında, oynamak için \"Çalıştır\" a bas.
-        \ Kodun çalıştığını görmek için Sid' e tıkla!"
-      iceage_free_play: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\\r\n\\\r\nTamamladığın
-        zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu
-        denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\\r\nNe yapacağını
-        bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
-      iceage_hello1: "Sid (1. aktör) herkesi yeni bir macera için bir araya getirmek
-        istiyor. 'söyle' bloğunu sürükleyip 'çalıştığında' olayının altına bağlayarak
-        Sid'in \"Merhaba!\" demesine yardımcı olabilir misiniz? \\\r\n\\\r\nİçine
-        \n\"Merhaba!\" yazmayı unutmayın!"
-      iceage_hello2: Manny (aktör 1), Sid (aktör 2) ' i buldu ve onu bir maceraya
-        davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez kullanarak onların
-        birbirleriyle selamlaşmalarına yardımcı ol.
-      iceage_move_events: "Scrat hâlâ meşe palamutlarını arıyor!\n\\\r\nHerbir olaya
-        bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön
-        değiştirerek onun dönüp dolaşmasına yardımcı olun.\\\r\nİşiniz bittiğinde,
-        \"Çalıştır\" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin."
-      iceage_move_to_flag: Scrat meşe palamudunu arıyor! Son 200 pikseli hareket ettirerek
-        ona yardımcı olur musun?
-      iceage_repeat: "'Sürekli tekrarla' bloğu kodun devamlı çalışmasını sağlar. Granny'
-        nin sağa ve sola tekrar tekrar hareket ederek bazı alıştırmalar yapmasına
-        yardımcı olmak için kodlarınızı 'sürekli tekrarla' bloğunun içine koyabilir
-        misin?"
-      iceage_throw_hearts: "Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.
-        \  \\\r\n\\\r\nSid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması
-        için `aktör __ fırlat` komutunu kullanın! \\\r\nKalpler Granny' ye çarptığında,
-        Granny' nin modunu mutlu olarak ayarlayın."
-      iceage_warn_ice_age: "Herkesin daha hızlı olması gerekiyor çünkü kar fırtınası
-        geliyor! \\\r\nSahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in
-        hızını arttır.\\\r\n\"Çalıştır\" a bas ve Sid' i, Diego' yu uyarması için
-        ona doğru hareket ettir."
+      iceage_click_hello: "Üstüne tıkladığınızda Sid'in arkadaşlarını çağırmasını
+        sağlayabilir misiniz? \nTamamladığınızda, oynatmak için \"Çalıştır\" a basın.
+        Kodun çalıştığını görmek için Sid'e tıklayın!"
+      iceage_free_play: "Kendi oyununuzu veya hikayenizi oluşturma zamanı!  \n\nTamamladığınızda,
+        arkadaşlarınızın oyunu kendi telefon, tablet ya da bilgisayarlarında denemelerine
+        izin vermek için \"Bitir\" düğmesine tıklayın!\nNe yapacağınızı bilmiyor musunuz?
+        Detaylar için ipuçlarına tıklayın."
+      iceage_hello1: "Sid (aktör 1) herkesi yeni bir macera için biraraya getirmek
+        istiyor. \"Merhaba!\" demesi için \"söyle\" bloğunu sürükleyip \"çalıştığı
+        zaman\" olayının altına bağlayabilir misiniz?   \n\nİçine \"Merhaba!\" yazmayı
+        unutmayın!"
+      iceage_hello2: Manny (aktör 2), Sid (aktör 1)' i buldu ve onu bir maceraya davet
+        etmek istiyor. Birbirlerini selamlamaları için "aktör \_\_\_ diyor" bloğunu
+        iki kez kullanın.
+      iceage_move_events: "Scrat hâlâ meşe palamutlarını arıyor! \nHer bir olaya bir
+        \"taşı aktör 1\" bloğu ekleyerek ve her ok tuşu için hareket yönünü değiştirerek
+        Scrat'in gezinmesini sağlayın. \nİşiniz bittiğinde, \"Çalıştır\"a tıklayın
+        ve tüm meşe palamutlarını toplayın."
+      iceage_move_to_actor: Diego (aktör1), Manny (aktör 2)'yi arıyor. İkisini bir
+        araya getirmeye yardım edebilir misiniz? Buluştuklarında bir ses çalmak için
+        "aktör dokunduğunda" olayına bir blok bağlayın.
+      iceage_move_to_flag: Scrat, meşe palamudunu arıyor! Son 200 pikseli gitmesine
+        yardım eder misiniz?
+      iceage_repeat: '"Sürekli tekrarla" bloğu, kodu sürekli çalıştırmanızı sağlar.
+        Granny''nin sürekli sağa ve sola giderek egzersiz yapmasını sağlamak için
+        birkaç blok yerleştirebilir misiniz?'
+      iceage_sound_and_points: "Son bulmacadaki kod ile Granny'yi sola ve sağa taşıyacak
+        kod aşağıda. \nProgramı, Sid ve Granny çarpıştıklarında \\*bir ses çal\\*\\*
+        ve **bir puan kazan** kodlarını çalıştıracak şekilde bitirebilir misiniz?
+        \nOyunu oynamak için \"Çalıştır\"a bas."
+      iceage_throw_hearts: "Sid, büyükannesinin yani Granny'nin onu sevdiğini bilmesini
+        istiyor.   \n\nSid (aktör 1)'in Granny (aktör 2)'ye kalp atması için \"aktör\\_\\_fırlat\"
+        komutunu kullanın!\nGranny'nin ruh halini kalpleri yakaladıkça mutlu olarak
+        ayarlayın ."
+      iceage_warn_ice_age: "Herkesin hızlanmalı çünkü bir kar fırtınası geliyor! \nSahneyi
+        buzlu arka planla değiştirin ve Sid (aktör 1)'in hızını hızlıya ayarlayın.\n\"Çalıştır\"a
+        basın ve Diego'yu uyarması için Sid'i ona götürün."
       ramp_artist_loops2: Her hareket arasında rasgele bir renk değiştirip, bu adımı
         beş kez tekrarlayarak biraz güzellik katın.
       ramp_artist_loops2_2018: Her hareket arasında rasgele bir renk değiştirip, bu

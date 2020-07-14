@@ -29,7 +29,6 @@ require_relative 'sync-in'
 require_relative 'sync-up'
 require_relative 'sync-down'
 require_relative 'sync-out'
-require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
 
@@ -48,9 +47,8 @@ class I18nSync
       sync_up if should_i "sync up"
       create_in_up_pr if @options[:with_pull_request]
       sync_down if should_i "sync down"
-      sync_out if should_i "sync out"
+      sync_out(true) if should_i "sync out"
       create_down_out_pr if @options[:with_pull_request]
-      upload_i18n_stats if should_i "upload translation stats"
       checkout_staging
     elsif @options[:command]
       case @options[:command]
@@ -68,7 +66,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out
+        sync_out(true)
         if @options[:with_pull_request]
           create_down_out_pr
         end

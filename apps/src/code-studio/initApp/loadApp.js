@@ -7,6 +7,10 @@ import {getStore} from '../redux';
 import {mergeProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {
+  setAppLoadStarted,
+  setAppLoaded
+} from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -584,8 +588,10 @@ export default function loadAppOptions() {
       // immediately
       resolve(appOptions);
     } else {
+      getStore().dispatch(setAppLoadStarted());
       loadAppAsync(appOptions).then(appOptions => {
         project.init(sourceHandler);
+        getStore().dispatch(setAppLoaded());
         resolve(appOptions);
       });
     }

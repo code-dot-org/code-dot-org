@@ -152,23 +152,30 @@ end
 
 def campaign_date(format)
   @country ||= hoc_detect_country
+  type = HOC_COUNTRIES[@country]['type'] || 'default'
+  language = HOC_COUNTRIES[@country]['default_language']
+  id = 'campaign_date_full'
 
   case format
   when "start-short"
-    return HOC_COUNTRIES[@country]['campaign_date_start_short']
+    id = 'campaign_date_start_short'
   when "start-long"
-    return HOC_COUNTRIES[@country]['campaign_date_start_long']
+    id = 'campaign_date_start_long'
   when "short"
-    return HOC_COUNTRIES[@country]['campaign_date_short']
+    id = 'campaign_date_short'
   when "full"
-    return HOC_COUNTRIES[@country]['campaign_date_full']
+    id = 'campaign_date_full'
   when "year"
-    return HOC_COUNTRIES[@country]['campaign_date_year']
+    id = 'campaign_date_year'
   when "full-year"
-    return HOC_COUNTRIES[@country]['campaign_date_full_year']
-  else
-    return HOC_COUNTRIES[@country]['campaign_date_full']
+    id = 'campaign_date_full_year'
   end
+
+  if %w(latam europe africa).include? type
+    id = "#{type}_#{id}"
+  end
+
+  return HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
 def company_count

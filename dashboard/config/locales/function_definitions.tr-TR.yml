@@ -156,7 +156,12 @@ tr-TR:
       4-5 Bee Debugging 9:
         make all honey:
           name: bütün balı yap
+      Alien Defender:
+        game has been won:
+          name: oyun kazanıldı
       Choose Your Own Adventure:
+        witch ending:
+          name: hangi bitiş
         story:
           name: hikaye
         starting path:
@@ -314,6 +319,8 @@ tr-TR:
         do something:
           name: bir şeyler yap
       Find the Wizard:
+        check guess:
+          name: tahmini kontrol et
         do something:
           name: bir şeyler yap
       FoodFight:
@@ -343,6 +350,11 @@ tr-TR:
           name: bir ev çiz
         triangle:
           name: üçgen
+      Guess The Number:
+        check guess:
+          name: tahmini kontrol et
+          parameters:
+            theGuess: Tahmin
       InspirationalArtwork:
         n-sided shape:
           parameters:
@@ -1269,10 +1281,10 @@ tr-TR:
           name: 7 al 7 yap
       courseE_bee_functions8:
         collect all nectar:
-          name: tüm nektarı topla
+          name: nektarın tamamını topla
       courseE_bee_functions9:
         get all nectar:
-          name: bütün nektarı al
+          name: nektarın tamamını al
       courseE_bee_functions_challenge1:
         do something:
           name: bir şeyler yap
@@ -1321,7 +1333,9 @@ tr-TR:
         check and pick:
           name: yokla ve topla
         find pumpkin:
-          name: bal kabağı bul
+          name: balkabağı bul
+        wander path:
+          name: yolda ilerle
       courseE_farmer_functions11_predict_2018:
         pumpkin square:
           name: bal kabağı karesi
@@ -1390,7 +1404,7 @@ tr-TR:
           name: mısır için kareye bak
       courseE_farmer_functions2ba:
         corn and pumpkin:
-          name: mısır ve bal kabağı
+          name: mısır ve balkabağı
       courseE_farmer_functions2ba_2018:
         check square for corn:
           name: mısır için kareye bak
@@ -1408,7 +1422,7 @@ tr-TR:
           name: tüm bal kabaklarını al
       courseE_farmer_functions3c:
         corn and pumpkin:
-          name: mısır ve bal kabağı
+          name: mısır ve balkabağı
       courseE_farmer_functions3c1_2018:
         check square for corn:
           name: mısır için kareye bak
@@ -1441,13 +1455,13 @@ tr-TR:
           name: tüm bal kabaklarını al
       courseE_farmer_functions4b:
         corn and pumpkin:
-          name: mısır ve bal kabağı
+          name: mısır ve balkabağı
       courseE_farmer_functions5c:
         corn and pumpkin:
-          name: mısır ve bal kabağı
+          name: mısır ve balkabağı
       courseE_farmer_functions6c:
         corn and pumpkin:
-          name: mısır ve bal kabağı
+          name: mısır ve balkabağı
       courseE_farmer_functions7a1_2018:
         garden square:
           name: bahçe karesi
@@ -1500,37 +1514,45 @@ tr-TR:
         draw a square:
           name: bir kare çiz
         checker:
+          name: denetleyici
           parameters:
             size: boyut
             color: renk
         do something:
           name: bir şeyler yap
         Make gingham:
+          name: Pötikare yap
           parameters:
             size: boyut
         black outline:
+          name: siyah anahat
           parameters:
             length: uzunluk
       courseF_artist_fwp2:
         draw a square:
           name: bir kare çiz
+          description: uzunluk parametresi ile bir kare çizin
           parameters:
             length: uzunluk
         checker:
+          name: denetleyici
           parameters:
             size: boyut
             color: renk
         do something:
           name: bir şeyler yap
         Make gingham:
+          name: Pötikare yap
           parameters:
             size: boyut
         black outline:
+          name: siyah anahat
           parameters:
             length: uzunluk
       courseF_artist_fwp2_predict1:
         draw a square:
           name: bir kare çiz
+          description: uzunluk parametresi ile bir kare çiz
           parameters:
             length: uzunluk
       courseF_artist_fwp3:
@@ -1539,13 +1561,16 @@ tr-TR:
           parameters:
             length: uzunluk
         draw a square2:
+          name: Bir kare çiz 2
           parameters:
             size: boyut
         filled square:
+          name: doldurulan kare
           parameters:
             size: boyut
             color: renk
         black outline:
+          name: siyah anahat
           parameters:
             length: uzunluk
       courseF_artist_fwp4:
@@ -1620,6 +1645,12 @@ tr-TR:
           name: bir sekizgen çiz
           parameters:
             length: uzunluk
+      courseF_bee_functions2:
+        get only nectar:
+          name: şu durumda nektar al
+      courseF_bee_functions3:
+        only make honey:
+          name: şu durumda bal yap
       courseF_bee_functions6:
         get nectar make honey:
           name: nektar al, bal yap
@@ -1648,14 +1679,17 @@ tr-TR:
             width: genişlik
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
+          name: NektarveyaBalsatırı
           parameters:
             width: genişlik
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
+          name: NektarveyaBalsatırı
           parameters:
             width: genişlik
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
+          name: NektarveyaBalsatırı
           parameters:
             width: genişlik
       courseF_bee_fwp_challenge1:

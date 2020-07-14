@@ -476,7 +476,6 @@
   "deleteProjectConfirm": "Biztosan törölni akarod a projektet? Ezt nem lehet visszacsinálni.",
   "deleteSection": "Csoport törlése",
   "deleteSectionConfirm": "Biztosan törölni akarod a csoportot? Ezt nem lehet visszacsinálni.",
-  "deleteSectionHideSuggestion": "Ha csak a csoportok listájából szeretnéd eltávolítani a csoportot, fontold meg az \"Elrejtés\" lehetőség használatát.",
   "deleteUsedImage": "{name} használva van {values, plural, one {1 place} other {#places}} ebben az alkalmazásban. Ha törli azt, a kép nem jelenik meg egyik helyen sem. Biztosan törölni akarja?",
   "deleting": "Törlés",
   "description": "Leírás",

@@ -5,12 +5,30 @@ ko:
   language: 한국어
   front_title: 역사상 가장 큰 학습 이벤트에 참여하세요. %{campaign_date}
   coming_soon: 곧 시작됩니다.
-  campaign_date_start_short: 12월 4일
-  campaign_date_start_long: 12월 4일
-  campaign_date_short: 12월 4일-10일
-  campaign_date_full: 12월 4일-10일
-  campaign_date_year: 2017년
-  campaign_date_full_year: 2017년 12월 4일부터 10일
+  campaign_date_start_short: 12월 7일
+  campaign_date_start_long: 12월 7일
+  campaign_date_short: 12월 7일-13일
+  campaign_date_full: 12월 7일-13일
+  campaign_date_year: 2016년
+  campaign_date_full_year: 2016년 12월 5일부터 11일
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: 2016년
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: 2016년
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: 2016년
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: 컴퓨터과학을 배워 세상을 바꾸어 보세요.
   hoc2019_header_line1_mobile: 컴퓨터과학을 배워.
   hoc2019_header_line2_mobile: 세상을 바꾸어 보세요.
