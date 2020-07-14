@@ -20,6 +20,7 @@
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
 - if current_user
+  = render partial: 'layouts/thank_donors_interstitial'
   = render partial: 'home/homepage'
 
 %br/
