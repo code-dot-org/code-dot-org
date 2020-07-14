@@ -9,6 +9,12 @@ scripts_map = {
   'jigsaw' => 'jigsaw',
   'hourofcode' => 'hourofcode',
   'starwars' => 'starwars',
+  'starwarsblocks' => 'starwarsblocks',
+  'mc' => 'mc',
+  'minecraft' => 'minecraft',
+  'hero' => 'hero',
+  'aquatic' => 'aquatic',
+  'dance' => 'dance',
   'frozen' => 'frozen',
   'playlab' => 'playlab',
   'infinity' => 'infinity',
@@ -24,20 +30,34 @@ scripts_map = {
   'cspunit1' => 'cspunit1',
   'cspunit2' => 'cspunit2',
   'cspunit3' => 'cspunit3',
+  'cspunit4' => 'cspunit4',
+  'cspunit5' => 'cspunit5',
+  'cspunit6' => 'cspunit6',
   'ECSPD' => 'ECSPD',
   'ECSPD-NexTech' => 'ECSPD-NexTech',
-  'allthethings' => 'allthethings'
+  'allthethings' => 'allthethings',
+  'coursea-2017' => 'coursea-2017',
+  'courseb-2017' => 'courseb-2017',
+  'coursec-2017' => 'coursec-2017',
+  'coursed-2017' => 'coursed-2017',
+  'coursee-2017' => 'coursee-2017',
+  'coursef-2017' => 'coursef-2017',
+  'express-2017' => 'express-2017',
+  'pre-express-2017' => 'pre-express-2017'
 }
 
 @scripts = {}
+@lesson_groups = {}
+@lessons = {}
 @script_levels = {}
 @levels = {}
 @level_sources = {}
-@stages = {}
 @callouts = {}
 
 def handle_level(level)
-  @levels["level_#{level.id}"] = level.attributes
+  attributes = level.attributes.clone
+  attributes.delete('id')
+  @levels["level_#{level.id}"] = attributes
 
   level_source = level.level_sources.first
   @level_sources["level_source_#{level.id}"] = level_source.attributes if level_source
@@ -48,13 +68,17 @@ scripts_map.each do |_script_id, name|
   script = Script.find_by_name name
   @scripts[name] = script.attributes
 
-  script.lessons.each do |stage|
-    @stages["stage_#{stage.id}"] = stage.attributes
+  script.lesson_groups.each do |lesson_group|
+    @lesson_groups["lesson_group_#{lesson_group.id}"] = lesson_group.attributes
+  end
+
+  script.lessons.each do |lesson|
+    @lessons["lesson_#{lesson.id}"] = lesson.attributes
   end
 
   script.script_levels.to_a[0, 10000].each do |sl|
     key = "script_level_#{sl.script_id}_#{sl.level_id}"
-    @script_levels[key] = sl.attributes
+    @script_levels[key] = sl.attributes.merge({"levels" => "level_#{sl.level_id}"})
 
     sl.callouts.each do |c|
       @callouts["callout_#{c.id}"] = c.attributes
@@ -79,8 +103,9 @@ end
 prefix = "../test/fixtures/"
 
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
-File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
+File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
+File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
-File.new("#{prefix}stage.yml", 'w').write(yamlize(@stages))
+File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
 File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
