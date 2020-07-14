@@ -201,8 +201,16 @@ MARKDOWN
     script = create :script
     level1 = create :multi
     level2 = create :multi
-    properties = {pages: [{levels: [level1.name]}, {levels: [level2.name]}]}
-    create :level_group, name: 'level_group', properties: properties
+    level_group_dsl = <<~DSL
+      name 'level_group'
+
+      page
+      level '#{level1.name}'
+
+      page
+      level '#{level2.name}'
+    DSL
+    LevelGroup.create_from_level_builder({}, {name: 'level_group', dsl_text: level_group_dsl})
 
     teacher = create :teacher
     student = create :student
