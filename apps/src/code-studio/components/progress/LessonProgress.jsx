@@ -104,6 +104,19 @@ class LessonProgress extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    for (
+      let levelIndex = 0;
+      levelIndex < this.props.levels.length;
+      levelIndex++
+    ) {
+      if (
+        this.props.levels[levelIndex].status !==
+        nextProps.levels[levelIndex].status
+      ) {
+        return true;
+      }
+    }
+
     return this.props.width !== nextProps.width;
   }
 
