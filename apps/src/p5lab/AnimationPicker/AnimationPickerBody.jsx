@@ -127,10 +127,7 @@ export default class AnimationPickerBody extends React.Component {
 
   animationCategoriesRendering() {
     const libraryManifest = this.props.getLibraryManifest();
-    const categories = libraryManifest.categories;
-    // Add "All" category, which isn't in the manifest categories,
-    // but with an empty list since searchAssets handles All separately.
-    categories.all = [];
+    const categories = Object.keys(libraryManifest.categories) + ['all'];
     return Object.keys(categories).map(category => (
       <AnimationPickerListItem
         key={category}
