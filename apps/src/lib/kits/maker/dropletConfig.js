@@ -162,7 +162,7 @@ export const makerBlocks = [
     func: 'var mySensor = createCapacitiveTouchSensor',
     ...createCapacitiveTouchSensorProps,
     noAutocomplete: true,
-    docFunc: 'createCapacitiveTouchSensorProps'
+    docFunc: 'createCapacitiveTouchSensor'
   }
 ];
 

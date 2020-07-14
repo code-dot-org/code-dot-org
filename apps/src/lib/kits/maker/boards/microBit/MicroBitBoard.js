@@ -10,6 +10,7 @@ import {
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -29,6 +30,8 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    this.interpreterReference_ = null;
   }
 
   /**
@@ -107,7 +110,18 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   createCapacitiveTouchSensor(pin) {
-    const newSensor = new ExternalButton({mb: this.boardClient_, pin}, true);
+    const newSensor = new CapacitiveTouchSensor({mb: this.boardClient_, pin});
+    // Add the capacitive touch sensor to the interpreter
+    // The interpreter reference is set during the board connection so
+    // should be not-null here
+    this.interpreterReference_.addCustomMarshalObject({
+      instance: CapacitiveTouchSensor
+    });
+    this.interpreterReference_.createGlobalProperty(
+      'CapacitiveTouchSensor',
+      CapacitiveTouchSensor
+    );
+
     this.dynamicComponents_.push(newSensor);
     return newSensor;
   }
@@ -151,13 +165,13 @@ export default class MicroBitBoard extends EventEmitter {
    * @param {JSInterpreter} jsInterpreter
    */
   installOnInterpreter(jsInterpreter) {
+    this.interpreterReference_ = jsInterpreter;
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
         instance: componentConstructors[key]
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
-
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
