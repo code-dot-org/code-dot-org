@@ -468,7 +468,6 @@
   "deleteProjectConfirm": "Quer mesmo apagar o seu projecto? Não poderá voltar atrás.",
   "deleteSection": "Apagar Secção",
   "deleteSectionConfirm": "Tem a certeza que quer apagar esta secção? Não poderá voltar atrás.",
-  "deleteSectionHideSuggestion": "Se pretende remover esta secção da sua lista de secções, considere utilizar a opção 'Esconder secção'.",
   "deleteUsedImage": "{name} é utilizado em {value, plural, one {1 sítio} other {# sítios}} nesta applicação. Se apagar, a imagem não aparecerá em nenhum daqueles sítios. Tem a certeza que pretende apagar?",
   "deleting": "A apagar",
   "description": "Descrição",

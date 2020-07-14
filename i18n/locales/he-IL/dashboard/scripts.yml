@@ -4583,6 +4583,10 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Tell a Story in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -4595,6 +4599,10 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Tell a Story in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
         csp1-2020:
           lesson_groups:
             cspSurvey:
@@ -4717,3 +4725,31 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור

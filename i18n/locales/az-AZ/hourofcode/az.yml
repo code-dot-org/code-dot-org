@@ -11,6 +11,24 @@ az:
   campaign_date_full: 4-10 dekabr
   campaign_date_year: '2017'
   campaign_date_full_year: 4-10 dekabr 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: İnformatikanı öyrənin. Dünyanı dəyişin.
   hoc2019_header_line1_mobile: İnformatikanı öyrənin.
   hoc2019_header_line2_mobile: Dünyanı dəyişdirin.
@@ -464,7 +482,7 @@ az:
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
   signup_registration_deadline: Registration for the Hour of Code closes December
-    11.
+    13.
   signup_name_placeholder: Adınız
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Məsələn, Linkoln litseyi

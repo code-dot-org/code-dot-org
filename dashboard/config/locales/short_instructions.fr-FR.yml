@@ -1840,8 +1840,6 @@ fr-FR:
         un schéma commun ?
       course1_maze_debugging_challenge1: Corrige ce niveau. Enlève les blocs en trop,
         et ajoute les blocs manquant. Amène l'oiseau jusqu'au cochon!
-      course1_maze_debugging_challenge2: Débogue ce niveau. Ce sont les bons blocs,
-        mais ils sont dans le désordre !
       course1_maze_seq_challenge1: Trace le chemin et amène-moi à ce stupide cochon.
         Évite le TNT ou les plumes vont voler !
       course1_maze_seq_challenge2: Tu peux seulement te déplacer jusqu'à quatre fois
@@ -1920,8 +1918,8 @@ fr-FR:
       course4_harvester_nested_loops_challenge1: '"J''ai besoin d''aide à la ferme
         ! Aide-moi à récolter ce maïs en utilisant uniquement les blocs présents dans
         ta boîte à outils."'
-      courseA_artist_loops1: C'est un nouveau puzzle appelé "Artiste". Joue avec ce
-        niveau et dessine quelque chose d'amusant.
+      courseA_artist_loops1: Ceci est un nouveau puzzle appelé "Artiste". Joue avec
+        ce puzzle et dessine quelque chose d'amusant.
       courseA_artist_loops10: Aide moi à placer les pierres pour que je ne tombe pas!
       courseA_artist_loops10_2018: Aide moi à placer les pierres pour que je ne tombe
         pas!
@@ -1948,23 +1946,16 @@ fr-FR:
       courseA_artist_loops12_2020: |-
         L'artiste a vu quelque chose d'étrange
         au loin. Dessine ce que tu penses qu'il a vu.
-      courseA_artist_loops1_2018: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
-      courseA_artist_loops1_2019: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
-      courseA_artist_loops1_2020: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
-      courseA_artist_loops2: Aide l'artiste à dessiner cette ligne 2 fois en avançant.
-      courseA_artist_loops2_2018: Aide l'artiste à dessiner cette ligne 2 fois en
-        avançant.
-      courseA_artist_loops2_2019: Aide l'artiste à dessiner cette ligne 2 fois en
-        avançant.
-      courseA_artist_loops2_2020: Aide l'artiste à dessiner cette ligne 2 fois en
-        avançant.
-      courseA_artist_loops3: Dessine une ligne 5 fois en avançant.
-      courseA_artist_loops3_2018: Dessine une ligne 5 fois en avançant.
-      courseA_artist_loops3_2019: Dessine une ligne 5 fois en avançant.
-      courseA_artist_loops3_2020: Dessine une ligne 5 fois en avançant.
+      courseA_artist_loops1_2018: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
+      courseA_artist_loops1_2019: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
+      courseA_artist_loops1_2020: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
+      courseA_artist_loops3: Dessine une ligne en avançant 5 fois.
+      courseA_artist_loops3_2018: Dessine une ligne en avançant 5 fois.
+      courseA_artist_loops3_2019: Dessine une ligne en avançant 5 fois.
+      courseA_artist_loops3_2020: Dessine une ligne en avançant 5 fois.
       courseA_artist_loops4: Maintenant, utilise la boucle `répéter` pour dessiner
         cette ligne 5 fois!
       courseA_artist_loops4_2018: Maintenant, utilise la boucle `répéter` pour dessiner
@@ -2434,8 +2425,8 @@ fr-FR:
       courseB_Scrat_ramp5a_2018: Essaie celui-ci, par toi-même !
       courseB_Scrat_ramp5a_2019: Essaie celui-ci, par toi-même !
       courseB_Scrat_ramp5a_2020: Essaie celui-ci, par toi-même !
-      courseB_artist_loops1: C'est un nouveau puzzle appelé "Artiste". Joue avec ce
-        niveau et dessine quelque chose d'amusant.
+      courseB_artist_loops1: Ceci est un nouveau puzzle appelé "Artiste". Joue avec
+        ce puzzle et dessine quelque chose d'amusant.
       courseB_artist_loops10: Utilise ce que tu as appris pour dessiner une image
         de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
       courseB_artist_loops10_2018: Utilise ce que tu as appris pour dessiner une image
@@ -2444,12 +2435,12 @@ fr-FR:
         de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
       courseB_artist_loops10_2020: Utilise ce que tu as appris pour dessiner une image
         de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
-      courseB_artist_loops1_2018: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
-      courseB_artist_loops1_2019: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
-      courseB_artist_loops1_2020: C'est un nouveau puzzle appelé "Artiste". Joue avec
-        ce niveau et dessine quelque chose d'amusant.
+      courseB_artist_loops1_2018: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
+      courseB_artist_loops1_2019: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
+      courseB_artist_loops1_2020: Ceci est un nouveau puzzle appelé "Artiste". Joue
+        avec ce puzzle et dessine quelque chose d'amusant.
       courseB_artist_loops2: L'Artiste essaie de tracer une ligne droite **6** fois,
         mais n'y arrive pas.  Peux-tu l'aider?
       courseB_artist_loops2_2018: L'Artiste essaie de tracer une ligne droite **6**
@@ -2672,9 +2663,8 @@ fr-FR:
         pour aider Scrat à l'atteindre ?
       courseB_iceage_loops9_2020: Le gland est si loin ! Peux-tu utiliser des boucles
         pour aider Scrat à l'atteindre ?
-      courseB_maze_seq1: |-
-        Joue avec ces blocs pour voir ce qu'ils font faire à l'oiseau !
-        Amène l'oiseau jusqu'au cochon pour terminer le niveau.
+      courseB_maze_seq1: Joue avec ces blocs pour voir ce qu'ils font faire à l'oiseau!
+        Il faut que tu amènes l'oiseau jusqu'au cochon pour terminer le niveau.
       courseB_maze_seq10: Corrige les bugs pour amener l'oiseau jusqu'au cochon.
       courseB_maze_seq10_2018: Corrige le code pour amener Scrat au gland.
       courseB_maze_seq10_2019: Corrige le code pour amener Scrat au gland.
@@ -2683,7 +2673,6 @@ fr-FR:
       courseB_maze_seq11_2018: C'est tout toi ! Amène Scrat au gland.
       courseB_maze_seq11_2019: C'est tout toi ! Amène Scrat au gland.
       courseB_maze_seq11_2020: C'est tout toi ! Amène Scrat au gland.
-      courseB_maze_seq12: Maintenant attrape ce cochon comme tu !
       courseB_maze_seq12_2018: Maintenant, empare-toi de ce gland comme tu peux !
       courseB_maze_seq12_2019: Maintenant, empare-toi de ce gland comme tu peux !
       courseB_maze_seq12_2020: Maintenant, empare-toi de ce gland comme tu peux !
@@ -2746,14 +2735,6 @@ fr-FR:
         tous tes blocs ?
       courseB_maze_seq_challenge1_2020: Peux-tu trouver un chemin avant d'épuiser
         tous tes blocs ?
-      courseB_maze_seq_challenge2: Débogue ce niveau. Ce sont les bons blocs, mais
-        ils sont dans le désordre !
-      courseB_maze_seq_challenge2_2018: Débogue ce niveau. Ce sont les bons blocs,
-        mais ils sont dans le désordre !
-      courseB_maze_seq_challenge2_2019: Débogue ce niveau. Ce sont les bons blocs,
-        mais ils sont dans le désordre !
-      courseB_maze_seq_challenge2_2020: Débogue ce niveau. Ce sont les bons blocs,
-        mais ils sont dans le désordre !
       courseB_playLab_events1: Vois si tu peux deviner ce que fait chaque bloc.
       courseB_playLab_events1_2018: Vois si tu peux deviner ce que fait chaque bloc.
       courseB_playLab_events1_2019: Vois si tu peux deviner ce que fait chaque bloc.
@@ -2840,7 +2821,7 @@ fr-FR:
         tu cliques dessus.
       courseB_playlab_events_challenge2_2020: Fais disparaître les animaux lorsque
         tu cliques dessus.
-      courseB_starWars_prog1: '"Vas chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog1: '"Va chercher la ferraille, BB-8 !"'
       courseB_starWars_prog10: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseB_starWars_prog10_2018: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseB_starWars_prog10_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
@@ -2849,9 +2830,9 @@ fr-FR:
       courseB_starWars_prog11_2018: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseB_starWars_prog11_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseB_starWars_prog11_2020: Aidez BB-8 à rassembler la ferraille rougeoyante
-      courseB_starWars_prog1_2018: '"Vas chercher la ferraille, BB-8 !"'
-      courseB_starWars_prog1_2019: '"Vas chercher la ferraille, BB-8 !"'
-      courseB_starWars_prog1_2020: '"Vas chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog1_2018: '"Va chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog1_2019: '"Va chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog1_2020: '"Va chercher la ferraille, BB-8 !"'
       courseB_starWars_prog2: Récupère tout le métal.
       courseB_starWars_prog2_2018: Récupère tout le métal.
       courseB_starWars_prog2_2019: Récupère tout le métal.

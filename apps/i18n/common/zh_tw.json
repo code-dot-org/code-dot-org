@@ -508,7 +508,6 @@
   "deleteProjectConfirm": "確定要刪除你的專案？一旦刪除就無法復原。",
   "deleteSection": "刪除學習小組",
   "deleteSectionConfirm": "確定要刪除這個學習小組？一旦刪除就無法復原喔。",
-  "deleteSectionHideSuggestion": "如果你只是想從清單中移除，可以改用「隱藏學習小組」的方式。",
   "deleteUsedImage": "{name}在此App中用在{value, plural, one {1 place} other {# places}}中。 如果刪除它，該圖像將不會出現在任何這些位置。 你確定要刪除嗎？",
   "deleting": "正在刪除",
   "description": "描述",
