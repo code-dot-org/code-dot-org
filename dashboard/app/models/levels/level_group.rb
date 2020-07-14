@@ -57,13 +57,13 @@ class LevelGroup < DSLDefined
   class LevelGroupPage
     def initialize(page_number, offset, levels)
       @page_number = page_number
-      @offset = offset
+      @question_offset = offset
       @question_levels = levels
     end
 
     attr_reader :question_levels
     attr_reader :page_number
-    attr_reader :offset
+    attr_reader :question_offset
   end
 
   # Returns an array of pages LevelGroupPage objects, each of which contains:

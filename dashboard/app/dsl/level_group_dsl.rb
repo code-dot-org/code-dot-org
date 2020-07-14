@@ -99,7 +99,7 @@ class LevelGroupDSL < LevelDSL
     level.pages.each do |page|
       new_dsl << "\n\npage"
       page.question_levels.each_with_index do |sublevel, index|
-        texts.select {|text| text['index'] == page.offset + index}.each do |text|
+        texts.select {|text| text['index'] == page.question_offset + index}.each do |text|
           new_dsl << "\ntext '#{text['level_name']}'"
         end
         new_dsl << "\nlevel '#{sublevel.name}'"

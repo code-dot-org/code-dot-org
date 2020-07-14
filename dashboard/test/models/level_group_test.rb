@@ -76,11 +76,11 @@ MARKDOWN
     # Validate the page offsets and page_numbers.
     pages = level_group.pages
     assert_equal 'Long Assessment', level_group.properties['title']
-    assert_equal pages[0].offset, 0
+    assert_equal pages[0].question_offset, 0
     assert_equal pages[0].page_number, 1
-    assert_equal pages[1].offset, 3
+    assert_equal pages[1].question_offset, 3
     assert_equal pages[1].page_number, 2
-    assert_equal pages[2].offset, 5
+    assert_equal pages[2].question_offset, 5
     assert_equal pages[2].page_number, 3
 
     # Validate the text index.

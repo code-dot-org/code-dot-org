@@ -30,7 +30,7 @@
 
       -# Show any text from an external level.
       - if data["texts"]
-        - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
+        - data["texts"].select {|text| text["index"] == page.question_offset + index}.each do |text_level_info|
           - text_level = Script.cache_find_level(text_level_info["level_name"])
           .level-group-content
             = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
@@ -39,7 +39,7 @@
 
       - level_class = level.class.to_s.underscore
 
-      .level-group-number= "#{page.offset + index + 1}. "
+      .level-group-number= "#{page.question_offset + index + 1}. "
       .level-group-content
         - if ['multi', 'evaluation_multi'].include? level_class
           = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
