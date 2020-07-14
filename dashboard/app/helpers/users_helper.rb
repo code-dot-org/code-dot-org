@@ -271,7 +271,7 @@ module UsersHelper
       page_valid_result_count = 0
 
       # Retrieve the level information for the embedded levels.
-      embedded_levels = page.levels
+      embedded_levels = page.question_levels
       embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
       embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
