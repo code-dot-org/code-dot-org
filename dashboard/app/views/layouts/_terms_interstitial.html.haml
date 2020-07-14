@@ -4,12 +4,6 @@
     .modal-content.no-modal-icon
       %h2.donor-header= t('donor_interstitial.title') + '...'
       %p= t('donor_interstitial.subtitle')
-      %h2.donor-subheader= t('donor_interstitial.local_supporters')
-      .clear
-      .scroll-box
-        .donor-container
-          - ["Facebook", "Twitter", "Google", "Microsoft", "Facebook", "Twitter", "Google", "Microsoft", "Facebook", "Twitter", "Google", "Microsoft", "Facebook", "Twitter", "Google", "Microsoft"].each do |donor|
-            .donor= donor
       %h2.donor-subheader= t('donor_interstitial.global_supporters')
       .clear
       .scroll-box
