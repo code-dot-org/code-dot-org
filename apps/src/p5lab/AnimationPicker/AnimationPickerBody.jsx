@@ -45,6 +45,7 @@ export default class AnimationPickerBody extends React.Component {
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     getLibraryManifest: PropTypes.func.isRequired,
+    categories: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired
   };
@@ -126,16 +127,10 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    const libraryManifest = this.props.getLibraryManifest();
-    const categories = libraryManifest.categories;
-    return Object.keys(categories).map(category => (
+    return Object.keys(this.props.categories).map(category => (
       <AnimationPickerListItem
         key={category}
-        label={
-          msg[`animationCategory_${category}`]
-            ? msg[`animationCategory_${category}`]()
-            : category
-        }
+        label={this.props.categories[category]}
         category={category}
         onClick={this.onCategoryChange}
       />
@@ -161,6 +156,7 @@ export default class AnimationPickerBody extends React.Component {
     }
     const {searchQuery, categoryQuery, results} = this.state;
     const {
+      categories,
       hideUploadOption,
       is13Plus,
       onDrawYourOwnClick,
@@ -187,7 +183,7 @@ export default class AnimationPickerBody extends React.Component {
                 >
                   {'All categories > '}
                 </span>
-                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
+                <span>{categories[categoryQuery]}</span>
               </div>
             )}
           </div>
