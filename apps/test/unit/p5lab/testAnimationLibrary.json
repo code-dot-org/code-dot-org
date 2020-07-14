@@ -35,20 +35,6 @@
       "name": "hip"
     }
   },
-  "categories": {
-    "animals": [
-      "category_animals/hippo",
-      "category_animals/hippo_gray",
-      "category_animals/elephant_square",
-      "category_animals/giraffe_square",
-      "category_animals/hippo_square",
-      "category_animals/monkey_square",
-      "category_animals/panda_square",
-      "category_animals/hippo_token",
-      "category_animals/bear",
-      "category_animals/bear_with_fish"
-    ]
-  },
   "aliases": {
     "hippo": ["category_animals/hippo"],
     "hippo_gray": ["category_animals/hippo_gray"],
