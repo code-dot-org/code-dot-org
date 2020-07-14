@@ -1933,7 +1933,7 @@ endvariants
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
-      [@csf_script.name, @csf_script_2019.name],
+      ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
       Script.script_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
