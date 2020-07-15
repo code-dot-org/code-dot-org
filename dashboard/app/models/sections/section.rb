@@ -60,7 +60,7 @@ class Section < ActiveRecord::Base
   validates :name, presence: true, unless: -> {deleted?}
 
   belongs_to :script
-  belongs_to :course
+  belongs_to :unit_group, foreign_key: 'course_id'
 
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
