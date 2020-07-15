@@ -811,11 +811,11 @@ en:
     review_terms: "Review updated terms"
   donor_interstitial:
     title: "Your free CS courses are made possible by"
-    subtitle: "We'd like to thank the generous donors whose support has made Code.org's success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our donors!"
+    subtitle: "We’d like to thank the generous donors whose support has made Code.org’s success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our <a href='%{donors_url}'>donors</a>!"
     local_supporters: "Local Supporters"
     global_supporters: "Global Supporters"
     support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
-    support_codeorg_2: "Join our donors to support Code.org."
+    support_codeorg_2: "Join our donors to <a href=\"%{donate_url}\">support Code.org</a>."
     get_started: "Get started on Code.org"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
