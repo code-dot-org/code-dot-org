@@ -120,6 +120,11 @@ class LevelTest < ActiveSupport::TestCase
     assert_not custom_levels.include?(@level)
   end
 
+  test "should not allow pairing with levelgroup type levels" do
+    level = Level.create({type: "LevelGroup"})
+    assert_equal level.should_allow_pairing?, false
+  end
+
   test "summarize returns object with expected fields" do
     summary = @level.summarize
     assert_equal(summary[:level_id], @level.id)
