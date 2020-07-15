@@ -8,9 +8,9 @@ class ExperimentsControllerTest < ActionController::TestCase
     default_script = create(:script, name: 'default-script')
     alternate_script = create(:script, name: 'alternate-script')
 
-    create :course_script, course: course, script: default_script, position: 2
+    create :course_script, unit_group: course, script: default_script, position: 2
     create :course_script,
-      course: course,
+      unit_group: course,
       script: alternate_script,
       position: 2,
       default_script: default_script,
