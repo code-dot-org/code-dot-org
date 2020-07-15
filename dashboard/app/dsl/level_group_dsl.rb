@@ -38,6 +38,12 @@ class LevelGroupDSL < LevelDSL
   end
 
   def text(name)
+    # Ensure level name hasn't already been used.
+    if @level_names.include? name
+      raise "Don't use the same level twice in a LevelGroup (#{name})."
+    end
+    @level_names << name
+
     # Ensure level is appropriate type.
     level = Script.cache_find_level(name)
     if level.nil?
