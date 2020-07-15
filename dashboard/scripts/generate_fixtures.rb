@@ -60,6 +60,12 @@ def handle_level(level)
   attributes.delete('id')
   @levels["level_#{level.id}"] = attributes
 
+  level.contained_levels.each do |contained_level|
+    cl_attributes = contained_level.attributes.clone
+    cl_attributes.delete('id')
+    @levels["level_#{contained_level.id}"] = cl_attributes
+  end
+
   if level.level_concept_difficulty
     lcd_attributes = level.level_concept_difficulty.attributes
     lcd_attributes.delete('level_id')
