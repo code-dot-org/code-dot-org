@@ -45,7 +45,7 @@ class Script < ActiveRecord::Base
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   has_many :course_scripts
-  has_many :courses, through: :course_scripts
+  has_many :unit_groups, through: :course_scripts
 
   scope :with_associated_models, -> do
     includes(
