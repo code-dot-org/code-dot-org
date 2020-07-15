@@ -42,8 +42,6 @@ const styles = {
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    authenticityToken: PropTypes.string,
-
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -141,7 +139,7 @@ class OwnedSections extends React.Component {
             )}
           </div>
         )}
-        <RosterDialog authenticityToken={this.props.authenticityToken} />
+        <RosterDialog />
         <AddSectionDialog />
         <EditSectionDialog />
       </div>
