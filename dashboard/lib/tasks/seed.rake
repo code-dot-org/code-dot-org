@@ -372,6 +372,7 @@ namespace :seed do
     # patterns are relative to dashboard directory
     watched_files = FileList[
       'app/dsl/**/*',
+      'app/models/levels/*',
       'config/**/*',
       'db/**/*',
       'lib/tasks/**/*',

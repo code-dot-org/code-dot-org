@@ -39,7 +39,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       questions = []
 
       # For each level in the multi group (ignore pages structure information)
-      level_group.levels.each_with_index do |level, index|
+      level_group.question_levels.each_with_index do |level, index|
         # A single level corresponds to a single question
         summary = level.question_summary
         summary[:question_index] = index
@@ -114,7 +114,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         # And construct a listing of all the individual levels and their results.
         level_results = []
 
-        level_group.levels.each do |level|
+        level_group.question_levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
           elsif level.is_a? Match

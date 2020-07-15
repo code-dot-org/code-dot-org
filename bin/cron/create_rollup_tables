@@ -49,7 +49,7 @@ def main
 
   LevelGroup.find_each do |level|
     level.pages.each_with_index do |page, page_index|
-      page.levels.each_with_index do |contained_level, position_index|
+      page.question_levels.each_with_index do |contained_level, position_index|
         next unless contained_level.type == 'Multi'
         next if contained_levels.
           select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
