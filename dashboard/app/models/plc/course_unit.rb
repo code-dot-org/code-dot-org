@@ -34,7 +34,7 @@ class Plc::CourseUnit < ActiveRecord::Base
   end
 
   def has_evaluation?
-    script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
+    script.levels.where(type: 'LevelGroup').flat_map(&:question_levels).any? {|level| level.class == EvaluationMulti}
   end
 
   def determine_preferred_learning_modules(user)
