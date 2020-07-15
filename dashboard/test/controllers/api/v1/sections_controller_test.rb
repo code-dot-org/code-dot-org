@@ -417,7 +417,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
     test "can create with a course id but no script id - #{existing_course_name}" do
-      existing_course = Course.find_by(name: existing_course_name)
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
       sign_in @teacher
       post :create, params: {
@@ -475,7 +475,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
     test "can create with both a course id and a script id - #{existing_course_name}" do
-      existing_course = Course.find_by(name: existing_course_name)
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
       sign_in @teacher
       post :create, params: {
@@ -547,7 +547,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: can update section you own" do
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
 
     sign_in @teacher
     section_with_script = create(
@@ -594,7 +594,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: name is ignored if empty or all whitespace" do
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
 
     section = create :section, name: 'Old section name'
     sign_in section.teacher
@@ -652,7 +652,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: course_id is not updated if invalid" do
-    Course.stubs(:valid_course_id?).returns(false)
+    UnitGroup.stubs(:valid_course_id?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)
