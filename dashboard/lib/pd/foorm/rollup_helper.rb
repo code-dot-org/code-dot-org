@@ -70,9 +70,10 @@ module Pd::Foorm
       questions
     end
 
-    # Validate question is valid for rolling up. Validations are:
+    # Validate question is valid for rolling up and return question if valid. Validations are:
     #   - question is the same across all forms it was found in. Same is defined by
-    #   having the same type and same choices/rows/columns
+    #   having the same type and same choices/columns. If there are differences in rows, merge
+    #   the rows together, if there are any conflicts taking the text for the first row with a given id.
     #   - question answers can be parsed as integers
     def self.validate_and_get_question(question, question_data, parsed_forms, form_type)
       columns = nil

@@ -350,7 +350,7 @@ module Pd
     # GET workshop_survey/foorm/csf/post201
     def new_csf_post201_foorm
       # Use enrollment_code to find a specific workshop
-      # or search all CSF201 workshops the current user enrolled in.
+      # or search all CSF201 workshops the current user is enrolled in and attended.
       attended_workshop = get_attended_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
