@@ -102,7 +102,7 @@
             }
           ],
           "hasOther": true,
-          "otherText": "Other"
+          "otherText": "Other (please describe)"
         },
         {
           "type": "comment",
@@ -133,7 +133,7 @@
             }
           ],
           "hasOther": true,
-          "otherText": "Other"
+          "otherText": "Other (please describe)"
         }
       ],
       "title": "Barriers to Teaching CS Fundamentals"
@@ -369,7 +369,7 @@
             }
           ],
           "hasOther": true,
-          "otherText": "Other"
+          "otherText": "Other (please describe)"
         },
         {
           "type": "comment",
