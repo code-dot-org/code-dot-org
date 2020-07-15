@@ -96,9 +96,9 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      course = Course.find_by_name(professional_learning_course)
+      course = UnitGroup.find_by_name(professional_learning_course)
       unless course
-        course = Course.new(name: professional_learning_course)
+        course = UnitGroup.new(name: professional_learning_course)
         course.plc_course = Plc::Course.create!(course: course)
         course.save!
       end
@@ -214,7 +214,7 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
     scripts = with_hidden ? all_scripts : visible_scripts
 
@@ -1676,7 +1676,7 @@ class Script < ActiveRecord::Base
   # course for this script
   def course
     return nil if course_scripts.length != 1
-    Course.get_from_cache(course_scripts[0].course_id)
+    UnitGroup.get_from_cache(course_scripts[0].course_id)
   end
 
   # @return {String|nil} path to the course overview page for this script if there
@@ -1848,6 +1848,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_version_year_options
-    Course.get_version_year_options
+    UnitGroup.get_version_year_options
   end
 end

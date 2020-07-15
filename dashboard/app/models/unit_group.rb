@@ -82,7 +82,7 @@ class UnitGroup < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
 
-    course = Course.find_or_create_by!(name: hash['name'])
+    course = UnitGroup.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
     course.save!
@@ -133,7 +133,7 @@ class UnitGroup < ApplicationRecord
   # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
-    Course.update_strings(name, course_strings)
+    UnitGroup.update_strings(name, course_strings)
     update_scripts(scripts, alternate_scripts) if scripts
     save!
   end
@@ -150,7 +150,7 @@ class UnitGroup < ApplicationRecord
   def write_serialization
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
-    File.write(Course.file_path(name), serialize)
+    File.write(UnitGroup.file_path(name), serialize)
   end
 
   # @param new_scripts [Array<String>]
@@ -220,7 +220,7 @@ class UnitGroup < ApplicationRecord
 
   def self.all_courses
     Rails.cache.fetch('valid_courses/all') do
-      Course.all
+      UnitGroup.all
     end
   end
 
@@ -233,11 +233,11 @@ class UnitGroup < ApplicationRecord
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache
+      return UnitGroup.valid_courses_without_cache
     end
 
     courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      Course.valid_courses_without_cache
+      UnitGroup.valid_courses_without_cache
     end
 
     if user && has_any_pilot_access?(user)
@@ -249,7 +249,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.valid_course_infos(user: nil)
-    return Course.valid_courses(user: user).map {|c| c.assignable_info(user)}
+    return UnitGroup.valid_courses(user: user).map {|c| c.assignable_info(user)}
   end
 
   # @param user [User]
@@ -261,7 +261,7 @@ class UnitGroup < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table.
   def self.valid_courses_without_cache
-    Course.all.select(&:visible?)
+    UnitGroup.all.select(&:visible?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
@@ -276,7 +276,7 @@ class UnitGroup < ApplicationRecord
   # Users should only be able to assign one of their valid courses.
   def assignable?(user)
     if user&.teacher?
-      Course.valid_course_id?(id)
+      UnitGroup.valid_course_id?(id)
     end
   end
 
@@ -324,7 +324,7 @@ class UnitGroup < ApplicationRecord
     return [] unless family_name
 
     # Include visible courses, plus self if not already included
-    courses = Course.valid_courses(user: user).clone
+    courses = UnitGroup.valid_courses(user: user).clone
     courses.append(self) unless courses.any? {|c| c.id == id}
 
     versions = courses.
@@ -417,7 +417,7 @@ class UnitGroup < ApplicationRecord
 
     # Redirect user to the latest assigned course in this course family,
     # if one exists and it is newer than the current course.
-    latest_assigned_version = Course.latest_assigned_version(family_name, user)
+    latest_assigned_version = UnitGroup.latest_assigned_version(family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
     latest_assigned_version.link
@@ -426,7 +426,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
-    latest_course_version = Course.latest_stable_version(family_name)
+    latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 
     # All users can see the latest course version.
@@ -441,11 +441,11 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
-  # @return [Course] Returns the latest stable version in a course family.
+  # @return [UnitGroup] Returns the latest stable version in a course family.
   def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
-    Course.
+    UnitGroup.
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only stable courses.
@@ -457,12 +457,12 @@ class UnitGroup < ApplicationRecord
 
   # @param family_name [String] The family name for a course family.
   # @param user [User]
-  # @return [Course] Returns the latest version in a course family that the user is assigned to.
+  # @return [UnitGroup] Returns the latest version in a course family that the user is assigned to.
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
     assigned_course_ids = user.section_courses.pluck(:id)
 
-    Course.
+    UnitGroup.
       # select only courses assigned to this user.
       where(id: assigned_course_ids).
       # select only courses in the same course family.
@@ -488,7 +488,7 @@ class UnitGroup < ApplicationRecord
     return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
-    Course.
+    UnitGroup.
       joins(:default_course_scripts).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
@@ -534,7 +534,7 @@ class UnitGroup < ApplicationRecord
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      Course.with_associated_models.find_each do |course|
+      UnitGroup.with_associated_models.find_each do |course|
         cache[course.name] = course
         cache[course.id.to_s] = course
       end
@@ -556,7 +556,7 @@ class UnitGroup < ApplicationRecord
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.find_by(find_by => id_or_name)
+    UnitGroup.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)
