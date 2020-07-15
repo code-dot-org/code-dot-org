@@ -49,35 +49,62 @@ class LevelGroup < DSLDefined
     'fa fa-list-ul'
   end
 
-  # Returns a flattened array of all the Levels in this LevelGroup, in order.
-  def question_levels
+  # Returns an array of all the question levels and texts in this LevelGroup,
+  # in order.
+  def page_levels
     child_levels.all
   end
 
-  class LevelGroupPage
-    def initialize(page_number, offset, levels)
-      @page_number = page_number
-      @question_offset = offset
-      @question_levels = levels
-    end
-
-    attr_reader :question_levels
-    attr_reader :page_number
-    attr_reader :question_offset
+  # Returns an array of all the question levels in this LevelGroup, in order.
+  def question_levels
+    child_levels.where.not(type: 'External').all
   end
 
-  # Returns an array of pages LevelGroupPage objects, each of which contains:
-  #   levels: an array of Levels.
+  class LevelGroupPage
+    def initialize(page_number, page_offset, page_levels, question_offset)
+      @page_number = page_number
+      @page_offset = page_offset
+      @page_levels = page_levels
+      @question_offset = question_offset
+    end
+
+    attr_reader :page_number
+    attr_reader :page_offset
+    attr_reader :page_levels
+    attr_reader :question_offset
+
+    def question_levels
+      page_levels.reject {|l| l.is_a?(External)}
+    end
+
+    def texts
+      page_levels.select {|l| l.is_a?(External)}
+    end
+  end
+
+  # Returns an array of LevelGroupPage objects, each of which contains:
   #   page_number: the 1-based page number (corresponding to the /page/X URL).
-  #   page_offset: the count of questions occurring on prior pages.
+  #   page_offset: the count of questions and texts on prior pages.
+  #   page_levels: an array of questions and texts on this page.
+  #   question_offset: the count of questions on prior pages.
+  #   question_levels: an array of questions on this page.
+  #   texts: an array of texts on this page.
+  #
+  # A question is an answerable level of one of the following types:
+  #   multi match text_match free_response evaluation_multi
+  #
+  # A text is a level of type external, which appears as text on the page, and
+  # cannot be answered.
 
   def pages
     offset = 0
+    question_offset = 0
     @pages ||= properties['levels_per_page'].map.with_index do |page_size, page_index|
       page_number = page_index + 1
-      levels_by_page = question_levels[offset..(offset + page_size - 1)]
-      page_object = LevelGroupPage.new(page_number, offset, levels_by_page)
+      levels = page_levels[offset..(offset + page_size - 1)]
+      page_object = LevelGroupPage.new(page_number, offset, levels, question_offset)
       offset += page_size
+      question_offset += page_object.question_levels.length
       page_object
     end
   end
@@ -100,7 +127,7 @@ class LevelGroup < DSLDefined
   end
 
   # @param [Array] new_levels_by_page A 2D array of levels, e.g.
-  #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
+  #   [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_by_page(new_levels_by_page)
     reload
     self.child_levels = []
@@ -121,8 +148,8 @@ class LevelGroup < DSLDefined
     save!
   end
 
-  def levels_by_page
-    pages.map(&:question_levels)
+  def page_levels_by_page
+    pages.map(&:page_levels)
   end
 
   def assign_attributes(params)
@@ -144,7 +171,7 @@ class LevelGroup < DSLDefined
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(levels_by_page, new_suffix)
+    level.clone_sublevels_with_suffix(page_levels_by_page, new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
   end
@@ -154,17 +181,6 @@ class LevelGroup < DSLDefined
   # @param [Array[Array[Level]]] A 2D array of levels, e.g.
   #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
   def clone_sublevels_with_suffix(old_levels_by_page, new_suffix)
-    new_properties = properties
-
-    if new_properties['texts']
-      new_properties['texts'].map! do |text|
-        new_level = Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
-        text['level_name'] = new_level.name
-        text
-      end
-    end
-    update!(properties: new_properties)
-
     new_levels_by_page = old_levels_by_page.map do |page_levels|
       page_levels.map {|level| level.clone_with_suffix(new_suffix)}
     end
