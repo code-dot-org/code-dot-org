@@ -168,7 +168,3 @@ export default class ReportAbuseForm extends React.Component {
     );
   }
 }
-
-// TODO - just expose renderer on dashboard?
-window.dashboard = window.dashboard || {};
-window.dashboard.ReportAbuseForm = ReportAbuseForm;
