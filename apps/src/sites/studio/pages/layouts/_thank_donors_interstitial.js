@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 $(document).ready(function() {
   $('#dismiss-thank-donors').click(function() {
-    $('#terms-modal').modal('hide');
+    $('#thank-donors-modal').modal('hide');
   });
 });
 
@@ -22,7 +22,7 @@ function getCookie(key) {
 $(document).ready(function() {
   var already_shown = !!getCookie('hide_thank_donors');
   if (!already_shown && screen.width > 970) {
-    $('#terms-modal').modal('show');
+    $('#thank-donors-modal').modal('show');
     setCookie('hide_thank_donors', '1');
   }
 });
