@@ -4,7 +4,7 @@ class ExperimentsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
     @experiment_name = 'my-experiment'
-    course = create :course, name: 'my-course'
+    course = create :unit_group, name: 'my-course'
     default_script = create(:script, name: 'default-script')
     alternate_script = create(:script, name: 'alternate-script')
 

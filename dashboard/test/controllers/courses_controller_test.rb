@@ -10,14 +10,14 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_course = create :course, pilot_experiment: 'my-experiment'
+    @pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
     @pilot_section = create :section, user: @pilot_teacher, course: @pilot_course
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
-    @course_regular = create :course, name: 'non-plc-course'
+    @course_regular = create :unit_group, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
@@ -53,25 +53,25 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 2
 
   test "show: redirect to latest stable version in course family" do
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
-    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: true
-    create :course, name: 'csp-2020', family_name: 'csp', version_year: '2020'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020'
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
-    create :course, name: 'csd-2018', family_name: 'csd', version_year: '2018', is_stable: true
-    create :course, name: 'csd-2019', family_name: 'csd', version_year: '2019', is_stable: true
-    create :course, name: 'csd-2020', family_name: 'csd', version_year: '2019'
+    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2019'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
   end
 
   test "show: redirect from new unstable version to assigned version" do
     student = create :student
-    csp2017 = create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
     create :follower, section: create(:section, course: csp2017), student_user: student
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
-    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in student
     get :show, params: {course_name: 'csp-2019'}
@@ -81,9 +81,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family for logged out user" do
     sign_out @teacher
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
-    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     get :show, params: {course_name: 'csp-2017'}
 
@@ -92,8 +92,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect to latest stable version if no_redirect query param provided" do
     sign_out @teacher
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
 
     get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
     assert_response :ok
@@ -102,9 +102,9 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family for student" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
-    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
@@ -115,8 +115,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect student to latest stable version in course family if they have progress" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
     Course.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:student)
@@ -127,9 +127,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect student to latest stable version in course family if they are assigned" do
     student = create :student
-    csp2017 = create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
     create :follower, section: create(:section, course: csp2017), student_user: student
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
     sign_in student
     get :show, params: {course_name: 'csp-2017'}
@@ -138,8 +138,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect teacher to latest stable version in course family" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
 
     get :show, params: {course_name: 'csp-2017'}
 
@@ -214,7 +214,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "update: fails without levelbuilder permission" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
 
@@ -225,7 +225,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to default_course_scripts" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
 
@@ -240,7 +240,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to alternate_course_scripts" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
     create :script, name: 'script2-alt'
@@ -278,7 +278,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp-2017'
+    create :unit_group, name: 'csp-2017'
 
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles'}
     assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp-2017').summarize[:title]
@@ -287,7 +287,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :course, name: 'csp-2019'
+    course = create :unit_group, name: 'csp-2019'
 
     assert_nil course.version_year
     assert_nil course.family_name
@@ -327,7 +327,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
     assert_template 'courses/edit'

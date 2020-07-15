@@ -16,7 +16,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "get_from_cache uses cache" do
-      course = create(:course, name: 'acourse')
+      course = create(:unit_group, name: 'acourse')
       # Ensure cache is populated with this course by name and id
       UnitGroup.stubs(:should_cache?).returns true
       UnitGroup.get_from_cache(course.name)
@@ -38,18 +38,18 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class NameValidationTests < ActiveSupport::TestCase
     test "should allow valid course names" do
-      create(:course, name: 'valid-name')
+      create(:unit_group, name: 'valid-name')
     end
 
     test "should not allow uppercase letters in course name" do
       assert_raises ActiveRecord::RecordInvalid do
-        create(:course, name: 'UpperCase')
+        create(:unit_group, name: 'UpperCase')
       end
     end
 
     test "should not allow spaces in course name" do
       assert_raises ActiveRecord::RecordInvalid do
-        create(:course, name: 'spaced out')
+        create(:unit_group, name: 'spaced out')
       end
     end
 
@@ -61,7 +61,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    course = create(:course, name: 'my-course', is_stable: true)
+    course = create(:unit_group, name: 'my-course', is_stable: true)
     create(:course_script, course: course, position: 1, script: create(:script, name: "script1"))
     create(:course_script, course: course, position: 2, script: create(:script, name: "script2"))
     create(:course_script, course: course, position: 3, script: create(:script, name: "script3"))
@@ -83,23 +83,23 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if course is not in a family" do
-    course = create :course
+    course = create :unit_group
     assert course.stable?
   end
 
   test "stable?: true if course in family has is_stable set" do
-    course = create :course, family_name: 'csd', is_stable: true
+    course = create :unit_group, family_name: 'csd', is_stable: true
     assert course.stable?
   end
 
   test "stable?: defaults to false if course in family does not have is_stable set" do
-    course = create :course, family_name: 'csd'
+    course = create :unit_group, family_name: 'csd'
     refute course.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
     test "add CourseScripts" do
-      course = create :course
+      course = create :unit_group
 
       create(:script, name: 'script1')
       create(:script, name: 'script2')
@@ -115,7 +115,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove CourseScripts" do
-      course = create :course
+      course = create :unit_group
 
       create(:course_script, course: course, position: 0, script: create(:script, name: 'script1'))
       create(:course_script, course: course, position: 1, script: create(:script, name: 'script2'))
@@ -130,7 +130,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    course = create :course, name: 'my-course', family_name: 'my-family', version_year: '1999'
+    course = create :unit_group, name: 'my-course', family_name: 'my-family', version_year: '1999'
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -193,10 +193,10 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'summarize_version' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, is_stable: true)
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, is_stable: true)
-    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', visible: true)
-    csp_2020 = create(:course, name: 'csp-2020', family_name: 'csp', version_year: '2019')
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, is_stable: true)
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, is_stable: true)
+    csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', visible: true)
+    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019')
 
     [csp_2017, csp_2018, csp_2019].each do |c|
       summary = c.summarize_versions
@@ -211,7 +211,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
-      @course = create(:course, name: 'my-course')
+      @course = create(:unit_group, name: 'my-course')
 
       @course_teacher = create :teacher
       @course_section = create :section, user: @course_teacher, course: @course
@@ -306,7 +306,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class RedirectCourseUrl < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     end
 
     test 'returns nil for nil user' do
@@ -334,7 +334,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test 'returns link to latest assigned course for student assigned to a course in this family' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
-      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, course: csp_2018
       student = create :student
       section.students << student
@@ -343,7 +343,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test 'returns nil if latest assigned course is an older version than the current course' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
-      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, course: @csp_2017
       student = create :student
       section.students << student
@@ -353,11 +353,11 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
-      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
       @student = create :student
     end
 
@@ -391,9 +391,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
-      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
       @student = create :student
     end
 
@@ -415,19 +415,19 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class ProgressTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
       create :course_script, course: @csp_2017, script: @csp2_2017, position: 1
 
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       @csp1_2018 = create(:script, name: 'csp1-2018')
       @csp2_2018 = create(:script, name: 'csp2-2018')
       create :course_script, course: @csp_2018, script: @csp1_2018, position: 1
       create :course_script, course: @csp_2018, script: @csp2_2018, position: 1
 
-      @csd = create(:course, name: 'csd')
+      @csd = create(:unit_group, name: 'csd')
       @csd1 = create(:script, name: 'csd1')
       create :course_script, course: @csd, script: @csd1, position: 1
 
@@ -481,16 +481,16 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "valid_courses" do
-    csp = create(:course, name: 'csp-2017', visible: true, is_stable: true)
+    csp = create(:unit_group, name: 'csp-2017', visible: true, is_stable: true)
     # Should still be in valid_courses if visible and not stable
-    csd = create(:course, name: 'csd-2017', visible: true)
-    create(:course, name: 'madeup')
+    csd = create(:unit_group, name: 'csd-2017', visible: true)
+    create(:unit_group, name: 'madeup')
 
     assert_equal [csp, csd], UnitGroup.valid_courses
   end
 
   test "assignable_info" do
-    csp = create(:course, name: 'csp-2017', visible: true, is_stable: true)
+    csp = create(:unit_group, name: 'csp-2017', visible: true, is_stable: true)
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
@@ -541,7 +541,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     teacher = create :teacher
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :course, pilot_experiment: 'my-experiment'
+    create :unit_group, pilot_experiment: 'my-experiment'
     assert UnitGroup.any?(&:pilot?)
 
     refute UnitGroup.valid_courses(user: student).any?(&:pilot_experiment)
@@ -554,8 +554,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     teacher = create :teacher
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
 
-    csp_2019 = create :course, name: 'csp-2019', visible: true
-    csp_2020 = create :course, name: 'csp-2020', pilot_experiment: 'my-experiment'
+    csp_2019 = create :unit_group, name: 'csp-2019', visible: true
+    csp_2020 = create :unit_group, name: 'csp-2020', pilot_experiment: 'my-experiment'
 
     assert_equal UnitGroup.valid_courses, [csp_2019]
     assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
@@ -568,15 +568,15 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "update_teacher_resources" do
-    course = create :course
+    course = create :unit_group
     course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
 
     assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
   end
 
   test 'has pilot access' do
-    course = create :course
-    pilot_course = create :course, pilot_experiment: 'my-experiment'
+    course = create :unit_group
+    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
     script_in_pilot_course = create :script
     create :course_script, course: pilot_course, script: script_in_pilot_course, position: 1
 
@@ -632,7 +632,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     student = create :student
     teacher = create :teacher
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :course, pilot_experiment: 'my-experiment'
+    create :unit_group, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
     refute UnitGroup.has_any_pilot_access?
