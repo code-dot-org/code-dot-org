@@ -102,7 +102,7 @@ class Section < ActiveRecord::Base
   end
 
   def course
-    Course.get_from_cache(course_id) if course_id
+    UnitGroup.get_from_cache(course_id) if course_id
   end
 
   def workshop_section?

@@ -18,7 +18,7 @@ class CoursesController < ApplicationController
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
-        course_infos = Course.valid_course_infos(user: current_user)
+        course_infos = UnitGroup.valid_course_infos(user: current_user)
         render json: course_infos
       end
     end
@@ -29,9 +29,9 @@ class CoursesController < ApplicationController
     # When the url of a course family is requested, redirect to a specific course version.
     #
     # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
-    if Course::FAMILY_NAMES.include?(params[:course_name])
+    if UnitGroup::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to_course = Course.all_courses.
+      redirect_to_course = UnitGroup.all_courses.
           select {|c| c.family_name == params[:course_name] && c.is_stable?}.
           sort_by(&:version_year).
           last
@@ -44,7 +44,7 @@ class CoursesController < ApplicationController
       return
     end
 
-    course = Course.get_from_cache(params[:course_name])
+    course = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless course
 
     if course.plc_course
@@ -79,7 +79,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    course = Course.new(name: params.require(:course).require(:name))
+    course = UnitGroup.new(name: params.require(:course).require(:name))
     if course.save
       redirect_to action: :edit, course_name: course.name
     else
@@ -88,7 +88,7 @@ class CoursesController < ApplicationController
   end
 
   def update
-    course = Course.find_by_name!(params[:course_name])
+    course = UnitGroup.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
     # Convert checkbox values from a string ("on") to a boolean.
@@ -98,7 +98,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    course = Course.find_by_name!(params[:course_name])
+    course = UnitGroup.find_by_name!(params[:course_name])
 
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if course.try(:plc_course)
@@ -132,8 +132,8 @@ class CoursesController < ApplicationController
 
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
     # are assigned.
-    redirect_course = Course.latest_assigned_version(course.family_name, current_user)
-    redirect_course ||= Course.latest_stable_version(course.family_name)
+    redirect_course = UnitGroup.latest_assigned_version(course.family_name, current_user)
+    redirect_course ||= UnitGroup.latest_stable_version(course.family_name)
 
     # Do not redirect if we are already on the correct course.
     return nil if redirect_course == course
