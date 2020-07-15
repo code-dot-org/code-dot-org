@@ -5,7 +5,7 @@
   .modal-dialog
     .modal-content.no-modal-icon
       %h2.donor-header= t('donor_interstitial.title') + '...'
-      %p!= t('donor_interstitial.subtitle', donors_url: 'https://code.org/about/donors')
+      %p= t('donor_interstitial.subtitle', donors_url: CDO.code_org_url("/about/donors"), markdown: :inline).html_safe
       %h2.donor-subheader= t('donor_interstitial.global_supporters')
       .clear
       .scroll-box
@@ -13,8 +13,7 @@
           - Donor.where(level: %w(platinum diamond)).order(:weight).pluck(:name).each do |donor|
             .donor= donor
       %p= t('donor_interstitial.support_codeorg_1')
-      %p= t('donor_interstitial.support_codeorg_2')
-      / FND-893 - Stop using markdown in <Label>s
+      %p= t('donor_interstitial.support_codeorg_2', donate_url: CDO.code_org_url("/donate"), markdown: :inline).html_safe
       .right
         = button_tag t('donor_interstitial.get_started'), id: 'dismiss-thank-donors', type: 'button', class: 'btn primary-button'
       .clear
