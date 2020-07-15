@@ -1055,7 +1055,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    course = create :course, name: 'pd-workshop-pre-survey-test'
+    course = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script).tap do |script|

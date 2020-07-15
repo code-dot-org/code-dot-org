@@ -15,15 +15,15 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @course = create(:unit_group)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
 
     @script = create(:script)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: CSP_COURSE_NAME, visible: true, is_stable: true)
-    @csp_course_soft_launched = create(:course, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
+    @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
+    @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
     create(:course_script, course: @csp_course, script: @csp_script, position: 1)
   end

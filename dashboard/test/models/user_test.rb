@@ -3086,7 +3086,7 @@ class UserTest < ActiveSupport::TestCase
   class AssignedCoursesAndScripts < ActiveSupport::TestCase
     setup do
       @student = create :student
-      @course = create :course, name: 'course'
+      @course = create :unit_group, name: 'course'
     end
 
     test "it returns assigned courses" do
@@ -3179,7 +3179,7 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'csd'
+      course = create :unit_group, name: 'csd'
       create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
       create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
 
@@ -3219,7 +3219,7 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'testcourse'
+      course = create :unit_group, name: 'testcourse'
       course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
       create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
       create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
@@ -3243,7 +3243,7 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       @teacher = create :teacher
       @grand_teacher = create :teacher
-      @course = create :course, name: 'csd'
+      @course = create :unit_group, name: 'csd'
     end
     test "it returns courses in which a teacher exists as a student" do
       grand_section = create :section, user_id: @grand_teacher.id, course: @course
@@ -3283,7 +3283,7 @@ class UserTest < ActiveSupport::TestCase
     single_script = create :script
     (create :section, script: single_script).students << student
     course_script = create :script
-    course_with_script = create :course
+    course_with_script = create :unit_group
     create :course_script, course: course_with_script, script: course_script, position: 1
     (create :section, course: course_with_script).students << student
 
@@ -3564,7 +3564,7 @@ class UserTest < ActiveSupport::TestCase
 
       # explicitly disable LB mode so that we don't create a .course file
       Rails.application.config.stubs(:levelbuilder_mode).returns false
-      @course = create :course
+      @course = create :unit_group
 
       @script2 = create :script
       @script3 = create :script
