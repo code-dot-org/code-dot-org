@@ -275,8 +275,8 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def should_disable_pairing?
-    type == "LevelGroup"
+  def should_allow_pairing?
+    type != "LevelGroup"
   end
 
   def self.level_file_path(level_name)
