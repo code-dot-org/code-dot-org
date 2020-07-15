@@ -32161,8 +32161,11 @@ en:
           stages:
             new lesson: &2
               name: new lesson
+            Module 1: &3
+              name: Module 1
           lessons:
             new lesson: *2
+            Module 1: *3
           lesson_groups:
             lesson group:
               display_name: display name
