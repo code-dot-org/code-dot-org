@@ -5,7 +5,6 @@ class LevelGroupDSL < LevelDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @hash[:texts] = []
     @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
@@ -49,9 +48,7 @@ class LevelGroupDSL < LevelDSL
       raise "LevelGroup text must be a level of type external. (#{name})"
     end
 
-    # Record the name of the external level, as well as the index of the actual level
-    # it appears immediately before.
-    @hash[:texts] << {level_name: name, index: @level_names.length}
+    @current_page_level_names << name
   end
 
   def level(name)
@@ -95,14 +92,11 @@ class LevelGroupDSL < LevelDSL
     new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
     new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
 
-    texts = properties['texts'] || []
     level.pages.each do |page|
       new_dsl << "\n\npage"
-      page.levels.each_with_index do |sublevel, index|
-        texts.select {|text| text['index'] == page.offset + index}.each do |text|
-          new_dsl << "\ntext '#{text['level_name']}'"
-        end
-        new_dsl << "\nlevel '#{sublevel.name}'"
+      page.levels_and_texts.each do |sublevel|
+        command = sublevel.is_a?(External) ? 'text' : 'level'
+        new_dsl << "\n#{command} '#{sublevel.name}'"
       end
     end
     new_dsl

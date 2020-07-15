@@ -25,7 +25,7 @@
 
 class LevelGroup < DSLDefined
   serialized_attrs %w(
-    levels_per_page
+    levels_and_texts_per_page
   )
 
   def dsl_default
@@ -49,35 +49,58 @@ class LevelGroup < DSLDefined
     'fa fa-list-ul'
   end
 
-  # Returns a flattened array of all the Levels in this LevelGroup, in order.
+  # Returns an array of all the levels and texts in this LevelGroup,
+  # in order.
+  def levels_and_texts
+    pages.map(&:levels_and_texts).flatten
+  end
+
+  # Returns an array of all the levels in this LevelGroup, in order.
   def levels
-    child_levels.all
+    pages.map(&:levels).flatten
   end
 
   class LevelGroupPage
-    def initialize(page_number, offset, levels)
+    def initialize(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
       @page_number = page_number
-      @offset = offset
-      @levels = levels
+      @levels_and_texts_offset = levels_and_texts_offset
+      @levels_and_texts = levels_and_texts
+      @levels_offset = levels_offset
     end
 
-    attr_reader :levels
     attr_reader :page_number
-    attr_reader :offset
+    attr_reader :levels_and_texts_offset
+    attr_reader :levels_and_texts
+    attr_reader :levels_offset
+
+    def levels
+      levels_and_texts.reject {|l| l.is_a?(External)}
+    end
+
+    def texts
+      levels_and_texts.select {|l| l.is_a?(External)}
+    end
   end
 
-  # Returns an array of pages LevelGroupPage objects, each of which contains:
-  #   levels: an array of Levels.
+  # Returns an array of LevelGroupPage objects, each of which contains:
   #   page_number: the 1-based page number (corresponding to the /page/X URL).
-  #   page_offset: the count of questions occurring on prior pages.
+  #   levels_and_texts_offset: the count of levels and texts on prior pages.
+  #   levels_and_texts: an array of levels and texts on this page.
+  #   levels_offset: the count of levels on prior pages.
+  #   levels: an array of levels on this page.
+  #   texts: an array of texts on this page.
 
   def pages
-    offset = 0
-    @pages ||= properties['levels_per_page'].map.with_index do |page_size, page_index|
+    levels_and_texts_offset = 0
+    levels_offset = 0
+    return @pages if @pages
+    all_levels_and_texts = child_levels.all
+    @pages = properties['levels_and_texts_per_page'].map.with_index do |page_size, page_index|
       page_number = page_index + 1
-      levels_by_page = levels[offset..(offset + page_size - 1)]
-      page_object = LevelGroupPage.new(page_number, offset, levels_by_page)
-      offset += page_size
+      levels_and_texts = all_levels_and_texts[levels_and_texts_offset..(levels_and_texts_offset + page_size - 1)]
+      page_object = LevelGroupPage.new(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
+      levels_and_texts_offset += page_size
+      levels_offset += page_object.levels.length
       page_object
     end
   end
@@ -88,23 +111,23 @@ class LevelGroup < DSLDefined
     # old way: store pages in property hash
     level.update!(properties: {pages: data[:pages]})
 
-    # new way: store pages in levels_per_page and child_levels.
-    levels_by_page = data[:pages].map do |page|
+    # new way: store pages in levels_and_texts_per_page and child_levels.
+    levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
         Level.find_by_name!(level_name)
       end
     end
-    level.update_levels_by_page(levels_by_page)
+    level.update_levels_and_texts_by_page(levels_and_texts_by_page)
 
     level
   end
 
-  # @param [Array] new_levels_by_page A 2D array of levels, e.g.
-  #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
-  def update_levels_by_page(new_levels_by_page)
+  # @param [Array] new_levels_and_texts_by_page A 2D array of levels and texts,
+  # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
+  def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
     reload
     self.child_levels = []
-    new_levels = new_levels_by_page.flatten
+    new_levels = new_levels_and_texts_by_page.flatten
     new_levels.each_with_index do |level, level_index|
       ParentLevelsChildLevel.find_or_create_by!(
         parent_level: self,
@@ -113,16 +136,16 @@ class LevelGroup < DSLDefined
       )
     end
 
-    self.levels_per_page = []
+    self.levels_and_texts_per_page = []
     @pages = nil
-    new_levels_by_page.each do |levels_by_page|
-      levels_per_page.push(levels_by_page.count)
+    new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
+      levels_and_texts_per_page.push(levels_and_texts_by_page.count)
     end
     save!
   end
 
-  def levels_by_page
-    pages.map(&:levels)
+  def get_levels_and_texts_by_page
+    pages.map(&:levels_and_texts)
   end
 
   def assign_attributes(params)
@@ -144,31 +167,20 @@ class LevelGroup < DSLDefined
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(levels_by_page, new_suffix)
+    level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
   end
 
   # Clone the sublevels, adding the specified suffix to the level name. Also
   # updates this level to reflect the new level names.
-  # @param [Array[Array[Level]]] A 2D array of levels, e.g.
-  #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
-  def clone_sublevels_with_suffix(old_levels_by_page, new_suffix)
-    new_properties = properties
-
-    if new_properties['texts']
-      new_properties['texts'].map! do |text|
-        new_level = Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
-        text['level_name'] = new_level.name
-        text
-      end
+  # @param [Array[Array[Level]]] A 2D array of levels and texts, e.g.
+  # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
+  def clone_sublevels_with_suffix(old_levels_and_texts_by_page, new_suffix)
+    new_levels_and_texts_by_page = old_levels_and_texts_by_page.map do |levels_and_texts|
+      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix)}
     end
-    update!(properties: new_properties)
-
-    new_levels_by_page = old_levels_by_page.map do |page_levels|
-      page_levels.map {|level| level.clone_with_suffix(new_suffix)}
-    end
-    update_levels_by_page(new_levels_by_page)
+    update_levels_and_texts_by_page(new_levels_and_texts_by_page)
   end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
