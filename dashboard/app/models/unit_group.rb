@@ -18,10 +18,10 @@ class UnitGroup < ApplicationRecord
   self.table_name = 'courses'
 
   # Some Courses will have an associated Plc::Course, most will not
-  has_one :plc_course, class_name: 'Plc::Course'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy
+  has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
+  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
 
   after_save :write_serialization
 
