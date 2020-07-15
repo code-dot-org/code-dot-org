@@ -16,10 +16,13 @@
   padding: 0 15px;
 }
 #terms-modal .modal-content p,
-#thank-donors-modal .modal-content p,
 #school-info-modal .modal-content p,
 #race-modal .modal-content p {
   font-size: 12px;
+  color: $default_text;
+}
+#thank-donors-modal .modal-content p {
+  font-size: 13px;
   color: $default_text;
   line-height: 18px;
 }
@@ -44,8 +47,7 @@
 #race-modal .full-width {
   width: 100%;
 }
-#terms-modal .scroll-box,
-#thank-donors-modal .scroll-box {
+#terms-modal .scroll-box {
   height: 350px;
   border: 1px solid $border_gray;
   padding: 20px;
@@ -123,26 +125,31 @@ $almost_white: #eee;
   }
 }
 
-#terms-modal, #thank-donors-modal {
+#thank-donors-modal {
   width: 700px;
 }
-#terms-modal .scroll-box,
+
 #thank-donors-modal .scroll-box {
-  height: 200px;
+  height: 224px;
+  border-top: 1px solid $border_gray;
+  padding: 0;
+  overflow: auto;
+  overflow-y: scroll;
 }
 
 .donor-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 642px;
 }
 
 .donor {
   height: 40px;
   width: 190px;
-  flex-basis: 30%;
-  padding: 1%;
+  padding: 8px 12px;
   text-align: center;
+  vertical-align: middle;
   font-family: $gotham-bold;
   font-size: 14px;
 }
@@ -151,9 +158,22 @@ $almost_white: #eee;
   text-align: center;
   font-size: 20px;
   color: $purple;
+  margin-top: 12px;
+  margin-bottom: 8px;
 }
 
 .donor-header {
   font-size: 24px;
   color: $purple;
+  margin-bottom: 14px;
+}
+
+.support-codeorg-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#dismiss-thank-donors {
+  margin-top: 0;
+  margin-bottom: 16px;
 }
