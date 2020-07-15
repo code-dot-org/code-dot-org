@@ -5,9 +5,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CachingTests < ActiveSupport::TestCase
     def populate_cache_and_disconnect_db
-      Course.stubs(:should_cache?).returns true
-      @@course_cache ||= Course.course_cache_to_cache
-      Course.course_cache
+      UnitGroup.stubs(:should_cache?).returns true
+      @@course_cache ||= UnitGroup.course_cache_to_cache
+      UnitGroup.course_cache
 
       # NOTE: ActiveRecord collection association still references an active DB connection,
       # even when the data is already eager loaded.
@@ -18,21 +18,21 @@ class UnitGroupTest < ActiveSupport::TestCase
     test "get_from_cache uses cache" do
       course = create(:course, name: 'acourse')
       # Ensure cache is populated with this course by name and id
-      Course.stubs(:should_cache?).returns true
-      Course.get_from_cache(course.name)
-      Course.get_from_cache(course.id)
+      UnitGroup.stubs(:should_cache?).returns true
+      UnitGroup.get_from_cache(course.name)
+      UnitGroup.get_from_cache(course.id)
 
-      uncached_course = Course.get_without_cache(course.id)
+      uncached_course = UnitGroup.get_without_cache(course.id)
 
       populate_cache_and_disconnect_db
 
       # Uncached find should raise because db was disconnected
       assert_raises do
-        Course.find_by_name('acourse')
+        UnitGroup.find_by_name('acourse')
       end
 
-      assert_equal uncached_course, Course.get_from_cache('acourse')
-      assert_equal uncached_course, Course.get_from_cache(course.id)
+      assert_equal uncached_course, UnitGroup.get_from_cache('acourse')
+      assert_equal uncached_course, UnitGroup.get_from_cache(course.id)
     end
   end
 
@@ -54,7 +54,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "should allow uppercase letters if it is a plc course" do
-      course = Course.new(name: 'PLC Course')
+      course = UnitGroup.new(name: 'PLC Course')
       course.plc_course = Plc::Course.new(course: course)
       course.save!
     end
@@ -75,7 +75,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if course has plc_course" do
-    course = Course.new(family_name: 'plc')
+    course = UnitGroup.new(family_name: 'plc')
     course.plc_course = Plc::Course.new(course: course)
     course.save
 
@@ -319,7 +319,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'returns nil for student assigned to this course' do
-      Course.any_instance.stubs(:can_view_version?).returns(true)
+      UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       section = create :section, course: @csp_2017
       student = create :student
       section.students << student
@@ -327,13 +327,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'returns nil for student not assigned to any course' do
-      Course.any_instance.stubs(:can_view_version?).returns(true)
+      UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       student = create :student
       assert_nil @csp_2017.redirect_to_course_url(student)
     end
 
     test 'returns link to latest assigned course for student assigned to a course in this family' do
-      Course.any_instance.stubs(:can_view_version?).returns(true)
+      UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, course: csp_2018
       student = create :student
@@ -342,7 +342,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'returns nil if latest assigned course is an older version than the current course' do
-      Course.any_instance.stubs(:can_view_version?).returns(true)
+      UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, course: @csp_2017
       student = create :student
@@ -398,17 +398,17 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'latest_stable_version returns nil if course family does not exist' do
-      assert_nil Course.latest_stable_version('fake-family')
+      assert_nil UnitGroup.latest_stable_version('fake-family')
     end
 
     test 'latest_stable_version returns latest course version' do
-      latest_version = Course.latest_stable_version('csp')
+      latest_version = UnitGroup.latest_stable_version('csp')
       assert_equal @csp_2018, latest_version
     end
 
     test 'latest_assigned_version returns latest version in family assigned to student' do
       create :follower, section: create(:section, course: @csp_2017), student_user: @student
-      latest_assigned_version = Course.latest_assigned_version('csp', @student)
+      latest_assigned_version = UnitGroup.latest_assigned_version('csp', @student)
       assert_equal @csp_2017, latest_assigned_version
     end
   end
@@ -486,7 +486,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     csd = create(:course, name: 'csd-2017', visible: true)
     create(:course, name: 'madeup')
 
-    assert_equal [csp, csd], Course.valid_courses
+    assert_equal [csp, csd], UnitGroup.valid_courses
   end
 
   test "assignable_info" do
@@ -542,12 +542,12 @@ class UnitGroupTest < ActiveSupport::TestCase
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     create :course, pilot_experiment: 'my-experiment'
-    assert Course.any?(&:pilot?)
+    assert UnitGroup.any?(&:pilot?)
 
-    refute Course.valid_courses(user: student).any?(&:pilot_experiment)
-    refute Course.valid_courses(user: teacher).any?(&:pilot_experiment)
-    assert Course.valid_courses(user: pilot_teacher).any?(&:pilot_experiment)
-    assert Course.valid_courses(user: levelbuilder).any?(&:pilot_experiment)
+    refute UnitGroup.valid_courses(user: student).any?(&:pilot_experiment)
+    refute UnitGroup.valid_courses(user: teacher).any?(&:pilot_experiment)
+    assert UnitGroup.valid_courses(user: pilot_teacher).any?(&:pilot_experiment)
+    assert UnitGroup.valid_courses(user: levelbuilder).any?(&:pilot_experiment)
   end
 
   test "valid_courses: pilot experiment results not cached" do
@@ -557,14 +557,14 @@ class UnitGroupTest < ActiveSupport::TestCase
     csp_2019 = create :course, name: 'csp-2019', visible: true
     csp_2020 = create :course, name: 'csp-2020', pilot_experiment: 'my-experiment'
 
-    assert_equal Course.valid_courses, [csp_2019]
-    assert_equal Course.valid_courses(user: teacher), [csp_2019]
+    assert_equal UnitGroup.valid_courses, [csp_2019]
+    assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
     # We had a caching bug where valid_courses with a user with pilot experiment would mutate the value stored
     # in the Rails cache, causing the course behind the experiment to be returned for all calls afterwards.
     # Verify that the results are still correct after this call.
-    assert_equal Course.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
-    assert_equal Course.valid_courses, [csp_2019]
-    assert_equal Course.valid_courses(user: teacher), [csp_2019]
+    assert_equal UnitGroup.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
+    assert_equal UnitGroup.valid_courses, [csp_2019]
+    assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
   end
 
   test "update_teacher_resources" do
@@ -635,10 +635,10 @@ class UnitGroupTest < ActiveSupport::TestCase
     create :course, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
-    refute Course.has_any_pilot_access?
-    refute Course.has_any_pilot_access?(student)
-    refute Course.has_any_pilot_access?(teacher)
-    assert Course.has_any_pilot_access?(pilot_teacher)
-    assert Course.has_any_pilot_access?(levelbuilder)
+    refute UnitGroup.has_any_pilot_access?
+    refute UnitGroup.has_any_pilot_access?(student)
+    refute UnitGroup.has_any_pilot_access?(teacher)
+    assert UnitGroup.has_any_pilot_access?(pilot_teacher)
+    assert UnitGroup.has_any_pilot_access?(levelbuilder)
   end
 end
