@@ -79,9 +79,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       script = Script.get_from_cache(script_id)
       return head :bad_request if script.nil?
       # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.course.try(:id)
+      return head :bad_request if course_id && course_id != script.unit_group.try(:id)
       # If script has a course and no course_id was provided, use default course
-      course_id ||= script.course.try(:id)
+      course_id ||= script.unit_group.try(:id)
       # Unhide script for this section before assigning
       section.toggle_hidden_script script, false
     end
