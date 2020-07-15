@@ -30,7 +30,6 @@ export default function manageLinkedAccounts(state = initialState, action) {
   if (action.type === INITIALIZE_STATE) {
     const {
       authenticationOptions,
-      authenticityToken,
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent
@@ -38,7 +37,6 @@ export default function manageLinkedAccounts(state = initialState, action) {
     return {
       ...state,
       authenticationOptions,
-      authenticityToken,
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent
