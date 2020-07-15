@@ -7,6 +7,7 @@ import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
 import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -23,7 +24,6 @@ const alert = window.alert;
 
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
-    csrfToken: PropTypes.string.isRequired,
     abuseUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
     email: PropTypes.string,
@@ -83,11 +83,7 @@ export default class ReportAbuseForm extends React.Component {
         <p>{msg.reportAbuseIntro()}</p>
         <br />
         <form action="/report_abuse" method="post">
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value={this.props.csrfToken}
-          />
+          <RailsAuthenticityToken />
           <input type="hidden" name="channel_id" value={this.getChannelId()} />
           <input type="hidden" name="name" value={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
