@@ -392,7 +392,14 @@ fa-IR:
         draw flame:
           parameters:
             x: طول (x)
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: طول (x)
       courseC_data wizard:
+        do something:
+          name: یه کاری بکن
+      courseC_data wizard_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_concept1:
@@ -424,6 +431,9 @@ fa-IR:
       courseE_artist_functions10_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions10_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions2:
         draw a square:
           name: یک مربع بکشید
@@ -433,6 +443,9 @@ fa-IR:
       courseE_artist_functions2_2019:
         draw a square:
           name: یک مربع بکشید
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: یک مربع بکشید
       courseE_artist_functions2_copy:
         draw a square:
           name: یک مربع بکشید
@@ -440,6 +453,9 @@ fa-IR:
         draw a star:
           name: رسم یک ستاره
       courseE_artist_functions3_2019:
+        draw a star:
+          name: رسم یک ستاره
+      courseE_artist_functions3_2020:
         draw a star:
           name: رسم یک ستاره
       courseE_artist_functions4:
@@ -457,6 +473,9 @@ fa-IR:
       courseE_artist_functions5_2019:
         draw a star:
           name: رسم یک ستاره
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: رسم یک ستاره
       courseE_artist_functions5_copy:
         draw a star:
           name: رسم یک ستاره
@@ -466,6 +485,9 @@ fa-IR:
       courseE_artist_functions7_2018:
         draw a house:
           name: یک خانه بکشید
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: یک خانه بکشید
       courseE_artist_functions8:
         do something:
           name: یه کاری بکن
@@ -473,6 +495,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions8_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8a_2018:
@@ -485,16 +510,27 @@ fa-IR:
           name: یک مربع بکشید
         do something:
           name: یه کاری بکن
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: یک مربع بکشید
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions8b_2018:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8b_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions8b_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions8c_2018:
         do something:
           name: یه کاری بکن
       courseE_artist_functions8c_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions8c_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions9:
@@ -506,6 +542,9 @@ fa-IR:
       courseE_artist_functions9_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions9_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions_challenge1:
         do something:
           name: یه کاری بکن
@@ -513,6 +552,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_challenge2:
@@ -524,6 +566,9 @@ fa-IR:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: یه کاری بکن
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: یه کاری بکن
       courseE_artist_functions_predict1:
         draw a square:
           name: یک مربع بکشید
@@ -531,6 +576,9 @@ fa-IR:
         draw a square:
           name: یک مربع بکشید
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: یک مربع بکشید
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: یک مربع بکشید
       courseE_artist_functions_predict1_copy:
@@ -543,6 +591,9 @@ fa-IR:
         do something:
           name: یه کاری بکن
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: یه کاری بکن
+      courseE_artist_functions_predict2_2020:
         do something:
           name: یه کاری بکن
       courseE_bee_functions1:
@@ -706,9 +757,15 @@ fa-IR:
       courseF_bee_variables_7_2019:
         collect:
           name: جمع آوری
+      courseF_bee_variables_7_2020:
+        collect:
+          name: جمع آوری
       courseF_bee_variables_8_2018:
         collect:
           name: جمع آوری
       courseF_bee_variables_8_2019:
+        collect:
+          name: جمع آوری
+      courseF_bee_variables_8_2020:
         collect:
           name: جمع آوری

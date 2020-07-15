@@ -10427,111 +10427,6 @@ is:
               name: Lykkjur og slembitölur
             Practice PT - Design a Digital Scene:
               name: Fagnámsæfing - Hanna stafræna sviðsmynd
-        csd3-virtual:
-          description_short: "Forritun"
-          stages:
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram.
-            Drawing in Game Lab:
-              name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
-            Shapes and Randomization:
-              name: Form og handahóf
-            Variables:
-              name: Breytur
-            Sprites:
-              name: Kvikar
-            Sprite Movement:
-              name: Hreyfing kvika
-            Conditionals:
-              name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
-            Velocity:
-              name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
-            Collision Detection:
-              name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-            Complex Sprite Movement:
-              name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að bæta eigin hugmyndum í leikinn í síðasta áfanganum.
-            Collisions:
-              name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt. Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`, `bounce` og `bounceOff`).
-            Functions:
-              name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
-            The Game Design Process:
-              name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
-            Using the Game Design Process:
-              name: Notkun leikjahönnunarferlisins
-            Sprite Properties:
-              name: Eiginleikar kvika
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kafli 1: Myndir og Hreyfing'
-          lessons:
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram.
-            Drawing in Game Lab:
-              name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
-            Shapes and Randomization:
-              name: Form og handahóf
-            Variables:
-              name: Breytur
-            Sprites:
-              name: Kvikar
-            Sprite Movement:
-              name: Hreyfing kvika
-            Conditionals:
-              name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
-            Velocity:
-              name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
-            Collision Detection:
-              name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-            Complex Sprite Movement:
-              name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að bæta eigin hugmyndum í leikinn í síðasta áfanganum.
-            Collisions:
-              name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt. Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`, `bounce` og `bounceOff`).
-            Functions:
-              name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
-            The Game Design Process:
-              name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
-            Using the Game Design Process:
-              name: Notkun leikjahönnunarferlisins
-            Sprite Properties:
-              name: Eiginleikar kvika
         jess-test-script:
           stages:
             new stage:
@@ -10764,3 +10659,134 @@ is:
               display_name: 'Kafað dýpra: Námskeið E og F'
             k5_next_steps_1:
               display_name: Næstu skref
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp5_1:
+              display_name: 'Kafli 1: Atburðaknúin forritun'
+        csd3-virtual:
+          description_short: "Forritun"
+          stages:
+            Programming for Entertainment:
+              description_student: "Hópurinn er beðinn að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
+              description_teacher: "Nemendur eru beðnir að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
+            Plotting Shapes:
+              description_student: "Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram."
+              description_teacher: "Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram."
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+              description_student: "Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem hann hannaði í næsta tíma á undan."
+              description_teacher: "Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan."
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Text:
+              name: texti
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+              description_student: "Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði."
+            Velocity:
+              name: Hraði
+              description_student: "Eftir stutta skoðun á því hvernig teljaramynstrið er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller)."
+              description_teacher: "Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller)."
+            Collision Detection:
+              name: Skynjun árekstra
+              description_student: "Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma."
+              description_teacher: "Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma."
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+              description_student: "Hópurinn lærir að samtvinna hraðaeiginleika kvika og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik þar sem leikvera flýgur um og safnar peningum. "
+              description_teacher: "Nemendur læra að nota hraðaeiginleika kvika ásamt teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að bæta eigin hugmyndum í leikinn í síðasta áfanganum."
+            Collisions:
+              name: Árekstrar
+              description_student: "Hópurinn forritar kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt. Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og bounceOff)."
+              description_teacher: "Nemendur forrita kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`, `bounce` og `bounceOff`)."
+            Functions:
+              name: Föll
+              description_student: "Þessi kennslustund tekur fyrir föll sem aðferð til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til."
+              description_teacher: "Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til."
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+              description_student: "Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild."
+              description_teacher: "Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild."
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
+          lessons:
+            Programming for Entertainment:
+              description_student: "Hópurinn er beðinn að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
+              description_teacher: "Nemendur eru beðnir að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
+            Plotting Shapes:
+              description_student: "Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram."
+              description_teacher: "Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram."
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+              description_student: "Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem hann hannaði í næsta tíma á undan."
+              description_teacher: "Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan."
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Text:
+              name: texti
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+              description_student: "Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði."
+            Velocity:
+              name: Hraði
+              description_student: "Eftir stutta skoðun á því hvernig teljaramynstrið er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller)."
+              description_teacher: "Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller)."
+            Collision Detection:
+              name: Skynjun árekstra
+              description_student: "Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma."
+              description_teacher: "Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma."
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+              description_student: "Hópurinn lærir að samtvinna hraðaeiginleika kvika og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik þar sem leikvera flýgur um og safnar peningum. "
+              description_teacher: "Nemendur læra að nota hraðaeiginleika kvika ásamt teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að bæta eigin hugmyndum í leikinn í síðasta áfanganum."
+            Collisions:
+              name: Árekstrar
+              description_student: "Hópurinn forritar kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt. Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og bounceOff)."
+              description_teacher: "Nemendur forrita kvika til að eiga samskipti á nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`, `bounce` og `bounceOff`)."
+            Functions:
+              name: Föll
+              description_student: "Þessi kennslustund tekur fyrir föll sem aðferð til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til."
+              description_teacher: "Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til."
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+              description_student: "Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild."
+              description_teacher: "Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild."
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
+          lesson_groups:
+            csd3_1:
+              display_name: Innihald
+            csd3_2:
+              display_name: Innihald
+            cspSurvey:
+              display_name: Innihald
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald

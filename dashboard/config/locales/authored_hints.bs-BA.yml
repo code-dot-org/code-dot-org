@@ -10,6 +10,27 @@ bs-BA:
       2-3 Artist 4:
         2-3_Artist_4_a: Da biste završili kuću, sve što trebamo učiniti je nacrtati
           Kvadrat!
+      CourseD_Dance_2020_01:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Postarajte se da se plesač pojavi na ekranu.
+
+          _Ovaj level se završava nakon 4 takta._
+      CourseD_Dance_2020_04:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Plesač mora promjeniti novi pokret svako četiri takta.
+
+          _Level se završava nakon 7 taktova._
+      CourseD_Dance_2020_05:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.
+
+          _Level se završava nakon 11 taktova._
       CourseD_Dance_Party_01:
         validation: |-
           **Kako da pređem ovaj level?**
@@ -250,6 +271,11 @@ bs-BA:
         courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni
           za 90 stepeni' blok.
       courseC_artist_prog2_2019:
+        courseC_artist_prog2_a: Koristite li blok 'kreni naprijed za 100 piksela',
+          sam će povući liniju automatski.
+        courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni
+          za 90 stepeni' blok.
+      courseC_artist_prog2_2020:
         courseC_artist_prog2_a: Koristite li blok 'kreni naprijed za 100 piksela',
           sam će povući liniju automatski.
         courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni

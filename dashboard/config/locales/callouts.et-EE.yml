@@ -117,6 +117,15 @@ et-EE:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      CourseD_Dance_2020_04:
+        dance_callout_02: Lisa see plokk oma programmi!
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Uus plokk!
+      CourseD_Dance_2020_07:
+        setprop_hint: Uus plokk!
+      CourseD_Dance_2020_09:
+        new_block_3: Uus plokk!
+        new_block_4: Uus plokk!
       CourseD_Dance_Party_01:
         dance_callout_01: Lisa see plokk oma programmi!
       CourseD_Dance_Party_02:
@@ -154,6 +163,9 @@ et-EE:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus
           koodi sama nimega, mis töölaual.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus
+          koodi sama nimega, mis töölaual.
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake
           neid sõnu, et näha, kuhu kõik läksid!
@@ -181,17 +193,26 @@ et-EE:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale
           ja lisage kood, mida soovite korduvalt kasutada.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale
+          ja lisage kood, mida soovite korduvalt kasutada.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
       NEW Course 4 Artist Functions 7:
         edit_function: Funktsiooni muutmiseks kliki siin.
@@ -214,19 +235,28 @@ et-EE:
         craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
           oskad selle lõpetada?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
           oskad selle lõpetada?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
+          oskad selle lõpetada?
       Overworld Move to Sheep:
         craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
       Overworld Place Wall:
         craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
       Overworld Place Wall_2019:
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+      Overworld Place Wall_2020:
         craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
       Underground Avoiding Lava:
         craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
@@ -234,9 +264,14 @@ et-EE:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
           käsu edasiliikumiseks?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
+          käsu edasiliikumiseks?
       Underground Iron:
         craft_what_is_iron: Kaevanda seda rauda!
       Underground Iron_2019:
+        craft_what_is_iron: Kaevanda seda rauda!
+      Underground Iron_2020:
         craft_what_is_iron: Kaevanda seda rauda!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
@@ -245,6 +280,9 @@ et-EE:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
           Sa ei pea üldse meekärgesid kontrollima.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
+          Sa ei pea üldse meekärgesid kontrollima.
+      courseD_bee_conditionals2_2020:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
           Sa ei pea üldse meekärgesid kontrollima.
       courseD_bee_conditionals2_copy:

@@ -804,17 +804,6 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
-        csd3-virtual:
-          stages:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
-          lessons:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط
         csp5-virtual:
           stages:
             Variables:
@@ -848,3 +837,46 @@ ur:
               name: شرائط
             Variables:
               name: متغیرات
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق

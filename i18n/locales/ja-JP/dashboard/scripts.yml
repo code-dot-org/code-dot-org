@@ -4575,28 +4575,6 @@ ja:
           lessons:
             Creating Functions:
               name: 関数の作成
-        csd3-virtual:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう) 
-          lesson_groups:
-            csd3_1:
-              display_name: '第 1 章: 画像とアニメーション'
-          lessons:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう) 
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4679,3 +4657,77 @@ ja:
               name: 変数（へんすう）
             For Loops:
               name: ループ用
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csd3-virtual:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Text:
+              name: テキスト
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+          lessons:
+            Variables:
+              name: 変数（へんすう）
+            Text:
+              name: テキスト
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: 内容
+            csd3_2:
+              display_name: 内容
+            cspSurvey:
+              display_name: 内容
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容

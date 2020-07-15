@@ -236,6 +236,7 @@
   "dancePartyTitle": "Tantsuõhtu",
   "dataLimitAlert": "Rakendus on andmebaasi liiga tihti lugenud või kirjutanud, mis võib põhjustada ootamatuid vigu. Palun teavita rakenduse omanikku kui probleemid jätkuvad.",
   "dataTableNamePlaceholder": "Tabeli nimi",
+  "dataLibrarySearchPlacholder": "Otsi",
   "dataWorkspaceHeader": "Andmevaatur",
   "debugWatchHeader": "Vaata",
   "debugWatchNotAvailable": "<puudub>",

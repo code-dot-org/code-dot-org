@@ -365,7 +365,14 @@ si-LK:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: යමක් කරන්න
+      courseC_data wizard_2020:
         do something:
           name: යමක් කරන්න
       courseE_artist_concept1:
@@ -397,6 +404,9 @@ si-LK:
       courseE_artist_functions10_2019:
         do something:
           name: යමක් කරන්න
+      courseE_artist_functions10_2020:
+        do something:
+          name: යමක් කරන්න
       courseE_artist_functions2:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
@@ -406,6 +416,9 @@ si-LK:
       courseE_artist_functions2_2019:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: සමචතුරස්‍රයක් අඳින්න
       courseE_artist_functions2_copy:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
@@ -413,6 +426,9 @@ si-LK:
         draw a star:
           name: තරුවක් අඳින්න
       courseE_artist_functions3_2019:
+        draw a star:
+          name: තරුවක් අඳින්න
+      courseE_artist_functions3_2020:
         draw a star:
           name: තරුවක් අඳින්න
       courseE_artist_functions4:
@@ -430,6 +446,9 @@ si-LK:
       courseE_artist_functions5_2019:
         draw a star:
           name: තරුවක් අඳින්න
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: තරුවක් අඳින්න
       courseE_artist_functions5_copy:
         draw a star:
           name: තරුවක් අඳින්න
@@ -439,6 +458,9 @@ si-LK:
       courseE_artist_functions7_2018:
         draw a house:
           name: ගෙයක් අඳින්න
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: ගෙයක් අඳින්න
       courseE_artist_functions8:
         do something:
           name: යමක් කරන්න
@@ -446,6 +468,9 @@ si-LK:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions8_2019:
+        do something:
+          name: යමක් කරන්න
+      courseE_artist_functions8_2020:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions8a_2018:
@@ -458,16 +483,27 @@ si-LK:
           name: සමචතුරස්‍රයක් අඳින්න
         do something:
           name: යමක් කරන්න
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: සමචතුරස්‍රයක් අඳින්න
+        do something:
+          name: යමක් කරන්න
       courseE_artist_functions8b_2018:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions8b_2019:
         do something:
           name: යමක් කරන්න
+      courseE_artist_functions8b_2020:
+        do something:
+          name: යමක් කරන්න
       courseE_artist_functions8c_2018:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions8c_2019:
+        do something:
+          name: යමක් කරන්න
+      courseE_artist_functions8c_2020:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions9:
@@ -479,6 +515,9 @@ si-LK:
       courseE_artist_functions9_2019:
         do something:
           name: යමක් කරන්න
+      courseE_artist_functions9_2020:
+        do something:
+          name: යමක් කරන්න
       courseE_artist_functions_challenge1:
         do something:
           name: යමක් කරන්න
@@ -486,6 +525,9 @@ si-LK:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: යමක් කරන්න
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions_challenge2:
@@ -497,6 +539,9 @@ si-LK:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: යමක් කරන්න
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: යමක් කරන්න
       courseE_artist_functions_predict1:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
@@ -504,6 +549,9 @@ si-LK:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: සමචතුරස්‍රයක් අඳින්න
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: සමචතුරස්‍රයක් අඳින්න
       courseE_artist_functions_predict1_copy:
@@ -516,6 +564,9 @@ si-LK:
         do something:
           name: යමක් කරන්න
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: යමක් කරන්න
+      courseE_artist_functions_predict2_2020:
         do something:
           name: යමක් කරන්න
       courseE_bee_functions1:
@@ -680,9 +731,15 @@ si-LK:
       courseF_bee_variables_7_2019:
         collect:
           name: එකතු කරන්න
+      courseF_bee_variables_7_2020:
+        collect:
+          name: එකතු කරන්න
       courseF_bee_variables_8_2018:
         collect:
           name: එකතු කරන්න
       courseF_bee_variables_8_2019:
+        collect:
+          name: එකතු කරන්න
+      courseF_bee_variables_8_2020:
         collect:
           name: එකතු කරන්න

@@ -227,6 +227,7 @@
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
       studentCount: current_user.students.count,
+      authenticityToken: form_authenticity_token
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

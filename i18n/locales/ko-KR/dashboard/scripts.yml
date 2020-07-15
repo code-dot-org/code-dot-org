@@ -4485,37 +4485,6 @@ ko:
               name: 함수 만들기
             Creating functions with Parameters:
               name: 매개변수가 있는 함수 만들기
-        csd3-virtual:
-          description_short: "프로그래밍"
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Sprite Properties:
-              name: 스프라이트 속성
-          lesson_groups:
-            csd3_1:
-              display_name: '1 장: 이미지와 애니메이션'
-          lessons:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Sprite Properties:
-              name: 스프라이트 속성
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4602,3 +4571,58 @@ ko:
               name: 반복을 위한
             Sprite Lab:
               name: 스프라이트 연구소
+        csd3-virtual:
+          description_short: "프로그래밍"
+          stages:
+            Variables:
+              name: 변수
+            Sprite Properties:
+              name: 스프라이트 속성
+            Text:
+              name: 문장
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+          lessons:
+            Variables:
+              name: 변수
+            Sprite Properties:
+              name: 스프라이트 속성
+            Text:
+              name: 문장
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+          lesson_groups:
+            csd3_1:
+              display_name: 콘텐츠
+            csd3_2:
+              display_name: 콘텐츠
+            cspSurvey:
+              display_name: 콘텐츠
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: 콘텐츠
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: 콘텐츠
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: 콘텐츠
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: 콘텐츠

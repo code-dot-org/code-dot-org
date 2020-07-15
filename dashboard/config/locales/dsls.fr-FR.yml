@@ -565,7 +565,25 @@ fr-FR:
           scène de cette histoire ! |
 
 '
+      Begin planning your project_2018_2019_2020:
+        content1: description ici
+        markdown: '# Exemples de Projets    Tu es sur le point de commencer ton projet
+          final. Avant de commencer, passe un moment à regarder les exemples de projets.    |
+          Écureuil Affamé | Histoire d''Extraterrestre |    |---|---|    | [![Écureuil
+          Affamé (Labo du Jeu)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG
+          "Écureuil Affamé(Labo du Jeu")] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view)
+          /[![Histoire d''Extraterrestre (Labo du Jeu)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG
+          "Histoire d''Extraterrestre (Labo du Jeu")] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view)
+          / / Essaie d''ajouter des sons à ce jeu ! | Essaie d''ajouter une autre
+          scène de cette histoire ! |
+
+'
       BigEvent-Unplugged:
+        markdown: |
+          # Le grand événement
+
+          En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
+      BigEvent-Unplugged_2020:
         markdown: |
           # Le grand événement
 
@@ -573,7 +591,13 @@ fr-FR:
       BinaryBracelets-Unplugged:
         markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
           dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+      BinaryBracelets-Unplugged_2020:
+        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
+          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       BinaryImages-Unplugged:
+        markdown: "# Images Binaires    Exprime comment recréer une image seulement
+          à l'aide de deux valeurs simples.\n"
+      BinaryImages-Unplugged_2020:
         markdown: "# Images Binaires    Exprime comment recréer une image seulement
           à l'aide de deux valeurs simples.\n"
       CSD Header Size MC:
@@ -980,6 +1004,10 @@ fr-FR:
         markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
           crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
           » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
+          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
+          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
       Crowdsourcing-Unplugged:
         markdown: "# Production participative   Vois comment la production participative,
           une technique de résolution de problèmes commune en informatique, peut t'aider
@@ -1158,6 +1186,15 @@ fr-FR:
           pour smartphones**.   * La conception d'applications, accessibles pour les
           personnes handicapées, améliorent ces mêmes applications pour tout le monde
           aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
+          **l'accessibilité** consiste à créer de la technologie pour les personnes
+          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
+          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
+          manières, notamment la façon dont ils utilisent la technologie comme **applications
+          pour smartphones**.   * La conception d'applications, accessibles pour les
+          personnes handicapées, améliorent ces mêmes applications pour tout le monde
+          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
       DigitalCitizenship-Unplugged:
         markdown: "# Citoyenneté Numérique    Il n'est pas sûr de partager certaines
           informations, en ligne. Cette leçon t'aidera à apprendre la différence entre
@@ -1171,7 +1208,15 @@ fr-FR:
         markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
           et les avantages du respect de la propriété et du droit d'auteur, en particulier
           dans les environnements numériques.\n"
+      DigitalSharing-Unplugged_2020:
+        markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
+          et les avantages du respect de la propriété et du droit d'auteur, en particulier
+          dans les environnements numériques.\n"
       EnvelopeVariables-Unplugged:
+        markdown: "# Envelope Variables   Les variables offrent beaucoup de liberté
+          en informatique. Cette leçon aide à expliquer ce que sont les variables
+          et les différentes façons dont nous pouvons les utiliser.\n"
+      EnvelopeVariables-Unplugged_2020:
         markdown: "# Envelope Variables   Les variables offrent beaucoup de liberté
           en informatique. Cette leçon aide à expliquer ce que sont les variables
           et les différentes façons dont nous pouvons les utiliser.\n"
@@ -1179,7 +1224,16 @@ fr-FR:
         markdown: "# Les Boucles Pour Amusantes   Nous savons que les boucles nous
           permettent de faire des choses encore et encore mais, maintenant, nous allons
           apprendre à utiliser des boucles avec une structure supplémentaire intégrée.\n"
+      ForLoopFun-Unplugged_2020:
+        markdown: "# Les Boucles Pour Amusantes   Nous savons que les boucles nous
+          permettent de faire des choses encore et encore mais, maintenant, nous allons
+          apprendre à utiliser des boucles avec une structure supplémentaire intégrée.\n"
       GettingLoopy-Unplugged:
+        markdown: |
+          # Faire le plain de boucles
+
+          Cette leçon présente le concept de programmation des boucles à travers une activité de danse.
+      GettingLoopy-Unplugged_2020:
         markdown: |
           # Faire le plain de boucles
 
@@ -1192,7 +1246,17 @@ fr-FR:
       GraphPaperProgramming-Unplugged:
         markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
           que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
+          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
       HappyLoops-Unplugged:
+        markdown: |
+          # Joyeuses boucles
+
+          Dans cette leçon, vous allez apprendre les boucles!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
         markdown: |
           # Joyeuses boucles
 
@@ -1204,6 +1268,11 @@ fr-FR:
           # Joyeuse carte
 
           Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # Joyeuse carte
+
+          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
       Internet Simulator Setup:
         content1: description ici
       Internet Simulator Setup 2:
@@ -1211,6 +1280,9 @@ fr-FR:
       Internet Simulator Setup 3:
         content1: description ici
       Internet-Unplugged:
+        markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
+          classe, simplement à l'aide de morceaux de papier.\n"
+      Internet-Unplugged_2020:
         markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
           classe, simplement à l'aide de morceaux de papier.\n"
       K-1 Artist 1 Multi 1:
@@ -1416,12 +1488,25 @@ fr-FR:
           # Bougé, Bougé
 
           Utiliser une carte et donner les commandes pour atteindre le but.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # Bougé, Bougé
+
+          Utiliser une carte et donner les commandes pour atteindre le but.
       Multi-Screen Apps:
         content1: description ici
       MyLoopyRoboticFriends-Unplugged:
         markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
           utilisant des boucles !\n"
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
+          utilisant des boucles !\n"
       MyRoboticFriends-Unplugged:
+        markdown: |
+          # Mon ami robot
+
+          Apprend à programmer en codant pour tes amis!
+      MyRoboticFriends-Unplugged_2020:
         markdown: |
           # Mon ami robot
 
@@ -1595,6 +1680,9 @@ fr-FR:
       PicturingData-Unplugged:
         markdown: "# Représenter des Données    Utilise un projet du Labo du Jeu pour
           recueillir des données et faire des prévisions.    ![] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)\n"
+      PicturingData-Unplugged_2020:
+        markdown: "# Représenter des Données    Utilise un projet du Labo du Jeu pour
+          recueillir des données et faire des prévisions.    ![] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)\n"
       PowerOfWords-Unplugged:
         markdown: "# La Pouvoir des Mots   Aujourd'hui tu apprendras ce qu'il faut
           faire si quelqu'un est méchant en ligne.\n"
@@ -1621,6 +1709,9 @@ fr-FR:
       RelayProgramming-Unplugged:
         markdown: "# Programmation en Relais    Composez des équipes et travaillez
           ensemble pour écrire des programmes qui dessinent des images.\n"
+      RelayProgramming-Unplugged_2020:
+        markdown: "# Programmation en Relais    Composez des équipes et travaillez
+          ensemble pour écrire des programmes qui dessinent des images.\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Rejette les mechancetés
@@ -1629,7 +1720,13 @@ fr-FR:
       SimonSays-Unplugged:
         markdown: "# Jacques A Dit   Joue à un jeu et réfléchis aux commandes nécessaires
           pour obtenir le bon résultat.\n"
+      SimonSays-Unplugged_2020:
+        markdown: "# Jacques A Dit   Joue à un jeu et réfléchis aux commandes nécessaires
+          pour obtenir le bon résultat.\n"
       Songwriting-Unplugged:
+        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
+          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
+      Songwriting-Unplugged_2020:
         markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
           chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
       'Technique: Frequency Analysis':
@@ -1687,6 +1784,13 @@ fr-FR:
           de la musique, ou juste naviguer sur internet.\n* C'est important pour les
           programmeurs de comprendre les besoins des autres et de concevoir des applications
           dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# La bonne application\n\n* Tout le monde utilise des ordinateurs
+          de nos jours, surtout des smartphones. \n* Les applications de smartphone
+          aident les gens à faire des chose tels que parles à leurs amis, écouter
+          de la musique, ou juste naviguer sur internet.\n* C'est important pour les
+          programmeurs de comprendre les besoins des autres et de concevoir des applications
+          dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       behaviors 1 predict:
         answers:
         - text: 'Le lutin tournera
@@ -1711,7 +1815,57 @@ fr-FR:
             mystère` fonctionne. Étudie le code à l''intérieur, puis fais une prévision.
 
 '
+      behaviors 1 predict_2020:
+        answers:
+        - text: 'Le lutin tournera
+
+'
+          feedback: Incorrect.
+        - text: 'Le lutin rétrécira.
+
+'
+          correct: true
+          feedback: Correct!
+        - text: 'Le lutin bougera.
+
+'
+          feedback: Incorrect.
+        - text: 'Le lutin changera de couleurs.
+
+'
+          feedback: Incorrect
+        questions:
+        - text: 'Clique sur le bouton « modifier » pour voir comment le `comportement
+            mystère` fonctionne. Étudie le code à l''intérieur, puis fais une prévision.
+
+'
       behaviors 4 predict:
+        answers:
+        - text: 'À gauche puis vers le bas
+
+'
+          feedback: Incorrect.
+        - text: 'En diagonale
+
+'
+          correct: true
+          feedback: Correct!
+        - text: 'Zigzag
+
+'
+          feedback: 'Incorrect.
+
+'
+        - text: 'Vers le bas, puis à gauche
+
+'
+          feedback: Incorrect
+        questions:
+        - text: 'Faites une prévision. Quel chemin le satellite suivra-t-il, vers
+            la galaxie ?
+
+'
+      behaviors 4 predict_2020:
         answers:
         - text: 'À gauche puis vers le bas
 
@@ -1779,6 +1933,20 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessinera une seule ligne.
+          feedback: Incorrect. L'artiste a dessiné un carré.
+        - text: L'artiste dessinera un carré.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L'artiste dessine un carré.
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1830,14 +1998,31 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
             fermier ramassera après avoir cliqué sur "Démarrer" ?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
+        - text: '12'
+          correct: true
+          feedback: Correct!
+        - text: '15'
+          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
+            3 boucles. 4 fois égal 12!
+        - text: Je ne sais pas.
+          feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
+            4 fois égal 12!
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
+            fermier ramassera après avoir cliqué sur "Démarrer" ?
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+        - text: Le programme n'échouera pas. Scrat va atteindre le gland.
           feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -1847,12 +2032,12 @@ fr-FR:
             qui va faire échouer ce programme? '
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+        - text: Le programme n'échouera pas. Scrat va atteindre le gland.
           feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -1862,12 +2047,27 @@ fr-FR:
             qui va faire échouer ce programme? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
+        - text: Le programme n'échouera pas. Scrat va atteindre le gland.
           feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
+        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
+          feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
+        - text: Je ne sais pas.
+          feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
+            après son dernier virage. '
+        questions:
+        - text: 'Regarde attentivement le code ci-dessous. Quel est la première erreur
+            qui va faire échouer ce programme? '
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: Le programme n'échouera pas. Scrat va atteindre le gland.
+          feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
+        - text: Scrat prendra le mauvais chemin après son dernier virage.
+          correct: true
+          feedback: Correct!
+        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -1877,13 +2077,13 @@ fr-FR:
             qui va faire échouer ce programme? '
       courseC_multi_maze_programming8_predict1:
         answers:
-        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va s'arrêter à un pas du cochon.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va foncer dans les explosifs.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1891,13 +2091,13 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va s'arrêter à un pas du cochon.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va foncer dans les explosifs.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1905,13 +2105,27 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va s'arrêter à un pas du cochon.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va foncer dans les explosifs.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
+        - text: Je ne sais pas.
+          feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
+        questions:
+        - text: Lis attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu vas cliquer sur "Démarrer"?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: L'oiseau va s'arrêter à un pas du cochon.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau va foncer dans les explosifs.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1944,6 +2158,19 @@ fr-FR:
         questions:
         - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - text: BB-8 ne bougera pas.
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera seulement d'un pas
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: BB-8 bougera 5 fois et ramassera toute la feraille
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas
+          feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
+        questions:
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 ne bougera pas.
           feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
@@ -2010,6 +2237,24 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 va voyager trop loin dans la première boucle.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+            ramasser toute la ferraille.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 ramassera toute la ferraille sans problème.
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+            2 pas, alors qu'il a besoin d'avancer de 3 pas.
+        - text: Je ne sais pas.
+          feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
+            qu; il a besoin d'avancer de 3 pas.
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2039,6 +2284,20 @@ fr-FR:
         - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
             appuyé sur "Démarrer"?
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+          feedback: Incorrect.
+        - text: B
+          feedback: Incorrect.
+        - text: C
+          feedback: Incorrect.
+        - text: D
+          correct: true
+          feedback: Correct!
+        questions:
+        - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
+            appuyé sur "Démarrer"?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
           feedback: Incorrect.
@@ -2121,6 +2380,29 @@ fr-FR:
         questions:
         - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
             lorsque tu cliqueras sur "Démarrer"?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: Correct!
+        - text: B
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
+        - text: C
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+            le répète 4 fois dans un cercle.
+        - text: Je ne sais pas.
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it
+            4 times in a circle.
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
+        questions:
+        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
+            lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -2168,6 +2450,29 @@ fr-FR:
             Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
             ?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
+        questions:
+        - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
+            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
+            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
+            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
+            ?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
             ce qu’il se passe. '
@@ -2267,6 +2572,18 @@ fr-FR:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
             après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
             pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Correct!
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
+            d'abeilles.
+        - text: Je ne sais pas.
+        questions:
+        - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
+            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
+            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: L'abeille avancera et prendra le nectar seulement une fois.
@@ -2302,6 +2619,23 @@ fr-FR:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
             se passer lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - text: L'abeille avancera et prendra le nectar seulement une fois.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L'abeille prendra 2 unités de nectar.
+          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+            le nectar, lui permettant ainsi de terminer le puzzle.
+        - text: L' abeille prendra tout le nectar.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+            lui permettant ainsi de terminer le puzzle.
+        questions:
+        - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
+            se passer lorsque tu cliqueras sur "Démarrer"?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: L'abeille avancera et prendra le nectar seulement une fois.
           feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
@@ -2359,6 +2693,26 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
             produira lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
+        - text: '8'
+          correct: true
+          feedback: Correct!
+        - text: '12'
+          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+            puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
+            qui se répète 2 fois. 4 fois 2 égal 8!
+        - text: Je ne sais pas.
+          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
+            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
+            répète 2 fois. 4 fois 2 égal 8!
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
+            produira lorsque tu cliqueras sur "Démarrer"?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
           feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
@@ -2462,6 +2816,27 @@ fr-FR:
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer" ?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: Le ceuilleur  ramassera toutes les plantes.
+          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
+        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+            prend.
+          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
+            ramassera pas la citrouille.
+        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
+            et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
+            pas la citrouille.
+        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
+          br / >
+        questions:
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+            sur "Démarrer" ?
       courseD_multi_farmer_ramp13:
         answers:
         - text: Le fermier marchera jusq'au bout du chemin et recoltera la citrouille.
@@ -2531,6 +2906,21 @@ fr-FR:
             mais il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: Rien. Ce code ne laissera qu’un terrain plat.
+          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+        - text: Ce code laissera le tas intact.
+          correct: true
+          feedback: Correct!
+        - text: Ce code laissera les trous intacts.
+          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+            quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
+        - text: Je ne sais pas.
+          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
+            mais il n'y a pas de code pour enlever la saleté du tas.
+        questions:
+        - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: Rien ne se passera.
@@ -2568,6 +2958,24 @@ fr-FR:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le fermier n'arrêtera jamais d'enlever la saleté.
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+            tas, puis s'arrêtera dès que le tas sera terminé
+        - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
+            dès que le tas sera terminé
+        questions:
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+            sur "Démarrer"?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
@@ -2643,6 +3051,25 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
+            toujours.
+          correct: true
+          feedback: Correct!
+        - text: Le zombie va arriver jusqu'au tournesol.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
+        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
+            sans jamais s'arrêter de tourner.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
+        - text: Je ne sais pas.
+          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
+            aller et venir, pour toujours.
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
       courseD_multi_maze_until2_predict1:
         answers:
         - text: L'oiseau ne bougera pas du tout.
@@ -2700,6 +3127,25 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: L'oiseau ne bougera pas du tout.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
+            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
+        - text: L'oiseau va aller jusqu'au cochon.
+          correct: true
+          feedback: Correct!
+        - text: L'oiseau avance et percute la TNT.
+          feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
+            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
+        - text: Je ne sais pas.
+          feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
+            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
+        questions:
+        - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
+            tu cliqueras sur "Démarrer"?
       courseD_multi_scrat_predict1:
         answers:
         - text: Rien. Scrat ne bougera pas du tout.
@@ -2719,6 +3165,8 @@ fr-FR:
         questions:
         - text: Ce code utilise un nouveau bloc. Que penses-tu qu'il se passera lorsque
             tu appuieras sur "Exécuter" ?
+      courseD_project_exemplars_2020_2021:
+        content1: Page du Manuel du Test Markdown
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
@@ -2800,6 +3248,29 @@ fr-FR:
         questions:
         - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: La fermière ramassera 2 citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
+        - text: La fermière ramassera toutes les citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
+        - text: La fermière ramassera la salade.
+          correct: true
+          feedback: Correct!
+        - text: La fermière va ramasser le maïs.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
+        questions:
+        - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
+            va ramasser ?
       courseE_prediction_artistFunction1:
         answers:
         - text: Rien. La fonction n'est appelée dans le programme.
@@ -2831,6 +3302,21 @@ fr-FR:
         questions:
         - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: Rien. La fonction n'est appelée dans le programme.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera un carré simple.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera 2 carrés qui se chevauchent.
+          feedback: Incorrect. La longueur de chaque côté du carré fait seulement
+            100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
+        - text: L’artiste dessinera 2 carrés avec un petit écart entre les 2.
+          correct: true
+          feedback: Correct! La fonction est appelée 2 fois dans le programme avec
+            un saut entre les 2.
+        questions:
+        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+      courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - text: Rien. La fonction n'est appelée dans le programme.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
@@ -2879,6 +3365,10 @@ fr-FR:
           des fonctions ! |
 
 '
+      courseE_project_exemplars_2019_2020:
+        content1: Page du Manuel du Test Markdown
+      courseExpress_project_exemplars_2019_2020:
+        content1: Page du Manuel du Test Markdown
       courseF_bee_variables_8a_2018:
         answers:
         - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
@@ -2949,6 +3439,41 @@ fr-FR:
         title: 'Bee Variables Multi
 
 '
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
+            pas « rassembler ».
+
+'
+          feedback: 'Incorrect. Le nom de ta variable n''affecte pas sa valeur.
+
+'
+        - text: 'L''abeille ne recueillera que 2 nectar.
+
+'
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille recueillera tout le nectar.
+
+'
+          feedback: 'Incorrect. La variable est remise à 0 avant les deux derniers
+            appels de fonction.
+
+'
+        - text: Je ne sais pas.
+          feedback: 'La variable est remise à 0 avant les deux derniers appels de
+            fonction, où 1 est ajouté à chaque fois. L''abeille recueille ensuite
+            2 unités de nectar.
+
+'
+        questions:
+        - text: 'Regarde le code ci-dessous. Combien d''unités de nectar l''abeille
+            recueillera-t-elle, à la fin ?
+
+'
+        title: 'Bee Variables Multi
+
+'
       courseF_external_variableConstant:
         markdown: "<h2>More on Variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just
@@ -2969,6 +3494,17 @@ fr-FR:
 
 '
       courseF_external_variableConstant_2018_2019:
+        markdown: '<h2>Plus sur les Variables</h2 > <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"style="
+          padding-left: 30px; width: 300px; float: right; " / ><h3 > Tu viens d''apprendre
+          une excellente façon d''utiliser un variable...comme qu''une constante !   Lorsque
+          tu utilises une variable comme constante, tu définis une valeur une fois,
+          puis utilises cette *même* valeur plusieurs fois, dans ton programme, sans
+          la modifier, après avoir cliqué sur « Exécuter ».  < / h3><br/><hr/> < h3>Dans
+          la partie suivante de la série, tu écriras du code avec des variables qui
+          *véritablement* changent à l''intérieur du programme.< / h3>
+
+'
+      courseF_external_variableConstant_2018_2019_2020:
         markdown: '<h2>Plus sur les Variables</h2 > <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"style="
           padding-left: 30px; width: 300px; float: right; " / ><h3 > Tu viens d''apprendre
           une excellente façon d''utiliser un variable...comme qu''une constante !   Lorsque
@@ -3054,6 +3590,17 @@ fr-FR:
           vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
           - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
           prédéterminés (intervalle de pas)\n"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « boucles pour » !** \n\n### **Les
+          boucles pour sont des boucles avc lesquelles tu définis les valeurs de démarrage,
+          d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
+          plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
+          ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
+          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
+          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
+          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
+          prédéterminés (intervalle de pas)\n"
       courseF_markdown_forloops_intro:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
@@ -3062,6 +3609,13 @@ fr-FR:
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
           énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
+          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
+          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_forloops_intro_2019_2020:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
           type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
@@ -3118,6 +3672,14 @@ fr-FR:
           de la variable comme espace réservé où tu veux dans ton programme ! ---##
           **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
           élément d'information qui peut changer\n"
+      courseF_markdown_variables_end_2019_2020:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! ---##
+          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
+          élément d'information qui peut changer\n"
       courseF_markdown_variables_intro:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
@@ -3125,6 +3687,12 @@ fr-FR:
           permet d'écrire un programme, même si on ne connaît toutes les valeurs que
           plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
       courseF_markdown_variables_intro_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+          réservés pour les informations qui peuvent changer.  Avoir un espace réservé
+          permet d'écrire un programme, même si on ne connaît toutes les valeurs que
+          plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
+      courseF_markdown_variables_intro_2019_2020:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
           réservés pour les informations qui peuvent changer.  Avoir un espace réservé
@@ -3169,6 +3737,25 @@ fr-FR:
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
+            côté de l'espace de jeu à l'autre.
+          feedback: Incorrect. L'artiste tourne entre les itérations de la boucle
+            `Pour`.
+        - text: 'L'' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus fin. '
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
+        - text: L' artiste dessinera une spirale et à chaque fois à traver la boucle
+            `pour`, le trait deviens plus long et plus épais.
+          correct: true
+          feedback: Correct!
+        - text: Je ne sais pas.
+          feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
+            dessine un trait plus long qui est aussi plus épais.
+        questions:
+        - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
             côté de l'espace de jeu à l'autre.
@@ -3245,6 +3832,23 @@ fr-FR:
         - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
             lorsque tu cliqueras sur "Démarrer"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+          correct: true
+          feedback: Correct!
+        - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
+          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
+            dans la boucle `répéte` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
+          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
+            bloc `tourner` pour que cela se produise.
+        - text: Je ne sais pas.
+          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
+            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+        questions:
+        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
+            lorsque tu cliqueras sur "Démarrer"?
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - text: L'artiste dessinera un triangle de 50 pixels de côté.
           correct: true
@@ -3373,6 +3977,29 @@ fr-FR:
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
+            sauf pour une.
+          correct: true
+          feedback: Correct!
+        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'Je ne sais pas.
+
+'
+          feedback: 'La boucle `pour` permettra à l''abeille de recueillir la bonne
+            quantité de nectar, mais elle est définie pour ne s''arrêter que sur 4
+            fleurs.
+
+'
+        questions:
+        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
+            su "Démarrer"?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: L' abeille ne collectera pas de nectar ni de miel.
@@ -3430,6 +4057,8 @@ fr-FR:
           /[![Spirale (Artiste)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
           \ |   | Soyons créatifs avec les variables ! | Soyons créatifs avec les
           boucles Pour ! |\n"
+      courseF_project_exemplars_2019_2020:
+        content1: Page du Manuel du Test Markdown
       coursee_prediction_artistfunction2:
         answers:
         - text: L’artiste résoudra ce problème correctement.
@@ -3475,6 +4104,27 @@ fr-FR:
             "dessiner polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: L’artiste résoudra ce problème correctement.
+          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
+            une ligne de polygones`.
+        - text: L’artiste dessinera 4 carrés dans une fenêtre.
+          correct: true
+          feedback: Correct!
+        - text: L’artiste dessinera seulement 1 ligne de carrés.
+          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+        - text: L’artiste dessinera 4 carrés les uns sur les autres.
+          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
+            "dessiner polygone".
+        questions:
+        - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
+      csf_be_a_super_digital_citizen:
+        content1: description ici
+      csf_password_power-up:
+        content1: description ici
+      csf_putting_a_stop_to_online_meanness:
+        content1: description ici
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel ramassera 4 trésortrésors avec ce code.
@@ -3513,6 +4163,24 @@ fr-FR:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: Laurel ramassera 4 trésortrésors avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
+            cela provoque une erreur.
+          correct: true
+          feedback: Correct!
+        - text: Laurel ramassera tous les trésors.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
+        - text: Je ne sais pas.
+          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
+            et cela a provoqué une erreur.
+        questions:
+        - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
+            le programme sera lancé?
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel ramassera 4 trésortrésors avec ce code.
           feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y

@@ -61,19 +61,28 @@ hr-HR:
         craft_callout_preplaced: Stavili smo malo blokovi za početak
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Stavili smo malo blokovi za početak
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
           li to završiti?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
           li to završiti?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
+          li to završiti?
       Overworld Move to Sheep:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Place Wall:
         craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
       Overworld Place Wall_2019:
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+      Overworld Place Wall_2020:
         craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
       Underground Avoiding Lava:
         craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
@@ -81,9 +90,14 @@ hr-HR:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
           da se krene naprijed?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
+          da se krene naprijed?
       Underground Iron:
         craft_what_is_iron: Meni ovo glačalo!
       Underground Iron_2019:
+        craft_what_is_iron: Meni ovo glačalo!
+      Underground Iron_2020:
         craft_what_is_iron: Meni ovo glačalo!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Koristi blok "napravi krug"

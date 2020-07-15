@@ -3365,21 +3365,6 @@ ca:
           lessons:
             Creating Functions:
               name: Creant Funcions
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionals
-            Functions:
-              name: Funcions
-          lessons:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Condicionals
-            Functions:
-              name: Funcions
         csp5-virtual:
           stages:
             While Loops:
@@ -3447,3 +3432,22 @@ ca:
               name: Per bucles
             Sprite Lab:
               name: Laboratori de personatges
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: text
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: text
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
