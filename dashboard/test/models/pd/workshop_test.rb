@@ -1094,11 +1094,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns(course_name)
-    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end
