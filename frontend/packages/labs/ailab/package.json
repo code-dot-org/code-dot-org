@@ -1,0 +1,29 @@
+{
+  "name": "ml-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:code-dot-org/ml-playground.git",
+  "author": "",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack-dev-server --mode development --content-base public",
+    "test": "yarn run lint",
+    "lint": "eslint --ext .js,.jsx src"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "eslint-plugin-react": "^7.20.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.8.0"
+  }
+}
