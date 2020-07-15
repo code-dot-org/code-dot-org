@@ -426,7 +426,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.course
+      assert_equal existing_course, returned_section.unit_group
       assert_nil returned_json['script']['id']
       assert_nil returned_section.script
     end
