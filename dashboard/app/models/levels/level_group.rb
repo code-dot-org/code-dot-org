@@ -108,10 +108,6 @@ class LevelGroup < DSLDefined
   def self.setup(data)
     level = super(data)
 
-    # old way: store pages in property hash
-    level.update!(properties: {pages: data[:pages]})
-
-    # new way: store pages in levels_and_texts_per_page and child_levels.
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
         Level.find_by_name!(level_name)
