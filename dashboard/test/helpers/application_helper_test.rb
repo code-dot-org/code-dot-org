@@ -191,14 +191,18 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/sharing_drawing.png', meta_image_url(level: Artist.first)
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level: Studio.first)
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Bounce').levels.first)
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Flappy').levels.first)
+    level = create :level, game_id: 24
+    level_source = create(:level_source, level: level)
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source without image' do
     assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Artist.first))
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Studio.first))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Bounce').levels.first))
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Flappy').levels.first))
+    level = create :level, game_id: 24
+    level_source = create(:level_source, level: level)
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source with image' do
