@@ -5,8 +5,9 @@ require 'test_helper'
 # DEPRECATION NOTICE
 #
 # Please locate new tests for RegistrationsController in files for individual
-# routes under
-#   test/controllers/registrations_controller/*_test.rb
+# routes under one of:
+#   test/integration/registration/*_test.rb
+#   test/integration/omniauth/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
@@ -486,5 +487,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
 end

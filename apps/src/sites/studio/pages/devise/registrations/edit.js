@@ -25,7 +25,8 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudents,
-  studentCount
+  studentCount,
+  authenticityToken
 } = scriptData;
 
 $(document).ready(() => {
@@ -86,7 +87,8 @@ $(document).ready(() => {
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent
+      isCleverStudent,
+      authenticityToken
     );
   }
 
