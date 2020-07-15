@@ -115,6 +115,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'submits to CSTA if csta is provided' do
+    sign_in create :teacher
     actual_args = capture_csta_args_for_request(
       valid_params.merge(
         'csta' => [true, 'true', 1, '1'].sample,
@@ -141,6 +142,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'sends school name and district name as found by NCES id' do
+    sign_in create :teacher
     school = create :school
 
     actual_args = capture_csta_args_for_request(
@@ -155,6 +157,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'sends blank school and district name if school is not found by id' do
+    sign_in create :teacher
     School.expects(:find_by).with(id: '000000000000').returns(nil)
 
     actual_args = capture_csta_args_for_request(
@@ -172,6 +175,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     # This scenario reflects what happens when a teacher signs up for CSTA Plus
     # and also for the AFE Inspirational Marketing Kit, so we asked the teacher
     # for a school address as part of the form.
+    sign_in create :teacher
     school = create :school
     refute_equal 'example-street-1', school.address_line1
 
@@ -198,6 +202,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     # This scenario reflects what happens when a teacher signs up for CSTA Plus
     # but does not opt-in to the AFE Inspirational Marketing Kit, so we don't
     # ask them for a school address on the client.
+    sign_in create :teacher
     school = create :school
 
     actual_args = capture_csta_args_for_request(
@@ -218,6 +223,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
   test 'sends empty address info if neither request nor school can provide it' do
     # This probably won't happen, but we'd like to detect and handle a graceful fallback
+    sign_in create :teacher
     School.expects(:find_by).returns(nil)
 
     actual_args = capture_csta_args_for_request(
@@ -283,27 +289,19 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   private
 
   def capture_afe_args_for_request(request_params)
-    captured_args = nil
-    Services::AFEEnrollment.expects(:submit).with do |args|
-      captured_args = args; true
-    end
-
-    post '/dashboardapi/v1/amazon_future_engineer_submit',
-      params: request_params,
-      as: :json
-
-    assert_response :success, "Failed response: #{response.body}"
-    refute_nil captured_args
-    captured_args
+    capture_service_args_for_request Services::AFEEnrollment, request_params
   end
 
   def capture_csta_args_for_request(request_params)
+    capture_service_args_for_request Services::CSTAEnrollment, request_params
+  end
+
+  def capture_service_args_for_request(service, request_params)
     captured_args = nil
-    Services::CSTAEnrollment.expects(:submit).with do |args|
+    service.expects(:submit).with do |args|
       captured_args = args; true
     end
 
-    sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',
       params: request_params,
       as: :json
