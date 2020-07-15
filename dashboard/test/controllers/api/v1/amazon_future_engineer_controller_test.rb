@@ -89,38 +89,28 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'new-code-account is 0 if the user was created five minutes ago or more' do
-    # Expect to submit with the appropriate new-code-account value
-    Services::AFEEnrollment.expects(:submit).with do |params|
-      params[:new_code_account] == false
-    end
-
     Timecop.freeze do
       # Create the teacher more than five minutes before we submit
       teacher = create :teacher
       Timecop.travel(5.minutes)
 
+      # Expect to submit with the appropriate new-code-account value
       sign_in teacher
-      post '/dashboardapi/v1/amazon_future_engineer_submit',
-        params: valid_params, as: :json
-      assert_response :success, "Failed response: #{response.body}"
+      actual_args = capture_afe_args_for_request(valid_params)
+      assert_equal false, actual_args[:new_code_account]
     end
   end
 
   test 'new-code-account is 1 if the user was created less than five minutes ago' do
-    # Expect to submit with the appropriate new-code-account value
-    Services::AFEEnrollment.expects(:submit).with do |params|
-      params[:new_code_account] == true
-    end
-
     Timecop.freeze do
       # Create the teacher less than five minutes before we submit
       teacher = create :teacher
       Timecop.travel(5.minutes - 1.second)
 
+      # Expect to submit with the appropriate new-code-account value
       sign_in teacher
-      post '/dashboardapi/v1/amazon_future_engineer_submit',
-        params: valid_params, as: :json
-      assert_response :success, "Failed response: #{response.body}"
+      actual_args = capture_afe_args_for_request(valid_params)
+      assert_equal true, actual_args[:new_code_account]
     end
   end
 
@@ -291,6 +281,21 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   private
+
+  def capture_afe_args_for_request(request_params)
+    captured_args = nil
+    Services::AFEEnrollment.expects(:submit).with do |args|
+      captured_args = args; true
+    end
+
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: request_params,
+      as: :json
+
+    assert_response :success, "Failed response: #{response.body}"
+    refute_nil captured_args
+    captured_args
+  end
 
   def capture_csta_args_for_request(request_params)
     captured_args = nil
