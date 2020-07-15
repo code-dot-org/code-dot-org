@@ -125,6 +125,9 @@ Resources:
       ContainerDefinitions:
       - Name: freegeoip
         Essential: true
+        # Image was built from https://github.com/voyagin/freegeoip and contains our free MaxMind License Key.
+        # A copy of the key is stored in AWS Secrets Manager, and credentials to login to the MaxMind web console
+        # to provision a new key are shared securely within the organization.
         Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/vgeoip:latest"
         MemoryReservation: 512
         LogConfiguration:
