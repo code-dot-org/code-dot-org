@@ -127,8 +127,9 @@ export default class AnimationPickerBody extends React.Component {
 
   animationCategoriesRendering() {
     const libraryManifest = this.props.getLibraryManifest();
-    const categories = Object.keys(libraryManifest.categories) + ['all'];
-    return Object.keys(categories).map(category => (
+    const categories = Object.keys(libraryManifest.categories);
+    categories.push('all');
+    return categories.map(category => (
       <AnimationPickerListItem
         key={category}
         label={
