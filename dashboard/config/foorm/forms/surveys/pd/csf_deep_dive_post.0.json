@@ -423,19 +423,19 @@
               "text": "I feel more prepared to teach the material covered in this workshop than before I came."
             },
             {
-              "value": "know_where_to_get_help",
+              "value": "where_to_go",
               "text": "I know where to go if I need help preparing to teach this material."
             },
             {
-              "value": "suitable_for_my_level",
+              "value": "suitable_my_level",
               "text": "This professional development was suitable for my level of experience with teaching CS."
             },
             {
-              "value": "part_of_community",
+              "value": "feel_community",
               "text": "I feel like I am a part of a community of teachers. "
             },
             {
-              "value": "recommend_to_others",
+              "value": "would_recommend",
               "text": "I would recommend this professional development to others."
             }
           ]
@@ -476,11 +476,11 @@
           ],
           "rows": [
             {
-              "value": "activities_engaging",
+              "value": "engaging",
               "text": "I found the activities we did in this workshop interesting and engaging."
             },
             {
-              "value": "highly_active",
+              "value": "active",
               "text": "I was highly active and participated a lot in the workshop activities."
             },
             {
@@ -488,7 +488,7 @@
               "text": "When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others."
             },
             {
-              "value": "will_use_in_classroom",
+              "value": "ideas",
               "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
             }
           ]
@@ -559,7 +559,7 @@
                   "text": "Demonstrated knowledge of the curriculum."
                 },
                 {
-                  "value": "equitable_workshop_environment",
+                  "value": "built_equitable",
                   "text": "Built and sustained an equitable learning environment in our workshop."
                 },
                 {
@@ -571,7 +571,7 @@
                   "text": "Supported productive workshop discussions."
                 },
                 {
-                  "value": "create_equity_for_students",
+                  "value": "ways_equitable",
                   "text": "Helped me see ways to create and support an equitable learning environment for my students."
                 },
                 {

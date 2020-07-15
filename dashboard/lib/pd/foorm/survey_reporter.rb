@@ -32,6 +32,7 @@ module Pd::Foorm
       return result_data unless rollup_configuration && rollup_configuration[ws_data.course.to_sym]
 
       questions_to_summarize = rollup_configuration[ws_data.course.to_sym]
+
       rollup_question_details = Pd::Foorm::RollupHelper.get_question_details_for_rollup(
         parsed_forms,
         questions_to_summarize
@@ -47,7 +48,7 @@ module Pd::Foorm
                                          get_facilitator_rollup_for_course(
                                            facilitators,
                                            ws_data.course,
-                                           rollup_question_details
+                                           questions_to_summarize
                                          ) :
                                          {}
 
@@ -65,11 +66,11 @@ module Pd::Foorm
     end
 
     # Get rollup for all survey results for the given course
-    def self.get_rollup_for_course(course_name, rollup_question_details, facilitators)
+    def self.get_rollup_for_course(course_name, questions_to_summarize, facilitators)
       workshop_ids = Pd::Workshop.where(course: course_name).where.not(started_at: nil, ended_at: nil).pluck(:id)
       return get_rollup_for_workshop_ids(
         workshop_ids,
-        rollup_question_details,
+        questions_to_summarize,
         false,
         facilitators
       )
@@ -85,7 +86,7 @@ module Pd::Foorm
     #   general: { see RollupCreator.calculate_averaged_rollup },
     #   facilitator: { see RollupCreator.calculate_averaged_rollup }
     # }
-    def self.get_facilitator_rollup_for_course(facilitators, course_name, rollup_question_details)
+    def self.get_facilitator_rollup_for_course(facilitators, course_name, questions_to_summarize)
       rollups = {general: {}, facilitator: {}}
       facilitators.each_key do |facilitator_id|
         workshop_ids = Pd::Workshop.
@@ -95,7 +96,7 @@ module Pd::Foorm
           pluck(:id)
         facilitator_rollup = get_rollup_for_workshop_ids(
           workshop_ids,
-          rollup_question_details,
+          questions_to_summarize,
           true,
           facilitators,
           facilitator_id
@@ -112,13 +113,17 @@ module Pd::Foorm
     # If split_by_facilitator is true, split questions by facilitator id.
     def self.get_rollup_for_workshop_ids(
       workshop_ids,
-      rollup_question_details,
+      questions_to_summarize,
       split_by_facilitator,
       facilitators,
       facilitator_id=nil
     )
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids, facilitator_id)
-      _, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
+      parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
+      rollup_question_details = Pd::Foorm::RollupHelper.get_question_details_for_rollup(
+        parsed_forms,
+        questions_to_summarize
+      )
       return Pd::Foorm::RollupCreator.calculate_averaged_rollup(
         summarized_answers,
         rollup_question_details,
