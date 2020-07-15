@@ -328,13 +328,13 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: no script or course assigned' do
-    section = create :section, script: nil, course: nil
+    section = create :section, script: nil, unit_group: nil
     assert_nil section.default_script
   end
 
   test 'default_script: script assigned, no course assigned' do
     script = create :script
-    section = create :section, script: script, course: nil
+    section = create :section, script: script, unit_group: nil
     assert_equal script, section.default_script
   end
 
@@ -342,11 +342,11 @@ class SectionTest < ActiveSupport::TestCase
     script1 = create :script
     script2 = create :script
     course = create :unit_group
-    create :course_script, course: course, script: script1, position: 1
-    create :course_script, course: course, script: script2, position: 2
+    create :course_script, unit_group: course, script: script1, position: 1
+    create :course_script, unit_group: course, script: script2, position: 2
     course.reload
 
-    section = create :section, script: script2, course: course
+    section = create :section, script: script2, unit_group: course
     assert_equal script2, section.default_script
   end
 
@@ -354,18 +354,18 @@ class SectionTest < ActiveSupport::TestCase
     script1 = create :script
     script2 = create :script
     course = create :unit_group
-    create :course_script, course: course, script: script1, position: 1
-    create :course_script, course: course, script: script2, position: 2
+    create :course_script, unit_group: course, script: script1, position: 1
+    create :course_script, unit_group: course, script: script2, position: 2
     course.reload
 
-    section = create :section, script: nil, course: course
+    section = create :section, script: nil, unit_group: course
     assert_equal script1, section.default_script
   end
 
   test 'summarize: section with a course assigned' do
     course = create :unit_group, name: 'somecourse'
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: nil, course: course
+      section = create :section, script: nil, unit_group: course
 
       expected = {
         id: section.id,
@@ -404,7 +404,7 @@ class SectionTest < ActiveSupport::TestCase
     script = Script.find_by_name('jigsaw')
 
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: script, course: nil
+      section = create :section, script: script, unit_group: nil
 
       expected = {
         id: section.id,
@@ -446,7 +446,7 @@ class SectionTest < ActiveSupport::TestCase
     Timecop.freeze(Time.zone.now) do
       # If this were a real section, it would actually have a script that is part of
       # the provided course
-      section = create :section, script: script, course: course
+      section = create :section, script: script, unit_group: course
 
       expected = {
         id: section.id,
@@ -482,7 +482,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with neither course or script assigned' do
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: nil, course: nil
+      section = create :section, script: nil, unit_group: nil
 
       expected = {
         id: section.id,
@@ -517,7 +517,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with students' do
-    section = create :section, script: nil, course: nil
+    section = create :section, script: nil, unit_group: nil
     student1 = create(:follower, section: section).student_user
     student2 = create(:follower, section: section).student_user
 
@@ -529,7 +529,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with duplicate students' do
-    section = create :section, script: nil, course: nil
+    section = create :section, script: nil, unit_group: nil
     student = create :student
     create(:follower, section: section, student_user: student)
     create(:follower, section: section, student_user: student)
@@ -543,7 +543,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with sharing disabled and script with project sharing' do
     script = create :script, project_sharing: true
-    section = create :section, sharing_disabled: true, script: script, course: nil
+    section = create :section, sharing_disabled: true, script: script, unit_group: nil
     summarized_section = section.summarize
 
     assert summarized_section[:script][:project_sharing]

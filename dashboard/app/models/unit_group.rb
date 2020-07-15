@@ -384,7 +384,7 @@ class UnitGroup < ApplicationRecord
       end
     end
 
-    course_sections = user.sections_as_student.where(course: self)
+    course_sections = user.sections_as_student.where(unit_group: self)
     unless course_sections.empty?
       alternates.each do |cs|
         course_sections.each do |section|

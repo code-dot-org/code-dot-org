@@ -11,7 +11,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
-    @pilot_section = create :section, user: @pilot_teacher, course: @pilot_course
+    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_course
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Script.stubs(:should_cache?).returns true
@@ -69,7 +69,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "show: redirect from new unstable version to assigned version" do
     student = create :student
     csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :follower, section: create(:section, course: csp2017), student_user: student
+    create :follower, section: create(:section, unit_group: csp2017), student_user: student
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
     create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
@@ -128,7 +128,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "show: do not redirect student to latest stable version in course family if they are assigned" do
     student = create :student
     csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :follower, section: create(:section, course: csp2017), student_user: student
+    create :follower, section: create(:section, unit_group: csp2017), student_user: student
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
     sign_in student
