@@ -8,6 +8,10 @@ import React from 'react';
  * that have CSRF protection enabled.
  */
 export default function RailsAuthenticityToken() {
+  if (IN_UNIT_TEST) {
+    return <input type="hidden" name="authenticity_token" value="fake_token" />;
+  }
+
   const csrfParam = document.querySelector('meta[name="csrf-param"]');
   const csrfToken = document.querySelector('meta[name="csrf-token"]');
   if (csrfParam && csrfToken) {
@@ -15,6 +19,7 @@ export default function RailsAuthenticityToken() {
       <input type="hidden" name={csrfParam.content} value={csrfToken.content} />
     );
   }
+
   console.error(
     'Tried to render an authenticity token into the form but no CSRF meta tags were found in the document.'
   );
