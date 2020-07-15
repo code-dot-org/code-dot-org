@@ -27,7 +27,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csf_script_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
     # ensure that we have freshly generated caches with this course/script
-    Course.clear_cache
+    UnitGroup.clear_cache
     Script.clear_cache
   end
 
@@ -39,9 +39,9 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_family_cache
 
     # Also populate course_cache, as it's used by course_link
-    Course.stubs(:should_cache?).returns true
-    @@course_cached ||= Course.course_cache_to_cache
-    Course.course_cache
+    UnitGroup.stubs(:should_cache?).returns true
+    @@course_cached ||= UnitGroup.course_cache_to_cache
+    UnitGroup.course_cache
 
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
@@ -1300,7 +1300,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'course_link uses cache' do
     populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
-    Course.stubs(:should_cache?).returns true
+    UnitGroup.stubs(:should_cache?).returns true
     script = Script.get_from_cache(@script_in_course.name)
     assert_equal "/courses/#{@course.name}", script.course_link
   end
@@ -1705,7 +1705,7 @@ endvariants
     script = create(:script)
     alternate_script = build(:script)
 
-    Course.stubs(:has_any_course_experiments?).returns(true)
+    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Rails.cache.stubs(:fetch).returns([script])
     script.stubs(:alternate_script).returns(alternate_script)
 
@@ -1717,7 +1717,7 @@ endvariants
     user = create(:user)
     script = create(:script)
 
-    Course.stubs(:has_any_course_experiments?).returns(true)
+    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Rails.cache.stubs(:fetch).returns([script])
     script.stubs(:alternate_script).returns(nil)
 

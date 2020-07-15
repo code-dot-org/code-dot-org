@@ -20,7 +20,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   setup do
     # Expect any scripts/courses to be valid unless specified by test
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
     Script.stubs(:valid_script_id?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized

@@ -118,7 +118,7 @@ class CoursesControllerTest < ActionController::TestCase
     create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
-    Course.any_instance.stubs(:has_progress?).returns(true)
+    UnitGroup.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
 
@@ -198,7 +198,7 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     post :create, params: {course: {name: 'csp'}}
-    Course.find_by_name!('csp')
+    UnitGroup.find_by_name!('csp')
     assert_redirected_to '/courses/csp/edit'
   end
 
@@ -230,7 +230,7 @@ class CoursesControllerTest < ActionController::TestCase
     create :script, name: 'script2'
 
     post :update, params: {course_name: 'csp', scripts: ['script1', 'script2']}
-    default_course_scripts = Course.find_by_name('csp').default_course_scripts
+    default_course_scripts = UnitGroup.find_by_name('csp').default_course_scripts
     assert_equal 2, default_course_scripts.length
     assert_equal ['script1', 'script2'], default_course_scripts.map(&:script).map(&:name)
 
@@ -257,7 +257,7 @@ class CoursesControllerTest < ActionController::TestCase
         }
       ]
     }
-    course = Course.find_by_name('csp')
+    course = UnitGroup.find_by_name('csp')
     assert_equal 3, course.default_course_scripts.length
     assert_equal ['script1', 'script2', 'script3'], course.default_course_scripts.map(&:script).map(&:name)
 
@@ -281,7 +281,7 @@ class CoursesControllerTest < ActionController::TestCase
     create :unit_group, name: 'csp-2017'
 
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles'}
-    assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp-2017').summarize[:title]
+    assert_equal "Computer Science Principles ('17-'18)", UnitGroup.find_by_name!('csp-2017').summarize[:title]
   end
 
   test "update: persists changes to course_params" do
