@@ -12,7 +12,7 @@ import {
 } from './teacherSectionsRedux';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
-const orangeButtonStyle = {
+const ctaButtonStyle = {
   background: color.orange,
   color: color.white,
   border: '1px solid #b07202',
@@ -51,7 +51,7 @@ const styles = {
     left: 20
   },
   buttonPrimary: {
-    ...orangeButtonStyle,
+    ...ctaButtonStyle,
     float: 'right'
   },
   buttonSecondary: {
@@ -162,7 +162,7 @@ function ReauthorizeGoogleClassroom() {
   return (
     <form method="POST" action={REAUTHORIZE_URL}>
       <RailsAuthenticityToken />
-      <button type="submit" style={orangeButtonStyle}>
+      <button type="submit" style={ctaButtonStyle}>
         {locale.authorizeGoogleClassrooms()}
       </button>
     </form>
