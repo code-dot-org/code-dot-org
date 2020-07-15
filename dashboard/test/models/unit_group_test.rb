@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CourseTest < ActiveSupport::TestCase
+class UnitGroupTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   class CachingTests < ActiveSupport::TestCase
