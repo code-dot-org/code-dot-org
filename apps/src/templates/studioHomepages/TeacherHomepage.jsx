@@ -44,7 +44,6 @@ export class UnconnectedTeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
-    authenticityToken: PropTypes.string,
     beginGoogleImportRosterFlow: PropTypes.func
   };
 
@@ -173,8 +172,7 @@ export class UnconnectedTeacherHomepage extends Component {
       teacherEmail,
       canViewAdvancedTools,
       isEnglish,
-      specialAnnouncement,
-      authenticityToken
+      specialAnnouncement
     } = this.props;
 
     // Hide the regular announcement/notification for now.
@@ -237,7 +235,7 @@ export class UnconnectedTeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections authenticityToken={authenticityToken} />
+        <TeacherSections />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

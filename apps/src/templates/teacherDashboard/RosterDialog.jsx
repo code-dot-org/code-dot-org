@@ -10,6 +10,7 @@ import {
   importOrUpdateRoster,
   isRosterDialogOpen
 } from './teacherSectionsRedux';
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 const orangeButtonStyle = {
   background: color.orange,
@@ -125,13 +126,13 @@ NoClassroomsFound.propTypes = {
 const ROSTERED_SECTIONS_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
 
-const LoadError = ({rosterProvider, loginType, authenticityToken}) => {
+const LoadError = ({rosterProvider, loginType}) => {
   switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
           <p>{locale.authorizeGoogleClassroomsText()}</p>
-          <ReauthorizeGoogleClassroom authenticityToken={authenticityToken} />
+          <ReauthorizeGoogleClassroom />
           <p>
             <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
               {locale.errorLoadingRosteredSectionsSupport()}
@@ -152,29 +153,21 @@ const LoadError = ({rosterProvider, loginType, authenticityToken}) => {
 };
 LoadError.propTypes = {
   rosterProvider: PropTypes.string,
-  loginType: PropTypes.string,
-  authenticityToken: PropTypes.string
+  loginType: PropTypes.string
 };
 
 const REAUTHORIZE_URL =
   '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
-function ReauthorizeGoogleClassroom({authenticityToken}) {
+function ReauthorizeGoogleClassroom() {
   return (
     <form method="POST" action={REAUTHORIZE_URL}>
-      <input
-        type="hidden"
-        name="authenticity_token"
-        value={authenticityToken}
-      />
+      <RailsAuthenticityToken />
       <button type="submit" style={orangeButtonStyle}>
         {locale.authorizeGoogleClassrooms()}
       </button>
     </form>
   );
 }
-ReauthorizeGoogleClassroom.propTypes = {
-  authenticityToken: PropTypes.string
-};
 
 class RosterDialog extends React.Component {
   static propTypes = {
@@ -184,8 +177,7 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
-    authenticityToken: PropTypes.string
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
   };
 
   state = {selectedId: null};
@@ -238,7 +230,6 @@ class RosterDialog extends React.Component {
             <LoadError
               rosterProvider={this.props.rosterProvider}
               loginType={loginType}
-              authenticityToken={this.props.authenticityToken}
             />
           ) : this.props.classrooms ? (
             <ClassroomList
