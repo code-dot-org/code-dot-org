@@ -5,7 +5,7 @@
   .modal-dialog
     .modal-content.no-modal-icon
       %h2.donor-header= t('donor_interstitial.title') + '...'
-      %p= t('donor_interstitial.subtitle')
+      %p!= t('donor_interstitial.subtitle', donors_url: 'https://code.org/about/donors')
       %h2.donor-subheader= t('donor_interstitial.global_supporters')
       .clear
       .scroll-box
