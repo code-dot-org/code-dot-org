@@ -80,7 +80,11 @@ module Pd::Foorm
     # questions across all workshops each facilitator has run.
     # @param object {facilitator_id: facilitator_name,...} specifying facilitators to include
     # @param String course_name course name to rollup, ex 'CS Principles'
-    # @param object rollup_question_details questions to include in rollup
+    # @param object questions_to_summarize question ids to include in rollup in format
+    # {
+    #   general: [{question_id: "sample_question_id", "header_text": "Sample Question"},...]
+    #   facilitator: [{...same as general...}]
+    # }
     # @return
     # {
     #   general: { see RollupCreator.calculate_averaged_rollup },
