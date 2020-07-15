@@ -6,7 +6,7 @@ FactoryGirl.define do
   factory :course_script do
   end
 
-  factory :course do
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
