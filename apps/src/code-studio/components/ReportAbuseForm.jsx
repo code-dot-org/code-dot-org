@@ -84,8 +84,12 @@ export default class ReportAbuseForm extends React.Component {
         <br />
         <form action="/report_abuse" method="post">
           <RailsAuthenticityToken />
-          <input type="hidden" name="channel_id" value={this.getChannelId()} />
-          <input type="hidden" name="name" value={this.props.name} />
+          <input
+            type="hidden"
+            name="channel_id"
+            defaultValue={this.getChannelId()}
+          />
+          <input type="hidden" name="name" defaultValue={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>{msg.email()}</div>
             <input
