@@ -1585,7 +1585,7 @@ class Script < ActiveRecord::Base
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    return [] unless courses.empty?
+    return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
     scripts = Script.
       where(family_name: family_name).
