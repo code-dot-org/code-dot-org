@@ -125,7 +125,7 @@ Resources:
       ContainerDefinitions:
       - Name: freegeoip
         Essential: true
-        Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/freegeoip:latest"
+        Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/vgeoip:latest"
         MemoryReservation: 512
         LogConfiguration:
           LogDriver: awslogs
