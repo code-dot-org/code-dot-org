@@ -82,10 +82,10 @@ class UnitGroup < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
 
-    course = UnitGroup.find_or_create_by!(name: hash['name'])
-    course.update_scripts(hash['script_names'], hash['alternate_scripts'])
-    course.properties = hash['properties']
-    course.save!
+    unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
+    unit_group.properties = hash['properties']
+    unit_group.save!
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -165,7 +165,7 @@ class UnitGroup < ApplicationRecord
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      course_script = CourseScript.find_or_create_by!(course: self, script: script) do |cs|
+      course_script = CourseScript.find_or_create_by!(unit_group: self, script: script) do |cs|
         cs.position = index + 1
       end
       course_script.update!(position: index + 1)
@@ -176,7 +176,7 @@ class UnitGroup < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_course_scripts.find_by(script: default_script).position
-      course_script = CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
+      course_script = CourseScript.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
         cs.default_script = default_script
@@ -190,7 +190,7 @@ class UnitGroup < ApplicationRecord
 
     scripts_to_delete.each do |script_name|
       script = Script.find_by_name!(script_name)
-      CourseScript.where(course: self, script: script).destroy_all
+      CourseScript.where(unit_group: self, script: script).destroy_all
     end
     # Reload model so that default_course_scripts is up to date
     transaction {reload}
@@ -597,7 +597,7 @@ class UnitGroup < ApplicationRecord
     # will fail to detect if a user was previously assigned to a pilot course in
     # which they made no progress.
 
-    is_assigned = user.sections_as_student.any? {|s| s.course == self}
+    is_assigned = user.sections_as_student.any? {|s| s.unit_group == self}
     has_progress = !!UserScript.find_by(user: user, script: default_scripts)
     has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
     (is_assigned || has_progress) && has_pilot_teacher
@@ -608,6 +608,6 @@ class UnitGroup < ApplicationRecord
   def self.has_any_pilot_access?(user = nil)
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
-    all_courses.any? {|course| course.has_pilot_experiment?(user)}
+    all_courses.any? {|unit_group| unit_group.has_pilot_experiment?(user)}
   end
 end

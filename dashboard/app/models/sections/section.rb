@@ -101,7 +101,7 @@ class Section < ActiveRecord::Base
     Script.get_from_cache(script_id) if script_id
   end
 
-  def course
+  def unit_group
     UnitGroup.get_from_cache(course_id) if course_id
   end
 
@@ -205,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:default_course_scripts).try(:first).try(:script)
+    return unit_group.try(:default_course_scripts).try(:first).try(:script)
   end
 
   def summarize_without_students
@@ -222,9 +222,9 @@ class Section < ActiveRecord::Base
     title_of_current_unit = ''
     link_to_current_unit = ''
 
-    if course
-      title = course.localized_title
-      link_to_assigned = course_path(course)
+    if unit_group
+      title = unit_group.localized_title
+      link_to_assigned = course_path(unit_group)
       if script_id
         title_of_current_unit = script.localized_title
         link_to_current_unit = script_path(script)
