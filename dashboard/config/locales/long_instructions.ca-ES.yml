@@ -37,6 +37,12 @@ ca-ES:
       Course 4 Artist 8: Dibuixa el sol repetint diverses vegades tot el bloc.
       Course 4 Artist 8a: Recordes aquesta forma? Ara et deixarem que la facis tu
         sense donar-te cap bloc per començar!
+      CourseD_Dance_2020_05: |-
+        _Ara sí que marquem el ritme!_
+
+        Afegeix un bloc de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"mesures"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.
+      CourseD_Dance_2020_10: Anima't i segueix el ritme! Crea una dansa pròpia per
+        compartir amb els teus amics.
       CourseD_Dance_Party_01: |-
         _Anem a fer una festa de ball!_
 
@@ -110,29 +116,59 @@ ca-ES:
         dins del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: Hi ha un **calamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         amagat per alguna banda d'aquest Monument de l'Oceà; el saps trobar?
+      CourseE_HOC 2018 Level_10_2020: Hi ha un **calamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        amagat per alguna banda d'aquest Monument de l'Oceà; el saps trobar?
       CourseE_HOC 2018 Level_11: Construir una paret de **prismarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         al voltant del formigó negre. Això activarà el **conducte** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         i finalitzarà el teu repte!
+      CourseE_HOC 2018 Level_11_2020: Construir una paret de **prismarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        al voltant del formigó negre. Això activarà el **conducte** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        i finalitzarà el teu repte!
+      CourseE_HOC 2018 Level_1_2020: Necessites queviures pel viatge que t'espera.
+        Troba una **barca** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        dins del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: És molt més fàcil fer-ho amb una barca que no nedant
         a mar oberta! Vés fins al final del moll i fica-t'hi dins.
+      CourseE_HOC 2018 Level_2_2020: És molt més fàcil fer-ho amb una barca que no
+        nedant a mar oberta! Vés fins al final del moll i fica-t'hi dins.
       CourseE_HOC 2018 Level_3: Agafa els rems i condueix la teva barca per la mar
         oberta i pesca el **bacallà** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Agafa els rems i condueix la teva barca per la
+        mar oberta i pesca el **bacallà** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: Donem el bacallà per menjar al **dofí** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Fés servir un bloc de repetició per travessar l'oceà més ràpidament.
+      CourseE_HOC 2018 Level_4_2020: Donem el bacallà per menjar al **dofí** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Fés servir un bloc de repetició per travessar l'oceà més ràpidament.
       CourseE_HOC 2018 Level_5: Hi ha una **closca de nautilus** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         amagada per algun lloc! Explora el vaixell naufragat per trobar el **cofre**
         ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_5_2020: Hi ha una **closca de nautilus** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        amagada per algun lloc! Explora el vaixell naufragat per trobar el **cofre**
+        ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Fa un fred que pela! Atrapa un **salmó** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        quan vagis fins a les runes submarines.
+      CourseE_HOC 2018 Level_6_2020: Fa un fred que pela! Atrapa un **salmó** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         quan vagis fins a les runes submarines.
       CourseE_HOC 2018 Level_7a: Has trobat les runes submarines. Cerca entre la sorra
         un **cofre** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
         que contingui la **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
         de tresor.
+      CourseE_HOC 2018 Level_7a_2020: Has trobat les runes submarines. Cerca entre
+        la sorra un **cofre** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        que contingui la **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        de tresor.
       CourseE_HOC 2018 Level_8: Primer icebergs, i ara lava? Travessa aquesta illa
         volcànica i trobaràs els **peixos tropicals** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         a l'escull de corall.
+      CourseE_HOC 2018 Level_8_2020: Primer icebergs, i ara lava? Travessa aquesta
+        illa volcànica i trobaràs els **peixos tropicals** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        a l'escull de corall.
       CourseE_HOC 2018 Level_9b: Has aconseguit arribar al corall! Ara busca el **Cor
         de la Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Fés servir el corall blau i vermell per arribar al **cofre** del tresor
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Has aconseguit arribar al corall! Ara busca
+        el **Cor de la Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Fés servir el corall blau i vermell per arribar al **cofre** del tresor
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_2019_05: |-
@@ -307,12 +343,15 @@ ca-ES:
         a l'ovella.
       Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
+      Overworld Move to Sheep_2020: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis
         per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l
         amb algo totalment diferent)
       courseD_maze_nestedLoops4: Porta'm fins al girasol!
       courseD_maze_nestedLoops4_2018: Porta'm fins al girasol!
       courseD_maze_nestedLoops4_2019: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2020: Porta'm fins al girasol!
       courseE_bee_functions3: Les funcions són blocs de codi que realitzen una tasca.
         Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar
         un bucle per reduir el nombre de blocs usats.

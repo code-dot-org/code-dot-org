@@ -4543,24 +4543,6 @@ th:
           lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
-        csd3-virtual:
-          stages:
-            Variables:
-              name: ตัวแปร
-            Conditionals:
-              name: เงื่อนไข 
-            Functions:
-              name: ฟังก์ชัน
-          lesson_groups:
-            csd3_1:
-              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
-          lessons:
-            Variables:
-              name: ตัวแปร
-            Conditionals:
-              name: เงื่อนไข 
-            Functions:
-              name: ฟังก์ชัน
         jess-test-script:
           stages:
             Debugging:
@@ -4623,3 +4605,26 @@ th:
               name: ตัวแปร
             For Loops:
               name: การวนรอบ
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd3-virtual:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Text:
+              name: ข้อความ
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+          lessons:
+            Variables:
+              name: ตัวแปร
+            Text:
+              name: ข้อความ
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน

@@ -39,6 +39,22 @@ cs-CZ:
         edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Použij šipek k přemístění aktéra
+      CourseD_Dance_2020_01:
+        dance_callout_01: Přidej do svého programu tento blok!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Přidej tento blok do svého programu.
+        arrow_buttons: Mačkej klávesy se šipkami a ovládej tak svého tanečníka.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Přidej do svého programu tento blok!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Přidejte do svého programu novou událost.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Nový blok!
+      CourseD_Dance_2020_07:
+        setprop_hint: Nový blok!
+      CourseD_Dance_2020_09:
+        new_block_3: Nový blok!
+        new_block_4: Nový blok!
       CourseD_Dance_Party_01:
         dance_callout_01: Přidej do svého programu tento blok!
       CourseD_Dance_Party_02:
@@ -87,6 +103,9 @@ cs-CZ:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus
           kódu se stejným názvem v pracovním prostoru.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus
+          kódu se stejným názvem v pracovním prostoru.
       Infinity_move_collide:
         Infinity_move_collide_callout: Přehraj zvuk, když dojde k této události.
       Infinity_move_directions:
@@ -108,17 +127,26 @@ cs-CZ:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
           a vložte kód, který chcete pořád opakovat.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
+          a vložte kód, který chcete pořád opakovat.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
       NEW Course 4 Artist Functions 7:
         edit_function: Klepnutím sem upravíš svou funkci.
@@ -143,19 +171,29 @@ cs-CZ:
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
           začít
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
+          začít
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
       Overworld Move to Sheep:
         craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Place Wall:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Overworld Place Wall_2019:
+        craft_inside_repeat: Opakuj akce umístěním bloků zde
+      Overworld Place Wall_2020:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Underground Avoiding Lava:
         craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
@@ -163,13 +201,21 @@ cs-CZ:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
           posunu dopředu?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
+          posunu dopředu?
       Underground Iron:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vytěž toto železo!
+      Underground Iron_2020:
+        craft_what_is_iron: Vytěž toto železo!
       courseA_collector_preLoops1:
         courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
       courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
+          ti pomůžou dokončit úkol.
+      courseA_maze_ramp2_2020:
         courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
           ti pomůžou dokončit úkol.
       courseA_maze_ramp3a_2018:
@@ -181,7 +227,13 @@ cs-CZ:
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
+      courseB_Scrat_ramp1_2020:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
       courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
+          ti pomůžou dokončit úkol.
+      courseB_Scrat_ramp3a_2020:
         courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
           ti pomůžou dokončit úkol.
       courseC_maze_programming1:
@@ -193,6 +245,9 @@ cs-CZ:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
+      courseC_maze_programming1_2020:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
       courseC_maze_programming2:
         courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
           ti pomůžou dokončit úkol.
@@ -202,11 +257,16 @@ cs-CZ:
       courseC_maze_programming2_2019:
         courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
           ti pomůžou dokončit úkol.
+      courseC_maze_programming2_2020:
+        courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
+          ti pomůžou dokončit úkol.
       courseC_maze_programming5:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseC_maze_programming5_2018:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseC_maze_programming5_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseC_maze_programming5_2020:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Tohle číslo můžeš změnit.
@@ -222,7 +282,12 @@ cs-CZ:
       courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
           použít blok `pokud je cesta vpřed`.
+      courseD_farmer_while7_2020:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
       courseD_maze_intro5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_intro5a_2020:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
@@ -231,6 +296,9 @@ cs-CZ:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
       courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2020:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
       courseD_maze_ramp2:
@@ -242,7 +310,12 @@ cs-CZ:
       courseD_maze_ramp2_2019:
         courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
           ti pomůžou dokončit úkol.
+      courseD_maze_ramp2_2020:
+        courseC_maze_programming2_1: Toto je panel. Zde najdeš další bloky, které
+          ti pomůžou dokončit úkol.
       courseD_maze_ramp3_2019:
+        stone_block_2: Šedé bloky není možné zahodit.
+      courseD_maze_ramp3_2020:
         stone_block_2: Šedé bloky není možné zahodit.
       courseD_maze_ramp5:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
@@ -250,11 +323,15 @@ cs-CZ:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp5_2019:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5_2020:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp5a:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp5a_2018:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a_2020:
         '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"

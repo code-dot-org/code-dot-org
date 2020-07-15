@@ -3048,21 +3048,6 @@ sl:
           lessons:
             Creating Functions:
               name: Ustvarjanje funkcij
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
         csp5-virtual:
           stages:
             While Loops:
@@ -3125,3 +3110,29 @@ sl:
               name: Funkcije
             Variables:
               name: Spremenljivke
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Text:
+              name: Besedilo
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+          lessons:
+            Variables:
+              name: Spremenljivke
+            Text:
+              name: Besedilo
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+          lesson_groups:
+            csd3_1:
+              display_name: Vsebina
+            csd3_2:
+              display_name: Vsebina
+            cspSurvey:
+              display_name: Vsebina

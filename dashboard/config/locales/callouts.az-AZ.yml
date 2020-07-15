@@ -57,6 +57,8 @@ az-AZ:
         craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
       frozen line:
         move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib
           şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın

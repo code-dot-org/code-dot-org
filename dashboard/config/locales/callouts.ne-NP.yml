@@ -64,19 +64,28 @@ ne-NP:
         craft_callout_preplaced: We've put some blocks here to get you started
       Overworld Chop Trees_2019:
         craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: We've put some blocks here to get you started
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: This code will start building your house. Can
           you finish it?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: This code will start building your house. Can
           you finish it?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
       Overworld Move to Sheep:
         craft_run_button_callout: Hit "Run" to try your program
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Hit "Run" to try your program
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Hit "Run" to try your program
       Overworld Place Wall:
         craft_inside_repeat: Repeat actions by placing blocks in here
       Overworld Place Wall_2019:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Overworld Place Wall_2020:
         craft_inside_repeat: Repeat actions by placing blocks in here
       Underground Avoiding Lava:
         craft_callout_moveforward: This code will check for lava, can you add a command
@@ -84,9 +93,14 @@ ne-NP:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: This code will check for lava, can you add a command
           to move forward?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?
       Underground Iron:
         craft_what_is_iron: Mine this iron!
       Underground Iron_2019:
+        craft_what_is_iron: Mine this iron!
+      Underground Iron_2020:
         craft_what_is_iron: Mine this iron!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Use the "create a circle" block

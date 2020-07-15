@@ -46,7 +46,10 @@ export default class WorkspaceAlert extends React.Component {
       : {top: $('#headers').height(), left: toolbarWidth};
 
     return (
-      <div style={{...styles.alertContainer, ...position}}>
+      <div
+        style={{...styles.alertContainer, ...position}}
+        onClick={displayBottom ? onClose : undefined}
+      >
         <Alert
           onClose={onClose}
           type={type}

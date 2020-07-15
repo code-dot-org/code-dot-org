@@ -10558,80 +10558,6 @@ ro:
             CS Principles Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
-        csd3-virtual:
-          description_short: Programare
-          description_audience: "[șir gol]"
-          stages:
-            Shapes and Randomization:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CS Discoveries Post Course survey:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Text and Captioned Scenes:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capitolul 1: Imagini şi animaţii'
-          lessons:
-            Shapes and Randomization:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CS Discoveries Post Course survey:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Text and Captioned Scenes:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
         jess-test-script:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -11066,3 +10992,65 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd3-virtual:
+          description_short: Programare
+          description_audience: "[șir gol]"
+          stages:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lessons:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lesson_groups:
+            csd3_1:
+              display_name: Conţinut
+            csd3_2:
+              display_name: Conţinut
+            cspSurvey:
+              display_name: Conţinut

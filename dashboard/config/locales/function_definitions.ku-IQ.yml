@@ -114,6 +114,9 @@ ku-IQ:
       courseE_artist_functions7_2018:
         draw a house:
           name: ماڵێك دروست بكە
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: ماڵێك دروست بكە
       courseF_artist_fwp1:
         checker:
           parameters:
@@ -164,9 +167,15 @@ ku-IQ:
       courseF_bee_variables_7_2019:
         collect:
           name: كۆبكەوە/خركەوە
+      courseF_bee_variables_7_2020:
+        collect:
+          name: كۆبكەوە/خركەوە
       courseF_bee_variables_8_2018:
         collect:
           name: كۆبكەوە/خركەوە
       courseF_bee_variables_8_2019:
+        collect:
+          name: كۆبكەوە/خركەوە
+      courseF_bee_variables_8_2020:
         collect:
           name: كۆبكەوە/خركەوە

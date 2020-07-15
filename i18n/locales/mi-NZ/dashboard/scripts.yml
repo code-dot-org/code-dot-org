@@ -3307,21 +3307,6 @@ mi:
           lessons:
             Creating Functions:
               name: Te Waihanga Taumahi
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Ngā Taurangi
-            Conditionals:
-              name: Ngā Here
-            Functions:
-              name: Ngā Taumahi
-          lessons:
-            Variables:
-              name: Ngā Taurangi
-            Conditionals:
-              name: Ngā Here
-            Functions:
-              name: Ngā Taumahi
         csp5-virtual:
           stages:
             While Loops:
@@ -3388,3 +3373,29 @@ mi:
               name: Ngā Taurangi
             For Loops:
               name: Mō Ngā Koromeke
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Text:
+              name: Kuputuhi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+          lessons:
+            Variables:
+              name: Ngā Taurangi
+            Text:
+              name: Kuputuhi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+          lesson_groups:
+            csd3_1:
+              display_name: Ihirangi
+            csd3_2:
+              display_name: Ihirangi
+            cspSurvey:
+              display_name: Ihirangi

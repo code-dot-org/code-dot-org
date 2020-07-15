@@ -76,6 +76,22 @@ ko-KR:
         edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
       Course 4 Play Lab Vars 1:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      CourseD_Dance_2020_01:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: 이 블록을 프로그램에 추가합니다.
+        arrow_buttons: 댄서를 조종하려면 화살표 단추를 누르세요.
+      CourseD_Dance_2020_04:
+        dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      CourseD_Dance_2020_05:
+        dance_callout_05: 프로그램에 새로운 이벤트를 추가하십시오.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: 새 블록!
+      CourseD_Dance_2020_07:
+        setprop_hint: 새 블록!
+      CourseD_Dance_2020_09:
+        new_block_3: 새 블록!
+        new_block_4: 새 블록!
       CourseD_Dance_Party_01:
         dance_callout_01: 이 블록을 프로그램에 추가하세요!
       CourseD_Dance_Party_02:
@@ -124,6 +140,9 @@ ko-KR:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: 이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게
           됩니다.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: 이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게
+          됩니다.
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
           보려면 이 단어를 클릭하세요!
@@ -145,17 +164,26 @@ ko-KR:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: "'반복' 루프를 소개합니다! 작업 공간에서 이 루프를 클릭하고 원하는 코드를 추가해 실행해보세요.
           여러 번 실행해도 좋아요."
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: "'반복' 루프를 소개합니다! 작업 공간에서 이 루프를 클릭하고 원하는 코드를 추가해 실행해보세요.
+          여러 번 실행해도 좋아요."
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: Agent와는 달리 플레이어는 물을 그냥 건널 수 없어요!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Agent와는 달리 플레이어는 물을 그냥 건널 수 없어요!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: Agent와는 달리 플레이어는 물을 그냥 건널 수 없어요!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: 블록은 삭제는 안 되지만 대신 수정할 수 있어요!
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: 블록은 삭제는 안 되지만 대신 수정할 수 있어요!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: 블록은 삭제는 안 되지만 대신 수정할 수 있어요!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
       NEW Course 4 Artist Functions 7:
         edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
@@ -177,31 +205,45 @@ ko-KR:
         craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
       Overworld Chop Trees_2019:
         craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
       Overworld House Frame Chosen_2019:
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+      Overworld House Frame Chosen_2020:
         craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
       Overworld Move to Sheep:
         craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
       Overworld Move to Sheep_2019:
         craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
       Overworld Place Wall:
         craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
       Overworld Place Wall_2019:
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+      Overworld Place Wall_2020:
         craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
       Underground Avoiding Lava:
         craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
       Underground Iron:
         craft_what_is_iron: 이 철을 채굴하세요!
       Underground Iron_2019:
+        craft_what_is_iron: 이 철을 채굴하세요!
+      Underground Iron_2020:
         craft_what_is_iron: 이 철을 채굴하세요!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      courseD_bee_conditionals2_2020:
         4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
       courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.

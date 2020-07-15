@@ -125,6 +125,22 @@ nl-NL:
       Course 4 SCV 6:
         Course_4_SCV_6: Met dit blok kun je je kleur aanpassen aan bijna alles wat
           je wil zien!  Verander de getallen om te zien wat er gebeurt!
+      CourseD_Dance_2020_01:
+        dance_callout_01: Voeg dit blok toe aan je programma!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Voeg dit blok toe aan je programma.
+        arrow_buttons: Druk op de pijltjestoetsen om je danser te besturen.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Voeg dit blok toe aan je programma!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Voeg een nieuw evenement toe aan je programma.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Nieuw blok!
+      CourseD_Dance_2020_07:
+        setprop_hint: Nieuw blok!
+      CourseD_Dance_2020_09:
+        new_block_3: Nieuw blok!
+        new_block_4: Nieuw blok!
       CourseD_Dance_Party_01:
         dance_callout_01: Voeg dit blok toe aan je programma!
       CourseD_Dance_Party_02:
@@ -173,6 +189,9 @@ nl-NL:
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Met deze kleine instructie weet de computer dat het
           GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd.
+      Function intro Ryan_2020:
+        Function_intro_Ryan_1: Met deze kleine instructie weet de computer dat het
+          GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd.
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende
           categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
@@ -201,9 +220,14 @@ nl-NL:
       MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte
           en voeg code to die je steeds weer wilt uitvoeren.
+      MC_HOC_2017_03_Cole_2020:
+        MC_HOC_2017_03_Cole_1: Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte
+          en voeg code to die je steeds weer wilt uitvoeren.
       MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: De agent kan over water zweven, maar de speler niet!
       MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: De agent kan over water zweven, maar de speler niet!
+      MC_HOC_2017_04_Cole_2020:
         MC_HOC_2017_04_Cole_a: De agent kan over water zweven, maar de speler niet!
       MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: Je kunt deze blokken niet weggooien, maar je kunt ze
@@ -211,9 +235,14 @@ nl-NL:
       MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: Je kunt deze blokken niet weggooien, maar je kunt ze
           wel bewerken!
+      MC_HOC_2017_06_Cole_2020:
+        MC_HOC_2017_06_Cole_1: Je kunt deze blokken niet weggooien, maar je kunt ze
+          wel bewerken!
       MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
       MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
+      MC_HOC_2017_Ali_2020:
         MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
       NEW Course 4 Artist Functions 3:
         NEW_Course_4_Artist_Functions_3_1: Klik hier om de nieuwe functie aan te passen,
@@ -261,19 +290,29 @@ nl-NL:
       Overworld Chop Trees_2019:
         craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op
           weg te helpen
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op
+          weg te helpen
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
           Kun jij het afmaken?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
           Kun jij het afmaken?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
+          Kun jij het afmaken?
       Overworld Move to Sheep:
         craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Klik op "Run" om je programma te proberen
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Place Wall:
         craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
       Overworld Place Wall_2019:
+        craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
+      Overworld Place Wall_2020:
         craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
       Underground Avoiding Lava:
         craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht
@@ -281,9 +320,14 @@ nl-NL:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht
           toevoegen om vooruit te bewegen?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht
+          toevoegen om vooruit te bewegen?
       Underground Iron:
         craft_what_is_iron: Delf dit ijzer!
       Underground Iron_2019:
+        craft_what_is_iron: Delf dit ijzer!
+      Underground Iron_2020:
         craft_what_is_iron: Delf dit ijzer!
       courseA_maze_seq4:
         made_of_stone: Deze blokken zijn gemaakt van steen. Je kunt ze verplaatsen,
@@ -294,6 +338,8 @@ nl-NL:
         courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Dit is een toelichting
+      courseA_playLab_events4_2020:
+        courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events5:
         courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
           te veranderen.
@@ -301,6 +347,9 @@ nl-NL:
         courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
           te veranderen.
       courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
+          te veranderen.
+      courseA_playLab_events5_2020:
         courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
           te veranderen.
       courseB_maze_seq3:
@@ -315,6 +364,9 @@ nl-NL:
       courseC_collector_prog7_2019:
         courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
           je ze nodig hebt!
+      courseC_collector_prog7_2020:
+        courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
+          je ze nodig hebt!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
@@ -322,6 +374,9 @@ nl-NL:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
+          heeft. Je hoeft niet voor honingraten te checken.
+      courseD_bee_conditionals2_2020:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       courseD_bee_conditionals2_copy:
