@@ -68,7 +68,12 @@ def handle_level(level)
   end
 
   level_source = level.level_sources.first
-  @level_sources["level_source_#{level.id}"] = level_source.attributes if level_source
+  if level_source
+    ls_attributes = level_source.attributes
+    ls_attributes.delete('level_id')
+    ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
+    @level_sources["level_source_#{level.id}"] = ls_attributes
+  end
 end
 
 scripts_map.each do |_script_id, name|
