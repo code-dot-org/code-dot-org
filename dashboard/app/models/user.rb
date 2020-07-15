@@ -1549,7 +1549,7 @@ class User < ActiveRecord::Base
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1655,7 +1655,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user

@@ -341,7 +341,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'default_script: script and course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :course
+    course = create :unit_group
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload
@@ -353,7 +353,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'default_script: no script assigned, course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :course
+    course = create :unit_group
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload
@@ -363,7 +363,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'somecourse'
+    course = create :unit_group, name: 'somecourse'
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: nil, course: course
 
@@ -441,7 +441,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :course, name: 'somecourse'
+    course = create :unit_group, name: 'somecourse'
 
     Timecop.freeze(Time.zone.now) do
       # If this were a real section, it would actually have a script that is part of

@@ -84,7 +84,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with assigned course" do
-    course = create :course
+    course = create :unit_group
     create :course_script, course: course, script: Script.get_from_cache('allthethings'), position: 1
     create :course_script, course: course, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
     course.reload
