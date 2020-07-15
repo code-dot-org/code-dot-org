@@ -14,7 +14,9 @@
 #
 require 'cdo/script_constants'
 
-class Course < ApplicationRecord
+class UnitGroup < ApplicationRecord
+  self.table_name = 'courses'
+
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy
