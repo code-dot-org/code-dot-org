@@ -89,6 +89,16 @@ class LevelGroup < DSLDefined
   #   levels_offset: the count of levels on prior pages.
   #   levels: an array of levels on this page.
   #   texts: an array of texts on this page.
+  #
+  # In this context, a "level" is a Level object of one of the following types:
+  #   multi match text_match free_response evaluation_multi
+  # These "levels" contain questions which the end user can answer.
+  #
+  # A "text" is a Level object of type external. These show text on
+  # the page but do not accept an answer and are excluded from numbering.
+  #
+  # Under the hood, "levels" and "texts" are both referred to as "sublevels",
+  # which live in the parent_levels_child_levels table.
 
   def pages
     levels_and_texts_offset = 0
