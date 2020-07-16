@@ -249,7 +249,7 @@ function setupSim(
   addBehaviorSimple({id: 0}, new Behavior(collectBehavior));
 
   function checkSimulationEnd() {
-    if (countByAnimation(s3costume) === 0) {
+    if (countByAnimation({costume: s3costume}) === 0) {
       destroy({costume: s1costume});
       destroy({costume: s2costume});
       printText('The simulation has ended after ' + World.seconds + ' seconds');
