@@ -77,11 +77,7 @@ def handle_level(level)
 
   level_source = level.level_sources.first
   if level_source
-<<<<<<< HEAD
-    ls_attributes = level_source.attributes
-=======
     ls_attributes = level_source.attributes.clone
->>>>>>> fix-fixtures
     ls_attributes.delete('level_id')
     ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
     @level_sources["level_source_#{level.id}"] = ls_attributes
