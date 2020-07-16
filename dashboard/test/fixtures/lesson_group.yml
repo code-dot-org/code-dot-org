@@ -464,34 +464,19 @@ lesson_group_2063:
     time: *63
   position: 1
   properties: "{}"
-lesson_group_2061:
-  id: 2061
-  key: ''
-  script_id: 27
-  user_facing: false
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &64 2020-05-21 19:48:35.000000000 Z
-    zone: *2
-    time: *64
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &65 2020-05-21 19:48:35.000000000 Z
-    zone: *2
-    time: *65
-  position: 1
-  properties: "{}"
 lesson_group_2100:
   id: 2100
   key: ''
   script_id: 68
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &66 2020-05-21 19:48:46.000000000 Z
+    utc: &64 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *66
+    time: *64
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &67 2020-05-21 19:48:46.000000000 Z
+    utc: &65 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *67
+    time: *65
   position: 1
   properties: "{}"
 lesson_group_2122:
@@ -500,13 +485,13 @@ lesson_group_2122:
   script_id: 90
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &68 2020-05-21 19:49:02.000000000 Z
+    utc: &66 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *68
+    time: *66
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &69 2020-05-21 19:49:02.000000000 Z
+    utc: &67 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *69
+    time: *67
   position: 1
   properties: "{}"
 lesson_group_2125:
@@ -515,13 +500,13 @@ lesson_group_2125:
   script_id: 94
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &70 2020-05-21 19:49:05.000000000 Z
+    utc: &68 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *70
+    time: *68
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &71 2020-05-21 19:49:05.000000000 Z
+    utc: &69 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *71
+    time: *69
   position: 1
   properties: "{}"
 lesson_group_2128:
@@ -530,13 +515,13 @@ lesson_group_2128:
   script_id: 98
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &72 2020-05-21 19:49:09.000000000 Z
+    utc: &70 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *72
+    time: *70
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &73 2020-05-21 19:49:09.000000000 Z
+    utc: &71 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *73
+    time: *71
   position: 1
   properties: "{}"
 lesson_group_2131:
@@ -545,18 +530,33 @@ lesson_group_2131:
   script_id: 102
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &74 2020-05-21 19:49:13.000000000 Z
+    utc: &72 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *74
+    time: *72
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &75 2020-05-21 19:49:13.000000000 Z
+    utc: &73 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *75
+    time: *73
   position: 1
   properties: "{}"
 lesson_group_1378:
   id: 1378
   key: csf_e_1
+  script_id: 107
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &74 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *74
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &75 2020-07-01 21:15:15.000000000 Z
+    zone: *2
+    time: *75
+  position: 1
+  properties: '{"display_name":"Ramp Up to Course E (Optional)"}'
+lesson_group_1379:
+  id: 1379
+  key: csf_e_2
   script_id: 107
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -567,11 +567,11 @@ lesson_group_1378:
     utc: &77 2020-07-01 21:15:15.000000000 Z
     zone: *2
     time: *77
-  position: 1
-  properties: '{"display_name":"Ramp Up to Course E (Optional)"}'
-lesson_group_1379:
-  id: 1379
-  key: csf_e_2
+  position: 2
+  properties: '{"display_name":"Course E Content"}'
+lesson_group_1380:
+  id: 1380
+  key: end_of_course_project
   script_id: 107
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -582,11 +582,11 @@ lesson_group_1379:
     utc: &79 2020-07-01 21:15:15.000000000 Z
     zone: *2
     time: *79
-  position: 2
-  properties: '{"display_name":"Course E Content"}'
-lesson_group_1380:
-  id: 1380
-  key: end_of_course_project
+  position: 3
+  properties: '{"display_name":"End of Course Project"}'
+lesson_group_1381:
+  id: 1381
+  key: extra_course_content
   script_id: 107
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -597,26 +597,26 @@ lesson_group_1380:
     utc: &81 2020-07-01 21:15:15.000000000 Z
     zone: *2
     time: *81
-  position: 3
-  properties: '{"display_name":"End of Course Project"}'
-lesson_group_1381:
-  id: 1381
-  key: extra_course_content
-  script_id: 107
-  user_facing: true
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &82 2020-04-22 17:50:10.000000000 Z
-    zone: *2
-    time: *82
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &83 2020-07-01 21:15:15.000000000 Z
-    zone: *2
-    time: *83
   position: 4
   properties: '{"display_name":"Extra Course Content"}'
 lesson_group_1404:
   id: 1404
   key: csf_f_1
+  script_id: 112
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &82 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *82
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &83 2020-07-01 21:15:21.000000000 Z
+    zone: *2
+    time: *83
+  position: 1
+  properties: '{"display_name":"Ramp Up to Course F (Optional)"}'
+lesson_group_1405:
+  id: 1405
+  key: csf_f_2
   script_id: 112
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -627,11 +627,11 @@ lesson_group_1404:
     utc: &85 2020-07-01 21:15:21.000000000 Z
     zone: *2
     time: *85
-  position: 1
-  properties: '{"display_name":"Ramp Up to Course F (Optional)"}'
-lesson_group_1405:
-  id: 1405
-  key: csf_f_2
+  position: 2
+  properties: '{"display_name":"Course F Content"}'
+lesson_group_1406:
+  id: 1406
+  key: end_of_course_project
   script_id: 112
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -642,26 +642,26 @@ lesson_group_1405:
     utc: &87 2020-07-01 21:15:21.000000000 Z
     zone: *2
     time: *87
-  position: 2
-  properties: '{"display_name":"Course F Content"}'
-lesson_group_1406:
-  id: 1406
-  key: end_of_course_project
-  script_id: 112
-  user_facing: true
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &88 2020-04-22 17:50:17.000000000 Z
-    zone: *2
-    time: *88
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &89 2020-07-01 21:15:21.000000000 Z
-    zone: *2
-    time: *89
   position: 3
   properties: '{"display_name":"End of Course Project"}'
 lesson_group_1866:
   id: 1866
   key: content
+  script_id: 317
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &88 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *88
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &89 2020-07-01 21:16:59.000000000 Z
+    zone: *2
+    time: *89
+  position: 1
+  properties: '{"display_name":"Content"}'
+lesson_group_1867:
+  id: 1867
+  key: end_of_course_project
   script_id: 317
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
@@ -672,21 +672,6 @@ lesson_group_1866:
     utc: &91 2020-07-01 21:16:59.000000000 Z
     zone: *2
     time: *91
-  position: 1
-  properties: '{"display_name":"Content"}'
-lesson_group_1867:
-  id: 1867
-  key: end_of_course_project
-  script_id: 317
-  user_facing: true
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &92 2020-04-22 17:52:16.000000000 Z
-    zone: *2
-    time: *92
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &93 2020-07-01 21:16:59.000000000 Z
-    zone: *2
-    time: *93
   position: 2
   properties: '{"display_name":"End of Course Project"}'
 lesson_group_2240:
@@ -695,12 +680,12 @@ lesson_group_2240:
   script_id: 367
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &94 2020-05-21 19:51:36.000000000 Z
+    utc: &92 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *94
+    time: *92
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &95 2020-05-21 19:51:36.000000000 Z
+    utc: &93 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *95
+    time: *93
   position: 1
   properties: "{}"

@@ -4232,121 +4232,19 @@ lesson_168:
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2063
-lesson_151:
-  id: 151
-  name: Introduction to PD
-  absolute_position: 1
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &500 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *500
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &501 2020-05-21 19:48:35.000000000 Z
-    zone: *2
-    time: *501
-  lockable: false
-  relative_position: 1
-  properties: "{}"
-  lesson_group_id: 2061
-lesson_152:
-  id: 152
-  name: What is ECS?
-  absolute_position: 2
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &502 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *502
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &503 2020-05-21 19:48:35.000000000 Z
-    zone: *2
-    time: *503
-  lockable: false
-  relative_position: 2
-  properties: "{}"
-  lesson_group_id: 2061
-lesson_153:
-  id: 153
-  name: Impact of Computer Science
-  absolute_position: 3
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &504 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *504
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &505 2020-05-21 19:48:36.000000000 Z
-    zone: *2
-    time: *505
-  lockable: false
-  relative_position: 3
-  properties: "{}"
-  lesson_group_id: 2061
-lesson_154:
-  id: 154
-  name: Growth Mindset
-  absolute_position: 4
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &506 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *506
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &507 2020-05-21 19:48:36.000000000 Z
-    zone: *2
-    time: *507
-  lockable: false
-  relative_position: 4
-  properties: "{}"
-  lesson_group_id: 2061
-lesson_155:
-  id: 155
-  name: Teaching Strategies
-  absolute_position: 5
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &508 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *508
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &509 2020-05-21 19:48:36.000000000 Z
-    zone: *2
-    time: *509
-  lockable: false
-  relative_position: 5
-  properties: "{}"
-  lesson_group_id: 2061
-lesson_156:
-  id: 156
-  name: Preparing for in-person PD
-  absolute_position: 6
-  script_id: 27
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &510 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *510
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &511 2020-05-21 19:48:36.000000000 Z
-    zone: *2
-    time: *511
-  lockable: false
-  relative_position: 6
-  properties: "{}"
-  lesson_group_id: 2061
 lesson_412:
   id: 412
   name: Jigsaw
   absolute_position: 1
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &512 2020-02-21 16:29:58.000000000 Z
+    utc: &500 2020-02-21 16:29:58.000000000 Z
     zone: *2
-    time: *512
+    time: *500
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &513 2020-05-21 19:48:46.000000000 Z
+    utc: &501 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *513
+    time: *501
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -4357,13 +4255,13 @@ lesson_413:
   absolute_position: 2
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &514 2020-02-21 16:29:58.000000000 Z
+    utc: &502 2020-02-21 16:29:58.000000000 Z
     zone: *2
-    time: *514
+    time: *502
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &515 2020-05-21 19:48:46.000000000 Z
+    utc: &503 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *515
+    time: *503
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -4374,13 +4272,13 @@ lesson_414:
   absolute_position: 3
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &516 2020-02-21 16:29:58.000000000 Z
+    utc: &504 2020-02-21 16:29:58.000000000 Z
     zone: *2
-    time: *516
+    time: *504
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &517 2020-05-21 19:48:46.000000000 Z
+    utc: &505 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *517
+    time: *505
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -4391,13 +4289,13 @@ lesson_415:
   absolute_position: 4
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &518 2020-02-21 16:29:59.000000000 Z
+    utc: &506 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *518
+    time: *506
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &519 2020-05-21 19:48:46.000000000 Z
+    utc: &507 2020-05-21 19:48:46.000000000 Z
     zone: *2
-    time: *519
+    time: *507
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -4408,13 +4306,13 @@ lesson_416:
   absolute_position: 5
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &520 2020-02-21 16:29:59.000000000 Z
+    utc: &508 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *520
+    time: *508
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &521 2020-05-21 19:48:47.000000000 Z
+    utc: &509 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *521
+    time: *509
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -4425,13 +4323,13 @@ lesson_417:
   absolute_position: 6
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &522 2020-02-21 16:29:59.000000000 Z
+    utc: &510 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *522
+    time: *510
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &523 2020-05-21 19:48:47.000000000 Z
+    utc: &511 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *523
+    time: *511
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -4442,13 +4340,13 @@ lesson_418:
   absolute_position: 7
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &524 2020-02-21 16:29:59.000000000 Z
+    utc: &512 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *524
+    time: *512
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &525 2020-05-21 19:48:47.000000000 Z
+    utc: &513 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *525
+    time: *513
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -4459,13 +4357,13 @@ lesson_419:
   absolute_position: 8
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &526 2020-02-21 16:29:59.000000000 Z
+    utc: &514 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *526
+    time: *514
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &527 2020-05-21 19:48:47.000000000 Z
+    utc: &515 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *527
+    time: *515
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -4476,13 +4374,13 @@ lesson_420:
   absolute_position: 9
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &528 2020-02-21 16:29:59.000000000 Z
+    utc: &516 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *528
+    time: *516
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &529 2020-05-21 19:48:47.000000000 Z
+    utc: &517 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *529
+    time: *517
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -4493,13 +4391,13 @@ lesson_421:
   absolute_position: 10
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &530 2020-02-21 16:29:59.000000000 Z
+    utc: &518 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *530
+    time: *518
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &531 2020-05-21 19:48:47.000000000 Z
+    utc: &519 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *531
+    time: *519
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -4510,13 +4408,13 @@ lesson_422:
   absolute_position: 11
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &532 2020-02-21 16:29:59.000000000 Z
+    utc: &520 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *532
+    time: *520
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &533 2020-05-21 19:48:47.000000000 Z
+    utc: &521 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *533
+    time: *521
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -4527,13 +4425,13 @@ lesson_423:
   absolute_position: 12
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &534 2020-02-21 16:29:59.000000000 Z
+    utc: &522 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *534
+    time: *522
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &535 2020-05-21 19:48:47.000000000 Z
+    utc: &523 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *535
+    time: *523
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -4544,13 +4442,13 @@ lesson_424:
   absolute_position: 13
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &536 2020-02-21 16:29:59.000000000 Z
+    utc: &524 2020-02-21 16:29:59.000000000 Z
     zone: *2
-    time: *536
+    time: *524
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &537 2020-05-21 19:48:47.000000000 Z
+    utc: &525 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *537
+    time: *525
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -4561,13 +4459,13 @@ lesson_425:
   absolute_position: 14
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &538 2020-02-21 16:30:00.000000000 Z
+    utc: &526 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *538
+    time: *526
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &539 2020-05-21 19:48:47.000000000 Z
+    utc: &527 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *539
+    time: *527
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -4578,13 +4476,13 @@ lesson_426:
   absolute_position: 15
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &540 2020-02-21 16:30:00.000000000 Z
+    utc: &528 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *540
+    time: *528
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &541 2020-05-21 19:48:47.000000000 Z
+    utc: &529 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *541
+    time: *529
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -4595,13 +4493,13 @@ lesson_427:
   absolute_position: 16
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &542 2020-02-21 16:30:00.000000000 Z
+    utc: &530 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *542
+    time: *530
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &543 2020-05-21 19:48:47.000000000 Z
+    utc: &531 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *543
+    time: *531
   lockable: false
   relative_position: 16
   properties: "{}"
@@ -4612,13 +4510,13 @@ lesson_428:
   absolute_position: 17
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &544 2020-02-21 16:30:00.000000000 Z
+    utc: &532 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *544
+    time: *532
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &545 2020-05-21 19:48:47.000000000 Z
+    utc: &533 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *545
+    time: *533
   lockable: false
   relative_position: 17
   properties: "{}"
@@ -4629,13 +4527,13 @@ lesson_429:
   absolute_position: 18
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &546 2020-02-21 16:30:00.000000000 Z
+    utc: &534 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *546
+    time: *534
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &547 2020-05-21 19:48:47.000000000 Z
+    utc: &535 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *547
+    time: *535
   lockable: false
   relative_position: 18
   properties: "{}"
@@ -4646,13 +4544,13 @@ lesson_430:
   absolute_position: 19
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &548 2020-02-21 16:30:00.000000000 Z
+    utc: &536 2020-02-21 16:30:00.000000000 Z
     zone: *2
-    time: *548
+    time: *536
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &549 2020-05-21 19:48:47.000000000 Z
+    utc: &537 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *549
+    time: *537
   lockable: false
   relative_position: 19
   properties: "{}"
@@ -4663,13 +4561,13 @@ lesson_431:
   absolute_position: 20
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &550 2020-02-21 16:30:01.000000000 Z
+    utc: &538 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *550
+    time: *538
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &551 2020-05-21 19:48:47.000000000 Z
+    utc: &539 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *551
+    time: *539
   lockable: false
   relative_position: 20
   properties: "{}"
@@ -4680,13 +4578,13 @@ lesson_432:
   absolute_position: 21
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &552 2020-02-21 16:30:01.000000000 Z
+    utc: &540 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *552
+    time: *540
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &553 2020-05-21 19:48:47.000000000 Z
+    utc: &541 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *553
+    time: *541
   lockable: false
   relative_position: 21
   properties: "{}"
@@ -4697,13 +4595,13 @@ lesson_433:
   absolute_position: 22
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &554 2020-02-21 16:30:01.000000000 Z
+    utc: &542 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *554
+    time: *542
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &555 2020-05-21 19:48:47.000000000 Z
+    utc: &543 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *555
+    time: *543
   lockable: false
   relative_position: 22
   properties: "{}"
@@ -4714,13 +4612,13 @@ lesson_434:
   absolute_position: 23
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &556 2020-02-21 16:30:01.000000000 Z
+    utc: &544 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *556
+    time: *544
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &557 2020-05-21 19:48:47.000000000 Z
+    utc: &545 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *557
+    time: *545
   lockable: false
   relative_position: 23
   properties: "{}"
@@ -4731,13 +4629,13 @@ lesson_435:
   absolute_position: 24
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &558 2020-02-21 16:30:01.000000000 Z
+    utc: &546 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *558
+    time: *546
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &559 2020-05-21 19:48:47.000000000 Z
+    utc: &547 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *559
+    time: *547
   lockable: false
   relative_position: 24
   properties: "{}"
@@ -4748,13 +4646,13 @@ lesson_436:
   absolute_position: 25
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &560 2020-02-21 16:30:01.000000000 Z
+    utc: &548 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *560
+    time: *548
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &561 2020-05-21 19:48:47.000000000 Z
+    utc: &549 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *561
+    time: *549
   lockable: false
   relative_position: 25
   properties: "{}"
@@ -4765,13 +4663,13 @@ lesson_437:
   absolute_position: 26
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &562 2020-02-21 16:30:01.000000000 Z
+    utc: &550 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *562
+    time: *550
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &563 2020-05-21 19:48:47.000000000 Z
+    utc: &551 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *563
+    time: *551
   lockable: false
   relative_position: 26
   properties: "{}"
@@ -4782,13 +4680,13 @@ lesson_438:
   absolute_position: 27
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &564 2020-02-21 16:30:01.000000000 Z
+    utc: &552 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *564
+    time: *552
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &565 2020-05-21 19:48:47.000000000 Z
+    utc: &553 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *565
+    time: *553
   lockable: false
   relative_position: 27
   properties: "{}"
@@ -4799,13 +4697,13 @@ lesson_439:
   absolute_position: 28
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &566 2020-02-21 16:30:01.000000000 Z
+    utc: &554 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *566
+    time: *554
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &567 2020-05-21 19:48:47.000000000 Z
+    utc: &555 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *567
+    time: *555
   lockable: false
   relative_position: 28
   properties: "{}"
@@ -4816,13 +4714,13 @@ lesson_440:
   absolute_position: 29
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &568 2020-02-21 16:30:01.000000000 Z
+    utc: &556 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *568
+    time: *556
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &569 2020-05-21 19:48:47.000000000 Z
+    utc: &557 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *569
+    time: *557
   lockable: false
   relative_position: 29
   properties: "{}"
@@ -4833,13 +4731,13 @@ lesson_441:
   absolute_position: 30
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &570 2020-02-21 16:30:01.000000000 Z
+    utc: &558 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *570
+    time: *558
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &571 2020-05-21 19:48:47.000000000 Z
+    utc: &559 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *571
+    time: *559
   lockable: false
   relative_position: 30
   properties: "{}"
@@ -4850,13 +4748,13 @@ lesson_442:
   absolute_position: 31
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &572 2020-02-21 16:30:01.000000000 Z
+    utc: &560 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *572
+    time: *560
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &573 2020-05-21 19:48:47.000000000 Z
+    utc: &561 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *573
+    time: *561
   lockable: true
   relative_position: 1
   properties: "{}"
@@ -4867,13 +4765,13 @@ lesson_443:
   absolute_position: 32
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &574 2020-02-21 16:30:01.000000000 Z
+    utc: &562 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *574
+    time: *562
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &575 2020-05-21 19:48:47.000000000 Z
+    utc: &563 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *575
+    time: *563
   lockable: false
   relative_position: 31
   properties: "{}"
@@ -4884,13 +4782,13 @@ lesson_444:
   absolute_position: 33
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &576 2020-02-21 16:30:01.000000000 Z
+    utc: &564 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *576
+    time: *564
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &577 2020-05-21 19:48:47.000000000 Z
+    utc: &565 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *577
+    time: *565
   lockable: false
   relative_position: 32
   properties: "{}"
@@ -4901,13 +4799,13 @@ lesson_445:
   absolute_position: 34
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &578 2020-02-21 16:30:01.000000000 Z
+    utc: &566 2020-02-21 16:30:01.000000000 Z
     zone: *2
-    time: *578
+    time: *566
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &579 2020-05-21 19:48:47.000000000 Z
+    utc: &567 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *579
+    time: *567
   lockable: false
   relative_position: 33
   properties: "{}"
@@ -4918,13 +4816,13 @@ lesson_446:
   absolute_position: 35
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &580 2020-02-21 16:30:02.000000000 Z
+    utc: &568 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *580
+    time: *568
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &581 2020-05-21 19:48:47.000000000 Z
+    utc: &569 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *581
+    time: *569
   lockable: false
   relative_position: 34
   properties: "{}"
@@ -4935,13 +4833,13 @@ lesson_447:
   absolute_position: 36
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &582 2020-02-21 16:30:02.000000000 Z
+    utc: &570 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *582
+    time: *570
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &583 2020-05-21 19:48:47.000000000 Z
+    utc: &571 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *583
+    time: *571
   lockable: false
   relative_position: 35
   properties: "{}"
@@ -4952,13 +4850,13 @@ lesson_448:
   absolute_position: 37
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &584 2020-02-21 16:30:02.000000000 Z
+    utc: &572 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *584
+    time: *572
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &585 2020-05-21 19:48:47.000000000 Z
+    utc: &573 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *585
+    time: *573
   lockable: false
   relative_position: 36
   properties: "{}"
@@ -4969,13 +4867,13 @@ lesson_449:
   absolute_position: 38
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &586 2020-02-21 16:30:02.000000000 Z
+    utc: &574 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *586
+    time: *574
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &587 2020-05-21 19:48:47.000000000 Z
+    utc: &575 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *587
+    time: *575
   lockable: false
   relative_position: 37
   properties: "{}"
@@ -4986,13 +4884,13 @@ lesson_450:
   absolute_position: 39
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &588 2020-02-21 16:30:02.000000000 Z
+    utc: &576 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *588
+    time: *576
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &589 2020-05-21 19:48:47.000000000 Z
+    utc: &577 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *589
+    time: *577
   lockable: false
   relative_position: 38
   properties: "{}"
@@ -5003,13 +4901,13 @@ lesson_451:
   absolute_position: 40
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &590 2020-02-21 16:30:02.000000000 Z
+    utc: &578 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *590
+    time: *578
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &591 2020-05-21 19:48:47.000000000 Z
+    utc: &579 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *591
+    time: *579
   lockable: true
   relative_position: 2
   properties: "{}"
@@ -5020,13 +4918,13 @@ lesson_452:
   absolute_position: 41
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &592 2020-02-21 16:30:02.000000000 Z
+    utc: &580 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *592
+    time: *580
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &593 2020-05-21 19:48:47.000000000 Z
+    utc: &581 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *593
+    time: *581
   lockable: false
   relative_position: 39
   properties: "{}"
@@ -5037,13 +4935,13 @@ lesson_453:
   absolute_position: 42
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &594 2020-02-21 16:30:02.000000000 Z
+    utc: &582 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *594
+    time: *582
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &595 2020-05-21 19:48:47.000000000 Z
+    utc: &583 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *595
+    time: *583
   lockable: false
   relative_position: 40
   properties: "{}"
@@ -5054,13 +4952,13 @@ lesson_454:
   absolute_position: 43
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &596 2020-02-21 16:30:02.000000000 Z
+    utc: &584 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *596
+    time: *584
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &597 2020-05-21 19:48:47.000000000 Z
+    utc: &585 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *597
+    time: *585
   lockable: false
   relative_position: 41
   properties: "{}"
@@ -5071,13 +4969,13 @@ lesson_455:
   absolute_position: 44
   script_id: 68
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &598 2020-02-21 16:30:02.000000000 Z
+    utc: &586 2020-02-21 16:30:02.000000000 Z
     zone: *2
-    time: *598
+    time: *586
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &599 2020-05-21 19:48:47.000000000 Z
+    utc: &587 2020-05-21 19:48:47.000000000 Z
     zone: *2
-    time: *599
+    time: *587
   lockable: false
   relative_position: 42
   properties: "{}"
@@ -5088,13 +4986,13 @@ lesson_637:
   absolute_position: 1
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &600 2020-02-21 16:30:57.000000000 Z
+    utc: &588 2020-02-21 16:30:57.000000000 Z
     zone: *2
-    time: *600
+    time: *588
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &601 2020-05-21 19:49:02.000000000 Z
+    utc: &589 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *601
+    time: *589
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -5105,13 +5003,13 @@ lesson_638:
   absolute_position: 2
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &602 2020-02-21 16:30:57.000000000 Z
+    utc: &590 2020-02-21 16:30:57.000000000 Z
     zone: *2
-    time: *602
+    time: *590
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &603 2020-05-21 19:49:02.000000000 Z
+    utc: &591 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *603
+    time: *591
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -5122,13 +5020,13 @@ lesson_639:
   absolute_position: 3
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &604 2020-02-21 16:30:57.000000000 Z
+    utc: &592 2020-02-21 16:30:57.000000000 Z
     zone: *2
-    time: *604
+    time: *592
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &605 2020-05-21 19:49:02.000000000 Z
+    utc: &593 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *605
+    time: *593
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -5139,13 +5037,13 @@ lesson_640:
   absolute_position: 4
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &606 2020-02-21 16:30:57.000000000 Z
+    utc: &594 2020-02-21 16:30:57.000000000 Z
     zone: *2
-    time: *606
+    time: *594
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &607 2020-05-21 19:49:02.000000000 Z
+    utc: &595 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *607
+    time: *595
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -5156,13 +5054,13 @@ lesson_641:
   absolute_position: 5
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &608 2020-02-21 16:30:58.000000000 Z
+    utc: &596 2020-02-21 16:30:58.000000000 Z
     zone: *2
-    time: *608
+    time: *596
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &609 2020-05-21 19:49:02.000000000 Z
+    utc: &597 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *609
+    time: *597
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -5173,13 +5071,13 @@ lesson_642:
   absolute_position: 6
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &610 2020-02-21 16:30:58.000000000 Z
+    utc: &598 2020-02-21 16:30:58.000000000 Z
     zone: *2
-    time: *610
+    time: *598
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &611 2020-05-21 19:49:02.000000000 Z
+    utc: &599 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *611
+    time: *599
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -5190,13 +5088,13 @@ lesson_643:
   absolute_position: 7
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &612 2020-02-21 16:30:58.000000000 Z
+    utc: &600 2020-02-21 16:30:58.000000000 Z
     zone: *2
-    time: *612
+    time: *600
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &613 2020-05-21 19:49:02.000000000 Z
+    utc: &601 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *613
+    time: *601
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -5207,13 +5105,13 @@ lesson_644:
   absolute_position: 8
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &614 2020-02-21 16:30:58.000000000 Z
+    utc: &602 2020-02-21 16:30:58.000000000 Z
     zone: *2
-    time: *614
+    time: *602
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &615 2020-05-21 19:49:02.000000000 Z
+    utc: &603 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *615
+    time: *603
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -5224,13 +5122,13 @@ lesson_645:
   absolute_position: 9
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &616 2020-02-21 16:30:58.000000000 Z
+    utc: &604 2020-02-21 16:30:58.000000000 Z
     zone: *2
-    time: *616
+    time: *604
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &617 2020-05-21 19:49:02.000000000 Z
+    utc: &605 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *617
+    time: *605
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -5241,13 +5139,13 @@ lesson_646:
   absolute_position: 10
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &618 2020-02-21 16:30:59.000000000 Z
+    utc: &606 2020-02-21 16:30:59.000000000 Z
     zone: *2
-    time: *618
+    time: *606
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &619 2020-05-21 19:49:02.000000000 Z
+    utc: &607 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *619
+    time: *607
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -5258,13 +5156,13 @@ lesson_647:
   absolute_position: 11
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &620 2020-02-21 16:30:59.000000000 Z
+    utc: &608 2020-02-21 16:30:59.000000000 Z
     zone: *2
-    time: *620
+    time: *608
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &621 2020-05-21 19:49:02.000000000 Z
+    utc: &609 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *621
+    time: *609
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -5275,13 +5173,13 @@ lesson_648:
   absolute_position: 12
   script_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &622 2020-02-21 16:30:59.000000000 Z
+    utc: &610 2020-02-21 16:30:59.000000000 Z
     zone: *2
-    time: *622
+    time: *610
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &623 2020-05-21 19:49:02.000000000 Z
+    utc: &611 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *623
+    time: *611
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -5292,13 +5190,13 @@ lesson_687:
   absolute_position: 1
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &624 2020-02-21 16:31:12.000000000 Z
+    utc: &612 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *624
+    time: *612
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &625 2020-05-21 19:49:05.000000000 Z
+    utc: &613 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *625
+    time: *613
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -5309,13 +5207,13 @@ lesson_688:
   absolute_position: 2
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &626 2020-02-21 16:31:12.000000000 Z
+    utc: &614 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *626
+    time: *614
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &627 2020-05-21 19:49:05.000000000 Z
+    utc: &615 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *627
+    time: *615
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -5326,13 +5224,13 @@ lesson_689:
   absolute_position: 3
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &628 2020-02-21 16:31:12.000000000 Z
+    utc: &616 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *628
+    time: *616
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &629 2020-05-21 19:49:05.000000000 Z
+    utc: &617 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *629
+    time: *617
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -5343,13 +5241,13 @@ lesson_690:
   absolute_position: 4
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &630 2020-02-21 16:31:12.000000000 Z
+    utc: &618 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *630
+    time: *618
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &631 2020-05-21 19:49:05.000000000 Z
+    utc: &619 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *631
+    time: *619
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -5360,13 +5258,13 @@ lesson_691:
   absolute_position: 5
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &632 2020-02-21 16:31:12.000000000 Z
+    utc: &620 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *632
+    time: *620
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &633 2020-05-21 19:49:06.000000000 Z
+    utc: &621 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *633
+    time: *621
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -5377,13 +5275,13 @@ lesson_692:
   absolute_position: 6
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &634 2020-02-21 16:31:12.000000000 Z
+    utc: &622 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *634
+    time: *622
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &635 2020-05-21 19:49:06.000000000 Z
+    utc: &623 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *635
+    time: *623
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -5394,13 +5292,13 @@ lesson_693:
   absolute_position: 7
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &636 2020-02-21 16:31:12.000000000 Z
+    utc: &624 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *636
+    time: *624
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &637 2020-05-21 19:49:06.000000000 Z
+    utc: &625 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *637
+    time: *625
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -5411,13 +5309,13 @@ lesson_694:
   absolute_position: 8
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &638 2020-02-21 16:31:13.000000000 Z
+    utc: &626 2020-02-21 16:31:13.000000000 Z
     zone: *2
-    time: *638
+    time: *626
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &639 2020-05-21 19:49:06.000000000 Z
+    utc: &627 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *639
+    time: *627
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -5428,13 +5326,13 @@ lesson_695:
   absolute_position: 9
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &640 2020-02-21 16:31:13.000000000 Z
+    utc: &628 2020-02-21 16:31:13.000000000 Z
     zone: *2
-    time: *640
+    time: *628
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &641 2020-05-21 19:49:06.000000000 Z
+    utc: &629 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *641
+    time: *629
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -5445,13 +5343,13 @@ lesson_696:
   absolute_position: 10
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &642 2020-02-21 16:31:13.000000000 Z
+    utc: &630 2020-02-21 16:31:13.000000000 Z
     zone: *2
-    time: *642
+    time: *630
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &643 2020-05-21 19:49:06.000000000 Z
+    utc: &631 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *643
+    time: *631
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -5462,13 +5360,13 @@ lesson_697:
   absolute_position: 11
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &644 2020-02-21 16:31:14.000000000 Z
+    utc: &632 2020-02-21 16:31:14.000000000 Z
     zone: *2
-    time: *644
+    time: *632
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &645 2020-05-21 19:49:06.000000000 Z
+    utc: &633 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *645
+    time: *633
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -5479,13 +5377,13 @@ lesson_698:
   absolute_position: 12
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &646 2020-02-21 16:31:14.000000000 Z
+    utc: &634 2020-02-21 16:31:14.000000000 Z
     zone: *2
-    time: *646
+    time: *634
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &647 2020-05-21 19:49:06.000000000 Z
+    utc: &635 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *647
+    time: *635
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -5496,13 +5394,13 @@ lesson_699:
   absolute_position: 13
   script_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &648 2020-02-21 16:31:14.000000000 Z
+    utc: &636 2020-02-21 16:31:14.000000000 Z
     zone: *2
-    time: *648
+    time: *636
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &649 2020-05-21 19:49:06.000000000 Z
+    utc: &637 2020-05-21 19:49:06.000000000 Z
     zone: *2
-    time: *649
+    time: *637
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -5513,13 +5411,13 @@ lesson_737:
   absolute_position: 1
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &650 2020-02-21 16:31:27.000000000 Z
+    utc: &638 2020-02-21 16:31:27.000000000 Z
     zone: *2
-    time: *650
+    time: *638
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &651 2020-05-21 19:49:09.000000000 Z
+    utc: &639 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *651
+    time: *639
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -5530,13 +5428,13 @@ lesson_738:
   absolute_position: 2
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &652 2020-02-21 16:31:27.000000000 Z
+    utc: &640 2020-02-21 16:31:27.000000000 Z
     zone: *2
-    time: *652
+    time: *640
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &653 2020-05-21 19:49:09.000000000 Z
+    utc: &641 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *653
+    time: *641
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -5547,13 +5445,13 @@ lesson_739:
   absolute_position: 3
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &654 2020-02-21 16:31:28.000000000 Z
+    utc: &642 2020-02-21 16:31:28.000000000 Z
     zone: *2
-    time: *654
+    time: *642
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &655 2020-05-21 19:49:09.000000000 Z
+    utc: &643 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *655
+    time: *643
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -5564,13 +5462,13 @@ lesson_740:
   absolute_position: 4
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &656 2020-02-21 16:31:28.000000000 Z
+    utc: &644 2020-02-21 16:31:28.000000000 Z
     zone: *2
-    time: *656
+    time: *644
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &657 2020-05-21 19:49:09.000000000 Z
+    utc: &645 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *657
+    time: *645
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -5581,13 +5479,13 @@ lesson_741:
   absolute_position: 5
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &658 2020-02-21 16:31:28.000000000 Z
+    utc: &646 2020-02-21 16:31:28.000000000 Z
     zone: *2
-    time: *658
+    time: *646
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &659 2020-05-21 19:49:09.000000000 Z
+    utc: &647 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *659
+    time: *647
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -5598,13 +5496,13 @@ lesson_742:
   absolute_position: 6
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &660 2020-02-21 16:31:29.000000000 Z
+    utc: &648 2020-02-21 16:31:29.000000000 Z
     zone: *2
-    time: *660
+    time: *648
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &661 2020-05-21 19:49:09.000000000 Z
+    utc: &649 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *661
+    time: *649
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -5615,13 +5513,13 @@ lesson_743:
   absolute_position: 7
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &662 2020-02-21 16:31:29.000000000 Z
+    utc: &650 2020-02-21 16:31:29.000000000 Z
     zone: *2
-    time: *662
+    time: *650
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &663 2020-05-21 19:49:09.000000000 Z
+    utc: &651 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *663
+    time: *651
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -5632,13 +5530,13 @@ lesson_744:
   absolute_position: 8
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &664 2020-02-21 16:31:29.000000000 Z
+    utc: &652 2020-02-21 16:31:29.000000000 Z
     zone: *2
-    time: *664
+    time: *652
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &665 2020-05-21 19:49:09.000000000 Z
+    utc: &653 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *665
+    time: *653
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -5649,13 +5547,13 @@ lesson_745:
   absolute_position: 9
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &666 2020-02-21 16:31:30.000000000 Z
+    utc: &654 2020-02-21 16:31:30.000000000 Z
     zone: *2
-    time: *666
+    time: *654
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &667 2020-05-21 19:49:09.000000000 Z
+    utc: &655 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *667
+    time: *655
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -5666,13 +5564,13 @@ lesson_746:
   absolute_position: 10
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &668 2020-02-21 16:31:30.000000000 Z
+    utc: &656 2020-02-21 16:31:30.000000000 Z
     zone: *2
-    time: *668
+    time: *656
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &669 2020-05-21 19:49:09.000000000 Z
+    utc: &657 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *669
+    time: *657
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -5683,13 +5581,13 @@ lesson_747:
   absolute_position: 11
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &670 2020-02-21 16:31:31.000000000 Z
+    utc: &658 2020-02-21 16:31:31.000000000 Z
     zone: *2
-    time: *670
+    time: *658
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &671 2020-05-21 19:49:09.000000000 Z
+    utc: &659 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *671
+    time: *659
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -5700,13 +5598,13 @@ lesson_748:
   absolute_position: 12
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &672 2020-02-21 16:31:31.000000000 Z
+    utc: &660 2020-02-21 16:31:31.000000000 Z
     zone: *2
-    time: *672
+    time: *660
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &673 2020-05-21 19:49:09.000000000 Z
+    utc: &661 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *673
+    time: *661
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -5717,13 +5615,13 @@ lesson_749:
   absolute_position: 13
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &674 2020-02-21 16:31:31.000000000 Z
+    utc: &662 2020-02-21 16:31:31.000000000 Z
     zone: *2
-    time: *674
+    time: *662
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &675 2020-05-21 19:49:09.000000000 Z
+    utc: &663 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *675
+    time: *663
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -5734,13 +5632,13 @@ lesson_750:
   absolute_position: 14
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &676 2020-02-21 16:31:31.000000000 Z
+    utc: &664 2020-02-21 16:31:31.000000000 Z
     zone: *2
-    time: *676
+    time: *664
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &677 2020-05-21 19:49:09.000000000 Z
+    utc: &665 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *677
+    time: *665
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -5751,13 +5649,13 @@ lesson_751:
   absolute_position: 15
   script_id: 98
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &678 2020-02-21 16:31:31.000000000 Z
+    utc: &666 2020-02-21 16:31:31.000000000 Z
     zone: *2
-    time: *678
+    time: *666
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &679 2020-05-21 19:49:09.000000000 Z
+    utc: &667 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *679
+    time: *667
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -5768,13 +5666,13 @@ lesson_800:
   absolute_position: 1
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &680 2020-02-21 16:31:48.000000000 Z
+    utc: &668 2020-02-21 16:31:48.000000000 Z
     zone: *2
-    time: *680
+    time: *668
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &681 2020-05-21 19:49:13.000000000 Z
+    utc: &669 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *681
+    time: *669
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -5785,13 +5683,13 @@ lesson_801:
   absolute_position: 2
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &682 2020-02-21 16:31:48.000000000 Z
+    utc: &670 2020-02-21 16:31:48.000000000 Z
     zone: *2
-    time: *682
+    time: *670
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &683 2020-05-21 19:49:13.000000000 Z
+    utc: &671 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *683
+    time: *671
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -5802,13 +5700,13 @@ lesson_802:
   absolute_position: 3
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &684 2020-02-21 16:31:48.000000000 Z
+    utc: &672 2020-02-21 16:31:48.000000000 Z
     zone: *2
-    time: *684
+    time: *672
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &685 2020-05-21 19:49:13.000000000 Z
+    utc: &673 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *685
+    time: *673
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -5819,13 +5717,13 @@ lesson_803:
   absolute_position: 4
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &686 2020-02-21 16:31:48.000000000 Z
+    utc: &674 2020-02-21 16:31:48.000000000 Z
     zone: *2
-    time: *686
+    time: *674
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &687 2020-05-21 19:49:13.000000000 Z
+    utc: &675 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *687
+    time: *675
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -5836,13 +5734,13 @@ lesson_804:
   absolute_position: 5
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &688 2020-02-21 16:31:49.000000000 Z
+    utc: &676 2020-02-21 16:31:49.000000000 Z
     zone: *2
-    time: *688
+    time: *676
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &689 2020-05-21 19:49:13.000000000 Z
+    utc: &677 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *689
+    time: *677
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -5853,13 +5751,13 @@ lesson_805:
   absolute_position: 6
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &690 2020-02-21 16:31:49.000000000 Z
+    utc: &678 2020-02-21 16:31:49.000000000 Z
     zone: *2
-    time: *690
+    time: *678
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &691 2020-05-21 19:49:13.000000000 Z
+    utc: &679 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *691
+    time: *679
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -5870,13 +5768,13 @@ lesson_806:
   absolute_position: 7
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &692 2020-02-21 16:31:50.000000000 Z
+    utc: &680 2020-02-21 16:31:50.000000000 Z
     zone: *2
-    time: *692
+    time: *680
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &693 2020-05-21 19:49:13.000000000 Z
+    utc: &681 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *693
+    time: *681
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -5887,13 +5785,13 @@ lesson_807:
   absolute_position: 8
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &694 2020-02-21 16:31:50.000000000 Z
+    utc: &682 2020-02-21 16:31:50.000000000 Z
     zone: *2
-    time: *694
+    time: *682
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &695 2020-05-21 19:49:13.000000000 Z
+    utc: &683 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *695
+    time: *683
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -5904,13 +5802,13 @@ lesson_808:
   absolute_position: 9
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &696 2020-02-21 16:31:50.000000000 Z
+    utc: &684 2020-02-21 16:31:50.000000000 Z
     zone: *2
-    time: *696
+    time: *684
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &697 2020-05-21 19:49:13.000000000 Z
+    utc: &685 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *697
+    time: *685
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -5921,13 +5819,13 @@ lesson_809:
   absolute_position: 10
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &698 2020-02-21 16:31:51.000000000 Z
+    utc: &686 2020-02-21 16:31:51.000000000 Z
     zone: *2
-    time: *698
+    time: *686
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &699 2020-05-21 19:49:13.000000000 Z
+    utc: &687 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *699
+    time: *687
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -5938,13 +5836,13 @@ lesson_810:
   absolute_position: 11
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &700 2020-02-21 16:31:51.000000000 Z
+    utc: &688 2020-02-21 16:31:51.000000000 Z
     zone: *2
-    time: *700
+    time: *688
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &701 2020-05-21 19:49:13.000000000 Z
+    utc: &689 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *701
+    time: *689
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -5955,13 +5853,13 @@ lesson_811:
   absolute_position: 12
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &702 2020-02-21 16:31:51.000000000 Z
+    utc: &690 2020-02-21 16:31:51.000000000 Z
     zone: *2
-    time: *702
+    time: *690
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &703 2020-05-21 19:49:13.000000000 Z
+    utc: &691 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *703
+    time: *691
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -5972,13 +5870,13 @@ lesson_812:
   absolute_position: 13
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &704 2020-02-21 16:31:52.000000000 Z
+    utc: &692 2020-02-21 16:31:52.000000000 Z
     zone: *2
-    time: *704
+    time: *692
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &705 2020-05-21 19:49:13.000000000 Z
+    utc: &693 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *705
+    time: *693
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -5989,13 +5887,13 @@ lesson_813:
   absolute_position: 14
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &706 2020-02-21 16:31:52.000000000 Z
+    utc: &694 2020-02-21 16:31:52.000000000 Z
     zone: *2
-    time: *706
+    time: *694
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &707 2020-05-21 19:49:13.000000000 Z
+    utc: &695 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *707
+    time: *695
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -6006,13 +5904,13 @@ lesson_814:
   absolute_position: 15
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &708 2020-02-21 16:31:52.000000000 Z
+    utc: &696 2020-02-21 16:31:52.000000000 Z
     zone: *2
-    time: *708
+    time: *696
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &709 2020-05-21 19:49:13.000000000 Z
+    utc: &697 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *709
+    time: *697
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -6023,13 +5921,13 @@ lesson_815:
   absolute_position: 16
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &710 2020-02-21 16:31:52.000000000 Z
+    utc: &698 2020-02-21 16:31:52.000000000 Z
     zone: *2
-    time: *710
+    time: *698
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &711 2020-05-21 19:49:14.000000000 Z
+    utc: &699 2020-05-21 19:49:14.000000000 Z
     zone: *2
-    time: *711
+    time: *699
   lockable: false
   relative_position: 16
   properties: "{}"
@@ -6040,13 +5938,13 @@ lesson_816:
   absolute_position: 17
   script_id: 102
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &712 2020-02-21 16:31:52.000000000 Z
+    utc: &700 2020-02-21 16:31:52.000000000 Z
     zone: *2
-    time: *712
+    time: *700
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &713 2020-05-21 19:49:14.000000000 Z
+    utc: &701 2020-05-21 19:49:14.000000000 Z
     zone: *2
-    time: *713
+    time: *701
   lockable: false
   relative_position: 17
   properties: "{}"
@@ -6057,13 +5955,13 @@ lesson_871:
   absolute_position: 1
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &714 2020-02-21 16:32:15.000000000 Z
+    utc: &702 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *714
+    time: *702
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &715 2020-04-22 17:50:10.000000000 Z
+    utc: &703 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *715
+    time: *703
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -6074,13 +5972,13 @@ lesson_872:
   absolute_position: 2
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &716 2020-02-21 16:32:15.000000000 Z
+    utc: &704 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *716
+    time: *704
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &717 2020-04-22 17:50:10.000000000 Z
+    utc: &705 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *717
+    time: *705
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -6091,13 +5989,13 @@ lesson_873:
   absolute_position: 3
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &718 2020-02-21 16:32:15.000000000 Z
+    utc: &706 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *718
+    time: *706
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &719 2020-04-22 17:50:10.000000000 Z
+    utc: &707 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *719
+    time: *707
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -6108,13 +6006,13 @@ lesson_874:
   absolute_position: 4
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &720 2020-02-21 16:32:15.000000000 Z
+    utc: &708 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *720
+    time: *708
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &721 2020-04-22 17:50:10.000000000 Z
+    utc: &709 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *721
+    time: *709
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -6125,13 +6023,13 @@ lesson_875:
   absolute_position: 5
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &722 2020-02-21 16:32:15.000000000 Z
+    utc: &710 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *722
+    time: *710
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &723 2020-04-22 17:50:10.000000000 Z
+    utc: &711 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *723
+    time: *711
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -6142,13 +6040,13 @@ lesson_876:
   absolute_position: 6
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &724 2020-02-21 16:32:16.000000000 Z
+    utc: &712 2020-02-21 16:32:16.000000000 Z
     zone: *2
-    time: *724
+    time: *712
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &725 2020-04-22 17:50:10.000000000 Z
+    utc: &713 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *725
+    time: *713
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -6159,13 +6057,13 @@ lesson_877:
   absolute_position: 7
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &726 2020-02-21 16:32:16.000000000 Z
+    utc: &714 2020-02-21 16:32:16.000000000 Z
     zone: *2
-    time: *726
+    time: *714
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &727 2020-04-22 17:50:10.000000000 Z
+    utc: &715 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *727
+    time: *715
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -6176,13 +6074,13 @@ lesson_878:
   absolute_position: 8
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &728 2020-02-21 16:32:16.000000000 Z
+    utc: &716 2020-02-21 16:32:16.000000000 Z
     zone: *2
-    time: *728
+    time: *716
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &729 2020-04-22 17:50:10.000000000 Z
+    utc: &717 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *729
+    time: *717
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -6193,13 +6091,13 @@ lesson_879:
   absolute_position: 9
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &730 2020-02-21 16:32:17.000000000 Z
+    utc: &718 2020-02-21 16:32:17.000000000 Z
     zone: *2
-    time: *730
+    time: *718
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &731 2020-04-22 17:50:10.000000000 Z
+    utc: &719 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *731
+    time: *719
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -6210,13 +6108,13 @@ lesson_880:
   absolute_position: 10
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &732 2020-02-21 16:32:17.000000000 Z
+    utc: &720 2020-02-21 16:32:17.000000000 Z
     zone: *2
-    time: *732
+    time: *720
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &733 2020-04-22 17:50:10.000000000 Z
+    utc: &721 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *733
+    time: *721
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -6227,13 +6125,13 @@ lesson_881:
   absolute_position: 11
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &734 2020-02-21 16:32:17.000000000 Z
+    utc: &722 2020-02-21 16:32:17.000000000 Z
     zone: *2
-    time: *734
+    time: *722
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &735 2020-04-22 17:50:10.000000000 Z
+    utc: &723 2020-04-22 17:50:10.000000000 Z
     zone: *2
-    time: *735
+    time: *723
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -6244,13 +6142,13 @@ lesson_882:
   absolute_position: 12
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &736 2020-02-21 16:32:18.000000000 Z
+    utc: &724 2020-02-21 16:32:18.000000000 Z
     zone: *2
-    time: *736
+    time: *724
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &737 2020-04-22 17:50:11.000000000 Z
+    utc: &725 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *737
+    time: *725
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -6261,13 +6159,13 @@ lesson_883:
   absolute_position: 13
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &738 2020-02-21 16:32:18.000000000 Z
+    utc: &726 2020-02-21 16:32:18.000000000 Z
     zone: *2
-    time: *738
+    time: *726
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &739 2020-04-22 17:50:11.000000000 Z
+    utc: &727 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *739
+    time: *727
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -6278,13 +6176,13 @@ lesson_884:
   absolute_position: 14
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &740 2020-02-21 16:32:18.000000000 Z
+    utc: &728 2020-02-21 16:32:18.000000000 Z
     zone: *2
-    time: *740
+    time: *728
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &741 2020-04-22 17:50:11.000000000 Z
+    utc: &729 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *741
+    time: *729
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -6295,13 +6193,13 @@ lesson_885:
   absolute_position: 15
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &742 2020-02-21 16:32:19.000000000 Z
+    utc: &730 2020-02-21 16:32:19.000000000 Z
     zone: *2
-    time: *742
+    time: *730
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &743 2020-04-22 17:50:11.000000000 Z
+    utc: &731 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *743
+    time: *731
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -6312,13 +6210,13 @@ lesson_886:
   absolute_position: 16
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &744 2020-02-21 16:32:19.000000000 Z
+    utc: &732 2020-02-21 16:32:19.000000000 Z
     zone: *2
-    time: *744
+    time: *732
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &745 2020-04-22 17:50:11.000000000 Z
+    utc: &733 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *745
+    time: *733
   lockable: false
   relative_position: 16
   properties: "{}"
@@ -6329,13 +6227,13 @@ lesson_887:
   absolute_position: 17
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &746 2020-02-21 16:32:20.000000000 Z
+    utc: &734 2020-02-21 16:32:20.000000000 Z
     zone: *2
-    time: *746
+    time: *734
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &747 2020-04-22 17:50:11.000000000 Z
+    utc: &735 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *747
+    time: *735
   lockable: false
   relative_position: 17
   properties: "{}"
@@ -6346,13 +6244,13 @@ lesson_888:
   absolute_position: 18
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &748 2020-02-21 16:32:20.000000000 Z
+    utc: &736 2020-02-21 16:32:20.000000000 Z
     zone: *2
-    time: *748
+    time: *736
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &749 2020-04-22 17:50:11.000000000 Z
+    utc: &737 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *749
+    time: *737
   lockable: false
   relative_position: 18
   properties: "{}"
@@ -6363,13 +6261,13 @@ lesson_889:
   absolute_position: 19
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &750 2020-02-21 16:32:21.000000000 Z
+    utc: &738 2020-02-21 16:32:21.000000000 Z
     zone: *2
-    time: *750
+    time: *738
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &751 2020-04-22 17:50:11.000000000 Z
+    utc: &739 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *751
+    time: *739
   lockable: false
   relative_position: 19
   properties: "{}"
@@ -6380,13 +6278,13 @@ lesson_890:
   absolute_position: 20
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &752 2020-02-21 16:32:22.000000000 Z
+    utc: &740 2020-02-21 16:32:22.000000000 Z
     zone: *2
-    time: *752
+    time: *740
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &753 2020-04-22 17:50:11.000000000 Z
+    utc: &741 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *753
+    time: *741
   lockable: false
   relative_position: 20
   properties: "{}"
@@ -6397,13 +6295,13 @@ lesson_891:
   absolute_position: 21
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &754 2020-02-21 16:32:22.000000000 Z
+    utc: &742 2020-02-21 16:32:22.000000000 Z
     zone: *2
-    time: *754
+    time: *742
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &755 2020-04-22 17:50:11.000000000 Z
+    utc: &743 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *755
+    time: *743
   lockable: false
   relative_position: 21
   properties: "{}"
@@ -6414,13 +6312,13 @@ lesson_892:
   absolute_position: 22
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &756 2020-02-21 16:32:22.000000000 Z
+    utc: &744 2020-02-21 16:32:22.000000000 Z
     zone: *2
-    time: *756
+    time: *744
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &757 2020-04-22 17:50:11.000000000 Z
+    utc: &745 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *757
+    time: *745
   lockable: false
   relative_position: 22
   properties: "{}"
@@ -6431,13 +6329,13 @@ lesson_893:
   absolute_position: 23
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &758 2020-02-21 16:32:22.000000000 Z
+    utc: &746 2020-02-21 16:32:22.000000000 Z
     zone: *2
-    time: *758
+    time: *746
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &759 2020-04-22 17:50:11.000000000 Z
+    utc: &747 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *759
+    time: *747
   lockable: false
   relative_position: 23
   properties: "{}"
@@ -6448,13 +6346,13 @@ lesson_894:
   absolute_position: 24
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &760 2020-02-21 16:32:22.000000000 Z
+    utc: &748 2020-02-21 16:32:22.000000000 Z
     zone: *2
-    time: *760
+    time: *748
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &761 2020-04-22 17:50:11.000000000 Z
+    utc: &749 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *761
+    time: *749
   lockable: false
   relative_position: 24
   properties: "{}"
@@ -6465,13 +6363,13 @@ lesson_895:
   absolute_position: 25
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &762 2020-02-21 16:32:23.000000000 Z
+    utc: &750 2020-02-21 16:32:23.000000000 Z
     zone: *2
-    time: *762
+    time: *750
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &763 2020-04-22 17:50:11.000000000 Z
+    utc: &751 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *763
+    time: *751
   lockable: false
   relative_position: 25
   properties: "{}"
@@ -6482,13 +6380,13 @@ lesson_896:
   absolute_position: 26
   script_id: 107
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &764 2020-02-21 16:32:23.000000000 Z
+    utc: &752 2020-02-21 16:32:23.000000000 Z
     zone: *2
-    time: *764
+    time: *752
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &765 2020-04-22 17:50:11.000000000 Z
+    utc: &753 2020-04-22 17:50:11.000000000 Z
     zone: *2
-    time: *765
+    time: *753
   lockable: false
   relative_position: 26
   properties: "{}"
@@ -6499,13 +6397,13 @@ lesson_963:
   absolute_position: 1
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &766 2020-02-21 16:32:51.000000000 Z
+    utc: &754 2020-02-21 16:32:51.000000000 Z
     zone: *2
-    time: *766
+    time: *754
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &767 2020-04-22 17:50:17.000000000 Z
+    utc: &755 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *767
+    time: *755
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -6516,13 +6414,13 @@ lesson_964:
   absolute_position: 2
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &768 2020-02-21 16:32:51.000000000 Z
+    utc: &756 2020-02-21 16:32:51.000000000 Z
     zone: *2
-    time: *768
+    time: *756
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &769 2020-04-22 17:50:17.000000000 Z
+    utc: &757 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *769
+    time: *757
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -6533,13 +6431,13 @@ lesson_965:
   absolute_position: 3
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &770 2020-02-21 16:32:51.000000000 Z
+    utc: &758 2020-02-21 16:32:51.000000000 Z
     zone: *2
-    time: *770
+    time: *758
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &771 2020-04-22 17:50:17.000000000 Z
+    utc: &759 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *771
+    time: *759
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -6550,13 +6448,13 @@ lesson_966:
   absolute_position: 4
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &772 2020-02-21 16:32:52.000000000 Z
+    utc: &760 2020-02-21 16:32:52.000000000 Z
     zone: *2
-    time: *772
+    time: *760
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &773 2020-04-22 17:50:17.000000000 Z
+    utc: &761 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *773
+    time: *761
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -6567,13 +6465,13 @@ lesson_967:
   absolute_position: 5
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &774 2020-02-21 16:32:52.000000000 Z
+    utc: &762 2020-02-21 16:32:52.000000000 Z
     zone: *2
-    time: *774
+    time: *762
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &775 2020-04-22 17:50:17.000000000 Z
+    utc: &763 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *775
+    time: *763
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -6584,13 +6482,13 @@ lesson_968:
   absolute_position: 6
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &776 2020-02-21 16:32:52.000000000 Z
+    utc: &764 2020-02-21 16:32:52.000000000 Z
     zone: *2
-    time: *776
+    time: *764
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &777 2020-04-22 17:50:17.000000000 Z
+    utc: &765 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *777
+    time: *765
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -6601,13 +6499,13 @@ lesson_969:
   absolute_position: 7
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &778 2020-02-21 16:32:52.000000000 Z
+    utc: &766 2020-02-21 16:32:52.000000000 Z
     zone: *2
-    time: *778
+    time: *766
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &779 2020-04-22 17:50:17.000000000 Z
+    utc: &767 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *779
+    time: *767
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -6618,13 +6516,13 @@ lesson_970:
   absolute_position: 8
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &780 2020-02-21 16:32:53.000000000 Z
+    utc: &768 2020-02-21 16:32:53.000000000 Z
     zone: *2
-    time: *780
+    time: *768
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &781 2020-04-22 17:50:17.000000000 Z
+    utc: &769 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *781
+    time: *769
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -6635,13 +6533,13 @@ lesson_971:
   absolute_position: 9
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &782 2020-02-21 16:32:53.000000000 Z
+    utc: &770 2020-02-21 16:32:53.000000000 Z
     zone: *2
-    time: *782
+    time: *770
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &783 2020-04-22 17:50:17.000000000 Z
+    utc: &771 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *783
+    time: *771
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -6652,13 +6550,13 @@ lesson_972:
   absolute_position: 10
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &784 2020-02-21 16:32:54.000000000 Z
+    utc: &772 2020-02-21 16:32:54.000000000 Z
     zone: *2
-    time: *784
+    time: *772
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &785 2020-04-22 17:50:17.000000000 Z
+    utc: &773 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *785
+    time: *773
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -6669,13 +6567,13 @@ lesson_973:
   absolute_position: 11
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &786 2020-02-21 16:32:54.000000000 Z
+    utc: &774 2020-02-21 16:32:54.000000000 Z
     zone: *2
-    time: *786
+    time: *774
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &787 2020-04-22 17:50:17.000000000 Z
+    utc: &775 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *787
+    time: *775
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -6686,13 +6584,13 @@ lesson_974:
   absolute_position: 12
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &788 2020-02-21 16:32:54.000000000 Z
+    utc: &776 2020-02-21 16:32:54.000000000 Z
     zone: *2
-    time: *788
+    time: *776
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &789 2020-04-22 17:50:17.000000000 Z
+    utc: &777 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *789
+    time: *777
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -6703,13 +6601,13 @@ lesson_975:
   absolute_position: 13
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &790 2020-02-21 16:32:54.000000000 Z
+    utc: &778 2020-02-21 16:32:54.000000000 Z
     zone: *2
-    time: *790
+    time: *778
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &791 2020-04-22 17:50:17.000000000 Z
+    utc: &779 2020-04-22 17:50:17.000000000 Z
     zone: *2
-    time: *791
+    time: *779
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -6720,13 +6618,13 @@ lesson_976:
   absolute_position: 14
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &792 2020-02-21 16:32:55.000000000 Z
+    utc: &780 2020-02-21 16:32:55.000000000 Z
     zone: *2
-    time: *792
+    time: *780
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &793 2020-04-22 17:50:18.000000000 Z
+    utc: &781 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *793
+    time: *781
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -6737,13 +6635,13 @@ lesson_977:
   absolute_position: 15
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &794 2020-02-21 16:32:56.000000000 Z
+    utc: &782 2020-02-21 16:32:56.000000000 Z
     zone: *2
-    time: *794
+    time: *782
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &795 2020-04-22 17:50:18.000000000 Z
+    utc: &783 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *795
+    time: *783
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -6754,13 +6652,13 @@ lesson_978:
   absolute_position: 16
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &796 2020-02-21 16:32:56.000000000 Z
+    utc: &784 2020-02-21 16:32:56.000000000 Z
     zone: *2
-    time: *796
+    time: *784
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &797 2020-04-22 17:50:18.000000000 Z
+    utc: &785 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *797
+    time: *785
   lockable: false
   relative_position: 16
   properties: "{}"
@@ -6771,13 +6669,13 @@ lesson_979:
   absolute_position: 17
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &798 2020-02-21 16:32:56.000000000 Z
+    utc: &786 2020-02-21 16:32:56.000000000 Z
     zone: *2
-    time: *798
+    time: *786
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &799 2020-04-22 17:50:18.000000000 Z
+    utc: &787 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *799
+    time: *787
   lockable: false
   relative_position: 17
   properties: "{}"
@@ -6788,13 +6686,13 @@ lesson_980:
   absolute_position: 18
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &800 2020-02-21 16:32:57.000000000 Z
+    utc: &788 2020-02-21 16:32:57.000000000 Z
     zone: *2
-    time: *800
+    time: *788
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &801 2020-04-22 17:50:18.000000000 Z
+    utc: &789 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *801
+    time: *789
   lockable: false
   relative_position: 18
   properties: "{}"
@@ -6805,13 +6703,13 @@ lesson_981:
   absolute_position: 19
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &802 2020-02-21 16:32:57.000000000 Z
+    utc: &790 2020-02-21 16:32:57.000000000 Z
     zone: *2
-    time: *802
+    time: *790
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &803 2020-04-22 17:50:18.000000000 Z
+    utc: &791 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *803
+    time: *791
   lockable: false
   relative_position: 19
   properties: "{}"
@@ -6822,13 +6720,13 @@ lesson_982:
   absolute_position: 20
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &804 2020-02-21 16:32:58.000000000 Z
+    utc: &792 2020-02-21 16:32:58.000000000 Z
     zone: *2
-    time: *804
+    time: *792
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &805 2020-04-22 17:50:18.000000000 Z
+    utc: &793 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *805
+    time: *793
   lockable: false
   relative_position: 20
   properties: "{}"
@@ -6839,13 +6737,13 @@ lesson_983:
   absolute_position: 21
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &806 2020-02-21 16:32:58.000000000 Z
+    utc: &794 2020-02-21 16:32:58.000000000 Z
     zone: *2
-    time: *806
+    time: *794
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &807 2020-04-22 17:50:18.000000000 Z
+    utc: &795 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *807
+    time: *795
   lockable: false
   relative_position: 21
   properties: "{}"
@@ -6856,13 +6754,13 @@ lesson_984:
   absolute_position: 22
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &808 2020-02-21 16:32:58.000000000 Z
+    utc: &796 2020-02-21 16:32:58.000000000 Z
     zone: *2
-    time: *808
+    time: *796
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &809 2020-04-22 17:50:18.000000000 Z
+    utc: &797 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *809
+    time: *797
   lockable: false
   relative_position: 22
   properties: "{}"
@@ -6873,13 +6771,13 @@ lesson_985:
   absolute_position: 23
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &810 2020-02-21 16:32:59.000000000 Z
+    utc: &798 2020-02-21 16:32:59.000000000 Z
     zone: *2
-    time: *810
+    time: *798
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &811 2020-04-22 17:50:18.000000000 Z
+    utc: &799 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *811
+    time: *799
   lockable: false
   relative_position: 23
   properties: "{}"
@@ -6890,13 +6788,13 @@ lesson_986:
   absolute_position: 24
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &812 2020-02-21 16:33:00.000000000 Z
+    utc: &800 2020-02-21 16:33:00.000000000 Z
     zone: *2
-    time: *812
+    time: *800
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &813 2020-04-22 17:50:18.000000000 Z
+    utc: &801 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *813
+    time: *801
   lockable: false
   relative_position: 24
   properties: "{}"
@@ -6907,13 +6805,13 @@ lesson_987:
   absolute_position: 25
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &814 2020-02-21 16:33:00.000000000 Z
+    utc: &802 2020-02-21 16:33:00.000000000 Z
     zone: *2
-    time: *814
+    time: *802
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &815 2020-04-22 17:50:18.000000000 Z
+    utc: &803 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *815
+    time: *803
   lockable: false
   relative_position: 25
   properties: "{}"
@@ -6924,13 +6822,13 @@ lesson_988:
   absolute_position: 26
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &816 2020-02-21 16:33:01.000000000 Z
+    utc: &804 2020-02-21 16:33:01.000000000 Z
     zone: *2
-    time: *816
+    time: *804
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &817 2020-04-22 17:50:18.000000000 Z
+    utc: &805 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *817
+    time: *805
   lockable: false
   relative_position: 26
   properties: "{}"
@@ -6941,13 +6839,13 @@ lesson_989:
   absolute_position: 27
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &818 2020-02-21 16:33:01.000000000 Z
+    utc: &806 2020-02-21 16:33:01.000000000 Z
     zone: *2
-    time: *818
+    time: *806
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &819 2020-04-22 17:50:18.000000000 Z
+    utc: &807 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *819
+    time: *807
   lockable: false
   relative_position: 27
   properties: "{}"
@@ -6958,13 +6856,13 @@ lesson_990:
   absolute_position: 28
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &820 2020-02-21 16:33:01.000000000 Z
+    utc: &808 2020-02-21 16:33:01.000000000 Z
     zone: *2
-    time: *820
+    time: *808
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &821 2020-04-22 17:50:18.000000000 Z
+    utc: &809 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *821
+    time: *809
   lockable: false
   relative_position: 28
   properties: "{}"
@@ -6975,13 +6873,13 @@ lesson_991:
   absolute_position: 29
   script_id: 112
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &822 2020-02-21 16:33:01.000000000 Z
+    utc: &810 2020-02-21 16:33:01.000000000 Z
     zone: *2
-    time: *822
+    time: *810
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &823 2020-04-22 17:50:18.000000000 Z
+    utc: &811 2020-04-22 17:50:18.000000000 Z
     zone: *2
-    time: *823
+    time: *811
   lockable: false
   relative_position: 29
   properties: "{}"
@@ -6992,13 +6890,13 @@ lesson_2919:
   absolute_position: 1
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &824 2020-02-21 16:53:07.000000000 Z
+    utc: &812 2020-02-21 16:53:07.000000000 Z
     zone: *2
-    time: *824
+    time: *812
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &825 2020-04-22 17:52:16.000000000 Z
+    utc: &813 2020-04-22 17:52:16.000000000 Z
     zone: *2
-    time: *825
+    time: *813
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -7009,13 +6907,13 @@ lesson_2920:
   absolute_position: 2
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &826 2020-02-21 16:53:08.000000000 Z
+    utc: &814 2020-02-21 16:53:08.000000000 Z
     zone: *2
-    time: *826
+    time: *814
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &827 2020-04-22 17:52:16.000000000 Z
+    utc: &815 2020-04-22 17:52:16.000000000 Z
     zone: *2
-    time: *827
+    time: *815
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -7026,13 +6924,13 @@ lesson_2921:
   absolute_position: 3
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &828 2020-02-21 16:53:10.000000000 Z
+    utc: &816 2020-02-21 16:53:10.000000000 Z
     zone: *2
-    time: *828
+    time: *816
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &829 2020-04-22 17:52:16.000000000 Z
+    utc: &817 2020-04-22 17:52:16.000000000 Z
     zone: *2
-    time: *829
+    time: *817
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -7043,13 +6941,13 @@ lesson_2922:
   absolute_position: 4
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &830 2020-02-21 16:53:10.000000000 Z
+    utc: &818 2020-02-21 16:53:10.000000000 Z
     zone: *2
-    time: *830
+    time: *818
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &831 2020-04-22 17:52:16.000000000 Z
+    utc: &819 2020-04-22 17:52:16.000000000 Z
     zone: *2
-    time: *831
+    time: *819
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -7060,13 +6958,13 @@ lesson_2923:
   absolute_position: 5
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &832 2020-02-21 16:53:11.000000000 Z
+    utc: &820 2020-02-21 16:53:11.000000000 Z
     zone: *2
-    time: *832
+    time: *820
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &833 2020-04-22 17:52:16.000000000 Z
+    utc: &821 2020-04-22 17:52:16.000000000 Z
     zone: *2
-    time: *833
+    time: *821
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -7077,13 +6975,13 @@ lesson_2924:
   absolute_position: 6
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &834 2020-02-21 16:53:12.000000000 Z
+    utc: &822 2020-02-21 16:53:12.000000000 Z
     zone: *2
-    time: *834
+    time: *822
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &835 2020-04-22 17:52:17.000000000 Z
+    utc: &823 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *835
+    time: *823
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -7094,13 +6992,13 @@ lesson_2925:
   absolute_position: 7
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &836 2020-02-21 16:53:13.000000000 Z
+    utc: &824 2020-02-21 16:53:13.000000000 Z
     zone: *2
-    time: *836
+    time: *824
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &837 2020-04-22 17:52:17.000000000 Z
+    utc: &825 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *837
+    time: *825
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -7111,13 +7009,13 @@ lesson_2926:
   absolute_position: 8
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &838 2020-02-21 16:53:15.000000000 Z
+    utc: &826 2020-02-21 16:53:15.000000000 Z
     zone: *2
-    time: *838
+    time: *826
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &839 2020-04-22 17:52:17.000000000 Z
+    utc: &827 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *839
+    time: *827
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -7128,13 +7026,13 @@ lesson_2927:
   absolute_position: 9
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &840 2020-02-21 16:53:16.000000000 Z
+    utc: &828 2020-02-21 16:53:16.000000000 Z
     zone: *2
-    time: *840
+    time: *828
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &841 2020-04-22 17:52:17.000000000 Z
+    utc: &829 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *841
+    time: *829
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -7145,13 +7043,13 @@ lesson_2928:
   absolute_position: 10
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &842 2020-02-21 16:53:17.000000000 Z
+    utc: &830 2020-02-21 16:53:17.000000000 Z
     zone: *2
-    time: *842
+    time: *830
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &843 2020-04-22 17:52:17.000000000 Z
+    utc: &831 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *843
+    time: *831
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -7162,13 +7060,13 @@ lesson_2929:
   absolute_position: 11
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &844 2020-02-21 16:53:17.000000000 Z
+    utc: &832 2020-02-21 16:53:17.000000000 Z
     zone: *2
-    time: *844
+    time: *832
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &845 2020-04-22 17:52:17.000000000 Z
+    utc: &833 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *845
+    time: *833
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -7179,13 +7077,13 @@ lesson_2930:
   absolute_position: 12
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &846 2020-02-21 16:53:17.000000000 Z
+    utc: &834 2020-02-21 16:53:17.000000000 Z
     zone: *2
-    time: *846
+    time: *834
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &847 2020-04-22 17:52:17.000000000 Z
+    utc: &835 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *847
+    time: *835
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -7196,13 +7094,13 @@ lesson_2931:
   absolute_position: 13
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &848 2020-02-21 16:53:17.000000000 Z
+    utc: &836 2020-02-21 16:53:17.000000000 Z
     zone: *2
-    time: *848
+    time: *836
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &849 2020-04-22 17:52:17.000000000 Z
+    utc: &837 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *849
+    time: *837
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -7213,13 +7111,13 @@ lesson_2932:
   absolute_position: 14
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &850 2020-02-21 16:53:18.000000000 Z
+    utc: &838 2020-02-21 16:53:18.000000000 Z
     zone: *2
-    time: *850
+    time: *838
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &851 2020-04-22 17:52:17.000000000 Z
+    utc: &839 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *851
+    time: *839
   lockable: false
   relative_position: 14
   properties: "{}"
@@ -7230,13 +7128,13 @@ lesson_2933:
   absolute_position: 15
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &852 2020-02-21 16:53:20.000000000 Z
+    utc: &840 2020-02-21 16:53:20.000000000 Z
     zone: *2
-    time: *852
+    time: *840
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &853 2020-04-22 17:52:17.000000000 Z
+    utc: &841 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *853
+    time: *841
   lockable: false
   relative_position: 15
   properties: "{}"
@@ -7247,13 +7145,13 @@ lesson_2934:
   absolute_position: 16
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &854 2020-02-21 16:53:21.000000000 Z
+    utc: &842 2020-02-21 16:53:21.000000000 Z
     zone: *2
-    time: *854
+    time: *842
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &855 2020-04-22 17:52:17.000000000 Z
+    utc: &843 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *855
+    time: *843
   lockable: false
   relative_position: 16
   properties: "{}"
@@ -7264,13 +7162,13 @@ lesson_2935:
   absolute_position: 17
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &856 2020-02-21 16:53:21.000000000 Z
+    utc: &844 2020-02-21 16:53:21.000000000 Z
     zone: *2
-    time: *856
+    time: *844
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &857 2020-04-22 17:52:17.000000000 Z
+    utc: &845 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *857
+    time: *845
   lockable: false
   relative_position: 17
   properties: "{}"
@@ -7281,13 +7179,13 @@ lesson_2936:
   absolute_position: 18
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &858 2020-02-21 16:53:23.000000000 Z
+    utc: &846 2020-02-21 16:53:23.000000000 Z
     zone: *2
-    time: *858
+    time: *846
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &859 2020-04-22 17:52:17.000000000 Z
+    utc: &847 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *859
+    time: *847
   lockable: false
   relative_position: 18
   properties: "{}"
@@ -7298,13 +7196,13 @@ lesson_2937:
   absolute_position: 19
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &860 2020-02-21 16:53:24.000000000 Z
+    utc: &848 2020-02-21 16:53:24.000000000 Z
     zone: *2
-    time: *860
+    time: *848
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &861 2020-04-22 17:52:17.000000000 Z
+    utc: &849 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *861
+    time: *849
   lockable: false
   relative_position: 19
   properties: "{}"
@@ -7315,13 +7213,13 @@ lesson_2938:
   absolute_position: 20
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &862 2020-02-21 16:53:26.000000000 Z
+    utc: &850 2020-02-21 16:53:26.000000000 Z
     zone: *2
-    time: *862
+    time: *850
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &863 2020-04-22 17:52:17.000000000 Z
+    utc: &851 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *863
+    time: *851
   lockable: false
   relative_position: 20
   properties: "{}"
@@ -7332,13 +7230,13 @@ lesson_2939:
   absolute_position: 21
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &864 2020-02-21 16:53:28.000000000 Z
+    utc: &852 2020-02-21 16:53:28.000000000 Z
     zone: *2
-    time: *864
+    time: *852
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &865 2020-04-22 17:52:17.000000000 Z
+    utc: &853 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *865
+    time: *853
   lockable: false
   relative_position: 21
   properties: "{}"
@@ -7349,13 +7247,13 @@ lesson_2940:
   absolute_position: 22
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &866 2020-02-21 16:53:28.000000000 Z
+    utc: &854 2020-02-21 16:53:28.000000000 Z
     zone: *2
-    time: *866
+    time: *854
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &867 2020-04-22 17:52:17.000000000 Z
+    utc: &855 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *867
+    time: *855
   lockable: false
   relative_position: 22
   properties: "{}"
@@ -7366,13 +7264,13 @@ lesson_2941:
   absolute_position: 23
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &868 2020-02-21 16:53:30.000000000 Z
+    utc: &856 2020-02-21 16:53:30.000000000 Z
     zone: *2
-    time: *868
+    time: *856
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &869 2020-04-22 17:52:17.000000000 Z
+    utc: &857 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *869
+    time: *857
   lockable: false
   relative_position: 23
   properties: "{}"
@@ -7383,13 +7281,13 @@ lesson_2942:
   absolute_position: 24
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &870 2020-02-21 16:53:31.000000000 Z
+    utc: &858 2020-02-21 16:53:31.000000000 Z
     zone: *2
-    time: *870
+    time: *858
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &871 2020-04-22 17:52:17.000000000 Z
+    utc: &859 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *871
+    time: *859
   lockable: false
   relative_position: 24
   properties: "{}"
@@ -7400,13 +7298,13 @@ lesson_2943:
   absolute_position: 25
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &872 2020-02-21 16:53:32.000000000 Z
+    utc: &860 2020-02-21 16:53:32.000000000 Z
     zone: *2
-    time: *872
+    time: *860
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &873 2020-04-22 17:52:17.000000000 Z
+    utc: &861 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *873
+    time: *861
   lockable: false
   relative_position: 25
   properties: "{}"
@@ -7417,13 +7315,13 @@ lesson_2944:
   absolute_position: 26
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &874 2020-02-21 16:53:33.000000000 Z
+    utc: &862 2020-02-21 16:53:33.000000000 Z
     zone: *2
-    time: *874
+    time: *862
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &875 2020-04-22 17:52:17.000000000 Z
+    utc: &863 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *875
+    time: *863
   lockable: false
   relative_position: 26
   properties: "{}"
@@ -7434,13 +7332,13 @@ lesson_2945:
   absolute_position: 27
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &876 2020-02-21 16:53:35.000000000 Z
+    utc: &864 2020-02-21 16:53:35.000000000 Z
     zone: *2
-    time: *876
+    time: *864
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &877 2020-04-22 17:52:17.000000000 Z
+    utc: &865 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *877
+    time: *865
   lockable: false
   relative_position: 27
   properties: "{}"
@@ -7451,13 +7349,13 @@ lesson_2946:
   absolute_position: 28
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &878 2020-02-21 16:53:35.000000000 Z
+    utc: &866 2020-02-21 16:53:35.000000000 Z
     zone: *2
-    time: *878
+    time: *866
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &879 2020-04-22 17:52:17.000000000 Z
+    utc: &867 2020-04-22 17:52:17.000000000 Z
     zone: *2
-    time: *879
+    time: *867
   lockable: false
   relative_position: 28
   properties: "{}"
@@ -7468,13 +7366,13 @@ lesson_2947:
   absolute_position: 29
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &880 2020-02-21 16:53:38.000000000 Z
+    utc: &868 2020-02-21 16:53:38.000000000 Z
     zone: *2
-    time: *880
+    time: *868
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &881 2020-04-22 17:52:18.000000000 Z
+    utc: &869 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *881
+    time: *869
   lockable: false
   relative_position: 29
   properties: "{}"
@@ -7485,13 +7383,13 @@ lesson_2948:
   absolute_position: 30
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &882 2020-02-21 16:53:40.000000000 Z
+    utc: &870 2020-02-21 16:53:40.000000000 Z
     zone: *2
-    time: *882
+    time: *870
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &883 2020-04-22 17:52:18.000000000 Z
+    utc: &871 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *883
+    time: *871
   lockable: false
   relative_position: 30
   properties: "{}"
@@ -7502,13 +7400,13 @@ lesson_2949:
   absolute_position: 31
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &884 2020-02-21 16:53:41.000000000 Z
+    utc: &872 2020-02-21 16:53:41.000000000 Z
     zone: *2
-    time: *884
+    time: *872
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &885 2020-04-22 17:52:18.000000000 Z
+    utc: &873 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *885
+    time: *873
   lockable: false
   relative_position: 31
   properties: "{}"
@@ -7519,13 +7417,13 @@ lesson_2950:
   absolute_position: 32
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &886 2020-02-21 16:53:42.000000000 Z
+    utc: &874 2020-02-21 16:53:42.000000000 Z
     zone: *2
-    time: *886
+    time: *874
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &887 2020-04-22 17:52:18.000000000 Z
+    utc: &875 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *887
+    time: *875
   lockable: false
   relative_position: 32
   properties: "{}"
@@ -7536,13 +7434,13 @@ lesson_2951:
   absolute_position: 33
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &888 2020-02-21 16:53:42.000000000 Z
+    utc: &876 2020-02-21 16:53:42.000000000 Z
     zone: *2
-    time: *888
+    time: *876
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &889 2020-04-22 17:52:18.000000000 Z
+    utc: &877 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *889
+    time: *877
   lockable: false
   relative_position: 33
   properties: "{}"
@@ -7553,13 +7451,13 @@ lesson_2952:
   absolute_position: 34
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &890 2020-02-21 16:53:43.000000000 Z
+    utc: &878 2020-02-21 16:53:43.000000000 Z
     zone: *2
-    time: *890
+    time: *878
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &891 2020-04-22 17:52:18.000000000 Z
+    utc: &879 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *891
+    time: *879
   lockable: false
   relative_position: 34
   properties: "{}"
@@ -7570,13 +7468,13 @@ lesson_2953:
   absolute_position: 35
   script_id: 317
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &892 2020-02-21 16:53:43.000000000 Z
+    utc: &880 2020-02-21 16:53:43.000000000 Z
     zone: *2
-    time: *892
+    time: *880
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &893 2020-04-22 17:52:18.000000000 Z
+    utc: &881 2020-04-22 17:52:18.000000000 Z
     zone: *2
-    time: *893
+    time: *881
   lockable: false
   relative_position: 35
   properties: "{}"
@@ -7587,13 +7485,13 @@ lesson_3255:
   absolute_position: 1
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &894 2020-02-21 17:01:25.000000000 Z
+    utc: &882 2020-02-21 17:01:25.000000000 Z
     zone: *2
-    time: *894
+    time: *882
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &895 2020-05-21 19:51:36.000000000 Z
+    utc: &883 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *895
+    time: *883
   lockable: false
   relative_position: 1
   properties: "{}"
@@ -7604,13 +7502,13 @@ lesson_3256:
   absolute_position: 2
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &896 2020-02-21 17:01:25.000000000 Z
+    utc: &884 2020-02-21 17:01:25.000000000 Z
     zone: *2
-    time: *896
+    time: *884
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &897 2020-05-21 19:51:36.000000000 Z
+    utc: &885 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *897
+    time: *885
   lockable: false
   relative_position: 2
   properties: "{}"
@@ -7621,13 +7519,13 @@ lesson_3257:
   absolute_position: 3
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &898 2020-02-21 17:01:25.000000000 Z
+    utc: &886 2020-02-21 17:01:25.000000000 Z
     zone: *2
-    time: *898
+    time: *886
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &899 2020-05-21 19:51:36.000000000 Z
+    utc: &887 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *899
+    time: *887
   lockable: false
   relative_position: 3
   properties: "{}"
@@ -7638,13 +7536,13 @@ lesson_3258:
   absolute_position: 4
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &900 2020-02-21 17:01:25.000000000 Z
+    utc: &888 2020-02-21 17:01:25.000000000 Z
     zone: *2
-    time: *900
+    time: *888
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &901 2020-05-21 19:51:36.000000000 Z
+    utc: &889 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *901
+    time: *889
   lockable: false
   relative_position: 4
   properties: "{}"
@@ -7655,13 +7553,13 @@ lesson_3259:
   absolute_position: 5
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &902 2020-02-21 17:01:27.000000000 Z
+    utc: &890 2020-02-21 17:01:27.000000000 Z
     zone: *2
-    time: *902
+    time: *890
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &903 2020-05-21 19:51:36.000000000 Z
+    utc: &891 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *903
+    time: *891
   lockable: false
   relative_position: 5
   properties: "{}"
@@ -7672,13 +7570,13 @@ lesson_3260:
   absolute_position: 6
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &904 2020-02-21 17:01:27.000000000 Z
+    utc: &892 2020-02-21 17:01:27.000000000 Z
     zone: *2
-    time: *904
+    time: *892
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &905 2020-05-21 19:51:36.000000000 Z
+    utc: &893 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *905
+    time: *893
   lockable: false
   relative_position: 6
   properties: "{}"
@@ -7689,13 +7587,13 @@ lesson_3261:
   absolute_position: 7
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &906 2020-02-21 17:01:28.000000000 Z
+    utc: &894 2020-02-21 17:01:28.000000000 Z
     zone: *2
-    time: *906
+    time: *894
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &907 2020-05-21 19:51:36.000000000 Z
+    utc: &895 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *907
+    time: *895
   lockable: false
   relative_position: 7
   properties: "{}"
@@ -7706,13 +7604,13 @@ lesson_3262:
   absolute_position: 8
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &908 2020-02-21 17:01:30.000000000 Z
+    utc: &896 2020-02-21 17:01:30.000000000 Z
     zone: *2
-    time: *908
+    time: *896
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &909 2020-05-21 19:51:36.000000000 Z
+    utc: &897 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *909
+    time: *897
   lockable: false
   relative_position: 8
   properties: "{}"
@@ -7723,13 +7621,13 @@ lesson_3263:
   absolute_position: 9
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &910 2020-02-21 17:01:31.000000000 Z
+    utc: &898 2020-02-21 17:01:31.000000000 Z
     zone: *2
-    time: *910
+    time: *898
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &911 2020-05-21 19:51:36.000000000 Z
+    utc: &899 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *911
+    time: *899
   lockable: false
   relative_position: 9
   properties: "{}"
@@ -7740,13 +7638,13 @@ lesson_3264:
   absolute_position: 10
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &912 2020-02-21 17:01:32.000000000 Z
+    utc: &900 2020-02-21 17:01:32.000000000 Z
     zone: *2
-    time: *912
+    time: *900
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &913 2020-05-21 19:51:36.000000000 Z
+    utc: &901 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *913
+    time: *901
   lockable: false
   relative_position: 10
   properties: "{}"
@@ -7757,13 +7655,13 @@ lesson_3265:
   absolute_position: 11
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &914 2020-02-21 17:01:34.000000000 Z
+    utc: &902 2020-02-21 17:01:34.000000000 Z
     zone: *2
-    time: *914
+    time: *902
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &915 2020-05-21 19:51:36.000000000 Z
+    utc: &903 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *915
+    time: *903
   lockable: false
   relative_position: 11
   properties: "{}"
@@ -7774,13 +7672,13 @@ lesson_3266:
   absolute_position: 12
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &916 2020-02-21 17:01:36.000000000 Z
+    utc: &904 2020-02-21 17:01:36.000000000 Z
     zone: *2
-    time: *916
+    time: *904
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &917 2020-05-21 19:51:36.000000000 Z
+    utc: &905 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *917
+    time: *905
   lockable: false
   relative_position: 12
   properties: "{}"
@@ -7791,13 +7689,13 @@ lesson_3267:
   absolute_position: 13
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &918 2020-02-21 17:01:36.000000000 Z
+    utc: &906 2020-02-21 17:01:36.000000000 Z
     zone: *2
-    time: *918
+    time: *906
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &919 2020-05-21 19:51:36.000000000 Z
+    utc: &907 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *919
+    time: *907
   lockable: false
   relative_position: 13
   properties: "{}"
@@ -7808,13 +7706,13 @@ lesson_3268:
   absolute_position: 14
   script_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &920 2020-02-21 17:01:37.000000000 Z
+    utc: &908 2020-02-21 17:01:37.000000000 Z
     zone: *2
-    time: *920
+    time: *908
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &921 2020-05-21 19:51:36.000000000 Z
+    utc: &909 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *921
+    time: *909
   lockable: false
   relative_position: 14
   properties: "{}"
