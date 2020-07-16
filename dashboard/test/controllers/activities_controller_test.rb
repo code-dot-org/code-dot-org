@@ -891,7 +891,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "lesson 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:lessons])
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
     last_level_in_first_stage = script.lessons.first.script_levels.last
     post :milestone,

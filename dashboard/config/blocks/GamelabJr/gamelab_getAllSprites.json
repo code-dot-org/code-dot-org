@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "name": "getAllSprites",
+    "expression": "{costume: \"all\"}",
+    "inline": false,
+    "blockText": "all sprites",
+    "returnType": "Sprite",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+
+    ]
+  }
+}

@@ -1062,6 +1062,10 @@ def generate_user(name)
   return email, password
 end
 
+def find_test_user_by_name(name)
+  User.find_by(email: @users[name][:email])
+end
+
 And /^I check the pegasus URL$/ do
   pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
   puts "Pegasus URL is #{pegasus_url}"
