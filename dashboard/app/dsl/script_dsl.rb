@@ -268,10 +268,6 @@ class ScriptDSL < BaseDSL
   # @override
   def i18n_hash
     i18n_lesson_strings = {}
-    @lessons.each do |lesson|
-      i18n_lesson_strings[lesson[:lesson]] = {'name' => lesson[:lesson]}
-    end
-
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
