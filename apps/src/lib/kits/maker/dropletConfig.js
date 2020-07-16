@@ -151,18 +151,6 @@ export const makerBlocks = [
     ...createButtonProps,
     noAutocomplete: true,
     docFunc: 'createButton'
-  },
-
-  {
-    func: 'createCapacitiveTouchSensor',
-    ...createCapacitiveTouchSensorProps,
-    type: 'either'
-  },
-  {
-    func: 'var mySensor = createCapacitiveTouchSensor',
-    ...createCapacitiveTouchSensorProps,
-    noAutocomplete: true,
-    docFunc: 'createCapacitiveTouchSensor'
   }
 ];
 
@@ -420,6 +408,17 @@ const circuitPlaygroundBlocks = [
 const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
+  {
+    func: 'createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    type: 'either'
+  },
+  {
+    func: 'var mySensor = createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    noAutocomplete: true,
+    docFunc: 'createCapacitiveTouchSensor'
+  },
   {
     func: 'onBoardEvent',
     parent: api,
