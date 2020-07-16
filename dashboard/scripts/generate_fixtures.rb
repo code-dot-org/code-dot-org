@@ -34,7 +34,6 @@ scripts_map = {
   'cspunit5' => 'cspunit5',
   'cspunit6' => 'cspunit6',
   'ECSPD' => 'ECSPD',
-  'ECSPD-NexTech' => 'ECSPD-NexTech',
   'allthethings' => 'allthethings',
   'coursea-2017' => 'coursea-2017',
   'courseb-2017' => 'courseb-2017',
@@ -46,7 +45,10 @@ scripts_map = {
   'pre-express-2017' => 'pre-express-2017'
 }
 
+@courses = {}
+@plc_courses = {}
 @scripts = {}
+@plc_course_units = {}
 @lesson_groups = {}
 @lessons = {}
 @script_levels = {}
@@ -67,7 +69,7 @@ def handle_level(level)
   end
 
   if level.level_concept_difficulty
-    lcd_attributes = level.level_concept_difficulty.attributes
+    lcd_attributes = level.level_concept_difficulty.attributes.clone
     lcd_attributes.delete('level_id')
     lcd_attributes = lcd_attributes.merge({"level" => "level_#{level.id}"})
     @level_concept_difficulty["level_concept_difficulty_#{level.id}"] = lcd_attributes
@@ -75,7 +77,7 @@ def handle_level(level)
 
   level_source = level.level_sources.first
   if level_source
-    ls_attributes = level_source.attributes
+    ls_attributes = level_source.attributes.clone
     ls_attributes.delete('level_id')
     ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
     @level_sources["level_source_#{level.id}"] = ls_attributes
@@ -86,6 +88,21 @@ scripts_map.each do |_script_id, name|
   puts name
   script = Script.find_by_name name
   @scripts[name] = script.attributes
+
+  script.courses&.each do |course|
+    @courses[course.name] = course.attributes
+  end
+
+  plc_course_unit = script.plc_course_unit
+  if plc_course_unit
+    plc_cu_attributes = plc_course_unit.attributes.clone
+    plc_cu_attributes.delete('id')
+    @plc_course_units[plc_course_unit.unit_name] = plc_cu_attributes
+    if plc_course_unit.plc_course
+      @plc_courses[plc_course_unit.plc_course.name] = plc_course_unit.plc_course.attributes
+      @courses[plc_course_unit.plc_course.course.name] = plc_course_unit.plc_course.course.attributes
+    end
+  end
 
   script.lesson_groups.each do |lesson_group|
     @lesson_groups["lesson_group_#{lesson_group.id}"] = lesson_group.attributes
@@ -121,7 +138,10 @@ end
 
 prefix = "../test/fixtures/"
 
+File.new("#{prefix}courses.yml", 'w').write(yamlize(@courses))
+File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
+File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
 File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
