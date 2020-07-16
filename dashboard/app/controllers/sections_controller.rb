@@ -24,7 +24,7 @@ class SectionsController < ApplicationController
     if @section.script
       redirect_to @section.script
     elsif @section.unit_group
-      redirect_to @section.unit_group
+      redirect_to course_path(@section.unit_group)
     else
       redirect_to '/'
     end
