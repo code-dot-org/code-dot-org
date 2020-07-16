@@ -26,7 +26,6 @@ export default class CapacitiveTouchSensor extends EventEmitter {
     this.board.mb.streamAnalogChannel(this.board.pin); // enable temp sensor
     this.readSensorTimer = setInterval(() => {
       let currentValue = this.board.mb.analogChannel[this.board.pin];
-      console.log(this.board.mb.analogChannel[this.board.pin]);
       if (this.board.mb.analogChannel[this.board.pin] !== 255) {
         if (currentValue > this.releaseReading + 200 && !this.connect) {
           this.emit('down');
