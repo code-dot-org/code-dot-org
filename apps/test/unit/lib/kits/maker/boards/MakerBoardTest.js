@@ -254,7 +254,7 @@ export function itImplementsTheMakerBoardInterface(
      * @function
      * @name MakerBoard#createCapacitiveTouchSensor
      * @param {number} pin
-     * @return {Button} a newly constructed CapTouch component
+     * @return {EventEmitter} a newly constructed CapTouch component
      */
     describe(`createCapacitiveTouchSensor(pin)`, () => {
       // Example code:
@@ -267,12 +267,11 @@ export function itImplementsTheMakerBoardInterface(
         return board.connect();
       });
 
-      it(`returns a Button component`, () => {
+      it(`returns an Event Emitter with isPressed property`, () => {
         const button = board.createCapacitiveTouchSensor(2);
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-        expect(button).to.have.property('holdtime');
       });
     });
   });
