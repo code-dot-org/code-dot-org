@@ -147,8 +147,10 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    if (spriteArg.costume) {
+      return spriteCommands.countByAnimation(spriteArg.costume);
+    }
   },
 
   createNewSprite(name, animation, location) {
@@ -186,6 +188,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {
