@@ -7,10 +7,28 @@ fi:
   coming_soon: Tulossa pian
   campaign_date_start_short: 4. joulukuuta
   campaign_date_start_long: Joulukuu 4
-  campaign_date_short: Dec. 4-10
+  campaign_date_short: Dec. 7-13
   campaign_date_full: Joulukuu 4-10
-  campaign_date_year: '2017'
+  campaign_date_year: '2020'
   campaign_date_full_year: Joulukuu 4-10, 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2020'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2020'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Opi koodaamaan. Muuta maailmaa.
   hoc2019_header_line1_mobile: Opi koodaamaan.
   hoc2019_header_line2_mobile: Muuta maailmaa.

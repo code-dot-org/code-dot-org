@@ -427,7 +427,6 @@
   "deleteProjectConfirm": "Ønsker du verkeleg å slette prosjektet ditt? Du kan ikkje gjere om dette etterpå.",
   "deleteSection": "Slett seksjonen",
   "deleteSectionConfirm": "Er du sikker på at du vil slette denne seksjonen? Du kan ikkje angre deg.",
-  "deleteSectionHideSuggestion": "Om du berre vil skjule denne seksjonen frå lista di over seksjonar, vurdér å bruke \"Skjul seksjonen\" i staden.",
   "deleteUsedImage": "{name} blir brukt i {value, plural, one {1 place} other {# places}} i denne appen. Om du slettar den, vil ikkje biletet synast nokon av desse stadane. Er du sikker du ønsker å slette det?",
   "deleting": "Sletter",
   "description": "Beskrivelse",

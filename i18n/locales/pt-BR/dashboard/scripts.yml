@@ -26114,28 +26114,38 @@ pt:
           stages:
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             Sequencing with Scrat:
               name: Sequenciando com Scrat
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             Programming in Maze:
               name: Programação no labirinto
+              description_teacher: Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
             Programming with Rey and BB-8:
               name: Programação com Rey e BB-8
+              description_teacher: Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.
             Programming in Harvester:
               name: Programação em Harvester
+              description_teacher: 'Os alunos aplicarão os conceitos de programação que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir o objetivo, os alunos precisam coletar milho usando um novo bloco. Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial e começarão a usar o processo de depuração. '
             Spelling Bee:
               name: Soletrando
             Loops in Ice Age:
               name: Laços na Era do gelo
             Loops in Collector:
               name: Laços em coletor
+              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             Loops in Artist:
               name: Laços no Artista
+              description_teacher: Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.
             Tell a Story in Play Lab:
               name: Conte uma história no Play Lab
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Make a Game in Play Lab:
               name: Faça um jogo no Play Lab
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciamento
@@ -26146,28 +26156,38 @@ pt:
           lessons:
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             Sequencing with Scrat:
               name: Sequenciando com Scrat
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             Programming in Maze:
               name: Programação no labirinto
+              description_teacher: Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
             Programming with Rey and BB-8:
               name: Programação com Rey e BB-8
+              description_teacher: Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.
             Programming in Harvester:
               name: Programação em Harvester
+              description_teacher: 'Os alunos aplicarão os conceitos de programação que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir o objetivo, os alunos precisam coletar milho usando um novo bloco. Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial e começarão a usar o processo de depuração. '
             Spelling Bee:
               name: Soletrando
             Loops in Ice Age:
               name: Laços na Era do gelo
             Loops in Collector:
               name: Laços em coletor
+              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             Loops in Artist:
               name: Laços no Artista
+              description_teacher: Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.
             Tell a Story in Play Lab:
               name: Conte uma história no Play Lab
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Make a Game in Play Lab:
               name: Faça um jogo no Play Lab
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
         csp1-2020:
           stages:
             new stage:
@@ -26622,11 +26642,15 @@ pt:
               name: nova fase
             Debugging:
               name: Analisando
+            Module 1:
+              name: Módulo 1
           lessons:
             new stage:
               name: nova fase
             Debugging:
               name: Analisando
+            Module 1:
+              name: Módulo 1
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -27217,4 +27241,44 @@ pt:
             csd3_2:
               display_name: Conteúdo
             cspSurvey:
+              display_name: Conteúdo
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lição
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
               display_name: Conteúdo

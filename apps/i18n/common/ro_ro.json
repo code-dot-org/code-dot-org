@@ -426,7 +426,6 @@
   "deleteProjectConfirm": "Chiar vrei să îţi ştergi proiectul? Nu poţi anula această acţiune.",
   "deleteSection": "Șterge secțiunea",
   "deleteSectionConfirm": "Eşti sigur că vrei să ştergi această secţiune? Nu vei putea anula această acţiune.",
-  "deleteSectionHideSuggestion": "Dacă doreşti să elimini această secţiune din lista ta de secţiuni, ia în considerare opţiunea \"Ascunde secţiune\".",
   "deleteUsedImage": "{name} este utlizată {value, plural, one {într-un singur loc}other { în # locuri}} în această aplicație. Dacă o vei șterge, imaginea nu va mai apare în niciunul din aceste locuri. Ești sigur(ă) că vrei să o ștergi?",
   "deleting": "Ştergerea",
   "description": "Descriere",
