@@ -1765,7 +1765,7 @@ class Script < ActiveRecord::Base
     pairing_disabled_levels = levels.select {|level| !level.should_allow_pairing?}
     !pairing_disabled_levels.detect do |level|
       level.levels.detect do |child_level|
-        child_level.id == level_id
+        child_level&.id == level_id
       end
     end
   end
