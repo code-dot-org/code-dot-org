@@ -114,13 +114,15 @@ export default class MicroBitBoard extends EventEmitter {
     // Add the capacitive touch sensor to the interpreter
     // The interpreter reference is set during the board connection so
     // should be not-null here
-    this.interpreterReference_.addCustomMarshalObject({
-      instance: CapacitiveTouchSensor
-    });
-    this.interpreterReference_.createGlobalProperty(
-      'CapacitiveTouchSensor',
-      CapacitiveTouchSensor
-    );
+    if (this.interpreterReference_) {
+      this.interpreterReference_.addCustomMarshalObject({
+        instance: CapacitiveTouchSensor
+      });
+      this.interpreterReference_.createGlobalProperty(
+        'CapacitiveTouchSensor',
+        CapacitiveTouchSensor
+      );
+    }
 
     this.dynamicComponents_.push(newSensor);
     return newSensor;

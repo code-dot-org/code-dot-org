@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -359,19 +360,11 @@ describe('MicroBitBoard', () => {
   });
 
   describe(`createCapacitiveTouchSensor(pin)`, () => {
-    it('makes a button controller', () => {
+    it('makes a CapacitiveTouchSensor controller', () => {
       return board.connect().then(() => {
         const pin = 1;
         const newSensor = board.createCapacitiveTouchSensor(pin);
-        expect(newSensor).to.be.an.instanceOf(ExternalButton);
-      });
-    });
-
-    it('sets the pin to touchMode on the board', () => {
-      return board.connect().then(() => {
-        let touchModeSpy = sinon.spy(board.boardClient_, 'setTouchMode');
-        board.createCapacitiveTouchSensor(1);
-        expect(touchModeSpy).to.have.been.calledOnce;
+        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
       });
     });
   });
