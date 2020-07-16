@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
+import formComponentUtils from '../form_components/utils';
 import DatePicker from '../workshop_dashboard/components/date_picker';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
@@ -71,13 +72,19 @@ class InternationalOptInComponent extends FormComponent {
   render() {
     const labels = this.props.labels;
 
-    const lastSubjectsKey = this.props.options.subjects.slice(-1)[0];
+    const lastSubjectsKey = formComponentUtils.normalizeAnswer(
+      this.props.options.subjects[this.props.options.subjects.length - 1]
+    ).answerValue;
     const textFieldMapSubjects = {[lastSubjectsKey]: 'other'};
 
-    const lastResourcesKey = this.props.options.resources.slice(-1)[0];
+    const lastResourcesKey = formComponentUtils.normalizeAnswer(
+      this.props.options.resources[this.props.options.resources.length - 1]
+    ).answerValue;
     const textFieldMapResources = {[lastResourcesKey]: 'other'};
 
-    const lastRoboticsKey = this.props.options.robotics.slice(-1)[0];
+    const lastRoboticsKey = formComponentUtils.normalizeAnswer(
+      this.props.options.robotics[this.props.options.robotics.length - 1]
+    ).answerValue;
     const textFieldMapRobotics = {[lastRoboticsKey]: 'other'};
 
     return (
