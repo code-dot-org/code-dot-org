@@ -40,6 +40,7 @@ class ApiControllerTest < ActionController::TestCase
 
   private def create_script_with_lockable_stage
     script = create :script
+    lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
     level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
@@ -47,7 +48,7 @@ class ApiControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :lesson, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: stage
@@ -126,8 +127,9 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
-    stage1 = create :lesson, script: script, name: 'First Stage'
-    stage2 = create :lesson, script: script, name: 'Second Stage'
+    lesson_group = create :lesson_group, script: script
+    stage1 = create :lesson, script: script, name: 'First Stage', lesson_group: lesson_group
+    stage2 = create :lesson, script: script, name: 'Second Stage', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -928,7 +930,8 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should not return progress for bonus levels" do
     script = create :script
-    stage = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    stage = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: stage
     create :script_level, script: script, lesson: stage, bonus: true
 
