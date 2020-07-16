@@ -1060,8 +1060,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     add_unit = ->(unit_name, lesson_names) do
       create(:script).tap do |script|
         create :course_script, course: course, script: script, position: (next_position += 1)
+        create :lesson_group, script: script
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 

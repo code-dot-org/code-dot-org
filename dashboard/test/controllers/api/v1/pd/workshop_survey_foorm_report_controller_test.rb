@@ -144,12 +144,6 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body, symbolize_names: true)
 
-      overall_rollup_general = response[:workshop_rollups][:general][:overall]
-      assert_equal 11, overall_rollup_general[:response_count]
-      assert_equal 5.36, overall_rollup_general[:averages][:teacher_engagement][:rows][:engaging]
-      overall_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall]
-      assert_equal 11, overall_rollup_facilitator[:response_count]
-      assert_equal 5.36, overall_rollup_facilitator[:averages][:facilitator_effectiveness][:rows][:demonstrated_knowledge]
       overall_facilitator_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall_facilitator]
       csf_workshop_1_facilitator = csf_workshop_1.facilitators.pluck(:id).first.to_s.to_sym
       assert_equal 5, overall_facilitator_rollup_facilitator[csf_workshop_1_facilitator][:response_count]
