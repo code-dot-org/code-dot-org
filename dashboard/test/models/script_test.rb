@@ -1216,9 +1216,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 'Report Script Name', updated_report_script['title']
     assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
+    assert_equal 'report-stage-1', updated_report_script['lessons']['Report Stage 1']['name']
+    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Stage 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
   end
 
   test '!text_to_speech_enabled? by default' do
