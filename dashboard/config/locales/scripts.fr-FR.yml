@@ -41900,26 +41900,80 @@ fr:
           stages:
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Sequencing with Scrat:
               name: Séquencer avec Scrat
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in Maze:
               name: La Programmation dans le Labyrinthe
+              description_teacher: En utilisant des personnages du jeu Angry Birds,
+                les élèves développeront des algorithmes séquentiels pour déplacer
+                un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
+                ce faire, ils empileront des blocs de code ensemble, dans une séquence
+                linéaire, les faisant se déplacer tout droit, tourner à gauche ou
+                tourner à droite.
             Programming with Rey and BB-8:
               name: Programmer avec Rey et BB-8
+              description_teacher: Dans cette leçon, les élèves utiliseront leurs
+                nouvelles compétences en programmation de manière plus compliquée
+                pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
               name: La Programmation dans la Moissonneuse
+              description_teacher: 'Les élèves appliqueront les concepts de programmation
+                qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
+                au lieu de simplement amener le personnage à un but, les étudiants
+                doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants
+                continueront à développer des compétences d''algorithme séquentiel
+                et commenceront à utiliser le processus de débogage. '
             Spelling Bee:
               name: Concours d'orthographe
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Loops in Collector:
               name: Les Boucles dans Collecteur
+              description_teacher: Dans cette leçon, les élèves continuent d'apprendre
+                le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles
+                pour collecter des trésors dans les espaces ouverts des grottes. Un
+                nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
+                son voyage.
             Ocean Scene with Loops:
               name: Scène de l'Océan avec des Boucles
+              description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
+                des images en bouclant de simples séquences d'instructions. Dans la
+                leçon branchée précédente, des boucles étaient utilisées pour traverser
+                un labyrinthe et collecter des trésors. Ici, les boucles créent des
+                motifs. À la fin de cette phase, les étudiants auront la possibilité
+                de créer leurs propres images à l'aide de boucles.
             Loops in Artist:
               name: Les Boucles dans Artiste
+              description_teacher: De retour aux boucles, les élèves apprennent à
+                dessiner des images en bouclant de simples séquences d'instructions.
+                Dans la leçon en ligne précédente, des boucles ont été utilisées pour
+                traverser un labyrinthe et collecter des trésors. Ici, les élèves
+                utilisent des boucles pour créer des motifs. À la fin de cette phase,
+                les étudiants auront la possibilité de créer leurs propres images
+                en utilisant des boucles.
             Tell a Story in Play Lab:
               name: Raconter une Histoire dans le Labo du Jeu
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Make a Game in Play Lab:
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -41930,26 +41984,80 @@ fr:
           lessons:
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Sequencing with Scrat:
               name: Séquencer avec Scrat
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in Maze:
               name: La Programmation dans le Labyrinthe
+              description_teacher: En utilisant des personnages du jeu Angry Birds,
+                les élèves développeront des algorithmes séquentiels pour déplacer
+                un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
+                ce faire, ils empileront des blocs de code ensemble, dans une séquence
+                linéaire, les faisant se déplacer tout droit, tourner à gauche ou
+                tourner à droite.
             Programming with Rey and BB-8:
               name: Programmer avec Rey et BB-8
+              description_teacher: Dans cette leçon, les élèves utiliseront leurs
+                nouvelles compétences en programmation de manière plus compliquée
+                pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
               name: La Programmation dans la Moissonneuse
+              description_teacher: 'Les élèves appliqueront les concepts de programmation
+                qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
+                au lieu de simplement amener le personnage à un but, les étudiants
+                doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants
+                continueront à développer des compétences d''algorithme séquentiel
+                et commenceront à utiliser le processus de débogage. '
             Spelling Bee:
               name: Concours d'orthographe
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Loops in Collector:
               name: Les Boucles dans Collecteur
+              description_teacher: Dans cette leçon, les élèves continuent d'apprendre
+                le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles
+                pour collecter des trésors dans les espaces ouverts des grottes. Un
+                nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
+                son voyage.
             Ocean Scene with Loops:
               name: Scène de l'Océan avec des Boucles
+              description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
+                des images en bouclant de simples séquences d'instructions. Dans la
+                leçon branchée précédente, des boucles étaient utilisées pour traverser
+                un labyrinthe et collecter des trésors. Ici, les boucles créent des
+                motifs. À la fin de cette phase, les étudiants auront la possibilité
+                de créer leurs propres images à l'aide de boucles.
             Loops in Artist:
               name: Les Boucles dans Artiste
+              description_teacher: De retour aux boucles, les élèves apprennent à
+                dessiner des images en bouclant de simples séquences d'instructions.
+                Dans la leçon en ligne précédente, des boucles ont été utilisées pour
+                traverser un labyrinthe et collecter des trésors. Ici, les élèves
+                utilisent des boucles pour créer des motifs. À la fin de cette phase,
+                les étudiants auront la possibilité de créer leurs propres images
+                en utilisant des boucles.
             Tell a Story in Play Lab:
               name: Raconter une Histoire dans le Labo du Jeu
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Make a Game in Play Lab:
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
         csp1-2020:
           stages:
             new stage:
@@ -42335,11 +42443,15 @@ fr:
               name: nouvelle phase
             Debugging:
               name: Le Débogage
+            Module 1:
+              name: Module 1
           lessons:
             new stage:
               name: nouvelle phase
             Debugging:
               name: Le Débogage
+            Module 1:
+              name: Module 1
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -43580,4 +43692,44 @@ fr:
             csd3_2:
               display_name: Contenu
             cspSurvey:
+              display_name: Contenu
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
               display_name: Contenu

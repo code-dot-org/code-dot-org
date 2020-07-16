@@ -256,7 +256,6 @@
   "deleteProject": "ပရောဂျက်ကိုဖျက်ဆီးပါ",
   "deleteSection": "Section ကို ဖျက်ဆီးပါ",
   "deleteSectionConfirm": "သင်ဤအပိုင်းကို ဖျတ်ရန်သေချာပြီလား။သင် ဖျတ်ပြီးလျှင် ပြန်လည်ပြုပြင်လို့ မရပါ။",
-  "deleteSectionHideSuggestion": "အကယ်၍ သင်သည် သင့်ရဲ့sectionတွေထဲက ဤအပိုင်းကိုရိုးရှင်းစွာ ပယ်ဖျတ်လိုလျှင် 'Hide section' ကိုသုံးရန် စဉ်စားပါ။",
   "description": "ဖော်ပြချက်",
   "designMode": "ပုံစံ",
   "dialogCancel": "ပယ်ဖျတ်သည်",

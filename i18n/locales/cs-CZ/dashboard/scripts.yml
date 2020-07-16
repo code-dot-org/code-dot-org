@@ -5590,3 +5590,43 @@ cs:
               display_name: Obsah
             cspSurvey:
               display_name: Obsah
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah

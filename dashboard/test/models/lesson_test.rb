@@ -5,40 +5,40 @@ class StageTest < ActiveSupport::TestCase
     @student = create :student
   end
   test "lockable_state with swapped level without user_level" do
-    _, level1, _, stage, _ = create_swapped_lockable_stage
+    _, level1, _, lesson, _ = create_swapped_lockable_lesson
 
-    lockable_state = stage.lockable_state [@student]
+    lockable_state = lesson.lockable_state [@student]
 
     assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
   test "lockable_state with swapped level in reverse order without userlevel" do
-    _, _, level2, stage, script_level = create_swapped_lockable_stage
+    _, _, level2, lesson, script_level = create_swapped_lockable_lesson
     script_level.properties = {variants: {level1: {active: false}}}
     script_level.save!
 
-    lockable_state = stage.lockable_state [@student]
+    lockable_state = lesson.lockable_state [@student]
 
     assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
     assert_equal level2.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
   test "lockable_state with swapped level with user_level for inactive level" do
-    script, _, level2, stage, _ = create_swapped_lockable_stage
+    script, _, level2, lesson, _ = create_swapped_lockable_lesson
     create :user_level, user: @student, script: script, level: level2, unlocked_at: Time.now
 
-    lockable_state = stage.lockable_state [@student]
+    lockable_state = lesson.lockable_state [@student]
 
     assert_equal false, lockable_state[0][:locked], 'unlocked user_level should unlock old level'
     assert_equal level2.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
   test "lockable_state with swapped level with user_level for active level" do
-    script, level1, _, stage, _ = create_swapped_lockable_stage
+    script, level1, _, lesson, _ = create_swapped_lockable_lesson
     create :user_level, user: @student, script: script, level: level1, unlocked_at: Time.now
 
-    lockable_state = stage.lockable_state [@student]
+    lockable_state = lesson.lockable_state [@student]
 
     assert_equal false, lockable_state[0][:locked], 'unlocked user_level should unlock new level'
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
@@ -46,31 +46,41 @@ class StageTest < ActiveSupport::TestCase
 
   test "summary for single page long assessment" do
     script = create :script
-    properties = {pages: [{levels: ['level_free_response', 'level_multi_unsubmitted']}]}
-    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true, properties: properties
-    stage = create :lesson, name: 'stage1', script: script, lockable: true
-    create :script_level, script: script, levels: [level1], assessment: true, lesson: stage
+    create :text_match, name: 'level_free_response', type: 'TextMatch'
+    create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    level_group_dsl = <<~DSL
+      name 'level1'
+      title 'title1'
+      submittable 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+    lesson = create :lesson, name: 'lesson1', script: script, lockable: true
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Ensure that a single page long assessment has a uid that ends with "_0".
-    assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
+    assert_equal lesson.summarize[:levels].first[:uid], "#{lesson.summarize[:levels].first[:ids].first}_0"
   end
 
   test "summary for lesson with extras" do
     script = create :script, lesson_extras_available: true
     level = create :level
-    stage = create :lesson, script: script
-    create :script_level, script: script, lesson: stage, levels: [level]
+    lesson = create :lesson, script: script
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
-    assert_match /extras$/, stage.summarize[:lesson_extras_level_url]
+    assert_match /extras$/, lesson.summarize[:lesson_extras_level_url]
   end
 
-  test "summary for stage with extras where include_bonus_levels is true" do
+  test "summary for lesson with extras where include_bonus_levels is true" do
     script = create :script
     level = create :level
-    stage = create :lesson, script: script
-    create :script_level, lesson: stage, levels: [level], bonus: true
+    lesson = create :lesson, script: script
+    create :script_level, lesson: lesson, levels: [level], bonus: true
 
-    summary = stage.summarize(true)
+    summary = lesson.summarize(true)
     assert_equal 1, summary[:levels].length
     assert_equal [level.id], summary[:levels].first[:ids]
   end
@@ -78,8 +88,8 @@ class StageTest < ActiveSupport::TestCase
   test "summary of levels for lesson plan" do
     script = create :script
     level = create :level
-    stage = create :lesson, script: script, name: 'My Stage'
-    script_level = create :script_level, script: script, lesson: stage, levels: [level]
+    lesson = create :lesson, script: script, name: 'My Stage'
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level]
 
     expected_summary_of_levels = [
       {
@@ -97,36 +107,37 @@ class StageTest < ActiveSupport::TestCase
       }
     ]
 
-    assert_equal expected_summary_of_levels, stage.summary_for_lesson_plans[:levels]
+    assert_equal expected_summary_of_levels, lesson.summary_for_lesson_plans[:levels]
   end
 
   test "last_progression_script_level" do
-    stage = create :lesson
-    create :script_level, lesson: stage
-    last_script_level = create :script_level, lesson: stage
+    lesson = create :lesson
+    create :script_level, lesson: lesson
+    last_script_level = create :script_level, lesson: lesson
 
-    assert_equal last_script_level, stage.last_progression_script_level
+    assert_equal last_script_level, lesson.last_progression_script_level
   end
 
   test "last_progression_script_level with a bonus level" do
-    stage = create :lesson
-    last_script_level = create :script_level, lesson: stage
-    create :script_level, lesson: stage, bonus: true
+    lesson = create :lesson
+    last_script_level = create :script_level, lesson: lesson
+    create :script_level, lesson: lesson, bonus: true
 
-    assert_equal last_script_level, stage.last_progression_script_level
+    assert_equal last_script_level, lesson.last_progression_script_level
   end
 
   test "next_level_path_for_stage_extras" do
     script = create :script
-    stage1 = create :lesson, script: script
-    create :script_level, script: script, lesson: stage1
-    create :script_level, script: script, lesson: stage1
-    stage2 = create :lesson, script: script
-    create :script_level, script: script, lesson: stage2
-    create :script_level, script: script, lesson: stage2
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson1
+    create :script_level, script: script, lesson: lesson1
+    lesson2 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson2
+    create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_lesson_extras(@student)
-    assert_equal '/', stage2.next_level_path_for_lesson_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, lesson1.next_level_path_for_lesson_extras(@student)
+    assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
   class StagePublishedTests < ActiveSupport::TestCase
@@ -137,10 +148,10 @@ class StageTest < ActiveSupport::TestCase
 
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-      @script_with_visible_after_stages = create :script
-      @stage_future_visible_after = create :lesson, name: 'stage 1', script: @script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
-      @stage_past_visible_after = create :lesson, name: 'stage 2', script: @script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
-      @stage_no_visible_after = create :lesson, name: 'stage 3', script: @script_with_visible_after_stages
+      @script_with_visible_after_lessons = create :script
+      @lesson_future_visible_after = create :lesson, name: 'lesson 1', script: @script_with_visible_after_lessons, visible_after: '2020-04-01 08:00:00 -0700'
+      @lesson_past_visible_after = create :lesson, name: 'lesson 2', script: @script_with_visible_after_lessons, visible_after: '2020-03-01 08:00:00 -0700'
+      @lesson_no_visible_after = create :lesson, name: 'lesson 3', script: @script_with_visible_after_lessons
     end
 
     teardown do
@@ -148,37 +159,37 @@ class StageTest < ActiveSupport::TestCase
     end
 
     test "published? returns true if levelbuilder" do
-      assert @stage_future_visible_after.published?(@levelbuilder)
-      assert @stage_past_visible_after.published?(@levelbuilder)
-      assert @stage_no_visible_after.published?(@levelbuilder)
+      assert @lesson_future_visible_after.published?(@levelbuilder)
+      assert @lesson_past_visible_after.published?(@levelbuilder)
+      assert @lesson_no_visible_after.published?(@levelbuilder)
     end
 
-    test "published? returns true if stage does not have visible_after date" do
-      assert @stage_no_visible_after.published?(@teacher)
-      assert @stage_no_visible_after.published?(@student)
-      assert @stage_no_visible_after.published?(nil)
+    test "published? returns true if lesson does not have visible_after date" do
+      assert @lesson_no_visible_after.published?(@teacher)
+      assert @lesson_no_visible_after.published?(@student)
+      assert @lesson_no_visible_after.published?(nil)
     end
 
-    test "published? returns true if stage visible_after date is in past" do
-      assert @stage_past_visible_after.published?(@teacher)
-      assert @stage_past_visible_after.published?(@student)
-      assert @stage_past_visible_after.published?(nil)
+    test "published? returns true if lesson visible_after date is in past" do
+      assert @lesson_past_visible_after.published?(@teacher)
+      assert @lesson_past_visible_after.published?(@student)
+      assert @lesson_past_visible_after.published?(nil)
     end
 
-    test "published? returns false if stage visible_after date is in future" do
-      refute @stage_future_visible_after.published?(@teacher)
-      refute @stage_future_visible_after.published?(@student)
-      refute @stage_future_visible_after.published?(nil)
+    test "published? returns false if lesson visible_after date is in future" do
+      refute @lesson_future_visible_after.published?(@teacher)
+      refute @lesson_future_visible_after.published?(@student)
+      refute @lesson_future_visible_after.published?(nil)
     end
   end
 
-  def create_swapped_lockable_stage
+  def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
     level2 = create :level_group, name: 'level2', title: 'title2', submittable: true
-    stage = create :lesson, name: 'stage1', script: script, lockable: true
-    script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, lesson: stage
+    lesson = create :lesson, name: 'lesson1', script: script, lockable: true
+    script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, lesson: lesson
 
-    [script, level1, level2, stage, script_level]
+    [script, level1, level2, lesson, script_level]
   end
 end

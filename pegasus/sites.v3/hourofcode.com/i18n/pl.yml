@@ -5,12 +5,30 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 4 grudnia
-  campaign_date_start_long: 4 grudnia
-  campaign_date_short: 4-10 grudnia
-  campaign_date_full: 4-10 grudnia
+  campaign_date_start_short: 7 grudnia
+  campaign_date_start_long: 7 grudnia
+  campaign_date_short: 7-13 grudnia
+  campaign_date_full: 7-13 grudnia
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 grudnia 2016 roku
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!

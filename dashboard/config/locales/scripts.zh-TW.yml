@@ -28112,28 +28112,41 @@ zh-TW:
           stages:
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Sequencing with Scrat:
               name: 和鼠奎特一起學序列
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
+              description_teacher: 學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
+              description_teacher: 在本課堂中，學生會以更複雜的方式運用新的程式設計技巧，與 BB-8 一起完成更巧妙的關卡。
             Programming in Harvester:
               name: 和農夫一起學程式
+              description_teacher: 學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。
             Spelling Bee:
               name: 拼字蜜蜂
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
             Loops in Collector:
               name: 收藏家中的迴圈（Loops）
+              description_teacher: 在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get
+                treasure」（取得寶藏）積木，協助她完成旅程。
             Ocean Scene with Loops:
               name: 海洋場景與迴圈（Loop）
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Tell a Story in Play Lab:
               name: 在 Play Lab 中說故事
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的故事！
             Make a Game in Play Lab:
               name: 在 Play Lab 中製作遊戲
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的遊戲！
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -28144,28 +28157,41 @@ zh-TW:
           lessons:
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Sequencing with Scrat:
               name: 和鼠奎特一起學序列
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
+              description_teacher: 學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
+              description_teacher: 在本課堂中，學生會以更複雜的方式運用新的程式設計技巧，與 BB-8 一起完成更巧妙的關卡。
             Programming in Harvester:
               name: 和農夫一起學程式
+              description_teacher: 學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。
             Spelling Bee:
               name: 拼字蜜蜂
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
             Loops in Collector:
               name: 收藏家中的迴圈（Loops）
+              description_teacher: 在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get
+                treasure」（取得寶藏）積木，協助她完成旅程。
             Ocean Scene with Loops:
               name: 海洋場景與迴圈（Loop）
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Tell a Story in Play Lab:
               name: 在 Play Lab 中說故事
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的故事！
             Make a Game in Play Lab:
               name: 在 Play Lab 中製作遊戲
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的遊戲！
         csp1-2020:
           stages:
             new stage:
@@ -28619,11 +28645,15 @@ zh-TW:
               name: 新舞台
             Debugging:
               name: 除錯
+            Module 1:
+              name: 模組 1
           lessons:
             new stage:
               name: 新舞台
             Debugging:
               name: 除錯
+            Module 1:
+              name: 模組 1
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -29607,4 +29637,44 @@ zh-TW:
             csd3_2:
               display_name: 內容
             cspSurvey:
+              display_name: 內容
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: 階段
+          lessons:
+            Lesson:
+              name: 階段
+          lesson_groups:
+            lg_1:
+              display_name: 內容
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: 階段
+          lessons:
+            Lesson:
+              name: 階段
+          lesson_groups:
+            lg_1:
+              display_name: 內容
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: 階段
+          lessons:
+            Lesson:
+              name: 階段
+          lesson_groups:
+            lg_1:
+              display_name: 內容
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: 階段
+          lessons:
+            Lesson:
+              name: 階段
+          lesson_groups:
+            lg_1:
               display_name: 內容

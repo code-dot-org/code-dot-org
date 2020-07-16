@@ -4691,3 +4691,43 @@ ja:
               display_name: 内容
             cspSurvey:
               display_name: 内容
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容

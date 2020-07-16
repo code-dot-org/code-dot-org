@@ -13,6 +13,34 @@ import {STATES} from '@cdo/apps/geographyConstants';
 
 const VALIDATION_STATE_ERROR = 'error';
 
+const AMAZON_PRIVACY_POLICY_URL =
+  'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+const AFE_CONSENT_BODY = (
+  <span>
+    I give Code.org permission to share my name and email address, and my
+    school's name, address, and NCES ID, with Amazon.com (required to
+    participate). Use of your personal information is subject to{' '}
+    <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
+      Amazon’s Privacy Policy
+    </a>
+    .
+  </span>
+);
+
+const CSTA_PRIVACY_POLICY_URL = 'https://csteachers.org/privacy-policy/';
+const CSTA_CONSENT_BODY = (
+  <span>
+    I give Code.org permission to share my name and email address, and my
+    school's name, address, and NCES ID, with the Computer Science Teachers
+    Association (required if you want a CSTA+ membership). I provide my consent
+    to the use of my personal data as described in the{' '}
+    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank">
+      CSTA Privacy Policy
+    </a>
+    .
+  </span>
+);
+
 const styles = {
   wrong_school: {
     textAlign: 'right'
@@ -241,25 +269,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           )}
           <SingleCheckbox
             name="csta"
-            label="Send me a free annual Computer Science Teachers Association (CSTA)
-              Plus membership - which includes access to Amazon expert-led
-              webinars and other exclusive content."
+            label="Send me a free annual Computer Science Teachers Association Plus (CSTA+) membership - which includes access to Amazon expert-led webinars and other exclusive content."
             onChange={this.handleChange}
             value={this.state.csta}
           />
           {this.state.csta && (
             <div style={styles.consentIndent}>
-              <div>
-                Since you checked the box above, please consent to the sharing
-                and use of your personal data with the CSTA. Your information
-                will be shared as described in accordance with the{' '}
-                <a href="https://csteachers.org/privacy-policy/">
-                  CSTA Privacy Policy.
-                </a>
-              </div>
+              Since you checked the box above, please consent to sharing your
+              information with the CSTA.
               <SingleCheckbox
                 name="consentCSTA"
-                label="I give Code.org permission to share my name, email address, and school name, address, and NCES ID with the Computer Science Teachers Association. I provide my consent to the use of my personal data as described in the CSTA Privacy Policy (required if you want a CSTA Plus membership)."
+                label={CSTA_CONSENT_BODY}
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
                 validationState={
@@ -281,10 +301,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="consentAFE"
-            label="I give Code.org permission to share my name, email address, and
-              school name, address, and ID with Amazon.com (required to
-              participate). Use of your personal information is subject to
-              Amazon’s Privacy Policy."
+            label={AFE_CONSENT_BODY}
             onChange={this.handleChange}
             value={this.state.consentAFE}
             validationState={
@@ -297,9 +314,9 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           <div>
             By clicking Continue, you will receive an email from Amazon Future
             Engineer to claim your benefits. You will also receive occasional
-            emails from Amazon Future Engineer about new opportunities. You
-            always have the choice to adjust your interest settings or
-            unsubscribe.
+            emails from Amazon Future Engineer about new opportunities, such as
+            Amazon Future Engineer scholarships and grants. You always have the
+            choice to adjust your interest settings or unsubscribe.
           </div>
           <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
