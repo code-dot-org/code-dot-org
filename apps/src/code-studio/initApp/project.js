@@ -26,7 +26,7 @@ var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
-var header = require('../header');
+import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file

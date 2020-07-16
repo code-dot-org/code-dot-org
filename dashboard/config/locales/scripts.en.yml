@@ -3364,7 +3364,7 @@ en:
             Gumball Play Lab:
               name: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Star Wars: Building a Galaxy With Code (Javascript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_audience: ''
@@ -3376,7 +3376,7 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Star Wars: Building a Galaxy With Code (Blockly)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_audience: ''
@@ -29937,6 +29937,48 @@ en:
               name: Behaviors with Sprite Lab
             End of Course Project:
               name: End of Course Project
+            Programming with Angry Birds: &1
+              name: Programming with Angry Birds
+            Debugging with Scrat: &2
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel: &3
+              name: Collecting Treasure with Laurel
+            Creating Art with Code: &4
+              name: Creating Art with Code
+            Sticker Art with Loops: &5
+              name: Sticker Art with Loops
+            Nested Loops in Maze: &6
+              name: Nested Loops in Maze
+            Snowflakes with Anna and Elsa: &7
+              name: Snowflakes with Anna and Elsa
+            'Looking Ahead with Minecraft ': &8
+              name: 'Looking Ahead with Minecraft '
+            If/Else with Bee: &9
+              name: If/Else with Bee
+            While Loops with the Farmer: &10
+              name: While Loops with the Farmer
+            Harvesting with Conditionals: &11
+              name: Harvesting with Conditionals
+            Functions with Harvester: &12
+              name: Functions with Harvester
+            Functions with Artist: &13
+              name: Functions with Artist
+            Variables with Artist: &14
+              name: Variables with Artist
+            Changing Variables with Bee: &15
+              name: Changing Variables with Bee
+            Changing Variables with Artist: &16
+              name: Changing Variables with Artist
+            For Loops with Bee: &17
+              name: For Loops with Bee
+            For Loops with Artist: &18
+              name: For Loops with Artist
+            Swimming Fish in Sprite Lab: &19
+              name: Swimming Fish in Sprite Lab
+            Alien Dance Party: &20
+              name: Alien Dance Party
+            Behaviors in Sprite Lab: &21
+              name: Behaviors in Sprite Lab
           lesson_groups:
             csf_warmup:
               display_name: Warm-Up
@@ -30075,6 +30117,27 @@ en:
               name: Behaviors with Sprite Lab
             End of Course Project:
               name: End of Course Project
+            Programming with Angry Birds: *1
+            Debugging with Scrat: *2
+            Collecting Treasure with Laurel: *3
+            Creating Art with Code: *4
+            Sticker Art with Loops: *5
+            Nested Loops in Maze: *6
+            Snowflakes with Anna and Elsa: *7
+            'Looking Ahead with Minecraft ': *8
+            If/Else with Bee: *9
+            While Loops with the Farmer: *10
+            Harvesting with Conditionals: *11
+            Functions with Harvester: *12
+            Functions with Artist: *13
+            Variables with Artist: *14
+            Changing Variables with Bee: *15
+            Changing Variables with Artist: *16
+            For Loops with Bee: *17
+            For Loops with Artist: *18
+            Swimming Fish in Sprite Lab: *19
+            Alien Dance Party: *20
+            Behaviors in Sprite Lab: *21
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -30084,23 +30147,23 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: ''
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming in Maze
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               name: Programming in Harvester
               description_student: ''
-              description_teacher: ''
+              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Spelling Bee:
               name: Spelling Bee
               description_student: ''
@@ -30108,27 +30171,39 @@ en:
             Loops in Ice Age:
               name: Loops in Ice Age
               description_student: ''
-              description_teacher: ''
+              description_teacher: Building on the concept of repeating instructions from "My Loopy Robotic Friends," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Loops in Collector:
               name: Loops in Collector
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Tell a Story in Play Lab:
               name: Tell a Story in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Make a Game in Play Lab:
               name: Make a Game in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            Programming in with Angry Birds: &22
+              name: Programming in with Angry Birds
+            Loops with Scrat: &23
+              name: Loops with Scrat
+            Loops with Laurel: &24
+              name: Loops with Laurel
+            Drawing Gardens with Loops: &25
+              name: Drawing Gardens with Loops
+            On the Move with Events: &26
+              name: On the Move with Events
+            A Royal Battle with Events: &27
+              name: A Royal Battle with Events
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -30140,23 +30215,23 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: ''
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Sequencing with Scrat:
               name: Sequencing with Scrat
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               name: Programming in Maze
               description_student: ''
-              description_teacher: ''
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               name: Programming in Harvester
               description_student: ''
-              description_teacher: ''
+              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Spelling Bee:
               name: Spelling Bee
               description_student: ''
@@ -30164,27 +30239,33 @@ en:
             Loops in Ice Age:
               name: Loops in Ice Age
               description_student: ''
-              description_teacher: ''
+              description_teacher: Building on the concept of repeating instructions from "My Loopy Robotic Friends," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Loops in Collector:
               name: Loops in Collector
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Tell a Story in Play Lab:
               name: Tell a Story in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Make a Game in Play Lab:
               name: Make a Game in Play Lab
               description_student: ''
-              description_teacher: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            Programming in with Angry Birds: *22
+            Loops with Scrat: *23
+            Loops with Laurel: *24
+            Drawing Gardens with Loops: *25
+            On the Move with Events: *26
+            A Royal Battle with Events: *27
         csp1-2020:
           stages:
             new stage:
@@ -30753,6 +30834,24 @@ en:
               name: Course Resources
             Debugging:
               name: Debugging
+            Virtual Professional Learning Overview:
+              name: Virtual Professional Learning Overview
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 8:
+              name: Module 8
+            Module 7:
+              name: Module 7
           title: Jess's Script
           description_audience: ''
           description_short: ''
@@ -30777,6 +30876,24 @@ en:
               name: Course Resources
             Debugging:
               name: Debugging
+            Virtual Professional Learning Overview:
+              name: Virtual Professional Learning Overview
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 8:
+              name: Module 8
+            Module 7:
+              name: Module 7
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
           description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
@@ -31778,10 +31895,10 @@ en:
               display_name: Next Steps
         dani-test-2020:
           stages:
-            new lesson: &1
+            new lesson: &28
               name: new lesson
           lessons:
-            new lesson: *1
+            new lesson: *28
           lesson_groups:
             lesson group:
               display_name: display name
@@ -32081,3 +32198,88 @@ en:
               display_name: Content
             cspSurvey:
               display_name: Content
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lesson
+          lessons:
+            Lesson:
+              name: Lesson
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        kaitie-test-script:
+          stages:
+            new lesson: &29
+              name: new lesson
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
+          lessons:
+            new lesson: *29
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
+          lesson_groups:
+            lesson group:
+              display_name: display name
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

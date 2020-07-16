@@ -41,9 +41,13 @@ export function getSpriteArray(spriteArg) {
     }
   }
   if (spriteArg.costume) {
-    return Object.values(nativeSpriteMap).filter(
-      sprite => sprite.getAnimationLabel() === spriteArg.costume
-    );
+    if (spriteArg.costume === 'all') {
+      return Object.values(nativeSpriteMap);
+    } else {
+      return Object.values(nativeSpriteMap).filter(
+        sprite => sprite.getAnimationLabel() === spriteArg.costume
+      );
+    }
   }
   return [];
 }

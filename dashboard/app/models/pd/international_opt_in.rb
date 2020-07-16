@@ -40,6 +40,20 @@ class Pd::InternationalOptIn < ApplicationRecord
     ]
   end
 
+  def validate_with(options)
+    # Because we're using the special "answerText/answerValue" format in
+    # self.options, we need to normalize to just answerValue here for
+    # validation.
+    normalized_options = options.map do |key, values|
+      normalized_values = values.map do |value|
+        return value.fetch(:answerValue, nil) if value.is_a? Hash
+        value
+      end
+      [key, normalized_values]
+    end.to_h
+    super(normalized_options)
+  end
+
   def validate_required_fields
     super
 
@@ -59,12 +73,24 @@ class Pd::InternationalOptIn < ApplicationRecord
       subjects: %w(cs ict math science history la efl music art other),
       resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
       robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
-      workshopCourse: %w(csf_af csf_express csd csp),
+      workshopCourse: %w(csf_af csf_express csd csp not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
     }
 
-    entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
+    # Convert all entry keys to objects which define the form value and display
+    # text (in this case, _translated_ display text) separately.
+    #
+    # See the definition of the "Answer" object in
+    # apps/src/code-studio/pd/form_components/utils.js
+    entries = Hash[entry_keys.map do |key, values|
+      [key, values.map do |value|
+        {
+          answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
+          answerValue: value
+        }
+      end]
+    end]
 
     entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
     entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
