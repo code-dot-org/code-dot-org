@@ -26357,28 +26357,38 @@ id:
           stages:
             Learn to Drag and Drop:
               name: Belajar Menarik dan Melepaskan
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Programming in Maze:
               name: Pemrograman dalam Labirin
+              description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
+              description_teacher: Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8.
             Programming in Harvester:
               name: Pemrograman dalam Pemanen
+              description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging. '
             Spelling Bee:
               name: Spelling Bee
             Loops in Ice Age:
               name: Putaran dalam Ice Age
             Loops in Collector:
               name: Loop dalam Kolektor
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
             Ocean Scene with Loops:
               name: Adegan Laut dengan Loop
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan loop.
             Loops in Artist:
               name: Loop dalam Artis
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.
             Tell a Story in Play Lab:
               name: Menuturkan Cerita di Play Lab
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
             Make a Game in Play Lab:
               name: Membuat Permainan dalam Play Lab
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -26389,28 +26399,38 @@ id:
           lessons:
             Learn to Drag and Drop:
               name: Belajar Menarik dan Melepaskan
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Programming in Maze:
               name: Pemrograman dalam Labirin
+              description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
+              description_teacher: Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8.
             Programming in Harvester:
               name: Pemrograman dalam Pemanen
+              description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging. '
             Spelling Bee:
               name: Spelling Bee
             Loops in Ice Age:
               name: Putaran dalam Ice Age
             Loops in Collector:
               name: Loop dalam Kolektor
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
             Ocean Scene with Loops:
               name: Adegan Laut dengan Loop
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan loop.
             Loops in Artist:
               name: Loop dalam Artis
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.
             Tell a Story in Play Lab:
               name: Menuturkan Cerita di Play Lab
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
             Make a Game in Play Lab:
               name: Membuat Permainan dalam Play Lab
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
         csp1-2020:
           stages:
             new stage:
@@ -26900,6 +26920,8 @@ id:
               name: Materi Pembelajaran Kursus
             Debugging:
               name: Debugging
+            Module 1:
+              name: Modul 1
           title: Jess's Script
           lessons:
             Our First Stage:
@@ -26920,6 +26942,8 @@ id:
               name: Materi Pembelajaran Kursus
             Debugging:
               name: Debugging
+            Module 1:
+              name: Modul 1
         csd2-virtual:
           title: Pengenalan Web Lab sesuai Kecepatan Belajar Sendiri
           description: Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging dan memberi komentar. Pada akhir unit pelajaran ini, Anda akan memiliki situs web pribadi yang dapat dipublikasikan ke Internet.
@@ -27913,4 +27937,44 @@ id:
             csd3_2:
               display_name: Konten
             cspSurvey:
+              display_name: Konten
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Pelajaran
+          lessons:
+            Lesson:
+              name: Pelajaran
+          lesson_groups:
+            lg_1:
+              display_name: Konten
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Pelajaran
+          lessons:
+            Lesson:
+              name: Pelajaran
+          lesson_groups:
+            lg_1:
+              display_name: Konten
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Pelajaran
+          lessons:
+            Lesson:
+              name: Pelajaran
+          lesson_groups:
+            lg_1:
+              display_name: Konten
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Pelajaran
+          lessons:
+            Lesson:
+              name: Pelajaran
+          lesson_groups:
+            lg_1:
               display_name: Konten

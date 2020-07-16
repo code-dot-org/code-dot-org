@@ -6174,3 +6174,43 @@ nn:
               display_name: Innhald
             cspSurvey:
               display_name: Innhald
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald

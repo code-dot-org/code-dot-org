@@ -2,7 +2,7 @@
 tr-TR:
   data:
     display_name:
-      Alien Defender: Uzaylı Koruyucu
+      Alien Defender: Alien Defender
       App Lab Intro 8 - Video Design Mode: 'Video: Tasarım Modu'
       App Lab Intro 8 - Video Getting Started: 'Video: İşe Başlama'
       App Lab Intro 8 - Video Images and Sounds: 'Video: Görüntüler ve Sesler'
@@ -447,6 +447,9 @@ tr-TR:
       CSS U2 Body Map: Body Elementi
       CSS U2 Body Map_2018: Body Elementi
       CSS U2 Body Map_2019: Body Elementi
+      'Course E: Artist Project': Kurs E Artist Projesi
+      'Course E: Artist Project_2018': Kurs E Artist Projesi
+      'Course E: Artist Project_2019': Kurs E Artist Projesi
       CourseD_Dance_2020_bonus1: Geri ve ileri
       CourseD_Dance_2020_bonus3: Düzene Girelim
       CourseEF_video_MakeSprite: Nesne Oluşturma

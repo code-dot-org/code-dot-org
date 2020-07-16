@@ -11124,6 +11124,8 @@ pl:
               name: Pętle for w pszczole
             For Loops in Artist:
               name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
           lesson_groups:
             csf_loops:
               display_name: Pętle
@@ -11152,6 +11154,8 @@ pl:
               name: Pętle for w pszczole
             For Loops in Artist:
               name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
         pre-express-2020:
           description_audience: W wieku 4-8
           stages:
@@ -11760,20 +11764,28 @@ pl:
           stages:
             new lesson:
               name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
             Buttons and Events:
               name: Przyciski i wydarzenia
           lessons:
             new lesson:
               name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
             Buttons and Events:
               name: Przyciski i wydarzenia
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+            lg_1:
+              display_name: DISPLAYNAME
             cspSurvey:
               display_name: Ankieta
             csp5_1:
               display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            cs_lg:
+              display_name: LG GOOD
         csd3-virtual:
           description_short: Programowanie
           stages:
@@ -11861,3 +11873,53 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        kaitie-test-script:
+          stages:
+            new lesson:
+              name: nowa lekcja
+          lessons:
+            new lesson:
+              name: nowa lekcja
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko

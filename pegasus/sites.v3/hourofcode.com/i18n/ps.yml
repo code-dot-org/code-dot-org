@@ -5,12 +5,30 @@ ps:
   language: پښتو
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 4
-  campaign_date_start_long: December 4
-  campaign_date_short: Dec. 4-10
-  campaign_date_full: December 4-10
-  campaign_date_year: '2017'
-  campaign_date_full_year: December 4-10, 2017
+  campaign_date_start_short: Dec. 7
+  campaign_date_start_long: December 7
+  campaign_date_short: Dec. 7-13
+  campaign_date_full: December 7-13
+  campaign_date_year: '2020'
+  campaign_date_full_year: December 7-13, 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2020'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2020'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -460,7 +478,7 @@ ps:
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
   signup_registration_deadline: Registration for the Hour of Code closes December
-    11.
+    13.
   signup_name_placeholder: Your Name
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: For example, Lincoln High School

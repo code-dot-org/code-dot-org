@@ -13156,8 +13156,18 @@ it:
           stages:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Programming in Maze:
               name: Programmazione nel labirinto
             Programming with Rey and BB-8:
@@ -13172,10 +13182,33 @@ it:
               name: Cicli con la collezionista
             Ocean Scene with Loops:
               name: Al mare con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             Loops in Artist:
               name: Cicli con l'artista
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
+            Make a Game in Play Lab:
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
           lesson_groups:
             csf_sequencing:
               display_name: Sequenze di istruzioni
@@ -13186,8 +13219,18 @@ it:
           lessons:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Programming in Maze:
               name: Programmazione nel labirinto
             Programming with Rey and BB-8:
@@ -13202,10 +13245,33 @@ it:
               name: Cicli con la collezionista
             Ocean Scene with Loops:
               name: Al mare con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             Loops in Artist:
               name: Cicli con l'artista
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
+            Make a Game in Play Lab:
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
         csp1-2020:
           stages:
             Binary Numbers:
@@ -13439,4 +13505,44 @@ it:
             csd3_2:
               display_name: Contenuto
             cspSurvey:
+              display_name: Contenuto
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lezione
+          lessons:
+            Lesson:
+              name: Lezione
+          lesson_groups:
+            lg_1:
+              display_name: Contenuto
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lezione
+          lessons:
+            Lesson:
+              name: Lezione
+          lesson_groups:
+            lg_1:
+              display_name: Contenuto
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lezione
+          lessons:
+            Lesson:
+              name: Lezione
+          lesson_groups:
+            lg_1:
+              display_name: Contenuto
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lezione
+          lessons:
+            Lesson:
+              name: Lezione
+          lesson_groups:
+            lg_1:
               display_name: Contenuto
