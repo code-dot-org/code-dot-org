@@ -25,7 +25,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
     @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
-    create(:course_script, course: @csp_course, script: @csp_script, position: 1)
+    create(:course_script, unit_group: @csp_course, script: @csp_script, position: 1)
   end
 
   test 'logged out cannot list sections' do
@@ -442,7 +442,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # TODO: Better to fail here?
 
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'can create with a script id but no course id' do
@@ -455,7 +455,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @script.id, returned_json['script']['id']
     assert_equal @script, returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'cannot assign an invalid script id' do
@@ -470,7 +470,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_json['script']['id']
     assert_nil returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
@@ -485,7 +485,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.course
+      assert_equal existing_course, returned_section.unit_group
       assert_equal @csp_script.id, returned_json['script']['id']
       assert_equal @csp_script, returned_section.script
     end
