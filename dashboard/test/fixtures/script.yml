@@ -557,35 +557,17 @@ ECSPD:
   properties: '{"professional_learning_course":"ECS Support Legacy"}'
   new_name: 
   family_name: 
-ECSPD-NexTech:
-  id: 27
-  name: ECSPD-NexTech
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &64 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *64
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &65 2020-02-21 16:29:07.000000000 Z
-    zone: *2
-    time: *65
-  wrapup_video_id: 
-  hidden: true
-  user_id: 
-  login_required: true
-  properties: '{"professional_learning_course":"ECS Support Legacy"}'
-  new_name: 
-  family_name: 
 allthethings:
   id: 68
   name: allthethings
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &66 2020-02-21 16:29:58.000000000 Z
+    utc: &64 2020-02-21 16:29:58.000000000 Z
     zone: *2
-    time: *66
+    time: *64
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &67 2020-06-24 16:56:57.000000000 Z
+    utc: &65 2020-06-24 16:56:57.000000000 Z
     zone: *2
-    time: *67
+    time: *65
   wrapup_video_id: 
   hidden: true
   user_id: 
@@ -597,13 +579,13 @@ coursea-2017:
   id: 90
   name: coursea-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &68 2020-02-21 16:30:57.000000000 Z
+    utc: &66 2020-02-21 16:30:57.000000000 Z
     zone: *2
-    time: *68
+    time: *66
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &69 2020-05-21 19:49:02.000000000 Z
+    utc: &67 2020-05-21 19:49:02.000000000 Z
     zone: *2
-    time: *69
+    time: *67
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -615,13 +597,13 @@ courseb-2017:
   id: 94
   name: courseb-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &70 2020-02-21 16:31:12.000000000 Z
+    utc: &68 2020-02-21 16:31:12.000000000 Z
     zone: *2
-    time: *70
+    time: *68
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &71 2020-05-21 19:49:05.000000000 Z
+    utc: &69 2020-05-21 19:49:05.000000000 Z
     zone: *2
-    time: *71
+    time: *69
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -633,13 +615,13 @@ coursec-2017:
   id: 98
   name: coursec-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &72 2020-02-21 16:31:27.000000000 Z
+    utc: &70 2020-02-21 16:31:27.000000000 Z
     zone: *2
-    time: *72
+    time: *70
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &73 2020-05-21 19:49:09.000000000 Z
+    utc: &71 2020-05-21 19:49:09.000000000 Z
     zone: *2
-    time: *73
+    time: *71
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -651,13 +633,13 @@ coursed-2017:
   id: 102
   name: coursed-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &74 2020-02-21 16:31:48.000000000 Z
+    utc: &72 2020-02-21 16:31:48.000000000 Z
     zone: *2
-    time: *74
+    time: *72
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &75 2020-05-21 19:49:13.000000000 Z
+    utc: &73 2020-05-21 19:49:13.000000000 Z
     zone: *2
-    time: *75
+    time: *73
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -669,13 +651,13 @@ coursee-2017:
   id: 107
   name: coursee-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &76 2020-02-21 16:32:15.000000000 Z
+    utc: &74 2020-02-21 16:32:15.000000000 Z
     zone: *2
-    time: *76
+    time: *74
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &77 2020-05-21 19:49:18.000000000 Z
+    utc: &75 2020-05-21 19:49:18.000000000 Z
     zone: *2
-    time: *77
+    time: *75
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -687,13 +669,13 @@ coursef-2017:
   id: 112
   name: coursef-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &78 2020-02-21 16:32:51.000000000 Z
+    utc: &76 2020-02-21 16:32:51.000000000 Z
     zone: *2
-    time: *78
+    time: *76
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &79 2020-05-21 19:49:24.000000000 Z
+    utc: &77 2020-05-21 19:49:24.000000000 Z
     zone: *2
-    time: *79
+    time: *77
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -705,13 +687,13 @@ express-2017:
   id: 317
   name: express-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &80 2020-02-21 16:53:07.000000000 Z
+    utc: &78 2020-02-21 16:53:07.000000000 Z
     zone: *2
-    time: *80
+    time: *78
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &81 2020-05-21 19:51:10.000000000 Z
+    utc: &79 2020-05-21 19:51:10.000000000 Z
     zone: *2
-    time: *81
+    time: *79
   wrapup_video_id: 
   hidden: false
   user_id: 
@@ -723,13 +705,13 @@ pre-express-2017:
   id: 367
   name: pre-express-2017
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &82 2020-02-21 17:01:24.000000000 Z
+    utc: &80 2020-02-21 17:01:24.000000000 Z
     zone: *2
-    time: *82
+    time: *80
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &83 2020-05-21 19:51:36.000000000 Z
+    utc: &81 2020-05-21 19:51:36.000000000 Z
     zone: *2
-    time: *83
+    time: *81
   wrapup_video_id: 
   hidden: false
   user_id: 
