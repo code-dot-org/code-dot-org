@@ -1,25 +1,12 @@
 require_relative 'test_helper'
 require 'cdo/poste'
 
-class FakeSmtp
-  # make these instance variables easily accessible, so we can make assertions
-  # about the values passed to send_message
-  attr_reader :message, :from_address, :to_addresses
-
-  def send_message(message, from_address, *to_addresses)
-    @message = message
-    @from_address = from_address
-    @to_addresses = to_addresses
-  end
-end
-
 class DelivererRenderTest < Minitest::Test
   ROOT_DIR = Pathname.new(__dir__) + "../../"
   FIXTURES_DIR = Pathname.new(__dir__) + "fixtures/deliverer/"
 
   def setup
-    @fake_smtp = FakeSmtp.new
-    Deliverer.any_instance.stubs(:reset_connection).returns(@fake_smtp)
+    Deliverer.any_instance.stubs(:reset_connection).returns({})
     @deliverer = Deliverer.new({})
   end
 
