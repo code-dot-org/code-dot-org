@@ -94,7 +94,7 @@ class CoursesController < ApplicationController
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     course.update(course_params)
-    redirect_to course
+    redirect_to course_path(course)
   end
 
   def edit
