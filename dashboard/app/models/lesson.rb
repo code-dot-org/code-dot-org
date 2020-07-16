@@ -71,6 +71,7 @@ class Lesson < ActiveRecord::Base
         visible_after: raw_lesson[:visible_after],
         relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
       )
+      lesson.save!
 
       temp_sls = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
       lesson.reload
