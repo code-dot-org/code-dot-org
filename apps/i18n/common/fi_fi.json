@@ -209,6 +209,7 @@
   "dataLimitAlert": "Sovellus on ollut lukemassa tai kirjoittamassa tietokantaan liian usein, joka voi johtaa ennaltaodottamattomiin ongelmiin. Ole hyvä ja anna sovelluksen omistajan tietää, jos ongelmat jatkuvat.",
   "dataTableCaption": "Luo tietotaulukoita tallentamaan usean palstan tietorivejä eri tietokentille.",
   "dataTableNamePlaceholder": "Taulukon nimi",
+  "dataLibrarySearchPlacholder": "Haku",
   "dataWorkspaceHeader": "Data Selain",
   "debugWatchHeader": "Katsele",
   "debugWatchNotAvailable": "< ei saatavilla >",

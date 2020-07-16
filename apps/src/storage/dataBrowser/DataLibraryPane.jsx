@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {showWarning} from '../redux/data';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import LibraryCategory from './LibraryCategory';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {getDatasetInfo} from './dataUtils';
@@ -43,7 +44,10 @@ class DataLibraryPane extends React.Component {
   };
 
   onError = error => {
-    if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
+    if (
+      error.type === WarningType.DUPLICATE_TABLE_NAME ||
+      error.type === WarningType.MAX_TABLES_EXCEEDED
+    ) {
       this.props.onShowWarning(error.msg);
     }
   };
@@ -104,7 +108,10 @@ class DataLibraryPane extends React.Component {
     categories = this.filterCategories(_.cloneDeep(categories));
     return (
       <div style={styles.container}>
-        <p>{msg.dataLibraryDescription()}</p>
+        <SafeMarkdown
+          markdown={msg.dataLibraryDescription()}
+          openExternalLinksInNewTab
+        />
         <SearchBar
           placeholderText={msg.dataLibrarySearchPlacholder()}
           onChange={this.search}

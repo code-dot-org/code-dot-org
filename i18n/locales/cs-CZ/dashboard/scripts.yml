@@ -5470,29 +5470,6 @@ cs:
           lessons:
             Creating Functions:
               name: Vytvářející funkce
-        csd3-virtual:
-          description_short: "Programování"
-          stages:
-            Variables:
-              name: Proměnné
-            Conditionals:
-              name: Podmínky
-            Functions:
-              name: Funkce
-            Random Numbers:
-              name: Náhodná čísla
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitola 1: Obrázky a animace'
-          lessons:
-            Variables:
-              name: Proměnné
-            Conditionals:
-              name: Podmínky
-            Functions:
-              name: Funkce
-            Random Numbers:
-              name: Náhodná čísla
         jess-test-script:
           stages:
             Debugging:
@@ -5582,3 +5559,74 @@ cs:
               name: Proměnné
             For Loops:
               name: Cykly "For"
+        csd3-virtual:
+          description_short: "Programování"
+          stages:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Text:
+              name: Text
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce
+          lessons:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Text:
+              name: Text
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce
+          lesson_groups:
+            csd3_1:
+              display_name: Obsah
+            csd3_2:
+              display_name: Obsah
+            cspSurvey:
+              display_name: Obsah
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekce
+          lessons:
+            Lesson:
+              name: Lekce
+          lesson_groups:
+            lg_1:
+              display_name: Obsah

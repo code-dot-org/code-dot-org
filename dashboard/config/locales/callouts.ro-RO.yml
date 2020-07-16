@@ -69,6 +69,22 @@ ro-RO:
       Course 4 SCV 6:
         Course_4_SCV_6: Acest bloc îţi permite să modifici culoarea cu aproape orice
           vrei vrei să vezi! Joacă-te cu numerele ca să vezi ce se întamplă!
+      CourseD_Dance_2020_01:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      CourseD_Dance_2020_02:
+        dance_callout_11_a: Adaugă acest bloc la programul tău.
+        arrow_buttons: Apasă butoanele cu săgeată pentru a-l controla pe dansator.
+      CourseD_Dance_2020_04:
+        dance_callout_02: Adaugă acest bloc la programul tău!
+      CourseD_Dance_2020_05:
+        dance_callout_05: Adăugați un nou eveniment în program.
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Bloc nou!
+      CourseD_Dance_2020_07:
+        setprop_hint: Bloc nou!
+      CourseD_Dance_2020_09:
+        new_block_3: Bloc nou!
+        new_block_4: Bloc nou!
       CourseD_Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_02:
@@ -162,19 +178,28 @@ ro-RO:
         craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
           Il poti termina?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
           Il poti termina?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
       Overworld Move to Sheep:
         craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Place Wall:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Overworld Place Wall_2019:
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Overworld Place Wall_2020:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Underground Avoiding Lava:
         craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
@@ -182,9 +207,14 @@ ro-RO:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
           pentru a inainta?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
+          pentru a inainta?
       Underground Iron:
         craft_what_is_iron: Extrage acest fier!
       Underground Iron_2019:
+        craft_what_is_iron: Extrage acest fier!
+      Underground Iron_2020:
         craft_what_is_iron: Extrage acest fier!
       courseA_collector_preLoops1:
         courseA_collector_preLoops1_1: Apasă aici pentru a vedea acest cod rulând!

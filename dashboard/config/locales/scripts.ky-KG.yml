@@ -2956,6 +2956,11 @@ ky:
               name: Spelling Bee
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
+                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
+                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
+                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
+                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
           lesson_groups:
@@ -2968,23 +2973,13 @@ ky:
               name: Spelling Bee
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
+                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
+                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
+                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
+                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-          lessons:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
         csp5-virtual:
           stages:
             Variables:
@@ -3033,3 +3028,50 @@ ky:
               name: Функциялар
             Variables:
               name: Өзгөрмөлөр
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+          lessons:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
