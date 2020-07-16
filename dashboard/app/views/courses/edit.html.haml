@@ -5,6 +5,6 @@
                         version_year_options: UnitGroup.get_version_year_options}
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
-= form_for(course) do |f|
+= form_for(course, {url: course_path(course)}) do |f|
   #course_editor
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
