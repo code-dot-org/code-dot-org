@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource except: [:index]
+  authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
     view_options(full_width: true, responsive_content: true, has_i18n: true)
