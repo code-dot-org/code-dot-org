@@ -232,10 +232,16 @@ uk-UA:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: очистити шлях
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: очистити шлях
       MC_HOC_2017_Ali:
         build short bridge:
           name: побудувати короткий міст
       MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: побудувати короткий міст
+      MC_HOC_2017_Ali_2020:
         build short bridge:
           name: побудувати короткий міст
       MC_HOC_2017_FP20x20:
@@ -244,6 +250,11 @@ uk-UA:
         function 2:
           name: функція 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: функція 1
+        function 2:
+          name: функція 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: функція 1
         function 2:
@@ -510,7 +521,14 @@ uk-UA:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: щось зробити
+      courseC_data wizard_2020:
         do something:
           name: щось зробити
       courseE_artist_concept1:
@@ -546,6 +564,9 @@ uk-UA:
       courseE_artist_functions10_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions10_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions2:
         draw a square:
           name: намалювати квадрат
@@ -555,6 +576,9 @@ uk-UA:
       courseE_artist_functions2_2019:
         draw a square:
           name: намалювати квадрат
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: намалювати квадрат
       courseE_artist_functions2_copy:
         draw a square:
           name: намалювати квадрат
@@ -562,6 +586,9 @@ uk-UA:
         draw a star:
           name: намалювати зірку
       courseE_artist_functions3_2019:
+        draw a star:
+          name: намалювати зірку
+      courseE_artist_functions3_2020:
         draw a star:
           name: намалювати зірку
       courseE_artist_functions4:
@@ -579,6 +606,9 @@ uk-UA:
       courseE_artist_functions5_2019:
         draw a star:
           name: намалювати зірку
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: намалювати зірку
       courseE_artist_functions5_copy:
         draw a star:
           name: намалювати зірку
@@ -586,6 +616,9 @@ uk-UA:
         draw a house:
           name: намалювати будинок
       courseE_artist_functions7_2018:
+        draw a house:
+          name: намалювати будинок
+      courseE_artist_functions7_2020:
         draw a house:
           name: намалювати будинок
       courseE_artist_functions8:
@@ -609,12 +642,24 @@ uk-UA:
           name: малювати лінію квадрату
         draw square:
           name: намалюйте квадрат
+      courseE_artist_functions8_2020:
+        do something:
+          name: щось зробити
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
       courseE_artist_functions8a_2018:
         draw a square:
           name: намалювати квадрат
         do something:
           name: щось зробити
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: намалювати квадрат
+        do something:
+          name: щось зробити
+      courseE_artist_functions8a_2020:
         draw a square:
           name: намалювати квадрат
         do something:
@@ -627,6 +672,13 @@ uk-UA:
         do something:
           name: щось зробити
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+        do something:
+          name: щось зробити
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
@@ -647,6 +699,13 @@ uk-UA:
           name: намалюйте квадрат
         do something:
           name: щось зробити
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+        do something:
+          name: щось зробити
       courseE_artist_functions9:
         do something:
           name: щось зробити
@@ -656,12 +715,20 @@ uk-UA:
       courseE_artist_functions9_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions9_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functionsProj_2018:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
           name: намалюйте квадрат
       courseE_artist_functionsProj_2019:
+        draw a line of squares:
+          name: малювати лінію квадрату
+        draw square:
+          name: намалюйте квадрат
+      courseE_artist_functionsProj_2020:
         draw a line of squares:
           name: малювати лінію квадрату
         draw square:
@@ -675,6 +742,9 @@ uk-UA:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions_challenge2:
         do something:
           name: щось зробити
@@ -684,6 +754,9 @@ uk-UA:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: щось зробити
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: щось зробити
       courseE_artist_functions_predict1:
         draw a square:
           name: намалювати квадрат
@@ -691,6 +764,9 @@ uk-UA:
         draw a square:
           name: намалювати квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: намалювати квадрат
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: намалювати квадрат
       courseE_artist_functions_predict1_copy:
@@ -703,6 +779,9 @@ uk-UA:
         do something:
           name: щось зробити
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: щось зробити
+      courseE_artist_functions_predict2_2020:
         do something:
           name: щось зробити
       courseE_bee_functions1:
@@ -901,9 +980,15 @@ uk-UA:
       courseF_bee_variables_7_2019:
         collect:
           name: збирати
+      courseF_bee_variables_7_2020:
+        collect:
+          name: збирати
       courseF_bee_variables_8_2018:
         collect:
           name: збирати
       courseF_bee_variables_8_2019:
+        collect:
+          name: збирати
+      courseF_bee_variables_8_2020:
         collect:
           name: збирати

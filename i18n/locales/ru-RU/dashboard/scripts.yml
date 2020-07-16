@@ -7363,41 +7363,6 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
-        csd3-virtual:
-          description_short: "Программирование"
-          stages:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
-            Velocity:
-              name: Скорость
-            Collision Detection:
-              name: Обнаружение столкновений
-            Functions:
-              name: функции
-            Random Numbers:
-              name: Случайные числа
-          lesson_groups:
-            csd3_1:
-              display_name: 'Глава 1: Изображения и анимации'
-          lessons:
-            Plotting Shapes:
-              name: Рисование фигур
-            Variables:
-              name: переменные
-            Conditionals:
-              name: Условные команды
-            Velocity:
-              name: Скорость
-            Collision Detection:
-              name: Обнаружение столкновений
-            Functions:
-              name: функции
-            Random Numbers:
-              name: Случайные числа
         csd2-virtual:
           stages:
             CSS Classes:
@@ -7540,3 +7505,92 @@ ru:
               display_name: 'Погружаемся глубже: курсы E и F'
             k5_next_steps_1:
               display_name: Следующие шаги
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+        csd3-virtual:
+          description_short: "Программирование"
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lessons:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: Содержимое
+            csd3_2:
+              display_name: Содержимое
+            cspSurvey:
+              display_name: Содержимое
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Урок
+          lessons:
+            Lesson:
+              name: Урок
+          lesson_groups:
+            lg_1:
+              display_name: Содержимое
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Урок
+          lessons:
+            Lesson:
+              name: Урок
+          lesson_groups:
+            lg_1:
+              display_name: Содержимое
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Урок
+          lessons:
+            Lesson:
+              name: Урок
+          lesson_groups:
+            lg_1:
+              display_name: Содержимое
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Урок
+          lessons:
+            Lesson:
+              name: Урок
+          lesson_groups:
+            lg_1:
+              display_name: Содержимое

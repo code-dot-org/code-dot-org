@@ -31,6 +31,15 @@ ca-ES:
         edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
+      CourseD_Dance_2020_04:
+        dance_callout_02: Afegir aquest bloc al teu programa!
+      CourseD_Dance_2020_06:
+        dance_party_11_5_groups: Nou bloc!
+      CourseD_Dance_2020_07:
+        setprop_hint: Nou bloc!
+      CourseD_Dance_2020_09:
+        new_block_3: Nou bloc!
+        new_block_4: Nou bloc!
       CourseD_Dance_Party_01:
         dance_callout_01: Afegir aquest bloc al teu programa!
       CourseD_Dance_Party_02:
@@ -96,19 +105,28 @@ ca-ES:
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
       Overworld Chop Trees_2019:
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+      Overworld Chop Trees_2020:
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa.
           Pots acabar-lo?
       Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa.
           Pots acabar-lo?
+      Overworld House Frame Chosen_2020:
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa.
+          Pots acabar-lo?
       Overworld Move to Sheep:
         craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
       Overworld Place Wall:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Overworld Place Wall_2019:
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Overworld Place Wall_2020:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Underground Avoiding Lava:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
@@ -116,9 +134,14 @@ ca-ES:
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
           per a seguir endavant?
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
+          per a seguir endavant?
       Underground Iron:
         craft_what_is_iron: Aquest ferro és meu!
       Underground Iron_2019:
+        craft_what_is_iron: Aquest ferro és meu!
+      Underground Iron_2020:
         craft_what_is_iron: Aquest ferro és meu!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle"

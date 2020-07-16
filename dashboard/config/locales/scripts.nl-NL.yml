@@ -5536,30 +5536,6 @@ nl:
               name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
-        csd3-virtual:
-          description_short: Programmeren
-          stages:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
-            Velocity:
-              name: Snelheid
-            Collision Detection:
-              name: Botsingdetectie
-            Functions:
-              name: Functies
-          lessons:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
-            Velocity:
-              name: Snelheid
-            Collision Detection:
-              name: Botsingdetectie
-            Functions:
-              name: Functies
         jess-test-script:
           stages:
             new stage:
@@ -5698,3 +5674,82 @@ nl:
           lesson_groups:
             k5_next_steps_1:
               display_name: Volgende stappen
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd3-virtual:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+          lessons:
+            Variables:
+              name: Variabelen
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+          lesson_groups:
+            csd3_1:
+              display_name: Content
+            csd3_2:
+              display_name: Content
+            cspSurvey:
+              display_name: Content
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Les
+          lessons:
+            Lesson:
+              name: Les
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Les
+          lessons:
+            Lesson:
+              name: Les
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Les
+          lessons:
+            Lesson:
+              name: Les
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Les
+          lessons:
+            Lesson:
+              name: Les
+          lesson_groups:
+            lg_1:
+              display_name: Content

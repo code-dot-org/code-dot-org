@@ -126,7 +126,7 @@ fr:
     forgot_password: Mot de passe oublié ?
     migration_success: Succès ! Vous pouvez maintenant profiter de notre nouvelle
       expérience de compte.
-    demigration_success: La nouvelle expérience de compte est à présent désactivée
+    demigration_success: La nouvelle expérience de compte est désormais désactivée
       sur votre compte.
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
@@ -956,6 +956,8 @@ fr:
     open_response_body: Merci pour ta réponse !
     correct_title: Correct
     correct_body: C'est la bonne réponse.
+  lesson_extras:
+    bonus_level: Niveau bonus
   dialog:
     ok: OK
     startover_title: Es-tu certain(e) de vouloir recommencer ?

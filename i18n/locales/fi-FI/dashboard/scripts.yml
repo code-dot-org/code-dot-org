@@ -4245,28 +4245,6 @@ fi:
           lessons:
             Creating Functions:
               name: Funktioiden luominen
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Muuttujat
-            Conditionals:
-              name: Ehtolausekkeet
-            Velocity:
-              name: Nopeus
-            Functions:
-              name: Funktiot
-          lesson_groups:
-            csd3_1:
-              display_name: 'Luku 1: Kuvia ja animaatioita'
-          lessons:
-            Variables:
-              name: Muuttujat
-            Conditionals:
-              name: Ehtolausekkeet
-            Velocity:
-              name: Nopeus
-            Functions:
-              name: Funktiot
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4343,3 +4321,30 @@ fi:
               name: Muuttujat
             For Loops:
               name: Silmukat
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muuttujat
+            Text:
+              name: teksti
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+          lessons:
+            Variables:
+              name: Muuttujat
+            Text:
+              name: teksti
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot

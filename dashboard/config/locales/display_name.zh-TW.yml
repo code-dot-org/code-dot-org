@@ -17,6 +17,7 @@ zh-TW:
       AppLab Intro 7 - playSound: 播放音效的用法
       CDEF_video_SpritesInAction: 如何建立一個角色
       CDEF_video_SpritesInAction_2019: 如何建立一個角色
+      CDEF_video_SpritesInAction_2020: 如何建立一個角色
       CSD Board Sensors Map: 類比感測器
       CSD Board Sensors Map_2018: 類比感測器
       CSD Board Sensors Map_2019: 類比感測器
@@ -406,10 +407,14 @@ zh-TW:
       'Course F: Artist Project_2019': '課程 F 小藝術家專案
 
 '
+      CourseD_Dance_2020_bonus1: 不斷重複
+      CourseD_Dance_2020_bonus3: 加入陣形
       CourseEF_video_IntroSpriteLab: 這是 Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: 這是 Sprite Lab
+      CourseEF_video_IntroSpriteLab_2020: 這是 Sprite Lab
       CourseEF_video_MakeSprite: 如何建立一個角色
       CourseEF_video_MakeSprite_2019: 如何建立一個角色
+      CourseEF_video_MakeSprite_2020: 如何建立一個角色
       CourseE_Project_SpriteLab: '課程 E 精靈實驗室專案
 
 '
@@ -419,6 +424,9 @@ zh-TW:
       CourseE_hoops: '兔子
 
 '
+      CourseF_Oceans_Video_Machine_Learning: 影片：機器學習
+      CourseF_Oceans_Video_Societal_Implications: 影片：社會影響
+      CourseF_Oceans_Video_Training_Data: 影片：訓練的數據
       CourseF_Project_Revise_SpriteLab: '修訂精靈實驗室專案
 
 '
@@ -460,10 +468,16 @@ zh-TW:
       MC_HOC_2017_01_RETRY_2019: '田地
 
 '
+      MC_HOC_2017_01_RETRY_2020: '田地
+
+'
       MC_HOC_2017_02_Cole: '農場
 
 '
       MC_HOC_2017_02_Cole_2019: '農場
+
+'
+      MC_HOC_2017_02_Cole_2020: '農場
 
 '
       MC_HOC_2017_03_Cole: '樹林
@@ -472,12 +486,19 @@ zh-TW:
       MC_HOC_2017_03_Cole_2019: '樹林
 
 '
+      MC_HOC_2017_03_Cole_2020: '樹林
+
+'
       MC_HOC_2017_04POINT5_RYAN: 沙漠
       MC_HOC_2017_04POINT5_RYAN_2019: 沙漠
+      MC_HOC_2017_04POINT5_RYAN_2020: 沙漠
       MC_HOC_2017_04_Cole: '沼澤地
 
 '
       MC_HOC_2017_04_Cole_2019: '沼澤地
+
+'
+      MC_HOC_2017_04_Cole_2020: '沼澤地
 
 '
       MC_HOC_2017_05_Cole: '河流
@@ -486,10 +507,16 @@ zh-TW:
       MC_HOC_2017_05_Cole_2019: '河流
 
 '
+      MC_HOC_2017_05_Cole_2020: '河流
+
+'
       MC_HOC_2017_06_Cole: '漲潮
 
 '
       MC_HOC_2017_06_Cole_2019: '漲潮
+
+'
+      MC_HOC_2017_06_Cole_2020: '漲潮
 
 '
       MC_HOC_2017_07_Cole: '雪山口
@@ -498,10 +525,16 @@ zh-TW:
       MC_HOC_2017_07_Cole_2019: '雪山口
 
 '
+      MC_HOC_2017_07_Cole_2020: '雪山口
+
+'
       MC_HOC_2017_10_RETRY: '洞穴
 
 '
       MC_HOC_2017_10_RETRY_2019: '洞穴
+
+'
+      MC_HOC_2017_10_RETRY_2020: '洞穴
 
 '
       MC_HOC_2017_Ali: '下界要塞
@@ -510,8 +543,12 @@ zh-TW:
       MC_HOC_2017_Ali_2019: '下界要塞
 
 '
+      MC_HOC_2017_Ali_2020: '下界要塞
+
+'
       MC_HOC_2017_FP20x20: 自由發揮
       MC_HOC_2017_FP20x20_2019: 自由發揮
+      MC_HOC_2017_FP20x20_2020: 自由發揮
       Making Music_2018: 製作音樂
       Making Music_2019: 製作音樂
       New Minecraft Hero Project: 自由發揮
@@ -538,6 +575,7 @@ zh-TW:
       courseF_artist_for1: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2018: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2019: 計次迴圈自由發揮（初級）
+      courseF_artist_for1_2020: 計次迴圈自由發揮（初級）
       courseF_project_1: '精靈實驗室示例專案
 
 '
@@ -549,3 +587,4 @@ zh-TW:
       csd-pre-survey-levelgroup_2019: 教學內容概覽
       scrat_loops_C-F_video: 冰河歷險紀中的迴圈影片
       scrat_loops_C-F_video_2019: 冰河歷險紀中的迴圈影片
+      scrat_loops_C-F_video_2020: 冰河歷險紀中的迴圈影片

@@ -88,7 +88,14 @@ my-MM:
         draw flame:
           parameters:
             x: "×"
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: "×"
       courseC_data wizard:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseC_data wizard_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_concept1:
@@ -109,6 +116,9 @@ my-MM:
       courseE_artist_functions10_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions10_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -118,10 +128,16 @@ my-MM:
       courseE_artist_functions8_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8a_2018:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8a_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8a_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8b_2018:
@@ -130,10 +146,16 @@ my-MM:
       courseE_artist_functions8b_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8b_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8c_2018:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions8c_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions8c_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions9:
@@ -145,6 +167,9 @@ my-MM:
       courseE_artist_functions9_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions9_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge1:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -152,6 +177,9 @@ my-MM:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_challenge2:
@@ -163,6 +191,9 @@ my-MM:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_predict2:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
@@ -170,6 +201,9 @@ my-MM:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: တစ်ခုခုကို ပြုလုပ်ပါ
+      courseE_artist_functions_predict2_2020:
         do something:
           name: တစ်ခုခုကို ပြုလုပ်ပါ
       courseE_bee_functions1:

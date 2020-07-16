@@ -276,6 +276,9 @@ ka-GE:
       Function intro Ryan_2019:
         build bridge:
           name: ხიდის აგება
+      Function intro Ryan_2020:
+        build bridge:
+          name: ხიდის აგება
       Geometric Sun:
         draw a door:
           name: კარის დახატვა
@@ -350,6 +353,9 @@ ka-GE:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: გზის გასუფთავება
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: გზის გასუფთავება
       MC_HOC_2017_Ali:
         build short bridge:
           name: მოკლე ხიდის აგება
@@ -360,12 +366,22 @@ ka-GE:
           name: მოკლე ხიდის აგება
         build long bridge:
           name: გრძელი ხიდის აგება
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: მოკლე ხიდის აგება
+        build long bridge:
+          name: გრძელი ხიდის აგება
       MC_HOC_2017_FP20x20:
         function 1:
           name: ფუნქცია 1
         function 2:
           name: ფუნქცია 2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: ფუნქცია 1
+        function 2:
+          name: ფუნქცია 2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: ფუნქცია 1
         function 2:
@@ -689,6 +705,9 @@ ka-GE:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: მოსალოდნელი გადაწყვეტა
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: მოსალოდნელი გადაწყვეტა
       courseC_artist_prog3:
         draw flame:
           name: ალის დახატვა
@@ -710,7 +729,17 @@ ka-GE:
             x: x
         draw fire:
           name: ცეცხლის დახატვა
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: ალის დახატვა
+          parameters:
+            x: x
+        draw fire:
+          name: ცეცხლის დახატვა
       courseC_data wizard:
+        do something:
+          name: გააკეთეთ რამე
+      courseC_data wizard_2020:
         do something:
           name: გააკეთეთ რამე
       courseD_artist_binary1:
@@ -722,6 +751,9 @@ ka-GE:
       courseD_artist_binary1_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary1_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binary2:
         draw:
           name: დახატვა
@@ -729,6 +761,9 @@ ka-GE:
         draw:
           name: დახატვა
       courseD_artist_binary2_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binary2_2020:
         draw:
           name: დახატვა
       courseD_artist_binary3:
@@ -740,6 +775,9 @@ ka-GE:
       courseD_artist_binary3_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary3_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binary4:
         draw:
           name: დახატვა
@@ -747,6 +785,9 @@ ka-GE:
         draw:
           name: დახატვა
       courseD_artist_binary4_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binary4_2020:
         draw:
           name: დახატვა
       courseD_artist_binary5:
@@ -758,6 +799,9 @@ ka-GE:
       courseD_artist_binary5_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary5_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binary6:
         draw:
           name: დახატვა
@@ -765,6 +809,9 @@ ka-GE:
         draw:
           name: დახატვა
       courseD_artist_binary6_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binary6_2020:
         draw:
           name: დახატვა
       courseD_artist_binary7:
@@ -776,6 +823,9 @@ ka-GE:
       courseD_artist_binary7_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary7_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binary8:
         draw:
           name: დახატვა
@@ -783,6 +833,9 @@ ka-GE:
         draw:
           name: დახატვა
       courseD_artist_binary8_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binary8_2020:
         draw:
           name: დახატვა
       courseD_artist_binary8_predict1:
@@ -794,10 +847,16 @@ ka-GE:
       courseD_artist_binary8_predict1_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binaryFP_2018:
         draw:
           name: დახატვა
       courseD_artist_binaryFP_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binaryFP_2020:
         draw:
           name: დახატვა
       courseD_artist_binary_challenge1_2018:
@@ -806,10 +865,16 @@ ka-GE:
       courseD_artist_binary_challenge1_2019:
         draw:
           name: დახატვა
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: დახატვა
       courseD_artist_binary_challenge2_2018:
         draw:
           name: დახატვა
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: დახატვა
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: დახატვა
       courseD_autorun_binary2_2019:
@@ -887,6 +952,13 @@ ka-GE:
           name: ექვსკუთხედის დახატვა
         draw line of hexagons:
           name: ექვსკუთხედების ხაზის დახატვა
+      courseE_artist_functions10_2020:
+        do something:
+          name: გააკეთეთ რამე
+        draw hexagon:
+          name: ექვსკუთხედის დახატვა
+        draw line of hexagons:
+          name: ექვსკუთხედების ხაზის დახატვა
       courseE_artist_functions2:
         draw a square:
           name: კვადრატის დახატვა
@@ -896,6 +968,9 @@ ka-GE:
       courseE_artist_functions2_2019:
         draw a square:
           name: კვადრატის დახატვა
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: კვადრატის დახატვა
       courseE_artist_functions2_copy:
         draw a square:
           name: კვადრატის დახატვა
@@ -903,6 +978,9 @@ ka-GE:
         draw a star:
           name: ვარსკვლავის დახატვა
       courseE_artist_functions3_2019:
+        draw a star:
+          name: ვარსკვლავის დახატვა
+      courseE_artist_functions3_2020:
         draw a star:
           name: ვარსკვლავის დახატვა
       courseE_artist_functions4:
@@ -918,6 +996,9 @@ ka-GE:
         draw a star:
           name: ვარსკვლავის დახატვა
       courseE_artist_functions5_2019:
+        draw a star:
+          name: ვარსკვლავის დახატვა
+      courseE_artist_functions5_2020:
         draw a star:
           name: ვარსკვლავის დახატვა
       courseE_artist_functions5_copy:
@@ -936,6 +1017,11 @@ ka-GE:
       courseE_artist_functions7_2019:
         draw a window:
           name: ფანჯრის დახატვა
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: ფანჯრის დახატვა
+        draw a house:
+          name: სახლის დახატვა
       courseE_artist_functions8:
         do something:
           name: გააკეთეთ რამე
@@ -957,12 +1043,24 @@ ka-GE:
           name: კვადრატების ხაზის დახატვა
         draw square:
           name: კვადრატის დახატვა
+      courseE_artist_functions8_2020:
+        do something:
+          name: გააკეთეთ რამე
+        draw a line of squares:
+          name: კვადრატების ხაზის დახატვა
+        draw square:
+          name: კვადრატის დახატვა
       courseE_artist_functions8a_2018:
         draw a square:
           name: კვადრატის დახატვა
         do something:
           name: გააკეთეთ რამე
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: კვადრატის დახატვა
+        do something:
+          name: გააკეთეთ რამე
+      courseE_artist_functions8a_2020:
         draw a square:
           name: კვადრატის დახატვა
         do something:
@@ -981,6 +1079,13 @@ ka-GE:
           name: კვადრატის დახატვა
         do something:
           name: გააკეთეთ რამე
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: კვადრატების ხაზის დახატვა
+        draw square:
+          name: კვადრატის დახატვა
+        do something:
+          name: გააკეთეთ რამე
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: კვადრატების ხაზის დახატვა
@@ -989,6 +1094,13 @@ ka-GE:
         do something:
           name: გააკეთეთ რამე
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: კვადრატების ხაზის დახატვა
+        draw square:
+          name: კვადრატის დახატვა
+        do something:
+          name: გააკეთეთ რამე
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: კვადრატების ხაზის დახატვა
         draw square:
@@ -1016,6 +1128,13 @@ ka-GE:
           name: სამკუთხედის დახატვა
         draw line of triangles:
           name: სამკუთხედების ხაზის დახატვა
+      courseE_artist_functions9_2020:
+        do something:
+          name: გააკეთეთ რამე
+        draw triangle:
+          name: სამკუთხედის დახატვა
+        draw line of triangles:
+          name: სამკუთხედების ხაზის დახატვა
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: ექვსკუთხედის დახატვა
@@ -1026,6 +1145,15 @@ ka-GE:
         draw square:
           name: კვადრატის დახატვა
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: ექვსკუთხედის დახატვა
+        draw line of hexagons:
+          name: ექვსკუთხედების ხაზის დახატვა
+        draw a line of squares:
+          name: კვადრატების ხაზის დახატვა
+        draw square:
+          name: კვადრატის დახატვა
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: ექვსკუთხედის დახატვა
         draw line of hexagons:
@@ -1049,6 +1177,11 @@ ka-GE:
           name: ჩემი დიზაინი
         do something:
           name: გააკეთეთ რამე
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: ჩემი დიზაინი
+        do something:
+          name: გააკეთეთ რამე
       courseE_artist_functions_challenge2:
         my design:
           name: ჩემი დიზაინი
@@ -1064,6 +1197,11 @@ ka-GE:
           name: ჩემი დიზაინი
         do something:
           name: გააკეთეთ რამე
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: ჩემი დიზაინი
+        do something:
+          name: გააკეთეთ რამე
       courseE_artist_functions_predict1:
         draw a square:
           name: კვადრატის დახატვა
@@ -1071,6 +1209,9 @@ ka-GE:
         draw a square:
           name: კვადრატის დახატვა
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: კვადრატის დახატვა
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: კვადრატის დახატვა
       courseE_artist_functions_predict1_copy:
@@ -1091,6 +1232,13 @@ ka-GE:
         do something:
           name: გააკეთეთ რამე
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: მრავალკუთხედების ხაზის დახატვა
+        draw polygon:
+          name: მრავალკუთხედის დახატვა
+        do something:
+          name: გააკეთეთ რამე
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: მრავალკუთხედების ხაზის დახატვა
         draw polygon:
@@ -1159,6 +1307,13 @@ ka-GE:
           name: ყველა გოგრის აღება
         pumpkin square:
           name: გოგრის კვადრატი
+      courseE_farmer_functions10a1_2020:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+        get all pumpkins:
+          name: ყველა გოგრის აღება
+        pumpkin square:
+          name: გოგრის კვადრატი
       courseE_farmer_functions11_predict:
         check and pick:
           name: შემოწმება და აღება
@@ -1172,6 +1327,13 @@ ka-GE:
         get all pumpkins:
           name: ყველა გოგრის აღება
       courseE_farmer_functions11_predict_2019:
+        pumpkin square:
+          name: გოგრის კვადრატი
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+        get all pumpkins:
+          name: ყველა გოგრის აღება
+      courseE_farmer_functions11_predict_2020:
         pumpkin square:
           name: გოგრის კვადრატი
         check square for corn:
@@ -1192,16 +1354,29 @@ ka-GE:
           name: ხორბლის მართკუთხედი
         lettuce stairs:
           name: სალათის კიბე
+      courseE_farmer_functions13_2020:
+        check for corn:
+          name: ხორბალზე შემოწმება
+        corn rectangle:
+          name: ხორბლის მართკუთხედი
+        lettuce stairs:
+          name: სალათის კიბე
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
       courseE_farmer_functions2ba:
@@ -1213,6 +1388,11 @@ ka-GE:
         get all pumpkins:
           name: ყველა გოგრის აღება
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+        get all pumpkins:
+          name: ყველა გოგრის აღება
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
         get all pumpkins:
@@ -1230,12 +1410,22 @@ ka-GE:
           name: კვადრატის ხორბალზე შემოწმება
         get all pumpkins:
           name: ყველა გოგრის აღება
+      courseE_farmer_functions3c1_2020:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+        get all pumpkins:
+          name: ყველა გოგრის აღება
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
         get all pumpkins:
           name: ყველა გოგრის აღება
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: კვადრატის ხორბალზე შემოწმება
+        get all pumpkins:
+          name: ყველა გოგრის აღება
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: კვადრატის ხორბალზე შემოწმება
         get all pumpkins:
@@ -1255,16 +1445,25 @@ ka-GE:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: ბაღის კვადრატი
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: ბაღის კვადრატი
       courseE_farmer_functions8a1_2018:
         garden square:
           name: ბაღის კვადრატი
       courseE_farmer_functions8a1_2019:
         garden square:
           name: ბაღის კვადრატი
+      courseE_farmer_functions8a1_2020:
+        garden square:
+          name: ბაღის კვადრატი
       courseE_farmer_functions9a1_2018:
         garden square:
           name: ბაღის კვადრატი
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: ბაღის კვადრატი
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: ბაღის კვადრატი
       courseE_playLab_challenge1:
@@ -1495,16 +1694,25 @@ ka-GE:
       courseF_bee_variables_6_2019:
         collect stairs:
           name: კიბეების შეგროვება
+      courseF_bee_variables_6_2020:
+        collect stairs:
+          name: კიბეების შეგროვება
       courseF_bee_variables_7_2018:
         collect:
           name: შეგროვება
       courseF_bee_variables_7_2019:
         collect:
           name: შეგროვება
+      courseF_bee_variables_7_2020:
+        collect:
+          name: შეგროვება
       courseF_bee_variables_8_2018:
         collect:
           name: შეგროვება
       courseF_bee_variables_8_2019:
+        collect:
+          name: შეგროვება
+      courseF_bee_variables_8_2020:
         collect:
           name: შეგროვება
       grade5_artist_binary11:

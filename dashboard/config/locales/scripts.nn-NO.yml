@@ -6040,32 +6040,6 @@ nn:
           lessons:
             Creating Functions:
               name: Lag Funksjonar
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variablar
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Fart
-            Functions:
-              name: Funksjonar
-            Sprite Properties:
-              name: Eigenskapar ved Sprite
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapittel 1: Bilder og animasjonar'
-          lessons:
-            Variables:
-              name: Variablar
-            Conditionals:
-              name: Betingelser
-            Velocity:
-              name: Fart
-            Functions:
-              name: Funksjonar
-            Sprite Properties:
-              name: Eigenskapar ved Sprite
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -6160,3 +6134,83 @@ nn:
               display_name: 'Djupdykk: Kurs E og F'
             k5_next_steps_1:
               display_name: Neste steg
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøking
+            csp5_1:
+              display_name: 'Kapittel 1: Hendingdriven programmering'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+          lessons:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+          lesson_groups:
+            csd3_1:
+              display_name: Innhald
+            csd3_2:
+              display_name: Innhald
+            cspSurvey:
+              display_name: Innhald
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald

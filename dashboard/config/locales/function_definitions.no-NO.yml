@@ -484,7 +484,14 @@ no-NO:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: gjør noe
+      courseC_data wizard_2020:
         do something:
           name: gjør noe
       courseE_artist_concept1:
@@ -520,6 +527,9 @@ no-NO:
       courseE_artist_functions10_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions10_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions2:
         draw a square:
           name: tegn en firkant
@@ -529,6 +539,9 @@ no-NO:
       courseE_artist_functions2_2019:
         draw a square:
           name: tegn en firkant
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: tegn en firkant
       courseE_artist_functions2_copy:
         draw a square:
           name: tegn en firkant
@@ -536,6 +549,9 @@ no-NO:
         draw a star:
           name: tegn en stjerne
       courseE_artist_functions3_2019:
+        draw a star:
+          name: tegn en stjerne
+      courseE_artist_functions3_2020:
         draw a star:
           name: tegn en stjerne
       courseE_artist_functions4:
@@ -553,6 +569,9 @@ no-NO:
       courseE_artist_functions5_2019:
         draw a star:
           name: tegn en stjerne
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: tegn en stjerne
       courseE_artist_functions5_copy:
         draw a star:
           name: tegn en stjerne
@@ -560,6 +579,9 @@ no-NO:
         draw a house:
           name: tegn et hus
       courseE_artist_functions7_2018:
+        draw a house:
+          name: tegn et hus
+      courseE_artist_functions7_2020:
         draw a house:
           name: tegn et hus
       courseE_artist_functions8:
@@ -583,12 +605,24 @@ no-NO:
           name: tegn en linje av firkanter
         draw square:
           name: tegn en firkant
+      courseE_artist_functions8_2020:
+        do something:
+          name: gjør noe
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
       courseE_artist_functions8a_2018:
         draw a square:
           name: tegn en firkant
         do something:
           name: gjør noe
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
+      courseE_artist_functions8a_2020:
         draw a square:
           name: tegn en firkant
         do something:
@@ -601,6 +635,13 @@ no-NO:
         do something:
           name: gjør noe
       courseE_artist_functions8b_2019:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
+      courseE_artist_functions8b_2020:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
@@ -621,6 +662,13 @@ no-NO:
           name: tegn en firkant
         do something:
           name: gjør noe
+      courseE_artist_functions8c_2020:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+        do something:
+          name: gjør noe
       courseE_artist_functions9:
         do something:
           name: gjør noe
@@ -630,12 +678,20 @@ no-NO:
       courseE_artist_functions9_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions9_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functionsProj_2018:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
           name: tegn en firkant
       courseE_artist_functionsProj_2019:
+        draw a line of squares:
+          name: tegn en linje av firkanter
+        draw square:
+          name: tegn en firkant
+      courseE_artist_functionsProj_2020:
         draw a line of squares:
           name: tegn en linje av firkanter
         draw square:
@@ -649,6 +705,9 @@ no-NO:
       courseE_artist_functions_challenge1_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions_challenge1_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions_challenge2:
         do something:
           name: gjør noe
@@ -658,6 +717,9 @@ no-NO:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: gjør noe
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: gjør noe
       courseE_artist_functions_predict1:
         draw a square:
           name: tegn en firkant
@@ -665,6 +727,9 @@ no-NO:
         draw a square:
           name: tegn en firkant
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: tegn en firkant
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: tegn en firkant
       courseE_artist_functions_predict1_copy:
@@ -677,6 +742,9 @@ no-NO:
         do something:
           name: gjør noe
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: gjør noe
+      courseE_artist_functions_predict2_2020:
         do something:
           name: gjør noe
       courseE_bee_functions1:
@@ -877,9 +945,15 @@ no-NO:
       courseF_bee_variables_7_2019:
         collect:
           name: samle
+      courseF_bee_variables_7_2020:
+        collect:
+          name: samle
       courseF_bee_variables_8_2018:
         collect:
           name: samle
       courseF_bee_variables_8_2019:
+        collect:
+          name: samle
+      courseF_bee_variables_8_2020:
         collect:
           name: samle

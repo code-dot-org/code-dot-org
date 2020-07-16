@@ -3763,22 +3763,6 @@ hy:
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
-        csd3-virtual:
-          description_short: Programming
-          stages:
-            Variables:
-              name: փոփոխականների
-            Conditionals:
-              name: conditionals
-            Functions:
-              name: գործառույթները
-          lessons:
-            Variables:
-              name: փոփոխականների
-            Conditionals:
-              name: conditionals
-            Functions:
-              name: գործառույթները
         csp5-virtual:
           stages:
             While Loops:
@@ -3845,3 +3829,46 @@ hy:
               name: փոփոխականների
             For Loops:
               name: For Loops
+        csd3-virtual:
+          description_short: Programming
+          stages:
+            Variables:
+              name: փոփոխականների
+            Text:
+              name: տեքստ
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+          lessons:
+            Variables:
+              name: փոփոխականների
+            Text:
+              name: տեքստ
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+          lesson_groups:
+            csd3_1:
+              display_name: պարունակություն
+            csd3_2:
+              display_name: պարունակություն
+            cspSurvey:
+              display_name: պարունակություն
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: պարունակություն

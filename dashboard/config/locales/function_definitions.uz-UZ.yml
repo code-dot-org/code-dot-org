@@ -115,6 +115,9 @@ uz-UZ:
       courseC_data wizard:
         do something:
           name: nimadir qilish
+      courseC_data wizard_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_concept1:
         do something:
           name: nimadir qilish
@@ -133,10 +136,16 @@ uz-UZ:
       courseE_artist_functions10_2019:
         do something:
           name: nimadir qilish
+      courseE_artist_functions10_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_functions7:
         draw a house:
           name: uy chizish
       courseE_artist_functions7_2018:
+        draw a house:
+          name: uy chizish
+      courseE_artist_functions7_2020:
         draw a house:
           name: uy chizish
       courseE_artist_functions8:
@@ -148,10 +157,16 @@ uz-UZ:
       courseE_artist_functions8_2019:
         do something:
           name: nimadir qilish
+      courseE_artist_functions8_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_functions8a_2018:
         do something:
           name: nimadir qilish
       courseE_artist_functions8a_2019:
+        do something:
+          name: nimadir qilish
+      courseE_artist_functions8a_2020:
         do something:
           name: nimadir qilish
       courseE_artist_functions8b_2018:
@@ -160,10 +175,16 @@ uz-UZ:
       courseE_artist_functions8b_2019:
         do something:
           name: nimadir qilish
+      courseE_artist_functions8b_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_functions8c_2018:
         do something:
           name: nimadir qilish
       courseE_artist_functions8c_2019:
+        do something:
+          name: nimadir qilish
+      courseE_artist_functions8c_2020:
         do something:
           name: nimadir qilish
       courseE_artist_functions9:
@@ -175,6 +196,9 @@ uz-UZ:
       courseE_artist_functions9_2019:
         do something:
           name: nimadir qilish
+      courseE_artist_functions9_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_functions_challenge1:
         do something:
           name: nimadir qilish
@@ -182,6 +206,9 @@ uz-UZ:
         do something:
           name: nimadir qilish
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: nimadir qilish
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: nimadir qilish
       courseE_artist_functions_challenge2:
@@ -193,6 +220,9 @@ uz-UZ:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: nimadir qilish
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: nimadir qilish
       courseE_artist_functions_predict2:
         do something:
           name: nimadir qilish
@@ -200,6 +230,9 @@ uz-UZ:
         do something:
           name: nimadir qilish
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: nimadir qilish
+      courseE_artist_functions_predict2_2020:
         do something:
           name: nimadir qilish
       courseE_bee_functions1:

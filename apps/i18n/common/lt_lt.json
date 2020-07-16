@@ -182,6 +182,7 @@
   "dancePartyButton": "Pradėti",
   "dataLimitAlert": "Programėlė per dažnai skaitė arba rašė duomenis iš/į duomenų bazę, kas gali galėjo sukelti netikėtų nesėkmių. Prašome, informuokite programėlės autorių, jei nuolat susiduriate su panašiomis problemomis.",
   "dataTableNamePlaceholder": "Lentelės pavadinimas",
+  "dataLibrarySearchPlacholder": "Ieškoti",
   "dataWorkspaceHeader": "Duomenų naršyklė",
   "debugWatchHeader": "Žiūrėti",
   "debugWatchNotAvailable": "<not available>nepasiekiamas",

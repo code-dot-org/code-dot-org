@@ -300,6 +300,7 @@
   "dancePartyTitle": "Dance Party",
   "dataLimitAlert": "Appen har læst eller skrivet med databasen for ofte, hvilket kan resultere i uventede fejl.  Lad app ejeren vide, hvis du fortsat oplever problemer.",
   "dataTableNamePlaceholder": "Tabelnavn",
+  "dataLibrarySearchPlacholder": "Søg",
   "dataWorkspaceHeader": "Data Browser",
   "debugWatchHeader": "Se",
   "debugWatchNotAvailable": "<ikke tilgængelig>",

@@ -349,6 +349,9 @@ ja-JP:
       Function intro Ryan_2019:
         build bridge:
           name: 橋を作る
+      Function intro Ryan_2020:
+        build bridge:
+          name: 橋を作る
       Geometric Sun:
         draw a door:
           name: ドアをかく
@@ -433,12 +436,20 @@ ja-JP:
       MC_HOC_2017_07_Cole_2019:
         clear path:
           name: 道を作る
+      MC_HOC_2017_07_Cole_2020:
+        clear path:
+          name: 道を作る
       MC_HOC_2017_10_RETRY:
         fix long path:
           name: 長い道を直す
         fix short path:
           name: 短い道を直す
       MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: 長い道を直す
+        fix short path:
+          name: 短い道を直す
+      MC_HOC_2017_10_RETRY_2020:
         fix long path:
           name: 長い道を直す
         fix short path:
@@ -453,12 +464,22 @@ ja-JP:
           name: 短い橋をかける
         build long bridge:
           name: 長い橋をかける
+      MC_HOC_2017_Ali_2020:
+        build short bridge:
+          name: 短い橋をかける
+        build long bridge:
+          name: 長い橋をかける
       MC_HOC_2017_FP20x20:
         function 1:
           name: 関数1
         function 2:
           name: 関数2
       MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: 関数1
+        function 2:
+          name: 関数2
+      MC_HOC_2017_FP20x20_2020:
         function 1:
           name: 関数1
         function 2:
@@ -802,6 +823,9 @@ ja-JP:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: potential solution
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: potential solution
       courseC_artist_prog3:
         draw flame:
           name: 窓わくをかく
@@ -823,6 +847,13 @@ ja-JP:
             x: x
         draw fire:
           name: ほのおをかく
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: 窓わくをかく
+          parameters:
+            x: x
+        draw fire:
+          name: ほのおをかく
       courseC_artist_prog4:
         booster:
           name: ブースター
@@ -832,7 +863,13 @@ ja-JP:
       courseC_artist_prog4_2019:
         booster:
           name: ブースター
+      courseC_artist_prog4_2020:
+        booster:
+          name: ブースター
       courseC_data wizard:
+        do something:
+          name: 何かしてください
+      courseC_data wizard_2020:
         do something:
           name: 何かしてください
       courseD_artist_binary1:
@@ -846,6 +883,11 @@ ja-JP:
         draw:
           name: 図形をかく
       courseD_artist_binary1_2019:
+        draw bit:
+          name: ０か1で もようを かく
+        draw:
+          name: 図形をかく
+      courseD_artist_binary1_2020:
         draw bit:
           name: ０か1で もようを かく
         draw:
@@ -865,6 +907,11 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary2_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binary3:
         draw:
           name: 図形をかく
@@ -876,6 +923,11 @@ ja-JP:
         draw bit:
           name: ０か1で もようを かく
       courseD_artist_binary3_2019:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
+      courseD_artist_binary3_2020:
         draw:
           name: 図形をかく
         draw bit:
@@ -895,6 +947,11 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary4_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binary5:
         draw:
           name: 図形をかく
@@ -906,6 +963,11 @@ ja-JP:
         draw bit:
           name: ０か1で もようを かく
       courseD_artist_binary5_2019:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
+      courseD_artist_binary5_2020:
         draw:
           name: 図形をかく
         draw bit:
@@ -925,6 +987,11 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary6_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binary7:
         draw:
           name: 図形をかく
@@ -936,6 +1003,11 @@ ja-JP:
         draw bit:
           name: ０か1で もようを かく
       courseD_artist_binary7_2019:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
+      courseD_artist_binary7_2020:
         draw:
           name: 図形をかく
         draw bit:
@@ -955,6 +1027,11 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary8_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binary8_predict1:
         draw:
           name: 図形をかく
@@ -970,12 +1047,22 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binaryFP_2018:
         draw:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
       courseD_artist_binaryFP_2019:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
+      courseD_artist_binaryFP_2020:
         draw:
           name: 図形をかく
         draw bit:
@@ -990,12 +1077,22 @@ ja-JP:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
       courseD_artist_binary_challenge2_2018:
         draw:
           name: 図形をかく
         draw bit:
           name: ０か1で もようを かく
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: 図形をかく
+        draw bit:
+          name: ０か1で もようを かく
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: 図形をかく
         draw bit:
@@ -1103,6 +1200,13 @@ ja-JP:
           name: 六角形 を かく
         draw line of hexagons:
           name: 六角形の列をかく
+      courseE_artist_functions10_2020:
+        do something:
+          name: 何かしてください
+        draw hexagon:
+          name: 六角形 を かく
+        draw line of hexagons:
+          name: 六角形の列をかく
       courseE_artist_functions1_copy:
         draw ear stems:
           name: メガネをかく
@@ -1121,6 +1225,11 @@ ja-JP:
           name: 正方形 を かく
         draw ear stems:
           name: メガネをかく
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: 正方形 を かく
+        draw ear stems:
+          name: メガネをかく
       courseE_artist_functions2_copy:
         draw a square:
           name: 正方形 を かく
@@ -1130,6 +1239,9 @@ ja-JP:
         draw a star:
           name: 星形 を かく
       courseE_artist_functions3_2019:
+        draw a star:
+          name: 星形 を かく
+      courseE_artist_functions3_2020:
         draw a star:
           name: 星形 を かく
       courseE_artist_functions4:
@@ -1145,6 +1257,9 @@ ja-JP:
         draw a star:
           name: 星形 を かく
       courseE_artist_functions5_2019:
+        draw a star:
+          name: 星形 を かく
+      courseE_artist_functions5_2020:
         draw a star:
           name: 星形 を かく
       courseE_artist_functions5_copy:
@@ -1163,6 +1278,11 @@ ja-JP:
       courseE_artist_functions7_2019:
         draw a window:
           name: まどをかく
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: まどをかく
+        draw a house:
+          name: 家 を かく
       courseE_artist_functions8:
         do something:
           name: 何かしてください
@@ -1188,12 +1308,26 @@ ja-JP:
           name: draw a line of squares
         draw square:
           name: 正方形を かく
+      courseE_artist_functions8_2020:
+        do something:
+          name: 何かしてください
+        staggered squares:
+          name: ずれた正方形
+        draw a line of squares:
+          name: draw a line of squares
+        draw square:
+          name: 正方形を かく
       courseE_artist_functions8a_2018:
         draw a square:
           name: 正方形 を かく
         do something:
           name: 何かしてください
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: 正方形 を かく
+        do something:
+          name: 何かしてください
+      courseE_artist_functions8a_2020:
         draw a square:
           name: 正方形 を かく
         do something:
@@ -1212,6 +1346,13 @@ ja-JP:
           name: 正方形を かく
         do something:
           name: 何かしてください
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: draw a line of squares
+        draw square:
+          name: 正方形を かく
+        do something:
+          name: 何かしてください
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: draw a line of squares
@@ -1222,6 +1363,15 @@ ja-JP:
         staggered squares:
           name: ずれた正方形
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: draw a line of squares
+        draw square:
+          name: 正方形を かく
+        do something:
+          name: 何かしてください
+        staggered squares:
+          name: ずれた正方形
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: draw a line of squares
         draw square:
@@ -1251,6 +1401,13 @@ ja-JP:
           name: 三角形を かく
         draw line of triangles:
           name: 三角形の列をかく
+      courseE_artist_functions9_2020:
+        do something:
+          name: 何かしてください
+        draw triangle:
+          name: 三角形を かく
+        draw line of triangles:
+          name: 三角形の列をかく
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: 六角形 を かく
@@ -1263,6 +1420,17 @@ ja-JP:
         draw square:
           name: 正方形を かく
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: 六角形 を かく
+        draw line of hexagons:
+          name: 六角形の列をかく
+        staggered squares:
+          name: ずれた正方形
+        draw a line of squares:
+          name: draw a line of squares
+        draw square:
+          name: 正方形を かく
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: 六角形 を かく
         draw line of hexagons:
@@ -1288,6 +1456,11 @@ ja-JP:
           name: 私のデザイン
         do something:
           name: 何かしてください
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: 私のデザイン
+        do something:
+          name: 何かしてください
       courseE_artist_functions_challenge2:
         my design:
           name: 私のデザイン
@@ -1303,6 +1476,11 @@ ja-JP:
           name: 私のデザイン
         do something:
           name: 何かしてください
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: 私のデザイン
+        do something:
+          name: 何かしてください
       courseE_artist_functions_predict1:
         draw a square:
           name: 正方形 を かく
@@ -1314,6 +1492,11 @@ ja-JP:
         draw ear stems:
           name: メガネをかく
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: 正方形 を かく
+        draw ear stems:
+          name: メガネをかく
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: 正方形 を かく
         draw ear stems:
@@ -1338,6 +1521,13 @@ ja-JP:
         do something:
           name: 何かしてください
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: 多角形の列をかく
+        draw polygon:
+          name: 多角形をかく
+        do something:
+          name: 何かしてください
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: 多角形の列をかく
         draw polygon:
@@ -1422,6 +1612,15 @@ ja-JP:
           name: カボチャをすべてとる
         pumpkin square:
           name: pumpkin square
+      courseE_farmer_functions10a1_2020:
+        pick along path:
+          name: 道に沿ってしゅうかくする
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+        get all pumpkins:
+          name: カボチャをすべてとる
+        pumpkin square:
+          name: pumpkin square
       courseE_farmer_functions10b:
         navigate:
           name: ナビゲート
@@ -1454,6 +1653,17 @@ ja-JP:
           name: get produce
         get all pumpkins:
           name: カボチャをすべてとる
+      courseE_farmer_functions11_predict_2020:
+        pick along path:
+          name: 道に沿ってしゅうかくする
+        pumpkin square:
+          name: pumpkin square
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+        get produce:
+          name: get produce
+        get all pumpkins:
+          name: カボチャをすべてとる
       courseE_farmer_functions13_2018:
         pick along path:
           name: 道に沿ってしゅうかくする
@@ -1472,16 +1682,31 @@ ja-JP:
           name: corn rectangle
         lettuce stairs:
           name: lettuce stairs
+      courseE_farmer_functions13_2020:
+        pick along path:
+          name: 道に沿ってしゅうかくする
+        check for corn:
+          name: トウモロコシか調べる
+        corn rectangle:
+          name: corn rectangle
+        lettuce stairs:
+          name: lettuce stairs
       courseE_farmer_functions1a_2018:
         check square for corn:
           name: トウモロコシをしゅうかくする
       courseE_farmer_functions1a_2019:
         check square for corn:
           name: トウモロコシをしゅうかくする
+      courseE_farmer_functions1a_2020:
+        check square for corn:
+          name: トウモロコシをしゅうかくする
       courseE_farmer_functions2b_2018:
         check square for corn:
           name: トウモロコシをしゅうかくする
       courseE_farmer_functions2b_2019:
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+      courseE_farmer_functions2b_2020:
         check square for corn:
           name: トウモロコシをしゅうかくする
       courseE_farmer_functions2ba:
@@ -1493,6 +1718,11 @@ ja-JP:
         get all pumpkins:
           name: カボチャをすべてとる
       courseE_farmer_functions2ba_2019:
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+        get all pumpkins:
+          name: カボチャをすべてとる
+      courseE_farmer_functions2ba_2020:
         check square for corn:
           name: トウモロコシをしゅうかくする
         get all pumpkins:
@@ -1514,12 +1744,24 @@ ja-JP:
           name: トウモロコシをしゅうかくする
         get all pumpkins:
           name: カボチャをすべてとる
+      courseE_farmer_functions3c1_2020:
+        pick along path:
+          name: 道に沿ってしゅうかくする
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+        get all pumpkins:
+          name: カボチャをすべてとる
       courseE_farmer_functions3c_2018:
         check square for corn:
           name: トウモロコシをしゅうかくする
         get all pumpkins:
           name: カボチャをすべてとる
       courseE_farmer_functions3c_2019:
+        check square for corn:
+          name: トウモロコシをしゅうかくする
+        get all pumpkins:
+          name: カボチャをすべてとる
+      courseE_farmer_functions3c_2020:
         check square for corn:
           name: トウモロコシをしゅうかくする
         get all pumpkins:
@@ -1539,10 +1781,16 @@ ja-JP:
       courseE_farmer_functions7a1_2019:
         garden square:
           name: garden square
+      courseE_farmer_functions7a1_2020:
+        garden square:
+          name: garden square
       courseE_farmer_functions8a1_2018:
         garden square:
           name: garden square
       courseE_farmer_functions8a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions8a1_2020:
         garden square:
           name: garden square
       courseE_farmer_functions8b:
@@ -1552,6 +1800,9 @@ ja-JP:
         garden square:
           name: garden square
       courseE_farmer_functions9a1_2019:
+        garden square:
+          name: garden square
+      courseE_farmer_functions9a1_2020:
         garden square:
           name: garden square
       courseE_farmer_functions9b:
@@ -1732,6 +1983,9 @@ ja-JP:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: counterを使って、進んでミツをとる
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: counterを使って、進んでミツをとる
       courseF_bee_functions2:
         get only nectar:
           name: ミツを集める
@@ -1831,10 +2085,16 @@ ja-JP:
       courseF_bee_variables_1_2019:
         collect row:
           name: 一列分集める
+      courseF_bee_variables_1_2020:
+        collect row:
+          name: 一列分集める
       courseF_bee_variables_2_2018:
         collect row:
           name: 一列分集める
       courseF_bee_variables_2_2019:
+        collect row:
+          name: 一列分集める
+      courseF_bee_variables_2_2020:
         collect row:
           name: 一列分集める
       courseF_bee_variables_3_2018:
@@ -1843,10 +2103,16 @@ ja-JP:
       courseF_bee_variables_3_2019:
         collect row:
           name: 一列分集める
+      courseF_bee_variables_3_2020:
+        collect row:
+          name: 一列分集める
       courseF_bee_variables_4_2018:
         collect row:
           name: 一列分集める
       courseF_bee_variables_4_2019:
+        collect row:
+          name: 一列分集める
+      courseF_bee_variables_4_2020:
         collect row:
           name: 一列分集める
       courseF_bee_variables_5_2018:
@@ -1855,10 +2121,16 @@ ja-JP:
       courseF_bee_variables_5_2019:
         collect row:
           name: 一列分集める
+      courseF_bee_variables_5_2020:
+        collect row:
+          name: 一列分集める
       courseF_bee_variables_6_2018:
         collect stairs:
           name: 階段状に集める
       courseF_bee_variables_6_2019:
+        collect stairs:
+          name: 階段状に集める
+      courseF_bee_variables_6_2020:
         collect stairs:
           name: 階段状に集める
       courseF_bee_variables_7_2018:
@@ -1867,12 +2139,20 @@ ja-JP:
       courseF_bee_variables_7_2019:
         collect:
           name: あつめる
+      courseF_bee_variables_7_2020:
+        collect:
+          name: あつめる
       courseF_bee_variables_8_2018:
         move and increment:
           name: move and increment
         collect:
           name: あつめる
       courseF_bee_variables_8_2019:
+        move and increment:
+          name: move and increment
+        collect:
+          name: あつめる
+      courseF_bee_variables_8_2020:
         move and increment:
           name: move and increment
         collect:

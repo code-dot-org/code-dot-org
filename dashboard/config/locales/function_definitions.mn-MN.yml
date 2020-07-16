@@ -803,6 +803,9 @@ mn-MN:
       courseB_artist_loops_challenge2_2019:
         potential solution:
           name: боломжит шийдэл
+      courseB_artist_loops_challenge2_2020:
+        potential solution:
+          name: боломжит шийдэл
       courseC_artist_prog3:
         draw flame:
           name: дөл зурах
@@ -824,6 +827,13 @@ mn-MN:
             x: x
         draw fire:
           name: гал зурах
+      courseC_artist_prog3_2020:
+        draw flame:
+          name: дөл зурах
+          parameters:
+            x: x
+        draw fire:
+          name: гал зурах
       courseC_artist_prog4:
         booster:
           name: өргөгч
@@ -833,7 +843,13 @@ mn-MN:
       courseC_artist_prog4_2019:
         booster:
           name: өргөгч
+      courseC_artist_prog4_2020:
+        booster:
+          name: өргөгч
       courseC_data wizard:
+        do something:
+          name: ямар нэг юм хийх
+      courseC_data wizard_2020:
         do something:
           name: ямар нэг юм хийх
       courseD_artist_binary1:
@@ -847,6 +863,11 @@ mn-MN:
         draw:
           name: зурах
       courseD_artist_binary1_2019:
+        draw bit:
+          name: бит зурах
+        draw:
+          name: зурах
+      courseD_artist_binary1_2020:
         draw bit:
           name: бит зурах
         draw:
@@ -866,6 +887,11 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary2_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binary3:
         draw:
           name: зурах
@@ -877,6 +903,11 @@ mn-MN:
         draw bit:
           name: бит зурах
       courseD_artist_binary3_2019:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
+      courseD_artist_binary3_2020:
         draw:
           name: зурах
         draw bit:
@@ -896,6 +927,11 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary4_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binary5:
         draw:
           name: зурах
@@ -907,6 +943,11 @@ mn-MN:
         draw bit:
           name: бит зурах
       courseD_artist_binary5_2019:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
+      courseD_artist_binary5_2020:
         draw:
           name: зурах
         draw bit:
@@ -926,6 +967,11 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary6_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binary7:
         draw:
           name: зурах
@@ -937,6 +983,11 @@ mn-MN:
         draw bit:
           name: бит зурах
       courseD_artist_binary7_2019:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
+      courseD_artist_binary7_2020:
         draw:
           name: зурах
         draw bit:
@@ -956,6 +1007,11 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary8_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binary8_predict1:
         draw:
           name: зурах
@@ -971,12 +1027,22 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary8_predict1_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binaryFP_2018:
         draw:
           name: зурах
         draw bit:
           name: бит зурах
       courseD_artist_binaryFP_2019:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
+      courseD_artist_binaryFP_2020:
         draw:
           name: зурах
         draw bit:
@@ -991,12 +1057,22 @@ mn-MN:
           name: зурах
         draw bit:
           name: бит зурах
+      courseD_artist_binary_challenge1_2020:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
       courseD_artist_binary_challenge2_2018:
         draw:
           name: зурах
         draw bit:
           name: бит зурах
       courseD_artist_binary_challenge2_2019:
+        draw:
+          name: зурах
+        draw bit:
+          name: бит зурах
+      courseD_artist_binary_challenge2_2020:
         draw:
           name: зурах
         draw bit:
@@ -1099,6 +1175,13 @@ mn-MN:
           name: зургаан өнцөгт зурах
         draw line of hexagons:
           name: зургаан өнцөгтийн шугамыг зурах
+      courseE_artist_functions10_2020:
+        do something:
+          name: ямар нэг юм хийх
+        draw hexagon:
+          name: зургаан өнцөгт зурах
+        draw line of hexagons:
+          name: зургаан өнцөгтийн шугамыг зурах
       courseE_artist_functions1_copy:
         draw ear stems:
           name: чихний ишийг зур
@@ -1117,6 +1200,11 @@ mn-MN:
           name: квадрат зурах
         draw ear stems:
           name: чихний ишийг зур
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: квадрат зурах
+        draw ear stems:
+          name: чихний ишийг зур
       courseE_artist_functions2_copy:
         draw a square:
           name: квадрат зурах
@@ -1126,6 +1214,9 @@ mn-MN:
         draw a star:
           name: од зурах
       courseE_artist_functions3_2019:
+        draw a star:
+          name: од зурах
+      courseE_artist_functions3_2020:
         draw a star:
           name: од зурах
       courseE_artist_functions4:
@@ -1141,6 +1232,9 @@ mn-MN:
         draw a star:
           name: од зурах
       courseE_artist_functions5_2019:
+        draw a star:
+          name: од зурах
+      courseE_artist_functions5_2020:
         draw a star:
           name: од зурах
       courseE_artist_functions5_copy:
@@ -1159,6 +1253,11 @@ mn-MN:
       courseE_artist_functions7_2019:
         draw a window:
           name: цонх зурах
+      courseE_artist_functions7_2020:
+        draw a window:
+          name: цонх зурах
+        draw a house:
+          name: байшин зурах
       courseE_artist_functions8:
         do something:
           name: ямар нэг юм хийх
@@ -1180,12 +1279,24 @@ mn-MN:
           name: квадратуудын шугамын зураарай
         draw square:
           name: квадрат -г зураарай
+      courseE_artist_functions8_2020:
+        do something:
+          name: ямар нэг юм хийх
+        draw a line of squares:
+          name: квадратуудын шугамын зураарай
+        draw square:
+          name: квадрат -г зураарай
       courseE_artist_functions8a_2018:
         draw a square:
           name: квадрат зурах
         do something:
           name: ямар нэг юм хийх
       courseE_artist_functions8a_2019:
+        draw a square:
+          name: квадрат зурах
+        do something:
+          name: ямар нэг юм хийх
+      courseE_artist_functions8a_2020:
         draw a square:
           name: квадрат зурах
         do something:
@@ -1204,6 +1315,13 @@ mn-MN:
           name: квадрат -г зураарай
         do something:
           name: ямар нэг юм хийх
+      courseE_artist_functions8b_2020:
+        draw a line of squares:
+          name: квадратуудын шугамын зураарай
+        draw square:
+          name: квадрат -г зураарай
+        do something:
+          name: ямар нэг юм хийх
       courseE_artist_functions8c_2018:
         draw a line of squares:
           name: квадратуудын шугамын зураарай
@@ -1212,6 +1330,13 @@ mn-MN:
         do something:
           name: ямар нэг юм хийх
       courseE_artist_functions8c_2019:
+        draw a line of squares:
+          name: квадратуудын шугамын зураарай
+        draw square:
+          name: квадрат -г зураарай
+        do something:
+          name: ямар нэг юм хийх
+      courseE_artist_functions8c_2020:
         draw a line of squares:
           name: квадратуудын шугамын зураарай
         draw square:
@@ -1239,6 +1364,13 @@ mn-MN:
           name: гурвалжин зурах
         draw line of triangles:
           name: гурвалжны шугамыг зур
+      courseE_artist_functions9_2020:
+        do something:
+          name: ямар нэг юм хийх
+        draw triangle:
+          name: гурвалжин зурах
+        draw line of triangles:
+          name: гурвалжны шугамыг зур
       courseE_artist_functionsProj_2018:
         draw hexagon:
           name: зургаан өнцөгт зурах
@@ -1249,6 +1381,15 @@ mn-MN:
         draw square:
           name: квадрат -г зураарай
       courseE_artist_functionsProj_2019:
+        draw hexagon:
+          name: зургаан өнцөгт зурах
+        draw line of hexagons:
+          name: зургаан өнцөгтийн шугамыг зурах
+        draw a line of squares:
+          name: квадратуудын шугамын зураарай
+        draw square:
+          name: квадрат -г зураарай
+      courseE_artist_functionsProj_2020:
         draw hexagon:
           name: зургаан өнцөгт зурах
         draw line of hexagons:
@@ -1272,6 +1413,11 @@ mn-MN:
           name: миний загвар
         do something:
           name: ямар нэг юм хийх
+      courseE_artist_functions_challenge1_2020:
+        my design:
+          name: миний загвар
+        do something:
+          name: ямар нэг юм хийх
       courseE_artist_functions_challenge2:
         my design:
           name: миний загвар
@@ -1287,6 +1433,11 @@ mn-MN:
           name: миний загвар
         do something:
           name: ямар нэг юм хийх
+      courseE_artist_functions_challenge2_2020:
+        my design:
+          name: миний загвар
+        do something:
+          name: ямар нэг юм хийх
       courseE_artist_functions_predict1:
         draw a square:
           name: квадрат зурах
@@ -1298,6 +1449,11 @@ mn-MN:
         draw ear stems:
           name: чихний ишийг зур
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: квадрат зурах
+        draw ear stems:
+          name: чихний ишийг зур
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: квадрат зурах
         draw ear stems:
@@ -1322,6 +1478,13 @@ mn-MN:
         do something:
           name: ямар нэг юм хийх
       courseE_artist_functions_predict2_2019:
+        draw line of polygons:
+          name: олон өнцөгтийн шугамыг зурах
+        draw polygon:
+          name: олон өнцөгт зурах
+        do something:
+          name: ямар нэг юм хийх
+      courseE_artist_functions_predict2_2020:
         draw line of polygons:
           name: олон өнцөгтийн шугамыг зурах
         draw polygon:
@@ -1594,6 +1757,9 @@ mn-MN:
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter:
           name: тоологчийн хамт шүүс цуглуулж, хөдлөөрэй
+      courseF_bee_for_challenge1_2020:
+        move and get nectar with counter:
+          name: тоологчийн хамт шүүс цуглуулж, хөдлөөрэй
       courseF_bee_functions2:
         get only nectar:
           name: зөвхөн шүүсийг цуглуулах
@@ -1693,10 +1859,16 @@ mn-MN:
       courseF_bee_variables_7_2019:
         collect:
           name: цуглуулах
+      courseF_bee_variables_7_2020:
+        collect:
+          name: цуглуулах
       courseF_bee_variables_8_2018:
         collect:
           name: цуглуулах
       courseF_bee_variables_8_2019:
+        collect:
+          name: цуглуулах
+      courseF_bee_variables_8_2020:
         collect:
           name: цуглуулах
       grade5_artist_binary11:

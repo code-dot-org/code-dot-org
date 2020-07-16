@@ -71,15 +71,22 @@ fa-IR:
         craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
       Overworld Move to Sheep_2019:
         craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+      Overworld Move to Sheep_2020:
+        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
       Underground Avoiding Lava:
         craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می
           توانید برای حرکت به جلو یک دستور اضافه کنید؟
       Underground Avoiding Lava_2019:
         craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می
           توانید برای حرکت به جلو یک دستور اضافه کنید؟
+      Underground Avoiding Lava_2020:
+        craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می
+          توانید برای حرکت به جلو یک دستور اضافه کنید؟
       Underground Iron:
         craft_what_is_iron: این آهن را استخراج کنید!
       Underground Iron_2019:
+        craft_what_is_iron: این آهن را استخراج کنید!
+      Underground Iron_2020:
         craft_what_is_iron: این آهن را استخراج کنید!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره"

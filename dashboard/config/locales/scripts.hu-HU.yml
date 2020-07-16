@@ -5227,6 +5227,9 @@ hu:
           stages:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
             Spelling Bee:
               name: Betüző méh
           lesson_groups:
@@ -5237,6 +5240,9 @@ hu:
           lessons:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
             Spelling Bee:
               name: Betüző méh
         csp1-2020:
@@ -5275,34 +5281,6 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
-        csd3-virtual:
-          description_short: Programozás
-          stages:
-            Variables:
-              name: változók
-            Sprites:
-              name: Sprite-ok
-            Conditionals:
-              name: Feltételek
-            Functions:
-              name: funkciók
-            Random Numbers:
-              name: Véletlen számok
-            Sprite Properties:
-              name: Sprite tulajdonságok
-          lessons:
-            Variables:
-              name: változók
-            Sprites:
-              name: Sprite-ok
-            Conditionals:
-              name: Feltételek
-            Functions:
-              name: funkciók
-            Random Numbers:
-              name: Véletlen számok
-            Sprite Properties:
-              name: Sprite tulajdonságok
         csd2-virtual:
           stages:
             CSS Classes:
@@ -5388,3 +5366,88 @@ hu:
           lesson_groups:
             k5_getting_started_1:
               display_name: Első lépések
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+        csd3-virtual:
+          description_short: Programozás
+          stages:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprites:
+              name: Sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Text:
+              name: szöveg
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+          lessons:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprites:
+              name: Sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Text:
+              name: szöveg
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+          lesson_groups:
+            csd3_1:
+              display_name: Tartalom
+            csd3_2:
+              display_name: Tartalom
+            cspSurvey:
+              display_name: Tartalom
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom

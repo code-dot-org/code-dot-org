@@ -10355,19 +10355,14 @@ ro:
           stages:
             Learn to Drag and Drop:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Sequencing with Scrat:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming in Maze:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming with Rey and BB-8:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming in Harvester:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Spelling Bee:
               name: Albina de Ortografie
               description_student: "[șir gol]"
@@ -10375,22 +10370,16 @@ ro:
             Loops in Ice Age:
               name: Bucle în Ice Age
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Loops in Collector:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Ocean Scene with Loops:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Loops in Artist:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Tell a Story in Play Lab:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Make a Game in Play Lab:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
           lesson_groups:
             csf_loops:
               display_name: Bucle
@@ -10399,19 +10388,14 @@ ro:
           lessons:
             Learn to Drag and Drop:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Sequencing with Scrat:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming in Maze:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming with Rey and BB-8:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming in Harvester:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Spelling Bee:
               name: Albina de Ortografie
               description_student: "[șir gol]"
@@ -10419,22 +10403,16 @@ ro:
             Loops in Ice Age:
               name: Bucle în Ice Age
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Loops in Collector:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Ocean Scene with Loops:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Loops in Artist:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Tell a Story in Play Lab:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Make a Game in Play Lab:
               description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
         csp1-2020:
           stages:
             Binary Numbers:
@@ -10556,80 +10534,6 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             CS Principles Post Course survey:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-        csd3-virtual:
-          description_short: Programare
-          description_audience: "[șir gol]"
-          stages:
-            Shapes and Randomization:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CS Discoveries Post Course survey:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Text and Captioned Scenes:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capitolul 1: Imagini şi animaţii'
-          lessons:
-            Shapes and Randomization:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Variables:
-              name: Variabile
-            Conditionals:
-              name: Condiţionale
-            Velocity:
-              name: Viteza
-            Functions:
-              name: Funcţii
-            Post-Project Test:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CS Discoveries Post Course survey:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprite Properties:
-              name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Text and Captioned Scenes:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         jess-test-script:
@@ -11062,6 +10966,113 @@ ro:
             k5_next_steps_1:
               display_name: Pașii următori
         dani-test-2020:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd3-virtual:
+          description_short: Programare
+          description_audience: "[șir gol]"
+          stages:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lessons:
+            Variables:
+              name: Variabile
+            Sprites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text:
+              name: Text
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+          lesson_groups:
+            csd3_1:
+              display_name: Conţinut
+            csd3_2:
+              display_name: Conţinut
+            cspSurvey:
+              display_name: Conţinut
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lecția
+          lessons:
+            Lesson:
+              name: Lecția
+          lesson_groups:
+            lg_1:
+              display_name: Conţinut
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lecția
+          lessons:
+            Lesson:
+              name: Lecția
+          lesson_groups:
+            lg_1:
+              display_name: Conţinut
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lecția
+          lessons:
+            Lesson:
+              name: Lecția
+          lesson_groups:
+            lg_1:
+              display_name: Conţinut
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lecția
+          lessons:
+            Lesson:
+              name: Lecția
+          lesson_groups:
+            lg_1:
+              display_name: Conţinut
+        kaitie-test-script:
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
