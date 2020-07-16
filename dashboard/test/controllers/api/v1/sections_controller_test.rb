@@ -634,7 +634,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_equal @csp_script.id, section.script_id
-    assert_equal @csp_script.course.id, section.course_id
+    assert_equal @csp_script.unit_group.id, section.course_id
   end
 
   test "update: script_id is cleared if not provided" do

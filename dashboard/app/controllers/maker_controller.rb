@@ -36,7 +36,7 @@ class MakerController < ApplicationController
     # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
     maker_years.each do |year|
-      if assigned.include?(year.unit_group) || assigned.include?(year.script)
+      if assigned.include?(year.course) || assigned.include?(year.script)
         return year.script
       end
     end
