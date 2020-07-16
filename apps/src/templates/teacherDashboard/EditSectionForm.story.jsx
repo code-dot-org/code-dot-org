@@ -7,7 +7,7 @@ import {
   validAssignments,
   testSection
 } from './teacherDashboardTestHelpers';
-        
+
 export default storybook => {
   storybook = storybook.storiesOf('EditSectionForm', module);
 
@@ -28,6 +28,7 @@ export default storybook => {
         }}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -49,6 +50,7 @@ export default storybook => {
         }}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -67,6 +69,7 @@ export default storybook => {
         section={testSection}
         isSaveInProgress={true}
         stageExtrasAvailable={() => false}
+        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
