@@ -14,7 +14,6 @@ scripts_map = {
   'minecraft' => 'minecraft',
   'hero' => 'hero',
   'aquatic' => 'aquatic',
-  'dance' => 'dance',
   'frozen' => 'frozen',
   'playlab' => 'playlab',
   'infinity' => 'infinity',

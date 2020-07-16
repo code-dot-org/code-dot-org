@@ -723,7 +723,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'hoc?' do
-    assert Script.find_by_name('dance').hoc?
     assert Script.find_by_name('flappy').hoc?
     assert Script.find_by_name('mc').hoc?
     assert Script.find_by_name('hourofcode').hoc?
