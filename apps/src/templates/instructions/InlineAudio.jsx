@@ -282,6 +282,10 @@ class InlineAudio extends React.Component {
   }
 }
 
+InlineAudio.defaultProps = {
+  autoplayEnabled: false
+};
+
 export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
