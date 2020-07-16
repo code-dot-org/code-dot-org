@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
-  container: {
+  headerItem: {
     textAlign: 'center',
     cursor: 'pointer'
   },
@@ -63,54 +63,57 @@ export default class HeaderPopup extends Component {
       },
       {includeUserId: true}
     );
+
+    $(document).on('click', this.handleClickDocument);
   };
 
   handleClickClose = () => {
     this.setState({open: false});
+
+    $(document).off('click', this.handleClickDocument);
   };
 
-  handleClickBackground = event => {
-    if (event.target === this.refs.background) {
-      this.setState({open: false});
+  handleClickDocument = event => {
+    const target = event && event.target;
+    if ($(this.refs.headerPopup).find(target).length > 0) {
+      return;
     }
+
+    this.handleClickClose();
   };
 
   render() {
     return (
       <div style={styles.container}>
         {!this.state.open && (
-          <div>
-            <div className="header_popup_link" onClick={this.handleClickOpen}>
-              <i className="fa fa-caret-down" style={styles.caret} />
-              <div style={styles.more}>{i18n.moreAllCaps()}</div>
-            </div>
+          <div
+            style={styles.headerItem}
+            className="header_popup_link"
+            onClick={this.handleClickOpen}
+          >
+            <i className="fa fa-caret-down" style={styles.caret} />
+            <div style={styles.more}>{i18n.moreAllCaps()}</div>
           </div>
         )}
 
         {this.state.open && (
           <div>
-            <div onClick={this.handleClickClose}>
+            <div style={styles.headerItem} onClick={this.handleClickClose}>
               <i className="fa fa-caret-up" style={styles.caret} />
               <div style={styles.more}>{i18n.lessAllCaps()}</div>
             </div>
 
-            <div
-              className="header_popup_background"
-              onClick={this.handleClickBackground}
-              ref="background"
-            >
-              <div className="header_popup">
-                <div
-                  className="header_popup_scrollable"
-                  style={{maxHeight: this.props.windowHeight - 80}}
-                >
-                  <div className="header_popup_body">
-                    <div className="user-stats-block">
-                      <MiniView
-                        linesOfCodeText={this.props.linesOfCodeText}
-                        minimal={this.props.minimal}
-                      />
-                    </div>
+            <div className="header_popup" ref="headerPopup">
+              <div
+                className="header_popup_scrollable"
+                style={{maxHeight: this.props.windowHeight - 80}}
+              >
+                <div className="header_popup_body">
+                  <div className="user-stats-block">
+                    <MiniView
+                      linesOfCodeText={this.props.linesOfCodeText}
+                      minimal={this.props.minimal}
+                    />
                   </div>
                 </div>
               </div>
