@@ -228,9 +228,6 @@ def distribute_course_content(locale)
   locale_dir = File.join("i18n/locales", locale)
 
   Dir.glob(File.join(locale_dir, "course_content/**/*.json")) do |course_strings_file|
-    relative_path = course_strings_file.delete_prefix(locale_dir)
-    next unless file_changed?(locale, relative_path)
-
     course_strings = JSON.load(File.read(course_strings_file))
     next unless course_strings
 
