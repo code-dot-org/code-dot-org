@@ -29937,6 +29937,48 @@ en:
               name: Behaviors with Sprite Lab
             End of Course Project:
               name: End of Course Project
+            Programming with Angry Birds: &1
+              name: Programming with Angry Birds
+            Debugging with Scrat: &2
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel: &3
+              name: Collecting Treasure with Laurel
+            Creating Art with Code: &4
+              name: Creating Art with Code
+            Sticker Art with Loops: &5
+              name: Sticker Art with Loops
+            Nested Loops in Maze: &6
+              name: Nested Loops in Maze
+            Snowflakes with Anna and Elsa: &7
+              name: Snowflakes with Anna and Elsa
+            'Looking Ahead with Minecraft ': &8
+              name: 'Looking Ahead with Minecraft '
+            If/Else with Bee: &9
+              name: If/Else with Bee
+            While Loops with the Farmer: &10
+              name: While Loops with the Farmer
+            Harvesting with Conditionals: &11
+              name: Harvesting with Conditionals
+            Functions with Harvester: &12
+              name: Functions with Harvester
+            Functions with Artist: &13
+              name: Functions with Artist
+            Variables with Artist: &14
+              name: Variables with Artist
+            Changing Variables with Bee: &15
+              name: Changing Variables with Bee
+            Changing Variables with Artist: &16
+              name: Changing Variables with Artist
+            For Loops with Bee: &17
+              name: For Loops with Bee
+            For Loops with Artist: &18
+              name: For Loops with Artist
+            Swimming Fish in Sprite Lab: &19
+              name: Swimming Fish in Sprite Lab
+            Alien Dance Party: &20
+              name: Alien Dance Party
+            Behaviors in Sprite Lab: &21
+              name: Behaviors in Sprite Lab
           lesson_groups:
             csf_warmup:
               display_name: Warm-Up
@@ -30075,6 +30117,27 @@ en:
               name: Behaviors with Sprite Lab
             End of Course Project:
               name: End of Course Project
+            Programming with Angry Birds: *1
+            Debugging with Scrat: *2
+            Collecting Treasure with Laurel: *3
+            Creating Art with Code: *4
+            Sticker Art with Loops: *5
+            Nested Loops in Maze: *6
+            Snowflakes with Anna and Elsa: *7
+            'Looking Ahead with Minecraft ': *8
+            If/Else with Bee: *9
+            While Loops with the Farmer: *10
+            Harvesting with Conditionals: *11
+            Functions with Harvester: *12
+            Functions with Artist: *13
+            Variables with Artist: *14
+            Changing Variables with Bee: *15
+            Changing Variables with Artist: *16
+            For Loops with Bee: *17
+            For Loops with Artist: *18
+            Swimming Fish in Sprite Lab: *19
+            Alien Dance Party: *20
+            Behaviors in Sprite Lab: *21
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -30129,6 +30192,18 @@ en:
               name: Make a Game in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            Programming in with Angry Birds: &22
+              name: Programming in with Angry Birds
+            Loops with Scrat: &23
+              name: Loops with Scrat
+            Loops with Laurel: &24
+              name: Loops with Laurel
+            Drawing Gardens with Loops: &25
+              name: Drawing Gardens with Loops
+            On the Move with Events: &26
+              name: On the Move with Events
+            A Royal Battle with Events: &27
+              name: A Royal Battle with Events
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -30185,6 +30260,12 @@ en:
               name: Make a Game in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            Programming in with Angry Birds: *22
+            Loops with Scrat: *23
+            Loops with Laurel: *24
+            Drawing Gardens with Loops: *25
+            On the Move with Events: *26
+            A Royal Battle with Events: *27
         csp1-2020:
           stages:
             new stage:
@@ -31814,10 +31895,10 @@ en:
               display_name: Next Steps
         dani-test-2020:
           stages:
-            new lesson: &1
+            new lesson: &28
               name: new lesson
           lessons:
-            new lesson: *1
+            new lesson: *28
           lesson_groups:
             lesson group:
               display_name: display name
@@ -32159,10 +32240,42 @@ en:
               display_name: Content
         kaitie-test-script:
           stages:
-            new lesson: &2
+            new lesson: &29
               name: new lesson
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
           lessons:
-            new lesson: *2
+            new lesson: *29
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
           lesson_groups:
             lesson group:
               display_name: display name
