@@ -3,10 +3,13 @@
 require_relative '../config/environment'
 
 scripts_map = {
+  'hour_of_code' => 'Hour of Code',
+  'events' => 'events',
   'jigsaw' => 'jigsaw',
   'hourofcode' => 'hourofcode',
   'starwars' => 'starwars',
   'frozen' => 'frozen',
+  'playlab' => 'playlab',
   'artist' => 'artist',
   'algebra' => 'algebra',
   'flappy' => 'flappy',
