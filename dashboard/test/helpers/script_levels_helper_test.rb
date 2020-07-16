@@ -60,7 +60,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(@student)
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
-    assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.lesson_extras = true
     @section.save
     response = {}
@@ -73,7 +72,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(@student)
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
-    assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.lesson_extras = false
     @section.save
     response = {}
@@ -86,7 +84,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(@student)
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 8, false
-    assert_equal false, script_level.end_of_stage?, 'bad script_level selected for test'
     @section.lesson_extras = true
     @section.save
     response = {}
@@ -98,7 +95,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'get End-of-Stage experience only for student of teacher' do
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
-    assert script_level.end_of_stage?, 'bad script_level selected for test'
     @section.lesson_extras = true
     @section.save
     response = {}

@@ -9,9 +9,9 @@ tr-TR:
         Bee_Cond_5_1a: Mor çiçeklerde 1 veya 0 nektar olabilir... ama kodu çalıştırmadan
           tam olarak bilemezsin!
       4-5 Artist Patterns Free Play:
-        4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
-          organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
-          gittiğini görebilirsin!
+        4-5_Artist_Patterns_Free_Play_1: Favori bloklarınızın hepsi kategoriler altında
+          düzenlendi. Bu kelimelere tıklayarak blokların hangi kategorilere gittiğini
+          görebilirsiniz!
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
@@ -293,13 +293,13 @@ tr-TR:
         Function_intro_Ryan_1: Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma
           alanındaki aynı adla çalıştırmasını söyler.
       Geometric Sun:
-        4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
-          organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
-          gittiğini görebilirsin!
+        4-5_Artist_Patterns_Free_Play_1: Favori bloklarınızın hepsi kategoriler altında
+          düzenlendi. Bu kelimelere tıklayarak blokların hangi kategorilere gittiğini
+          görebilirsiniz!
       Geometric Sun_2018:
-        4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
-          organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
-          gittiğini görebilirsin!
+        4-5_Artist_Patterns_Free_Play_1: Favori bloklarınızın hepsi kategoriler altında
+          düzenlendi. Bu kelimelere tıklayarak blokların hangi kategorilere gittiğini
+          görebilirsiniz!
       Infinity_move_collide:
         Infinity_move_collide_callout: Bu olay gerçekleştiğinde ses çal.
       Infinity_move_directions:
@@ -374,8 +374,8 @@ tr-TR:
       OPD-K5-forloops-5:
         courseF_bee_for4_1: Burada 'için' döngüsünü bulacaksınız!
       OPD-K5-projects-4:
-        courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
-          götür.
+        courseE_playLab_scaffold3_1: Bir sonraki seviyeye geçmek için aktörü bu bayrağa
+          götürün.
       OPD-K5-variables-5:
         courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
       Overworld Chop Trees:
@@ -438,13 +438,13 @@ tr-TR:
       course3_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu
           kullanın.
@@ -458,8 +458,8 @@ tr-TR:
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Bu işlev mısır ile iyi bir iş çıkaracaktır,
           ancak diğer sebzelerde nasıl acaba?
@@ -654,11 +654,11 @@ tr-TR:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
       courseC19_playLab_EOC3:
-        courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
-          götür.
+        courseE_playLab_scaffold3_1: Bir sonraki seviyeye geçmek için aktörü bu bayrağa
+          götürün.
       courseC19_playLab_EOC3_2020:
-        courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
-          götür.
+        courseE_playLab_scaffold3_1: Bir sonraki seviyeye geçmek için aktörü bu bayrağa
+          götürün.
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: Bu bloğu, Waddles ve Chomp temas ettiklerinde
           kullanın!
@@ -732,7 +732,7 @@ tr-TR:
         courseC_harvester_loops1_callout1: Balkabağının üzerindeki dört rakamı, dört
           adet kabak toplanabileceğini gösterir.
       courseC_maze_debugging5:
-        courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
+        courseC_maze_debugging5_1: Gri bloklar silinemez!
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
       courseC_maze_debugging5_2019:
@@ -819,20 +819,20 @@ tr-TR:
         courseC_starWars_loops2: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
-          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "gelişigüzel renk"
-          bloğu işinizi kolaylaştıracaktır!
+          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "rastgele renk" bloğu
+          işinizi kolaylaştıracaktır!
       courseD_artist_nestedLoops1a_2018:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
-          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "gelişigüzel renk"
-          bloğu işinizi kolaylaştıracaktır!
+          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "rastgele renk" bloğu
+          işinizi kolaylaştıracaktır!
       courseD_artist_nestedLoops1a_2019:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
-          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "gelişigüzel renk"
-          bloğu işinizi kolaylaştıracaktır!
+          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "rastgele renk" bloğu
+          işinizi kolaylaştıracaktır!
       courseD_artist_nestedLoops1a_2020:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
-          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "gelişigüzel renk"
-          bloğu işinizi kolaylaştıracaktır!
+          renkleri kullanmak zorunda değilsiniz. İsterseniz bu "rastgele renk" bloğu
+          işinizi kolaylaştıracaktır!
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Bu sayıyı değiştirebilirsiniz.
         courseD_artist_ramp11_2: Kodun tekrar edilmesini istediğiniz sayıyı girmek
@@ -967,83 +967,76 @@ tr-TR:
         courseD_maze_ramp7_1: Bu sizin ilk meydan okuma bulmacanız! Zor olmaları tasarlanmıştır,
           birkaç kez denemeniz gerekebilir.
       courseE_artist_functions1:
-        courseD_artist_functions1_1: İlk karemizi oluşturmaya yardımcı olması için
-          bu bloku kullanmaya başlayalım.
+        courseD_artist_functions1_1: İlk kareyi oluşturmaya bu bloğu kullanmakla başlayalım.
       courseE_artist_functions1_copy:
-        courseD_artist_functions1_1: İlk karemizi oluşturmaya yardımcı olması için
-          bu bloku kullanmaya başlayalım.
+        courseD_artist_functions1_1: İlk kareyi oluşturmaya bu bloğu kullanmakla başlayalım.
       courseE_artist_functions2:
-        courseD_artist_functions2_1: |-
-          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
-          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+        courseD_artist_functions2_1: Bu yeşil blok çalıştığında fonksiyondaki tüm
+          kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?
       courseE_artist_functions2_2018:
-        courseD_artist_functions2_1: |-
-          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
-          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+        courseD_artist_functions2_1: Bu yeşil blok çalıştığında fonksiyondaki tüm
+          kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?
       courseE_artist_functions2_2019:
-        courseD_artist_functions2_1: |-
-          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
-          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+        courseD_artist_functions2_1: Bu yeşil blok çalıştığında fonksiyondaki tüm
+          kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?
       courseE_artist_functions2_2020:
-        courseD_artist_functions2_1: |-
-          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
-          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+        courseD_artist_functions2_1: Bu yeşil blok çalıştığında fonksiyondaki tüm
+          kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?
       courseE_artist_functions2_copy:
-        courseD_artist_functions2_1: |-
-          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
-          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+        courseD_artist_functions2_1: Bu yeşil blok çalıştığında fonksiyondaki tüm
+          kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?
       courseE_artist_functions8:
-        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
-          kutusunun içindeki bu etiketin altına taşındı.
+        courseD_artist_functions8_1: Fonksiyonları oluşturan bloklarınız alet kutusundaki
+          bu etiketin altına taşındı.
       courseE_artist_functions8a_2018:
-        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
-          kutusunun içindeki bu etiketin altına taşındı.
+        courseD_artist_functions8_1: Fonksiyonları oluşturan bloklarınız alet kutusundaki
+          bu etiketin altına taşındı.
       courseE_artist_functions8a_2019:
-        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
-          kutusunun içindeki bu etiketin altına taşındı.
+        courseD_artist_functions8_1: Fonksiyonları oluşturan bloklarınız alet kutusundaki
+          bu etiketin altına taşındı.
       courseE_artist_functions8a_2020:
-        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
-          kutusunun içindeki bu etiketin altına taşındı.
+        courseD_artist_functions8_1: Fonksiyonları oluşturan bloklarınız alet kutusundaki
+          bu etiketin altına taşındı.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge1_2018:
         courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge1_2019:
         courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge1_2020:
         courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
-        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
-          istediğin değişikliği yap!
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı beğenmediyseniz
+          istediğiniz değişikliği yapın!
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: Bu sayıyı değiştirebilirsiniz.
         courseE_artist_ramp8_2: Kodun tekrar edilmesini istediğiniz sayıyı girmek
@@ -1053,56 +1046,56 @@ tr-TR:
         courseE_artist_ramp8_2: Kodun tekrar edilmesini istediğiniz sayıyı girmek
           için buraya tıklayın.
       courseE_farmer_functions1:
-        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
       courseE_farmer_functions13_2018:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions13_2019:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions13_2020:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions1_2018:
-        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
       courseE_farmer_functions1_2019:
-        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
       courseE_farmer_functions1_2020:
-        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
       courseE_farmer_functions1a:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions1a_2018:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions1a_2019:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions1a_2020:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions2b:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions2b_2018:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions2b_2019:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_farmer_functions2b_2020:
-        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
-          herhangi bir zaman değişir.
+        courseE_farmer_functions1a_1: Bilinmeyen bitki. Programı her çalıştırdığınızda
+          değişir.
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
           bölümlerine taşımanızı sağlar.
       courseE_playLab_scaffold3:
-        courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
-          götür.
+        courseE_playLab_scaffold3_1: Bir sonraki seviyeye geçmek için aktörü bu bayrağa
+          götürün.
       courseF_artist_fwp1:
         courseF_artist_fwp1_1: Fonksiyonun içindeki kodu değiştirmek için "düzenle"
           düğmesini kullan.

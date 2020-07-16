@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -15,6 +16,7 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   clear: {
@@ -23,7 +25,7 @@ const styles = {
   }
 };
 
-export default class TeacherHomepage extends Component {
+export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     hocLaunch: PropTypes.string,
@@ -41,7 +43,8 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    beginGoogleImportRosterFlow: PropTypes.func
   };
 
   state = {
@@ -146,6 +149,13 @@ export default class TeacherHomepage extends Component {
     $('#flashes')
       .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
       .show();
+
+    // A special on-load behavior: If requested by queryparam, automatically
+    // launch the Google Classroom rostering flow.
+    const {queryStringOpen, beginGoogleImportRosterFlow} = this.props;
+    if (queryStringOpen === 'rosterDialog') {
+      beginGoogleImportRosterFlow();
+    }
   }
 
   render() {
@@ -161,7 +171,6 @@ export default class TeacherHomepage extends Component {
       teacherName,
       teacherEmail,
       canViewAdvancedTools,
-      queryStringOpen,
       isEnglish,
       specialAnnouncement
     } = this.props;
@@ -226,7 +235,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} />
+        <TeacherSections />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -243,3 +252,8 @@ export default class TeacherHomepage extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  {beginGoogleImportRosterFlow}
+)(UnconnectedTeacherHomepage);

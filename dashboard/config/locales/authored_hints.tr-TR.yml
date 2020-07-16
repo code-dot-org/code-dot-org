@@ -62,9 +62,9 @@ tr-TR:
         2-3_Artist_Debugging_9_b: Tam dönüş için blok eklemene gerek yok. Sadece programdaki
           sola dön bloğuna 60 derece ekle!
       2-3 Artist Functions 1:
-        2-3_Artist_Functions_1_a: Karelerin kenarları 100 piksel genişliğinde, buda
-          demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
-        2-3_Artist_Functions_1_b: Gözlük yapmak için çakışan çizgiler olabilir.
+        2-3_Artist_Functions_1_a: Karelerin her bir kenarı 100 piksel, ikinci kareyi
+          çizmeden önce 175 piksel ilerlemelisiniz.
+        2-3_Artist_Functions_1_b: Gözlük yapmak için üst üste binen çizgiler çizebilirsiniz.
       2-3 Artist Functions 11:
         2-3_Artist_Functions_11_a: Fonksiyonun içinde sadece kenar sayısını ve kenar
           uzunluğunu değil, bir de sanatçının her kenar arasında dönmesi gereken açıyı
@@ -72,8 +72,12 @@ tr-TR:
       2-3 Artist Functions 12:
         2-3_Artist_Functions_12_a: Önce kodu çalıştır ve ne eklemen gerektiğini gör.
       2-3 Artist Functions 2:
-        2-3_Artist_Functions_2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
-          \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+        2-3_Artist_Functions_2_a: |-
+          Programınız şunları yapmalı:
+
+          -   Fonksiyon kullan
+          -   100 + 75 piksel ilerle
+          -   Fonksiyon kullan
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 4:
@@ -148,15 +152,17 @@ tr-TR:
         2-3_Bee_Functions_6_a: Fonksiyonla döngü kullanman gerekmiyor. Fonksiyonu
           kullanarak ilerle sonra da tekrar fonksiyonu kullanarak ilerle.
       2-3 Bee Functions 8:
-        2-3_Bee_Functions_8_a: |-
-          Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.
-           Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız!  ! \[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
+        2-3_Bee_Functions_8_a: "Bulmaca zorlu görünüyorsa fonksiyonu adım adım oluşturmayı
+          deneyin.  \n\nBirkaç blok ekleyin, sonra deneyin. Biraz daha ekleyin, sonra
+          tekrar deneyin. Çok geçmeden başaracaksınız!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9:
         2-3_Bee_Functions_8_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde
           bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın.
           Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        2-3_Bee_Functions_8_b: Kodunu yeşil fonksiyon bloğu içinde oluştur. ! \[]
-          (<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)
+        2-3_Bee_Functions_8_b: |-
+          Kodunuzu yeşil fonksiyon bloğu içinde oluşturmayı unutmayın!
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2:
         2-3_Bee_Loops_2_a: Döngü içinde 4 blok olsun.
       2-3 Bee Loops 3:
@@ -310,10 +316,10 @@ tr-TR:
       4-5 While Loops 8:
         4-5_While_Loops_8_a: Her öğe kendi 'süresince' döngüsüne ihtiyaç duymaktadır.
       Course 4 Artist 11:
-        Course_4_Artist_11_a: 'Yarım altıgenin \*\* 30 kenar uzunluğu \*\* ve \*\*
-          60 derece\*\*sağa dönüşü vardır.  '
-        Course_4_Artist_11_b: '2/3 üçgeninin \*\* 80 kenar uzunluğunu \*\* ve \*\*
-          120 derece \*\*sağa dönüşü vardır.  '
+        Course_4_Artist_11_a: 'Yarım altıgenin **30 kenar uzunluğu \*\* ve \*\*60
+          derece** sağa dönüşü var.  '
+        Course_4_Artist_11_b: '2/3 üçgenin **80 kenar uzunluğunu** ve **120 derece**
+          sağa dönüşü var. '
       Course 4 Artist 12:
         Course_4_Artist_12_a: 'Bu resimde tekrarlanan her şekil önce \*\* yarım bir
           Altıgen **, daha sonra \*\* bir üçgenin iki kenarının**birleşiminden oluşur. '
@@ -2613,20 +2619,22 @@ tr-TR:
       OPD-K5-forloops-7:
         courseF_bee_for7_c: "'tekrar' döngünüzde 'zıt' değişken kullanmayı unutmayın."
       OPD-K5-projects-2:
-        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
-          aktör eklemek için kullanılabilir."
-        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
-          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
-        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
-          planı ayarla' bloğunu kullanın.
+        courseE_playLab_scaffold1_a: '"Ayarla aktör 1 ??? görünümüne" bloğu bu aşamada
+          bir aktör eklemek için kullanılabilir.'
+        courseE_playLab_scaffold1_b: Aktörünüzün programınızın başında görünmesi için
+          "çalıştığı zaman" bloğunun altına "aktörü ayarla" bloğu yerleştirin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için "??? arka
+          planı ayarla" bloğunu kullanın.
       OPD-K5-projects-3:
-        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
-          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
-        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
-          ettirebilmelisin!
+        courseE_playLab_scaffold1_a: Bloğun kontrol ettiği yönü değiştirmek için "\_\_\_\_
+          oka basıldığında" olayının açılır menüsünü kullanın.
+        courseE_playLab_scaffold1_b: Her birinin altında taşıyacakları yön olan dört
+          "\_\_\_\_ oka basıldığında" olay bloğunuz olmalı.
+        courseE_playLab_scaffold1_c: Tamamladığınızda kahramanınızı ok tuşlarıyla
+          hareket ettirebilmelisiniz!
       OPD-K5-projects-5:
-        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
-          çıkarmak için 'puanı sil' kullanın.
+        courseE_playLab_scaffold4_a: Bir puan eklemek için '"puan al" ve bir puan
+          silmek için "'puan sil" blokları kullanın.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_a: Bu üçgende iç açıyı 60 derece yapmak
           için sanatçıyı 120 derece döndürmeyi unutmayın.
@@ -3190,14 +3198,13 @@ tr-TR:
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course3_bee_debugging_challenge1:
@@ -3218,14 +3225,14 @@ tr-TR:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu
           her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra
           çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde
-          kod oluşturmayı unutmayın.
+        courseE_bee_functions_challenge1_b: Kodunuzu yeşil fonksiyon bloğu içinde
+          oluşturmayı unutmayın.
       course3_bee_functions_challenge2:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu
           her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra
           çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde
-          kod oluşturmayı unutmayın.
+        courseE_bee_functions_challenge1_b: Kodunuzu yeşil fonksiyon bloğu içinde
+          oluşturmayı unutmayın.
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_a: Yardımcı olmak için araç kutusundaki işlevleri
           kullanabilirsiniz. Başka bir işlevin tanımının içindeki bir fonksiyonu çağırabilirsiniz!
@@ -3387,30 +3394,30 @@ tr-TR:
           veya tüm kodları kaldırabilir ve kendi yolunu bulabilirsin!
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
-          Burada oyuncu oyunu kazandığında yapabileceğin bazı şeyler var:
+          İşte, oyuncu oyunu kazandığında yapabileceğiniz birkaç şey:
 
           -   Dinozoru kaybet.
           -   Sincapları durdur.
           -   Sincapları ve şövalyeyi mutlu et.
           -   Yeni bir arka plan ayarla.
-          -   Yardım ettiği için oyuncuya şövalyeyi teşekkür ettir.
+          -   Şövalyenin, yardım ettiği için oyuncuya teşekkür etmesini sağla.
           -   Bütün aktörleri kaybet ve "Kazandınız!" mesajı göster.
         courseE_playLab_challenge1_b: |-
-          Burada oyuncu oyunu kaybettiğinde yapabileceğin bazı şeyler var:
+          İşte, oyuncu oyunu kaybettiğinde yapabileceğiniz birkaç şey:
 
-          -   Şövalyeyi kaybet.
+          -   Şövalyeyi kaybet
           -   Sincapları üzgün yap.
-          -   Dinozora bir şeyler söylet.
+          -   Dinozora bir şey söylet.
           -   Yeni bir arka plan ayarla.
-          -   Bütün aktörleri yok et ve "Oyun Bitti" mesajı göster.
+          -   Bütün aktörleri kaybet ve "Kaybettiniz!" mesajı göster.
       course4_artist_binary_challenge2:
         courseD_artist_binary_challenge2_a: |-
           Eğer kodların gerçekten karmaşık bir hal almaya başlarsa, senin için en iyi ipucu `⟲ Baştan Başla`komutuna basmak.
 
           Orjinal programdan sadece bir kaç satır hatalı. Bir yaklaşım başarısız olursa, geri dön ve yeniden dene. Bir çözüm var!
       course4_artist_concept_challenge2:
-        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez oluşturduğunda,
-          onu tekrar tekrar kullanabilirsin. İstediğin zaman istediğin yerde!
+        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez tanımladığınızda
+          tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!
         courseE_artist_concept_challenge2_b: |-
           Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:
           <xml>  <block type="jump_to">
@@ -3420,14 +3427,13 @@ tr-TR:
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course4_artist_variables_challenge1:
@@ -6710,35 +6716,39 @@ tr-TR:
         courseB_starWars_prog9_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC19_playLab_EOC1:
-        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
-          aktör eklemek için kullanılabilir."
-        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
-          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
-        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
-          planı ayarla' bloğunu kullanın.
+        courseE_playLab_scaffold1_a: '"Ayarla aktör 1 ??? görünümüne" bloğu bu aşamada
+          bir aktör eklemek için kullanılabilir.'
+        courseE_playLab_scaffold1_b: Aktörünüzün programınızın başında görünmesi için
+          "çalıştığı zaman" bloğunun altına "aktörü ayarla" bloğu yerleştirin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için "??? arka
+          planı ayarla" bloğunu kullanın.
       courseC19_playLab_EOC1_2020:
-        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
-          aktör eklemek için kullanılabilir."
-        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
-          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
-        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
-          planı ayarla' bloğunu kullanın.
+        courseE_playLab_scaffold1_a: '"Ayarla aktör 1 ??? görünümüne" bloğu bu aşamada
+          bir aktör eklemek için kullanılabilir.'
+        courseE_playLab_scaffold1_b: Aktörünüzün programınızın başında görünmesi için
+          "çalıştığı zaman" bloğunun altına "aktörü ayarla" bloğu yerleştirin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için "??? arka
+          planı ayarla" bloğunu kullanın.
       courseC19_playLab_EOC2:
-        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
-          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
-        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
-          ettirebilmelisin!
+        courseE_playLab_scaffold1_a: Bloğun kontrol ettiği yönü değiştirmek için "\_\_\_\_
+          oka basıldığında" olayının açılır menüsünü kullanın.
+        courseE_playLab_scaffold1_b: Her birinin altında taşıyacakları yön olan dört
+          "\_\_\_\_ oka basıldığında" olay bloğunuz olmalı.
+        courseE_playLab_scaffold1_c: Tamamladığınızda kahramanınızı ok tuşlarıyla
+          hareket ettirebilmelisiniz!
       courseC19_playLab_EOC2_2020:
-        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
-          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
-        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
-          ettirebilmelisin!
+        courseE_playLab_scaffold1_a: Bloğun kontrol ettiği yönü değiştirmek için "\_\_\_\_
+          oka basıldığında" olayının açılır menüsünü kullanın.
+        courseE_playLab_scaffold1_b: Her birinin altında taşıyacakları yön olan dört
+          "\_\_\_\_ oka basıldığında" olay bloğunuz olmalı.
+        courseE_playLab_scaffold1_c: Tamamladığınızda kahramanınızı ok tuşlarıyla
+          hareket ettirebilmelisiniz!
       courseC19_playLab_EOC4:
-        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
-          çıkarmak için 'puanı sil' kullanın.
+        courseE_playLab_scaffold4_a: Bir puan eklemek için '"puan al" ve bir puan
+          silmek için "'puan sil" blokları kullanın.
       courseC19_playLab_EOC4_2020:
-        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
-          çıkarmak için 'puanı sil' kullanın.
+        courseE_playLab_scaffold4_a: Bir puan eklemek için '"puan al" ve bir puan
+          silmek için "'puan sil" blokları kullanın.
       courseC_PlayLab_events1:
         courseC_PlayLab_events1_a: |-
           Bu bloğu "çalıştığı zaman" bloğuna ekleyin:
@@ -7522,37 +7532,84 @@ tr-TR:
         courseC_artist_prog2_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece
           sağa dön` bloğunu kullanın.
       courseC_artist_prog2_2018:
-        courseC_artist_prog2_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan,
-          otomatik olarak bir çizgi çizeceğim.
-        courseC_artist_prog2_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece
-          sağa dön` bloğunu kullanın.
+        courseC_artist_prog2_a: '*"<xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          bloğunu kullanırsanız bir çizgi çizeceğim."*'
+        courseC_artist_prog2_b: Köşeyi dönmekte zorlanıyor musunuz? <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
+          bloğunu kullanın.
       courseC_artist_prog2_2019:
-        courseC_artist_prog2_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan,
-          otomatik olarak bir çizgi çizeceğim.
-        courseC_artist_prog2_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece
-          sağa dön` bloğunu kullanın.
+        courseC_artist_prog2_a: '*"<xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          bloğunu kullanırsanız bir çizgi çizeceğim."*'
+        courseC_artist_prog2_b: Köşeyi dönmekte zorlanıyor musunuz? <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
+          bloğunu kullanın.
       courseC_artist_prog2_2020:
-        courseC_artist_prog2_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan,
-          otomatik olarak bir çizgi çizeceğim.
-        courseC_artist_prog2_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece
-          sağa dön` bloğunu kullanın.
+        courseC_artist_prog2_a: '*"<xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          bloğunu kullanırsanız bir çizgi çizeceğim."*'
+        courseC_artist_prog2_b: Köşeyi dönmekte zorlanıyor musunuz? <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
+          bloğunu kullanın.
       courseC_artist_prog3:
-        courseC_artist_prog3_b: Daha kısa kodla yapmak ister misin? Bu bulmacada 'Tekrar'
-          (repeat) döngüsü kullanmayı deneyin.
+        courseC_artist_prog3_a: |-
+          Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.
+
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+        courseC_artist_prog3_b: Kodu kısaltmak ister misiniz? Bu bulmacada "tekrar"
+          döngüsü kullanabilirsiniz.
       courseC_artist_prog3_2018:
-        courseC_artist_prog3_b: Daha kısa kodla yapmak ister misin? Bu bulmacada 'Tekrar'
-          (repeat) döngüsü kullanmayı deneyin.
+        courseC_artist_prog3_a: |-
+          Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.
+
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+        courseC_artist_prog3_b: Kodu kısaltmak ister misiniz? Bu bulmacada "tekrar"
+          döngüsü kullanabilirsiniz.
       courseC_artist_prog3_2019:
-        courseC_artist_prog3_b: Daha kısa kodla yapmak ister misin? Bu bulmacada 'Tekrar'
-          (repeat) döngüsü kullanmayı deneyin.
+        courseC_artist_prog3_a: |-
+          Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.
+
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+        courseC_artist_prog3_b: Kodu kısaltmak ister misiniz? Bu bulmacada "tekrar"
+          döngüsü kullanabilirsiniz.
       courseC_artist_prog3_2020:
-        courseC_artist_prog3_b: Daha kısa kodla yapmak ister misin? Bu bulmacada 'Tekrar'
-          (repeat) döngüsü kullanmayı deneyin.
+        courseC_artist_prog3_a: |-
+          Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.
+
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+          -   dön
+          -   ilerle
+        courseC_artist_prog3_b: Kodu kısaltmak ister misiniz? Bu bulmacada "tekrar"
+          döngüsü kullanabilirsiniz.
       courseC_artist_prog4:
-        courseC_artist_prog4_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog4_a: Roketi tamamlamak için üstteki üçgeni çizmeniz yeterli!
+        courseC_artist_prog4_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog4_c: |-
-          Bir üçgen çizmek için:
+          Bir üçgen çizmek için şunları yapın:
 
           -   ilerle
           -   120 derece sola dön
@@ -7560,10 +7617,11 @@ tr-TR:
           -   120 derece sola dön
           -   ilerle
       courseC_artist_prog4_2018:
-        courseC_artist_prog4_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog4_a: Roketi tamamlamak için üstteki üçgeni çizmeniz yeterli!
+        courseC_artist_prog4_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog4_c: |-
-          Bir üçgen çizmek için:
+          Bir üçgen çizmek için şunları yapın:
 
           -   ilerle
           -   120 derece sola dön
@@ -7571,10 +7629,11 @@ tr-TR:
           -   120 derece sola dön
           -   ilerle
       courseC_artist_prog4_2019:
-        courseC_artist_prog4_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog4_a: Roketi tamamlamak için üstteki üçgeni çizmeniz yeterli!
+        courseC_artist_prog4_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog4_c: |-
-          Bir üçgen çizmek için:
+          Bir üçgen çizmek için şunları yapın:
 
           -   ilerle
           -   120 derece sola dön
@@ -7582,10 +7641,11 @@ tr-TR:
           -   120 derece sola dön
           -   ilerle
       courseC_artist_prog4_2020:
-        courseC_artist_prog4_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog4_a: Roketi tamamlamak için üstteki üçgeni çizmeniz yeterli!
+        courseC_artist_prog4_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog4_c: |-
-          Bir üçgen çizmek için:
+          Bir üçgen çizmek için şunları yapın:
 
           -   ilerle
           -   120 derece sola dön
@@ -7593,83 +7653,147 @@ tr-TR:
           -   120 derece sola dön
           -   ilerle
       courseC_artist_prog5:
+        courseC_artist_prog5_a: Kodu satır satır inceleyip işlerin nerede karıştığını
+          anlayana dek "Çalıştır"ın altındaki aracı kaydırarak kodunuzu yavaşlatın.
         courseC_artist_prog5_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseC_artist_prog5_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
-        courseC_artist_prog5_d: Her sağa dönüş 90 derece olmalıdır.
+        courseC_artist_prog5_c: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
+        courseC_artist_prog5_d: Her dönüş 90 derece sağa olmalıdır.
       courseC_artist_prog5_2018:
+        courseC_artist_prog5_a: Kodu satır satır inceleyip işlerin nerede karıştığını
+          anlayana dek "Çalıştır"ın altındaki aracı kaydırarak kodunuzu yavaşlatın.
         courseC_artist_prog5_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
         courseC_artist_prog5_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
           üzerindeki açılır menüyü kullanabilirsin!
-        courseC_artist_prog5_d: Her sağa dönüş 90 derece olmalıdır.
+        courseC_artist_prog5_d: Her dönüş 90 derece sağa olmalıdır.
       courseC_artist_prog5_2019:
+        courseC_artist_prog5_a: Kodu satır satır inceleyip işlerin nerede karıştığını
+          anlayana dek "Çalıştır"ın altındaki aracı kaydırarak kodunuzu yavaşlatın.
         courseC_artist_prog5_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
         courseC_artist_prog5_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
           üzerindeki açılır menüyü kullanabilirsin!
-        courseC_artist_prog5_d: Her sağa dönüş 90 derece olmalıdır.
+        courseC_artist_prog5_d: Her dönüş 90 derece sağa olmalıdır.
       courseC_artist_prog5_2020:
+        courseC_artist_prog5_a: Kodu satır satır inceleyip işlerin nerede karıştığını
+          anlayana dek "Çalıştır"ın altındaki aracı kaydırarak kodunuzu yavaşlatın.
         courseC_artist_prog5_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
         courseC_artist_prog5_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
           üzerindeki açılır menüyü kullanabilirsin!
-        courseC_artist_prog5_d: Her sağa dönüş 90 derece olmalıdır.
+        courseC_artist_prog5_d: Her dönüş 90 derece sağa olmalıdır.
+      courseC_artist_prog6:
+        courseC_artist_prog6_a: Artist, ilk satırı çizgiyi çizmek için zaten doğru
+          yöne bakıyor.
+        courseC_artist_prog6_b: Bu baklava şekli aslında köşesi üzerinde duran bir
+          kare.
+        courseC_artist_prog6_c: Bu baklava şekli, aynı zamanda bir kare. Köşelerde
+          90 derece döndüğünüzden emin olun.
+      courseC_artist_prog6_2018:
+        courseC_artist_prog6_a: Artist, ilk satırı çizgiyi çizmek için zaten doğru
+          yöne bakıyor.
+        courseC_artist_prog6_b: Bu baklava şekli aslında köşesi üzerinde duran bir
+          kare.
+        courseC_artist_prog6_c: Bu baklava şekli, aynı zamanda bir kare. Köşelerde
+          90 derece döndüğünüzden emin olun.
+      courseC_artist_prog6_2019:
+        courseC_artist_prog6_a: Artist, ilk satırı çizgiyi çizmek için zaten doğru
+          yöne bakıyor.
+        courseC_artist_prog6_b: Bu baklava şekli aslında köşesi üzerinde duran bir
+          kare.
+        courseC_artist_prog6_c: Bu baklava şekli, aynı zamanda bir kare. Köşelerde
+          90 derece döndüğünüzden emin olun.
+      courseC_artist_prog6_2020:
+        courseC_artist_prog6_a: Artist, ilk satırı çizgiyi çizmek için zaten doğru
+          yöne bakıyor.
+        courseC_artist_prog6_b: Bu baklava şekli aslında köşesi üzerinde duran bir
+          kare.
+        courseC_artist_prog6_c: Bu baklava şekli, aynı zamanda bir kare. Köşelerde
+          90 derece döndüğünüzden emin olun.
       courseC_artist_prog7:
-        courseC_artist_prog7_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog7_a: Tüm açıları 45 veya 90 derece.
+        courseC_artist_prog7_b: |-
+          İlk adımda her şey yolunda mı?\
+          Peki ikinci adımda?\
+          İşler nerede karışıyor?
+        courseC_artist_prog7_c: Hangi açıya ihtiyacınız olduğunu görmek için dönüş
+          bloklarındaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog7_d: |-
-          Bu kodu 2 kere tekrar etmelisin:
+          Şunları yapın:
 
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
           -   ilerle
-          -   sağa 90 derece dön
+          -   90 derece sağa dön
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
+
+          Bu deseni iki kez tekrarlayın!
         courseC_artist_prog7_e: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC_artist_prog7_2018:
-        courseC_artist_prog7_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog7_a: Tüm açıları 45 veya 90 derece.
+        courseC_artist_prog7_b: |-
+          İlk adımda her şey yolunda mı?\
+          Peki ikinci adımda?\
+          İşler nerede karışıyor?
+        courseC_artist_prog7_c: Hangi açıya ihtiyacınız olduğunu görmek için dönüş
+          bloklarındaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog7_d: |-
-          Bu kodu 2 kere tekrar etmelisin:
+          Şunları yapın:
 
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
           -   ilerle
-          -   sağa 90 derece dön
+          -   90 derece sağa dön
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
+
+          Bu deseni iki kez tekrarlayın!
         courseC_artist_prog7_e: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC_artist_prog7_2019:
-        courseC_artist_prog7_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog7_a: Tüm açıları 45 veya 90 derece.
+        courseC_artist_prog7_b: |-
+          İlk adımda her şey yolunda mı?\
+          Peki ikinci adımda?\
+          İşler nerede karışıyor?
+        courseC_artist_prog7_c: Hangi açıya ihtiyacınız olduğunu görmek için dönüş
+          bloklarındaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog7_d: |-
-          Bu kodu 2 kere tekrar etmelisin:
+          Şunları yapın:
 
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
           -   ilerle
-          -   sağa 90 derece dön
+          -   90 derece sağa dön
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
+
+          Bu deseni iki kez tekrarlayın!
         courseC_artist_prog7_e: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC_artist_prog7_2020:
-        courseC_artist_prog7_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön' bloğu
-          üzerindeki açılır menüyü kullanabilirsin!
+        courseC_artist_prog7_a: Tüm açıları 45 veya 90 derece.
+        courseC_artist_prog7_b: |-
+          İlk adımda her şey yolunda mı?\
+          Peki ikinci adımda?\
+          İşler nerede karışıyor?
+        courseC_artist_prog7_c: Hangi açıya ihtiyacınız olduğunu görmek için dönüş
+          bloklarındaki açılır menüyü kullanabilirsiniz!
         courseC_artist_prog7_d: |-
-          Bu kodu 2 kere tekrar etmelisin:
+          Şunları yapın:
 
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
           -   ilerle
-          -   sağa 90 derece dön
+          -   90 derece sağa dön
           -   ilerle
-          -   sağa 45 derece dön
+          -   45 derece sağa dön
+
+          Bu deseni iki kez tekrarlayın!
         courseC_artist_prog7_e: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC_artist_prog_challenge1:
@@ -7686,24 +7810,24 @@ tr-TR:
           olarak veya iki farklı kare olarak çizebilirsiniz!
       courseC_artist_prog_challenge2a:
         courseC_artist_prog_challenge2_a: İlk satırı çizdikten sonra, ikinci satırı
-          çizmeden önce sola dönmeyi deneyin.
+          çizmeden önce sola dönün.
         courseC_artist_prog_challenge2_b: İkinci satırı çizdikten sonra, üçüncü satırı
-          çizmeden önce sağa dönmeyi deneyin.
+          çizmeden önce sağa dönün.
       courseC_artist_prog_challenge2a_2018:
         courseC_artist_prog_challenge2_a: İlk satırı çizdikten sonra, ikinci satırı
-          çizmeden önce sola dönmeyi deneyin.
+          çizmeden önce sola dönün.
         courseC_artist_prog_challenge2_b: İkinci satırı çizdikten sonra, üçüncü satırı
-          çizmeden önce sağa dönmeyi deneyin.
+          çizmeden önce sağa dönün.
       courseC_artist_prog_challenge2a_2019:
         courseC_artist_prog_challenge2_a: İlk satırı çizdikten sonra, ikinci satırı
-          çizmeden önce sola dönmeyi deneyin.
+          çizmeden önce sola dönün.
         courseC_artist_prog_challenge2_b: İkinci satırı çizdikten sonra, üçüncü satırı
-          çizmeden önce sağa dönmeyi deneyin.
+          çizmeden önce sağa dönün.
       courseC_artist_prog_challenge2a_2020:
         courseC_artist_prog_challenge2_a: İlk satırı çizdikten sonra, ikinci satırı
-          çizmeden önce sola dönmeyi deneyin.
+          çizmeden önce sola dönün.
         courseC_artist_prog_challenge2_b: İkinci satırı çizdikten sonra, üçüncü satırı
-          çizmeden önce sağa dönmeyi deneyin.
+          çizmeden önce sağa dönün.
       courseC_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: Döngüler kullanın, böylece \`topla 'blokları
           bitmez!
@@ -8342,65 +8466,221 @@ tr-TR:
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging1:
+        courseC_maze_debugging1_a: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging1_b: Bu bulmacayı tamamlamak için eklemeniz gereken
           1 blok var.
       courseC_maze_debugging1_2018:
+        courseC_maze_debugging1_a: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging1_b: Bu bulmacayı tamamlamak için eklemeniz gereken
           1 blok var.
       courseC_maze_debugging1_2019:
+        courseC_maze_debugging1_a: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging1_b: Bu bulmacayı tamamlamak için eklemeniz gereken
           1 blok var.
       courseC_maze_debugging1_2020:
+        courseC_maze_debugging1_a: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging1_b: Bu bulmacayı tamamlamak için eklemeniz gereken
           1 blok var.
       courseC_maze_debugging2:
+        courseC_maze_debugging2_a: Çalışma alanında birçok harika kod var. Tamamını
+          silip yeniden başlamayın!
+        courseC_maze_debugging2_b: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging2_c: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging2_2018:
+        courseC_maze_debugging2_a: Çalışma alanında birçok harika kod var. Tamamını
+          silip yeniden başlamayın!
+        courseC_maze_debugging2_b: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging2_c: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging2_2019:
+        courseC_maze_debugging2_a: Çalışma alanında birçok harika kod var. Tamamını
+          silip yeniden başlamayın!
+        courseC_maze_debugging2_b: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging2_c: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging2_2020:
+        courseC_maze_debugging2_a: Çalışma alanında birçok harika kod var. Tamamını
+          silip yeniden başlamayın!
+        courseC_maze_debugging2_b: "-   İlk adımdan sonra çalışıyor mu?\n-   İkinci
+          adımdan sonra çalışıyor mu? \n-   İşler nerede karışıyor?"
         courseC_maze_debugging2_c: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging3:
+        courseC_maze_debugging3_a: |-
+          Kodlarınızın arasından bir bloğu silmek için, bloklarınızın tamamını çalışma alanının başka bir kısmına sürükleyin.
+
+          Silmek istediğiniz bloğu araç kutusuna geri sürükleyin.
+
+          Son olarak, diğer bloklarınızı ait oldukları yere yeniden yerleştirin.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_a: |-
+          Kodlarınızın arasından bir bloğu silmek için, bloklarınızın tamamını çalışma alanının başka bir kısmına sürükleyin.
+
+          Silmek istediğiniz bloğu araç kutusuna geri sürükleyin.
+
+          Son olarak, diğer bloklarınızı ait oldukları yere yeniden yerleştirin.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_a: |-
+          Kodlarınızın arasından bir bloğu silmek için, bloklarınızın tamamını çalışma alanının başka bir kısmına sürükleyin.
+
+          Silmek istediğiniz bloğu araç kutusuna geri sürükleyin.
+
+          Son olarak, diğer bloklarınızı ait oldukları yere yeniden yerleştirin.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging3_2020:
+        courseC_maze_debugging3_a: |-
+          Kodlarınızın arasından bir bloğu silmek için, bloklarınızın tamamını çalışma alanının başka bir kısmına sürükleyin.
+
+          Silmek istediğiniz bloğu araç kutusuna geri sürükleyin.
+
+          Son olarak, diğer bloklarınızı ait oldukları yere yeniden yerleştirin.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Neyin yanlış olduğunu anlayamıyor musunuz? Ne olduğunu
           görmek için kodu bir kaç kere çalıştırmayı deneyin.
       courseC_maze_debugging4:
-        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'ı yanlış yönde çeviriyor.
-          Hangisi bulabilir misin?
+        courseC_maze_debugging4_a: Talimatların üzerinden tek tek geçmek için "Adım"
+          düğmesini kullanın. İşlerin karıştığı satırı bulmanıza yardımcı oldu mu?
+        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'i yanlış yöne döndürüyor.
+          Hangisi olduğunu bulabilir misiniz?
       courseC_maze_debugging4_2018:
-        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'ı yanlış yönde çeviriyor.
-          Hangisi bulabilir misin?
+        courseC_maze_debugging4_a: Talimatların üzerinden tek tek geçmek için "Adım"
+          düğmesini kullanın. İşlerin karıştığı satırı bulmanıza yardımcı oldu mu?
+        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'i yanlış yöne döndürüyor.
+          Hangisi olduğunu bulabilir misiniz?
       courseC_maze_debugging4_2019:
-        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'ı yanlış yönde çeviriyor.
-          Hangisi bulabilir misin?
+        courseC_maze_debugging4_a: Talimatların üzerinden tek tek geçmek için "Adım"
+          düğmesini kullanın. İşlerin karıştığı satırı bulmanıza yardımcı oldu mu?
+        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'i yanlış yöne döndürüyor.
+          Hangisi olduğunu bulabilir misiniz?
       courseC_maze_debugging4_2020:
-        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'ı yanlış yönde çeviriyor.
-          Hangisi bulabilir misin?
+        courseC_maze_debugging4_a: Talimatların üzerinden tek tek geçmek için "Adım"
+          düğmesini kullanın. İşlerin karıştığı satırı bulmanıza yardımcı oldu mu?
+        courseC_maze_debugging4_b: Dönüşlerden biri, Scrat'i yanlış yöne döndürüyor.
+          Hangisi olduğunu bulabilir misiniz?
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_a: "Çalışma alanında zaten birçok faydalı kod var.
+          Tamamını silmeyin! \nKodu inceleyip hatanın nerede olduğunu anlamak için
+          \"Adım\" düğmesini kullanın."
+        courseC_maze_debugging5_b: Scrat'in yapması gerekeni dışınızdan söylemeyi
+          deneyin. Çalışma alanındaki kodla aynı mı? Hata ne?
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_a: "Çalışma alanında zaten birçok faydalı kod var.
+          Tamamını silmeyin! \nKodu inceleyip hatanın nerede olduğunu anlamak için
+          \"Adım\" düğmesini kullanın."
+        courseC_maze_debugging5_b: Scrat'in yapması gerekeni dışınızdan söylemeyi
+          deneyin. Çalışma alanındaki kodla aynı mı? Hata ne?
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_a: "Çalışma alanında zaten birçok faydalı kod var.
+          Tamamını silmeyin! \nKodu inceleyip hatanın nerede olduğunu anlamak için
+          \"Adım\" düğmesini kullanın."
+        courseC_maze_debugging5_b: Scrat'in yapması gerekeni dışınızdan söylemeyi
+          deneyin. Çalışma alanındaki kodla aynı mı? Hata ne?
+      courseC_maze_debugging5_2020:
+        courseC_maze_debugging5_a: "Çalışma alanında zaten birçok faydalı kod var.
+          Tamamını silmeyin! \nKodu inceleyip hatanın nerede olduğunu anlamak için
+          \"Adım\" düğmesini kullanın."
+        courseC_maze_debugging5_b: Scrat'in yapması gerekeni dışınızdan söylemeyi
+          deneyin. Çalışma alanındaki kodla aynı mı? Hata ne?
       courseC_maze_debugging6:
-        courseC_maze_debugging6_b: Bir kez hatayı bulup düzeltirsen ikinciyi bulmak
-          için hata ayıklamaya yeniden başla. Program çalışana kadar işlemi tekrarlayın!
+        courseC_maze_debugging6_a: |-
+          -   Scrat ne yapmalı?
+          -   Scrat ne yapıyor?
+          -   Bu size ne anlatıyor?
+        courseC_maze_debugging6_b: |-
+          İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          İşlemi, program çalışana dek tekrarlayın!
       courseC_maze_debugging6_2018:
-        courseC_maze_debugging6_b: Bir kez hatayı bulup düzeltirsen ikinciyi bulmak
-          için hata ayıklamaya yeniden başla. Program çalışana kadar işlemi tekrarlayın!
+        courseC_maze_debugging6_a: |-
+          -   Scrat ne yapmalı?
+          -   Scrat ne yapıyor?
+          -   Bu size ne anlatıyor?
+        courseC_maze_debugging6_b: |-
+          İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          İşlemi, program çalışana dek tekrarlayın!
       courseC_maze_debugging6_2019:
-        courseC_maze_debugging6_b: Bir kez hatayı bulup düzeltirsen ikinciyi bulmak
-          için hata ayıklamaya yeniden başla. Program çalışana kadar işlemi tekrarlayın!
+        courseC_maze_debugging6_a: |-
+          -   Scrat ne yapmalı?
+          -   Scrat ne yapıyor?
+          -   Bu size ne anlatıyor?
+        courseC_maze_debugging6_b: |-
+          İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          İşlemi, program çalışana dek tekrarlayın!
       courseC_maze_debugging6_2020:
-        courseC_maze_debugging6_b: Bir kez hatayı bulup düzeltirsen ikinciyi bulmak
-          için hata ayıklamaya yeniden başla. Program çalışana kadar işlemi tekrarlayın!
+        courseC_maze_debugging6_a: |-
+          -   Scrat ne yapmalı?
+          -   Scrat ne yapıyor?
+          -   Bu size ne anlatıyor?
+        courseC_maze_debugging6_b: |-
+          İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          İşlemi, program çalışana dek tekrarlayın!
+      courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   İlk adımda her şey yolunda mı?
+          -   Peki ikinci adımda?
+          -   İşler nerede karışıyor?
+        courseC_maze_debugging7_b: Programı satır satır çalıştırmak için "Adım" düğmesini
+          kullanmayı unutmayın!
+        courseC_maze_debugging7_c: |-
+          İlk hatayı bulup ayıkladıktan sonra sıradakini bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          Hata ayıklama işlemini program çalışana dek tekrarlayın!
+      courseC_maze_debugging7_2018:
+        courseC_maze_debugging7_a: |-
+          -   İlk adımda her şey yolunda mı?
+          -   Peki ikinci adımda?
+          -   İşler nerede karışıyor?
+        courseC_maze_debugging7_b: Programı satır satır çalıştırmak için "Adım" düğmesini
+          kullanmayı unutmayın!
+        courseC_maze_debugging7_c: |-
+          İlk hatayı bulup ayıkladıktan sonra sıradakini bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          Hata ayıklama işlemini program çalışana dek tekrarlayın!
+      courseC_maze_debugging7_2019:
+        courseC_maze_debugging7_a: |-
+          -   İlk adımda her şey yolunda mı?
+          -   Peki ikinci adımda?
+          -   İşler nerede karışıyor?
+        courseC_maze_debugging7_b: Programı satır satır çalıştırmak için "Adım" düğmesini
+          kullanmayı unutmayın!
+        courseC_maze_debugging7_c: |-
+          İlk hatayı bulup ayıkladıktan sonra sıradakini bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          Hata ayıklama işlemini program çalışana dek tekrarlayın!
+      courseC_maze_debugging7_2020:
+        courseC_maze_debugging7_a: |-
+          -   İlk adımda her şey yolunda mı?
+          -   Peki ikinci adımda?
+          -   İşler nerede karışıyor?
+        courseC_maze_debugging7_b: Programı satır satır çalıştırmak için "Adım" düğmesini
+          kullanmayı unutmayın!
+        courseC_maze_debugging7_c: |-
+          İlk hatayı bulup ayıkladıktan sonra sıradakini bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.
+
+          Hata ayıklama işlemini program çalışana dek tekrarlayın!
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Sola veya sağa? Bu size kalmış!
         courseC_maze_debugging_challenge1_b: Scrat'in yolu bir dikdörtgen şeklinde!
@@ -9922,8 +10202,8 @@ tr-TR:
           sırada!
         courseD_artist_ramp12_b: Problemi 2 parçaya ayırmayı ve 2 farklı 'tekrarla'
           döngüsü kullanmayı deneyin.
-        courseD_artist_ramp12_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön'
-          bloğu üzerindeki açılır menüyü kullanabilirsin!
+        courseD_artist_ramp12_c: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
       courseD_autorun_binary2_2019:
         courseD_artist_binary2_a: Bu programı çalışırken görmek için sadece 'Çalıştır'
           ı tıklayın!
@@ -11504,45 +11784,49 @@ tr-TR:
         courseD_maze_nestedLoops5_b: Döngüleri nereye koyacağınızı bulamıyor musunuz?
           Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
       courseD_maze_ramp1:
-        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
-          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+        courseC_maze_programming1_a: Kuş domuza ulaşamıyorsa üç bloğun birbirlerine
+          tam olarak tutturulduğundan emin olun ve "Çalıştır"a tekrar tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp1_2018:
-        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
-          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+        courseC_maze_programming1_a: Kuş domuza ulaşamıyorsa üç bloğun birbirlerine
+          tam olarak tutturulduğundan emin olun ve "Çalıştır"a tekrar tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp1_2019:
-        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
-          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+        courseC_maze_programming1_a: Kuş domuza ulaşamıyorsa üç bloğun birbirlerine
+          tam olarak tutturulduğundan emin olun ve "Çalıştır"a tekrar tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp1_2020:
-        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
-          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+        courseC_maze_programming1_a: Kuş domuza ulaşamıyorsa üç bloğun birbirlerine
+          tam olarak tutturulduğundan emin olun ve "Çalıştır"a tekrar tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp2:
-        courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
-          zaman' bloğuna bağlı olduğundan emin olun.
+        courseC_maze_programming2_b: Üç bloğun birbirlerine tam olarak tutturulup
+          "çalıştığı zaman" bloğuna eklendiğinden emin olun.
       courseD_maze_ramp2_2018:
-        courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
-          zaman' bloğuna bağlı olduğundan emin olun.
+        courseC_maze_programming2_b: Üç bloğun birbirlerine tam olarak tutturulup
+          "çalıştığı zaman" bloğuna eklendiğinden emin olun.
       courseD_maze_ramp2_2019:
-        courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
-          zaman' bloğuna bağlı olduğundan emin olun.
+        courseC_maze_programming2_b: Üç bloğun birbirlerine tam olarak tutturulup
+          "çalıştığı zaman" bloğuna eklendiğinden emin olun.
       courseD_maze_ramp2_2020:
-        courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
-          zaman' bloğuna bağlı olduğundan emin olun.
+        courseC_maze_programming2_b: Üç bloğun birbirlerine tam olarak tutturulup
+          "çalıştığı zaman" bloğuna eklendiğinden emin olun.
       courseD_maze_ramp4:
-        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
-          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
-          bir kez daha ileri gidin.
+        courseC_maze_programming4_a: Sağa veya sola kuşun bakış açısına göre dönebilirsiniz.
+          Eğer yüzünüz sağa dönükse sağa dön komutu sizi aşağıya döndürecektir.
+        courseC_maze_programming4_b: Yolu takip etmek için, ilerleyin ve bir yöne
+          dönün. Sonra yeniden ilerleyin ve tersine dönün. Domuza ulaşmak için bir
+          kez daha ilerleyin.
       courseD_maze_ramp4_2018:
-        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
-          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
-          bir kez daha ileri gidin.
+        courseC_maze_programming4_a: Sağa veya sola kuşun bakış açısına göre dönebilirsiniz.
+          Eğer yüzünüz sağa dönükse sağa dön komutu sizi aşağıya döndürecektir.
+        courseC_maze_programming4_b: Yolu takip etmek için, ilerleyin ve bir yöne
+          dönün. Sonra yeniden ilerleyin ve tersine dönün. Domuza ulaşmak için bir
+          kez daha ilerleyin.
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_a: Sağa veya sola Scrat'in bakış açısından dönebilirsiniz.
           Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.
@@ -11556,27 +11840,27 @@ tr-TR:
           dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
           bir kez daha ileri gidin.
       courseD_maze_ramp5:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5_2018:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5_2019:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5_2020:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5a:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5a_2018:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5a_2019:
@@ -11588,19 +11872,19 @@ tr-TR:
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5b:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5b_2018:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5b_2019:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp5b_2020:
-        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
+        courseC_maze_programming5_b: Dönüşlerin, kuşun bakış açısından olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp6:
@@ -11864,42 +12148,56 @@ tr-TR:
         courseD_maze_ramp7_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseE_artist_concept1:
-        courseE_artist_concept1_c: Kalemin genişliğini değiştirmek için fonksiyonu
-          çalıştırmadan önce her defasında 'genişliği ayarla' bloğunu kullanın.
+        courseE_artist_concept1_a: Altıgenlerin kenarları 50 piksel ve dönüşler 60
+          derece sağa.
+        courseE_artist_concept1_b: Altıgen için kodu tekrar tekrar yazmak zorunda
+          kalmamak için burada fonksiyon kullanabilirsiniz.
+        courseE_artist_concept1_c: Kalem genişliğini değiştirecek her fonksiyon çağrısından
+          önce "genişliği ayarla" bloğu kullanın.
       courseE_artist_concept1_2018:
-        courseE_artist_concept1_c: Kalemin genişliğini değiştirmek için fonksiyonu
-          çalıştırmadan önce her defasında 'genişliği ayarla' bloğunu kullanın.
+        courseE_artist_concept1_a: Altıgenlerin kenarları 50 piksel ve dönüşler 60
+          derece sağa.
+        courseE_artist_concept1_b: Altıgen için kodu tekrar tekrar yazmak zorunda
+          kalmamak için burada fonksiyon kullanabilirsiniz.
+        courseE_artist_concept1_c: Kalem genişliğini değiştirecek her fonksiyon çağrısından
+          önce "genişliği ayarla" bloğu kullanın.
       courseE_artist_concept4:
-        courseE_artist_concept4_c: Karelerin bir çizgisini çizdikten sonra, etrafında
-          dönebilir ve sola giden karelerin diğer çizgilerini çizebilirsiniz veya
-          sağa giden karelerin diğer çizgisini çizmek için figürün soluna geri atlayabilirsiniz.
-          Hangisini tercih edersiniz?
+        courseE_artist_concept4_a: Bu bulmacayı çözmenin birçok yolu var.  Bir plan
+          yapabilir misiniz?
+        courseE_artist_concept4_b: Bir kare oluşturmayı deneyin. Ardından bir kare
+          satırı oluşturun. Sırada ne var?
+        courseE_artist_concept4_c: Bir kare satırı çizdikten sonra geri dönüp sola
+          doğru başka bir kare satırı çizebilirsiniz veya sağa doğru başka bir kare
+          satırı çizmek için şeklin soluna atlayabilirsiniz. Hangisi sizin tercihiniz?
       courseE_artist_concept4_2018:
-        courseE_artist_concept4_c: Karelerin bir çizgisini çizdikten sonra, etrafında
-          dönebilir ve sola giden karelerin diğer çizgilerini çizebilirsiniz veya
-          sağa giden karelerin diğer çizgisini çizmek için figürün soluna geri atlayabilirsiniz.
-          Hangisini tercih edersiniz?
+        courseE_artist_concept4_a: Bu bulmacayı çözmenin birçok yolu var.  Bir plan
+          yapabilir misiniz?
+        courseE_artist_concept4_b: Bir kare oluşturmayı deneyin. Ardından bir kare
+          satırı oluşturun. Sırada ne var?
+        courseE_artist_concept4_c: Bir kare satırı çizdikten sonra geri dönüp sola
+          doğru başka bir kare satırı çizebilirsiniz veya sağa doğru başka bir kare
+          satırı çizmek için şeklin soluna atlayabilirsiniz. Hangisi sizin tercihiniz?
       courseE_artist_concept_challenge1:
-        courseE_artist_concept_challenge1_a: 'Yarım altıgenin \*\* 30 kenar uzunluğu
-          \*\* ve \*\* 60 derece\*\*sağa dönüşü vardır.  '
-        courseE_artist_concept_challenge1_b: '2/3 üçgeninin \*\* 80 kenar uzunluğunu
-          \*\* ve \*\* 120 derece \*\*sağa dönüşü vardır.  '
+        courseE_artist_concept_challenge1_a: 'Yarım altıgenin **30 kenar uzunluğu
+          \*\* ve \*\*60 derece** sağa dönüşü var.  '
+        courseE_artist_concept_challenge1_b: '2/3 üçgenin **80 kenar uzunluğunu**
+          ve **120 derece** sağa dönüşü var. '
         courseE_artist_concept_challenge1_c: |-
-          Şeklin tamamını oluşturmak için tekrar etmek istediğiniz tasarım bu:
+          Şeklin tamamını oluşturmak için tekrar etmek isteyeceğiniz tasarım bu:
 
           ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
       courseE_artist_concept_challenge1_2018:
-        courseE_artist_concept_challenge1_a: 'Yarım altıgenin \*\* 30 kenar uzunluğu
-          \*\* ve \*\* 60 derece\*\*sağa dönüşü vardır.  '
-        courseE_artist_concept_challenge1_b: '2/3 üçgeninin \*\* 80 kenar uzunluğunu
-          \*\* ve \*\* 120 derece \*\*sağa dönüşü vardır.  '
+        courseE_artist_concept_challenge1_a: 'Yarım altıgenin **30 kenar uzunluğu
+          \*\* ve \*\*60 derece** sağa dönüşü var.  '
+        courseE_artist_concept_challenge1_b: '2/3 üçgenin **80 kenar uzunluğunu**
+          ve **120 derece** sağa dönüşü var. '
         courseE_artist_concept_challenge1_c: |-
-          Şeklin tamamını oluşturmak için tekrar etmek istediğiniz tasarım bu:
+          Şeklin tamamını oluşturmak için tekrar etmek isteyeceğiniz tasarım bu:
 
           ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
       courseE_artist_concept_challenge2:
-        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez oluşturduğunda,
-          onu tekrar tekrar kullanabilirsin. İstediğin zaman istediğin yerde!
+        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez tanımladığınızda
+          tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!
         courseE_artist_concept_challenge2_b: |-
           Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:
           <xml>  <block type="jump_to">
@@ -11907,8 +12205,8 @@ tr-TR:
           <title name="VALUE">???</title>
           </block></xml>
       courseE_artist_concept_challenge2_2018:
-        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez oluşturduğunda,
-          onu tekrar tekrar kullanabilirsin. İstediğin zaman istediğin yerde!
+        courseE_artist_concept_challenge2_a: Bir fonksiyonu bir kez tanımladığınızda
+          tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!
         courseE_artist_concept_challenge2_b: |-
           Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:
           <xml>  <block type="jump_to">
@@ -11916,45 +12214,66 @@ tr-TR:
           <title name="VALUE">???</title>
           </block></xml>
       courseE_artist_functions1:
-        courseE_artist_functions1_a: Karelerin kenarları 100 piksel genişliğinde,
-          buda demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
-        courseE_artist_functions1_b: Gözlük yapmak için çakışan çizgiler olabilir.
-        courseE_artist_functions1_c: Daha kısa kodlama için, gözlüğün kare çerçevesini
-          çizmek için bir tane 'tekrarla' döngüsü kullanmayı deneyin.
+        courseE_artist_functions1_a: Karelerin her bir kenarı 100 piksel, ikinci kareyi
+          çizmeden önce 175 piksel ilerlemelisiniz.
+        courseE_artist_functions1_b: Gözlük yapmak için üst üste binen çizgiler çizebilirsiniz.
+        courseE_artist_functions1_c: Daha kısa bir kod için, gözlüğün kare çerçevelerini
+          çizmek için "tekrar" döngüsü kullanabilirsiniz.
       courseE_artist_functions10:
+        courseD_artist_functions10_b: Bu çizim bir öncekine çok benziyor fakat "satır
+          çiz" fonksiyonu bu kez farklı bir şekil çiziyor.
+        courseD_artist_functions10_a: Çok fazla "ilerle" bloğu kullanmamak için bir
+          "altıgen çiz" fonksiyonu oluşturun ve birkaç kez çağırın.
         courseD_artist_functions10_c: |-
-          `line of hexagons` isimli fonksiyonun nerede kullanıldığı görebiliyor musun?
+          "Altıgen satırı" fonksiyonunun bu çizimde nerede kullanılacağını buldunuz mu?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2018:
+        courseD_artist_functions10_b: Bu çizim bir öncekine çok benziyor fakat "satır
+          çiz" fonksiyonu bu kez farklı bir şekil çiziyor.
+        courseD_artist_functions10_a: Çok fazla "ilerle" bloğu kullanmamak için bir
+          "altıgen çiz" fonksiyonu oluşturun ve birkaç kez çağırın.
         courseD_artist_functions10_c: |-
-          `line of hexagons` isimli fonksiyonun nerede kullanıldığı görebiliyor musun?
+          "Altıgen satırı" fonksiyonunun bu çizimde nerede kullanılacağını buldunuz mu?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2019:
+        courseD_artist_functions10_b: Bu çizim bir öncekine çok benziyor fakat "satır
+          çiz" fonksiyonu bu kez farklı bir şekil çiziyor.
+        courseD_artist_functions10_a: Çok fazla "ilerle" bloğu kullanmamak için bir
+          "altıgen çiz" fonksiyonu oluşturun ve birkaç kez çağırın.
         courseD_artist_functions10_c: |-
-          `line of hexagons` isimli fonksiyonun nerede kullanıldığı görebiliyor musun?
+          "Altıgen satırı" fonksiyonunun bu çizimde nerede kullanılacağını buldunuz mu?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2020:
+        courseD_artist_functions10_b: Bu çizim bir öncekine çok benziyor fakat "satır
+          çiz" fonksiyonu bu kez farklı bir şekil çiziyor.
+        courseD_artist_functions10_a: Çok fazla "ilerle" bloğu kullanmamak için bir
+          "altıgen çiz" fonksiyonu oluşturun ve birkaç kez çağırın.
         courseD_artist_functions10_c: |-
-          `line of hexagons` isimli fonksiyonun nerede kullanıldığı görebiliyor musun?
+          "Altıgen satırı" fonksiyonunun bu çizimde nerede kullanılacağını buldunuz mu?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_copy:
-        courseE_artist_functions1_a: Karelerin kenarları 100 piksel genişliğinde,
-          buda demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
-        courseE_artist_functions1_b: Gözlük yapmak için çakışan çizgiler olabilir.
-        courseE_artist_functions1_c: Daha kısa kodlama için, gözlüğün kare çerçevesini
-          çizmek için bir tane 'tekrarla' döngüsü kullanmayı deneyin.
+        courseE_artist_functions1_a: Karelerin her bir kenarı 100 piksel, ikinci kareyi
+          çizmeden önce 175 piksel ilerlemelisiniz.
+        courseE_artist_functions1_b: Gözlük yapmak için üst üste binen çizgiler çizebilirsiniz.
+        courseE_artist_functions1_c: Daha kısa bir kod için, gözlüğün kare çerçevelerini
+          çizmek için "tekrar" döngüsü kullanabilirsiniz.
       courseE_artist_functions2:
-        courseD_artist_functions2_b: Fonksiyon bütün programı içermeyecek, sadece
-          100 piksel uzunluğundaki kenarlarını çizer.
-        courseD_artist_functions2_c: "'Çalıştığı zaman' bloğunun altına fonksiyonunuzu
-          'çalıştırmak' için yeşil 'bir kare çiz' bloğu kullanın. Aksi takdirde, fonksiyonunuzdaki
-          kod çalışmayacak."
-        courseD_artist_functions2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
-          \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+        courseD_artist_functions2_b: Yazdığınız fonksiyon bütün programı değil, sadece
+          kenarları 100 piksel olan bir kare çizme kısmını kapsamalı.
+        courseD_artist_functions2_c: |-
+          Fonksiyonu, "çalıştığı zaman" bloğuna "çağırmak" için yeşil "bir kare çiz" bloğunu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Programınız şunları yapmalı:
+
+          -   Fonksiyon kullan
+          -   100 + 75 piksel ilerle
+          -   Fonksiyon kullan
       courseE_artist_functions2_2018:
         courseD_artist_functions2_b: Fonksiyon bütün programı içermeyecek, sadece
           100 piksel uzunluğundaki kenarlarını çizer.
@@ -11980,443 +12299,636 @@ tr-TR:
         courseD_artist_functions2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
           \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
       courseE_artist_functions2_copy:
-        courseD_artist_functions2_b: Fonksiyon bütün programı içermeyecek, sadece
-          100 piksel uzunluğundaki kenarlarını çizer.
-        courseD_artist_functions2_c: "'Çalıştığı zaman' bloğunun altına fonksiyonunuzu
-          'çalıştırmak' için yeşil 'bir kare çiz' bloğu kullanın. Aksi takdirde, fonksiyonunuzdaki
-          kod çalışmayacak."
-        courseD_artist_functions2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
-          \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+        courseD_artist_functions2_b: Yazdığınız fonksiyon bütün programı değil, sadece
+          kenarları 100 piksel olan bir kare çizme kısmını kapsamalı.
+        courseD_artist_functions2_c: |-
+          Fonksiyonu, "çalıştığı zaman" bloğuna "çağırmak" için yeşil "bir kare çiz" bloğunu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Programınız şunları yapmalı:
+
+          -   Fonksiyon kullan
+          -   100 + 75 piksel ilerle
+          -   Fonksiyon kullan
       courseE_artist_functions3:
-        courseD_artist_functions3_b: Döngünüzün içinde başlatıcı kod bloklarından
-          her 3' ü de bulunmalı.
+        courseD_artist_functions3_a: |-
+          Bu bulmacayı çözmek için başlangıç kodunu 8 kez tekrarlayan bir döngü eklemelisiniz.
+
+          Başlangıç kodunu hatırlamıyorsanız çalışma alanının sağ üst köşesinde yer alan "baştan başla" düğmesine tıklayın.
+        courseD_artist_functions3_b: Döngünüzde 3 başlangıç kodu bloğu da olmalı.
       courseE_artist_functions3_copy:
-        courseD_artist_functions3_b: Döngünüzün içinde başlatıcı kod bloklarından
-          her 3' ü de bulunmalı.
+        courseD_artist_functions3_a: |-
+          Bu bulmacayı çözmek için başlangıç kodunu 8 kez tekrarlayan bir döngü eklemelisiniz.
+
+          Başlangıç kodunu hatırlamıyorsanız çalışma alanının sağ üst köşesinde yer alan "baştan başla" düğmesine tıklayın.
+        courseD_artist_functions3_b: Döngünüzde 3 başlangıç kodu bloğu da olmalı.
       courseE_artist_functions4:
-        courseD_artist_functions4_b: Kendi fonksiyonunu oluşturmaya başlamak için
-          'yıldız çiz' fonksiyonunu araç kutusunun dışına sürükle. Önceki bulmacadaki
-          ile aynı koda sahip olmalı, çünkü aynı yıldız desenini çiziyorsun.
+        courseD_artist_functions4_a: Fonksiyon kullanmayı deneyin!
+        courseD_artist_functions4_b: Kendi fonksiyonunuzu oluşturmaya başlamak için
+          "bir yıldız çiz" fonksiyonunu araç kutusundan sürükleyin. Önceki bulmaca
+          ile aynı kodlar olmalı, çünkü aynı yıldız desenini çiziyorsunuz.
         courseD_artist_functions4_c: Ana programınızda bu fonksiyonu çağırmak için
-          yeşil 'yıldız çiz' bloğunu kullan. Her bir yıldızda ileri atlamayı unutmayın!
+          yeşil "bir yıldız çiz" bloğunu kullanın. Yıldızlar arasında ileri atlamayı
+          unutmayın!
       courseE_artist_functions4_copy:
-        courseD_artist_functions4_b: Kendi fonksiyonunu oluşturmaya başlamak için
-          'yıldız çiz' fonksiyonunu araç kutusunun dışına sürükle. Önceki bulmacadaki
-          ile aynı koda sahip olmalı, çünkü aynı yıldız desenini çiziyorsun.
+        courseD_artist_functions4_a: Fonksiyon kullanmayı deneyin!
+        courseD_artist_functions4_b: Kendi fonksiyonunuzu oluşturmaya başlamak için
+          "bir yıldız çiz" fonksiyonunu araç kutusundan sürükleyin. Önceki bulmaca
+          ile aynı kodlar olmalı, çünkü aynı yıldız desenini çiziyorsunuz.
         courseD_artist_functions4_c: Ana programınızda bu fonksiyonu çağırmak için
-          yeşil 'yıldız çiz' bloğunu kullan. Her bir yıldızda ileri atlamayı unutmayın!
+          yeşil "bir yıldız çiz" bloğunu kullanın. Yıldızlar arasında ileri atlamayı
+          unutmayın!
       courseE_artist_functions5:
-        courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
-          kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
-          kullanın!"
+        courseD_artist_functions5_a: Pes etmeyin! Öğrendiklerinizi hatırlayın.
+        courseD_artist_functions5_b: Fonksiyonlar, kaydedilen kodu yalnızca döngüden
+          değil her zaman çağırabilmeyi sağlar!
+        courseD_artist_functions5_c: '"Bir yıldız çiz" fonksiyona yıldız şekli kodunu
+          sürükleyerek başlayın, sonra 3 yıldız çizmek için bu fonksiyonu kullanın!'
       courseE_artist_functions5_2018:
+        courseD_artist_functions5_a: Pes etmeyin! Öğrendiklerinizi hatırlayın.
+        courseD_artist_functions5_b: Fonksiyonlar, kaydedilen kodu yalnızca döngüden
+          değil her zaman çağırabilmeyi sağlar!
         courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
           kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
           kullanın!"
       courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: Pes etmeyin! Öğrendiklerinizi hatırlayın.
+        courseD_artist_functions5_b: Fonksiyonlar, kaydedilen kodu yalnızca döngüden
+          değil her zaman çağırabilmeyi sağlar!
         courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
           kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
           kullanın!"
       courseE_artist_functions5_2020:
+        courseD_artist_functions5_a: Pes etmeyin! Öğrendiklerinizi hatırlayın.
+        courseD_artist_functions5_b: Fonksiyonlar, kaydedilen kodu yalnızca döngüden
+          değil her zaman çağırabilmeyi sağlar!
         courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
           kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
           kullanın!"
       courseE_artist_functions5_copy:
-        courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
-          kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
-          kullanın!"
+        courseD_artist_functions5_a: Pes etmeyin! Öğrendiklerinizi hatırlayın.
+        courseD_artist_functions5_b: Fonksiyonlar, kaydedilen kodu yalnızca döngüden
+          değil her zaman çağırabilmeyi sağlar!
+        courseD_artist_functions5_c: '"Bir yıldız çiz" fonksiyona yıldız şekli kodunu
+          sürükleyerek başlayın, sonra 3 yıldız çizmek için bu fonksiyonu kullanın!'
       courseE_artist_functions6:
+        grade4_artist_functions_windows0_a: Şimdilik yalnızca bir pencere yapmaya
+          odaklanın. Bir sonraki bulmacada fonksiyon oluşturacağız.
+        grade4_artist_functions_windows0_b: İç içe döngü kullanmayı deneyin. İç döngü
+          kare yapacak ve dış döngü kareyi dört kez döndürecek.
         grade4_artist_functions_windows0_c: Hata yapmaktan korkmayın! Bulmacayı henüz
           çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için
           kodu çalıştırın.
+      courseE_artist_functions7:
+        courseD_artist_functions7_a: Önce fonksiyon oluşturup ardından her seferinde
+          bir pencere ekleyebilirsiniz.
+        courseD_artist_functions7_b: Fazladan tekrar döngüsü eklemenize gerek yok.
+          Artist'in üstteki pencereler arasında 100 piksel, sonra alttakilere gitmek
+          için 150 piksel aşağı atlamasını sağlamanız yeterli.
+      courseE_artist_functions7_2018:
+        courseD_artist_functions7_a: Önce fonksiyon oluşturup ardından her seferinde
+          bir pencere ekleyebilirsiniz.
+      courseE_artist_functions7_2019:
+        courseD_artist_functions7_a: Önce fonksiyon oluşturup ardından her seferinde
+          bir pencere ekleyebilirsiniz.
+      courseE_artist_functions7_2020:
+        courseD_artist_functions7_a: Önce fonksiyon oluşturup ardından her seferinde
+          bir pencere ekleyebilirsiniz.
       courseE_artist_functions8:
-        courseD_artist_functions8_f: Sadece bir tane 'move forward' bloğuna ihtiyacın
-          var, fakat birkaç tane 'jump forward' ve/veya 'jump backward' bloğuna ihtiyacın
-          olacak!
-        courseD_artist_functions8_d: |-
-          Karelerin bir çizgisini yapmak için,
+        courseD_artist_functions8_f: Sadece bir "ilerle" bloğuna fakat birden çok
+          "ileri atla" ve/veya "geri atla" bloğuna ihtiyacınız olacak!
+        courseD_artist_functions8_a: |-
+          Kare için bir fonksiyon oluşturun, sonra bir kare satırı için fonksiyon oluşturmayı deneyin.
 
-          -   3 kez tekrarlayın
-          -   bir kenar uzunluğu**50 piksel** olan bir kare çizin
-          -   **100 piksel** ileri atlayın
+          Bu resmi yapmak için "bir kare satırı çiz" fonksiyonunu nasıl kullanırsınız?
+        courseD_artist_functions8_d: |-
+          Bir kare satırı oluşturmak için:
+
+          -   3 kez tekrarla
+              -   kenar uzunluğu **50 piksel** olan bir kare çiz
+              -   **100 piksel** ileri atla
+        courseD_artist_functions8_b: |-
+          Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+        courseD_artist_functions8_c: Her bir kare satırının sonunda Artist sıradaki
+          kare satırını çizmeye başlamadan önce aşağı ve geri atlamalı.
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2018:
-        courseD_artist_functions8_f: Sadece bir tane 'move forward' bloğuna ihtiyacın
-          var, fakat birkaç tane 'jump forward' ve/veya 'jump backward' bloğuna ihtiyacın
-          olacak!
-        courseD_artist_functions8_d: |-
-          Karelerin bir çizgisini yapmak için,
+        courseD_artist_functions8_f: Sadece bir "ilerle" bloğuna fakat birden çok
+          "ileri atla" ve/veya "geri atla" bloğuna ihtiyacınız olacak!
+        courseD_artist_functions8_a: |-
+          Kare için bir fonksiyon oluşturun, sonra bir kare satırı için fonksiyon oluşturmayı deneyin.
 
-          -   3 kez tekrarlayın
-          -   bir kenar uzunluğu**50 piksel** olan bir kare çizin
-          -   **100 piksel** ileri atlayın
+          Bu resmi yapmak için "bir kare satırı çiz" fonksiyonunu nasıl kullanırsınız?
+        courseD_artist_functions8_d: |-
+          Bir kare satırı oluşturmak için:
+
+          -   3 kez tekrarla
+              -   kenar uzunluğu **50 piksel** olan bir kare çiz
+              -   **100 piksel** ileri atla
+        courseD_artist_functions8_b: |-
+          Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
-        courseD_artist_functions8_f: Sadece bir tane 'move forward' bloğuna ihtiyacın
-          var, fakat birkaç tane 'jump forward' ve/veya 'jump backward' bloğuna ihtiyacın
-          olacak!
-        courseD_artist_functions8_d: |-
-          Karelerin bir çizgisini yapmak için,
+        courseD_artist_functions8_f: Sadece bir "ilerle" bloğuna fakat birden çok
+          "ileri atla" ve/veya "geri atla" bloğuna ihtiyacınız olacak!
+        courseD_artist_functions8_a: |-
+          Kare için bir fonksiyon oluşturun, sonra bir kare satırı için fonksiyon oluşturmayı deneyin.
 
-          -   3 kez tekrarlayın
-          -   bir kenar uzunluğu**50 piksel** olan bir kare çizin
-          -   **100 piksel** ileri atlayın
+          Bu resmi yapmak için "bir kare satırı çiz" fonksiyonunu nasıl kullanırsınız?
+        courseD_artist_functions8_d: |-
+          Bir kare satırı oluşturmak için:
+
+          -   3 kez tekrarla
+              -   kenar uzunluğu **50 piksel** olan bir kare çiz
+              -   **100 piksel** ileri atla
+        courseD_artist_functions8_b: |-
+          Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2020:
-        courseD_artist_functions8_f: Sadece bir tane 'move forward' bloğuna ihtiyacın
-          var, fakat birkaç tane 'jump forward' ve/veya 'jump backward' bloğuna ihtiyacın
-          olacak!
-        courseD_artist_functions8_d: |-
-          Karelerin bir çizgisini yapmak için,
+        courseD_artist_functions8_f: Sadece bir "ilerle" bloğuna fakat birden çok
+          "ileri atla" ve/veya "geri atla" bloğuna ihtiyacınız olacak!
+        courseD_artist_functions8_a: |-
+          Kare için bir fonksiyon oluşturun, sonra bir kare satırı için fonksiyon oluşturmayı deneyin.
 
-          -   3 kez tekrarlayın
-          -   bir kenar uzunluğu**50 piksel** olan bir kare çizin
-          -   **100 piksel** ileri atlayın
+          Bu resmi yapmak için "bir kare satırı çiz" fonksiyonunu nasıl kullanırsınız?
+        courseD_artist_functions8_d: |-
+          Bir kare satırı oluşturmak için:
+
+          -   3 kez tekrarla
+              -   kenar uzunluğu **50 piksel** olan bir kare çiz
+              -   **100 piksel** ileri atla
+        courseD_artist_functions8_b: |-
+          Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions9:
         courseD_artist_functions9_e: |-
-          Bu çizimde 'üçgenlerin çizgisi' olarak kullanılabilecek 4 yerin hepsini bulabilir misin?
+          Bu çizimde "üçgen satırı" olarak kullanılabilecek 4 yeri bulabilir misiniz?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_c: "Üçgenden bir çizgi çizmek için: \n\n-   tekrar
-          4 kez \n-   bir üçgen çiz\n-   ileri 50 piksel"
-        courseD_artist_functions9_d: "Elmas çizmek için: \n\n-   2 kez tekrarla\n
-          \   \\-üçgenlerden çizgi çiz \n-   120 derece dönüş yap\n-   üçgenlerden
-          çizgi çiz \n-   60 derece dön"
+        courseD_artist_functions9_a: |-
+          Bu bulmaca 3 kısma ayrılabilir:
+
+          -   "bir üçgen çiz" fonksiyonu oluştur
+          -   "bir üçgen satırı çiz" fonksiyonu oluştur
+          -   bu çizimi tamamlamak için "bir üçgen satırı çiz" fonksiyonunu dört kez kullan
+        courseD_artist_functions9_b: Bu çizim, dört kez üçgen satırı çizip bir sonraki
+          üçgen satırını çizmeye başlamadan önce 60 veya 120 derece dönerek yapılır.
+        courseD_artist_functions9_c: |-
+          Bir üçgen satırı çizmek için:
+
+          -   4 kez tekrarla
+              -   üçgen çiz
+              -   50 piksel ileri atla
+        courseD_artist_functions9_d: |-
+          Baklava şekli çizmek için:
+
+          -   2 kez tekrarla
+              -   bir üçgen satırı çiz
+              -   60 derece dön
+              -   bir üçgen satırı çiz
+              -   120 derece dön
       courseE_artist_functions9_2018:
         courseD_artist_functions9_e: |-
-          Bu çizimde 'üçgenlerin çizgisi' olarak kullanılabilecek 4 yerin hepsini bulabilir misin?
+          Bu çizimde "üçgen satırı" olarak kullanılabilecek 4 yeri bulabilir misiniz?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_c: "Üçgenden bir çizgi çizmek için: \n\n-   tekrar
-          4 kez \n-   bir üçgen çiz\n-   ileri 50 piksel"
-        courseD_artist_functions9_d: "Elmas çizmek için: \n\n-   2 kez tekrarla\n
-          \   \\-üçgenlerden çizgi çiz \n-   120 derece dönüş yap\n-   üçgenlerden
-          çizgi çiz \n-   60 derece dön"
+        courseD_artist_functions9_a: |-
+          Bu bulmaca 3 kısma ayrılabilir:
+
+          -   "bir üçgen çiz" fonksiyonu oluştur
+          -   "bir üçgen satırı çiz" fonksiyonu oluştur
+          -   bu çizimi tamamlamak için "bir üçgen satırı çiz" fonksiyonunu dört kez kullan
+        courseD_artist_functions9_b: Bu çizim, dört kez üçgen satırı çizip bir sonraki
+          üçgen satırını çizmeye başlamadan önce 60 veya 120 derece dönerek yapılır.
+        courseD_artist_functions9_c: |-
+          Bir üçgen satırı çizmek için:
+
+          -   4 kez tekrarla
+              -   üçgen çiz
+              -   50 piksel ileri atla
+        courseD_artist_functions9_d: |-
+          Baklava şekli çizmek için:
+
+          -   2 kez tekrarla
+              -   bir üçgen satırı çiz
+              -   60 derece dön
+              -   bir üçgen satırı çiz
+              -   120 derece dön
       courseE_artist_functions9_2019:
         courseD_artist_functions9_e: |-
-          Bu çizimde 'üçgenlerin çizgisi' olarak kullanılabilecek 4 yerin hepsini bulabilir misin?
+          Bu çizimde "üçgen satırı" olarak kullanılabilecek 4 yeri bulabilir misiniz?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_c: "Üçgenden bir çizgi çizmek için: \n\n-   tekrar
-          4 kez \n-   bir üçgen çiz\n-   ileri 50 piksel"
-        courseD_artist_functions9_d: "Elmas çizmek için: \n\n-   2 kez tekrarla\n
-          \   \\-üçgenlerden çizgi çiz \n-   120 derece dönüş yap\n-   üçgenlerden
-          çizgi çiz \n-   60 derece dön"
+        courseD_artist_functions9_a: |-
+          Bu bulmaca 3 kısma ayrılabilir:
+
+          -   "bir üçgen çiz" fonksiyonu oluştur
+          -   "bir üçgen satırı çiz" fonksiyonu oluştur
+          -   bu çizimi tamamlamak için "bir üçgen satırı çiz" fonksiyonunu dört kez kullan
+        courseD_artist_functions9_b: Bu çizim, dört kez üçgen satırı çizip bir sonraki
+          üçgen satırını çizmeye başlamadan önce 60 veya 120 derece dönerek yapılır.
+        courseD_artist_functions9_c: |-
+          Bir üçgen satırı çizmek için:
+
+          -   4 kez tekrarla
+              -   üçgen çiz
+              -   50 piksel ileri atla
+        courseD_artist_functions9_d: |-
+          Baklava şekli çizmek için:
+
+          -   2 kez tekrarla
+              -   bir üçgen satırı çiz
+              -   60 derece dön
+              -   bir üçgen satırı çiz
+              -   120 derece dön
       courseE_artist_functions9_2020:
         courseD_artist_functions9_e: |-
-          Bu çizimde 'üçgenlerin çizgisi' olarak kullanılabilecek 4 yerin hepsini bulabilir misin?
+          Bu çizimde "üçgen satırı" olarak kullanılabilecek 4 yeri bulabilir misiniz?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_c: "Üçgenden bir çizgi çizmek için: \n\n-   tekrar
-          4 kez \n-   bir üçgen çiz\n-   ileri 50 piksel"
-        courseD_artist_functions9_d: "Elmas çizmek için: \n\n-   2 kez tekrarla\n
-          \   \\-üçgenlerden çizgi çiz \n-   120 derece dönüş yap\n-   üçgenlerden
-          çizgi çiz \n-   60 derece dön"
+        courseD_artist_functions9_a: |-
+          Bu bulmaca 3 kısma ayrılabilir:
+
+          -   "bir üçgen çiz" fonksiyonu oluştur
+          -   "bir üçgen satırı çiz" fonksiyonu oluştur
+          -   bu çizimi tamamlamak için "bir üçgen satırı çiz" fonksiyonunu dört kez kullan
+        courseD_artist_functions9_b: Bu çizim, dört kez üçgen satırı çizip bir sonraki
+          üçgen satırını çizmeye başlamadan önce 60 veya 120 derece dönerek yapılır.
+        courseD_artist_functions9_c: |-
+          Bir üçgen satırı çizmek için:
+
+          -   4 kez tekrarla
+              -   üçgen çiz
+              -   50 piksel ileri atla
+        courseD_artist_functions9_d: |-
+          Baklava şekli çizmek için:
+
+          -   2 kez tekrarla
+              -   bir üçgen satırı çiz
+              -   60 derece dön
+              -   bir üçgen satırı çiz
+              -   120 derece dön
       courseE_artist_functions_challenge1:
-        courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız,
-          son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara
-          da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
-        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara 'zıpla'yabilirsiniz
-          veya bütün tasarımı istediğiniz gibi değiştirebilirsiniz!
+        courseE_artist_functions_challenge1_a: Fonksiyonu bir kez daha çağırırsanız
+          son köşede aynı tasarımı oluşturabilirsiniz.
+        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara '"atla" bloğunu
+          kullanabilir veya tasarımı baştan aşağı değiştirebilirsiniz!
       courseE_artist_functions_challenge1_2018:
-        courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız,
-          son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara
-          da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
-        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara 'zıpla'yabilirsiniz
-          veya bütün tasarımı istediğiniz gibi değiştirebilirsiniz!
+        courseE_artist_functions_challenge1_a: Fonksiyonu bir kez daha çağırırsanız
+          son köşede aynı tasarımı oluşturabilirsiniz.
+        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara '"atla" bloğunu
+          kullanabilir veya tasarımı baştan aşağı değiştirebilirsiniz!
       courseE_artist_functions_challenge1_2019:
-        courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız,
-          son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara
-          da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
-        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara 'zıpla'yabilirsiniz
-          veya bütün tasarımı istediğiniz gibi değiştirebilirsiniz!
+        courseE_artist_functions_challenge1_a: Fonksiyonu bir kez daha çağırırsanız
+          son köşede aynı tasarımı oluşturabilirsiniz.
+        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara '"atla" bloğunu
+          kullanabilir veya tasarımı baştan aşağı değiştirebilirsiniz!
       courseE_artist_functions_challenge1_2020:
-        courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız,
-          son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara
-          da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
-        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara 'zıpla'yabilirsiniz
-          veya bütün tasarımı istediğiniz gibi değiştirebilirsiniz!
+        courseE_artist_functions_challenge1_a: Fonksiyonu bir kez daha çağırırsanız
+          son köşede aynı tasarımı oluşturabilirsiniz.
+        courseE_artist_functions_challenge1_b: Ayrıca başka konumlara '"atla" bloğunu
+          kullanabilir veya tasarımı baştan aşağı değiştirebilirsiniz!
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_functions_challenge2_2020:
         courseE_artist_functions_challenge1_a: |-
           <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
 
-          <block type="jump_to_xy">
-          <title name="XPOS">350</title>
-          <title name="YPOS">200</title>
-          </block>
-          </xml>
-
-          Bu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
+          Bu "atla" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_ramp8:
         courseE_artist_ramp8_a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan
           ve 100 yerine 200 gir.
-        courseE_artist_ramp8_b: 4 tarafı çizmek için bir döngü içinde 'ileri 100 piksel'
-          bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin
-          olun. Daha sonra dönmeyi unutma!
-        courseE_artist_ramp8_c: Döngünüzün içinde iki blok bulunmalı, 'ilerle' ve
-          '90 derece sağa dön'.
+        courseE_artist_ramp8_b: |-
+          4 kenar çizmek için "100 piksel ilerle" bloğunu bir tekrar döngüsüne yerleştirin ve döngünün bunu 4 kez tekrarlayacağına emin olun.
+
+          Sonrasında dönmeyi unutmayın!
+        courseE_artist_ramp8_c: 'Döngünüzün içinde iki blok olmalı: "ilerle" ve "90
+          derece sağa dön".'
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan
           ve 100 yerine 200 gir.
-        courseE_artist_ramp8_b: 4 tarafı çizmek için bir döngü içinde 'ileri 100 piksel'
-          bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin
-          olun. Daha sonra dönmeyi unutma!
-        courseE_artist_ramp8_c: Döngünüzün içinde iki blok bulunmalı, 'ilerle' ve
-          '90 derece sağa dön'.
+        courseE_artist_ramp8_b: |-
+          4 kenar çizmek için "100 piksel ilerle" bloğunu bir tekrar döngüsüne yerleştirin ve döngünün bunu 4 kez tekrarlayacağına emin olun.
+
+          Sonrasında dönmeyi unutmayın!
+        courseE_artist_ramp8_c: 'Döngünüzün içinde iki blok olmalı: "ilerle" ve "90
+          derece sağa dön".'
       courseE_artist_ramp9:
-        courseD_artist_ramp12_a: Bu kareye benzer bir şekil. Farklı olan nedir?
-        courseD_artist_ramp12_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön'
-          bloğu üzerindeki açılır menüyü kullanabilirsin!
-        courseD_artist_ramp12_c: Her tarafı çizmek için 100 piksel ilerlemen gerekecek,
-          sonra 120 derece dönmelisin. Kaç tarafa ihtiyacın var?
+        courseD_artist_ramp12_a: Bu kareye benzer bir şekil mi? Farklı olan nedir?
+        courseD_artist_ramp12_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
+        courseD_artist_ramp12_c: Her bir kenarı çizmek için 100 piksel ilerlemeli
+          ve 120 derece sağa dönmelisiniz. Kaç kenara ihtiyacınız var?
       courseE_artist_ramp9_2:
-        courseD_artist_ramp12_a: Bu kareye benzer bir şekil. Farklı olan nedir?
-        courseD_artist_ramp12_b: Hangi açıya ihtiyacın olduğunu görmek için 'dön'
-          bloğu üzerindeki açılır menüyü kullanabilirsin!
-        courseD_artist_ramp12_c: Her tarafı çizmek için 100 piksel ilerlemen gerekecek,
-          sonra 120 derece dönmelisin. Kaç tarafa ihtiyacın var?
+        courseD_artist_ramp12_a: Bu kareye benzer bir şekil mi? Farklı olan nedir?
+        courseD_artist_ramp12_b: Hangi açıya ihtiyacınız olduğunu görmek için "dön"
+          bloğundaki açılır menüyü kullanabilirsiniz!
+        courseD_artist_ramp12_c: Her bir kenarı çizmek için 100 piksel ilerlemeli
+          ve 120 derece sağa dönmelisiniz. Kaç kenara ihtiyacınız var?
       courseE_bee_concept1:
-        courseE_bee_concept1_b: Burada _tekrarlayan_ herhangi bir desen var mı?
+        courseE_bee_concept1_b: Burada _tekrar_ eden bir desen var mı?
+        courseE_bee_concept1_a: İç içe döngüleri burada nasıl kullanacağınızı anlamadıysanız
+          talimatları bir kağıda adım adım yazmayı deneyin. Gördüğünüz desenleri çembere
+          alın.
       courseE_bee_concept1_2018:
-        courseE_bee_concept1_b: Burada _tekrarlayan_ herhangi bir desen var mı?
+        courseE_bee_concept1_b: Burada _tekrar_ eden bir desen var mı?
+        courseE_bee_concept1_a: İç içe döngüleri burada nasıl kullanacağınızı anlamadıysanız
+          talimatları bir kağıda adım adım yazmayı deneyin. Gördüğünüz desenleri çembere
+          alın.
       courseE_bee_concept2:
-        courseE_bee_concept2_a: Burada bir 'süresince' döngüsünün yardımı olur mu?
-        courseE_bee_concept2_d: Bal>0 mı diye görmek için boş alanları bile kontrol
-          edebilirsiniz.
-        courseE_bee_concept2_b: Her yolun sonuna hareket etmek için, ve her boş alandaki
-          tüm balı toplamak için 'süresince' döngüsünü kullanabilirsiniz.
+        courseE_bee_concept2_a: Burada bir "while" döngüsü işe yarar mı?
+        courseE_bee_concept2_d: Bal > 0 mı görmek için boş alanları bile kontrol edebilirsiniz.
+        courseE_bee_concept2_b: Her yolun sonuna gitmek ve her yerdeki balın tamamını
+          toplamak için "while" döngülerini kullanabilirsiniz.
         courseE_bee_concept2_c: Her yoldan sonra arı hangi yöne dönmeli?
       courseE_bee_concept2_2018:
-        courseE_bee_concept2_a: Burada bir 'süresince' döngüsünün yardımı olur mu?
+        courseE_bee_concept2_a: Burada bir "while" döngüsü işe yarar mı?
         courseE_bee_concept2_d: Bal>0 mı diye görmek için boş alanları bile kontrol
           edebilirsiniz.
-        courseE_bee_concept2_b: Her yolun sonuna hareket etmek için, ve her boş alandaki
-          tüm balı toplamak için 'süresince' döngüsünü kullanabilirsiniz.
+        courseE_bee_concept2_b: Her yolun sonuna gitmek ve her yerdeki balın tamamını
+          toplamak için "while" döngülerini kullanabilirsiniz.
         courseE_bee_concept2_c: Her yoldan sonra arı hangi yöne dönmeli?
       courseE_bee_concept3:
-        courseE_bee_concept3a_b: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu
-          adım adım yazmayı deneyin ve desenlere bakın.
+        courseE_bee_concept3a_a: Bu bulmacayı çözmek için iç içe "tekrar" döngülerini
+          kullanabilirsiniz.
+        courseE_bee_concept3a_b: Döngüleri nereye koyacağınızı bulamıyorsanız kodunuzu
+          adım adım yazmayı deneyin ve desen arayın.
         courseE_bee_concept3a_c: Üç grup çiçek var, bu yüzden dış döngünüz üç kez
-          tekrarlanmalı.
+          tekrar etmeli.
       courseE_bee_concept3_2018:
-        courseE_bee_concept3a_b: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu
-          adım adım yazmayı deneyin ve desenlere bakın.
+        courseE_bee_concept3a_b: Döngüleri nereye koyacağınızı bulamıyorsanız kodunuzu
+          adım adım yazmayı deneyin ve desen arayın.
       courseE_bee_concept4:
-        courseE_bee_concept4_b: Basamak deseni, çiçekler ve balpeteklerinin tamamını
-          geçmenize yardımcı olabilir.
-        courseE_bee_concept4_c: Eğer bir çiçekte iseniz, kaç kez nektar almak zorundasınız?
-          Bu sayı bütün çiçekler için aynı mıdır?
+        courseE_bee_concept4_a: Bir "eğer/değilse" ifadesi burada gerçekten işinize
+          yarayabilir.
+        courseE_bee_concept4_b: Basamak deseni, tüm çiçeklere ve peteklere ulaşmanızı
+          sağlayabilir.
+        courseE_bee_concept4_c: Çiçekteyseniz kaç kez nektar almalısınız? Bu sayı
+          bütün çiçekler için aynı mıdır?
       courseE_bee_concept4_2018:
-        courseE_bee_concept4_b: Basamak deseni, çiçekler ve balpeteklerinin tamamını
-          geçmenize yardımcı olabilir.
-        courseE_bee_concept4_c: Eğer bir çiçekte iseniz, kaç kez nektar almak zorundasınız?
-          Bu sayı bütün çiçekler için aynı mıdır?
+        courseE_bee_concept4_a: Bir "eğer/değilse" ifadesi burada gerçekten işinize
+          yarayabilir.
+        courseE_bee_concept4_b: Basamak deseni, tüm çiçeklere ve peteklere ulaşmanızı
+          sağlayabilir.
+        courseE_bee_concept4_c: Çiçekteyseniz kaç kez nektar almalısınız? Bu sayı
+          bütün çiçekler için aynı mıdır?
       courseE_bee_concept5:
-        courseE_bee_concept5_c: "Arının gidebileceği dikdörtgen yolun bir resmi var.
-          \n![](<https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8
-          Hint Drawing.png>)"
+        courseE_bee_concept5_a: Çiçekler dikdörtgen bir yol çiziyor. Bu yolu izlemek
+          için "önünde yol olduğu sürece" fonksiyonu ve hatta her bir kenar için farklı
+          kare sayısı kullanabilirsiniz.
+        courseE_bee_concept5_c: |-
+          İşte, arının gidebileceği dikdörtgen yolun bir resmi:
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: Her kareyi çiçek var mı diye "eğer" bloğu kullanarak
+          kontrol edebilirsiniz, olmadığını bilseniz bile.
       courseE_bee_concept5_2018:
-        courseE_bee_concept5_c: "Arının gidebileceği dikdörtgen yolun bir resmi var.
-          \n![](<https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8
-          Hint Drawing.png>)"
+        courseE_bee_concept5_a: Çiçekler dikdörtgen bir yol çiziyor. Bu yolu izlemek
+          için "önünde yol olduğu sürece" fonksiyonu ve hatta her bir kenar için farklı
+          kare sayısı kullanabilirsiniz.
+        courseE_bee_concept5_c: |-
+          İşte, arının gidebileceği dikdörtgen yolun bir resmi:
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: Her kareyi çiçek var mı diye "eğer" bloğu kullanarak
+          kontrol edebilirsiniz, olmadığını bilseniz bile.
       courseE_bee_functions1:
-        courseE_bee_functions1_b: Kodunuzu kısaltmak için nektar toplarken bir tane
-          'tekrarla' döngüsü kullanın.
+        courseE_bee_functions1_a: Sola ve sağa dönüşlerin arının bakış açısından olduğunu
+          unutmayın.
+        courseE_bee_functions1_b: Kodunuzu kısaltmak için nektar toplarken bir "tekrar"
+          döngüsü kullanın.
         courseE_bee_functions1_c: Sola ve sağa dönüşlerin arının bakış açısından olduğunu
           unutmayın.
       courseE_bee_functions10:
-        courseE_bee_functions10_a: Bütün balı toplamak için 'süresince' (while) döngüsü
-          kullanmanız gerekir, çünkü petekler arasında kaç bal olduğu farklılık gösterir.
-        courseE_bee_functions10_b: Fonksiyonlarınız dönüşler ve hareketler içermeli,
-          böylece arı ana yolda olduğu zaman fonksiyonu çağırabilirisiniz.
-        courseE_bee_functions10_c: Ana programda fonksiyonu çağırmayı unutmayın!
+        courseE_bee_functions10_a: Balın tamamını toplamak için bir "while" döngüsü
+          kullanmalısınız çünkü petekler arasında kaç bal olduğu farklılık gösterir.
+        courseE_bee_functions10_b: Fonksiyonlarınızda dönüşler ve hareketler olmalı,
+          böylece arı ana yolda olduğunda fonksiyonu çağırabilirsiniz.
+        courseE_bee_functions10_c: Ana programda fonksiyonunuzu çağırmayı unutmayın!
       courseE_bee_functions2:
-        courseE_bee_functions2_b: Yeşil '2 nektar al' bloğunu fonksiyonu çağırmak
-          için kullanın.
-        courseE_bee_functions2_c: Bu bulmacayı çözmek için ilerle ve iki defa 2 nektar
-          al.
+        courseE_bee_functions2_b: Bu <xml><block type="procedures_callnoreturn"><mutation
+          name="get 2 nectar"/></block></xml> bloğu, size verilen fonksiyonu çağırır.
+        courseE_bee_functions2_c: Bu bulmacayı çözmek için ilerleyin ve iki defa 2
+          nektar alın.
       courseE_bee_functions3:
-        courseE_bee_functions3_b: Ana programda 'çalıştığı zaman' bloğunun altında
-          '5 al' fonksiyonunu çağır.
-        courseE_bee_functions3_c: Ana programın tüm hareketleri kontrol edecek, fonksiyon
-          sadece arı çiçeğe ulaştığında gerçekleşen şeyler için.
-        courseE_bee_functions3_d: Doğruca bu yolu kullanmayı deneyin.
+        courseE_bee_functions3_a: Bu bulmacadaki fonksiyonun yalnızca nektar toplaması
+          gerekiyor, fonksiyonda "ilerle" veya "dön" blokları bulunmamalı.
+        courseE_bee_functions3_b: '"5 al" fonksiyonunu, "çalıştığı zaman" bloğunun
+          altına çağırın.'
+        courseE_bee_functions3_c: Ana programınız tüm hareketleri kontrol eder, fonksiyon
+          sadece arı çiçeğe ulaştığında gerçekleşen şeyler içindir.
+        courseE_bee_functions3_d: Bu yolu kullanmayı deneyin.
       courseE_bee_functions4:
-        courseE_bee_functions4_b: Yeşil 'ilerle ve nektar al' blokunu fonksiyonu çağırmak
-          için kullan.
-        courseE_bee_functions4_c: Fonksiyonu değiştirmene gerek yok, sadece programda
-          kullan.
+        courseE_bee_functions4_a: Fonksiyonunuz arıyı zaten yan yollardan aşağı doğru
+          götürüp ana yola geri döndürecek. Bu bölümü programınıza eklemenize gerek
+          yok.
+        courseE_bee_functions4_b: Yeşil "ilerle ve nektar al" bloğunu bu fonksiyonu
+          çağırmak için kullanın.
+        courseE_bee_functions4_c: Fonksiyonu değiştirmenize gerek yok, programda kullanmanız
+          yeterli.
       courseE_bee_functions5:
-        courseE_bee_functions5_c: "'ileri git' bloku 'geri git' bloku olarak değiştirilebilir.
-          Yolların sonundaki her yeri değiştirmek yerine bunu kullan!"
+        courseE_bee_functions5_a: Fonksiyonu düzenleyerek ana programı değiştirmek
+          gerekmeden bulmacayı çözmesini sağlayın.
+        courseE_bee_functions5_c: '"İlerle" bloğu "geri git" bloğu ile değiştirilebilir.
+          Yolun sonunda her şeye baştan başlamak yerine bunu kullanın!'
+        courseE_bee_functions5_b: "Fonksiyonunuz ile arı şunları yapmalı: \n\n-   dön\n-
+          \  ilerle\n-   nektarın tamamını topla\n-   geri git\n-   arının başladığı
+          yöne geri dön"
       courseE_bee_functions6:
-        courseE_bee_functions6_a: |-
-          Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.
-           Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız!  ! \[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
-        courseE_bee_functions6_b: Bu durumda fonksiyon içine taşımak yardımcı olabilir,
-          ama bütün 'ilerle' bloklarının orada olması gerekmiyor.
+        courseE_bee_functions6_a: "Bulmaca zorlu görünüyorsa fonksiyonu adım adım
+          oluşturmayı deneyin.  \n\nBirkaç blok ekleyin, sonra deneyin. Biraz daha
+          ekleyin, sonra tekrar deneyin. Çok geçmeden başaracaksınız!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_b: Bu durumda fonksiyon içine taşımak yardımcı olabilir
+          fakat bütün "ilerle" bloklarının orada olması gerekmiyor.
       courseE_bee_functions7:
         courseE_bee_functions7_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde
           bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın.
           Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        courseE_bee_functions7_b: Kodunu yeşil fonksiyon bloğu içinde oluştur. ! \[]
-          (<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)
+        courseE_bee_functions7_b: |-
+          Kodunuzu yeşil fonksiyon bloğu içinde oluşturmayı unutmayın!
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_c: Bu fonksiyon arının yolun aşağısına inmesini, nektar
+          toplamasını, bal yapmasını ve dönüp geri gelmesini sağlamalı.
       courseE_bee_functions8:
-        courseE_bee_functions8_c: Ana programınıza merdiven adımı hareketleri deseni
-          gerekiyor.
+        courseE_bee_functions8_a: Fonksiyonunuz yalnızca nektar toplamalı. While döngüsü
+          yerine tekrar döngüsü kullanmayı deneyin.
+        courseE_bee_functions8_b: Nektarın tamamını aldığınızdan emin olmak için "while
+          nektar > 0" döngüsü kullanın.
+        courseE_bee_functions8_c: Ana programınıza bir merdiven deseni gerekiyor.
+          Unutmayın, ana program "çalıştığı zaman" bloğunun altındaki kod.
       courseE_bee_functions9:
-        courseE_bee_functions9_b: Bazı çiçeklerin ne kadar nektara sahip olduğunu
-          bilsen bile 'sürece' döngüsü hepsi için çalışan bir fonksiyon yapabilir.
+        courseE_bee_functions9_a: Bu bulmaca için de bir öncekinde kullandığınız fonksiyonu
+          kullanabilirsiniz. Tek yapmanız gereken her çiçeğe ulaştığınızda nektarın
+          tamamını toplayan bir fonksiyon oluşturmak.
+        courseE_bee_functions9_b: Bazı çiçeklerde ne kadar nektar olduğunu bilseniz
+          bile bir "'while" döngüsü bir fonksiyonu hepsi için çalıştırabilir.
       courseE_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu
           her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra
           çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde
-          kod oluşturmayı unutmayın.
+        courseE_bee_functions_challenge1_b: Kodunuzu yeşil fonksiyon bloğu içinde
+          oluşturmayı unutmayın.
       courseE_bee_functions_challenge2:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu
           her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra
           çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
-        courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde
-          kod oluşturmayı unutmayın.
+        courseE_bee_functions_challenge1_b: Kodunuzu yeşil fonksiyon bloğu içinde
+          oluşturmayı unutmayın.
       courseE_farmer_concept1:
-        courseE_farmer_concept1_b: Merdiven adımı desenini delikleri almak için kullanabilirsin.
+        courseE_farmer_concept1_a: '"Çukur olduğu sürece" bloğu çukurları zemin eşitlenene
+          dek doldurmanızı sağlar.'
+        courseE_farmer_concept1_b: Çukurlara ulaşmak için bir merdiven deseni kullanabilirsiniz.
       courseE_farmer_concept1_2018:
-        courseE_farmer_concept1_b: Merdiven adımı desenini delikleri almak için kullanabilirsin.
+        courseE_farmer_concept1_a: '"Çukur olduğu sürece" bloğu çukurları zemin eşitlenene
+          dek doldurmanızı sağlar.'
+        courseE_farmer_concept1_b: Çukurlara ulaşmak için bir merdiven deseni kullanabilirsiniz.
       courseE_farmer_concept2:
-        courseE_farmer_concept2_b: Dönen, yoldan aşağı giden, kabaklar toplayan ve
-          ana yatay yola döndüren fonksiyon burada yardımcı olabilir.
-        courseE_farmer_concept2_c: Ana programın yeşil 'bir şeyler yap' bloku ile
-          bu fonksiyonu çağırabilir.
+        courseE_farmer_concept2_a: Yolların uzunluğu aynı fakat aralarındaki kare
+          sayısı farklı. Burada döngü kullanmak işe yaramayabilir. Bir fonksiyon deneyin.
+        courseE_farmer_concept2_b: 'Burada şu türde bir fonksiyon işe yarayabilir:
+          Dön, yolda ilerle, balkabağı topla ve yatay ana yola dön.'
+        courseE_farmer_concept2_c: Ana programınız bu fonksiyonu yeşil "bir şey yap"
+          bloğu ile çağırabilir.
       courseE_farmer_concept2_2018:
-        courseE_farmer_concept2_b: Dönen, yoldan aşağı giden, kabaklar toplayan ve
-          ana yatay yola döndüren fonksiyon burada yardımcı olabilir.
-        courseE_farmer_concept2_c: Ana programın yeşil 'bir şeyler yap' bloku ile
-          bu fonksiyonu çağırabilir.
+        courseE_farmer_concept2_a: Yolların uzunluğu aynı fakat aralarındaki kare
+          sayısı farklı. Burada döngü kullanmak işe yaramayabilir. Bir fonksiyon deneyin.
+        courseE_farmer_concept2_b: 'Burada şu türde bir fonksiyon işe yarayabilir:
+          Dön, yolda ilerle, balkabağı topla ve yatay ana yola dön.'
+        courseE_farmer_concept2_c: Ana programınız bu fonksiyonu yeşil "bir şey yap"
+          bloğu ile çağırabilir.
       courseE_farmer_concept3:
         grade3_robotFarmer_ConditionalsIntro_8_b: Bir yolun sonuna geldiğinizde ne
-          yapmanız gerekir?
-        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda bir çok defa kodunuzu
-          çalıştırmak için 'tekrarla' döngüsü kullanın.
+          yapmalısınız?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda kodunuzu birden çok
+          kez çalıştırmak için "tekrar" döngüsü kullanın.
       courseE_farmer_concept3_2018:
         grade3_robotFarmer_ConditionalsIntro_8_b: Bir yolun sonuna geldiğinizde ne
-          yapmanız gerekir?
-        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda bir çok defa kodunuzu
-          çalıştırmak için 'tekrarla' döngüsü kullanın.
+          yapmalısınız?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda kodunuzu birden çok
+          kez çalıştırmak için "tekrar" döngüsü kullanın.
       courseE_farmer_functions1:
-        courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
-        courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir
-          döngü kullanarak alabilir misin?
+        courseE_farmer_functions1_a: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
+        courseE_farmer_functions1_b: Tek bir balkabağı toplamanız gerek fakat ona
+          ulaşmak için döngü kullanabilir misiniz?
       courseE_farmer_functions10b:
-        courseE_farmer_functions10b_a: Bu bulmacayı çözmek için bir 'eğer/değilse'
-          ifadesini kullanman gerekir.
-        courseE_farmer_functions10b_b: İlk bal kabağından sonra hangi yöne dönmeniz
-          gerekir?
+        courseE_farmer_functions10b_a: Önce, fonksiyonunuzu yeniden oluşturmalısınız.
+        courseE_farmer_functions10b_b: İlk balkabağından sonra hangi yöne dönmelisiniz?
         courseE_farmer_functions10b_c: Fonksiyonu yapmak için yardıma ihtiyacınız
-          varsa son bulmacada geriye bakın.
+          varsa son bulmacayı inceleyin.
       courseE_farmer_functions1_2018:
-        courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
-        courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir
-          döngü kullanarak alabilir misin?
+        courseE_farmer_functions1_a: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
+        courseE_farmer_functions1_b: Tek bir balkabağı toplamanız gerek fakat ona
+          ulaşmak için döngü kullanabilir misiniz?
       courseE_farmer_functions1_2019:
-        courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
-        courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir
-          döngü kullanarak alabilir misin?
+        courseE_farmer_functions1_a: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
+        courseE_farmer_functions1_b: Tek bir balkabağı toplamanız gerek fakat ona
+          ulaşmak için döngü kullanabilir misiniz?
       courseE_farmer_functions1_2020:
-        courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi!
-          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
-        courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir
-          döngü kullanarak alabilir misin?
+        courseE_farmer_functions1_a: Araç kutusu bu sefer biraz farklı düzenlendi!
+          Hangi blokların olduğunu görmek için farklı kategorilere tıklayın.
+        courseE_farmer_functions1_b: Tek bir balkabağı toplamanız gerek fakat ona
+          ulaşmak için döngü kullanabilir misiniz?
       courseE_farmer_functions1a:
-        courseE_farmer_functions1a_b: Eğer mısırda değilsen, bir sonrakinde hangi
-          mahsulü kontrol etmelisin?
+        courseE_farmer_functions1a_a: '"Eğer/değilse" ifadelerini adım adım inceleyin.
+          Bir mısır bitkisinin üzerindeyseniz ne yapmalısınız?'
+        courseE_farmer_functions1a_b: Balkabağına ulaşmak için "kadar tekrarla" bloğunu
+          kullanın!
       courseE_farmer_functions1a_2018:
-        courseE_farmer_functions1a_b: Eğer mısırda değilsen, bir sonrakinde hangi
-          mahsulü kontrol etmelisin?
+        courseE_farmer_functions1a_b: Balkabağına ulaşmak için "kadar tekrarla" bloğunu
+          kullanın!
       courseE_farmer_functions1a_2019:
-        courseE_farmer_functions1a_b: Eğer mısırda değilsen, bir sonrakinde hangi
-          mahsulü kontrol etmelisin?
+        courseE_farmer_functions1a_b: Balkabağına ulaşmak için "kadar tekrarla" bloğunu
+          kullanın!
       courseE_farmer_functions1a_2020:
-        courseE_farmer_functions1a_b: Eğer mısırda değilsen, bir sonrakinde hangi
-          mahsulü kontrol etmelisin?
+        courseE_farmer_functions1a_b: Balkabağına ulaşmak için "kadar tekrarla" bloğunu
+          kullanın!
       courseE_farmer_functions2b:
-        courseE_farmer_functions2b_a: İki yolun sonuna ulaşmak için 'bal kabağına
-          kadar tekrarla''yı kullanabilirsiniz.
-        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, bu yüzden sadece
-          ilerleyebilir ve dönebilirsiniz.
-        courseE_farmer_functions2b_c: Bütün mısırları toplamak için iki ayrı 'kadar
-          tekrarla' karesine ihtiyacınız var.
+        courseE_farmer_functions2b_a: İki yolun sonuna ulaşmak için "bal kabağına
+          kadar tekrarla'"yı kullanabilirsiniz.
+        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir
+          ve dönebilirsiniz.
+        courseE_farmer_functions2b_c: Mısırların tamamını toplamak için iki ayrı "kadar
+          tekrarla" bloğuna ihtiyacınız var.
       courseE_farmer_functions2b_2018:
         courseE_farmer_functions2b_a: İki yolun sonuna ulaşmak için 'bal kabağına
           kadar tekrarla''yı kullanabilirsiniz.
-        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, bu yüzden sadece
-          ilerleyebilir ve dönebilirsiniz.
-        courseE_farmer_functions2b_c: Bütün mısırları toplamak için iki ayrı 'kadar
-          tekrarla' karesine ihtiyacınız var.
+        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir
+          ve dönebilirsiniz.
+        courseE_farmer_functions2b_c: Mısırların tamamını toplamak için iki ayrı "kadar
+          tekrarla" bloğuna ihtiyacınız var.
       courseE_farmer_functions2b_2019:
         courseE_farmer_functions2b_a: İki yolun sonuna ulaşmak için 'bal kabağına
           kadar tekrarla''yı kullanabilirsiniz.
-        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, bu yüzden sadece
-          ilerleyebilir ve dönebilirsiniz.
-        courseE_farmer_functions2b_c: Bütün mısırları toplamak için iki ayrı 'kadar
-          tekrarla' karesine ihtiyacınız var.
+        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir
+          ve dönebilirsiniz.
+        courseE_farmer_functions2b_c: Mısırların tamamını toplamak için iki ayrı "kadar
+          tekrarla" bloğuna ihtiyacınız var.
       courseE_farmer_functions2b_2020:
         courseE_farmer_functions2b_a: İki yolun sonuna ulaşmak için 'bal kabağına
           kadar tekrarla''yı kullanabilirsiniz.
-        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, bu yüzden sadece
-          ilerleyebilir ve dönebilirsiniz.
-        courseE_farmer_functions2b_c: Bütün mısırları toplamak için iki ayrı 'kadar
-          tekrarla' karesine ihtiyacınız var.
+        courseE_farmer_functions2b_b: Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir
+          ve dönebilirsiniz.
+        courseE_farmer_functions2b_c: Mısırların tamamını toplamak için iki ayrı "kadar
+          tekrarla" bloğuna ihtiyacınız var.
       courseE_farmer_functions2ba:
-        courseE_farmer_functions2ba_a: Nu fonksiyonu çağırmak için yeşil 'mısır ve
-          bal kabağı' karesi kullanın.
+        courseE_farmer_functions2ba_a: Bu fonksiyonu çağırmak için yeşil "mısır ve
+          balkabağı" bloğunu kullanın.
         courseE_farmer_functions2ba_b: Bu fonksiyonun nasıl çalıştığını görmek için
-          alet çantasındaki bütün kareleri 'sırasında çalıştır'ın altına sürükleyin.
+          çalışma alanındaki tüm blokları "çalıştığı zaman" altına birlikte sürükleyin.
       courseE_farmer_functions2ba_2018:
         courseE_farmer_functions2ba_a: Nu fonksiyonu çağırmak için yeşil 'mısır ve
           bal kabağı' karesi kullanın.
@@ -12427,66 +12939,66 @@ tr-TR:
         courseE_farmer_functions2ba_a: Nu fonksiyonu çağırmak için yeşil 'mısır ve
           bal kabağı' karesi kullanın.
       courseE_farmer_functions3c:
-        courseE_farmer_functions3c_a: Bu programda hangi dizi sıkça tekrarlanmış?
-          Bu kareleri fonksiyona sürükleyebilir misiniz?
-        courseE_farmer_functions3c_b: Kareleri sildiğin zamanlarda ana programdaki
-          fonksiyonlarını çağırmayı unutma.
+        courseE_farmer_functions3c_a: Bu programda hangi dizilim sıkça tekrarlanmış?
+          Bu blokları fonksiyona sürükleyebilir misiniz?
+        courseE_farmer_functions3c_b: Ana programdaki fonksiyonunuzu blokları kaldırdığınız
+          yerlere çağırmayı unutmayın
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseE_farmer_functions4b_b: Her yoldan sonra dönmeyi unutma.
-        courseE_farmer_functions4b_c: Yeşil 'mısır ve bal kabağı' kareleri alet çantasının
-          fonksiyonlar sekmesindedir.
+        courseE_farmer_functions4b_b: Her yoldan sonra dönmeyi unutmayın.
+        courseE_farmer_functions4b_c: Yeşil "mısır ve balkabağı" blokları araç kutusunun
+          Fonksiyonlar sekmesinde.
       courseE_farmer_functions5c:
-        courseE_farmer_functions5c_a: Bu bulmacada başka döngü yapabileceğiniz desenler
-          var mı?
+        courseE_farmer_functions5c_a: Bu bulmacada döngü haline getirebileceğiniz
+          başka desenler var mı?
         courseE_farmer_functions5c_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseE_farmer_functions6c:
-        courseE_farmer_functions6c_a: Marul aramak için de fonksiyonunuzu düzenleyin.
-        courseE_farmer_functions6c_b: Bir alanda marul olup olmadığını kontrol etmek
-          için bir 'eğer/başka' karesi yardım eder mi?
+        courseE_farmer_functions6c_a: Fonksiyonunuzu marulları da aramak için düzenleyin.
+        courseE_farmer_functions6c_b: Bir yerde marul olup olmadığını kontrol etmek
+          için "eğer/değilse" bloğu işe yarar mı?
         courseE_farmer_functions6c_c: Mısır aramaya devam etmeyi unutmayın!
       courseE_farmer_functions7b:
-        courseE_farmer_functions7b_a: Burada bir fonksiyona ihtiyacınız yok, ama eğer
-          sizin için yararlıysa bir tane yapabilirsiniz!
-        courseE_farmer_functions7b_b: Mısır aramak için bir 'eğer/başka' ifadesi kullanın,
-          sonra hangi mısırı bulduğunuza dayanarak dönün.
-        courseE_farmer_functions7b_c: Labirent boyunca bütün yolu gitmenizde bir 'bal
-          kabağına kadar tekrarla' döngüsü yardımcı olabilir.
+        courseE_farmer_functions7b_a: Burada bir fonksiyona ihtiyacınız yok fakat
+          işinize yarıyorsa bir tane yapabilirsiniz!
+        courseE_farmer_functions7b_b: Mısır aramak için bir "eğer/değilse" ifadesi
+          kullanın, sonra bulduğunuz mahsule göre dönün.
+        courseE_farmer_functions7b_c: '"Balkabağına kadar tekrarla" döngüsü labirent
+          boyunca bütün yolu gitmenizi sağlayabilir.'
       courseE_farmer_functions8b:
         courseE_farmer_functions8b_a: Verilen kodun ne yaptığını görmek için çalıştırmayı
           deneyin. Bundan sonra neye ihtiyacınız var?
-        courseE_farmer_functions8b_b: Başlangıç karelerinin hepsini bir fonksiyona
-          taşıyın ki onları biden fazla kullanabilirsiniz.
-        courseE_farmer_functions8b_c: Fonksiyonu kaç kere çağırmaya ihtiyacınız var?
+        courseE_farmer_functions8b_b: Tüm başlangıç bloklarını bir fonksiyona taşıyarak
+          birden fazla kez kullanabilirsiniz.
+        courseE_farmer_functions8b_c: Fonksiyonu kaç kere çağırmanız gerekiyor?
       courseE_farmer_functions9b:
-        courseE_farmer_functions9b_a: Yolda ilerlemek için iç içe geçmiş 'eğer' ve
-          'eğer/başka' ifadelerini kullanabilir misiniz?
-        courseE_farmer_functions9b_b: Yollar boyunca hareket etmek için 'bal kabağına
-          kadar tekrarla' kullanın.
-        courseE_farmer_functions9b_c: Yollar boyunca her döngüden sonra kareler büyüyormuş
-          gibi hareket etmek isteyeceksiniz.
+        courseE_farmer_functions9b_a: Yolda ilerlemek için iç içe geçmiş "eğer" ve
+          "eğer/değilse" ifadelerini kullanabilir misiniz?
+        courseE_farmer_functions9b_b: Yollarda ilerlemek için "balkabağına kadar tekrarla"yı
+          kullanın.
+        courseE_farmer_functions9b_c: Yollarda her döngüden sonra büyüyen karelermiş
+          gibi ilerlemek isteyebilirsiniz.
       courseE_farmer_ramp11a:
-        courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla
-          bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak
-          çözebilirsiniz.  '
-        courseE_farmer_ramp12_b: Marulu almak için bir kez ilerlemek yeterlidir.
+        courseE_farmer_ramp12_a: 'Çiftçinin kaç kez toprak atması gerektiğini "tekrar"
+          bloğu ile söylemek yerine artık "yığın olduğu sürece" bloğu kullabilirsiniz.  '
+        courseE_farmer_ramp12_b: Toprağa ulaşmak için yalnızca bir kez ilerlemeniz
+          yeterli.
       courseE_farmer_ramp11a_2018:
-        courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla
-          bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak
-          çözebilirsiniz.  '
-        courseE_farmer_ramp12_b: Marulu almak için bir kez ilerlemek yeterlidir.
+        courseE_farmer_ramp12_a: 'Çiftçinin kaç kez toprak atması gerektiğini "tekrar"
+          bloğu ile söylemek yerine artık "yığın olduğu sürece" bloğu kullabilirsiniz.  '
+        courseE_farmer_ramp12_b: Toprağa ulaşmak için yalnızca bir kez ilerlemeniz
+          yeterli.
       courseE_farmer_ramp11a_2019:
-        courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla
-          bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak
-          çözebilirsiniz.  '
-        courseE_farmer_ramp12_b: Marulu almak için bir kez ilerlemek yeterlidir.
+        courseE_farmer_ramp12_a: 'Çiftçinin kaç kez toprak atması gerektiğini "tekrar"
+          bloğu ile söylemek yerine artık "yığın olduğu sürece" bloğu kullabilirsiniz.  '
+        courseE_farmer_ramp12_b: Toprağa ulaşmak için yalnızca bir kez ilerlemeniz
+          yeterli.
       courseE_farmer_ramp11a_2020:
-        courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla
-          bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak
-          çözebilirsiniz.  '
-        courseE_farmer_ramp12_b: Marulu almak için bir kez ilerlemek yeterlidir.
+        courseE_farmer_ramp12_a: 'Çiftçinin kaç kez toprak atması gerektiğini "tekrar"
+          bloğu ile söylemek yerine artık "yığın olduğu sürece" bloğu kullabilirsiniz.  '
+        courseE_farmer_ramp12_b: Toprağa ulaşmak için yalnızca bir kez ilerlemeniz
+          yeterli.
       courseE_farmer_ramp11b:
         courseE_farmer_ramp11b_a: Kodunuzu daha kısa yapmak için 'tekrar' döngüsünün
           içine 'süresince' döngüsü yerleştirebilirsiniz.
@@ -12548,66 +13060,68 @@ tr-TR:
         courseE_farmer_ramp12e_b: Bu bulmacanın çözümü son bulmacanın çözümüne çok
           benziyor, fakat diğer yöne dönüyor.
       courseE_farmer_ramp12f:
-        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12f_2018:
-        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12f_2019:
-        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12f_2020:
-        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12f_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12g:
-        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12g_2018:
-        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12g_2019:
-        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_farmer_ramp12g_2020:
-        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı dönmesi gerekli karar
-          vermesine yardımcı olmak için bir 'eğer/başka' karesi kullanın.
+        courseE_farmer_ramp12G_b: Çiftçinin sağa mı sola mı döneceğine karar vermesi
+          için bir "eğer/değilse" bloğu kullanın.
       courseE_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
-          Burada oyuncu oyunu kazandığında yapabileceğin bazı şeyler var:
+          İşte, oyuncu oyunu kazandığında yapabileceğiniz birkaç şey:
 
           -   Dinozoru kaybet.
           -   Sincapları durdur.
           -   Sincapları ve şövalyeyi mutlu et.
           -   Yeni bir arka plan ayarla.
-          -   Yardım ettiği için oyuncuya şövalyeyi teşekkür ettir.
+          -   Şövalyenin, yardım ettiği için oyuncuya teşekkür etmesini sağla.
           -   Bütün aktörleri kaybet ve "Kazandınız!" mesajı göster.
         courseE_playLab_challenge1_b: |-
-          Burada oyuncu oyunu kaybettiğinde yapabileceğin bazı şeyler var:
+          İşte, oyuncu oyunu kaybettiğinde yapabileceğiniz birkaç şey:
 
-          -   Şövalyeyi kaybet.
+          -   Şövalyeyi kaybet
           -   Sincapları üzgün yap.
-          -   Dinozora bir şeyler söylet.
+          -   Dinozora bir şey söylet.
           -   Yeni bir arka plan ayarla.
-          -   Bütün aktörleri yok et ve "Oyun Bitti" mesajı göster.
+          -   Bütün aktörleri kaybet ve "Kaybettiniz!" mesajı göster.
       courseE_playLab_scaffold1:
-        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
-          aktör eklemek için kullanılabilir."
-        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
-          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
-        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
-          planı ayarla' bloğunu kullanın.
+        courseE_playLab_scaffold1_a: '"Ayarla aktör 1 ??? görünümüne" bloğu bu aşamada
+          bir aktör eklemek için kullanılabilir.'
+        courseE_playLab_scaffold1_b: Aktörünüzün programınızın başında görünmesi için
+          "çalıştığı zaman" bloğunun altına "aktörü ayarla" bloğu yerleştirin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için "??? arka
+          planı ayarla" bloğunu kullanın.
       courseE_playLab_scaffold2:
-        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
-          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
-        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
-          ettirebilmelisin!
+        courseE_playLab_scaffold1_a: Bloğun kontrol ettiği yönü değiştirmek için "\_\_\_\_
+          oka basıldığında" olayının açılır menüsünü kullanın.
+        courseE_playLab_scaffold1_b: Her birinin altında taşıyacakları yön olan dört
+          "\_\_\_\_ oka basıldığında" olay bloğunuz olmalı.
+        courseE_playLab_scaffold1_c: Tamamladığınızda kahramanınızı ok tuşlarıyla
+          hareket ettirebilmelisiniz!
       courseE_playLab_scaffold4:
-        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
-          çıkarmak için 'puanı sil' kullanın.
+        courseE_playLab_scaffold4_a: Bir puan eklemek için '"puan al" ve bir puan
+          silmek için "'puan sil" blokları kullanın.
       courseE_playLab_scaffold5:
-        courseE_playLab_scaffold5_a: Bu seviyeyi bitirmek için, kazanman veya kaybetmen
-          gerekir. Bitirmek için bir adet 'kazanarak oyunu bitir' veya 'kaybederek
-          oyunu bitir' kullanın.
+        courseE_playLab_scaffold5_a: Bu seviyeyi tamamlamak için kazanmalı veya kaybetmelisiniz.
+          Bitirmek için "oyunu kazanarak bitir" veya "oyunu kaybederek bitir" bloğu
+          kullanın.
       courseF_artist_for2:
         courseF_artist_for2_b: Döngünüzün içinde 10' a kadar saymayı unutmayın.
         courseF_artist_for2_c: |-
@@ -15685,48 +16199,47 @@ tr-TR:
         iceage_click_hello_a: Bu bulmacayı tamamlamak için 'tıklandığı zaman' olayına
           'bir ya da daha fazla 'aktör 1 de' bloku ekle.
       iceage_free_play:
-        iceage_free_play_a: 'Sid ve Manny''ye buz kristali savaşı yaptırabilir misin?  '
-        iceage_free_play_b: Granny'ye Dieogo'yu kovalattırın. Onu yakalarsa oyunu
-          kazanmış olarak sonlandırın.
-        iceage_free_play_c: Sid'in Dieogo'ya kar taneleri fırlatmasını ve kar taneleri
-          her dokunduğunda Diego'nun daha büyük olmasını sağla? Diego 5 kez vurulduğunda
-          oyunu kazanmış olarak sonlandır.
+        iceage_free_play_a: 'Sid ve Manny''ye Buz Kristali savaşı yaptırabilir misiniz?  '
+        iceage_free_play_b: Granny'nin Dieogo'yu kovalamasını sağlayın, yakalarsa
+          oyunu kazanarak bitirin.
+        iceage_free_play_c: Sid'in Diego'ya kar taneleri fırlatmasını ve Diego'nun
+          her vurulduğunda büyümesini sağlayabilir misiniz? Diego 5 kez vurulduğunda
+          oyunu kazanarak bitirin.
       iceage_hello1:
-        iceage_hello1_a: Bu bulmacayı çözmek için yalnızca bir blok eklemeniz gerekiyor.
-          Araç çubuğundan 'söyle' bloğunu sürükleyin ve bu bloğu çalışma alanında
-          zaten bulunan 'çalıştığı zaman' olay bloğuna bağlayın. Daha sonra, içine
-          "Merhaba!" yazın.
+        iceage_hello1_a: Bu bulmacayı çözmek için bir blok eklemeniz yeterli. Araç
+          çubuğundan "söyle" bloğunu sürükleyin ve bu bloğu, zaten çalışma alanında
+          olan "çalıştığı zaman" olay bloğuna bağlayın. Sonra, içine "Merhaba!" yazın.
       iceage_hello2:
-        iceage_hello2_a: 'Bu bulmacayı çözmek için Sid''in ''aktör 1 de'' blokunu
-          kullanarak bir şeyler söylemesini sağlaman gerekir. Bunun yanında Manny''nin
-          de ''aktör 2 de'' bloku ile bir şeyler söylemesini sağlaman gerekir. '
+        iceage_hello2_a: Bu bulmacayı çözmek için, "aktör 1 söyle" bloğu ile Sid'e
+          bir şeyler söyletmelisiniz. Ayrıca,  "aktör 2 söyle" bloğu ile Manny'ye
+          de bir şeyler söyletmelisiniz.
       iceage_move_events:
-        iceage_move_events_a: 'Bu bulmacayı çözmek için her bir ''Ne zaman ok'' olayının
-          farklı bir ''taşı aktör 1'' komutuyla bağlanması gerekir. '
+        iceage_move_events_a: 'Bu bulmacayı çözmek için, her bir "\_\_\_ oka basıldığında"
+          olayına farklı bir "taşı aktör 1" komutu bağlanmalı. '
       iceage_move_to_actor:
-        iceage_move_to_actor_a: Bu bulmaca için Diego'yu 200 piksel aşağıya ya da
-          Manny'yi 200 piksel yukarıya taşıyabilirsin.
-        iceage_move_to_actor_b: Bu meydan okumayı bitirmek için '\_\_\_ sesi çal'
-          blokunu 'aktör 1 aktör 2ye dokunduğunda' blokuna bağla.
+        iceage_move_to_actor_a: Bu bulmaca için, Diego'yu 200 piksel aşağıya ya da
+          Manny'yi 200 piksel yukarıya taşıyabilirsiniz.
+        iceage_move_to_actor_b: Bu meydan okumayı tamamlamak için "\_\_\_ sesi çal"
+          bloğunu "aktör 1, aktör 2'ye dokunduğunda" olayına bağlayın.
       iceage_move_to_flag:
-        iceage_hello3_a: "'taşı aktör 1 sağa 200 piksel' blokunu bu bulmacayı çözmek
-          için kullan."
+        iceage_hello3_a: Bu bulmacayı çözmek için, "taşı aktör 1 sağa 200 piksel"
+          bloğunu kullanın
       iceage_repeat:
-        iceage_repeat_a: Bu bulmacayı çözmek için 'taşı aktör 1 sola' ve 'taşı aktör
-          1 sağa' bloklarının her ikisini de kullan.
+        iceage_repeat_a: Bu bulmacayı çözmek için "taşı aktör 1 sola" ve "taşı aktör
+          1 sağa" bloklarının ikisini de kullan.
       iceage_sound_and_points:
-        iceage_sound_and_points_a: "'aktör 1 aktör 2ye dokunduğunda' olayının altına
-          2 blok eklemeniz gerekir."
-        iceage_sound_and_points_b: Bu bölümü geçmek için 'skor puanı' bloku ve '\_\_\_\_
-          sesini çal' blokunun ikisine de ihtiyacın var.
+        iceage_sound_and_points_a: '"Aktör 1, aktör 2''ye dokunduğunda" olayının altına
+          iki blok eklemelisiniz.'
+        iceage_sound_and_points_b: Bu seviyeyi geçmek için "bir puan kazan" ve "\_\_\_\_
+          sesini\\ çal' bloklarına ihtiyacınız olacak.
       iceage_throw_hearts:
-        iceage_throw_hearts_a: Granny'ye kalpleri ne zaman fırlatmalısın? Oka basıldığında
-          mı? Sid'e tıklandığı zaman mı? Granny'ye tıkladığın zaman mı? Karar senin!
-        iceage_throw_hearts_b: Kalp aldığında Granny'yi mutlu etmek için, 'ayarla
-          aktör 2 mutlu ruh haline' blokunu 'aktör 2 mermiye dokunduğunda' olayına
-          bağlaman gerekir.
+        iceage_throw_hearts_a: Granny'ye kalpleri ne zaman fırlatsın? Oka basıldığında
+          mı? Sid'e tıkladığınızda mı? Granny'ye tıkladığınızda mı? Karar sizin!
+        iceage_throw_hearts_b: Granny'nin kalp aldığında mutlu olması için, "ayarla
+          aktör 2 mutlu ruh haline" bloğunu "aktör 2 atılana temas ettiğinde" olayının
+          altına bağlamalısınız.
       iceage_warn_ice_age:
         iceage_warn_ice_age_a: 'Bulmacayı çözmek için sadece uygun olan yere 2 blok
           eklemelisin. '
-        iceage_warn_ice_age_b: Program başladıktan hemen sonra onlara sahip olmak
-          için 'Çalıştığı zaman' olayının altına 2 yeni blok ekle.
+        iceage_warn_ice_age_b: İki yeni bloğu da "çalıştığı zaman" olayının altına
+          ekleyerek program başlar başlamaz gerçekleşmelerini sağlayın.
