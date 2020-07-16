@@ -906,16 +906,17 @@ pl-PL:
       New Sports Project: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
         zasady i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij
         przycisk "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.
-      OPD-K5-events-2: Dołącz block "pofruń na normalną wysokość" do zdarzenia "po
-        kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu, aby
-        przesunąć Flappy'ego do miejsca docelowego.
+      OPD-K5-events-2: Dołącz blok "Machnij skrzydłami normalną ilość razy" do zdarzenia
+        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
+        aby przesunąć Flappy'ego do miejsca docelowego.
       OPD-K5-events-3: Spróbuj dodać blok, który ustawia poziom prędkości po naciśnięciu
-        przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego, aby kontynuować.
-      OPD-K5-events-4: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie na ziemię".
+        przycisku "Uruchom".  Zagraj w grę i machaj skrzydłami, aby dolecieć do obiektu
+        docelowego, aby kontynuować.
+      OPD-K5-events-4: Dołącz blok "Zakończ grę" do zdarzenia "Kiedy uderzy w ziemię".
         Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
-      OPD-K5-events-5: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę" tak, żeby
+      OPD-K5-events-5: Dołącz blok do zdarzenia "Kiedy uderzy w przeszkodę" tak, żeby
         gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie rur.
-      OPD-K5-events-6: Dołącz blok do zdarzenia "kiedy minie przeszkodę", a następnie
+      OPD-K5-events-6: Dołącz blok do zdarzenia "Kiedy minie przeszkodę", a następnie
         naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy zestaw
         rur.
       OPD-K5-forloops-5: Pomóż pszczółce zebrać cały nektar.
@@ -1161,6 +1162,8 @@ pl-PL:
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
+      course2_maze_loops_challenge1: 'Teraz Scrat chce skorzystać z pętli, aby znaleźć
+        żołędź! '
       course2_maze_programming_challenge1: \_"Świnka się chowa! Czy pomożesz mi znaleźć
         sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
@@ -1184,10 +1187,20 @@ pl-PL:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby
         zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń
         go i zastąp go czymś zupełnie inny)
+      courseA_artist_loops1: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj na
+        tym poziomie i narysuj coś zabawnego.'
       courseA_artist_loops10: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2018: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2019: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2020: Pomóż mi położyć kamienie niżej, a nie spadnę!
+      courseA_artist_loops11: Pomóż mi zbudować stopnie, aby obserwować odpływający
+        statek.
+      courseA_artist_loops11_2018: Pomóż mi zbudować stopnie, aby obserwować odpływający
+        statek.
+      courseA_artist_loops11_2019: Pomóż mi zbudować stopnie, aby obserwować odpływający
+        statek.
+      courseA_artist_loops11_2020: Pomóż mi zbudować stopnie, aby obserwować odpływający
+        statek.
       courseA_artist_loops12: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co
         Twoim zdaniem zobaczył.
       courseA_artist_loops12_2018: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
@@ -1196,14 +1209,102 @@ pl-PL:
         co Twoim zdaniem zobaczył.
       courseA_artist_loops12_2020: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
         co Twoim zdaniem zobaczył.
+      courseA_artist_loops1_2018: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
+      courseA_artist_loops1_2019: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
+      courseA_artist_loops1_2020: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
+      courseA_artist_loops2: Pomóż grafikowi narysować tę linię dwa razy do przodu.
+      courseA_artist_loops2_2018: Pomóż grafikowi narysować tę linię dwa razy do przodu.
+      courseA_artist_loops2_2019: Pomóż grafikowi narysować tę linię dwa razy do przodu.
+      courseA_artist_loops2_2020: Pomóż grafikowi narysować tę linię dwa razy do przodu.
+      courseA_artist_loops3: Ryzuj linię do przodu pięć razy.
+      courseA_artist_loops3_2018: Ryzuj linię do przodu pięć razy.
+      courseA_artist_loops3_2019: Ryzuj linię do przodu pięć razy.
+      courseA_artist_loops3_2020: Ryzuj linię do przodu pięć razy.
+      courseA_artist_loops4: Użyj pętli "powtórz", aby narysować tę linię pięć razy!
+      courseA_artist_loops4_2018: Użyj pętli "powtórz", aby narysować tę linię pięć
+        razy!
+      courseA_artist_loops4_2019: Użyj pętli "powtórz", aby narysować tę linię pięć
+        razy!
+      courseA_artist_loops4_2020: Użyj pętli "powtórz", aby narysować tę linię pięć
+        razy!
+      courseA_artist_loops5: Narysuj linię o długości siedmiu kroków. Stanie się ona
+        naszym horyzontem.
+      courseA_artist_loops5_2018: Narysuj linię o długości siedmiu kroków. Stanie
+        się ona naszym horyzontem.
+      courseA_artist_loops5_2019: Narysuj linię o długości siedmiu kroków. Stanie
+        się ona naszym horyzontem.
+      courseA_artist_loops5_2020: Narysuj linię o długości siedmiu kroków. Stanie
+        się ona naszym horyzontem.
+      courseA_artist_loops6: Z tyłu wstawmy ładny pagórek.
+      courseA_artist_loops6_2018: Z tyłu wstawmy ładny pagórek.
+      courseA_artist_loops6_2019: Z tyłu wstawmy ładny pagórek.
+      courseA_artist_loops6_2020: Z tyłu wstawmy ładny pagórek.
       courseA_artist_loops7: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2018: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2019: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2020: Użyj pętli `repeat` aby dodać fale na wodzie.
+      courseA_artist_loops8: Potrzebujemy drabiny, aby wejść do łodzi.
+      courseA_artist_loops8_2018: Potrzebujemy drabiny, aby wejść do łodzi.
+      courseA_artist_loops8_2019: Potrzebujemy drabiny, aby wejść do łodzi.
+      courseA_artist_loops8_2020: Potrzebujemy drabiny, aby wejść do łodzi.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2019: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2020: 'Wyzwanie: Napraw schody.'
+      courseA_artist_loops_challenge1: Czy umiesz narysować domek? Spraw, aby wyglądał
+        tak, jak chcesz!
+      courseA_artist_loops_challenge1_2018: Czy umiesz narysować domek? Spraw, aby
+        wyglądał tak, jak chcesz!
+      courseA_artist_loops_challenge1_2019: Czy umiesz narysować domek? Spraw, aby
+        wyglądał tak, jak chcesz!
+      courseA_artist_loops_challenge1_2020: Czy umiesz narysować domek? Spraw, aby
+        wyglądał tak, jak chcesz!
+      courseA_artist_loops_challenge2a: _"Pomóż mi rozłożyć te trzy namioty!"_
+      courseA_artist_loops_challenge2a_2018: _"Pomóż mi rozłożyć te trzy namioty!"_
+      courseA_artist_loops_challenge2a_2019: _"Pomóż mi rozłożyć te trzy namioty!"_
+      courseA_artist_loops_challenge2a_2020: _"Pomóż mi rozłożyć te trzy namioty!"_
+      courseA_collector_loops1: Prowadź Laurel dookoła i zbierz tyle skarbów, ile
+        dasz radę!
+      courseA_collector_loops10: Pomóż Laurel zebrać cały skarb ze ścieżki.
+      courseA_collector_loops10_2018: Pomóż Laurel zebrać cały skarb ze ścieżki.
+      courseA_collector_loops10_2019: Pomóż Laurel zebrać cały skarb ze ścieżki.
+      courseA_collector_loops10_2020: Pomóż Laurel zebrać cały skarb ze ścieżki.
+      courseA_collector_loops11: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseA_collector_loops11_2018: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseA_collector_loops11_2019: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseA_collector_loops11_2020: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseA_collector_loops12: _"Eureka!  Zdobądź tyle skarbów, ile zdołasz!"_
+      courseA_collector_loops12_2018: _"Eureka!  Zdobądź tyle skarbów, ile zdołasz!"_
+      courseA_collector_loops12_2019: _"Eureka!  Zdobądź tyle skarbów, ile zdołasz!"_
+      courseA_collector_loops12_2020: _"Eureka!  Zdobądź tyle skarbów, ile zdołasz!"_
+      courseA_collector_loops1_2018: Prowadź Laurel dookoła i zbierz tyle skarbów,
+        ile dasz radę!
+      courseA_collector_loops1_2019: Prowadź Laurel dookoła i zbierz tyle skarbów,
+        ile dasz radę!
+      courseA_collector_loops1_2020: Prowadź Laurel dookoła i zbierz tyle skarbów,
+        ile dasz radę!
+      courseA_collector_loops2: Zbierz wszystkie trzy stosy, aby przejść ten poziom.
+      courseA_collector_loops2_2018: Zbierz wszystkie trzy stosy, aby przejść ten
+        poziom.
+      courseA_collector_loops4: Napraw ścieżkę Laurel, aby zdobyć cały skarb.
+      courseA_collector_loops4_2018: Napraw ścieżkę Laurel, aby zdobyć cały skarb.
+      courseA_collector_loops4_2019: Napraw ścieżkę Laurel, aby zdobyć cały skarb.
+      courseA_collector_loops4_2020: Napraw ścieżkę Laurel, aby zdobyć cały skarb.
+      courseA_collector_loops5: Wykorzystaj to, czego się nauczyłeś dotychczas, aby
+        zdobyć cały skarb.
+      courseA_collector_loops5_2018: Wykorzystaj to, czego się nauczyłeś dotychczas,
+        aby zdobyć cały skarb.
+      courseA_collector_loops5_2019: Wykorzystaj to, czego się nauczyłeś dotychczas,
+        aby zdobyć cały skarb.
+      courseA_collector_loops5_2020: Wykorzystaj to, czego się nauczyłeś dotychczas,
+        aby zdobyć cały skarb.
+      courseA_collector_loops6: Dodaj bloki do tego kodu, aby zdobyć cały skarb.
+      courseA_collector_loops6_2018: Dodaj bloki do tego kodu, aby zdobyć cały skarb.
+      courseA_collector_loops6_2019: Dodaj bloki do tego kodu, aby zdobyć cały skarb.
+      courseA_collector_loops6_2020: Dodaj bloki do tego kodu, aby zdobyć cały skarb.
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie
         skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać
@@ -1212,6 +1313,22 @@ pl-PL:
         wszystkie skarby?
       courseA_collector_loops7_2020: Co powinieneś dodać do tego kodu, aby zebrać
         wszystkie skarby?
+      courseA_collector_loops8: Zapisz kod aby zdobyć cały skarb.
+      courseA_collector_loops8_2018: Zapisz kod aby zdobyć cały skarb.
+      courseA_collector_loops8_2019: Zapisz kod aby zdobyć cały skarb.
+      courseA_collector_loops8_2020: Zapisz kod aby zdobyć cały skarb.
+      courseA_collector_loops9: "**Wyzwanie:** Skarb jest ułożony na tych schodach
+        prowadzących w górę! Napisz kod, aby pomóc Laurel zdobyć go w całości."
+      courseA_collector_loops9_2018: "**Wyzwanie:** Skarb jest ułożony na tych schodach
+        prowadzących w górę! Napisz kod, aby pomóc Laurel zdobyć go w całości."
+      courseA_collector_loops9_2019: "**Wyzwanie:** Skarb jest ułożony na tych schodach
+        prowadzących w górę! Napisz kod, aby pomóc Laurel zdobyć go w całości."
+      courseA_collector_loops9_2020: "**Wyzwanie:** Skarb jest ułożony na tych schodach
+        prowadzących w górę! Napisz kod, aby pomóc Laurel zdobyć go w całości."
+      courseA_collector_loops_challenge1: _"Czy możesz mi pomóc odnaleźć błędy?"_
+      courseA_collector_loops_challenge1_2018: _"Czy możesz mi pomóc odnaleźć błędy?"_
+      courseA_collector_loops_challenge1_2019: _"Czy możesz mi pomóc odnaleźć błędy?"_
+      courseA_collector_loops_challenge1_2020: _"Czy możesz mi pomóc odnaleźć błędy?"_
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej _3_ części skarbu
         aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2018: Zbierz przynajmniej _3_ części skarbu
@@ -1220,6 +1337,7 @@ pl-PL:
         aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2020: Zbierz przynajmniej _3_ części skarbu
         aby przejść ten poziom.
+      courseA_collector_preLoops7: Zbierz wszystkie trzy stosy, aby przejść ten poziom.
       courseA_harvester_loops6_2019: Będziesz potrzebować **jednego** klocka `Move
         South` i **jednego** klocka `Move West`.
       courseA_harvester_loops6_2020: Będziesz potrzebować **jednego** klocka `Move
@@ -1228,12 +1346,123 @@ pl-PL:
       courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_ramp5a_2020: Doprowadź ptaka do świnki!
       courseA_maze_seq1: Doprowadź ptaka do złej świnki!
+      courseA_maze_seq10: 'Wyzwanie: Obejdź TNT, aby doprowadzić ptaka do świnki! '
+      courseA_maze_seq10_copy: 'Wyzwanie: Obejdź TNT, aby doprowadzić ptaka do świnki! '
+      courseA_maze_seq11: Idź w jedną stronę, a później w drugą, by doprowadzić ptaka
+        do świnki.
+      courseA_maze_seq11_2018: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki.
+      courseA_maze_seq11_2019: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki.
+      courseA_maze_seq11_2020: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki.
+      courseA_maze_seq12: 'Schwytaj tę świnkę! '
+      courseA_maze_seq12_2018: 'Schwytaj tę świnkę! '
+      courseA_maze_seq12_2019: 'Schwytaj tę świnkę! '
+      courseA_maze_seq12_2020: 'Schwytaj tę świnkę! '
+      courseA_maze_seq13: Schwytaj tę świnkę w dowolny możliwy sposób!
+      courseA_maze_seq13_2018: Schwytaj tę świnkę w dowolny możliwy sposób!
+      courseA_maze_seq13_2019: Schwytaj tę świnkę w dowolny możliwy sposób!
+      courseA_maze_seq13_2020: Schwytaj tę świnkę w dowolny możliwy sposób!
       courseA_maze_seq1_2018: Doprowadź ptaka do złej świnki!
       courseA_maze_seq1_2019: Doprowadź ptaka do złej świnki!
       courseA_maze_seq1_2020: Doprowadź ptaka do złej świnki!
-      courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
+      courseA_maze_seq2: Zmień kod, aby doprowadzić ptaka do świnki!
       courseA_maze_seq3: Napraw kod, aby doprowadzić ptaka do świnki!
       courseA_maze_seq4: USUŃ blok, aby doprowadzić ptaka do świnki!
+      courseA_maze_seq5: 'Na początek wypróbuj ten. '
+      courseA_maze_seq5_copy: 'Na początek wypróbuj ten. '
+      courseA_maze_seq6: Idź w jedną stronę, a później w drugą, by doprowadzić ptaka
+        do świnki!
+      courseA_maze_seq6_2018: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki!
+      courseA_maze_seq6_2019: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki!
+      courseA_maze_seq6_2020: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki!
+      courseA_maze_seq6_copy: Idź w jedną stronę, a później w drugą, by doprowadzić
+        ptaka do świnki!
+      courseA_maze_seq7: Zorientuj się, czego brakuje, a następnie dodaj bloki, by
+        doprowadzić ptaka do świnki!
+      courseA_maze_seq7_copy: Zorientuj się, czego brakuje, a następnie dodaj bloki,
+        by doprowadzić ptaka do świnki!
+      courseA_maze_seq8: Przejdź ten poziom i doprowadź ptaka do świnki!
+      courseA_maze_seq8_2018: Przejdź ten poziom i doprowadź ptaka do świnki!
+      courseA_maze_seq8_2019: Przejdź ten poziom i doprowadź ptaka do świnki!
+      courseA_maze_seq8_2020: Przejdź ten poziom i doprowadź ptaka do świnki!
+      courseA_maze_seq8_copy: Przejdź ten poziom i doprowadź ptaka do świnki!
+      courseA_maze_seq9: Zdebuguj ten poziom, dodając bloki, aby doprowadzić ptaka
+        do świnki!
+      courseA_maze_seq_challenge1: Coś poszło nie tak. Pomóż naprawić kod, aby doprowadzić
+        ptaka do świnki!
+      courseA_maze_seq_challenge1_2018: Coś poszło nie tak. Pomóż naprawić kod, aby
+        doprowadzić ptaka do świnki!
+      courseA_maze_seq_challenge1_2019: Coś poszło nie tak. Pomóż naprawić kod, aby
+        doprowadzić ptaka do świnki!
+      courseA_maze_seq_challenge1_2020: Coś poszło nie tak. Pomóż naprawić kod, aby
+        doprowadzić ptaka do świnki!
+      courseA_maze_seq_challenge2: Wyznacz ścieżkę i zaprowadź ptaka do świnki. Unikaj
+        TNT, bo inaczej zacznie fruwać pierze!
+      courseA_maze_seq_challenge2_2018: Wyznacz ścieżkę i zaprowadź ptaka do świnki.
+        Unikaj TNT, bo inaczej zacznie fruwać pierze!
+      courseA_maze_seq_challenge2_2019: Wyznacz ścieżkę i zaprowadź ptaka do świnki.
+        Unikaj TNT, bo inaczej zacznie fruwać pierze!
+      courseA_maze_seq_challenge2_2020: Wyznacz ścieżkę i zaprowadź ptaka do świnki.
+        Unikaj TNT, bo inaczej zacznie fruwać pierze!
+      courseA_playLab_events1: To jest poziom Play Lab.  Przemieszaj bloki do obszaru
+        roboczego i zobacz, co się dzieje!
+      courseA_playLab_events1_2018: To jest poziom Play Lab.  Przemieszaj bloki do
+        obszaru roboczego i zobacz, co się dzieje!
+      courseA_playLab_events2: 'Pies Jorge chce powiedzieć: "Cześć." Czy możesz mu
+        pomóc?'
+      courseA_playLab_events2_2018: 'Pies Jorge chce powiedzieć: "Cześć." Czy możesz
+        mu pomóc?'
+      courseA_playLab_events3: 'Połącz blok "Przemieść w lewo" z blokiem wydarzenia
+        "Gdy jest po lewej stronie", który jest już w obszarze roboczym.  '
+      courseA_playLab_events3_2018: 'Połącz blok "Przemieść w lewo" z blokiem wydarzenia
+        "Gdy jest po lewej stronie", który jest już w obszarze roboczym.  '
+      courseA_playLab_events3_2020: 'Połącz blok "Przemieść w lewo" z blokiem wydarzenia
+        "Gdy jest po lewej stronie", który jest już w obszarze roboczym.  '
+      courseA_playLab_events4: Dodaj bloki służące do przejścia w prawo, po kliknięciu
+        przycisku "W prawo".
+      courseA_playLab_events5: Dodawaj wydarzenia, aby Jorge poruszał się w górę i
+        w dół, po przyciśnięciu przycisków "W górę" i "W dół".
+      courseA_playLab_events5_2018: Dodawaj wydarzenia, aby Jorge poruszał się w górę
+        i w dół, po przyciśnięciu przycisków "W górę" i "W dół".
+      courseA_playLab_events6: Spraw, by stało się to bardziej interesujące poprzez
+        zmianę tła i odtwarzanie losowo wybranego dźwięku podczas kliknięcia w Jorge'a.
+      courseA_playLab_events6_2018: Spraw, by stało się to bardziej interesujące poprzez
+        zmianę tła i odtwarzanie losowo wybranego dźwięku podczas kliknięcia w Jorge'a.
+      courseA_playLab_events7: Dodawaj to tej gry co tylko chcesz. Czy możesz sprawić,
+        by dinozaur znikał, gdy Jorge na niego wpadnie?
+      courseA_playlab_events_challenge1: Czy możesz napisać kod, aby pokazać pozostałe
+        postacie? Wskazówki pomogą Ci realizować ten projekt krok-po-kroku.
+      courseA_playlab_events_challenge1_2018: Czy możesz napisać kod, aby pokazać
+        pozostałe postacie? Wskazówki pomogą Ci realizować ten projekt krok-po-kroku.
+      courseA_playlab_events_challenge1_2019: Czy możesz napisać kod, aby pokazać
+        pozostałe postacie? Wskazówki pomogą Ci realizować ten projekt krok-po-kroku.
+      courseA_playlab_events_challenge1_2020: Czy możesz napisać kod, aby pokazać
+        pozostałe postacie? Wskazówki pomogą Ci realizować ten projekt krok-po-kroku.
+      courseA_playlab_events_challenge2: Przydziel każdemu coś do zrobienia, gdy w
+        nich klikniesz.
+      courseA_playlab_events_challenge2_2018: Przydziel każdemu coś do zrobienia,
+        gdy w nich klikniesz.
+      courseA_playlab_events_challenge2_2019: Przydziel każdemu coś do zrobienia,
+        gdy w nich klikniesz.
+      courseA_playlab_events_challenge2_2020: Przydziel każdemu coś do zrobienia,
+        gdy w nich klikniesz.
+      courseA_video_events: Potrzeba lepszego połączenia laboratorium gier/ wydarzeń
+      courseA_video_events_2018: Potrzeba lepszego połączenia laboratorium gier/ wydarzeń
+      courseA_video_events_2019: Potrzeba lepszego połączenia laboratorium gier/ wydarzeń
+      courseA_video_events_2020: Potrzeba lepszego połączenia laboratorium gier/ wydarzeń
+      courseB_artist_loops1: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj na
+        tym poziomie i narysuj coś zabawnego.'
+      courseB_artist_loops1_2018: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
+      courseB_artist_loops1_2019: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
+      courseB_artist_loops1_2020: 'To jest nowy typ puzzla o nazwie: "Grafik". Graj
+        na tym poziomie i narysuj coś zabawnego.'
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
@@ -1246,6 +1475,10 @@ pl-PL:
       courseB_artist_loops_challenge2_2020: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_collector_loops10: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseB_collector_loops10_2018: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseB_collector_loops10_2019: Pomóż Laurel zebrać cały skarb z tej groty.
+      courseB_collector_loops10_2020: Pomóż Laurel zebrać cały skarb z tej groty.
       courseB_collector_loops_challenge2a: Pomóż Laurelowi zabrać co najmniej **5**
         części skarbu, aby ukończyć tę łamigłówkę.
       courseB_collector_loops_challenge2a_2018: Pomóż Laurelowi zabrać co najmniej
@@ -1254,6 +1487,10 @@ pl-PL:
         **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_collector_loops_challenge2a_2020: Pomóż Laurelowi zabrać co najmniej
         **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_maze_seq6: Idź w jedną stronę, a później w drugą, by doprowadzić ptaka
+        do świnki!
+      courseB_maze_seq7: Zorientuj się, czego brakuje, a następnie dodaj bloki, by
+        doprowadzić ptaka do świnki!
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w
         złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne,
@@ -1268,14 +1505,134 @@ pl-PL:
       courseC19_playLab_EOC5_2020: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
+      courseC_PlayLab_events1: Spraw, by Pies Jorge (postać 1) powie "Cześć."
+      courseC_PlayLab_events1_2018: Spraw, by Pies Jorge (postać 1) powie "Cześć."
+      courseC_PlayLab_events1_2019: Spraw, by Pies Jorge (postać 1) powie "Cześć."
+      courseC_PlayLab_events1_2020: Spraw, by Pies Jorge (postać 1) powie "Cześć."
+      courseC_PlayLab_events2: Czy możesz spowodować, aby Pies Jorge (postać 1) coś
+        powiedział, a następnie Kotka Oliwka (postać 2) coś powiedziała?
+      courseC_PlayLab_events2_2018: Czy możesz spowodować, aby Pies Jorge (postać
+        1) coś powiedział, a następnie Kotka Oliwka (postać 2) coś powiedziała?
+      courseC_PlayLab_events2_2019: Czy możesz spowodować, aby Pies Jorge (postać
+        1) coś powiedział, a następnie Kotka Oliwka (postać 2) coś powiedziała?
+      courseC_PlayLab_events2_2020: Czy możesz spowodować, aby Pies Jorge (postać
+        1) coś powiedział, a następnie Kotka Oliwka (postać 2) coś powiedziała?
       courseC_PlayLab_events3: Czy możesz napisać program, który sprawia, że Jorge
-        (postać 1) idzie w kierunku Kota Oliwek?
+        (postać 1) idzie w kierunku Kotki Oliwki?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że
-        Jorge (postać 1) idzie w kierunku Kota Oliwek?
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki?
       courseC_PlayLab_events3_2019: Czy możesz napisać program, który sprawia, że
-        Jorge (postać 1) idzie w kierunku Kota Oliwek?
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki?
       courseC_PlayLab_events3_2020: Czy możesz napisać program, który sprawia, że
-        Jorge (postać 1) idzie w kierunku Kota Oliwek?
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki?
+      courseC_PlayLab_events4: Czy możesz napisać program, które sprawia, że Jorge
+        (postać 1) idzie w kierunku Kotki Oliwki i powoduje, że Oliwka mówi "Cześć",
+        gdy Jorge do niej dociera?
+      courseC_PlayLab_events4_2018: Czy możesz napisać program, które sprawia, że
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki i powoduje, że Oliwka mówi
+        "Cześć", gdy Jorge do niej dociera?
+      courseC_PlayLab_events4_2019: Czy możesz napisać program, które sprawia, że
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki i powoduje, że Oliwka mówi
+        "Cześć", gdy Jorge do niej dociera?
+      courseC_PlayLab_events4_2020: Czy możesz napisać program, które sprawia, że
+        Jorge (postać 1) idzie w kierunku Kotki Oliwki i powoduje, że Oliwka mówi
+        "Cześć", gdy Jorge do niej dociera?
+      courseC_PlayLab_events5: Czy mógłbyś napisać program, który powoduje, że Ośmiornica
+        Oktawia mówi "Co nowego?", po kliknięciu w nią?
+      courseC_PlayLab_events5_2018: Czy mógłbyś napisać program, który powoduje, że
+        Ośmiornica Oktawia mówi "Co nowego?", po kliknięciu w nią?
+      courseC_PlayLab_events5_2019: Czy mógłbyś napisać program, który powoduje, że
+        Ośmiornica Oktawia mówi "Co nowego?", po kliknięciu w nią?
+      courseC_PlayLab_events5_2020: Czy mógłbyś napisać program, który powoduje, że
+        Ośmiornica Oktawia mówi "Co nowego?", po kliknięciu w nią?
+      courseC_PlayLab_events6: Teraz napisz program, który powoduje, że pingwin Waddles
+        porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić do
+        wszystkich celów!
+      courseC_PlayLab_events6_2018: Teraz napisz program, który powoduje, że pingwin
+        Waddles porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić
+        do wszystkich celów!
+      courseC_PlayLab_events6_2019: Teraz napisz program, który powoduje, że pingwin
+        Waddles porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić
+        do wszystkich celów!
+      courseC_PlayLab_events6_2020: Teraz napisz program, który powoduje, że pingwin
+        Waddles porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić
+        do wszystkich celów!
+      courseC_PlayLab_events7: 'Blok "Powtarzaj w nieskończoność" umożliwia wykonywanie
+        kodu bez przerwy. Użyj tego bloku, aby przemieszczać Dinozaura Chompa (postać
+        2) w górę i w dół bez przerwy o 400 pikseli. '
+      courseC_PlayLab_events7_2018: 'Blok "Powtarzaj w nieskończoność" umożliwia wykonywanie
+        kodu bez przerwy. Użyj tego bloku, aby przemieszczać Dinozaura Chompa (postać
+        2) w górę i w dół bez przerwy o 400 pikseli. '
+      courseC_PlayLab_events7_2019: 'Blok "Powtarzaj w nieskończoność" umożliwia wykonywanie
+        kodu bez przerwy. Użyj tego bloku, aby przemieszczać Dinozaura Chompa (postać
+        2) w górę i w dół bez przerwy o 400 pikseli. '
+      courseC_PlayLab_events7_2020: 'Blok "Powtarzaj w nieskończoność" umożliwia wykonywanie
+        kodu bez przerwy. Użyj tego bloku, aby przemieszczać Dinozaura Chompa (postać
+        2) w górę i w dół bez przerwy o 400 pikseli. '
+      courseC_PlayLab_events8: "Czy mógłbyś spowodować, że Pingwin Waddles (postać
+        1) odtworzy dźwięk \"Trafienie\" i powie \"Ała!\", gdy trafi w Chompa? \nGdy
+        skończysz, zagraj w grę, aby to nastąpiło."
+      courseC_PlayLab_events8_2018: "Czy mógłbyś spowodować, że Pingwin Waddles (postać
+        1) odtworzy dźwięk \"Trafienie\" i powie \"Ała!\", gdy trafi w Chompa? \nGdy
+        skończysz, zagraj w grę, aby to nastąpiło."
+      courseC_PlayLab_events8_2019: "Czy mógłbyś spowodować, że Pingwin Waddles (postać
+        1) odtworzy dźwięk \"Trafienie\" i powie \"Ała!\", gdy trafi w Chompa? \nGdy
+        skończysz, zagraj w grę, aby to nastąpiło."
+      courseC_PlayLab_events8_2020: "Czy mógłbyś spowodować, że Pingwin Waddles (postać
+        1) odtworzy dźwięk \"Trafienie\" i powie \"Ała!\", gdy trafi w Chompa? \nGdy
+        skończysz, zagraj w grę, aby to nastąpiło."
+      courseC_PlayLab_events9: "Czy mógłbyś dodać blok, aby zebrać punkt, gdy Pingwin
+        Waddles wpadnie na Ośmiornicę Octavię (postać 3)? \n\nGraj w grę i przemieszczaj
+        Waddlesa za pomocą strzałek, aż zdobędziesz punkt!"
+      courseC_PlayLab_events9_2018: "Czy mógłbyś dodać blok, aby zebrać punkt, gdy
+        Pingwin Waddles wpadnie na Ośmiornicę Octavię (postać 3)? \n\nGraj w grę i
+        przemieszczaj Waddlesa za pomocą strzałek, aż zdobędziesz punkt!"
+      courseC_PlayLab_events9_2019: "Czy mógłbyś dodać blok, aby zebrać punkt, gdy
+        Pingwin Waddles wpadnie na Ośmiornicę Octavię (postać 3)? \n\nGraj w grę i
+        przemieszczaj Waddlesa za pomocą strzałek, aż zdobędziesz punkt!"
+      courseC_PlayLab_events9_2020: "Czy mógłbyś dodać blok, aby zebrać punkt, gdy
+        Pingwin Waddles wpadnie na Ośmiornicę Octavię (postać 3)? \n\nGraj w grę i
+        przemieszczaj Waddlesa za pomocą strzałek, aż zdobędziesz punkt!"
+      courseC_PlayLab_eventsA: "Dodaj bloki do zdarzenia \"Po uruchomieniu\", aby
+        zmienić tło i szybkość Pingwina Waddlesa.   \n\nZagraj w grę i przesuwaj Waddlesa
+        strzałkami, aż zdobędziesz punkt."
+      courseC_PlayLab_eventsA_2018: "Dodaj bloki do zdarzenia \"Po uruchomieniu\",
+        aby zmienić tło i szybkość Pingwina Waddlesa.   \n\nZagraj w grę i przesuwaj
+        Waddlesa strzałkami, aż zdobędziesz punkt."
+      courseC_PlayLab_eventsA_2019: "Dodaj bloki do zdarzenia \"Po uruchomieniu\",
+        aby zmienić tło i szybkość Pingwina Waddlesa.   \n\nZagraj w grę i przesuwaj
+        Waddlesa strzałkami, aż zdobędziesz punkt."
+      courseC_PlayLab_eventsA_2020: "Dodaj bloki do zdarzenia \"Po uruchomieniu\",
+        aby zmienić tło i szybkość Pingwina Waddlesa.   \n\nZagraj w grę i przesuwaj
+        Waddlesa strzałkami, aż zdobędziesz punkt."
+      courseC_PlayLab_eventsFP: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk
+        "Zakończ", aby udostępnić ją znajomym. Przejrzyj pomysły na opowieść w podpowiedziach.
+      courseC_PlayLab_eventsFP_2018: Utwórz własną opowieść. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby udostępnić ją znajomym. Przejrzyj pomysły na opowieść
+        w podpowiedziach.
+      courseC_PlayLab_eventsFP_2019: Utwórz własną opowieść. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby udostępnić ją znajomym. Przejrzyj pomysły na opowieść
+        w podpowiedziach.
+      courseC_PlayLab_eventsFP_2020: Utwórz własną opowieść. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby udostępnić ją znajomym. Przejrzyj pomysły na opowieść
+        w podpowiedziach.
+      courseC_PlayLab_events_challenge1: "Użyj nowego bloku, aby sprawić, by Waddles
+        automatycznie przemieścił się z powrotem na start, gdy wpadnie na Dinozaura,
+        a wówczas zdobywa punkt.   \n\nZagraj w grę i przesuwaj Waddlesa strzałkami,
+        aż zdobędziesz wystarczającą ilość punktów."
+      courseC_PlayLab_events_challenge1_2018: "Użyj nowego bloku, aby sprawić, by
+        Waddles automatycznie przemieścił się z powrotem na start, gdy wpadnie na
+        Dinozaura, a wówczas zdobywa punkt.   \n\nZagraj w grę i przesuwaj Waddlesa
+        strzałkami, aż zdobędziesz wystarczającą ilość punktów."
+      courseC_PlayLab_events_challenge1_2019: "Użyj nowego bloku, aby sprawić, by
+        Waddles automatycznie przemieścił się z powrotem na start, gdy wpadnie na
+        Dinozaura, a wówczas zdobywa punkt.   \n\nZagraj w grę i przesuwaj Waddlesa
+        strzałkami, aż zdobędziesz wystarczającą ilość punktów."
+      courseC_PlayLab_events_challenge1_2020: "Użyj nowego bloku, aby sprawić, by
+        Waddles automatycznie przemieścił się z powrotem na start, gdy wpadnie na
+        Dinozaura, a wówczas zdobywa punkt.   \n\nZagraj w grę i przesuwaj Waddlesa
+        strzałkami, aż zdobędziesz wystarczającą ilość punktów."
+      courseC_artist_loop1: Dodajmy kilka pizz!
       courseC_artist_loops5a: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2018: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2019: Spróbuj nowych nalepek!
@@ -1296,6 +1653,18 @@ pl-PL:
       courseC_artist_loops8a_2018: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_loops8a_2019: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_loops8a_2020: A teraz spróbuj czegoś na własną rękę!
+      courseC_artist_loopsPre1a: Czas obrócić tę linię!
+      courseC_artist_loopsPre1a_2018: Czas obrócić tę linię!
+      courseC_artist_loopsPre1a_2019: Czas obrócić tę linię!
+      courseC_artist_loopsPre1a_2020: Czas obrócić tę linię!
+      courseC_artist_loopsPrePre1a: 'Doprowadź grafika na środek obszaru gry, a następnie
+        narysuj linię. '
+      courseC_artist_loopsPrePre1a_2018: 'Doprowadź grafika na środek obszaru gry,
+        a następnie narysuj linię. '
+      courseC_artist_loopsPrePre1a_2019: 'Doprowadź grafika na środek obszaru gry,
+        a następnie narysuj linię. '
+      courseC_artist_loopsPrePre1a_2020: 'Doprowadź grafika na środek obszaru gry,
+        a następnie narysuj linię. '
       courseC_artist_prog5: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog5_2018: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
@@ -1315,14 +1684,14 @@ pl-PL:
       courseC_collector_loops_challenge2_2018: Zbierz co najmniej **5** części skarbu!
       courseC_collector_loops_challenge2_2019: Zbierz co najmniej **5** części skarbu!
       courseC_collector_loops_challenge2_2020: Zbierz co najmniej **5** części skarbu!
-      courseC_collector_prog1: Graz blokami, aby przekonać się, czy jesteś w stanie
-        pomów Laurel zebrać trochę skarbów.
-      courseC_collector_prog1_2018: Graz blokami, aby przekonać się, czy jesteś w
-        stanie pomów Laurel zebrać trochę skarbów.
-      courseC_collector_prog1_2019: Graz blokami, aby przekonać się, czy jesteś w
-        stanie pomów Laurel zebrać trochę skarbów.
-      courseC_collector_prog1_2020: Graz blokami, aby przekonać się, czy jesteś w
-        stanie pomów Laurel zebrać trochę skarbów.
+      courseC_collector_prog1: Pobaw się blokami, aby przekonać się, czy jesteś w
+        stanie pomóc Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2018: Pobaw się blokami, aby przekonać się, czy jesteś
+        w stanie pomóc Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2019: Pobaw się blokami, aby przekonać się, czy jesteś
+        w stanie pomóc Laurel zebrać trochę skarbów.
+      courseC_collector_prog1_2020: Pobaw się blokami, aby przekonać się, czy jesteś
+        w stanie pomóc Laurel zebrać trochę skarbów.
       courseC_collector_prog2: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
         aby go podnieść.
       courseC_collector_prog2_2018: Doprowadź Laurel do skarbu, a następnie użyj "Zbierz",
@@ -1389,74 +1758,78 @@ pl-PL:
         aby ukończyć to wyzwanie!
       courseC_collector_prog_challenge2_2020: Zbierz co najmniej **10** części skarbu,
         aby ukończyć to wyzwanie!
-      courseC_flappy_events1: Dołącz block "pofruń na normalną wysokość" do zdarzenia
-        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
-        aby przesunąć Flappy'ego do miejsca docelowego.
+      courseC_flappy_events1: Dołącz blok "Machnij skrzydłami normalną ilość razy"
+        do zdarzenia "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub
+        dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
       courseC_flappy_events10: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events10_2018: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events10_2019: 'Stwórz swoją własną grę z Flappym! '
       courseC_flappy_events10_2020: 'Stwórz swoją własną grę z Flappym! '
-      courseC_flappy_events1_2018: Dołącz block "pofruń na normalną wysokość" do zdarzenia
-        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
-        aby przesunąć Flappy'ego do miejsca docelowego.
-      courseC_flappy_events1_2019: Dołącz block "pofruń na normalną wysokość" do zdarzenia
-        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
-        aby przesunąć Flappy'ego do miejsca docelowego.
-      courseC_flappy_events1_2020: Dołącz block "pofruń na normalną wysokość" do zdarzenia
-        "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu,
-        aby przesunąć Flappy'ego do miejsca docelowego.
+      courseC_flappy_events1_2018: Dołącz blok "Machnij skrzydłami normalną ilość
+        razy" do zdarzenia "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij
+        lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
+      courseC_flappy_events1_2019: Dołącz blok "Machnij skrzydłami normalną ilość
+        razy" do zdarzenia "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij
+        lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
+      courseC_flappy_events1_2020: Dołącz blok "Machnij skrzydłami normalną ilość
+        razy" do zdarzenia "po kliknięciu", a następnie naciśnij "Uruchom". Kliknij
+        lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
       courseC_flappy_events2: Spróbuj dodać blok, który ustawia poziom prędkości po
-        naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
-        aby kontynuować.
+        naciśnięciu przycisku "Uruchom".  Zagraj w grę i machaj skrzydłami, aby dolecieć
+        do obiektu docelowego, aby kontynuować.
       courseC_flappy_events2_2018: Spróbuj dodać blok, który ustawia poziom prędkości
-        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
-        aby kontynuować.
+        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i machaj skrzydłami, aby
+        dolecieć do obiektu docelowego, aby kontynuować.
       courseC_flappy_events2_2019: Spróbuj dodać blok, który ustawia poziom prędkości
-        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
-        aby kontynuować.
+        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i machaj skrzydłami, aby
+        dolecieć do obiektu docelowego, aby kontynuować.
       courseC_flappy_events2_2020: Spróbuj dodać blok, który ustawia poziom prędkości
-        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego,
-        aby kontynuować.
-      courseC_flappy_events3: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
-        na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
-      courseC_flappy_events3_2018: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
-        na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
-      courseC_flappy_events3_2019: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
-        na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
-      courseC_flappy_events3_2020: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie
-        na ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
-      courseC_flappy_events4: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
+        po naciśnięciu przycisku "Uruchom".  Zagraj w grę i machaj skrzydłami, aby
+        dolecieć do obiektu docelowego, aby kontynuować.
+      courseC_flappy_events3: Dołącz blok "Zakończ grę" do zdarzenia "Kiedy uderzy
+        w ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      courseC_flappy_events3_2018: Dołącz blok "Zakończ grę" do zdarzenia "Kiedy uderzy
+        w ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      courseC_flappy_events3_2019: Dołącz blok "Zakończ grę" do zdarzenia "Kiedy uderzy
+        w ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      courseC_flappy_events3_2020: Dołącz blok "Zakończ grę" do zdarzenia "Kiedy uderzy
+        w ziemię". Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      courseC_flappy_events4: Dołącz blok do zdarzenia "Kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
-      courseC_flappy_events4_2018: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
+      courseC_flappy_events4_2018: Dołącz blok do zdarzenia "Kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
-      courseC_flappy_events4_2019: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
+      courseC_flappy_events4_2019: Dołącz blok do zdarzenia "Kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
-      courseC_flappy_events4_2020: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę"
+      courseC_flappy_events4_2020: Dołącz blok do zdarzenia "Kiedy uderzy w przeszkodę"
         tak, żeby gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie
         rur.
-      courseC_flappy_events5: Dołącz blok do zdarzenia "kiedy minie przeszkodę", a
+      courseC_flappy_events5: Dołącz blok do zdarzenia "Kiedy minie przeszkodę", a
         następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
         zestaw rur.
-      courseC_flappy_events5_2018: Dołącz blok do zdarzenia "kiedy minie przeszkodę",
+      courseC_flappy_events5_2018: Dołącz blok do zdarzenia "Kiedy minie przeszkodę",
         a następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
         zestaw rur.
-      courseC_flappy_events5_2019: Dołącz blok do zdarzenia "kiedy minie przeszkodę",
+      courseC_flappy_events5_2019: Dołącz blok do zdarzenia "Kiedy minie przeszkodę",
         a następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
         zestaw rur.
-      courseC_flappy_events5_2020: Dołącz blok do zdarzenia "kiedy minie przeszkodę",
+      courseC_flappy_events5_2020: Dołącz blok do zdarzenia "Kiedy minie przeszkodę",
         a następnie naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy
         zestaw rur.
-      courseC_flappy_events6: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy fruwa
-        na małą lub dużą wysokość.
-      courseC_flappy_events6_2018: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
-        fruwa na małą lub dużą wysokość.
-      courseC_flappy_events6_2019: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
-        fruwa na małą lub dużą wysokość.
-      courseC_flappy_events6_2020: Sprawdź, czy potrafisz zdobyć punkt, gdy Flappy
-        fruwa na małą lub dużą wysokość.
+      courseC_flappy_events6: Sprawdź, czy nadal jesteś w stanie zdobyć punkt, gdy
+        Flappy macha skrzydłami mniejszą lub większą ilość razy, za każdym razem,
+        gdy klikniesz.
+      courseC_flappy_events6_2018: Sprawdź, czy nadal jesteś w stanie zdobyć punkt,
+        gdy Flappy macha skrzydłami mniejszą lub większą ilość razy, za każdym razem,
+        gdy klikniesz.
+      courseC_flappy_events6_2019: Sprawdź, czy nadal jesteś w stanie zdobyć punkt,
+        gdy Flappy macha skrzydłami mniejszą lub większą ilość razy, za każdym razem,
+        gdy klikniesz.
+      courseC_flappy_events6_2020: Sprawdź, czy nadal jesteś w stanie zdobyć punkt,
+        gdy Flappy macha skrzydłami mniejszą lub większą ilość razy, za każdym razem,
+        gdy klikniesz.
       courseC_flappy_events7: Następnie, spróbuj zmienić scenę dołączając inny blok
         do bloku "po uruchomieniu".
       courseC_flappy_events7_2018: Następnie, spróbuj zmienić scenę dołączając inny
@@ -1473,14 +1846,15 @@ pl-PL:
         na przykład po minięciu przeszkody.
       courseC_flappy_events8_2020: Ustaw **losową** scenę podczas innego zdarzenia...
         na przykład po minięciu przeszkody.
-      courseC_flappy_events9: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
-        ustawić wynik z powrotem na 0.
-      courseC_flappy_events9_2018: Po uderzeniu w przeszkodę, zamiast kończyć grę,
-        spróbuj ustawić wynik z powrotem na 0.
-      courseC_flappy_events9_2019: Po uderzeniu w przeszkodę, zamiast kończyć grę,
-        spróbuj ustawić wynik z powrotem na 0.
-      courseC_flappy_events9_2020: Po uderzeniu w przeszkodę, zamiast kończyć grę,
-        spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9: Aby wszystko nieco skomplikować, zamiast kończyć grę,
+        gdy Flappy uderzy w przeszkodę, spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9_2018: Aby wszystko nieco skomplikować, zamiast kończyć
+        grę, gdy Flappy uderzy w przeszkodę, spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9_2019: Aby wszystko nieco skomplikować, zamiast kończyć
+        grę, gdy Flappy uderzy w przeszkodę, spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9_2020: Aby wszystko nieco skomplikować, zamiast kończyć
+        grę, gdy Flappy uderzy w przeszkodę, spróbuj ustawić wynik z powrotem na 0.
+      courseC_harvester_loops1: Użyj pętli, by zebrać wszystkie dynie.
       courseC_harvester_loops10: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2019: Zbierz całą kukurydzę o wszystkie dynie.
@@ -1489,6 +1863,21 @@ pl-PL:
       courseC_harvester_loops11_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2020: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops1_2018: Użyj pętli, by zebrać wszystkie dynie.
+      courseC_harvester_loops1_2019: Użyj pętli, by zebrać wszystkie dynie.
+      courseC_harvester_loops1_2020: Użyj pętli, by zebrać wszystkie dynie.
+      courseC_harvester_loops2: Czy jesteś w stanie połączyć dwie różne pętle, aby
+        przejść do dyń, a następnie je zebrać?
+      courseC_harvester_loops2_2018: Czy jesteś w stanie połączyć dwie różne pętle,
+        aby przejść do dyń, a następnie je zebrać?
+      courseC_harvester_loops2_2019: Czy jesteś w stanie połączyć dwie różne pętle,
+        aby przejść do dyń, a następnie je zebrać?
+      courseC_harvester_loops2_2020: Czy jesteś w stanie połączyć dwie różne pętle,
+        aby przejść do dyń, a następnie je zebrać?
+      courseC_harvester_loops3: Zbierz wszystkie dynie.
+      courseC_harvester_loops3_2018: Zbierz wszystkie dynie.
+      courseC_harvester_loops3_2019: Zbierz wszystkie dynie.
+      courseC_harvester_loops3_2020: Zbierz wszystkie dynie.
       courseC_harvester_loops4: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2019: Zbierz całą kukurydzę o wszystkie dynie.
@@ -1505,6 +1894,13 @@ pl-PL:
       courseC_harvester_loops7_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2020: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops8: "**Wyzwanie.** Zbierz całą kukurydzę i wszystkie dynie."
+      courseC_harvester_loops8_2018: "**Wyzwanie.** Zbierz całą kukurydzę i wszystkie
+        dynie."
+      courseC_harvester_loops8_2019: "**Wyzwanie.** Zbierz całą kukurydzę i wszystkie
+        dynie."
+      courseC_harvester_loops8_2020: "**Wyzwanie.** Zbierz całą kukurydzę i wszystkie
+        dynie."
       courseC_harvester_loops9: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2018: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2019: Zbierz całą kukurydzę o wszystkie dynie.
@@ -1521,10 +1917,56 @@ pl-PL:
         i pól!
       courseC_harvester_loops_challenge2_2020: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
+      courseC_maze_debugging1: Napraw kod, aby pomóc Scratowi dostać się do żołędzia.
+      courseC_maze_debugging1_2018: Napraw kod, aby pomóc Scratowi dostać się do żołędzia.
+      courseC_maze_debugging1_2019: Napraw kod, aby pomóc Scratowi dostać się do żołędzia.
+      courseC_maze_debugging1_2020: Napraw kod, aby pomóc Scratowi dostać się do żołędzia.
+      courseC_maze_debugging2: Wykorzystaj umiejętności debugowania, aby doprowadzić
+        Scrata to żołędzia.
+      courseC_maze_debugging2_2018: Wykorzystaj umiejętności debugowania, aby doprowadzić
+        Scrata to żołędzia.
+      courseC_maze_debugging2_2019: Wykorzystaj umiejętności debugowania, aby doprowadzić
+        Scrata to żołędzia.
+      courseC_maze_debugging2_2020: Wykorzystaj umiejętności debugowania, aby doprowadzić
+        Scrata to żołędzia.
+      courseC_maze_debugging3: Usuń bloki, aby doprowadzić Scrata do żołędzia!
+      courseC_maze_debugging3_2018: Usuń bloki, aby doprowadzić Scrata do żołędzia!
+      courseC_maze_debugging3_2019: Usuń bloki, aby doprowadzić Scrata do żołędzia!
+      courseC_maze_debugging3_2020: Usuń bloki, aby doprowadzić Scrata do żołędzia!
+      courseC_maze_debugging4: Ktoś narobił bałaganu w instrukcjach! Czy możesz pomóc?
+      courseC_maze_debugging4_2018: Ktoś narobił bałaganu w instrukcjach! Czy możesz
+        pomóc?
+      courseC_maze_debugging4_2019: Ktoś narobił bałaganu w instrukcjach! Czy możesz
+        pomóc?
+      courseC_maze_debugging4_2020: Ktoś narobił bałaganu w instrukcjach! Czy możesz
+        pomóc?
+      courseC_maze_debugging5: Zdebuguj ten program przestawiając lub zmieniając bloki.
+      courseC_maze_debugging5_2018: Zdebuguj ten program przestawiając lub zmieniając
+        bloki.
+      courseC_maze_debugging5_2019: Zdebuguj ten program przestawiając lub zmieniając
+        bloki.
+      courseC_maze_debugging5_2020: Zdebuguj ten program przestawiając lub zmieniając
+        bloki.
+      courseC_maze_debugging6: Zorientuj się, co poszło nie tak i doprowadź Scrata
+        to żołędzia.
+      courseC_maze_debugging6_2018: Zorientuj się, co poszło nie tak i doprowadź Scrata
+        to żołędzia.
+      courseC_maze_debugging6_2019: Zorientuj się, co poszło nie tak i doprowadź Scrata
+        to żołędzia.
+      courseC_maze_debugging6_2020: Zorientuj się, co poszło nie tak i doprowadź Scrata
+        to żołędzia.
       courseC_maze_debugging_challenge1: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2018: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2019: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2020: _"Czy ja właśnie chodzę w kółko?"_
+      courseC_maze_loops_challenge1a: 'Teraz Scrat chce skorzystać z pętli, aby znaleźć
+        żołędź! '
+      courseC_maze_loops_challenge1a_2018: 'Teraz Scrat chce skorzystać z pętli, aby
+        znaleźć żołędź! '
+      courseC_maze_loops_challenge1a_2019: 'Teraz Scrat chce skorzystać z pętli, aby
+        znaleźć żołędź! '
+      courseC_maze_loops_challenge1a_2020: 'Teraz Scrat chce skorzystać z pętli, aby
+        znaleźć żołędź! '
       courseC_maze_programming1: W przypadku tej łamigłówki, przeciągnij wszystkie
         bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
       courseC_maze_programming1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie
@@ -1619,6 +2061,14 @@ pl-PL:
       courseC_starWars_loops10_predict2_2018: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_predict2_2019: Dobrze sobie radzisz! Oby tak dalej!
       courseC_starWars_loops10_predict2_2020: Dobrze sobie radzisz! Oby tak dalej!
+      courseC_starWars_loops11: Już prawie to masz! Tym razem wybierz dowolną ścieżkę,
+        która Ci się podoba!
+      courseC_starWars_loops11_2018: Już prawie to masz! Tym razem wybierz dowolną
+        ścieżkę, która Ci się podoba!
+      courseC_starWars_loops11_2019: Już prawie to masz! Tym razem wybierz dowolną
+        ścieżkę, która Ci się podoba!
+      courseC_starWars_loops11_2020: Już prawie to masz! Tym razem wybierz dowolną
+        ścieżkę, która Ci się podoba!
       courseC_starWars_loops1_2018: BB-8 podniesie każdy kawałek złomu, na jaki natrafi
         na ścieżce, po której się porusza. Użyj 5 tych samych bloków, aby skłonić
         BB-8 do podniesienia każdego kawałka złomu na obszarze gry.
@@ -1675,6 +2125,29 @@ pl-PL:
         Czy potrafisz umieścić pętlę w tym ciągu?
       courseC_starWars_loops6_copy: Pętle działają  nawet z wieloma blokami w środku.
         Czy potrafisz umieścić pętlę w tym ciągu?
+      courseC_starWars_loops7: Czy możesz spróbować pozyskać cały złom wykorzystując
+        tylko jedną pętlę? Spróbuj to wszystko zaprogramować znajdując potem kod powtarzający
+        do włożenia do pętli.
+      courseC_starWars_loops7_2018: Czy możesz spróbować pozyskać cały złom wykorzystując
+        tylko jedną pętlę? Spróbuj to wszystko zaprogramować znajdując potem kod powtarzający
+        do włożenia do pętli.
+      courseC_starWars_loops7_2019: Czy możesz spróbować pozyskać cały złom wykorzystując
+        tylko jedną pętlę? Spróbuj to wszystko zaprogramować znajdując potem kod powtarzający
+        do włożenia do pętli.
+      courseC_starWars_loops7_2020: Czy możesz spróbować pozyskać cały złom wykorzystując
+        tylko jedną pętlę? Spróbuj to wszystko zaprogramować znajdując potem kod powtarzający
+        do włożenia do pętli.
+      courseC_starWars_loops7_copy: Czy możesz spróbować pozyskać cały złom wykorzystując
+        tylko jedną pętlę? Spróbuj to wszystko zaprogramować znajdując potem kod powtarzający
+        do włożenia do pętli.
+      courseC_starWars_loops9: Użyj tego wszystkiego, czego się nauczyłeś, aby pozbierać
+        cały złom!
+      courseC_starWars_loops9_2018: Użyj tego wszystkiego, czego się nauczyłeś, aby
+        pozbierać cały złom!
+      courseC_starWars_loops9_2019: Użyj tego wszystkiego, czego się nauczyłeś, aby
+        pozbierać cały złom!
+      courseC_starWars_loops9_2020: Użyj tego wszystkiego, czego się nauczyłeś, aby
+        pozbierać cały złom!
       courseD_artist_binary1: "Kod binarny to sposób reprezentowania informacji przy
         użyciu tylko dwóch stanów. Tutaj będziemy używać stanu \"off\" (wyłączony),
         reprezentowanego przez 0, i \"on\" (włączony), reprezentowanego przez 1).
@@ -1699,6 +2172,22 @@ pl-PL:
         \\\r \\\r Udostępniliśmy Ci siatkę \"pikseli\", po której możesz chodzić i
         tworzyć wzory przez włączanie pewnych kwadratów. Czy mógłbyś spowodować, by
         artysta narysował \"01010101\" binarnie w pierwszym rzędzie?"
+      courseD_artist_binary2: Uruchom ten kod, aby zobaczyć, jak grafik korzysta z
+        rozwiązania binarnego, aby narysować ten wzór.
+      courseD_artist_binary2_2018: Uruchom ten kod, aby zobaczyć, jak grafik korzysta
+        z rozwiązania binarnego, aby narysować ten wzór.
+      courseD_artist_binary2_2019: Uruchom ten kod, aby zobaczyć, jak grafik korzysta
+        z rozwiązania binarnego, aby narysować ten wzór.
+      courseD_artist_binary2_2020: Uruchom ten kod, aby zobaczyć, jak grafik korzysta
+        z rozwiązania binarnego, aby narysować ten wzór.
+      courseD_artist_binary3: Które z tych binarnych łańcuchów możesz zapętlić 8 razy,
+        aby narysować ten obraz?
+      courseD_artist_binary3_2018: Które z tych binarnych łańcuchów możesz zapętlić
+        8 razy, aby narysować ten obraz?
+      courseD_artist_binary3_2019: Które z tych binarnych łańcuchów możesz zapętlić
+        8 razy, aby narysować ten obraz?
+      courseD_artist_binary3_2020: Które z tych binarnych łańcuchów możesz zapętlić
+        8 razy, aby narysować ten obraz?
       courseD_artist_binary4: Czy potrafisz narysować ten wzorek powtarzając binarny
         łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_artist_binary4_2018: Czy potrafisz narysować ten wzorek powtarzając
@@ -1707,6 +2196,18 @@ pl-PL:
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_artist_binary4_2020: Czy potrafisz narysować ten wzorek powtarzając
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
+      courseD_artist_binary5: "Każdy binarny łańcuch reprezentuje jeden wiersz tego
+        obrazka. \n\nCzy potrafisz je zmienić tak, aby była rysowana uśmiechnięta
+        buźka, a nie zmartwiona twarz?"
+      courseD_artist_binary5_2018: "Każdy binarny łańcuch reprezentuje jeden wiersz
+        tego obrazka. \n\nCzy potrafisz je zmienić tak, aby była rysowana uśmiechnięta
+        buźka, a nie zmartwiona twarz?"
+      courseD_artist_binary5_2019: "Każdy binarny łańcuch reprezentuje jeden wiersz
+        tego obrazka. \n\nCzy potrafisz je zmienić tak, aby była rysowana uśmiechnięta
+        buźka, a nie zmartwiona twarz?"
+      courseD_artist_binary5_2020: "Każdy binarny łańcuch reprezentuje jeden wiersz
+        tego obrazka. \n\nCzy potrafisz je zmienić tak, aby była rysowana uśmiechnięta
+        buźka, a nie zmartwiona twarz?"
       courseD_artist_binary6: Który 6-cyfrowy binarny łańcuch, powtórzony 11 razy,
         narysuje ten obraz?
       courseD_artist_binary6_2018: Który 6-cyfrowy binarny łańcuch, powtórzony 11
@@ -1731,7 +2232,15 @@ pl-PL:
       courseD_artist_binary8_predict1_2018: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_predict1_2019: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binary8_predict1_2020: Ukończ kod, aby utworzyć ten rysunek.
+      courseD_artist_binaryFP: "Oto obszar do rysowania o większej rozdzielczości
+        - 16 na 16 pikseli! \n\nCo się stanie, kiedy zaczniemy tworzyć z użyciem bitów!"
       courseD_artist_binaryFP8: "**Czas na zabawę:** Narysuj binarnie cokolwiek chcesz! "
+      courseD_artist_binaryFP_2018: "Oto obszar do rysowania o większej rozdzielczości
+        - 16 na 16 pikseli! \n\nCo się stanie, kiedy zaczniemy tworzyć z użyciem bitów!"
+      courseD_artist_binaryFP_2019: "Oto obszar do rysowania o większej rozdzielczości
+        - 16 na 16 pikseli! \n\nCo się stanie, kiedy zaczniemy tworzyć z użyciem bitów!"
+      courseD_artist_binaryFP_2020: "Oto obszar do rysowania o większej rozdzielczości
+        - 16 na 16 pikseli! \n\nCo się stanie, kiedy zaczniemy tworzyć z użyciem bitów!"
       courseD_artist_binary_challenge1_2018: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_artist_binary_challenge1_2019: Możesz użyć tylko binarnych wartości
@@ -1744,6 +2253,85 @@ pl-PL:
         przywrócić to logo do normy?
       courseD_artist_binary_challenge2_2020: Czy jesteś wystarczająco wytrwały, aby
         przywrócić to logo do normy?
+      courseD_artist_nestedLoops1: |-
+        Narysuj trójkąt, aby uruchomić ten etap.\
+        (Każdy bok ma długość 100 pikseli, a Ty musisz wykonać skręt o 120 stopni w każdym kącie zewnętrznym.)
+      courseD_artist_nestedLoops10: Weź kwadraty z poprzedniego razu, ale tym razem
+        tylko 7 i ułóż w rzędzie.
+      courseD_artist_nestedLoops10_2018: Weź kwadraty z poprzedniego razu, ale tym
+        razem tylko 7 i ułóż w rzędzie.
+      courseD_artist_nestedLoops10_2019: Weź kwadraty z poprzedniego razu, ale tym
+        razem tylko 7 i ułóż w rzędzie.
+      courseD_artist_nestedLoops10_2020: Weź kwadraty z poprzedniego razu, ale tym
+        razem tylko 7 i ułóż w rzędzie.
+      courseD_artist_nestedLoops1_2018: |-
+        Narysuj trójkąt, aby uruchomić ten etap.\
+        (Każdy bok ma długość 100 pikseli, a Ty musisz wykonać skręt o 120 stopni w każdym kącie zewnętrznym.)
+      courseD_artist_nestedLoops1_2019: |-
+        Narysuj trójkąt, aby uruchomić ten etap.\
+        (Każdy bok ma długość 100 pikseli, a Ty musisz wykonać skręt o 120 stopni w każdym kącie zewnętrznym.)
+      courseD_artist_nestedLoops1_2020: |-
+        Narysuj trójkąt, aby uruchomić ten etap.\
+        (Każdy bok ma długość 100 pikseli, a Ty musisz wykonać skręt o 120 stopni w każdym kącie zewnętrznym.)
+      courseD_artist_nestedLoops1a: Teraz dokonaj sześciokrotnego  zapętlenia trójkąta.
+      courseD_artist_nestedLoops1a_2018: Teraz dokonaj sześciokrotnego  zapętlenia
+        trójkąta.
+      courseD_artist_nestedLoops1a_2019: Teraz dokonaj sześciokrotnego  zapętlenia
+        trójkąta.
+      courseD_artist_nestedLoops1a_2020: Teraz dokonaj sześciokrotnego  zapętlenia
+        trójkąta.
+      courseD_artist_nestedLoops2: Tym razem rozwiąż to zadanie używając jak najmniejszej
+        liczby bloków.
+      courseD_artist_nestedLoops2_2018: Tym razem rozwiąż to zadanie używając jak
+        najmniejszej liczby bloków.
+      courseD_artist_nestedLoops2_2019: Tym razem rozwiąż to zadanie używając jak
+        najmniejszej liczby bloków.
+      courseD_artist_nestedLoops2_2020: Tym razem rozwiąż to zadanie używając jak
+        najmniejszej liczby bloków.
+      courseD_artist_nestedLoops3: |-
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+
+        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+      courseD_artist_nestedLoops3_2018: |-
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+
+        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+      courseD_artist_nestedLoops3_2019: |-
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+
+        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+      courseD_artist_nestedLoops3_2020: |-
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+
+        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+      courseD_artist_nestedLoops4: Świetnie! Zrób to samo z tymi okręgami.
+      courseD_artist_nestedLoops4_2018: Świetnie! Zrób to samo z tymi okręgami.
+      courseD_artist_nestedLoops4_2019: Świetnie! Zrób to samo z tymi okręgami.
+      courseD_artist_nestedLoops4_2020: Świetnie! Zrób to samo z tymi okręgami.
+      courseD_artist_nestedLoops5: Co się stanie, jeśli również wykonać skręt o 90
+        stopni pomiędzy okręgami?
+      courseD_artist_nestedLoops5_2018: Co się stanie, jeśli również wykonać skręt
+        o 90 stopni pomiędzy okręgami?
+      courseD_artist_nestedLoops5_2019: Co się stanie, jeśli również wykonać skręt
+        o 90 stopni pomiędzy okręgami?
+      courseD_artist_nestedLoops5_2020: Co się stanie, jeśli również wykonać skręt
+        o 90 stopni pomiędzy okręgami?
+      courseD_artist_nestedLoops7: Użyj tego, czego się nauczyłeś, aby wykonać ten
+        rysunek.
+      courseD_artist_nestedLoops7_2018: Użyj tego, czego się nauczyłeś, aby wykonać
+        ten rysunek.
+      courseD_artist_nestedLoops7_2019: Użyj tego, czego się nauczyłeś, aby wykonać
+        ten rysunek.
+      courseD_artist_nestedLoops7_2020: Użyj tego, czego się nauczyłeś, aby wykonać
+        ten rysunek.
+      courseD_artist_nestedLoops8: Wykorzystując to, czego się nauczyłeś na podstawie
+        ostatnich kilku zadań, buduj ten obrazek od początku.
+      courseD_artist_nestedLoops8_2018: Wykorzystując to, czego się nauczyłeś na podstawie
+        ostatnich kilku zadań, buduj ten obrazek od początku.
+      courseD_artist_nestedLoops8_2019: Wykorzystując to, czego się nauczyłeś na podstawie
+        ostatnich kilku zadań, buduj ten obrazek od początku.
+      courseD_artist_nestedLoops8_2020: Wykorzystując to, czego się nauczyłeś na podstawie
+        ostatnich kilku zadań, buduj ten obrazek od początku.
       courseD_artist_nestedLoops9: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść do tego
         jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_2018: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
@@ -1760,6 +2348,14 @@ pl-PL:
         dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops9_predict1_2020: "\\*\\* Wyzwanie: \\*\\* Czy możesz
         dojść do tego jak utworzyć obrazek taki jak ten?"
+      courseD_artist_nestedLoopsFP: Teraz Twoja kolej. Wykorzystaj umiejętności, które
+        nabyłeś i zrób coś, co kochasz!
+      courseD_artist_nestedLoopsFP_2018: Teraz Twoja kolej. Wykorzystaj umiejętności,
+        które nabyłeś i zrób coś, co kochasz!
+      courseD_artist_nestedLoopsFP_2019: Teraz Twoja kolej. Wykorzystaj umiejętności,
+        które nabyłeś i zrób coś, co kochasz!
+      courseD_artist_nestedLoopsFP_2020: Teraz Twoja kolej. Wykorzystaj umiejętności,
+        które nabyłeś i zrób coś, co kochasz!
       courseD_artist_nestedLoops_challenge1: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoops_challenge1_2018: "\\*\\* Wyzwanie: \\*\\* Czy możesz
@@ -1788,8 +2384,18 @@ pl-PL:
         z rzędu!
       courseD_artist_project2_2020: Teraz weź swój kształt i narysuj go dwa lub trzy
         z rzędu!
+      courseD_artist_ramp11: Teraz utwórz kwadrat z wykorzystaniem Grafika!
+      courseD_artist_ramp12: Użyj tego, czego się nauczyłeś, by narysować ten trójką
+        wewnątrz kwadratu.
+      courseD_autorun_binary2_2019: Uruchom ten kod, aby zobaczyć, jak grafik korzysta
+        z rozwiązania binarnego, aby narysować ten wzór.
+      courseD_autorun_binary3_2019: Które z tych binarnych łańcuchów możesz zapętlić
+        8 razy, aby narysować ten obraz?
       courseD_autorun_binary4_2019: Czy potrafisz narysować ten wzorek powtarzając
         binarny łańcuch złożony z trzech cyfr (0 lub 1)?
+      courseD_autorun_binary5_2019: "Każdy binarny łańcuch reprezentuje jeden wiersz
+        tego obrazka. \n\nCzy potrafisz je zmienić tak, aby była rysowana uśmiechnięta
+        buźka, a nie zmartwiona twarz?"
       courseD_autorun_binary6_2019: Który 6-cyfrowy binarny łańcuch, powtórzony 11
         razy, narysuje ten obraz?
       courseD_autorun_binary7_2019: Jaki jest najkrótszy łańcuch binarny, który możesz
@@ -1806,6 +2412,39 @@ pl-PL:
         Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_copy: Sprawdź, czy pod chmurką jest kwiat.
         Jeśli jest, zbierz nektar.
+      courseD_bee_conditionals2: 'Sprawdź każdą chmurkę, czy nie skrywa pod sobą kwiatka,
+        zanim zbierzesz nektar. '
+      courseD_bee_conditionals2_2018: 'Sprawdź każdą chmurkę, czy nie skrywa pod sobą
+        kwiatka, zanim zbierzesz nektar. '
+      courseD_bee_conditionals2_2019: 'Sprawdź każdą chmurkę, czy nie skrywa pod sobą
+        kwiatka, zanim zbierzesz nektar. '
+      courseD_bee_conditionals2_2020: 'Sprawdź każdą chmurkę, czy nie skrywa pod sobą
+        kwiatka, zanim zbierzesz nektar. '
+      courseD_bee_conditionals2_copy: 'Sprawdź każdą chmurkę, czy nie skrywa pod sobą
+        kwiatka, zanim zbierzesz nektar. '
+      courseD_bee_conditionals3: "Pomóż pszczółce zebrać cały nektar. \n\nMożesz zbierać
+        nektar tylko z kwiatków, ale możesz sprawdzić każde miejsce, aby zobaczyć,
+        czy jest tam kwiatek."
+      courseD_bee_conditionals3_2018: "Pomóż pszczółce zebrać cały nektar. \n\nMożesz
+        zbierać nektar tylko z kwiatków, ale możesz sprawdzić każde miejsce, aby zobaczyć,
+        czy jest tam kwiatek."
+      courseD_bee_conditionals3_2019: "Pomóż pszczółce zebrać cały nektar. \n\nMożesz
+        zbierać nektar tylko z kwiatków, ale możesz sprawdzić każde miejsce, aby zobaczyć,
+        czy jest tam kwiatek."
+      courseD_bee_conditionals3_2020: "Pomóż pszczółce zebrać cały nektar. \n\nMożesz
+        zbierać nektar tylko z kwiatków, ale możesz sprawdzić każde miejsce, aby zobaczyć,
+        czy jest tam kwiatek."
+      courseD_bee_conditionals3_copy: "Pomóż pszczółce zebrać cały nektar. \n\nMożesz
+        zbierać nektar tylko z kwiatków, ale możesz sprawdzić każde miejsce, aby zobaczyć,
+        czy jest tam kwiatek."
+      courseD_bee_conditionals6: Pod pewnymi chmurkami mogą być plastry miodu. Sprawdź,
+        czy za każdą chmurką ukrywa się plaster miodu!
+      courseD_bee_conditionals6_2018: Pod pewnymi chmurkami mogą być plastry miodu.
+        Sprawdź, czy za każdą chmurką ukrywa się plaster miodu!
+      courseD_bee_conditionals6_2019: Pod pewnymi chmurkami mogą być plastry miodu.
+        Sprawdź, czy za każdą chmurką ukrywa się plaster miodu!
+      courseD_bee_conditionals6_2020: Pod pewnymi chmurkami mogą być plastry miodu.
+        Sprawdź, czy za każdą chmurką ukrywa się plaster miodu!
       courseD_bee_conditionals7: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać
         nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_2018: Użyj bloku 'jeśli/w przeciwnym razie', żeby
@@ -1898,6 +2537,18 @@ pl-PL:
       courseD_collector_debugging4a_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging4a_2019: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging4a_2020: Napraw błędy, aby zebrać wszystkie skarby.
+      courseD_collector_debugging5: Wszystkie potrzebne komendy już tutaj są...Teraz
+        wykorzystaj swoje umiejętności debugowania, aby wymyślić, jak rozwiązać to
+        zadanie.
+      courseD_collector_debugging5a_2018: Wszystkie potrzebne komendy już tutaj są...Teraz
+        wykorzystaj swoje umiejętności debugowania, aby wymyślić, jak rozwiązać to
+        zadanie.
+      courseD_collector_debugging5a_2019: Wszystkie potrzebne komendy już tutaj są...Teraz
+        wykorzystaj swoje umiejętności debugowania, aby wymyślić, jak rozwiązać to
+        zadanie.
+      courseD_collector_debugging5a_2020: Wszystkie potrzebne komendy już tutaj są...Teraz
+        wykorzystaj swoje umiejętności debugowania, aby wymyślić, jak rozwiązać to
+        zadanie.
       courseD_collector_debugging6: 'Wyzwanie: Użyj swoich umiejętności debugowania,
         aby naprawić błędy i zebrać cały skarb.'
       courseD_collector_debugging6a_2018: 'Wyzwanie: Użyj kodu w obszarze roboczym,
@@ -1908,6 +2559,8 @@ pl-PL:
         aby uzyskać co najmniej **6** części skarbu!'
       courseD_collector_debugging_challenge2: Czy jesteś ekspertem od zagnieżdżonych
         pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały skarb!
+      courseD_collector_nested_loops_challenge2a: Pomóż Laurel zebrać przynajmniej
+        dwie sterty skarbu.
       courseD_collector_ramp10: Pomóż Laurel zebrać cały skarb.
       courseD_collector_ramp8: Pomóż Laurel zebrać cały skarb.
       courseD_collector_ramp9: Pomóż Laurel zebrać cały skarb.
@@ -2001,8 +2654,51 @@ pl-PL:
       courseD_maze_ramp7: Doprowadź ptaka do świnki!
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
+      courseD_playLab_cond1: Doprowadź Peglega do flag, aby rozwiązać to zadanie.
+      courseD_playLab_cond1_2018: Doprowadź Peglega do flag, aby rozwiązać to zadanie.
+      courseD_playLab_cond2: Przyznaj Peglegowi punkt za każdym razem, gdy dotrze
+        do smoka.
+      courseD_playLab_cond2_2018: Przyznaj Peglegowi punkt za każdym razem, gdy dotrze
+        do smoka.
+      courseD_playLab_cond3: Spraw, by smok co sekundę zmieniał emocje w trybie przypadkowym.
+      courseD_playLab_cond3_2018: Spraw, by smok co sekundę zmieniał emocje w trybie
+        przypadkowym.
+      courseD_playLab_cond3a: Zrób to, gdy Pegleg dotrze do smoka, otrzymuje 2 punkty,
+        jeśli smok jest szczęśliwy, a 1 jeśli nie.
+      courseD_playLab_cond3a_2018: Zrób to, gdy Pegleg dotrze do smoka, otrzymuje
+        2 punkty, jeśli smok jest szczęśliwy, a 1 jeśli nie.
+      courseD_playLab_cond4: Dodaj pewien kod tak, aby ninja (postać 3) zaczął ścigać
+        Peglega, gdy tylko gra się zacznie. Zakończ grę jako przegraną, jeśli ninja
+        go złapie.
+      courseD_playLab_cond4_2018: Dodaj pewien kod tak, aby ninja (postać 3) zaczął
+        ścigać Peglega, gdy tylko gra się zacznie. Zakończ grę jako przegraną, jeśli
+        ninja go złapie.
+      courseD_playLab_cond5: 'Dodaj pętlę "Powtarzaj bez końca", która sprawdza w
+        trybie ciągłym,czy punktacja przekracza 5, a następnie kończy grę z wynikiem
+        wygranym, gdy tak jest. '
+      courseD_playLab_cond5_2018: 'Dodaj pętlę "Powtarzaj bez końca", która sprawdza
+        w trybie ciągłym,czy punktacja przekracza 5, a następnie kończy grę z wynikiem
+        wygranym, gdy tak jest. '
+      courseD_playLab_cond6: "1.  Zwolnij tempo ninji (postać 3), zanim ustawisz go
+        na ściganie pirata.  \n2.  Jeśli pirat jest większy niż 225 pikseli, ustaw
+        ninję na **ucieczkę** pirata. W przeciwnym wypadku ustaw ninję na **ściganie**
+        pirata.  "
+      courseD_playLab_cond6_2018: "1.  Zwolnij tempo ninji (postać 3), zanim ustawisz
+        go na ściganie pirata.  \n2.  Jeśli pirat jest większy niż 225 pikseli, ustaw
+        ninję na **ucieczkę** pirata. W przeciwnym wypadku ustaw ninję na **ściganie**
+        pirata.  "
+      courseD_playLab_cond6a: Jeśli pirat (postać 1) jest w strefie bezpiecznej, odczekaj
+        jedną sekundę, następnie odlicz punkt jeśli zostaje on pod linią ośmiornicy.
+      courseD_playLab_cond6a_2018: Jeśli pirat (postać 1) jest w strefie bezpiecznej,
+        odczekaj jedną sekundę, następnie odlicz punkt jeśli zostaje on pod linią
+        ośmiornicy.
+      courseD_playLab_condFP: Teraz zbuduj swoją własną grę i pochwal się nią znajomym!
+      courseD_playLab_condFP_2018: Teraz zbuduj swoją własną grę i pochwal się nią
+        znajomym!
       courseD_scrat_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
         razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_scrat_ramp8: Wykorzystaj to, czego się nauczyłeś, aby doprowadzić Scrata
+        to żołędzia.
       courseE_artist_concept_challenge1: Nie bój się popełniać błędów próbując. Nie
         oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj, jeśli
         chcesz zobaczyć więcej wskazówek!
@@ -2019,6 +2715,8 @@ pl-PL:
         utworzyć okulary. '
       courseE_artist_functions2_2020: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
+      courseE_artist_ramp8: Teraz utwórz kwadrat z wykorzystaniem Grafika!
+      courseE_artist_ramp8_2: Teraz utwórz kwadrat z wykorzystaniem Grafika!
       courseE_artist_ramp9: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
         trójkąt.
       courseE_artist_ramp9_2: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
@@ -2037,7 +2735,17 @@ pl-PL:
       courseE_bee_functions4: Użyj funkcji "move and get nectar" (przejdź i pobierz
         nektar), aby zebrać cały nektar.
       courseE_bee_functions_challenge2: Rozwiąż to wyzwanie na własną rękę!
+      courseE_farmer_concept2: Zbierz wszystkie dynie.
+      courseE_farmer_concept2_2018: Zbierz wszystkie dynie.
       courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
+      courseE_farmer_ramp11a: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11a_2018: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11a_2019: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11a_2020: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11b: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11b_2018: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11b_2019: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp11b_2020: Jest stos, zatem usuń brud.
       courseE_playLab_scaffold5: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.

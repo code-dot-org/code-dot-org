@@ -408,7 +408,7 @@ ar-SA:
       Dance_Party_02: |-
         لنجعل غزال الموظ هذا يرقص!
 
-        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
+        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
 
         تُستخدَم **الإجراءات** لحساب الوقت منذ تشغيل الموسيقى. في هذا الدرس التعليمي، يكون الإجراء عبارة عن أربع خطوات بالطول.
       Dance_Party_03: |-

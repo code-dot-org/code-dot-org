@@ -404,7 +404,6 @@
   "deleteProjectConfirm": "क्या आप निश्चित तौर पर अपना प्रोजेक्ट मिटाना चाहते हैं? आप इस क्रिया को अनकिया नहीं कर सकते।",
   "deleteSection": "सेक्शन मिटाएं",
   "deleteSectionConfirm": "क्या आप सचमुच यह सेक्शन मिटाना चाहते हैं? आप इसे अनकिया (अनडू) नहीं कर पाएंगे।",
-  "deleteSectionHideSuggestion": "यदि आप सेक्शनों की अपनी सूची से इस सेक्शन को हटाना चाहते हैं, तो इसकी बजाय 'सेक्शन छिपाएं' विकल्प का उपयोग करने पर विचार करें।",
   "deleteUsedImage": "{name} este utlizată {value, plural, one {într-un singur loc} other { în # locuri}} în această aplicație. Dacă o vei șterge, imaginea nu va mai apare în niciunul din aceste locuri. Ești sigur(ă) că vrei să o ștergi?",
   "deleting": "मिटाया जा रहा है",
   "description": "विवरण ",
