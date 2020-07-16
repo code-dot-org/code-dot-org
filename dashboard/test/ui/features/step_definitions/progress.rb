@@ -48,7 +48,7 @@ def verify_bubble_type(selector, type)
 end
 
 def header_bubble_selector(level_num)
-  ".header_level_container .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
+  ".header_level .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|

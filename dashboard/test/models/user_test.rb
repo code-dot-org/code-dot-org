@@ -1070,6 +1070,8 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when last updated user_level is inside a level group' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     sub_level1 = create :text_match, name: 'sublevel1'
     create :text_match, name: 'sublevel2'
@@ -1083,7 +1085,7 @@ class UserTest < ActiveSupport::TestCase
     DSL
     level_group = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    create(:script_level, script: script, levels: [level_group])
+    create(:script_level, script: script, levels: [level_group], lesson: lesson)
     create :user_script, user: user, script: script
 
     # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
@@ -2441,8 +2443,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     User.expects(:track_proficiency).once
     track_progress(user.id, csf_script_level, 100)
@@ -2513,8 +2516,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     UserLevel.create!(
       user: user,
@@ -3852,7 +3856,8 @@ class UserTest < ActiveSupport::TestCase
   test 'generate_progress_from_storage_id' do
     # construct our fake applab-intro script
     script = create :script
-    stage = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    stage = create :lesson, script: script, lesson_group: lesson_group
     regular_level = create :level
     create :script_level, script: script, lesson: stage, levels: [regular_level]
 
