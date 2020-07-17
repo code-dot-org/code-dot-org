@@ -940,6 +940,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 2) do # both get a UserLevel
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -957,6 +958,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairings = 3.times.map {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 4) do # all 4 people
       assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
@@ -977,6 +979,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
 
@@ -997,6 +1000,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
 
