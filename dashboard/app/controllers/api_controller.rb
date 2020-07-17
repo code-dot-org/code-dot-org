@@ -108,7 +108,7 @@ class ApiController < ApplicationController
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
-    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
   end
 

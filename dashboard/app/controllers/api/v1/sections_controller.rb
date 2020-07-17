@@ -97,6 +97,12 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
 
+    unless params[:pairing_allowed] == section.pairing_allowed
+      section.students.each do |student|
+        # clear pairing here?
+      end
+    end
+
     section.update!(fields)
     if script_id
       section.students.each do |student|

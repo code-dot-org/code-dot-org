@@ -246,13 +246,14 @@ class ApplicationController < ActionController::Base
 
   def pairings=(pairings_from_params)
     # remove pairings
-    if pairings_from_params.blank?
+    if pairings_from_params[:pairings].blank?
       session[:pairings] = []
+      session[:pairing_section_id] = nil
       return
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params.map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -261,9 +262,15 @@ class ApplicationController < ActionController::Base
         nil
       end
     end.compact
+
+    session[:pairing_section_id] = pairings_from_params[:section_id]
   end
 
   def pairings
+    unless session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+      self.pairings = {pairings: []}
+    end
+
     return [] if session[:pairings].blank?
 
     User.find(session[:pairings])
@@ -272,6 +279,10 @@ class ApplicationController < ActionController::Base
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
   def pairing_user_ids
+    unless session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+      self.pairings = {pairings: []}
+    end
+
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
   end
