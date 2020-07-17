@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200717012416) do
+ActiveRecord::Schema.define(version: 20200717012604) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -352,12 +352,15 @@ ActiveRecord::Schema.define(version: 20200717012416) do
 
   create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "version_name"
-    t.text     "properties",        limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.text     "properties",         limit: 65535
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "content_root_type"
     t.integer  "content_root_id"
+    t.integer  "course_offering_id"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id", using: :btree
+    t.index ["course_offering_id", "version_name"], name: "index_course_versions_on_course_offering_id_and_version_name", unique: true, using: :btree
+    t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id", using: :btree
   end
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
