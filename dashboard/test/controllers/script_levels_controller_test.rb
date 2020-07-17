@@ -1515,22 +1515,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'coursea', version_year: '2017'
+    cats1 = create :script, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
+      get :show, params: {script_id: 'ui-test-versioned-script', stage_position: 1, id: 1}
     end
 
     cats1.update!(is_stable: true)
-    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
+    get :show, params: {script_id: 'ui-test-versioned-script', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats1/stage/1/puzzle/1"
 
-    create :script, name: 'cats2', family_name: 'coursea', version_year: '2018', is_stable: true
-    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
+    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', is_stable: true
+    get :show, params: {script_id: 'ui-test-versioned-script', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats2/stage/1/puzzle/1"
 
     # next redirects to latest version in a script family
-    get :next, params: {script_id: 'coursea'}
+    get :next, params: {script_id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/cats2/next"
   end
 
