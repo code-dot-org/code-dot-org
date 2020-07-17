@@ -643,7 +643,8 @@ class ApiControllerTest < ActionController::TestCase
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
     script = create :script
-    stage = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    stage = create :lesson, script: script, lesson_group: lesson_group
     contained_level = create :multi, name: 'multi level'
     level = create :maze, name: 'maze level', contained_level_names: ['multi level']
     create :script_level, script: script, lesson: stage, levels: [level]
@@ -726,7 +727,8 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for stage with swapped level" do
     sign_in @student_1
     script = create :script
-    stage = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    stage = create :lesson, script: script, lesson_group: lesson_group
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     level_source = create :level_source, level: level1a, data: 'level source'
@@ -890,7 +892,10 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paired icons for paired user levels" do
-    sl = create :script_level
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    sl = create :script_level, lesson: lesson, script: script
     driver_ul = create(
       :user_level,
       user: @student_4,
