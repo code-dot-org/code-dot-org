@@ -225,8 +225,9 @@ end
 
 def distribute_course_content(locale)
   locale_strings = {}
+  locale_dir = File.join("i18n/locales", locale)
 
-  Dir.glob("i18n/locales/#{locale}/course_content/**/*.json") do |course_strings_file|
+  Dir.glob(File.join(locale_dir, "course_content/**/*.json")) do |course_strings_file|
     course_strings = JSON.load(File.read(course_strings_file))
     next unless course_strings
 
@@ -252,46 +253,60 @@ def distribute_translations(upload_manifests)
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
+    locale_dir = File.join("i18n/locales", locale)
     puts "Distributing #{locale} (#{i}/#{total_locales})"
     $stdout.flush
     next if locale == 'en-US'
-    next unless File.directory?("i18n/locales/#{locale}/")
+    next unless File.directory?(locale_dir)
 
     ### Dashboard
     Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
       ext = File.extname(loc_file)
-      relname = File.basename(loc_file, ext)
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.yml')
 
       # Special case the un-prefixed Yaml file.
-      destination = (relname == "base") ?
+      destination = (basename == "base") ?
         "dashboard/config/locales/#{locale}#{ext}" :
-        "dashboard/config/locales/#{relname}.#{locale}#{ext}"
+        "dashboard/config/locales/#{basename}.#{locale}#{ext}"
 
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Course Content
     distribute_course_content(locale)
 
     ### Apps
     js_locale = locale.tr('-', '_').downcase
-    Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
-      relname = File.basename(loc_file, '.json')
-      destination = "apps/i18n/#{relname}/#{js_locale}.json"
+    Dir.glob("#{locale_dir}/blockly-mooc/*.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.json')
+      destination = "apps/i18n/#{basename}/#{js_locale}.json"
       sanitize_file_and_write(loc_file, destination)
     end
 
     ### Animation library
-    @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
-    spritelab_animation_translation_file = "i18n/locales/#{locale}/animations/spritelab_animation_library.json"
-    translations = JSON.load(File.open(spritelab_animation_translation_file))
-    # Use js_locale here as the animation library is used by apps
-    @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
+    spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
+    if file_changed?(locale, spritelab_animation_translation_path)
+      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+      spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
+      translations = JSON.load(File.open(spritelab_animation_translation_file))
+      # Use js_locale here as the animation library is used by apps
+      @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
+    end
 
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
     blockly_english = JSON.load(File.open("i18n/locales/source/blockly-core/core.json"))
-    Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
+    Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
       translations = JSON.load(File.open(loc_file))
       # Create a hash containing all translations, with English strings in
       # place of any missing translations. We do this as 'english merge
@@ -302,21 +317,24 @@ def distribute_translations(upload_manifests)
         translation.empty? ? english : translation
       end
       relname = File.basename(loc_file)
-      destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
+      destination = "apps/node_modules/@code-dot-org/blockly/#{locale_dir}/#{relname}"
       sanitize_data_and_write(translations_with_fallback, destination)
     end
 
     ### Pegasus markdown
-    Dir.glob("i18n/locales/#{locale}/codeorg-markdown/**/*.*") do |loc_file|
+    Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-      relative_dir = File.dirname(loc_file.delete_prefix("i18n/locales/#{locale}/codeorg-markdown"))
+      relative_dir = File.dirname(loc_file.delete_prefix("#{locale_dir}/codeorg-markdown"))
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
       FileUtils.mv(loc_file, destination)
     end
 
     ### Pegasus
-    loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
+    loc_file = "#{locale_dir}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
     sanitize_file_and_write(loc_file, destination)
   end
