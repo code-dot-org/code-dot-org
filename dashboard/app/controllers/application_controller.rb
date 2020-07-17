@@ -267,19 +267,21 @@ class ApplicationController < ActionController::Base
   end
 
   def pairings
-    unless session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
-      self.pairings = {pairings: []}
-    end
-
     return [] if session[:pairings].blank?
-
-    User.find(session[:pairings])
+    if pairing_still_enabled
+      User.find(session[:pairings])
+    else
+      # clear the pairing data from the session cookie
+      self.pairings = {pairings: []}
+      return []
+    end
   end
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
   def pairing_user_ids
-    unless session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+    unless pairing_still_enabled
+      # clear the pairing data from the session cookie
       self.pairings = {pairings: []}
     end
 
@@ -293,5 +295,11 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  private
+
+  def pairing_still_enabled
+    session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end
