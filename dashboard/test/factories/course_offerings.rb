@@ -8,6 +8,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_course_offerings_on_name  (name) UNIQUE
+#
 
 FactoryGirl.define do
   factory :course_offering do
