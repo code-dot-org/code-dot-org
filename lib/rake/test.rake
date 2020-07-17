@@ -211,7 +211,20 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
+  task :lib_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_lib_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [
+    :shared_ci,
+    :pegasus_ci,
+    :dashboard_ci,
+    :lib_ci,
+    :ui_live
+  ]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
