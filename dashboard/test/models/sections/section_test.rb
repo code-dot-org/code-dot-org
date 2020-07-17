@@ -569,15 +569,15 @@ class SectionTest < ActiveSupport::TestCase
     def create_script_with_levels(name, level_type)
       script = Script.find_by_name(name) || create(:script, name: name)
       lesson_group = create :lesson_group, script: script
-      stage = create :lesson, script: script, lesson_group: lesson_group
+      lesson = create :lesson, script: script, lesson_group: lesson_group
       # 5 non-programming levels
       5.times do
-        create :script_level, script: script, lesson: stage, levels: [create(:unplugged)]
+        create :script_level, script: script, lesson: lesson, levels: [create(:unplugged)]
       end
 
       # 5 programming levels
       5.times do
-        create :script_level, script: script, lesson: stage, levels: [create(level_type)]
+        create :script_level, script: script, lesson: lesson, levels: [create(level_type)]
       end
       script
     end
