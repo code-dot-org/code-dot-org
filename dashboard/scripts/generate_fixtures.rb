@@ -127,7 +127,7 @@ def yamlize(hsh)
   return hsh.to_yaml[4..-1]
 end
 
-prefix = "../test/fixtures/"
+prefix = Rails.root.join('test/fixtures/')
 
 File.new("#{prefix}courses.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
