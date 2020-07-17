@@ -27,7 +27,7 @@ level 'CSP - PL - U4 L04 Variables Make Project Submit_2020', progression: 'Vari
 level 'CSP - PL - Make Reflection', progression: 'Variables Make (~30 minutes)'
 level 'CSP-PL - Unit 4 Wrap-up', progression: 'Collaborative and Independent Work (~10 minutes)'
 level 'CSP - PL - Collaboration Reflection', progression: 'Collaborative and Independent Work (~10 minutes)'
-level 'CSP - Module 1 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
+level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 3'
 level 'VirtualPLOverview'
