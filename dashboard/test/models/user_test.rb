@@ -1007,11 +1007,13 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when most recent level is only followed by unplugged levels' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     script_levels = [
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
     ]
     create :user_script, user: user, script: script
 
@@ -1032,12 +1034,14 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when most recent level not a progression level' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     script_levels = [
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
-      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
     ]
     create :user_script, user: user, script: script
 
@@ -1057,9 +1061,11 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when we have no progress' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
-    create(:script_level, script: script, levels: [create(:maze)])
-    create(:script_level, script: script, levels: [create(:maze)])
+    create(:script_level, script: script, lesson: lesson, levels: [create(:maze)])
+    create(:script_level, script: script, lesson: lesson, levels: [create(:maze)])
     create :user_script, user: user, script: script
 
     # User's most recent progress is on unplugged level, that is followed by another
