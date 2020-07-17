@@ -46,11 +46,13 @@ class DelivererRenderTest < Minitest::Test
       params_file = FIXTURES_DIR + "params/#{name}.json"
       assert params_file.exist?, "Could not find params for #{name} email test. Please add a #{params_file.relative_path_from(ROOT_DIR)} fixture containing any required parameters for email template."
       params = JSON.parse(File.read(params_file))
+      is_hoc = false
 
       # Simulate the effects of associating a form with an email by putting a
       # "form_kind" entry in the fixture params which references one of our
       # form fixtures.
       if params.key?("form_kind")
+        is_hoc = params["form_kind"].include?('HocSignup')
         params["form_id"] = get_form_id_from_kind(params.delete("form_kind"))
       end
 
@@ -60,6 +62,12 @@ class DelivererRenderTest < Minitest::Test
       assert_equal header, YAML.load_file(File.join(expected_dir, 'header.yaml'))
       assert_equal html.to_s, File.read(File.join(expected_dir, 'body.html'))
       assert_equal text.to_s, File.read(File.join(expected_dir, 'body.txt'))
+
+      # many pegasus tests depend on hour of code forms not being in the database
+      # Delete the hour of code form after testing
+      if is_hoc
+        delete_form_by_id(params["form_id"])
+      end
     end
   end
 
@@ -83,5 +91,9 @@ class DelivererRenderTest < Minitest::Test
       updated_at: Time.parse("2020-02-27 16:50:16 -0800"),
       updated_ip: ''
     )
+  end
+
+  def delete_form_by_id(form_id)
+    PEGASUS_DB[:forms].where(id: form_id).delete
   end
 end
