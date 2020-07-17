@@ -19,5 +19,6 @@
 #
 
 class CourseVersion < ApplicationRecord
+  belongs_to :course_offering
   belongs_to :content_root, polymorphic: true
 end
