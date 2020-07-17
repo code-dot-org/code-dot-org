@@ -134,6 +134,7 @@ def localize_level_content
   puts "Preparing level content"
 
   block_category_strings = {}
+  progression_strings = {}
   level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
   # We have to run this specifically from the Rails directory because
@@ -151,6 +152,7 @@ def localize_level_content
 
         url = I18nScriptUtils.get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
+        progression_strings[script_level.progression] = script_level.progression if script_level.progression
 
         # extract block category strings; although these are defined for each
         # level, the expectation here is that there is a massive amount of
@@ -213,6 +215,17 @@ def localize_level_content
       "en" => {
         "data" => {
           "block_categories" => block_category_strings.sort.to_h
+        }
+      }
+    }
+    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
+    # Format strings for consumption by the rails i18n engine
+    formatted_data = {
+      "en" => {
+        "data" => {
+          "progressions" => progression_strings.sort.to_h
         }
       }
     }
