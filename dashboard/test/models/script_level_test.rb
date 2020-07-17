@@ -698,7 +698,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')
     @lesson_group = create(:lesson_group, script: @plc_script)
-    @lesson = create(:lesson, script: @plc_script)
+    @lesson = create(:lesson, script: @plc_script, lesson_group: @lesson_group)
     @level1 = create(:maze)
     create(:evaluation_multi, name: 'Evaluation Multi')
     evaluation_level_dsl = <<~DSL
