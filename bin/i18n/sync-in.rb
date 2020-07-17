@@ -220,7 +220,7 @@ def localize_level_content
     }
     file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
   end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.json"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
@@ -229,7 +229,7 @@ def localize_level_content
         }
       }
     }
-    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
+    file.write(JSON.pretty_generate(formatted_data))
   end
 end
 
