@@ -194,6 +194,7 @@ module Pd::Foorm
 
     # add single set of matrix answers to intermediate rollup (see get_intermediate_rollup for format)
     def self.add_summary_to_intermediate_rollup(intermediate_rollup_at_question, answers)
+      return unless intermediate_rollup_at_question
       answers.each do |answer_value, answer_count|
         intermediate_rollup_at_question[:sum] += answer_value.to_i * answer_count
         intermediate_rollup_at_question[:count] += answer_count
