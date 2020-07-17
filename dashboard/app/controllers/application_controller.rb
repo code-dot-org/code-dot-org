@@ -263,7 +263,7 @@ class ApplicationController < ActionController::Base
       end
     end.compact
 
-    session[:pairing_section_id] = pairings_from_params[:section_id]
+    session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
   def pairings
