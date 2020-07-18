@@ -59,10 +59,6 @@ class ScriptLevel < ActiveRecord::Base
     raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
-      assessment = raw_script_level.delete(:assessment)
-      named_level = raw_script_level.delete(:named_level)
-      bonus = raw_script_level.delete(:bonus)
-      lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
       levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
@@ -76,11 +72,11 @@ class ScriptLevel < ActiveRecord::Base
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment],
+        properties: properties.with_indifferent_access
       }
-      script_level_attributes[:properties] = properties.with_indifferent_access
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
@@ -88,11 +84,11 @@ class ScriptLevel < ActiveRecord::Base
         sl.levels = levels
       end
 
-      if lesson_name
+      if raw_script_level[:lesson]
         # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
+        lesson = script.lessons.detect {|s| s.name == raw_script_level[:lesson]} ||
           Lesson.find_by(
-            name: lesson_name,
+            name: raw_script_level[:lesson],
             script: script
           )
 
