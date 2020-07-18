@@ -65,7 +65,7 @@ class ScriptLevel < ActiveRecord::Base
       lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
-      levels = Level.add_levels(raw_script_level, script, new_suffix, editor_experiment)
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
 
       if new_suffix && properties[:variants]
         properties[:variants] = properties[:variants].map do |old_level_name, value|
