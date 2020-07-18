@@ -950,66 +950,10 @@ class Script < ActiveRecord::Base
 
     script.lesson_groups, script_lessons = raw_script_levels.empty? ? [[], []] : LessonGroup.add_lesson_groups(raw_lesson_groups, script)
 
-    script_levels_by_lesson = {}
-    script_level_position = Hash.new(0)
-    chapter = 0
-
     # Overwrites current script levels
-    script.script_levels = raw_script_levels.map do |raw_script_level|
-      raw_script_level.symbolize_keys!
-
-      assessment = raw_script_level.delete(:assessment)
-      named_level = raw_script_level.delete(:named_level)
-      bonus = raw_script_level.delete(:bonus)
-      lesson_name = raw_script_level.delete(:lesson)
-      properties = raw_script_level.delete(:properties) || {}
-
-      levels = Level.add_levels(raw_script_level, script, new_suffix, editor_experiment)
-
-      if new_suffix && properties[:variants]
-        properties[:variants] = properties[:variants].map do |old_level_name, value|
-          ["#{old_level_name}_#{new_suffix}", value]
-        end.to_h
-      end
-
-      script_level_attributes = {
-        script_id: script.id,
-        chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment
-      }
-      script_level_attributes[:properties] = properties.with_indifferent_access
-      script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
-      end || ScriptLevel.create!(script_level_attributes) do |sl|
-        sl.levels = levels
-      end
-
-      if lesson_name
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
-          Lesson.find_by(
-            name: lesson_name,
-            script: script
-          )
-
-        script_level.assign_attributes(stage_id: lesson.id, position: (script_level_position[lesson.id] += 1))
-        script_level.save! if script_level.changed?
-        (script_levels_by_lesson[lesson.id] ||= []) << script_level
-      end
-      script_level.assign_attributes(script_level_attributes)
-      script_level.save! if script_level.changed?
-      script_level
-    end
+    script.script_levels = ScriptLevel.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
 
     script_lessons.each do |lesson|
-      # make sure we have an up to date view
-      lesson.reload
-      lesson.script_levels = script_levels_by_lesson[lesson.id]
-      lesson.save! if lesson.changed?
-
       # Go through all the script levels for this lesson, except the last one,
       # and raise an exception if any of them are a multi-page assessment.
       # (That's when the script level is marked assessment, and the level itself
@@ -1028,21 +972,12 @@ class Script < ActiveRecord::Base
     end
 
     Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
-    Script.prevent_lesson_group_with_no_lessons(script)
 
     script.lessons = script_lessons
     script.reload.lessons
     script.generate_plc_objects
 
     script
-  end
-
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(script)
-    script.lesson_groups.each do |lesson_group|
-      next if lesson_group.lessons.count > 0
-      raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons."
-    end
   end
 
   # Only consecutive lessons can have the same lesson group.
