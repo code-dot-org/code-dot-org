@@ -31,6 +31,8 @@ class Lesson < ActiveRecord::Base
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
   has_many :script_levels, -> {order(:position)}, inverse_of: :lesson, foreign_key: 'stage_id'
+  has_many :levels, through: :script_levels
+
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
 
@@ -49,18 +51,11 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(raw_lesson_group, script, lockable_count, non_lockable_count, lesson_position)
+  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position)
     script_lessons = []
 
     # Set/create Lesson containing custom ScriptLevel
-    raw_lesson_group[:lessons].each do |raw_lesson|
-      # find the lesson group for this lesson
-      lesson_group = LessonGroup.find_by!(
-        key: raw_lesson_group[:key].presence || "",
-        script: script,
-        user_facing: raw_lesson_group[:key].present?
-      )
-
+    raw_lessons.each do |raw_lesson|
       # check if that lesson exists for the script otherwise create a new lesson
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
