@@ -131,6 +131,7 @@ $almost_white: #eee;
 
 #thank-donors-modal .scroll-box {
   height: 224px;
+  width: 642px;
   border-top: 1px solid $border_gray;
   padding: 0;
   overflow: auto;
@@ -139,7 +140,6 @@ $almost_white: #eee;
 
 .donor-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   width: 642px;
 }
@@ -149,9 +149,9 @@ $almost_white: #eee;
   width: 190px;
   padding: 8px 12px;
   text-align: center;
-  vertical-align: middle;
   font-family: $gotham-bold;
   font-size: 14px;
+  line-height: 40px;
 }
 
 .donor-subheader {
