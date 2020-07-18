@@ -958,21 +958,7 @@ class Script < ActiveRecord::Base
     script.script_levels = ScriptLevel.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
 
     script_lessons.each do |lesson|
-      # Go through all the script levels for this lesson, except the last one,
-      # and raise an exception if any of them are a multi-page assessment.
-      # (That's when the script level is marked assessment, and the level itself
-      # has a pages property and more than one page in that array.)
-      # This is because only the final level in a lesson can be a multi-page
-      # assessment.
-      lesson.script_levels.each do |script_level|
-        if !script_level.end_of_stage? && script_level.long_assessment?
-          raise "Only the final level in a lesson may be a multi-page assessment.  Script: #{script.name}"
-        end
-      end
-
-      if lesson.lockable && !lesson.script_levels.last.assessment?
-        raise 'Expect lockable lessons to have an assessment as their last level'
-      end
+      Script.prevent_multi_page_assessment_outside_final_level(lesson)
     end
 
     script.lessons = script_lessons
@@ -980,6 +966,24 @@ class Script < ActiveRecord::Base
     script.generate_plc_objects
 
     script
+  end
+
+  # Go through all the script levels for this lesson, except the last one,
+  # and raise an exception if any of them are a multi-page assessment.
+  # (That's when the script level is marked assessment, and the level itself
+  # has a pages property and more than one page in that array.)
+  # This is because only the final level in a lesson can be a multi-page
+  # assessment.
+  def self.prevent_multi_page_assessment_outside_final_level(lesson)
+    lesson.script_levels.each do |script_level|
+      if !script_level.end_of_stage? && script_level.long_assessment?
+        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
+      end
+    end
+
+    if lesson.lockable && !lesson.script_levels.last.assessment?
+      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
+    end
   end
 
   # If there is more than 1 lesson group then the key should never
